@@ -2,7 +2,7 @@
 title: Contributing to Nuxeo
 review:
     comment: ''
-    date: '2017-12-11'
+    date: '2020-05-23'
     status: ok
 labels:
     - content-review-lts2016
@@ -289,25 +289,113 @@ history:
 ---
 {{! multiexcerpt name='contributing-to-nuxeo'}}
 
+
+## Open Kitchen Philosophy
+
 Founded on the principles of open source, Nuxeo is passionate about community: the ecosystem of our community users, customers and partners who run their critical content-centric applications on our platform. Open source ensures that these external stakeholders have full visibility into not only the source code but the roadmap and ongoing commitment to standards and platforms. Customers, integrators, contributors and our own developers come together to share ideas, integrations and code to deliver value to the larger user base.
 
 Nuxeo development is fully transparent:
 
-*   Important development choices can be followed on through the [tech reports](http://www.nuxeo.com/media-center/blog-tag/techreport/). Comments are more than welcome!
+*   Our public roadmap can be followed on through the [Nuxeo Roadmap Documentation Page]({{page page='roadmap'}}). Comments are more than welcome!
 *   Any commit in the code can be followed on [Nuxeo GitHub repositories](http://nuxeo.github.io/) and on [ecm-checkins@lists.nuxeo.com,](mailto:ecm-checkins@lists.nuxeo.com.)
-*   Any evolution and bug fixing is tracked on [JIRA](http://jira.nuxeo.com/),
+*   Any evolution and bug fixing is tracked on [JIRA](http://jira.nuxeo.com/)
+
+<!-- 
+Section commented as it requires a VPN connection to get access
+
 *   Quality of the product development can be monitored on [our Jenkins Continuous Integration site](http://qa.nuxeo.org/) and [SonarQube Quality Assurance site](https://sonar.nuxeo.org/dashboard/index/org.nuxeo:nuxeo-ecm:master).
+-->
+
+
+## Contribution Principals
 
 Nuxeo is always happy when someone offers to help in the improvement of the product, whether it is for documentation, testing, fixing a bug, suggesting functional improvement or contributing totally new modules. To maintain the quality of such an open development process, Nuxeo has set up a few strict rules that a Nuxeo community member should follow to be able to contribute.
 
-There will be a "contributions portal" in the future; until then, this page explains the process that should be respected.
-
 Before describing this process, here are a few points that are the basis of the Nuxeo development process and that should always be kept in mind.
 
-*   Any evolution in Nuxeo sources should be matched with a JIRA issue ([http://jira.nuxeo.com/browse/NXP,](http://jira.nuxeo.com/browse/NXP,) or corresponding product [NXMOB](https://jira.nuxeo.com/browse/NXMOB), [NXIDE](https://jira.nuxeo.com/browse/NXIDE), [NXBT](https://jira.nuxeo.com/browse/NXBT)...).
+* Don’t edit directly the code without warning the Product Manager. This is really important because maybe the code was going to be completely refactored, or the fix was planned and assigned for the next team sprint, or your idea is simply not aligned with our product roadmap and you don’t want to lose your time :)
+*   Any evolution in Nuxeo sources should be matched with a JIRA issue ([Nuxeo Platform](http://jira.nuxeo.com/browse/NXP) or corresponding product [Browser Developer Extensions](https://jira.nuxeo.com/browse/BDE), [Nuxeo Elements](https://jira.nuxeo.com/browse/ELEMENTS), [Nuxeo Studio](https://jira.nuxeo.com/browse/NXS)...).
 *   Any code evolution must be documented, in the English language.
 *   Any new feature, even a low-level one, must be unit-tested.
 *   Any new feature must be implemented respecting usual Nuxeo software design, leveraging services, not putting business logic in Seam components. A bad design code could be rejected.
+*   Any PR should have only one commit message in general, so commit when you’re sure you’re done. That said, we may need to split the code into different commits for several reasons (organisation, code that may go to master but not into maintenance branches).
+*   The Nuxeo Dev team pays a lot of attention to the code formatting so don’t create useless spaces or newlines if not necessary (some IDE, like Atom, for example, creates a useless empty line at the end of the file, so adjust your settings).
+
+
+## Step by Step Instructions
+
+**Step #1** - Clone the GitHub repository:
+
+```Shell
+git clone https://github.com/nuxeo/nuxeo.git
+```
+
+**Step #2** - Ensure the branch you’re working on is up to date:
+
+```Shell
+git pull
+```
+
+**Step #3** - Create a branch, respecting the conventions:
+
+- If you’re not working on master branch, prefix it with the branch name
+- As a prefix, choose between fix, feature or improvement
+- Add the NXP ticket number
+- Add a short description, starting by a verb, all lowercase with hyphens
+
+```Shell
+git checkout -b '10.10-HF/fix-NXP-28805-review-retention-automation-operations'
+git checkout -b 'feature-NXP-28804-add-quickfilter-docs-with-retention-rules'
+```
+
+**Step #4** - Open your favorite IDE and apply your changes
+
+**Step #5** - Add your changes on git
+
+```Shell
+git add -A
+```
+
+**Step #6** - Add a commit message, respecting the naming conventions `<TICKET_NUMBER>: <description lowercase>`:
+
+```Shell
+git commit -m 'NXP-28804: add quick filter for docs in retention'
+```
+
+**Step #7** - Push your changes:
+
+```Shell
+git push origin 10.10-HF/fix-NXP-28805-review-retention-automation-operations
+git push origin feature-NXP-28804-add-quickfilter-docs-with-retention-rules
+```
+
+**Step #8** - Go to the GitHub UI and click on the button to create a PR.
+
+- Don’t hesitate to add a small comment to explain your contribution
+
+{{#> callout type='info' heading='Pull Request Review'}}
+Your contribution is going to be reviewed by the Dev team or the component leader. They will probably ask you to update some code sections. So take the review, answer them, and edit your code accordingly.
+{{/callout}}
+
+**Step #9** - _(Optional)_ At this stage, you might have 2 commit messages. The first one from your original PR, another one with some updates. 
+
+- To merge and rewrite your commit, run `git rebase -i HEAD~2`
+- The terminal will open the interactive rebase. You should end up with two lines, corresponding to those two commits.
+- Prefix the first commit message with `pick`
+- Prefix the second commit message with `fixup`
+- Push force the modification: `git push --force`
+- And repeat it until there is nothing left to review!
+
+## Product Specificities
+
+### Nuxeo Platform
+
+Don’t forget to Test and Push (T&P) after getting the number of required approvals (manual operation needed for now).
+
+
+### Nuxeo Web UI / Nuxeo Elements
+
+Ensure to execute npm run lint and npm run format to try to fix the format issues automatically before creating your commit. Be aware we have a command that helps us having the code properly formatted.
 
 ## Translations
 
@@ -330,6 +418,9 @@ Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chart
 {{! multiexcerpt name='translation-contribution-with-github'}}
 
 1.  For now, English translations are managed only on GitHub.
+  
+  * For Web UI labels, edit the [Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/blob/master/i18n/messages.json) or [Nuxeo UI Elements](https://github.com/nuxeo/nuxeo-ui-elements/blob/master/i18n/messages.json) JSON files.
+  
   * For JSF UI labels, looking at the [reference messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties) file at can help you understand in which GitHub repository or module the original translation is. For instance, look for the following sample lines:
 
     ```
@@ -346,7 +437,7 @@ Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chart
 
     If the module is under the `addons` directory, it will be in a specific GitHub repository. Otherwise, it will be in the [main Nuxeo repository](https://github.com/nuxeo/nuxeo).
 
-    * For Web UI labels, edit the [Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/blob/master/i18n/messages.json) or [Nuxeo UI Elements](https://github.com/nuxeo/nuxeo-ui-elements/blob/master/i18n/messages.json) JSON files.
+    
 
 2.  Use any standard Java i18n tool to edit the files.
 3.  Make a pull-request on [GitHub](https://github.com/nuxeo/).
@@ -355,7 +446,7 @@ Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chart
 
 ## {{> anchor 'documentation'}}Documentation
 
-Contribution is welcome both for technical (books and guides, FAQ, tutorials) and functional documentation. Ask a contributor account for [http://doc.nuxeo.com](/) on [Nuxeo Answers](https://answers.nuxeo.com/), <a>the nuxeo-dev mailing list</a> or on [the Nuxeo Google+ community](https://plus.google.com/communities/117410347547563540242).
+Contribution is welcome both for technical (books and guides, FAQ, tutorials) and functional documentation. Ask a contributor account for [http://doc.nuxeo.com](/) on [Nuxeo Answers](https://answers.nuxeo.com/), <a>the nuxeo-dev mailing list</a>.
 
 ## Testing
 
