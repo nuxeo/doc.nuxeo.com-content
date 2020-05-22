@@ -1,6 +1,6 @@
 ---
-title: Installation and Configuration
-description: Learn how to install and configure the Nuxeo Retention addon.
+title: Installation and Compliance Mode Configuration
+description: Learn how to install and configure the Nuxeo Retention addon  with Compliance Mode.
 review:
     comment: ''
     date: '2019-08-05'
