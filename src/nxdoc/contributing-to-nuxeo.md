@@ -373,6 +373,14 @@ git push origin feature-NXP-28804-add-quickfilter-docs-with-retention-rules
 
 - Don’t hesitate to add a small comment to explain your contribution
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/pr.png
+    name: pr.png
+    server#screenshot#up_to_date
+--}}
+![pr.png](nx_asset://a9b4d416-2b4e-4705-b1a5-23c2845094b9 ?w=550,border=true)
+
+
 {{#> callout type='info' heading='Pull Request Review'}}
 Your contribution is going to be reviewed by the Dev team or the component leader. They will probably ask you to update some code sections. So take the review, answer them, and edit your code accordingly.
 {{/callout}}
@@ -385,6 +393,15 @@ Your contribution is going to be reviewed by the Dev team or the component leade
 - Prefix the second commit message with `fixup`
 - Push force the modification: `git push --force`
 - And repeat it until there is nothing left to review!
+
+**Step #10** - Once your contribution is approved, go to your PR on GitHub,  click on “Rebase and Merge” button.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/rebase-and-merge.png
+    name: rebase-and-merge.png
+    server#screenshot#up_to_date
+--}}
+![rebase-and-merge.png](nx_asset://1d9ecd82-65a3-4d90-8af6-70e299e9408a ?w=150,border=true)
 
 ## Product Specificities
 
