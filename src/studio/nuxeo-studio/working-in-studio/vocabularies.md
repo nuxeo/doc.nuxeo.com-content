@@ -122,18 +122,44 @@ Watch the related courses on Nuxeo University
 
 {{{multiexcerpt 'disabling-feature' page='branding'}}}
 
+## Parameters
+
 In each of these three types of vocabulary you will find identical parameters like:
 
-- **Creation Policy**: The Creation Policy defines whether the values are created when the configuration is deployed on a Nuxeo Platform instance.
-  - **Don't override existing values** means that it will be deployed only if it has never been deployed before on the instance. If it is already here, it will let the existing values as is.
-  - **Always** means it will override the existing values with the ones that are on Studio. It should be used with a lot of attention, as there is no way to revert, if data has been deleted at deployment.
-  - **Never** would be used so as to disable the data loading logic temporarily, but would still declare the directory.
+- **Creation Table Policy**: The Creation Table Policy defines the creation strategy for the vocabulary table when the configuration is deployed on a Nuxeo Platform instance.
+  - **If not existing** means that it will be created only if it has never been created before on the instance. If it is already here, it will only update it if additional fields need to be added in the database. This is the recommanded policy for production.
+  - **Always** means the table is dropped and recreated each time the Nuxeo Server instance restarts. Modifications made directly in the instance are lost in the process. It should be used with a lot of attention, as there is no way to revert, if data has been deleted at deployment.
+  - **Never** would be used so as to disable the table creation logic temporarily, but would still declare the directory.
 - **Delete** and **Delete all**: Used to delete the values.
 - **Import CSV:** Opens a pop-up with inline documentation. You can either import data in Studio from a CSV file **or** references a file that is never "parsed" from Studio (only by your Nuxeo Platform at deployment time). Choose the second option if you have many lines, for a better user experience with your Studio project. The first line of the CSV file is the header that defines the vocabulary fields: id, label, obsolete, ordering, and parent for hierarchical vocabularies. See examples [Simple Vocabulary]({{file name='simple-vocabulary.csv'}}) and [Hierarchical Vocabulary]({{file name='hierarchical-vocabulary.csv'}}).
 
+{{#> callout type='warning' }}
+The policy to manage the duplicated entries is only available since Nuxeo Platform 11.1.
+{{/callout}}
+
+If the selected **Creation Table Policy** is **If not existing**, another drop-down is displayed allowing the user to define the policy when duplicates are found between the data defined in Studio and the data deployed on the Nuxeo Platform instance.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Vocabularies/Duplicates Entries Policy
+    name: STUDIO-duplicate-entries-policy.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Duplicates Entries Policy](nx_asset://ad953d85-bdba-4eba-abb5-dedac8d0b464 ?w=650,border=true)
+
+The three options are:
+
+- **Studio wins**: the policy means that the Studio configuration overrides any change made in the instance.
+- **Instance wins**: the default value, it means when a duplicate is found, the value defined in the Nuxeo Platform instance is kept and the one defined in Studio configuration is dropped.
+- **Throw an error**: a log entry is created at the start up of the Nuxeo Platform instance so the conflict can be resolved manually.
+
 ## The Simple Vocabulary
 
-![]({{file name='STUDIO-simple-vocabulary.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Vocabularies/Simple Vocabulary
+    name: STUDIO-simple-vocabulary.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Simple Vocabulary](nx_asset://dc12c731-6e22-4d2f-86cc-ace98baf9050 ?w=650,border=true)
 
 This type enables you to create a simple one-level vocabulary. Make sure to fill in the fields Id and Label correctly, with no special characters in the Id's name.
 
@@ -141,7 +167,12 @@ These fields are the same as those on the [vocabularies management interface]({{
 
 ## The Child Vocabulary
 
-![]({{file name='STUDIO-child-vocabulary.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Vocabularies/Child Vocabulary
+    name: STUDIO-child-vocabulary.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Child Vocabulary](nx_asset://362dcac4-7697-4cfd-bbc5-bb79bd553636 ?w=650,border=true)
 
 This type allows you to link vocabularies between them in order to have parent and child vocabularies.
 
@@ -149,7 +180,12 @@ You can't create a Child Vocabulary if you don't have a Parent Vocabulary alread
 
 ## The Hierarchical Vocabulary
 
-![]({{file name='NuxeoStudioHierarchicalVocabularyMainView.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Vocabularies/Hierarchical Vocabulary
+    name: STUDIO-hierarchical-vocabulary.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Hierarchical Vocabulary](nx_asset://bf251576-7b53-4a5f-9471-524cce28c3f8 ?w=650,border=true)
 
 This types has more parameters than the others:
 
