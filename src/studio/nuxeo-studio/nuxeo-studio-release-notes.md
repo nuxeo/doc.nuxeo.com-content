@@ -13,10 +13,13 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
+### Self-service User Management
+
+The connect dashboard will integrate an interface for you to manage your users without having to send requests to our support team anymore.
 
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.31.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.32.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
