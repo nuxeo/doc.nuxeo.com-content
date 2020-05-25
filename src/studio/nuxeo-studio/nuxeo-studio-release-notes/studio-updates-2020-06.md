@@ -15,7 +15,7 @@ toc: true
 
 ### Properties Filtering in Layouts
 
-When configuring layouts visually, a quick search will let you filter through the options you can drag and drop.
+When configuring layouts visually, a quick search lets you filter through the options you can drag and drop.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2020-06/properties filtering
@@ -26,7 +26,7 @@ When configuring layouts visually, a quick search will let you filter through th
 
 ### Layout Blocks Drag and Drop
 
-When configuring document layouts, your layout blocks will be available from the toolbox just as you expect them to be. Dragging and dropping a layout block shows its whole content so that you get a more realistic preview.
+When configuring document layouts, your layout blocks are available from the toolbox just as you expect them to be. Dragging and dropping a layout block shows its whole content so that you get a more realistic preview.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2020-06/layout blocks catalog
@@ -41,7 +41,14 @@ When configuring a layout block, get the ability to undo / redo your changes and
 
 ### New Look for the Dashboard
 
-Your dashboard at [connect.nuxeo.com](https://connect.nuxeo.com) will have a brand new look.
+Your dashboard at [connect.nuxeo.com](https://connect.nuxeo.com) has a brand new look.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2020-06/connect dashboard look update
+    name: connect-dashboard-look-update.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![connect dashboard look update](nx_asset://9896aca5-a2ca-48ad-be96-76fc7ce0c90c ?w=650,border=true)
 
 {{! /multiexcerpt}}
 
