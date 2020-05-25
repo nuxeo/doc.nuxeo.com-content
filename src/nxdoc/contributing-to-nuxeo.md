@@ -324,6 +324,13 @@ Before describing this process, here are a few points that are the basis of the 
 
 ## Step by Step Instructions
 
+There are two ways to contribute:
+
+- By [cloning the GitHub repository](#cloning-the-repository-locally) locally and using command line
+- By using [GitHub UI](#using-gitHub-ui) and make your changes online
+
+### Cloning the repository locally
+
 **Step #1** - Clone the GitHub repository:
 
 ```Shell
@@ -402,6 +409,28 @@ Your contribution is going to be reviewed by the Dev team or the component leade
     server#screenshot#up_to_date
 --}}
 ![rebase-and-merge.png](nx_asset://1d9ecd82-65a3-4d90-8af6-70e299e9408a ?w=150,border=true)
+
+### Using GitHub UI
+
+If you need to edit a single file, you can use the default GitHub UI feature to create a pull request. 
+
+- Click on the edit icon
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/github-ui-edit.png
+    name: github-ui-edit.png
+    server#screenshot#up_to_date
+--}}
+![github-ui-edit.png](nx_asset://f65ba7e6-794a-4881-826a-9e1e9046509a ?w=650,border=true)
+
+- Make your changes and add a commit message, and update the branch name respecting the naming conventions
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/github-ui-commit.png
+    name: github-ui-commit.png
+    server#screenshot#up_to_date
+--}}
+![github-ui-commit.png](nx_asset://8022c60b-5621-4dda-b9f7-55e609dfc2c2 ?w=650,border=true)
 
 ## Product Specificities
 
