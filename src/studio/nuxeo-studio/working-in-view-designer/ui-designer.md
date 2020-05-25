@@ -91,15 +91,6 @@ Allows you to create reusable components and share them between different docume
 Layout blocks are elements of a layout that can be reused in other layouts configuration.
 In each layout block, you can insert properties along with their configuration.
 
-Nuxeo Studio provides a variety of Layout Blocks templates:
-
-- **Title/description element template**: To create a single document layout block that contains, by default, the title and description properties. Properties can be added to the block.
-- **Document Page template**: To configure your own document tabs.
-- **Drawer Page template**: To customize your drawer menu.
-- **Main Page template**: To display specific information in custom pages.
-- **Dialog Action template**: To add a button opening a dialog box.
-- **Script Action template**: To add a button running an automation script.
-
 When creating or editing a form, you can drag and drop properties from any schema. Then, you can configure them individually.
 
 In any of your **Layouts**, you can drag and drop your Layout Blocks from the catalog.
