@@ -90,7 +90,7 @@ The steps to add a new user or a new group are basically the same.
     {{/callout}}
 
     {{#> callout type='warning' }}
-    If you choose a Creation Policy of "Always", then at each reload or restart the Studio-defined users and groups will **completely replace** anything you may have changed from Nuxeo. Any updates, additions or removals done from Nuxeo will be lost.
+    If you choose a Creation Table Policy of "Always", then at each reload or restart the Studio-defined users and groups will **completely replace** anything you may have changed from Nuxeo. Any updates, additions or removals done from Nuxeo will be lost.
     {{/callout}}
 
 **Users properties**
