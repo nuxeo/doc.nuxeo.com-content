@@ -17,7 +17,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.30.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.31.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
@@ -28,7 +28,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 {{{multiexcerpt 'studio-updates-2020-05-bugfix' page='studio-updates-2020-05'}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.31.0'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.30.0'%29) is available in our bug tracking tool.
 
 ---
 
