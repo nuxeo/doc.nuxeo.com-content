@@ -2,7 +2,7 @@
 title: Scheduling Periodic Events
 review:
     comment: ''
-    date: '2018-05-21'
+    date: '2020-05-15'
     status: ok
 labels:
     - lts2016-ok
@@ -112,12 +112,10 @@ history:
         date: '2010-12-24 15:44'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 The [Scheduler Service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.scheduler.SchedulerService) is a Nuxeo Platform service to schedule events at periodic times. This is the best way in Nuxeo Platform to execute things every night, every hour, every five minutes, or at whatever granularity you require.
-
 {{! /excerpt}}
 
 ## Scheduler Contribution
