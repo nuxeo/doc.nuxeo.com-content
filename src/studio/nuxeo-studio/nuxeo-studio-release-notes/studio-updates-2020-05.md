@@ -14,12 +14,15 @@ toc: true
 {{! multiexcerpt name='studio-updates-2020-05-changes'}}
 
 ### Default Role Change
-On new Studio projects, developers get write access by default to the [underlying Studio Git repository]({{page page='nuxeo-studio-designer-git-access'}}) instead of read. It is still possible to switch back to read access as an option.
+
+On new Studio projects, developers get `write` access by default to the [underlying Studio Git repository]({{page page='nuxeo-studio-designer-git-access'}}) instead of `read`. It is still possible to switch back to `read` access as an option.
 
 ### Widgets Drag and Drop Instead of Mode
-When configuring a document type or workflow task layout, each property in the tree offers a [list of available widgets](https://jira.nuxeo.com/browse/NXS-5775) (e.g. text input, text area) you can drag and drop instead of a view and edit mode.
+
+When configuring a document type or a workflow task layout, each property in the tree offers a [list of available widgets](https://jira.nuxeo.com/browse/NXS-5775) (e.g. text input, text area), that you can drag and drop instead of a view and edit mode.
 
 ### Simplified Layout Blocks Configuration Experience
+
 When configuring a [layout block]({{page page='ui-designer'}}#layout-blocks):
 - no need to choose a template anymore
 - naming experience is reviewed to make the expected naming pattern more explicit

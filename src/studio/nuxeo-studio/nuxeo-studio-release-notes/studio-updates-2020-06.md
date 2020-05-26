@@ -41,8 +41,7 @@ When configuring a layout block, get the ability to undo / redo your changes and
 
 ### New Look for the Dashboard
 
-Your dashboard at <a href="https://connect.nuxeo.com" target="_blank">connect.nuxeo.com</a> will have a brand new look.
-
+Your dashboard at [connect.nuxeo.com](https://connect.nuxeo.com) will have a brand new look.
 
 {{! /multiexcerpt}}
 
