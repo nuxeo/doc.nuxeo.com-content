@@ -100,9 +100,9 @@ This computation reads from the `status` stream and aggregate status update to b
 
 This `done` stream can be used as an input by custom computation to execute other actions once a command is completed.
 
-### Building an action with the Bulk Service
+### Building an Action With the Bulk Service
 
-#### Edit the MANIFEST file
+#### Edit the MANIFEST File
 
 On your MANIFEST file, add your new contribution:
 
@@ -111,7 +111,7 @@ On your MANIFEST file, add your new contribution:
 Nuxeo-Component: OSGI-INF/stream-contrib.xml
 ```
 
-#### Contribute an action
+#### Contribute an Action
 
 You need to register a couple action/stream processor:
 
@@ -127,18 +127,18 @@ You need to register a couple action/stream processor:
 </extension>
 ```
 
-If your action have some parameters, you can also validate them by adding a validation class to the action contribution:
+If your action has some parameters, you can also validate them by adding a validation class to the action contribution:
 
 ```xml
 <action name="myAction" validationClass="org.nuxeo.myValidationClass"/>
 ```
 
 It is possible to add several options to the stream processor to tune the way the documents are processed.
-Please visit [nuxeo-runtime-stream README](https://github.com/nuxeo/nuxeo/blob/master/modules/runtime/nuxeo-runtime-stream/README.md) for more information.
+Please visit the related [README](https://github.com/nuxeo/nuxeo/blob/master/modules/runtime/nuxeo-runtime-stream/README.md) for more information.
 
-#### Create the stream processor
+#### Create the Stream Processor
 
-Create a Java Class to declare a standard Stream processor. You should have a topology. It is possible to have as many computations as needed, but, the progress of our process must be reported to status stream. 
+Create a Java Class to declare a standard Stream processor. You should have a topology. It is possible to have as many computations as needed, but the progress of our process must be reported to status stream.
 
 ```java
 public class MyActionProcessor implements StreamProcessorTopology {
@@ -155,18 +155,18 @@ public class MyActionProcessor implements StreamProcessorTopology {
 }
 ```
 
-In this example, there is a single computation called `MyComputation`. This topology takes as input a stream with the name of the action, and the output stream as output. 
+In this example, there is a single computation called `MyComputation`. This topology takes as input a stream with the name of the action, and the output stream as output.
 
-#### Create the computations
+#### Create the Computations
 
-The computation presented previously should be defined in another Java class. 
+The computation presented previously should be defined in another Java class.
 
-An abstract Java class, `AbstractBulkComputation`, helps to creates all we need for the computation: 
+An abstract Java class, `AbstractBulkComputation`, helps to create all that we need for the computation:
 - A CoreSession
-- The list  of documents which are going to be processed
-- The action properties. 
+- The list of documents which are going to be processed
+- The action properties.
 
-Everything inside the class is the custom logic to implement. 
+Everything inside the class is the custom logic to implement.
 
 ```java
 // ...
@@ -199,8 +199,16 @@ for (DocumentModel doc : loadDocuments(session, ids)) {
 #### Invoke the Bulk Service
 
 The Bulk service can be called in different ways. For example:
-- From a **page provider** (`curl -s -X POST "$SERVER_URL/nuxeo/api/v1/search/pp/default_search/bulk/csvExport"`), adding an adapter to invoke our bulk service, with the name of our action, which, in this case, is `csvExport`.
-- From an **automation operation** (`curl -s -X POST "${SERVER_URL}/nuxeo/site/automation/Elasticsearch.BulkIndex"`)
+- From a **page provider**:
+  ```
+  curl -s -X POST "$SERVER_URL/nuxeo/api/v1/search/pp/default_search/bulk/csvExport"
+  ```
+  adding an adapter to invoke our bulk service, with the name of our action, which, in this case, is `csvExport`.
+
+- From an **automation operation**:
+  ```
+  curl -s -X POST "${SERVER_URL}/nuxeo/site/automation/Elasticsearch.BulkIndex"
+  ```
 
 ## Bulk REST API
 
