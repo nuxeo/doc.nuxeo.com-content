@@ -597,7 +597,7 @@ The licenses used are:
 | zookeeper-3.4.10.jar |   | 3.4.10 | AL 2.0 |
 
 {{#> callout type='info' heading='Modified Third-Party Libraries'}}
-
-Some third-party libraries have been modified to fix bugs. In such cases the library has the suffix `NX##` appended to the original artifact name, as well as the version. For example `jboss-seam-2.3.1.Final.NX03.jar`. In general these bugs are tracked using the Nuxeo JIRA project [VEND](https://jira.nuxeo.com/projects/VEND?filter=allissues), though other projects may be referenced. The source code for the fixes is available in the [Nuxeo GitHub organization](https://github.com/nuxeo). For example the source code for `jboss-seam-2.3.1.Final.NX03.jar` can be found [here](https://github.com/nuxeo/jboss-seam/tree/Nuxeo_2_3_1).
- 
+Some third-party libraries have been modified to fix bugs. In such cases, the library has the suffix `NX##` appended to the original artifact name, as well as the version, for example `jboss-seam-2.3.1.Final.NX03.jar`.</br>
+In general these bugs are tracked using the Nuxeo JIRA project [VEND](https://jira.nuxeo.com/projects/VEND?filter=allissues), though other projects may be referenced.</br>
+The source code for the fixes is available in the [Nuxeo GitHub organization](https://github.com/nuxeo). For example the source code for `jboss-seam-2.3.1.Final.NX03.jar` can be found [here](https://github.com/nuxeo/jboss-seam/tree/Nuxeo_2_3_1).
 {{/callout}}
