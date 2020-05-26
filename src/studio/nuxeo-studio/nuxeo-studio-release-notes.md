@@ -36,8 +36,8 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [May 2020]({{page page='studio-updates-2020-02-05'}})     | Widgets Drag and Drop Instead of Mode |
-| [April 2020]({{page page='studio-updates-2020-02-04'}})     | Improved Visual Layout Configuration Experience |
+| [May 2020]({{page page='studio-updates-2020-05'}})     | Widgets Drag and Drop Instead of Mode |
+| [April 2020]({{page page='studio-updates-2020-04'}})     | Improved Visual Layout Configuration Experience |
 | [February / March 2020]({{page page='studio-updates-2020-02-03'}})     | Custom icons support, security improvements |
 | [January 2020]({{page page='studio-updates-2020-01'}})     | Automatically switch to a new branch |
 | [December 2019]({{page page='studio-updates-2019-12'}})     | Layout Inheritance for faster layout configuration |
