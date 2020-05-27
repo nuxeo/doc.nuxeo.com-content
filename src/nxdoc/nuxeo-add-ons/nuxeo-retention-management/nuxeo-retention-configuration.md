@@ -12,7 +12,7 @@ toc: true
 tree_item_index: 400
 ---
 
-This section explains  how to tailor the Nuxeo Retention addon to fit custom needs.
+This section explains how to tailor the Nuxeo Retention addon to fit custom needs.
 
 ## Add New Retention End Actions
 
@@ -23,7 +23,7 @@ By default, there are two retention end actions:
 
 To add a custom end action, a new entry in the `RetentionEnd` vocabulary must be created.
 
-The vocabulary entry ID corresponds to the automation chain or automation scripting you have created in Nuxeo Studio Modeler. 
+The vocabulary entry ID corresponds to the automation chain or automation scripting you have created in Nuxeo Studio Modeler.
 
 {{#> callout type='note' heading='Automate vocabulary entry creation'}}
 It is not possible to automate the vocabulary entry creation from automation chain or automation scripting as the vocabulary is structured to be internationalized.
@@ -54,13 +54,13 @@ The operation definition is available in the Automation documentation (Use the *
 
 To use it in Nuxeo Studio:
 
-- Click on the automation operation
-- Click on the "JSON definition" link
-- Copy paste the JSON code into **Nuxeo Studio Modeler > SETTINGS > Registries > Automation operations**
+1. Click on the automation operation,
+1. Click on the **JSON definition** link,
+1. Copy-paste the JSON code into **Nuxeo Studio Modeler** > **SETTINGS** > **Registries** > **Automation operations**.
 
 ## Create Custom Retention Rules
 
-You can automate the retention rules creations in Studio. Retention rules are standard Nuxeo documents, of type `RetentionRule`. It can therefore be reused and customized. 
+You can automate the retention rules creations in Studio. Retention rules are standard Nuxeo documents, of type `RetentionRule`. It can therefore be reused and customized.
 
 Here is an example to create a retention rule with automation scripting:
 
@@ -89,7 +89,7 @@ var hr_contracts_properties = {
             "HR_Employment_Contract"
         ],
     };
-    
+
     var hr_contract_retention_rule = Document.Create(
       RetentionRules_location, {
 	    'type': "RetentionRule",
@@ -98,16 +98,14 @@ var hr_contracts_properties = {
       }
   );
   ```
-  
+
 {{#> callout type='note' heading='Retention Rules Location'}}
 You have to create the retention rules under the document of type `RetentionRules`. So ensure you have fetched it previously.
 {{/callout}}
 
 If you need to import the retention rule document type, then adopt the same strategy as extending the user schema:
 
-- Import the necessary [XSD schemas](https://github.com/nuxeo/nuxeo/tree/10.10/addons/nuxeo-retention/nuxeo-retention-core/src/main/resources/schemas)  
-  - `retention_definition.xsd`
-  - `retention_rule.xsd`
-- Generate the schemas (and doctype) in the **Content Model** section
-
- 
+1. Import the necessary [XSD schemas](https://github.com/nuxeo/nuxeo/tree/10.10/addons/nuxeo-retention/nuxeo-retention-core/src/main/resources/schemas),  
+  1. `retention_definition.xsd`
+  1. `retention_rule.xsd`
+1. Generate the schemas (and doctype) in the **Content Model** section.
