@@ -142,19 +142,28 @@ Nuxeo can't guarantee the compliance to SEC 17a-4 in the event that:
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
+### [Functional Overview&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' page='nuxeo-retention-functional-overview'}})
+{{/panel}}
+</div>
+
+<div class="column medium-4">
+{{#> panel type='secondary' match_height='true'}}
+### [Technical Overview&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' page='nuxeo-retention-technical-overview'}})
+{{/panel}}
+</div>
+
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-4">
+{{#> panel type='secondary' match_height='true'}}
 ### [Installation&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-retention-installation'}})
 {{/panel}}
 </div>
 
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### [Functional Overview&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-retention-functional-overview'}})
-{{/panel}}
-</div>
-
-<div class="column medium-4">
-{{#> panel type='secondary' match_height='true'}}
-### [Technical Overview&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-retention-technical-overview'}})
+### [Configuration&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-retention-configuration'}})
 {{/panel}}
 </div>
 
