@@ -13,10 +13,6 @@ As a commitment to an always improved security, Nuxeo Online Services delegates 
 
 The counterpart is that whenever using commands in our clients and APIs that require authentication, your password can't be used. Nuxeo Online Services needs an alternative way for you to authenticate: that's when you should use a token.
 
-{{#> callout type='warning' heading='Future Change'}}
-Tokens will become the mandatory way to authenticate for all our tools and APIs. We strongly recommend doing the switch as soon as possible to prevent any breakage in the future.
-{{/callout}}
-
 ## What is a Token
 
 {{! multiexcerpt name='what-is-a-token'}}
@@ -41,12 +37,14 @@ Tokens are only used for command line tools and APIs. You still need to use your
 ## Creating a Token
 
 To generate a token:
+{{! multiexcerpt name='token-creation-instructions'}}
 1. Login to [Nuxeo Online Services](https://connect.nuxeo.com),
 1. Visit the **My Tokens** tab,
 1. Create your token using the corresponding button and provide a clear name for it (ex: "CI Chain"). The name has no impact; it is only meant for you to remember where / how you plan to use it, that's very important in case you need to revoke it later.
 ![]({{file name='token-management.png'}} ?border=true,w=650)
 
 Your token will only be shown once; be sure to save it in a secure place, for instance a password management tool.
+{{! /multiexcerpt}}
 
 {{#> callout type='info'}}
 We recommend using a different token for every tool or service you plan to use: this lessens the impact if you need to revoke it at some point.
