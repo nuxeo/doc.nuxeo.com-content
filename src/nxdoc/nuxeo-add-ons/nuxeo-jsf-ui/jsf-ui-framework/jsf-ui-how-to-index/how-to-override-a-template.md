@@ -1,7 +1,7 @@
 ---
 title: 'HOWTO: Override a Template'
 review:
-    comment: 'Tutorial followed by Ahmed: OK for LTS 2016'
+    comment: ''
     date: '2017-03-20'
     status: ok
 details:
