@@ -208,7 +208,7 @@ To create a schema, click on **New**.
         - **Complex**: A complex type will let you define a complex field like an address storing street, zip code, etc... for instance.
         - **Directory**: The values for this field will be taken from a directory.
         - **User/Group**: The field values will be users and / or groups.
-        - **Document**: The field value will the be id of a document.
+        - **Document**: The field value will be the id of a document.
     - **Multi-valued**: Check this box if you want the property to be a list (a list of blobs, a list of booleans, a list of dates, ...).
     - **Default Value**: Sets a default value on the property at document creation time.
 3.  Click on the **Edit** button to configure validation rules directly from the schema.
