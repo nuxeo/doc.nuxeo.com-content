@@ -2,7 +2,7 @@
 title: Nuxeo Multi-Tenant
 review:
     comment: ''
-    date: '2019-01-22'
+    date: '2020-06-08'
     status: ok
 labels:
     - lts2017-ok
@@ -160,9 +160,7 @@ history:
         version: '1'
 ---
 
-{{#> callout type='note' }}
-This addon is not yet available on Web UI and requires the JSF UI addon to be installed.
-{{/callout}}
+{{multiexcerpt 'JSF-UI-required' space='nxdoc' page='generic-multi-excerpts'}}
 
 {{! excerpt}}
 [Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant) enables to have [domains]({{page page='nxdoc/nuxeo-platform-concepts'}}#available-spaces), or tenants, that are independent from each other, with their own users, vocabulary values etc.

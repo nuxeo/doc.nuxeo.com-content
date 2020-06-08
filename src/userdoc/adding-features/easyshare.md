@@ -2,7 +2,7 @@
 title: EasyShare
 review:
     comment: ''
-    date: '2017-12-12'
+    date: '2020-06-08'
     status: ok
 labels:
     - easyshare
@@ -123,8 +123,8 @@ history:
         date: '2014-03-06 17:40'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
 The [EasyShare package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare) is an addon for the Nuxeo platform which enables sharing files from the repository with external users not requiring a login.
 {{! /excerpt}}
@@ -174,7 +174,7 @@ It allows you to create EasyShare folders in which you can either create documen
 
 ## Adding Documents to an EasyShare Folder
 
-The EasyShare folder is a specific type of [collection]({{page page='userdoc/collections-web-ui'}}). To add documents to an EasyShare folder, follow the same steps as if you were adding a document to a collection, by clicking the icon ![]({{file name='add_to_collection.png' page='icons-index'}}) on the document or the EasyShare folder or by clicking the **Add to Collection** button from the workspace Content tab.
+The EasyShare folder is a specific type of [collection]({{page page='collections-web-ui'}}). To add documents to an EasyShare folder, follow the same steps as if you were adding a document to a collection, by clicking the icon ![]({{file name='add_to_collection.png' page='icons-index'}}) on the document or the EasyShare folder or by clicking the **Add to Collection** button from the workspace Content tab.
 
 Depending on the modules you have enabled on your Nuxeo Platform, you can create the following documents in an EasyShare folder:
 
@@ -212,7 +212,7 @@ If you want more information about the future evolutions and improvements, see [
 {{#> panel heading='Related Documentation'}}
 
 - [EasyShare Admin Documentation]({{page space='nxdoc' page='easyshare'}})
-- [Collections]({{page page='collections'}})
+- [Collections]({{page page='collections-web-ui'}})
 
 {{/panel}}
 </div>

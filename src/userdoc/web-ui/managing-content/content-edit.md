@@ -2,7 +2,7 @@
 title: Editing Content
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 description: Editing a document consists in modifying its content, as well as simply editing the title, description or any property of the document.
 toc: true

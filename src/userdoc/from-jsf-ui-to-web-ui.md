@@ -2,9 +2,8 @@
 title: From JSF UI to Web UI
 review:
     comment: ''
-    date: '2018-03-27'
+    date: '2020-06-08'
     status: ok
-toc: true
 description: This documentation page will help you to migrate from JSF UI to Web UI
 tree_item_index: 50
 labels:
@@ -80,7 +79,11 @@ Click on the ![]({{file name='preview.png' space='userdoc' page='icons-index'}})
 The preview opens in a popup window.</br>
 On the JSF UI, you can find this on the **Summary** tab of a document, clicking on **More** > **Preview**.</br>
 The document preview is displayed in a popup window.</br>
+<<<<<<< HEAD
 ![]({{file name='preview_popup.png' space='nxdoc' page='preview-jsf-ui'}} ?w=350,border=true)
+=======
+![]({{file name='preview_popup.png' space='nxdoc' page='preview'}} ?w=350,border=true)
+>>>>>>> b0573ef2d... Review Web UI userdoc
 On the JSF UI, you can also preview a document along with its main metadata on the [Info-View pop-up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}}), accessible from any thumbnail listing.
 </br>
 </br>
@@ -92,7 +95,11 @@ A **preview button** is available at the top right-and corner of each document a
 When you click on it, a popup is displayed previewing your document.</br>
 ![]({{file name='preview-button-web-ui.png'}} ?w=450,border=true)
 </br>
+<<<<<<< HEAD
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page version='' space='userdoc' page='browse'}})
+=======
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page version='' space='nxdoc' page='preview'}})
+>>>>>>> b0573ef2d... Review Web UI userdoc
 </td>
 </td>
 </tbody>
@@ -151,16 +158,26 @@ Clicking on elements on the left will open a side panel (also called Drawer) wit
 **Default Search**: The Search can be accessed at the top in the three main spaces, select the **Search** tab and it will enable you to search on keywords, metadata and additional criteria such as the location in the application.</br>
 ![]({{file name='search_content_view.png' page='nxdoc/how-to-configure-a-search-filter-with-facets-and-other-aggregates'}} ?w=400,border=true)
 **Quick Search**: The quick search can be accessed from any page. At any time, you can search a document by typing keywords in the search box located at the upper right corner of the page.</br>
+<<<<<<< HEAD
 ![]({{file name='search-box.png' space='nxdoc' page='quick-search-jsf-ui'}} ?w=314,h=42,border=true)
+=======
+![]({{file name='search-box.png' space='nxdoc' page='quick-search'}} ?w=314,h=42,border=true)
+>>>>>>> b0573ef2d... Review Web UI userdoc
 </br>
 </br>
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page version='' space='nxdoc' page='searching-the-nuxeo-platform'}})
 </td>
 <td colspan="1" style="background-color:white">
 **Search Tab**: The Search tab can be accessed from the side menu and enables you to search a document using documents metadata You can for instance select metadata of the searched document or the date of specific events such as publication, creation.</br>
+<<<<<<< HEAD
 ![]({{file name='search-tab-web-ui.png' space='userdoc' page='search'}} ?w=400,border=true)
 **Quick search**: As in JSF UI, the quick search can be accessed from any page. At any time, you can search a document by typing keywords in the search box located at the upper right corner of the page. The keywords will be highlighted in your query results.
 ![]({{file name='quick-search-web-ui.png' space='userdoc' page='search'}} ?w=400,border=true)
+=======
+![]({{file name='search-tab-web-ui.png' page='search'}} ?w=400,border=true)
+**Quick search**: As in JSF UI, the quick search can be accessed from any page. At any time, you can search a document by typing keywords in the search box located at the upper right corner of the page. The keywords will be highlighted in your query results.
+![]({{file name='quick-search-web-ui.png' page='search'}} ?w=400,border=true)
+>>>>>>> b0573ef2d... Review Web UI userdoc
 </br>
 </br>
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='search'}})

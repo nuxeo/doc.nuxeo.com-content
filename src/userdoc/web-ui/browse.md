@@ -2,7 +2,7 @@
 title: Browsing Content
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 description: null
 toc: true
@@ -32,7 +32,7 @@ The side menu displays all the domain structure from the root. It enables you to
 
 {{{multiexcerpt 'intro-dashboard' page='browsing-content'}}}
 
-![]({{file version='' space='nxdoc' page='web-ui-dashboard' name='DASHBOARD.png'}} ?w=600,border=true)
+![]({{file space='nxdoc' page='web-ui-dashboard' name='DASHBOARD.png'}} ?w=600,border=true)
 
 To access your dashboard, click on the icon on the top left hand corner of your platform.
 

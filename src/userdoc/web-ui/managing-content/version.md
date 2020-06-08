@@ -2,7 +2,7 @@
 title: Working with Versions
 review:
     comment: ''
-    date: '2018-11-15'
+    date: '2020-06-08'
     status: ok
 description: null
 toc: true
@@ -27,7 +27,7 @@ Draft version 0.0 is not archived.
 
 Two automatic versioning behaviors are applied by default: one for files (and associated document types) and one for notes.
 
-- Files and other document types with [schema]({{page version='' space='nxdoc' page='repository-concepts'}}#schemas) `file:file`, like pictures, are created in version 0.0. A new minor version is automatically created when you edit a document that was last modified by another user. This minor version holds the modifications of the previous contributor, so that no data is lost. Your changes are applied on top of this version, the version number becoming for instance 0.1+. When you edit a document that was last edited by yourself, no version is automatically saved. You can however decide to manually create a new version of the document.
+- Files and other document types with [schema]({{page space='nxdoc' page='repository-concepts'}}#schemas) `file:file`, like pictures, are created in version 0.0. A new minor version is automatically created when you edit a document that was last modified by another user. This minor version holds the modifications of the previous contributor, so that no data is lost. Your changes are applied on top of this version, the version number becoming for instance 0.1+. When you edit a document that was last edited by yourself, no version is automatically saved. You can however decide to manually create a new version of the document.
 
 - For notes, a new version is created for every modification, whether you are the last contributor of the note or not. The created version holds your changes. When they are created, notes have a version number of 0.1.
 
@@ -85,5 +85,5 @@ When you edit a document, either from your Nuxeo Drive folder or using the onlin
 
 Then, if your document's version was 1.0 before modification for instance, it automatically becomes 1.1+ after you edited it from the Nuxeo Drive folder and the 1.1 is archived as it is created. Otherwise, a simple modification is done on the document and logged in the document's History.
 
-See the page [How to Customize Nuxeo Drive Versioning Policy]({{page version='' space='client-apps' page='how-to-customize-nuxeo-drive-versioning-policy'}}) to change this behavior.
+See the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='client-apps' page='how-to-customize-nuxeo-drive-versioning-policy'}}) to change this behavior.
 {{! /multiexcerpt}}

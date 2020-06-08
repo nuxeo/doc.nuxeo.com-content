@@ -2,7 +2,7 @@
 title: Managing Content
 review:
     comment: ''
-    date: '2018-12-20'
+    date: '2020-06-08'
     status: ok
 labels:
     - web-ui

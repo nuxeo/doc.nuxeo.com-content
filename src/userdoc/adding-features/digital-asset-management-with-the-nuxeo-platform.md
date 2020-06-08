@@ -2,7 +2,7 @@
 title: Digital Asset Management with the Nuxeo Platform
 review:
     comment: ''
-    date: '2019-09-19'
+    date: '2020-06-08'
     status: ok
 labels:
     - multiexcerpt

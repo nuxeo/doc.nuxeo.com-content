@@ -154,7 +154,6 @@ history:
     version: '1'
 labels:
   - lts2017-ok
-
 ---
 
 <div class="row" data-equalizer data-equalize-on="medium">

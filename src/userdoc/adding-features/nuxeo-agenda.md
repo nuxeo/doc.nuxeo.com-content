@@ -2,7 +2,7 @@
 title: Nuxeo Agenda
 review:
     comment: ''
-    date: '2018-12-02'
+    date: '2020-06-08'
     status: ok
 labels:
     - nuxeo-agenda
@@ -73,9 +73,9 @@ history:
         date: '2013-11-22 11:38'
         message: ''
         version: '1'
-
 ---
-{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+
+{{multiexcerpt 'JSF-UI-required' space='nxdoc' page='generic-multi-excerpts'}}
 
 {{! multiexcerpt name='nuxeo-agenda-functional-overview'}}{{! excerpt}}
 

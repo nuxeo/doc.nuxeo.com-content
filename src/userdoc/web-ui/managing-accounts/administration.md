@@ -3,7 +3,7 @@ title: Administration
 description: This page presents the Administration menu on Web UI.
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 toc: true
 tree_item_index: 100
@@ -94,7 +94,11 @@ Email
 </td>
 <td colspan="1">
 
+<<<<<<< HEAD
 Email of the user.
+=======
+Email of the user.</br>
+>>>>>>> b0573ef2d... Review Web UI userdoc
 
 This address is used for [alerts]({{page page='alerts'}}).
 

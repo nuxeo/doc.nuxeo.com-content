@@ -135,3 +135,10 @@ Jump between any Studio feature or menu in a snap by typing its name. This actio
 The Nuxeo Platform provides a content repository for [document management](https://www.nuxeo.com/products/document-management/), [digital asset management](http://www.nuxeo.com/products/digital-asset-management/) and [case management](http://www.nuxeo.com/products/case-management/) business applications.
 
 {{! /multiexcerpt}}
+
+{{! multiexcerpt name='JSF-UI-required'}}
+{{#> callout type='note' heading='JSF UI Deprecation' }}
+This requires to have the JSF UI addon installed on your server that is deprecated since Nuxeo Platform LTS 2019.</br>
+Please refer to the [Web UI documentation](https://doc.nuxeo.com/nxdoc/web-ui/).
+{{/callout}}
+{{! /multiexcerpt}}

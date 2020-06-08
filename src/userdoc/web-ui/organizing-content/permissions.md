@@ -3,7 +3,7 @@ title: Managing Permissions
 description: 'Depending on the document you are on, you can be granted different permissions and be allowed different actions on the document.'
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 toc: true
 labels:
