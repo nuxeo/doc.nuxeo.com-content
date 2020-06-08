@@ -94,12 +94,7 @@ Email
 </td>
 <td colspan="1">
 
-<<<<<<< HEAD
-Email of the user.
-=======
 Email of the user.</br>
->>>>>>> b0573ef2d... Review Web UI userdoc
-
 This address is used for [alerts]({{page page='alerts'}}).
 
 </td>
