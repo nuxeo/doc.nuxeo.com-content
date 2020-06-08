@@ -2,7 +2,7 @@
 title: Managing Topics
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2020-06-08'
     status: ok
 labels:
     - topic
@@ -141,8 +141,8 @@ history:
         date: '2010-04-27 15:26'
         message: ''
         version: '1'
-
 ---
+
 {{multiexcerpt 'DeprecatedAddon' space='nxdoc' page='generic-multi-excerpts'}}
 
 A topic can be moderated, that is to say that the content needs to be approved in order to be available to forum readers.

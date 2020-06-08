@@ -2,7 +2,7 @@
 title: Digital Signature
 review:
     comment: ''
-    date: '2018-03-26'
+    date: '2020-06-08'
     status: ok
 labels:
     - digital-signature
@@ -122,9 +122,9 @@ history:
         date: '2013-10-23 14:22'
         message: ''
         version: '1'
-
 ---
-{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+
+{{multiexcerpt 'JSF-UI-required' space='nxdoc' page='generic-multi-excerpts'}}
 
 {{! excerpt}}
 The [Digital Signature addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature) introduces PDF signing capabilities to the Nuxeo Platform. This addon also provides generation of user certificates, which are required for document signing.

@@ -2,7 +2,7 @@
 title: Creating and Importing Content
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 description: null
 toc: true
@@ -32,7 +32,7 @@ Drag and drop is based on the HTML 5 standard and is available on all browsers t
 
 {{{multiexcerpt 'webui-supported-browsers' space='nxdoc' page='web-ui-overview'}}}
 
-See the [complete requirements]({{page version='' space='nxdoc' page='web-ui-overview'}}#requirements).
+See the [complete requirements]({{page space='nxdoc' page='web-ui-overview'}}#requirements).
 
 You can use drag and drop to easily import content into a workspace or just to create one document at a time. Two types of import are available:
 
@@ -87,7 +87,7 @@ Live Connect allows you to create a content application that handles cloud files
 
 Live Connect for Google Drive also brings the "Cloud Edit" mode. Your application based on the Nuxeo Platform can provide the users with a direct link to the SaaS applications that you can use for editing Google Drive files (Google Docs, Office 365, Pixlr, etc.).
 
-Read the [Live Connect]({{page version='' space='nxdoc' page='nuxeo-live-connect'}}) documentation for more information.
+Read the [Live Connect]({{page space='nxdoc' page='nuxeo-live-connect'}}) documentation for more information.
 
 ## Creating Personal Documents
 

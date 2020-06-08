@@ -2,7 +2,7 @@
 title: Nuxeo Diff
 review:
     comment: ''
-    date: '2017-12-12'
+    date: '2020-06-08'
     status: ok
 labels:
     - history
@@ -107,10 +107,9 @@ history:
         date: '2012-05-30 16:58'
         message: ''
         version: '1'
-
 ---
 
-{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+{{multiexcerpt 'JSF-UI-required' space='nxdoc' page='generic-multi-excerpts'}}
 
 {{! multiexcerpt name='nuxeo-diff-functional-overview'}}
 {{! excerpt}}

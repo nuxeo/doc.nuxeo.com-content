@@ -2,7 +2,7 @@
 title: Web UI
 review:
     comment: ''
-    date: '2018-10-16'
+    date: '2020-06-08'
     status: ok
 toc: true
 description: Web UI User Documentation

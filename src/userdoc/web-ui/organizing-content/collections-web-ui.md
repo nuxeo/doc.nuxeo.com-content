@@ -2,7 +2,7 @@
 title: Collections
 review:
   comment: ''
-  date: '2018-10-15'
+  date: '2020-06-08'
   status: ok
 toc: true
 tree_item_index: 200
@@ -90,7 +90,6 @@ In both ways documents are immediately removed from the collection.
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Collections developer documentation]({{page space='nxdoc' page='collections'}})
-- [Collections in JSF UI]({{page version='' space='userdoc' page='collections'}})
 
 {{/panel}}</div><div class="column medium-6">
 

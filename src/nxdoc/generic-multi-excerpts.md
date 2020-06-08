@@ -123,6 +123,9 @@ The Nuxeo Platform provides a content repository for [document management](http:
 
 {{! /multiexcerpt}}
 
-{{! multiexcerpt name='JSF-UI-required'}} {{#> callout type='note' }}
-This requires to have the JSF UI addon installed on your server.
-{{/callout}}{{! /multiexcerpt}}
+{{! multiexcerpt name='JSF-UI-required'}}
+{{#> callout type='note' heading='JSF UI Deprecation' }}
+This requires to have the JSF UI addon installed on your server that is deprecated since Nuxeo Platform LTS 2019.</br>
+Please refer to the [Web UI documentation](https://doc.nuxeo.com/nxdoc/web-ui/).
+{{/callout}}
+{{! /multiexcerpt}}

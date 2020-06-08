@@ -2,7 +2,7 @@
 title: Adding Features
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 labels:
     - marketplace
@@ -1709,8 +1709,8 @@ history:
         date: '2012-06-06 17:49'
         message: ''
         version: '1'
-
 ---
+
 The [Nuxeo Marketplace](http://marketplace.nuxeo.com) is Nuxeo's ECM application store. It offers plugins and packages, called Nuxeo Packages, that enable you to easily add features to your Nuxeo application. The list of available Nuxeo Packages is available to everyone, but some packages require a Nuxeo Online Services account to be able to install packages.
 
 The Marketplace offers packages aimed at developers and other that provide new features to end-users. Most of the packages can be [installed very easily on your instance]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}) and don't require any additional installation or configuration step. However, some other addons, typically connectors with other systems, involve some additional configuration.

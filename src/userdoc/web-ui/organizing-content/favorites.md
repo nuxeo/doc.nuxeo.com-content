@@ -2,7 +2,7 @@
 title: Favorites
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 description: null
 toc: true

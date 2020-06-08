@@ -2,7 +2,7 @@
 title: Participating to a Topic
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2020-06-08'
     status: ok
 labels:
     - topic
@@ -21,79 +21,79 @@ confluence:
     source_link: /display/USERDOC/Participating+to+a+Topic
 tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:42'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 16:47'
         message: new Edit permission
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 15:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 15:41'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-27 15:40'
         message: ''
         version: '10'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-09-25 22:32'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-03 17:40'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:17'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:34'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:34'
         message: Added related content
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:31'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:24'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-27 14:59'
         message: ''
         version: '1'
-
 ---
-{{multiexcerpt 'DeprecatedAddon' space='nxdoc' page='generic-multi-excerpts'}}
+
+{{multiexcerpt 'JSF-UI-required' space='nxdoc' page='generic-multi-excerpts'}}
 
 To participate to a topic, you can add comments in it. The other users will be able to answer your comment.
 

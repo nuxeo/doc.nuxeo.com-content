@@ -2,7 +2,7 @@
 title: Digital Asset Management with the Nuxeo Platform
 review:
     comment: ''
-    date: '2018-01-19'
+    date: '2020-06-08'
     status: ok
 labels:
     - multiexcerpt
@@ -22,32 +22,32 @@ confluence:
     source_link: /display/USERDOC/Digital+Asset+Management+with+the+Nuxeo+Platform
 tree_item_index: 1800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-20 08:00'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-19 15:36'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-18 17:49'
         message: Add note about annotations removed from 8.2
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 12:48'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-10 09:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-10 09:30'
         message: ''

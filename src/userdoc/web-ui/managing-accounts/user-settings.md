@@ -2,7 +2,7 @@
 title: User Settings
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 toc: true
 tree_item_index: 200

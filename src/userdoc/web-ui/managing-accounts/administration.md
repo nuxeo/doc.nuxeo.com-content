@@ -3,12 +3,13 @@ title: Administration
 description: null
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 toc: true
 tree_item_index: 100
 labels:
 ---
+
 ## Analytics
 
 Analytics enable administrators to consult information and statistics on how the application is used:
@@ -89,9 +90,9 @@ Email
 </td>
 <td colspan="1">
 
-Email of the user
+Email of the user.</br>
 
-This address is used for [alerts]({{page page='collaborative-features#alerts'}}).
+This address is used for [alerts]({{page page='alerts'}}).
 
 </td>
 </tr>

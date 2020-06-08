@@ -2,7 +2,7 @@
 title: Delegating a Task
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 labels:
     - workflow
@@ -11,6 +11,7 @@ toc: true
 tree_item_index: 300
 description: Web UI User Documentation about Workflows
 ---
+
 When you know you might not be able to perform a task, you can delegate it to another user or group of users. Delegating means that they can do the task for you, but you are still assigned to the task.
 
 As soon as you or a delegatee reviews the document, the task is closed for you and all the delegatees. On the contrary, if you do the task before the delegatees, the task is considered done for everyone.

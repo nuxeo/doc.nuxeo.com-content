@@ -3,7 +3,7 @@ title: Document Types in Web UI
 description: 'The Nuxeo Platform offers different document types such as workspaces, files, notes, pictures, etc.'
 review:
     comment: ''
-    date: '2018-10-15'
+    date: '2020-06-08'
     status: ok
 toc: true
 labels:
@@ -117,7 +117,7 @@ In the **View** tab of the document concerned, drag and drop the attachment in t
 In the **View** tab of the document concerned, click on ![]({{file name='delete_web-ui.png' page='icons-index'}}) next to the attachment concerned. The attachment is immediately deleted.
 
 {{#> callout type='note' heading='Limitations'}}
-- Attached files are not synchronized with [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}).
+- Attached files are not synchronized with [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}).
 {{/callout}}
 
 ### Picture
@@ -181,7 +181,7 @@ In a few words, don't try to manage workspaces' permissions with Templates (this
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Override Existing Document Types]({{page space='nxdoc' page='how-to-override-existing-document-types'}})
-- [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
+- [HOWTO: Override Existing Document Types]({{page space='nxdoc' page='how-to-override-existing-document-types'}})
+- [HOWTO: Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
 
 {{/panel}}</div></div>

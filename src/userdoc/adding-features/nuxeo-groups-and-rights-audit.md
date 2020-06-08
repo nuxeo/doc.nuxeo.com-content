@@ -2,7 +2,7 @@
 title: Nuxeo Groups and Rights Audit
 review:
     comment: ''
-    date: '2018-03-26'
+    date: '2020-06-08'
     status: ok
 labels:
     - nuxeo-groups-rights-audit
@@ -47,9 +47,9 @@ history:
         date: '2013-08-06 12:17'
         message: ''
         version: '1'
-
 ---
-{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+
+{{multiexcerpt 'JSF-UI-required' space='nxdoc' page='generic-multi-excerpts'}}
 
 {{! excerpt}}
 
