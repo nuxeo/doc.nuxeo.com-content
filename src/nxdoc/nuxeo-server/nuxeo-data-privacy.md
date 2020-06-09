@@ -136,6 +136,56 @@ Privacy by design concepts, applied to a Nuxeo-based application, require an und
 - Nuxeo data model: in particular, [document types]({{page version='' space='studio' page='documents'}}) and [schemas]({{page version='' space='studio' page='schemas'}}) concepts.
 - How the [Nuxeo repository security]({{page version='' space='nxdoc' page='nuxeo-security-system'}}) is built
 
+## Default storage entities for personal information in Nuxeo Platform
+
+Nuxeo Platform is willing to contain personnal information. This section details the possible **default** locations where personal information may be found. Depending on your implementation, this list has to be reviewed and completed (if you add personal information to your document types inside custom properties, add new audit entries, store files containing personal information etc.) 
+
+These personal information are necessary to ensure the effective functioning of Nuxeo Platform.
+
+### Nuxeo entities
+
+Personal information are firstly stored in the user profile:
+
+- Username (mandatory)
+- Firstname
+- Lastname
+- Email (mandatory)
+- Company
+- Groups
+
+When manupulating documents, The `dc:creator`, `dc:contributors` and `dc:lastContributor` will contain usernames. 
+
+The default audit events will be triggered and will contain:
+
+- Performed action
+- Date
+- Username
+- Category
+- Comment
+- State
+
+The default email notifications (when a user subscribes a document, or when a user is involved in a workfow instance) can contain:
+
+- Username
+- Firstname
+- Lastname
+- Audit entries
+
+### Nuxeo infrastructure components
+
+The following Nuxeo infrastructure elements, in charge of teh data persistance, are willing to store personal information:
+
+- The blob storage
+- The database (as it contains all document properties, the user registry etc)
+- Elasticsearch (which extracts information from the database and perform additional operations such as full text extraction)
+- The Nuxeo logs
+
+Then, depending on your implementation, personal information might be found:
+
+- In Redis or Kafka for asynchronous jobs 
+- Any monitoring tools (which can possibility store IP addfresses for example)
+- If your using specific Nuxeo addons (Nuxeo Drive which store personal information on the local drive, or Nuxeo Easyshare which stored IP downloading documents)
+
 ## Cookie Management
 
 **Nuxeo JSF UI** uses a set of cookies which are used exclusively to manage authentication and redirections:
