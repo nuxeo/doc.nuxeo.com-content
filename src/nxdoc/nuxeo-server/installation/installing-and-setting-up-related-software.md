@@ -572,6 +572,11 @@ Installing the FFmpeg package from your distribution's repository may not provid
 
 {{/callout}}
 
+{{#> callout type='warning' }}
+
+If **exiftool** is used to extract file-type-related metadata from **Office** files (DOCX, PPTX, XLSX, ODP, ODS, ODT), **Perl** module `Archive::Zip` is required (package `libarchive-zip-perl`).
+
+{{/callout}}
 ### LibreOffice Configuration
 
 {{! multiexcerpt name='libreoffice-5'}}
