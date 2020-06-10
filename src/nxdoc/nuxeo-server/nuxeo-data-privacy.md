@@ -136,13 +136,15 @@ Privacy by design concepts, applied to a Nuxeo-based application, require an und
 - Nuxeo data model: in particular, [document types]({{page version='' space='studio' page='documents'}}) and [schemas]({{page version='' space='studio' page='schemas'}}) concepts.
 - How the [Nuxeo repository security]({{page version='' space='nxdoc' page='nuxeo-security-system'}}) is built
 
-## Default storage entities for personal information in Nuxeo Platform
+## Default Storage Entities for Personal Information in Nuxeo Platform
 
-Nuxeo Platform is willing to contain personnal information. This section details the possible **default** locations where personal information may be found. Depending on your implementation, this list has to be reviewed and completed (if you add personal information to your document types inside custom properties, add new audit entries, store files containing personal information etc.) 
+Nuxeo Platform is willing to contain personal information. This section details the possible **default** locations where personal information may be found.
 
-These personal information are necessary to ensure the effective functioning of Nuxeo Platform.
+Depending on your implementation, this list has to be reviewed and completed (if you add personal information to your document types inside custom properties, add new audit entries, store files containing personal information etc.)
 
-### Nuxeo entities
+This personal information is necessary to ensure the effective functioning of Nuxeo Platform.
+
+### Nuxeo Entities
 
 Personal information are firstly stored in the user profile:
 
@@ -153,9 +155,9 @@ Personal information are firstly stored in the user profile:
 - Company
 - Groups
 
-When manupulating documents, The `dc:creator`, `dc:contributors` and `dc:lastContributor` will contain usernames. 
+When manipulating documents, The `dc:creator`, `dc:contributors` and `dc:lastContributor` contain usernames.
 
-The default audit events will be triggered and will contain:
+The default audit events are triggered and contain:
 
 - Performed action
 - Date
@@ -164,33 +166,33 @@ The default audit events will be triggered and will contain:
 - Comment
 - State
 
-The default email notifications (when a user subscribes a document, or when a user is involved in a workfow instance) can contain:
+The default email notifications (when a user subscribes to a document, or when a user is involved in a workflow instance) can contain:
 
 - Username
 - Firstname
 - Lastname
 - Audit entries
 
-### Nuxeo infrastructure components
+### Nuxeo Infrastructure Components
 
-The following Nuxeo infrastructure elements, in charge of teh data persistance, are willing to store personal information:
+The following Nuxeo infrastructure elements, in charge of the data persistence, are willing to store personal information:
 
 - The blob storage
-- The database (as it contains all document properties, the user registry etc)
+- The database (as it contains all document properties, the user registry, etc.)
 - Elasticsearch (which extracts information from the database and perform additional operations such as full text extraction)
 - The Nuxeo logs
 
 Then, depending on your implementation, personal information might be found:
 
-- In Redis or Kafka for asynchronous jobs 
-- Any monitoring tools (which can possibility store IP addfresses for example)
-- If your using specific Nuxeo addons (Nuxeo Drive which store personal information on the local drive, or Nuxeo Easyshare which stored IP downloading documents)
+- In Redis or Kafka for asynchronous jobs
+- Any monitoring tools (which can possibility store IP address for example)
+- If you are using specific Nuxeo addons (Nuxeo Drive which stores personal information on the local Drive, or Nuxeo Easyshare which stores IP downloading documents)
 
 ## Cookie Management
 
 **Nuxeo JSF UI** uses a set of cookies which are used exclusively to manage authentication and redirections:
 
-- `JSESSIONID`: Session ID for the web application to mantain the authentication alive
+- `JSESSIONID`: Session ID for the web application to maintain the authentication alive
 - `org.jboss.seam.core.TimeZone`
 - `org.jboss.seam.core.Locale`     
 - `nuxeo.start.url.fragment`
