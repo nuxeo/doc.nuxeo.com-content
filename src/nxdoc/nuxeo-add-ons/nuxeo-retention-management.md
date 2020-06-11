@@ -18,6 +18,17 @@ tree_item_index: 2530
 The Nuxeo Retention Management addon covers all the necessary aspects of retention management to fulfill legal requirements. It includes management of records, retention rules, deletion of the document at a specific date and legal case management features, such as putting documents under legal hold and/or retention depending on a specific event or metadata and searching for a retention rule.
 {{! /excerpt}}
 
+{{#> callout type='info' heading='University'}}
+Watch the related courses on Nuxeo University:</br>
+[Nuxeo Retention Management - Product News](https://university.nuxeo.com/learn/course/external/view/elearning/214/retention-management)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-retention.png
+    name: university-retention.png
+    addins#screenshot#up_to_date
+--}}
+![university-retention.png](nx_asset://b7b756ce-c2c1-47e3-8cdd-72468a72135f ?w=450,border=true)
+{{/callout}}
+
 ## Concept
 
 **Retention management** refers to the control of a document's lifecycle through rules and policies. Documents can be kept or deleted depending on a set of rules which may pertain to time, events or specific metadata contained in the document type.
