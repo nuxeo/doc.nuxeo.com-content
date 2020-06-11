@@ -20,10 +20,11 @@ Comments (and so annotations) are linked to a specific document (their parent). 
 
 ## Core Implementation
 
-### Storage
+### Definitions
 
-Comments in Nuxeo are stored as regular document of type `Comment`.</br>
-They hold:
+Comments in Nuxeo are stored as regular documents of type `Comment`.</br>
+Comments hold:
+
 - parent id
 - ancestor ids
 - author
@@ -34,37 +35,57 @@ They hold:
 [`Comment`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/comment/api/Comment.html) interface has been created to handle comments in Nuxeo. The interface is used as based type in [comment service](#java-api) and also defines how comments are serialized in JSON in order to use them with the [REST API](#json-entity-format).
 
 Annotations are stored as regular document of type `Annotation` which inherit from `Comment`. They hold in addition of comments:
+
 - blob xpath
 
 Like comments, annotations have the [`Annotation`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/comment/api/Annotation.html) interface to use them.
 
 Comments and annotations can have the facet `ExternalEntity`. When they have this facet, it can hold in addition:
+
 - external entity id
 - external entity
 - external entity origin</br>
 With this facet, it is possible to handle external content such as annotations made in [Nuxeo Enhanced Viewer]({{page space='nxdoc' page='nuxeo-enhanced-viewer'}}) for instance.
 
-Comments and annotations are stored in a `Comments` hidden folder under the domain of commented document. If there's no domain, folder is placed under the root.
+### Storage
+
+Comments and annotations are stored as a tree structure in a folderish document of type `CommentRoot` which is located right under the commented document. Comments are _special children_ which means they are not copied with the commented document during copy operations but they are snapshot when the document is checked in.</br>
+Please note comments are not restored when a version of the commented document is checked out.
 
 ### Permissions
 
-Comments and annotations shared the same permission model. Comment and annotation permissions are deduced from the higher parent permission (ie: commented or annotated document). See below the model:
-- Read permission on higher document grants read access on its comments and annotations
-- Read permission on higher document grants create comment and create annotation on higher document and its comments or annotations
-- Being creator of comment or annotation or being administrator grants update on related comment or annotation
-- Being creator of comment or annotation, being administrator or having Manage Everything on higher document grants delete on related comment or annotation
+Comments and annotations rely on the the [`ACL`](https://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/security/ACL.html) security model present in Nuxeo. ACLs are automatically inherited by default in `Nuxeo`. So for example if a user has read access to a document, he also has read access to its children. By consequence, people who have access to a commented document have read access to its comments and people who create comments and annotations, can edit them as they have write access on them.
 
 ### Events
 
-All events shared the same event context. It contains:
-- the parent document in `parentComment`
-- the commented document in `comment_document`
+All events share the same event context. It contains:
+
+- the parent document in `parentComment` which may be a comment or the commented document
+- the comment in `comment_document`
 - the comment text in `comment`
 - the category `commentCategory` in `category`
 
 A `commentAdded` event is fired when creating a comment or annotation.
 
+A `commentUpdated` event is fired when updating a comment or annotation.
+
 A `commentRemoved` event is fired when deleting a comment or annotation.
+
+### Autosubscription
+
+Document creator is subscribed automatically to the `commentAdded` event on his documents.\
+Comment Author is subscribed automatically to the `commentAdded` event on the commented document.\
+Autosubscription is turned on by default. It can be turned off by contributing like so:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="org.nuxeo.ecm.platform.comment.service.notification.custom">
+  <require>org.nuxeo.ecm.platform.comment.service.notification</require>
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="org.nuxeo.ecm.platform.comment.service.notification.autosubscribe">false<property>
+  </extension>
+</component>
+```
 
 ## Usage
 
