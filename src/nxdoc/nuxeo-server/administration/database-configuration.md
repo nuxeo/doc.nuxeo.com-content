@@ -162,7 +162,6 @@ This takes two steps:
     *   [MySQL]({{page page='mysql'}})
     *   [MariaDB]({{page page='mariadb'}})
     *   [MongoDB]({{page page='mongodb'}})
-    *   [MarkLogic]({{page page='marklogic'}})
 2.  [Connect Nuxeo to the database]({{page page='connecting-nuxeo-to-the-database'}}).
 
 &nbsp;
