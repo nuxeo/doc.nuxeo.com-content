@@ -121,15 +121,13 @@ User must be at least in 'administrators' or 'members' group, or one of their su
 </table>
 </div>
 
-<!-- Commenting this section until https://jira.nuxeo.com/browse/NXP-19778 is resolved
-####Inviting a New User
+#### Inviting a New User
 
 Inviting a new user means creating a user account without setting its password, and having the user validate the invitation.
 
 - To invite a user, go to **Administration** menu > **Users & Groups**. Click on the **New** button and fill in the user creation form and leave **Set user password** to unactive. </br>
   An invitation email is sent to the user at the email address you filled in. The user account is pending the user validation and the user account is not available in the user search results.
 - To validate the invitation, click on the validation link in the invitation email. Define your password and click on the **Submit** button. You are redirected to the login page of the Nuxeo Platform: you can now log in and use the Platform.
--->
 
 #### Creating a New User Account
 
