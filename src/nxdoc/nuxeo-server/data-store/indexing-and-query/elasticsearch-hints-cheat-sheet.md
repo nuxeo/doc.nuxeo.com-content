@@ -86,6 +86,17 @@ This page lists interesting use cases of Elasticsearch Hints.
 Watch the [related course](https://university.nuxeo.com/learn/course/internal/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer) on Nuxeo University.
 {{/callout}}
 
+## More Like This
+
+The More Like hint allows leveraging the [**More Like This**](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html) query of Eleasticsearch to find documents that are "like" a given set of documents.
+
+Example:
+```
+SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext,dc:description.fulltext) OPERATOR(more_like_this) */ ecm:uuid = '1234'
+```
+
+It will take the most frequent terms of the title and description of document 1234 and finds documents that also match those terms.
+
 ## Fuzzy Search on Full Text Index
 
 ### Nuxeo Studio Configuration
