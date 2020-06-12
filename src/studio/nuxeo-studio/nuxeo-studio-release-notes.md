@@ -19,7 +19,7 @@ The connect dashboard will integrate an interface for you to manage your users w
 
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.32.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.33.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
@@ -32,7 +32,7 @@ The connect dashboard will integrate an interface for you to manage your users w
 {{{multiexcerpt 'studio-updates-2020-05-bugfix' page='studio-updates-2020-05'}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.30.0','3.31.0'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.32.0'%29) is available in our bug tracking tool.
 
 ---
 
@@ -40,6 +40,7 @@ The connect dashboard will integrate an interface for you to manage your users w
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [June 2020]({{page page='studio-updates-2020-06'}})     | Improved layout blocks experience |
 | [May 2020]({{page page='studio-updates-2020-05'}})     | Widgets Drag and Drop Instead of Mode |
 | [April 2020]({{page page='studio-updates-2020-04'}})     | Improved Visual Layout Configuration Experience |
 | [February / March 2020]({{page page='studio-updates-2020-02-03'}})     | Custom icons support, security improvements |
