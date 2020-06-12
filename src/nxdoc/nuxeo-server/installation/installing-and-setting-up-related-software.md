@@ -567,16 +567,13 @@ $ sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice
 ```
 
 {{#> callout type='warning' }}
-
 Installing the FFmpeg package from your distribution's repository may not provide you with support for all video formats. Refer to the [FFmpeg](#ffmpeg) section for more information.
-
 {{/callout}}
 
 {{#> callout type='warning' }}
-
 If **exiftool** is used to extract file-type-related metadata from **Office** files (DOCX, PPTX, XLSX, ODP, ODS, ODT), **Perl** module `Archive::Zip` is required (package `libarchive-zip-perl`).
-
 {{/callout}}
+
 ### LibreOffice Configuration
 
 {{! multiexcerpt name='libreoffice-5'}}
