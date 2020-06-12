@@ -504,7 +504,7 @@ Improving a module is always welcome and is carefully managed by Nuxeo developer
 
 Nuxeo is highly modularized and as a consequence, it is totally possible to develop a new feature that will be deeply mixed with the existing interface. Our main recommendation, among respecting coding rules and design, is to respect the usual code layout: core, API, facade, web, &hellip; If you have such a project, Nuxeo will be glad to help you designing your module, and to provide a GitHub repository, aside from a web page (Wiki) and a JIRA project for the visibility of your development.
 
-1.  Start by an introductory email in the mailing list, explaining the purpose of the new module you want to develop (BEFORE developing it) and how you think of doing it or how you did it (although it is always better to contact the list before).
+1.  Start by an introductory email to the [partners mailing list](mailto:partners@nuxeo.com), explaining the purpose of the new module you want to develop (BEFORE developing it) and how you think of doing it or how you did it (although it is always better to contact the list before).
 2.  After a few exchanges in the mailing list, return the [Contributor Agreement](#contributoragreement) signed. Nuxeo will then add you to the GitHub organization and give you rights to commit in a new GitHub repository.
 3.  Read and respect the [Coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}).
 4.  Commit your development regularly (meaning don't wait to finish everything: on the contrary commit each of your developments on a very atomic mode, mentioning the purpose of your commit in JIRA (take it as an advice more than a rule).
