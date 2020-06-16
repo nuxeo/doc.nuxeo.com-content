@@ -266,7 +266,7 @@ is permanent, all the computation threads on all nodes are going to terminate, b
 Also, nothing prevents a computation from creating a Dead Letter Queue mechanism. In case of failure, the record is
 persisted in a dedicated stream and the processing continues. This is the approach taken by the [WorkManager DLQ](https://jira.nuxeo.com/browse/NXP-27148).
 
-### Recovery After Failure
+### {{> anchor 'recovery'}}Recovery After Failure
 
 A computation in failure on critical processing requires a human intervention to understand the cause and fix it.
 
