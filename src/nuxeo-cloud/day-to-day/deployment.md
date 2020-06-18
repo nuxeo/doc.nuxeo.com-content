@@ -1,8 +1,8 @@
 ---
-title: Deploy
+title: Deployment
 review:
     comment: ''
-    date: '03-19-2020'
+    date: '06-19-2020'
     status: ok
 labels:
     - nuxeo-cloud
@@ -31,14 +31,18 @@ On Preproduction and production environments, it is not allowed to:
 
 ## Deploy My Configuration
 
-The Nuxeo Cloud Operations (NCO) team will deploy all changes and updates to the pre-prod and prod environments.
+The Nuxeo Cloud Operations (NCO) team will deploy all changes and updates to the pre-prod and prod environments. All deployments are done via Marketplace packages.
 
 The cloud team typically complete deployment requests within 1 day of the ticket being submitted.
 
-In order to support the deployment we need a JIRA SUPNXP ticket, with a ticket type of **Nuxeo Cloud Deployment** that provides the following information:
+Each Cloud Deployment requires a **JIRA SUPNXP** to be created with a ticket type of **Nuxeo Cloud Deployment** that provides the following information:
 - Name and Link to the Marketplace Package (MP) with the correct version
 - 3rd Party Services or SSO services required (e.g. FFMPEG, ImageMagick, Okta, etc.)
 - Nuxeo Conf Updates corresponding to packages or 3rd party services
 - Identify the requested Date and Time (include time zone) of deployment.
   - The cloud team will NOT perform a deployment until a date/time has been provided.
   - These can be done outside of maintenance windows.
+
+{{#> callout type='info'}}
+The Cloud team WON'T perform a deployment until a date/time has been provided. Especially if the deployment request is to be performed outside of the standard maintenance window.
+{{/callout}}

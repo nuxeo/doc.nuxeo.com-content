@@ -9,60 +9,47 @@ labels:
 ---
 
 <div class="row" data-equalizer data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="column medium-4" align='center'>
 {{#> panel type='secondary' match_height='true'}}
-### What's Nuxeo Cloud
+![]({{file name='cloud-settings.png'}})
 
-...
+### [What's Nuxeo Cloud]({{page page='what-is-nuxeo-cloud'}})
+{{/panel}}
+</div>
+<div class="column medium-4" align='center'>
+{{#> panel type='secondary' match_height='true'}}
+![]({{file name='cloud-new.png'}})
 
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='what-is-nuxeo-cloud'}})
+### [New to Nuxeo Cloud]({{page page='new-to-nuxeo-cloud'}})
+
 {{/panel}}
 </div>
 
-<div class="column medium-6">
+<div class="column medium-4" align='center'>
 {{#> panel type='secondary' match_height='true'}}
-### New to Nuxeo Cloud
+![]({{file name='cloud-timeout.png'}})
 
-...
+### [Nuxeo Cloud Day-to-day]({{page page='day-to-day'}})
 
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='getting-started'}})
 {{/panel}}
 </div>
 
-</div>
 <div class="row" data-equalizer data-equalize-on="medium">
-
-<div class="column medium-6">
+<div class="column medium-6" align='center'>
 {{#> panel type='secondary' match_height='true'}}
-### Nuxeo Cloud Day-to-day
+![]({{file name='cloud-edit.png'}})
 
-...
+### [Start Developing an Application]({{page page='start-developing'}})
 
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-drive'}})
 {{/panel}}
 </div>
 
-<div class="column medium-6">
+<div class="column medium-6" align='center'>
 {{#> panel type='secondary' match_height='true'}}
-### Start Developing an Application
+![]({{file name='content-box.png'}})
 
-...
+### [Additional Modules]({{page page='additional-modules'}})
 
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-mobile'}})
-{{/panel}}
-</div>
-
-</div>
-<div class="row" data-equalizer data-equalize-on="medium">
-
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Additional Modules
-
-...
-
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='support'}})
 {{/panel}}
 </div>
 

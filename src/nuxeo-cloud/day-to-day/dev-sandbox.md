@@ -24,11 +24,9 @@ During the application development process, there is a need to test the latest w
 
 Thus, the OpenShift project offers two such sandbox environments that can be managed directly via the OpenShift developer admin:
 
-- a Development environment (DEV):It is meant to continuously be updated with the latest work.
-- a User Acceptance Testing environment (UAT):It is meant for validation and requires manual approval.
+
 
 These two environments share a MongoDB server and an Elasticsearch server, but each has its own MongoDB database and ElasticSearch index.
-
 
 ## OpenShift Web Console
 
