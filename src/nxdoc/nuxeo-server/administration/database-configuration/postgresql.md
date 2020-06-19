@@ -785,7 +785,6 @@ Also to have an effective monitoring you should install the following extensions
     sudo /etc/init.d/postgresql restart
     ```
 
-See the PostgreSQL section of the [Monitoring and Maintenance]({{page page='monitoring-and-maintenance'}}) page.
 
 ### Adapt Your Configuration to Your Hardware
 

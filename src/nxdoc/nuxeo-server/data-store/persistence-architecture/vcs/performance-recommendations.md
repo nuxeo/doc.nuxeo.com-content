@@ -150,14 +150,14 @@ Here is a non-exhaustive list of recommendations to get better performance:
 - [Configure ImageMagick]({{page page='installing-and-setting-up-related-software'}}) to use a single thread.
 
 
-- [Monitor]({{page page='metrics-and-monitoring'}}) everything: JVM, GC, VCS cache hit ratio, database, system.
+- [Monitor]({{page page='metrics'}}) everything: JVM, GC, VCS cache hit ratio, database, system.
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Managing Performance]({{page page='managing-performance'}})
-- [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
+- [Metrics and Monitoring]({{page page='metrics'}})
 - [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
 - [Monitoring Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
 

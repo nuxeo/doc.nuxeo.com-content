@@ -1652,7 +1652,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1">Some monitoring features are available by default in the Admin tab of the Nuxeo Platform. You can complete these features by using addons, such as Nuxeo Datadog reporter.<br/>
-    [Metrics and Monitoring admin documentation]({{page page='metrics-and-monitoring'}})<br/>
+    [Metrics and Monitoring admin documentation]({{page page='metrics'}})<br/>
     [Nuxeo Datadog Reporter documentation]({{page page='nuxeo-datadog-reporter'}})<br/>
     Monitoring features are still in consideration for Web UI.
     </td>
