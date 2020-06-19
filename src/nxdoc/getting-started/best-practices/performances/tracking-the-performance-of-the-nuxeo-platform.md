@@ -573,7 +573,7 @@ Also, we use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https:/
 
 ### Monitoring Tools
 
-[A Graphite server]({{page page='metrics-and-monitoring'}}) can monitor Nuxeo, the back ends (PostgreSQL/MongoDB, Redis, Elasticsearch) and the system.
+[A Graphite server]({{page page='metrics'}}) can monitor Nuxeo, the back ends (PostgreSQL/MongoDB, Redis, Elasticsearch) and the system.
 
 You can also use other tools to get more information:
 
@@ -762,7 +762,7 @@ The bench procedure can be customized to validate customer installation:
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Performance Recommendations]({{page page='performance-recommendations'}})
-- [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
+- [Metrics and Monitoring]({{page page='metrics'}})
 - [Managing Performance]({{page page='managing-performance'}})
 
 {{/panel}}</div><div class="column medium-6">

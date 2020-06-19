@@ -206,8 +206,11 @@ echo -e "domain metrics\nbeans" | java -jar /tmp/jmxterm-1.0.1-uber.jar -l local
 
 Then proceed to the metric capture:
 ```bash
-(now=`date +%Y%m%d-%H%M%S`; java -jar /tmp/jmxterm-1.0.1-uber.jar -l localhost:1089 -n -i /tmp/metrics-script.txt)  > /tmp/nuxeo-metrics-$now.txt 2>&1
+java -jar /tmp/jmxterm-1.0.1-uber.jar -l localhost:1089 -n -i /tmp/metrics-script.txt)  > /tmp/nuxeo-metrics-`date +%Y%m%d-%H%M%S`.txt 2>&1
 ```
+
+
+
 
 ## {{> anchor 'gc'}}JVM Garbage Collector
 
@@ -408,9 +411,8 @@ If you think you've found a security issue, please report it privately to [secur
 
 {{#> panel heading='Related Documentation'}}
 
-- [Monitoring and Maintenance]({{page page='monitoring-and-maintenance'}})
-- [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
-- [Transactions and Connections]({{page page='transactions-and-connections'}})
+- [Maintenance]({{page page='maintenance'}})
+- [Metrics and Monitoring]({{page page='metrics'}})
 
 {{/panel}}</div><div class="column medium-6">
 

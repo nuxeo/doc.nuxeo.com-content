@@ -45,7 +45,7 @@ For every component, the Nuxeo architecture must follow the compatibility matrix
 Monitoring is critical; all components of the Nuxeo architecture should be supervised to make sure that the platform is running efficiently and make adjustments if bottlenecks or performance issues are identified. This is about monitoring the server capabilities in terms of CPU consumption, RAM, JVM performance, etc. Once monitoring is set up, the architecture should be benchmarked and stress tested.
 
 {{#> callout type='info' heading='Useful links'}}
-[Metrics and Monitoring]({{page version='' space='nxdoc' page='metrics-and-monitoring'}})
+[Metrics and Monitoring]({{page version='' space='nxdoc' page='metrics'}})
 {{/callout}}
 
 ## Component Tuning

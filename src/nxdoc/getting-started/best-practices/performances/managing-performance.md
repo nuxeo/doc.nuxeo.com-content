@@ -180,7 +180,7 @@ The following metrics should be considered when qualifying a performance issue.
         *   Is this on an SSD (solid state disk)?
     *   Is the DB storage using SSD (solid state disks)?
 
-You can find more information about monitoring Nuxeo in the [Nuxeo Metrics page]({{page page='metrics-and-monitoring'}}).
+You can find more information about monitoring Nuxeo in the [Nuxeo Metrics page]({{page page='metrics'}}).
 
 For simple and automatic GC (garbage collection in the JVM) monitoring, see the [Monitoring Page]({{page version='' space='nxdoc' page='reporting-problems'}}#jvm-garbage-collector).
 
@@ -198,7 +198,7 @@ For simple and automatic GC (garbage collection in the JVM) monitoring, see the 
 
 Performing benchmarking and performance tests is only effective when good monitoring is in place &ndash; the metrics you capture from monitoring the various systems and components is crucial when trying to pinpoint bottlenecks, and crucial in determining if a particular modification yields any improvement.
 
-For more information on monitoring the Nuxeo Platform, please see [Nuxeo Metrics page]({{page page='metrics-and-monitoring'}}).
+For more information on monitoring the Nuxeo Platform, please see [Nuxeo Metrics page]({{page page='metrics'}}).
 
 ### Connection Pools
 
@@ -306,7 +306,7 @@ If your benchmarks show that you use 100% of the CPU, this is usually a good sig
 
 - [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
 - [Performance Recommendations]({{page page='performance-recommendations'}})
-- [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
+- [Metrics and Monitoring]({{page page='metrics'}})
 
 {{/panel}}</div><div class="column medium-6">
 
