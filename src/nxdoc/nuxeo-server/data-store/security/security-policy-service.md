@@ -245,4 +245,4 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
 
 ### CMISQL Security Checks
 
-To find examples of security policies using CMISQL query transformers, please check the  [`TitleFilteringSecurityPolicy2`](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-chemistry/nuxeo-opencmis-tests/src/test/java/org/nuxeo/ecm/core/opencmis/impl/TitleFilteringSecurityPolicy2.java) in the unit tests.
+To find examples of security policies using CMISQL query transformers, please check the  [`TitleFilteringSecurityPolicy2`](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-chemistry/nuxeo-opencmis-tests/src/test/java/org/nuxeo/ecm/core/opencmis/impl/TitleFilteringSecurityPolicy2.java) in the unit tests.
