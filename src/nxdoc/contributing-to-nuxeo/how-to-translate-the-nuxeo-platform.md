@@ -530,7 +530,7 @@ public class TestMessages extends TranslationTestCase {
 }
 ```
 
-The [`TranslationTestCase`](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-test/src/main/java/org/nuxeo/ecm/platform/test/TranslationTestCase.java) file is defined in the `nuxeo-platform-test` module, so you should add the following to your project `pom.xml` file:
+The [`TranslationTestCase`](https://github.com/nuxeo/nuxeo/blob/10.10/nuxeo-services/nuxeo-platform-test/src/main/java/org/nuxeo/ecm/platform/test/TranslationTestCase.java) file is defined in the `nuxeo-platform-test` module, so you should add the following to your project `pom.xml` file:
 
 ```
 <dependency>
@@ -542,7 +542,7 @@ The [`TranslationTestCase`](https://github.com/nuxeo/nuxeo/blob/master/modules/p
 
 This test case will assume that the English translation file is at the "usual" location, you can override method `getEnTranslationsPath` if you placed your properties file elsewhere. It will check for simple things: syntax errors (errors in unicode characters can prevent the file from being loaded, for instance) and duplicate entries (that can happen easily when copy/pasting translations).
 
-Additional test cases exist if you'd like to check for consistency between translations of two different languages for instance, you can check the [TranslationEnFrTestCase](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-test/src/main/java/org/nuxeo/ecm/platform/test/TranslationEnFrTestCase.java) logics or the [<span class="pl-en">TestExtMessages</span>](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-lang-ext/src/test/java/org/nuxeo/ecm/platform/lang/ext/test/TestExtMessages.java) parametrized tests on the `nuxeo-platform-lang-ext` module.
+Additional test cases exist if you'd like to check for consistency between translations of two different languages for instance, you can check the [TranslationEnFrTestCase](https://github.com/nuxeo/nuxeo/blob/10.10/nuxeo-services/nuxeo-platform-test/src/main/java/org/nuxeo/ecm/platform/test/TranslationEnFrTestCase.java) logics or the [<span class="pl-en">TestExtMessages</span>](https://github.com/nuxeo/nuxeo/blob/10.10/addons/nuxeo-platform-lang-ext/src/test/java/org/nuxeo/ecm/platform/lang/ext/test/TestExtMessages.java) parametrized tests on the `nuxeo-platform-lang-ext` module.
 
 ### Nuxeo Crowdin Translations Synchronization Process
 
@@ -552,7 +552,7 @@ Since a Nuxeo application is composed of several bundles, which can contribute t
 
 Only the master branch is handled by Crowdin: changes to translation files in maintenance branches will have to be committed manually in GitHub.
 
-*   The generated aggregate file at [https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-lang-ext/src/main/resources/crowdin/messages.properties) is generated from all supported Nuxeo modules that hold a `crowdin.ini` file, referencing the relative path to their messages_en_US.properties file.
+*   The generated aggregate file at [https://github.com/nuxeo/nuxeo/blob/10.10/addons/nuxeo-platform-lang-ext/src/main/resources/crowdin/messages.properties](https://github.com/nuxeo/nuxeo/blob/10.10/addons/nuxeo-platform-lang-ext/src/main/resources/crowdin/messages.properties) is generated from all supported Nuxeo modules that hold a `crowdin.ini` file, referencing the relative path to their messages_en_US.properties file.
     Here is a sample `crowdin.ini` file content:
 
     ```
@@ -572,7 +572,7 @@ Only the master branch is handled by Crowdin: changes to translation files in ma
 
 #### Crowdin - Nuxeo Synchronization
 
-*   Daily, non-English translations from Crowdin are pushed to the Nuxeo source code, inside the [nuxeo-platform-lang-ext](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-platform-lang-ext) module.
+*   Daily, non-English translations from Crowdin are pushed to the Nuxeo source code, inside the [nuxeo-platform-lang-ext](https://github.com/nuxeo/nuxeo/blob/10.10/addons/nuxeo-platform-lang-ext) module.
 *   All translations are exported, even unapproved.
 *   Untranslated labels take the reference English value by default.
 *   If exported files hold duplicate keys, or syntax errors, they will not be pushed to GitHub (unit test are run on the lang-ext module before pushing).
