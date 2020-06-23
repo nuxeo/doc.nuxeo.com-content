@@ -49,17 +49,18 @@ With this facet, it is possible to handle external content such as annotations m
 
 ### Storage
 
-Comments and annotations are stored as a tree structure in a folderish document of type `CommentRoot` which is located right under the commented document. Comments are _special children_ which means they are not copied with the commented document during copy operations but they are snapshot when the document is checked in.</br>
+Comments and annotations are stored as a tree structure in a folderish document of type `CommentRoot` which is located right under the commented document. Comments are _special children_ which means they are not copied with the commented document during copy operations but they are snapshotted when the document is checked in.</br>
 Please note comments are not restored when a version of the commented document is checked out.
 
 ### Permissions
 
-Comments and annotations rely on the the [`ACL`](https://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/security/ACL.html) security model present in Nuxeo. ACLs are automatically inherited by default in `Nuxeo`. So for example if a user has read access to a document, he also has read access to its children. By consequence, people who have access to a commented document have read access to its comments and people who create comments and annotations, can edit them as they have write access on them.
+Comments and annotations rely on the [`ACL`](https://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/security/ACL.html) security model present in Nuxeo. ACLs are automatically inherited by default in `Nuxeo`. So for example, if a user has read access to a document, he also has read access to its children.
+
+By consequence, people who have access to a commented document have read access to its comments and people who create comments and annotations can edit them as they have write access on them.
 
 ### Events
 
 All events share the same event context. It contains:
-
 - the parent document in `parentComment` which may be a comment or the commented document
 - the comment in `comment_document`
 - the comment text in `comment`
@@ -71,11 +72,11 @@ A `commentUpdated` event is fired when updating a comment or annotation.
 
 A `commentRemoved` event is fired when deleting a comment or annotation.
 
-### Autosubscription
+### Auto Subscription
 
-Document creator is subscribed automatically to the `commentAdded` event on his documents.\
-Comment Author is subscribed automatically to the `commentAdded` event on the commented document.\
-Autosubscription is turned on by default. It can be turned off by contributing like so:
+Document creator is subscribed automatically to the `commentAdded` event on his document(s).</br>
+Comment author is subscribed automatically to the `commentAdded` event on the commented document.</br>
+Auto subscription is turned on by default. It can be turned off by contributing like so:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
