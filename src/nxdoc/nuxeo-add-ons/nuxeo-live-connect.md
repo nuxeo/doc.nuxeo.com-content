@@ -520,30 +520,35 @@ Live Connect for OneDrive is compatible with Nuxeo Platform 8.2+.
 
 **Step 1: Preparing your application accounts on the OneDrive App console**
 
-1.  Go to [https://account.live.com/developers/applications/index](https://account.live.com/developers/applications/index).
-2.  Click on **Add an app**.
-3.  Enter the name of your new application and click on **Create application**.
-4.  Copy the **Application ID**.
-5.  **Application Secrets**: Click on **Generate New Password** and copy it.
-6.  On **Platforms**, click on **Add Platform** and then select **Web**. In **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback`.
-7.  In the **Application permissions** section, activate `Files.Read.All` to your security profile.
-8.  Click on **Save**.
+- Login to [Microsoft Azure Portal](https://portal.azure.com/), and go to _App Registrations_ (if it is not in your dashboard, search for "app registrations")
+- Click on **New Registration**.
+- Enter the name of your new application,
+- Set the **Redirect URI**, to the following URL, adapting the hostname and port to your case: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback`.
+- Click **Register**.
+- Copy the **Application (Client) ID** (to be used later as "Client ID" in Nuxeo)
+- Click the **View API Permissions** button, then **Add a permission**
+- Select _Microsoft Graph_, then _Delegated permissions_. Filter on "file", check `File.Read.All` and save
+- On the left pannel, click **Certificates & secrets**, then **New Client Secret**.
+- Give a name and a duration to this secret.
+- Copy the secret generated. **Warning**: It will not be displayed a second time if you refresh the page or logout. Copy/paste it somewhere temporarily, we need it to setup Nuxeo (as "Client Secret").
+- Back to **Overview**, open **Redirect URIs**. Check the redirect URI is good, and in **Implicit grant**, check both _Access tokens_ and _ID tokens_.
+- Save
 
 **Step 2: Configuring the Nuxeo Platform**
 
-1.  Install the package Nuxeo Live Connect if it is not already installed.
-2.  In the **Administration**, go to **Cloud Services** > **Service providers**.
-3.  In the **OAuth2 Service providers** section, click on the **Modify** button of the **onedrive** service provider.
-4.  Paste the OneDrive client_id in **ClientID**.
-5.  Paste the OneDrive client_secret in **Client Secret**.
+- Install the package Nuxeo Live Connect if it is not already installed.
+- In the **Administration** left button of WebUI, go to **Cloud Services**
+- In the **Providers** tab, click on the **Modify** button of the **onedrive** service provider.
+- Paste the OneDrive "Application (Client) ID" in **ClientID**.
+- Paste the OneDrive client secret in **Client Secret**.
     {{#> callout type='info' }}
     Default values for
     - Authorization Server URL: https://login.live.com/oauth20_authorize.srf?response_type=code
     - Token Server URL: https://login.live.com/oauth20_token.srf
       {{/callout}}
-6.  Make sure the **Enabled** box is checked.
-7.  Save.
-8.  Now just create a new OneDrive document
+- Make sure the **Enabled** box is checked.
+- Save.
+- Now just create a new OneDrive document. You also can test the connection is OK by going to **User Settings** (the bottom-left button in Web UI) > **Cloud Services**, and, in the the "Connect to" area, click the **ONEDRIVE** button.
 
 {{#> callout type='note' }}
 To use the OneDrive file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites
