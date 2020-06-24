@@ -247,14 +247,16 @@ history:
     version: '1'
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
-[Video on Live Connect](https://university.nuxeo.com/learn/public/course/view/elearning/56/understanding-live-connect).
-![]({{file name='university-live-connect.png' page='nxdoc/university'}} ?w=450,border=true)
+
+{{#> callout type='info'}}
+Browsers that block pop-ups may affect the behavior of Nuxeo Live Connect. If you face any difficulties, make sure to check your browser settings.
 {{/callout}}
 
-{{#> callout type='tip'}}
-Browsers that block pop-ups may affect the behavior of Nuxeo Live Connect. If you face any difficulties, make sure to check your browser settings.
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related course on Nuxeo University:</br>
+[Live Connect](https://university.nuxeo.com/learn/public/course/view/elearning/56/understanding-live-connect)
+
+  ![]({{file name='university-live-connect.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
@@ -300,14 +302,14 @@ The table below shows the available features for each default implementation.
 <tr>
 <td colspan="1">Download URL</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>\*</sup></td>
+<td colspan="1">Yes<sup>*</sup></td>
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
 </tr>
 <tr>
 <td colspan="1">Full-text indexation</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>\*</sup>
+<td colspan="1">Yes<sup>*</sup>
 </td>
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
@@ -315,20 +317,20 @@ The table below shows the available features for each default implementation.
 <tr>
 <td colspan="1">PDF conversion</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>\*</sup>
+<td colspan="1">Yes<sup>*</sup>
 </td>
-<td colspan="1">Yes<sup>\*</sup>
+<td colspan="1">Yes<sup>*</sup>
 </td>
-<td colspan="1">Yes<sup>\*</sup>
+<td colspan="1">Yes<sup>*</sup>
 </td>
 </tr>
 <tr>
 <td colspan="1">Preview</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>\*</sup>
+<td colspan="1">Yes<sup>*</sup>
 </td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>\*</sup>
+<td colspan="1">Yes<sup>*</sup>
 </td>
 </tr>
 <tr>
@@ -348,10 +350,10 @@ The table below shows the available features for each default implementation.
 <tr>
 <td colspan="1">Versioning</td>
 <td colspan="1">Yes (non-native Google Drive documents)</td>
-<td colspan="1">Yes<sup>\*</sup>
+<td colspan="1">Yes<sup>*</sup>
 </td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>\*</sup>
+<td colspan="1">Yes<sup>*</sup>
 </td>
 </tr>
 <tr>
@@ -360,10 +362,7 @@ The table below shows the available features for each default implementation.
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
-</tr>
-</tbody>
-</table>
-</div>
+</tr></tbody></table></div>
 
 <sup>\*</sup> _Provided by the Nuxeo Platform_
 
@@ -489,12 +488,10 @@ zone: https://www.dropbox.com.
 3.  Select the **Custom App** application type.
 4.  In the Authentication Method screen, select **Standard OAuth 2.0 (User Authentication)**.
 5.  Enter the name of your application and select **Create Application**.
-6.  In **redirect_uri** set the following URL, adapting the hostname and port to your case: [http://nuxeo-server:8080/nuxeo/site/oauth2/box/callback](http://nuxeo-server:8080/nuxeo/site/oauth2/box/callback) .
-
+6.  In **redirect_uri** set the following URL, adapting the hostname and port to your case: [http://nuxeo-server:8080/nuxeo/site/oauth2/box/callback](http://nuxeo-server:8080/nuxeo/site/oauth2/box/callback).
     {{#> callout type='info' }}
-    Please note that Box allows HTTP only for localhost. For all other sites HTTPS must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](/x/GAFc).
+    Please note that Box allows HTTP only for localhost. For all other sites HTTPS must be used. See [HTTP and HTTPS Reverse-Proxy Configuration]({{page version='' space='nxdoc' page='http-and-https-reverse-proxy-configuration'}}).
     {{/callout}}
-
 7.  Copy the client_id and client_secret.
 8.  Click on button **Save Application**.
 
@@ -507,15 +504,13 @@ zone: https://www.dropbox.com.
 5.  Paste the Box client_secret in **Client Secret**.
 6.  Make sure the **Enabled** box is checked.
 7.  Save.
-8.  Now just create a new Box document
+8.  Now just create a new Box document.
 
 {{#> callout type='note' }}
-To use the Box file picker with Internet Explorer 11, the following URLs must be added to IE11's trusted sites
-zone:
-
+To use the Box file picker with Internet Explorer 11, the following URLs must be added to IE11's trusted sites:
 - https://app.box.com
 - https://cdn01.boxcdn.net
-  {{/callout}}
+{{/callout}}
 
 ### Setting Up Live Connect for OneDrive
 
@@ -523,34 +518,41 @@ Live Connect for OneDrive is compatible with Nuxeo Platform 8.2+.
 
 **Step 1: Preparing your application accounts on the OneDrive App console**
 
-1.  Go to [https://account.live.com/developers/applications/index](https://account.live.com/developers/applications/index).
-2.  Click on **Add an app**.
-3.  Enter the name of your new application and click on **Create application**.
-4.  Copy the **Application ID**.
-5.  **Application Secrets**: Click on **Generate New Password** and copy it.
-6.  On **Platforms**, click on **Add Platform** and then select **Web**. In **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback`.
-7.  In the **Application permissions** section, activate `Files.Read.All` to your security profile.
-8.  Click on **Save**.
+1. Login to [Microsoft Azure Portal](https://portal.azure.com/), and go to _App Registrations_ (if it is not in your dashboard, search for "app registrations")
+1. Click on **New Registration**.
+1. Enter the name of your new application,
+1. Set the **Redirect URI**, to the following URL, adapting the hostname and port to your case: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback`.
+1. Click **Register**.
+1. Copy the **Application (Client) ID** (to be used later as "Client ID" in Nuxeo)
+1. Click the **View API Permissions** button, then **Add a permission**
+1. Select _Microsoft Graph_, then _Delegated permissions_. Filter on "file", check `File.Read.All` and save
+1. On the left panel, click **Certificates & secrets**, then **New Client Secret**.
+1. Give a name and a duration to this secret.
+1. Copy the secret generated. </br>
+    **Warning**: It will not be displayed a second time if you refresh the page or logout. Copy/paste it somewhere temporarily, we need it to setup Nuxeo (as "Client Secret").
+1. Back to **Overview**, open **Redirect URIs**. Check the redirect URI is good, and in **Implicit grant**, check both _Access tokens_ and _ID tokens_.
+1. Save.
 
 **Step 2: Configuring the Nuxeo Platform**
 
-1.  Install the package Nuxeo Live Connect if it is not already installed.
-2.  In the **Administration**, go to **Cloud Services** > **Service providers**.
-3.  In the **OAuth2 Service providers** section, click on the **Modify** button of the **onedrive** service provider.
-4.  Paste the OneDrive client_id in **ClientID**.
-5.  Paste the OneDrive client_secret in **Client Secret**.
+1. Install the package Nuxeo Live Connect if it is not already installed.
+1. In the **Administration** left button of Web UI, go to **Cloud Services**
+1. In the **Providers** tab, click on the **Modify** button of the **onedrive** service provider.
+1. Paste the OneDrive "Application (Client) ID" in **ClientID**.
+1. Paste the OneDrive client secret in **Client Secret**.
     {{#> callout type='info' }}
-    Default values for
+    Default values for:
     - Authorization Server URL: https://login.live.com/oauth20_authorize.srf?response_type=code
     - Token Server URL: https://login.live.com/oauth20_token.srf
-      {{/callout}}
-6.  Make sure the **Enabled** box is checked.
-7.  Save.
-8.  Now just create a new OneDrive document
+    {{/callout}}
+1. Make sure the **Enabled** box is checked.
+1. Save.
+
+You can test that the connection is OK by going to **User Settings** (the bottom-left button in Web UI) > **Cloud Services**, and, in the "Connect to" area, click on the **ONEDRIVE** button.
 
 {{#> callout type='note' }}
-To use the OneDrive file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites
-zone: https://api.onedrive.com.
+To use the OneDrive file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites:
+https://api.onedrive.com.
 {{/callout}}
 
 ### Setting Up Live Connect for OneDrive for Business
@@ -638,3 +640,4 @@ To change this interval users can override the default contribution:
 
 - **Nuxeo Drive** is not compatible with files that are stored on a Live Connect backend: files will be downloaded, but it won't be possible to update them.
 - **Native versioning**: Only non-native Google Drive documents have revisions created on the Google Drive side.
+
