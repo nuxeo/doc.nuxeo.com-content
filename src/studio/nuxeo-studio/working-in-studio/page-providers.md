@@ -83,6 +83,10 @@ In the query filter field, variables can be defined using the `?` keyword. When 
 ### Predicates
 Predicates are used in search forms to provide additional search criteria on top of the initial [query filter](#query-filter).
 
+{{#> callout type='info' heading='System properties'}}
+System properties can be found under the `system` schema. For more info, refer to the [Special NXQL Properties](https://doc.nuxeo.com/nxdoc/nxql/#special-nxql-properties)
+{{/callout}}
+
 ### Default Sort
 Lets you define in which order results should be returned by default.
 
