@@ -297,7 +297,7 @@ By default, the "default" template is enabled on your Nuxeo server (see the [Dat
         *   `nuxeo.db.port`
     2. MongoDB Database:
         *   `nuxeo.mongodb.server`
-        *   `nuxeo.mongodb.name`
+        *   `nuxeo.mongodb.dbname`
 4.  Save your modifications.
 5.  Restart the server.
 
