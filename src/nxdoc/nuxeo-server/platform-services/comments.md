@@ -47,7 +47,7 @@ Comments and annotations can have the facet `ExternalEntity`. When they have thi
 - external entity origin</br>
 With this facet, it is possible to handle external content such as annotations made in [Nuxeo Enhanced Viewer]({{page space='nxdoc' page='nuxeo-enhanced-viewer'}}) for instance.
 
-### Current implementation - TreeCommentManager
+### Current Implementation - TreeCommentManager
 
 #### Storage
 
@@ -56,7 +56,7 @@ Please note comments are not restored when a version of the commented document i
 
 #### Permissions
 
-Comments and annotations rely on the the [`ACL`](https://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/security/ACL.html) security model present in Nuxeo. ACLs are automatically inherited by default in `Nuxeo`. So for example if a user has read access to a document, he also has read access to its children.
+Comments and annotations rely on the [`ACL`](https://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/security/ACL.html) security model present in Nuxeo. ACLs are automatically inherited by default in `Nuxeo`. So for example, if a user has read access to a document, he also has read access to its children.
 
 By consequence, people who have access to a commented document have read access to its comments and people who create comments and annotations, can edit them as they have write access on them.
 
@@ -90,7 +90,7 @@ Auto subscription is turned on by default. It can be turned off by contributing 
 </component>
 ```
 
-### Legacy implementation - PropertyCommentManager
+### Legacy Implementation - PropertyCommentManager
 
 #### Storage
 
@@ -98,7 +98,8 @@ Comments and annotations are stored in a `Comments` hidden folder under the doma
 
 #### Permissions
 
-Comments and annotations shared the same permission model. Comment and annotation permissions are deduced from the higher parent permission (ie: commented or annotated document). See below the model:
+Comments and annotations shared the same permission model. Their permissions are deduced from the higher parent permission (ie: commented or annotated document):
+
 - Read permission on higher document grants read access on its comments and annotations
 - Read permission on higher document grants create comment and create annotation on higher document and its comments or annotations
 - Being creator of comment or annotation or being administrator grants update on related comment or annotation
