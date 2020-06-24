@@ -10,7 +10,7 @@ labels:
     - lts2017-ok
     - tcardoso
     - lts2019-ok
-tree_item_index: 500
+tree_item_index: 600
 ---
 
 Below are the evolutions and improvements planned for Web UI.
