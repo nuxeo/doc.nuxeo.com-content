@@ -24,7 +24,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 Web UI provides a safe experience when uploading files, even for large files in the 75gb range and when the upload goes on for hours due to a slow connection.
 
-If a network problem happens, upload is resumed whenever possible. Otherwise, guidance is provided so that you can decide what to do with the situation: e.g. create the document anyway and upload the attachment later.
+If a network problem happens, guidance is provided so that you can decide what to do with the situation: e.g. create the document anyway and upload the attachment later.
 
 - [<a href="https://jira.nuxeo.com/browse/NXP-29189" target="_blank">NXP-29189</a>]
 - [<a href="https://jira.nuxeo.com/browse/NXP-28495" target="_blank">NXP-28495</a>]
@@ -69,7 +69,7 @@ The background color of suggestion elements is configurable. [<a href="https://j
 
 ### Standalone Elements
 
-The following elements can be used easily in a broader context such as a custom page for Web UI or a standalone application:
+The following elements were moved to the Nuxeo Elements library, improving their consistency and making them available to standalone applications:
 
 * `nuxeo-document-layout`
 * `nuxeo-video-conversions`
