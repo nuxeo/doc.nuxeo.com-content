@@ -202,7 +202,7 @@ All icons can be found in the project [resources]({{page page='resources'}}).
 - **Accepted children types**: The document types selected here will be creatable just under the document type being designed. This attribute only appears for document types that have the "folderish" facet.
 
 {{#> callout type='info'}}
-If a document type must be listed on tthe create modal, you have to define on the document type definition its container types. Declaring only allowed accepted children document types is not sufficient.
+If a document type must be listed in the create modal, you have to define its container types on the document type definition. It isn't sufficient to only declare **allowed accepted children document types**.
 {{/callout}}
 
 - **Document Facets**: Read the page [Available Facets]({{page space='nxdoc' page='available-facets'}}) for better understanding of what facets are and which ones are available. If you don't find the facet you are looking for, you can add it [using the custom facet registry]({{page page='registries'}}).
