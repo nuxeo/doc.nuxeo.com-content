@@ -8,6 +8,7 @@ review:
 toc: true
 labels:
 tree_item_index: 999
+hidden: true
 ---
 
 {{! multiexcerpt name='upgrade-notes'}}
@@ -23,22 +24,28 @@ This page mentions how to do a technical upgrade. Have a look at the [release no
 ### Polymer 3 Migration
 
 #### High Level Overview
-Migrating to Polymer 3 is fairly transparent. Quoting the <a href="https://polymer-library.polymer-project.org/3.0/docs/about_30#api-changes" target="_blank">Polymer dev team</a>:
+
+Migrating to Polymer 3 is fairly transparent. Quoting the [Polymer dev team](https://polymer-library.polymer-project.org/3.0/docs/about_30#api-changes):
 
 > The Polymer 3.0 API is almost 100% backward compatible with Polymer 2.x—the only changes are removing APIs related to HTML Imports (such as importHref), and converting Polymer's API to be module-based rather than globals-based.
 
 #### Studio Projects
+
 Studio configuration is made to be compatible and does not need to be migrated. If you did add customization in your project, see below for further details. Otherwise you can consider your project safe to use.
 
 #### HTML Imports
+
 Nuxeo added a compatibility layer to keep HTML imports working. There is no need to update HTML imports done in your code.
 
 #### ES Modules
+
 Because Polymer 3 relies on ES Modules, it no longer loads HTML files through HTML imports, which would set Polymer objects into the global `Polymer` namespace. Therefore, methods and objects that were available under the `Polymer` namespace will not work by default anymore: e.g. there is no `Polymer.dom.*`, you are supposed to do this instead:
 
-```import { dom } from '@polymer/polymer/lib/legacy/polymer.dom.js';```
+```
+import { dom } from '@polymer/polymer/lib/legacy/polymer.dom.js';
+```
 
-In order to keep compatibility, Nuxeo <a href="https://jira.nuxeo.com/browse/NXP-28411" target="_blank">exports some of the previous options</a>:
+In order to keep compatibility, Nuxeo [exports some of the previous options](https://jira.nuxeo.com/browse/NXP-28411):
 * `Polymer.dom()`  => `@polymer/polymer/lib/legacy/polymer.dom.js`
 * `Polymer.Async.*` => `@polymer/polymer/lib/utils/async.js`
 * `Polymer.Debouncer` => `@polymer/polymer/lib/utils/debounce.js`
@@ -69,9 +76,8 @@ From now on, retrieving tasks needs to be made using a paginable approach. Some 
 
 Removed variables can be safely deleted from your themes or elements. Deprecated variables should be replaced by the new ones on themes and custom elements making use of them:
 
-* Removed `--nuxeo-results-view-min-height` (added in [<a href="https://jira.nuxeo.com/browse/NXP-27652" target="_blank">NXP-27652</a>]).
-* Deprecated `--nuxeo-document-content-min-height` in favor of `--nuxeo-document-content-height` (affects `nuxeo-document-content`)
-* Deprecated `--nuxeo-document-trash-content-min-height` in favor of `--nuxeo-document-trash-content-height` (affects `nuxeo-document-trash-content`)
+* Removed `--nuxeo-results-view-min-height` (added in [NXP-27652](https://jira.nuxeo.com/browse/NXP-27652)).
+* Deprecated `--nuxeo-document-content-min-height` in favor of `--nuxeo-document-content-height` (affects `nuxeo-document-content`).
+* Deprecated `--nuxeo-document-trash-content-min-height` in favor of `--nuxeo-document-trash-content-height` (affects `nuxeo-document-trash-content`).
 
-{{{multiexcerpt 'matching-notes' page='web-ui-11-1-upgrade-notes'}}}
 {{! /multiexcerpt}}
