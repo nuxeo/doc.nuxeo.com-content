@@ -8,6 +8,7 @@ review:
 toc: true
 labels:
 tree_item_index: 999
+hidden: true
 ---
 
 {{! multiexcerpt name='release-notes'}}
@@ -26,10 +27,10 @@ Web UI provides a safe experience when uploading files, even for large files in 
 
 If a network problem happens, guidance is provided so that you can decide what to do with the situation: e.g. create the document anyway and upload the attachment later.
 
-- [<a href="https://jira.nuxeo.com/browse/NXP-29189" target="_blank">NXP-29189</a>]
-- [<a href="https://jira.nuxeo.com/browse/NXP-28495" target="_blank">NXP-28495</a>]
-- [<a href="https://jira.nuxeo.com/browse/NXP-27346" target="_blank">NXP-27346</a>]
-- [<a href="https://jira.nuxeo.com/browse/NXP-27162" target="_blank">NXP-27162</a>]
+- [NXP-29189](https://jira.nuxeo.com/browse/NXP-29189)
+- [NXP-28495](https://jira.nuxeo.com/browse/NXP-28495)
+- [NXP-27346](https://jira.nuxeo.com/browse/NXP-27346)
+- [NXP-27162](https://jira.nuxeo.com/browse/NXP-27162)
 
 ### Advanced Validation Logic for Forms
 
@@ -37,13 +38,13 @@ Form validation offers advanced options:
 - Logic can be executed asynchronously to call a third party service
 - Server-side logic can also check the input and trigger an error that will be made visible to the user
 
-[<a href="https://jira.nuxeo.com/browse/NXP-28048" target="_blank">NXP-28048</a>]
+[[NXP-28048](https://jira.nuxeo.com/browse/NXP-28048)]
 
 ### Easier to Find and Read Audit Entries
 
 The document history tab displays the time for each entry along with the date. Advanced filtering options are also available to filter actions per user, action or category.
 
-[<a href="https://jira.nuxeo.com/browse/NXP-29042" target="_blank">NXP-29042</a>]
+[[NXP-29042](https://jira.nuxeo.com/browse/NXP-29042)]
 
 ### Workflow Task Endpoint is Paginated
 
@@ -51,7 +52,7 @@ All requests made to the workflow `task` endpoint paginate results instead of re
 
 Users can still scroll through the list of tasks as usual in order to retrieve more of them.
 
-[<a href="https://jira.nuxeo.com/browse/NXP-28008" target="_blank">NXP-28008</a>]
+[[NXP-28008](https://jira.nuxeo.com/browse/NXP-28008)]
 
 ### Polymer 3 Migration
 
@@ -61,11 +62,11 @@ This is a technical change that happens under the hood, and backwards compatibil
 
 ### Styling Improvements
 
-Layouts generated using Nuxeo Studio include a `nuxeo-styles` module in order to provide a consistent look and feel to your configuration. A new CSS option (mixin) can be added to your themes to override the default styling of any widget included in a layout, for instance to change the spacing rules. [<a href="https://jira.nuxeo.com/browse/NXP-27652" target="_blank">NXP-27652</a>]
+Layouts generated using Nuxeo Studio include a `nuxeo-styles` module in order to provide a consistent look and feel to your configuration. A new CSS option (mixin) can be added to your themes to override the default styling of any widget included in a layout, for instance to change the spacing rules.[[NXP-27652](https://jira.nuxeo.com/browse/NXP-27652)]
 
-Labels are more consistent when viewing a picture. [<a href="https://jira.nuxeo.com/browse/ELEMENTS-1186" target="_blank">ELEMENTS-1186</a>]
+Labels are more consistent when viewing a picture. [[ELEMENTS-1186](https://jira.nuxeo.com/browse/ELEMENTS-1186)]
 
-The background color of suggestion elements is configurable. [<a href="https://jira.nuxeo.com/browse/NXP-27077" target="_blank">NXP-27077</a>]
+The background color of suggestion elements is configurable. [[NXP-27077](https://jira.nuxeo.com/browse/NXP-27077)]
 
 ### Standalone Elements
 
@@ -77,19 +78,17 @@ The following elements were moved to the Nuxeo Elements library, improving their
 * `nuxeo-document-comment`
 * `nuxeo-document-comment-thread`
 
-[<a href="https://jira.nuxeo.com/browse/ELEMENTS-1024" target="_blank">ELEMENTS-1024</a>]
+[[ELEMENTS-1024](https://jira.nuxeo.com/browse/ELEMENTS-1024)]
 
 ### Other Noteworthy Items
-- Document creation and edit popups size can be changed using theme variables [<a href="https://jira.nuxeo.com/browse/NXP-26938" target="_blank">NXP-26938</a>
-- When doing a bulk download, a notification is displayed until the download starts [<a href="https://jira.nuxeo.com/browse/NXP-28478" target="_blank">NXP-28478</a>]
-- Workflow analytics are clearer by showing a label for buttons pressed instead of an id [<a href="https://jira.nuxeo.com/browse/NXP-28338" target="_blank">NXP-28338</a>]
-- Portrait dimensioned videos are better handled in conversions [<a href="https://jira.nuxeo.com/browse/NXP-28856" target="_blank">NXP-28856</a>]
-- Document type name in the creation notification confirmation is translated [<a href="https://jira.nuxeo.com/browse/NXP-28533" target="_blank">NXP-28533</a>]
-- A default HTML page is shown when no preview is available in Web UI [<a href="https://jira.nuxeo.com/browse/NXP-27648" target="_blank">NXP-27648</a>]
-- When two people complete the same task, the second person is notified and taken to the document [<a href="https://jira.nuxeo.com/browse/NXP-27462" target="_blank">NXP-27462</a>]
+
+- Document creation and edit popups size can be changed using theme variables</br> [[NXP-26938](https://jira.nuxeo.com/browse/NXP-26938)]
+- When doing a bulk download, a notification is displayed until the download starts</br> [[NXP-28478](https://jira.nuxeo.com/browse/NXP-28478)]
+- Workflow analytics are clearer by showing a label for buttons pressed instead of an id</br> [[NXP-28338](https://jira.nuxeo.com/browse/NXP-28338)]
+- Portrait dimensioned videos are better handled in conversions</br> [[NXP-28856](https://jira.nuxeo.com/browse/NXP-28856)]
+- Document type name in the creation notification confirmation is translated</br> [[NXP-28533](https://jira.nuxeo.com/browse/NXP-28533)]
+- A default HTML page is shown when no preview is available in Web UI</br> [[NXP-27648](https://jira.nuxeo.com/browse/NXP-27648)]
+- When two people complete the same task, the second person is notified and taken to the document</br> [[NXP-27462](https://jira.nuxeo.com/browse/NXP-27462)]
 
 This release also comes with over 160 bugs fixed, making Web UI more solid than ever.
-
-{{{multiexcerpt 'matching-notes' page='web-ui-11-1-release-notes'}}}
-
 {{! /multiexcerpt}}
