@@ -24,6 +24,6 @@ Customers can enable content delivery network support for improving the delivery
 
 ## Improved Disaster Recovery Objectives
 
-Nuxeo Cloud customers can choose to purchase additional disaster recovery options including
-Improved RPO or RTO times
-Support for additional “stand by” environments
+Nuxeo Cloud customers can choose to purchase additional disaster recovery options including:
+- Improved RPO or RTO times
+- Support for additional “stand by” environments
