@@ -1,6 +1,6 @@
 ---
 title: Health Check
-description: Endpoint to monitor Nuxeo heath.
+description: Endpoint to monitor Nuxeo health.
 review:
     date: '2020-06-10'
     status: ok
@@ -12,9 +12,8 @@ labels:
     - observability
 toc: true
 tree_item_index: 100
-history:
-    -
 ---
+
 Nuxeo provides a REST endpoint for monitoring its health:
 
 `http://NUXEO_SERVER/nuxeo/runningstatus`

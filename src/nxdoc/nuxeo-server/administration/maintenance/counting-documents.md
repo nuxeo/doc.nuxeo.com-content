@@ -2,7 +2,7 @@
 title: Counting Documents
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2020-06-25'
     status: ok
 labels:
     - content-review-lts2016
@@ -56,22 +56,21 @@ history:
         date: '2013-10-27 22:40'
         message: ''
         version: '1'
-
 ---
+
 If you want to know how many documents you have in your repository, you can go to the **Administration** menu, and check the  **Repository Content** tab in the **Analytics** sub-menu.
 
-You can filter the statisticts on a specific time period.
+You can filter the statistics on a specific time period.
 
 ![]({{file name='admin_repository_analytics_tab.png'}} ?w=600,h=321,border=true)
 
 &nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
-- [Admin Tab Overview]({{page page='admin-tab-overview'}})
-- [Metrics and Monitoring]({{page page='metrics'}})
-
-{{/panel}}</div><div class="column medium-6">
+- [Metrics]({{page page='metrics'}})
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 

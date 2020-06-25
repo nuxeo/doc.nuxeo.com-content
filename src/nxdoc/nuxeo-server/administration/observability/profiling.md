@@ -10,15 +10,13 @@ labels:
     - monitoring
 toc: true
 tree_item_index: 500
-history:
-  -
 ---
 
-Like any other Java application Nuxeo can be profiled, you will find few useful tools in this section.
+Like any other Java application, Nuxeo can be profiled, you will find a few useful tools in this section.
 
 ## Java Flight Recorder (JFR)
 
-Since OpenJDK version 11 it is easy to run Flight Recorder.
+Since OpenJDK version 11, it is easy to run Flight Recorder.
 JFR is a profiling tool used to gather diagnostics and profiling data from a running Java application.
 
 To observe a particular load during one minute on a Nuxeo node just run:
@@ -31,7 +29,7 @@ This will produce a JFR file `/tmp/capture.jfr`.
 
 You now need to install [Java Mission Control 7](https://jdk.java.net/jmc/) and open the JFR file.
 
-This is a very powerful way to report a peformance problem because in addition of the profiling,
+This is a very powerful way to report a performance problem because in addition of the profiling,
 the JFR file also contains a capture of the CPU activity, memory pressure, and thread dumps.
 
 ## Java Flame Graph
@@ -40,7 +38,7 @@ the JFR file also contains a capture of the CPU activity, memory pressure, and t
 allowing the most frequent code-paths to be identified quickly and accurately.
 
 A typical output is an SVG that can be searched and zoomed:
-![flame graph]({{file name='profiling-flame-graph.png'}} ?w=600,border=true)
+![flame graph]({{file name='profiling-flame-graph.png'}} ?w=650,border=true)
 
 First follow the documentation to [install Async profiler](https://github.com/jvm-profiling-tools/async-profiler).
 
@@ -69,4 +67,3 @@ If you see memory pressure:
 ```bash
 ./profiler.sh -e alloc -d 30 --title '"Nuxeo Memory"' -f /tmp/flame-mem.svg jps
 ```
-

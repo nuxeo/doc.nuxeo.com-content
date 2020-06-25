@@ -3,7 +3,7 @@ title: Backup and Restore
 description: Nuxeo Platform supports the backup of your data.
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2020-06-25'
     status: ok
 labels:
     - content-review-lts2016
@@ -22,6 +22,7 @@ confluence:
     shortlink: IoAO
     shortlink_source: 'https://doc.nuxeo.com/x/IoAO'
     source_link: /display/NXDOC/Backup+and+Restore
+toc: true
 tree_item_index: 200
 version_override:
     LTS 2015: 710/admindoc/backup-and-restore
@@ -133,8 +134,8 @@ history:
         date: '2010-03-01 00:58'
         message: ''
         version: '1'
-
 ---
+
 ## Backing Up
 
 Nuxeo supports hot backup of your data.
@@ -170,17 +171,15 @@ you need to backup / restore `${audit.elasticsearch.indexName}` Elasticsearch in
 Note that since Nuxeo 9.10, the sequence index `${seqgen.elasticsearch.indexName}` can be regenerated quickly at startup, so it is not mandatory to backup this index.
 
 {{#> callout type='warning' }}
-
 This is really important if as if you decide to use Elasticsearch as a backend for audit logs it will become the reference (no more SQL backend), so backuping a Nuxeo instance implies backuping the audit Elasticsearch index.
+{{/callout}}
 
-{{/callout}} {{#> callout type='info' }}
-
+{{#> callout type='info' }}
 Reminder: as stated in&nbsp;[Setting up an Elasticsearch Cluster]({{page page='elasticsearch-setup#settingupanelasticsearchcluster'}}), the embedded Elasticsearch mode&nbsp;**is only for testing purpose**&nbsp;and should not be used in production.
 
 Yet if you decide to use it for development or tests, to perform the backup / restore operations you will need to make the embedded Elasticsearch server accept HTTP request on port 9200 by setting `elasticsearch.httpEnabled=true` in `nuxeo.conf`.
 
 Make sure you set back `elasticsearch.httpEnabled=false` when the backup / restore operations are over.
-
 {{/callout}}
 
 ## Additional Information

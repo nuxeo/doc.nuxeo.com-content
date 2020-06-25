@@ -10,9 +10,8 @@ labels:
     - monitoring
 toc: true
 tree_item_index: 400
-history:
-  -
 ---
+
 The Nuxeo code is instrumented using [Opencensus](https://opencensus.io) to collect traces
 that are published to a tracing system.
 
@@ -20,17 +19,17 @@ A trace tracks the time spent by Nuxeo processing a request. Each trace consists
 A span is a unit of work and carries key/value tags and annotations with attributes describing the work being done.
 
 Examples of tags:
-![tags]({{file name='jaeger-tags.png'}} ?w=600,border=true)
+![tags]({{file name='jaeger-tags.png'}} ?w=650,border=true)
 
 Examples of annotations (called logs in Jaeger):
-![annotations]({{file name='jaeger-logs.png'}} ?w=600,border=true)
+![annotations]({{file name='jaeger-logs.png'}} ?w=650,border=true)
 
 The maximum number of annotations and attributes per span can be configured with the following options:
 - `tracing.attributes.max` the maximum number of attributes in a span, default to 128, maximum is 512
 - `tracing.annotations.max` the maximum number of annotations in a span, default to 128, maximum is 512
 
 The trace context is propagated to scheduled Work or Stream processing.
-As the result the trace shows all related asynchronous processing that are triggered by an HTTP request.
+As a result, the trace shows all related asynchronous processing that are triggered by an HTTP request.
 
 ## Supported Tracing Systems
 
@@ -38,6 +37,7 @@ All tracers require the activation of the metric service using:
 `metrics.enabled=true`.
 
 ### Jaeger
+
 You need to adapt the `tracing.jaeger.url` for your setup:
 ```
 metrics.enabled=true
@@ -49,6 +49,7 @@ tracing.jaeger.service=nuxeo
 ```
 
 ### Zipkin
+
 You need to adapt the `tracing.zipkin.url` for your setup:
 ```
 metrics.enabled=true
@@ -59,7 +60,7 @@ tracing.zipkin.url=http://zipkin:9411/api/v2/spans
 
 ### Datadog
 
-Since Nuxeo 11.2 there is Datadog APM tracer available, you need to adapt the `tracing.datadog.url` for your setup:
+Since Nuxeo 11.2, there is Datadog APM tracer available, you need to adapt the `tracing.datadog.url` for your setup:
 ```
 metrics.enabled=true
 
@@ -68,6 +69,7 @@ tracing.datadog.url=http://localhost:8126/v0.3/traces
 ```
 
 ## Configuring What is Traced
+
 Which request is traced can be determined by sampling probability using the option `tracing.sampler.probability`.
 A value of `0` means no sampling, and a value of `1` traces all requests.
 
@@ -86,4 +88,4 @@ You will have to change the trace id (`a00...`) for each capture.
 
 Refer to the [`traceparent` specification for more information](https://github.com/w3c/trace-context/blob/master/spec/20-http_request_header_format.md).
 
-![async trace]({{file name='jaeger-trace1.png'}} ?w=600,border=true)
+![async trace]({{file name='jaeger-trace1.png'}} ?w=650,border=true)

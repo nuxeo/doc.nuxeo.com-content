@@ -2,7 +2,7 @@
 title: Purging Audit Logs (NXP_LOGS)
 review:
     comment: ''
-    date: '2018-09-21'
+    date: '2020-06-25'
     status: ok
 labels:
     - lts2016-ok
@@ -103,8 +103,8 @@ history:
         date: '2013-01-14 11:41'
         message: ''
         version: '1'
-
 ---
+
 Depending on usage (lots of updates, lots of workflows, lots of logins, ...), the audit storage can grow very quickly.
 
 You can configure the audit to filter what must be recorded, but there is no API or UI to do a cleanup inside the audit tables. Actually, this is not something we forgot, we simply considered that it was safer like that: the Audit Service is here to record activity in the platform, it makes sense that a component cannot easily delete its audit trail.
@@ -115,33 +115,13 @@ This means that the cleanup should be done at the Backend level (SQL or Elastics
 
 Since the table structure of `NXP_LOGS` is really obvious, it is an easy job for a database administrator to remove old rows based on the `log_event_date` column which contains a timestamp.
 
-<div class="message-content">
-
-&nbsp;
-
 {{#> callout type='warning' }}
-
 Please backup your database before proceeding.
-
 {{/callout}}
-
-&nbsp;
-
-</div>
-
-<div class="message-content">
-
-&nbsp;
 
 {{#> callout type='warning' }}
-
 Keep in mind that these scripts purge all Audit entries, including documents' audit entries (i.e. documents' history).
-
 {{/callout}}
-
-&nbsp;
-
-</div>
 
 If you prefer you can find below the source of a PostgreSQL function that can be used to purge Audit entries older than a given date. You can easily adapt it:
 
