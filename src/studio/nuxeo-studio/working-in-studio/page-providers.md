@@ -78,19 +78,23 @@ The query filter is where you can fill in the [NXQL]({{page space='nxdoc' page='
 As you can see from the screenshot above, this query is launched when no additional criteria has been added in the search form.
 
 ### Query Parameters
+
 In the query filter field, variables can be defined using the `?` keyword. When adding variables, the corresponding parameters have to be added as query parameters in the same order. When launching a query through the REST API, it is possible to override the parameter's default value set here by sending it in the query.
 
 ### Predicates
+
 Predicates are used in search forms to provide additional search criteria on top of the initial [query filter](#query-filter).
 
 {{#> callout type='info' heading='System properties'}}
-System properties can be found under the `system` schema. For more info, refer to the [Special NXQL Properties](https://doc.nuxeo.com/nxdoc/nxql/#special-nxql-properties)
+System properties can be found under the `system` schema. For more info, refer to the [Special NXQL Properties]({{page version='' space='nxdoc' page='nxql'}}#special-nxql-properties)
 {{/callout}}
 
 ### Default Sort
+
 Lets you define in which order results should be returned by default.
 
 ### Quick Filters
+
 As shown in the screenshot above, quick filters appear in the interface as buttons, where clicking on the button enables or disables the search criteria associated to the quick filter. This is particularly useful to let your users filter documents quickly using commonly used or context relevant search criteria: for instance you can put quick filters to only display documents in a specific state, located in a specific space...
 
 ### Elasticsearch Index Specific Options
