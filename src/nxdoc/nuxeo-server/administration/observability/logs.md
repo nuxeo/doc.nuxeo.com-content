@@ -3,16 +3,15 @@ title: Logs
 description: Configuring Nuxeo logs.
 review:
     date: '2020-06-10'
-    status: requiresUpdates
-    comment: 'To be reviewed since log4j2?'
+    status: ok
+    comment: ''
 labels:
     - metrics
     - monitoring
 toc: true
 tree_item_index: 200
-history:
-  -
 ---
+
 Nuxeo logging is compliant with common Java logging frameworks [Log4J](https://logging.apache.org/log4j/1.2/), [Log4j2](https://logging.apache.org/log4j/2.x/),
 [JCL](https://commons.apache.org/proper/commons-logging/), [SLF4J](http://www.slf4j.org/) and [JUL](http://download.oracle.com/javase/6/docs/technotes/guides/logging/index.html).
 
@@ -27,7 +26,6 @@ You can increase or decrease the logs for specific services. Here are some usefu
 - `org.nuxeo.runtime.deployment.preprocessor.DeploymentPreprocessor` logs the pre-processing order
 - `org.nuxeo.osgi.application.loader.FrameworkLoader` writes the configuration summary
 - `org.nuxeo.runtime.osgi.OSGiRuntimeService` provides the final startup summary
-
 
 ## Log Files
 
@@ -46,7 +44,7 @@ The log files location depends on the `nuxeo.log.dir` parameter. By default, Nux
 ## Tomcat Specific
 
 {{#> callout type='note' }}
-The following information is for debug purpose, it may have impacts on performance and logging files size
+The following information is for debug purpose, it may have impacts on performance and logging files size.
 {{/callout}}
 
 `$NUXEO_HOME/conf/logging.properties` has no effect; you can safely remove it.
@@ -134,9 +132,7 @@ $ grep duration_ms log/slow-query.log | sed -e's/^[^\t]*\t//g' -e 's/{.*$//g' |s
 ```
 
 {{#> callout type='tip' }}
-
 When configuring the log priority to TRACE a debug stack trace is available in the log so you got the code path.
-
 {{/callout}}
 
 ## Logging Transactional Events
@@ -145,11 +141,12 @@ Configure log4j in `$NUXEO_HOME/lib/log4j2.xml` by adding the following keywords
 
 ```html/xml
 <PatternLayout pattern="%d{ISO8601} %-5p [%t] [%c] %m%X%n" />
-
+```
 You should also add a new Logger if you want the traces to be enabled:
 
 ```html/xml
 <Logger name="org.nuxeo.ecm.core.management.jtajca" level="trace" additivity="false" />
+```
 
 At this stage, once a transaction is started or a connection is opened, their identifiers are put in a context map for the logger. By adding the `%X`&nbsp;keyword, you've requested to print them each a message is logged. The transactions and connections will also be logged. You should add additional log statements at level `DEBUG` or `TRACE` around the code you want to monitor.
 
@@ -209,8 +206,8 @@ ERROR
 [Consumer clientId=XXX, groupId=XXX] Offset commit failed on partition XXX at offset XXX: The request timed out.
 </td><td colspan="1">
 This is KafkaConsumer retry under network congestion that can be ignored [Kafka-7791](https://issues.apache.org/jira/browse/KAFKA-7791)
-</td></tr>
-
-
-
-</tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>

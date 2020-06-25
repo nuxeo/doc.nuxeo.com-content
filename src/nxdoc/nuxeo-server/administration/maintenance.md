@@ -155,4 +155,49 @@ history:
         message: ''
         version: '1'
 ---
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Backup and Restore
 
+Learn how Nuxeo Platform supports the backup of your data.
+
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='backup-and-restore'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Purging Audit Logs
+
+Depending on usage, the audit storage can grow very quickly, discover how to purge them.
+
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='purging-audit-logs-nxp_logs'}})
+{{/panel}}
+</div>
+
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Garbage-Collecting Orphaned Binaries
+
+Binaries attached to documents are stored using a specialized binary store, learn how to handle them.
+
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='garbage-collecting-orphaned-binaries'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Reporting Problems
+
+This page lists some procedures to extract information of a running Nuxeo instance.
+
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='reporting-problems'}})
+{{/panel}}
+</div>
+
+</div>

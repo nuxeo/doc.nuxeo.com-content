@@ -10,7 +10,9 @@ labels:
 toc: true
 tree_item_index: 300
 ---
+
 The Nuxeo code is instrumented using [Dropwizard Metrics](http://metrics.dropwizard.io/).
+
 This library enables to report different type of metrics:
 - __Counters__: a value that can increase (or decrease), for instance the number of created documents.
 - __Gauges__: this is an instantaneous measurement of a value. For example, the size of a cache.
@@ -42,8 +44,8 @@ It is possible to activate multiple reporters at the same time.
 Depending on the chosen metric reporter, Nuxeo will __push__ metrics or the metric system will __poll__ Nuxeo for metrics.
 For instance, metrics are pushed to Graphite and Datadog while Prometheus is polling Nuxeo for metrics.
 
-Monitoring systems are either hierarchical or dimensinal:
-- __Hierarchical__ Monitoring system uses a flat metric names, like a file system tree. Example of such system are: JMX, Graphite, StatsD, Ganglia, ...
+Monitoring systems are either hierarchical or dimensional:
+- __Hierarchical__ Monitoring system uses a flat metric name, like a file system tree. Example of such system are: JMX, Graphite, StatsD, Ganglia, ...
 - __Dimensional__ Monitoring system uses metric names enriched with tag key/value pairs. Example of such system are: Prometheus, Datadog, influxDB, ...
 
 Since Nuxeo 11 the instrumentation of the code uses metric names with tags (dimensional metric).
@@ -84,9 +86,7 @@ that express the work `queue` dimension, the metric name is translated into:
 </table>
 </div>
 
-
-Note that the tag value (`videoConversion` in the above example) can be rewritten as a valid identifier,
-for instance a value of `audit/writer` will be translated into `audit-writer`
+Note that the tag value (`videoConversion` in the above example) can be rewritten as a valid identifier, for instance a value of `audit/writer` will be translated into `audit-writer`
 
 ### JMX Reporter
 
@@ -105,16 +105,14 @@ JAVA_OPTS=$JAVA_OPTS -Dcom.sun.management.jmxremote=true
 ```
 
 {{#> callout type='note' }}
-
 You then have to manage security for this access, since there is no authentication by default.
-
 {{/callout}}
 
 Visit [this page to see how to dump all metrics]({{page page='reporting-problems'}}#nuxeo-metrics-via-jmx).
 
- 
+
 ```bash
-$ echo "get -b metrics:name=nuxeo.works.queue.timer,queue=default,type=timers *" | java -jar /tmp/jmxterm-1.0.1-uber.jar -l localhost:1089 -n 
+$ echo "get -b metrics:name=nuxeo.works.queue.timer,queue=default,type=timers *" | java -jar /tmp/jmxterm-1.0.1-uber.jar -l localhost:1089 -n
 Welcome to JMX terminal. Type "help" for available commands.
 #mbean = metrics:name=nuxeo.works.queue.timer,queue=default,type=timers:
 50thPercentile = 0.0;
@@ -154,7 +152,7 @@ metrics.graphite.pollInterval=60
 metrics.graphite.prefix=
 ```
 
-![graphite]({{file name='graphite-nav.png'}} ?w=600,border=true)
+![graphite]({{file name='graphite-nav.png'}} ?w=650,border=true)
 
 ### Datadog Reporter
 
@@ -177,7 +175,7 @@ When UDP is chosen, the `metrics.datadog.host` and `metrics.datadog.port` must r
 Additional tags can be added to all metrics using `metrics.datadog.tags`.
 Metrics are polled from Nuxeo and pushed to Datadog using the defined `pollInterval`.
 
-![datadog]({{file name='datadog-nav.png'}} ?w=600,border=true)
+![datadog]({{file name='datadog-nav.png'}} ?w=650,border=true)
 
 ### Prometheus Reporter
 
@@ -193,7 +191,7 @@ You have to manage security for this access and make sure it is accessible from 
 Note that the Dropwizzard Metrics are exposed using [Opencensus](opencensus.io/), they are automatically prefixed by `dropwizard5_`
 and suffixed depending on metric types (`_gauge`, `_count` and `_timer`).
 
-![prometheus]({{file name='prometheus-nav.png'}} ?w=600,border=true)
+![prometheus]({{file name='prometheus-nav.png'}} ?w=650,border=true)
 
 ## Metrics Filtering
 
@@ -217,9 +215,9 @@ Fortunately it is possible to filter metrics.
 
 Nuxeo comes with a default filter that:
 - Reduces timer metrics by removing some percentiles and rates
-- Accept only few caches and directories metrics
+- Accept only a few caches and directories metrics
 - Deny other caches and directories
-- Deny log4j metrics for level below WARN
+- Deny log4j metrics for the level below WARN
 
 This filter can be found in `common-base` template in the [metrics-config.xml](https://github.com/nuxeo/nuxeo/blob/master/server/nuxeo-nxr-server/src/main/resources/templates/common-base/nxserver/config/metrics-config.xml) file:
 
@@ -260,7 +258,7 @@ This filter can be found in `common-base` template in the [metrics-config.xml](h
 
 Note that the `prefix` value used in the allow/deny rules is the beginning of the flatten metric name.
 
-## Metrics description
+## Metrics Description
 
 This section describes the main metrics available by categories.
 
@@ -293,6 +291,7 @@ Common directories are: `userDirectory`, `groupDirectory`
 - `nuxeo.directories.directory.cache.size`: Cache size
 
 ### Nuxeo Elasticsearch
+
 Nuxeo Elasticsearch service use timers.
 
 - `nuxeo.elasticsearch.service.timer`: Timer on the service dimension below
@@ -380,7 +379,7 @@ these metrics are global to the Nuxeo cluster and have 2 dimensions:
 - `nuxeo.streams.global.stream.group.end`: Offset of the last record in the stream
 - `nuxeo.streams.global.stream.group.latency`: Latency of consumer group when there is a lag
 
-#### Understanding the lag and latency metrics
+#### Understanding the Lag and Latency Metrics
 
 Given a producer that appends 3 records in a stream `source`:
  - `record1` at time `t1`, offset `1`
@@ -481,8 +480,8 @@ Some metrics depends on the chosen garbage collector or the version of the JVM:
 - `jvm.threads.timed_waiting.count`
 - `jvm.threads.waiting.count`
 
-
 ### Tomcat
+
 Can be disabled using:
 ```
 metrics.tomcat.enabled=false
@@ -500,6 +499,7 @@ metrics.tomcat.enabled=false
 - `tomcat.requestCount`
 
 ### Log4j
+
 Can be disabled using:
 ```
 metrics.log4j.enabled=false
@@ -510,7 +510,6 @@ metrics.log4j.enabled=false
 - `org.apache.logging.log4j.core.Appender.error`: Count the number of log at level ERROR
 - `org.apache.logging.log4j.core.Appender.fatal`: Count the number of log at FATAL level
 
-
 ## Monitoring Dashboard
 
 The above metrics can be rendered in dashboards depending on the chosen monitoring systems.
@@ -519,15 +518,14 @@ The above metrics can be rendered in dashboards depending on the chosen monitori
 
 Grafana can be used to render Graphite or Prometheus metrics.
 
-The [Nuxeo Stacks](https://github.com/bdelbosc/nuxeo-stacks/b) tool that generates dev and testing environment for Nuxeo
-provision a Grafana dashboard using a Graphite backend.
+The [Nuxeo Stacks](https://github.com/bdelbosc/nuxeo-stacks/) tool that generates dev and testing environment for Nuxeo provides a Grafana dashboard using a Graphite backend.
 
 The [JSON dashboard can be found in its sources](https://github.com/bdelbosc/nuxeo-stacks/blob/master/roles/common/files/grafana/provisioning/dashboards/nuxeo.json).
 
-![grafana]({{file name='grafana-dashboard.png'}} ?w=600,border=true)
+![grafana]({{file name='grafana-dashboard.png'}} ?w=650,border=true)
 
 ### Datadog
 
 The same dashboard can be build using Datadog.
 
-![datadog]({{file name='datadog-dashboard.png'}} ?w=600,border=true)
+![datadog]({{file name='datadog-dashboard.png'}} ?w=650,border=true)

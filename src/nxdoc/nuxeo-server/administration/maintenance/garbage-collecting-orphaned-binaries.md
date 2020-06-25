@@ -2,7 +2,7 @@
 title: Garbage-Collecting Orphaned Binaries
 review:
     comment: ''
-    date: '2019-03-14'
+    date: '2020-06-25'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,6 @@ labels:
     - fguillaume
     - lts2017-ok
     - lts2019-ok
-toc: true
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -85,13 +84,13 @@ if (!docBlobManager.isBinariesGarbageCollectionInProgress()) {
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
 - [Deleting Content]({{page space='userdoc' page='content-delete'}}) (User documentation)
 - [Trash Service]({{page page='trash-service'}})
-- [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
-
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
-
+- [HOWTO: Use Trash Feature]({{page page='how-to-use-trash-feature'}})
+{{/panel}}
+</div>
+<div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 - [Delete All Trashed Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/delete-all-trashed-documents)
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

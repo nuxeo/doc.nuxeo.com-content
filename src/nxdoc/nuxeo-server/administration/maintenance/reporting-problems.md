@@ -2,7 +2,7 @@
 title: Reporting Problems
 review:
     comment: ''
-    date: '2020-02-12'
+    date: '2020-06-25'
     status: ok
 toc: true
 labels:
@@ -174,8 +174,6 @@ These information can be requested by the Support team.</br>
 Please always compress files before uploading them to your JIRA ticket.
 {{! /excerpt}}
 
-&nbsp;
-
 ## {{> anchor 'nuxeo-conf'}}Nuxeo Status and Configuration
 
 To dump your server status and configuration:
@@ -208,9 +206,6 @@ Then proceed to the metric capture:
 ```bash
 java -jar /tmp/jmxterm-1.0.1-uber.jar -l localhost:1089 -n -i /tmp/metrics-script.txt)  > /tmp/nuxeo-metrics-`date +%Y%m%d-%H%M%S`.txt 2>&1
 ```
-
-
-
 
 ## {{> anchor 'gc'}}JVM Garbage Collector
 
@@ -406,18 +401,12 @@ If you think you've found a security issue, please report it privately to [secur
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
-
-{{! Please update the label in the Content by Label macro below. }}
-
 {{#> panel heading='Related Documentation'}}
-
 - [Maintenance]({{page page='maintenance'}})
-- [Metrics and Monitoring]({{page page='metrics'}})
-
-{{/panel}}</div><div class="column medium-6">
-
-{{! Please update the label and target spaces in the Content by Label macro below. }}
-
+- [Metrics]({{page page='metrics'}})
+{{/panel}}
+</div>
+<div class="column medium-6">
 &nbsp;
-
-</div></div>
+</div>
+</div>
