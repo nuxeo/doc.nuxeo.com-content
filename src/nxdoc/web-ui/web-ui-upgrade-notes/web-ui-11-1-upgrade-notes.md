@@ -34,7 +34,7 @@ Studio configuration is made to be compatible and does not need to be migrated. 
 Nuxeo added a compatibility layer to keep HTML imports working. There is no need to update HTML imports done in your code.
 
 #### ES Modules
-Polymer 3 is enforcing the use of modules, and requires to import specific features rather than using wildcards. Some options that were available under the global `Polymer` namespace will not work by default anymore: e.g. there is no `Polymer.dom.*`, you are supposed to do this instead:
+Because Polymer 3 relies on ES Modules, it no longer loads HTML files through HTML imports, which would set Polymer objects into the global `Polymer` namespace. Therefore, methods and objects that were available under the `Polymer` namespace will not work by default anymore: e.g. there is no `Polymer.dom.*`, you are supposed to do this instead:
 
 ```import { dom } from '@polymer/polymer/lib/legacy/polymer.dom.js';```
 
