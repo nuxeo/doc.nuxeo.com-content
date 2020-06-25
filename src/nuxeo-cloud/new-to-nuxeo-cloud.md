@@ -10,36 +10,39 @@ tree_item_index: 200
 toc: true
 ---
 
-Nuxeo Cloud customers begin by following the 3 steps identified below. 
+Nuxeo Cloud customers start their on-boarding with the 3 following steps:
 
-Step 1 - The Nuxeo Cloud team gathers the information required to deploy the environments. This includes answering the following questions:
-Where is the user base located?
-What additional services have been purchased? (maybe links to Drive, Adobe CC, Arender, etc.)
-Who will require access to the environments?
-Has a development sandbox been purchased?
-Is Nuxeo Professional Services engaged as part of the project?
+1. The Nuxeo Cloud team gathers the information required to deploy the environments. This includes answering the following questions:
+    - Where is the user base located?
+    - What additional services have been purchased? (maybe links to Drive, Adobe CC, Arender, etc.)
+    - Who will require access to the environments?
+    - Has a development sandbox been purchased?
+    - Is Nuxeo Professional Services engaged as part of the project?
 
-Step 2 - Once all of the necessary information has been identified, the Nuxeo Cloud team deploys the necessary environments and provides the appropriate resources with access.
+2. Once all of the necessary information has been identified, the Nuxeo Cloud team deploys the necessary environments and provides the appropriate resources with access.
 
-Step 3 - The project teams begin using the environments to start the project, configuration and testing efforts to move toward production. The environment provisioning process can take as little as one week!
+3. The project teams begin using the environments to start the project, configuration and testing efforts to move toward production. The environment provisioning process can take as little as one week!
 
-## Production & Pre-Production Maintenance
+## FAQ
 
-All Nuxeo Cloud Production and Pre-Production environments are supported via standard maintenance windows. These windows are available to the Nuxeo Cloud team 7 days a week in order to make any necessary updates to environments. They are typically used only 1-2 times per month.
+## Deployment
 
-# US & EU Standard Maintenance Windows
+### How do I request a deployment from the cloud team to a Prod or Pre-Prod environment?
 
-US customers - 12AM - 2AM EST
-EU customers - 12AM - 2AM CET
-Note: If required, Nuxeo Cloud can accommodate exceptions to the standard maintenance windows
+### How do I request a deployment for a service (e.g. aRender) or config update to a cloud supported environment?
 
-# Nuxeo HotFixes
+## Prod / Preprod
 
-Nuxeo Cloud applies Nuxeo LTS HotFixes to all cloud environments the first full week of each month during the maintenance windows. Customer contacts are emailed 1 week before the HotFix deployment takes place. Our standard deployment is:
+### Can Prod data be copied to a Pre-Prod environment?
 
-Pre-Prod = First Tuesday of the Month
-Prod = First Thursday of the Month
+### Can a Dev Sandbox environment contain production data?
 
-# Additional Updates / Security Patches
+### How does a dev or engineering team get access to environment infrastructure?  
 
-The standard maintenance window may also be used to apply updates to 3rd party services, infrastructure or security patches. We notify customer contacts via email before these take place.
+### How are changes made to a Cloud Prod & Pre-Prod Environment?
+
+### What if I need to drop or reset the DB?
+
+## Development Sandbox Questions
+
+### What information is needed to set up a Development Sandbox?
