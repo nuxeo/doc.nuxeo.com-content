@@ -26,6 +26,7 @@ confluence:
     source_link: /display/NXDOC/Metrics+and+Monitoring
 tree_item_index: 100
 version_override:
+    Next: next/nxdoc/metrics
     LTS 2015: 710/admindoc/metrics-and-monitoring
     '6.0': 60/admindoc/metrics-and-monitoring
     '5.8': 58/admindoc/metrics-and-monitoring

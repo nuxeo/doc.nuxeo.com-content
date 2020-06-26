@@ -26,6 +26,7 @@ confluence:
     source_link: /display/NXDOC/Logs+Analysis
 tree_item_index: 300
 version_override:
+    Next: next/nxdoc/logs
     LTS 2015: 710/admindoc/logs-analysis
     '6.0': 60/admindoc/logs-analysis
     '5.8': 58/admindoc/logs-analysis
