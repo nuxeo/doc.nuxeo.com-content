@@ -448,7 +448,7 @@ By default, executing a batch will automatically remove it. You can prevent this
 ### Deleting a File from a Batch
 
 ```
-DELETE http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileId}
+DELETE http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
 
 Returns a 204 No Content and removes the file from the batch.
