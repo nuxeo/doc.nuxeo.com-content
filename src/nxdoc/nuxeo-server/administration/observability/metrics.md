@@ -8,6 +8,8 @@ labels:
     - metrics
     - monitoring
 toc: true
+version_override:
+    LTS 2019: nxdoc/metrics-and-monitoring
 tree_item_index: 300
 ---
 

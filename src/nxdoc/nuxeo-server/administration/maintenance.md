@@ -25,6 +25,7 @@ confluence:
     source_link: /display/NXDOC/Monitoring+and+Maintenance
 tree_item_index: 300
 version_override:
+    LTS 2019: nxdoc/monitoring-and-maintenance
     LTS 2015: 710/admindoc/monitoring-and-maintenance
     '6.0': 60/admindoc/monitoring-and-maintenance
     '5.8': 58/admindoc/monitoring-and-maintenance
