@@ -74,8 +74,9 @@ A `commentRemoved` event is fired when deleting a comment or annotation.
 
 ### Auto Subscription
 
-Document creator is subscribed automatically to the `commentAdded` event on his document(s).</br>
-Comment author is subscribed automatically to the `commentAdded` event on the commented document.</br>
+When a first comment is added to a document, the document creator is subscribed automatically to the `commentAdded` event on his document(s).</br>
+When writing his first comment, a comment author is subscribed automatically to the `commentAdded` event on the commented document.</br>
+Once a user unsubscribes from a document, he won't be auto subscribed again to this document.</br>
 Auto subscription is turned on by default. It can be turned off by contributing like so:
 
 ```xml
