@@ -44,6 +44,10 @@ Our standard maintenance window is 7 days a week:
 
 Exceptions can be made to accommodate peak user times.
 
+### Production and Pre-Production Maintenance
+
+All Nuxeo Cloud Production and Pre-Production environments are supported via standard maintenance windows. These windows are available to the Nuxeo Cloud team 7 days a week in order to make any necessary updates to environments. They are typically used only 1-2 times per month.
+
 ## Hotfixes, Patches, 3rd Party Updates and LTS releases
 
 The Cloud team will proactively deploy and manage the following monthly, during the first week of each month.
@@ -56,23 +60,15 @@ The LTS upgrade process will be coordinated with customers and the appropriate d
 - LTS releases are supported up to 3 years after the release has been made public.
 - A non-compliance fee may be imposed for customers who do not upgrade to the new LTS after an LTS release is no longer supported.
 
-## Production and Pre-Production Maintenance
+## Nuxeo Hotfixes
 
-All Nuxeo Cloud Production and Pre-Production environments are supported via standard maintenance windows. These windows are available to the Nuxeo Cloud team 7 days a week in order to make any necessary updates to environments. They are typically used only 1-2 times per month.
+Nuxeo Cloud applies Nuxeo LTS Hotfixes to all cloud environments the first full week of each month during the maintenance windows.
+Customer contacts are emailed 1 week before the Hotfix deployment takes place.
 
-# US and EU Standard Maintenance Windows
+Our standard deployment is:
+- Pre-Prod: First Tuesday of the Month
+- Prod: First Thursday of the Month
 
-US customers - 12AM - 2AM EST
-EU customers - 12AM - 2AM CET
-Note: If required, Nuxeo Cloud can accommodate exceptions to the standard maintenance windows
-
-# Nuxeo HotFixes
-
-Nuxeo Cloud applies Nuxeo LTS HotFixes to all cloud environments the first full week of each month during the maintenance windows. Customer contacts are emailed 1 week before the HotFix deployment takes place. Our standard deployment is:
-
-Pre-Prod = First Tuesday of the Month
-Prod = First Thursday of the Month
-
-# Additional Updates / Security Patches
+## Additional Updates / Security Patches
 
 The standard maintenance window may also be used to apply updates to 3rd party services, infrastructure or security patches. We notify customer contacts via email before these take place.
