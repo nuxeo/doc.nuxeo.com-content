@@ -10,39 +10,20 @@ tree_item_index: 200
 toc: true
 ---
 
-Nuxeo Cloud customers start their on-boarding with the 3 following steps:
+## How do I get started?
 
-1. The Nuxeo Cloud team gathers the information required to deploy the environments. This includes answering the following questions:
-    - Where is the user base located?
-    - What additional services have been purchased? (maybe links to Drive, Adobe CC, Arender, etc.)
-    - Who will require access to the environments?
-    - Has a development sandbox been purchased?
-    - Is Nuxeo Professional Services engaged as part of the project?
+Nuxeo will provision the prod and pre-prod before the team is ready to begin using them.
 
-2. Once all of the necessary information has been identified, the Nuxeo Cloud team deploys the necessary environments and provides the appropriate resources with access.
+We typically ask for at least 1-2 weeks notice before provisioning both environments. If required, expedited requests can be addressed.
 
-3. The project teams begin using the environments to start the project, configuration and testing efforts to move toward production. The environment provisioning process can take as little as one week!
+In order to set up both environments we need the following:
+- LTS Version: including any HF's that may be required
+- Database: MongoDB or PostgreSQL
+- Prod and Pre-Prod URL: typically we use `*.nuxeocloud.com` (prod) and `*.preprod.nuxeocloud.com` (pre-prod)
+- AWS Region: if this is not known or a specific one is not required, we can determine the right region by knowing where the primary users are located
+- Email Setup:
+    - application emails will be sent from an @nuxeocloud.com email addresses
+    - no dummy email addresses are allowed - not allowed by AWS
+- Technical Contact: person who can answer any follow up questions the team has on the environment deployment
 
-## FAQ
-
-## Deployment
-
-### How do I request a deployment from the cloud team to a Prod or Pre-Prod environment?
-
-### How do I request a deployment for a service (e.g. aRender) or config update to a cloud supported environment?
-
-## Prod / Preprod
-
-### Can Prod data be copied to a Pre-Prod environment?
-
-### Can a Dev Sandbox environment contain production data?
-
-### How does a dev or engineering team get access to environment infrastructure?  
-
-### How are changes made to a Cloud Prod & Pre-Prod Environment?
-
-### What if I need to drop or reset the DB?
-
-## Development Sandbox Questions
-
-### What information is needed to set up a Development Sandbox?
+After an environment has been provisioned, the technical/business contact will be provided with the appropriate login credentials

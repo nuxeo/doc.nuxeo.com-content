@@ -12,15 +12,15 @@ toc: true
 
 ## Concept
 
-=> **Monitored & Controlled**: The Nuxeo Cloud Operations (NCO) team deploys ALL changes and updates to pre-prod and prod environments
+- **Monitored & Controlled**: The Nuxeo Cloud Operations (NCO) team deploys ALL changes and updates to pre-prod and prod environments
 
-=> **Fast**: Requests typically completed within 1-2 days
+- **Fast**: Requests typically completed within 1-2 days
 
-=> **Follow Nuxeo Best Practices**: Deployments done via Marketplace Packages so that our automation process is easily used across all projects
+- **Follow Nuxeo Best Practices**: Deployments done via Marketplace Packages so that our automation process is easily used across all projects
   - NO Snapshots of Date-Based Releases: only production ready code
   - DO NOT deploy the same Marketplace Package to the same environment multiple times
 
-=> **Use Maintenance Windows / Minimize Impact**: Deployments done during standard maintenance windows unless otherwise specified to minimize potential impact to users.
+- **Use Maintenance Windows / Minimize Impact**: Deployments done during standard maintenance windows unless otherwise specified to minimize potential impact to users.
 
 ## Deploy My Configuration
 
@@ -42,14 +42,16 @@ The Cloud team WON'T perform a deployment until a date/time has been provided. E
 
 ## Customization
 
-Customers will have Studio access to configure their business logic and data model and to define the list of packages (including custom) that are required
-The Private Marketplace will be available to customers for custom Java development
-The NCO team will validate and deploy all packages to hosted production and pre-prod environments via marketplace packages
-If necessary, additional Nuxeo teams (e.g. professional services) can provide support for the creation and deployment of any required configuration or customization
+Customers have access to [Nuxeo Studio]({{page version='' space='studio' page='nuxeo-studio'}}) to configure their business logic and data model and to define the list of packages (including custom) that are required.
 
-## Constraints
+The Private Marketplace is available to customers for custom Java development.
+
+The NCO team validates and deploys all packages to hosted production and pre-prod environments via marketplace packages.
+
+If necessary, additional Nuxeo teams (e.g. professional services) can provide support for the creation and deployment of any required configuration or customization.
+
+## Limitations
 
 On Preproduction and production environments, it is not allowed to:
-
 - Deploy Snapshot versions
 - Perform Hot-Reload

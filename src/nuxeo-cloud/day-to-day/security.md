@@ -10,44 +10,29 @@ tree_item_index: 400
 toc: true
 ---
 
-The Nuxeo Cloud environments are built using cloud and application security best practices - including support for encryption of data at rest and in transit and threat detection monitoring using Threat Stack
+The Nuxeo Cloud environments are built using Cloud and application security best practices - including support for encryption of data at rest and in transit and threat detection monitoring using Threat Stack.
 
 A single tenant deployment model is applied to each customer’s production and pre-production deployments - meaning no resources are shared between customers.
 
-Nuxeo Cloud has been PCI-DSS and SOC2 Certified (as of 2019)
+Nuxeo Cloud has been PCI-DSS and SOC2 Certified (as of 2019).
 
 ## Access / Authentication
 
 Customers will have access to all of the Nuxeo APIs.
 
-Customers will have the option to integrate Nuxeo with their Identity Management (IDM) solution. Nuxeo supports most SAML enabled IDM solutions such as Okta and Active Directory Federated Solution (ADFS).
+Customers have the option to integrate Nuxeo with their Identity Management (IDM) solution. Nuxeo supports most SAML enabled IDM solutions such as Okta and Active Directory Federated Solution (ADFS).
 
 The standard process will create users on the fly at first connection, but Nuxeo can also provide an option to provision users and groups via a SCIM API.
 
-All customer environment changes are tracked via
-- JIRA issues
-- Jenkins Jobs
-- System Logs
-- Security Policy Exceptions
-
-All environment deployments are reviewed and approved by a different cloud team member before they are deployed
-
-All updates are done via automation as much as possible
-
-All manual changes require security review and approval before being made to an environment
-Critical Security updates may require a quick resolution and notification after the change has been made
-
 ## Modifications / Updates
 
-All customer environment changes are tracked via
+All customer environment changes are tracked via:
 - JIRA issues
 - Jenkins Jobs
 - System Logs
 - Security Policy Exceptions
 
-All environment deployments are reviewed and approved by a different cloud team member before they are deployed
-
-All updates are done via automation as much as possible
+All environment deployments are reviewed and approved by a different cloud team member before they are deployed. All updates are done via automation as much as possible.
 
 All manual changes require security review and approval before being made to an environment
 Critical Security updates may require a quick resolution and notification after the change has been made.
