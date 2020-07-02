@@ -32,7 +32,7 @@ Watch the related courses on Nuxeo University
 
 ### Installation
 
-You can install directly from the [Chrome Web Store](https://chrome.google.com/webstore/detail/nuxeo-extension/kncphbjdicjganncpalklkllihdidcmh) or [Mozilla Addons](https://addons.mozilla.org/en-US/firefox/addon/nuxeo-dev-tools/).
+You can install directly from the [Chrome Web Store](https://chrome.google.com/webstore/detail/nuxeo-gmail/odejoomeopibjmmflfjanjejcnkllnhm) or [Mozilla Addons](https://addons.mozilla.org/en-US/firefox/addon/nuxeo-dev-tools/).
 
 ### Building from GitHub
 
