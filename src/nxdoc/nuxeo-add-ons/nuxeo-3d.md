@@ -121,7 +121,7 @@ To install Docker:
 1. Follow the instructions at [Get Docker](https://www.docker.com/products/overview) on Docker's official site.
 
     To check if Docker is properly installed, run `docker -v` anywhere on the command line console. As result, Docker version and build information should be shown.
-2. In Docker settings, make sure that Docker can access the repository where the Nuxeo server is installed. If that's not the case, add it to the repositories.
+2. In Docker settings, make sure that the server where the Nuxeo instance and Docker are installed can access the repository (https://hub.docker.com/_/nuxeo). If that's not the case, add it to the repositories.
 
 Nuxeo Platform 3D relies on two Docker images that are available on [Nuxeo's Docker Hub account](https://hub.docker.com/u/nuxeo/). The Nuxeo server will trigger the download and installation of these two images, so you don't need to set them up in Docker.
 
