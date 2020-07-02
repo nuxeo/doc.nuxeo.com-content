@@ -30,7 +30,7 @@ The Nuxeo Dev Tools extension requires Nuxeo Platform 8.2 and above.
 
 ### Installation from the Stores
 
-You can install it directly from the [Chrome Web Store](https://chrome.google.com/webstore/detail/nuxeo-extension/kncphbjdicjganncpalklkllihdidcmh) or [Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/nuxeo-dev-tools/).
+You can install it directly from the [Chrome Web Store](https://chrome.google.com/webstore/detail/nuxeo-gmail/odejoomeopibjmmflfjanjejcnkllnhm) or [Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/nuxeo-dev-tools/).
 
 ### Building from GitHub
 
