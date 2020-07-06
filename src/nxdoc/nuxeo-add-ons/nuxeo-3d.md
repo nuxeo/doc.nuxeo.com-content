@@ -99,8 +99,8 @@ history:
         date: '2016-10-07 16:29'
         message: ''
         version: '1'
-
 ---
+
 [Nuxeo Platform 3D](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d) provides support for 3D file types.
 
 ## Installation and Configuration
@@ -174,7 +174,7 @@ Features not available on 3D document type:
 
 The 3D preview allows a complete visualization of the 3D document in real-time: you can rotate, pan and zoom on the 3D model.
 
-![]({{file name='preview.png'}} ?w=600,border=true)
+![]({{file name='preview.png'}} ?w=350,border=true)
 
 Preview is done through a WebGL rendering.
 
@@ -182,7 +182,7 @@ Preview is done through a WebGL rendering.
 
 The configured render views are presented as a set of 2D orthographic renderings of the original 3D model. These renders provide an exact representation of the model in the parametrized views. The render views can be downloaded in full resolution. Clicking on a render view changes the camera position of the currently loaded model in the 3D Preview to match the rotation of the render view.
 
-![]({{file name='renders.png'}} ?w=300,h=251,border=true)
+![]({{file name='renders.png'}} ?w=600,border=true)
 
 #### Transmission Formats
 
