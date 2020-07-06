@@ -2,7 +2,7 @@
 title: Nuxeo 3D
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2020-07-06'
     status: ok
 labels:
     - lts2016-ok
