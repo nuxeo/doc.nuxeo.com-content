@@ -13,8 +13,8 @@ toc: true
 tree_item_index: 100
 ---
 
-<!--## Requirements
-
+<!--
+## Requirements
 To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer.
 We provide OS-specific installers for macOS and Windows, available from the Nuxeo Drive tab of the Home.
 
@@ -27,7 +27,8 @@ See this up-to-date [support page](https://github.com/nuxeo/nuxeo-drive/blob/mas
 Nuxeo Drive uses the same authentication way as any user would do with its browser. So it can handle basic authentications [available in the platform]({{page page='authentication-and-user-management'}}) and Kerberos. But it is missing several protocols that require deep changes in Nuxeo Drive itself, as of now those are not available:
 
 - OAuth 2
-- NTLM (tracked with the ticket [NXDRIVE-875](https://jira.nuxeo.com/browse/NXDRIVE-875))-->
+- NTLM (tracked with the ticket [NXDRIVE-875](https://jira.nuxeo.com/browse/NXDRIVE-875))
+-->
 
 ## Installation
 
@@ -35,16 +36,53 @@ Nuxeo Drive uses the same authentication way as any user would do with its brows
 
 If you try to synchronize a folder and you haven't installed the Nuxeo Drive client yet or haven't provided your credentials to the Nuxeo Drive client, you are automatically directed to the Nuxeo Drive home tab to install it.
 
-<div class="dl-boxes">
-<a href="https://community.nuxeo.com/static/drive-updates/nuxeo-drive.dmg">macOS<br>![]({{file page='userdoc/icons-index' name='download-document-web-ui-blue.png'}})</a>
-<a href="https://community.nuxeo.com/static/drive-updates/nuxeo-drive-x86_64.AppImage">Linux<br>![]({{file page='userdoc/icons-index' name='download-document-web-ui-blue.png'}})</a>
-<a href="https://community.nuxeo.com/static/drive-updates/nuxeo-drive.exe">Windows<br>![]({{file page='userdoc/icons-index' name='download-document-web-ui-blue.png'}})</a>
-</div>
+<div>
+<table style="border-width:0px;">
+<tbody style="border-width:0px;">
+<tr>
+<td colspan="1" style="text-align:center; font-size:200%;">
 
-{{#> callout type='note' }}
-For GNU/Linux, once downloaded, [make the file executable](https://discourse.appimage.org/t/how-to-run-an-appimage/80) once downloaded.</br>
-If you encounter any error, please check those pages: [Manual Usage](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/gnu_linux.md) and [Troubleshooting](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/gnu_linux_qa.md).
-{{/callout}}
+<b>
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/download-document-web-ui.png
+    name: download-document-web-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![download-document-web-ui.png](nx_asset://55bbb17d-d2e5-40ba-a3d8-86d06be630b9)</br>
+[macOS](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.dmg)
+</b>
+</br>
+</td>
+<td colspan="1" style="text-align:center; font-size:200%;">
+
+<b>
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/download-document-web-ui.png
+    name: download-document-web-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![download-document-web-ui.png](nx_asset://55bbb17d-d2e5-40ba-a3d8-86d06be630b9)</br>
+[Linux](https://community.nuxeo.com/static/drive-updates/nuxeo-drive-x86_64.AppImage)
+</b>
+</br>
+</td>
+<td colspan="1" style="text-align:center; font-size:200%;">
+
+<b>
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/download-document-web-ui.png
+    name: download-document-web-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![download-document-web-ui.png](nx_asset://55bbb17d-d2e5-40ba-a3d8-86d06be630b9)</br>
+[Windows](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.exe)
+</b>
+</br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 <!--**Windows**
@@ -77,10 +115,8 @@ After you installed Nuxeo Drive, you need to start it manually.
 Start Nuxeo Drive like any other application:
 
 - On macOS, Nuxeo Drive is in the Applications directory.
-
     {{#> callout type='note' }}
     When you double click on the icon the first time, a security message appears. This is normal, jus click on **Open**.
-
     ![]({{file name='drive-macos-warning.png' page='nuxeo-drive'}})
     {{/callout}}
 - On Windows, Nuxeo Drive is started from **Start** > **Programs** > **Nuxeo** > **Nuxeo Drive**.
@@ -407,9 +443,7 @@ To uninstall Nuxeo Drive:
 4. Delete the Nuxeo Drive item from your Favorites in the Finder.
 
 {{#> callout type='warning' }}
-
 At this point you have uninstalled the Nuxeo Drive program and its configuration. If you want to get rid of the synchronized data you also need to delete the Nuxeo Drive folder like you delete any regular folder.
-
 {{/callout}}
 
 ### Uninstalling Nuxeo Drive on Windows
