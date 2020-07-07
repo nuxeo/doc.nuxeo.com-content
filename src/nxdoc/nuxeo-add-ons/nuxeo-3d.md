@@ -2,7 +2,7 @@
 title: Nuxeo 3D
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2020-07-06'
     status: ok
 labels:
     - lts2016-ok
@@ -101,6 +101,7 @@ history:
         version: '1'
 ---
 
+
 [Nuxeo Platform 3D](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d) provides support for 3D file types.
 
 ## Installation and Configuration
@@ -121,7 +122,7 @@ To install Docker:
 1. Follow the instructions at [Get Docker](https://www.docker.com/products/overview) on Docker's official site.
 
     To check if Docker is properly installed, run `docker -v` anywhere on the command line console. As result, Docker version and build information should be shown.
-2. In Docker settings, make sure that Docker can access the repository where the Nuxeo server is installed. If that's not the case, add it to the repositories.
+2. In Docker settings, make sure that the server where the Nuxeo instance and Docker are installed can access the repository (https://hub.docker.com/_/nuxeo). If that's not the case, add it to the repositories.
 
 Nuxeo Platform 3D relies on two Docker images that are available on [Nuxeo's Docker Hub account](https://hub.docker.com/u/nuxeo/). The Nuxeo server will trigger the download and installation of these two images, so you don't need to set them up in Docker.
 
@@ -158,12 +159,12 @@ When a main 3D model file is assigned to a 3D document, a processing routine is 
 To create a 3D document, you can either attach the 3D file as main content of the document and then attach the textures files, or you can directly attach a standalone ZIP file as main content of the 3D document, that holds all the 3D resources for the document. This second way to proceed allows a directory structure inside the ZIP.
 
 Available features on 3D document type:
-- [Edit metadata]({{page version='' space='userdoc' page='content-edit'}})
-- [Versioning of document]({{page version='' space='userdoc' page='version'}})
-- [Tagging]({{page version='' space='nxdoc' page='tagging'}})
-- [Add to collections]({{page version='' space='userdoc' page='collections-web-ui'}})
-- [Relations]({{page version='' space='nxdoc' page='editing-content'}}#relations)
-- [Publishing]({{page version='' space='userdoc' page='share'}})
+- [Edit metadata]({{page version='' space='userdoc' page='editing-content'}}#edit-metadata-form)
+- [Versioning of document]({{page version='' space='userdoc' page='editing-content'}}#versioning-overview)
+- [Tagging]({{page version='' space='userdoc' page='tags'}})
+- [Add to collections]({{page version='' space='userdoc' page='collections'}})
+- [Relations]({{page version='' space='userdoc' page='editing-content'}}#relations)
+- [Publishing]({{page version='' space='userdoc' page='publishing-content'}})
 
 Features not available on 3D document type:
 - Default workflows
@@ -174,7 +175,7 @@ Features not available on 3D document type:
 
 The 3D preview allows a complete visualization of the 3D document in real-time: you can rotate, pan and zoom on the 3D model.
 
-![]({{file name='preview.png'}} ?w=600,border=true)
+![]({{file name='preview.png'}} ?w=350,border=true)
 
 Preview is done through a WebGL rendering.
 
@@ -182,7 +183,7 @@ Preview is done through a WebGL rendering.
 
 The configured render views are presented as a set of 2D orthographic renderings of the original 3D model. These renders provide an exact representation of the model in the parametrized views. The render views can be downloaded in full resolution. Clicking on a render view changes the camera position of the currently loaded model in the 3D Preview to match the rotation of the render view.
 
-![]({{file name='renders.png'}} ?w=300,h=251,border=true)
+![]({{file name='renders.png'}} ?w=600,border=true)
 
 #### Transmission Formats
 
