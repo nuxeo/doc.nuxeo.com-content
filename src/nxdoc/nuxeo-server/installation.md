@@ -31,11 +31,10 @@ version_override:
 ---
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-
-- [Video on the Installation Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/141/nuxeo-platform-quickstart-installation-concepts)
-- [Screenshare on the Installation Process](https://university.nuxeo.com/learn/public/course/view/elearning/139/nuxeo-platform-quickstart-installation-process).
-  {{/callout}}
+Watch the related courses on Nuxeo University:</br>
+[Video on the Installation Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/141/nuxeo-platform-quickstart-installation-concepts)</br>
+[Screenshare on the Installation Process](https://university.nuxeo.com/learn/public/course/view/elearning/139/nuxeo-platform-quickstart-installation-process).
+{{/callout}}
 
 The [Nuxeo Platform](https://www.nuxeo.com/) comes in many different packages and can be installed on many operating systems. You may have to install:
 
@@ -45,10 +44,52 @@ The [Nuxeo Platform](https://www.nuxeo.com/) comes in many different packages an
 - a virtual machine image (works on any operating system that supports running VMware or VirtualBox),
 - a **.deb** package (works on Linux Debian and Ubuntu).
 
-<div class="dl-boxes">
-<a href="{{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-linux'}}">Linux<br>![]({{file page='userdoc/icons-index' name='download-document-web-ui-blue.png'}})</a>
-<a href="{{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-mac-os'}}">macOS<br>![]({{file page='userdoc/icons-index' name='download-document-web-ui-blue.png'}})</a>
-<a href="{{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-windows'}}">Windows<br>![]({{file page='userdoc/icons-index' name='download-document-web-ui-blue.png'}})</a>
+<div>
+<table style="border-width:0px;">
+<tbody style="border-width:0px;">
+<tr>
+<td colspan="1" style="text-align:center; font-size:200%;">
+
+<b>
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/download-document-web-ui.png
+    name: download-document-web-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![download-document-web-ui.png](nx_asset://55bbb17d-d2e5-40ba-a3d8-86d06be630b9)</br>
+[Linux]({{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-linux'}})
+</b>
+</br>
+</td>
+<td colspan="1" style="text-align:center; font-size:200%;">
+
+<b>
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/download-document-web-ui.png
+    name: download-document-web-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![download-document-web-ui.png](nx_asset://55bbb17d-d2e5-40ba-a3d8-86d06be630b9)</br>
+[macOS]({{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-mac-os'}})
+</b>
+</br>
+</td>
+<td colspan="1" style="text-align:center; font-size:200%;">
+
+<b>
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/download-document-web-ui.png
+    name: download-document-web-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![download-document-web-ui.png](nx_asset://55bbb17d-d2e5-40ba-a3d8-86d06be630b9)</br>
+[Windows]({{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-windows'}})
+</b>
+</br>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 ## General Installation Process
