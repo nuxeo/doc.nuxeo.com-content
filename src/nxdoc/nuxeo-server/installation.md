@@ -2,7 +2,7 @@
 title: Installation
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2020-07-07'
     status: ok
 labels:
     - lts2016-ok
@@ -259,15 +259,14 @@ history:
         date: '2010-08-02 17:14'
         message: ''
         version: '1'
-
 ---
+
 The Nuxeo Platform comes in many different packages and can be installed on many operating systems. You may have to install:
 
 - a zip archive (works on any operating system that supports a Java Development Kit),
 - a Windows installer (**.exe**),
 - a virtual machine image (works on any operating system that supports running VMware or VirtualBox),
 -  a **.deb** package (works on Linux Debian and Ubuntu).
-
 
 <div>
 <table style="border-width:0px;">
@@ -301,8 +300,6 @@ The Nuxeo Platform comes in many different packages and can be installed on many
 </tbody>
 </table>
 </div>
-
-
 
 ## General Installation Process
 
