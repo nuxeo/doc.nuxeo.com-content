@@ -65,7 +65,7 @@ history:
 
 {{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
 
-The Nuxeo Platform used to feature a module dedicated to case management, called Case Management Framework. From the version 5.6 of the platform, the technology on which CMF was based, called Content Routing, has been integrated in the Platform by default to enable users to create their own routes without installing a specific module and leaving their regular content management environment.
+The Nuxeo Platform used to feature a module dedicated to case management, called [Case Management Framework](https://www.nuxeo.com/products/case-management/). From the version 5.6 of the platform, the technology on which CMF was based, called Content Routing, has been integrated in the Platform by default to enable users to create their own routes without installing a specific module and leaving their regular content management environment.
 
 So how to do case management with the Nuxeo Platform?
 It takes two steps:
