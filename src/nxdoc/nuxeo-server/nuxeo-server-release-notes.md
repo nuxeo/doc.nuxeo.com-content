@@ -338,18 +338,6 @@ Previously, the Bulk Service Processor (the scroller and status computations) re
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28357](https://jira.nuxeo.com/browse/NXP-28357)
 
-#### Implement Coalescing Commands on Bulk Action Framework
-
-Bulk Action Framework now supports coalescing commands as WorkManager does.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26776](https://jira.nuxeo.com/browse/NXP-26776)
-
-#### Implement Idempotent Commands on Bulk Action Framework
-
-Bulk Action Framework now supports idempotent commands as WorkManager does.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26777](https://jira.nuxeo.com/browse/NXP-26777)
-
 #### Bulk Service Handles Elasticsearch Scroller
 (also available in 10.10)
 
@@ -647,6 +635,14 @@ The field `ecm:isProxy` is now part of the valid fields for Elasticsearch aggreg
 #### Cleanup
 
 This release also comes with hundreds of bugs fixed and also code cleanups, making Nuxeo Server more solid than ever.
+
+## Addons
+
+### Web UI
+
+For more information on Web UI latest release:
+- [Web UI Release Notes]({{page version='next' space='nxdoc' page='web-ui-release-notes'}})
+- [Web UI Upgrade Notes]({{page version='next' space='nxdoc' page='web-ui-upgrade-notes'}})
 
 <!--
 ## Deprecation
