@@ -23,13 +23,15 @@ We will also provide soon instructions for upgrading to the latest release.
 
 ### Core Storage
 
-#### Allow optimized MongoDB ids with shorter size {{Also available in '10.10'}}
+#### Allow Optimized MongoDB Ids With Shorter Size
+(also available in 10.10)
 
-We can now use  8 bytes MongoDB ids (instead of 36 bytes) in order to reduce database and index sizes.
+We can now use 8 bytes MongoDB ids (instead of 36 bytes) to reduce database and index sizes.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28763](https://jira.nuxeo.com/browse/NXP-28763)
 
-#### Blob provider improvements {{Also available in '10.10'}}
+#### Blob Provider Improvements
+(also available in 10.10)
 
 A new blob provider implementation has been added to provide more flexibility and more options:
 - making them transactional,
@@ -47,37 +49,43 @@ This new blob provider can be enabled using a property in `nuxeo.config`
 - [NXP-28716](https://jira.nuxeo.com/browse/NXP-28716)
 - [NXP-25712](https://jira.nuxeo.com/browse/NXP-25712)
 
-#### Better management of temporary files for the encrypted (AES) blob provider {{Also available in '10.10'}}
+#### Better Management of Temporary Files for the Encrypted (AES) Blob Provider
+(also available in 10.10)
 
 A new implementation of the AESBinaryManager has been added to improve temporary files management.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28456](https://jira.nuxeo.com/browse/NXP-28456)
 
-#### DefaultBlobDispatcher supports full regexp-based match {{Also available in '10.10'}}
+#### DefaultBlobDispatcher Supports Full Regexp-Based Match
+(also available in 10.10)
 
 Full regexp-based match has been added to `DefaultBlobDispatcher`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28267](https://jira.nuxeo.com/browse/NXP-28267)
 
-#### Add ecm:path variable to the default blob dispatcher {{Also available in '10.10'}}
+#### Add `ecm:path` Variable to the Default Blob Dispatcher
+(also available in 10.10)
 
 `ecm:path` variable is added to the default blob dispatcher.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28227](https://jira.nuxeo.com/browse/NXP-28227)
 
-#### Allow avoiding use of the HTTP proxy for S3 connections if the S3 endpoint is internal {{Also available in '10.10'}}
+#### Allow Avoiding Use of the HTTP Proxy for S3 Connections if the S3 Endpoint Is Internal
+(also available in 10.10)
 
-In some situations the S3BinaryManager needs to connect to a local S3-compatible endpoint that must not go through the global `nuxeo.http.proxy.host` defined.
+In some situations, the S3BinaryManager needs to connect to a local S3-compatible endpoint that must not go through the global `nuxeo.http.proxy.host` defined.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28185](https://jira.nuxeo.com/browse/NXP-28185)
 
-#### Better management of authentication parameters for Google Storage {{Also available in '10.10'}}
+#### Better Management of Authentication Parameters for Google Storage
+(also available in 10.10)
 
-We can now reference a file with the json content rather than the json value itself as a framework property.
+We can now reference a file with the JSON content rather than the JSON value itself as a framework property.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27925](https://jira.nuxeo.com/browse/NXP-27925)
 
-#### Configurable digest in S3BinaryManager {{Also available in '10.10'}}
+#### Configurable Digest in S3BinaryManager
+(also available in 10.10)
 
 The digest algorithm to use to compute a unique key when storing blobs in S3 can now be configured among standard algorithms listed here for Java 11.
 
@@ -85,57 +93,61 @@ The default value is MD5.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27805](https://jira.nuxeo.com/browse/NXP-27805)
 
-#### S3 cache and connection parameters configurable through nuxeo.conf
+#### S3 Cache and Connection Parameters Configurable Through `nuxeo.conf`
 
 Instead of editing the template defining the S3 blob provider, we can now set the S3 cache and the connection parameters in `nuxeo.conf`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27777](https://jira.nuxeo.com/browse/NXP-27777)
 
-#### S3 Transfer Acceleration support <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [](https://jira.nuxeo.com/browse/
+#### S3 Transfer Acceleration Support
 
-We now allows to use the accelerate mode of S3, more details here: https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html
+We now allow using the accelerate mode of S3, more details here: https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27657](https://jira.nuxeo.com/browse/NXP-27657)
 
-#### Configure S3 multipart part size {{Also available in '10.10'}}
+#### Configure S3 Multipart Part Size
+(also available in 10.10)
 
 It is now possible to configure the chunk size of multipart part size (from 5MB to 5GB).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26899](https://jira.nuxeo.com/browse/NXP-26899)
 
-#### Document Deletion with Bulk Action Framework on DBS
+#### Document Deletion With Bulk Action Framework on DBS
 
-We are now using Nuxeo Bulk Action Framework to delete massively documents. This is supported for DBS only.
+We now use the Bulk Action Framework to delete massively documents. This is supported for DBS only.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26908](https://jira.nuxeo.com/browse/NXP-26908)
 
-#### MongoDB new indexes
-To improve performances, new indexes have been added on the metadatas `rend:sourceId` and `rend:sourceVersionableId` that are used for standard queries on Nuxeo Server.
+#### MongoDB New Indexes
+
+To improve performances, new indexes have been added on the metadata `rend:sourceId` and `rend:sourceVersionableId` that are used for standard queries on Nuxeo Server.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26676](https://jira.nuxeo.com/browse/NXP-26676)
 
 #### H2 1.4.200
+
 The Nuxeo Platform now relies on H2 1.4.200
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28956](https://jira.nuxeo.com/browse/NXP-28956)
 
 ### Directory
 
-#### Allow directory initialization to just add missing entries
+#### Allow Directory Initialization to Just Add Missing Entries
 
-It is now possible to initialize a directory  by adding missing entries, and keep the existing entries untouched.
+It is now possible to initialize a directory by adding missing entries and keep the existing entries untouched.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27877](https://jira.nuxeo.com/browse/NXP-27877)
 
 ### Workflow
 
-#### Support task variables on nuxeo-dropzone
+#### Support Task Variables on Nuxeo-Dropzone
 
 Nuxeo-dropzone has been improved to be usable on workflow tasks layouts for uploading blobs to variables.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28263](https://jira.nuxeo.com/browse/NXP-28263)
 
-#### Task endpoint paginable {{Also available in '10.10'}}
+#### Task Endpoint Paginable
+(also available in 10.10)
 
 The Task endpoint is now paginable.
 
@@ -152,19 +164,20 @@ The Nuxeo Platform now relies on Kafka 2.5.0.
 
 Previously, the stream processing lag and latency could be monitored by using Nuxeo `stream.sh`.
 
-Stream lag and latency are now directly by Nuxeo Server.
+Stream lag and latency are now directly delivered by Nuxeo Server.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28801](https://jira.nuxeo.com/browse/NXP-28801)
 
-#### Expose Nuxeo Stream latency metrics to Datadog {{Also available in '10.10'}}
+#### Expose Nuxeo Stream latency metrics to Datadog
+(also available in 10.10)
 
-In the same way it has been done for Graphite (cf. [NXP-26248](https://jira.nuxeo.com/browse/NXP-26248)), we can now expose Nuxeo Stream lag and latency in Datadog.
+In the same way, it has been done for Graphite (cf. [NXP-26248](https://jira.nuxeo.com/browse/NXP-26248)), we can now expose Nuxeo Stream lag and latency in Datadog.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28508](https://jira.nuxeo.com/browse/NXP-28508)
 
 #### Nuxeo Stream probe in the default health check
 
-The default Nuxeo health check that is used by the runningstatus REST endpoint now includes a probe to check Nuxeo Stream Processors.
+The default Nuxeo health check that is used by the `runningstatus` REST endpoint now includes a probe to check Nuxeo Stream Processors.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28094](https://jira.nuxeo.com/browse/NXP-28094)
 
@@ -184,55 +197,58 @@ Another case is when having different processors that work together, we may want
 
 #### Recovery procedure for systematic failure in a stream processor
 
-There is a new option to recover from systematic stream processor failure.
-First, add nuxeo.stream.recovery.skipFirstFailures=1 to a single Nuxeo node, Processors will skip the first record in failure instead of terminating.
-Second, once the problematic record is skipped remove the option from the nuxeo.conf and perform a rolling restart of other Nuxeo nodes in order to restore all processor threads.
+There is a new option to recover from systematic stream processor failure.</br>
+First, add `nuxeo.stream.recovery.skipFirstFailures=1` to a single Nuxeo node, Processors will skip the first record in failure instead of terminating.
+Second, once the problematic record is skipped remove the option from the `nuxeo.conf` and perform a rolling restart of other Nuxeo nodes to restore all processor threads.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27529](https://jira.nuxeo.com/browse/NXP-27529)
 
 #### Expose stream processor failures as metrics
 
-A new counter metric has been added when the processing enters in termination due to an error. also even if the probe is disabled it will be nice to have the stream processor probe output to list which processing is failing.
+A new counter metric has been added when the processing enters in termination due to an error. Also, even if the probe is disabled, it will be nice to have the stream processor probe output to list which processing is failing.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27471](https://jira.nuxeo.com/browse/NXP-27471)
 
-#### Stream Processor probe in the runningstatus
+#### Stream Processor Probe in The `runningstatus`
 
-Since 11.1 you can activate a health check probe to check the status of stream processors.
-The option to activate in nuxeo.conf is:`nuxeo.stream.healthCheck.enabled=true`
+Since 11.1, you can activate a health check probe to check the status of stream processors.
+The option to activate in `nuxeo.conf` is:`nuxeo.stream.healthCheck.enabled=true`
 
-If a stream processor fails after retries and its failover policy is to stop on error the runningstatus will be in error.
-When this happens the Nuxeo node needs to be restarted to continue the processing.
-Note that by default the health check probe is not activated.
+If a stream processor fails after retries and its failover policy is to stop on error the `runningstatus` will be in error.</br>
+When this happens the Nuxeo node needs to be restarted to continue the processing.</br>
+Note that, by default, the health check probe is not activated.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27164](https://jira.nuxeo.com/browse/NXP-27164)
 
 ### WorkManager
 
-#### Trigger an action after completion of a group of Works {{Also available in '10.10'}}
+#### Trigger an action after completion of a group of Works
+(also available in 10.10)
 
 The StreamWorkManager provides the capability to trigger an action once all tasks of a group of Works are completed.
-For  instance, it is now possible to fire a document rendition done Event once all the renderings for a document are completed.
+For instance, it is now possible to fire a document rendition done Event once all the renderings for a document are completed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28182](https://jira.nuxeo.com/browse/NXP-28182)
 
-#### New metrics for Works DLQ usage {{Also available in '10.10'}}
+#### New metrics for Works DLQ usage
+(also available in 10.10)
 
 Introduce a new metric nuxeo.works.dlq.count that counts the Works in failure that has been put in the dead letter queue (DLQ) stream since the instance is up.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27673](https://jira.nuxeo.com/browse/NXP-27673)
 
-#### Store Work in failure in DLQ for repair purpose {{Also available in '10.10'}}
+#### Store Work in Failure in DLQ for Repair Purpose
+(also available in 10.10)
 
-After retries, Works in failure are stored in a dead letter queue (DLQ) stream named dlq-work.
+After retries, Works in failure are stored in a dead letter queue (DLQ) stream named `dlq-work`.
 This DLQ is activated by default on both WorkManager implementations (default and StreamWorkManager).
 
-Works in this DLQ can be re-executed for a repair purpose using an automation operation.
+Works in this DLQ can be re-executed for repair purpose using an automation operation.
 Note that in cluster mode when NOT using Kafka you need to run this automation operation on each Nuxeo node.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27148](https://jira.nuxeo.com/browse/NXP-27148)
 
-#### WorkManager processing disabling
+#### WorkManager Processing Disabling
 
 You can now use `nuxeo.work.processing.disable=true` to disable WorkManager processing
 
@@ -240,15 +256,17 @@ You can now use `nuxeo.work.processing.disable=true` to disable WorkManager proc
 
 ### Scheduler
 
-#### Scheduler services to support multiple Nuxeo nodes startup {{Also available in '10.10'}}
+#### Scheduler Services to Support Multiple Nuxeo Nodes Startup
+(also available in 10.10)
 
-The scheduler services handles the startup with multiple Nuxeo nodes.
+The scheduler services handle the startup with multiple Nuxeo nodes.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-285585](https://jira.nuxeo.com/browse/NXP-28558)
 
 ### Audit
 
-#### Export Audit in CSV files {{Also available in '10.10'}}
+#### Export Audit in CSV Files
+(also available in 10.10)
 
 Audit is now exportable as a CSV file.
 
@@ -256,47 +274,53 @@ Audit is now exportable as a CSV file.
 
 ### Query
 
-#### NOW expression in NXQL {{Also available in '10.10'}}
+#### NOW Expression in NXQL
+(also available in 10.10)
 
-NOW expression is supported  in the NXQL language.
+NOW expression is supported in the NXQL language.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26305](https://jira.nuxeo.com/browse/NXP-26305)
 
 ### Rendition
 
-#### Ability to disable the rendition computations
+#### Ability to Disable the Rendition Computations
 
 Previously, the renditions were automatically and systematically computed/re-computed when adding or updating a file content.
 It is now possible to configure Nuxeo Server to disable this behavior.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28743](https://jira.nuxeo.com/browse/NXP-28743)
 
-#### Bulk Action Framework for Picture.RecomputeViews operation
+#### Bulk Action Framework for `Picture.RecomputeViews` Operation
 
-`Picture.RecomputeViews` operation has been re-implemented to use Bulk Action Framework.
+`Picture.RecomputeViews` operation has been re-implemented to use the Bulk Action Framework.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26420](https://jira.nuxeo.com/browse/NXP-26420)
 
-#### Thumbnail recomputation with Bulk Action Framework {{Also available in '10.10'}}
-Thumbnail recomputation is now done using Bulk Action Framework.
+#### Thumbnail Recomputation with Bulk Action Framework
+(also available in 10.10)
+
+Thumbnail recomputation is now done using the Bulk Action Framework.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27605](https://jira.nuxeo.com/browse/NXP-27605)
 
 ### Elasticsearch
 
-#### Elasticsearch "nested" operator {{Also available in '10.10'}}
+#### Elasticsearch `nested` Operator
+(also available in 10.10)
 
 Nuxeo Server now supports the Elasticsearch "nested" operator.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25489](https://jira.nuxeo.com/browse/NXP-25489)
 
-#### Multiple Nuxeo with embedded elasticsearch {{Also available in '10.10'}}
+#### Multiple Nuxeo With Embedded Elasticsearch
+(also available in 10.10)
 
-Multiple Nuxeo with embedded elasticsearch can run on the same server.
+Multiple Nuxeo with embedded Elasticsearch can run on the same server.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27922](https://jira.nuxeo.com/browse/NXP-27922)
 
-#### Elasticsearch reindexing optimization when a document is checked in {{Also available in '10.10'}}
+#### Elasticsearch Reindexing Optimization When a Document Is Checked In
+(also available in 10.10)
 
 The number of versions reindexed at document check-in has been optimized.
 
@@ -304,7 +328,7 @@ The number of versions reindexed at document check-in has been optimized.
 
 ### Bulk Service (Aka "Bulk Action Framework")
 
-#### Bulk Service Processor can be contributed by configuration
+#### Bulk Service Processor Can Be Contributed by Configuration
 
 Previously, the Bulk Service Processor (the scroller and status computations) required development to handle the dynamic parts (the action source stream) and to control the initialization.
 - The Bulk Service Processor can now be created by using configuration only for:
@@ -314,19 +338,20 @@ Previously, the Bulk Service Processor (the scroller and status computations) re
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28357](https://jira.nuxeo.com/browse/NXP-28357)
 
-#### Implement coalescing commands on Bulk Action Framework
+#### Implement Coalescing Commands on Bulk Action Framework
 
 Bulk Action Framework now supports coalescing commands as WorkManager does.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26776](https://jira.nuxeo.com/browse/NXP-26776)
 
-#### Implement idempotent commands on Bulk Action Framework
+#### Implement Idempotent Commands on Bulk Action Framework
 
-Bulk Action Framework  now supports idempotent commands as WorkManager does.
+Bulk Action Framework now supports idempotent commands as WorkManager does.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26777](https://jira.nuxeo.com/browse/NXP-26777)
 
-#### Bulk Service handles Elasticsearch scroller {{Also available in '10.10'}}
+#### Bulk Service Handles Elasticsearch Scroller
+(also available in 10.10)
 
 Elasticsearch scroller is usable with the Bulk Service.
 
@@ -334,7 +359,7 @@ Elasticsearch scroller is usable with the Bulk Service.
 
 ### Monitoring
 
-#### Improvements in error messages
+#### Improvements in Error Messages
 
 We improved some error messages to help analysis and diagnosis.
 
@@ -346,13 +371,14 @@ We improved some error messages to help analysis and diagnosis.
 - [NXP-22770](https://jira.nuxeo.com/browse/NXP-22770)
 - [NXP-26687](https://jira.nuxeo.com/browse/NXP-26687)
 
-#### javax.mail messages in Nuxeo logs {{Also available in '10.10'}}
+#### `javax.mail` Messages in Nuxeo Logs
+(also available in 10.10)
 
 `javax.mail` messages are now redirected to Nuxeo logs.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28275](https://jira.nuxeo.com/browse/NXP-28275)
 
-#### nuxeoctl start should be in strict mode by default
+#### `nuxeoctl` Now Starts Nuxeo Platform in Strict Mode
 
 Previously, it was possible to start a Nuxeo instance with an undeployed component. This can be risky, especially in cluster mode.
 
@@ -380,7 +406,7 @@ It is now possible to easily build Datadog dashboards in the same way as for Gra
 - [NXP-28697](https://jira.nuxeo.com/browse/NXP-28697)
 - [NXP-28696](https://jira.nuxeo.com/browse/NXP-28696)
 
-#### Change default Datadog poll interval to 1 min
+#### Change Default Datadog Poll Interval to 1 Min
 
 The option to configure the metrics poll interval for Datadog is now `metrics.datadog.pollInterval` and the default value is 60 (previously `datadog.pollinterval=10`)
 
@@ -388,9 +414,10 @@ The option to configure the metrics poll interval for Datadog is now `metrics.da
 
 ### Comment Service
 
-#### Rework Comments Storage / Architecture {{Also available in '10.10'}}
+#### Rework Comments Storage/Architecture
+(also available in 10.10)
 
-- The comments storage has been refactored in order to improve several aspects:
+- The comments storage has been refactored to improve several aspects:
 - Permissions management
 - Storage
 - Versioning
@@ -400,19 +427,20 @@ The option to configure the metrics poll interval for Datadog is now `metrics.da
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27984](https://jira.nuxeo.com/browse/NXP-27984)
 
-#### Add parent post content in 'new comment' notification
+#### Add Parent Post Content in 'New Comment' Notification
 
 If a comment is a reply to another comment, the parent comment is now quoted in the comment notification mail.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28255](https://jira.nuxeo.com/browse/NXP-28255)
 
-#### Comments indexed on linked document full-text field
+#### Comments Indexed on Linked Document Full-Text Field
 
 Comments are now indexed on linked document full-text field.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26669](https://jira.nuxeo.com/browse/NXP-26669)
 
-#### Automatically send notifications to the users who participate to a conversation {{Also available in '10.10'}}
+#### Automatically Send Notifications to the Users Who Participate in a Conversation
+(also available in 10.10)
 
 Automatic notifications are sent to users who participate on Comment conversation.
 
@@ -420,16 +448,17 @@ Automatic notifications are sent to users who participate on Comment conversatio
 
 ### Download Service
 
-#### Digest and Last-Modified negotiation for download service {{Also available in '10.10'}}
+#### Digest and Last-Modified Negotiation for Download Service
+(also available in 10.10)
 
 Digest and Last-Modified negotiation are added to the download service to manage the following request/response headers:
 - Want-Digest / Digest
 - If-Modified-Since / Last-Modified
 
-
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28092](https://jira.nuxeo.com/browse/NXP-28092)
 
-#### Refactor DownloadService.downloadBlob to use builder pattern {{Also available in '10.10'}}
+#### Refactor `Downloadservice.Downloadblob` to Use Builder Pattern
+(also available in 10.10)
 
 Previously, the API DownloadService.downloadBlob had lots of different overloaded versions with different numbers of arguments.
 
@@ -437,7 +466,8 @@ We now use a builder pattern itself, to pass a download context object with all 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28005](https://jira.nuxeo.com/browse/NXP-28005)
 
-#### Make download service deal with HEAD efficiently {{Also available in '10.10'}}
+#### Make Download Service Deal With Head Efficiently
+(also available in 10.10)
 
 The download service responds to a HEAD request with a better efficiency.
 
@@ -445,28 +475,30 @@ The download service responds to a HEAD request with a better efficiency.
 
 ### CMIS
 
-#### Use the Nuxeo DownloadService framework for CMIS downloads {{Also available in '10.10'}}
+#### Use the Nuxeo Downloadservice Framework for Cmis Downloads
+(also available in 10.10)
 
-We are now using the Nuxeo DownloadService framework for CMIS downloads, instead of the native OpenCMIS library code.
+We now use the Nuxeo DownloadService framework for CMIS downloads, instead of the native OpenCMIS library code.
 This allows us to better deal with buffering, transactions, and take into account potential CDN redirects.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27337](https://jira.nuxeo.com/browse/NXP-27337)
 
 ### REST API
 
-#### Facet API on SimpleDocumentModel {{Also available in '10.10'}}
+#### Facet API on `SimpleDocumentModel`
+(also available in 10.10)
 
 The facet API has been implemented on `SimpleDocumentModel`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28597](https://jira.nuxeo.com/browse/NXP-28597)
 
-#### Offset support to PaginableObject
+#### Offset Support to PaginableObject
 
 The `PaginableObject.java` now supports the ability to specify an offset instead of a page index when it comes to fetching a page provider result set.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28418](https://jira.nuxeo.com/browse/NXP-28418)
 
-#### New parameter to the Document.Copy operation to reset the document lifecycle
+#### New Parameter to the `Document.Copy` Operation to Reset the Document Lifecycle
 
 There is a listener linked to the copy event and which looks at a context variable to reset the lifecycle or not.
 
@@ -492,7 +524,8 @@ A new API on ConfigurationService has been added to handle primitive like types:
 
 ### AWS Service
 
-#### Multiple configurations for AWSConfigurationService {{Also available in '10.10'}}
+#### Multiple Configurations for AWSConfigurationService
+(also available in 10.10)
 
 Multiple AWS configurations are now supported.
 
@@ -500,17 +533,18 @@ Multiple AWS configurations are now supported.
 
 ### CSV Export Service
 
-#### Elasticsearch scroll for CSV Export bulk action
+#### Elasticsearch Scroll for CSV Export Bulk Action
 
-The CSV Export now uses elasticsearch scroll. This allows to improve resilience and ensure that an export from the UI (search result from elasticsearch) matches the export.
+The CSV Export now uses Elasticsearch scroll. This allows to improve resilience and ensure that an export from the UI (search result from Elasticsearch) matches the export.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28577](https://jira.nuxeo.com/browse/NXP-28577)
 
-### Scroll service {{Also available in '10.10'}}
+### Scroll Service
+(also available in 10.10)
 
 We added a new service dedicated to retrieve a long list of identifiers representing a result set.
 
-This service allows to globalize the existing scrolling API to get a document list ids or elasticsearch resultset.
+This service allows to globalize the existing scrolling API to get a document list ids or Elasticsearch resultset.
 
 It also allows to have other document scrollers:
 - a list of ids (so we don't have to query the repository or elastic)
@@ -525,33 +559,36 @@ It also allows to have other document scrollers:
 
 ### Customisation
 
-#### Allow global disabling of schemas, like files {{Also available in '10.10'}}
+#### Allow Global Disabling of Schemas, Like Files
+(also available in 10.10)
 
 We can now disable an existing schema (make it so that it's ignored whenever a doctype references it, or when the list of all schemas is returned).
 For instance, some use cases require that no attachments are created in the platform. With this feature, this becomes possible by simply disabling the files schema.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27962](https://jira.nuxeo.com/browse/NXP-27962)
 
-#### Allow global disabling of facets, like Versionable {{Also available in '10.10'}}
+#### Allow Global Disabling of Facets, Like Versionable
+(also available in 10.10)
 
 A facet can be globally disabled.
 For instance, some use cases require that no versions are created in the platform.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27873](https://jira.nuxeo.com/browse/NXP-27873)
 
-#### Allow Map and List in Nuxeo Platform List template parameters
+#### Allow Map and List in Nuxeo Platform List Template Parameters
 
 It is now possible to contribute a complex structure as `templateParam`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27613](https://jira.nuxeo.com/browse/NXP-27613)
 
-#### Improve openId provider descriptor to handle user info request authentication per bearer {{Also available in '10.10'}}
+#### Improve OpenID Provider Descriptor to Handle User Info Request Authentication per Bearer
+(also available in 10.10)
 
-We improved OpenID provider in order to be able to choose between authentication though query parameters or through Authentication header.
+We improved OpenID provider to be able to choose between authentication though query parameters or through Authentication header.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27446](https://jira.nuxeo.com/browse/NXP-27446)
 
-### Packaging/Distribution/Miscellaneous
+### Packaging / Distribution / Miscellaneous
 
 #### Tomcat 9.0.35
 
@@ -559,29 +596,30 @@ The Nuxeo Platform now relies on Tomcat 9.0.35.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29093](https://jira.nuxeo.com/browse/NXP-29093)
 
-#### Other upgrades
+#### Other Upgrades
 
-Other upgrades are listed in the following jira:[NXP-28537](https://jira.nuxeo.com/browse/NXP-28537)
+Other upgrades are listed in the following JIRA ticket: [NXP-28537](https://jira.nuxeo.com/browse/NXP-28537)
 
-#### Remove post commit listeners
+#### Remove Post Commit Listeners
 
 Post-commit listeners have been converted to asynchronous listeners.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-2691](https://jira.nuxeo.com/browse/NXP-26911)
 
-#### Allow Event.Fire to use properties
+#### Allow Event.Fire to Use Properties
 
 It is now possible to use properties into the asynchronous events.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26449](https://jira.nuxeo.com/browse/NXP-26449)
 
-#### DocumentModelJsonWriter expose schemas {{Also available in '10.10'}}
+#### `DocumentModelJsonWriter` Exposes Schemas
+(also available in 10.10)
 
 Documents exported through JSON now have an addition schemas field (similar to facets).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27995](https://jira.nuxeo.com/browse/NXP-27995)
 
-#### ClusterService to hold cluster node info
+#### Clusterservice to Hold Cluster Node Info
 
 A new service has been added to hold info about whether clustering is enabled and the cluster node id.
 This replaces ad-hoc uses of the framework properties repository.clustering.enabled and repository.clustering.id and multiple different random generations of ids when there is no node id specified.
@@ -592,18 +630,27 @@ Current direct users of the properties are:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25499](https://jira.nuxeo.com/browse/NXP-25499)
 
-#### Reduce response size of the ACL enricher {{Also available in '10.10'}}
+#### Reduce Response Size of the ACL Enricher
+(also available in 10.10)
 
 The User object representation is now returned to the client without its groups.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27947](https://jira.nuxeo.com/browse/NXP-27947)
 
-#### ecm:isProxy a valid field for aggregates {{Also available in '10.10'}}
+#### `ecm:isProxy` A Valid Field for Aggregates
+(also available in 10.10)
 
-The field ecm:isProxy is now part of the valid fields for Elasticsearch aggregates.
+The field `ecm:isProxy` is now part of the valid fields for Elasticsearch aggregates.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26656](https://jira.nuxeo.com/browse/NXP-26656)
 
 #### Cleanup
 
 This release also comes with hundreds of bugs fixed and also code cleanups, making Nuxeo Server more solid than ever.
+
+<!--
+## Deprecation
+
+
+## Farewell
+-->
