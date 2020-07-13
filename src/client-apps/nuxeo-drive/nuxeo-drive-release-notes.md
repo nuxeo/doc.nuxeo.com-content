@@ -18,7 +18,7 @@ Welcome to the Release Notes for **Nuxeo Drive 4.4.4**
 
 ### Direct Transfer
 
-The Direct Transfer has been re-enabled as a BETA feature, it can be activated through the Features tab (see following paragraph about the [Feature tab](#new-feature-tab)).
+The Direct Transfer has been re-enabled as a BETA feature, it can be activated through the Features tab (see following paragraph about the [Feature tab](#new-features-tab)).
 
 The Direct Transfer feature [leverages the FileManager](https://jira.nuxeo.com/browse/NXDRIVE-2065) for files upload.
 
