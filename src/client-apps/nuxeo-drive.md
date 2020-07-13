@@ -461,10 +461,6 @@ To uninstall Nuxeo Drive:
 
 2. Uninstall the Nuxeo Drive application like a regular program using the Control Panel.
 
-    {{#> callout type='tip' }}
-    If you have any problem during the uninstallation process you can try using this [Microsoft tool](https://support.microsoft.com/fr-fr/mats/program_install_and_uninstall) to uninstall Nuxeo Drive properly.
-    {{/callout}}
-
 {{#> callout type='warning' }}
 At this point you have uninstalled the Nuxeo Drive program and its configuration. If you want to get rid of the synchronized data you also need to delete the Nuxeo Drive folder like you delete any regular Windows folder.
 {{/callout}}
