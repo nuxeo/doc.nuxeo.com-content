@@ -36,9 +36,15 @@ Direct Transfers can be paused, resumed and cancelled through this interface. A 
 
 Duplicates management has been temporary disabled on the client side. It now only relies on the FileManager to decide what to do. This is the same behavior as when creating a new file on Web-UI: a new document will be created each time, generating possible duplicates.
 
-A better duplicates management is being written and will be shipped within the next version.
+A better duplicates management is being written and will be shipped within a future version.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2235](https://jira.nuxeo.com/browse/NXDRIVE-2235)
+
+### Disable Temporarily S3 Capability
+
+The Amazon S3 batch handler has been completely turned off until blocker bugs have been fixed (likely in the next release).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2226](https://jira.nuxeo.com/browse/NXDRIVE-2226)
 
 ### New Features Tab
 
@@ -50,12 +56,6 @@ When changing the state of a feature, the new user preferences are saved into th
 ![]({{file name='features-tab-drive.png'}})
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2138](https://jira.nuxeo.com/browse/NXDRIVE-2138)
-
-### Disable Temporarily S3 Capability
-
-The Amazon S3 batch handler has been completely turned off until blocker bugs have been fixed (likely in the next release).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2226](https://jira.nuxeo.com/browse/NXDRIVE-2226)
 
 ## Improvements
 
