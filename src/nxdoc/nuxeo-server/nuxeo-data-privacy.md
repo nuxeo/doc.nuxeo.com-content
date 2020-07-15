@@ -117,7 +117,7 @@ With the proper [permissions]({{page version='' space='userdoc' page='permission
 As described in [Trash Service]({{page version='' space='nxdoc' page='trash-service'}}) page, documents are first moved to the trash before being permanently deleted. The Nuxeo Platform removes the personal information references from the binary storage as well as from within the database.
 
 {{#> callout type='info' }}
-Some personal information may be stored within the indexes. Purging audits is in any case an heavy operation. Cleaning the indexes requires specific ElasticSearch operations. Audit log entries this could be done with downtime using a [log purging procedure]({{page version='' space='nxdoc' page='purging-audit-logs-nxp_logs'}}). It is also possible to use a delete query directly on the audit banckend or from Nuxeo.
+Some personal information may be stored within the indexes. Purging audits is in any case an heavy operation. Cleaning the indexes requires specific ElasticSearch operations. Cleaning audit log entries could be performed, with downtime, using a [log purging procedure]({{page version='' space='nxdoc' page='purging-audit-logs-nxp_logs'}}). It is also possible to use a delete query directly on the audit banckend or from Nuxeo.
 {{/callout}}
 
 ### Right to Object
