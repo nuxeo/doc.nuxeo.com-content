@@ -71,15 +71,15 @@ For a broader look about variables available in different contexts, have a look 
 For a more advanced rendition service, you may be interested in having a look at the [Nuxeo Platform Template Rendering module]({{page page='template-rendering-addon'}}).
 {{/callout}}
 
-## FreeMarker Templating Language (ftl)
+## FreeMarker Templating Language (FTL)
 
-### Standard variables
+### Standard Variables
 
 *   **`${Document}`** - the context document. This is the document on which the rendering is done in the case the rendering is done on a single document. When the input is a list of document then this variable is undefined.
-*   **`${This}`** - the rendering input. Will be a document in the case of a single document or a list of documents in th case of multiple documents.
+*   **`${This}`** - the rendering input. Will be a document in the case of a single document or a list of documents in the case of multiple documents.
 *   **`${Session}`** - the current core session.
 *   **`${Context}`** - the context.
-*   **`${CurrentDate}`** - the current date. See [Use of MVEL in Automation chains (date wrapper)]({{page page='use-of-mvel-in-automation-chains'}}) for details.
+*   **`${CurrentDate}`** - the current date. See [Use of MVEL in Automation chains (date wrapper)]({{page page='use-of-mvel-in-automation-chains'}}#date-wrapper) for details.
 *   **`${Fn}`** - a collection of useful functions. See [Use of MVEL in Automation chains (fn object)]({{page page='use-of-mvel-in-automation-chains'}}) for details.
 *   **`${Env}`** - a hashmap containing Nuxeo environment variables. Example: `Env["org.nuxeo.ecm.product.name"]`.
 *   **`${CurrentUser}`** - the current user.
@@ -93,10 +93,11 @@ By using the FreeMarker templating engine, you also gain access to its whole fun
 </#list>
 ```
 
-### Handling Map and List in Nuxeo Platform Rendering templateParam	
+### Handling Map and List in Nuxeo Platform Rendering `templateParam`
 
-It is possible to contribute a complexe structure as `templateParam`. For instance:
+It is possible to contribute a complex structure as `templateParam`.
 
+For instance:
 ```
 <fields xmlns:dt="http://www.nuxeo.org/DocumentTemplate">
   <dt:field name="account" type="Map">
@@ -132,7 +133,7 @@ Here are the operations of the account ${account.number} for this month:
  </#list>
 ```
 
-### Going further
+### Going Further
 
 Have a look at the [FreeMarker manual](http://freemarker.org/docs) for more information about it.
 
