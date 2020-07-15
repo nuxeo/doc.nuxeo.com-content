@@ -2,7 +2,7 @@
 title: Document Templates and Automation Rendering Service
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2020-07-15'
     status: ok
 labels:
     - lts2016-ok
@@ -73,6 +73,8 @@ For a more advanced rendition service, you may be interested in having a look at
 
 ## FreeMarker Templating Language (ftl)
 
+### Standard variables
+
 *   **`${Document}`** - the context document. This is the document on which the rendering is done in the case the rendering is done on a single document. When the input is a list of document then this variable is undefined.
 *   **`${This}`** - the rendering input. Will be a document in the case of a single document or a list of documents in th case of multiple documents.
 *   **`${Session}`** - the current core session.
@@ -90,6 +92,47 @@ By using the FreeMarker templating engine, you also gain access to its whole fun
   ${doc.title}
 </#list>
 ```
+
+### Handling Map and List in Nuxeo Platform Rendering templateParam	
+
+It is possible to contribute a complexe structure as `templateParam`. For instance:
+
+```
+<fields xmlns:dt="http://www.nuxeo.org/DocumentTemplate">
+  <dt:field name="account" type="Map">
+    <dt:field name="owner" type="Map">
+      <dt:field name="firstname" type="String" value="John"/>
+      <dt:field name="lastname" type="String" value="Doe"/>
+    </dt:field>
+    <dt:field name="type" type="String" value="checking"/>
+    <dt:field name="operations" type="list">
+      <dt:field name="op1" type="Map">
+        <dt:field name="date" type="Date" value="2017-07-14 13:14:15.678"/>
+        <dt:field name="value" type="String" value="$ 200.20"/>
+        <dt:field name="isPositive" type="Boolean" value="true"/>
+      </dt:field>
+      <dt:field name="op2" type="Map">
+        <dt:field name="date" type="Date" value="2017-07-15 13:10:15.678"/>
+        <dt:field name="value" type="String" value="-$ 40.27"/>
+        <dt:field name="isPositive" type="Boolean" value="false"/>
+      </dt:field>
+    </dt:field>
+  </dt:field>
+</fields>
+```
+
+can be used with the following FTL template:
+
+```
+Hello ${account.owner.firstname} ${account.owner.lastname},
+Here are the operations of the account ${account.number} for this month:
+            DATE          |   VALUE  | IS POSITIVE
+ <#list account.operations as operation>
+ ${operation.date?datetime} | ${operation.value} | ${operation.isPositive?string("yes", "no")}
+ </#list>
+```
+
+### Going further
 
 Have a look at the [FreeMarker manual](http://freemarker.org/docs) for more information about it.
 
