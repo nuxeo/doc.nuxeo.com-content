@@ -867,8 +867,11 @@ When you start Nuxeo Drive on your computer for the first time, you need to prov
 
 You can override classes to implement your own Nuxeo Drive following the [developer guide](https://github.com/nuxeo/nuxeo-drive/blob/master/DEVELOPERS.md).
 
-
 ## Direct Transfer
+
+{{#> callout type='note' }}
+The Direct Transfer feature is available in Beta version starting from Nuxeo Drive 4.4.4.
+{{/callout}}
 
 ### Duplicates Behavior
 
@@ -876,12 +879,11 @@ You can choose what to do when a transfer would create a duplicate document on t
 The setting is effective for all files that will be sent at the same time (it is called the *session*). Each *session* has its own duplicates behavior.
 
 Available options are:
-
 - **Create**: a duplicate document will be created, this is the same behavior as when adding a new file from Web UI.
 - **Ignore**: the transfer will be cancelled, preventing the duplicate creation.
 - **Override**: the document will be replaced on the server.
 
 {{#> callout type='warning' }}
-The **Ignore** option may be problematic on huge trees: for each and every file, a NXQL query will be done on the server to verifiy the existance of a similar document.<br>
-And that query is not using ElasticSearch, so if you have folderish documents with thousands of children, that query will likely be a bottleneck.<br>
+The **Ignore** option may be problematic on huge trees: for each and every file, an NXQL query will be done on the server to verify the existence of a similar document.<br>
+And that query is not using Elasticsearch, so if you have folderish documents with thousands of children, that query will likely be a bottleneck.<br>
 {{/callout}}
