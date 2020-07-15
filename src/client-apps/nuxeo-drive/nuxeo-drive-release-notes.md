@@ -18,7 +18,7 @@ Welcome to the Release Notes for **Nuxeo Drive 4.4.4**
 
 ### Direct Transfer
 
-The Direct Transfer has been re-enabled as a BETA feature, it can be activated through the Features tab (see following paragraph about the [Feature tab](#new-features-tab)).
+The Direct Transfer has been re-enabled as a BETA feature, it can be activated through the Features tab (see the following paragraph about the [Feature tab](#new-features-tab)).
 
 The Direct Transfer feature [leverages the FileManager](https://jira.nuxeo.com/browse/NXDRIVE-2065) for files upload.
 
@@ -34,7 +34,7 @@ Direct Transfers can be paused, resumed and cancelled through this interface. A 
 
 #### Duplicates Management
 
-Duplicates management has been temporary disabled on the client side. It now only relies on the FileManager to decide what to do. This is the same behavior as when creating a new file on Web-UI: a new document will be created each time, generating possible duplicates.
+Duplicates management has been temporarily disabled on the client-side. It now only relies on the FileManager to decide what to do. This is the same behavior as when creating a new file on Web-UI: a new document will be created each time, generating possible duplicates.
 
 A better duplicates management is being written and will be shipped within a future version.
 
@@ -65,7 +65,7 @@ When changing the state of a feature, the new user preferences are saved into th
 
 During a Direct Edit, it sometimes happened that the download failed for a number of reasons.
 If the document was large enough to be downloaded by chunks, then an incomplete temporary file was saved.</br>
-Trying another Direct Edit on that same document was resuming the download using the same temporary file and may caused an error and prevent the file from being opened. The user was not aware of this error as no notifications were displayed, and nothing was written in the logs.
+Trying another Direct Edit on that same document was resuming the download using the same temporary file and may cause an error and prevent the file from being opened. The user was not aware of this error as no notifications were displayed, and nothing was written in the logs.
 
 The only way to fix this error was for the user to manually remove the temporary and restart a Direct Edit.
 
@@ -83,7 +83,7 @@ Direct Edit on proxies is now forbidden. Allowing it was too bad for both server
 - filling up client logs (see [NXDRIVE-2131](https://jira.nuxeo.com/browse/NXDRIVE-2131));
 - generating a huge amount of Sentry events, exploding our quota.
 
-Finally, such move was the next logical step after NXP-28497 where the Direct Edit button has been hidden for those documents.
+Finally, such a move was the next logical step after NXP-28497 where the Direct Edit button has been hidden for those documents.
 
 This is a 2-part fix alongside [NXDRIVE-2131](https://jira.nuxeo.com/browse/NXDRIVE-2131).
 
@@ -100,9 +100,9 @@ When starting again, the application will now first retrieve the file's metadata
 #### Handle Corrupted Downloads in Direct Edit
 
 During a Direct Edit, it may happen that the downloaded file ends up corrupted.
-The download was aborted without informing the user of what happened and the Direct Edit canceled.
+The download was aborted without informing the user of what happened and the Direct Edit cancelled.
 
-The download is now retried multiple times when Drive detects such case. On each and every try, the user will be informed of the error via a notification. If the download still fails after 3 tries, the user will be notified that Direct Edit is impossible on the targeted document.
+The download is now retried multiple times when Drive detects such a case. On each and every try, the user will be informed of the error via a notification. If the download still fails after 3 tries, the user will be notified that Direct Edit is impossible on the targeted document.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1786](https://jira.nuxeo.com/browse/NXDRIVE-1786)
 
@@ -118,7 +118,7 @@ Basque is now part of the available languages: the application and its installer
 
 ### Account Removal on macOS
 
-The account removal was no more working on macOS. This is a due to an API change of the Finder favorites management in latest Apple versions.
+The account removal was no more working on macOS. This is due to an API change of the Finder favorites management in latest Apple versions.
 
 This is now fixed. Future regressions of that kind will be handled to still allow one to remove an account even if there was an error somewhere in the Apple-specific API call.
 
