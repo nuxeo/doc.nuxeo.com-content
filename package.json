@@ -10,7 +10,6 @@
     "url": "http://andrewgoodricke.com"
   },
   "dependencies": {
-    "bcrypt": "^5.0.0",
     "co": "^4.6.0",
     "lodash.defaultsdeep": "^4.6.1",
     "node-yaml-config": "0.0.5",
