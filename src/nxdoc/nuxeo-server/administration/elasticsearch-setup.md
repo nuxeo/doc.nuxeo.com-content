@@ -585,7 +585,7 @@ elasticsearch.clusterName=elasticsearch
 ```
 Where:
 
-- `elasticsearch.client` choose the TransportClient protocol, this is the default so this option is not required.
+- `elasticsearch.client` choose the TransportClient protocol.
 - `elasticsearch.addressList` points to one or many Elasticsearch nodes, this is a comma separated list of `host:port`. Note that the default port for this protocol is **9300** (and not 9200).
 - `elasticsearch.clusterName` is the cluster name to join, `elasticsearch` being the default cluster name.
 
