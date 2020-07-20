@@ -354,7 +354,7 @@ Repository children documents cache stats:
 - `nuxeo.repositories.repository.childCache.read.count`
 - `nuxeo.repositories.repository.childCache.size`
 
-### Nuxeo Streams
+### {{> anchor 'nuxeo-streams'}}Nuxeo Streams
 
 [Nuxeo Stream]({{page page='nuxeo-stream'}}) Processor relies on a topology of computations.
 It is important to monitor failure [because a manual intervention is required]({{page page='nuxeo-stream'}}#recovery).

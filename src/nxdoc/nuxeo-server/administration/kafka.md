@@ -3,10 +3,10 @@ title: Kafka
 description: Kafka configuration and integration with Nuxeo.
 review:
     comment: ''
-    date: '2019-04-17'
+    date: '2020-07-16'
     status: ok
 labels:
-    - lts2019-ok
+    - 11.1-ok
 toc: true
 tree_item_index: 1100
 ---
@@ -23,65 +23,86 @@ Watch the related course on Nuxeo University:</br>
 
 ## When to Use Kafka?
 
-Since Nuxeo 10.10 it is highly recommended to use Kafka when running Nuxeo in cluster mode:
+Since Nuxeo 10.10 it is highly recommended to use Kafka when running Nuxeo in cluster mode,
+[Nuxeo Stream]({{page page='nuxeo-stream'}}) requires [Kafka](https://kafka.apache.org/) to run in a distributed way.
+Kafka acts as a message broker and enables reliable distributed processing by handling failover between nodes.
 
-- [Nuxeo Stream]({{page page='nuxeo-stream'}}) introduced in Nuxeo 9.3 requires [Kafka](https://kafka.apache.org/) to run in a distributed way.
-  Kafka will act as a message broker and enable reliable distributed processing by handling failover between nodes.
+{{#> callout type='warning' }}Without Kafka, Nuxeo Stream relies on local storage using Chronicle Queue with the following limitations:
+- the processing is **not distributed** among Nuxeo nodes, the processing happens on the node it is submitted
+- there is no cluster-wide metrics to follow processing progress
+- losing the local storage that contains the Chronicle Queue files means losing running or scheduled processing
+{{/callout}}
 
-  Without Kafka, Nuxeo Stream relies on local storage using Chronicle Queue:
-   - the processing is not distributed among nodes
-   - there is no cluster wide metrics to follow processing progress
-   - the chronicle queue files need to be backup on each node
-
-- The [Nuxeo Bulk Service]({{page page='bulk-action-framework'}}) introduced in Nuxeo 10.10 relies on Nuxeo Stream and therefore requires Kafka to work in a distributed way.
+Note that the [Nuxeo Bulk Service]({{page page='bulk-action-framework'}}), introduced in Nuxeo 10.10, relies on Nuxeo Stream and therefore requires Kafka to work in a distributed way.
 
 Other reasons to use Kafka:
-
 - The WorkManager can be configured to use Nuxeo Stream and go beyond the boundaries of Redis by not being limited by memory.
-
 - To get rid of Redis deployment.
-
 - To gain interoperability using Kafka topic and Avro messaging.
 
 ## Kafka Setup
 
-Nuxeo only need to talk with Kafka brokers, it does not need to have access to Zookeeper.
+Nuxeo uses the Kafka [Producer](https://kafka.apache.org/documentation/#producerapi), [Consumer](https://kafka.apache.org/documentation/#consumerapi), and [Admin](https://kafka.apache.org/documentation/#adminapi) APIs.
+This requires only a Kafka brokers (aka bootstrap) access, it does not need to have access to Zookeeper.
 
-Here is the compatibility versions:
-
+Here are the compatible versions:
 {{{multiexcerpt 'kafka_supported_versions' page='Compatibility Matrix'}}}
 
-Kafka broker need to be tuned a bit:
+Kafka brokers need to be tuned if you want more than 7 days of retention or if you have a Kafka version < 2:
 
-  | Kafka broker options | default | recommended |  Description |
+  | Kafka Broker Options | Default | Recommended |  Description |
   | --- | ---: | ---: | --- |
-  | `offsets.retention.minutes` | `1440` | `20160` |The default offset retention is only 1 day, without activity for this amount of time the current consumer offset position is lost and all messages will be reprocessed. To prevent this we recommend to use a value 2 times bigger as `log.retention.hours`, so by default 14 days or `20160`. See [KAFKA-3806](https://issues.apache.org/jira/browse/KAFKA-3806) for more information. |
-  | `log.retention.hours` | `168` | |The default log retention is 7 days. If you change this make sure you update `offset.retention.minutes`.|
+  | `offsets.retention.minutes` | `1440` (Kafka < 2.x) | `10080` | Make sure the offset retention is greater or equal to `log.retention.hours` |
+  | `log.retention.hours` | `168` | `168`| The default log retention is 7 days. If you change this make sure you update `offset.retention.minutes`|
 
 {{#> callout type='warning' }}
-Make sure that you set properly the `offsets.retention.minutes`.
+If the `offsets.retention.minutes` is not properly set and there is no activity, consumer positions can be lost and all records will be reprocessed.</br>
+To prevent this we recommend to use value greater of equals to `log.retention.hours`. See [KAFKA-3806](https://issues.apache.org/jira/browse/KAFKA-3806) for more information
 {{/callout}}
 
 ## Kafka Configuration
 
-Access, consumer and producer properties are registered using the Nuxeo `KafkaConfigService` extension point:
+The Kafka Producer, Consumer and Admin properties are registered using the Nuxeo `KafkaConfigService` extension point,
+you can define multiple configuration for different usages:
 
 ```xml
 <?xml version="1.0"?>
 <component name="my.project.kafka.contrib">
+  <require>org.nuxeo.runtime.stream.kafka.service</require>
   <extension target="org.nuxeo.runtime.stream.kafka.service" point="kafkaConfig">
     <kafkaConfig name="default" topicPrefix="nuxeo-">
+      <!-- admin properties can be defined when requiring a different access than producer  -->
+      <!--
+      <admin>
+        <property name="bootstrap.servers">kafka:9092</property>
+        <property name="request.timeout.ms">60000</property>
+        <property name="default.replication.factor">2</property>
+      </admin>
+      -->
       <producer>
-        <property name="bootstrap.servers">localhost:9092</property>
+        <property name="bootstrap.servers">kafka:9092</property>
+        <property name="default.replication.factor">1</property>
+        <property name="delivery.timeout.ms">120000</property>
+        <property name="acks">1</property>
       </producer>
       <consumer>
-        <property name="bootstrap.servers">localhost:9092</property>
+        <property name="bootstrap.servers">kafka:9092</property>
         <property name="request.timeout.ms">30000</property>
-        <property name="default.api.timeout.ms">60000</property>
+        <property name="max.poll.interval.ms">7200000</property>
         <property name="session.timeout.ms">50000</property>
         <property name="heartbeat.interval.ms">4000</property>
         <property name="max.poll.records">2</property>
-        <property name="max.poll.interval.ms">3600000</property>
+        <property name="default.api.timeout.ms">60000</property>
+      </consumer>
+    </kafkaConfig>
+    <!-- Define another config for higher throughput > 100 records per 10min -->
+    <kafkaConfig name="fastConsumer" topicPrefix="nuxeo-">
+      <producer>...</producer>
+      <consumer>
+        ...
+        <property name="max.poll.interval.ms">600000</property>
+        <property name="max.poll.records">100</property>
+        ...
       </consumer>
     </kafkaConfig>
   </extension>
@@ -93,8 +114,6 @@ Here are some important properties:
   | Consumer options | default | Description |
   | --- | ---: |  --- |
   | `bootstrap.servers` | `localhost:9092` | A list of host/port pairs to use for establishing the initial connection to the Kafka cluster. |
-  | `enable.auto.commit` | `false` | The module manages the offset commit this is always set to `false`. |
-  | `auto.offset.reset` | `earliest` | This option is always set to `earliest` |
   | `request.timeout.ms` | `30000` | Request timeout between client and Kafka brokers. |
   | `default.api.timeout.ms` | `60000` | Default timeout for consumer API related to position (commit or move to a position). |
   | `max.poll.interval.ms` | `3600000` | Consumers that don't call poll during this delay are removed from the group. |
@@ -102,30 +121,28 @@ Here are some important properties:
   | `session.timeout.ms` | `50000` | Consumers that don't send heartbeat during this delay are removed from the group. |
   | `heartbeat.interval.ms` | `4000` | Interval between heartbeats. |
   | `group.initial.rebalance.delay.ms` | `3000` | Delay for the initial consumer rebalance. |
-  | `subscribe.disable` | `false` | Not a Kafka option, used by the module to disable the dynamic assignment, when this option is `true` LogManager will only support static partition assignment. |
 
 A consumer will be removed from the group if:
-
  - there is a network outage longer than `session.timeout.ms`
  - the consumer is too slow to process record, see remark about the `max.poll.interval.ms` below.
 
+Note that Nuxeo will always set `enable.auto.commit` to `false` and `auto.offset.reset` to `earliest`.
 
   | Producer options | default | Description |
   | --- | ---: |  --- |
   | `delivery.timeout.ms` | `120000` | Timeout for a producer to get an acknowledgement. |
   | `acks` | `1` | The number of acknowledgments the producer requires the leader to have received before considering a request complete. |
   | `compression.type` | `none` | Valid values are none, gzip, snappy, or lz4. Compression is of full batches of data, so the efficacy of batching will also impact the compression ratio (more batching means better compression). |
-  | `default.replication.factor` | `1` | Not a Kafka option, used by Nuxeo to set the topic replication factor when creating new topic. |
+  | `default.replication.factor` | `1` | Not a Kafka option, used by Nuxeo to set the topic replication factor when creating a new topic. |
 
 A producer will fail to deliver a record if it cannot get an acknowledgement within `delivery.timeout.ms`.
 
-
-Most of the above properties can be tuned directly from [nuxeo.conf file]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}).
+Most of the above properties can be tuned directly from [nuxeo.conf file]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}) where properties are prefixed with `kafka.`.
 
 {{#> callout type='warning' }}
-Make sure that you set properly the `default.replication.factor`, the default value is `1` which means NO replication.
+Make sure you set properly the `default.replication.factor`, the default value is `1` which means **No replication**.</br>
 With replication factor N, Kafka will tolerate up to N-1 server failures without losing record.
-For instance if you have 3 brokers in your cluster a replication factor of 2 will tolerate a server failure.
+For instance, if you have 3 brokers in your cluster a replication factor of 2 will tolerate a server failure.
 {{/callout}}
 
 {{#> callout type='warning' }}
@@ -139,83 +156,165 @@ For instance, this will happen when using the `StreamWorkManager` if a Work take
 
 Please refer to the Kafka documentation about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) and [replication](https://kafka.apache.org/documentation/#replication) for more information.
 
-When using Nuxeo Stream for PubSub service (see below) it is recommended to **reduce the topic retention to few hours** in order to save disk storage.
+When using Nuxeo Stream for PubSub service (see below) it is recommended to **reduce the topic retention to few hours** to save disk storage.
 
-This is done at the Kafka level using the following command:
+This should be done at the Kafka level using the following command:
 ```bash
 $KAFKA_HOME/bin/kafka-configs.sh --zookeeper <zk_host> --alter --entity-type topics --entity-name nuxeo-pubsub --add-config retention.ms=7200000
 ```
 
-## About Topics
+## Kafka Topics and Consumer Groups
 
-Each Nuxeo stream is a Kafka topic. The topic name is the stream name with a `topicPrefix` (`kafka.topicPrefix` in `nuxeo.conf`).
+Each Nuxeo Stream is a Kafka Topic and each Nuxeo Computation is a consumer part of a Kafka Consumer Group.
 
-Because streams are defined by configuration, the list of topics varies depending on the deployed Nuxeo components.
+Both Topic and Consumer Group are prefixed using the `kafka.topicPrefix` option in `nuxeo.conf`.
+This prefix is by default `nuxeo-`, you can share a Kafka cluster among different Nuxeo cluster instances using distinct prefixes.
 
-Nuxeo uses the Kafka Producer/Consumer API and the consumer groups varies depending on what is deployed.
+Since Nuxeo 11.1 stream and computation names use [namespaces]({{page page='nuxeo-stream'}}#namespace) to avoid conflicts between services and to ease the configuration.
+
+A Nuxeo Stream named `<namespace>/<stream>` is converted to a topic:</br> `<prefix><namespace>-<stream>`.
+
+Same applies to Nuxeo Computation: `<namespace>/<computation>` is converted into a group:</br> `<prefix><namespace>-<stream-name>`
+
+Because streams and computations are extensible, the list of topics and group varies depending on the deployed Nuxeo components.
 
 If you want the complete list of topics and consumer groups, the easiest way is to start a staging environment and use Kafka scripts:
 ```bash
 # list of topics
-/opt/kafka/bin/kafka-topics.sh  --zookeeper zookeeper:2181 --list
+/opt/kafka/bin/kafka-topics.sh  --zookeeper zookeeper:2181 --list --exclude-internal
+nuxeo-audit-audit
+nuxeo-bulk-automation
+nuxeo-bulk-bulkIndex
+nuxeo-bulk-command
+nuxeo-bulk-csvExport
+nuxeo-bulk-deletion
+nuxeo-bulk-done
+nuxeo-bulk-exposeBlob
+nuxeo-bulk-index
+nuxeo-bulk-makeBlob
+nuxeo-bulk-recomputeThumbnails
+nuxeo-bulk-recomputeViews
+nuxeo-bulk-removeProxy
+nuxeo-bulk-setProperties
+nuxeo-bulk-setSystemProperties
+nuxeo-bulk-sortBlob
+nuxeo-bulk-status
+nuxeo-bulk-trash
+nuxeo-bulk-zipBlob
+nuxeo-input-null
+nuxeo-pubsub-pubsub
+nuxeo-retention-retentionExpired
+nuxeo-work-blobs
+nuxeo-work-collections
+nuxeo-work-default
+nuxeo-work-dlq
+nuxeo-work-elasticSearchIndexing
+nuxeo-work-escalation
+nuxeo-work-fulltextUpdater
+nuxeo-work-permissionsPurge
+nuxeo-work-pictureViewsGeneration
+nuxeo-work-renditionBuilder
+nuxeo-work-updateACEStatus
+nuxeo-work-videoConversion
+
 # list of consumers
 /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+nuxeo-audit-writer
+nuxeo-bulk-automation
+nuxeo-bulk-bulkIndex
+nuxeo-bulk-csvExport
+nuxeo-bulk-deletion
+nuxeo-bulk-exposeBlob
+nuxeo-bulk-index
+nuxeo-bulk-indexCompletion
+nuxeo-bulk-makeBlob
+nuxeo-bulk-recomputeThumbnails
+nuxeo-bulk-recomputeViews
+nuxeo-bulk-removeProxy
+nuxeo-bulk-scroller
+nuxeo-bulk-setProperties
+nuxeo-bulk-setSystemProperties
+nuxeo-bulk-sortBlob
+nuxeo-bulk-status
+nuxeo-bulk-trash
+nuxeo-bulk-zipBlob
+nuxeo-retention-retentionExpired
+nuxeo-stream-metrics
+nuxeo-work-blobs
+nuxeo-work-collections
+nuxeo-work-default
+nuxeo-work-elasticSearchIndexing
+nuxeo-work-escalation
+nuxeo-work-fulltextUpdater
+nuxeo-work-permissionsPurge
+nuxeo-work-pictureViewsGeneration
+nuxeo-work-renditionBuilder
+nuxeo-work-updateACEStatus
+nuxeo-work-videoConversion
 ```
 
 For instance, you can use this list of topics to create them in your target environment so Nuxeo can use a Kafka user with limited rights.
 
-Below is listed common topics used by Nuxeo.
+Below are listed common topics and consumer groups used by Nuxeo using the default `nuxeo-` prefix.
 
 ### Default Nuxeo Topics
 
-#### The Audit Topic: nuxeo-audit
+#### The Audit Topic
 
-Used to decouple write into the audit backend, it is a single partition topic to get a total ordering.
-The consumer group is `nuxeo-AuditLogWriter`, there is a single consumer in the Nuxeo cluster.
+Nuxeo Stream is used to decouple write into the audit backend, the namespace used is `audit`.
+A stream `audit/audit` is defined with a single partition to get a total ordering.
+The computation in charge of writing to the backend is called `audit/writer`.
+This translates into a topic `nuxeo-audit-audit` and a consumer group `nuxeo-audit-writer`.
 
 You can see the lag using `stream.sh`:
 ```bash
-./bin/stream.sh lag -k -l audit
-## Log: audit partitions: 1
-### Group: AuditLogWriter
-| partition | lag  | pos  | end  | posOffset | endOffset |
-| All       | 0    | 1039 | 1039 | 1039      | 1039      |
+./bin/stream.sh lag -k -l audit/audit
+## Log: Name{id='audit-audit', urn='audit/audit'} partitions: 1
+### Group: Name{id='audit-writer', urn='audit/writer'}
+| partition | lag | pos | end | posOffset | endOffset |
+| All       |   0 |  20 |  20 |        20 |        20 |
 ```
 
 Or using Kafka scripts:
 ```bash
-/opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group nuxeo-AuditLogWriter
--- GROUP    TOPIC     PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG    CONSUMER-ID           HOST   CLIENT-ID
--- nuxeo-AuditLogWriter nuxeo-audit  0    1039   1039   0      AuditLogWriter-13-666cc3d2-5a5d-409e-9347-6e1565fab4cc /192.168.16.7   AuditLogWriter-13
+/opt/kafka/bin/kafka-topics.sh --zookeeper zookeeper:2181 --describe --topic nuxeo-audit-audit
+-- Topic:nuxeo-audit-audit	PartitionCount:1	ReplicationFactor:1	Configs:
+--	Topic: nuxeo-audit-audit	Partition: 0	Leader: 1001	Replicas: 1001	Isr: 1001
+
+
+/opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group nuxeo-audit-writer
+-- GROUP              TOPIC             PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                HOST            CLIENT-ID
+-- nuxeo-audit-writer nuxeo-audit-audit 0          20              20              0               nuxeo-audit-writer-21-4ebb7f79-d9f8-41f5-ae6e-559981380967 /172.19.0.11    nuxeo-audit-writer-21
 ```
 
 #### The StreamWorkManager Topics
 
 When `nuxeo.stream.work.enabled=true` the WorkManager is based on Nuxeo Stream and each Work Queue is using a topic.
 
-You will find a topic for each Work Queue (prefixed by `nuxeo-`):
-- `default`: the default WorkManager queue.
-- `elasticSearchIndexing`: the queue used for indexing documents in Elasticsearch.
-- `fulltextUpdater`
-- `renditionBuilder`
-- `permissionsPurge`
-- `collections`
-- `blobs`
-- `escalation`
+Since Nuxeo 11.1 the namespace `work` is used.
 
-In addition there is a Dead Letter Queue topic to store Work in failure:
-- `dlq-work`
+Given a Work Queue for instance `elasticSearchIndexing`:
+- the stream and its associated computation will be `work/elasticSearchIndexing`
+- the Kafka topic name and consumer group will be `nuxeo-work-elasticSearchIndexing`
 
-Consumer groups are named from the Work Queue name, for instance:</br>
-For a Work Queue `elasticSearchIndexing`:
-  - the topic will be named `nuxeo-elasticSearchIndexing`
-  - the consumer group `nuxeo-elasticSearchIndexing`
+You will find a topic for each Work Queue:
+- `nuxeo-work-default`: the default WorkManager queue.
+- `nuxeo-work-elasticSearchIndexing`: the queue used for indexing documents in Elasticsearch.
+- `nuxeo-work-fulltextUpdater`
+- `nuxeo-work-renditionBuilder`
+- `nuxeo-work-permissionsPurge`
+- `nuxeo-work-collections`
+- `nuxeo-work-blobs`
+- `nuxeo-work-escalation`
+
+In addition, there is a Dead Letter Queue stream `work/dlq` to store Work in failure the topic is:
+- `nuxeo-work-dlq`
 
 Here is an example to get the lag and latency for the `default` Work Queue:
 ```bash
-./bin/stream.sh latency -k -l default --codec avro --verbose
-## Log: default partitions: 12
-### Group: default
+./bin/stream.sh latency -k -l work/default --codec avro --verbose
+## Log: Name{id='work-default', urn='work/default'} partitions: 12
+### Group: Name{id='work-default', urn='work/default'}
 | partition |  lag | latencyMs |      latency |  posTimestamp | posDate                  | curDate                  |  pos |  end | posOffset |  endOffset  | posKey                               |
 |       --- | ---: |      ---: |         ---: |          ---: | ---:                     | ---:                     | ---: | ---: |      ---: |        ---: | ---                                  |
 |       All | 1326 |      6336 | 00:00:06.336 | 1581688116759 | 2020-02-14T13:48:36.759Z | 2020-02-14T13:48:43.095Z | 7968 | 9294 |       586 |         831 | bf95c693-1591-48d6-88ee-a06b512da235 |
@@ -235,12 +334,12 @@ Here is an example to get the lag and latency for the `default` Work Queue:
 
 #### The Bulk Service (Bulk Action Framework) Topics
 
-By default topics are prefixed by `nuxeo-bulk-`.
+Since Nuxeo 11.1 the namespace used is `bulk`.
 
 There are topics part of the Bulk Service:
-- `command`: Scheduled Bulk Commands are first written into this topic.
-- `status`: Any Bulk Command reports its progress into this topic.
-- `done`: This topic contains the status of the completed Bulk Commands.
+- `nuxeo-bulk-command`: Scheduled Bulk Commands are first written into this topic.
+- `nuxeo-bulk-status`: Any Bulk Command reports its progress into this topic.
+- `nuxeo-bulk-done`: This topic contains the status of the completed Bulk Commands.
 
 Each Bulk Action creates its own processor and topics, you can find a [description of the topology]({{page page='bulk-action-framework'}}#bulk-service)
 and interesting [debugging commands]({{page page='bulk-action-framework'}}#debugging) in the related documentation.
@@ -248,9 +347,9 @@ and interesting [debugging commands]({{page page='bulk-action-framework'}}#debug
 #### The PubSub Topic
 
 The PubSub service is used to send instant messages to all Nuxeo nodes, mainly to do cache invalidation.
-When it is configured to use Nuxeo Stream (`nuxeo.pubsub.provider=stream`) messages are published in a topic named `nuxeo-pubsub` by default.
+When it is configured to use Nuxeo Stream (`nuxeo.pubsub.provider=stream`) messages are published in a topic named `nuxeo-pubsub-pubsub` by default.
 
 This topic is special because consumers don't need past messages, they start consuming from the end of the topic and they don't need to commit their position.
 As a result, Kafka is not able to list consumer groups for this topic.
 
-Also, because it is instant messages it is recommended to **reduce the topic retention to few hours** in order to save disk storage, see the above Kafka configuration section.
+Also, because it is instant messages, it is recommended to **reduce the topic retention to few hours** to save disk storage, see the above Kafka configuration section.
