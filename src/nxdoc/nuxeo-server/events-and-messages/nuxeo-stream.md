@@ -2,17 +2,19 @@
 title: Nuxeo Stream
 review:
     comment: ''
-    date: '2019-07-11'
+    date: '2020-07-16'
     status: ok
 labels:
-    - lts2017-ok
-    - lts2019-ok
+    - 11.1-ok
 toc: true
 tree_item_index: 300
 ---
 
 {{! excerpt}}
-Nuxeo Stream provides a Log storage abstraction and a Stream processing pattern.
+Nuxeo Stream aims to provide asynchronous and distributed processing, there are different layers:
+- A Log storage abstraction with a Chronicle Queue and Kafka implementations
+- A library to provide processing patterns without dependencies on Nuxeo  
+- Nuxeo services to configure Kafka, streams and processor using Nuxeo extension point. 
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -52,8 +54,6 @@ But it is much more powerful:
 - Messages exchanged by computations can be validated according to an Avro schema taking care of message evolution and interoperability.
 - Computations are monitored, the lag and latency between producer and consumer are available metrics
 
-Visit the [Nuxeo Stream README](https://github.com/nuxeo/nuxeo/tree/master/modules/runtime/nuxeo-stream) for more details.
-
 ## Nuxeo Stream Library
 
 The `nuxeo-stream` module provides a log-based broker message passing system with a computation stream pattern.
@@ -71,15 +71,19 @@ The Chronicle Queue implementation can be used when producers and consumers are 
 
 Please visit the [Kafka page]({{page page='kafka'}}) for more information.
 
-## Nuxeo Stream Service
+&nbsp;
+
+## Nuxeo Stream Services
 
 The `nuxeo-runtime-stream` module provides an integration of the `nuxeo-stream` library with Nuxeo by exposing Nuxeo services:
 
 ### Kafka Configuration Service
 
-This service enables to register Kafka access, along with Kafka properties for consumer and producers.
+This service enables to register multiple Kafka access, along with Kafka properties for consumer, producer and admin API.
 
 Please visit the [Kafka page]({{page page='kafka'}}) for more information.
+
+&nbsp;
 
 ### Codec Service
 
@@ -95,8 +99,8 @@ The Codec service proposes multiple formats:
 - `avro`: use Java reflection to convert the record to [Avro message](https://avro.apache.org/docs/current/spec.html#single_object_encoding) which is `avro` binary with a header containing a fingerprint of the schema.
 - `avroConfluent`: same as `avro` but using the [Confluent Schema Registry](https://docs.confluent.io/current/avro.html#confluent-schema-registry)
 
-`avro` and `avroConfluent` refer to a schema fingerprint so they are an interoperable format
-that supports [forward and backward compatibility](https://docs.confluent.io/current/avro.html).
+`avro` and `avroConfluent` refer to a schema fingerprint, they are an interoperable format
+supporting [forward and backward compatibility](https://docs.confluent.io/current/avro.html).
 
 When using the Computation pattern, the record is always of type `org.nuxeo.lib.stream.computation.Record`
 that contains the following information:
@@ -104,6 +108,7 @@ that contains the following information:
 - `data`: an array of bytes
 - `watermark`: an extended timestamp with a sequence
 - `flagAsByte`: a byte representing 8 flags
+- `traceContext`: since 11.1 if a distributed trace is activated the context is propagated via the record
 
 The default codec for the computation record is `avro` (this can be changed by configuration), with the following schema:
 ```json
@@ -133,6 +138,14 @@ The default codec for the computation record is `avro` (this can be changed by c
         "type": "int",
         "java-class": "java.lang.Byte"
       }
+    },
+    {
+      "name" : "traceContext",
+      "type" : [ "null", {
+        "type" : "bytes",
+        "java-class" : "[B"
+      } ],
+      "default" : null
     }
   ]
 }
@@ -150,32 +163,75 @@ Also, it is possible to contribute a new Codec.
 
 ### Nuxeo Stream Services
 
-The `StreamService` enables to define Log configurations and eventually to initialize Log.
+#### {{> anchor 'namespace'}}Namespaces for Stream and Computation names
+
+Since Nuxeo 11.1 in order to prevent conflict between different services (Audit, StreamWorkManager, Bulk Service ...) a namespace has been introduced for Stream and Computation names.
+
+The notation is an URN (Unified Resource Name) of form: `namespace/specific-name`.
+
+Nuxeo defines the following namespaces:
+- `audit`: for the Audit service
+- `work`: for the StreamWorkManager
+- `bulk`: for the Bulk Action service
+- `import`: for the Nuxeo Stream Importer
+- `retention`: for the retention service
+- `pubsub`: for the PubSub service
+
+Because stream and computation names are used to define thread names, Kafka topics, Kafka consumer group, Chronicle files, and metrics,
+the URN notation `namespace/specific-name` is encoded as an identifier with the form `namespace-specific-name`.
+For this reason a namespace should not contain the `-` (dash) character.
+
+For backward compatibility it is still possible to not use namepsace as long as names match `[A-Za-z0-9][A-Za-z0-9_]*` see [NXP-28877](https://jira.nuxeo.com/browse/NXP-28877) for more information.
+
+#### LogConfig
+
+`LogConfig` extension point enables to define:
+- An implementation (Chronicle Queue or Kafka) and its configuration
+- How to create new Logs if they don't exist
+- When to use the configuration, using a startswith match pattern on the Log/Stream or Consumer Group name.
+
+For instance:
 
   ```xml
    <extension target="org.nuxeo.runtime.stream.service" point="logConfig">
     <!-- Chronicle impl, define the storage directory with a week of retention -->
-    <logConfig name="myImport" type="chronicle">
-      <option name="directory">import</option>
+    <logConfig name="myCQImport" type="chronicle">
       <option name="basePath">/var/lib/nuxeo/my-import</option>
       <option name="retention">7d</option>
       <!-- Init a log with 12 partitions if it does not exists -->
-      <log name="myLog" size="12" />
+      <log name="myCQ/myLog" size="12" />
+      <!-- this config will be applied to all log or stream name from the myCQ namespace -->
+      <match name="myCQ/" />
     </logConfig>
+    <!-- Define a specific Kafka configuration for the audit namespace  -->
+    <logConfig name="fastAuditConsumer" type="kafka">
+      <!-- fastConsumer must be a valid kafkaConfig -->
+      <option name="kafkaConfig">fastConsumer</option>
+      <match name="audit/" />
+    </logConfig>
+    <!-- Define a specific Kafka configuration for StreamWorkManager videoConversion  -->
+    <logConfig name="mySlowConsumer" type="kafka">
+      <option name="kafkaConfig">slowConsumer</option>
+      <!-- -->
+      <match group="work/videoConversion" />
+    </logConfig>
+  </extension>
   ```
 
-It provides a low-level access to the Log using the [LogManager](https://github.com/nuxeo/nuxeo/tree/master/modules/runtime/nuxeo-stream) that can create Log, create tailer (reader) or appender (writer).
+It is possible to use the low low-level access to the Log using the [LogManager](https://github.com/nuxeo/nuxeo/tree/master/modules/runtime/nuxeo-stream) that can create Log, create tailer (reader) or appender (writer).
 
-  ```
+  ```java
   StreamService service = Framework.getService(StreamService.class);
-  LogManager logManager = service.getLogManager("myImport");
+  LogManager logManager = service.getLogManager();
+  Name myStream = Name.ofUrn("myCQ/myLog");
+  Name myConsumer = Name.ofUrn("myCQ/consumer");
 
   // write
-  LogAppender<MyRecord> appender = logManager.getAppender("myLog");
+  LogAppender<MyRecord> appender = logManager.getAppender(myStream);
   appender.append(key, new MyRecord(key, "foo"));
 
   // read
-  try (LogTailer<MyRecord> tailer = logManager.createTailer("myConsumerGroup", "myLog")) {
+  try (LogTailer<MyRecord> tailer = logManager.createTailer(myConsumer, myStream)) {
       LogRecord<MyRecord> logRecord = tailer.read(Duration.ofSeconds(1));
       MyRecord myRecord = logRecord.message();
       // ... do something with the message
@@ -185,7 +241,10 @@ It provides a low-level access to the Log using the [LogManager](https://github.
   // never close the manager, this is done by the service
   ```
 
-When using the Stream Processing pattern, you do not have to use the LogManager directly.</br>
+#### Stream Processor
+
+When using the Stream Processing pattern, you do not have to use the LogManager directly.
+
 Register your processor by providing:
   - a Java Class that defines a topology of computations
   - some settings that describe the stream configuration (partitions, codec) and how to run the computation (concurrency, policies)
@@ -193,26 +252,25 @@ The `StreamService` will run a set of computation thread pools called a Processo
 
   ```xml
    <streamProcessor name="myStreamProcessor" class="org.nuxeo.runtime.stream.tests.MyStreamProcessor"
-      defaultConcurrency="4" defaultPartitions="2" logConfig="default">
+      defaultConcurrency="4" defaultPartitions="2">
       <!-- All the streams used in the topology will be initialized with the default partitions and codec
            but you can change the default: -->
-      <stream name="input" partitions="1" codec="avro" />
-      <stream name="output" codec="avroJson" />
+      <stream name="my/input" partitions="1" codec="avro" />
+      <stream name="my/output" codec="avroJson" />
       <!-- Same for the computation concurrency and policy -->
-      <computation name="myComputation" concurrency="1" />
-      <policy name="myComputation" maxRetries="10" delay="1s" maxDelay="60s" continueOnFailure="false" />
+      <computation name="my/computation" concurrency="1" />
+      <policy name="my/computation" maxRetries="10" delay="1s" maxDelay="60s" continueOnFailure="false" />
       <!-- It is possible to pass a map of options to your stream processor constructor -->
       <option name="myOption">value</option>
     </streamProcessor>
   ```
 
-If you want to write some input to feed your processor:
+To write some input to feed your process, just ask for the StreamManager:
   ```java
   StreamService service = Framework.getService(StreamService.class);
-  // Get a stream manager based on a log configuration
-  StreamManager streamManager = service.getLogManager("default");
+  StreamManager streamManager = service.getStreamManager();
   // Append a record
-  streamManager.append("input", Record.of("key", "some message".getBytes("UTF-8")));
+  streamManager.append(Name.ofUrn("my/input"), Record.of("key", "some message".getBytes("UTF-8")));
   ```
 
 ## Error Handling
@@ -224,7 +282,7 @@ Strategies for handling errors is essential to have stable and reliable processi
 Errors can be temporary, in this case retrying after some delay is a good strategy. The classical way is to configure a number of retries with a delay that backs off exponentially up to a maximum,
 for instance:
 ```xml
-<policy name="myComputation" maxRetries="8" delay="1s" maxDelay="60s" continueOnFailure="false" />
+<policy name="my/computation" maxRetries="8" delay="1s" maxDelay="60s" continueOnFailure="false" />
 ```
 The above configuration defines a retry policy with 8 retries, starting with a delay of 1s that backs off exponentially up to 60s:
 - t: error, wait 1s
@@ -248,6 +306,8 @@ which tolerates a 15min shortage.
 
 When using Kafka, the record is reassigned to a valid consumer, the tolerance in this case is:
 15min * number of consumer threads.
+
+The policy `name` refers to the computation name, to set a default retry policy for all computations of the processor you should use `name="default"`.
 
 ### Fallback
 
@@ -319,28 +379,10 @@ nuxeo.stream.health.check.delay=36h
 
 ### Monitoring
 
-Computations expose metrics per node (`*` is to be replaced with the computation name):
-- the number of failure per computation: `nuxeo.nuxeo.stream.computation.*.failure.count`
-- the number of record skipped after retries: `nuxeo.nuxeo.stream.computation.*.failure.count`
-- the number of computation running (processing record): `nuxeo.nuxeo.stream.computation.*.running.count`
-- the time and rate on record processing: `nuxeo.nuxeo.stream.computation.*.processRecord.*`
-- the time and rate on the timer processing: `nuxeo.nuxeo.stream.computation.*.processTimer.*`
-
-The above metrics can be exposed in JMX, Graphite, StatsD or DataDog.
-
-It is possible to get computation cluster metrics like:
-- the number of records to process to catch up with the producer (or the end of the stream): `lag`
-- the number of records in the stream: `end`
-- the position of the computation in the stream, its last committed position: `pos`
-- the elapsed time between now and the last processed record was submitted, only if there is some lag: `latency`
-
-For instance:
-- A lag of 3 indicates that the computation pool has 3 records to process to catch up with the producer.
-- A latency of 5min indicates that the computation is 5 min behind the producer.
-
-If the latency keeps growing, then it is probable that the computation is in failure.
-
-The `stream.sh` script exposes the above metrics, it is part of Nuxeo distribution in the `bin` directory.
+Nuxeo exposes Computation metrics per Nuxeo node and also global metrics visit the 
+  [Nuxeo Streams metrics page]({{page page='metrics'}}#nuxeo-streams).
+ 
+The `stream.sh` script can be used to display the lag and latency, the script is part of Nuxeo distribution in the `bin` directory.
 
 To get the lag, pos and end for all streams and computations:
 ```bash
@@ -352,21 +394,7 @@ To get the latency in addition:
 ./bin/stream.sh -k latency --codec avro
 ```
 
-To publish these metrics periodically into Graphite:
- ```bash
-# publish to Graphite lag and latency for all the streams every 30s
- /bin/stream.sh monitor -k --codec avro -l ALL -i 30 --host graphite --port 2003
-```
-
-To publish metrics periodically into Datadog:
- ```bash
-# publish to Datadog lag and latency for all the streams every 60s with some additional tags
- /bin/stream.sh datadog -k --codec avro -l ALL -i 60 --api-key <DATADOG_API_KEY> --tags "staging:foo,project:bar"
-```
-
-Note that this monitoring command can be run on all Nuxeo nodes. It requires very few resources and
-because it relies on Kafka, only one command will publish the metrics, the other instances are there for
-automatic failover.
+Since Nuxeo 11.1, Nuxeo is reporting global lag and latency metrics, there is no more need to run additional `stream.sh` process.
 
 ### Reporting Problems
 

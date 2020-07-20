@@ -200,11 +200,16 @@ More information can be found on the [Elasticsearch Setup]({{page page='elastics
 <tbody>
 <tr>
   <th colspan="1">Nuxeo Platform Version:</th>
+  <th colspan="1">11.1</th>
   <th colspan="1">LTS 2019</th>
   <th colspan="1">LTS 2017</th>
 </tr>
 <tr>
   <th colspan="1">Kafka</th>
+<td colspan="1">
+  Library: 2.5.0 scala 2.12<br/>
+  Cluster: 1.x, 2.x
+</td>
 <td colspan="1">
   Library: 2.1.1 scala 2.12 since HF15<br/>
   Library: 2.1.0 scala 2.12 from HF01 to HF14<br/>
