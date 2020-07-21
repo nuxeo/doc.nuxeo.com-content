@@ -54,7 +54,7 @@ history:
 
 The Virtual Navigations menu entry enables you to define new browsing trees based on document properties. You can install the [Nuxeo Virtual Navigation]({{page space='nxdoc' page='nuxeo-virtual-navigation'}}) add-on to see how default virtual navigations based on the vocabularies Subject and Coverage work. This page explains the different options available on the Nuxeo Studio configuration screens.
 
-A virtual navigation is a [content view]({{page page='content-views'}}) whose filter is not displayed as a form but as a tree that shows the values of a vocabulary.
+A [virtual navigation](https://www.nuxeo.com/blog/webinar-building-virtual-navigation-structures-nuxeo-platform/) is a [content view]({{page page='content-views'}}) whose filter is not displayed as a form but as a tree that shows the values of a vocabulary.
 
 ## Pre-Requisites
 
