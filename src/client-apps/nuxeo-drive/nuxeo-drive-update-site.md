@@ -234,7 +234,7 @@ The process is quite simple:
 ### Windows
 
 The only action to do is to install the new version by calling `nuxeo-drive-x.y.z.exe /VERYSILENT /START=auto` from the temporary folder.
-The installer will automagically:
+The installer will automatically:
 
 1. Stop Drive;
 2. Install the new version, it will upgrade the old one without personal data loss;
@@ -246,8 +246,8 @@ The installer will automagically:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about Nuxeo Drive'}}
 
-- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
-- [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}})
+- [HOWTO: Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [HOWTO: Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}})
 - [Nuxeo Drive documentation]({{page page='nuxeo-drive'}})
 
 {{/panel}}</div><div class="column medium-6">

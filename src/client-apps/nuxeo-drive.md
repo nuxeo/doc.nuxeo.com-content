@@ -159,6 +159,10 @@ The Nuxeo Drive settings window shows four tabs that enable you to customize the
     This is where you select the general behavior of your Nuxeo Drive: what language to use, the update policy, etc.
     ![]({{file name='drive-tab-general.png' page='nuxeo-drive'}})
 
+- **Features**</br>
+    This is where you can turn on/off the features available on your application.
+    ![]({{file name='drive-tab-features.png' page='nuxeo-drive'}})
+
 - **Accounts**</br>
     Set up one or several Nuxeo Platform accounts to synchronize with Nuxeo Drive.
     ![]({{file name='drive-tab-accounts.png' page='nuxeo-drive'}})
