@@ -152,7 +152,7 @@ In our case, we will add the following contribution in our custom bundle file:
     <nuxeo-filter document="[[document]]" expression="document.facets.indexOf('Folderish') === -1
                                                    && document.facets.indexOf('Collection') === -1">
       <template>
-        <nuxeo-document-page-validity name="view" document="[[document]]" opened></nuxeo-document-page>
+        <nuxeo-document-page-validity name="view" document="[[document]]" opened></nuxeo-document-page-validity>
       </template>
     </nuxeo-filter>
   </template>
