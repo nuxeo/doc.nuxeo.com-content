@@ -1,5 +1,5 @@
 ---
-title: Documents
+title: Document Types
 review:
   comment: ''
   date: ''
