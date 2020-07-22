@@ -57,8 +57,8 @@ history:
         date: '2013-07-11 10:57'
         message: ''
         version: '1'
-
 ---
+
 Nuxeo Automation includes a service designed to perform renditions based on Freemarker or MVEL templating.
 
 Two operations are provided for leveraging this rendition engine: [Conversion > Render Document](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Render.Document) and [Conversion > Render Document Feed](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Render.DocumentFeed). The output format can be TEXT, HTML, XML, JSON, etc.
@@ -69,15 +69,13 @@ Two operations are provided for leveraging this rendition engine: [Conversion > 
 We list here the variables accessible in this rendition context and as a consequence in the templates.
 
 {{#> callout type='tip' heading='Nuxeo Studio'}}
-
 When building a custom document or mail template in Nuxeo Studio, do not hesitate to see the help ("See Examples") to get template samples.
-
 {{/callout}}
 
 ## FreeMarker Templating Language (ftl)
 
 *   **`${Document}`** - the context document. This is the document on which the rendering is done in the case the rendering is done on a single document. When the input is a list of document then this variable is undefined.
-*   **`${This}`** - the rendering input. Will be a document in the case of a single document or a list of documents in th case of multiple documents.
+*   **`${This}`** - the rendering input. Will be a document in the case of a single document or a list of documents in the case of multiple documents.
 *   **`${Session}`** - the current core session.
 *   **`${Context}`** - any object can be added to the context before calling the operation that will render the template (document or mail template).
   - Regular Automation: Use `Execution Context > Context.SetVar`
@@ -96,7 +94,7 @@ By using the FreeMarker templating engine, you also gain access to its whole fun
 </#list>
 ```
 
-In this example, This is the input of the Document.RenderFeed operation:
+In this example, this is the input of the `Document.RenderFeed` operation:
 
 ```
 <#list This as oneDoc>
@@ -116,30 +114,29 @@ Have a look at the [FreeMarker manual](https://freemarker.apache.org/docs/) for 
 
 {{#> callout type='tip' heading='Going further'}}
 
-- Freemarker also comes with a lot more (formating, test a value is empty, …). Read the documentation and ensure your instance is using the suitable Freemarker version in the `pom.xml` file. 
+- Freemarker also comes with a lot more (formatting, test that a value is empty, …).</br>
+  Read the documentation and make sure your instance is using the correct Freemarker version in the `pom.xml` file.
 - Sometimes it will be easier to calculate a value before calling the template, instead of calculating it in Freemarker.
 
 {{/callout}}
 
-### Caution points
+### Caution Points
 
-#### Java objects
+#### Java Objects
 
-With `${expression}` and control flows (conditions, lists), Freemarker expects Java objects: it could be an issue when using JavaScript Automation
+With `${expression}` and control flows (conditions, lists), Freemarker expects Java objects: it could be an issue when using JavaScript Automation.
 
-- No issue with scalars (String, number, boolean, date)
-- Potential issues with arrays and objects: Use `Java.to()` for conversions, or use "Java in JS" to build native Java objects in JS (write a Java plugin if it becomes complex)
+- No issue with scalars (String, number, boolean, date).
+- Potential issues with arrays and objects: Use `Java.to()` for conversions, or use "Java in JS" to build native Java objects in JS (write a Java plugin if it becomes complex).
 
 For example, if a JavaScript array of string needs to be converted into Java objects:
-
 ```
 var theValues = ["value1", "value2", "value3", "value4"];
 ctx.theValues = Java.to(theValues);
 Document.Mail(...);
 ```
 
-with in the mail template:
-
+within the mail template:
 ```
 <#list theValues as value>
 <p>...${value}...</p>
@@ -148,18 +145,20 @@ with in the mail template:
 
 #### CurrentUser
 
-CurrentUser object is not available: it is not possible to use `${CurrentUser.firstName}` for example. It is necessary to fill values in context variables before calling the template. It is possible to use `Session.getPrincipal()`, `${Session.getPrincipal().getFirstName()}`, etc. 
+CurrentUser object is not available: it is not possible to use `${CurrentUser.firstName}` for example. It is necessary to fill values in context variables before calling the template.
 
-  It is more flexible to use context variables as it handles null values, the `actingUser` variable, etc.
+Therefore, It is possible to use `Session.getPrincipal()`, `${Session.getPrincipal().getFirstName()}`, etc.
 
-#### Security consideration
+It is more flexible to use context variables as it handles null values, the `actingUser` variable, etc.
+
+#### Security
 
 Freemarker is a scripting language. It should always stay server side, built in the Studio Project: it is therefore recommended to avoid having users writing scripts client side, that could be executed server side.
 
 ## MVEL
 
 * **`${Document}`** - the context document. This is the document on which the rendering is done in the case the rendering is done on a single document. When the input is a list of document then this variable is undefined.
-* **`${This}`** - the rendering input. Will be a document in the case of a single document or a list of documents in th case of multiple documents.
+* **`${This}`** - the rendering input. Will be a document in the case of a single document or a list of documents in the case of multiple documents.
 * **`${Session}`** - the current core session.
 * **`${Context}`** - the context.
 * **`${CurrentDate}`** - the current date. See [Use of MVEL in Automation chains (date wrapper)]({{page page='use-of-mvel-in-automation-chains'}}) for details.
@@ -177,7 +176,7 @@ By using MVEL, you also gain access to its whole functionalities. For example, u
 
 Have a look at the [MVEL Documentation](http://mvel.documentnode.com/#language-guide-for-2.0) for more information about it.
 
-## Variable contribution
+## Variable Contribution
 
 You can contribute custom objects and functions in Java.
 
@@ -197,4 +196,3 @@ You can contribute custom objects and functions in Java.
   </contextFactory>
 </extension>
 ```
-
