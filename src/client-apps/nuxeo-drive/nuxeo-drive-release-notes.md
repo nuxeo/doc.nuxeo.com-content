@@ -11,7 +11,7 @@ toc: true
 
 Welcome to the Release Notes for **Nuxeo Drive 4.4.4**
 
-**Status**: <font color="#ff0044">**BETA**</font> </br>
+**Status**: <font color="#0066ff">**Release**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.4.4.md)
 
 ## Important Changes
@@ -134,10 +134,8 @@ We enforced that mechanism robustness and it's fixed now.
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2162](https://jira.nuxeo.com/browse/NXDRIVE-2162)
 
 
-<!--To be published when 4.4.4 released
 ## Download Links
 
 - [GNU/Linux](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.4-x86_64.AppImage)
 - [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.4.dmg)
 - [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.4.exe)
--->
