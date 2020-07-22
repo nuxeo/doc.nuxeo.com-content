@@ -323,7 +323,7 @@ Available features:
 
 | Parameter | Default Value (bool) | Version Added | Description
 |---|---|---|---
-| `auto_updates` | true | 4.4.2 | Allow or disallow auto-updates.
+| `auto_update` | true | 4.4.2 | Allow or disallow auto-updates.
 | `direct_edit` | true | 4.4.2 | Allow or disallow Direct Edit.
 | `direct_transfer` | true | 4.4.2 | Allow or disallow Direct Transfer.
 | `s3` | true | 4.4.2 | Allow or disallow using Amazon S3 direct uploads.
@@ -331,6 +331,11 @@ Available features:
 Here is how to tweak features via the local configuration file:
 
 ```ini
+[DEFAULT]
+env = myFeatures
+
+[myFeatures]
+; (other parameters...)
 feature.auto-update     = true
 feature.direct-edit     = true
 feature.direct-transfer = true
@@ -341,6 +346,7 @@ Here is how to tweak features via the server configuration file:
 
 ```json
 {
+  // (other parameters...)
   "feature": {
     "auto-update"     : true,
     "direct-edit"     : true,
@@ -369,6 +375,7 @@ update-check-delay = 0
 [custom]
 ca_bundle = C:\certificates\terena-ssl.crt
 debug = False
+feature.auto-update = true
 log-level-file = DEBUG
 ignored_suffixes =
     .bak
