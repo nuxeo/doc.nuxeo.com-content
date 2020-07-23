@@ -14,7 +14,7 @@ tree_item_index: 300
 Nuxeo Stream aims to provide asynchronous and distributed processing, there are different layers:
 - A Log storage abstraction with a Chronicle Queue and Kafka implementations
 - A library to provide processing patterns without dependencies on Nuxeo  
-- Nuxeo services to configure Kafka, streams and processor using Nuxeo extension point. 
+- Nuxeo services to configure Kafka, streams and processor using Nuxeo extension point.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -48,7 +48,7 @@ But it is much more powerful:
 - A computation can be executed in parallel.
 - Computations can be distributed on multiple machines.
 - Computation can be added, restarted or removed without stopping the processing or data loss.
-- Computations are fault tolerant and can define an error handling strategy.
+- Computations are fault-tolerant and can define an error handling strategy.
 - Streams capacity is only limited by disk size, there is no need to introduce back pressure to slow down producers.
 - Streams are persisted during a retention period, all records are kept. It is possible to debug, tune and test new features easily.
 - Messages exchanged by computations can be validated according to an Avro schema taking care of message evolution and interoperability.
@@ -62,16 +62,13 @@ This module has no dependency on Nuxeo framework to ease integration with extern
 
 The underlying Log solution relies on:
 
-- either on [Chronicle Queue](https://github.com/OpenHFT/Chronicle-Queue) which is a high-performance off-Heap queue library. There is no broker to install, it relies entirely on OS memory mapped file (the storage is limited by disk capacity).
-
+- either on [Chronicle Queue](https://github.com/OpenHFT/Chronicle-Queue) which is a high-performance off-Heap queue library. There is no broker to install, it relies entirely on OS memory-mapped file (the storage is limited by disk capacity).
 - either on [Apache Kafka](https://kafka.apache.org/) which is a distributed streaming platform.
 
 The Chronicle Queue implementation can be used when producers and consumers are on the same node,
 **for distributed support and fault tolerance Kafka is required**.
 
 Please visit the [Kafka page]({{page page='kafka'}}) for more information.
-
-&nbsp;
 
 ## Nuxeo Stream Services
 
@@ -82,8 +79,6 @@ The `nuxeo-runtime-stream` module provides an integration of the `nuxeo-stream` 
 This service enables to register multiple Kafka access, along with Kafka properties for consumer, producer and admin API.
 
 Please visit the [Kafka page]({{page page='kafka'}}) for more information.
-
-&nbsp;
 
 ### Codec Service
 
@@ -111,6 +106,7 @@ that contains the following information:
 - `traceContext`: since 11.1 if a distributed trace is activated the context is propagated via the record
 
 The default codec for the computation record is `avro` (this can be changed by configuration), with the following schema:
+
 ```json
 {
   "name": "Record",
@@ -151,7 +147,7 @@ The default codec for the computation record is `avro` (this can be changed by c
 }
 ```
 
-The computation record acts as an envelope that contains the data used by the computations.
+The computation record acts as an envelope that contains the data used by the computations.</br>
 The embedded data is a convention between computations and can be whatever you like, from plain JSON to Avro.
 Using the Codec service with an `avro` message is a good option to encode and decode this data,
 because:
@@ -165,9 +161,9 @@ Also, it is possible to contribute a new Codec.
 
 #### {{> anchor 'namespace'}}Namespaces for Stream and Computation names
 
-Since Nuxeo 11.1 in order to prevent conflict between different services (Audit, StreamWorkManager, Bulk Service ...) a namespace has been introduced for Stream and Computation names.
+Since Nuxeo 11.1, to prevent conflict between different services (Audit, StreamWorkManager, Bulk Service ...), a namespace has been introduced for Stream and Computation names.
 
-The notation is an URN (Unified Resource Name) of form: `namespace/specific-name`.
+The notation is a URN (Unified Resource Name) of the form: `namespace/specific-name`.
 
 Nuxeo defines the following namespaces:
 - `audit`: for the Audit service
@@ -179,16 +175,16 @@ Nuxeo defines the following namespaces:
 
 Because stream and computation names are used to define thread names, Kafka topics, Kafka consumer group, Chronicle files, and metrics,
 the URN notation `namespace/specific-name` is encoded as an identifier with the form `namespace-specific-name`.
-For this reason a namespace should not contain the `-` (dash) character.
+For this reason, a namespace should not contain the `-` (dash) character.
 
-For backward compatibility it is still possible to not use namepsace as long as names match `[A-Za-z0-9][A-Za-z0-9_]*` see [NXP-28877](https://jira.nuxeo.com/browse/NXP-28877) for more information.
+For backward compatibility it is still possible to not use namespace as long as names match `[A-Za-z0-9][A-Za-z0-9_]*` see [NXP-28877](https://jira.nuxeo.com/browse/NXP-28877) for more information.
 
 #### LogConfig
 
 `LogConfig` extension point enables to define:
 - An implementation (Chronicle Queue or Kafka) and its configuration
 - How to create new Logs if they don't exist
-- When to use the configuration, using a startswith match pattern on the Log/Stream or Consumer Group name.
+- When to use the configuration, using a `startswith` match pattern on the Log/Stream or Consumer Group name.
 
 For instance:
 
@@ -220,7 +216,7 @@ For instance:
 
 It is possible to use the low low-level access to the Log using the [LogManager](https://github.com/nuxeo/nuxeo/tree/master/modules/runtime/nuxeo-stream) that can create Log, create tailer (reader) or appender (writer).
 
-  ```java
+```
   StreamService service = Framework.getService(StreamService.class);
   LogManager logManager = service.getLogManager();
   Name myStream = Name.ofUrn("myCQ/myLog");
@@ -239,14 +235,14 @@ It is possible to use the low low-level access to the Log using the [LogManager]
       tailer.commit();
   }
   // never close the manager, this is done by the service
-  ```
+```
 
 #### Stream Processor
 
-When using the Stream Processing pattern, you do not have to use the LogManager directly.
+When using the Stream Processing pattern, you don't have to use the LogManager directly.
 
 Register your processor by providing:
-  - a Java Class that defines a topology of computations
+  - a Java class that defines a topology of computations
   - some settings that describe the stream configuration (partitions, codec) and how to run the computation (concurrency, policies)
 The `StreamService` will run a set of computation thread pools called a Processor when starting.
 
@@ -331,19 +327,17 @@ persisted in a dedicated stream and the processing continues. This is the approa
 A computation in failure on critical processing requires a human intervention to understand the cause and fix it.
 
 There are different possible causes:
-- An infrastructure failure, like a disk full, once fixed, a rolling restart of Nuxeo nodes must be done
-  to restart computations threads. If this is done within the retention period (7 days by default when using Kafka), there is no data loss.
+- An infrastructure failure, like a disk full. Once fixed, a rolling restart of Nuxeo nodes must be done to restart computations threads. If this is done within the retention period (7 days by default when using Kafka), there is no data loss.
 
-- A bug in the computation, redeploying a fix within the retention period is the best option,
-  if this is not possible we should force the computation to skip the failure, see below
+- A bug in the computation, redeploying a fix within the retention period is the best option. If this is not possible, we should force the computation to skip the failure, see below.
 
 - A poisonous record, something which is not supposed to be in the stream and must be skipped,
   the procedure is the following:
     1. Add this `nuxeo.conf` option on a single Nuxeo node:
-      `nuxeo.stream.recovery.skipFirstFailures=1`
+      `nuxeo.stream.recovery.skipFirstFailures=1`</br>
       Then restart the node, with this option processors will skip the first record in failure instead of terminating.
       Check the `server.log` file that this is the case.
-    2. Remove the `nuxeo.stream.recovery.skipFirstFailures=1` option line from `nuxeo.conf`
+    2. Remove the `nuxeo.stream.recovery.skipFirstFailures=1` option line from `nuxeo.conf`.
     3. Perform a rolling restart of other Nuxeo nodes to restore all processor threads.
 
 
@@ -367,10 +361,9 @@ It is important to understand that this probe will immediately report a computat
 ```
 2 computations have been terminated after failure. First failure detected: 2019-10-30 14:57:22Z, probe failure delayed by PT36H. This Nuxeo instance must be restarted within the stream retention period.
 ```
-**but** the probe failure is delayed by 36 hours in order to have time to apply the recovery procedure.
+**but** the probe failure is delayed by 36 hours to have time to apply the recovery procedure.
 
-This delay is necessary because most of the time the Nuxeo health check is used by load balancer and we don't want to interrupt
-the service immediately while we have time to fix the problem during the retention duration without downtime or data loss.
+This delay is necessary because most of the time the Nuxeo health check is used by the load balancer and we don't want to interrupt the service immediately while we have time to fix the problem during the retention duration without downtime or data loss.
 
 The probe delay is configurable using the `nuxeo.conf` option, keep it under the retention duration (7 days when using Kafka).
 ```
@@ -379,9 +372,9 @@ nuxeo.stream.health.check.delay=36h
 
 ### Monitoring
 
-Nuxeo exposes Computation metrics per Nuxeo node and also global metrics visit the 
+Nuxeo exposes Computation metrics per Nuxeo node and also global metrics visit the
   [Nuxeo Streams metrics page]({{page page='metrics'}}#nuxeo-streams).
- 
+
 The `stream.sh` script can be used to display the lag and latency, the script is part of Nuxeo distribution in the `bin` directory.
 
 To get the lag, pos and end for all streams and computations:
@@ -404,13 +397,9 @@ documents that don't exist or are not accessible.
 It is important to report problems so contributed code can reach the expected production state.
 
 If you encounter a problem, here is the needed information to report:
-
 1. Get the [health-check status]({{page page='reporting-problems'}}#health-check).
-
-2. Check for ERROR in the Nuxeo `server.log`. Look for pattern like `Terminate computation` or `Exception in processLoop`.
-
+2. Check for ERROR in the Nuxeo `server.log`. Look for a pattern like `Terminate computation` or `Exception in processLoop`.
 3. Report the [consumer lag]({{page page='reporting-problems'}}#stream-lag).
-
 4. Report [Nuxeo activity with thread dumps]({{page page='reporting-problems'}}#thread-dump).
 
 ## Integration
@@ -419,9 +408,10 @@ The Nuxeo stream service is used in different locations.
 
 ### Stream Audit Writer
 
-Used by default since Nuxeo 9.3. A sync listener collects the events that need to be traced in the audit.
+Used by default since Nuxeo 9.3, a sync listener collects the events that need to be traced in the audit.
 
 When the transaction is committed, events are written as JSON into an audit Log.
+
 A `StreamProcessor` takes the audit Log as input and send the entries in batch to the Audit backend.
 
 This brings:
@@ -451,7 +441,7 @@ This implementation is not activated by default.
 Instead of queueing work into memory or into Redis (which is also in memory),
 work can be queued into a Log without worries about the memory limits.
 
-Kafka is required to enable distributed work in cluster mode.
+Kafka is required to enable distributed work in a cluster mode.
 
 To scale horizontally, so adding Nuxeo node supports more load,
 the number of Log partitions that fix the maximum concurrency must be higher than the thread pool size of a single node.
@@ -468,6 +458,7 @@ For instance, with a work pool of size 4, we have 12 partitions in the Log:
 Note that, a work pool of size 1 is not over-provisioned because we don't want any concurrency.
 
 The Stream WorkManager can be configured with the following options:
+
 ```
 # Activate the StreamWorkManager
 nuxeo.stream.work.enabled=true
