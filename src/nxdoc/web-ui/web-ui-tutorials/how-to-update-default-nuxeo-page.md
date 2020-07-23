@@ -66,6 +66,8 @@ In this tutorial, we will automatically start the validation period from today's
 
 ## Instructions
 
+The idea is to override the default Nuxeo Web UI slot contribution, by using the same **name**, avoid having the two layouts being added to the DOM. We will use the  **priority** attribute to control the order of contributions with the same name. This allows you to control the merge of these contributions (ie disabling existing ones requires the disabled contribution to come after the one you want to disable). The default priority is 0: higher priority wins, so this contribution will result in an override of the default slot content template
+
 ### Copy the Original Document Page Element
 
 If you need to override any Nuxeo Web UI element, you need first to find the source file on the [Nuxeo Web UI Github repository](https://github.com/nuxeo/nuxeo-web-ui).
@@ -81,17 +83,8 @@ For LTS 2019 (10.10), choose the `10.10` branch: [https://github.com/nuxeo/nuxeo
 
 1. Go to **Nuxeo Studio Designer** and paste the code in a custom element, and adjust the element name: Under the **Resources** tab of Nuxeo Studio Designer:
   1. Create a folder called `custom-elements`
-  1. In the `custom-elements` folder, create an empty file called `nuxeo-document-page-validity.html` and paste the code of the `nuxeo-document-page`.
+  1. In the `custom-elements` folder, create an empty file called `nuxeo-document-page.html` and paste the code of the `nuxeo-document-page`.
 1. Comment all the element imports at the beginning of the file (like `<link rel="import" href="nuxeo-document-metadata.html">`)
-1. Replace all the `nuxeo-document-page` terms by `nuxeo-document-page-validity` in the file (you should found 3 results)
-
-You should end up with the following screenshot:
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize the default document view/step1.png
-    name: step1.png
-    studio_designer#screenshot#up_to_date
---}}
-![step1.png](nx_asset://82c754c3-b193-4f59-93c7-985ee7c3bd95 ?w=650,border=true)
 
 {{#> callout type='warning'}}
 This procedure implies that any updates by the Nuxeo team on this element won't be applied to your custom element: So ensure the code base is not affected along the hotfix releases.
@@ -132,7 +125,7 @@ To create it, just click on the default studio bundle file listing below the `UI
 Then, simply import the new element with:
 
 ```html
-<link rel="import" href="custom-elements/nuxeo-document-page-validity.html">
+<link rel="import" href="custom-elements/nuxeo-document-page.html">
 ```
 
 ### Replace the original page by the custom page
@@ -147,12 +140,13 @@ To override the default behavior:
 In our case, we will add the following contribution in our custom bundle file:
 
 ```
-<nuxeo-slot-content name="documentViewPage" slot="DOCUMENT_VIEWS_PAGES" order="10">
+<!-- Default order is 10 -->
+<nuxeo-slot-content name="documentViewPage" slot="DOCUMENT_VIEWS_PAGES" order="20">
   <template>
     <nuxeo-filter document="[[document]]" expression="document.facets.indexOf('Folderish') === -1
                                                    && document.facets.indexOf('Collection') === -1">
       <template>
-        <nuxeo-document-page-validity name="view" document="[[document]]" opened></nuxeo-document-page-validity>
+        <nuxeo-document-page name="view" document="[[document]]" opened></nuxeo-document-page>
       </template>
     </nuxeo-filter>
   </template>
