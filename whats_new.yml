@@ -1,17 +1,17 @@
 default:
   whats_new:
-    - url: /nxdoc/web-ui-automated-translation-labels/
-      date: '2020-03-30'
-      title: 'HOWTO: Translation Label Conventions'
-    - url: /nxdoc/how-to-create-and-customize-nuxeo-actions-menu/
-      date: '2020-03-31'
-      title: 'HOWTO: Create an Actions Menu'
-    - url: /nxdoc/how-to-filter-data-in-directory-suggestion/
-      date: '2020-01-13'
-      title: 'HOWTO: Filter Data in Suggestions'
-    - url: /studio/how-to-prepopulate-metadata-creation-document/
-      date: '2020-01-08'
-      title: 'Howto: Prepopulate Metadata at Creation'
-    - url: /studio/nuxeo-studio-community-cookbook/
-      date: '2020-01-06'
-      title: 'Nuxeo Studio Community Cookbook'
+    - url: /nxdoc/next/observability/
+      date: '2020-06-25'
+      title: 'Monitoring and Observability'
+    - url: /nxdoc/how-to-update-default-nuxeo-page/
+      date: '2020-07-21'
+      title: 'HOWTO: Customize the Default Document View'
+    - url: /studio/facets/
+      date: '2020-07-21'
+      title: 'Facets'
+    - url: /client-apps/nuxeo-drive-release-notes/
+      date: '2020-07-22'
+      title: 'Nuxeo Drive Release Notes'
+    - url: /nxdoc/next/nuxeo-stream/
+      date: '2020-07-23'
+      title: 'Nuxeo Stream'
