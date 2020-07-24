@@ -50,10 +50,10 @@ Here are the compatible versions:
 
 Kafka brokers need to be tuned if you want more than 7 days of retention or if you have a Kafka version < 2:
 
-  | Kafka Broker Options | Default | Recommended |  Description |
-  | --- | ---: | ---: | --- |
-  | `offsets.retention.minutes` | `1440` (Kafka < 2.x) | `10080` | Make sure the offset retention is greater or equal to `log.retention.hours` |
-  | `log.retention.hours` | `168` | `168`| The default log retention is 7 days. If you change this make sure you update `offset.retention.minutes`|
+| Kafka Broker Options | Default | Recommended |  Description |
+| --- | ---: | ---: | --- |
+| `offsets.retention.minutes` | `1440` (Kafka < 2.x) | `10080` | Make sure the offset retention is greater or equal to `log.retention.hours` |
+| `log.retention.hours` | `168` | `168`| The default log retention is 7 days. If you change this make sure you update `offset.retention.minutes`|
 
 {{#> callout type='warning' }}
 If the `offsets.retention.minutes` is not properly set and there is no activity, consumer positions can be lost and all records will be reprocessed.</br>
@@ -111,29 +111,29 @@ you can define multiple configuration for different usages:
 
 Here are some important properties:
 
-  | Consumer options | default | Description |
-  | --- | ---: |  --- |
-  | `bootstrap.servers` | `localhost:9092` | A list of host/port pairs to use for establishing the initial connection to the Kafka cluster. |
-  | `request.timeout.ms` | `30000` | Request timeout between client and Kafka brokers. |
-  | `default.api.timeout.ms` | `60000` | Default timeout for consumer API related to position (commit or move to a position). |
-  | `max.poll.interval.ms` | `3600000` | Consumers that don't call poll during this delay are removed from the group. |
-  | `max.poll.records` | `2` | Can be adjusted to make sure the poll interval is respected. |
-  | `session.timeout.ms` | `50000` | Consumers that don't send heartbeat during this delay are removed from the group. |
-  | `heartbeat.interval.ms` | `4000` | Interval between heartbeats. |
-  | `group.initial.rebalance.delay.ms` | `3000` | Delay for the initial consumer rebalance. |
+| Consumer options | default | Description |
+| --- | ---: |  --- |
+| `bootstrap.servers` | `localhost:9092` | A list of host/port pairs to use for establishing the initial connection to the Kafka cluster. |
+| `request.timeout.ms` | `30000` | Request timeout between client and Kafka brokers. |
+| `default.api.timeout.ms` | `60000` | Default timeout for consumer API related to position (commit or move to a position). |
+| `max.poll.interval.ms` | `3600000` | Consumers that don't call poll during this delay are removed from the group. |
+| `max.poll.records` | `2` | Can be adjusted to make sure the poll interval is respected. |
+| `session.timeout.ms` | `50000` | Consumers that don't send heartbeat during this delay are removed from the group. |
+| `heartbeat.interval.ms` | `4000` | Interval between heartbeats. |
+| `group.initial.rebalance.delay.ms` | `3000` | Delay for the initial consumer rebalance. |
 
 A consumer will be removed from the group if:
- - there is a network outage longer than `session.timeout.ms`
- - the consumer is too slow to process record, see remark about the `max.poll.interval.ms` below.
+- there is a network outage longer than `session.timeout.ms`
+- the consumer is too slow to process record, see remark about the `max.poll.interval.ms` below.
 
 Note that Nuxeo will always set `enable.auto.commit` to `false` and `auto.offset.reset` to `earliest`.
 
-  | Producer options | default | Description |
-  | --- | ---: |  --- |
-  | `delivery.timeout.ms` | `120000` | Timeout for a producer to get an acknowledgement. |
-  | `acks` | `1` | The number of acknowledgments the producer requires the leader to have received before considering a request complete. |
-  | `compression.type` | `none` | Valid values are none, gzip, snappy, or lz4. Compression is of full batches of data, so the efficacy of batching will also impact the compression ratio (more batching means better compression). |
-  | `default.replication.factor` | `1` | Not a Kafka option, used by Nuxeo to set the topic replication factor when creating a new topic. |
+| Producer options | default | Description |
+| --- | ---: |  --- |
+| `delivery.timeout.ms` | `120000` | Timeout for a producer to get an acknowledgement. |
+| `acks` | `1` | The number of acknowledgments the producer requires the leader to have received before considering a request complete. |
+| `compression.type` | `none` | Valid values are none, gzip, snappy, or lz4. Compression is of full batches of data, so the efficacy of batching will also impact the compression ratio (more batching means better compression). |
+| `default.replication.factor` | `1` | Not a Kafka option, used by Nuxeo to set the topic replication factor when creating a new topic. |
 
 A producer will fail to deliver a record if it cannot get an acknowledgement within `delivery.timeout.ms`.
 
@@ -148,9 +148,9 @@ For instance, if you have 3 brokers in your cluster a replication factor of 2 wi
 {{#> callout type='warning' }}
 It is important to adapt the `max.poll.interval.ms` for slow consumers; otherwise, you will encounter errors like:
 {{/callout}}
-  ```bash
-  ERROR [ComputationRunner] compliance: Exception in processLoop: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
-  ```
+```bash
+ERROR [ComputationRunner] compliance: Exception in processLoop: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+```
 
 For instance, this will happen when using the `StreamWorkManager` if a Work takes more than 2h.
 
