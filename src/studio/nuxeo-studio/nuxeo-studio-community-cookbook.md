@@ -36,6 +36,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![user-group-management.png](nx_asset://39abd0e2-a21a-4855-8980-59a5da0da115 ?w=150,border=true)
+    </td>
+    <td>[Local Group Admins](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/user-group-management)</td>
+    <td>Nuxeo</td>
+    <td>Administration</td>
+  </tr>
+  <tr>
+    <td>
     ![geodistance.png](nx_asset://439fd2e0-751c-4387-9603-bc2451589e3e ?w=150,border=true)
     </td>
     <td>[Geodistance and Google Map Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/geodistance-search-and-google-map)</td>
@@ -57,14 +65,6 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>[Send Emails From Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
     <td>Nuxeo</td>
     <td>Mail, Layouts, Automation, Templates</td>
-  </tr>
-  <tr>
-    <td>
-    ![currency2.jpg](nx_asset://e4fbb505-67be-42de-aec6-8421e4cf2259 ?w=150,border=true)
-    </td>
-    <td>[Display a Field With Currency Format](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/currency)</td>
-    <td>Nuxeo</td>
-    <td>Layout</td>
   </tr>
 </table>
 
@@ -289,6 +289,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+<tr>
+    <td>
+    ![user-group-management.png](nx_asset://39abd0e2-a21a-4855-8980-59a5da0da115 ?w=150,border=true)
+    </td>
+    <td>[Local Group Admins](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/user-group-management)</td>
+    <td>Nuxeo</td>
+    <td>Administration</td>
+  </tr>
 <tr>
   <td>
   ![task_reassignment.png](nx_asset://b38f325d-a79a-4424-97c3-0ebdd937a932 ?w=150,border=true)
