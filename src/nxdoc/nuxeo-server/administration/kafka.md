@@ -15,10 +15,15 @@ tree_item_index: 1100
 Kafka configuration and integration with Nuxeo.
 {{! /excerpt}}
 
-{{#> callout type='info'  heading='Nuxeo University'}}
+{{#> callout type='info' heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
-[Video on Streams from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
-![university_streams.png](nx_asset://6ea2d254-104f-4747-bf74-3f5aad34cc51 ?w=450,border=true)
+[Course on Nuxeo Stream](https://university.nuxeo.com/learn/course/external/view/elearning/207/NuxeoStream).
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-stream.png
+    name: university-stream.png
+    server#diagram#up_to_date
+--}}
+![university-stream.png](nx_asset://1e585980-9b10-4f53-a36e-a5978958ee6f ?w=450,border=true)
 {{/callout}}
 
 ## When to Use Kafka?
@@ -27,7 +32,8 @@ Since Nuxeo 10.10 it is highly recommended to use Kafka when running Nuxeo in cl
 [Nuxeo Stream]({{page page='nuxeo-stream'}}) requires [Kafka](https://kafka.apache.org/) to run in a distributed way.
 Kafka acts as a message broker and enables reliable distributed processing by handling failover between nodes.
 
-{{#> callout type='warning' }}Without Kafka, Nuxeo Stream relies on local storage using Chronicle Queue with the following limitations:
+{{#> callout type='warning' }}
+Without Kafka, Nuxeo Stream relies on local storage using Chronicle Queue with the following limitations:
 - the processing is **not distributed** among Nuxeo nodes, the processing happens on the node it is submitted
 - there is no cluster-wide metrics to follow processing progress
 - losing the local storage that contains the Chronicle Queue files means losing running or scheduled processing
