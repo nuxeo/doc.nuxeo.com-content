@@ -32,12 +32,11 @@ Since Nuxeo 10.10 it is highly recommended to use Kafka when running Nuxeo in cl
 [Nuxeo Stream]({{page page='nuxeo-stream'}}) requires [Kafka](https://kafka.apache.org/) to run in a distributed way.
 Kafka acts as a message broker and enables reliable distributed processing by handling failover between nodes.
 
-{{#> callout type='warning' }}
+<font color="#FF0000">**WARNING:**</font></br>
 Without Kafka, Nuxeo Stream relies on local storage using Chronicle Queue with the following limitations:
 - the processing is **not distributed** among Nuxeo nodes, the processing happens on the node it is submitted
 - there is no cluster-wide metrics to follow processing progress
 - losing the local storage that contains the Chronicle Queue files means losing running or scheduled processing
-{{/callout}}
 
 Note that the [Nuxeo Bulk Service]({{page page='bulk-action-framework'}}), introduced in Nuxeo 10.10, relies on Nuxeo Stream and therefore requires Kafka to work in a distributed way.
 
