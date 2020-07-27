@@ -130,7 +130,9 @@ Nuxeo is shipped with an embedded Tomcat server.
 <td colspan="1">2.8.x <br />
 3.0.x <br />
 3.2.x <br />
-4.0.x</td>
+4.0.x <br />
+5.0.x <br />
+6.0.x</td>
 <td colspan="1">2.8.x <br />
 3.0.x <br />
 3.2.x <br />
