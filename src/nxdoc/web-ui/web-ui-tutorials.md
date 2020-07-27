@@ -2,7 +2,7 @@
 title: Web UI Tutorials
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2020-07-27'
     status: ok
 toc: true
 labels:
