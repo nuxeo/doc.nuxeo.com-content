@@ -36,6 +36,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![nuxeo-date-time-picker2.png](nx_asset://31837bfd-dd61-4d11-b0a2-84c0e3eedb90 ?w=150,border=true)
+    </td>
+    <td>[Date Time Picker](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/nuxeo-date-time-picker)</td>
+    <td>Nuxeo</td>
+    <td>Layouts</td>
+  </tr>
+  <tr>
+    <td>
     ![user-group-management.png](nx_asset://39abd0e2-a21a-4855-8980-59a5da0da115 ?w=150,border=true)
     </td>
     <td>[Local Group Admins](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/user-group-management)</td>
@@ -57,14 +65,6 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>[Create a New Document From a Template List](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/create-from-template)</td>
     <td>Nuxeo</td>
     <td>Document Templates</td>
-  </tr>
-  <tr>
-    <td>
-    ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
-    </td>
-    <td>[Send Emails From Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
-    <td>Nuxeo</td>
-    <td>Mail, Layouts, Automation, Templates</td>
   </tr>
 </table>
 
@@ -108,6 +108,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+  <tr>
+    <td>
+    ![nuxeo-date-time-picker2.png](nx_asset://31837bfd-dd61-4d11-b0a2-84c0e3eedb90 ?w=150,border=true)
+    </td>
+    <td>[Date Time Picker](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/nuxeo-date-time-picker)</td>
+    <td>Nuxeo</td>
+    <td>Layouts</td>
+  </tr>
     <tr>
     <td>
     ![geodistance.png](nx_asset://439fd2e0-751c-4387-9603-bc2451589e3e ?w=150,border=true)
