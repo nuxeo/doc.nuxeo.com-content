@@ -66,7 +66,11 @@ In this tutorial, we will automatically start the validation period from today's
 
 ## Instructions
 
-The idea is to override the default Nuxeo Web UI slot contribution, by using the same **name**, avoid having the two layouts being added to the DOM. We will use the  **priority** attribute to control the order of contributions with the same name. This allows you to control the merge of these contributions (ie disabling existing ones requires the disabled contribution to come after the one you want to disable). The default priority is 0: higher priority wins, so this contribution will result in an override of the default slot content template
+The idea is to override the default Nuxeo Web UI slot contribution by using the same **name**, to avoid having two layouts added to the DOM.
+
+We will use the **priority** attribute to control the order of contributions with the same name. It allows you to control the merge of these contributions (e.g: disabling existing ones, requires the disabled contribution to come after the one you want to disable). 
+
+The default priority is 0: higher priority wins, therefore this contribution will result in an override of the default slot content template.
 
 ### Copy the Original Document Page Element
 
