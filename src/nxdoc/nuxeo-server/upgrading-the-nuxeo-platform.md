@@ -519,6 +519,12 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 
 ## Detailed Upgrade by Version
 
+### To Nuxeo Platform Cloud 2020 from LTS 2019
+See [Upgrade from LTS 2019 to Cloud Release 2020]({{page version='' space='' page='upgrade-from-lts-2017-to-lts-2019'}}) to upgrade to the latest Cloud release of Nuxeo Platform.
+
+Release Notes:
+- [Nuxeo Platform Cloud 2020 Release notes]({{page version='' space='' page='nuxeo-server-release-notes'}})
+
 ### To Fast Track 10.1 from LTS 2017
 See [Upgrade from LTS 2017 to 10.1]({{page version='' space='' page='upgrade-from-lts-2017-to-10.1'}}) to upgrade to the latest Fast Track of Nuxeo Platform.
 
@@ -562,125 +568,3 @@ Upgrade notes:
 *   [Upgrade notes for 7.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 *   [Upgrade notes for 7.4](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.4%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 *   [Upgrade notes for 7.10](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%2C%20NXCM%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%227.10%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
-
-### To 6.0 from 5.8 or 5.9.x
-
-[6.0 release notes.](http://nuxeo.github.io/releasenotes/6.0/)
-
-[5.9.5 upgrade notes.](https://jira.nuxeo.com/browse/NXP-14884?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.5%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)
-
-[5.9.4 upgrade notes.](https://jira.nuxeo.com/browse/NXP-14478?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.4%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)
-
-[5.9.3 upgrade notes.](https://jira.nuxeo.com/browse/NXP-13877?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.3%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)
-
-[5.9.1 upgrade notes.](https://jira.nuxeo.com/browse/NXP-13268?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.9.1%22%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)
-
-See [Upgrade from 5.8 to 6.0]({{page page='upgrade-from-58-to-60'}})
-
-### To 5.8 from 5.6 or 5.7.x
-
-[5.8 release notes.](http://nuxeo.github.io/releasenotes/5.8/)
-
-[5.7.3 upgrade notes.](https://jira.nuxeo.com/browse/NXP-12299?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.7.3%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
-
-[5.7.2 upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.7.2%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20ASC%2C%20key%20ASC) [.](https://jira.nuxeo.com/issues/?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.7.1%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20ASC%2C%20key%20ASC)
-
-[5.7.1 upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.7.1%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20ASC%2C%20key%20ASC).
-
-See [Upgrade from 5.6 to 5.8]({{page page='upgrade-from-56-to-58'}}).
-
-### To 5.6 from 5.5
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+in+%28%22NXP%22%2C+%22NXCM%22%29+AND+resolution+%3D+Fixed+AND+fixVersion+%3D+%225.6%22+AND+%28%22Impact+type%22+%3D+%22API+change%22+OR+%22Upgrade+notes%22+is+not+EMPTY%29+ORDER+BY+component+DESC%2C+key+DESC).
-
-See [Upgrade from 5.5 to 5.6]({{page page='upgrade-from-55-to-56'}}).
-
-### To 5.5 from 5.4.2
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+in+%28%22NXP%22%2C+%22NXCM%22%29+AND+resolution+%3D+Fixed+AND+fixVersion+%3D+%225.5%22+AND+%28%22Impact+type%22+%3D+%22API+change%22+OR+%22Upgrade+notes%22+is+not+EMPTY%29+ORDER+BY+component+DESC%2C+key+DESC).
-
-See [Upgrade from 5.4.2 to 5.5]({{page page='upgrade-from-542-to-55'}}).
-
-### To 5.4.2 from 5.4.1
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+NXP+AND+resolution+%21%3D+Unresolved+AND+fixVersion+in+%28%225.4.2%22%2C+%225.4.2-RC1%22%2C+%225.4.2-RC2%22%29+AND+%22Upgrade+notes%22+is+not+EMPTY).
-
-#### Oracle
-
-If using Oracle, see [Upgrade to 5.4.2 with Oracle.]({{page page='upgrade-from-541-to-542-with-oracle'}})
-
-### To 5.4.1 from 5.4.0.1
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+NXP+AND+resolution+%21%3D+Unresolved+AND+fixVersion+%3D+%225.4.1%22+AND+%22Upgrade+notes%22+is+not+EMPTY).
-
-### To 5.4.0.1 from 5.4.0
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+NXP+AND+resolution+%21%3D+Unresolved+AND+fixVersion+%3D+%225.4.0.1%22+AND+%22Upgrade+notes%22+is+not+EMPTY).
-
-### To 5.4.0 from 5.3.2
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+NXP+AND+resolution+%21%3D+Unresolved+AND+fixVersion+%3D+%225.4%22+AND+%22Upgrade+notes%22+is+not+EMPTY).
-
-#### JBoss
-
-If using the JBoss distribution, see [Upgrade to 5.4 and JBoss 5.]()
-
-#### Workflow Feature
-
-The workflow implementation has changed, see [From the old workflow system to the new 5.4 workflow system]({{page page='from-the-old-workflow-system-to-the-new-54-workflow-system'}}).
-
-### To 5.3.2 from 5.3.1
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+NXP+AND+resolution+%21%3D+Unresolved+AND+fixVersion+%3D+%225.3.2%22+AND+%22Upgrade+notes%22+is+not+EMPTY).
-
-See [Upgrade from 5.3.1 to 5.3.2]({{page page='upgrade-from-531-to-532'}}).
-
-#### MySQL
-
-If using MySQL, see [Upgrade from 5.3.1 with MySQL to 5.3.2]({{page page='upgrade-from-531-with-mysql-to-532'}}).
-
-### To 5.3.1 from 5.3.0
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+NXP+AND+resolution+%21%3D+Unresolved+AND+fixVersion+%3D+%225.3.1%22+AND+%22Upgrade+notes%22+is+not+EMPTY).
-
-See [Upgrade from 5.3.0 to 5.3.1]({{page page='upgrade-from-530-to-531'}}).
-
-### To 5.3.0 from 5.2.0
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+NXP+AND+resolution+%21%3D+Unresolved+AND+fixVersion+in+%28%225.3+RC%22%2C+%225.3+GA%22%29+AND+%22Upgrade+notes%22+is+not+EMPTY).
-
-### To 5.2.0 from 5.1.6
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+NXP+AND+resolution+%21%3D+Unresolved+AND+fixVersion+in+%28%225.2+GA%22%2C+%225.2+GA+SP1%22%2C+%225.2+M1%22%2C+%225.2+M2%22%2C+%225.2+M3%22%2C+%225.2+M4%22%2C+%225.2+RC%22%2C+%225.2+RC1%22%2C+%225.2+RC1+SP1%22%29+AND+%22Upgrade+notes%22+is+not+EMPTY).
-
-If using JCR with PostgreSQL, see [How to migrate a Nuxeo 5.1.6 to Nuxeo 5.2 under JCR+PostgreSQL configuration]({{page page='upgrade-from-516-with-jcr-postgresql-to-520'}}).
-
-### To 5.1.6 from 5.1.3
-
-[Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+NXP+AND+resolution+%21%3D+Unresolved+AND+fixVersion+%3D+%225.1.6%22+AND+%22Upgrade+notes%22+is+not+EMPTY).
-
-### To 5.1.3 from 5.1.2
-
-No upgrade notes.
-
-See [Upgrade from 5.1.2 to 5.1.3]({{page page='upgrade-from-512-to-513'}}).
-
-### To 5.1.x from Earlier
-
-1.  First, stop Nuxeo EP and, before any upgrade, always backup (at least)
-
-    *   `$JBOSS/server/default/lib/nuxeo*`
-    *   `$JBOSS/server/default/deploy/nuxeo.ear/`
-    *   `$JBOSS/server/default/data/`
-    *   dump your database(s) if you have any.
-2.  If you have specific configuration, back up separately the configuration files in order to easily re-apply them onto the default one (take care not to lose any modification on these files):
-
-    *   `$JBOSS/server/default/deploy/[nuxeo.ear/config/](http://nuxeo.ear/config/)`
-    *   `$JBOSS/server/default/deploy/[nuxeo.ear/datasources/](http://nuxeo.ear/datasources/)`
-    *   `$JBOSS/server/default/deploy/[nuxeo.ear/platform/nuxeo-platform-search-compass-plugin*/compass.cfg.xml](http://nuxeo.ear/platform/nuxeo-platform-search-compass-plugin*/compass.cfg.xml)`
-    *   any other JBoss files you could have changed (`mail-service.xml`, etc.).
-3.  It could also be useful to back up logs from $JBOSS/server/default/log/.
-4.  Move your JBoss directory and replace it with the one coming from the new Nuxeo EP version.
-5.  Replace `$JBOSS/server/default/data/` with your backup data.
-6.  Apply again you configuration.
-7.  Start Nuxeo.
