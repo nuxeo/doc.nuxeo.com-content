@@ -644,9 +644,163 @@ For more information on Web UI latest release:
 - [Web UI Release Notes]({{page version='next' space='nxdoc' page='web-ui-release-notes'}})
 - [Web UI Upgrade Notes]({{page version='next' space='nxdoc' page='web-ui-upgrade-notes'}})
 
-<!--
-## Deprecation
-
-
 ## Farewell
--->
+
+### Apache Derby
+
+The support of the Apache Derby embedded database has been removed.
+H2 is now the only option to handle in-memory data sources.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28673](https://jira.nuxeo.com/browse/NXP-28673)
+
+### JAAS
+
+JAAS has been removed (the use of LoginContext, security domains, LoginModules, etc.) and replaced per a direct call to NuxeoAuthenticationPlugins.
+
+New methods:
+ - Framework.loginSystem()
+ - Framework.loginSystem(originatingUser)
+ - Framework.loginUser(username)
+ - NuxeoPrincipal.getCurrent()
+ - NuxeoPrincipal.isCurrentAdministrator()
+
+The above loginSystem and loginUser methods now return a NuxeoLoginContext that is AutoCloseable and can therefore be used in a try-with-resources.
+
+Deprecated methods:
+ - Framework.login() -> Framework.loginSystem()
+ - Framework.loginAs(originatingUser) -> Framework.loginSystem(originatingUser)
+ - Framework.loginAsUser(username) -> Framework.loginUser(username)
+ - Framework.login(username, password) -> Framework.loginUser(username)
+ - ClientLoginModule.clearThreadLocalLogin() -> LoginComponent.clearPrincipalStack() (INTERNAL)
+ - ClientLoginModule.getThreadLocalLogin() -> LoginComponent (INTERNAL)
+ - ClientLoginModule.getCurrentLogin() -> LoginComponent.getCurrentPrincipal()
+ - ClientLoginModule.getCurrentPrincipal() -> NuxeoPrincipal.getCurrent()
+ - ClientLoginModule.isCurrentAdministrator() -> NuxeoPrincipal.isCurrentAdministrator()
+ - LoginStack
+
+These extension points or part of their contributions are removed:
+ - <loginModulePlugin> in the element <authenticationPlugin> of extension point authenticators of org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService
+ - the extension point domains of org.nuxeo.runtime.LoginComponent (which included registration of LoginModule classes)
+ - the extension point plugin of org.nuxeo.ecm.platform.login.LoginPluginRegistry (which included registration of LoginPlugin classes)
+
+Behavior change:
+ - NuxeoAuthenticationPlugin.handleRetrieveIdentity should now contain all the authentication code, and return a UserIdentificationInfo with credentialsChecked = true (using the 1-arg constructor) if the credentials have already been checked by the auth plugin itself. Otherwise the method may return a UserIdentificationInfo that includes a username and password, to let the generic filter check the password against the UserManager.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27942](https://jira.nuxeo.com/browse/NXP-27942)
+
+### NXCore class
+
+Usage of NXCore is deprecated and its usage is removed from the platform.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22532](https://jira.nuxeo.com/browse/NXP-22532)
+
+### Nuxeo static WAR
+
+The nuxeoctl pack command used to generate a static WAR has been removed as well as the nuxeo-distribution/nuxeo-war-tests module testing it.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28100](https://jira.nuxeo.com/browse/NXP-28100)
+
+### Nuxeo SDK distribution
+
+The Nuxeo Server Tomcat SDK build has been removed. The Maven profile sdk does not exist anymore.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28101](https://jira.nuxeo.com/browse/NXP-28101)
+
+### Post commit listeners
+
+Post-commit listeners have been converted to asynchronous listeners.
+
+From 11.1, the post commit event listeners were made either asynchronous or synchronous. We strongly recommend to do the same thing with any custom event listener.
+
+Later on, we will deprecate the post commit event listener execution mechanism relying on PostCommitEventExecutor, see NXP-27986.
+For this purpose, a warning is logged when running a post commit event listener to inform that its execution will soon be deprecated and advising to update the listener contributions to make them asynchronous with `<listener async=\"true\"...>`.
+
+The warning can be disabled with the following logger in NUXEO_SERVER/lib/log4j2.xml:
+`<Logger name="org.nuxeo.ecm.core.event.impl.PostCommitEventExecutor" level="warn">
+  <RegexFilter regex="Running post commit event listeners.*" onMatch="DENY" onMismatch="NEUTRAL" />
+</Logger>`
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26911](https://jira.nuxeo.com/browse/NXP-26911)
+
+### GWT modules
+
+All GWT related modules have been removed from nuxeo-jsf-ui repository:
+ - nuxeo-annot-api
+ - nuxeo-annot-contrib
+ - nuxeo-annot-core
+ - nuxeo-annot-http
+ - nuxeo-annot-repo
+ - nuxeo-platform-imaging-tiling
+ - nuxeo-platform-imaging-tiling-preview
+
+The PictureTilesRestlets restlet related to the nuxeo-platform-imaging-tiling has also been removed: the endpoint /nuxeo/restAPI/getTiles/ does not exist anymore.
+
+All GWT artifacts in the Nuxeo root pom dependencyManagement have also been removed. If you depend on those ones, you must update your project pom to add them.
+
+The related `nuxeo.old.jsf.preview` (introduced with NXP-25110) and nuxeo.text.annotations configuration properties that were used to activate the old preview and the GWT text annotations have been removed: setting them has no impact.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27447](https://jira.nuxeo.com/browse/NXP-27447)
+
+### Nuxeo DAM dependency
+
+The Nuxeo DAM Package and Nuxeo DAM JSF UI Package have been removed for Nuxeo 11.1.
+All the features (Picture, Video, ...) installed through those packages are now integrated by default in a Nuxeo Server.
+`You do not need to depend on `nuxeo-dam` package anymore on your Nuxeo package, for instance:
+<dependencies>
+    <package>nuxeo-web-ui</package>
+    <package>nuxeo-dam</package>
+</dependencies>`
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28626](https://jira.nuxeo.com/browse/NXP-28626)
+
+### Nuxeo Wizard
+
+The Nuxeo Wizard has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28621](https://jira.nuxeo.com/browse/NXP-28621)
+
+### Marklogic connector
+
+The Marklogic connector has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26571](https://jira.nuxeo.com/browse/NXP-26571)
+
+### Nuxeo Connect Report Tools
+
+The Nuxeo Connect Report Tools `nuxeo-connect-tools` has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27864](https://jira.nuxeo.com/browse/NXP-27864)
+
+### Nuxeo Shell
+
+The Nuxeo Shell `nuxeo-shell` add-on has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27312](https://jira.nuxeo.com/browse/NXP-27312)
+
+### Template Rendering Samples
+
+The Template Rendering Samples has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28059](https://jira.nuxeo.com/browse/NXP-28059)
+
+### Nuxeo Agenda
+
+The Nuxeo Agenda `nuxeo-agenda` add-on has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27271](https://jira.nuxeo.com/browse/NXP-27271)
+
+### Others packages
+
+The following deprecated and unused packages have been removed:
+ - nuxeo-activity
+ - nuxeo-business-days-management
+ - nuxeo-core-binarymanager-sql
+ - nuxeo-http-client
+ - nuxeo-javaagent
+ - nuxeo-logs-viewer
+ - nuxeo-rating
+ - nuxeo-resources-compat
+ - nuxeo-review-workflows-dashboards
+ - nuxeo-session-inspector
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27271](https://jira.nuxeo.com/browse/NXP-27271)
