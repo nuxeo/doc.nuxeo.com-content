@@ -1,21 +1,19 @@
 ---
-title: 'HOWTO: Create and Reuse a Custom element'
+title: 'HOWTO: Create elements with Block Layouts'
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2020-07-28'
     status: ok
 toc: true
 details:
     howto:
-        excerpt: Learn how to create and reuse a custom element in Studio Designer.
+        excerpt: Learn how to create and reuse a custom element with Block Layouts in Studio Designer.
         level: Advanced
         tool: code
         topics: Web UI
 labels:
     - lts2017-ok
     - tutorial
-    - nuxeo-elements
-    - tcardoso
     - nuxeo-ui-elements
     - university
     - polymer
@@ -24,52 +22,97 @@ tree_item_index: 500
 ---
 
 {{! excerpt}}
-In this tutorial you will learn how to create and reuse custom elements in Studio Designer.
+In this tutorial, you will learn how to create and reuse custom elements in Studio Designer thanks to Layout Blocks.
 {{! /excerpt}}
 
-{{#> callout type='info'}}
-Watch the related courses on Nuxeo University
-- [Expert Session on Nuxeo Elements Creation](https://university.nuxeo.com/learn/public/course/view/elearning/148/expert-session-creating-nuxeo-elements-with-studio-designer)
-- [Course on Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
-![]({{file name='university-new-nuxeo-element.png' page='nxdoc/university'}} ?w=450,border=true)
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the course on [Nuxeo Web UI Development](https://university.nuxeo.com/learn/course/external/view/elearning/164/web-ui-development)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/UNIVERSITY_SLOTS
+    name: Screenshot 2020-07-16 at 12.06.01.png
+    1.1.3#screenshot#up_to_date
+--}}
+![WEBUI_CUSTOMIZATION_FRONTEND_DEV](nx_asset://1840dd84-67fa-48ae-b849-7296ca1386ae ?w=450,border=true)
 {{/callout}}
+
+## Use Case
+
+We will create an element to display all the properties of a document type, in **Edit** mode, so that it can be shared with the `Create`, `Edit` and `Import` layouts (as they aim at modifying property values).
 
 ## Requirements
 
-- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}) created in Studio Modeler
-- The Web UI addon installed on your instance
+Create a custom **document type** in Nuxeo Studio Modeler with different property types (`String`, `Directory`, `Boolean`...). Here is an example with an `Invoice` document type with specific properties:
 
-## Create an Element
-We are going to start by adding a `validation` schema to our Contract document type.
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create elements with Block Layouts/layout_block_1.png
+    name: layout_block_1.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![layout_block_1.png](nx_asset://cf43c150-0703-4b67-8210-de8284b43926 ?w=650,border=true)
 
-In Studio Modeler, go to **Configuration**&nbsp;> **Content Model**&nbsp;> **Schemas**
-1. Click on **New** and name it `validation`.
-1. Add a field `validated` as a boolean.
-1. Save your changes.
+## Instructions
 
-Go to the Studio Designer on the **Resources** tab.
-1. Create a folder called `elements`.
-1. In it, create an element, using the `Sample layout template` called `my-validation-element`.
-  ![]({{file name='create-element-VD.png'}} ?w=200,border=true)
-1. Edit the layout of the element by adding the validation schema.
-  ![]({{file name='schema-annotations-VD.png'}} ?w=200,border=true)
-1. In the HTML editor, replace the lines describing the title and description by the following to call your `validation` element:
-  ```
-  <div role="widget">
-      <label>Validated</label>
-      <paper-checkbox checked="\{{document.properties.validation:validated}}"></paper-checkbox>
-  </div>
-  ```
-1. Save your changes.
+### Generate a Layout Block
 
-## Reuse an Element
+- Go to **Nuxeo Studio Designer** > **UI** > **Layout Blocks**
+- Create a new Layout Block called `nuxeo-<document_type_name>-edit`
 
-Now, go to your `contract` document type, on the `view` layout to use your element:
-1. Click on **Configure**.
-1. Switch to Code Editor at the button of the main view. On the search available in the elements catalog, search `my-validation-element`.
-1. Drag and drop it from the catalog to the editor.
-  ![]({{file name='contract-view-layout-element.png'}} ?w=650,border=true)
-1. Don't forget to add `document="[[document]]"` (view mode) or `document="{{document}}"` (edit mode) to your custom element
-1. Save your changes and deploy your studio project, you're done :)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create elements with Block Layouts/layout_block_2.png
+    name: layout_block_2.png
+    studio_designer#screenshot#up_to_date
+--}}
+![layout_block_2.png](nx_asset://8f7525f7-b7e2-457e-8393-ad41cfc6c857 ?w=650,border=true)
 
-  You can now reuse your element as much as you want, for example on the other layouts of your contract document, it will always be available in the **Project Elements** library.
+- Drag n drop the complete schema from the catalog panel
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create elements with Block Layouts/layout_block_3.png
+    name: layout_block_3.png
+    studio_designer#screenshot#up_to_date
+--}}
+![layout_block_3.png](nx_asset://e93db667-72f9-4b34-bdc9-bd4e990f4561 ?w=650,border=true)
+
+- Select **Edit** mode, and choose the suitable elements to be displayed in the document layout.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create elements with Block Layouts/layout_block_4.png
+    name: layout_block_4.png
+    studio_designer#screenshot#up_to_date
+--}}
+![layout_block_4.png](nx_asset://709d1df2-db47-4d0f-87f8-f9d12652a0c1 ?w=650,border=true)
+
+- Remove the Description property from the layout. 
+
+The final result should be something similar:
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create elements with Block Layouts/layout_block_5.png
+    name: Screenshot 2020-07-29 at 17.14.14.png
+    studio_designer#screenshot#up_to_date
+--}}
+![layout_block_5.png](nx_asset://6070025d-2655-4ef3-9671-bce1a8adaa80 ?w=650,border=true)
+
+### Reuse a Layout Block
+
+- Navigate to the **Layout** > **Local Document Types** > **<Document type** > **Create**
+- Click on "Configure"
+- Remove all the properties scaffolded by default
+- Drag n drop from the **Element Catalog** (in the left Panel) the layout block you've just created. It should be listed under the "Layout Blocks" header bar
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create elements with Block Layouts/layout_block_6.png
+    name: layout_block_6.png
+    studio_designer#screenshot#up_to_date
+--}}
+![layout_block_6.png](nx_asset://88b23f8b-f166-446c-b1d5-c8491fe17367 ?w=650,border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create elements with Block Layouts/layout_block_7.png
+    name: layout_block_7.png
+    studio_designer#screenshot#up_to_date
+--}}
+![layout_block_7.png](nx_asset://1ff5c7ea-a364-4f05-b412-8c679974ffc0 ?w=650,border=true)
+
+- Do the same with the `Edit` and `Import`
+
