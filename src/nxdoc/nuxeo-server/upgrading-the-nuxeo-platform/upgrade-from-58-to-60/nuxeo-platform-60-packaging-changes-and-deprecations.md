@@ -10,6 +10,7 @@ labels:
     - multiexcerpt
     - content-review-lts2017
 toc: true
+hidden: true
 confluence:
     ajs-parent-page-id: '17794754'
     ajs-parent-page-title: Upgrade from 5.8 to 6.0

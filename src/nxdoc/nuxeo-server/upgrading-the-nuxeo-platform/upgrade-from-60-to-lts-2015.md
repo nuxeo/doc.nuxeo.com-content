@@ -9,6 +9,7 @@ labels:
     - multiexcerpt
     - content-review-lts2017
 toc: true
+hidden: true
 confluence:
     ajs-parent-page-id: '3343538'
     ajs-parent-page-title: Upgrading the Nuxeo Platform
