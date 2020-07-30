@@ -3,7 +3,7 @@ title: Upgrade
 description: This page describes a general upgrade procedure. You will find below the list of required manual steps per version.
 review:
     comment: ''
-    date: '2017-12-11'
+    date: '2020-07-29'
     status: ok
 labels:
     - content-review-lts2016
@@ -427,17 +427,15 @@ history:
         date: '2010-07-21 18:00'
         message: ''
         version: '1'
-
 ---
+
 This page describes a general upgrade procedure. You will find below the list of required manual steps per version. Follow them carefully from your current version to the new version.
 
-*   To upgrade from one LTS version to another, from 5.8 to 7.10 for instance, follow 5.8 -> 6.0 -> 7.10.
+*   To upgrade from one LTS version to another, from 7.10 to 10.10 for instance, follow 7.10 -> 8.10 -> 10.10.
 *   To upgrade from an LTS version to the latest Fast Track version, from 6.0 to 8.3 for instance, follow 6.0 -> 7.10 -> 8.1 -> 8.2, etc.
 
 {{#> callout type='note' heading='Upgrade Notes'}}
-
 Although major changes are explicitly documented, it is recommended to look at the upgrade notes before upgrading. Upgrade notes list changes that may affect existing configuration or features after upgrade (changes on parameters, API, default behavior, etc.).
-
 {{/callout}}
 
 ## Nuxeo Upgrade Policy
@@ -470,16 +468,14 @@ Make sure no jobs are still queued or running before starting the upgrade proced
 3.  Deploy the new Nuxeo Platform version (see the [Installation]({{page page='installation'}}) pages).
 4.  Update the environment variable `NUXEO_HOME`.
 5.  Update your nuxeo.conf file to make it use your custom configuration, database and data directory.
-
-    *   Report your custom configuration (uncommented lines in the old Nuxeo Platform `nuxeo.conf`) into the nuxeo.conf file of the target Nuxeo Platform version.
-
+    *   Report your custom configuration (uncommented lines in the old Nuxeo Platform `nuxeo.conf`) into the nuxeo.conf file of the target Nuxeo Platform version.s
         {{#> callout type='warning' }}
-
         Be very careful about the two properties allowing to configure the backend for audit logs, make sure you read the related documentation:
 
         *   `audit.elasticsearch.enabled`: [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup#disablingelasticsearchforauditlogs'}})
-        *   `audit.elasticsearch.migration`: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page page='elasticsearch-setup#triggeringsqltoelasticsearchauditlogsmigration'}}){{/callout}}
-    1.  Replace the old nuxeo.conf file with this new one.
+        *   `audit.elasticsearch.migration`: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page page='elasticsearch-setup#triggeringsqltoelasticsearchauditlogsmigration'}})
+        {{/callout}}
+        *   Replace the old nuxeo.conf file with this new one.
 6.  [Upgrade your Nuxeo Packages](#marketplace-packages-upgrade).
 7.  [Upgrade and install your Studio project customization](#studio-project-upgrade).
 8.  [Upgrade and install your custom code](#custom-code-up).
@@ -520,13 +516,13 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 ## Detailed Upgrade by Version
 
 ### To Nuxeo Platform Cloud 2020 from LTS 2019
-See [Upgrade from LTS 2019 to Cloud Release 2020]({{page version='' space='' page='upgrade-from-lts-2017-to-lts-2019'}}) to upgrade to the latest Cloud release of Nuxeo Platform.
+See [Upgrade from LTS 2019 to Cloud Release 2020]({{page version='' space='' page='upgrade-from-lts-2017-to-cloud-2020'}}) to upgrade to the latest Cloud release of Nuxeo Platform.
 
 Release Notes:
 - [Nuxeo Platform Cloud 2020 Release notes]({{page version='' space='' page='nuxeo-server-release-notes'}})
 
-### To Fast Track 10.1 from LTS 2017
-See [Upgrade from LTS 2017 to 10.1]({{page version='' space='' page='upgrade-from-lts-2017-to-10.1'}}) to upgrade to the latest Fast Track of Nuxeo Platform.
+### To LTS 2019 from LTS 2017
+See [Upgrade from LTS 2017 to LTS 2019]({{page version='' space='nxdoc' page='upgrade-from-lts-2017-to-lts-2019'}}) to upgrade to the LTS 2019 version or [Upgrade from LST 2017 following Fast Tracks]({{page page='upgrade-from-lts-2017-following-fast-tracks'}}) to upgrade from a Fast Track version to LTS 2019.
 
 Release Notes:
 - [10.x Release notes]({{page version='' space='' page='nuxeo-server-release-notes'}})

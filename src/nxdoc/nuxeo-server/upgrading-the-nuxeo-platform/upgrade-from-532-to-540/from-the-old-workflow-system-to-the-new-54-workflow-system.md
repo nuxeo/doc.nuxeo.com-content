@@ -25,12 +25,12 @@ version_override:
     '6.0': 60/admindoc/from-the-old-workflow-system-to-the-new-54-workflow-system
     '5.8': 58/admindoc/from-the-old-workflow-system-to-the-new-54-workflow-system
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 15:13'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 12:16'
         message: ''

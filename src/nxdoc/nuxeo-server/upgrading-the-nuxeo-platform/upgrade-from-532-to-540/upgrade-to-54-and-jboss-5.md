@@ -21,18 +21,19 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/nobZ'
     source_link: /display/NXDOC/Upgrade+to+5.4+and+JBoss+5
 tree_item_index: 200
+hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 15:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-21 14:28'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 11:07'
         message: ''

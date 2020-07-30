@@ -10,6 +10,7 @@ labels:
     - excerpt
     - content-review-lts2017
 toc: true
+hidden: true
 confluence:
     ajs-parent-page-id: '12288891'
     ajs-parent-page-title: Upgrade from 5.6 to 5.8
