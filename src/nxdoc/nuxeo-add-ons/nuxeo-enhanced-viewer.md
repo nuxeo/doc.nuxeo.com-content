@@ -341,173 +341,34 @@ You can see the annotations linked to each version on the same screen, and even 
 ## Installation
 
 ### ARender
+
 Nuxeo Enhanced Viewer involves to install the ARender services. You can install the ARender services using kubernetes by following [ARender Documentation](https://arender.io/v4/documentation/install/kubernetes/).
 
-The yaml file needs to include some specific properties to Nuxeo Enhanced Viewer:
- - For the Nuxeo part:
-      - `arender.server.previewer.host=https://arender-previewer-${NAMESPACE}.platform.dev.nuxeo.com
-      - nuxeo.jwt.secret=JWT_SECRET
-      - nuxeo.arender.secret=OAUTH2_SECRET'
- - For the ARender Previewer part:
-      - `name: ARENDERSRV_NUXEO_URL value: "https://preview-${NAMESPACE}.platform.dev.nuxeo.com/nuxeo"
-      - name: ARENDERSRV_NUXEO_ARENDER_SECRET value: OAUTH2_SECRET`
+The YAML file needs to include some specific properties to Nuxeo Enhanced Viewer:
 
-The full yaml file is available below:
-`expose:
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-  config:
-    # add tls configuration
-    domain: platform.dev.nuxeo.com
-    exposer: Ingress
-    http: true
-    tlsacme: true
-    tlsSecretName: platform-cluster-tls
-    urltemplate: '"{{.Service}}-{{.Namespace}}.{{.Domain}}"'
+**For the Nuxeo part:**
+  - ```
+    arender.server.previewer.host=https://arender-previewer-${NAMESPACE}.platform.dev.nuxeo.com
+    ```
+  - ```
+    nuxeo.jwt.secret=JWT_SECRET
+    ```
+  - ```
+    nuxeo.arender.secret=OAUTH2_SECRET
+    ```
 
-cleanup:
-  Args:
-    - --cleanup
-  Annotations:
-    helm.sh/hook: pre-delete
-    helm.sh/hook-delete-policy: hook-succeeded
+**For the ARender Previewer part:**
+  - ```
+  name: ARENDERSRV_NUXEO_URL value: "https://preview-${NAMESPACE}.platform.dev.nuxeo.com/nuxeo"
+  ```
+  - ```
+  name: ARENDERSRV_NUXEO_ARENDER_SECRET value: OAUTH2_SECRET
+  ```
 
-nuxeo:
-  fullnameOverride: preview
-  nuxeo:
-    podAnnotations:
-      preview/scm.ref: ${SCM_REF}
-    podLabels:
-      branch: "$BRANCH_NAME"
-      team: platform
-      resource: pod
-      usage: preview
-    service:
-      annotations:
-        fabric8.io/ingress.annotations: |-
-          nginx.ingress.kubernetes.io/proxy-body-size: 0
-          nginx.ingress.kubernetes.io/server-snippet: ignore_invalid_headers off;
-      labels:
-        team: platform
-        resource: service
-        usage: preview
-    image:
-      repository: ${DOCKER_REGISTRY}/nuxeo/nuxeo-arender
-      tag: ${VERSION}
-      pullPolicy: Always
-      pullSecrets: kubernetes-docker-cfg
-    packages: nuxeo-web-ui nuxeo-dam /tmp/nuxeo-arender-package.zip ${STUDIO_PACKAGE}
-    livenessProbe:
-      initialDelaySeconds: 900
-      periodSeconds: 15
-      successThreshold: 1
-      failureThreshold: 5
-      timeoutSeconds: 10
-    readinessProbe:
-      periodSeconds: 60
-      initialDelaySeconds: 300
-      successThreshold: 1
-      timeoutSeconds: 10
-      failureThreshold: 10
-    custom_params: |-
-      arender.server.previewer.host=https://arender-previewer-${NAMESPACE}.platform.dev.nuxeo.com
-      nuxeo.jwt.secret=JWT_SECRET
-      nuxeo.arender.secret=OAUTH2_SECRET
-    custom_envs:
-    - name: NUXEO_CLID
-      valueFrom:
-        secretKeyRef:
-          name: instance-clid
-          key: instance.clid
-    persistence:
-      enabled: ${PERSISTENCE}
-  mongodb:
-    deploy: ${PERSISTENCE}
-    persistence:
-      enabled: ${PERSISTENCE}
-    labels:
-      branch: "$BRANCH_NAME"
-      resource: deployment
-      team: platform
-      usage: preview
-    podLabels:
-      branch: "$BRANCH_NAME"
-      resource: pod
-      team: platform
-      usage: preview
-  elasticsearch:
-    deploy: ${PERSISTENCE}
-    master:
-      persistence:
-        enabled: ${PERSISTENCE}
-    data:
-      persistence:
-        enabled: ${PERSISTENCE}
 
-arender:
-  fullnameOverride: arender
-  imagePullSecrets:
-    - kubernetes-docker-cfg
-  podLabels:
-    branch: "$BRANCH_NAME"
-    team: platform
-    resource: pod
-    usage: preview
-  serviceLabels:
-    team: platform
-    resource: service
-    usage: preview
-  previewer:
-    podAnnotations:
-      preview/scm.ref: ${SCM_REF}
-    image:
-      repository: ${DOCKER_REGISTRY}/nuxeo/arender-previewer
-      tag: ${VERSION}
-      pullPolicy: Always
-    custom_envs:
-    - name: ARENDERSRV_NUXEO_URL
-      value: "https://preview-${NAMESPACE}.platform.dev.nuxeo.com/nuxeo"
-    - name: ARENDERSRV_NUXEO_ARENDER_SECRET
-      value: OAUTH2_SECRET
-  rendition:
-    broker:
-      podAnnotations:
-        preview/scm.ref: ${SCM_REF}
-      image:
-        repository: docker-arender.packages.nuxeo.com/arender-document-service-broker
-        tag: ${ARENDER_VERSION}
-        pullPolicy: Always
-    converter:
-      podAnnotations:
-        preview/scm.ref: ${SCM_REF}
-      image:
-        repository: docker-arender.packages.nuxeo.com/arender-document-converter
-        tag: ${ARENDER_VERSION}
-        pullPolicy: Always
-    dfs:
-      podAnnotations:
-        preview/scm.ref: ${SCM_REF}
-      image:
-        repository: docker-arender.packages.nuxeo.com/arender-document-file-storage
-        tag: ${ARENDER_VERSION}
-        pullPolicy: Always
-    jni:
-      podAnnotations:
-        preview/scm.ref: ${SCM_REF}
-      image:
-        repository: docker-arender.packages.nuxeo.com/arender-document-renderer
-        tag: ${ARENDER_VERSION}
-        pullPolicy: Always
-    pdfbox:
-      podAnnotations:
-        preview/scm.ref: ${SCM_REF}
-      image:
-        repository: docker-arender.packages.nuxeo.com/arender-document-text-handler
-        tag: ${ARENDER_VERSION}
-        pullPolicy: Always`
+The full YAML file is available [here]({{file name='values.yaml'}}).
 
-### Nuxeo Enhanced Viewer add-on
+### Nuxeo Enhanced Viewer Addon
 
 Install the [Nuxeo Enhanced Viewer Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender) add-on.
 
@@ -579,7 +440,7 @@ The annotations module supports a large number of file formats.
 The Nuxeo Enhanced Viewer is constantly improved. You can monitor its roadmap below. </br>
 You can also submit your feedback on the [Nuxeo Server feedback portal](https://portal.prodpad.com/7cdff94a-f166-11e7-93bc-06df22ffaf6f).
 
-<iframe src='https://ext.prodpad.com/ext/roadmap/2be5150d3c6c4f6e5adfcb3c4cd19c6121542326' height='900' width='100%' frameborder='0'></iframe>
+<iframe src='https://roadmap.prodpad.com/fa6f47de-d314-11ea-8254-0abbec7104a5' height='900' width='100%' frameborder='0'></iframe>
 
 ## Going Further
 
