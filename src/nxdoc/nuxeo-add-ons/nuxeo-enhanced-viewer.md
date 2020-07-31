@@ -32,9 +32,7 @@ ARender software comprises two parts:
 - previewer
 - rendition
 
-ARender rendition server needs to be installed on a dedicated host.
-
-ARender previewer is extended by Nuxeo to integrate the ARender previewer with the Nuxeo REST API, it corresponds to [nuxeo-arender-connector-hmi](https://github.com/nuxeo/nuxeo-arender-connector/tree/master/nuxeo-arender-connector-hmi) in ARender Connector. It is built as a war file to deploy.
+ARender previewer is extended by Nuxeo to integrate the ARender previewer with the Nuxeo REST API, it corresponds to [nuxeo-arender-connector](https://github.com/nuxeo/nuxeo-arender-connector) in ARender Connector.
 
 Here's a chart illustrating the actions during the first connection to ARender:
 {{!--     ### nx_asset ###
@@ -43,6 +41,23 @@ Here's a chart illustrating the actions during the first connection to ARender:
     addins#diagram#up_to_date
 --}}
 ![arender-flow.png](nx_asset://3dfb1d20-3bb0-4124-819f-d6ad274630cb ?w=650,border=true)
+
+
+Since Nuxeo Enhanced Viewer 10.1, the rendition part is now divided into 5 micro-services:
+ - arender-document-service-broker
+ - arender-document-file-storage
+ - arender-document-converter
+ - arender-document-renderer
+ - arender-document-text-handler
+
+Here's a chart illustrating the ARender micro-services:
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/arender-architecture
+    name: ARender-Architecture-2.png
+    addins#schema#up_to_date
+--}}
+![arender-architecture](nx_asset://afc51692-c4eb-4e3d-a644-2a60795d9521 ?border=true)
+
 
 ## Functional Overview
 
@@ -325,69 +340,41 @@ You can see the annotations linked to each version on the same screen, and even 
 
 ## Installation
 
-There are several ways to install ARender software.
+### ARender
 
-For easy deployment, Nuxeo provides two Docker images, one for each part of the ARender software: `arender-previewer` and `arender-rendition`.
+Nuxeo Enhanced Viewer involves to install the ARender services. You can install the ARender services using kubernetes by following [ARender Documentation](https://arender.io/v4/documentation/install/kubernetes/).
+
+The YAML file needs to include some specific properties to Nuxeo Enhanced Viewer:
+
+**For the Nuxeo part:**
+  - ```
+    arender.server.previewer.host=https://arender-previewer-${NAMESPACE}.platform.dev.nuxeo.com
+    ```
+  - ```
+    nuxeo.jwt.secret=JWT_SECRET
+    ```
+  - ```
+    nuxeo.arender.secret=OAUTH2_SECRET
+    ```
+
+**For the ARender Previewer part:**
+  - ```
+  name: ARENDERSRV_NUXEO_URL value: "https://preview-${NAMESPACE}.platform.dev.nuxeo.com/nuxeo"
+  ```
+  - ```
+  name: ARENDERSRV_NUXEO_ARENDER_SECRET value: OAUTH2_SECRET
+  ```
+
+
+The full YAML file is available [here]({{file name='values.yaml'}}).
+
+### Nuxeo Enhanced Viewer Addon
+
+Install the [Nuxeo Enhanced Viewer Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender) add-on.
 
 {{#> callout type='warning' heading='Private addon'}}
 You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these images.
 {{/callout}}
-
-{{#> callout type='info' heading='Docker Images Version'}}
-Docker images have the same versions as marketplace packages.
-You should always use the same version for Docker images and marketplace packages.
-{{/callout}}
-
-You can also install both parts directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html).
-
-All communication is done over HTTP; we recommend using HTTPS for production. Below are the ports for each part:
-- previewer is reachable on port `8080` when exposed directly by Tomcat; we recommend to setup an Apache or Nginx in front of it.
-- rendition is reachable on port `8761`.
-
-Below are the requirements for firewall rules / Docker network setup:
-- Nuxeo needs to reach ARender previewer,
-- ARender previewer needs to reach ARender rendition,
-- ARender previewer needs to reach Nuxeo.
-
-### Embedded Installation - Development
-
-For development purposes, run the rendition Docker image and bind its port to localhost:
-```
-docker run -p 8761:8761 -it ARENDER_DOCKER_IMAGE_ID
-```
-
-Then install the [nuxeo-arender-connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector) marketplace package.
-
-It installs the ARender integration inside Nuxeo and the ARender previewer inside Nuxeo's Tomcat.
-
-### Docker Installation - Production
-
-For production, we recommend that each part of ARender software is deployed as a Docker container.
-
-You can deploy several ARender renditions. Their URL needs to be given to ARender previewer. ARender previewer is responsible for renditions loading. ARender renditions don't need to communicate with each other.
-
-Rendition URLs can be passed to ARender previewer with the `renditionHostEnv` environment variable.
-
-{{#> callout type='info' heading='ARender previewer behavior'}}
-ARender previewer owns in its cache a session corresponding to the t-uple user, document and blob.</br>
-You'll need to ask for a new session if the previewer crashes (action 1. on the chart above).
-{{/callout}}
-
-{{#> callout type='warning' heading='ARender previewer clustering'}}
-You can't have a cluster of ARender previewers because previewers don't share sessions.
-{{/callout}}
-
-If you need to change these settings while ARender previewer is running, there is a REST API on ARender previewer.
-
-To get current settings:
-```
-GET /arendergwt/weather?format=json
-```
-To update settings:
-```
-POST /arendergwt/weather?format=json
-["https://rendition1:8761", "https://rendition2:8761"]
-```
 
 ## Configuration
 
