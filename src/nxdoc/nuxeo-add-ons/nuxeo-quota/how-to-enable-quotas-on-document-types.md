@@ -133,7 +133,7 @@ By default, [quotas]({{page page='nuxeo-quota'}}) are available on domains and w
 
 {{#> callout type='tip' }}
 
-If you don't want to use Studio and prefer using your IDE, you can just [add a contribution]({{page page='contributing-to-an-extension-using-nuxeo-ide'}}) with the XML above.
+If you don't want to use Studio and prefer using your IDE, you can just [add a contribution]({{page page='contributing-to-an-extension'}}) with the XML above.
 
 {{/callout}}
 
