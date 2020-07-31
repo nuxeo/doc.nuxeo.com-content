@@ -453,7 +453,7 @@ The annotations module supports a large number of file formats.
 The Nuxeo Enhanced Viewer is constantly improved. You can monitor its roadmap below. </br>
 You can also submit your feedback on the [Nuxeo Server feedback portal](https://portal.prodpad.com/7cdff94a-f166-11e7-93bc-06df22ffaf6f).
 
-<iframe src='https://ext.prodpad.com/ext/roadmap/2be5150d3c6c4f6e5adfcb3c4cd19c6121542326' height='900' width='100%' frameborder='0'></iframe>
+<iframe src='https://roadmap.prodpad.com/fa6f47de-d314-11ea-8254-0abbec7104a5' height='900' width='100%' frameborder='0'></iframe>
 
 ## Going Further
 
