@@ -340,6 +340,21 @@ Using a transitive dependency in your code is weak and error prone: for instance
 
 There are two complementary solutions to optimize your POM and add missing direct dependencies:
 
+*   [Use Nuxeo IDE "Synchronize POM" feature ]({{page space='idedoc' page='managing-project-dependencies#sync-poms'}}).
+
+    {{#> callout type='info' }}
+
+    At the time of this writing (Nuxeo IDE1.2.1.201408071003), there are a few issues or limitations to take into account:
+
+    *   Inherited direct dependencies are ignored and the IDE suggests to add them again ([NXIDE-318](https://jira.nuxeo.com/browse/NXIDE-318)). That is not mandatory.
+
+    *   The IDE relies on the SDK. There may be unresolved dependencies you'll have to manually add ([NXIDE-319](https://jira.nuxeo.com/browse/NXIDE-319)).
+    *   Some dependencies are not reported by the IDE ([NXIDE-320](https://jira.nuxeo.com/browse/NXIDE-320)).
+
+    *   <span style="color: rgb(0,0,0);">The IDE does not list the culprit use of the missing dependencies (</span> [NXIDE-321](https://jira.nuxeo.com/browse/NXIDE-321)). If wondering, you'll have to search for the "missing" class in the code.
+        You can use the IDE search feature or [a custom Java find Shell function](https://gist.github.com/jcarsique/8581743#file-bashrc-L144).
+
+        {{/callout}}
 *   [Use the maven-dependency-plugin](#maven-dependency-plugin):
 
     ```
