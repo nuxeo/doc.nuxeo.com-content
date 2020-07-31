@@ -1,6 +1,6 @@
 ---
 title: Direct Transfer
-description: 'Direct Transfer adds a third core capability to Drive: one-time transfer of content between the Nuxeo Server and the user desktop.'
+description: 'Direct Transfer adds a third core capability to Nuxeo Drive: one-time transfer of content between the user desktop and the Nuxeo server.'
 review:
     comment: ''
     date: '2020-07-20'
@@ -12,16 +12,18 @@ tree_item_index: 100
 toc: true
 ---
 
-The purpose of the Direct Transfer feature is to add a third core capability to Nuxeo Drive: one-time transfer of content between the Nuxeo Server and the user desktop.
+The purpose of the Direct Transfer feature is to add a third core capability to Nuxeo Drive: one-time transfer of content between the user desktop and the Nuxeo server.
 
-Direct Transfer allows users having installed Nuxeo Drive to upload new content to the server, as opposed to using the traditional document creation from Nuxeo Web UI. This will be particularly useful in the case of big files, as timeouts occur with Web UI after a certain while.
+Direct Transfer allows users having installed Nuxeo Drive to upload new content to the server, as opposed to using the traditional document creation from Nuxeo Web UI. This will be particularly useful in the case of big files.
+
+This is also different from what is done in the core of Nuxeo Drive: transfers are not tight to synchronization roots but everywhere on the server (depending on user access rights).
 
 Nuxeo Drive upload capability provides a productive and network resilient way of transferring the content and leverage chunking capabilities of the platform to send content to the server.
 
 ## Create a Transfer
 
 1. Open Nuxeo Drive from your desktop and click on **Direct Transfer**.</br>
-    The finder opens.
+    The files selection box opens.
 1. Select the document(s) you want to transfer and click on **Open**.</br>
     The Direct Transfer popup opens.
     ![]({{file name='direct-transfer-creation.png'}})
@@ -60,7 +62,7 @@ From there you have full control on your transfer, you can:
 - pause/resume or cancel any upload.
 - monitor each upload thanks to the progress bar.
 
-Once the transfer is done, the popup closes and a desktop notification lets you know that the transfer is complete (works only for files < 25Mio).
+Once transfers are done, the popup closes and a desktop notification lets you know that the transfer is complete (works only for files > 25 MiB).
 
 <!--
 ## Limitations
