@@ -3,7 +3,7 @@ title: UI Feature Comparison
 description: This page lists the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons.
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2020-08-04'
     status: ok
 labels:
     - lts2016-ok
@@ -313,14 +313,6 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc' page='nuxeo-agenda'}})</td>
 </tr>
 <tr>
-    <td colspan="1">Dropbox documents</td>
-    <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
-</tr>
-<tr>
     <td>EasyShare Folder</td>
     <td>EasyShare</td>
     <td>&#10003;</td>
@@ -361,14 +353,6 @@ The tables below use the following notation:
     <td colspan="1">[User Documentation]({{page version='' space='userdoc' page='document-types-in-web-ui'}})</td>
 </tr>
 <tr>
-    <td colspan="1">OneDrive documents</td>
-    <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
-</tr>
-<tr>
     <td colspan="1">Ordered folder</td>
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
@@ -386,11 +370,11 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td colspan="1">Picture</td>
-    <td colspan="1">[Nuxeo DAM](http://www.nuxeo.com/solutions/digital-asset-management/)</td>
+    <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Nuxeo DAM Documentation]({{page page='digital-asset-management-dam'}})</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
     <td colspan="1">Section</td>
@@ -426,11 +410,11 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td colspan="1">Video</td>
-    <td colspan="1">[Nuxeo DAM](http://www.nuxeo.com/solutions/digital-asset-management/)</td>
+    <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -474,7 +458,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">Box, Dropbox, Google Drive, Microsoft OneDrive<br/>
+    <td colspan="1">Box, Google Drive<br/>
     [Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})
 </td>
 </tr>
@@ -541,7 +525,7 @@ The tables below use the following notation:
     </td>
     <td>&#10003;</td>
     <td>&#10003;<br/>&#10003;</td>
-    <td>LTS&nbsp;2020<br/>&#10003;</td>
+    <td>N/A<br/>&#10003;</td>
     <td colspan="1">
     [Document modification user documentation]({{page space='userdoc' page='content-edit'}})<br/>
     [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})<br/>
@@ -606,7 +590,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2020</td>
+    <td>N/A</td>
     <td>[Documentation]({{page page='nuxeo-tree-snapshot'}})</td>
 </tr>
 <tr>
@@ -858,7 +842,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2020</td>
+    <td>N/A</td>
     <td colspan="1"></td>
 </tr>
 <tr>
@@ -866,7 +850,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Media Publishing](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2020</td>
+    <td>N/A</td>
     <td colspan="1">The Nuxeo Media Publishing addon is deprecated since Nuxeo Platform LTS 2019.
     </td>
 </tr>
@@ -1105,7 +1089,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>N/A</td>
-    <td colspan="1">Still in consideration for Web UI</td>
+    <td colspan="1"></td>
 </tr>
 <tr>
     <td colspan="1">Permission purge</td>
@@ -1113,7 +1097,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>N/A</td>
-    <td colspan="1">Still in consideration for Web UI</td>
+    <td colspan="1"></td>
 </tr>
 <tr>
     <td colspan="1">Permission audit</td>
@@ -1124,7 +1108,6 @@ The tables below use the following notation:
     <td colspan="1">
     [Developer Documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
     [User Documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})<br/>
-    Still in consideration for Web UI
     </td>
 </tr>
 <tr>
@@ -1142,7 +1125,7 @@ The tables below use the following notation:
     <td>[Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2020</td>
+    <td>N/A</td>
     <td>[Nuxeo Multi-tenant documentation]({{page version='' space='userdoc' page='nuxeo-multi-tenant'}})</td>
 </tr>
 </tbody>
@@ -1198,7 +1181,6 @@ The tables below use the following notation:
     <td colspan="1">
     [Developer Documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
     [User Documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})<br/>
-    Still in consideration for Web UI
 </td>
 </tr>
 </tbody>
@@ -1274,7 +1256,7 @@ The tables below use the following notation:
     <td>[Nuxeo Diff Pictures](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2020</td>
+    <td>N/A</td>
     <td>[Developer documentation]({{page page='nuxeo-diff'}})<br/>
     [User documentation]({{page space='userdoc' page='nuxeo-diff'}})</td>
 </tr>
@@ -1382,7 +1364,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2020</td>
+    <td>N/A</td>
     <td colspan="1">
     [User Documentation]({{page space='userdoc' page='editing-content'}}#relations)<br/>
     [How to Add New Relation Types]({{page space='nxdoc' page='how-to-add-new-relation-types'}})
@@ -1439,7 +1421,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2019</td>
+    <td>N/A</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -1654,7 +1636,6 @@ The tables below use the following notation:
     <td colspan="1">Some monitoring features are available by default in the Admin tab of the Nuxeo Platform. You can complete these features by using addons, such as Nuxeo Datadog reporter.<br/>
     [Metrics and Monitoring admin documentation]({{page page='metrics'}})<br/>
     [Nuxeo Datadog Reporter documentation]({{page page='nuxeo-datadog-reporter'}})<br/>
-    Monitoring features are still in consideration for Web UI.
     </td>
 </tr>
 <tr>
