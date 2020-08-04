@@ -1253,10 +1253,14 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td>Picture comparison</td>
-    <td>[Nuxeo Diff Pictures](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)</td>
-    <td>N/A</td>
-    <td>&#10003;</td>
-    <td>N/A</td>
+    <td>[Nuxeo Enhanced Viewer]({{page page='nuxeo-enhanced-viewer'}})<br />
+        [Nuxeo Diff Pictures](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)</td>
+    <td>N/A< br/>
+        N/A</td>
+    <td>N/A<br />
+        &#10003;</td>
+    <td>&#10003;
+        N/A</td>
     <td>[Developer documentation]({{page page='nuxeo-diff'}})<br/>
     [User documentation]({{page space='userdoc' page='nuxeo-diff'}})</td>
 </tr>
