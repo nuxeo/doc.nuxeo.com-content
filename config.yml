@@ -7,7 +7,7 @@ default:
       - space_path: userdoc
         space_name: Nuxeo Platform User Documentation
     branch: master
-    dev_browser_path: nxdoc
+    dev_browser_path: nxdoc/next
     versions:
       - label: LTS 2019
       - label: Next
