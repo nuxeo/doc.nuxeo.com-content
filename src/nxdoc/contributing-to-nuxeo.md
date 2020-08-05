@@ -305,7 +305,6 @@ Section commented as it requires a VPN connection to get access
 *   Quality of the product development can be monitored on [our Jenkins Continuous Integration site](http://qa.nuxeo.org/) and [SonarQube Quality Assurance site](https://sonar.nuxeo.org/dashboard/index/org.nuxeo:nuxeo-ecm:master).
 -->
 
-
 ## Contribution Principals
 
 Nuxeo is always happy when someone offers to help in the improvement of the product, whether it is for documentation, testing, fixing a bug, suggesting functional improvement or contributing new modules. To maintain the quality of such an open development process, Nuxeo has set up a few strict rules that a Nuxeo community member should follow to be able to contribute.
@@ -324,77 +323,88 @@ Before describing this process, here are a few points that are the basis of the 
 ## Step by Step Instructions
 
 There are two ways to contribute:
+
 - By [cloning the GitHub repository](#cloning-the-repository-locally) locally and using command line.
 - By using [GitHub UI](#using-github-ui) and make your changes online.
 
 ### Cloning the Repository Locally
 
 1. Clone the GitHub repository:
-  ```Shell
-  git clone https://github.com/nuxeo/nuxeo.git
-  ```
+
+    ```shell
+    git clone https://github.com/nuxeo/nuxeo.git
+    ```
 
 1. Ensure the branch you’re working on is up to date:
-  ```Shell
-  git pull
-  ```
+
+    ```shell
+    git pull
+    ```
 
 1. Create a branch, respecting the conventions:
-  - If you’re not working on master branch, prefix it with the branch name
-  - As a prefix, choose between fix, feature or improvement
-  - Add the NXP ticket number
-  - Add a short description, starting by a verb, all lowercase with hyphens
 
-  ```Shell
-  git checkout -b '10.10-HF/fix-NXP-28805-review-retention-automation-operations'
-  git checkout -b 'feature-NXP-28804-add-quickfilter-docs-with-retention-rules'
-  ```
+    - If you’re not working on master branch, prefix it with the branch name
+    - As a prefix, choose between fix, feature or improvement
+    - Add the NXP ticket number
+    - Add a short description, starting by a verb, all lowercase with hyphens
+
+
+    ```shell
+    git checkout -b '10.10-HF/fix-NXP-28805-review-retention-automation-operations'
+    git checkout -b 'feature-NXP-28804-add-quickfilter-docs-with-retention-rules'
+    ```
 
 1. Open your favorite IDE and apply your changes.
 
 1. Add your changes on git:
-  ```Shell
-  git add -A
-  ```
+
+    ```shell
+    git add -A
+    ```
 
 1. Add a commit message, respecting the naming conventions `<TICKET_NUMBER>: <description lowercase>`:
-  ```Shell
-  git commit -m 'NXP-28804: add quick filter for docs in retention'
-  ```
+
+    ```shell
+    git commit -m 'NXP-28804: add quick filter for docs in retention'
+    ```
 
 1. Push your changes:
-  ```Shell
-  git push origin 10.10-HF/fix-NXP-28805-review-retention-automation-operations
-  git push origin feature-NXP-28804-add-quickfilter-docs-with-retention-rules
-  ```
+
+    ```shell
+    git push origin 10.10-HF/fix-NXP-28805-review-retention-automation-operations
+    git push origin feature-NXP-28804-add-quickfilter-docs-with-retention-rules
+    ```
 
 1. Go to the GitHub UI and click on the button to create a PR. Don’t hesitate to add a small comment to explain your contribution:
-  {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/pr.png
-      name: pr.png
-      server#screenshot#up_to_date
-  --}}
-  ![pr.png](nx_asset://a9b4d416-2b4e-4705-b1a5-23c2845094b9 ?w=550,border=true)
-  {{#> callout type='info' heading='Pull Request Review'}}
-  Your contribution is going to be reviewed by the Dev team or the component leader. They will probably ask you to update some code sections. So take the review, answer them, and edit your code accordingly.
-  {{/callout}}
+
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/pr.png
+        name: pr.png
+        server#screenshot#up_to_date
+    --}}
+    ![pr.png](nx_asset://a9b4d416-2b4e-4705-b1a5-23c2845094b9 ?w=550,border=true)
+
+    {{#> callout type='info' heading='Pull Request Review'}}
+    Your contribution is going to be reviewed by the Dev team or the component leader. They will probably ask you to update some code sections. So take the review, answer them, and edit your code accordingly.
+    {{/callout}}
 
 1. _(Optional)_ At this stage, you might have 2 commit messages. The first one from your original PR, another one with some updates.
 
-  - To merge and rewrite your commit, run `git rebase -i HEAD~2`
-  - The terminal will open the interactive rebase. You should end up with two lines, corresponding to those two commits.
-  - Prefix the first commit message with `pick`
-  - Prefix the second commit message with `fixup`
-  - Push force the modification: `git push --force`
-  - And repeat it until there is nothing left to review!
+    - To merge and rewrite your commit, run `git rebase -i HEAD~2`
+    - The terminal will open the interactive rebase. You should end up with two lines, corresponding to those two commits.
+    - Prefix the first commit message with `pick`
+    - Prefix the second commit message with `fixup`
+    - Push force the modification: `git push --force`
+    - And repeat it until there is nothing left to review!
 
 1. Once your contribution is approved, go to your PR on GitHub, click on **Rebase and Merge** button.
-  {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/rebase-and-merge.png
-      name: rebase-and-merge.png
-      server#screenshot#up_to_date
-  --}}
-  ![rebase-and-merge.png](nx_asset://1d9ecd82-65a3-4d90-8af6-70e299e9408a ?w=150,border=true)
+
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/rebase-and-merge.png
+        name: rebase-and-merge.png
+        server#screenshot#up_to_date
+    --}}
+    ![rebase-and-merge.png](nx_asset://1d9ecd82-65a3-4d90-8af6-70e299e9408a ?w=150,border=true)
 
 ### Using GitHub UI
 
@@ -402,21 +412,21 @@ If you need to edit a single file, you can use the default GitHub UI feature to 
 
 1. Click on the edit icon:
 
-  {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/github-ui-edit.png
-      name: github-ui-edit.png
-      server#screenshot#up_to_date
-  --}}
-  ![github-ui-edit.png](nx_asset://f65ba7e6-794a-4881-826a-9e1e9046509a ?w=650,border=true)
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/github-ui-edit.png
+        name: github-ui-edit.png
+        server#screenshot#up_to_date
+    --}}
+    ![github-ui-edit.png](nx_asset://f65ba7e6-794a-4881-826a-9e1e9046509a ?w=650,border=true)
 
 1. Make your changes and add a commit message, and update the branch name respecting the naming conventions:
 
-  {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/github-ui-commit.png
-      name: github-ui-commit.png
-      server#screenshot#up_to_date
-  --}}
-  ![github-ui-commit.png](nx_asset://8022c60b-5621-4dda-b9f7-55e609dfc2c2 ?w=650,border=true)
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/github-ui-commit.png
+        name: github-ui-commit.png
+        server#screenshot#up_to_date
+    --}}
+    ![github-ui-commit.png](nx_asset://8022c60b-5621-4dda-b9f7-55e609dfc2c2 ?w=650,border=true)
 
 ## Product Specificities
 
@@ -438,11 +448,11 @@ See [HOWTO: Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxe
 
 {{! multiexcerpt name='translation-contribution-with-crowdin'}}
 
-1.  Join the Nuxeo translation group of your choice at [crowdin.net/profile/nuxeo](https://crowdin.com/profile/nuxeo). Pick a language you want to translate and start by clicking **Translate**.
-2.  In the Crowdin translation view you will find all the phrases to translate to the left. (To view only the ones that still need translation, use the **Untranslated** filter.)
-3.  Click on a phrase you want to translate. You see the original phrase in the top, and a box to fill out your translation beneath.
-4.  Enter the translation and by clicking **Save**, and optionally, if you're a proofreader, you can approve the translation.
-5.  Contact one or several of the Crowdin project managers to [be credited for your contribution](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/CREDITS.txt).
+1. Join the Nuxeo translation group of your choice at [crowdin.net/profile/nuxeo](https://crowdin.com/profile/nuxeo). Pick a language you want to translate and start by clicking **Translate**.
+1. In the Crowdin translation view you will find all the phrases to translate to the left. (To view only the ones that still need translation, use the **Untranslated** filter.)
+1. Click on a phrase you want to translate. You see the original phrase in the top, and a box to fill out your translation beneath.
+1. Enter the translation and by clicking **Save**, and optionally, if you're a proofreader, you can approve the translation.
+1. Contact one or several of the Crowdin project managers to [be credited for your contribution](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/CREDITS.txt).
 
 {{! /multiexcerpt}}
 
@@ -450,28 +460,27 @@ See [HOWTO: Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxe
 
 {{! multiexcerpt name='translation-contribution-with-github'}}
 
-1.  For now, English translations are managed only on GitHub.
+1. For now, English translations are managed only on GitHub.
 
-  * For Web UI labels, edit the [Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/blob/master/i18n/messages.json) or [Nuxeo UI Elements](https://github.com/nuxeo/nuxeo-ui-elements/blob/master/i18n/messages.json) JSON files.
+    - For Web UI labels, edit the [Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/blob/master/i18n/messages.json) or [Nuxeo UI Elements](https://github.com/nuxeo/nuxeo-ui-elements/blob/master/i18n/messages.json) JSON files.
+    - For JSF UI labels, looking at the [reference messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties) file can help you understand in which GitHub repository or module the original translation is. For instance, look for the following sample lines:
 
-  * For JSF UI labels, looking at the [reference messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties) file can help you understand in which GitHub repository or module the original translation is. For instance, look for the following sample lines:
+        ```properties
+        ## DO NOT EDIT FOLLOWING LINE
+        # Translations from ./nuxeo/nuxeo-features/nuxeo-platform-lang/src/main/resources/web/nuxeo.war/WEB-INF/classes/messages_en_US.properties
 
-    ```
-    ## DO NOT EDIT FOLLOWING LINE
-    # Translations from ./nuxeo/nuxeo-features/nuxeo-platform-lang/src/main/resources/web/nuxeo.war/WEB-INF/classes/messages_en_US.properties
+        [...]
 
-    [...]
+        ## DO NOT EDIT FOLLOWING LINE
+        # Translations from ./nuxeo/addons/nuxeo-agenda/src/main/resources/OSGI-INF/l10n/messages_en_US.properties
 
-    ## DO NOT EDIT FOLLOWING LINE
-    # Translations from ./nuxeo/addons/nuxeo-agenda/src/main/resources/OSGI-INF/l10n/messages_en_US.properties
-
-    [...]
-    ```
+        [...]
+        ```
 
     If the module is under the `addons` directory, it will be in a specific GitHub repository. Otherwise, it will be in the [main Nuxeo repository](https://github.com/nuxeo/nuxeo).
 
-2.  Use any standard Java i18n tool to edit the files.
-3.  Make a pull-request on [GitHub](https://github.com/nuxeo/).
+1. Use any standard Java i18n tool to edit the files.
+1. Make a pull-request on [GitHub](https://github.com/nuxeo/).
 
 {{! /multiexcerpt}}
 
@@ -483,53 +492,53 @@ Contribution is welcome both for technical (books and guides, FAQ, tutorials) an
 
 Testing is always welcome, particularly when Nuxeo submits a new Fast Track version of its products. As our products are easily downloadable, it doesn't require any specific development skill.
 
-1.  Download the version you want to test, set it up.
-2.  Get and read the [user guide]({{page space='userdoc'}}) for the selected distribution and add-ons.
-3.  For any bug you detect, ask for a confirmation on [Nuxeo Answers](https://answers.nuxeo.com/), [create a JIRA ticket](http://jira.nuxeo.com/), specifying the version of the product, the environment (OS, browser, ...), the conditions and the reproduction steps. Before each release every ticket is read and depending on its severity, fixed before the release or postponed.
+1. Download the version you want to test, set it up.
+1. Get and read the [user guide]({{page space='userdoc'}}) for the selected distribution and add-ons.
+1. For any bug you detect, ask for a confirmation on [Nuxeo Answers](https://answers.nuxeo.com/), [create a JIRA ticket](http://jira.nuxeo.com/), specifying the version of the product, the environment (OS, browser, ...), the conditions and the reproduction steps. Before each release every ticket is read and depending on its severity, fixed before the release or postponed.
 
 ## Improvements and Bug Fixes
 
 Improving a module is always welcome and is carefully managed by Nuxeo developers. The process is to go through a JIRA "Contribution" ticket and [GitHub](https://github.com/nuxeo). Depending on the nature of your changes, you might be asked to sign and return the [Contributor Agreement](#contributoragreement). This is mandatory for everything that isn't minor improvement or bugfix. You may get credentials to commit directly when you get used to submitting pull requests and that those one respect the framework logic and quality rules.
 
-1.  Create a [JIRA "Contribution" ticket](http://jira.nuxeo.com/browse/NXP) that will hold a description of your improvements, functionally and technically.
-1.  Nuxeo will approve your specifications (or ask you some more information/change) and will give you recommendations. The JIRA issue will be in "specApproved" state.
-1.  Read the [Coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}).
-1.  [Fork](http://help.github.com/fork-a-repo/) the project on [GitHub](https://github.com/nuxeo/).
-1.  Do your modifications in a new branch named `FEATURE-the_Jira_issue-a_short_description`, respecting the coding and design guidelines. Be sure it doesn't break existing unit tests.
-1.  [Send a pull-request](https://help.github.com/articles/about-pull-requests/).
-1.  In JIRA, set the ticket to "devReview" state and give a link to your pull request.
-1.  Finally, we can ask for some changes, putting comments on your code, then your branch will be merged by a Nuxeo developer.
+1. Create a [JIRA "Contribution" ticket](http://jira.nuxeo.com/browse/NXP) that will hold a description of your improvements, functionally and technically.
+1. Nuxeo will approve your specifications (or ask you some more information/change) and will give you recommendations. The JIRA issue will be in "specApproved" state.
+1. Read the [Coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}).
+1. [Fork](http://help.github.com/fork-a-repo/) the project on [GitHub](https://github.com/nuxeo/).
+1. Do your modifications in a new branch named `FEATURE-the_Jira_issue-a_short_description`, respecting the coding and design guidelines. Be sure it doesn't break existing unit tests.
+1. [Send a pull-request](https://help.github.com/articles/about-pull-requests/).
+1. In JIRA, set the ticket to "devReview" state and give a link to your pull request.
+1. Finally, we can ask for some changes, putting comments on your code, then your branch will be merged by a Nuxeo developer.
 
 ## New Modules
 
 Nuxeo is highly modularized and as a consequence, it is totally possible to develop a new feature that will be deeply mixed with the existing interface. Our main recommendation, among respecting coding rules and design, is to respect the usual code layout: core, API, facade, web, &hellip; If you have such a project, Nuxeo will be glad to help you designing your module, and to provide a GitHub repository, aside from a web page (Wiki) and a JIRA project for the visibility of your development.
 
-1.  Start by an introductory email to the [partners mailing list](mailto:partners@nuxeo.com), explaining the purpose of the new module you want to develop (BEFORE developing it) and how you think of doing it or how you did it (although it is always better to contact the list before).
-2.  After a few exchanges in the mailing list, return the [Contributor Agreement](#contributoragreement) signed. Nuxeo will then add you to the GitHub organization and give you rights to commit in a new GitHub repository.
-3.  Read and respect the [Coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}).
-4.  Commit your development regularly (meaning don't wait to finish everything: on the contrary commit each of your developments on a very atomic mode, mentioning the purpose of your commit in JIRA (take it as an advice more than a rule).
-5.  Unit tests are mandatory and Test Driven Development is strongly encouraged. Functional tests could also be integrated. We'll put your module under continuous integration, if the quality of the code respects Nuxeo criteria.
-6.  [Package your plugin as a Nuxeo Package]({{page page='creating-nuxeo-packages'}}), if you want it to be on [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/). Plus it will be much easier for people to install it.
+1. Start by an introductory email to the [partners mailing list](mailto:partners@nuxeo.com), explaining the purpose of the new module you want to develop (BEFORE developing it) and how you think of doing it or how you did it (although it is always better to contact the list before).
+1. After a few exchanges in the mailing list, return the [Contributor Agreement](#contributoragreement) signed. Nuxeo will then add you to the GitHub organization and give you rights to commit in a new GitHub repository.
+1. Read and respect the [Coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}).
+1. Commit your development regularly (meaning don't wait to finish everything: on the contrary commit each of your developments on a very atomic mode, mentioning the purpose of your commit in JIRA (take it as an advice more than a rule).
+1. Unit tests are mandatory and Test Driven Development is strongly encouraged. Functional tests could also be integrated. We'll put your module under continuous integration, if the quality of the code respects Nuxeo criteria.
+1. [Package your plugin as a Nuxeo Package]({{page page='creating-nuxeo-packages'}}), if you want it to be on [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/). Plus it will be much easier for people to install it.
 
 In addition to code conventions and development good practices above-mentioned, when creating a new module you should also take the following recommendations into considerations:
 
-*   Align your code on a recent released version or on the latest development version.
-*   Provide a **clean POM** (well indented, no duplication, inheriting nuxeo-ecm POM, ...).
-*   If needed, provide a list of the artifacts (libraries) or Public Maven repositories that should be added to the Nuxeo Maven repository to be able to build.
-*   Avoid embedded libraries.
-*   Avoid introducing new libraries if the equivalent already exists in Nuxeo.
+- Align your code on a recent released version or on the latest development version.
+- Provide a **clean POM** (well indented, no duplication, inheriting nuxeo-ecm POM, ...).
+- If needed, provide a list of the artifacts (libraries) or Public Maven repositories that should be added to the Nuxeo Maven repository to be able to build.
+- Avoid embedded libraries.
+- Avoid introducing new libraries if the equivalent already exists in Nuxeo.
 
-## Not using GitHub?
+## Not using GitHub
 
 You can still contribute patches even without using GitHub:
 
-1.  Create a [JIRA ticket of type "Contribution"](http://jira.nuxeo.com/browse/NXP) describing the problem and what you plan to do (or what you did, if it comes after).
-1.  Read the [Coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}).
-1.  Fork the "master" branch of the sub-project you want to patch.
-1.  Make your modifications, respecting the [coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}), and check that they don't break existing unit tests.
-1.  Create a patch file and attach it to the JIRA ticket you created.
-1.  The patch will either be validated or you will receive feedback with guidance to complete it.
-1.  The patch will be committed by a Nuxeo developer.
+1. Create a [JIRA ticket of type "Contribution"](http://jira.nuxeo.com/browse/NXP) describing the problem and what you plan to do (or what you did, if it comes after).
+1. Read the [Coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}).
+1. Fork the "master" branch of the sub-project you want to patch.
+1. Make your modifications, respecting the [coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}), and check that they don't break existing unit tests.
+1. Create a patch file and attach it to the JIRA ticket you created.
+1. The patch will either be validated or you will receive feedback with guidance to complete it.
+1. The patch will be committed by a Nuxeo developer.
 
 ## Contributor Agreement {{> anchor 'contributoragreement'}}
 
