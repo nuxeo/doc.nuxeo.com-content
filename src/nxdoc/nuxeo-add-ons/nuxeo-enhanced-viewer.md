@@ -29,19 +29,11 @@ Watch the related course on Nuxeo University:</br>
 {{/callout}}
 
 ARender software comprises two parts:
+
 - previewer
 - rendition
 
-ARender previewer is extended by Nuxeo to integrate the ARender previewer with the Nuxeo REST API, it corresponds to [nuxeo-arender-connector](https://github.com/nuxeo/nuxeo-arender-connector) in ARender Connector.
-
-Here's a chart illustrating the actions during the first connection to ARender:
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Annotations with ARender/arender-flow.png
-    name: arender-flow.png
-    addins#diagram#up_to_date
---}}
-![arender-flow.png](nx_asset://3dfb1d20-3bb0-4124-819f-d6ad274630cb ?w=650,border=true)
-
+ARender previewer is extended by Nuxeo to integrate the ARender Previewer with the Nuxeo REST API, it corresponds to [code/arender-nuxeo-connector](https://github.com/nuxeo/nuxeo-arender-connector) in ARender Connector.
 
 Since Nuxeo Enhanced Viewer 10.1, the rendition part is now divided into 5 micro-services:
  - arender-document-service-broker
@@ -61,7 +53,7 @@ Here's a chart illustrating the ARender micro-services:
 
 ## Functional Overview
 
-Once the Nuxeo Enhanced Viewer is properly [installed and configured](#installation) a new **Annotations** tab is available on each document with the picture or video facet:
+Once the Nuxeo Enhanced Viewer is properly [installed and configured](#installation-configuration) a new **Annotations** tab is available on each document with the picture or video facet:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Annotations with ARender/annotation-tab.png
@@ -334,78 +326,189 @@ A new window is opened with the two documents side-by-side, highlighting text wh
 
 You can see the annotations linked to each version on the same screen, and even annotate one file from this view.
 
-## Installation
+## Installation / Configuration
 
-### ARender
+We assume you have a working Nuxeo on which you have installed the [Nuxeo Enhanced Viewer Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender) package.
 
-Nuxeo Enhanced Viewer involves to install the ARender services. You can install the ARender services using kubernetes by following [ARender Documentation](https://arender.io/v4/documentation/install/kubernetes/).
-
-The YAML file needs to include some specific properties to Nuxeo Enhanced Viewer:
-
-**For the Nuxeo part:**
-  - ```
-    arender.server.previewer.host=https://arender-previewer-${NAMESPACE}.platform.dev.nuxeo.com
-    ```
-  - ```
-    nuxeo.jwt.secret=JWT_SECRET
-    ```
-  - ```
-    nuxeo.arender.secret=OAUTH2_SECRET
-    ```
-
-**For the ARender Previewer part:**
-  - ```
-  name: ARENDERSRV_NUXEO_URL value: "https://preview-${NAMESPACE}.platform.dev.nuxeo.com/nuxeo"
-  ```
-  - ```
-  name: ARENDERSRV_NUXEO_ARENDER_SECRET value: OAUTH2_SECRET
-  ```
-
-
-The full YAML file is available [here]({{file name='values.yaml'}}).
-
-### Nuxeo Enhanced Viewer Addon
-
-Install the [Nuxeo Enhanced Viewer Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender) add-on.
-
-{{#> callout type='warning' heading='Private addon'}}
-You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these images.
+{{#> callout type='warning' heading='Private packages'}}
+You should contact your Nuxeo Administrator or Nuxeo sales representative to get access to these packages.
 {{/callout}}
-
-## Configuration
 
 ### Nuxeo Configuration
 
-The Nuxeo Enhanced Viewer relies on a [JWT](https://jwt.io/) to request an OAuth 2 token for authentication (See [OAuth 2]({{page page='using-oauth2'}}) documentation page for more information).
-You need to define a secret, `nuxeo.jwt.secret` in your `nuxeo.conf`, to enable it.
+The package requires you to define several properties in your `nuxeo.conf`.
 
-Authentication from ARender to Nuxeo relies on a shared secret between the two applications. This secret is defined with the property `nuxeo.arender.secret` in your `nuxeo.conf`.
+#### Before 10.3
 
-{{#> callout type='info' heading='Shared secret environment variable'}}
-If using the Docker image for the ARender previewer, you can also define this shared secret through an environment variable `nuxeoArenderSecretEnv`.
+The Nuxeo Enhanced Viewer relies on a [JWT](https://jwt.io/) token to request an OAuth 2.0 token for authentication (See [OAuth 2.0]({{page page='using-oauth2'}}) documentation page for more information). Thus, you need to define a JWT secret in your `nuxeo.conf`, which will be used to generate a JWT token.
+
+You also need to configure an OAuth 2.0 shared secret, between the two applications, with the property `nuxeo.arender.secret` in your `nuxeo.conf`.
+
+In the end, you should have the following properties in your `nuxeo.conf`:
+
+```properties
+arender.server.previewer.host=https://arender-previewer-url
+nuxeo.jwt.secret=JWT_SECRET
+nuxeo.arender.secret=OAUTH2_SECRET
+```
+
+#### Since 10.3
+
+The Nuxeo Enhanced Viewer relies on a complete OAuth 2.0 challenge for authentication (See [OAuth 2.0]({{page page='using-oauth2'}}) documentation page for more information). Thus, you need to define an OAuth 2.0 client, with a shared secret and a redirect URI, under the `nuxeo.arender.oauth2.client.` prefix.
+
+In the end, you should have the following properties in your `nuxeo.conf`:
+
+```properties
+arender.server.previewer.host=https://arender-previewer-url
+nuxeo.arender.oauth2.client.create=true
+nuxeo.arender.oauth2.client.id=arender
+nuxeo.arender.oauth2.client.secret=OAUTH2_SECRET
+nuxeo.arender.oauth2.client.redirectURI=/login/oauth2/code/nuxeo
+```
+
+### ARender Configuration
+
+Nuxeo Enhanced Viewer involves installing the ARender services. You can install the ARender services using Kubernetes and Helm 3 by following the [ARender Documentation](https://arender.io/v4/documentation/install/kubernetes/).
+
+{{#> callout type='warning' heading='Private services'}}
+You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these services.
 {{/callout}}
 
-If your ARender rendition server doesn't run on same host as Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:8761`).
+#### Common
 
-You can change the ARender previewer URL used by Nuxeo to open ARender sessions by setting `arender.server.previewer.host` in your `nuxeo.conf` (default value if `http://localhost:8080`).
+After getting the ARender Helm Chart, you need to customize some parts in order to deploy the Nuxeo connector and add configuration. You can find below an example of _values.yaml_:
 
-### ARender Previewer Configuration
+```yaml
+web-ui:
+  image:
+    repository: docker-arender.packages.nuxeo.com/nuxeo/arender-previewer
+    tag: [NEV_VERSION]
+  environment:
+    # required values
+    ARENDERSRV_NUXEO_SERVER_URL: http://nuxeo-host:8080
+    ARENDERSRV_NUXEO_SERVER_ARENDER_SECRET: OAUTH2_SECRET # Same than the one in nuxeo.conf
+    # optional values with their defaults
+    ARENDERSRV_NUXEO_CLIENT_TIMEOUT: 30
+    ARENDERSRV_NUXEO_SERVER_CONTEXT_PATH: /nuxeo
+rendition:
+  broker:
+    image:
+      repository: docker-arender.packages.nuxeo.com/arender-document-service-broker
+      tag: [ARENDER_VERSION]
+  converter:
+    image:
+      repository: docker-arender.packages.nuxeo.com/arender-document-converter
+      tag: [ARENDER_VERSION]
+    environment:
+      TKC_TOOLS_IMAGEMAGICK_OPTIONS: "-quality,100,-density,72x72,-units,PixelsPerInch,-auto-orient,+repage"
+      TKC_IMAGE_CONVERSION_TIMEOUT: "120"
+  dfs:
+    image:
+      repository: docker-arender.packages.nuxeo.com/arender-document-file-storage
+      tag: [ARENDER_VERSION]
+  renderer:
+    image:
+      repository: docker-arender.packages.nuxeo.com/arender-document-renderer
+      tag: [ARENDER_VERSION]
+  handler:
+    image:
+      repository: docker-arender.packages.nuxeo.com/arender-document-text-handler
+      tag: [ARENDER_VERSION]
+```
 
-- For an on-host installation, you can follow the [ARender Documentation](https://arender.io/doc/current4/documentation/setup/presentation/configuration.html).
+{{#> callout type='warning' heading='Renaming in 10.3'}}
 
-- For an embedded installation, you can modify the `arender-hmi.properties` files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
+Before 10.3:
 
-- For a Docker installation, you can extend our image and copy your properties file to `/docker-entrypoint-init.d/arender.properties`:
+- `ARENDERSRV_NUXEO_SERVER_URL` was named `ARENDERSRV_NUXEO_URL`
+- `ARENDERSRV_NUXEO_SERVER_ARENDER_SECRET` was named `ARENDERSRV_NUXEO_ARENDER_SECRET`
 
-  ```
-  FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
+{{/callout}}
 
-  COPY arender.properties /docker-entrypoint-init.d/arender.properties
-  ```
+You can find a release matrix in the repository's [wiki](https://github.com/nuxeo/nuxeo-arender-connector/wiki/Release-Matrix).
 
-You can also modify the `arender-hmi.properties` which is deployed inside the `/ARenderConfiguration` in the previewer Docker container.
+#### Ingress
 
-These configuration files let you customize the ARender interface to fit specific UI and UX needs. Please follow the [ARender configuration guide](https://arender.io/doc/current4/documentation/hmi/index-hmi.html) for more information.
+The Helm Chart doesn't deploy an _Ingress_ by default, you can enable it and customize it regarding your setup with the following values:
+
+```yaml
+web-ui:
+  ingress:
+    enabled: true
+    annotations: {}
+      # kubernetes.io/ingress.class: nginx
+      # kubernetes.io/tls-acme: "true"
+    hosts:
+      - host: chart-example.local
+        paths: []
+   tls: []
+    #  - secretName: chart-example-tls
+    #    hosts:
+    #      - chart-example.local
+```
+
+#### High-Availability
+
+You can configure the ARender stack to make it highly available, for that, a couple of settings needs to be added and a database backend is required in order to store OAuth 2.0 tokens and HTTP sessions.
+
+Currently, the only available backend is MongoDB, the HTTP sessions and OAuth 2.0 access and refresh tokens are stored in the `sessions` and `oauth2Authorized` collections.
+
+See below the possible values to configure HA:
+
+```yaml
+web-ui:
+  replicaCount: 2
+  autoscale:
+    enabled: true
+    cpuLimit: 80
+    maxReplicas: 4
+  environment:
+    # required values
+    ARENDERSRV_NUXEO_OAUTH2_STORAGE_BACKEND: mongodb
+    ARENDERSRV_NUXEO_OAUTH2_STORAGE_MONGODB_SERVER: mongodb://mongodb-host:27017
+    # optional values
+    ARENDERSRV_NUXEO_OAUTH2_STORAGE_MONGODB_DBNAME: arender
+    ARENDERSRV_NUXEO_OAUTH2_STORAGE_MONGODB_SSL: false
+rendition:
+  broker:
+    replicaCount: 2
+    autoscale:
+      enabled: true
+      cpuLimit: 80
+      maxReplicas: 4
+  converter:
+    replicaCount: 2
+    autoscale:
+      enabled: true
+      cpuLimit: 80
+      maxReplicas: 4
+  dfs:
+    replicaCount: 2
+    autoscale:
+      enabled: true
+      cpuLimit: 80
+      maxReplicas: 4
+  renderer:
+    replicaCount: 2
+    autoscale:
+      enabled: true
+      cpuLimit: 80
+      maxReplicas: 4
+  handler:
+    replicaCount: 2
+    autoscale:
+      enabled: true
+      cpuLimit: 80
+      maxReplicas: 4
+```
+
+The MongoDB server setting supports the [connection string](https://docs.mongodb.com/manual/reference/connection-string/).
+
+## Customization
+
+### ARender Previewer Customization
+
+You can customize the ARender Previewer interface to fit specific UI and UX needs.
 
 Examples of possible configurations:
 
@@ -420,6 +523,20 @@ Examples of possible configurations:
     addins#screenshot#up_to_date
 --}}
 ![arender-customized.png](nx_asset://a26f7eaf-e268-443f-be33-2c88542e2a13 ?w=600,border=true)
+
+The UI customization is done through two files to be put in the `/docker-entrypoint-init.d` directory inside the Previewer container.
+
+- `arender.css` to customize the style
+- `arender.properties` to customize the behavior
+
+Please follow the [ARender configuration guide](https://arender.io/doc/current4/documentation/hmi/index-hmi.html) for more information about available properties and style.
+
+{{#> callout type='info' heading='Properties as environment variables'}}
+UI properties can also be customized through environment variables. You need to capitalize all letters in the key, and to replace `.` by `_`, and prefix it with `ARENDER_`.
+
+For instance, `topPanel.widgets.beanNames` will become `ARENDER_TOPPANEL_WIDGETS_BEANNAMES`.
+
+{{/callout}}
 
 ## Supported File Formats
 
