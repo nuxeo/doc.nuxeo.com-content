@@ -819,21 +819,18 @@ You need to define an index for each repository. This is done by adding an `elas
 
 To understand why a document is not present in search results or not indexed, you can activate a debug trace.
 
-Open at the `lib/log4j.xml` file and uncomment the ELASTIC section:
+Open at the `lib/log4j2.xml` file and uncomment the 2 `ELASTIC` sections:
 
 ```xml
-      <appender name="ELASTIC" class="org.apache.log4j.FileAppender">
-        <errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
-        <param name="File" value="${nuxeo.log.dir}/elastic.log" />
-        <param name="Append" value="false" />
-        <layout class="org.apache.log4j.PatternLayout">
-          <param name="ConversionPattern" value="%d{ISO8601} %-5p [%t][%c] %m%X%n" />
-        </layout>
-      </appender>
-      <category name="org.nuxeo.elasticsearch" additivity="false">
-        <priority value="TRACE" />
-        <appender-ref ref="ELASTIC" />
-      </category>
+    <!-- Elasticsearch logging -->
+    <File name="ELASTIC" fileName="${sys:nuxeo.log.dir}/elastic.log" append="false">
+      <PatternLayout pattern="%d{ISO8601} %-5p [%t] [%c] %m%n" />
+    </File>
+
+
+    <Logger name="org.nuxeo.elasticsearch" level="trace" additivity="false">
+      <AppenderRef ref="ELASTIC" />
+    </Logger>
 ```
 
 The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.
