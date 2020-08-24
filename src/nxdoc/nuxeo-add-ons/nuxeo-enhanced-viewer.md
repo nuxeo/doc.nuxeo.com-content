@@ -314,10 +314,6 @@ Once your choice is made, click on “Ok” button, and the page(s) will be prin
 
 ### Document Comparison
 
-{{#> callout type='note' heading='Limitations'}}
-This feature only allows you to compare the **text** of two files.
-{{/callout}}
-
 With the Nuxeo Enhanced Viewer, you can compare the text of two different versions of a file. By default, the addon compares the binary stored in the `file:content` property corresponding to the main file. You can access this feature from the [Compare Versions Screen]({{page version='' space='userdoc' page='compare'}}) by clicking on the **eye icon**.
 
 {{!--     ### nx_asset ###
