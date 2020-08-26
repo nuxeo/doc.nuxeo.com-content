@@ -1,7 +1,7 @@
 ---
 title: 4.4.2
 description: Release notes for Nuxeo Drive.
-tree_item_index: 700
+tree_item_index: 1000
 review:
   comment: 'release'
   date: '2020-04-30'
