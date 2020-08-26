@@ -417,12 +417,10 @@ rendition:
 ```
 
 {{#> callout type='warning' heading='Renaming in 10.3'}}
-
-Before 10.3:
-
-- `ARENDERSRV_NUXEO_SERVER_URL` was named `ARENDERSRV_NUXEO_URL`
-- `ARENDERSRV_NUXEO_SERVER_ARENDER_SECRET` was named `ARENDERSRV_NUXEO_ARENDER_SECRET`
-
+**Before 10.3:**</br>
+`ARENDERSRV_NUXEO_SERVER_URL` was named `ARENDERSRV_NUXEO_URL`</br>
+</br>
+`ARENDERSRV_NUXEO_SERVER_ARENDER_SECRET` was named `ARENDERSRV_NUXEO_ARENDER_SECRET`
 {{/callout}}
 
 You can find a release matrix in the repository's [wiki](https://github.com/nuxeo/nuxeo-arender-connector/wiki/Release-Matrix).
@@ -532,10 +530,8 @@ The UI customization is done through two files to be put in the `/docker-entrypo
 Please follow the [ARender configuration guide](https://arender.io/doc/current4/documentation/hmi/index-hmi.html) for more information about available properties and style.
 
 {{#> callout type='info' heading='Properties as environment variables'}}
-UI properties can also be customized through environment variables. You need to capitalize all letters in the key, and to replace `.` by `_`, and prefix it with `ARENDER_`.
-
+UI properties can also be customized through environment variables. You need to capitalize all letters in the key, and to replace `.` by `_`, and prefix it with `ARENDER_`.</br>
 For instance, `topPanel.widgets.beanNames` will become `ARENDER_TOPPANEL_WIDGETS_BEANNAMES`.
-
 {{/callout}}
 
 ## Supported File Formats
