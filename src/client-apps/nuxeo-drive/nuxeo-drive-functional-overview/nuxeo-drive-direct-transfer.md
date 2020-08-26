@@ -36,10 +36,10 @@ Nuxeo Drive upload capability provides a productive and network resilient way of
 On Nuxeo Drive 4.4.4, if a document is already present on the remote folder, a duplicate document will be created, this is the same behavior as when adding a new file from Web UI.
 {{/callout}}
 
-### Options
+### Options{{> anchor 'duplicates-behavior'}}
 
 {{#> callout type='info' heading='Duplicate Management'}}
-This is only available on **Alpha** version.
+The Options section is only available on the **Alpha** channel update version.
 {{/callout}}
 
 On this section you need to choose what to do when a transfer would create a duplicate document on the server.
