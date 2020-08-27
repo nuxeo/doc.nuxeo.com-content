@@ -826,7 +826,7 @@ Since Nuxeo 5.8\. Database timeout after which connections not in use are remove
 
 **Since Nuxeo 5.8**
 
-Since Nuxeo 5.8\. Whether full text indexing and querying should be completely disabled in the repository. It also disable the **FulltextExtractorWork**. See [VCS]({{page version='' space='nxdoc' page='vcs'}}) for details. Can also be applied to [DBS]({{page version='' space='nxdoc' page='dbs'}}).
+Since Nuxeo 5.8\. Whether full text indexing and querying should be completely disabled in the repository. It also disables the Fulltext extraction (**FulltextExtractorWork**). See [VCS]({{page version=‘’ space=‘nxdoc’ page=‘vcs’}}) for details. Can also be applied to [DBS]({{page version=‘’ space=‘nxdoc’ page=‘dbs’}}).
 
 **Default Value**
 
