@@ -2,21 +2,22 @@
 title: Nuxeo Partner Certified Addons
 review:
   comment: ''
-  date: ''
+  date: '2020-08-27'
   status: ok
 labels:
   - marketplace
 toc: true
 ---
 
-## Global presentation
+## Global Presentation
 
-The Nuxeo partner community builds, maintains and distribute Nuxeo connectors through the Nuxeo Marketplace. Production ready addons needs to follow standard requirements to be recognized as **Nuxeo certified**:
+The Nuxeo partner community builds, maintains and distribute Nuxeo connectors through the Nuxeo Marketplace.
+
+Production-ready addons need to follow standard requirements to be recognized as **Nuxeo Certified**:
 - The addon will be available for the current Long Term Support versions, and the next one.
-- The addon will follow coding best practices (More on the [Nuxeo Core Developer Guide](https://doc.nuxeo.com/corg/)).
-- Nuxeo has access to the sources of the addon. 
-- The vendor commits to delivering a user documentation and a configuration documentation of the plugin in english. 
-
+- The addon will follow coding best practices (more info on the [Nuxeo Core Developer Guide](https://doc.nuxeo.com/corg/)).
+- Nuxeo has access to the sources of the addon.
+- The vendor commits to delivering user documentation and configuration documentation of the plugin in English.
 
 ## Nuxeo Certified Addon Levels
 
@@ -64,7 +65,7 @@ Two levels of certified addons are available:
     <td><center>X</center></td>
   </tr>
   <tr>
-    <td>Helpdesk system available (4)</td>
+    <td>Help desk system available (4)</td>
     <td></td>
     <td><center>X</center></td>
   </tr>
@@ -82,8 +83,8 @@ Two levels of certified addons are available:
 
 (1)	Addon installed without issue by installing and deploying the Nuxeo addon thanks to the provided documentation
 
-(2)	Source code provided and live demo organized to Nuxeo Team, giving a feedback on possible technical  improvements.
+(2)	Source code provided and live demo organized to Nuxeo Team, giving feedback on possible technical improvements.
 
-(3)	Source code audited by the Nuxeo Professional Services : potential bugs, security breaches, performance, scalability, code maintainability, respect of Nuxeo standard guidelines and best practices  are analyzed. All necessary actions should be applied by the partner, and checked by Nuxeo.
+(3)	Source code audited by the Nuxeo Professional Services: potential bugs, security breaches, performance, scalability, code maintainability, respect of Nuxeo standard guidelines and best practices are analyzed. All necessary actions should be applied by the partner, and checked by Nuxeo.
 
-(4)	Users can report bugs through an online helpdesk application and get feeback from the partner on the ticket resolution.
+(4)	Users can report bugs through an online help desk application and get feedback from the partner on the ticket resolution.
