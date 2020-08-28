@@ -361,7 +361,6 @@ The YAML file needs to include some specific properties to Nuxeo Enhanced Viewer
   name: ARENDERSRV_NUXEO_ARENDER_SECRET value: OAUTH2_SECRET
   ```
 
-
 The full YAML file is available [here]({{file name='values.yaml'}}).
 
 ### Nuxeo Enhanced Viewer Addon
