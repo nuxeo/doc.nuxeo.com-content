@@ -1,6 +1,6 @@
 ---
 title: Nuxeo Live Connect
-description: Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it.
+description: Live Connect allows you to create a content application that handles cloud files (Google Drive, Box, ...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it.
 review:
   comment: ''
   date: '2019-11-29'
@@ -247,7 +247,6 @@ history:
     version: '1'
 ---
 
-
 {{#> callout type='info'}}
 Browsers that block pop-ups may affect the behavior of Nuxeo Live Connect. If you face any difficulties, make sure to check your browser settings.
 {{/callout}}
@@ -259,16 +258,14 @@ Watch the related course on Nuxeo University:</br>
   ![]({{file name='university-live-connect.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
-Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
+Live Connect allows you to create a content application that handles cloud files (Google Drive, Box, ...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
 
 Live Connect for Google Drive also brings the "Cloud Edit" mode. Your application based on the Nuxeo Platform can provide the users with a direct link to the SaaS applications that you can use for editing Google Drive files (Google Docs, Office 365, Pixlr, etc.).
 
 Live Connect is designed to allow many implementations. Default implementations are:
 
 - Live Connect for Google Drive
-- Live Connect for Dropbox
 - Live Connect for Box
-- Live Connect for OneDrive & OneDrive for Business (since Nuxeo Platform 8.2)
 
 ## Live Connect Features
 
@@ -295,48 +292,31 @@ The table below shows the available features for each default implementation.
 <tr>
 <th colspan="1">Feature</th>
 <th colspan="1">Available for Google Drive</th>
-<th colspan="1">Available for Dropbox</th>
 <th colspan="1">Available for Box</th>
-<th colspan="1">Available for OneDrive</th>
 </tr>
 <tr>
 <td colspan="1">Download URL</td>
-<td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup></td>
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
 </tr>
 <tr>
 <td colspan="1">Full-text indexation</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup>
-</td>
-<td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
 </tr>
 <tr>
 <td colspan="1">PDF conversion</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup>
-</td>
-<td colspan="1">Yes<sup>*</sup>
-</td>
-<td colspan="1">Yes<sup>*</sup>
+<td colspan="1">Yes<sup>\*</sup>
 </td>
 </tr>
 <tr>
 <td colspan="1">Preview</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup>
-</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup>
-</td>
 </tr>
 <tr>
 <td colspan="1">Thumbnail</td>
-<td colspan="1">Yes</td>
-<td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
 </tr>
@@ -344,22 +324,14 @@ The table below shows the available features for each default implementation.
 <td colspan="1">Link to cloud app</td>
 <td colspan="1">Yes</td>
 <td colspan="1">No</td>
-<td colspan="1">No</td>
-<td colspan="1">Yes</td>
 </tr>
 <tr>
 <td colspan="1">Versioning</td>
 <td colspan="1">Yes (non-native Google Drive documents)</td>
-<td colspan="1">Yes<sup>*</sup>
-</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup>
-</td>
 </tr>
 <tr>
 <td colspan="1">Update of the document</td>
-<td colspan="1">Yes</td>
-<td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
 </tr></tbody></table></div>
@@ -435,6 +407,7 @@ To use the Google Drive file picker with Internet Explorer 11, the following URL
 zone: https://accounts.google.com.
 {{/callout}}
 
+<!--
 ### Setting Up Live Connect for Dropbox
 
 **Step 1: Preparing your application accounts on the Dropbox App console**
@@ -478,6 +451,7 @@ To enable additional users on your application, go to **Settings** > **Developme
 To use the Dropbox file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites
 zone: https://www.dropbox.com.
 {{/callout}}
+-->
 
 ### Setting Up Live Connect for Box
 
@@ -512,6 +486,7 @@ To use the Box file picker with Internet Explorer 11, the following URLs must be
 - https://cdn01.boxcdn.net
 {{/callout}}
 
+<!--
 ### Setting Up Live Connect for OneDrive
 
 Live Connect for OneDrive is compatible with Nuxeo Platform 8.2+.
@@ -599,6 +574,7 @@ While setting your application **delegated permissions**, you need to check:
 8.  Make sure the **Enabled** box is checked.
 9.  Save.
 10. Now just create a new OneDrive document
+-->
 
 ### Adding Trusted Sites to Internet Explorer 11
 
@@ -640,4 +616,3 @@ To change this interval users can override the default contribution:
 
 - **Nuxeo Drive** is not compatible with files that are stored on a Live Connect backend: files will be downloaded, but it won't be possible to update them.
 - **Native versioning**: Only non-native Google Drive documents have revisions created on the Google Drive side.
-
