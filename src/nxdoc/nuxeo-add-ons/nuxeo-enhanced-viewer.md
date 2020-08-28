@@ -480,12 +480,6 @@ rendition:
       enabled: true
       cpuLimit: 80
       maxReplicas: 4
-  dfs:
-    replicaCount: 2
-    autoscale:
-      enabled: true
-      cpuLimit: 80
-      maxReplicas: 4
   renderer:
     replicaCount: 2
     autoscale:
