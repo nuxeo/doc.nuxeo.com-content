@@ -45,4 +45,4 @@ Verification tests specific to this repository post build.
 
 
 # Trouble shooting
-See [main project trouble shooting](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md#trouble-shooting).
+See the [main project trouble shooting guide](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md#trouble-shooting).
