@@ -1,5 +1,5 @@
 ---
-title: UI Feature Comparison
+title: Nuxeo Platform Features
 review:
     comment: ''
     date: '2018-02-26'
@@ -18,7 +18,7 @@ confluence:
     shortlink: ARQ5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/ARQ5AQ'
     source_link: /display/NXDOC/Nuxeo+Platform+Feature+Table
-tree_item_index: 600
+tree_item_index: 150
 toc: true
 history:
     -

@@ -1,5 +1,5 @@
 ---
-title: Discover Nuxeo Platform APIs
+title: Track 1 - Discover Nuxeo Platform APIs
 review:
     comment: ''
     date: '2018-02-28'
@@ -83,21 +83,21 @@ This tutorial will guide you on a tour of the Nuxeo Platform and its features th
 
 The tutorial is composed of the following steps:
 
-1.&nbsp;[Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}})
+[1. Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}})
     {{{excerpt 'Setting up Your Nuxeo Environment'}}}
-2.&nbsp;[Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}})
+[2. Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}})
     {{{excerpt 'Setting up Your JavaScript Environment'}}}
-3.&nbsp;[Manipulating Documents]({{page page='manipulating-documents'}})
+[3. Manipulating Documents]({{page page='manipulating-documents'}})
     {{{excerpt 'Manipulating Documents'}}}
-4.&nbsp;[Handling Permissions]({{page page='handling-permissions'}})
+[4. Handling Permissions]({{page page='handling-permissions'}})
     {{{excerpt 'Handling Permissions'}}}
-5.&nbsp;[Managing Files]({{page page='managing-files'}})
+[5. Managing Files]({{page page='managing-files'}})
     {{{excerpt 'Managing Files'}}}
-6.&nbsp;[Retrieving Audit Log]({{page page='retrieving-audit-log'}})
+[6. Retrieving Audit Log]({{page page='retrieving-audit-log'}})
     {{{excerpt 'Retrieving Audit Log'}}}
-7.&nbsp;[Using Renditions]({{page page='using-renditions'}})
+[7. Using Renditions]({{page page='using-renditions'}})
     {{{excerpt 'Using Renditions'}}}
-8.&nbsp;[Using Workflows]({{page page='using-workflows'}})
+[8. Using Workflows]({{page page='using-workflows'}})
     {{{excerpt 'Using Workflows'}}}
-9.&nbsp;[Using Automation]({{page page='using-automation'}})
+[9. Using Automation]({{page page='using-automation'}})
     {{{excerpt 'Automation'}}}

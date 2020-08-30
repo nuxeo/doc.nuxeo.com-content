@@ -2,7 +2,7 @@
 title: Quick Overview
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2020-08-28'
     status: ok
 labels:
     - lts2016-ok
@@ -144,11 +144,11 @@ Main components of the Nuxeo Platform are:
 - **PaaS** and **Docker Deployment** Tooling
   Nuxeo has strong expertise in deploying Nuxeo Platform instances on docker containers, PaaS style, which you typically want to do if you are building a verticalised application on top of Nuxeo and have multi-tenancy considerations
 
-## Turnkey Application and Headless Repository
-You may be interested in using Nuxeo Platform for you project for different use cases:
-- If you need a headless scalable document repository with rich apis and data structures
-- If you need a turnkey application for managing assets (description, validation, publishing) with still ability to strongly customize it
-- If you want to build a custom UI upon the repository and want to benefit from our rich library of UI elements to accelerate the development of your project.
+## Application development strategies
+You may be interested in using Nuxeo Platform for you project for different use cases,  with a specific architecture:
+- If you need a **headless scalable document repository**, and use Nuxeo Platform as a backend application, then use the Nuxeo REST API  or any other Nuxeo SDK Client.
+- If you need to build **a custom web application surfacing the Nuxeo repository**, then you can benefit from our rich library of UI elements to accelerate the development of your project. You can alternatively build any other web application technology or  framework (Angular, React etc.) with the Nuxeo REST API or any other Nuxeo SDK Client.
+- If you need **to customize the Nuxeo Web UI web application**, then you have to  use Nuxeo Studio  Designer to create your custom document  layouts, pages, menus etc.
 
 ## Technical Overview
 
@@ -160,6 +160,8 @@ All server parts of Nuxeo, including plugins, are written in Java, with a mechan
 
 Nuxeo Server comes bundled with a Tomcat server. It requires for production to set up several other components: Elasticsearch, Redis, a relational (SQL) database or NoSQL store (like MongoDB). Deployment options support HA, failover and can be on-premise, or in the cloud, on bare machines, virtual machines or Docker containers. For more details about the Nuxeo deployment system, please refer to [pages on Standard High Availability Nuxeo Cluster Architecture]({{page page='standard-high-availability-nuxeo-cluster-architecture'}}).
 Nuxeo bundles can even be started on a JVM directly (i.e without an application sever). This is the deployment mode in all unit tests.
+
+<!--
 
 ## About Nuxeo Platform Data
 
@@ -217,6 +219,8 @@ By default, everything is bound to the same SQL database as the repository, but 
 
 ![]({{file name='DirectoryAbstraction.png'}} ?w=650,border=true)
 
+-->
+
 ## Integrating Nuxeo
 
 ### Calling Nuxeo Services
@@ -246,4 +250,6 @@ In addition of the native HTTP API, the Nuxeo Platform also provides solutions t
 
 ## Customizing the Web UI
 
-The Web UI is written on top of the Web Components standard and the paradigms of the Polymer Framework.
+The [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui-tutorials'}}) is written on top of the Web Components standard and the paradigms of the Polymer Framework.
+
+
