@@ -1,5 +1,5 @@
 ---
-title: Develop with Nuxeo Platform
+title: Track 3 - Develop with Nuxeo Platform
 review:
     comment: ''
     date: '2017-12-15'

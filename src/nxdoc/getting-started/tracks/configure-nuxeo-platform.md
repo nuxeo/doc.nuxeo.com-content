@@ -1,5 +1,5 @@
 ---
-title: Configure Nuxeo Platform
+title: Track 2 - Configure Nuxeo Platform
 review:
     comment: ''
     date: '2018-03-16'

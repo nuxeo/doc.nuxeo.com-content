@@ -1,8 +1,8 @@
 ---
 title: Bootstrap Your Case Management Project
 review:
-    comment: Will need to be reviewed again when Web UI 1.0 is mainstream
-    date: '2016-02-01'
+    comment: ''
+    date: '2020-09-01'
     status: ok
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
@@ -102,14 +102,19 @@ history:
 The Nuxeo Platform is a perfect choice for implementing a [case management project](https://www.nuxeo.com/products/case-management/). The platform provides all the necessary elements: strong information typing, rich form management, structure and document templating tools, event bus for plugging custom rules, powerful workflow engine, cases lists mechanisms. Nuxeo Studio allows semi-technical people to inject business requirements in the application while powerful API and great Java framework provide practically no limit in integrating with external applications or adding custom features.
 {{! /excerpt}}
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Bootstrap Your Case Management Project/claim4.png
+    name: claim4.png
+    addins#screenshot#up_to_date
+--}}
+![claim4.png](nx_asset://c369fec6-12b9-45bf-9207-51486cf38a8f ?w=650,border=true)
+
 Let's go through the important steps when implementing a case management project.
 
 ## Defining Your Case Model
 
 1.  From Nuxeo Studio, design your data model and structure, using document type, schemas and content-template features. A case has a specific type, and specific substructure.
-    ![]({{file name='case-default-structure.png'}} ?w=200,border=true,thumbnail=true)
 2.  Also define a default form for your case and the sub documents. At the beginning, just consider filling all the information at once. You will refine later the various forms and views you need depending on the role of the user.
-    ![]({{file name='case-default-form.png'}} ?w=500,border=true)
 3.  If you have some data that should come from remote systems, you should define your integration mode:
     *   Store a foreign key on the case and display the information by doing live queries;
     *   Fetch the data at creation of your case, and provide a way to synchronize it all the way long.
@@ -120,17 +125,33 @@ Let's go through the important steps when implementing a case management project
     ![]({{file name='case-lifecycle.png'}} ?w=600,border=true)
 2.  List the roles of your case management project, make the analysis of who should work when on your case and on which data. Each main phase of your case processing may be the object of a dedicated workflow model design. Or a simple task. You must define how you want to orchestrate all of the phases:
     *   Either by a global workflow that may call sub-workflows
-        ![]({{file name='Sub-Workflow orchestration.png'}} ?w=400,border=true)
+    {{!--     ### nx_asset ###
+path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Bootstrap Your Case Management Project/claim2.png
+name: claim2.png
+addins#screenshot#up_to_date
+--}}
+![claim2.png](nx_asset://6a560c72-de63-47cc-827e-40c4449072c8 ?w=400,border=true)
     *   or, in a more adaptive style, launching small workflows depending on some pre-defined event-based conditions (click on a given button, change of state of the case, change of the value of a metadata). You may also want to integrate Nuxeo with an external rules engine that would provide even more induction capabilities.
 
 ## Refining Your Users Views
 
 Now that you start having a pretty good idea of which user should fill which information, you can refine the user experience:
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Bootstrap Your Case Management Project/claim3.png
+    name: claim3.png
+    addins#screenshot#up_to_date
+--}}
+![claim3.png](nx_asset://dc33a301-7db4-4960-b582-08394fa39945 ?w=650,border=true)
+
 *   By spreading all your business data among different tabs for making them simpler, and by organizing the main case view in a nice way. You can use for this the forms and content views features, as well as the tab designer feature, in Studio.
-    ![]({{file name='tabular-form.png'}} ?w=600,border=true) ![]({{file name='incident-valuation.png'}} ?w=600,border=true)
+{{!--     ### nx_asset ###
+path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Bootstrap Your Case Management Project/claim1.png
+name: claim1.png
+addins#screenshot#up_to_date
+--}}
+![claim1.png](nx_asset://6926c0c8-3005-454d-9729-5bb7d5361c57 ?w=450,border=true)
 *   By providing working queues, that help organize the case worker job. A working queue is a mechanism for displaying cases depending on some of their criteria (nature, lifecycle, customer id, ...)
-    ![]({{file name='cases-queues.png'}} ?w=600,border=true)
 
 ## Adding Automation on Content Processing
 

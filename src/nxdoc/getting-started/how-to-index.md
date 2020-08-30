@@ -21,7 +21,7 @@ confluence:
     shortlink: ywYuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/ywYuAQ'
     source_link: /display/NXDOC/How-To+Index
-tree_item_index: 1000
+tree_item_index: 1100
 history:
     -
         author: Manon Lumeau
