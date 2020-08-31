@@ -4,138 +4,174 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: 'release'
-  date: '2020-04-30'
+  date: '2020-08-31'
   status: ok
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 4.4.4**
+Welcome to the Release Notes for **Nuxeo Drive 4.4.5**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.4.4.md)
+**Status**: <font color="#f04">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.4.5.md)
 
 ## Important Changes
 
 ### Direct Transfer
 
-The Direct Transfer has been re-enabled as a BETA feature, it can be activated through the Features tab (see the following paragraph about the [Feature tab](#new-features-tab)).
+#### Folder Uploads
 
-The Direct Transfer feature [leverages the FileManager](https://jira.nuxeo.com/browse/NXDRIVE-2065) for files upload.
+Folders upload through the Direct Transfer feature has been enabled back. The feature now creates folders via the [FileManager]({{page version='' space='nxdoc' page='file-manager'}}) instead of using the hardcoded `Folder` document type. Uploads of complex assets e.g. documents with deep hierarchies of folders and files are now well supported.
 
-#### Transfer Window
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2019](https://jira.nuxeo.com/browse/NXDRIVE-2019)
 
-Once a transfer is launched, a popup shows the list of all the files with their metrics (progress bar, file name, transferred data).
+#### Duplicates Behavior
 
-Direct Transfers can be paused, resumed and cancelled through this interface. A link to the remote folder is available in front of each file.
+You can choose what to do when a transfer would create a duplicate document on the server. The setting is effective for all files that will be sent at the same time (it is called the session). Each session has its own duplicates behavior.
 
-![]({{file name='direct-transfer-popup.png'}})
+Available options are:
+- **Create**: a duplicate document will be created, this is the same behavior as when adding a new file from Web UI.
+- **Ignore**: the transfer will be cancelled, preventing the duplicate creation.
+- **Override**: the document will be replaced on the server.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2208](https://jira.nuxeo.com/browse/NXDRIVE-2208), [NXDRIVE-1926](https://jira.nuxeo.com/browse/NXDRIVE-1926) and [NXDRIVE-2219](https://jira.nuxeo.com/browse/NXDRIVE-2219).
+![]({{file name='duplicates-behavior-dt.png' page='nuxeo-drive-release-notes'}})
 
-#### Duplicates Management
+{{#> callout type='note'}}
+The **Ignore** option may be problematic on huge trees: for each and every file, an NXQL query will be done on the server to verify the existence of a similar document.
+And that query is not using Elasticsearch, so if you have folderish documents with thousands of children, that query will likely be a bottleneck.
+{{/callout}}
 
-Duplicates management has been temporarily disabled on the client-side. It now only relies on the FileManager to decide what to do. This is the same behavior as when creating a new file on Web-UI: a new document will be created each time, generating possible duplicates.
-
-A better duplicates management is being written and will be shipped within a future version.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2235](https://jira.nuxeo.com/browse/NXDRIVE-2235)
-
-### Disable Temporarily S3 Capability
-
-The Amazon S3 batch handler has been completely turned off until blocker bugs have been fixed (likely in the next release).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2226](https://jira.nuxeo.com/browse/NXDRIVE-2226)
-
-### New Features Tab
-
-A new Features tab has been added to the Settings.
-
-This tab contains a list of switches for all features that may be activated/deactivated in one-click.</br>
-When changing the state of a feature, the new user preferences are saved into the local configuration file, thus permitting their persistence.
-
-![]({{file name='features-tab-drive.png'}})
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2138](https://jira.nuxeo.com/browse/NXDRIVE-2138)
-
-## Improvements
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2234](https://jira.nuxeo.com/browse/NXDRIVE-2234)
 
 ### Direct Edit
 
-#### Always Start a Fresh Download on Direct Edit
+#### Prevent Unintentional Upload of Files
 
-During a Direct Edit, it sometimes happened that the download failed for a number of reasons.
-If the document was large enough to be downloaded by chunks, then an incomplete temporary file was saved.</br>
-Trying another Direct Edit on that same document was resuming the download using the same temporary file and may cause an error and prevent the file from being opened. The user was not aware of this error as no notifications were displayed, and nothing was written in the logs.
+During a Direct Edit, some third party files may be inserted in the edited file temporary folder. These files were listed at startup, and, depending on the case were considered as the original edited file. This may corrupt the remote document (data loss) or allow an attacker to upload any content to the server.
 
-The only way to fix this error was for the user to manually remove the temporary and restart a Direct Edit.
+Some security has been added to ensure that those files are now simply ignored and only the original edited file would be taken into account.
 
-To prevent this issue from happening again, Drive now removes the previously downloaded file and does a fresh download of the document on each Direct Edit.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2144](https://jira.nuxeo.com/browse/NXDRIVE-2144)
 
-A similar issue was fixed at the same time, see [NXDRIVE-2116](https://jira.nuxeo.com/browse/NXDRIVE-2116).
+#### 3 Chances to Upload Direct Edit Updates
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2112](https://jira.nuxeo.com/browse/NXDRIVE-2112)
+As seen with proxies ([NXDRIVE-2131](https://jira.nuxeo.com/browse/NXDRIVE-2131) and [NXDRIVE-2132](https://jira.nuxeo.com/browse/NXDRIVE-2132)), an unhandled error while uploading a file will retry indefinitely. This is quite bad as it explodes server logs, client logs and our Sentry quota.
 
-#### Direct Edit on Proxies
+Such file will now be tried at most 3 times. Then, the document will be removed from the upload queue with an error displayed to the user.
 
-Direct Edit on proxies is now forbidden. Allowing it was too bad for both server and client sides as it was:
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2147](https://jira.nuxeo.com/browse/NXDRIVE-2147)
 
-- filling up server logs with errors (see [NXDRIVE-2131](https://jira.nuxeo.com/browse/NXDRIVE-2131));
-- filling up client logs (see [NXDRIVE-2131](https://jira.nuxeo.com/browse/NXDRIVE-2131));
-- generating a huge amount of Sentry events, exploding our quota.
+#### Direct Edit and Unusual Digests
 
-Finally, such a move was the next logical step after NXP-28497 where the Direct Edit button has been hidden for those documents.
+It is now possible to Direct Edit a document when the attached file has no digest or when the digest is not standard. This happens with third-party providers such as Amazon S3 or LiveProxy documents (Google Docs, ...).
 
-This is a 2-part fix alongside [NXDRIVE-2131](https://jira.nuxeo.com/browse/NXDRIVE-2131).
+{{#> callout type='warning'}}
+Note that such documents will loose the ability to check their integrity and thus the conflicts detection will be ineffective.
+{{/callout}}
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2132](https://jira.nuxeo.com/browse/NXDRIVE-2132)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2236](https://jira.nuxeo.com/browse/NXDRIVE-2236)
 
-#### Orphaned Documents Should First Be Remotely Unlocked Before Being Cleaned Up
+### S3 Direct Upload
 
-When the application was shut down while a Direct Edit session was ongoing, the edited document stayed locked on the server and the downloaded file was not removed.
+The Amazon S3 batch handler has been enabled back. It is still considered a beta feature and can be activated from the Features tab.
 
-When starting again, the application will now first retrieve the file's metadata to unlock the document on the server and then will locally clean up the orphaned file.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2210](https://jira.nuxeo.com/browse/NXDRIVE-2210)
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2129](https://jira.nuxeo.com/browse/NXDRIVE-2129)
+When uploading files using the Amazon S3 provider, Nuxeo Drive will automatically use the accelerate endpoint when available. Resulting in faster uploads.
 
-#### Handle Corrupted Downloads in Direct Edit
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2279](https://jira.nuxeo.com/browse/NXDRIVE-2279)
 
-During a Direct Edit, it may happen that the downloaded file ends up corrupted.
-The download was aborted without informing the user of what happened and the Direct Edit cancelled.
+## Improvements
 
-The download is now retried multiple times when Drive detects such a case. On each and every try, the user will be informed of the error via a notification. If the download still fails after 3 tries, the user will be notified that Direct Edit is impossible on the targeted document.
+### Systray Menu
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1786](https://jira.nuxeo.com/browse/NXDRIVE-1786)
+We have improved the systray menu with new icons and removed the server URL below the username.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2119](https://jira.nuxeo.com/browse/NXDRIVE-2219) and [NXDRIVE-2225](https://jira.nuxeo.com/browse/NXDRIVE-2225).
+
+### OS Integration
+
+The list of synchronized documents visible in the system tray menu is now displaying the good date format according to what is configured on the OS.
+
+Before the fix, a multi-locales OS and Nuxeo Drive configured to use the French language was displaying dates in the English format.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2230](https://jira.nuxeo.com/browse/NXDRIVE-2230)
+
+### Tracker
+
+In order to better control our release and OS support flows, primary metrics are now always sent to Google Analytics: application and OS versions.
+
+Those are simple transparent and anonymous details. This is harmless for the user and we kept everything GDPR-compliant.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2254](https://jira.nuxeo.com/browse/NXDRIVE-2254)
 
 ### Translations
 
-#### New language: Basque
+Polish is now part of the available languages: the application and its installers are now translated to Polish.
 
-Basque is now part of the available languages: the application and its installers are now translated to Basque.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2187](https://jira.nuxeo.com/browse/NXDRIVE-2187)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2269](https://jira.nuxeo.com/browse/NXDRIVE-2269)
 
 ## Fixes
 
-### Account Removal on macOS
+### Framework
 
-The account removal was no more working on macOS. This is due to an API change of the Finder favorites management in latest Apple versions.
+We adapted a bunch of code to be really thread-safe, especially when iterating over a `dict`. It also improve atomicity speed and the code is more memory efficient.
 
-This is now fixed. Future regressions of that kind will be handled to still allow one to remove an account even if there was an error somewhere in the Apple-specific API call.
+For instance, that code is not completely thread-safe:
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2206](https://jira.nuxeo.com/browse/NXDRIVE-2206)
+```
+for item in list(self.my_queue.values()):
+    # ...
+```
 
-### Adding a New Account on Windows
+And such code is not immune to "dictionary changed size during iteration" errors.
 
-In the previous version (4.4.2 that includes the work done on [NXDRIVE-2042](https://jira.nuxeo.com/browse/NXDRIVE-2042)), we introduced a nice bar to show the amount of disk space available. The same information is displayed when adding a new account, below the local folder selection.
+Here is the new code:
+```
+for item in self.my_queue.copy().values():
+    # ...
+```
 
-On Windows, it happens that it introduced a new bug when the selected folder was inexistent. Then the mechanism to query the available disk space was failing and thus it could prevent one from adding a new account.
-We enforced that mechanism robustness and it's fixed now.
+It applies to all operations on dict objects: `dict.items()`, `dict.keys()` and `dict.values()`.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2162](https://jira.nuxeo.com/browse/NXDRIVE-2162)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2083](https://jira.nuxeo.com/browse/NXDRIVE-2083)
 
+The application has a notion of "staled transfers". A staled transfer has the ONGOING status, meaning it is currently being processed.
 
+Normally, this status cannot be if the application was correctly shut down. In that case, such transfers will be purged at startup. This likely means there was an error somewhere and the transfer will unlikely being able to resume. This was done initially to remove infinite transfers on proxy documents.
+
+On the other end, if the application hard-crashed at the previous run, such transfers should be adapted to being able to resume. Removing them would likely make some users angry.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2186](https://jira.nuxeo.com/browse/NXDRIVE-2186)
+
+### Account Tab
+
+To better understand the fix, let's explain the bug.
+
+Let's add an account using a placeholder username (as it is generally done when the application is widely deployed with automation):
+```
+python -m nxdrive bind-server --password "azerty" --local-folder "$HOME/Nuxeo Drive" "foo" "http://localhost:8080/nuxeo"
+```
+
+The user "foo" will be used. When the user will start the application for the first time, it will be asked to update credentials.
+
+The user will click on the link to update credentials, fill the good username, password and validate.
+
+Then, the username will not be updated in the GUI. Even if the user entered something else different than "foo" as username, it will still be displayed as "foo". This is now fixed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2272](https://jira.nuxeo.com/browse/NXDRIVE-2272)
+
+When adding a new account, the app was trying to understand the given URL by deconstructing and reconstructing it using different patterns.
+
+This behavior leaded to several issues, the most critical was Kaspersky detecting and completely deleting the application because of its HTTP scanner heuristic.
+
+From now, a simple syntax check will be done on the URL and if it is wrong then the user will have to fix it. The user will know when the URL is good: the text field will have blue borders. If the given URL does not meet the expected syntax, the field is red.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2193](https://jira.nuxeo.com/browse/NXDRIVE-2193)
+
+<!--To publish when the 4.4.5 is released
 ## Download Links
 
-- [GNU/Linux](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.4-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.4.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.4.exe)
+- [GNU/Linux](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.5-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.5.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.5.exe)
+-->
