@@ -21,7 +21,7 @@ confluence:
     shortlink: yoMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/yoMlAQ'
     source_link: /display/NXDOC/Workflow+Use+Cases
-tree_item_index: 600
+tree_item_index: 30
 history:
     -
         author: Manon Lumeau
