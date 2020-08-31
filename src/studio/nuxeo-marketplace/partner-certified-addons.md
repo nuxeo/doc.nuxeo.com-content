@@ -75,7 +75,7 @@ Two levels of certified addons are available:
     <td><center>X</center></td>
   </tr>
   <tr>
-    <td>3 years support on a given LTS (5)</td>
+    <td>3 years support on a given LTS</td>
     <td></td>
     <td><center>X</center></td>
   </tr>
