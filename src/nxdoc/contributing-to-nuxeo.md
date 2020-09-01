@@ -351,7 +351,7 @@ As an external contributor, not member of the [Nuxeo](https://github.com/nuxeo/)
         git pull
         ```
 
-1. Create a new branch, respecting the [Nuxeo branch naming policy]({{page space='corg' page='git-usage/#main-rules-and-good-practices'}}) `<TYPE>-<JIRA_ISSUE>-<SHORT_DESCRIPTION>`.
+1. Create a new branch, respecting the [Nuxeo branch naming policy]({{page space='corg' page='git-usage'}}#main-rules-and-good-practices) `<TYPE>-<JIRA_ISSUE>-<SHORT_DESCRIPTION>`.
 
     - As a TYPE, choose between `fix`, `feature`, `improvement` or `task`.
     - JIRA_ISSUE is the reference of the related [Jira](https://jira.nuxeo.com/) issue.
@@ -371,7 +371,7 @@ As an external contributor, not member of the [Nuxeo](https://github.com/nuxeo/)
     git add -A
     ```
 
-1. Add a commit message, respecting the [Nuxeo commit conventions]({{page space='corg' page='git-usage/#main-rules-and-good-practices'}}) `<JIRA_ISSUE>: <MESSAGE>`.
+2. Add a commit message, respecting the [Nuxeo commit conventions]({{page space='corg' page='git-usage'}}#main-rules-and-good-practices) `<JIRA_ISSUE>: <MESSAGE>`.
 
     - JIRA_ISSUE is the reference of the related [Jira](https://jira.nuxeo.com/) issue. Most of the time, it is the same than the one in the branch name. Yet, it is OK to have additional commits referencing other JIRA issues within the same branch/PR.
     - MESSAGE should state *what* the change in this commit does.
