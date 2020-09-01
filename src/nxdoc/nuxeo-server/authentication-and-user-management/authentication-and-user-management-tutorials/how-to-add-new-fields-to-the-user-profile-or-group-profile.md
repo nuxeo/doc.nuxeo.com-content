@@ -2,7 +2,7 @@
 title: 'HOWTO: Add New Fields to the User Profile or Group Profile'
 review:
     comment: ''
-    date: '2018-10-10'
+    date: '2020-09-01'
     status: ok
 details:
     howto:
@@ -11,11 +11,11 @@ details:
         tool: XML configuration
         topics: 'LDAP, Multidirectory, authentication'
 tree_item_index: 400
+toc: true
 labels:
     - lts2017-ok
     - authentication
     - dmetzler
-
 ---
 
 Users and groups are defined using schemas and, as an *Extensible Platform*, Nuxeo gives you the ability to modify or add schemas.
@@ -68,8 +68,8 @@ Create a `manager_user_field.xsd` file with the following content from the defau
 
 ### Deploy the New Field in Studio Modeler
 
-1. Open you Nuxeo Studio Project and Navigate to **Studio Modeler** > **CONFIGURATION** > **Resources** > **Schemas**
-1. Upload the `my_custom_user.xsd` file
+1. Open your Nuxeo Studio Project and Navigate to **Studio Modeler** > **CONFIGURATION** > **Resources** > **Schemas**.
+1. Upload the `my_custom_user.xsd` file.
 1. Go to **CONFIGURATION** > **Content Model** > **Schemas** and click on **New**. </br>
     Fill in the popup window like this:
     {{!--     ### nx_asset ###
@@ -129,7 +129,9 @@ It includes:
                       model="[[_layoutModel(user, new)]]"
                       on-element-changed="_layoutElementChanged"></nuxeo-layout>
 ```
+
 by:
+
 ```html
 <nuxeo-layout id="layout" href="nuxeo-edit-user.html"
                       model="[[_layoutModel(user, new)]]"
@@ -139,7 +141,7 @@ by:
 #### User Management Layout
 
 1. Create a new element `nuxeo-user-group-management`.
-1. Replace the existing content by the element [`nuxeo-user-group-management.html`](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-user-group-management.html).
+1. Replace the existing content by the element</br> [`nuxeo-user-group-management.html`](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-user-group-management.html).
 1. Add the following line:
   ```
   <link rel="import" href="nuxeo-create-user.html">
@@ -152,7 +154,7 @@ by:
 #### User Management Page Layout
 
 1. Create a new element `nuxeo-user-group-management-page`.
-1. Replace the existing content by the element [`nuxeo-user-group-management-page.html`](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/elements/nuxeo-admin/nuxeo-user-group-management-page.html).
+1. Replace the existing content by the element</br> [`nuxeo-user-group-management-page.html`](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/elements/nuxeo-admin/nuxeo-user-group-management-page.html).
 1. Add the following line:
   ```
   <link rel="import" href="nuxeo-user-group-management.html">
