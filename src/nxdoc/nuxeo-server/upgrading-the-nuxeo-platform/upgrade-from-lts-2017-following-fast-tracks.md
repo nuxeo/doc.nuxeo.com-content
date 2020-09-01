@@ -571,11 +571,11 @@ If you want to migrate comments to the new storage model, follow the [Comment mi
 {{! multiexcerpt name='upgrade-10.3-comments-migration'}}
 To migrate comments to the new storage model:
 
-1. In the Nuxeo Platform's JSF UI, go to **Admin**&nbsp;> **System Information**&nbsp;> **Migration**, 
+1. In the Nuxeo Platform's JSF UI, go to **Admin**&nbsp;> **System Information**&nbsp;> **Migration**,
 2. Click the **Detect** button and wait until Nuxeo isolated which comments to migrate,
-3. Click the button **Migrate comments from relations to the parent id property usage** and wait until migration is completed.
-4. Click the **Detect** button to make sure no comments are leftover,
-   {{! /multiexcerpt}}
+3. Click the button **Migrate comments from relations to the parent id property usage** and wait until migration is completed,
+4. Click the **Detect** button to make sure no comments are leftover.
+{{! /multiexcerpt}}
 
 #### Log4j 2
 
