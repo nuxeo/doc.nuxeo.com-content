@@ -20,13 +20,13 @@ Welcome to the Release Notes for **Nuxeo Drive 4.4.5**
 
 #### Folder Uploads
 
-Folders upload through the Direct Transfer feature has been enabled back. The feature now creates folders via the [FileManager]({{page version='' space='nxdoc' page='file-manager'}}) instead of using the hardcoded `Folder` document type. Uploads of complex assets e.g. documents with deep hierarchies of folders and files are now well supported.
+Folders upload through the Direct Transfer feature has been enabled. The feature now creates folders via the [FileManager]({{page version='' space='nxdoc' page='file-manager'}}). Uploads of complex assets e.g. documents with deep hierarchies of folders and files are now well supported up to multiple thousands of documents.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2019](https://jira.nuxeo.com/browse/NXDRIVE-2019)
 
 #### Duplicates Behavior
 
-You can choose what to do when a transfer would create a duplicate document on the server. The setting is effective for all files that will be sent at the same time (it is called the session). Each session has its own duplicates behavior.
+You can now choose what to do when a transfer would create a duplicate document on the server. The setting is effective for all files that will be sent at the same time (it is called the session). Each session has its own duplicates behavior.
 
 Available options are:
 - **Create**: a duplicate document will be created, this is the same behavior as when adding a new file from Web UI.
@@ -62,7 +62,7 @@ Such file will now be tried at most 3 times. Then, the document will be removed 
 
 #### Direct Edit and Unusual Digests
 
-It is now possible to Direct Edit a document when the attached file has no digest or when the digest is not standard. This happens with third-party providers such as Amazon S3 or LiveProxy documents (Google Docs, ...).
+It is now possible to Direct Edit a document when the attached file has no digest or when the digest is not standard. 
 
 {{#> callout type='warning'}}
 Note that such documents will loose the ability to check their integrity and thus the conflicts detection will be ineffective.
@@ -137,7 +137,7 @@ It applies to all operations on dict objects: `dict.items()`, `dict.keys()` and 
 
 The application has a notion of "staled transfers". A staled transfer has the ONGOING status, meaning it is currently being processed.
 
-Normally, this status cannot be if the application was correctly shut down. In that case, such transfers will be purged at startup. This likely means there was an error somewhere and the transfer will unlikely being able to resume. This was done initially to remove infinite transfers on proxy documents.
+Normally, this status cannot be if the application was correctly shut down. In that case, such transfers will be purged at startup. This likely means there was an error somewhere and the transfer will unlikely be able to resume. This was done initially to remove infinite transfers on proxy documents.
 
 On the other end, if the application hard-crashed at the previous run, such transfers should be adapted to being able to resume. Removing them would likely make some users angry.
 
