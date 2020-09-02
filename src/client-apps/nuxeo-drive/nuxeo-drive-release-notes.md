@@ -52,7 +52,7 @@ Some security has been added to ensure that those files are now simply ignored a
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2144](https://jira.nuxeo.com/browse/NXDRIVE-2144)
 
-#### 3 Chances to Upload Direct Edit Updates
+#### 3 Attempts to Upload Direct Edit Updates
 
 As seen with proxies ([NXDRIVE-2131](https://jira.nuxeo.com/browse/NXDRIVE-2131) and [NXDRIVE-2132](https://jira.nuxeo.com/browse/NXDRIVE-2132)), an unhandled error while uploading a file will retry indefinitely. This is quite bad as it explodes server logs, client logs and our Sentry quota.
 
@@ -62,7 +62,7 @@ Such file will now be tried at most 3 times. Then, the document will be removed 
 
 #### Direct Edit and Unusual Digests
 
-It is now possible to Direct Edit a document when the attached file has no digest or when the digest is not standard. 
+It is now possible to Direct Edit a document when the attached file has no digest or when the digest is not standard.
 
 {{#> callout type='warning'}}
 Note that such documents will loose the ability to check their integrity and thus the conflicts detection will be ineffective.
