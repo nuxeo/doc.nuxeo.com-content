@@ -92,6 +92,33 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 31
+
+### Direct Upload with SSE-KMS Enabled on S3 Buckets
+
+The hotfix 31 introduces a new configuration property to setup SSE/KMS on the transient bucket for direct upload:
+```
+nuxeo.s3storage.transient.crypt.kms.key=<sse-kms-key-id>
+```
+
+### S3 Direct Upload of 5+ GB files
+The upload of very large files (> 5GB) requires to use an arbitrary key, instead of the digest computed by S3, as S3 is not computed any digest for these large files.
+In order to be able to use arbitrary file keys generated either by the provider or by a trusted upload client, the new S3BlobProvider must be used and the key strategy should be set to "managed" (default key strategy is "digest"). Use these properties in your nuxeo.conf:
+```
+nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider
+nuxeo.core.blobstore.keyStrategy=managed
+```
+
+### Import of MHTML Files
+The import of MHTML files requires to disable the Multipart handling. So a new parameter `nuxeo.batch.upload.multipart.disabled` has been added to the ConfigurationService to allow disabling multipart upload since streaming is now the way to go. You can use this contribution to set this new behavior:
+```
+<require>"org.nuxeo.ecm.platform.restapi.server.properties.batch.upload"</require>
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.batch.upload.multipart.disabled">true</property>
+</extension>
+```
+
+
 ## Hotfix 25
 
 ### Optimized MongoDB IDs
