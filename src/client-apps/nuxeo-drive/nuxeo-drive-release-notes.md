@@ -35,11 +35,6 @@ Available options are:
 
 ![]({{file name='duplicates-behavior-dt.png' page='nuxeo-drive-release-notes'}})
 
-{{#> callout type='note'}}
-The **Ignore** option may be problematic on huge trees: for each and every file, an NXQL query will be done on the server to verify the existence of a similar document.
-And that query is not using Elasticsearch, so if you have folderish documents with thousands of children, that query will likely be a bottleneck.
-{{/callout}}
-
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2234](https://jira.nuxeo.com/browse/NXDRIVE-2234)
 
 ### Direct Edit
