@@ -163,6 +163,12 @@ From now, a simple syntax check will be done on the URL and if it is wrong then 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2193](https://jira.nuxeo.com/browse/NXDRIVE-2193)
 
+### Upload
+
+A bug was appearing when using the S3 upload provider and when the configured bucket prefix was empty, such upload would never complete. It's now fixed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXPY-180](https://jira.nuxeo.com/browse/NXPY-180)
+
 <!--To publish when the 4.4.5 is released
 ## Download Links
 
