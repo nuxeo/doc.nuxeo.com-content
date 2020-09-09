@@ -23,23 +23,19 @@ Nuxeo Drive upload capability provides a productive and network resilient way of
 ## Create a Transfer
 
 1. Open Nuxeo Drive from your desktop and click on **Direct Transfer**.</br>
-    The files selection box opens.
-1. Select the document(s) you want to transfer and click on **Open**.</br>
     The Direct Transfer popup opens.
     ![]({{file name='direct-transfer-creation.png'}})
-1. Select the remote folder where you want the document(s) to be uploaded.</br>
+1. From this popup you can decide to **Add files** or **Add a folder**.</br>
+    The files selection popup opens.    
+1. Select the document(s) you want to transfer and click on **Open**.</br>
+1. Select the remote folder where you want the document(s) or folders to be uploaded.</br>
     The selected path will update depending on the remote folder selected.
-1. **Optional**: from this popup you can also add more files by clicking on **Add files** at the top right of the popup.
 1. Click on **OK** to launch the transfer.
-
-{{#> callout type='info' heading='Duplicate Management'}}
-On Nuxeo Drive 4.4.4, if a document is already present on the remote folder, a duplicate document will be created, this is the same behavior as when adding a new file from Web UI.
-{{/callout}}
 
 ### Options{{> anchor 'duplicates-behavior'}}
 
 {{#> callout type='info' heading='Duplicate Management'}}
-The Options section is only available on the **Alpha** channel update version.
+The Options section is only available on the **Beta** channel update version.
 {{/callout}}
 
 On this section you need to choose what to do when a transfer would create a duplicate document on the server.
@@ -50,16 +46,11 @@ Available options are:
 - **Ignore**: the transfer will be cancelled, preventing the duplicate creation.
 - **Override**: the document will be replaced on the server.
 
-{{#> callout type='warning' }}
-The **Ignore** option may be problematic on huge trees: for each and every file, an NXQL query will be done on the server to verify the existence of a similar document.<br>
-And that query is not using Elasticsearch, so if you have folderish documents with thousands of children, that query will likely be a bottleneck.<br>
-{{/callout}}
-
 ## Launch a Transfer
 
 Once a transfer is launched, a new popup appears.
 
-![]({{file name='direct-transfer-running.png'}})
+![]({{file name='direct-transfer-running.png'}} ?w=450)
 
 From there you have full control on your transfer, you can:
 - pause/resume or cancel any upload.
