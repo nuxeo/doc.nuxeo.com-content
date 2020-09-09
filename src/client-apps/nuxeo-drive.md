@@ -12,6 +12,12 @@ labels:
 toc: true
 tree_item_index: 100
 ---
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/TEST DOC ADDON/direct-transfer-creation.png
+    name: direct-transfer-creation.png
+    addins#popup#up_to_date
+--}}
+![direct-transfer-creation.png](nx_asset://80e2b085-a4f2-4a75-85fd-163214dd8a2c)
 
 <!--
 ## Requirements
