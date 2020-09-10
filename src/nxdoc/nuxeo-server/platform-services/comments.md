@@ -209,7 +209,8 @@ Annotations:
 | ---------------------------------------------- | ----------- | ----------------------------------------------------------- | ----------------------- | --------------------------------- |
 | Create an annotation on document               | POST        | `/@annotation`                                              | Annotation              | Created annotation                |
 | Fetch annotations of document                  | GET         | `/@annotation?xpath=file:content`                           | /                       | Annotation of specified blob      |
-| Fetch replies of annotations                   | GET         | `/@annotation/comments?annotationIds=...&annotationIds=...` | /                       | List of replies                   |
+| Fetch replies of annotations                   | GET         | `/@annotation/comments?annotationIds=...&annotationIds=...` | /                       | List of replies (deprecated since 11.3) |
+| Fetch replies of annotations                   | POST        | `/@annotation/comments`                                     | Array of annotation ids           | List of replies |
 | Fetch an annotation                            | GET         | `/@annotation/{annotationId}`                               | /                       | Annotation with annotationId      |
 | Fetch an annotation by its external entity id   | GET         | `/@annotation/external/{entityId}`                          | /                       | External annotation with entityId |
 | Update an annotation                           | PUT         | `/@annotation/{annotationId}`                               | Annotation with updates | Updated annotation                |
