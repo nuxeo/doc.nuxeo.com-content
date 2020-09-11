@@ -194,6 +194,6 @@ A bug was appearing when using the S3 upload provider and when the configured bu
 
 ## Download Links
 
-- [GNU/Linux](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.5-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.5.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.5.exe)
+- [GNU/Linux](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.4.5-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.4.5.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.4.5.exe)
