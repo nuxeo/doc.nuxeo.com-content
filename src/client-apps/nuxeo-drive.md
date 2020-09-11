@@ -422,7 +422,7 @@ Nuxeo Drive makes an extensive use of audit logs to get a summary of the server-
 
 Since Nuxeo Platform 7.3 we chose to use Elasticsearch as a default back end for audit logs. This improves scalability especially when using Nuxeo Drive with a large set of users.
 
-That's why we **strongly recommend to keep** this default configuration, but you can still [disable Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-elasticsearch-for-audit-logs).
+That's why we **strongly recommend to keep** this default configuration, but you can still [disable Elasticsearch for Audit Logs]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#disabling-elasticsearch-for-audit-logs).
 
 {{! /multiexcerpt}}
 

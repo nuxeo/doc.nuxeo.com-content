@@ -24,6 +24,12 @@ Folders upload through the Direct Transfer feature has been enabled. The feature
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2019](https://jira.nuxeo.com/browse/NXDRIVE-2019)
 
+#### Improved Folders Selection
+
+The Direct Transfer remote folder selection has been improved to better handle what kind of folderish documents can be used to transfer files into. It now respects the `HiddenInCreation` facet, as it is done in Web UI. We unified the experience.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2304](https://jira.nuxeo.com/browse/NXDRIVE-2304)
+
 #### Duplicates Behavior
 
 You can now choose what to do when a transfer would create a duplicate document on the server. The setting is effective for all files that will be sent at the same time (it is called the session). Each session has its own duplicates behavior.
@@ -65,6 +71,16 @@ Note that such documents will loose the ability to check their integrity and thu
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2236](https://jira.nuxeo.com/browse/NXDRIVE-2236)
 
+#### Force Refetch Server Config
+
+The fixed issue here is that Direct Edit starts only when the server configuration has been retrieved first. So when the app started and there were connection issues (bad network, no VPN, ...) then there was no Direct Edit thread started.
+
+Later, still while the app was running, even if the network issues were fixed, it was not possible to use Direct Edit without restarting the app.
+
+Now the server configuration is fetched "on-demand" before doing any Direct Edit.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2194](https://jira.nuxeo.com/browse/NXDRIVE-2194)
+
 ### S3 Direct Upload
 
 The Amazon S3 batch handler has been enabled back. It is still considered a beta feature and can be activated from the Features tab.
@@ -74,6 +90,13 @@ The Amazon S3 batch handler has been enabled back. It is still considered a beta
 When uploading files using the Amazon S3 provider, Nuxeo Drive will automatically use the accelerate endpoint when available. Resulting in faster uploads.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2279](https://jira.nuxeo.com/browse/NXDRIVE-2279)
+
+### File Integrity Checks
+
+There is a new option to disable the files integrity checks. </br>
+Set it to `True` to disable downloaded files integrity check. It is a needed option when the [managed blob store key strategy]({{page page='hotfixes-installation-notes-for-nuxeo-platform-lts-2019'}}#s3-direct-upload-of-5-gb-files) is set up on the server, because there is no logic digest filled, the application would not be able to validate such files.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2307](https://jira.nuxeo.com/browse/NXDRIVE-2307)
 
 ## Improvements
 
