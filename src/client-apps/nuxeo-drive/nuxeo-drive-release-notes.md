@@ -94,7 +94,7 @@ When uploading files using the Amazon S3 provider, Nuxeo Drive will automaticall
 ### File Integrity Checks
 
 There is a new option to disable the files integrity checks. </br>
-Set it to `True` to disable downloaded files integrity check. It is a needed option when the [managed blob store key strategy]({{page page='hotfixes-installation-notes-for-nuxeo-platform-lts-2019'}}#s3-direct-upload-of-5-gb-files) is set up on the server, because there is no logic digest filled, the application would not be able to validate such files.
+`disabled_file_integrity_check` set to `True` disables downloaded files integrity check. It is a needed option when the [managed blob store key strategy]({{page page='hotfixes-installation-notes-for-nuxeo-platform-lts-2019'}}#s3-direct-upload-of-5-gb-files) is set up on the server, because there is no logic digest filled, the application would not be able to validate such files.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2307](https://jira.nuxeo.com/browse/NXDRIVE-2307)
 
