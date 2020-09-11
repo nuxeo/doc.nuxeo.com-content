@@ -192,10 +192,8 @@ A bug was appearing when using the S3 upload provider and when the configured bu
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXPY-180](https://jira.nuxeo.com/browse/NXPY-180)
 
-<!--To publish when the 4.4.5 is released
 ## Download Links
 
 - [GNU/Linux](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.5-x86_64.AppImage)
 - [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.5.dmg)
 - [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.4.5.exe)
--->
