@@ -13,26 +13,24 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
-### Self-service User Management
+### Translation Keys used by Default in Studio Designer
 
-The connect dashboard will integrate an interface for you to manage your users without having to send requests to our support team anymore.
+Whenever you generate a layout, Studio Designer will use translation keys automatically generated as explained in our [managing translations]({{page space='nxdoc' page='web-ui-managing-translations'}}) page.
 
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.33.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'4.0.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2020-06-changes' page='studio-updates-2020-06'}}}
-{{{multiexcerpt 'studio-updates-2020-05-changes' page='studio-updates-2020-05'}}}
+{{{multiexcerpt 'studio-updates-2020-07-08-09-changes' page='studio-updates-2020-07-08-09'}}}
 
 ### Other Noteworthy Mentions
 
-{{{multiexcerpt 'studio-updates-2020-06-bugfix' page='studio-updates-2020-06'}}}
-{{{multiexcerpt 'studio-updates-2020-05-bugfix' page='studio-updates-2020-05'}}}
+{{{multiexcerpt 'studio-updates-2020-07-08-09-bugfix' page='studio-updates-2020-07-08-09'}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.32.0'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.34.0','3.34.1','3.34.2'%29) is available in our bug tracking tool.
 
 ---
 
@@ -40,6 +38,7 @@ The connect dashboard will integrate an interface for you to manage your users w
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [July to September 2020]({{page page='studio-updates-2020-07-08-09'}})     | Automatically generated translation keys, interface for account management |
 | [June 2020]({{page page='studio-updates-2020-06'}})     | Improved layout blocks experience |
 | [May 2020]({{page page='studio-updates-2020-05'}})     | Widgets Drag and Drop Instead of Mode |
 | [April 2020]({{page page='studio-updates-2020-04'}})     | Improved Visual Layout Configuration Experience |
