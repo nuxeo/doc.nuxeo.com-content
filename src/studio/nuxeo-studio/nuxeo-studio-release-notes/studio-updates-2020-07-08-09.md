@@ -16,7 +16,7 @@ toc: true
 ### Self-service User Management UI
 
 Administrators of an organization can manage their users along with their apps assignments directly from the dashboard.
-Refer to our [self-service user management]({{page page='organization-users-management'}}) documentation for further information.
+Refer to our [self-service user management]({{page page='account-management'}}) documentation for further information.
 
 ### Automatic Translation Keys Generation
 
