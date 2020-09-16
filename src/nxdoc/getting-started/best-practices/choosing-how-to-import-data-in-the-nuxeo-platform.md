@@ -2,7 +2,7 @@
 title: Choosing How to Import Data in the Nuxeo Platform
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2020-09-15'
     status: ok
 labels:
     - lts2016-ok
@@ -129,15 +129,15 @@ The Nuxeo Platform provides tools and APIs to import content:
 * Handling security, lifecycle and other system properties if necessary.
 
 Those tools natively handle several formats to specify document properties:
- * XML (one XML file per document or one for all documents)
- * CSV (one line per document)
- * Properties file (one property file per file to import for instance, or per folder)
+* XML (one XML file per document or one for all documents)
+* CSV (one line per document)
+* Properties file (one property file per file to import for instance, or per folder)
 
 ## Import Strategies
 
 Importing content in the Nuxeo Platform means:
- * Creating a document that will store the metadata and reference the binaries
- * Importing the binaries (when there are some; some projects do not handle files, just business objects)
+* Creating a document that will store the metadata and reference the binaries
+* Importing the binaries (when there are some; some projects do not handle files, just business objects)
 
 ### Creating Documents
 
@@ -148,7 +148,7 @@ There can be several strategies to create documents:
 * **Cons**: The less performant, although proven rates of thousands of documents per seconds can be reached
 
 **Use the Java API server-side**
-* **Pros**: Transactional, multi-theaded and highly performant. It provides the ability to disable events processing and to bundle event processing
+* **Pros**: Transactional, multi-threaded and highly performant. It provides the ability to disable events processing and to bundle event processing
 * **Cons**: A bit more complex to understand logics, requires to deploy a server-side plugin for any customization.  
 
 **Fill in the database directly** (SQL Scripts, MongoDB collections, ...)

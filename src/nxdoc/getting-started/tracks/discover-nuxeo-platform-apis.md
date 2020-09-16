@@ -1,8 +1,8 @@
 ---
-title: Track 1 - Discover Nuxeo Platform APIs
+title: 1 - Discover Nuxeo Platform APIs
 review:
     comment: ''
-    date: '2018-02-28'
+    date: '2020-09-15'
     status: ok
 labels:
     - lts2016-ok
@@ -73,12 +73,10 @@ history:
         date: '2016-02-17 13:58'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 This tutorial will guide you on a tour of the Nuxeo Platform and its features through its APIs.
-
 {{! /excerpt}}
 
 The tutorial is composed of the following steps:

@@ -1,8 +1,8 @@
 ---
 title: Handling Permissions
 review:
-
-    date: '2018-10-31'
+    comment: ''
+    date: '2020-09-15'
     status: ok
 toc: true
 labels:
@@ -128,12 +128,10 @@ history:
         version: '1'
 previous_link: nxdoc/manipulating-documents
 next_link: nxdoc/managing-files
-
 ---
+
 {{! excerpt}}
-
 Learn how to set up permissions on a structure and see the results of a security policy.
-
 {{! /excerpt}}
 
 ## Assigning Permissions

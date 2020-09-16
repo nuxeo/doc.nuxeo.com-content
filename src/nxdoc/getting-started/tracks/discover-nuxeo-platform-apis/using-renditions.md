@@ -2,7 +2,7 @@
 title: Using Renditions
 review:
     comment: ''
-    date: '2018-02-28'
+    date: '2020-09-15'
     status: ok
 toc: true
 labels:
