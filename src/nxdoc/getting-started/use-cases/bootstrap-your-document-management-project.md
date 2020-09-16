@@ -2,7 +2,7 @@
 title: Bootstrap Your Document Management Project
 review:
     comment: ''
-    date: '2016-02-01'
+    date: '2020-08-31'
     status: ok
 labels:
     - lts2016-ok

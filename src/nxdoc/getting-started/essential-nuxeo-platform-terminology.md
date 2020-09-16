@@ -2,7 +2,7 @@
 title: Essential Nuxeo Platform Terminology
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2020-09-15'
     status: ok
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
@@ -81,12 +81,10 @@ history:
         date: '2014-07-15 00:44'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 These are the most common and useful terms you will come across using the Nuxeo Platform. A fuller more extensive list can be found in the Nuxeo [glossary]({{page space='glos' page='index'}}).
-
 {{! /excerpt}}
 
 ## Content Model

@@ -2,7 +2,7 @@
 title: Using Automation
 review:
     comment: ''
-    date: '2018-02-28'
+    date: '2020-09-15'
     status: ok
 labels:
     - lts2016-ok

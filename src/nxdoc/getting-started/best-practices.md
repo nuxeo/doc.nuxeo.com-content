@@ -2,7 +2,7 @@
 title: Best Practices
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2020-09-15'
     status: ok
 labels:
     - content-review-lts2016
@@ -22,7 +22,7 @@ confluence:
     shortlink: XYMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/XYMlAQ'
     source_link: /display/NXDOC/Quick+Start+Series
-tree_item_index: 500
+tree_item_index: 300
 history:
     -
         author: Solen Guitter
@@ -54,7 +54,6 @@ history:
         date: '2014-05-04 00:33'
         message: ''
         version: '1'
-
 ---
 
 ### Best practices - Index

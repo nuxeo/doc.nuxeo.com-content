@@ -125,23 +125,18 @@ history:
         date: '2011-04-19 18:31'
         message: ''
         version: '1'
-
 ---
 
 This section provides step-by-step instructions to help you understand how to implement Nuxeo Platform features, through a practical use case. You will use:
-- The Nuxeo REST API
-- The Nuxeo Javascript Client
+- Nuxeo REST API
+- Nuxeo Javascript Client
 - Nuxeo Studio
-- nuxeocli 
-
-{{#> callout type='info' heading='Learning plan ordering'}}
-The three main subsections are articulated in a specific order: make sure to respect it as some exercises will need predefined configuration or code contribution.
-{{/callout}}
+- nuxeocli
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### Track #1 - Discover Nuxeo Platform APIs
+### 1 - Discover
 <br/>
 This tutorial is composed of different steps to guides you on a tour of the Nuxeo Platform and its features through its **APIs**. <br/>
 
@@ -151,7 +146,7 @@ This tutorial is composed of different steps to guides you on a tour of the Nuxe
 </div>
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true' }}
-### Track #2 - Configure Nuxeo Platform
+### 2 - Configure
 <br/>
 This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.<br/>
 
@@ -161,7 +156,7 @@ This tutorial introduces you to a few important aspects of **Nuxeo Studio** so t
 </div>
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### Track #3 - Develop with Nuxeo Platform
+### 3 - Develop
 <br/>
 This tutorial takes a contract's start date and add three months to it, but you can think of integrating any **custom logic in your Java class**.
 
@@ -170,6 +165,11 @@ This tutorial takes a contract's start date and add three months to it, but you 
 {{/panel}}
 </div>
 </div>
+
+{{#> callout type='tip' heading='Learning plan ordering'}}
+These pages follow a specific order, make sure to respect it as some exercises depend on previous configuration.
+{{/callout}}
+
 <div class="column">
 {{#> panel type='primary'}}
 

@@ -2,7 +2,7 @@
 title: How-To Index
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2020-09-15'
     status: ok
 labels:
     - lts2016-ok
@@ -148,6 +148,6 @@ history:
         date: '2014-07-10 11:45'
         message: ''
         version: '1'
-
 ---
+
 {{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC IDEDOC NXDOC Studio USERDOC' label='howto'}}}

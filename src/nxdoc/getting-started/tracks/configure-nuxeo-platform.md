@@ -1,8 +1,8 @@
 ---
-title: Track 2 - Configure Nuxeo Platform
+title: 2 - Configure Nuxeo Platform
 review:
     comment: ''
-    date: '2018-03-16'
+    date: '2020-09-15'
     status: ok
 labels:
     - studio
@@ -12,7 +12,6 @@ labels:
     - howto
 toc: true
 tree_item_index: 200
-
 ---
 
 This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.
@@ -22,7 +21,6 @@ This tutorial introduces you to a few important aspects of **Nuxeo Studio** so t
 BigCorp has a very simple workflow on a `BCContract` document type, called `BCContractCancel_WF`, allowing any BigCorp employee to cancel a contract. Once launched, the request will pass through a manager to confirm the cancellation.
 
 BigCorp needs a new feature added to this workflow: have someone from Accounting specify the amount to refund to the client, with a full refund automatically granted to cancellations that occur within 10 days of signing.
-
 
 In the steps below, we will show you how to add custom schemas, automation chains and workflow steps to fulfill this feature request.
 

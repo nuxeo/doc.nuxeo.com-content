@@ -2,7 +2,7 @@
 title: Understand Expression and Scripting Languages Used in Nuxeo
 review:
   comment: ''
-  date: '2016-12-06'
+  date: '2020-09-15'
   status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:

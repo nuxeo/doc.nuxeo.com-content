@@ -1,8 +1,8 @@
 ---
 title: Managing Files
 review:
-    comment:
-    date: '2018-10-31'
+    comment: ''
+    date: '2020-09-15'
     status: ok
 toc: true
 labels:
@@ -148,12 +148,10 @@ history:
         version: '1'
 previous_link: nxdoc/handling-permissions
 next_link: nxdoc/retrieving-audit-log
-
 ---
+
 {{! excerpt}}
-
 Learn how to upload files on your Nuxeo server and attach them to a document.
-
 {{! /excerpt}}
 
 ## Create a Document from an Existing File
