@@ -28,6 +28,7 @@ In any case, make sure you read your own PR before submitting it to other people
 ### Follow the Coding and Design Guidelines
 
 Before you start writing some code, make sure you've read the [Coding and Design Guidelines]({{page page='coding-and-design-guidelines'}}).
+
 Important coding standards are described in the [Java Code Style]({{page page='java-code-style'}}) and [JavaScript Code Style]({{page page='javascript-code-style'}}) pages.
 
 It is important to understand that changes will be requested if the code is not well-formatted.
@@ -113,9 +114,13 @@ For instance, if their logic for X wasn't so great, but they did Y and Z well, l
 #### There's More Than One Solution
 
 Don't always think of how you would have done something. Because it isn't how you would have approached and solved the problem, doesn't mean it isn't good.
+
 Take into account the initiator's point of view.
+
 If something is not clear or no consensus is reached, maybe ask the initiator/other reviewers directly before adding a comment.
+
 Let your ego at the door and be open-minded to considering new solutions.
+
 Ultimately, pair program before the code review stage!
 
 #### It's not "You", it's "the Code"
@@ -125,6 +130,7 @@ Prefer "The logic isn't clear to me." to "Your logic isn't clear."
 #### Discuss and Improve the Review Process Often
 
 Ask people what kind of feedback is useful, if they agree with the comments in general, if the comments don't sound too rude, etc.
+
 Consider how much time people spent doing reviews and identify any patterns from it. If people are frequently commenting on the same types of issues, are there steps we can take to address it so there are less of those issues on the next project? E.g.: improve formatting, add some automatic style checking, have better guidelines, etc.
 
 ## After your Pull Request is Reviewed
@@ -175,11 +181,13 @@ It is up to the reviewer to start the review immediately or to wait for the GitH
 ### Timeframe
 
 Requesting a reviewer does not imply an immediate review, everyone [handles the PR queue](#how-to-handle-the-pr-queue) in their own way.
+
 On the contrary, someone taking too long to do a review or post a comment shouldn't necessarily expect it to be taken into account.
 
 Indeed, a late comment doesn't "weigh" as much as an early one: if it doesn't have a consequence on the code itself (format or wording only for instance), the reviewer shouldn't expect it to be systematically taken into account. It is understandable that after a big number of forced push changes, the PR initiator won't want to force push again and add a risk about the already reviewed and validated commits.
 
 A review cannot take forever, so, at some point, a decision must be made. It's all about providing the best effort and agreeing on a compromise.
+
 Moreover, nothing is set in stone. The code can always evolve and be improved later.
 
 In any case, as the PR initiator, do not hesitate to schedule a short meeting with the requested reviewers to guide them through the PR. In the same way, as a reviewer, feel free to schedule a meeting with the initiator if things are unclear.
