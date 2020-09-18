@@ -1,17 +1,14 @@
 default:
   whats_new:
-    - url: /nxdoc/next/observability/
-      date: '2020-06-25'
-      title: 'Monitoring and Observability'
-    - url: /nxdoc/how-to-update-default-nuxeo-page/
-      date: '2020-07-21'
-      title: 'HOWTO: Customize the Default Document View'
-    - url: /studio/facets/
-      date: '2020-07-21'
-      title: 'Facets'
+    - url: /nxdoc/getting-started/
+      date: '2020-09-17'
+      title: 'Getting Started'
+    - url: /nxdoc/nuxeo-integration-guide/
+      date: '2020-09-17'
+      title: 'Integrate Nuxeo in Your Application'
+    - url: /corg/code-review-guidelines/
+      date: '2020-09-17'
+      title: 'Code Review Guidelines'
     - url: /client-apps/nuxeo-drive-release-notes/
-      date: '2020-07-22'
+      date: '2020-09-11'
       title: 'Nuxeo Drive Release Notes'
-    - url: /nxdoc/next/nuxeo-stream/
-      date: '2020-07-23'
-      title: 'Nuxeo Stream'
