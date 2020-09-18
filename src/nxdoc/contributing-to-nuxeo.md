@@ -2,10 +2,9 @@
 title: Contributing to Nuxeo
 review:
     comment: ''
-    date: '2020-05-23'
+    date: '2020-09-18'
     status: ok
 labels:
-    - content-review-lts2016
     - git
     - akervern
     - link-update
@@ -308,7 +307,7 @@ Before describing this process, here are a few points that are the basis of the 
 - Don’t start coding without warning the Product Manager. This is really important because maybe the code was going to be completely refactored, or the fix was planned and assigned for the next team sprint, or your idea is simply not aligned with our product roadmap and you don’t want to lose your time!
 - Any change in the Nuxeo sources should match with a JIRA issue ([Nuxeo Platform](https://jira.nuxeo.com/browse/NXP) or any other corresponding product: [Nuxeo Elements](https://jira.nuxeo.com/browse/ELEMENTS), [Browser Developer Extensions](https://jira.nuxeo.com/browse/BDE), etc.).
 - Any code change must be documented in English.
-- Any code change must be unit-tested, this is required to ensure non regression.
+- Any code change must be unit-tested, this is required to ensure non-regression.
 - Any code change must be implemented respecting the [Coding and Design Guidelines]({{page space='corg' page='coding-and-design-guidelines'}}). Typically, the Nuxeo Dev team pays a lot of attention to the code formatting so don’t add useless spaces or newlines if not necessary.
 - Always create a pull request (PR) on the `master` branch.
 
@@ -411,7 +410,7 @@ As an external contributor, not member of the [Nuxeo](https://github.com/nuxeo/)
     --}}
     ![pr.png](nx_asset://a9b4d416-2b4e-4705-b1a5-23c2845094b9 ?w=650,border=true)
 
-    By default, the name of the PR is either the commit message in the case of a single commit or the branch name with spaces instead of hypens. You can leave it as is or set a custom name, maybe more explanatory.
+    By default, the name of the PR is either the commit message in the case of a single commit or the branch name with spaces instead of hyphens. You can leave it as is or set a custom name, maybe more explanatory.
 
     Don’t hesitate to:
 
@@ -551,7 +550,7 @@ If you need to edit a single file, you can use the default GitHub UI feature to 
 
 1. Make your changes.
 
-1. Add a commit message, respecting the [Nuxeo commit conventions]({{page space='corg' page='git-usage/#main-rules-and-good-practices'}}) `<JIRA_ISSUE>: <MESSAGE>`, add an optional description and set the branch name, respecting the [Nuxeo branch naming policy]({{page space='corg' page='git-usage/#main-rules-and-good-practices'}}) `<TYPE>-<JIRA_ISSUE>-<SHORT_DESCRIPTION>`:
+1. Add a commit message, respecting the [Nuxeo commit conventions]({{page space='corg' page='git-usage'}}#main-rules-and-good-practices) `<JIRA_ISSUE>: <MESSAGE>`, add an optional description and set the branch name, respecting the [Nuxeo branch naming policy]({{page space='corg' page='git-usage'}}#main-rules-and-good-practices) `<TYPE>-<JIRA_ISSUE>-<SHORT_DESCRIPTION>`:
 
     {{!--     ### nx_asset ###
         path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Contributing to Nuxeo/github-ui-commit.png
@@ -583,7 +582,7 @@ Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chart
 
 See [HOWTO: Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}}) for more details.
 
-### With Crowdin (non English Translations)
+### With Crowdin (non-English Translations)
 
 {{! multiexcerpt name='translation-contribution-with-crowdin'}}
 
@@ -649,7 +648,7 @@ Nuxeo is highly modularized and as a consequence, it is totally possible to deve
 
 In addition to code conventions and development good practices above-mentioned, when creating a new module you should also consider the following recommendations:
 
-- Align your code on a recent released version or on the latest development version.
+- Align your code on a recently released version or on the latest development version.
 - Provide a **clean POM** (well indented, no duplication, inheriting the `nuxeo-ecm` POM, ...).
 - If needed, provide a list of the artifacts (libraries) or Public Maven repositories that should be added to the Nuxeo Maven repository to be able to build.
 - Avoid embedded libraries.
