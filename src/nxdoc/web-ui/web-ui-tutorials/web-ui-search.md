@@ -21,7 +21,7 @@ labels:
   - search-tab-component
   - lts2017-ok
   - lts2019-ok
-tree_item_index: 400
+tree_item_index: 600
 ---
 
 After having created your own [document type]({{page page='web-ui-document-layouts'}}#how-to-define-a-new-document-type-layout-with-the-view-designer) you will probably want to create your own search.

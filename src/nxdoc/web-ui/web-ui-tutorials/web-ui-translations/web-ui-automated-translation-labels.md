@@ -1,24 +1,18 @@
 ---
-title: 'HOWTO: Translation Label Conventions'
+title: 'Translation Label Conventions'
 description: Learn the naming conventions for internationalized labels in Nuxeo Web UI.
 review:
     comment: ''
-    date: '30-03-2020'
+    date: '2020-09-17'
     status: ok
 toc: true
-details:
-    howto:
-        excerpt: Learn the naming conventions for internationalized labels in Nuxeo Web UI.
-        level: Advanced
-        tool: code
-        topics: Web UI
 labels:
     - nuxeo-web-ui
     - customization
     - i18n
     - labels
     - localization
-tree_item_index: 1510
+tree_item_index: 100
 ---
 
 {{#> callout type='tip' }}
