@@ -3,8 +3,8 @@ title: 'Web UI Translations'
 description: Learn how translations are managed technically in Nuxeo Web UI.
 review:
     comment: ''
-    date: '2017-12-14'
-    status: requiresUpdates
+    date: '2020-09-17'
+    status: ok
 toc: true
 details:
     howto:
@@ -13,14 +13,11 @@ details:
         tool: code
         topics: Web UI
 labels:
-    - lts2016-ok
     - nuxeo-web-ui
-    - gbarata
     - customization
     - i18n
     - labels
     - localization
-    - content-review-lts2017
 tree_item_index: 450
 ---
 
@@ -28,7 +25,7 @@ tree_item_index: 450
 This page focuses on how to manage internationalization using code. If you are looking at how to translate a Web UI application easily, we recommend having a look at our how to about [managing translations]({{page space='nxdoc' page='web-ui-managing-translations'}}).
 {{/callout}}
 
-Nuxeo Web UI supports element internationalization. Every element that displays text to the user must extend the [I18nBehavior](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-i18n-behavior.html), which provides the `i18n` method to dynamically load labels according to the current locale.
+Nuxeo Web UI supports element internationalization. Every element that displays text to the user must extend the [i18nBehavior](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-i18n-behavior.html), which provides the `i18n` method to dynamically load labels according to the current locale.
 
 ```xml
 <span>[[i18n('label.app.usersAndGroups')]]</span>
@@ -44,16 +41,9 @@ Web UI uses the same language as the web browser.
 
 ## Contributing Labels
 
-Labels can be contributed to the Web UI by adding or overriding the JSON messages files in the `i18n` folder. The JSON objects therein possess key-value pairs, where each key is a unique id for the label and the value is the translated message itself. Keys usually begin with the name of the element where the label is used in (excluding the "nuxeo-" prefix), followed by a **dot** (.). This measure makes it easier to identify where a given key is used and prevents duplicates. As an example, take the following three labels which are used in the `nuxeo-activity` element:
+Labels can be contributed to the Web UI by adding or overriding the JSON messages files in the `i18n` folder. The JSON objects therein possess key-value pairs, where each key is a unique id for the label and the value is the translated message itself. Keys usually begin with the name of the element where the label is used in (excluding the "nuxeo-" prefix), followed by a **dot** (.).
 
-{{#> callout type='tip' }}
-Adding translation can easily be done using [Nuxeo Studio Designer]({{page space='nxdoc' page='web-ui-managing-translations'}}). When doing so, you can just update/create the `.json` file, there is no need to add a deployment fragment or to build the hierarchy that will hold the .json translation.
-{{/callout}}
-
-{{#> callout type='note' }}
-After adding a translation and having hot-reloaded your project, you may need to force refresh the page to force the translation files to be reloaded.
-{{/callout}}
-
+This measure makes it easier to identify where a given key is used and prevents duplicates. As an example, take the following three labels which are used in the `nuxeo-activity` element:
 {{#> panel type='code' heading='nuxeo-web-ui/i18n/messages.json'}}
 ```json
 {
@@ -65,7 +55,15 @@ After adding a translation and having hot-reloaded your project, you may need to
 ```
 {{/panel}}
 
-In order to make your bundle append additional label translations, you need to create the proper `messages` files as follow:
+{{#> callout type='tip' }}
+Adding translation can easily be done using [Nuxeo Studio Designer]({{page space='nxdoc' page='web-ui-managing-translations'}}). When doing so, you can just update/create the `.json` file, there is no need to add a deployment fragment or to build the hierarchy that will hold the .json translation.
+{{/callout}}
+
+{{#> callout type='note' }}
+After adding a translation and having hot-reloaded your project, you may need to force refresh the page to force the translation files to be reloaded.
+{{/callout}}
+
+To make your bundle append additional label translations, you need to create the proper `messages` files as follow:
 
 ```.
 ├── pom.xml
@@ -162,8 +160,9 @@ window.nuxeo.I18n.loadLocale();
 
 ## Overriding the Translation Function
 
-The translation function can also be overridden to fit different needs, by redefining `window.nuxeo.I18n.translate`. Here's an example:
+The translation function can also be overridden to fit different needs, by redefining `window.nuxeo.I18n.translate`.
 
+Here's an example:
 ```JavaScript
 window.nuxeo.I18n.translate = function (key) {
   var language = window.nuxeo.I18n.language || 'en';
@@ -180,6 +179,10 @@ window.nuxeo.I18n.translate = function (key) {
 Customizations on locale resolvers and the translation function can be made from within a custom element or a standalone script.
 {{/callout}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Blog Posts'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Blog Posts'}}
 - [Decoupled Global Localization with Polymer](https://www.nuxeo.com/blog/decoupled-global-localization-with-polymer/)
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>
