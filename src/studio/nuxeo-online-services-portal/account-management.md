@@ -26,7 +26,7 @@ Once access is granted, a new option appears in the dashboard, called "Account M
 
 ## Adding Users
 
-Adding users to your organization is done with the Add User button.
+Adding users to your organization is done with the **Add User** button.
 
 If that person does not have a NOS account yet, she will receive an email to set it up.
 
@@ -56,7 +56,7 @@ Click on the card again to remove the filter.
 
 ### Service Renewal
 
-You may see multiple entries for a given service when it is about to expire / be renewed. Soon to expire services are shown with a specific badge on them, same for the ones to start soon.
+You may see multiple entries for a given service when it is about to expire / be renewed. Soon to expire services are shown with a specific badge on them, same for the ones about to start.
 
 Existing permissions are copied over when the renewed service entry is created. Afterwards, entries are independent so make sure to apply your changes to both if you want to avoid any discrepancy.
 
@@ -65,14 +65,14 @@ Existing permissions are copied over when the renewed service entry is created. 
     name: service-starting-soon.png
     studio_modeler#screenshot#up_to_date
 --}}
-![service-starting-soon](nx_asset://ecb4903e-d6d3-4d5e-87c7-63af2ee1c30a ?w=650,border=true)
+![service-starting-soon](nx_asset://ecb4903e-d6d3-4d5e-87c7-63af2ee1c30a ?w=350,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/account-management/service-ending-soon
     name: service-ending-soon.png
     studio_modeler#screenshot#up_to_date
 --}}
-![service-ending-soon](nx_asset://b5bdd9f8-9b9e-465b-a8b3-9c668d73e298 ?w=650,border=true)
+![service-ending-soon](nx_asset://b5bdd9f8-9b9e-465b-a8b3-9c668d73e298 ?w=350,border=true)
 
 ## Removing Users
 
@@ -85,4 +85,4 @@ Removing a user from your organization is done by clicking the trash icon on tha
 --}}
 ![account-management-delete-user](nx_asset://ec9c0a62-efdc-4e2d-8286-5b2a6dde5082 ?w=650,border=true)
 
-Confirming the action will remove access to all applications and services from this organization; it does not delete the user account. If that person is also a member of other organizations, her access to them remains unchanged.
+Confirming the action will remove access to all applications and services from this organization; it does not delete the user account. If that person is also a member of other organizations, access to them remains unchanged.
