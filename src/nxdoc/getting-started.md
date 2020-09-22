@@ -1,12 +1,10 @@
 ---
 title: Getting Started
-description: Follow these 3 tutorials to discover all the features of Nuxeo Platform.
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2020-08-28'
     status: ok
 labels:
-    - lts2016-ok
     - home
     - mlumeau
     - lts2017-ok
@@ -126,25 +124,30 @@ history:
         date: '2011-04-19 18:31'
         message: ''
         version: '1'
-
 ---
+
+This section provides step-by-step instructions to help you understand how to implement Nuxeo Platform features, through a practical use case. You will use:
+- Nuxeo REST API
+- Nuxeo Javascript Client
+- Nuxeo Studio
+- nuxeocli
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### Discover Nuxeo Platform APIs
+### 1 - Discover
 <br/>
-This tutorial is composed of different steps to guides you on a tour of the Nuxeo Platform and its features through its APIs. <br/>
+This tutorial is composed of different steps to guides you on a tour of the Nuxeo Platform and its features through its **APIs**. <br/>
 
-<br/>
+<br/><br/>
 [Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='discover-nuxeo-platform-apis'}})
 {{/panel}}
 </div>
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true' }}
-### Configure Nuxeo Platform
+### 2 - Configure
 <br/>
-This tutorial introduces you to a few important aspects of Nuxeo Studio so that you can take advantage of this great product as quickly as possible.<br/>
+This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.<br/>
 
 <br/>
 [Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='configure-nuxeo-platform'}})
@@ -152,15 +155,20 @@ This tutorial introduces you to a few important aspects of Nuxeo Studio so that 
 </div>
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### Develop with Nuxeo Platform
+### 3 - Develop
 <br/>
-This tutorial takes a contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class.
+This tutorial takes a contract's start date and add three months to it, but you can think of integrating any **custom logic in your Java class**.
 
-<br/>
+<br/><br/>
 [Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='develop-with-nuxeo-platform'}})
 {{/panel}}
 </div>
 </div>
+
+{{#> callout type='tip' heading='Learning plan ordering'}}
+These pages follow a specific order, make sure to respect it as some exercises depend on previous configuration.
+{{/callout}}
+
 <div class="column">
 {{#> panel type='primary'}}
 
