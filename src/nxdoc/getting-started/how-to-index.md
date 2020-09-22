@@ -2,7 +2,7 @@
 title: How-To Index
 review:
     comment: ''
-    date: '2019-07-15'
+    date: '2020-09-15'
     status: ok
 labels:
     - lts2016-ok
@@ -22,7 +22,7 @@ confluence:
     shortlink: ywYuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/ywYuAQ'
     source_link: /display/NXDOC/How-To+Index
-tree_item_index: 1000
+tree_item_index: 1100
 history:
     -
         author: Manon Lumeau
