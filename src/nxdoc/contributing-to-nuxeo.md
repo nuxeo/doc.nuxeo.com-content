@@ -305,7 +305,7 @@ Nuxeo is always happy when someone offers to help in the improvement of the prod
 
 Before describing this process, here are a few points that are the basis of the Nuxeo development process and that should always be kept in mind.
 
-- Don’t start coding without warning the Product Manager. This is really important because maybe the code was going to be completely refactored, or the fix was planned and assigned for the next team sprint, or your idea is simply not aligned with our product roadmap and you don’t want to lose your time!
+- Don’t start coding without warning the [Product Manager](mailto:product-team@nuxeo.com). This is really important because maybe the code was going to be completely refactored, or the fix was planned and assigned for the next team sprint, or your idea is simply not aligned with our product roadmap and you don’t want to lose your time!
 - Any change in the Nuxeo sources should match with a JIRA issue ([Nuxeo Platform](https://jira.nuxeo.com/browse/NXP) or any other corresponding product: [Nuxeo Elements](https://jira.nuxeo.com/browse/ELEMENTS), [Browser Developer Extensions](https://jira.nuxeo.com/browse/BDE), etc.).
 - Any code change must be documented in English.
 - Any code change must be unit-tested, this is required to ensure non-regression.
