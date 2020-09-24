@@ -519,11 +519,13 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 
 ## Detailed Upgrade by Version
 
-### To Fast Track 10.1 from LTS 2017
-See [Upgrade from LTS 2017 to 10.1]({{page version='' space='' page='upgrade-from-lts-2017-to-10.1'}}) to upgrade to the latest Fast Track of Nuxeo Platform.
+### To LTS 2019 from LTS 2017
+
+See [Upgrade from LTS 2017 to LTS 2019]({{page version='' space='nxdoc' page='upgrade-from-lts-2017-to-lts-2019'}}) to upgrade to the LTS 2019 version or [Upgrade from LTS 2017 following Fast Tracks]({{page page='upgrade-from-lts-2017-following-fast-tracks'}}) to upgrade from a Fast Track version to LTS 2019.
 
 Release Notes:
-- [10.x Release notes]({{page version='' space='' page='nuxeo-server-release-notes'}})
+
+[10.x Release notes]({{page space='' page='nuxeo-server-release-notes'}})
 
 ### To LTS 2017 from LTS 2016
 

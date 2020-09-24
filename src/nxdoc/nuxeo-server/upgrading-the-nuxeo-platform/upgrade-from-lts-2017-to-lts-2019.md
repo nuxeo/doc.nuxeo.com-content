@@ -3,12 +3,12 @@ title: Upgrade from LTS 2017 to LTS 2019
 description: Instructions to upgrade your Nuxeo Platform instance from LTS 2017 version to LTS 2019.
 review:
     comment: ''
-    date: '2018-11-13'
+    date: '2020-09-14'
     status: ok
 labels:
     - multiexcerpt
 toc: true
-tree_item_index: 91
+tree_item_index: 96
 
 ---
 {{! multiexcerpt name='9.10-to-10.10-upgrade-page'}} For the general upgrade process, see the page [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}}).
