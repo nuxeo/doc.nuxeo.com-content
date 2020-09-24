@@ -516,7 +516,7 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 ## Detailed Upgrade by Version
 
 ### To Nuxeo Platform Cloud 2020 from LTS 2019
-See [Upgrade from LTS 2019 to Cloud Release 2020]({{page version='' space='' page='upgrade-from-lts-2017-to-cloud-2020'}}) to upgrade to the latest Cloud release of Nuxeo Platform.
+See [Upgrade from LTS 2019 to Cloud Release 2020]({{page version='' space='' page='upgrade-from-lts-2019-to-cloud-2020'}}) to upgrade to the latest Cloud release of Nuxeo Platform.
 
 Release Notes:
 - [Nuxeo Platform Cloud 2020 Release notes]({{page version='' space='' page='nuxeo-server-release-notes'}})
