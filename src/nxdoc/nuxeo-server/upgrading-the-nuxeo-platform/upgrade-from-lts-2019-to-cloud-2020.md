@@ -677,6 +677,24 @@ This allows to run this operation within a chain called from a workflow (transit
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28078](https://jira.nuxeo.com/browse/NXP-28078)
 
+### Make Tests Stop Depending on nuxeo-automation-client
+
+Tests depending on `EmbeddedAutomationServerFeature` can now make use of a limited-functionality `org.nuxeo.ecm.automation.test.HttpAutomationClient` (in a new package) that does direct HTPP calls and doesn't attempt to map JSON responses to a domain-level object model like Document, etc.
+
+```
+@Inject
+protected Session session;
+```
+
+becomes:
+
+```
+@Inject
+protected HttpAutomationSession clientSession;
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28581](https://jira.nuxeo.com/browse/NXP-28581)
+
 ## Directory
 
 ### New Capabilities
@@ -1094,9 +1112,15 @@ which by default is `GET` but can be changed to `POST`, in which case search req
 
 `RequestContext` and `RequestContextFilter` have been moved from WebEngine to `nuxeo-platform-web-common`.
 
-They have to be imported from:
+They have to be imported from `org.nuxeo.ecm.platform.web.common.RequestContext` and `org.nuxeo.ecm.platform.web.common.RequestCleanupHandler` (they were previously under `org.nuxeo.ecm.webengine.jaxrs.context`).
+
+Maven dependency to add:
+
 ```
-org.nuxeo.ecm.platform.web.common.RequestContext and org.nuxeo.ecm.platform.web.common.RequestCleanupHandler (they were previously under org.nuxeo.ecm.webengine.jaxrs.context).
+<dependency>
+  <groupId>org.nuxeo.ecm.platform</groupId>
+  <artifactId>nuxeo-platform-web-common</artifactId>
+</dependency>
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26710](https://jira.nuxeo.com/browse/NXP-26710)
@@ -1150,6 +1174,53 @@ The behavior of `AbstractSession.setLock` has been modified to meet the requirem
 Now if you try to lock a document locked by you, you will only get your original lock.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24359](https://jira.nuxeo.com/browse/NXP-24359)
+
+#### Document Path Not Available in emptyDocumentmodelCreated Event Context
+
+`DocumentModel#getRef` behavior has changed when called on a non-saved document. Before it was always returning null, now it may return a non-null PathRef value.
+
+If `DocumentModel#getRef` was wrongly used to test if a document is saved or not, code must be updated to rely on `DocumentModel#getId` instead.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26903](https://jira.nuxeo.com/browse/NXP-26903)
+
+#### Upgrade to Apache PDFBox 2.0.19
+
+The upgrade of Apache PDFBox from 1.8.16 to 2.0.19 introduces breaking changes to the library, code relying on it must be updated.
+
+See the [Migration to PDFBox 2.0.0](https://pdfbox.apache.org/2.0/migration.html) guide.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28825](https://jira.nuxeo.com/browse/NXP-28825)
+
+#### Upgrade to mockserver-netty 5.10.0
+
+```
+import org.mockserver.client.server.MockServerClient;
+```
+
+becomes:
+
+```
+import org.mockserver.client.MockServerClient;
+```
+
+Use try-with-resource on `MockServerClient`:
+
+```
+try {
+    MockServerClient client = new MockServerClient("localhost", PORT);
+    …
+}
+```
+
+becomes:
+
+```
+try (MockServerClient client = new MockServerClient("localhost", PORT)) {
+   …
+}
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28818](https://jira.nuxeo.com/browse/NXP-28818)
 
 ### New Capabilities
 
