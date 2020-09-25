@@ -45,6 +45,8 @@ To do so, you can use the preconfigured default pipeline. Basically, it checks o
 
 For both Dev and UAT environments, the pipeline is by default aligned with the master branch of the Github repository, so it's not possible to deploy a certain branch to the Dev environment and another branch to UAT.
 
+
+
 ### Process
 
 To start the pipeline, go to Builds > Pipelines, choose the default one and click on Start Pipeline.
@@ -53,13 +55,6 @@ It takes minutes to complete the pipeline (depending on test coverage). At the e
 * If you are asked to login, please login with Okta. Then select I’m a Nuxeo Customer</br>
 * Answering Proceed will deploy the application to the UAT environment. Answering Abort will only deploy the application to the Dev environment.
 
-### Edit to the Nuxeo Configuration
-
-If you want to make changes to the application configuration from the ​`nuxeo.conf` file, for instance to set ​`org.nuxeo.dev` property to `true`.
-
-Go to ​Resources > Config Maps and select the target environment configuration.
-
-You will be able to edit the `nuxeo.conf` file, and it will be deployed next time the pipeline is run or the pod can be deleted: Applications > Pods > devORuatpod > Actions > delete, so a new pod is deployed with the config changes.
 
 ## Release the Application
 
@@ -80,15 +75,57 @@ At the beginning of the build, you can click on the yellow Input Required messag
 
 At the end of the build, a new tag with the release version is automatically created (available in Github in Releases > Tags​), and the pom.xml file of the master branch of the Github repository is automatically updated with the next SNAPSHOT version in a Post release commit.
 
-## Drop the Database and Index
 
-If you want to drop the database and Elasticsearch index (for instance if you want to clean the data, or if you have pushed changes about a Document Type or a schema), go to ​Builds > Pipelines, and select the reset pipeline on the target environment.
+## Standard operations on the Dev Sandbox
+
+### Access the Nuxeo logs
+
+- Go to **Applications** > **Pods** > **Nuxeo server pod suffixed by (projectname)-dev-interactive or  (projectname)-uat-interactive** > **Logs**
+- Alternatively, you can use the [Openshift command line interface](https://docs.openshift.com/container-platform/4.5/cli_reference/openshift_cli/getting-started-cli.html), also called OC CLI.
+  
+### Access the database logs
+
+- Either from **Applications** > **Pods** > **Mongo pod** > **Logs** or **Terminal**. Enter `mongo` to get into shell. The databases for both Dev and UAT exist in the pod. Use the correct database and run mongo commands.
+
+### Edit to the Nuxeo Configuration
+
+- Go on **Resources** > **Config Map** >  **(projectname)-dev-config** or **(projectname)-uat-config** > **Actions** > **Edit** > Add the lines on the nuxeo.conf file
+-  Never update directly on the Nuxeo server the nuxeo.conf file because it will be lost if a new  image is deployed
+
+{{#> callout type='info'}}
+You will be able to edit the `nuxeo.conf` file, and it will be deployed next time the pipeline is run or the pod can be deleted: **Applications** > **Pods** > **Nuxeo server pod suffixed by (projectname)-dev-interactive or  (projectname)-uat-interactive** > **Actions** > **Delete**, so a new pod is deployed with the config changes.
+{{/callout}}
+
+### Install a Nuxeo package
+
+- Go to **Applications** > **Deployments** > **(projectname)-dev-interactive** or **(projectname)-uat-interactive**  > **Environment** > Edit `NUXEO_PACKAGES` value with your package name
+- Alternatively **Applications** > **Deployments** > **(projectname)-dev-interactive** or **(projectname)-uat-interactive**  > **Actions** > Edit YAML and your package in the value of `NUXEO_PACKAGES`
+
+### Deploy a Nuxeo Studio project
+
+- Make a dependency on your Nuxeo package to the version of the Nuxeo Studio project
+- Update the `org.nuxeo.dev` property to `true` on the nuxeo.conf file and hot reload on the instance with the [Nuxeo Browser Extension]({{page space='nxdoc' page='nuxeo-dev-tools-extension'}})
+
+### Drop the Database and Index
+
+If you want to drop the database and Elasticsearch index (for instance if you want to clean the data, or if you have pushed changes about a Document Type or a schema), go to **​Builds** > **Pipelines**, and select the reset pipeline on the target environment.
 
 You will be ask to confirm the environment that you would like to reset (Dev or UAT) and then if you are sure that you want to drop all the data.
+
+### Run nuxeoctl Command
+
+Within the nuxeo pod’s console you can access to the `nuxeoctl` command.
+
+{{#> callout type='warning'}}
+Remember that any packages using `nuxeoctl` will  be removed  after  a new deployment: Use Config Map instead.
+{{/callout}}
 
 ## Troubleshooting
 
 If something goes wrong, the first reaction you should have is to check the logs. For every build or deployment, you can click on View logs located on the left side of the running pipeline. For instance, if the pipeline build fails, you can click on View logs and you will be redirected to the Jenkins console output.
+
+- **Build** > **Pipelines** > **View logs**
+- Or **Applications** > **Routes** > Open the Jenkins URL 
 
 The second reaction to have is to check global logs and pods status.
 Go to Monitoring​: You can see all the warning and error events on the right.
@@ -96,7 +133,3 @@ Go to Monitoring​: You can see all the warning and error events on the right.
 The third reaction you should have in case of a failing build is simply to start a new build. Within a containerized deployment, issues with pulling packages from remote sources may make it time-out. Starting a new build, will make the remote pull attempt again and possibly a successful build.
 
 Finally, you can contact Nuxeo via email for more questions.
-
-## Run nuxeoctl Command
-
-Within the nuxeo pod’s console you can access to the `nuxeoctl` command.
