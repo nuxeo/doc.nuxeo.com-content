@@ -576,6 +576,10 @@ While setting your application **delegated permissions**, you need to check:
 10. Now just create a new OneDrive document
 -->
 
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect-jsf-ui).
+{{/callout}}
+
 ### Adding Trusted Sites to Internet Explorer 11
 
 In order to be able to use the external file pickers provided by Live Connect, certain URLs must be added to the list of trusted websites. This can be done as follows:

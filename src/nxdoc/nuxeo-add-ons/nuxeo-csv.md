@@ -229,9 +229,14 @@ After the package is installed, a new tab called **CSV** is available on the def
 ![]({{file name='nuxeo-csv-button-webui.png'}} ?w=450,border=true)
 
 ### With JSF UI
+
 Users have an **Import a CSV file** button available in the folder toolbar of the workspaces, folders and in any document where they can import files.
 
 ![]({{file name='nuxeo-csv-button.png'}} ?w=450,border=true)
+
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv-jsf-ui).
+{{/callout}}
 
 ## {{> anchor 'configuration'}}Configuration
 

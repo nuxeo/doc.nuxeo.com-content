@@ -101,7 +101,6 @@ history:
         version: '1'
 ---
 
-
 [Nuxeo Platform 3D](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d) provides support for 3D file types.
 
 ## Installation and Configuration
@@ -138,6 +137,10 @@ The required Docker images are:
 
     Collada2glTF is the official converter from Collada format to glTF - transmission format - developed by the Khronos Group to allow a broad adoption of glTF 3D format.
     It converts from the intermediate format to the final transmission format made available with level of detail on the content's view.
+
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d-jsf-ui).
+{{/callout}}
 
 ## Functional Overview
 

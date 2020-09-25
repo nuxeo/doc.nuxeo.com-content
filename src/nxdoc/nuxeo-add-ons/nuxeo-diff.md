@@ -84,10 +84,14 @@ history:
 
 {{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}
 
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-jsf-ui).
+{{/callout}}
+
 ## Functional Overview
 
 {{multiexcerpt 'nuxeo-diff-functional-overview' space='userdoc' page='nuxeo-diff'}}
 
 ## Technical Overview
 
-Check the [README](https://github.com/nuxeo/nuxeo-jsf-ui/blob/master/code/nuxeo-diff/README.md) for a technical overview. 
+Check the [README](https://github.com/nuxeo/nuxeo-jsf-ui/blob/master/code/nuxeo-diff/README.md) for a technical overview.

@@ -70,6 +70,10 @@ After the package is installed, a new collaborative space is available, called *
 
 ![]({{file name='EasyShare-folder.png'}} ?w=650,h=301,border=true)
 
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare-jsf-ui).
+{{/callout}}
+
 **On Web UI:**
 
 {{!--     ### nx_asset ###

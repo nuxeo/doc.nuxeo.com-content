@@ -176,6 +176,10 @@ After you installed Nuxeo Quota, a new tab **Quota / Statistics** is available i
 
 ![]({{file name='quotas_admin_tab.png'}} ?w=650,border=true)
 
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota-jsf-ui).
+{{/callout}}
+
 ## Quota Overview
 
 The Quota package allows to define a maximum size on spaces and to display the number of items (workspaces, folders, documents) in a folderish document on the navigation tree.
