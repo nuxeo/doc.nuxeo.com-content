@@ -183,6 +183,10 @@ After the package is installed, users get some new tabs:
 *   a **Signature** tab on documents
     ![]({{file name='signature_tab_without_signature.png' space='userdoc' page='digital-signature'}} ?w=600,border=true)
 
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature-jsf-ui).
+{{/callout}}    
+
 ### Configuration
 
 The Digital Signature package provides a sample root certificate populated with sample company's values. However you will need to configure the package so that documents are signed with your company's certificate and information instead of the sample one.

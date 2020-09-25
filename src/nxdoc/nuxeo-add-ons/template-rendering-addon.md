@@ -194,6 +194,10 @@ Watch the related courses on Nuxeo University:</br>
 
 {{{multiexcerpt 'mp-installation-easy' page='Generic Multi-Excerpts'}}}
 
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-jsf-ui).
+{{/callout}}
+
 ## Functional Overview
 
 The template rendering addon is a set of two addons available from the Nuxeo Marketplace: the [Template Rendering](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering "Template Rendering") itself and the [Template Rendering Samples](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples "Template Rendering Samples").

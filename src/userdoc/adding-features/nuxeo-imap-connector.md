@@ -226,6 +226,9 @@ The emails imported in the email folder cannot be modified in the Nuxeo Platform
     ![]({{file name='DM-emailFolder-created.png'}} ?w=650,border=true)
     You can now fetch emails.
 
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector-jsf-ui).
+{{/callout}}
 
 ### Email folder parameters
 

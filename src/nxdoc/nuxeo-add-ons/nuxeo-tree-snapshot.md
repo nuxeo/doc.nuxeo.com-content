@@ -23,6 +23,10 @@ The default button to perform a tree snapshot is exposed in Nuxeo JSF UI. You ca
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot-jsf-ui).
+{{/callout}}
+
 ## Using Nuxeo Tree Snapshot
 
 The addons adds a new document type, Versionable folder, which can be created in Workspaces.

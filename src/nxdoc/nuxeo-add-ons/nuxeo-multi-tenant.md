@@ -57,6 +57,10 @@ history:
 
 After you've installed it, a tab **Tenant isolation** is available in the Admin Center where you can enable or disable the tenant isolation.
 
+{{#> callout type='warning' heading='JSF UI' }}
+If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI version of this addon, available [here](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant-jsf-ui).
+{{/callout}}
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
