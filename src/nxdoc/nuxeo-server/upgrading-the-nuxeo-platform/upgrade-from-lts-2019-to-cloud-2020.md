@@ -679,7 +679,7 @@ This allows to run this operation within a chain called from a workflow (transit
 
 ### Make Tests Stop Depending on nuxeo-automation-client
 
-Tests depending on `EmbeddedAutomationServerFeature` can now make use of a limited-functionality `org.nuxeo.ecm.automation.test.HttpAutomationClient` (in a new package) that does direct HTPP calls and doesn't attempt to map JSON responses to a domain-level object model like Document, etc.
+Tests depending on `EmbeddedAutomationServerFeature` can now make use of a limited-functionality `org.nuxeo.ecm.automation.test.HttpAutomationClient` (in a new package) that does direct HTTP calls and doesn't attempt to map JSON responses to a domain-level object model like Document, etc.
 
 ```
 @Inject
