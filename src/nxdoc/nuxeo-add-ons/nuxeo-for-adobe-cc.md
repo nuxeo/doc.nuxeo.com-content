@@ -50,7 +50,7 @@ Once the installation done, a new extension "Nuxeo CC Connector" is available on
 
 ### Licensing Information
 
-Once Nuxeo for Adobe CC is properly installed, launch InDesign CC 2018/2019/2020 (licensing dialog does not appear in Photoshop or Illustrator) to see a dialog requesting license information:
+Once Nuxeo for Adobe CC is properly installed, launch InDesign CC 2018/2019/2020/2021 (licensing dialog does not appear in Photoshop or Illustrator) to see a dialog requesting license information:
 
 - If you have a license key for Nuxeo CC Connector (provided to you by your Nuxeo Admin or Nuxeo Sales), click “Yes” to activate now, or click “No” to activate later.
 
