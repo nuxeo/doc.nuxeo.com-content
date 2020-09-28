@@ -371,11 +371,10 @@ Log level must be set to INFO or WARN to reduce CPU and disk writes.
 
 #### Database
 
-Database choice has a large impact on performance.
+Database choice has a large impact on performance. You have two primary options: NoSQL (DBS) or relational (VCS) implementation of the repository. The most performant is the NoSQL interface with MongoDB implementation.
+If you want to use a relational dabatase, our recommendation is to use PostgreSQL which is the RDBMS backend implementation that comes with the most optimisations. 
 
-PostgreSQL has more Nuxeo optimizations than other databases. It is the preferred database platform.
-
-Tuning is not optional, as Nuxeo does not provide default database configurations for production.
+Whatever your choice is, tuning is not optional, as Nuxeo does not provide default database configurations for production.
 
 #### {{> anchor 'network'}}Network
 
