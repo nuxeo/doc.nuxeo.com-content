@@ -11,9 +11,9 @@ toc: true
 tree_item_index: 2630
 ---
 
-The Nuxeo Sitecore Connector gives Sitecore users the ability to search content stored in Nuxeo, select renditions to use, then copy the content into the Sitecore Media Library for use in Sitecore authored pages.
+The **Nuxeo Sitecore Connector** gives Sitecore users the ability to search content stored in Nuxeo, select renditions to use, then copy the content into the Sitecore Media Library for use in Sitecore-authored pages.
 
-The majority of the installation and configuration is on the Sitecore server. There are some modifications that are necessary on the Nuxeo server, within the nuxeo.conf file, that will require work by a Nuxeo Admininistrator.
+The majority of the installation and configuration is on the **Sitecore server**. There are some modifications/configurations that are necessary on the Nuxeo server, within the nuxeo.conf file, that will require work by a Nuxeo Admininistrator.
 
 ## Requirements
 **Sitecore** - must be 9.x or newer
@@ -22,9 +22,9 @@ The majority of the installation and configuration is on the Sitecore server. Th
 
 ## Installation
 
-There is nothing to install on the Nuxeo Sever. All packages necessary for The Nuxeo Sitecore Connector are deployed on the **Sitecore Server** instance. For access to the necessary install pkg, please contact your Nuxeo Account Executive. 
+There is nothing to install on the Nuxeo Sever. All packages necessary for The Nuxeo Sitecore Connector are deployed on the **Sitecore Server** instance. For access to the necessary install pkg, please contact your Nuxeo Account Executive.
 
-To deploy the Nuxeo for Sitecore Connector pkg, Have your Sitecore Administrator log in to Sitecore.
+To deploy the Nuxeo for Sitecore Connector pkg, have your Sitecore Administrator log in to Sitecore.
 From the Launch Pad dashboard, choose **Control Panel**
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/9-sitecore
@@ -34,7 +34,7 @@ From the Launch Pad dashboard, choose **Control Panel**
 ![9-sitecore](nx_asset://9695948f-15df-4a05-a0b7-cfe83b5a4fab ?border=true,w=200,h=300)
 
 
-Within the Administration section, click **Install a package**
+Within the Administration section, click **Install a Package**
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/5-sitecore
     name: 5-sitecore.png
@@ -68,7 +68,7 @@ On the Install a Package dialog, choose **Upload Package**
 This brings up the **Upload files** dialog which you will use to browse to the package you want to install. Navigate to the Package and select, then click **Next**
 
 
-You’ll be asked to Overwrite existing files - this is in case anything in the system is named the same - it’s probably safe to select this regardless, but if you don’t, it will append a string of numbers to the filename before uploading. Choose **Next**
+You’ll be asked to **Overwrite existing files?** - this is in case anything in the system is named the same - it’s probably safe to select this regardless, but if you don’t, it will append a string of numbers to the filename before uploading. Choose **Next**
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/1-sitecore
@@ -134,7 +134,7 @@ Upon successful installation, you’ll see the next dialog box, where you can si
 **VERY IMPORTANT**
 If you are using **Sitecore version 9.3** or newer, you will need to update the security policy in your web.config file in your sitecore instance.  This is new in 9.3 and should not be necessary for older versions.
 
-In you web.config, add to your existing Content-Security-Policy the following:
+In you web.config on your Sitecore instance, add to your existing Content-Security-Policy the following:
 
 
 ```
@@ -163,9 +163,9 @@ In the Modules/Settings you must add information related to your Nuxeo server.  
 **It's possible that you might already be using a jwt secret with Nuxeo.  If so, you can use the same value with Sitecore.**
 
 
-        
+
 ###Nuxeo
-Within the Nuxeo application, there is nothing to install and very little configuration that needs to be done.  Your Nuxeo system administrator will need to make some additions to your **nuxeo.conf** file.  See [Nuxeo Documentation] (https://doc.nuxeo.com/nxdoc/configuration-parameters-index-nuxeoconf/) for information on where that is located. 
+Within the Nuxeo application, there is nothing to install and very little configuration that needs to be done.  Your Nuxeo system administrator will need to make some additions to your **nuxeo.conf** file.  See [Nuxeo Documentation] (https://doc.nuxeo.com/nxdoc/configuration-parameters-index-nuxeoconf/) for information on where that is located.
 
 **JWT Secret:** In your nuxeo.conf file, add the following entry:
 nuxeo.jwt.secret=my\_jwt\_secret_value
@@ -194,7 +194,7 @@ Nuxeo content is accessed via the **Sitecore Content Editor**.
 
 While authoring your page/content in Sitecore, place your cursor where you want content to be placed. If you do not place the cursor on the page, the content will still be added to the Media Library/destination folder, but not placed in the page.
 
-From any Sitecore page, click on the **Show Editor** link. 
+From any Sitecore page, click on the **Show Editor** link.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/12-sitecore
@@ -240,7 +240,7 @@ To search, type in the term(s) and click **Search**. To browse, click on the **B
 --}}
 ![15-sitecore](nx_asset://a6ca396d-c701-45ca-b562-9d528c6486b4 ?border=true)
 
-Once you start browsing, you will see a clickable breadcrumb 
+Once you start browsing, you will see a clickable breadcrumb
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/10-sitecore
@@ -266,11 +266,9 @@ Click **import renditions** at the top of the page or below the item renditions 
 **This makes a copy of the selected rendition in the location indicated in the steps above.  When importing into Sitecore, there is NO continued connection between the Nuxeo file and the Sitecore file**
 {{/callout}}
 
-**Once in Sitecore**, 
+**Once in Sitecore**,
 you may need to validate some information, depending on your required fields (like alt info).
 You can remove content from your page without removing it from the library.
 Once items are in the library, you can make modifications to the image and save as normal in Sitecore, the “connection” back to the Nuxeo instance is “cut” and changes will not be reflected in Nuxeo.
 
 Place your cursor to add to the library AND the page directly, or simply click on the nuxeo icon to add to the library.
-
-
