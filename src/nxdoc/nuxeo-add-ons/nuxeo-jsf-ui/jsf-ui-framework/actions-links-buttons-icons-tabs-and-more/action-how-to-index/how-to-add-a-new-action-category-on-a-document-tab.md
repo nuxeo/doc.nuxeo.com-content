@@ -2,7 +2,7 @@
 title: 'HOWTO: Add a New Action Category on a Document Tab'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2020-09-30'
     status: ok
 details:
     howto:

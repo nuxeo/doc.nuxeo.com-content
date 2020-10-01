@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize the Login Page'
 review:
     comment: ''
-    date: '2017-12-11'
+    date: '2020-09-30'
     status: ok
 details:
     howto:

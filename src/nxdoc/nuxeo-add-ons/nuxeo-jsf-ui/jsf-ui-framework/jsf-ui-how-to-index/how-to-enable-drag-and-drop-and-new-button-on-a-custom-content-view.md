@@ -2,7 +2,7 @@
 title: 'HOWTO: Enable Drag and Drop and New Button on a Custom Content View'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2020-09-30'
     status: ok
 details:
     howto:

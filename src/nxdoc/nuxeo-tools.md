@@ -2,7 +2,7 @@
 title: Tools for the Nuxeo Platform
 description: Nuxeo offers a series of tools to help you develop on the Nuxeo Platform and customize your Nuxeo instance.
 review:
-    date: '2018-01-02'
+    date: '2020-09-30'
     status: ok
     comment: ''
 labels:

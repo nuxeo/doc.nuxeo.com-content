@@ -2,7 +2,7 @@
 title: 'HOWTO: Create a N-Level Select Widget'
 review:
     comment: ''
-    date: '2017-12-01'
+    date: '2020-09-30'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:

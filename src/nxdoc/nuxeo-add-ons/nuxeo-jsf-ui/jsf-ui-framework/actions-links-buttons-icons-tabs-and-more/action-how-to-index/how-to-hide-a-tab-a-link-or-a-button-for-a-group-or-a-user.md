@@ -2,7 +2,7 @@
 title: 'How to Hide a Tab, a Link or a Button for a Group or a User'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2020-09-30'
     status: ok
 details:
     howto:

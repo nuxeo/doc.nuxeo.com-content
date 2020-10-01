@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize the Error Pages'
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2020-09-30'
     status: ok
 details:
     howto:

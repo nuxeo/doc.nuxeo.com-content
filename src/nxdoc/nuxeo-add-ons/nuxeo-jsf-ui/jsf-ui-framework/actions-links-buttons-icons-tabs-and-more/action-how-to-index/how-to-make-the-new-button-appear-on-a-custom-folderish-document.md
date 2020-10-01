@@ -2,7 +2,7 @@
 title: 'HOWTO: Make the New Button Appear on a Custom Folderish Document'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2020-09-30'
     status: ok
 details:
     howto:

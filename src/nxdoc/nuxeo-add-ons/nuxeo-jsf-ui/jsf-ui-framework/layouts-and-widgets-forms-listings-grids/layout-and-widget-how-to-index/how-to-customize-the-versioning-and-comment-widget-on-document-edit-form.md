@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize the Versioning and Comment Widget on Document Edit Form'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2020-09-30'
     status: ok
 details:
     howto:

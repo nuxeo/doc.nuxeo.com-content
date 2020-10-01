@@ -2,7 +2,7 @@
 title: 'HOWTO: Define a New Content View'
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2020-09-30'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:

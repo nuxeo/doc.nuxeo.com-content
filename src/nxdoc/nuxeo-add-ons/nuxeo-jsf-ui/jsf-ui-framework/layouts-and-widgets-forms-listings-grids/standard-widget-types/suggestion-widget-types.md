@@ -2,7 +2,7 @@
 title: Suggestion Widget Types
 review:
     comment: ''
-    date: '2017-01-23'
+    date: '2020-09-30'
     status: ok
 labels:
     - lts2016-ok
