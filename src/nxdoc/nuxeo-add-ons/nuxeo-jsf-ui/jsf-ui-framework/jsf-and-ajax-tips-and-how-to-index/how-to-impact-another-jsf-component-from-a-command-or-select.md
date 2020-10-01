@@ -2,7 +2,7 @@
 title: 'HOWTO: Impact Another JSF Component from a Command or Select'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2020-09-30'
     status: ok
 details:
     howto:

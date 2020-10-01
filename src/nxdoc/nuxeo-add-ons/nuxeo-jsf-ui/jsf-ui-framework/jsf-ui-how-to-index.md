@@ -2,7 +2,7 @@
 title: JSF UI How-To Index
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2020-09-30'
     status: ok
 labels:
     - lts2016-ok
@@ -69,6 +69,7 @@ history:
         date: '2014-11-04 15:55'
         message: ''
         version: '1'
-
 ---
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC Studio' label='howto' filter='Topics=JSF UI'}}}

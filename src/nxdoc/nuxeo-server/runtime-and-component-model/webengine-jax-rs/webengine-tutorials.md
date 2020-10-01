@@ -2,7 +2,7 @@
 title: WebEngine Tutorials
 review:
     comment: Installation of samples is broken and has to be reviewed NXDOC-1022.
-    date: '2016-12-20'
+    date: '2020-09-30'
     status: requiresUpdates
 labels:
     - lts2016-ok
@@ -136,7 +136,6 @@ history:
         date: '2010-07-20 15:35'
         message: ''
         version: '1'
-
 ---
 In this section we will go deeper into WebEngine model by proposing 5 samples on how to use common WebEngine concepts.
 

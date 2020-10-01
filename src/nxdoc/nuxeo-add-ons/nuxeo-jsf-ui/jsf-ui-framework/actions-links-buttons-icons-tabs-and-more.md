@@ -2,7 +2,7 @@
 title: 'Actions (Links, Buttons, Icons, Tabs and More)'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2020-09-30'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:

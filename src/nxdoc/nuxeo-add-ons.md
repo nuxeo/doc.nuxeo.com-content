@@ -2,7 +2,7 @@
 title: Addons
 review:
     comment: ''
-    date: '2018-01-04'
+    date: '2020-09-30'
     status: ok
 labels:
     - lts2016-ok

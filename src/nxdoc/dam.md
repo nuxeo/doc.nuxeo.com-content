@@ -2,14 +2,13 @@
 title: Digital Asset Management
 review:
     comment: ''
-    date: '2018-01-30'
+    date: '2020-09-30'
     status: ok
 labels:
     - DAM
 is_overview: true
 tree_item_index: 350
 section_parent: dam
-toc: true
 ---
 
 <div class="row" data-equalizer data-equalize-on="medium">

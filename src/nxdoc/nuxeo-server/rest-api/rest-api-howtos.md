@@ -3,7 +3,7 @@ title: REST API HOWTOs
 description: Listing all available REST API Tutorials.
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2020-09-30'
     status: ok
 labels:
     - lts2016-ok

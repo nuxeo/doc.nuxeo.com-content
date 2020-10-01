@@ -2,7 +2,7 @@
 title: Drag and Drop Service for Content Capture (HTML5-Based)
 review:
     comment: ''
-    date: '2017-12-28'
+    date: '2020-09-30'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
