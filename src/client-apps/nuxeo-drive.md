@@ -250,13 +250,16 @@ Parameter values are taken as is, except for booleans. In that case, you can spe
 |---|---|---|---|---
 | `behavior` | [...](#behaviors) | map | 4.4.2 | Application behavior that can be turned on/off on-demand. That parameter cannot be set via the local configuration file: only the server has rights to define it.
 | `big-file` | 300 | int | 4.1.4 | File size in MiB. Files bigger than this limit are considered "big". This implies few tweaks in the synchronization engine like bypassing most of the expensive and time-consuming digest computations. It is a tradeoff to handle large files as best effort.
-| `ca-bundle` | None | str | 4.0.2 | File or directory with certificates of trusted CAs. If set, `ssl-no-verify` has no effect. See the `requests` [documentation](http://docs.python-requests.org/en/master/user/advanced/#ssl-cert-verification) for more details.
+| `ca-bundle` | None | str | 4.0.2 | File or directory with certificates of trusted Certificate Authorities. If set, `ssl-no-verify` has no effect. See the `requests` [documentation](http://docs.python-requests.org/en/master/user/advanced/#ssl-cert-verification) for more details.
 | `channel` | centralized | str | 4.0.2 | Update channel. Can be centralized, release, beta or alpha.
 | `chunk_limit` | 20 | int | 4.1.2 | Size in MiB above which files will be uploaded in chunks (if `chunk_upload` is `True`). Has to be above 0.
 | `chunk_size` | 20 | int | 4.1.2 | Size of the chunks in MiB. Has to be above 0 and lower or equal to 20.
 | `chunk_upload` | True | bool | 4.1.2 | Activate the upload in chunks for files bigger than `chunk_limit`.
 | `client_version` | None | str | 4.2.0 | Force the client version to run when using the centralized update channel (must be >= 4.2.0).
+| `database_batch_size` | 256 | int | 4.4.4 | [Direct Transfer] When adding files into the database, the operation is done by batch instead of one at a time. This option controls the batch size.
 | `delay` | 30 | int | 2 | Delay in seconds before each remote check (calling the [NuxeoDrive.GetChangeSummary](https://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewOperation/NuxeoDrive.GetChangeSummary) operation).
+| `disabled_file_integrity_check` | False | bool | 4.4.5 | Set to `True` to disable downloaded files integrity check. It is a needed option when the [managed blob store key strategy](https://doc.nuxeo.com/nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2019/#s3-direct-upload-of-5-gb-files) is set up on the server, because there is no logic digest filled, the application would not be able to validate such files.
+| `disallowed_types_for_dt` | ... | list | 4.4.6 | List of document types where Direct Transfer is not allowed, typically `Domain` and `Section`.
 | `feature` | [...](#features) | map | 4.4.2 | Application features that can be turned on/off on-demand.
 | `force-locale` | None | str | 2 | Force the reset to the language.
 | `handshake-timeout` | 60 | int | 2 | Define the handshake timeout in seconds.
@@ -272,6 +275,7 @@ Parameter values are taken as is, except for booleans. In that case, you can spe
 | `proxy-server` | None | str | 2 | Define the address of the proxy server (e.g. `http://proxy.example.com:3128`). This can also be set up by the user from the Settings window.
 | `ssl-no-verify` | False | bool | 4.0.1 | Define if SSL errors should be ignored. Highly unadvised to enable this option.
 | `sync-and-quit` | False | bool | 4.2.0 | Launch the synchronization and then exit the application.
+| `synchronization_enabled` | True | bool | 4.4.0 | Synchronization features are enabled. If set to `False`, nothing will be downloaded/uploaded/synchronized but Direct Edit and Direct Transfer will work.
 | `timeout` | 30 | int | 2 | Define the socket timeout in seconds.
 | `tmp_file_limit` | 10.0 | float | 4.1.4 | File size in MiB. Files smaller than this limit will be written at once to the file rather than chunk by chunk.
 | `update-check-delay` | 3600 | int | 2 | Define the auto-update check delay in seconds. 0 means disabled.
