@@ -10,48 +10,41 @@ tree_item_index: 300
 toc: true
 ---
 
-## Concept
+## Deployment Overview
 
-- **Monitored & Controlled**: The Nuxeo Cloud Operations (NCO) team deploys ALL changes and updates to pre-prod and prod environments
+The Nuxeo Cloud team deploys all changes to Production and Pre-Production Environments via Marketplace Packages.
 
-- **Fast**: Requests typically completed within 1-2 days
+JIRA deployment requests should be submitted up to 2 days before the change is required. The request should also include when the deployment should take place.
 
-- **Follow Nuxeo Best Practices**: Deployments done via Marketplace Packages so that our automation process is easily used across all projects
-  - NO Snapshots of Date-Based Releases: only production ready code
-  - DO NOT deploy the same Marketplace Package to the same environment multiple times
+Some important notes regarding deployments:
+- Snapshot or Date-Based Releases are NOT allowed. The Nuxeo Cloud Team only deploys production-ready code.
+- Marketplace Package versions should be used. The Nuxeo Cloud team will NOT deploy the same Marketplace Package to the same environment multiple times.
 
-- **Use Maintenance Windows / Minimize Impact**: Deployments done during standard maintenance windows unless otherwise specified to minimize potential impact to users.
+Nuxeo Cloud has Standard Maintenance Windows for all of our Production and Pre-Production Environments. The standard maintenance windows are used to make changes to minimize impact to users.
 
-## Deploy My Configuration
+The standard 7 days a week US, EU and Japan maintenance windows are identified below.
 
-The Nuxeo Cloud Operations (NCO) team will deploy all changes and updates to the pre-prod and prod environments. All deployments are done via Marketplace packages.
+- **US**: 12AM - 2AM EST
+- **EU**: 12AM CET - 2AM CET
+- **Japan**: 12AM JST - 2AM JST
 
-The cloud team typically complete deployment requests within 1 day of the ticket being submitted.
+## Deployment Requests
 
-Each Cloud Deployment requires a **JIRA SUPNXP** to be created with a ticket type of **Nuxeo Cloud Deployment** that provides the following information:
-- Name and Link to the Marketplace Package (MP) with the correct version
-- 3rd Party Services or SSO services required (e.g. FFMPEG, ImageMagick, Okta, etc.)
-- Nuxeo Conf Updates corresponding to packages or 3rd party services
-- Identify the requested Date and Time (include time zone) of deployment.
-  - The cloud team will NOT perform a deployment until a date/time has been provided.
-  - These can be done outside of maintenance windows.
+All Nuxeo Cloud Deployments require a JIRA Support Ticket (SUPNXP) to be created with a ticket type of “Nuxeo Cloud Deployment” that provides the following information:
+
+- Name and Link to the correct version of the Marketplace Package.
+- Required 3rd Party Services or SSO services (e.g. FFMPEG, ImageMagick, Okta, etc.).
+- Nuxeo Conf Updates corresponding to packages or 3rd party services.
+- The Date and Time of the deployment including time zone, which can be done outside of established maintenance windows.
 
 {{#> callout type='info'}}
-The Cloud team WON'T perform a deployment until a date/time has been provided. Especially if the deployment request is to be performed outside of the standard maintenance window.
+Nuxeo Cloud requires a Date and Time for all Deployment Requests, this includes identifying the standard maintenance window as the deployment time.
 {{/callout}}
 
-## Customization
+## Nuxeo Studio and Private Marketplace Packages
 
-Customers have access to [Nuxeo Studio]({{page version='' space='studio' page='nuxeo-studio'}}) to configure their business logic and data model and to define the list of packages (including custom) that are required.
+Nuxeo Cloud customers have access to [Nuxeo Studio]({{page version='' space='studio' page='nuxeo-studio'}}) to configure their business logic, data model and define the public or private packages that are required.
 
-The Private Marketplace is available to customers for custom Java development.
+The Private Marketplace is [available]({{page space='studio' page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}) to customers for custom Java development.
 
-The NCO team validates and deploys all packages to hosted production and pre-prod environments via marketplace packages.
-
-If necessary, additional Nuxeo teams (e.g. professional services) can provide support for the creation and deployment of any required configuration or customization.
-
-## Limitations
-
-On Preproduction and production environments, it is not allowed to:
-- Deploy Snapshot versions
-- Perform Hot-Reload
+Cloud Customers have the option to purchase Nuxeo Professional Service engagements to provide support for the development of additional configuration or customization changes.

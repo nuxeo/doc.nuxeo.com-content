@@ -1,5 +1,5 @@
 ---
-title: Additional Modules
+title: Nuxeo Cloud Addons
 review:
     comment: ''
     date: '03-19-2020'
@@ -12,7 +12,7 @@ toc: true
 
 ## Additional Environments
 
-Nuxeo Cloud customers can choose to purchase additional environments if required. These additional environments can be used to support training, additional testing efforts or support for internal teams.  
+Nuxeo Cloud customers can choose to purchase additional environments. These additional environments can be used to support additional training or testing efforts. 
 
 ## Nuxeo Drive
 

@@ -10,24 +10,24 @@ tree_item_index: 400
 toc: true
 ---
 
-## Concept
+## Overview
 
-The Nuxeo Dev Sandbox is built using OpenShift. OpenShift is an open source container application platform, based on top of Docker containers and Kubernetes pods. It enables you to easily build and deploy applications during their development process.
+The Nuxeo Development Sandbox is built on top of Docker containers and Kubernetes pods. Today, we use Openshift to support all Development Sandbox efforts.
 
-Nuxeo uses the Dev Sandbox, as part of the development process, to deploy and validate work before pushing to production cloud environments.
+The primary focus of the Development Sandbox is to enable you to easily build and deploy applications during the development process.
 
-The Nuxeo Sandbox is meant purely for Development. It does not support large volume data storage, data backups and it should never store production data.
+The Nuxeo Development Sandbox is meant purely for Development. It does not support large data storage or data backups and should never be used to store production data.
 
 ## Environments
 
-During the application development process, there is a need to test the latest work on test environments other than pre-production or production environments.
+During the application development process, there is a need to test new configurations and changes in a development environment rather than Pre-Production or Production Environments.
 
-Thus, the OpenShift project offers two such sandbox environments that can be managed directly via the OpenShift developer admin:
+The standard Development Sandbox project provides customers with 2 sandbox environments that can be managed directly via the OpenShift developer admin:
 
-- A development environment (DEV): It is meant to be continuously updated with the latest work.
-- A User Acceptance Testing environment (UAT): It is meant for validation purpose and requires manual work.
+- Development Environment (DEV): Initial environment for exploration of updates that is continuously updated with the latest changes.
+- Test Environment (UAT): Secondary environment for validation of updates that may require additional manual/user test efforts.
 
-These two environments share a MongoDB server and an Elasticsearch server, but each has its own MongoDB database and ElasticSearch index.
+The DEV & UAT Environments share a MongoDB and Elasticsearch server, but each has its own MongoDB database and ElasticSearch index.
 
 ## OpenShift Web Console
 
@@ -45,16 +45,14 @@ To do so, you can use the preconfigured default pipeline. Basically, it checks o
 
 For both Dev and UAT environments, the pipeline is by default aligned with the master branch of the Github repository, so it's not possible to deploy a certain branch to the Dev environment and another branch to UAT.
 
-
-
 ### Process
 
 To start the pipeline, go to Builds > Pipelines, choose the default one and click on Start Pipeline.
 It takes minutes to complete the pipeline (depending on test coverage). At the end of the pipeline, you can click on the yellow Input Required message asking if you want to deploy the application to the UAT environment too.
 
-* If you are asked to login, please login with Okta. Then select I’m a Nuxeo Customer</br>
-* Answering Proceed will deploy the application to the UAT environment. Answering Abort will only deploy the application to the Dev environment.
-
+- If you are asked to login, please login with Okta. Then select I’m a Nuxeo Customer.
+- Answering **Proceed** will deploy the application to the UAT environment. </br>
+  Answering **Abort**  will only deploy the application to the Dev environment.
 
 ## Release the Application
 
@@ -66,45 +64,46 @@ You can use the preconfigured release pipeline. Basically, it first asks you to 
 
 ### Process
 
-To start the pipeline, go to ​Builds > Pipelines > release-pipeline and click on Start Pipeline. The pipeline takes around 30 minutes to be completed.
+To start the pipeline, go to **​Builds** > **Pipelines** > **release-pipeline** and click on **Start Pipeline**. The pipeline takes around 30 minutes to be completed.
 
 At the beginning of the build, you can click on the yellow Input Required message, asking you to choose the increment version release scope (patch: 1.2.3 => 1.2.4 / minor: 1.2.3 => 1.3.0 / major: 1.2.3 => 2.0.0).
 
-* Answering **Abort** cancel the release.
-* Answering **Release** release the application with the selected release scope.
+- Answering **Abort** cancel the release.
+- Answering **Release** release the application with the selected release scope.
 
-At the end of the build, a new tag with the release version is automatically created (available in Github in Releases > Tags​), and the pom.xml file of the master branch of the Github repository is automatically updated with the next SNAPSHOT version in a Post release commit.
+At the end of the build, a new tag with the release version is automatically created (available in Github in Releases > Tags​), and the `pom.xml` file of the master branch of the Github repository is automatically updated with the next SNAPSHOT version in a Post release commit.s
 
+## Standard Operations on Dev Sandbox
 
-## Standard operations on the Dev Sandbox
+### Access the Nuxeo Logs
 
-### Access the Nuxeo logs
-
-- Go to **Applications** > **Pods** > **Nuxeo server pod suffixed by (projectname)-dev-interactive or  (projectname)-uat-interactive** > **Logs**
+- Go to **Applications** > **Pods** > Nuxeo server pod suffixed by **(projectname)-dev-interactive** or **(projectname)-uat-interactive** > **Logs**
 - Alternatively, you can use the [Openshift command line interface](https://docs.openshift.com/container-platform/4.5/cli_reference/openshift_cli/getting-started-cli.html), also called OC CLI.
-  
-### Access the database logs
+
+### Access the Database Logs
 
 - Either from **Applications** > **Pods** > **Mongo pod** > **Logs** or **Terminal**. Enter `mongo` to get into shell. The databases for both Dev and UAT exist in the pod. Use the correct database and run mongo commands.
 
 ### Edit to the Nuxeo Configuration
 
-- Go on **Resources** > **Config Map** >  **(projectname)-dev-config** or **(projectname)-uat-config** > **Actions** > **Edit** > Add the lines on the nuxeo.conf file
--  Never update directly on the Nuxeo server the nuxeo.conf file because it will be lost if a new  image is deployed
+If you want to make changes to the application configuration from the ​`nuxeo.conf` file, for instance to set `org.nuxeo.dev` property to `true`.
+
+- Go on **Resources** > **Config Map** >  **(projectname)-dev-config** or **(projectname)-uat-config** > **Actions** > **Edit** > Add the lines on the `nuxeo.conf` file.
+-  Never update directly on the Nuxeo server the `nuxeo.conf` file because it will be lost if a new image is deployed.
 
 {{#> callout type='info'}}
 You will be able to edit the `nuxeo.conf` file, and it will be deployed next time the pipeline is run or the pod can be deleted: **Applications** > **Pods** > **Nuxeo server pod suffixed by (projectname)-dev-interactive or  (projectname)-uat-interactive** > **Actions** > **Delete**, so a new pod is deployed with the config changes.
 {{/callout}}
 
-### Install a Nuxeo package
+### Install a Nuxeo Package
 
 - Go to **Applications** > **Deployments** > **(projectname)-dev-interactive** or **(projectname)-uat-interactive**  > **Environment** > Edit `NUXEO_PACKAGES` value with your package name
 - Alternatively **Applications** > **Deployments** > **(projectname)-dev-interactive** or **(projectname)-uat-interactive**  > **Actions** > Edit YAML and your package in the value of `NUXEO_PACKAGES`
 
-### Deploy a Nuxeo Studio project
+### Deploy a Nuxeo Studio Project
 
-- Make a dependency on your Nuxeo package to the version of the Nuxeo Studio project
-- Update the `org.nuxeo.dev` property to `true` on the nuxeo.conf file and hot reload on the instance with the [Nuxeo Browser Extension]({{page space='nxdoc' page='nuxeo-dev-tools-extension'}})
+- Make a dependency on your Nuxeo package to the version of the Nuxeo Studio project.
+- Update the `org.nuxeo.dev` property to `true` on the `nuxeo.conf` file and hot reload on the instance with the [Nuxeo Browser Extension]({{page space='nxdoc' page='nuxeo-dev-tools-extension'}}).
 
 ### Drop the Database and Index
 
@@ -125,7 +124,7 @@ Remember that any packages using `nuxeoctl` will  be removed  after  a new deplo
 If something goes wrong, the first reaction you should have is to check the logs. For every build or deployment, you can click on View logs located on the left side of the running pipeline. For instance, if the pipeline build fails, you can click on View logs and you will be redirected to the Jenkins console output.
 
 - **Build** > **Pipelines** > **View logs**
-- Or **Applications** > **Routes** > Open the Jenkins URL 
+- Or **Applications** > **Routes** > Open the Jenkins URL
 
 The second reaction to have is to check global logs and pods status.
 Go to Monitoring​: You can see all the warning and error events on the right.

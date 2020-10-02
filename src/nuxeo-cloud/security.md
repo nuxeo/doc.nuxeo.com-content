@@ -6,13 +6,13 @@ review:
     status: ok
 labels:
     - nuxeo-cloud
-tree_item_index: 400
+tree_item_index: 600
 toc: true
 ---
 
 The Nuxeo Cloud environments are built using Cloud and application security best practices - including support for encryption of data at rest and in transit and threat detection monitoring using Threat Stack.
 
-A single tenant deployment model is applied to each customer’s production and pre-production deployments - meaning no resources are shared between customers.
+All Production and Pre-Production environment are deployed as single tenants so that no resources are shared between customers or environments.
 
 Nuxeo Cloud has been PCI-DSS and SOC2 Certified (as of 2019).
 
