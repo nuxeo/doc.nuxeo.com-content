@@ -50,7 +50,7 @@ labels:
 {{#> panel type='secondary' match_height='true'}}
 ![]({{file name='content-box.png'}})
 
-### [Additional Modules]({{page page='additional-modules'}})
+### [Nuxeo Cloud Addons]({{page page='nuxeo-cloud-addons'}})
 
 {{/panel}}
 </div>

@@ -7,23 +7,24 @@ review:
 labels:
     - nuxeo-cloud
 tree_item_index: 200
-toc: true
 ---
 
 ## How do I get started?
 
-Nuxeo will provision the prod and pre-prod before the team is ready to begin using them.
+The Nuxeo Cloud team will set up and deploy the Production, Pre-Production and Development Sandbox Environments.
 
-We typically ask for at least 1-2 weeks notice before provisioning both environments. If required, expedited requests can be addressed.
+We ask for up to 1 week notice before deploying the Environments and typically handle this as part of completion of the Nuxeo Cloud procurement process. If required, expedited requests can be supported.
 
-In order to set up both environments we need the following:
-- LTS Version: including any HF's that may be required
-- Database: MongoDB or PostgreSQL
-- Prod and Pre-Prod URL: typically we use `*.nuxeocloud.com` (prod) and `*.preprod.nuxeocloud.com` (pre-prod)
-- AWS Region: if this is not known or a specific one is not required, we can determine the right region by knowing where the primary users are located
-- Email Setup:
-    - application emails will be sent from an @nuxeocloud.com email addresses
-    - no dummy email addresses are allowed - not allowed by AWS
-- Technical Contact: person who can answer any follow up questions the team has on the environment deployment
+In order to set up all environments we work with a combination of our customer contacts and Nuxeo resources to gather the following information:
 
-After an environment has been provisioned, the technical/business contact will be provided with the appropriate login credentials
+- **User Location** - used to determine which AWS region to deploy the environment
+- **Customer Technical Contact** - to help with any issues that arise as part of environment deployment
+- **Studio Users** - used to provide access to the Development Sandbox (if one was purchased)
+
+After the Production and Pre-Production environments have been deployed the Customer Technical Contact, and any additionally identified users, will be provided with the login credentials.
+
+{{#> callout type='note'}}
+Environment Requests, like Deployment Requests are managed via JIRA Requests. The primary method for working and communicating with the Nuxeo Cloud team is JIRA.
+{{/callout}}
+
+Our primary goal with the Environment Set Up process is to get our customers moving forward as soon as possible.
