@@ -14,15 +14,381 @@ tree_item_index: 1100
 
 {{! excerpt}}
 The [Nuxeo Aspera](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) connector
-enables users to download/upload binaries with Aspera.
+enables users to download/upload binaries with Aspera.  It is designed to be used with **Aspera On Cloud** intances, however, if you use a **self-hosted Aspera** instance, it is still possible you will be able to use the Nuxeo Aspera Connector.  Contact your Aspera team for more information and assistance.
 {{! /excerpt}}
 
-## Requirements
+## Version 3.0.0
+### Requirements
+
+- Aspera Desktop Client - [latest version].
+- Nuxeo Server LTS 2019 (10.10, HF 31, at least) with access to AWS S3 Storage along with the [Amazon S3 Online Storage plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=11.2.13)
+- IBM Aspera on Cloud Subscription (see note above about Aspera self-hosted)
+
+### Installation
+
+Installation is made of two steps:
+
+1.  Install the [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) available from the marketplace.
+2.  Install the [Aspera desktop client].
+
+### Configuration
+
+#### Aspera Configuration
+
+We need to configure 2 Aspera nodes; one for upload and one for download.
+
+Each node will be attached to one S3 bucket in Nuxeo:
+- The main Nuxeo S3 bucket in Nuxeo for download purpose
+- The S3 transient store bucket for upload purpose
+
+Follow this[Aspera documentation](https://aspera.ibmaspera.com/help/admin/nodes/adding_aws_s3_bucket) to attach S3 buckets to Aspera.
+
+Please note that, in the documentation above, for **Download** the IAM role used by Aspera only needs `READ` permissions on the bucket.
+
+The policy attached to this role can be added as shown in this **sample**:
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetObject",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": [
+        "arn:aws:s3:::bucket-name",
+        "arn:aws:s3:::bucket-name/\*"
+      ]
+    }
+  ]
+}
+```
+
+The policy for **Upload** must be able to put and get objects from the S3 bucket, **for example**:
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+  {
+    "Sid": "VisualEditor0",
+    "Effect": "Allow",
+    "Action": [
+    "s3:PutObject",
+    "s3:GetObject",
+        "s3:AbortMultipartUpload",
+        "s3:DeleteObject",
+        "s3:ListMultipartUploadParts"
+      ],
+      "Resource": "arn:aws:s3:::bucket-name/*"
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucketMultipartUploads",
+        "s3:ListBucket",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": "arn:aws:s3:::bucket-name"
+    }
+  ]
+}
+```
+
+#### Nuxeo Configuration
+
+##### Transient Store on AWS
+
+To use S3 direct upload with Nuxeo, you will need to add another policy to a new role **for example**:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMyBuckets"
+            ],
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetBucketLocation",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts",
+                "s3:ListBucketMultipartUploads"
+            ],
+            "Resource": "arn:aws:s3:::yourbucketname"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts",
+                "s3:ListBucketMultipartUploads"
+            ],
+            "Resource": "arn:aws:s3:::yourbucketname/*"
+        }
+    ]
+}
+```
+
+Make sure that all configuration values are set in the `nuxeo.conf`:
+
+```
+nuxeo.s3storage.useDirectUpload=true
+nuxeo.s3storage.transient.bucket=
+nuxeo.s3storage.transient.roleArn=
+nuxeo.aws.accessKeyId=
+nuxeo.aws.secretKey=
+nuxeo.aws.region=
+nuxeo.s3storage.bucket=
+```
+
+#### Aspera Nuxeo Configuration
+
+Add the aspera access keys in `nuxeo.conf`:
+
+**Example**:
+
+```
+## is the same for the 2 nodes
+aspera.node.url=https://ats-aws-us-east-1.aspera.io
+aspera.node.port=443
+
+### ACCESS KEY ON UPLOAD NODE LINKED TO TS S3 BUCKET
+aspera.access.key.id=
+### SECRET KEY ON UPLOAD NODE LINKED TO TS S3 BUCKET
+aspera.access.key.secret=
+
+### ACCESS KEY ON DOWNLOAD NODE LINKED TO TMAIN S3 BUCKET
+aspera.download.access.key.id=
+### SECRET KEY ON DOWNLOAD NODE LINKED TO MAIN S3 BUCKET
+aspera.download.access.key.secret=
+```
+
+### Functional Overview
+The **Nuxeo Aspera Connector** uses **Transfers** to add content to the Nuxeo system.  Transfers are “wrappers” or “buckets” for the files/folders you add to the Nuxeo system.
+
+#### Transfer steps
+The process of adding content is divided into 2 steps: **Upload** and **Create**. 
+In the first step, the user **uploads** content to the transfer bucket. While in this step, it may be possible, depending on the chosen “transition type”,  for a user to add files to the bucket and add properties that will apply to the content. 
+Once content and any metadata have been added, the transfer can be completed and the content is then **created** in the system.
+
+#### Transfer transition types
+Transitioning between the “upload” and “create” steps can be achieved in 2 ways: **automatically (auto-create)** or **manually**. Users can choose which option to use when creating the transfer from the transfer dashboard.   It is possible to change from manual to auto-create after you start adding content to the transfer.  **Once you set the to auto-create, however, the transfer will behave as if you started in that way, and some limitations around modifying the transfer will apply**.
+
+When auto-create is toggled/selected to be “on”, the user needs only to start the upload of the folders/files to the transfer.  Once the upload is completed, the system will automatically start the process to create the content in the system; no need to wait around simply to push a button.  **Before adding content** to the transfer, you can edit the **“common metadata”** which would apply to all files in the transfer.  Users can, of course, decide not to include any metadata at all, and simply add files, too.
+
+{{#> callout type='note' }}
+There are some caveats when using auto-create (auto-create is set to “on”).  Because of some asynchronous behavior, the ability to modify the transfer/file metadata or to add/remove files once your initial "add to transfer" has begun, is not allowed.  If you discover that you have erred in the files/information, you will need to let the transfer process complete before addressing within the system; where the content was added (not the transfer).
+{{/callout}}
+
+If a user has content that needs to be “tagged” or “catalogued” with metadata before creation in the system, the “manual” transition option might be a better choice. To use the **manual option**, choose “no” for auto-create or toggle the auto-create to “off” when creating a new transfer (you can only turn off auto-create if there is **no content in the transfer)**.  This will require someone **manually start** the creation process by clicking the **“complete transfer”** button once the upload is finished (the button is only visible once there is no longer an upload in progress)
+When using the manual transition, the user uploads content to the transfer bucket. While in this step, a user can add folders and files to the bucket and add properties that apply to the files. Properties can be added that apply to all files using the “common metadata” panel; more file-specific properties can be added either to multiple files at once (bulk edit of metadata) and/or individually,  using a single-file action.
+Once the metadata has been edited to fit the user's needs, the transfer can be **completed** and the content is then created in the system.
+Transfers have 3 states: Draft (no content added yet), In Progress (content added) and Completed (the transfer has been completed and the content has been created in the system).
+
+
+#### Using Aspera with Nuxeo
+
+Once in your instance, Nuxeo Aspera Upload can be accessed from two different ways:
+
+- From the **User Settings** menu located on the left side:
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image3
+    name: aspera-image3.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image3](nx_asset://2a6ee847-e886-4047-8e82-f4cafda627eb ?border=true)
+
+- By clicking on the Aspera upload button displayed on every folderish document (workspace, folder, etc.)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image19
+    name: aspera-image19.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image19](nx_asset://da4443e9-0ddb-4908-9ce8-5fcce2e108ce ?border=true)
+
+> The files uploaded by Aspera will be accessible in this folderish document (by default the target location is the user personal workspace)
+
+Once on the Aspera Upload screen (as you begin to add files), you will be able to download the Aspera Desktop client via the following banner at the top (if not already installed or if a new version is needed):
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image14
+    name: aspera-image14.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image14](nx_asset://304c7c51-ec27-4a37-9b02-439879412d6a ?border=true)
+
+Once on the Aspera menu, there are 2 main views available:
+
+- [Transfers Dashboard](#transfers-dashboard)
+
+- [Transfers](#transfers)
+
+ 
+#### Transfers Dashboard
+ 
+This screen shows the status of all current transfers in your Nuxeo application.
+ 
+You can:
+Create new uploads/transfers
+Access the transfers’ metadata and files properties
+Complete transfers
+Share transfers
+Delete transfers 
+All of these actions are available via the “transfer” view, as well.  You can find information on the actions in the [“transfer”](#transfers) section below.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image20
+    name: aspera-image20.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image20](nx_asset://0a9c8974-1796-47c6-99b9-68aff556583e ?border=true)
+
+{{#> callout type='note'}}
+
+“Delete” does remove the content from the Aspera Node in most cases, however, we have seen some inconsistencies.  It is advised that you **regularly clean** your Aspera Transfer Node. Deleting the transfer does not remove the content from the repository if the transfer has already been completed. This ONLY deletes the transfer “bucket” or “wrapper”)
+{{/callout}}
+
+
+
+ 
+#### Transfers
+Create a transfer
+To create a transfer from the dashboard, simply click **+ New Upload** in the upper right hand corner.  By default, this will set the “target document” (or destination) as the user’s personal workspace.  This can be edited using the “common metadata” edit.
+
+
+On this screen, different actions are available; 
+
+You can:
+- Drag and drop (or click to select) file(s) or folder(s)  to upload with Aspera and follow the status of the uploads (whether you have the Aspera desktop client or not).
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image1
+    name: aspera-image1.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image1](nx_asset://43f35a20-386f-4600-a94f-aa7749e1df2a ?border=true)
+ 
+- Define/edit the common metadata, including the “target document” or the destination of the current transfer (set of uploaded files) by clicking on the Edit button. 
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image7
+    name: aspera-image7.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image7](nx_asset://6f83fbc6-7402-4552-9bd7-54919ff9db0b ?border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image15
+    name: aspera-image15.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image15](nx_asset://97069cfe-16c9-4d54-bd8f-a578d88aa6aa ?border=true)
+
+ 
+ 
+- Modify the permissions to share the transfer with other user(s) (i.e. another user is responsible for modifying the metadata).
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image4
+    name: aspera-image4.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image4](nx_asset://c593d1b6-c8d5-4438-a18e-efaa0b7a75ba ?border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image6
+    name: aspera-image6.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image6](nx_asset://7d40c3b2-afa4-4c10-a424-18c1e4f9cfb6 ?border=true)
+ 
+ 
+- Edit/Delete individual files.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image24
+    name: aspera-image24.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image24](nx_asset://23bc5d1a-0037-450c-ba58-b724bd07caa7 ?border=true)
+ 
+- Bulk edit selected files metadata in once.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image25
+    name: aspera-image25.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image25](nx_asset://01f331b0-fce4-4dac-a645-f8bfae0e214a ?border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/10-aspera.png
+    name: 10-aspera.png
+    addins#screenshot#up_to_date
+--}}
+![10-aspera.png](nx_asset://462aa78e-525d-4b97-a8b2-27791a999a60 ?border=true) 
+ 
+
+- **Complete transfer** means to create the related documents in the Nuxeo application (once all files have been uploaded).
+ When completing a transfer, the "common metadata" is propagated to all Nuxeo documents (except where single/bulk metadata edits override them).
+
+#### Aspera Download
+The Nuxeo Aspera Download action is accessible via a button displayed when selecting one or several documents:
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/3-aspera.png
+    name: 3-aspera.png
+    addins#screenshot#up_to_date
+--}}
+![3-aspera.png](nx_asset://7fb3e281-3edc-46f9-bb4d-f13615876a1a ?border=true)
+
+{{#> callout type='note'}}
+While we distinguish between transfers used for “upload” purposes from “download” purposes, we currently only show the “upload” transfers on the transfer dashboard.  We have improvements planned for displaying both.
+{{/callout}}
+
+### How it Works
+#### Aspera Upload
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image27
+    name: aspera-image27.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image27](nx_asset://246e2c62-44ca-490c-ae96-783d3510c828 ?border=true)
+
+#### Aspera download
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image26
+    name: aspera-image26.png
+    addins#screenshot#up_to_date
+--}}
+![aspera-image26](nx_asset://55784608-f624-48aa-a670-b4aca341d828 ?border=true)
+
+## Version 2.0.8
+### Requirements
 
 - Aspera Desktop Client - [latest version](https://downloads.asperasoft.com/en/downloads/2).
 - Nuxeo Server LTS 2019 (10.10) with access to AWS S3 Storage
 
-## Installation
+### Installation
 
 Installation is made of two steps:
 
