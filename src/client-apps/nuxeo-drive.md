@@ -229,7 +229,7 @@ Each of these ways overrides the previous one.
 
 ### Names and Values
 
-Parameter names are quite flexible. There is no differentiation between lowercase and uppercase, nor between hyphens and underscores.
+Parameter names are quite flexible. There is no differentiation between lowercase and uppercase, nor between hyphens and underscores.</br>
 For instance, you can specify `ssl-no-verify`, `ssl_no_verify`, `ssl_no-verify` or `SSL_No_verify`, it will be the same result.
 
 Parameter values are taken as is, except for booleans. In that case, you can specify, in lowercase or uppercase:
@@ -249,7 +249,7 @@ Parameter values are taken as is, except for booleans. In that case, you can spe
 
 #### `behavior`
 
-Application behavior that can be turned on/off on-demand.
+Application behavior that can be turned on/off on-demand.</br>
 That parameter cannot be set via the local configuration file: only the server has rights to define it.
 
 - Default value (map): [...](#behaviors)
@@ -261,7 +261,7 @@ That parameter cannot be set via the local configuration file: only the server h
 
 Use the beta channel for auto-updates.
 
-- Default value (bool): False
+- Default value (bool): `False`
 - Version added: 2.0
 - Version removed: 4.0.2, use [channel](#channel) set to `beta` instead
 
@@ -279,19 +279,19 @@ Configure custom beta update website.
 
 #### `big-file`
 
-File size in MiB. Files bigger than this limit are considered "big".
-This implies few tweaks in the synchronization engine like bypassing most of the expensive and time-consuming digest computations.
+File size in MiB. Files bigger than this limit are considered "big".</br>
+This implies few tweaks in the synchronization engine like bypassing most of the expensive and time-consuming digest computations.</br>
 It is a tradeoff to handle large files as best effort.
 
-- Default value (int): 300
+- Default value (int): `300`
 - Version added: 4.1.4
 
 * * *
 
 #### `ca-bundle`
 
-File or directory with certificates of trusted Certificate Authorities.
-If set, [ssl-no-verify](#ssl-no-verify) has no effect.
+File or directory with certificates of trusted Certificate Authorities.</br>
+If set, [ssl-no-verify](#ssl-no-verify) has no effect.</br>
 See the `requests` [documentation](http://docs.python-requests.org/en/master/user/advanced/#ssl-cert-verification) for more details.
 
 - Default value (str): None
@@ -303,7 +303,7 @@ See the `requests` [documentation](http://docs.python-requests.org/en/master/use
 
 Update channel. Can be `centralized`, `release`, `beta` or `alpha`.
 
-- Default value (str): centralized
+- Default value (str): `centralized`
 - Version added: 4.0.2
 - Version changed: 4.2.0, changed from `release` to `centralized`
 
@@ -312,10 +312,10 @@ Update channel. Can be `centralized`, `release`, `beta` or `alpha`.
 
 #### `chunk-limit`
 
-Size in MiB above which files will be uploaded in chunks (if [chunk-upload](#chunk-upload) is `True`).
+Size in MiB above which files will be uploaded in chunks (if [chunk-upload](#chunk-upload) is `True`).</br>
 Has to be above 0.
 
-- Default value (int): 20
+- Default value (int): `20`
 - Version added: 4.1.2
 
 * * *
@@ -324,7 +324,7 @@ Has to be above 0.
 
 Size of the chunks in MiB. Has to be above 0 and lower or equal to 20.
 
-- Default value (int): 20
+- Default value (int): `20`
 - Version added: 4.1.2
 
 * * *
@@ -334,7 +334,7 @@ Size of the chunks in MiB. Has to be above 0 and lower or equal to 20.
 Activate the upload in chunks for files bigger than [chunk-limit](#chunk-limit).
 
 
-- Default value (bool): True
+- Default value (bool): `True`
 - Version added: 4.1.2
 
 * * *
@@ -352,7 +352,7 @@ Force the client version to run when using the centralized update channel (must 
 
 Define if SSL errors should be ignored.
 
-- Default value (bool): True
+- Default value (bool): `True`
 - Version added: 2.0
 - Version removed: 4.0.1, use [ssl-no-verify](#ssl-no-verify) set to `True` instead
 
@@ -360,10 +360,10 @@ Define if SSL errors should be ignored.
 
 #### `database-batch-size`
 
-[Direct Transfer] When adding files into the database, the operation is done by batch instead of one at a time.
+[Direct Transfer]({{page version='' space='client-apps' page='nuxeo-drive-direct-transfer'}}) When adding files into the database, the operation is done by batch instead of one at a time.
 This option controls the batch size.
 
-- Default value (int): 256
+- Default value (int): `256`
 - Version added: 4.4.4
 
 * * *
@@ -372,7 +372,7 @@ This option controls the batch size.
 
 Activate the debug window, and debug mode.
 
-- Default value (bool): False
+- Default value (bool): `False`
 - Version added: 2.0
 - Version removed: 4.0.0
 
@@ -382,17 +382,17 @@ Activate the debug window, and debug mode.
 
 Delay in seconds before each remote check (calling the [NuxeoDrive.GetChangeSummary](https://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewOperation/NuxeoDrive.GetChangeSummary) operation).
 
-- Default value (int): 30
+- Default value (int): `30`
 - Version added: 2.0
 
 * * *
 
 #### `disabled-file-integrity-check`
 
-Set to `True` to disable downloaded files integrity check.
+Set to `True` to disable downloaded files integrity check.</br>
 It is a needed option when the [managed blob store key strategy](https://doc.nuxeo.com/nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2019/#s3-direct-upload-of-5-gb-files) is set up on the server, because there is no logic digest filled, the application would not be able to validate such files.
 
-- Default value (bool): False
+- Default value (bool): `False`
 - Version added: 4.4.5
 
 * * *
@@ -434,7 +434,7 @@ Force the reset to the language.
 
 Define the handshake timeout in seconds.
 
-- Default value (int): 60
+- Default value (int): `60`
 - Version added: 2.0
 
 * * *
@@ -500,17 +500,17 @@ Lowercase file suffixes to ignore while syncing.
 
 #### `locale`
 
-Set up the language if not already defined.
+Set up the language if not already defined.</br>
 This can also be set up by the user from the Settings window.
 
-- Default value (str): en
+- Default value (str): `en`
 - Version added: 2.0
 
 * * *
 
 #### `log-filename`
 
-The name of the log file.
+The name of the log file.</br>
 If not set, defaults to `nxdrive.log`.
 
 - Default value (str): None
@@ -520,10 +520,10 @@ If not set, defaults to `nxdrive.log`.
 
 #### `log-level-console`
 
-Define level for console log.
+Define level for console log.</br>
 Can be `DEBUG`, `INFO`, `WARNING` or `ERROR`.
 
-- Default value (str): WARNING
+- Default value (str): `WARNING`
 - Version added: 2.0
 - Version changed: 4.1.0, removed the `TRACE` level
 
@@ -533,10 +533,10 @@ Can be `DEBUG`, `INFO`, `WARNING` or `ERROR`.
 
 #### `log-level-file`
 
-Define level for file log.
+Define level for file log.</br>
 Can be `DEBUG`, `INFO`, `WARNING` or `ERROR`.
 
-- Default value (str): WARNING
+- Default value (str): `WARNING`
 - Version added: 2.0
 - Version changed: 4.1.0, removed the `TRACE` level
 
@@ -548,7 +548,7 @@ Can be `DEBUG`, `INFO`, `WARNING` or `ERROR`.
 
 Define the maximum number of retries before considering the document as in error.
 
-- Default value (int): 3
+- Default value (int): `3`
 - Version added: 2.0
 
 * * *
@@ -557,7 +557,7 @@ Define the maximum number of retries before considering the document as in error
 
 Number of consecutive sync operations to perform without refreshing the internal state DB.
 
-- Default value (int): 10
+- Default value (int): `10`
 - Version added: 2.0
 - Version removed: 4.1.3
 
@@ -567,7 +567,7 @@ Number of consecutive sync operations to perform without refreshing the internal
 
 Disable the standard check for binding, to allow installation on network filesystem.
 
-- Default value (bool): False
+- Default value (bool): `False`
 - Version added: 2.0.911
 
 * * *
@@ -585,7 +585,7 @@ Define URLs exception for the proxy.
 
 #### `proxy-server`
 
-Define the address of the proxy server (e.g. `http://proxy.example.com:3128`).
+Define the address of the proxy server (e.g. `http://proxy.example.com:3128`).</br>
 This can also be set up by the user from the Settings window.
 
 - Default value (str): None
@@ -595,7 +595,7 @@ This can also be set up by the user from the Settings window.
 
 #### `proxy-type`
 
-Define proxy type.
+Define proxy type.</br>
 This can also be set up by the user from the Settings window.
 
 - Default value (str): None
@@ -609,7 +609,7 @@ This can also be set up by the user from the Settings window.
 Define if SSL errors should be ignored.
 Highly unadvised to enable this option.
 
-- Default value (bool): False
+- Default value (bool): `False`
 - Version added: 4.0.1
 
 * * *
@@ -618,17 +618,17 @@ Highly unadvised to enable this option.
 
 Launch the synchronization and then exit the application.
 
-- Default value (bool): False
+- Default value (bool): `False`
 - Version added: 4.2.0
 
 * * *
 
 #### `synchronization-enabled`
 
-Synchronization features are enabled.
+Synchronization features are enabled.</br>
 If set to `False`, nothing will be downloaded/uploaded/synchronized but Direct Edit and Direct Transfer features will work.
 
-- Default value (bool): True
+- Default value (bool): `True`
 - Version added: 4.4.0
 
 * * *
@@ -637,34 +637,34 @@ If set to `False`, nothing will be downloaded/uploaded/synchronized but Direct E
 
 Define the socket timeout in seconds.
 
-- Default value (int): 30
+- Default value (int): `30`
 - Version added: 2.0
 
 * * *
 
 #### `tmp-file-limit`
 
-File size in MiB.
+File size in MiB.</br>
 Files smaller than this limit will be written at once to the file rather than chunk by chunk.
 
-- Default value (float): 10.0
+- Default value (float): `10.0`
 - Version added: 4.1.4
 
 * * *
 
 #### `update-check-delay`
 
-Define the auto-update check delay in seconds.
+Define the auto-update check delay in seconds.</br>
 0 means disabled.
 
-- Default value (int): 3600
+- Default value (int): `3600`
 - Version added: 2.0
 
 * * *
 
 #### `update-site-url`
 
-Configure a custom update website.
+Configure a custom update website.</br>
 See Nuxeo Drive Update Site for more details.
 
 - Default value (str): [https://community.nuxeo.com/static/drive-updates](https://community.nuxeo.com/static/drive-updates)
@@ -676,7 +676,7 @@ See Nuxeo Drive Update Site for more details.
 
 Share anonymous usage analytics to help the developers build the best experience for you.
 
-- Default value (bool): False
+- Default value (bool): `False`
 - Version added: 4.1.0
 - Version changed: 4.4.5, a minimal set of GDPR-information is sent even if set to `False` (see [NXDRIVE-2254](https://jira.nuxeo.com/browse/NXDRIVE-2254))
 
@@ -684,15 +684,15 @@ Share anonymous usage analytics to help the developers build the best experience
 
 #### `use-sentry`
 
-Allow sharing error reports when something unusual happen.
-This parameter is critical for the product's health and we will thank you to not turn it off.
+Allow sharing error reports when something unusual happens.</br>
+This parameter is critical for the product's health, please do not turn it off.
 
-- Default value (bool): True
+- Default value (bool): `True`
 - Version added: 4.1.0
 
 ## Behaviors
 
-The application can be tweaked using on-demand on/off options via the `behavior` parameter.
+The application can be tweaked using on-demand on/off options via the `behavior` parameter.</br>
 As this is targeting server actions, this parameter cannot be set via the local configuration file but only via the server configuration one.
 
 Available behaviors:
@@ -713,7 +713,7 @@ Here is how to tweak behaviors via the server configuration file:
 
 ## Features
 
-Several features can be turned on/off on-demand via the `feature` parameter.
+Several features can be turned on/off on-demand via the `feature` parameter.</br>
 This parameter can be set via the local configuration file and the server configuration one.
 
 If the same feature is defined locally and remotely, then only the local value will be taken into account.
