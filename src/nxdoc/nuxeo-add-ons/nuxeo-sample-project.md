@@ -12,7 +12,7 @@ tree_item_index: 2550
 
 {{! excerpt}}
 
-[Nuxeo Sample](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample) registers bare contributions defined in [https://github.com/nuxeo/nuxeo-sample-project](https://github.com/nuxeo/nuxeo-sample-project) to help developers discover contributions mecanism.
+[Nuxeo Sample](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample) registers bare contributions defined in [https://github.com/nuxeo/nuxeo-sample-project](https://github.com/nuxeo/nuxeo-sample-project) to help developers discover contributions mechanism.
 
 {{! /excerpt}}
 
