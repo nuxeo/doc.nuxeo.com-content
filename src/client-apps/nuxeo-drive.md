@@ -536,7 +536,7 @@ Can be `DEBUG`, `INFO`, `WARNING` or `ERROR`.
 Define level for file log.</br>
 Can be `DEBUG`, `INFO`, `WARNING` or `ERROR`.
 
-- Default value (str): `WARNING`
+- Default value (str): `INFO`
 - Version added: 2.0
 - Version changed: 4.1.0, removed the `TRACE` level
 
