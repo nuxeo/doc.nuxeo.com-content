@@ -147,14 +147,16 @@ To use S3 direct upload with Nuxeo, you will need to add another policy to a new
 Make sure that all configuration values are set in the `nuxeo.conf`:
 
 ```
-nuxeo.s3storage.useDirectUpload=true
 nuxeo.s3storage.transient.bucket=
-nuxeo.s3storage.transient.roleArn=
 nuxeo.aws.accessKeyId=
 nuxeo.aws.secretKey=
 nuxeo.aws.region=
 nuxeo.s3storage.bucket=
 ```
+{{#> callout type='note'}}
+
+Since the work in [NXP-29548](https://jira.nuxeo.com/browse/NXP-29548) 'nuxeo.s3storage.useDirectUpload=true' and 'nuxeo.s3storage.transient.roleArn=' (documented as part of the previous version configuration) are no longer necessary **for the Nuxeo Aspera Connector** and can be removed, **if you only use these values for the Nuxeo Aspera Connector, and not for any other reason**.  See upgrade notes.
+{{/callout}}
 
 #### Aspera Nuxeo Configuration
 
