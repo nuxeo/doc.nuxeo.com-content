@@ -25,6 +25,9 @@ default:
             -
                 space_path: retention-management
                 space_name: Nuxeo Retention Management Documentation
+            -
+                space_path: nuxeo-cloud
+                space_name: Nuxeo Cloud Documentation    
         branch: 'static'
 
 development:
