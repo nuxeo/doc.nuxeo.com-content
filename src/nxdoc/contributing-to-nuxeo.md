@@ -298,7 +298,7 @@ Nuxeo development is fully transparent:
 - Any commit in the code can be followed on [Nuxeo GitHub repositories](http://nuxeo.github.io/) and on [ecm-checkins@lists.nuxeo.com](mailto:ecm-checkins@lists.nuxeo.com).
 - Any evolution and bug fixing is tracked on [JIRA](https://jira.nuxeo.com/).
 
-## Contribution Principals
+## Contribution Principles
 
 Nuxeo is always happy when someone offers to help in the improvement of the product, whether it is for documentation, testing, fixing a bug, suggesting functional improvement or contributing new modules. To maintain the quality of such an open development process, Nuxeo has set up a few strict rules that a Nuxeo community member should follow to be able to contribute.
 
