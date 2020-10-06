@@ -10,7 +10,7 @@ toc: true
 
 Code reviews are a collaborative process between coders and reviewers — this is not a battle. The goal of the reviews is to improve the code quality by having several pairs of eyes on the code, for the benefit of all.
 
-Before you read this page, make sure you've read the basic [Contribution Principals]({{page space='nxdoc' page='next/contributing-to-nuxeo'}}).
+Before you read this page, make sure you've read the basic [Contribution Principles]({{page space='nxdoc' page='contributing-to-nuxeo'}}#contribution-principles).
 
 These guidelines apply to the repositories of the [Nuxeo](https://github.com/nuxeo/) GitHub organization. Yet, some specific rules apply to the [Platform repositories](#platform-repositories), i.e. the ones maintained by the Platform team and built in a dedicated CI system.
 
