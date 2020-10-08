@@ -526,22 +526,6 @@ Public
 </td>
 </tr>
 <tr>
-<td colspan="1">
-Nuxeo Jenkins Report<br/>
-`nuxeo-jenkins-report-mp`
-</td>
-<td colspan="1">
-Public
-</td>
-<td colspan="1">
-[Administration documentation]({{page page='nuxeo-jenkins-report'}})<br/>
-[User documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
-</td>
-<td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp)
-</td>
-</tr>
-<tr>
 <td>
 Nuxeo JSF to Web UI<br/>
 `nuxeo-jsf-to-web-ui`
