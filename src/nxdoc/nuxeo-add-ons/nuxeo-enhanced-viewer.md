@@ -366,6 +366,10 @@ nuxeo.arender.oauth2.client.secret=OAUTH2_SECRET
 nuxeo.arender.oauth2.client.redirectURI=/login/oauth2/code/nuxeo
 ```
 
+{{#> callout type='warning' heading='10.3 deployment'}}
+In order to make the integration work on modern browsers, Nuxeo and NEV 10.3.x should be deployed under sibling domains, for instance `nuxeo.domain.org` and `nev.domain.org`.
+{{/callout}}
+
 ### ARender Configuration
 
 Nuxeo Enhanced Viewer involves installing the ARender services. You can install the ARender services using Kubernetes and Helm 3 by following the [ARender Documentation](https://arender.io/v4/documentation/install/kubernetes/).
