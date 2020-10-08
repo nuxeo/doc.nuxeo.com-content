@@ -21,7 +21,7 @@ npm run dev
 Refer to [the authoring instrutions](https://github.com/nuxeo/doc.nuxeo.com/blob/master/docs/writing-documentation.md#installation) for further details. Hint: append `/nxdoc` or `/userdoc` to the URL.
 
 ### Change browser
-To [change the from the default browser](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md#change-browser).
+Refer to [change the default browser](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md#change-browser).
 
 ## Project Structure
 ### `./assets/...`
