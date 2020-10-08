@@ -611,10 +611,6 @@ Useful for starting Nuxeo as a service.</td>
 <td>Dump a json report about the running server.</td>
 </tr>
 <tr>
-<td colspan="1">`register`</td>
-<td colspan="1">Register the server with an existing Nuxeo Online Service account.</td>
-</tr>
-<tr>
 <td colspan="1">`mp-list`</td>
 <td colspan="1">List local Marketplace packages (including hotfixes).</td>
 </tr>
