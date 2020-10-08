@@ -131,7 +131,7 @@ history:
         version: '1'
 ---
 {{! excerpt}}
-This chapter presents list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.
+This chapter presents the list of Nuxeo Packages available on the Nuxeo Marketplace, for the latest version of the Nuxeo Platform.
 {{! /excerpt}}
 
 {{! multiexcerpt name='MP-packages-list'}}
@@ -821,7 +821,7 @@ Platform Explorer<br/>
 Public
 </td>
 <td colspan="1">
-&nbsp;
+[Documentation]({{page page='explorer'}})
 </td>
 <td colspan="1">
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer)
