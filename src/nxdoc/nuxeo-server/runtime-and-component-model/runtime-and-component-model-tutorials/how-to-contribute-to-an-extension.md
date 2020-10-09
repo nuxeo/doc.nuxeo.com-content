@@ -3,7 +3,7 @@ title: 'HOWTO: Contribute to an Extension'
 description: Learn how to create an XML extension in Nuxeo Studio, with the Nuxeo CLI and how to override a Nuxeo contribution.
 review:
   comment: ''
-  date: '2017-12-14'
+  date: '2020-10-22'
   status: ok
 details:
   howto:
@@ -136,6 +136,7 @@ history:
     message: ''
     version: '1'
 ---
+
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University:</br>
 [Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
@@ -144,21 +145,32 @@ Watch the related courses on Nuxeo University:</br>
 
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute
 
-Whatever the tools you're using ([Nuxeo Studio](https://www.nuxeo.com/products/studio/) or [Nuxeo CLI]({{page page='nuxeo-cli'}})), your first step is to find the open door configuration where you want to contribute. We call these open doors **Extension points**.
-Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/).
+Regardless of the tool you're using ([Nuxeo Studio](https://www.nuxeo.com/products/studio/) or
+[Nuxeo CLI]({{page page='nuxeo-cli'}})), the first step is to find the open door configuration
+where you want to contribute. We call these open doors **Extension points**.
 
-1.  Click on `Extension points`.
-2.  Filter what you want using the combobox.
-3.  Click on the extension point you're interested in.
+Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/):
+
+1.  Click on **Extension points**.
+1.  Maybe use the search filter.
+1.  Click on the extension point you're interested in.
     The documentation of this extension point is displayed.
-    ![]({{file name='Nuxeo-explorer.png'}} ?w=600,border=true)
-4.  Then, if you click on any link in the **Contributions** section, you will see all the default contributions implemented into your Nuxeo instance.
-    There are [hundreds of configuration possibilities](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listExtensionPoints).
+
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Explorer/Explorer Extension Points
+        name: Explorer Extension Points.png
+        addins#screenshot#up_to_date
+    --}}
+    ![Explorer Extension Points](nx_asset://6b3e369d-9cbf-4f55-be1b-d2169a3e2c03)
+
+1.  Then, if you click on any link in the **Contributions** section, you will see all the default contributions
+    implemented into the documented Nuxeo instance.
+    There are [hundreds of configuration possibilities](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listContributions).
 
 ## {{> anchor 'xml-extension-studio'}}Contributing Using Nuxeo Studio
 
-1.  In the **Advanced Settings** > **XML extensions**, click on the **New** button.
-2.  Give the extension a name and click on the **Next** button.
+1.  In the **Advanced Settings** > **XML extensions**, click on the **Ok** button.
+2.  Give the extension an ID and click on the **Next** button.
     ![]({{file name='XMLExtensionEmpty.png'}} ?w=600,border=true)
 3.  Type the content of your extension directly in the area.
     The editor helps you: start typing `<` and it will suggest possible values. While you are typing, some suggestion happens sometimes when typing on space, and you can always call the suggester using the key CTRL+space.
@@ -166,126 +178,179 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 4.  Click on **Save**.
     ![]({{file name='NuxeoStudio-CodeMirrorIntegration.png'}} ?w=560,h=355,border=true)
 
-**Notes**
+{{#> callout type='note' heading='XML Format'}}
+XML declaration should always start with an `<extension>` element.
 
-- Pay attention to always start with an `<extension>` element, or a `<require>` element followed by an `<extension>` element. There is a minimal check done so as to avoid you contribute non correct XML. The `<require>` mechanism can be used to make sure you deploy after another contribution that is deployed by some built-in plugins for instance. You need to reference the component name in the `require` content.
-- You can contribute several extension points in the same XML Extensions feature. This is useful to group extensions that are contributed for the same high level functional goal.
-  Thus, you can have:
-  ```xml
-  <extension point ="" target =""> ...</extension>
-  ```
+There is a minimal check done so as to avoid defining incorrect XML.
 
-  or
+In some particular situations, the `<require>` element can also be used, see
+[overriding contributions](#overriding-contributions).
 
-  ```xml
-  <require> component name</require>
-  <extension point ="" target =""> ...</extension>
-  ```
+The `documentation` element can also be used, alonside the `<extension>` element (that will document the whole feature),
+or inside it (that will document the contributions to the target extension point). This documentation is extracted
+for display by the [Explorer addon]({{page page='explorer'}}).
+{{/callout}}
 
-  or
+Several extension points can be contributed to the same XML Extensions feature. This is useful to group extensions
+that are contributed for the same high level functional goal.
 
-  ```xml
-  <extension point ="" target =""> ...</extension>
-  <extension  point ="..." target="...">...</extension>
-  ```
+Contributions to the same extension point can also be stacked inside the same `<extension>` tag, although they
+can also be dupplicated for specific documentation.
 
-  or
-
-  ```xml
-  <require> component name</require>
-  <require> component name bis</require>
-  <extension  point ="..." target="...">...</extension>
-  ```
-  etc.
+Thus, you can have:
+```xml
+<extension target="component_A" point="point_A">
+  <!-- here goes the configuration XML fragment -->
+</extension>
+```
+or
+```xml
+<extension target="component_A" point="point_A">
+  <!-- here goes the first configuration XML fragment -->
+  <!-- here goes the second configuration XML fragment -->
+</extension>
+```
+or
+```xml
+<documentation>
+  Documentation for all contributions below
+</documentation>
+<extension target="component_A" point="point_A">
+  <documentation>
+    Documentation for this contribution
+  </documentation>
+  <!-- here goes the configuration XML fragment -->
+</extension>
+<extension target="component_A" point="point_A">
+  <documentation>
+    Documentation for this contribution
+  </documentation>
+  <!-- here goes the configuration XML fragment -->
+</extension>
+<extension target="component_B" point="point_B">
+  <documentation>
+    Documentation for this contribution
+  </documentation>
+  <!-- here goes the configuration XML fragment -->
+</extension>
+```
+or
+```xml
+<extension target="component_A" point="point_A">
+  <documentation>
+    Documentation for contributions below
+  </documentation>
+  <!-- here goes the first configuration XML fragment -->
+  <!-- here goes the second configuration XML fragment -->
+</extension>
+<extension target="component_B" point="point_B">
+  <!-- here goes the configuration XML fragment -->
+</extension>
+```
+etc.
 
 ## Contributing Using Nuxeo CLI
 
 Contributing to an extension using Nuxeo CLI requires more steps than using Nuxeo Studio.
 
-Here we assume that you have installed [Nuxeo CLI]({{page page='nuxeo-cli'}}) and follow the page [Develop with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}}) to understand the basics.
+Here we assume that you have installed [Nuxeo CLI]({{page page='nuxeo-cli'}}) and follow the page
+[Develop with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}}) to understand the basics.
 
-### Creating Your XML Extension in Nuxeo CLI
+### Creating an XML Extension in Nuxeo CLI
 
-Once you have found the `extension point` you want to contribute to:
+Once you have found the *extension point* that you want to contribute to:
 
-1.  Create a file `myproject-servicewhereIcontribute-contribution.xml` into the directory `src/main/resources/OSGI-INF/` of your project.
-2.  Declare an empty component into this file, like that:
-
+1.  Create a file named like `service-to-contribute-to-contrib.xml` into the
+    `src/main/resources/OSGI-INF/` directory of your project.
+1.  Declare an empty component into this file, with a **unique name** within the target application, you can follow the
+    suggested naming conventions to avoid conflicts:
     ```xml
     <?xml version="1.0"?>
-    <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
+    <component name="org.mycompany.myproject.target-extension-point-to-contribute-to.contrib">
     </component>
     ```
     {{#> callout type='note' heading='Naming your component'}}
-    *   In Nuxeo, we follow this naming convention `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
-        You can follow your way but be careful to avoid conflicts.
-    *   You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
-
-3.  Add your contribution that express the configuration you want in the component XML fragment. You get something like:
+    *   In Nuxeo bundles, we tend to follow this naming convention:
+        `org.mycompany.myproject.target-extension-point-to-contribute-to.distinctive-words`.
+        You can follow your way but should be careful to avoid conflicts.
+    *   If the component name is not unique, it will not be deployed, and the server startup will be aborted.
+    {{/callout}}
+1.  Add the XML fragment for the contribution expressing the target configuration. The format is the following:
     ```xml
     <?xml version="1.0"?>
-    <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
-      <!-- target and point value is given by the extension point definition -->
-      <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
-        <!-- here you put your configuration XML fragment
-          ...
-        <-->
-        </extension>
+    <component name="org.mycompany.myproject.target-extension-point-to-contribute-to.contrib">
+      <!-- target and point attributes below are given by the extension point definition -->
+      <extension target="name.of.the.component.declaring.the.extension.point" point="point.name">
+        <!-- here goes the configuration XML fragment -->
+      </extension>
+    </component>
+    ```
+    Here is a sample:
+    ```xml
+    <?xml version="1.0"?>
+    <component name="org.mycompany.myproject.DocumentAdapterService.contrib">
+      <extension point="adapters" target="org.nuxeo.ecm.core.api.DocumentAdapterService">
+        <documentation>
+          Adapter mapping for persisted documents using type NXBundleGroup.
+        </documentation>
+        <adapter class="org.nuxeo.apidoc.api.BundleGroup" factory="org.nuxeo.apidoc.adapters.AdapterFactory"
+          type="NXBundleGroup"/>
+      </extension>
     </component>
     ```
 
-### Declaring Your Contribution into Your Bundle
+### {{> anchor 'declare-bundle-contribution'}}Declaring a Contribution in a Bundle
 
-In the previous section you have created your configuration. You must now declare your component in your bundle so it's deployed in your Nuxeo Server. This declaration is made through the `src/main/resources/META-INF/MANIFEST.MF` file.
+In the previous section, the configuration has been created. Now it needs to be declared by the containing bundle,
+so that it's deployed by the Nuxeo server. This declaration is made through the
+`src/main/resources/META-INF/MANIFEST.MF` file.
 
-1.  Create a new parameter, if it does not exist.
+1.  Create a new entry `Nuxeo-Component`, if it does not exist:
     ```
     Manifest-Version: 1.0
-    Bundle-Vendor: Nuxeo
-    Bundle-ActivationPolicy: lazy
-    Bundle-ClassPath: .
-    Bundle-Version: 5.5
-    Bundle-Name: jalon-dm-bundle
-    Nuxeo-Component: OSGI-INF/extensions/me.jalon.dm.bundle.importer.FileSystemFetcher.xml,
-     OSGI-INF/extensions/com.mycomapny.test.FillIDDocument.xml,
-     OSGI-INF/extensions/com.mycomapny.test.asda.xml
     Bundle-ManifestVersion: 2
-    Bundle-SymbolicName: jalon-dm-bundle
-    Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+    Bundle-SymbolicName: org.mycompany.myproject.mybundle
+    Nuxeo-Component: OSGI-INF/extensions/doctypes-contrib.xml
+
     ```
 
+2.  If the `Nuxeo-Component` entry already existed with another component declaration, separate them by commas:
     ```
     Manifest-Version: 1.0
-    ... all the existing element already set ...
-    Nuxeo-Component: OSGI-INF/myproject-servicewhereIcontribute-contribution.xml
+    Bundle-ManifestVersion: 2
+    Bundle-SymbolicName: org.mycompany.myproject.mybundle
+    Nuxeo-Component: OSGI-INF/extensions/doctypes-contrib.xml,
+     OSGI-INF/extensions/adapters-contrib.xml,
+
     ```
 
-2.  If the `Nuxeo-Component` entry already exists with another component declaration, separate them by commas.
+{{{multiexcerpt 'manifest-format-warning' page='how-to-create-an-empty-bundle'}}}
 
-{{{multiexcerpt 'manifest-format-warning' page='How to create an empty bundle'}}}
+## {{> anchor 'overriding-contributions'}}Overriding the Nuxeo Default Configurations
 
-## Overriding the Nuxeo Default Configuration
+The Nuxeo application comes with runtime contributions, relying on the extension point system for default settings.
 
-Most of the time you will want to override an existing Nuxeo Component. Each extension point has its own logic (even if most of the time you will just have to contribute the same item with the same name). So look into the extension point definition to see how to override an existing configuration.
+Changing one of these configurations can be done by overriding the XML fragment from an existing Nuxeo component, by
+following the steps for your preferred tool (see above) combined with the specific steps below:
+1. Identify this component: using Nuxeo Explorer, go to the extension point definition (see
+   [the first section](#finding-extension-point)), for instance.
+1. Click on the contribution to be overriden: the explorer provides a dedicated link to help with overrides, that you
+   can take as an example.
+1. Notice the contributing component name: you will need to *require* it to make sure this new configuration is applied
+   *after* the original one.
+1. Write a custom component with a specific name, and declare it in your bundle.
+   You should have something like:
+   ```xml
+   <?xml version="1.0"?>
+   <component name="org.mycompany.myproject.extension.point.where.we.contribute">
+   <require>name.of.the.original.component.to.be.overridden</require>
+     <!-- target and point attributes below are given by the extension point definition -->
+     <extension target="name.of.the.component.declaring.the.extension.point" point="point.name">
+       <!-- here goes the new configuration XML fragment -->
+     </extension>
+   </component>
+   ```
 
-Components deployment is linear, so if you want to override an existing configuration, it must be deployed AFTER the existing component.
-
-**Follow the steps for your preferred tool (see above) combined the specific steps below.**
-
-1.  Identify this component: using Nuxeo Explorer, go to the extension point definition (see [the first section](#finding-extension-point) ).
-2.  Click on the contribution you want to override.
-3.  Copy the name of the component (value after **In component**).
-4.  Paste it in your component into a `<require>` item.
-    You will have something like that:
-    ```xml
-    <?xml version="1.0"?>
-    <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
-      <require>name.of.the.component.you.want.to.override</require>
-      <!-- target and point value is given by the extension point definition -->
-      <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
-        <!-- here you put your configuration XML fragment
-          ...
-        <-->
-      </extension>
-    </component>
-    ```
+Note: if you are adding this contribution from Nuxeo Studio, you do not need the require tag, as Studio contributions
+are added after all other contributions have been deployed. You might need it if you are overriding a contribution
+from another Studio project, though.

@@ -1,9 +1,15 @@
 ---
-title: Writing a Bundle Manifest
+title: 'HOWTO: Write a Bundle Manifest'
 review:
-    comment: ''
-    date: '2017-12-14'
-    status: ok
+  comment: ''
+  date: '2020-10-22'
+  status: ok
+details:
+    howto:
+        excerpt: Learn how to write a Bundle Manifest.
+        level: Advanced
+        tool: Code
+        topics: Runtime
 labels:
     - lts2016-ok
     - runtimecomponent
@@ -21,7 +27,8 @@ confluence:
     shortlink: QoJH
     shortlink_source: 'https://doc.nuxeo.com/x/QoJH'
     source_link: /display/NXDOC/Writing+a+Bundle+Manifest
-tree_item_index: 300
+toc: false
+tree_item_index: 500
 history:
     -
         author: Arnaud Kervern
@@ -288,7 +295,3 @@ Nuxeo is also using two specific manifest headers:
 *   **Nuxeo-WebModule**: Which specify the class name of a JAX-RS application declared by a Nuxeo bundle.
 
 Of course these two headers are optional and should be used only when needed.
-
-# Bundle Preprocessing
-
-Nuxeo is a very dynamic platform. When building a Nuxeo Application you will get an application template. At each startup, the application files are dynamically updated by each bundle in the application that need to modify a global configuration setting or to provide a global resource. We call this mechanism **preprocessing**.

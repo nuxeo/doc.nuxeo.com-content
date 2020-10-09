@@ -2,7 +2,7 @@
 title: Understanding Bundles Deployment
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2020-10-20'
     status: ok
 labels:
     - lts2016-ok
@@ -89,43 +89,82 @@ history:
 ---
 ## Deployment Phases
 
-&nbsp;
-
 {{! excerpt}}
 
-The Nuxeo Platform deployment is incremental: the startup process involves different processors for different phases.
+The Nuxeo Platform deployment is incremental: the startup process involves different phases.
 
 {{! /excerpt}}
 
-1.  Template processor for configuration
-2.  Deployment-fragment pre-processor
-3.  Bundle activation and deployment
-4.  WAR/EAR deployment
+1.  Process [Configuration Templates]({{page page='configuration-templates'}})
+1.  Process Deployment Fragment Resources
+1.  Deploy Nuxeo Runtime Configurations and [Bundles]({{page page='runtime-and-component-model'}})
+1.  Initialize the Servlet Container
 
-![]({{file name='Nx-deploy.png'}} ?w=600,h=472,border=true)
+### Configuration Templates Processing
 
-### Template Processor
-
-The template system allows to use template for generating configuration files:
+The [Configuration Template System]({{page page='configuration-templates'}}) is used to generate configuration files:
 
 *   data source declaration
-*   JCA connector declaration
 *   SMTP Gateway
 *   monitoring extensions
 *   misc extension point contributions
     (LDAP, SMTP, OpenOffice.org)
 
-The template processor system uses Java property files to read the variable and do the replacement in the template to generate the actual configuration files.
-
-The template processor system contains a profile system so that a given server can quickly be reconfigured for a target environment:
+This is useful to define profile-like configurations, so that a given server can quickly be reconfigured for a given
+target environment:
 
 *   Dev profile
 *   Integration profile
 *   Production profile
 *   &hellip;
 
-The template system uses Freemarker so that template can contain simple conditional processing.
+A template can be activated by creating a directory in the `$NUXEO_HOME/templates` directory: the corresponding
+directory name can then be used as an identifier and be listed in the `nuxeo.templates` variable, inside the
+`$NUXEO_HOME/bin/nuxeo.conf` file.
 
+Some Nuxeo packages hold pre-computed templates, ready for activation.
+
+The template directory usually holds Java property files with corresponding configuration variables and values. This
+variable can then be:
+*   looked up in the application code
+
+    ```
+    import org.nuxeo.runtime.api.Framework;
+
+    [...]
+
+    if (Framework.isBooleanPropertyTrue("my.service.enabled")) {
+       // ...
+    }
+    String myProfileValue = Framework.getProperty("my.service.custom.variable");
+    ```
+*   referenced by Nuxeo configurations
+
+    ```
+    <component name="my.contrib">
+      <require>org.nuxeo.runtime.datasource.server.contrib</require>
+      <extension target="org.nuxeo.runtime.datasource" point="datasources">
+        <datasource name="${nuxeo.db.commonds}" xaDataSource="${nuxeo.db.xadatasource}"
+          maxTotal="${nuxeo.db["max-pool-size"]}"
+          minTotal="${nuxeo.db["min-pool-size"]}"
+          maxWaitMillis="${nuxeo.db["blocking-timeout-millis"]}"
+          validationQuery="${nuxeo.db.validationQuery}"
+          accessToUnderlyingConnectionAllowed="true" >
+        </datasource>
+      </extension>
+    </component>
+    ```
+
+    The variable declaration can also hold a default value after the `:=` marker:
+    ```
+    maxTotal="${nuxeo.db["max-pool-size"]}:=10"
+    ```
+
+The template directory can also hold XML configurations that represent Nuxeo Components.
+When the template is activated, these configurations will be deployed by the
+[Runtime Framework](#runtime), see below.
+
+The template system can also use Freemarker to handle simple conditional processing:
 ```
 ...
 <extension target="org.nuxeo.ecm.core.repository.RepositoryService"
@@ -142,37 +181,29 @@ The template system uses Freemarker so that template can contain simple conditio
         <binaryStore path="${repository.binary.store}" />
 ...
 ```
+The file holding this configuration should be suffixed by `.nxftl`. This suffix will be removed when the Freemarker
+processing has been applied. For instance the file `datasources-config.xml.nxftl` will be renamed to
+`datasources-config.xml`.
 
-### Deployment Fragment Preprocessor
 
-In Nuxeo, the target web application is in fact created from a lot of separated bundles.
+### Deployment Fragment Resources Processing
 
-For that each bundle can contribute :
+In Nuxeo, the target web application is generated from a group of separated bundles. Each bundle can contribute:
 
-*   resources to the WAR
-*   declaration in the web.xml
-*   declaration in the faces-config.xml
-*   Java property files for i18n
+*   resources to the WAR directory (JSP files, images, etc),
+*   contributions to the corresponding `web.xml` servlet file,
+*   Java property files for i18n messages (translation files),
 *   &hellip;
 
-Because in JEE5 there is no standard way to do that, we use a pre-deployment processor that will process the bundles for deployment-fragment.xml files.
+To do that, you can place a file named `deployment-fragment.xml` in your jar inside the `OSGI-INF` directory.
 
-The deployment fragment contains ANT like commands that will be executed in order to contribute bundle resources to the JEE WAR Archive.
+This file contains can contain ANT-LIKE commands and XML contributions to the target templating file.
 
+Sample contribution to the `$NUXEO_HOME/nxserver/nuxeo.war/WEB-INF/web.xml` file, using slot `STD-AUTH-FILTER` (check
+the file at `$NUXEO_HOME/nxserver/META-INF/templates/web.xml` for the complete list of slots)
 ```
-<extension target="pages#PAGES">
-    <!-- Bind url to start the download -->
-    <page view-id="/nxconnectDownload.xhtml"
-      action="#{externalLinkManager.startDownload()}" />
-  </extension>
-
-  <extension target="faces-config#NAVIGATION">
-    <navigation-case>
-      <from-outcome>view_admin</from-outcome>
-      <to-view-id>/view_admin.xhtml</to-view-id>
-      <redirect />
-    </navigation-case>
-  </extension>
+<?xml version="1.0"?>
+<fragment version="1">
 
   <extension target="web#STD-AUTH-FILTER">
     <filter-mapping>
@@ -183,267 +214,137 @@ The deployment fragment contains ANT like commands that will be executed in orde
     </filter-mapping>
   </extension>
 
+</fragment>
 ```
 
-### Bundle Deployment
+Sample copy of the bundle `web/nuxeo.war` resources to the final `$NUXEO_HOME/nxserver/nuxeo.war/` directory:
+```
+<?xml version="1.0"?>
+<fragment version="1">
 
-This phase is the real deployment &ldquo;&agrave; la OSGi&rdquo; :
+  <install>
+    <unzip from="${bundle.fileName}" to="/" prefix="web">
+      <include>web/nuxeo.war/**</include>
+    </unzip>
+  </install>
 
-*   activate bundles
-*   declare components, services and extension points
-*   resolve Extension Point contributions
+</fragment>
+```
 
-### Standard WAR/EAR Deployment
+Note that if you'd like to control the order in which this pre-processing is done, you can add a "require" tag in the
+fragment, naming the bundle that should be deployed before yours:
 
-The standard WAR deployment is managed by the host application server that will handle:
+```
+<?xml version="1.0"?>
+<fragment version="1">
+  <require>org.nuxeo.ecm.platform.lang</require>
+  <install>
+    <delete path="${bundle.fileName}.tmp" />
+    <mkdir path="${bundle.fileName}.tmp" />
+    <unzip from="${bundle.fileName}" to="${bundle.fileName}.tmp" />
 
-*   Web resource declaration
-    (using the aggregated descriptor generated by the pre-deployment)
-*   JSF initialization
-*   Seam Init
+    <append from="${bundle.fileName}.tmp/OSGI-INF/l10n/messages_en_US.properties"
+      to="nuxeo.war/WEB-INF/classes/messages.properties" addNewLine="true" />
+    <append from="${bundle.fileName}.tmp/OSGI-INF/l10n/messages_en_US.properties"
+      to="nuxeo.war/WEB-INF/classes/messages_en.properties" addNewLine="true" />
+    <append from="${bundle.fileName}.tmp/OSGI-INF/l10n/messages_en_US.properties"
+      to="nuxeo.war/WEB-INF/classes/messages_en_US.properties" addNewLine="true" />
+
+    <delete path="${bundle.fileName}.tmp" />
+  </install>
+</fragment>
+```
+
+### {{> anchor 'runtime'}}Nuxeo Runtime Configurations and Bundles Deployment
+
+This phase deploys Nuxeo Runtime Components, registering Nuxeo Services, Extension Points and Contributions.
+
+First, component XML files detected in the `$NUXEO_HOME/nxserver/config/` directory are registered. These files might
+have been generated there thanks to the previous configuration templates processing.
+
+**NB**: only files with a name ending with **`-config.xml`** will be taken into account.
+Sometimes other resources are also present: they will be available in the classpath but will not be considered as
+component files.
+
+After that, bundles are processed for components, following the Runtime Framework lifecycle:
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Runtime/Runtime Flow
+    name: Runtime Flow.png
+    server#diagram#up_to_date
+--}}
+![Runtime Flow](nx_asset://731b5efa-6e69-4998-b3d1-89be397e6e79)
+
+In case of problems during the runtime deployment, the application startup might be aborted
+(see [`--lenient` option]({{page page ='nuxeoctl-and-control-panel-usage'}}#lenient) to control
+that).
+
+Sample startup log without errors:
+```
+INFO  [OSGiRuntimeService] Nuxeo Platform Started
+======================================================================
+= Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 548
+======================================================================
+```
+
+Sample startup log with errors:
+```
+INFO  [OSGiRuntimeService] Nuxeo Platform Started
+======================================================================
+= Component Loading Errors:
+  * Failed to load contributions for component service:OverridingXPoint-witherror
+======================================================================
+= Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 12
+======================================================================
+```
+
+To control the order in which components are deployed, you can ass a `<require>` element at the start of a
+component definition: this component will be deployed after the required component has been deployed too.
+This is useful to ensure proper override/merging behaviours on the final configuration held by the service.
+Here are a few notes about it:
+- a contribution does not need to require its target component: this requirement is implicit, and the contribution
+  will only be registered when the target extension point has been registered.
+- Studio bundles are deployed last: they require the `org.nuxeo.runtime.started` pseudo component, which is registered
+  after all components have been resolved.
+- a failed requirement (requirement to a missing component) will prevent the server startup.
+
+
+### Servlet Container Initialization
+
+Next, the Servlet Container is initialized, this is managed by Tomcat.
+
+Servlets, filters, filter mappings are taken into account thanks to the previously-generated `web.xml` configuration.
+
+Additional frameworks are also initialized (like the legacy JSF and Seam frameworks initializations, for instance).
+
+At this point, the application is fully deployed and should be ready to serve external requests.
+
 
 ## NuxeoCtl
 
-[NuxeoCtl]({{page page='nuxeoctl-and-control-panel-usage'}}) is not really part of the deployment, but it's a central tool that helps managing Nuxeo Startup.
+[NuxeoCtl]({{page page='nuxeoctl-and-control-panel-usage'}}) is not really part of the deployment, but it's a central
+tool that helps managing Nuxeo startup and configuration.
 
-NuxeoCtl provides
+NuxeoCtl provides:
 
 *   a Nuxeo Bootstrap
-    *   runs template system
+    *   runs the Configuration Template system
     *   starts the target Application Server
 *   some administration tools
     *   Nuxeo Package administration and installation
-    *   start/stop/restart/configure &hellip;
+    *   start/stop/restart/configure/&hellip;
 *   a simple command GUI
 
-NuxeoCtl, like the Templating System, is not really needed to be able to run Nuxeo. It just helps having a simple and efficient configuration.
+<div class="row" data-equalizer data-equalize-on="medium">
+  <div class="column">
 
-It will be more and more true as we continue integrating features inside NuxeoCtl :
-
-*   multi-node commands (like update package on each node)
-*   cloud commands
-
-In a sense, NuxeoCtl is close to what is provided in several &ldquo;Cloud packaged tomcats&rdquo; (TcServer, CloudFoundry &hellip;).
-
-## Existing Deployment Targets
-
-Nuxeo Platform currently supports several deployment targets.
-
-<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-**Testing**
-**(Junit)**
-
-</td><td colspan="1">
-
-**Custom Tomcat/JBoss**
-**(dynamic mode)**
-
-</td><td colspan="1">
-
-**Tomcat WAR**
-**(static mode)**
-
-</td><td colspan="1">
-
-**Jboss EAR**
-**(static mode)**
-
-</td></tr><tr><td colspan="1">
-
-**_NuxeoCtl_**
-
-</td><td colspan="1">
-
-<span style="color: rgb(153,153,153);">Not used</span>
-
-</td><td colspan="1">
-
-Yes
-
-</td><td colspan="1">
-
-<span style="color: rgb(204,204,204);">No</span>
-
-</td><td colspan="1">
-
-<span style="color: rgb(204,204,204);">No</span>
-
-</td></tr><tr><td colspan="1">
-
-**_Config templating_**
-
-</td><td colspan="1">
-
-<span style="color: rgb(153,153,153);">Not used</span>
-
-</td><td colspan="1">
-
-Yes
-
-</td><td colspan="1">
-
-<span style="color: rgb(153,153,153);">Run once</span>
-<span style="color: rgb(153,153,153);">(before creating the WAR)</span>
-
-</td><td colspan="1">
-
-<span style="color: rgb(153,153,153);">Run once</span>
-<span style="color: rgb(153,153,153);">(before creating the EAR)</span>
-
-</td></tr><tr><td colspan="1">
-
-**_Pre-deployment_**
-
-</td><td colspan="1">
-
-<span style="color: rgb(153,153,153);">Not used</span>
-
-</td><td colspan="1">
-
-Started by custom deployer
-
-</td><td colspan="1">
-
-<span style="color: rgb(153,153,153);">Run once</span>
-<span style="color: rgb(153,153,153);">(before creating the WAR)</span>
-
-</td><td colspan="1">
-
-<span style="color: rgb(153,153,153);">Run once</span>
-<span style="color: rgb(153,153,153);">(before creating the EAR)</span>
-
-</td></tr><tr><td colspan="1">
-
-**_Bundle activation_**
-
-</td><td colspan="1">
-
-Yes via Junit
-
-</td><td colspan="1">
-
-Started by custom deployer
-
-</td><td colspan="1">
-
-Started by Servlet listener
-
-</td><td colspan="1">
-
-Started by Jboss EAR listener
-
-</td></tr><tr><td colspan="1">
-
-**_Standard deployment_**
-
-</td><td colspan="1">
-
-<span style="color: rgb(179,179,179);">Not used</span>
-
-</td><td colspan="1">
-
-Yes
-
-</td><td colspan="1">
-
-Yes
-
-</td><td colspan="1">
-
-Yes
-
-</td></tr><tr><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-**_Full deployment_**
-
-</td><td colspan="1">
-
-No JSF / WAR
-
-</td><td colspan="1">
-
-Yes
-
-</td><td colspan="1">
-
-Yes
-
-</td><td colspan="1">
-
-Yes
-
-</td></tr><tr><td colspan="1">
-
-**_Marketplace feature_**
-
-</td><td colspan="1">
-
-N/A
-
-</td><td colspan="1">
-
-Yes
-
-</td><td colspan="1">
-
-No
-
-</td><td colspan="1">
-
-No
-
-</td></tr></tbody></table></div>
-
-Depending on the target platform:
-
-*   all deployment phases may not be run
-*   platform features may change
-
-The static deployment model was added initially for JBoss and was then extended to Tomcat too.
-
-In the static deployment model NuxeoCtl pack command is run to:
-
-*   run the template system
-*   run the pre-processing
-*   reorganize the WAR/EAR structure
-*   add a activator to start the Bundle deployment
-*   zip everything&nbsp;
-    ![]({{file name='Nx-static-deploy.png'}} ?w=600,h=313,border=true)
-
-&nbsp;
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections in this documentation'}}
+{{#> panel heading='Related Documentation'}}
 
 - [Standard High Availability Nuxeo Cluster Architecture]({{page page='standard-high-availability-nuxeo-cluster-architecture'}})
 - [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
+- [Configuration Templates]({{page page='configuration-templates'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
 
-&nbsp;
-
-</div></div>
+  </div>
+</div>
