@@ -68,7 +68,6 @@ This chapter describes common development tools and useful complementary tools t
 
 *   [Quality Assurance and Continuous Integration]({{page space='CORG' page='Quality Assurance+and+Continuous+Integration'}})
     *   [Isolated Testing]({{page space='CORG' page='Isolated Testing'}})
-    *   [Jenkins duty]({{page space='CORG' page='Jenkins duty'}})
     *   [Jenkins Job Configuration]({{page space='CORG' page='Jenkins Job+Configuration'}})
     *   [Jenkins plugins]({{page space='CORG' page='Jenkins plugins'}})
 *   [NXPointDoc Documentation tool]({{page space='CORG' page='NXPointDoc Documentation+tool'}})
@@ -77,4 +76,3 @@ This chapter describes common development tools and useful complementary tools t
 *   [Maven Usage]({{page space='CORG' page='Maven Usage'}})
 *   [Code Quality with IDE Plugins]({{page space='CORG' page='Code Quality+with+IDE+Plugins'}})
 *   [Docker usages]({{page space='CORG' page='Docker usages'}})
-

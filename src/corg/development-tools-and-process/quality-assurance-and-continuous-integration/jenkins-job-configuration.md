@@ -100,7 +100,7 @@ If your project is public and depends on a Studio project, you must add "jenkins
 
 The jobs are now organized within folders: you must not create a job at Jenkins root.
 
-### Nuxeo Addons
+## Nuxeo Addons
 
 For setting CI over a common Nuxeo Addon with a Maven build:
 
@@ -133,7 +133,7 @@ For setting CI over a common Nuxeo Addon with a Maven build:
 
     </td></tr></tbody></table></div>
 
-### Nuxeo Packages
+## Nuxeo Packages
 
 For setting CI over a common Nuxeo Package with a Maven build:
 
@@ -210,7 +210,7 @@ For setting CI over a common Nuxeo Package with a Maven build:
 
     </td></tr></tbody></table></div>
 
-### Nuxeo Plugins
+## Nuxeo Plugins
 
 For setting CI over a standalone Nuxeo Plugin (Addon + Package hosted together in the same GitHub repository) with a Maven build:
 
@@ -305,18 +305,17 @@ For setting CI over a standalone Nuxeo Plugin (Addon + Package hosted together i
 
     </td></tr></tbody></table></div>
 
+<!--
+## Sandbox Prototypes
 
 &nbsp;
 
-### Sandbox Prototypes
+## Build Environment
+-->
 
-&nbsp;
+## Discard Old Build
 
-### Build Environment
-
-### Discard Old Build
 {{#> panel type='code' heading='JenkinsFile'}}
-
 ```
 properties([[$class: 'BuildDiscarderProperty',                                                            
                      strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '',                           
@@ -328,11 +327,8 @@ properties([[$class: 'BuildDiscarderProperty',                       
 
 About "Discard Old Build", the properties set in the job are lost when setting properties in the Jenkinsfile.
 
+### Abort the Build If It's Stuck + Add Timestamps to the Console Output
 
-
-
-
-#### Abort the Build If It's Stuck + Add Timestamps to the Console Output
 {{#> panel type='code' heading='Jenkinsfile'}}
 ```
 timestamps {
