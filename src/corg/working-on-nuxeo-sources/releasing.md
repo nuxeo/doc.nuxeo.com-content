@@ -126,9 +126,7 @@ All other addons than those listed in [https://github.com/nuxeo/addons/blob/mast
 
 [Javadoc and Taglibs](http://community.nuxeo.com/api/) are updated by [https://qa.nuxeo.org/jenkins/job/Misc/job/nuxeo-community-doc/](https://qa.nuxeo.org/jenkins/job/Misc/job/nuxeo-community-doc/).
 
-[Platform Explorer](http://explorer.nuxeo.org/) is upgraded and updated with an export from the released distribution, using [the platform-explorer addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer).
-
-### Scripts
+[Platform Explorer](http://explorer.nuxeo.org/) is upgraded and updated with an export from the released distribution, using [the platform-explorer addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer), see [documentation]({{page space='nxdoc' page='explorer'}}).
 
 Here are the main scripts used for the release processes:
 
