@@ -1,12 +1,12 @@
 ---
-title: How to create an empty bundle
+title: 'HOWTO: Create an Empty Bundle'
 review:
-    comment: ''
-    date: '2017-12-14'
-    status: ok
+  comment: ''
+  date: '2020-10-22'
+  status: ok
 details:
     howto:
-        excerpt: Learn the basics of a Nuxeo module and is IDE agnostic.
+        excerpt: Learn the basics of a Nuxeo module raw creation.
         level: Advanced
         tool: Code
         topics: Bundle
@@ -33,7 +33,7 @@ confluence:
     shortlink: kwBu
     shortlink_source: 'https://doc.nuxeo.com/x/kwBu'
     source_link: /display/NXDOC/How+to+create+an+empty+bundle
-tree_item_index: 700
+tree_item_index: 400
 history:
     -
         author: Manon Lumeau
@@ -508,16 +508,15 @@ After you completed the project creation, you get this folder structure:
 
 ### The `deployment-fragment.xml` File
 
-In order to deploy your Nuxeo addon project in the Nuxeo server, you need a new file called `deployment-fragment.xml` in the `cookbook/src/main/resources/OSGI-INF` folder. This file tells the deployment mechanism which files must be copied and where. This file is not mandatory, but it is needed to have your bundle displayed in the log at start up.
+For this exercise, in order to deploy your Nuxeo addon project in the Nuxeo server, you need a new file called `deployment-fragment.xml` in the `cookbook/src/main/resources/OSGI-INF` folder. This file tells the deployment mechanism which files must be copied and where. This file is not mandatory, but it is needed to have your bundle displayed in the log at start up.
 
 For now, the content of the file `deployment-fragment.xml` should be:
 
 ```xml
 <?xml version="1.0"?>
 <fragment version="1">
-<!-- will contains some stuff -->
   <install>
-<!-- useful later -->
+    <!-- to be completed later -->
   </install>
 </fragment>
 ```
@@ -526,8 +525,11 @@ The content of this file will be completed in a coming recipe.
 
 **Remark:**
 
-*   If you want your bundle deployed after all other bundles/contributions, you can add a <require>all</require>
-*   The deployment-fragment.xml file is not required if you have no dependency information to transmit to the runtime or pre-deployment actions to execute.
+*   If you want your bundle deployed after all other bundles, you can add an element `<require>` inside
+    the `<fragment>` element, and fill it with the required bundle name. The `all` pseudo-bundle can also be referenced,
+    so that this bundle is deployed after all others: `<require>all</require>`.
+*   The `deployment-fragment.xml` file is **not required** if you have no dependency information to transmit to the runtime
+    or pre-deployment actions to execute.
 
 ### The `MANIFEST.MF` File
 

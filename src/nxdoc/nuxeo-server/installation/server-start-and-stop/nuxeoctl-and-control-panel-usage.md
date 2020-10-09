@@ -460,7 +460,7 @@ nuxeoctl connect-report [--output <file>|--gzip <*true|false|yes|no>|--pretty-pr
   <td>Deprecated since 11.1: strict mode is the default.</td>
 </tr>
 <tr>
-  <td>`--lenient`</td>
+  <td>{{> anchor 'lenient'}}`--lenient`</td>
   <td></td>
   <td>11.1</td>
   <td>Do not abort in error the start command when a component cannot be activated or if a server is already running.</td>
