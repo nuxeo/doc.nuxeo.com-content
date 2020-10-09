@@ -59,9 +59,6 @@ This is publishing Javadoc and TLDdoc into [http://community.nuxeo.com/api/](htt
 
 ## Publish Nuxeo product into the Explorer
 
-1.  Start an instance of the product to publish with the explorer plugin installed (see [https://github.com/nuxeo/nuxeo-apidoc-server](https://github.com/nuxeo/nuxeo-apidoc-server)).
-2.  Connect on `http://NUXEO_SERVER/nuxeo/site/distribution/`, save your distribution. You may need to wait and refresh to see your saved distribution documentation available. Export your documentation as zip.
-3.  Connect on [http://apidoc.nuxeo.org/nuxeo/site/distribution/](http://apidoc.nuxeo.org/nuxeo/site/distribution/) and import your zip.
-4.  Check your import was successful on [http://explorer.nuxeo.org/nuxeo/site/distribution/](http://explorer.nuxeo.org/nuxeo/site/distribution/).
+[Platform Explorer](http://explorer.nuxeo.org/) is upgraded and updated with an export from the released distribution, using [the platform-explorer addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer), see [documentation]({{page space='nxdoc' page='explorer'}}).
 
-Now, you can start to add technical documentation for that product version.
+Since Nuxeo version 11.3, this export is automated and run by a [Jenkins job](https://jenkins.platform.dev.nuxeo.com/job/nuxeo/job/nuxeo-explorer-jobs/job/export-platform-explorer-reference/).
