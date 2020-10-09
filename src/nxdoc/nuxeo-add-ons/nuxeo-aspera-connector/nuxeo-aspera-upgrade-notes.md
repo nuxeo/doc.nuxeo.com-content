@@ -61,9 +61,9 @@ For a listing of improvements and functional enhancements in version 3.0.x, plea
 see [NXP-9425] (https://jira.nuxeo.com/browse/NXP-29425)
 
 ### Transfer 'tab' behavior
-`nuxeo-aspera-upload-page` element: Replaced `aspera-tab-update` event by `aspera-page-update` event code link
+`nuxeo-aspera-upload-page` element: Replaced `aspera-tab-update` event by `aspera-page-update` event
 
-`nuxeo-aspera-page` element: changed `selectedtab` property into `selectedPage` property code link
+`nuxeo-aspera-page` element: changed `selectedtab` property into `selectedPage` property
 
 see [NXP-29130](https://jira.nuxeo.com/browse/nxp-29130)
 
@@ -76,30 +76,30 @@ see [NXP-29497](https://jira.nuxeo.com/browse/nxp-29497)
 
 see [NXP-29592](https://jira.nuxeo.com/browse/nxp-29592)
 
-`nuxeo-aspera-transfer-page` element removes properties: `transfers`, `offset` and `isPreviousPageAvailable` check
+`nuxeo-aspera-transfer-page` element removes properties: `transfers`, `offset` and `isPreviousPageAvailable`
 
 see [NXP-29282](https://jira.nuxeo.com/browse/nxp-29282)
 
 
 ### Storing message files
-Deprecated `getOrCreateTransferDocument` methods (which was a deprecated Aspera method). check code
+Deprecated `getOrCreateTransferDocument` methods (which was a deprecated Aspera method)
 
 see [NXP-29590](https://jira.nuxeo.com/browse/NXP-29590)
 
 ### Workers' status
-Deprecated `bmExecute(Transfer transfer)` and introduces `bmExecute()` instead code link
+Deprecated `bmExecute(Transfer transfer)` and introduces `bmExecute()` instead
 
 see [NXP-29589](https://jira.nuxeo.com/browse/NXP-29589)
 
 ### Transfer change event
-Deprecating `transfer-changed` event. Use `aspera-uploads-refresh` instead check change
+Deprecating `transfer-changed` event. Use `aspera-uploads-refresh` instead
 
 see [NXP-29302](https://jira.nuxeo.com/browse/nxp-29302)
 
 ### Aspera Connect download
-Removes `linkActive` and `download` properties from `nuxeo-aspera-connect` element check
+Removes `linkActive` and `download` properties from `nuxeo-aspera-connect`
 
-see [NXp-28412](https://jira.nuxeo.com/browse/NXP-28412)
+see [NXP-28412](https://jira.nuxeo.com/browse/NXP-28412)
 
 ### Transfer complete event
 Removed the `aspera-transfer-complete` event and its listeners. From now on, there is no such event being fired.
@@ -107,7 +107,7 @@ Removed the `aspera-transfer-complete` event and its listeners. From now on, the
 see [NXP-29467](https://jira.nuxeo.com/browse/nxp-29467)
 
 ### Transfer edit
-Removed `nuxeo-aspera-upload-edit-dialog` element check code
+Removed `nuxeo-aspera-upload-edit-dialog` element
 
 see [NXP-28207](https://jira.nuxeo.com/browse/nxp-28207
 
