@@ -14,7 +14,7 @@ tree_item_index: 1100
 
 {{! excerpt}}
 The [Nuxeo Aspera](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) connector
-enables users to download/upload binaries with Aspera.  It is designed to be used with **Aspera On Cloud** intances, however, if you use a **self-hosted Aspera** instance, it is still possible you will be able to use the Nuxeo Aspera Connector.  Contact your Aspera team for more information and assistance.
+enables users to download/upload binaries with Aspera.  It is designed to be used with **Aspera On Cloud** instances, however, if you use a **self-hosted Aspera** instance, it is still possible you will be able to use the Nuxeo Aspera Connector.  Contact your Aspera team for more information and assistance.
 {{! /excerpt}}
 
 ## Version 3.0.0
