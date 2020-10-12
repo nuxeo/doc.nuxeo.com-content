@@ -12,22 +12,32 @@ toc: true
 ## Released Changes
 
 ### Auto-create
-https://jira.nuxeo.com/browse/NXP-27574
-polling
+Users now have the option of manually "completing" a transfer, or "automatically" completing the transfer once the content has "uploaded".
+
+See [NXP-27574](https://jira.nuxeo.com/browse/NXP-27574)
+
 
 ### Folder upload support
-https://jira.nuxeo.com/browse/NXP-27573
+Now, in addition to files, users have the ability to upload content in folders as well as files.  As with files, the upload/creation honors configurations of your file import manager and will apply document types and metadata based on your business rules.
+
+See [NXP-27573](https://jira.nuxeo.com/browse/NXP-27573)
 
 
 ### UI/UX improvements
 Since the 2.0.x releases, many updates have been made to improve styling as well as UX for some behaviors. Many of these changes can be found under [this Epic](https://jira.nuxeo.com/browse/NXP-27477).
 
-#### Dashboard pagination 
-https://jira.nuxeo.com/browse/NXP-29406
+### Transfer Dashboard improvements
+Improvements have been made to the transfer dashboard pagination so that users can better access to transfers they have permissions to.  In addition, users can now filter by transfer status.
+
+See [NXP- 29406](https://jira.nuxeo.com/browse/NXP-29406)
 
 
-#### Performance and stability
-testing?
+### Performance and stability
+Since the last release, we've worked on increasing the performance and stability of the Nuxeo Aspera Connector. 
+
+There has been extensive work behind the seems to incorporate more testing as part of the development process.
+
+See [NXP-29407](https://jira.nuxeo.com/browse/NXP-29407)
 ci/cd?
 file/folder deletion?
 
