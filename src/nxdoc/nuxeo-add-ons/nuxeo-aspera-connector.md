@@ -41,7 +41,7 @@ Each node will be attached to one S3 bucket in Nuxeo:
 - The main Nuxeo S3 bucket in Nuxeo for download purpose
 - The S3 transient store bucket for upload purpose
 
-Follow this[Aspera documentation](https://aspera.ibmaspera.com/help/admin/nodes/adding_aws_s3_bucket) to attach S3 buckets to Aspera.
+Follow this [Aspera documentation](https://aspera.ibmaspera.com/help/admin/nodes/adding_aws_s3_bucket) to attach S3 buckets to Aspera.
 
 Please note that, in the documentation above, for **Download** the IAM role used by Aspera only needs `READ` permissions on the bucket.
 
