@@ -14,6 +14,10 @@ toc: true
 This chapter highlights some major information about upgrade from Nuxeo Aspera Connector 2.x to Nuxeo Aspera Connector 3.0.x.
 For a listing of improvements and functional enhancements in version 3.0.x, please see the [release notes]() {{! /excerpt}}
 
+{{#> callout type='warning'}}
+Because of the changes to parameters in the nuxeo.conf file, this release is labeled as a major release.  Transfers that exist in your system **that were started/created with a previous version will not work with this release and attempts to complete them will fail with this realse**.
+{{/callout}}
+
 ## Installation and Configuration
 
 ### Changed/modified Parameters
@@ -114,5 +118,5 @@ see [NXP-28207](https://jira.nuxeo.com/browse/nxp-28207
 
 ## Complementary Information
 
-- Release notes for 3.0.0 (needs link)
-- Nuxeo Aspera Connector (needs link)
+- [Release notes for 3.0.0](https://doc.nuxeo.com/nxdoc/nuxeo-aspera-connector/nuxeo-aspera-release-notes/)
+- [Nuxeo Aspera Connector](https://doc.nuxeo.com/nxdoc/nuxeo-aspera-connector/)

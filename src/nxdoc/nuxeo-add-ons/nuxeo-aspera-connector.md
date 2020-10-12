@@ -20,16 +20,21 @@ enables users to download/upload binaries with Aspera.  It is designed to be use
 ## Version 3.0.0
 ### Requirements
 
-- Aspera Desktop Client - [latest version].
-- Nuxeo Server LTS 2019 (10.10, HF 31, at least) with access to AWS S3 Storage along with the [Amazon S3 Online Storage plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=11.2.13)
+- Aspera Desktop Client - you will be prompted to install necessary versions when using the Connector.
+- Nuxeo Server LTS 2019 (**10.10, HF 31, at least**) with access to AWS S3 Storage along with the [Amazon S3 Online Storage plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=11.2.13)
 - IBM Aspera on Cloud Subscription (see note above about Aspera self-hosted)
+
+
+{{#> callout type='warning'}}
+If you are **upgrading from a previous version** of the Nuxeo Aspera connector, please see the [upgrade notes](https://doc.nuxeo.com/nxdoc/nuxeo-aspera-connector/nuxeo-aspera-upgrade-notes/) for critical information related to potential breaking code.
+{{/callout}}
 
 ### Installation
 
 Installation is made of two steps:
 
 1.  Install the [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) available from the marketplace.
-2.  Install the [Aspera desktop client].
+2.  Install the Aspera desktop client (you will be prompted to install the necessary Aspera software when you try to use the Connector, if you do not already have it).
 
 ### Configuration
 
@@ -598,6 +603,7 @@ Once on the Aspera menu, 2 tabs are available:
 This screen shows the status of all current transfers in your Nuxeo application.</br>
 
 You can:
+
 - Access the transfer metadata and files properties
 - Complete transfers
 - Share transfers
