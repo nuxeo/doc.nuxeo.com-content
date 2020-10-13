@@ -159,8 +159,7 @@ nuxeo.aws.region=
 nuxeo.s3storage.bucket=
 ```
 {{#> callout type='note'}}
-
-Since the work in [NXP-29548](https://jira.nuxeo.com/browse/NXP-29548) 'nuxeo.s3storage.useDirectUpload=true' and 'nuxeo.s3storage.transient.roleArn=' (documented as part of the previous version configuration) are no longer necessary **for the Nuxeo Aspera Connector** and can be removed, **if you only use these values for the Nuxeo Aspera Connector, and not for any other reason**.  See upgrade notes.
+New in this release, 'nuxeo.s3storage.useDirectUpload=true' and 'nuxeo.s3storage.transient.roleArn=' (documented as part of the previous version configuration) are no longer necessary **for the Nuxeo Aspera Connector** and can be removed, **if you only use these values for the Nuxeo Aspera Connector, and not for any other reason**.  See [upgrade notes](https://doc.nuxeo.com/nxdoc/nuxeo-aspera-connector/nuxeo-aspera-upgrade-notes/).
 {{/callout}}
 
 #### Aspera Nuxeo Configuration
@@ -171,8 +170,8 @@ Add the aspera access keys in `nuxeo.conf`:
 
 ```
 ## is the same for the 2 nodes
-aspera.node.url=https://ats-aws-us-east-1.aspera.io
-aspera.node.port=443
+aspera.node.url=
+aspera.node.port=
 
 ### ACCESS KEY ON UPLOAD NODE LINKED TO TS S3 BUCKET
 aspera.access.key.id=
@@ -189,21 +188,21 @@ aspera.download.access.key.secret=
 The **Nuxeo Aspera Connector** uses **Transfers** to add content to the Nuxeo system.  Transfers are “wrappers” or “buckets” for the files/folders you add to the Nuxeo system.
 
 #### Transfer steps
-The process of adding content is divided into 2 steps: **Upload** and **Create**. 
-In the first step, the user **uploads** content to the transfer bucket. While in this step, it may be possible, depending on the chosen “transition type”,  for a user to add files to the bucket and add properties that will apply to the content. 
+The process of adding files and folders using the Nuxeo Aspera Connector is divided into 2 steps: **Upload** and **Create**. 
+In the first step, the user **uploads** files and folders to the transfer bucket. While in this step, it may be possible, depending on the chosen “transition type”,  for a user to add items to the bucket and add properties that will apply (as needed/desired). 
 Once content and any metadata have been added, the transfer can be completed and the content is then **created** in the system.
 
 #### Transfer transition types
 Transitioning between the “upload” and “create” steps can be achieved in 2 ways: **automatically (auto-create)** or **manually**. Users can choose which option to use when creating the transfer from the transfer dashboard.   It is possible to change from manual to auto-create after you start adding content to the transfer.  **Once you set the to auto-create, however, the transfer will behave as if you started in that way, and some limitations around modifying the transfer will apply**.
 
-When auto-create is toggled/selected to be “on”, the user needs only to start the upload of the folders/files to the transfer.  Once the upload is completed, the system will automatically start the process to create the content in the system; no need to wait around simply to push a button.  **Before adding content** to the transfer, you can edit the **“common metadata”** which would apply to all files in the transfer.  Users can, of course, decide not to include any metadata at all, and simply add files, too.
+When auto-create is toggled/selected to be “on”, the user needs only to start the upload of the content to the transfer.  Once the upload is completed, the system will automatically start the process to create the content in the system; no need to wait around simply to push a button.  **Before adding content** to the transfer, you can edit the **“common metadata”** which would apply to all items in the transfer.  Users can, of course, decide not to include any metadata at all, and simply add content, too.
 
 {{#> callout type='note' }}
-There are some caveats when using auto-create (auto-create is set to “on”).  Because of some asynchronous behavior, the ability to modify the transfer/file metadata or to add/remove files once your initial "add to transfer" has begun, is not allowed.  If you discover that you have erred in the files/information, you will need to let the transfer process complete before addressing within the system; where the content was added (not the transfer).
+There are some caveats when using auto-create (auto-create is set to “on”).  Because of some asynchronous behavior, the ability to modify the transfer/file metadata or to add/remove content once your initial "add to transfer" has begun, is not allowed.  If you discover that you have erred in the content/information, you will need to let the transfer process complete before addressing within the system; where the content was added (not the transfer).
 {{/callout}}
 
 If a user has content that needs to be “tagged” or “catalogued” with metadata before creation in the system, the “manual” transition option might be a better choice. To use the **manual option**, choose “no” for auto-create or toggle the auto-create to “off” when creating a new transfer (you can only turn off auto-create if there is **no content in the transfer)**.  This will require someone **manually start** the creation process by clicking the **“complete transfer”** button once the upload is finished (the button is only visible once there is no longer an upload in progress)
-When using the manual transition, the user uploads content to the transfer bucket. While in this step, a user can add folders and files to the bucket and add properties that apply to the files. Properties can be added that apply to all files using the “common metadata” panel; more file-specific properties can be added either to multiple files at once (bulk edit of metadata) and/or individually,  using a single-file action.
+When using the manual transition, the user uploads content to the transfer bucket. While in this step, a user can add content to the bucket and add properties that apply to the items. Properties can be added that "apply to all" using the “common metadata” panel; more file-specific properties can be added either to multiple files at once (bulk edit of metadata) and/or individually,  using a single-file action.
 Once the metadata has been edited to fit the user's needs, the transfer can be **completed** and the content is then created in the system.
 Transfers have 3 states: Draft (no content added yet), In Progress (content added) and Completed (the transfer has been completed and the content has been created in the system).
 
@@ -230,9 +229,9 @@ Once in your instance, Nuxeo Aspera Upload can be accessed from two different wa
 --}}
 ![aspera-image19](nx_asset://da4443e9-0ddb-4908-9ce8-5fcce2e108ce ?border=true)
 
-> The files uploaded by Aspera will be accessible in this folderish document (by default the target location is the user personal workspace)
+> The content uploaded by Aspera will be accessible in this folderish document (by default the target location is the user personal workspace)
 
-Once on the Aspera Upload screen (as you begin to add files), you will be able to download the Aspera Desktop client via the following banner at the top (if not already installed or if a new version is needed):
+Once on the Aspera Upload screen (as you begin to add content), you will be able to download the Aspera Desktop client via the following banner at the top (if not already installed or if a new version is needed):
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image14
@@ -243,18 +242,18 @@ Once on the Aspera Upload screen (as you begin to add files), you will be able t
 
 Once on the Aspera menu, there are 2 main views available:
 
-- [Transfers Dashboard](#transfers-dashboard)
+- [Aspera Dashboard](#aspera-dashboard)
 
 - [Transfers](#transfers)
 
  
-#### Transfers Dashboard
+#### Aspera Dashboard
  
 This screen shows the status of all current transfers in your Nuxeo application.
  
 You can:
 Create new uploads/transfers
-Access the transfers’ metadata and files properties
+Access the transfers’ metadata and content properties
 Complete transfers
 Share transfers
 Delete transfers 
@@ -293,6 +292,9 @@ You can:
 ![aspera-image1](nx_asset://43f35a20-386f-4600-a94f-aa7749e1df2a ?border=true)
  
 - Define/edit the common metadata, including the “target document” or the destination of the current transfer (set of uploaded files) by clicking on the Edit button. 
+{{#> callout type='info'}}
+By default, when clicking "+ New Upload" from the Aspera Dashboard or the transfer view, the `target location` for the upload is the **user's personal workspace**.  If you use the "Upload with Aspera" action from a folderish document, the `target location` will be set to **that folderish document**, by default.
+{{/callout}}
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image7
@@ -336,7 +338,7 @@ You can:
 --}}
 ![aspera-image24](nx_asset://23bc5d1a-0037-450c-ba58-b724bd07caa7 ?border=true)
  
-- Bulk edit selected files metadata in once.
+- Bulk edit selected files metadata.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image25
@@ -353,7 +355,7 @@ You can:
 ![10-aspera.png](nx_asset://462aa78e-525d-4b97-a8b2-27791a999a60 ?border=true) 
  
 
-- **Complete transfer** means to create the related documents in the Nuxeo application (once all files have been uploaded).
+- **Complete transfer** means to create the related documents in the Nuxeo application (once all content has been uploaded).
  When completing a transfer, the "common metadata" is propagated to all Nuxeo documents (except where single/bulk metadata edits override them).
 
 #### Aspera Download
@@ -402,9 +404,9 @@ Installation is made of two steps:
 1.  Install the [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) available from the marketplace.
 1.  Install the [Aspera desktop client](http://d3gcli72yxqn2z.cloudfront.net/connect/v4/bin/IBMAsperaConnectInstaller-3.8.1.161274.dmg).
 
-## Configuration
+### Configuration
 
-### Aspera Configuration
+#### Aspera Configuration
 
 We need to configure 2 Aspera nodes; one for upload and one for download.
 
@@ -471,9 +473,9 @@ The policy for **Upload** must be able to put and get objects from the S3 bucket
 }
 ```
 
-### Nuxeo Configuration
+#### Nuxeo Configuration
 
-#### Transient Store on AWS
+##### Transient Store on AWS
 
 To use S3 direct upload with Nuxeo, you will need to add another policy to a new role:
 
@@ -527,7 +529,7 @@ nuxeo.aws.region=
 nuxeo.s3storage.bucket=
 ```
 
-#### Aspera Nuxeo Configuration
+##### Aspera Nuxeo Configuration
 
 Add the aspera access keys in `nuxeo.conf`:
 
@@ -549,19 +551,19 @@ aspera.download.acess.key.id=
 aspera.download.acess.key.secret=
 ```
 
-## Functional Overview
+### Functional Overview
 
 The Nuxeo Aspera Connector uses "Transfers" to add content to the system.
 
 The process is divided into 2 steps: Upload and Create.
 
-In the first step, the user **uploads** content to the transfer bucket. While in this step, he can add files to the bucket and add properties that will apply to the content. Properties can be added to all files at once (common metadata), to multiple files at once (bulk edit of metadata) and one at a time.
+In the first step, the user **uploads** content to the transfer bucket. While in this step, a user can add content to the bucket and add properties that will apply to the content. Properties can be added to all files at once (common metadata), to multiple files at once (bulk edit of metadata) and one at a time.
 
 Once the metadata has been edited to fit the user's needs, the transfer can be completed and the content is then **created** in the system.
 
 Transfers have 3 states: **Draft** (no content added yet), **In Progress** (content added) and **Completed** (the transfer has been completed and the content has been created in the system).
 
-### Aspera Upload
+#### Aspera Upload
 
 Once in your instance, Nuxeo Aspera Upload can be accessed from two different ways:
 
@@ -583,7 +585,7 @@ Once in your instance, Nuxeo Aspera Upload can be accessed from two different wa
 --}}
 ![2-aspera.png](nx_asset://baeef2eb-ddbc-41e1-b036-46ee567027bf ?w=450,border=true)
 
-> The files uploaded by Aspera will be accessible in this folderish document (by default the target location is the user personal workspace)
+> The content uploaded by Aspera will be accessible in this folderish document (by default the target location is the user personal workspace)
 
 Once on the Aspera Upload screen, you will be able to download the Aspera Desktop client via the following banner at the top:
 
@@ -598,13 +600,13 @@ Once on the Aspera menu, 2 tabs are available:
 - [Transfers](#transfers)
 - [Upload to Nuxeo](#upload-to-nuxeo)
 
-#### Transfers
+##### Transfers
 
 This screen shows the status of all current transfers in your Nuxeo application.</br>
 
 You can:
 
-- Access the transfer metadata and files properties
+- Access the transfer metadata and content's properties
 - Complete transfers
 - Share transfers
 - Delete transfers (as long as they have not been completed)
@@ -616,7 +618,7 @@ You can:
 --}}
 ![4-aspera.png](nx_asset://d6df353e-f79a-4041-bf26-23b66ab6253b ?w=450,border=true)
 
-#### Upload To Nuxeo
+##### Upload To Nuxeo
 
 On this screen, different actions are available; you can:
 
@@ -629,7 +631,7 @@ On this screen, different actions are available; you can:
 --}}
 ![0-aspera.png](nx_asset://be725a89-3066-425a-8a66-e5cb41b3a440 ?w=450,border=true)
 
-- Define/edit the common metadata of the current transfer (set of uploaded files) by clicking on the **Edit** button.
+- Define/edit the common metadata of the current transfer (set of uploaded content) by clicking on the **Edit** button.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/5-aspera.png
@@ -663,7 +665,7 @@ On this screen, different actions are available; you can:
 --}}
 ![8-aspera.png](nx_asset://4924c339-5ec4-44cb-9298-c911b0c3a567 ?w=450,border=true)
 
-- Bulk edit selected files metadata in once.
+- Bulk edit selected files.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/9-aspera.png
@@ -685,7 +687,7 @@ On this screen, different actions are available; you can:
 When completing a transfer, the "common metadata" is propagated to all Nuxeo documents (except all single/bulk metadata edits override them).
 {{/callout}}
 
-### Aspera Download
+#### Aspera Download
 
 The Nuxeo Aspera Download action is accessible via a button displayed when selecting one or several documents:
 
@@ -696,7 +698,7 @@ The Nuxeo Aspera Download action is accessible via a button displayed when selec
 --}}
 ![3-aspera.png](nx_asset://7fb3e281-3edc-46f9-bb4d-f13615876a1a ?w=450,border=true)
 
-### How it Works
+#### How it Works
 
 **Aspera Upload**
 
@@ -716,7 +718,7 @@ The Nuxeo Aspera Download action is accessible via a button displayed when selec
 --}}
 ![aspera-download.png](nx_asset://0127fdfb-455f-4f79-aaa5-df414f77cc07 ?w=450,border=true)
 
-## Customization
+### Customization
 
 ### Model
 
