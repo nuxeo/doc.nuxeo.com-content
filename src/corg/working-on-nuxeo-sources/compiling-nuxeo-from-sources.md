@@ -112,7 +112,7 @@ history:
 ---
 ## Requirements
 
-*   [Sun Java](http://java.sun.com/) 6 (up to Nuxeo Platform 5.6), 7 (since Nuxeo Platform 5.7) or 8 (since Nuxeo Platform 7.2)
+*   [Oracle's JDK or OpenJDK 11]({{page space='nxdoc' page='installation'}}#hardware-and-software-requirements) (since Nuxeo Platform 11.1) or 8 (since Nuxeo Platform 7.2)
 *   [Apache Maven](http://maven.apache.org/) [2.2.1 up to Nuxeo 5.8](http://archive.apache.org/dist/maven/maven-2/2.2.1/binaries/) or [3.1.1+ since Nuxeo 5.9.2 (3.2+ recommended)](http://maven.apache.org/download.cgi)
 *   [Apache Ant 1.7.1+](http://ant.apache.org/)
 *   [Git](http://git-scm.com/)
