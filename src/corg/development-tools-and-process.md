@@ -70,7 +70,6 @@ This chapter describes common development tools and useful complementary tools t
     *   [Isolated Testing]({{page space='CORG' page='Isolated Testing'}})
     *   [Jenkins Job Configuration]({{page space='CORG' page='Jenkins Job+Configuration'}})
     *   [Jenkins plugins]({{page space='CORG' page='Jenkins plugins'}})
-*   [NXPointDoc Documentation tool]({{page space='CORG' page='NXPointDoc Documentation+tool'}})
 *   [Git Usage]({{page space='CORG' page='Git Usage'}})
 *   [Mercurial usage]({{page space='CORG' page='Mercurial usage'}})
 *   [Maven Usage]({{page space='CORG' page='Maven Usage'}})
