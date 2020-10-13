@@ -1,9 +1,9 @@
 ---
 title: Jenkins Job Configuration
 review:
-    comment: ''
+    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
     date: ''
-    status: ok
+    status: not-ok
 notes: >-
     Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:

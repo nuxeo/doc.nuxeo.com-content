@@ -1,9 +1,9 @@
 ---
 title: Compiling Nuxeo from sources
 review:
-    comment: ''
-    date: ''
-    status: ok
+    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
+    date: '20-10-10'
+    status: not-ok
 toc: true
 confluence:
     ajs-parent-page-id: '9275231'
@@ -110,6 +110,7 @@ history:
         version: '1'
 
 ---
+
 ## Requirements
 
 *   [Sun Java](http://java.sun.com/) 6 (up to Nuxeo Platform 5.6), 7 (since Nuxeo Platform 5.7) or 8 (since Nuxeo Platform 7.2)

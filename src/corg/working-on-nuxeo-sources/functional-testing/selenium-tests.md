@@ -1,9 +1,9 @@
 ---
 title: Selenium tests
 review:
-    comment: ''
+    comment: '<span style="color:red">Warning</span> This page is outdated. Check back soon for updated content!'
     date: ''
-    status: ok
+    status: not-ok
 toc: true
 confluence:
     ajs-parent-page-id: '6422538'
