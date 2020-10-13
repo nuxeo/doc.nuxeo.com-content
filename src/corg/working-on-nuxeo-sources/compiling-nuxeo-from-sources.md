@@ -113,7 +113,7 @@ history:
 ## Requirements
 
 *   [Oracle's JDK or OpenJDK 11]({{page space='nxdoc' page='installation'}}#hardware-and-software-requirements) (since Nuxeo Platform 11.1) or 8 (since Nuxeo Platform 7.2)
-*   [Apache Maven](http://maven.apache.org/) [2.2.1 up to Nuxeo 5.8](http://archive.apache.org/dist/maven/maven-2/2.2.1/binaries/) or [3.1.1+ since Nuxeo 5.9.2 (3.2+ recommended)](http://maven.apache.org/download.cgi)
+*   [Apache Maven](http://maven.apache.org/download.cgi) [3.3+](http://archive.apache.org/dist/maven/maven-3/) since Nuxeo Platform 11.1
 *   [Apache Ant 1.7.1+](http://ant.apache.org/)
 *   [Git](http://git-scm.com/)
 *   [NodeJS 4.4.2 (LTS), npm, yo, grunt-cli, gulp, bower]({{page page='installing-nodejs-and-related-tools'}})
