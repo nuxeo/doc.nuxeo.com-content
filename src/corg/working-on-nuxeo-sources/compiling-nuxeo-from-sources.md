@@ -1,9 +1,9 @@
 ---
 title: Compiling Nuxeo from sources
 review:
-    comment: ''
-    date: ''
-    status: ok
+    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
+    date: '20-10-10'
+    status: not-ok
 toc: true
 confluence:
     ajs-parent-page-id: '9275231'
@@ -110,6 +110,7 @@ history:
         version: '1'
 
 ---
+
 ## Requirements
 
 *   [Oracle's JDK or OpenJDK 11]({{page space='nxdoc' page='installation'}}#hardware-and-software-requirements) (since Nuxeo Platform 11.1) or 8 (since Nuxeo Platform 7.2)

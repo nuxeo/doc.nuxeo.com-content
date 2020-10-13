@@ -1,9 +1,9 @@
 ---
 title: Creating Your Own Distribution
 review:
-    comment: ''
-    date: ''
-    status: ok
+    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
+    date: '20-10-10'
+    status: not-ok
 labels:
     - ant-assembly-maven-plugin
     - packaging

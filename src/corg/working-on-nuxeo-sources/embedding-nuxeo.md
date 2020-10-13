@@ -1,7 +1,7 @@
 ---
 title: Embedding Nuxeo
 review:
-    comment: 'This page needs to be reviewed'
+    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
     date: '2016-10-11'
     status: not-ok
 labels:

@@ -1,9 +1,9 @@
 ---
 title: Generating Packages and Installers
 review:
-    comment: ''
+    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
     date: ''
-    status: ok
+    status: not-ok
 confluence:
     ajs-parent-page-id: '9275231'
     ajs-parent-page-title: Working on Nuxeo sources
