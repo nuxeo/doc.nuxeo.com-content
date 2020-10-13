@@ -38,8 +38,7 @@ Since the last release, we've worked on increasing the performance and stability
 There has been extensive work behind the seems to incorporate more testing as part of the development process.
 
 See [NXP-29407](https://jira.nuxeo.com/browse/NXP-29407)
-ci/cd?
-file/folder deletion?
+
 
 
 
