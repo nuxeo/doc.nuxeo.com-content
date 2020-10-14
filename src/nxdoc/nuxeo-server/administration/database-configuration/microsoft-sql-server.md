@@ -297,7 +297,7 @@ For instance the following collations have been checked to work correctly:
 
 ## Database Collation
 
-To work properly Nuxeo need to have some columns with a case-sensitive collation.
+To work properly Nuxeo needs to have some columns with a case-sensitive collation.
 
 To make sure this is the case, use:
 
