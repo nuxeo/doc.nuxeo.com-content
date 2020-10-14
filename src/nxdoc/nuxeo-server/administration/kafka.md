@@ -49,7 +49,7 @@ Other reasons to use Kafka:
 
 ## Kafka Setup
 
-Nuxeo only need to talk with Kafka brokers, it does not need to have access to Zookeeper.
+Nuxeo only needs to talk with Kafka brokers, it does not need to have access to Zookeeper.
 
 Here is the compatibility versions:
 
