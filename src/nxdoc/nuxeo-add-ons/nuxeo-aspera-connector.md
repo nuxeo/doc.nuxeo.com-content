@@ -312,7 +312,7 @@ By default, when clicking "+ New Upload" from the Aspera Dashboard or the transf
 
  
  
-- Modify the permissions to share the transfer with other user(s) (i.e. another user is responsible for modifying the metadata).
+- Modify the permissions to share the transfer with other user(s) (e.g. another user is responsible for modifying the metadata).
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image4
