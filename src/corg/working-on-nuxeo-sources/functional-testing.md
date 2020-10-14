@@ -1,7 +1,7 @@
 ---
-title: Functional testing
+title: Functional Testing
 review:
-    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
+    comment: 'This page needs to be reviewed. Check back soon for updated content!'
     date: ''
     status: not-ok
 toc: true
@@ -43,13 +43,13 @@ history:
         date: '2011-04-08 19:12'
         message: ''
         version: '1'
-
 ---
-## Using Nuxeo tools for functional testing
+
+## Using Nuxeo Tools for Functional Testing
 
 Look at [https://github.com/nuxeo/tools-nuxeo-ftest](https://github.com/nuxeo/tools-nuxeo-ftest) for instructions and samples.
 
-### Selenium sample
+### Selenium Sample
 
 You will have to create such a structure in your project:
 

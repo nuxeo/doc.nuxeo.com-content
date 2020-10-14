@@ -1,7 +1,7 @@
 ---
 title: Releasing
 review:
-    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
+    comment: 'This page needs to be reviewed. Check back soon for updated content!'
     date: ''
     status: not-ok
 toc: true
@@ -83,8 +83,8 @@ history:
         date: '2011-06-16 16:46'
         message: ''
         version: '1'
-
 ---
+
 ## Release Process
 
 Here is an overview of the release tooling and process at Nuxeo.

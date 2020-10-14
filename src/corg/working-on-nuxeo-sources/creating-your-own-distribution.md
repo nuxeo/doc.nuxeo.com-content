@@ -1,7 +1,7 @@
 ---
 title: Creating Your Own Distribution
 review:
-    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
+    comment: 'This page needs to be reviewed. Check back soon for updated content!'
     date: '20-10-10'
     status: not-ok
 labels:
@@ -106,8 +106,8 @@ history:
         date: '2010-03-01 13:29'
         message: ''
         version: '1'
-
 ---
+
 It is of course possible to create custom builds.
 
 Multiple technologies have been used for packaging in the `nuxeo-distribution` project (`maven-assembly-plugin`, `maven-nuxeo-plugin`, `maven-antrun-extended-plugin`, `nuxeo-distribution-tools`, and finally `ant-assembly-maven-plugin`).

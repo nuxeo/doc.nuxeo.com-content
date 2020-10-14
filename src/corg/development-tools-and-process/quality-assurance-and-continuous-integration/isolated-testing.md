@@ -1,7 +1,7 @@
 ---
 title: Isolated Testing
 review:
-    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
+    comment: 'This page needs to be reviewed. Check back soon for updated content!'
     date: ''
     status: not-ok
 toc: true
@@ -88,8 +88,8 @@ history:
         date: '2013-02-14 12:27'
         message: ''
         version: '1'
-
 ---
+
 Here are solutions for testing your developments before merging them on the master branch.
 
 ## "On-Demand Test and Push" Jobs
