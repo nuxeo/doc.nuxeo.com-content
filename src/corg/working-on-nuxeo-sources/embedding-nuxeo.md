@@ -1,7 +1,7 @@
 ---
 title: Embedding Nuxeo
 review:
-    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
+    comment: 'This page needs to be reviewed. Check back soon for updated content!'
     date: '2016-10-11'
     status: not-ok
 labels:
@@ -80,8 +80,8 @@ history:
         date: '2010-07-21 15:31'
         message: ''
         version: '1'
-
 ---
+
 This document explains how a Nuxeo server can be embedded in another application. The method described here is good for development, testing or playing with Nuxeo and it is not recommended for production use. For production you can use one of the packages proposed by Nuxeo.
 
 In theory, to embed a Nuxeo server, you need to know the list of bundles and third party libraries you want to deploy, and to have a Nuxeo home directory configured as required by the type of the installation you want. Then you configure the framework bootstrap (`org.nuxeo.osgi.application.FrameworkBootstrap`) and launch Nuxeo. In practice this is not an easy task.

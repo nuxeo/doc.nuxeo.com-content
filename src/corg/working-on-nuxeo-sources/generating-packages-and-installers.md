@@ -1,7 +1,7 @@
 ---
 title: Generating Packages and Installers
 review:
-    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
+    comment: 'This page needs to be reviewed. Check back soon for updated content!'
     date: ''
     status: not-ok
 confluence:
@@ -107,8 +107,8 @@ history:
         date: '2011-06-16 12:56'
         message: ''
         version: '1'
-
 ---
+
 Here are steps for generating packages and installers, making them available for download.
 
 ## Nuxeo Packages

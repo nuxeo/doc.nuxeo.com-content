@@ -1,7 +1,7 @@
 ---
 title: Selenium tests
 review:
-    comment: '<span style="color:red">Warning</span> This page is outdated. Check back soon for updated content!'
+    comment: 'This page needs to be reviewed. Check back soon for updated content!'
     date: ''
     status: not-ok
 toc: true
@@ -138,17 +138,17 @@ history:
         date: '2010-07-21 18:00'
         message: ''
         version: '1'
-
 ---
+
 Nuxeo is using a tool to run selenium tests on a given server, see documentation at [https://github.com/nuxeo/tools-nuxeo-ftest](https://github.com/nuxeo/tools-nuxeo-ftest)
 
-## Selenium documentation
+## Selenium Documentation
 
 Helpful links: [http://seleniumhq.org/documentation/](http://seleniumhq.org/documentation/)
 
 Commands reference: [http://release.seleniumhq.org/selenium-core/1.0.1/reference.html](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html)
 
-## Firefox plugins
+## Firefox Plugins
 
 Here are some Firefox plugins that make life easier writing Selenium tests:
 
@@ -156,7 +156,7 @@ Here are some Firefox plugins that make life easier writing Selenium tests:
 
 *   XPath Checker ([https://addons.mozilla.org/fr/firefox/addon/1095](https://addons.mozilla.org/fr/firefox/addon/1095)) is very handy when struggling to find an element path in the HTML page DOM structure. Higly recommended!
 
-## Structure of Nuxeo test suites
+## Structure of Nuxeo Test Suites
 
 The Nuxeo test suites are located in subdirectory tests/ and named tests.html, suite1.html and suite2.html.
 
@@ -165,7 +165,7 @@ tests.html has been cut in two for automated testing: THINK OF UPDATING ALL FILE
 Note that the tests are currently not very "unit": some tests will require
 previous tests to be run to succeed.
 
-## Generic advice when writing tests
+## Generic Advice When Writing Tests
 
 *   Have a look at selenium commands to see what is available.
 
@@ -239,41 +239,41 @@ Sample usage:
 </tr>
 ```
 
-### how to get an element when no id is available
+### How to Get an Element When No ID Is Available
 
 (taken from [http://lawrencesong.net/2008/01/selenium-element-locators/](http://lawrencesong.net/2008/01/selenium-element-locators/))
 
-#### get the link with the link text :
+#### Get the Link With the Link Text:
 
 ```
 <a href="link url">Link Text</a> -> link=Link Text
 ```
 
-#### get element with the element text :
+#### Get Element With the Element Text:
 
 ```
 <a href="link url">Link Text</a> -> //a[text()='Link Text']
 ```
 
-#### get element with part of the element text:
+#### Get Element With Part of the Element Text:
 
 ```
 <a href="link url">Link Text</a> -> //a[contains(text(), 'ink Tex')]
 ```
 
-#### get element with an attribute :
+#### Get Element With an Attribute:
 
 ```
 <a href="link url">Link Text</a> -> //a[@href='link url']
 ```
 
-#### get element with two attributes :
+#### Get Element With Two Attributes:
 
 ```
 <input type="text" value="value"/> -> //input[@type='text' and @value='value']
 ```
 
-### sometimes this command will succed:
+### Sometimes This Command Will Succed:
 
 ```
 <td>click</td>
@@ -289,7 +289,7 @@ when this one will fail:
 <td></td>
 ```
 
-### Print out the rendered HTML in the page
+### Print Out the Rendered HTML in the Page
 
 When trying to debug what's happening on the server, it may be useful to print out the rendered HTML in the page. The following command can be used:
 

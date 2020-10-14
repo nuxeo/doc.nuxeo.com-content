@@ -73,8 +73,8 @@ history:
         date: '2012-01-20 17:41'
         message: ''
         version: '1'
-
 ---
+
 ## Compatible Firefox Location
 
 Webdriver tests run on selenium 2.53.0 and they pass on Firefox 26 to 46 included. You can use the following system property while running the tests to make Webdriver use the correct Firefox:

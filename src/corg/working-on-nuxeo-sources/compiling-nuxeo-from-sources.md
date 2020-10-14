@@ -1,7 +1,7 @@
 ---
-title: Compiling Nuxeo from sources
+title: Compiling Nuxeo From Sources
 review:
-    comment: '<span style="color:red">Warning</span> This page needs to be reviewed. Check back soon for updated content!'
+    comment: 'This page needs to be reviewed. Check back soon for updated content!'
     date: '20-10-10'
     status: not-ok
 toc: true
@@ -108,7 +108,6 @@ history:
         date: '2011-12-01 21:47'
         message: ''
         version: '1'
-
 ---
 
 ## Requirements
@@ -130,7 +129,7 @@ The following may also be used to build some installers or retrieve code not yet
 *   [Mono xbuild](http://www.mono-project.com/Microsoft.Build) for Linux OS, [Mono:OSX](http://www.mono-project.com/Mono_on_MacOS_X) for Mac OS X, any C# compiler for Windows
 *   other required Open Source tools may be automatically downloaded by Maven when needed
 
-## Getting the Nuxeo sources
+## Getting the Nuxeo Sources
 
 See [Getting the Nuxeo Source Code]({{page page='getting-the-nuxeo-source-code'}})
 
@@ -147,7 +146,7 @@ mvn -DskipTests=true install -Paddons,distrib
 
 The main Nuxeo distribution is then available in `nuxeo-distribution/nuxeo-distribution-tomcat/target/nuxeo-distribution-tomcat-$VERSION-nuxeo-cap.zip`.
 
-### Available Maven profiles
+### Available Maven Profiles
 
 Profiles usable anywhere in Nuxeo:
 
@@ -164,7 +163,7 @@ Profiles available at Nuxeo root:
 *   addons: also build addons
 *   distrib: also build distributions (nuxeo-distribution sub-module)
 
-## Building distributions
+## Building Distributions
 
 A few default distributions are available from [download](http://www.nuxeo.com/downloads). You can either customize them, or build your own distribution from sources.
 
@@ -172,22 +171,22 @@ The module [nuxeo-distribution](https://github.com/nuxeo/nuxeo-distribution/) us
 
 You don't need to use the [nuxeo-distribution](https://github.com/nuxeo/nuxeo-distribution/) module if:
 
-*   you want a standard Nuxeo distribution
-    => download it from [http://www.nuxeo.com/downloads/](http://www.nuxeo.com/downloads/) (manual download only)
-    => download it from [http://maven.nuxeo.org](http://maven.nuxeo.org) (manually via online interface or automatically using Maven)
-*   you want to customize configuration files
-    => use [the template configuration system]({{page space='nxdoc' page='configuration-templates'}})
-*   you want to [build your own distribution]({{page page='creating-your-own-distribution'}})
-    => rely on the same tools and principles as nuxeo-distribution does but do it from your own project, with your own assembly.
+- you want a standard Nuxeo distribution:
+    - download it from [http://www.nuxeo.com/downloads/](http://www.nuxeo.com/downloads/) (manual download only)
+    - download it from [http://maven.nuxeo.org](http://maven.nuxeo.org) (manually via online interface or automatically using Maven)
+- you want to customize configuration files:
+    - use [the template configuration system]({{page space='nxdoc' page='configuration-templates'}})
+- you want to [build your own distribution]({{page page='creating-your-own-distribution'}}):
+    - rely on the same tools and principles as nuxeo-distribution does but do it from your own project, with your own assembly.
 
 You have to use [nuxeo-distribution](https://github.com/nuxeo/nuxeo-distribution/) module if:
 
-*   you want to reproduce the Nuxeo build process,
-*   you want to build Nuxeo offline,
-    => Being unable to download artifacts from Internet, you will need a lot of other Nuxeo sources and some third-party artifacts.
-*   you work on Nuxeo source code and need quick feedback on your changes, you don't want to wait for [our continuous integration system](https://qa.nuxeo.org/jenkins/) building nuxeo-distribution
+- you want to reproduce the Nuxeo build process,
+- you want to build Nuxeo offline,
+    - Being unable to download artifacts from Internet, you will need a lot of other Nuxeo sources and some third-party artifacts.
+- you work on Nuxeo source code and need quick feedback on your changes, you don't want to wait for [our continuous integration system](https://qa.nuxeo.org/jenkins/) building nuxeo-distribution
 
-### Available Maven profiles
+### Available Maven Profiles
 
 Profiles for use in nuxeo-distribution:
 
@@ -199,7 +198,7 @@ Profiles for use in nuxeo-distribution:
 
 See [README](https://github.com/nuxeo/nuxeo-distribution/blob/master/README.md) file at root of `nuxeo-distribution` for a short description and common usage examples.
 
-### Produced packages
+### Produced Packages
 
 *   standalone NXR packages
     *   Content Application Platform (CAP)
