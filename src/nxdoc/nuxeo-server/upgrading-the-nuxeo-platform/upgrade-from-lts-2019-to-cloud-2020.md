@@ -142,25 +142,29 @@ You can also relax the constraint on a secured property, for example dc:creator 
 
 ## Nuxeo API Changes
 
-#### New endpoint to get all comments for 50+ annotations documents
+#### New Endpoint to Get All Comments for 50+ Annotations Documents
 
-- REST API:
-The endpoint GET `/nuxeo/api/v1/id/DOC_ID/@annotation/comments` has been deprecated in favor of POST `/nuxeo/api/v1/id/DOC_ID/@annotation/comments`.
+- **REST API**:
+    The endpoint GET `/nuxeo/api/v1/id/DOC_ID/@annotation/comments` has been deprecated in favor of POST `/nuxeo/api/v1/id/DOC_ID/@annotation/comments`.
 
-The annotationIds are now given in the payload request as a simple json array.
+    The annotationIds are now given in the payload request as a simple json array.
 
-For instance:
-`curl -XPOST http://localhost:8080/nuxeo/api/v1/id/DOC_ID/@annotation/comments -d '[ "ANNOT_ID1", "ANNOT_ID2", ...  ]'`
+    For instance:
+    ```
+    curl -XPOST http://localhost:8080/nuxeo/api/v1/id/DOC_ID/@annotation/comments -d '[ "ANNOT_ID1", "ANNOT_ID2", ...  ]'
+    ```
 
-- Java API
-Added:
-```
-CommentManager#getComments(CoreSession session, Collection<String> documentIds)
-AnnotationAdapter#getCommentsFromBody(String payload)
-```
+- **Java API**
+    Added:
+    ```
+    CommentManager#getComments(CoreSession session, Collection<String> documentIds)
+    AnnotationAdapter#getCommentsFromBody(String payload)
+    ```
 
-Deprecated:
-`AnnotationAdapter#getComments(@QueryParam("annotationIds") List<String> annotationIds)`
+    Deprecated:
+    ```
+    AnnotationAdapter#getComments(@QueryParam("annotationIds") List<String> annotationIds)
+    ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29610](https://jira.nuxeo.com/browse/NXP-29610)
 
@@ -243,7 +247,7 @@ Previously when the result of the operation had a URL we returned a redirect to 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26773](https://jira.nuxeo.com/browse/NXP-26773)
 
-#### Error management on invalid operation/chain/codec registration
+#### Error Management on Invalid Operation/Chain/Codec Registration
 
 Operation chain contributions should now require contributions holding operations that they reference.
 
@@ -297,21 +301,21 @@ protected HttpAutomationSession clientSession;
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28581](https://jira.nuxeo.com/browse/NXP-28581)
 
-#### Rename the parameter "overwite" of FileManager.Import to "overwrite"
+#### Rename the Parameter "overwite" of filemanager.import to "overwrite"
 
-In the FileManager.Import operation, the misspelled param overwite has been renamed to overwrite:
-- overwite is now deprecated, no more used and replaced by overwrite.
-- overwite is kept as an alias for backward compatibility.
+In the FileManager.Import operation, the misspelled param `overwite` has been renamed to overwrite:
+- `overwite` is now deprecated, no more used and replaced by `overwrite`.
+- `overwite` is kept as an alias for backward compatibility.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29286](https://jira.nuxeo.com/browse/NXP-29286)
 
 ## Workflow
 
-### Behavior changes
+### Behavior Changes
 
-#### Workflow page providers now used the ecm:isTrashed attribute
+#### Workflow Page Providers Now Used the `ecm:isTrashed` Attribute
 
-Workflow page providers now used the ecm:isTrashed attribute.
+Workflow page providers now used the `ecm:isTrashed` attribute.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29183](https://jira.nuxeo.com/browse/NXP-29183)
 
@@ -638,21 +642,21 @@ try (MockServerClient client = new MockServerClient("localhost", PORT)) {
 
 ## Farewell
 
-### Remove deprecated org.nuxeo.ecm.core.model.LockManager
+### Remove Deprecated `org.nuxeo.ecm.core.model.LockManager`
 
-The internal interface org.nuxeo.ecm.core.model.LockManager has been removed, org.nuxeo.ecm.core.api.lock.LockManager should be used instead.
+The internal interface `org.nuxeo.ecm.core.model.LockManager` has been removed, `org.nuxeo.ecm.core.api.lock.LockManager` should be used instead.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29654](https://jira.nuxeo.com/browse/NXP-29654)
 
-### Remove old JDBCClusterInvalidator for VCS
+### Remove Old JDBCClusterInvalidator for VCS
 
-The configuration property repository.clustering.delay is now fully unused (all clustering invalidation propagation is immediate).
+The configuration property `repository.clustering.delay` is now fully unused (all clustering invalidation propagation is immediate).
 
 The unused class JDBCClusterInvalidator has been removed.
 
-The configuration property `repository.clustering.delay` is not used anymore, and in the <repository> extension point, the <clustering> part doesn't exist anymore.
+The configuration property `repository.clustering.delay` is not used anymore, and in the &lt;repository&gt; extension point, the &lt;clustering&gt; part doesn't exist anymore.
 
-(Note that the <clustering> id= and enabled= attributes were removed from the <repository> extension point by NXP-25499.)
+(Note that the &lt;clustering&gt; id= and enabled= attributes were removed from the &lt;repository&gt; extension point by [NXP-25499](https://jira.nuxeo.com/browse/NXP-25499).)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28891](https://jira.nuxeo.com/browse/NXP-28891)
 
@@ -1115,7 +1119,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 </table>
 </div>
 
-## Dependencies removal
+## Dependencies Removal
 
 <div class="table-scroll">
 <table class="hover">

@@ -19,7 +19,7 @@ You can also find detailed JIRA release notes:
 - [11.2 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20630)
 - [11.3 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20723)
 
-The upgrade notes is available [here]({{page page='upgrade-from-lts-2019-to-cloud-2020'}})
+The upgrade notes are available [here]({{page page='upgrade-from-lts-2019-to-cloud-2020'}}).
 
 ## Nuxeo Server
 
@@ -103,9 +103,11 @@ The CloudFront properties are:
 #### Allow Simple S3 Blob Provider Implementation Override, and Use Proper Require
 
 To switch to the new S3 blob provider implementation from [NXP-28460](https://jira.nuxeo.com/browse/NXP-28460) add in `nuxeo.conf`:
-`nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider`
+```
+nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider
+```
 
-This assumes of course that the s3binaries template is used (which is automatically done when installing the amazon-s3-online-storage package).
+This assumes of course that the s3binaries template is used (which is automatically done when installing the [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) package).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28716](https://jira.nuxeo.com/browse/NXP-28716)
 
@@ -148,20 +150,22 @@ AWS TransferManager is used for copy by S3DirectBatchHandler.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29292](https://jira.nuxeo.com/browse/NXP-29292)
 
-#### S3 Direct Upload for little files (SSE-KMS)
+#### S3 Direct Upload for Little Files (SSE-KMS)
 
 S3 Direct upload now works with SSE-KMS enabled.
 
 It introduces a new configuration property to setup SSE/KMS on the transient bucket (for direct upload):
-`nuxeo.s3storage.transient.crypt.kms.key=<sse-kms-key-id>`
+```
+nuxeo.s3storage.transient.crypt.kms.key=<sse-kms-key-id>
+```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29496](https://jira.nuxeo.com/browse/NXP-29496)
 
-#### Allow using arbitrary file keys in S3
+#### Allow Using Arbitrary File Keys in S3
 
-Objects can be stored in S3 with an arbitrary file key instead of md5 digest.
+Objects can be stored in S3 with an arbitrary file key instead of MD5 digest.
 
-In order to be able to use arbitrary file keys generated either by the provider or by a trusted upload client the new S3BlobProvider should be used and the key strategy should be set to "managed" (default key strategy is "digest"): 
+To be able to use arbitrary file keys generated either by the provider or by a trusted upload client, the new S3BlobProvider should be used and the key strategy should be set to `managed` (default key strategy is `digest`): 
 ```
 nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider
 nuxeo.core.blobstore.keyStrategy=managed
@@ -179,14 +183,15 @@ This is implemented for the `S3BlobProvider`.
 
 #### Allow Blob Provider to Access Document When Reading Blob
 
-The new API `BlobProvider.readBlob(BlobInfoContext)` should be implemented by blob providers that wish to get information about the `Document` or the blob's xpath while reading the blob.
+The new API `BlobProvider.readBlob(BlobInfoContext)` should be implemented by blob providers that wish to get information about the `Document` or the blob's XPath while reading the blob.
+
 This is mostly useful for blob providers that implement "virtual" blobs whose information is derived from properties of the document itself.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28900](https://jira.nuxeo.com/browse/NXP-28900)
 
 #### Add `BlobProvider.supportsSync()` to Avoid Relying on Binarymanager for Sync Tests
 
-New API: `BlobProvider.supportsSync()`
+New API: `BlobProvider.supportsSync()`</br>
 Sync refers to the fact that a blob from this provider may be synced with a remote system (like Nuxeo Drive) or with a process that updates things in the blob (like Binary Metadata or WOPI).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28488](https://jira.nuxeo.com/browse/NXP-28488)
@@ -211,9 +216,9 @@ They have the same configuration properties as the old ones, with additions. The
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28276](https://jira.nuxeo.com/browse/NXP-28276)
 
-#### Add Full regexp-based Match to DefaultBlobDispatcher
+#### Add Full Regexp-Based Match to DefaultBlobDispatcher
 
-The default blob dispatcher now has a new operator ^ to match based on a full regexp (in addition to the already-existing glob-based match using ~).
+The default blob dispatcher now has a new operator `^` to match based on a full regexp (in addition to the already-existing glob-based match using `~`).
 
 For instance the following will match any document somewhere under a folder named images:
 ```
@@ -225,6 +230,7 @@ For instance the following will match any document somewhere under a folder name
 #### Add `ecm:path` Variable to the Default Blob Dispatcher
 
 The default blob dispatcher now has a pseudo-property `ecm:path` representing the document path.
+
 For example the following will match any JPG document somewhere under a folder named images:
 ```
 <property name="ecm:path~*/images/*">test</property>
@@ -260,8 +266,8 @@ This feature is not compatible with S3 Direct Upload.
 #### Enable S3 Transfer Acceleration
 
 The S3 connector now has new `nuxeo.conf` parameters to configure S3 accelerate mode:
- - `nuxeo.s3storage.accelerateMode` (default false)
- - `nuxeo.s3storage.transient.accelerateMode` (default false) (for direct upload)
+ - `nuxeo.s3storage.accelerateMode` (default `false`)
+ - `nuxeo.s3storage.transient.accelerateMode` (default `false`) (for direct upload)
 
 For example:
  - `nuxeo.s3storage.accelerateMode=true`
@@ -273,22 +279,26 @@ Note that accelerate mode is incompatible with path-style access ([NXP-27805](ht
 
 #### Enforce the Server Side Encryption Header in S3 Client Request
 
-S3 copy (used during direct upload in particular) now correctly takes into account the server-side encryption configuration for the destination bucket.
+S3 copy (used during direct upload in particular) now correctly takes into account the server-side encryption configuration for the destination bucket.</b>
 For direct upload, this requires setting the property:
-`nuxeo.s3storage.transient.crypt.serverside=true`
+```
+nuxeo.s3storage.transient.crypt.serverside=true
+```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26901](https://jira.nuxeo.com/browse/NXP-26901)
 
-#### S3 multipart part size should be configurable
+#### S3 Multipart Part Size Should Be Configurable
 
-There is a new configuration property `nuxeo.s3.multipart.copy.part.size` to change the S3 multipart copy part size. The default is 5242880 (5MB). It can be changed with:
+There is a new configuration property `nuxeo.s3.multipart.copy.part.size` to change the S3 multipart copy part size. The default is `5242880` (5MB).
+
+It can be changed with:
 ```
 <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
     <property name="nuxeo.s3.multipart.copy.part.size">5242880</property>
 </extension>
 ```
 
-Note that the maximum allowed by S3 is 5368709120 (5GB).
+Note that the maximum allowed by S3 is `5368709120` (5GB).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26899](https://jira.nuxeo.com/browse/NXP-26899)
 
@@ -299,7 +309,7 @@ Fulltext extracted from binaries can be stored in a blob provider instead of met
 nuxeo.vcs.fulltext.storedInBlob=true
 ```
 
-(Note that despite the vcs in the name, which is here for regularity with other properties, it also applies to DBS/MongoDB.)
+(Note that despite the `vcs` in the name, which is here for regularity with other properties, it also applies to DBS/MongoDB.)
 
 When doing so, by default a BlobProvider named fulltext will be used to store these blobs. When using a custom blob provider configuration instead of the default local filesystem storage, this fulltext blob provider must be defined accordingly. Usage of this specific blob provider is configured through a blob dispatcher in the default configuration, which may be overridden if needed.
 
@@ -317,7 +327,10 @@ Note that when fulltext blob storage is enabled, repository-based fulltext searc
 
 A new blob provider `org.nuxeo.ecm.core.blob.AESBlobProvider` is available.
 
-It has the same configuration properties as the old `org.nuxeo.ecm.core.blob.binary.AESBinaryManager`.
+It has the same configuration properties as the old:
+```
+org.nuxeo.ecm.core.blob.binary.AESBinaryManager
+```
 
 To encrypt a binary, an AES key is needed. This key can be retrieved from a keystore, or generated from a password using PBKDF2 (in which case each stored file contains a different salt for security reasons).
 
@@ -348,11 +361,13 @@ A new S3 permission (action) is necessary to use DirectUpload with the new `S3Bl
 
 #### Define `nuxeo.binarystores.root` for the Root of All Binaries Store
 
-A new property `nuxeo.binarystores.root` is now available, and its use is recommended over the now-deprecated `repository.binary.store`. The old `repository.binary.store` is equivalent to `${nuxeo.binarystores.root}/binaries`
+A new property `nuxeo.binarystores.root` is now available, and its use is recommended over the now-deprecated `repository.binary.store`.
+
+The old `repository.binary.store` is equivalent to `${nuxeo.binarystores.root}/binaries`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27109](https://jira.nuxeo.com/browse/NXP-27109)
 
-#### Support flagging repositories as headless
+#### Support Flagging Repositories as Headless
 
 A new "headless" attribute has been added to the repository descriptor to allow flagging repositories as headless:
 
@@ -365,12 +380,12 @@ A new "headless" attribute has been added to the repository descriptor to allow 
 </extension>
 ```
 
-By default repositories are not headless.
+By default repositories are not headless.</br>
 For 10.10, all repositories, except for the "default" one are headless unless explicitly set otherwise.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29331](https://jira.nuxeo.com/browse/NXP-29331)
 
-#### Configure transient store cache
+#### Configure Transient Store Cache
 
 Four new configuration properties where introduced to control transient store first and second level cache:
 ```
@@ -385,7 +400,7 @@ nuxeo.s3storage.transient.ttl2=10
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29291](https://jira.nuxeo.com/browse/NXP-29291)
 
-#### Allow to bypass allowed subtype check in FileManager
+#### Allow to Bypass Allowed Subtype Check in FileManager
 
 A new flag is exposed to bypass the subtype check when creating a document with FileManager.
 
@@ -442,7 +457,7 @@ To use optimized ids, provide the following XML configuration (or adapt it):
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28763](https://jira.nuxeo.com/browse/NXP-28763)
 
-#### Allow Configuration of Mongodb Query Max Execution Time
+#### Allow Configuration of MongoDB Query Max Execution Time
 
 Query max execution time can be configured using:
 ` <extension target="org.nuxeo.runtime.mongodb.MongoDBComponent" point="connection">
@@ -455,7 +470,7 @@ The default is 1h.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29112](https://jira.nuxeo.com/browse/NXP-29112)
 
-#### Allow Full Configuration of Mongodb Connection
+#### Allow Full Configuration of MongoDB Connection
 
 All MongoDB options can now be configured using a Nuxeo contribution.
 
@@ -617,14 +632,14 @@ The Task endpoint is now paginable.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28008](https://jira.nuxeo.com/browse/NXP-28008)
 
-#### "workflowInstanceId" Alias for Workflow.GetOpenTasks Operation
+#### `workflowInstanceId` Alias for `Workflow.GetOpenTasks` Operation
 
-The "processId" parameter of the `Workflow.GetOpenTasks` operation now has a "workflowInstanceId" alias.
-This allows to run this operation within a chain called from a workflow (transition, escalation rule, ...) without passing any parameters, as the "nodeId" and "processId" (= "workflowInstanceId") parameters will be automatically bound to the operation context variables named the same way.
+The `processId` parameter of the `Workflow.GetOpenTasks` operation now has a `workflowInstanceId` alias.</br>
+This allows to run this operation within a chain called from a workflow (transition, escalation rule, ...) without passing any parameters, as the `nodeId` and `processId` (= `workflowInstanceId`) parameters will be automatically bound to the operation context variables named the same way.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28078](https://jira.nuxeo.com/browse/NXP-28078)
 
-#### Delete the related workflow instances when a document is deleted
+#### Delete the Related Workflow Instances When a Document Is Deleted
 
 Workflow instances related to deleted documents are now also removed.
 
@@ -697,21 +712,25 @@ Note that, by default, the health check probe is not activated.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27164](https://jira.nuxeo.com/browse/NXP-27164)
 
-#### Allow to disable Stream Processing
+#### Allow to Disable Stream Processing
 
 An option is available to disable Stream Processing on a given node.
 
 All Stream Processors can be disabled on a Nuxeo node using:
-`nuxeo.stream.processing.enabled=false`
+```
+nuxeo.stream.processing.enabled=false
+```
 
 All WorkManager processing can be disabled on a Nuxeo node using:
-`nuxeo.work.processing.enabled=false`
+```
+nuxeo.work.processing.enabled=false
+```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29361](https://jira.nuxeo.com/browse/NXP-29361)
 
 ### WorkManager
 
-#### Trigger an action after completion of a group of Works
+#### Trigger an Action after Completion of a Group of Works
 (also available in 10.10)
 
 The StreamWorkManager provides the capability to trigger an action once all tasks of a group of Works are completed.
@@ -756,13 +775,16 @@ The scheduler services handle the startup with multiple Nuxeo nodes.
 
 In cluster mode, the scheduler service is initialized non-concurrently in a cluster-wide critical section.
 
-When a cluster node attempts to initialize the scheduler service and another node is already doing the same thing, it will wait for 1 min for the cluster-wide lock to be released and do its own initialization. If this timeout expires, then initialization fails with an exception.
-The following two nuxeo.conf property can be used to change this timeout:
+When a cluster node attempts to initialize the scheduler service and another node is already doing the same thing, it will wait for 1 min for the cluster-wide lock to be released and do its own initialization. If this timeout expires, then initialization fails with an exception.</br>
+The following `nuxeo.conf` property can be used to change this timeout:
 ```
 org.nuxeo.scheduler.cluster.start.duration=1m
 ```
 
-In case where there's a startup crash while a lock is held, it may be necessary to manually cleanup the key/value store of its locks. The key corresponding to the lock is `nuxeo:cluster:start-scheduler`.
+In case where there's a startup crash while a lock is held, it may be necessary to manually cleanup the key/value store of its locks. The key corresponding to the lock is:
+```
+nuxeo:cluster:start-scheduler
+```
 
 For a MongoDB key/value store, the key is stored in the collection `kv.cluster`
 
@@ -938,9 +960,9 @@ It is now possible to easily build Datadog dashboards in the same way as for Gra
 It is now possible to report Datadog metrics to a local agent using UDP.
 
 The following options need to be used:
- - `metrics.datadog.udp=true`,
- - `metrics.datadog.host`,
- - `metrics.datadog.port`,
+ - `metrics.datadog.udp=true`
+ - `metrics.datadog.host`
+ - `metrics.datadog.port`
 
 You don't have to configure the API_KEY.
 
@@ -974,21 +996,21 @@ val reporter =
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28697](https://jira.nuxeo.com/browse/NXP-28697)
 
-### Authentication, user management and permissions
+### Authentication, User Management and Permissions
 
-#### postAuthenticationProcessChecks added to SAMLAuthenticationProvider
+#### `postAuthenticationProcessChecks` added to `SAMLAuthenticationProvider`
 
-Post Authentication Process Checks has been added to SAMLAuthenticationProvider.
+Post Authentication Process Checks has been added to `SAMLAuthenticationProvider`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29495](https://jira.nuxeo.com/browse/NXP-29495)
 
-#### User and group events/categories added to the platform audit directories
+#### User and Group Events/Categories Added to the Platform Audit Directories
 
 User and group events/categories have been added to the Audit directories.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29200](https://jira.nuxeo.com/browse/NXP-29200)
 
-#### Allow ACLs on versions
+#### Allow ACLs on Versions
 
 A new configuration property allows to set permissions on versions.
 
@@ -1002,7 +1024,7 @@ The new configuration property `org.nuxeo.version.acl.disabled` controls whether
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28758](https://jira.nuxeo.com/browse/NXP-28758)
 
-#### Make version Read permission depend on live doc ReadVersion
+#### Make Version Read Permission Depend on Live Doc ReadVersion
 
 A property is exposed to make the Read permission on a version depend on the ReadVersion permission on the live document.
 
@@ -1138,7 +1160,7 @@ APIs below were added on ConfigurationService, signature are key or key/defaultV
  - `boolean isBooleanTrue(String)`
  - `boolean isBooleanFalse(String)`
 
-Fallback on default value occurs when property doesn't exist or is blank. isBooleanTrue and isBooleanFalse return true if and only if property value is true and respectively false.
+Fallback on default value occurs when property doesn't exist or is blank. `isBooleanTrue` and `isBooleanFalse` return true if and only if property value is true and respectively false.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26181](https://jira.nuxeo.com/browse/NXP-26181)
 
@@ -1290,15 +1312,17 @@ We can see that the perf profile is deployed after the template parameter value.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29190](https://jira.nuxeo.com/browse/NXP-29190)
 
-#### Allow concurrent startup of Nuxeo instances
+#### Allow Concurrent Startup of Nuxeo Instances
 
 In cluster mode, the document repository and the directories are initialized non-concurrently in a cluster-wide critical section.
 
 When a cluster node attempts to initialize its repository (or a directory) and another node is already doing the same thing, it will wait for 1 min for the cluster-wide lock to be released and do its own initialization. If this timeout expires, then initialization fails with an exception.
 
 The following two `nuxeo.conf` properties can be used to change this timeout:
-`org.nuxeo.repository.cluster.start.duration=1m
-org.nuxeo.directory.cluster.start.duration=1m`
+```
+org.nuxeo.repository.cluster.start.duration=1m
+org.nuxeo.directory.cluster.start.duration=1m
+```
 
 In case where there's a startup crash while a lock is held, it may be necessary to manually cleanup the key/value store of its locks. The keys corresponding to the locks are visible when using Redis with KEYS `nuxeo:cluster:*` for instance `nuxeo:cluster:start-repository-default` or `nuxeo:cluster:start-directories`.
 
@@ -1306,22 +1330,24 @@ For a MongoDB key/value store, the keys are stored in the collection `kv.cluster
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28661](https://jira.nuxeo.com/browse/NXP-28661)
 
-#### Allow to pass Connect URL when running the Nuxeo Server Docker image
+#### Allow to Pass Connect URL When Running the Nuxeo Server Docker Image
 
-It is now possible to override the Connect URL when starting a Nuxeo Docker image through the environment variable NUXEO_CONNECT_URL.
+It is now possible to override the Connect URL when starting a Nuxeo Docker image through the environment variable `NUXEO_CONNECT_URL`.
 
 For instance, to run a container with another Connect URL than the default one:
-`docker run -it -p 8080:8080 -e NUXEO_CONNECT_URL=<NUXEO_CONNECT_URL> nuxeo/slim:latest`
+```
+docker run -it -p 8080:8080 -e NUXEO_CONNECT_URL=<NUXEO_CONNECT_URL> nuxeo/slim:latest
+```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29194](https://jira.nuxeo.com/browse/NXP-29194)
 
-#### Kafka availability checking at Nuxeo startup
+#### Kafka Availability Checking at Nuxeo Startup
 
 Nuxeo startup is now checking Kafka availability.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22844](https://jira.nuxeo.com/browse/NXP-22844)
 
-#### ElasticSearch availability checking at Nuxeo startup
+#### Elasticsearch Availability Checking at Nuxeo Startup
 
 Nuxeo startup is now checking ElasticSearch availability.
 
@@ -1447,15 +1473,15 @@ For more information on Web UI latest release:
 
 ### JSF
 
-#### Improve JSF Admin NOS registration page in offline case
+#### Improve Jsf Admin Nos Registration Page in Offline Case
 
 JSF Admin NOS page displays registration information in offline mode.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29336](https://jira.nuxeo.com/browse/NXP-29336)
 
-#### Fix JSF EL evaluation of a condition using a multi-valued property in a filter used by a picture conversion
+#### Fix JSF EL Evaluation of a Condition Using a Multi-Valued Property in a Filter Used by a Picture Conversion
 
-The function nx:arrayContains is added to evaluate JSF EL condition on multi-valued properties.
+The function `nx:arrayContains` is added to evaluate JSF EL condition on multi-valued properties.
 
 Added new functions in the EL context to work with arrays:
 
