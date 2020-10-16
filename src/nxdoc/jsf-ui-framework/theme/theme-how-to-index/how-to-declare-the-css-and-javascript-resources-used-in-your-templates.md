@@ -149,7 +149,7 @@ Let's define two types of resources to be included later on pages:
 </extension>
 ```
 
-Here the `uri` element is used, so resources will be looked up in the JAR holding the declaration. Please refer to the [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) documentation for more details.
+Here the `uri` element is used, so resources will be looked up in the JAR holding the declaration. Please refer to the [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/7.10/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) documentation for more details.
 
 ## Including Resources in a Given Page
 

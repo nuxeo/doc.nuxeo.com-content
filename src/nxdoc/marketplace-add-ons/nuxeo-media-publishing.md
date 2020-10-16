@@ -265,7 +265,7 @@ Your service implementation must implement the `MediaPublishingProvider` interfa
 #### Step 2: Contribute an OAuth provider
 
 1.  Nested in the component tag of your XML contribution file, add a `require` tag the `OAuth2ServiceProviderRegistry`.
-2.  Then, use the extension point [`providers`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry--providers) of the `OAuth2ServiceProviderRegistry` service to register the OAuth provider.
+2.  Then, use the extension point [`providers`](http://explorer.nuxeo.com/nuxeo/site/distribution/7.10/viewExtensionPoint/org.nuxeo.ecm.platform.oauth2.providers.OAuth2ServiceProviderRegistry--providers) of the `OAuth2ServiceProviderRegistry` service to register the OAuth provider.
 
     ```xml
     <component name="org.nuxeo.ecm.media.publishing.MyOAuthServiceProvider">

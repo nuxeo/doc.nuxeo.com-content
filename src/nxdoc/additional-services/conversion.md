@@ -81,7 +81,7 @@ history:
 ---
 {{! excerpt}}
 
-The Nuxeo Platform comes with a [conversion service](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.convert.api.ConversionService) that can be used to manage conversion of blobs from one format to an other.
+The Nuxeo Platform comes with a [conversion service](http://explorer.nuxeo.com/nuxeo/site/distribution/7.10/viewService/org.nuxeo.ecm.core.convert.api.ConversionService) that can be used to manage conversion of blobs from one format to an other.
 
 {{! /excerpt}}
 
