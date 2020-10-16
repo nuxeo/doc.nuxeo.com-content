@@ -257,7 +257,7 @@ The command endpoint section lists all the available [operations and chain of op
 
 1.  Click on operation category and then on the operation you want to run.
 2.  Fill in the operation parameters form.
-    See the [Operation parameters documentation]({{page page='content-automation-concepts#operation-parameters'}}) or [operations list on the Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/current/listOperations) for more information on the parameters.
+    See the [Operation parameters documentation]({{page page='content-automation-concepts#operation-parameters'}}) or [operations list on the Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/6.0/listOperations) for more information on the parameters.
     Tip: For document input, click on the icon ![]({{file name='playground_browse_icon.png'}}) to browse the repository tree and find your document, instead of typing the document path.
 3.  Optionally click on the icon ![]({{file name='playground_settings_icon.png'}} ?w=16,thumbnail=true) to update the [request headers]({{page page='special-http-headers'}}) before running the call.
 4.  Click on the **Run** button.
