@@ -384,4 +384,4 @@ In most of the case, each type of user will have access via a separated virtual 
 
 {{/panel}}
 
-You can see [specificChains](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--specificChains) extension point for more info.
+You can see [specificChains](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--specificChains) extension point for more info.

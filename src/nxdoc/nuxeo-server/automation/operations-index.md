@@ -238,7 +238,7 @@ history:
 ---
 {{! excerpt}}
 
-The lists of operations and their description is available [on the Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/listOperations).
+The lists of operations and their description is available [on the Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/listOperations).
 
 {{! /excerpt}}
 

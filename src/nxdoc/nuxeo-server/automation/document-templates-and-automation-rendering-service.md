@@ -61,7 +61,7 @@ history:
 ---
 Nuxeo Automation includes a service designed to perform renditions based on Freemarker or MVEL templating.
 
-Two operations are provided for leveraging this rendition engine: [Conversion > Render Document](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Render.Document) and [Conversion > Render Document Feed](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Render.DocumentFeed)
+Two operations are provided for leveraging this rendition engine: [Conversion > Render Document](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Render.Document) and [Conversion > Render Document Feed](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Render.DocumentFeed)
 
 We list here the variables accessible in this rendition context and as a consequence in the templates.
 

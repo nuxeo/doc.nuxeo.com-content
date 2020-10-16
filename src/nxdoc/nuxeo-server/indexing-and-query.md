@@ -352,7 +352,7 @@ The Nuxeo Platform is also [compatible with the CMISQL]({{page page='cmis'}}) de
 
 The framework also provides a paginated query system, the Page Providers.&nbsp;Page Providers are a way to expose a query defined in NXQL with additional services: pagination, parameters, maximum number of results, aggregates definition. Page providers are named and declared to the server via a contribution. More information can be found about [the page provider object]({{page page='page-providers'}}). Page providers are used in the platform in many places: Web application for browsing, for dashboards, &hellip;
 
-Resources Endpoint are also based on a page provider. By being declarative, page providers are very easy to override. That way, most of the document lists logic of the default application can be redefined just by [overriding the corresponding page provider](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.query.api.PageProviderService--providers). You can also build your own application in the same way. Note that in the web application, page providers are associated to a higher concept, the Content View, that wraps all the UI aspects of executing and presenting a search result (see paragraph below).
+Resources Endpoint are also based on a page provider. By being declarative, page providers are very easy to override. That way, most of the document lists logic of the default application can be redefined just by [overriding the corresponding page provider](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.platform.query.api.PageProviderService--providers). You can also build your own application in the same way. Note that in the web application, page providers are associated to a higher concept, the Content View, that wraps all the UI aspects of executing and presenting a search result (see paragraph below).
 
 ### How to Query the Repository
 
@@ -383,7 +383,7 @@ The following table and schema gives an overview of the different ways of queryi
     ```
 
     **Related topics**:
-    *   [PageProvider Operation definition](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Repository.PageProvider)
+    *   [PageProvider Operation definition](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Repository.PageProvider)
     *   [How to use Operations with the Java Client](https://github.com/nuxeo/nuxeo-java-client#operation-api)
     *   [How to use Operations with the JavaScript client](https://nuxeo.github.io/nuxeo-js-client/9.10/Operation.html)
 3.  **CMIS (Client side & Server side)**

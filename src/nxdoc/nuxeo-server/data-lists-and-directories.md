@@ -273,7 +273,7 @@ Example directory using the above templates:
 
 ## SQL Directories
 
-SQL directories read and store their information in a SQL database. They are defined through the [`directories`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.directory.sql.SQLDirectoryFactory--directories) extension point of the [`org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.directory.sql.SQLDirectoryFactory) component.
+SQL directories read and store their information in a SQL database. They are defined through the [`directories`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.directory.sql.SQLDirectoryFactory--directories) extension point of the [`org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewComponent/org.nuxeo.ecm.directory.sql.SQLDirectoryFactory) component.
 
 The following properties are specific to SQL directories:
 
@@ -316,7 +316,7 @@ Example:
 
 ## LDAP Directories
 
-LDAP directories store information in a LDAP database. They are defined through the [`servers`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory--servers) and [`directories`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory--directories) extension points of the [`org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory) component.
+LDAP directories store information in a LDAP database. They are defined through the [`servers`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory--servers) and [`directories`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory--directories) extension points of the [`org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewComponent/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory) component.
 
 First, one or more servers have to be defined. A **server** defines:
 
@@ -416,7 +416,7 @@ Example:
 
 ## Multi-directories
 
-Multi-directories are used to combine values coming from different directories. They are defined through the [`directories`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.directory.multi.MultiDirectoryFactory--directories) extension point of the [`org.nuxeo.ecm.directory.multi.MultiDirectoryFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.directory.multi.MultiDirectoryFactory) component.
+Multi-directories are used to combine values coming from different directories. They are defined through the [`directories`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.directory.multi.MultiDirectoryFactory--directories) extension point of the [`org.nuxeo.ecm.directory.multi.MultiDirectoryFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewComponent/org.nuxeo.ecm.directory.multi.MultiDirectoryFactory) component.
 
 A multi-directory is made up of one or more **sources**. Each source aggregates one or more **sub-directories**.
 
