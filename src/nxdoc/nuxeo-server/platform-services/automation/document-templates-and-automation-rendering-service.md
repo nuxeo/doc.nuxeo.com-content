@@ -61,7 +61,7 @@ history:
 
 Nuxeo Automation includes a service designed to perform renditions based on Freemarker or MVEL templating.
 
-Two operations are provided for leveraging this rendition engine: [Conversion > Render Document](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Render.Document) and [Conversion > Render Document Feed](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Render.DocumentFeed). The output format can be TEXT, HTML, XML, JSON, etc.
+Two operations are provided for leveraging this rendition engine: [Conversion > Render Document](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/Render.Document) and [Conversion > Render Document Feed](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/Render.DocumentFeed). The output format can be TEXT, HTML, XML, JSON, etc.
 
 - For a broader look about variables available in different contexts, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
 - For a more advanced rendition service, you may be interested in having a look at the [Nuxeo Platform Template Rendering module]({{page page='template-rendering-addon'}}).

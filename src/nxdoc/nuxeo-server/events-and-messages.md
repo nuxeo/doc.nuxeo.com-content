@@ -422,7 +422,7 @@ To monitor execution of the listeners, you can use the Admin Center / Monitoring
 
 ![]({{file name='AdminCenter-Nuxeo-Event-Bus.png'}} ?w=600,border=true)
 
-For diagnostic and testing purpose, you can use the [EventAdminService](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.event.EventServiceAdmin) to activate / deactivate listeners one by one.
+For diagnostic and testing purpose, you can use the [EventAdminService](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewService/org.nuxeo.ecm.core.event.EventServiceAdmin) to activate / deactivate listeners one by one.
 
 The `EventServiceAdmin` is accessible:
 

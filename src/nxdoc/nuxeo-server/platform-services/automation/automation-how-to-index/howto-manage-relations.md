@@ -17,7 +17,7 @@ toc: true
 tree_item_index: 90
 ---
 
-Nuxeo REST API provides 3 methods to query, create and delete relationships between documents, the description of each of these operations can be found in [Nuxeo Platform Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/current/listOperations).
+Nuxeo REST API provides 3 methods to query, create and delete relationships between documents, the description of each of these operations can be found in [Nuxeo Platform Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/listOperations).
 
 On this page, we are going to create an element to retrieve relations on a document and to add/delete them.
 

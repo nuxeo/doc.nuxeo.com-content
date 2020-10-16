@@ -321,7 +321,7 @@ The Alert tab is currently only available on JSF UI. It is planned to be integra
 
 {{#> callout type='tip' }}
 
-You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types.
+You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types.
 
 {{/callout}}
 
