@@ -111,7 +111,7 @@ URLs:
 -   `/nuxeo/nxsearch`: navigation under Search tab
 -   `/nuxeo/nxdam`: navigation in DAM (when the DAM Nuxeo Package is installed)
 
-The [complete list of contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.rest.URLService--urlpatterns) can be browsed on the explorer.
+The [complete list of contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.rest.URLService--urlpatterns) can be browsed on the explorer.
 
 Other URLs exposed by WebEngine module are of the form `/nuxeo/site/*` (where * is a service offered by a WebEngine module), please refer to [Default WebEngine Applications]({{page page='default-webengine-applications'}}) for the list of corresponding URLs.
 

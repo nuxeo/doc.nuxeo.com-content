@@ -140,7 +140,7 @@ Parameters  | Name: message, Value: Message INFO
 Context Variables | Key: ChainParameters, Value: {}
 ```
 
-- '`chainA`' is executed, produces a document model and runs two operations:  [`Context.FetchDocument`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.FetchDocument) and  [`Seam.AddInfoMessage`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage) .
+- '`chainA`' is executed, produces a document model and runs two operations:  [`Context.FetchDocument`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Context.FetchDocument) and  [`Seam.AddInfoMessage`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Seam.AddInfoMessage) .
 - These two operations display the following information during their executions:
 
     - Input Type, Output Type,
@@ -207,7 +207,7 @@ Parameters  | Name: message, Value: test
 Context Variables | Key: ChainParameters, Value: {} | Key: Seam.AddInfoMessage, Value: Message INFO
 ```
 
-- '`chainA`' is executed, produces a document model and runs three operations: [Context.FetchDocument](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.FetchDocument), [Context.RunOperation](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.RunOperation) and [Seam.AddInfoMessage](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage).
+- '`chainA`' is executed, produces a document model and runs three operations: [Context.FetchDocument](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Context.FetchDocument), [Context.RunOperation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Context.RunOperation) and [Seam.AddInfoMessage](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Seam.AddInfoMessage).
 - The `Context.RunOperation` runs a second subchain '`chainB`':
 
     - These chain has parent ID attribute to '`chainA`';

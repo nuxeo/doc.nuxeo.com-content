@@ -140,7 +140,7 @@ Here is an example of such an extension point:
 
 ```
 
-The above code is contributing two REST bindings - one for the atomic operation [`Document.Delete`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) which is completely disabled (by using the `disabled` parameter) and the second one is defining a security rule for the automation chain named `audit`.
+The above code is contributing two REST bindings - one for the atomic operation [`Document.Delete`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Document.Delete) which is completely disabled (by using the `disabled` parameter) and the second one is defining a security rule for the automation chain named `audit`.
 
 The `chain` attribute must be set to `true` every time a binding refers to an automation chain and not to an atomic operation.
 

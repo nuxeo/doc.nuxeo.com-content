@@ -613,7 +613,7 @@ Here the resource type is inferred from the resource name extension: it ends by 
 
 ```
 
-Several kinds of URIs are accepted to reference the resource location. Please refer to the [wro4j documentation](https://code.google.com/p/wro4j/wiki/ResourceTypes) or the [extension point documentation](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) for details.
+Several kinds of URIs are accepted to reference the resource location. Please refer to the [wro4j documentation](https://code.google.com/p/wro4j/wiki/ResourceTypes) or the [extension point documentation](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) for details.
 
 Here files will be retrieved from the generated WAR directory (nuxeo.war)&nbsp; so you should make sure that the `OSGI-INF/deployment-fragment.xml` file of your module copies the files from the JAR there.
 
