@@ -116,12 +116,12 @@ history:
 ---
 
 {{! excerpt}}
-The [Scheduler Service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.scheduler.SchedulerService) is a Nuxeo Platform service to schedule events at periodic times. This is the best way in Nuxeo Platform to execute things every night, every hour, every five minutes, or at whatever granularity you require.
+The [Scheduler Service](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewService/org.nuxeo.ecm.core.scheduler.SchedulerService) is a Nuxeo Platform service to schedule events at periodic times. This is the best way in Nuxeo Platform to execute things every night, every hour, every five minutes, or at whatever granularity you require.
 {{! /excerpt}}
 
 ## Scheduler Contribution
 
-To schedule an event, you contribute a `<schedule>` to the [schedule](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.scheduler.SchedulerService--schedule) extension point of the [SchedulerService](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.scheduler.SchedulerService) component.
+To schedule an event, you contribute a `<schedule>` to the [schedule](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.scheduler.SchedulerService--schedule) extension point of the [SchedulerService](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.scheduler.SchedulerService) component.
 
 A schedule is defined by:
 
@@ -242,7 +242,7 @@ In the **Event Handler Activation**, update the **Current document is** filter v
 
 When using the Scheduler Service to trigger [Automation Chains]({{page page='content-automation-concepts'}}) through [Event Listener]({{page page='events-and-messages'}}) and [Event Handler]({{page space='studio' page='event-handlers'}}), the Core Session cannot be retrieved and cannot be set within the Operation Context _(Core Session is not found)_.
 
-If the need is to execute operations needing an operation context session, the first operation of the chain should be [LoginAs Operation](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Auth.LoginAs). It will create a new authenticated session and set the Automation context session accordingly.
+If the need is to execute operations needing an operation context session, the first operation of the chain should be [LoginAs Operation](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Auth.LoginAs). It will create a new authenticated session and set the Automation context session accordingly.
 
 {{#> callout type='info' }}
 Check that the field **Current document is** is set to **Any** (default value is Regular document)

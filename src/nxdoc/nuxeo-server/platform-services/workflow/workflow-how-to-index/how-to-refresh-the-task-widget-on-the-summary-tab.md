@@ -70,9 +70,9 @@ history:
 
 ---
 
-If you start a workflow automatically using the [Workflow > StartWorkflow](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.StartWorkflow) operation and that your workflow's first node creates a task to the workflow initiator, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Seam.RaiseEvents)** operation, with the value `workflowNewProcessStarted` for the event name.
+If you start a workflow automatically using the [Workflow > StartWorkflow](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Context.StartWorkflow) operation and that your workflow's first node creates a task to the workflow initiator, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Seam.RaiseEvents)** operation, with the value `workflowNewProcessStarted` for the event name.
 
-If you cancel a workflow automatically using the [Workflow > CancelWorkflow](http://explorer.nuxeo.com/nuxeo/site/distribution/server-10.10/viewOperation/WorkflowInstance.Cancel) operation, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Seam.RaiseEvents)** operation, with the value `WorkflowInstance.Cancel` for the event name.
+If you cancel a workflow automatically using the [Workflow > CancelWorkflow](http://explorer.nuxeo.com/nuxeo/site/distribution/server-10.10/viewOperation/WorkflowInstance.Cancel) operation, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Seam.RaiseEvents)** operation, with the value `WorkflowInstance.Cancel` for the event name.
 
 * * *
 

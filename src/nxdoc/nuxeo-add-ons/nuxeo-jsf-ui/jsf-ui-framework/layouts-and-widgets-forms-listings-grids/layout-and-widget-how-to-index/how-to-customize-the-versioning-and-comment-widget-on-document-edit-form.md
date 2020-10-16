@@ -156,9 +156,9 @@ On documents edit form, a **Comment** textarea is displayed, and this text is vi
 
 When using a **Toggleable Form** (`toggleableLayoutWithForms`) [widget type](http://showcase.nuxeo.com/nuxeo/layoutDemo/toggleableLayoutWidget), these fields can be shown by setting the property **Show Edit Options** (`showEditOptions`) to `true`, and they can be hidden by setting the property to `false`.
 
-On the standard edit form, on the **Edit** tab, the layout showing these fields is included by default. Customizing it or hiding it can be done overriding the layout named [`document_edit_form_options`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp.base--layouts) .
+On the standard edit form, on the **Edit** tab, the layout showing these fields is included by default. Customizing it or hiding it can be done overriding the layout named [`document_edit_form_options`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp.base--layouts) .
 
-This layout holds [three widgets](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp.base--widgets)&nbsp;that can be customized independently:
+This layout holds [three widgets](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp.base--widgets)&nbsp;that can be customized independently:
 
 *   `document_edit_current_version`,
 *   `document_edit_versioning_options`,

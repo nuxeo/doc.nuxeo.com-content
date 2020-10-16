@@ -99,7 +99,7 @@ history:
 ---
 
 {{! excerpt}}
-The Nuxeo Platform comes with a [conversion service](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.convert.api.ConversionService) that can be used to manage conversion of blobs from one format to an other.
+The Nuxeo Platform comes with a [conversion service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewService/org.nuxeo.ecm.core.convert.api.ConversionService) that can be used to manage conversion of blobs from one format to an other.
 {{! /excerpt}}
 
 This is what is used for getting a PDF file from an office document, for instance. This is also the infrastructure you should use if you want to plug an Autocad convertor or any business specific format that is not available in the built-in set of converters.
@@ -335,9 +335,9 @@ This call can throw `ConverterNotRegistred` if the target converter does not exi
 
 A few operations exist to do synchronous conversions:
 
-*   [Conversion > Convert to given mime-type](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.Convert)
-*   [Conversion > Convert To PDF](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.ToPDF)
-*   [Conversion > Run converter](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.RunConverter)
+*   [Conversion > Convert to given mime-type](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Blob.Convert)
+*   [Conversion > Convert To PDF](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Blob.ToPDF)
+*   [Conversion > Run converter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Blob.RunConverter)
 
 
 ## Configuration and Contributions
@@ -398,7 +398,7 @@ Here is an example of conversion bypass on the any2pdf converter, the input and 
 </converter>
     ```
 
-See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.convert.service.ConversionServiceImpl--converter).
+See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.convert.service.ConversionServiceImpl--converter).
 
 #### Chained Converters
 

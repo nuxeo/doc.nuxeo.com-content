@@ -86,7 +86,7 @@ Probes can be used to run a test on the target deployed platform in order to che
 *   check VCS access,
 *   ...
 
-Probes can be defined via the[ `probes` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--probes).
+Probes can be defined via the[ `probes` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--probes).
 
 Note that a probe is only run if the last execution time was more than 20s ago. For intervals less than 20s, the last execution status is returned as part of the response.
 
@@ -102,4 +102,4 @@ Here is a list of available probes:
 * `s3BinaryManagerStatus`: check access to s3 buckets
 * `streamStatus`: check for Nuxeo Stream processor failure
 
-Probes can be run as part of the `runningstatus` health check endpoint using the [`healthCheck` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--healthCheck).
+Probes can be run as part of the `runningstatus` health check endpoint using the [`healthCheck` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--healthCheck).

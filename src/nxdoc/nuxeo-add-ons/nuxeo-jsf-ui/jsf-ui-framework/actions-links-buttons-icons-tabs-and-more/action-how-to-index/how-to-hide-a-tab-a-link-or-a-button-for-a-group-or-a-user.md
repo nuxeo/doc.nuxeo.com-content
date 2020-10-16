@@ -132,7 +132,7 @@ history:
 
 <u>Goal</u>: hide the "`New`" button to all member of a group named `Group1`.
 
-If you are looking for another button or link, you can find all the contributions extending the service `org.nuxeo.ecm.platform.actions.ActionService` for the point `actions` in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions).
+If you are looking for another button or link, you can find all the contributions extending the service `org.nuxeo.ecm.platform.actions.ActionService` for the point `actions` in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions).
 
 In this example, you will define a filter for the action "`New`", which should be hidden for members of a group `Group1`. The id of this action is `newDocument`.
 
@@ -179,7 +179,7 @@ In this example, you will define a filter for the action "`New`", which should b
 
 In this example, the name of the group to be excluded was hardcoded. It is also possible to create a method which returns a list of group names to exclude.
 
-Find more information related to Actions and filters in the [documentation]({{page page='actions-links-buttons-icons-tabs-and-more'}}) and details for the extension point in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--filters).
+Find more information related to Actions and filters in the [documentation]({{page page='actions-links-buttons-icons-tabs-and-more'}}) and details for the extension point in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--filters).
 
 # Disabling Tabs on Your Document Type Using Nuxeo Studio
 
