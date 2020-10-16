@@ -178,7 +178,7 @@ aspera.access.key.id=
 ### SECRET KEY ON UPLOAD NODE LINKED TO TS S3 BUCKET
 aspera.access.key.secret=
 
-### ACCESS KEY ON DOWNLOAD NODE LINKED TO TMAIN S3 BUCKET
+### ACCESS KEY ON DOWNLOAD NODE LINKED TO MAIN S3 BUCKET
 aspera.download.access.key.id=
 ### SECRET KEY ON DOWNLOAD NODE LINKED TO MAIN S3 BUCKET
 aspera.download.access.key.secret=
