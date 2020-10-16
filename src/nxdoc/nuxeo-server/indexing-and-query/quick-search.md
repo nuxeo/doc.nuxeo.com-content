@@ -95,10 +95,10 @@ The simple search content view is named&nbsp;`simple_search` <span class="s">and
 
 ## Quick Search Box
 
-Since 5.8, the simple search box is shown thanks to an action. To customize this box, the corresponding action contribution can be overridden. See [http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.actions--actions](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.actions--actions)
+Since 5.8, the simple search box is shown thanks to an action. To customize this box, the corresponding action contribution can be overridden. See [http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewContribution/org.nuxeo.ecm.platform.actions--actions](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewContribution/org.nuxeo.ecm.platform.actions--actions)
 
 ## Suggestions
 
 It takes over the simple search by disabling the action showing the simple search box, and adding the suggester one. See [https://github.com/nuxeo/nuxeo-platform-suggestbox/blob/master/nuxeo-platform-suggestbox-jsf/src/main/resources/OSGI-INF/suggestbox-actions-contrib.xml](https://github.com/nuxeo/nuxeo-platform-suggestbox/blob/release-9.10/nuxeo-platform-suggestbox-jsf/src/main/resources/OSGI-INF/suggestbox-actions-contrib.xml).
 
-Suggesters can be contributed to this search box. See the contribution at [http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.suggestbox.core.defaultSuggesters--suggesters](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewContribution/org.nuxeo.ecm.platform.suggestbox.core.defaultSuggesters--suggesters).
+Suggesters can be contributed to this search box. See the contribution at [http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewContribution/org.nuxeo.ecm.platform.suggestbox.core.defaultSuggesters--suggesters](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewContribution/org.nuxeo.ecm.platform.suggestbox.core.defaultSuggesters--suggesters).

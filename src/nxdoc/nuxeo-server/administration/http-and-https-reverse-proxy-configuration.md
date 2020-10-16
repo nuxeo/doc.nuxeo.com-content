@@ -436,7 +436,7 @@ Without having `HttpOnly` and `Secure` flags in HTTP response header, it is poss
 
 ### Configuring HTTP Cache
 
-The Simple cache filter is deprecated, we recommend using the [`filterConfig` extension point of `RequestControllerService`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService) .
+The Simple cache filter is deprecated, we recommend using the [`filterConfig` extension point of `RequestControllerService`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewComponent/org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService) .
 
 #### RequestControllerService's Filter Extension Point
 

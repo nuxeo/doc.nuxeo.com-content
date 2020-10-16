@@ -143,7 +143,7 @@ An automation chain is a pipe of parametrized atomic operations. The automation 
 
 {{! /excerpt}}
 
-Chain contribution is done via the [Nuxeo extension point mechanism]({{page page='runtime-and-component-model'}}). The extension point name is [`chains`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--chains) and the component exposing the extension point is [`org.nuxeo.ecm.core.operation.OperationServiceComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.operation.OperationServiceComponent) .
+Chain contribution is done via the [Nuxeo extension point mechanism]({{page page='runtime-and-component-model'}}). The extension point name is [`chains`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--chains) and the component exposing the extension point is [`org.nuxeo.ecm.core.operation.OperationServiceComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewComponent/org.nuxeo.ecm.core.operation.OperationServiceComponent) .
 
 Here is an example of a chain extension:
 

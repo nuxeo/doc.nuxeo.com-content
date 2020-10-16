@@ -88,7 +88,7 @@ These are properties of the document of type 'DocumentRoute' stored on a dynamic
 
 Usual property types are available beside complex properties that are currently disabled.
 
-Workflow variables can be accessed from the automation context during the execution of the process using the context variable `WorkflowVariables["my_variable"]`. They can be updated using the Automation operation [Set Workflow Variable](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.SetWorkflowVar).
+Workflow variables can be accessed from the automation context during the execution of the process using the context variable `WorkflowVariables["my_variable"]`. They can be updated using the Automation operation [Set Workflow Variable](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Context.SetWorkflowVar).
 
 ## Availability
 

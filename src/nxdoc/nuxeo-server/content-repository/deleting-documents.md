@@ -111,7 +111,7 @@ Besides the standard user interface, a document is put in the trash when using W
 
 ### Permanently Deleting the Document
 
-A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument-org.nuxeo.ecm.core.api.DocumentRef-) or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) operation.
+A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument-org.nuxeo.ecm.core.api.DocumentRef-) or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Document.Delete) operation.
 
 **Soft-Delete**
 
