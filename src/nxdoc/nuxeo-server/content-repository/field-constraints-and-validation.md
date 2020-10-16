@@ -312,7 +312,7 @@ public interface DocumentValidationService {
 
 {{/panel}}
 
-Validation can be enabled/disabled at different level by means of the extension point [`activations`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.core.api.DocumentValidationService.activations--activations) of the `org.nuxeo.ecm.core.api.DocumentValidationService` component.
+Validation can be enabled/disabled at different level by means of the extension point [`activations`](http://explorer.nuxeo.com/nuxeo/site/distribution/8.10/viewContribution/org.nuxeo.ecm.core.api.DocumentValidationService.activations--activations) of the `org.nuxeo.ecm.core.api.DocumentValidationService` component.
 
 ## {{> anchor 'contraints-setup'}}Setting up Constraints
 
