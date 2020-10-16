@@ -175,7 +175,7 @@ On this screen you can add new parameters. This can be useful when you want to [
 
 The Studio Automation Chain integrates a new editor called YAML editor which enables you to edit your chain in plain text. You can click on the button **Switch editor** to activate this feature. You can switch back to the visual editor whenever you want.
 
-For more information on the Studio Automation Chains, see [all the operations available](http://explorer.nuxeo.org/nuxeo/site/distribution/current/listOperations).
+For more information on the Studio Automation Chains, see [all the operations available](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listOperations).
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
