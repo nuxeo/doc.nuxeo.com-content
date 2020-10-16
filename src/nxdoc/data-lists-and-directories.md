@@ -106,7 +106,7 @@ A **vocabulary** is a specialized **directory** with only a few important column
 
 We try to map all data that can be manipulated like record via directories. For that, directories provide a simple CRUD API and an abstraction on the actual implementation. This means that the services of the platform do not have to worry about where and how the data is stored, they just access the API.
 
-![]({{file name='Selection_026.png'}} ?w=600,border=true)
+![]({{file version='810' name='Selection_026.png'}} ?w=600,border=true)
 
 Directories comes with several implementations:
 

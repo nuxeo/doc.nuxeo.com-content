@@ -183,15 +183,15 @@ Here we want to create a document type "Contract" that will hold specific metada
     *   Label: Contract
     *   Description: Contract document type for internal use.Your document type is created.
 3.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
-    ![]({{file page='/nxdoc/getting-started-with-nuxeo-studio' name='definition_contract.png'}} ?w=600,h=365,border=true)
+    ![]({{file name='definition_contract.png'}} ?w=600,h=365,border=true)
 4.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
-    ![]({{file npage='/nxdoc/getting-started-with-nuxeo-studio' ame='schema_contract.png'}} ?w=600,border=true)
+    ![]({{file name='schema_contract.png'}} ?w=600,border=true)
 
-5.  Specify the [form that will be used to create the document (aka creation layout)]({{page space='studio' page='form-layouts'}}):
-    1.  Click on the icon ![]({{file name='delete.gif' space='studio' page='studio-icons-index'}}) to remove the WARNING and Description widgets.
+5.  Specify the [form that will be used to create the document (aka creation layout)]({{page page='/studio/form-layouts'}}):
+    1.  Click on the icon ![]({{file name='delete.gif' page='/studio/studio-icons-index'}}) to remove the WARNING and Description widgets.
     2.  Drag and drop the fields "Owner", "Start" and "Policy" from the schema Contract to the grid.
-    3.  Click on ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) if you want to edit their label and click on the popup **Save** button.
-        ![]({{file page='/nxdoc/getting-started-with-nuxeo-studio' name='creation_layout_contract.png'}} ?w=580,border=true)
+    3.  Click on ![]({{file name='editor_area.gif' page='/studio/studio-icons-index'}}) if you want to edit their label and click on the popup **Save** button.
+        ![]({{file  name='creation_layout_contract.png'}} ?w=580,border=true)
 6.  On the Edit layout (the form used to update the metadata of the document):
     1.  Click on the button **Import Layout** and select **Import 'create' layout**.
     2.  Click on the button **Add Row**.
