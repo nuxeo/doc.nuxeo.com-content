@@ -100,7 +100,7 @@ history:
 
 ---
 
--  Check that common properties are set as prefetched (see [org.nuxeo.ecm.core.schema.TypeService--configuration](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration) and [org.nuxeo.ecm.core.schema.TypeService--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype)).
+-  Check that common properties are set as prefetched (see [org.nuxeo.ecm.core.schema.TypeService--configuration](http://explorer.nuxeo.com/nuxeo/site/distribution/7.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration) and [org.nuxeo.ecm.core.schema.TypeService--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/7.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype)).
 -  If you don't want to match proxies in your query, add a `AND ecm:isProxy = 0` clause.
 -  If you don't use proxies at all, deactivate them at the repository level by adding inside the `<repository>` tag the following:
 

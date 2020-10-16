@@ -652,7 +652,7 @@ When migrating resources to the WebResources service, the following rule can be 
 *   When the resource is kept in the JAR contributing to the service, the local **path** to the resource can be used like `style/my_style.css`.
 *   Old style resources contributed to the theme styling service used the `src` attribute now renamed to `path`. Note that styles referencing flavor variables could not be placed in the WAR directory before, otherwise flavor replacement could not be done correctly. This restriction is not valid anymore.
 
-For more details, check out the [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) documentation.
+For more details, check out the [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/7.10/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) documentation.
 
 ### SASS Styles Definition
 

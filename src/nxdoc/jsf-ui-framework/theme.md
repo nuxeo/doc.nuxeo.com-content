@@ -583,7 +583,7 @@ Here is an example of the `galaxy/default` default page definition:
 
 ### Resources
 
-Resources that need to be included on a page need to define a `resource` contribution to the&nbsp; [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources). Resources define mainly a name and a type, here are sample contributions:
+Resources that need to be included on a page need to define a `resource` contribution to the&nbsp; [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/7.10/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources). Resources define mainly a name and a type, here are sample contributions:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
@@ -617,7 +617,7 @@ Here the resource type is inferred from the resource name extension: it ends by 
 
 ```
 
-Several kinds of URIs are accepted to reference the resource location. Please refer to the [wro4j documentation](https://code.google.com/p/wro4j/wiki/ResourceTypes) or the [extension point documentation](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) for details.
+Several kinds of URIs are accepted to reference the resource location. Please refer to the [wro4j documentation](https://code.google.com/p/wro4j/wiki/ResourceTypes) or the [extension point documentation](http://explorer.nuxeo.com/nuxeo/site/distribution/7.10/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) for details.
 
 Here files will be retrieved from the generated WAR directory (nuxeo.war)&nbsp; so you should make sure that the `OSGI-INF/deployment-fragment.xml` file of your module copies the files from the JAR there.
 
@@ -841,7 +841,7 @@ Before 7.4, CSS files referencing flavor variables needed to be referenced as re
 
 ### Processors
 
-Custom processors can be defined and used. Some [default processors](https://code.google.com/p/wro4j/wiki/AvailableProcessors) are also available, you can refer to the [`processors` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--processors) and take example on the custom [FlavorResourceProcessor](https://github.com/nuxeo/nuxeo/blob/release-7.10/nuxeo-theme/nuxeo-theme-styling/src/main/java/org/nuxeo/theme/styling/wro/FlavorResourceProcessor.java) implementation and [registration](https://github.com/nuxeo/nuxeo/blob/release-7.10/nuxeo-theme/nuxeo-theme-styling/src/main/resources/OSGI-INF/webresources-contrib.xml).
+Custom processors can be defined and used. Some [default processors](https://code.google.com/p/wro4j/wiki/AvailableProcessors) are also available, you can refer to the [`processors` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/7.10/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--processors) and take example on the custom [FlavorResourceProcessor](https://github.com/nuxeo/nuxeo/blob/release-7.10/nuxeo-theme/nuxeo-theme-styling/src/main/java/org/nuxeo/theme/styling/wro/FlavorResourceProcessor.java) implementation and [registration](https://github.com/nuxeo/nuxeo/blob/release-7.10/nuxeo-theme/nuxeo-theme-styling/src/main/resources/OSGI-INF/webresources-contrib.xml).
 
 ### {{> anchor 'negotiations'}}Negotiations
 
