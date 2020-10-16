@@ -299,7 +299,7 @@ The output of the chain does not really matter.
 
 At some point, inside your Automation chain you may need to access the Seam context. For that, new operations were introduced:
 
-* [`Seam.RunOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/RunOperation): runs an operation or a chain in the Seam context. For example, if you want to get available actions via the `Actions.GET` operation, but want to leverage the Seam context for actions filters:
+* [`Seam.RunOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/RunOperation): runs an operation or a chain in the Seam context. For example, if you want to get available actions via the `Actions.GET` operation, but want to leverage the Seam context for actions filters:
 
 {{#> panel type='code' heading='Running an operation in the Seam context'}}
 ```
@@ -311,7 +311,7 @@ At some point, inside your Automation chain you may need to access the Seam cont
 ```
 {{/panel}}
 
-*   [`Seam.InitContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/WebUI.InitSeamContext) / [`Seam.DestroyContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/WebUI.DestroySeamContext): initializes / destroys the Seam context:
+*   [`Seam.InitContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/WebUI.InitSeamContext) / [`Seam.DestroyContext`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/WebUI.DestroySeamContext): initializes / destroys the Seam context:
 
 {{#> panel type='code' heading='Manual Seam context management'}}
 ```

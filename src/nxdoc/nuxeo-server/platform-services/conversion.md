@@ -99,7 +99,7 @@ history:
 
 {{! excerpt}}
 
-The Nuxeo Platform comes with a [conversion service](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.convert.api.ConversionService) that can be used to manage conversion of blobs from one format to an other.
+The Nuxeo Platform comes with a [conversion service](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewService/org.nuxeo.ecm.core.convert.api.ConversionService) that can be used to manage conversion of blobs from one format to an other.
 
 {{! /excerpt}}
 
@@ -336,9 +336,9 @@ This call can throw `ConverterNotRegistred` if the target converter does not exi
 
 A few operations exist to do synchronous conversions:
 
-*   [Conversion > Convert to given mime-type](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.Convert)
-*   [Conversion > Convert To PDF](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.ToPDF)
-*   [Conversion > Run converter](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.RunConverter)
+*   [Conversion > Convert to given mime-type](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/Blob.Convert)
+*   [Conversion > Convert To PDF](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/Blob.ToPDF)
+*   [Conversion > Run converter](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/Blob.RunConverter)
 
 
 ## Configuration and Contributions
@@ -388,7 +388,7 @@ To contribute a new converter, you have to contribute a class that implement the
 </extension>
 ```
 
-See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.convert.service.ConversionServiceImpl--converter).
+See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.convert.service.ConversionServiceImpl--converter).
 
 #### Chained Converters
 

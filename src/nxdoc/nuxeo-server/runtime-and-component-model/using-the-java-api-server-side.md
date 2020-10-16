@@ -96,7 +96,7 @@ From within a Nuxeo Runtime aware context, you can access a service locally (in 
 RelationManager rm = Framework.getService(RelationManager.class)
 ```
 
-You can find the list of existing services on the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/listServices). You will also need to understand main Java classes, using the [javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/).
+You can find the list of existing services on the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/listServices). You will also need to understand main Java classes, using the [javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/).
 
 {{#> callout type='warning' }}
 
