@@ -188,7 +188,7 @@ At the Core level, blobs are bound to documents via a property of type `BlobProp
 
 Which corresponds in [Nuxeo Studio]({{page version='' space='studio' page='nuxeo-studio'}}) to selecting "Blob" in the type.
 
-You can then use either the [`Document.SetBLob`](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.SetBlob) operation to set a blob on a given property or the `setPropertyValue(String xpath,`
+You can then use either the [`Document.SetBLob`](http://explorer.nuxeo.com/nuxeo/site/distribution/8.10/viewOperation/Document.SetBlob) operation to set a blob on a given property or the `setPropertyValue(String xpath,`
 
 `Serializable value)`, of the `documentModel` object in the Java API. You can also have a look at the BlobAdapter pattern.
 
