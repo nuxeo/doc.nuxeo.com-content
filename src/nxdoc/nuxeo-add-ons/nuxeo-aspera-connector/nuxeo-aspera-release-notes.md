@@ -12,7 +12,7 @@ toc: true
 ## Released Changes
 
 ### Auto-create
-Users now have the option of manually "completing" a transfer, or "automatically" completing the transfer once the content has "uploaded".
+Users now have the option of manually "completing" a transfer, or "automatically" completing the transfer once the content has been "uploaded".
 
 See [NXP-27574](https://jira.nuxeo.com/browse/NXP-27574)
 
@@ -45,4 +45,3 @@ See [NXP-29407](https://jira.nuxeo.com/browse/NXP-29407)
 ## Learn More
 
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project%20%3D%20NXP%20AND%20status%20in%20(Resolved%2C%20Closed%20AND%20resolution%20%3D%20Fixed%20AND%20component%20%3D%20%22Aspera%20Connector%22%20AND%20text%20~%20%22aspera%22%20AND%20resolved%20%3E%3D%202020-05-15%20AND%20resolved%20%3C%3D%202020-10-30) is available in our ticket tracking tool.
-
