@@ -134,7 +134,7 @@ In your email templates, you have access to different variables depending if you
 
 Variables that can be used to set up an email in an automation chain.
 
-*   `${Document}` **-** The context document. This is the document on which some action was done and the [send mail operation](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Mail) was triggered. See [Use of MVEL in Automation chains (document wrapper)]({{page page='use-of-mvel-in-automation-chains'}}#-anchor-doc-wrapper-document-wrapper) for details.
+*   `${Document}` **-** The context document. This is the document on which some action was done and the [send mail operation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Document.Mail) was triggered. See [Use of MVEL in Automation chains (document wrapper)]({{page page='use-of-mvel-in-automation-chains'}}#-anchor-doc-wrapper-document-wrapper) for details.
 *   `${docUrl}` - The document URL.
 *   `${viewId}` **-** The view of the document which will be displayed by the document URL.
 *   `${subject}` - The mail subject.

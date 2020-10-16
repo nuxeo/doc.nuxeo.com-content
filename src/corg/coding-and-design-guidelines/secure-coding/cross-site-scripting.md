@@ -107,10 +107,10 @@ Thanks to the JSF ViewState management, all active (POST) requests have to be as
 
 Automation API is by default exposed via JAX-RS and it does not include any specific filtering related to CSRF.
 
-However, the&nbsp;[Binding extension point of AutomationServer](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.automation.server.AutomationServer--bindings) allows to define filtering rules on a per Operation basis.
+However, the&nbsp;[Binding extension point of AutomationServer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.automation.server.AutomationServer--bindings) allows to define filtering rules on a per Operation basis.
 
 In addition, most CSRF issues are related to users having valid authentication sessions : a simple protection can be to limit access to REST API to some specific authentication methods.
-Typically, you can easily define a [custom Authentication chain](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--specificChains) that will be dedicated to REST Calls : this is actually the case [by default](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.automation.server.auth.config--specificChains) with a configuration like : &nbsp;
+Typically, you can easily define a [custom Authentication chain](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--specificChains) that will be dedicated to REST Calls : this is actually the case [by default](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.automation.server.auth.config--specificChains) with a configuration like : &nbsp;
 
 ```
 <specificAuthenticationChain name="Automation">
