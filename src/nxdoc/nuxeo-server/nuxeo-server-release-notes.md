@@ -2,7 +2,7 @@
 title: Nuxeo Server LTS 2019 Release Notes
 review:
    comment: ''
-   date: '2019-01-18'
+   date: '2020-05-15'
    status: ok
 labels:
     - lts2017-ok
