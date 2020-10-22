@@ -124,13 +124,13 @@ CoreInstance.doPrivileged("default", session -> {
 
 In order to declare a property secured you can contribute the following:
 ```
-<component name="my.component.name" version="1.0">
+<component name="my.component.name">
   <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
     <property schema="YOUR_SCHEMA" name="PROP_NAME" secured="true" />
   </extension>
 </component>
 You can also relax the constraint on a secured property, for example dc:creator with:
-<component name="my.component.name" version="1.0">
+<component name="my.component.name">
   <require>org.nuxeo.ecm.core.CoreExtensions</require>
   <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
     <property schema="dublincore" name="created" secured="false" />

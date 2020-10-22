@@ -76,7 +76,7 @@ Of course, like any JSON marshaller, you have to register it.
 
 ```xml
 <?xml version="1.0"?>
-<component name="org.nuxeo.example.marshallers" version="1.0.0">
+<component name="org.nuxeo.example.marshallers">
     <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
         <register class="org.nuxeo.example.BreadcrumbJsonEnricher" enable="true" />
     </extension>

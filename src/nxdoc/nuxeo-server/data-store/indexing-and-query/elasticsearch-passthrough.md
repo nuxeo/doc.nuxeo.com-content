@@ -189,7 +189,7 @@ The following contribution:
 
 ```xml
 <?xml version="1.0"?>
-<component name="org.nuxeo.ecm.platform.routing.es" version="1.0">
+<component name="org.nuxeo.ecm.platform.routing.es">
   <require>org.nuxeo.elasticsearch.http.readonly.RequestFilterService</require>
   <extension target="org.nuxeo.elasticsearch.http.readonly.RequestFilterService"
     point="filters">
