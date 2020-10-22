@@ -243,7 +243,7 @@ Response: there are 3 cases here.
 1.  The chunk has been uploaded but the file is incomplete, meaning some chunks are missing.
 
     ```
-    308 Resume Incomplete
+    202 Accepted
     {"batchId": myBatchId, "fileIdx": "0", "uploadType": "chunked", "uploadedSize": chunkSize, "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
     ```
 
@@ -280,7 +280,7 @@ Response: again there are 3 cases here.
 1.  The file is incomplete.
 
     ```
-    308 Resume Incomplete
+    202 Accepted
     {"name": myFile.doc, "size": 115090, "uploadType": "chunked", "uploadedChunkIds": [0, 1, 2], "chunkCount": 5}
     ```
 

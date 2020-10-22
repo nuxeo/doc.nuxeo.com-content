@@ -667,7 +667,7 @@ Optionally depending on the HTTP client you are using you might need to add the 
 
 For a file uploaded in one go, the chunks attached to the batch are stored on temporary disk storage until the batch is executed or dropped.
 
-Returns a 201 CREATED status code for a complete chunked file and a 308 Resume Incomplete status code for an incomplete chunked file.
+Returns a 201 CREATED status code for a complete chunked file and a 202 Accepted status code for an incomplete chunked file.
 
 JSON response data:
 
@@ -681,7 +681,7 @@ JSON response data:
 GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
 
-Returns a 200 OK status code for a complete chunked file and a 308 Resume Incomplete status code for an incomplete chunked file. It is this specific 308 Resume Incomplete status code that lets you know that you either need to upload the missing chunks or to resume an interrupted file upload.
+Returns a 200 OK status code for a complete chunked file and a 202 Accepted status code for an incomplete chunked file. It is this specific 202 Accepted status code that lets you know that you either need to upload the missing chunks or to resume an interrupted file upload.
 
 If the batch doesn't contain any file with the given index, returns a 404 Not Found status code.
 
