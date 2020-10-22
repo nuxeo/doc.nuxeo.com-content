@@ -74,7 +74,7 @@ Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Onlin
 - The file must contain a specific `component name`:
 
 ```xml
-<component name="records-s3-compliance" version="1.0.0">
+<component name="records-s3-compliance">
 ```
 - The file must contain a blob manager extension with the configuration of the S3 bucket dedicated to the records and the following parameters:
 
@@ -99,7 +99,7 @@ Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Onlin
 Complete XML extension file example:
 ```xml
 <?xml version="1.0"?>
-<component name="records-s3-compliance" version="1.0.0">
+<component name="records-s3-compliance">
 
   <require>default-repository-config</require>
 

@@ -146,7 +146,7 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
 
 ```xml
 <?xml version="1.0"?>
-<component name="org.nuxeo.example.marshallers" version="1.0.0">
+<component name="org.nuxeo.example.marshallers">
   <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
     <register class="org.nuxeo.example.ProductJsonWriter" enable="true" />
     <register class="org.nuxeo.example.ProductJsonReader" enable="true" />
