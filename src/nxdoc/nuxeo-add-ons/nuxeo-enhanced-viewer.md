@@ -526,7 +526,7 @@ The UI customization is done through two files to be put in the `/docker-entrypo
 - `arender.css` to customize the style
 - `arender.properties` to customize the behavior
 
-Please follow the [ARender configuration guide](https://arender.io/doc/current4/documentation/hmi/index-hmi.html) for more information about available properties and style.
+Please follow the [ARender configuration guide](https://arender.io/v4/documentation/configuration/) for more information about available properties and style.
 
 {{#> callout type='info' heading='Properties as environment variables'}}
 UI properties can also be customized through environment variables. You need to capitalize all letters in the key, and to replace `.` by `_`, and prefix it with `ARENDER_`.</br>
