@@ -135,16 +135,16 @@ Let's look at a minimal example of package.xml file:
   <description>
     <p>Put here an HTML description of your Nuxeo Package.</p>
   </description>
-  <platforms>
-    <platform>server-11.10</platform>
-    <platform>server-11.10-HF*</platform>
-  </platforms>
+  <target-platform>
+    <name>server</name>
+    <version>[11.10,12)</version>
+  </target-platform>
 </package>
 
 ```
 
 This is a minimal package manifest. It is defining a package nuxeo-package at version 1.0.0 and of type addon.
-The package can be installed on platforms 11.10.
+The package can be installed on platforms form server-11.10 (included) to server-12.0 (exculded).
 
 Also, the package title and description that should be used by the UI are specified by the `title` and `description` elements.
 
@@ -158,13 +158,13 @@ Let's look at the full version of the same package manifest:
   </description>
   <home-page>http://some.host.com/mypage</home-page>
   <vendor>Your Company</vendor>
-  <hotreload-support>true</hotreload-support>
   <require-terms-and-conditions-acceptance>false</require-terms-and-conditions-acceptance>
-  <!-- Nuxeo Validation: none | inprocess | primary_validation | nuxeo_certified -->
-  <nuxeo-validation>none</nuxeo-validation>
-  <!-- Production State: production_ready | testing | proto -->
-  <production-state>testing</production-state>
-  <supported>false</supported>
+  <license>Apache License, Version 2.0</license>
+  <license-url>http://www.apache.org/licenses/LICENSE-2.0</license-url>
+  <target-platform>
+    <name>server</name>
+    <version>[11.10,12)</version>
+  </target-platform>
   <platforms>
     <platform>server-11.10</platform>
     <platform>server-11.10-HF*</platform>
@@ -182,10 +182,6 @@ Let's look at the full version of the same package manifest:
   <provides>
     <package>an-embedded-package:1.0.0:1.0.0</package>
   </provides>
-  <license>Apache License, Version 2.0</license>
-  <license-url>http://www.apache.org/licenses/LICENSE-2.0</license-url>
-  <!-- Visibility: PRIVATE | MARKETPLACE | DEV | PUBLIC -->
-  <visibility>PUBLIC</visibility>
 </package>
 
 ```
@@ -201,18 +197,11 @@ Here are the available fields (see the [<span class="nolink">PackageDefinition</
 - `description`: HTML field.
 - `home-page`: The URL where more information can be found about this package.
 - `vendor`: The vendor represent the entity providing and maintaining the package.
-- `supported`: True or False. Is the package maintenance guaranteed by a support contract with the vendor.
-- `hotreload-support`: True or False. Can the package be "hot reloaded" (cf Nuxeo Studio, Dev mode...).
 - `require-terms-and-conditions-acceptance`: True or False. Determines if the package install requires terms and conditions acceptance by the administrator.
-- `nuxeo-validation`: A validation status: `none`, `inprocess`, `primary_validation` or `nuxeo_certified`.</br>
-  See [org.nuxeo.connect.update.NuxeoValidationState.](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/NuxeoValidationState.html)
-- `production-state`: A production status: `proto`, `testing`, `production_ready`.</br>
-  See [org.nuxeo.connect.update.ProductionState](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/ProductionState.html).
 - `license`: Open field: GPL, BSD, LGPL...
 - `license-url`: If no URL is provided, then a `license.txt` file should be included in the package.
-- `visibility`: `PRIVATE` (restricted to specific users and/or projects), `MARKETPLACE` (restricted to registered users), `DEV` (restricted to registered users) or `PUBLIC` (no restriction). The visibility determines the channel where the package will be distributed and how it can be installed.</br>
-  See [org.nuxeo.connect.update.PackageVisibility](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/PackageVisibility.html).
-- `platforms`: The list of platforms supported by this package.
+- `target-platform`: The name and version range of platforms on which this package can be installed.</br>
+  See [Target Platform section](#target-platform)
 - `dependencies`: The list of package dependencies.</br>
   See [org.nuxeo.connect.update.PackageDependency](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/PackageDependency.html).
 - `optional-dependencies`: The list of package optional dependencies. Used for packages which use the conditional bundle installation.
@@ -249,6 +238,58 @@ For instance, Nuxeo would use:
 - And in case of important code changes, respectively `2.0.0`, `2.1.0` and `2.2.0` for the next packages targeting `8.x`, `9.x` and `10.x`.
 
 Maintenance branches are usually named `major.minor` or `major.minor_LTS`: for instance, `1.0`, `1.1` and `1.2` or `1.0_8.10`, `1.1_9.10` and `1.2_10.10`.
+
+## Target platform
+
+The prefered way to define on which Nuxeo platform a package can be installed is the following:
+
+```xml
+  <target-platform>
+    <name>[compatible distribution name]</name>
+    <version>[range of compatible distribution versions]</version>
+  </target-platform>
+
+```
+Where the compatible distribution name must refers to the `org.nuxeo.distribution.name` property of the Nuxeo platform and the range of compatible distribution versions is defined using a *maven-like* version range syntax and refers to the `org.nuxeo.distribution.version` property of the Nuxeo platform.
+
+### Constraints
+
+Here are the constraints to be followed when defining the `<target-platform>` in your package.xml:
+
+- Both `<name>` and `<version>` tags are **required** inside `<target-platform>`
+- The `<name>` is case sensitive and must be an **exact match** of the `org.nuxeo.distribution.name` property of the Nuxeo platform
+- The `<version>` syntax follows these rules
+
+    | Version Range	    | Meaning         |
+    | --------- | --------------- |
+    | 1.0	    | x == 1.0        |
+    | (,1.0]    | x <= 1.0        |
+    | (,1.0)    | x < 1.0         |
+    | [1.0]	    | x == 1.0        |
+    | [1.0,)    | x >= 1.0        |
+    | (1.0,)    | x > 1.0         |
+    | (1.0,2.0)	| 1.0 < x < 2.0   |
+    | [1.0,2.0]	| 1.0 <= x <= 2.0 |
+
+- The `<version>` must refers to the `org.nuxeo.distribution.version` property of the Nuxeo platform
+- As only one range can be defined, **exclusion is not possible**. To achieve the same purpose, you should use the `<conflicts>` tag and/or do separate specific releases of your package
+
+### Patterns (former way)
+
+Although it is not the recommanded way, it is still possible to use the former `<platforms>` tag to declare pattern(s) matching the *[name]-[version]* couple of the targeted Nuxeo platforms:
+
+```xml
+  <platforms>
+    <platform>server-11.10</platform>
+    <platform>server-11.10-HF*</platform>
+  </platforms>
+
+```
+{{#> callout type='note' }}
+
+The new `<target-platform>` tag take precedence on the former `<platforms>` tag if both are defined in the package.xml
+
+{{/callout}}
 
 ## Package Dependencies
 
