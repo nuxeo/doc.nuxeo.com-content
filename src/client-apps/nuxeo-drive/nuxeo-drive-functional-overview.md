@@ -651,8 +651,8 @@ Starting from Nuxeo Platform 6.0, you can synchronize spaces on which you have [
 
 #### Web UI
 
-To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive-webui-unsynced.png' page='nuxeo-drive'}} ?w=20).
-The icon becomes ![]({{file name='drive-webui-synced-under-root.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive-webui-direct-edit.png' page='nuxeo-drive'}} ?w=20).
+To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive-webui-synced-under-root.png' page='nuxeo-drive'}} ?w=20).
+The icon becomes ![]({{file name='drive-webui-unsynced.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive-webui-direct-edit.png' page='nuxeo-drive'}} ?w=20).
 
 {{! multiexcerpt name='drive-content-sync'}}
 The folder and all its content is now available in your local Nuxeo Drive folder. You can now create, edit, delete documents from your computer. If you only have Read permissions, documents are in read-only mode.
