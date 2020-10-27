@@ -39,7 +39,7 @@ Simflofy documents are now stored in Nuxeo like any other document.
 
 ## Installation
 
-- A Simflofy server is needed to run the federation process. You can follow the [Simflofy installation steps](http://simflofy.helpdocsonline.com/install-and-configuration).
+- A Simflofy server is needed to run the federation process. You can follow the [Simflofy installation steps](https://simflofy.helpdocsonline.com/simflofy_installation).
 
 {{#> callout type='warning' heading='Simflofy requirements'}}
 Note that Simflofy requires **MongoDB 3.4.x** as a database.
