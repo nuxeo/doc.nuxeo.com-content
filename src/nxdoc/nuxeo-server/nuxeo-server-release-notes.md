@@ -1529,6 +1529,60 @@ H2 is now the only option to handle in-memory data sources.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28673](https://jira.nuxeo.com/browse/NXP-28673)
 
+### Nuxeo Wizard
+
+The Nuxeo Wizard has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28621](https://jira.nuxeo.com/browse/NXP-28621)
+
+### Marklogic Connector
+
+The Marklogic connector has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26571](https://jira.nuxeo.com/browse/NXP-26571)
+
+### Nuxeo Agenda
+
+The Nuxeo Agenda `nuxeo-agenda` addon has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27271](https://jira.nuxeo.com/browse/NXP-27271)
+
+### Live Connect for Box
+
+The Nuxeo Live Connect addon doesn't support anymore Box (following API vendors changes).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29754](https://jira.nuxeo.com/browse/NXP-29754)
+
+### Live Connect for OneDrive & OneDrive for Business
+
+The Nuxeo Live Connect addon doesn't support anymore OneDrive and OneDrive for Business (following API vendors changes).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29754](https://jira.nuxeo.com/browse/NXP-29754)
+
+### Nuxeo Static WAR
+
+The `nuxeoctl` pack command used to generate a static WAR has been removed as well as the `nuxeo-distribution/nuxeo-war-tests` module testing it.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28100](https://jira.nuxeo.com/browse/NXP-28100)
+
+### Nuxeo SDK Distribution
+
+The Nuxeo Server Tomcat SDK build has been removed. The Maven profile `sdk` does not exist anymore.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28101](https://jira.nuxeo.com/browse/NXP-28101)
+
+### Nuxeo Shell
+
+The Nuxeo Shell `nuxeo-shell` addon has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27312](https://jira.nuxeo.com/browse/NXP-27312)
+
+### Template Rendering Samples
+
+The Template Rendering Samples has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28059](https://jira.nuxeo.com/browse/NXP-28059)
+
 ### JAAS
 
 JAAS has been removed (the use of LoginContext, security domains, LoginModules, etc.) and replaced per a direct call to `NuxeoAuthenticationPlugins`.
@@ -1578,18 +1632,6 @@ Behavior change:
 Usage of NXCore is deprecated and its usage is removed from the platform.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22532](https://jira.nuxeo.com/browse/NXP-22532)
-
-### Nuxeo Static WAR
-
-The `nuxeoctl` pack command used to generate a static WAR has been removed as well as the `nuxeo-distribution/nuxeo-war-tests` module testing it.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28100](https://jira.nuxeo.com/browse/NXP-28100)
-
-### Nuxeo SDK Distribution
-
-The Nuxeo Server Tomcat SDK build has been removed. The Maven profile `sdk` does not exist anymore.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28101](https://jira.nuxeo.com/browse/NXP-28101)
 
 ### Post Commit Listeners
 
@@ -1643,41 +1685,11 @@ You do not need to depend on `nuxeo-dam` package anymore on your Nuxeo package, 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28626](https://jira.nuxeo.com/browse/NXP-28626)
 
-### Nuxeo Wizard
-
-The Nuxeo Wizard has been removed.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28621](https://jira.nuxeo.com/browse/NXP-28621)
-
-### Marklogic Connector
-
-The Marklogic connector has been removed.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26571](https://jira.nuxeo.com/browse/NXP-26571)
-
 ### Nuxeo Connect Report Tools
 
 The Nuxeo Connect Report Tools `nuxeo-connect-tools` has been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27864](https://jira.nuxeo.com/browse/NXP-27864)
-
-### Nuxeo Shell
-
-The Nuxeo Shell `nuxeo-shell` addon has been removed.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27312](https://jira.nuxeo.com/browse/NXP-27312)
-
-### Template Rendering Samples
-
-The Template Rendering Samples has been removed.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28059](https://jira.nuxeo.com/browse/NXP-28059)
-
-### Nuxeo Agenda
-
-The Nuxeo Agenda `nuxeo-agenda` addon has been removed.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27271](https://jira.nuxeo.com/browse/NXP-27271)
 
 ### Others Packages
 
