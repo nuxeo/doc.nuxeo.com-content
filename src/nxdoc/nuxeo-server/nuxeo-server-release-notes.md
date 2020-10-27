@@ -1547,9 +1547,9 @@ The Nuxeo Agenda `nuxeo-agenda` addon has been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27271](https://jira.nuxeo.com/browse/NXP-27271)
 
-### Live Connect for Box
+### Live Connect for Dropbox
 
-The Nuxeo Live Connect addon doesn't support anymore Box (following API vendors changes).
+The Nuxeo Live Connect addon doesn't support anymore Dropbox (following API vendors changes).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29754](https://jira.nuxeo.com/browse/NXP-29754)
 
