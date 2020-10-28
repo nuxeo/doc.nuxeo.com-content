@@ -363,7 +363,7 @@ Note also that the default maximum pool size for the AJP connector on JBoss is o
 
 #### JVM Tuning
 
-Always use the latest 1.8 JDKs, they contain performance optimizations.
+Always use the latest 11 JDKs, they contain performance optimizations.
 
 #### Log Level
 

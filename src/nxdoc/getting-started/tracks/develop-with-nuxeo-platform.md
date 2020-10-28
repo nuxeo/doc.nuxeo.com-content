@@ -422,7 +422,7 @@ Watch the related courses on Nuxeo University
 * A Contract document type created on this [page]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
 * An IDE that integrates with Maven.
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
-* Java 8 with JDK
+* Java 11 with JDK
 * Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}}))
 * The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
 * npm 2.12.0+

@@ -71,9 +71,9 @@ history:
 ---
 ## Java
 
-Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 11** (Oracle's JDK or OpenJDK){{! /multiexcerpt}}.
+Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 11** (Azul's Zulu OpenJDK or Oracle's JDK){{! /multiexcerpt}}.
 
-As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version, for instance the latest bugfix version of Java 11 was 11.0.7 at the time of this writing.
+As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version, for instance the latest bugfix version of Java 11 was 11.0.8 at the time of this writing.
 
 More information is available from the [Installation]({{page page='installation'}}) page.
 
