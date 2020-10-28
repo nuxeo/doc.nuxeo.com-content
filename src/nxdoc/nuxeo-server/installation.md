@@ -223,9 +223,9 @@ If you have requirements and/or constraints are not reflected below, **do not he
     If Java is correctly installed on your computer, the name and version of your Java virtual machine is displayed:
 
     ```
-    openjdk version "11.0.5" 2019-10-15
-    OpenJDK Runtime Environment 18.9 (build 11.0.5+10)
-    OpenJDK 64-Bit Server VM 18.9 (build 11.0.5+10, mixed mode)
+    openjdk version "11.0.8" 2020-07-14 LTS
+    OpenJDK Runtime Environment Zulu11.41+23-CA (build 11.0.8+10-LTS)
+    OpenJDK 64-Bit Server VM Zulu11.41+23-CA (build 11.0.8+10-LTS, mixed mode)
     ```
 
     Check in the output that the JDK version is 64 bits.
@@ -240,7 +240,7 @@ If you have requirements and/or constraints are not reflected below, **do not he
     If you installed a JDK, the javac version is displayed:
 
     ```
-    javac 11.0.5
+    javac 11.0.8
     ```
 
     If you installed a Java Runtime Environment instead of a Java Development Kit, it will fail to find javac and to display the javac version. In this case, install a Java Development Kit (see below).
@@ -249,36 +249,12 @@ If you have requirements and/or constraints are not reflected below, **do not he
 
 ## Installing Java Development Kit {{> anchor 'java-install'}}
 
-### For Linux Users
+{{! multiexcerpt name='java-install'}}
 
-{{! multiexcerpt name='java-install-linux'}}
+Java packages and instructions for installation are available from the Azul website:
 
-```bash
-sudo apt install openjdk-11-jdk
-```
-
-You can also download [Java 11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) from the Oracle website.
+- [Download](https://www.azul.com/downloads/zulu-community/?architecture=x86-64-bit&package=jdk)
+- [Instructions](https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/Title.htm)
 
 {{! /multiexcerpt}}
 
-### For macOS Users
-
-{{! multiexcerpt name='java-install-macos'}}
-
-Java packages and instructions for installation are available from the Oracle website:
-
-- [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
-- [Instructions](https://docs.oracle.com/javase/10/install/installation-jdk-and-jre-macos.htm#JSJIG-GUID-0071963E-D247-4D15-BF49-AD19C7260740)
-
-{{! /multiexcerpt}}
-
-### For Windows Users
-
-{{! multiexcerpt name='java-install-windows'}}
-
-**If the required version of Java is not installed on your computer:**
-
-1.  Download it from the Oracle website ([Java 11](http://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)) and choose the appropriate platform for your hardware and Windows version.
-2.  Run the downloaded **.exe** file and follow the instructions displayed.
-
-{{! /multiexcerpt}}

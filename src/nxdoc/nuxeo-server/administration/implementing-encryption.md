@@ -121,9 +121,9 @@ need to use the old insecure encryption algorithm, you must add the option `useI
 
 {{#> callout type='note' heading='Java Cryptographic Extension'}}
 
-By default Oracle Java ships with a Java Cryptographic Extension (JCE) module configured for 128-bit maximum key length, whereas the Nuxeo Platform needs at least 256-bit keys for adequate security of AES.
+By default Azul Java ships with a Java Cryptographic Extension (JCE) module configured for 128-bit maximum key length, whereas the Nuxeo Platform needs at least 256-bit keys for adequate security of AES.
 
-To overcome this limitation, you must install an optional downloadable component coming with the JDK. Go to [Oracle Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html) and download and install the **Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files** for your JDK (see the README.txt file inside the downloaded ZIP for installation instructions).
+To overcome this limitation, you must install an optional downloadable component coming with the JDK. Go to [Zulu Cryptography Extensions Kit](https://www.azul.com/products/zulu-and-zulu-enterprise/zulu-cryptography-extension-kit/) and download and install the **Zulu Cryptography Extension Kit - Unlimited Strength Jurisdiction Policy Files** (see the README.txt file inside the downloaded ZIP for installation instructions).
 
 If you do not do this, you will get an exception `java.security.InvalidKeyException: Illegal key size or default parameters` when encrypting or decrypting a file.
 

@@ -231,7 +231,7 @@ Watch the related courses on Nuxeo University
 
 ## Requirements
 
-Automation Scripting is using Java 8 Nashorn engine. To leverage all the Automation Scripting feature, the Nuxeo server needs to run at least **JDK 8 update 40**.
+Automation Scripting is using Java 8 Nashorn engine. To leverage all the Automation Scripting feature, the Nuxeo server needs to run **JDK 11**.
 
 ## How It Works
 
