@@ -202,6 +202,8 @@ Here are the available fields (see the [<span class="nolink">PackageDefinition</
 - `license-url`: If no URL is provided, then a `license.txt` file should be included in the package.
 - `target-platform`: The name and version range of platforms on which this package can be installed.</br>
   See [Target Platform section](#target-platform)
+- `platforms` (not recommended): The platform *name-version* patterns on which this package can be installed.</br>
+  See [Patterns (former way) section](#patterns-(former-way))
 - `dependencies`: The list of package dependencies.</br>
   See [org.nuxeo.connect.update.PackageDependency](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/PackageDependency.html).
 - `optional-dependencies`: The list of package optional dependencies. Used for packages which use the conditional bundle installation.
