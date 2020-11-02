@@ -144,7 +144,7 @@ Let's look at a minimal example of package.xml file:
 ```
 
 This is a minimal package manifest. It is defining a package nuxeo-package at version 1.0.0 and of type addon.
-The package can be installed on platforms form server-11.10 (included) to server-12.0 (exculded).
+The package can be installed on platforms from server-11.10 (included) to server-12.0 (excluded).
 
 Also, the package title and description that should be used by the UI are specified by the `title` and `description` elements.
 
@@ -250,7 +250,9 @@ The prefered way to define on which Nuxeo platform a package can be installed is
   </target-platform>
 
 ```
-Where the compatible distribution name must refers to the `org.nuxeo.distribution.name` property of the Nuxeo platform and the range of compatible distribution versions is defined using a *maven-like* version range syntax and refers to the `org.nuxeo.distribution.version` property of the Nuxeo platform.
+The compatible distribution name must refer to the `org.nuxeo.distribution.name` property of the Nuxeo platform. 
+
+The range of compatible distribution versions is defined using a *maven-like* version range syntax and refers to the `org.nuxeo.distribution.version` property of the Nuxeo platform.
 
 ### Constraints
 
@@ -271,8 +273,8 @@ Here are the constraints to be followed when defining the `<target-platform>` in
     | (1.0,2.0)	| 1.0 < x < 2.0   |
     | [1.0,2.0]	| 1.0 <= x <= 2.0 |
 
-- The `<version>` must refers to the `org.nuxeo.distribution.version` property of the Nuxeo platform
-- As only one range can be defined, **exclusion is not possible**. To achieve the same purpose, you should use the `<conflicts>` tag and/or do separate specific releases of your package
+- The `<version>` must refer to the `org.nuxeo.distribution.version` property of the Nuxeo platform
+- Only one range can be defined and **exclusion is not possible**. To achieve the same purpose, use the `<conflicts>` tag and/or do separate specific releases of your package
 
 ### Patterns (former way)
 
@@ -287,7 +289,7 @@ Although it is not the recommanded way, it is still possible to use the former `
 ```
 {{#> callout type='note' }}
 
-The new `<target-platform>` tag take precedence on the former `<platforms>` tag if both are defined in the package.xml
+The new `<target-platform>` tag takes precedence on the former `<platforms>` tag if both are defined in the package.xml
 
 {{/callout}}
 
