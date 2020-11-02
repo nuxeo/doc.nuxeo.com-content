@@ -179,7 +179,7 @@ If a blob provider is referenced but there is no actual XML configuration for it
 It's important to mark the blob provider as `transient` in its configuration using `<property name="transient">true</property>`. This is done implicitly if the blob provider names starts with `transient`.
 
 {{#> callout type='warning' heading='Clustering Configuration'}}
-In a cluster environment the transient blob provider must be shared by all the Nuxeo instances, see the [related documentation]({{page version='' space='nxdoc' page='nuxeo-clustering-configuration'}}#transient-store).
+In a cluster environment the transient blob provider must be shared by all the Nuxeo instances, see the [related documentation]({{page version='' space='nxdoc' page='nuxeo-clustering-configuration'}}#binaries).
 {{/callout}}
 
 ## Parameter Storage
