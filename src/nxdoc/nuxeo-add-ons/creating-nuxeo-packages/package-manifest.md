@@ -146,7 +146,7 @@ Let's look at a minimal example of package.xml file:
 ```
 
 This is a minimal package manifest. It is defining a package nuxeo-package at version 1.0.0 and of type addon.
-The package can be installed on platforms form server-11.10 (included) to server-12.0 (exculded).
+The package can be installed on platforms from server-11.10 (included) to server-12.0 (excluded).
 
 Also, the package title and description that should be used by the UI are specified by the `title` and `description` elements.
 
@@ -204,6 +204,8 @@ Here are the available fields (see the [<span class="nolink">PackageDefinition</
 - `license-url`: If no URL is provided, then a `license.txt` file should be included in the package.
 - `target-platform`: The name and version range of platforms on which this package can be installed.</br>
   See [Target Platform section](#target-platform)
+- `platforms` (not recommended): The platform *name-version* patterns on which this package can be installed.</br>
+  See [Patterns (former way) section](#patterns-(former-way))
 - `dependencies`: The list of package dependencies.</br>
   See [org.nuxeo.connect.update.PackageDependency](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/PackageDependency.html).
 - `optional-dependencies`: The list of package optional dependencies. Used for packages which use the conditional bundle installation.
@@ -252,7 +254,9 @@ The prefered way to define on which Nuxeo platform a package can be installed is
   </target-platform>
 
 ```
-Where the compatible distribution name must refers to the `org.nuxeo.distribution.name` property of the Nuxeo platform and the range of compatible distribution versions is defined using a *maven-like* version range syntax and refers to the `org.nuxeo.distribution.version` property of the Nuxeo platform.
+The compatible distribution name must refer to the `org.nuxeo.distribution.name` property of the Nuxeo platform. 
+
+The range of compatible distribution versions is defined using a *maven-like* version range syntax and refers to the `org.nuxeo.distribution.version` property of the Nuxeo platform.
 
 ### Constraints
 
@@ -273,8 +277,8 @@ Here are the constraints to be followed when defining the `<target-platform>` in
     | (1.0,2.0)	| 1.0 < x < 2.0   |
     | [1.0,2.0]	| 1.0 <= x <= 2.0 |
 
-- The `<version>` must refers to the `org.nuxeo.distribution.version` property of the Nuxeo platform
-- As only one range can be defined, **exclusion is not possible**. To achieve the same purpose, you should use the `<conflicts>` tag and/or do separate specific releases of your package
+- The `<version>` must refer to the `org.nuxeo.distribution.version` property of the Nuxeo platform
+- Only one range can be defined and **exclusion is not possible**. To achieve the same purpose, use the `<conflicts>` tag and/or do separate specific releases of your package
 
 ### Patterns (former way)
 
@@ -289,7 +293,7 @@ Although it is not the recommanded way, it is still possible to use the former `
 ```
 {{#> callout type='note' }}
 
-The new `<target-platform>` tag take precedence on the former `<platforms>` tag if both are defined in the package.xml
+The new `<target-platform>` tag takes precedence on the former `<platforms>` tag if both are defined in the package.xml
 
 {{/callout}}
 
