@@ -2,7 +2,7 @@
 title: Elasticsearch Setup
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2020-11-03'
     status: ok
 labels:
     - lts2016-ok
@@ -462,12 +462,10 @@ history:
         date: '2014-11-10 12:34'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 This page provides several configuration use cases for Elasticsearch.
-
 {{! /excerpt}}
 
 ## Setting up an Elasticsearch Cluster
@@ -884,10 +882,10 @@ curl -XGET 'localhost:9200/nuxeo/doc/_search?pretty' -H 'Content-Type: applicati
 
 You may need to change the `size` parameter to get more or less indexed terms.
 
-### Explain and profile Elasticsearch queries
+### Explain and Profile Elasticsearch Queries
 
 When trace level logs are actived, Elasticsearch curl command will be present in the `elastic.log` log file. Getting more details on what is happening during the query execution, can either be done using [explain](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-explain.html) or [profile](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-profile.html#search-profile-api-example).
-Those two approachs will help to understand the mapping and the field scoring, it can also gives inputs about unmapped fields for example.
+Those two approaches will help to understand the mapping and the field scoring, it can also gives inputs about unmapped fields for example.
 
 ### Comparing the Elasticsearch Index with the Database Content
 
