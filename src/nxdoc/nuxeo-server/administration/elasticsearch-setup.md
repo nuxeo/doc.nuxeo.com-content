@@ -3,7 +3,7 @@ title: Elasticsearch Setup
 description: This page provides several configuration use cases for Elasticsearch.
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2020-11-03'
     status: ok
 labels:
     - lts2016-ok
@@ -546,7 +546,7 @@ elasticsearch.index.translog.durability=async
 ```
 
 If your indexes are already created you need some manual operation to change the translog:
-```
+```bash
 curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo-uidgen/_settings" -d '{
   "index.translog.durability" : "async"
 }'
@@ -603,7 +603,7 @@ elasticsearch.restClient.password=your_password
 ```
 {{#> callout type='tip' }}
 For X-Pack, please follow the Elasticsearch documentation for configuring a user and role, an example could be:
-```
+```bash
 curl -XPOST -u elastic 'localhost:9200/_xpack/security/role/nuxeo_role' -H "Content-Type: application/json" -d '{
   "cluster" : [
     "all"
@@ -617,7 +617,7 @@ curl -XPOST -u elastic 'localhost:9200/_xpack/security/role/nuxeo_role' -H "Cont
 }'
 ```
 Configuring a user for that role could look something like this:
-```
+```bash
 curl -XPOST -u elastic 'localhost:9200/_xpack/security/user/nuxeo_user' -H "Content-Type: application/json" -d '{
   "password" : "nuxeo_secret_password",
   "full_name" : "Nuxeo User",
@@ -639,7 +639,6 @@ elasticsearch.restClient.keystore.type
 ```
 
 {{#> callout type='warning' }}
-
 If you are using TLS/SSL then the `elasticsearch.addressList` will need to be updated to include `https`.
 {{/callout}}
 
@@ -676,7 +675,7 @@ You can find all the available options in the [nuxeo.defaults](https://github.co
 #### Index Aliases
 
 Nuxeo supports repository index aliases. This allows you to distinguish the read index from the write index. To enable this feature set `manageAlias` to `true` in the default template (`elasticsearch-config.xml.nxftl`).
-```
+```xml
 <elasticSearchIndex name="${elasticsearch.indexName}" type="doc" repository="default" manageAlias="true">
 ```
 
@@ -685,10 +684,9 @@ When `manageAlias` is `true`, Nuxeo will manage 2 aliases: one for searching usi
 When reindexing the repository, a new index is created (`nuxeo-0001`) and the write alias is updated to use it. The search alias stays on the previous index (`nuxeo-0000`), it is read-only and can still be used by users. Once indexing is terminated the search alias is updated to point to the new index (`nuxeo-0001`). An administrator can then backup and delete the old index.
 
 {{#> callout type='warning' }}
-
 If you choose to enable Nuxeo management of index aliases then it is best to leave Nuxeo to manage them. Do not try to manage aliases externally in Elasticsearch at the same time.
-
 {{/callout}}
+
 ## Disabling Elasticsearch
 
 Elasticsearch is enabled by default, if you want to disable Elasticsearch indexing and search you can simply add the following option to the `nuxeo.conf`:
@@ -783,7 +781,7 @@ Here the index is a primary storage and you cannot rebuild it. So we need a tool
 1. Stop the Nuxeo Platform
 1. Copy the audit logs entries in the new index using [stream2es](https://github.com/elasticsearch/stream2es/). Here we copy `nuxeo-audit` to `nuxeo-audit2`.
 
-    ```
+    ```bash
     curl -O download.elasticsearch.org/stream2es/stream2es; chmod +x stream2es
     ./stream2es es --source http://localhost:9200/nuxeo-audit --target http://localhost:9200/nuxeo-audit2 --replace
     ```
@@ -795,7 +793,7 @@ You need to define an index for each repository. This is done by adding an `elas
 1. Create a custom template as described in the above section "Changing the mapping of the index".
 1. Add a second `elasticSearchIndex` contribution:
 
-    ```
+    ```xml
     <elasticSearchIndex name="nuxeo-repo2" type="doc" repository="repo2"> ....
     ```
 
@@ -807,21 +805,17 @@ You need to define an index for each repository. This is done by adding an `elas
 
 To understand why a document is not present in search results or not indexed, you can activate a debug trace.
 
-Open at the `lib/log4j.xml` file and uncomment the ELASTIC section:
+Open at the `lib/log4j.xml` file and uncomment the `ELASTIC` section:
 
 ```xml
-      <appender name="ELASTIC" class="org.apache.log4j.FileAppender">
-        <errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
-        <param name="File" value="${nuxeo.log.dir}/elastic.log" />
-        <param name="Append" value="false" />
-        <layout class="org.apache.log4j.PatternLayout">
-          <param name="ConversionPattern" value="%d{ISO8601} %-5p [%t][%c] %m%X%n" />
-        </layout>
-      </appender>
-      <category name="org.nuxeo.elasticsearch" additivity="false">
-        <priority value="TRACE" />
-        <appender-ref ref="ELASTIC" />
-      </category>
+<!-- Elasticsearch logging -->
+<File name="ELASTIC" fileName="${sys:nuxeo.log.dir}/elastic.log" append="false">
+  <PatternLayout pattern="%d{ISO8601} %-5p [%t] [%c] %m%n" />
+</File>
+
+<Logger name="org.nuxeo.elasticsearch" level="trace" additivity="false">
+  <AppenderRef ref="ELASTIC" />
+</Logger>
 ```
 
 The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.
@@ -830,7 +824,7 @@ The `elastic.log` file will contain all the requests done by the Nuxeo Platform 
 
 It is also important to report the current settings and mapping of an Elasticsearch index (here called `nuxeo`)
 
-```
+```bash
 curl localhost:9200/nuxeo/_settings?pretty > /tmp/nuxeo-settings.json
 curl localhost:9200/nuxeo/_mapping?pretty > /tmp/nuxeo-mapping.json
 # misc info and stats on Elasticsearch
@@ -846,7 +840,7 @@ curl localhost:9200/_cat/indices?v >> /tmp/es-info.txt
 
 To test the full-text analyzer:
 
-```
+```bash
 curl -s -X GET "localhost:9200/nuxeo/_analyze" -H 'Content-Type: application/json' -d' {
   "analyzer" : "fulltext",
   "text" : "This is a text for testing, file_name/1-foos-BAR.jpg"
@@ -855,7 +849,7 @@ curl -s -X GET "localhost:9200/nuxeo/_analyze" -H 'Content-Type: application/jso
 
 To test an analyzer derived from the mapping:
 
-```
+```bash
 curl -s -X GET "localhost:9200/nuxeo/_analyze" -H 'Content-Type: application/json' -d' {
   "field" : "ecm:path.children",
   "text" : "workspaces/main folder/sub-folder"
@@ -875,6 +869,11 @@ curl -XGET 'localhost:9200/nuxeo/doc/_search?pretty' -H 'Content-Type: applicati
 ```
 
 You may need to change the `size` parameter to get more or less indexed terms.
+
+### Explain and Profile Elasticsearch Queries
+
+When trace level logs are actived, Elasticsearch curl command will be present in the `elastic.log` log file. Getting more details on what is happening during the query execution, can either be done using [explain](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-explain.html) or [profile](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-profile.html#search-profile-api-example).
+Those two approaches will help to understand the mapping and the field scoring, it can also gives inputs about unmapped fields for example.
 
 ### Comparing the Elasticsearch Index with the Database Content
 
