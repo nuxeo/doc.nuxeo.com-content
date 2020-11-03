@@ -29,6 +29,17 @@ The standard Development Sandbox project provides customers with 2 sandbox envir
 
 The DEV & UAT Environments share a MongoDB and Elasticsearch server, but each has its own MongoDB database and ElasticSearch index.
 
+## Prerequesites
+
+The Nuxeo Cloud Team needs:
+- A Github project URL for the custom developments. 
+- SSh keys to be included to the Nuxeo Cloud DEV CI/CD chain to deploy your custom package. Please refer to the [Github Documentation Page](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
+{{#> callout type='Note' heading='Additional information'}}
+- These elements are mandatory even if the Nuxeo application will deploy only a Nuxeo Studio project.
+- The Github project cannot be created inside the Nuxeo Github organisation: every client has to own their Github project.
+{{/callout}}
+
 ## OpenShift Web Console
 
 Access to the OpenShift administration is managed by Nuxeo through Okta. An account with Okta is required to login.
