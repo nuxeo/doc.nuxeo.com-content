@@ -1,11 +1,10 @@
 ---
 title: Runtime and Component Model
-description: This page describes how the Nuxeo Platform is modular, and how bundles, components and extension points relate to each other to let you create a fully customized application.
+description: Nuxeo Platform is modular, and bundles, components and extension points relate to each other to let you create a fully customized application.
 review:
     comment: ''
     date: '2020-10-09'
     status: ok
-excerpt: 'This page describes how the Nuxeo Platform is modular, and how bundles, components and extension points relate to each other to let you create a fully customized application.'
 labels:
     - lts2016-ok
     - extension-point
@@ -330,39 +329,36 @@ history:
         date: '2010-02-26 10:25'
         message: ''
         version: '1'
-
 ---
 
-This page describes how the Nuxeo Platform is modular, and how bundles, components and extension points relate to each
-other to let you create a fully customized application.
+This page describes how the Nuxeo Platform is modular, and how bundles, components and extension points relate to each other to let you create a fully customized application.
 
-## The Goal: Easy Customization and Integration
+## Easy Customization and Integration
 
-One of the main goals of the Nuxeo Platform is to provide an easy and clean way to customize the platform for your
-application needs. That way:
+One of the main goals of the Nuxeo Platform is to provide an easy and clean way to customize the platform for your application needs. That way:
 
-*   No need to hack the system to make it run
-*   Your custom code will be based on maintained extension points and interfaces, and will be able to be easily upgraded
+- No need to hack the system to make it run
+- Your custom code will be based on maintained extension points and interfaces, and will be able to be easily upgraded
 
 For that, Nuxeo Platform provides the following patterns:
 
-*   [Bundle](#bundles): A bundle is a "plugin". It is most of the time a ".jar" file with a specific structure that aims at deploying a new set of features on the Nuxeo server. Thanks to this "bundle" notion, developers can deliver their new features in a standalone JAR that the platform will know how to start. As a result, your customization is also delivered as a plug-in, like the tens of plug-ins that are part of the Nuxeo ecosystem, and that you can find on [GitHub](https://github.com/nuxeo) or the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace).
-*   [Components and services](#components): A component is a software object declared via XML (and that may reference a Java class) that is used to expose some services in the framework. Thanks to this architecture, it is possible to expose a new service anywhere in the Java code executed in the platform. Services are auto-documented: you can see the list on [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
-*   [Extensions](#extensions): An extension is a mechanism leveraged by the services to let platform users inject customization in the core of the implementation. It is a pattern used frequently on products such as Mozilla, Chrome, or Eclipse. Thanks to this architecture, it is possible to go very deep in product customization, only with XML, or using our [Nuxeo Studio]({{page space='studio' page='nuxeo-studio'}}) visual environment, without any coding. You can see the list of all extension points in [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints). Contributions to extensions are usually delivered in a custom bundle.
+- [Bundle](#bundles): A bundle is a "plugin". It is most of the time a ".jar" file with a specific structure that aims at deploying a new set of features on the Nuxeo server. Thanks to this "bundle" notion, developers can deliver their new features in a standalone JAR that the platform will know how to start. As a result, your customization is also delivered as a plug-in, like the tens of plug-ins that are part of the Nuxeo ecosystem, and that you can find on [GitHub](https://github.com/nuxeo) or the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace).
 
-Implementing your own **bundle**, you will be able to contribute to existing **extensions** so as to customize your
-application. A lot of these configurations are supported by [Nuxeo  Studio]({{page space='studio' page ='nuxeo-studio'}}).
+- [Components and services](#components): A component is a software object declared via XML (and that may reference a Java class) that is used to expose some services in the framework. Thanks to this architecture, it is possible to expose a new service anywhere in the Java code executed in the platform. Services are auto-documented: you can see the list on [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
+
+- [Extensions](#extensions): An extension is a mechanism leveraged by the services to let platform users inject customization in the core of the implementation. It is a pattern used frequently on products such as Mozilla, Chrome, or Eclipse. Thanks to this architecture, it is possible to go very deep in product customization, only with XML, or using our [Nuxeo Studio]({{page space='studio' page='nuxeo-studio'}}) visual environment, without any coding. You can see the list of all extension points in [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints). Contributions to extensions are usually delivered in a custom bundle.
+
+Implementing your own **bundle**, you will be able to contribute to existing **extensions** so as to customize your application. A lot of these configurations are supported by [Nuxeo  Studio]({{page space='studio' page ='nuxeo-studio'}}).
+
 For instance, you can:
+- Define custom [schemas and Document types]({{page page='data-store'}}) and custom lifecycles,
+- Add [workflows]({{page page='workflow'}}),
+- Enforce business policies:
+    - Use [content automation]({{page page='automation'}}),
+    - Write custom [listener scripts]({{page page='events-and-messages'}}),
+- Update [global configurations for the Web UI]({{page page='web-ui-configuration-properties'}}).
 
-*   Define custom [schemas and Document types]({{page page='data-store'}}) and custom lifecycles,
-*   Add [workflows]({{page page='workflow'}}),
-*   Enforce business policies:
-    *   Use [content automation]({{page page='automation'}}),
-    *   Write custom [listener scripts]({{page page='events-and-messages'}}),
-*   Update [global configurations for the Web UI]({{page page='web-ui-configuration-properties'}}).
-
-When existing extensions are not enough, you can declare your own **services** or leverage existing ones in Java code:
-this will allow your business logics to benefit from the same kind of configurability.
+When existing extensions are not enough, you can declare your own **services** or leverage existing ones in Java code: this will allow your business logics to benefit from the same kind of configurability.
 
 In Nuxeo, everything can be configured:
 
@@ -373,7 +369,6 @@ In Nuxeo, everything can be configured:
 --}}
 ![EP Stack](nx_asset://d950d323-6b62-416c-be68-ca4e2714a680)
 
-
 ## Bundles, Components, Services and Extension Points
 
 ### {{> anchor 'bundles'}}Nuxeo Bundles
@@ -383,17 +378,17 @@ works inside a Nuxeo Application.
 
 It typically contains:
 
-*   An [OSGi-like](https://en.wikipedia.org/wiki/OSGi) manifest file,
-*   Java classes,
-*   XML components,
-*   Resources,
-*   A deployment descriptor.
+- An [OSGi-like](https://en.wikipedia.org/wiki/OSGi) manifest file,
+- Java classes,
+- XML components,
+- Resources,
+- A deployment descriptor.
 
 The manifest file is used to:
 
-*   Define an id for the bundle,
-*   Define the dependencies of the bundles (i.e.: other bundles that should be present for this bundle to run),
-*   List XML components that are part of the bundle.
+- Define an id for the bundle,
+- Define the dependencies of the bundles (i.e.: other bundles that should be present for this bundle to run),
+- List XML components that are part of the bundle.
 
 Here is an example of a manifest file, located at `src/main/resources/META-INF/MANIFEST.MF`:
 
@@ -415,51 +410,41 @@ Nuxeo-Component: OSGI-INF/convert-service-framework.xml
 ```
 
 Here we can see that this bundle:
-
-*   Is named `org.nuxeo.ecm.core.convert`.
-*   Depends on two other bundles: `core.api` and `convert.api`.
-*   Contains one XML component: `convert-service-framework.xml`.
+- is named `org.nuxeo.ecm.core.convert`.
+- depends on two other bundles: `core.api` and `convert.api`.
+- contains one XML component: `convert-service-framework.xml`.
 
 Nuxeo bundles are deployed on the Nuxeo server via the Nuxeo runtime, and provides:
+- A lifecycle model for Java modules,
+- A service model,
+- An extension model.
 
-*   A lifecycle model for Java modules,
-*   A service model,
-*   An extension model.
+When the Nuxeo runtime starts, it will try to load all Nuxeo bundles installed in the system. When all dependencies of this bundle are resolved, the framework starts the bundle. Starting a bundle means invoking a bundle activator, if any is declared in the manifest file. It also means parsing all Nuxeo components declared in the MANIFEST, and scheduling them for deployment.
 
-When the Nuxeo runtime starts, it will try to load all Nuxeo bundles installed in the system. When all dependencies of
-this bundle are resolved, the framework starts the bundle. Starting a bundle means invoking a bundle activator, if any
-is declared in the manifest file. It also means parsing all Nuxeo components declared in the MANIFEST, and schedulling
-them for deployment.
-
-In the same way that activations are performed, deactivations are also handled: each step has an equivalent step to
-undo changes made to the system. This mechanism provides a flexible way to build modular applications, when some
-resources are made available or are removed.
+In the same way that activations are performed, deactivations are also handled: each step has an equivalent step to undo changes made to the system. This mechanism provides a flexible way to build modular applications, when some resources are made available or are removed.
 
 The mechanism is usually triggered when starting and stopping the Nuxeo server, although
 [hot-reload features]({{page page='supporting-hot-reload'}}) are also supported.
 
 Note that Nuxeo is using single class loader for all bundles.
 
-To learn more about creating a bundle, see [HOWTO: Create an empty bundle]({{page page='how-to-create-an-empty-bundle'}})
-or [HOWTO: Write a Bundle Manifest]({{page page='howto-write-a-bundle-manifest'}}).
+To learn more about creating a bundle, see [HOWTO: Create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or [HOWTO: Write a Bundle Manifest]({{page page='howto-write-a-bundle-manifest'}}).
+
 To access a service from Java code, see [HOWTO: Use the Runtime Java API]({{page page='howto-use-the-runtime-java-api'}}).
 [Use the Runtime Java API]({{page page='howto-use-the-runtime-java-api'}}).
 
 
 ### {{> anchor 'components'}}Nuxeo Components
 
-A **component** is a software object declared via XML (and that may reference a Java class). The corresponding XML file
-is usually held by a **bundle**, in the `OSGI-INF` directory, and referenced by the `META-INF/MANIFEST.MF` file.
+A **component** is a software object declared via XML (and that may reference a Java class). The corresponding XML file is usually held by a **bundle**, in the `OSGI-INF` directory, and referenced by the `META-INF/MANIFEST.MF` file.
 
 Each component has a unique name and can be used to:
-*   Declare requirements on other components,
-*   Declare a Java component implementation,
-*   Define a **service** interface,
-*   Contribute some extensions.
+- Declare requirements on other components,
+- Declare a Java component implementation,
+- Define a **service** interface,
+- Contribute some extensions.
 
-When only contributing some extensions, the component is not backed by a custom Java class: it can be "pure XML"
-(although some contributions will, themselves, accept Java classes for configured objects). A component is usually made
-of several classes and XML configuration.
+When only contributing some extensions, the component is not backed by a custom Java class: it can be "pure XML" (although some contributions will, themselves, accept Java classes for configured objects). A component is usually made of several classes and XML configuration.
 
 Here is a schema of all the possibilities:
 
@@ -471,9 +456,7 @@ Here is a schema of all the possibilities:
 ![Bundles](nx_asset://c308d841-2950-4d13-a320-67bde1efeec8)
 
 
-Some components are indeed holding all these different types of declarations, but we usually see the following
-pattern for "framework" components, defining a service and extension points:
-
+Some components are indeed holding all these different types of declarations, but we usually see the following pattern for "framework" components, defining a service and extension points:
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Runtime/Framework Bundle
     name: bundle-framework.png
@@ -482,7 +465,6 @@ pattern for "framework" components, defining a service and extension points:
 ![Framework Bundle](nx_asset://cb23a2eb-649d-4693-b423-dcfc6f8ca4ad)
 
 We usually see the following pattern for "contribution" components, defining contributions to other extension points:
-
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Runtime/Configuration Bundle
     name: bundle-configuration.png
@@ -490,12 +472,9 @@ We usually see the following pattern for "contribution" components, defining con
 --}}
 ![Configuration Bundle](nx_asset://2115c276-c3f5-4d1a-a0a6-cb923c323274)
 
-
-
 ### {{> anchor 'services'}}Nuxeo Services
 
-Components usually derive from a base class provided by Nuxeo Runtime and will be available as a singleton via a
-simple Nuxeo Runtime call:
+Components usually derive from a base class provided by Nuxeo Runtime and will be available as a singleton via a simple Nuxeo Runtime call:
 
 ```
 import org.nuxeo.runtime.api.Framework;
@@ -505,11 +484,7 @@ import org.nuxeo.runtime.api.Framework;
 Framework.getRuntime().getComponent(componentName)
 ```
 
-Usually, components are not used directly, they are used via a **service** interface. For that, the XML components can
-declare which service interfaces are provided by a given component. The component can directly implement the service
-interface, or can delegate service interface implementation to an other class. Components must be accessed using the
-interfaces they provide and not through real implementation classes. Once declared the service will be available via
-a simple Nuxeo Runtime call:
+Usually, components are not used directly, they are used via a **service** interface. For that, the XML components can declare which service interfaces are provided by a given component. The component can directly implement the service interface, or can delegate service interface implementation to an other class. Components must be accessed using the interfaces they provide and not through real implementation classes. Once declared the service will be available through a simple Nuxeo Runtime call:
 
 ```
 import org.nuxeo.runtime.api.Framework;
@@ -523,36 +498,31 @@ To learn more about creating a service, see [HOWTO: Create a service]({{page pag
 
 The list of existing services can be found on the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
 
-
 ### {{> anchor 'extensions'}}Nuxeo Extension Points and Contributions
 
 One of the corner stones of the Nuxeo Platform is to provide components and services that can easily be configured
 or extended. For that, we use the extension point system provided by Nuxeo Runtime.
 
 This extension point system allows you to:
-
-*   Configure the behavior of components (by contributing XML configurations),
-*   Extend the behavior of components (by contributing Java code or scripting).
+- Configure the behavior of components (by contributing XML configurations),
+- Extend the behavior of components (by contributing Java code or scripting).
 
 Basically, inside the Nuxeo Platform, the pattern is always the same:
-
-*   Services are provided by components,
-*   Components expose extension points.
+- Services are provided by components,
+- Components expose extension points.
 
 The same extension point system is used all over the platform:
-
-*   Inside Nuxeo Runtime itself,
-*   Inside Nuxeo Core (configure and extend document storage),
-*   Inside the Nuxeo Service layer (configure and extend ECM services).
+- Inside Nuxeo Runtime itself,
+- Inside Nuxeo Core (configure and extend document storage),
+- Inside the Nuxeo Service layer (configure and extend ECM services).
 
 Each Java component can declare one or several extension points, served by one or several service interfaces.
 
 These extension points can be used to provide:
+- Configuration,
+- Additional code (i.e. plug-in system).
 
-*   Configuration,
-*   Additional code (i.e. plug-in system).
-
-So most Nuxeo services are configurable and pluggable via the underlying component.
+So, most Nuxeo services are configurable and pluggable via the underlying component.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Runtime/Extension Points
@@ -561,13 +531,11 @@ So most Nuxeo services are configurable and pluggable via the underlying compone
 --}}
 ![Extension Points](nx_asset://20532d90-c6f8-42e0-8df5-68da4a918b21)
 
-
 #### Declaring an Extension Point
 
 Extension points are declared via the XML component that declares the corresponding Java component.
 
 Here is a simple example:
-
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl">
@@ -595,30 +563,24 @@ Here is a simple example:
 
 What we can read in this XML component is:
 
-*   A Java component (via the `<component>` tag) with a unique id (into the `name` attribute) is declared;
-*   This component declares a new service interface (via the `<implementation>` tag) -- the component name and service
-    interface do not need to be identical, like in this example;
-*   The declaration of the `ConvertService` interface (used to also fetch it) implemented by `ConvertServiceImpl` Java implementation,
-*   This service expose two extension points:
-    *   One to contribute configuration (`configuration`),
-    *   One to contribute some Java code (new `converter` plugin).
+- A Java component (via the `<component>` tag) with a unique id (into the `name` attribute) is declared;
+- This component declares a new service interface (via the `<implementation>` tag) -- the component name and service interface do not need to be identical, like in this example;
+- The declaration of the `ConvertService` interface (used to also fetch it) implemented by `ConvertServiceImpl` Java implementation,
+- This service expose two extension points:
+    - One to contribute configuration (`configuration`),
+    - One to contribute some Java code (new `converter` plugin).
 
 Each extension point has his own XML structure descriptor, to specify the XML fragment expected for this extension point:
+- `org.nuxeo.ecm.core.convert.extension.ConverterDescriptor`
+- `org.nuxeo.ecm.core.convert.extension.GlobalConfigDescriptor`
 
-*   `org.nuxeo.ecm.core.convert.extension.ConverterDescriptor`
-*   `org.nuxeo.ecm.core.convert.extension.GlobalConfigDescriptor`
+This description is defined directly into these classes by annotations. Nuxeo Runtime instanced descriptors and delivers it to the Java component implementation each time a new contribution to these extension points is detected.
 
-This description is defined directly into these classes by annotations. Nuxeo Runtime instanced descriptors and
-delivers it to the Java component implementation each time a new contribution to these extension points is detected.
-
-**Each Nuxeo extension point uses this pattern to declare configuration possibilities, service integration, extension
-behavior, merge, override, etc.**
-This pattern is used by all extension points in Nuxeo, and you can use this same infrastructure to declare your own
-business services.
+**Each Nuxeo extension point uses this pattern to declare configuration possibilities, service integration, extension behavior, merge, override, etc.**
+This pattern is used by all extension points in Nuxeo, and you can use this same infrastructure to declare your own business services.
 
 To learn more about creating an extension point and a related service, see
 [HOWTO: Create a service]({{page page='how-to-create-a-service'}}).
-
 
 #### Contributing to an Extension Point
 
@@ -626,13 +588,11 @@ XML components can also be used to contribute to extension points.
 
 For that, the XML component needs to:
 
-*   Be referenced in a manifest bundle,
-*   Specify a target extension point,
-*   Provide the XML content expected by the target extension point.
+- Be referenced in a manifest bundle,
+- Specify a target extension point,
+- Provide the XML content expected by the target extension point.
 
-Expected XML syntax is defined by the [XMap object]({{page page='how-to-create-a-service'}}#xmap-annotated-object)
-referenced in the extension point declaration. This oject's javadoc is also visible on the extension point page in the
-Explorer, see [*Contribution Descriptors* on a sample page](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.event.EventServiceComponent--listener#toc1).
+Expected XML syntax is defined by the [XMap object]({{page page='how-to-create-a-service'}}#xmap-annotated-object) referenced in the extension point declaration. This oject's javadoc is also visible on the extension point page in the Explorer, see [*Contribution Descriptors* on a sample page](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.event.EventServiceComponent--listener#toc1).
 
 Here is an example contribution to the extension point presented above:
 
@@ -651,32 +611,30 @@ Here is an example contribution to the extension point presented above:
 To learn more about contributing to existing extension points, see
 [HOWTO: Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}}).
 
-
 #### Extension Points Everywhere
 
-The Nuxeo Platform uses extension points extensively, to let you extend and configure most of the features provided by
-the platform.
+The Nuxeo Platform uses extension points extensively, to let you extend and configure most of the features provided by the platform.
 
 The list of existing extension points can be found on the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints).
-
 
 ## {{> anchor 'packages'}}Nuxeo Packages
 
 The Nuxeo main bundles are made available on the Nuxeo server by default. To deploy custom bundles, a
 [Nuxeo Package]({{page page='creating-nuxeo-packages'}}) can be created.
+
 This package can hold bundles, related libraries, as well as [configuration templates]({{page page='configuration-templates'}}).
 
-Now you may want to understand [how those packages are deployed on a Nuxeo server]({{page page='understanding-bundles-deployment'}}).
+Now, you may want to understand [how those packages are deployed on a Nuxeo server]({{page page='understanding-bundles-deployment'}}).
+
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
   <div class="column">
 
 {{#> panel heading='Related Documentation'}}
-
 - [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}})
 - [Explorer Documentation]({{page page='explorer'}})
 - [Nuxeo CLI]({{page page='nuxeo-cli'}})
-
 {{/panel}}
 
   </div>

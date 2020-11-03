@@ -13,19 +13,17 @@ details:
     topics: Extension point
 toc: true
 tree_item_index: 600
-
 ---
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University:</br>
 [Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
-![]({{file name='university-extension-points.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-extension-points.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## {{> anchor 'declaring-service'}}Declaring the Service
 
-Declaring a component to define a service is similar to [declaring a component to contribute to an existing
-extension point]({{page page='how-to-contribute-to-an-extension-point'}}).
+Declaring a component to define a service is similar to [declaring a component to contribute to an existing extension point]({{page page='how-to-contribute-to-an-extension-point'}}).
 
 The first step is to create a dedicate XML file, named for instance, `myproject-service-framework.xml`:
 ```
@@ -50,11 +48,9 @@ The second step is to create corresponding Java objects:
     }
     ```
 
-    NB: Most of the time, it is convenient to make the component instance also implement the service interface, but
-    this is not strictly necessary. It is possible to separate concerns, especially if you'd like to define several
-    services for this component: in this case, the service implementation will need to be kept as a field on the
-    component instance, and returned by the `#getAdapter` method. Keep in mind that a given component implementation
-    (and corresponding service implementation) are singletons inside the Nuxeo application.
+    **NB:** Most of the time, it is convenient to make the component instance also implement the service interface, but this is not strictly necessary.</br>
+    It is possible to separate concerns, especially if you'd like to define several services for this component: in this case, the service implementation will need to be kept as a field on the component instance, and returned by the `#getAdapter` method.</br>
+    Keep in mind that a given component implementation (and corresponding service implementation) are singletons inside the Nuxeo application.
     ```
     package org.mycompany.myproject;
 
@@ -89,9 +85,7 @@ The service interface and the component implementation should then be referenced
 </component>
 ```
 
-Only one component implementation can be given here. But multiple `<provide>` elements can be added inside the
-`<service>` element: the logics inside the `#getAdapter` method just need to be changed to return the right Java
-object depending on the target interface:
+Only one component implementation can be given here. But multiple `<provide>` elements can be added inside the `<service>` element: the logics inside the `#getAdapter` method just need to be changed to return the right Java object depending on the target interface:
 ```
 <?xml version="1.0"?>
 <component name="org.mycompany.myproject.MyService">
@@ -104,6 +98,7 @@ object depending on the target interface:
 
 </component>
 ```
+
 with:
 ```
 public class MyComponent extends DefaultComponent {
@@ -125,6 +120,7 @@ public class MyComponent extends DefaultComponent {
 
 }
 ```
+
 or:
 ```
 public class MyComponent extends DefaultComponent implements MyService {
@@ -145,8 +141,9 @@ public class MyComponent extends DefaultComponent implements MyService {
 }
 ```
 
-{{> anchor 'xmap-annotated-object'}}Now let's define an extension point for this component, to accept configurable
-objects, and maybe use them in the service API. This involves creating a XMap object, here is a sample:
+{{> anchor 'xmap-annotated-object'}}Now let's define an extension point for this component, to accept configurable objects, and maybe use them in the service API.
+
+This involves creating a XMap object, here is a sample:
 ```
 package org.mycompany.myproject.api;
 
@@ -171,6 +168,7 @@ public class SampleDescriptor {
     // add convenient getters here
 }
 ```
+
 This will allow parsing a contribution with a format similar to:
 ```
 <sample id="myId" class="org.mycompany.myproject.contrib.MySampleImpl">
@@ -185,12 +183,10 @@ This will allow parsing a contribution with a format similar to:
   </properties>
 </sample>
 ```
-If you'd like to properly handle hot-reload on your component, or handle merging of descriptors, it can be useful
-to make the descriptor implement the `org.nuxeo.runtime.model.Descriptor` interface, that comes with needed
-`#getId` and `#merge` methods.
 
-The string marker `Descriptor#UNIQUE_DESCRIPTOR_ID` can be used as an id, when handling only one single instance
-of the contribution on the component, instead of multiple contributions (to hold simple configuration for instance).
+If you'd like to properly handle hot-reload on your component, or handle merging of descriptors, it can be useful to make the descriptor implement the `org.nuxeo.runtime.model.Descriptor` interface, that comes with needed `#getId` and `#merge` methods.
+
+The string marker `Descriptor#UNIQUE_DESCRIPTOR_ID` can be used as an id, when handling only one single instance of the contribution on the component, instead of multiple contributions (to hold simple configuration for instance).
 
 This descriptor also needs to be referenced in the component declaration:
 ```
@@ -209,11 +205,9 @@ This descriptor also needs to be referenced in the component declaration:
 ```
 Note that multiple descriptors can be defined on the same extension point.
 
-Now it's time to define a registry to actually have access to contributions in the Java code, and implement
-corresponding service logics.
+Now it's time to define a registry to actually have access to contributions in the Java code, and implement corresponding service logics.
 
-When implementing the `org.nuxeo.runtime.model.Descriptor` interface, this can be done in the component `#start`
-method:
+When implementing the `org.nuxeo.runtime.model.Descriptor` interface, this can be done in the component `#start` method:
 ```
 public class MyComponent extends DefaultComponent {
 
@@ -274,10 +268,8 @@ Here is a full sample contribution to the target extension point:
 
 ## {{> anchor 'defining-properties'}}Defining Properties on the Service Component
 
-Defining an extension point is not strictly necessary if you just want to expose a service and do not need configurable
-elements. If some simple elements need to be configurable, there are several options:
-1.  Define a property on the service. Note that this property value **will not be able to be overridden** by another
-    contribution, but it might be useful to keep that value in the XML component declaration:
+Defining an extension point is not strictly necessary if you just want to expose a service and do not need configurable elements. If some simple elements need to be configurable, there are several options:
+1.  Define a property on the service. Note that this property value **will not be able to be overridden** by another contribution, but it might be useful to keep that value in the XML component declaration:
     ```
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.MyService">
@@ -288,6 +280,7 @@ elements. If some simple elements need to be configurable, there are several opt
 
     </component>
     ```
+
     From the component code, that property can be retrieved from the Runtime context, when activating the component:
     ```
     public class MyComponent extends DefaultComponent {
@@ -299,9 +292,7 @@ elements. If some simple elements need to be configurable, there are several opt
 
     }
     ```
-1.  Contribute a property to the default service `ConfigurationService`. This property can be defined alongside the
-    component and service declarations. Note that this property value **will be able to be overridden** by another
-    contribution, and will be able to be documented specifically:
+1.  Contribute a property to the default service `ConfigurationService`. This property can be defined alongside the component and service declarations. Note that this property value **will be able to be overridden** by another contribution, and will be able to be documented specifically:
     ```
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.MyService">
@@ -319,8 +310,7 @@ elements. If some simple elements need to be configurable, there are several opt
     </component>
     ```
 
-    From the component code, that property can be retrieved from the Runtime framework, after starting the component,
-    for instance (to make sure ConfigurationService is available):
+    From the component code, that property can be retrieved from the Runtime framework, after starting the component, for instance (to make sure ConfigurationService is available):
     ```
     import org.nuxeo.runtime.services.config.ConfigurationService;
 
@@ -337,8 +327,7 @@ elements. If some simple elements need to be configurable, there are several opt
     }
     ```
     It can also be retrieved from other Java classes in the code, outside the component implementation.
-1.  Yet another alternative is possible if this configuration property needs to be changed easily depending on the
-    infrastucture, from `nuxeo.conf` properties or [Configuration Templates]({{page page='configuration-templates'}}):
+1.  Yet another alternative is possible if this configuration property needs to be changed easily depending on the infrastructure, from `nuxeo.conf` properties or [Configuration Templates]({{page page='configuration-templates'}}):
     ```
     import org.nuxeo.runtime.services.config.ConfigurationService;
 
@@ -354,8 +343,7 @@ elements. If some simple elements need to be configurable, there are several opt
 
     }
     ```
-1.  Last but not least, using the `ConfigurationService` and the environment property can be combined, by using
-    a variable in the ConfigurationService contribution:
+1.  Last but not least, using the `ConfigurationService` and the environment property can be combined, by using a variable in the ConfigurationService contribution:
     ```
     <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
       <property name="org.mycompany.myproject.myprop">
@@ -364,22 +352,16 @@ elements. If some simple elements need to be configurable, there are several opt
     </extension>
     ```
     Retrieving this property from the code can be done through the same previous lookup
-    `Framework.getService(ConfigurationService.class).getString(MY_PROP_NAME)`: during the deployment,
-    if the environment property `org.mycompany.myproject.mypropFromEnv` is defined in the `nuxeo.conf` or in
-    configuration templates, this value will be used. Otherwise, the default value (after the `:=` marker) will be
-    resolved.
+    `Framework.getService(ConfigurationService.class).getString(MY_PROP_NAME)`: during the deployment, if the environment property `org.mycompany.myproject.mypropFromEnv` is defined in the `nuxeo.conf` or in configuration templates, this value will be used. </br>
+    Otherwise, the default value (after the `:=` marker) will be resolved.
 
-    Note that using the same property name, a warning will be issued at startup, to avoid confusions: the environment
-    property will be ignored in this case.
+    Note that, using the same property name, a warning will be issued at startup, to avoid confusions: the environment property will be ignored in this case.
 
 ## {{> anchor 'handling-dependencies'}}Handling Dependencies
 
-Sometimes, a component or service will interact with another. The `Framework#getService` lookup will allow
-references from the Java code, but the [Deployment Flow]({{page page='understanding-bundles-deployment'}}) needs to be
-taken into account.
+Sometimes, a component or service will interact with another. The `Framework#getService` lookup will allow references from the Java code, but the [Deployment Flow]({{page page='understanding-bundles-deployment'}}) needs to be taken into account.
 
-To make sure your component is **resolved** after another one, the `<require>` tag can be used in the component
-declaration:
+To make sure your component is **resolved** after another one, the `<require>` tag can be used in the component declaration:
 ```
   <?xml version="1.0"?>
   <component name="org.mycompany.myproject.MyService">
@@ -390,13 +372,10 @@ declaration:
 
   </component>
 ```
-Note that you do not need to require another component if you contribute to it: this dependency is implicit.
-In the previous example where a contribution was made to the `org.nuxeo.runtime.ConfigurationService` extension point
-`configuration`, no requirement is needed.
 
+Note that, you do not need to require another component if you contribute to it: this dependency is implicit. In the previous example where a contribution was made to the `org.nuxeo.runtime.ConfigurationService` extension point `configuration`, no requirement is needed.
 
-To make sure you component is **started** after another one, the `#getApplicationStartedOrder` method should be
-implemented on the component:
+To make sure you component is **started** after another one, the `#getApplicationStartedOrder` method should be implemented on the component:
 ```
 public class MyComponent extends DefaultComponent {
 
@@ -408,9 +387,9 @@ public class MyComponent extends DefaultComponent {
 }
 ```
 Components are sorted according to this reference value, in *increasing* order, before starting all components.
+
 For "pure XML" components, only holding contributions, the default start value is `0`.
-Otherwise, the default value is `1000`, and the repository initialization uses number `100`. Negative values can also be
-used.
+Otherwise, the default value is `1000`, and the repository initialization uses number `100`. Negative values can also be used.
 
 If you'd like this start order to be relative to another one, the following lookup can also be done (for instance):
 ```

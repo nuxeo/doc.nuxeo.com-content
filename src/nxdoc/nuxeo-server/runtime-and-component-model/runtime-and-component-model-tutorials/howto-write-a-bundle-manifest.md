@@ -185,26 +185,23 @@ history:
         date: '2010-11-09 12:55'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 This page gives some rules for writing a bundle's manifest.
-
 {{! /excerpt}}
+
 {{#> callout type='info' }}
-
 Check [Nuxeo CLI]({{page page='nuxeo-cli'}}) to bootstrap your Bundle.
-
 {{/callout}}
 
 You should first refer to the [Component Model page]({{page page='runtime-and-component-model'}}) for a better understanding of Nuxeo Runtime, Bundles, Components and services concepts.
 
 Here is some practical information:
 
-*   Using the manifest you can define an unique name for your bundle (i.e. the Bundle-SymbolicName). This name is helping the framework to identify the bundle.
-*   Using the manifest you can define an activator class.
-*   Using the manifest you can declare bundle dependencies (so that the bundle can be started only when dependencies are resolved). Also, these dependencies are used to determine the visible class path of your bundle. Classes not specified in dependencies will not be visible to your bundle. Bundle dependencies **are ignored** by Nuxeo Runtime launcher.
+- Using the manifest you can define an unique name for your bundle (i.e. the Bundle-SymbolicName). This name is helping the framework to identify the bundle.
+- Using the manifest you can define an activator class.
+- Using the manifest you can declare bundle dependencies (so that the bundle can be started only when dependencies are resolved). Also, these dependencies are used to determine the visible class path of your bundle. Classes not specified in dependencies will not be visible to your bundle. Bundle dependencies **are ignored** by Nuxeo Runtime launcher.
 
 In the Nuxeo Platform, the best way to initialize your components (without worrying about dependencies) is to use a lazy loading model - so that a service is initialized at the first call. This method also speed the startup time.
 
@@ -291,7 +288,7 @@ Eclipse-ExtensibleAPI: true
 
 Nuxeo is also using two specific manifest headers:
 
-*   **Nuxeo-Component**: Which specify components declared by a bundle (as XML descriptor file paths relative to JAR root);
-*   **Nuxeo-WebModule**: Which specify the class name of a JAX-RS application declared by a Nuxeo bundle.
+- **Nuxeo-Component**: Which specify components declared by a bundle (as XML descriptor file paths relative to JAR root);
+- **Nuxeo-WebModule**: Which specify the class name of a JAX-RS application declared by a Nuxeo bundle.
 
 Of course these two headers are optional and should be used only when needed.
