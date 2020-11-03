@@ -140,7 +140,7 @@ history:
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University:</br>
 [Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
-![]({{file name='university-extension-points.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-extension-points.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute
@@ -151,58 +151,52 @@ where you want to contribute. We call these open doors **Extension points**.
 
 Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/):
 
-1.  Click on **Extension points**.
-1.  Maybe use the search filter.
-1.  Click on the extension point you're interested in.
-    The documentation of this extension point is displayed.
+1. Click on **Extension points**.
 
-    {{!--     ### nx_asset ###
-        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Explorer/Explorer Extension Points
-        name: Explorer Extension Points.png
-        addins#screenshot#up_to_date
-    --}}
-    ![Explorer Extension Points](nx_asset://6b3e369d-9cbf-4f55-be1b-d2169a3e2c03)
+1. Maybe use the search filter.
 
-1.  Then, if you click on any link in the **Contributions** section, you will see all the default contributions
-    implemented into the documented Nuxeo instance.
+1. Click on the extension point you're interested in.</br>
+  The documentation of this extension point is displayed.
+  ![]({{file name='Nuxeo-explorer.png'}} ?w=600,border=true)
+
+1. Then, if you click on any link in the **Contributions** section, you will see all the default contributions implemented into the documented Nuxeo instance.</br>
     There are [hundreds of configuration possibilities](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listContributions).
 
 ## {{> anchor 'xml-extension-studio'}}Contributing Using Nuxeo Studio
 
-1.  In the **Advanced Settings** > **XML extensions**, click on the **Ok** button.
-2.  Give the extension an ID and click on the **Next** button.
+1. In the **Advanced Settings** > **XML extensions**, click on the **Ok** button.
+
+2. Give the extension an ID and click on the **Next** button.
     ![]({{file name='XMLExtensionEmpty.png'}} ?w=600,border=true)
-3.  Type the content of your extension directly in the area.
-    The editor helps you: start typing `<` and it will suggest possible values. While you are typing, some suggestion happens sometimes when typing on space, and you can always call the suggester using the key CTRL+space.
-    ![]({{file name='XMLCompletion.png'}} ?w=150,border=true,thumbnail=true) ![]({{file name='XMLCompletionBis.png'}} ?w=150,border=true,thumbnail=true)
-4.  Click on **Save**.
-    ![]({{file name='NuxeoStudio-CodeMirrorIntegration.png'}} ?w=560,h=355,border=true)
+
+3. Type the content of your extension directly in the area.</br>
+  The editor helps you: start typing `<` and it will suggest possible values. While you are typing, some suggestion happens sometimes when typing on space, and you can always call the suggester using the key CTRL+space.
+  ![]({{file name='XMLCompletion.png'}} ?w=150,border=true,thumbnail=true)
+  ![]({{file name='XMLCompletionBis.png'}} ?w=150,border=true,thumbnail=true)
+
+4. Click on **Save**.
+  ![]({{file name='NuxeoStudio-CodeMirrorIntegration.png'}} ?w=560,h=355,border=true)
 
 {{#> callout type='note' heading='XML Format'}}
-XML declaration should always start with an `<extension>` element.
-
-There is a minimal check done so as to avoid defining incorrect XML.
-
+XML declaration should always start with an `<extension>` element.</br>
+There is a minimal check done so as to avoid defining incorrect XML.</br>
 In some particular situations, the `<require>` element can also be used, see
-[overriding contributions](#overriding-contributions).
-
-The `documentation` element can also be used, alonside the `<extension>` element (that will document the whole feature),
-or inside it (that will document the contributions to the target extension point). This documentation is extracted
-for display by the [Explorer addon]({{page page='explorer'}}).
+[overriding contributions](#overriding-contributions).</br>
+The `documentation` element can also be used, alongside the `<extension>` element (that will document the whole feature), or inside it (that will document the contributions to the target extension point). This documentation is extracted for display by the [Explorer addon]({{page page='explorer'}}).
 {{/callout}}
 
-Several extension points can be contributed to the same XML Extensions feature. This is useful to group extensions
-that are contributed for the same high level functional goal.
+Several extension points can be contributed to the same XML Extensions feature. This is useful to group extensions that are contributed for the same high-level functional goal.
 
-Contributions to the same extension point can also be stacked inside the same `<extension>` tag, although they
-can also be dupplicated for specific documentation.
+Contributions to the same extension point can also be stacked inside the same `<extension>` tag, although they can also be duplicated for specific documentation.
 
 Thus, you can have:
+
 ```xml
 <extension target="component_A" point="point_A">
   <!-- here goes the configuration XML fragment -->
 </extension>
 ```
+
 or
 ```xml
 <extension target="component_A" point="point_A">
@@ -210,6 +204,7 @@ or
   <!-- here goes the second configuration XML fragment -->
 </extension>
 ```
+
 or
 ```xml
 <documentation>
@@ -234,6 +229,7 @@ or
   <!-- here goes the configuration XML fragment -->
 </extension>
 ```
+
 or
 ```xml
 <extension target="component_A" point="point_A">
@@ -260,22 +256,23 @@ Here we assume that you have installed [Nuxeo CLI]({{page page='nuxeo-cli'}}) an
 
 Once you have found the *extension point* that you want to contribute to:
 
-1.  Create a file named like `service-to-contribute-to-contrib.xml` into the
-    `src/main/resources/OSGI-INF/` directory of your project.
-1.  Declare an empty component into this file, with a **unique name** within the target application, you can follow the
-    suggested naming conventions to avoid conflicts:
-    ```xml
-    <?xml version="1.0"?>
-    <component name="org.mycompany.myproject.target-extension-point-to-contribute-to.contrib">
-    </component>
-    ```
-    {{#> callout type='note' heading='Naming your component'}}
-    *   In Nuxeo bundles, we tend to follow this naming convention:
-        `org.mycompany.myproject.target-extension-point-to-contribute-to.distinctive-words`.
-        You can follow your way but should be careful to avoid conflicts.
-    *   If the component name is not unique, it will not be deployed, and the server startup will be aborted.
-    {{/callout}}
-1.  Add the XML fragment for the contribution expressing the target configuration. The format is the following:
+1. Create a file named like `service-to-contribute-to-contrib.xml` into the `src/main/resources/OSGI-INF/` directory of your project.
+
+1. Declare an empty component into this file, with a **unique name** within the target application, you can follow the suggested naming conventions to avoid conflicts:
+  ```xml
+  <?xml version="1.0"?>
+  <component name="org.mycompany.myproject.target-extension-point-to-contribute-to.contrib">
+  </component>
+  ```
+
+  {{#> callout type='note' heading='Naming your component'}}
+  In Nuxeo bundles, we tend to follow this naming convention:</br>
+  `org.mycompany.myproject.target-extension-point-to-contribute-to.distinctive-words`.</br>
+  You can follow your way but should be careful to avoid conflicts.</br>
+  If the component name is not unique, it will not be deployed, and the server startup will be aborted.
+  {{/callout}}
+
+1. Add the XML fragment for the contribution expressing the target configuration. The format is the following:
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.target-extension-point-to-contribute-to.contrib">
@@ -285,6 +282,7 @@ Once you have found the *extension point* that you want to contribute to:
       </extension>
     </component>
     ```
+
     Here is a sample:
     ```xml
     <?xml version="1.0"?>
@@ -305,7 +303,7 @@ In the previous section, the configuration has been created. Now it needs to be 
 so that it's deployed by the Nuxeo server. This declaration is made through the
 `src/main/resources/META-INF/MANIFEST.MF` file.
 
-1.  Create a new entry `Nuxeo-Component`, if it does not exist:
+1. Create a new entry `Nuxeo-Component`, if it does not exist:
     ```
     Manifest-Version: 1.0
     Bundle-ManifestVersion: 2
@@ -314,7 +312,7 @@ so that it's deployed by the Nuxeo server. This declaration is made through the
 
     ```
 
-2.  If the `Nuxeo-Component` entry already existed with another component declaration, separate them by commas:
+1. If the `Nuxeo-Component` entry already existed with another component declaration, separate them by commas:
     ```
     Manifest-Version: 1.0
     Bundle-ManifestVersion: 2
@@ -330,15 +328,15 @@ so that it's deployed by the Nuxeo server. This declaration is made through the
 
 The Nuxeo application comes with runtime contributions, relying on the extension point system for default settings.
 
-Changing one of these configurations can be done by overriding the XML fragment from an existing Nuxeo component, by
-following the steps for your preferred tool (see above) combined with the specific steps below:
+Changing one of these configurations can be done by overriding the XML fragment from an existing Nuxeo component, by following the steps for your preferred tool (see above) combined with the specific steps below:
 1. Identify this component: using Nuxeo Explorer, go to the extension point definition (see
    [the first section](#finding-extension-point)), for instance.
-1. Click on the contribution to be overriden: the explorer provides a dedicated link to help with overrides, that you
-   can take as an example.
-1. Notice the contributing component name: you will need to *require* it to make sure this new configuration is applied
-   *after* the original one.
-1. Write a custom component with a specific name, and declare it in your bundle.
+
+1. Click on the contribution to be overridden: the explorer provides a dedicated link to help with overrides, that you can take as an example.
+
+1. Notice the contributing component name: you will need to *require* it to make sure this new configuration is applied *after* the original one.
+
+1. Write a custom component with a specific name, and declare it in your bundle.</br>
    You should have something like:
    ```xml
    <?xml version="1.0"?>
@@ -351,6 +349,6 @@ following the steps for your preferred tool (see above) combined with the specif
    </component>
    ```
 
-Note: if you are adding this contribution from Nuxeo Studio, you do not need the require tag, as Studio contributions
-are added after all other contributions have been deployed. You might need it if you are overriding a contribution
-from another Studio project, though.
+{{#> callout type='note'}}
+If you are adding this contribution from Nuxeo Studio, you do not need the require tag, as Studio contributions are added after all other contributions have been deployed. You might need it if you are overriding a contribution from another Studio project, though.
+{{/callout}}

@@ -85,14 +85,12 @@ history:
         date: '2012-09-21 14:37'
         message: ''
         version: '1'
-
 ---
+
 ## Deployment Phases
 
 {{! excerpt}}
-
 The Nuxeo Platform deployment is incremental: the startup process involves different phases.
-
 {{! /excerpt}}
 
 1.  Process [Configuration Templates]({{page page='configuration-templates'}})
@@ -104,29 +102,26 @@ The Nuxeo Platform deployment is incremental: the startup process involves diffe
 
 The [Configuration Template System]({{page page='configuration-templates'}}) is used to generate configuration files:
 
-*   data source declaration
-*   SMTP Gateway
-*   monitoring extensions
-*   misc extension point contributions
+- data source declaration
+- SMTP Gateway
+- monitoring extensions
+- misc extension point contributions
     (LDAP, SMTP, OpenOffice.org)
 
-This is useful to define profile-like configurations, so that a given server can quickly be reconfigured for a given
-target environment:
+This is useful to define profile-like configurations, so that a given server can quickly be reconfigured for a given target environment:
 
-*   Dev profile
-*   Integration profile
-*   Production profile
-*   &hellip;
+- Dev profile
+- Integration profile
+- Production profile
+- &hellip;
 
-A template can be activated by creating a directory in the `$NUXEO_HOME/templates` directory: the corresponding
-directory name can then be used as an identifier and be listed in the `nuxeo.templates` variable, inside the
-`$NUXEO_HOME/bin/nuxeo.conf` file.
+A template can be activated by creating a directory in the `$NUXEO_HOME/templates` directory: the corresponding directory name can then be used as an identifier and be listed in the `nuxeo.templates` variable, inside the `$NUXEO_HOME/bin/nuxeo.conf` file.
 
 Some Nuxeo packages hold pre-computed templates, ready for activation.
 
-The template directory usually holds Java property files with corresponding configuration variables and values. This
-variable can then be:
-*   looked up in the application code
+The template directory usually holds Java property files with corresponding configuration variables and values. This variable can then be:
+
+- looked up in the application code
 
     ```
     import org.nuxeo.runtime.api.Framework;
@@ -138,7 +133,7 @@ variable can then be:
     }
     String myProfileValue = Framework.getProperty("my.service.custom.variable");
     ```
-*   referenced by Nuxeo configurations
+- referenced by Nuxeo configurations
 
     ```
     <component name="my.contrib">
@@ -181,26 +176,23 @@ The template system can also use Freemarker to handle simple conditional process
         <binaryStore path="${repository.binary.store}" />
 ...
 ```
-The file holding this configuration should be suffixed by `.nxftl`. This suffix will be removed when the Freemarker
-processing has been applied. For instance the file `datasources-config.xml.nxftl` will be renamed to
-`datasources-config.xml`.
 
+The file holding this configuration should be suffixed by `.nxftl`. This suffix will be removed when the Freemarker processing has been applied. For instance the file `datasources-config.xml.nxftl` will be renamed to `datasources-config.xml`.
 
 ### Deployment Fragment Resources Processing
 
 In Nuxeo, the target web application is generated from a group of separated bundles. Each bundle can contribute:
 
-*   resources to the WAR directory (JSP files, images, etc),
-*   contributions to the corresponding `web.xml` servlet file,
-*   Java property files for i18n messages (translation files),
-*   &hellip;
+- resources to the WAR directory (JSP files, images, etc),
+- contributions to the corresponding `web.xml` servlet file,
+- Java property files for i18n messages (translation files),
+- &hellip;
 
 To do that, you can place a file named `deployment-fragment.xml` in your jar inside the `OSGI-INF` directory.
 
-This file contains can contain ANT-LIKE commands and XML contributions to the target templating file.
+This file can contain ANT-LIKE commands and XML contributions to the target templating file.
 
-Sample contribution to the `$NUXEO_HOME/nxserver/nuxeo.war/WEB-INF/web.xml` file, using slot `STD-AUTH-FILTER` (check
-the file at `$NUXEO_HOME/nxserver/META-INF/templates/web.xml` for the complete list of slots)
+Sample contribution to the `$NUXEO_HOME/nxserver/nuxeo.war/WEB-INF/web.xml` file, using slot `STD-AUTH-FILTER` (check the file at `$NUXEO_HOME/nxserver/META-INF/templates/web.xml` for the complete list of slots)
 ```
 <?xml version="1.0"?>
 <fragment version="1">
@@ -231,8 +223,7 @@ Sample copy of the bundle `web/nuxeo.war` resources to the final `$NUXEO_HOME/nx
 </fragment>
 ```
 
-Note that if you'd like to control the order in which this pre-processing is done, you can add a "require" tag in the
-fragment, naming the bundle that should be deployed before yours:
+Note that if you'd like to control the order in which this pre-processing is done, you can add a `require` tag in the fragment, naming the bundle that should be deployed before yours:
 
 ```
 <?xml version="1.0"?>
@@ -259,12 +250,10 @@ fragment, naming the bundle that should be deployed before yours:
 
 This phase deploys Nuxeo Runtime Components, registering Nuxeo Services, Extension Points and Contributions.
 
-First, component XML files detected in the `$NUXEO_HOME/nxserver/config/` directory are registered. These files might
-have been generated there thanks to the previous configuration templates processing.
+First, component XML files detected in the `$NUXEO_HOME/nxserver/config/` directory are registered. These files might have been generated there thanks to the previous configuration templates processing.
 
 **NB**: only files with a name ending with **`-config.xml`** will be taken into account.
-Sometimes other resources are also present: they will be available in the classpath but will not be considered as
-component files.
+Sometimes other resources are also present: they will be available in the classpath but will not be considered as component files.
 
 After that, bundles are processed for components, following the Runtime Framework lifecycle:
 
@@ -298,16 +287,13 @@ INFO  [OSGiRuntimeService] Nuxeo Platform Started
 ======================================================================
 ```
 
-To control the order in which components are deployed, you can ass a `<require>` element at the start of a
-component definition: this component will be deployed after the required component has been deployed too.
-This is useful to ensure proper override/merging behaviours on the final configuration held by the service.
-Here are a few notes about it:
-- a contribution does not need to require its target component: this requirement is implicit, and the contribution
-  will only be registered when the target extension point has been registered.
-- Studio bundles are deployed last: they require the `org.nuxeo.runtime.started` pseudo component, which is registered
-  after all components have been resolved.
-- a failed requirement (requirement to a missing component) will prevent the server startup.
+To control the order in which components are deployed, you can ass a `<require>` element at the start of a component definition: this component will be deployed after the required component has been deployed too.
+This is useful to ensure proper override/merging behaviors on the final configuration held by the service.
 
+Here are a few notes about it:
+- a contribution does not need to require its target component: this requirement is implicit, and the contribution will only be registered when the target extension point has been registered.
+- Studio bundles are deployed last: they require the `org.nuxeo.runtime.started` pseudo component, which is registered after all components have been resolved.
+- a failed requirement (requirement to a missing component) will prevent the server startup.
 
 ### Servlet Container Initialization
 
@@ -319,22 +305,21 @@ Additional frameworks are also initialized (like the legacy JSF and Seam framewo
 
 At this point, the application is fully deployed and should be ready to serve external requests.
 
-
 ## NuxeoCtl
 
-[NuxeoCtl]({{page page='nuxeoctl-and-control-panel-usage'}}) is not really part of the deployment, but it's a central
-tool that helps managing Nuxeo startup and configuration.
+[NuxeoCtl]({{page page='nuxeoctl-and-control-panel-usage'}}) is not really part of the deployment, but it's a central tool that helps managing Nuxeo startup and configuration.
 
 NuxeoCtl provides:
 
-*   a Nuxeo Bootstrap
-    *   runs the Configuration Template system
-    *   starts the target Application Server
-*   some administration tools
-    *   Nuxeo Package administration and installation
-    *   start/stop/restart/configure/&hellip;
-*   a simple command GUI
+- a Nuxeo Bootstrap
+    - runs the Configuration Template system
+    - starts the target Application Server
+- some administration tools
+    - Nuxeo Package administration and installation
+    - start/stop/restart/configure/&hellip;
+- a simple command GUI
 
+* * *
 <div class="row" data-equalizer data-equalize-on="medium">
   <div class="column">
 
