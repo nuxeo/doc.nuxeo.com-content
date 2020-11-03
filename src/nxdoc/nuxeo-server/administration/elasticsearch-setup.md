@@ -554,7 +554,7 @@ elasticsearch.index.translog.durability=async
 ```
 
 If your indexes are already created you need some manual operation to change the translog:
-```
+```bash
 curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo-uidgen/_settings" -d '{
   "index.translog.durability" : "async"
 }'
@@ -611,7 +611,7 @@ elasticsearch.restClient.password=your_password
 ```
 {{#> callout type='tip' }}
 For X-Pack, please follow the Elasticsearch documentation for configuring a user and role, an example could be:
-```
+```bash
 curl -XPOST -u elastic 'localhost:9200/_xpack/security/role/nuxeo_role' -H "Content-Type: application/json" -d '{
   "cluster" : [
     "all"
@@ -625,7 +625,7 @@ curl -XPOST -u elastic 'localhost:9200/_xpack/security/role/nuxeo_role' -H "Cont
 }'
 ```
 Configuring a user for that role could look something like this:
-```
+```bash
 curl -XPOST -u elastic 'localhost:9200/_xpack/security/user/nuxeo_user' -H "Content-Type: application/json" -d '{
   "password" : "nuxeo_secret_password",
   "full_name" : "Nuxeo User",
@@ -684,7 +684,7 @@ You can find all the available options in the [nuxeo.defaults](https://github.co
 #### Index Aliases
 
 Nuxeo supports repository index aliases.  This allows you to distinguish the read index from the write index. To enable this feature set `manageAlias` to `true` in the default template (`elasticsearch-config.xml.nxftl`).
-```
+```xml
 <elasticSearchIndex name="${elasticsearch.indexName}" type="doc" repository="default" manageAlias="true">
 ```
 
@@ -795,7 +795,7 @@ Here the index is a primary storage and you cannot rebuild it. So we need a tool
 4.  Stop the Nuxeo Platform
 5.  Copy the audit logs entries in the new index using [stream2es](https://github.com/elasticsearch/stream2es/). Here we copy `nuxeo-audit` to `nuxeo-audit2`.
 
-    ```
+    ```bash
     curl -O download.elasticsearch.org/stream2es/stream2es; chmod +x stream2es
     ./stream2es es --source http://localhost:9200/nuxeo-audit --target http://localhost:9200/nuxeo-audit2 --replace
     ```
@@ -807,7 +807,7 @@ You need to define an index for each repository. This is done by adding an `elas
 1.  Create a custom template as described in the above section "Changing the mapping of the index".
 2.  Add a second `elasticSearchIndex` contribution:
 
-    ```
+    ```xml
     <elasticSearchIndex name="nuxeo-repo2" type="doc" repository="repo2"> ....
     ```
 
@@ -822,15 +822,14 @@ To understand why a document is not present in search results or not indexed, yo
 Open at the `lib/log4j2.xml` file and uncomment the 2 `ELASTIC` sections:
 
 ```xml
-    <!-- Elasticsearch logging -->
-    <File name="ELASTIC" fileName="${sys:nuxeo.log.dir}/elastic.log" append="false">
-      <PatternLayout pattern="%d{ISO8601} %-5p [%t] [%c] %m%n" />
-    </File>
+<!-- Elasticsearch logging -->
+<File name="ELASTIC" fileName="${sys:nuxeo.log.dir}/elastic.log" append="false">
+  <PatternLayout pattern="%d{ISO8601} %-5p [%t] [%c] %m%n" />
+</File>
 
-
-    <Logger name="org.nuxeo.elasticsearch" level="trace" additivity="false">
-      <AppenderRef ref="ELASTIC" />
-    </Logger>
+<Logger name="org.nuxeo.elasticsearch" level="trace" additivity="false">
+  <AppenderRef ref="ELASTIC" />
+</Logger>
 ```
 
 The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.
@@ -839,7 +838,7 @@ The `elastic.log` file will contain all the requests done by the Nuxeo Platform 
 
 It is also important to report the current settings and mapping of an Elasticsearch index (here called `nuxeo`)
 
-```
+```bash
 curl localhost:9200/nuxeo/_settings?pretty > /tmp/nuxeo-settings.json
 curl localhost:9200/nuxeo/_mapping?pretty > /tmp/nuxeo-mapping.json
 # misc info and stats on Elasticsearch
@@ -855,7 +854,7 @@ curl localhost:9200/_cat/indices?v >> /tmp/es-info.txt
 
 To test the full-text analyzer:
 
-```
+```bash
 curl -s -X GET "localhost:9200/nuxeo/_analyze" -H 'Content-Type: application/json' -d' {
   "analyzer" : "fulltext",
   "text" : "This is a text for testing, file_name/1-foos-BAR.jpg"
@@ -864,7 +863,7 @@ curl -s -X GET "localhost:9200/nuxeo/_analyze" -H 'Content-Type: application/jso
 
 To test an analyzer derived from the mapping:
 
-```
+```bash
 curl -s -X GET "localhost:9200/nuxeo/_analyze" -H 'Content-Type: application/json' -d' {
   "field" : "ecm:path.children",
   "text" : "workspaces/main folder/sub-folder"
@@ -884,6 +883,11 @@ curl -XGET 'localhost:9200/nuxeo/doc/_search?pretty' -H 'Content-Type: applicati
 ```
 
 You may need to change the `size` parameter to get more or less indexed terms.
+
+### Explain and profile Elasticsearch queries
+
+When trace level logs are actived, Elasticsearch curl command will be present in the `elastic.log` log file. Getting more details on what is happening during the query execution, can either be done using [explain](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-explain.html) or [profile](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-profile.html#search-profile-api-example).
+Those two approachs will help to understand the mapping and the field scoring, it can also gives inputs about unmapped fields for example.
 
 ### Comparing the Elasticsearch Index with the Database Content
 
