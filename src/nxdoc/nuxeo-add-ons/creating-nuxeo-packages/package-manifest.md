@@ -2,7 +2,7 @@
 title: Package Manifest
 review:
     comment: ''
-    date: '2019-03-26'
+    date: '2020-10-23'
     status: ok
 labels:
     - packaging-component
@@ -203,7 +203,7 @@ Here are the available fields (see the [<span class="nolink">PackageDefinition</
 - `target-platform`: The name and version range of platforms on which this package can be installed.</br>
   See [Target Platform section](#target-platform)
 - `platforms` (not recommended): The platform *name-version* patterns on which this package can be installed.</br>
-  See [Patterns (former way) section](#patterns-(former-way))
+  See [Patterns (former way) section](#patterns-former-way)
 - `dependencies`: The list of package dependencies.</br>
   See [org.nuxeo.connect.update.PackageDependency](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/PackageDependency.html).
 - `optional-dependencies`: The list of package optional dependencies. Used for packages which use the conditional bundle installation.
@@ -241,9 +241,9 @@ For instance, Nuxeo would use:
 
 Maintenance branches are usually named `major.minor` or `major.minor_LTS`: for instance, `1.0`, `1.1` and `1.2` or `1.0_8.10`, `1.1_9.10` and `1.2_10.10`.
 
-## Target platform
+## Target Platform
 
-The prefered way to define on which Nuxeo platform a package can be installed is the following:
+The preferred way to define on which Nuxeo platform a package can be installed is the following:
 
 ```xml
   <target-platform>
@@ -252,35 +252,40 @@ The prefered way to define on which Nuxeo platform a package can be installed is
   </target-platform>
 
 ```
-The compatible distribution name must refer to the `org.nuxeo.distribution.name` property of the Nuxeo platform. 
+
+The compatible distribution name must refer to the `org.nuxeo.distribution.name` property of the Nuxeo platform.
 
 The range of compatible distribution versions is defined using a *maven-like* version range syntax and refers to the `org.nuxeo.distribution.version` property of the Nuxeo platform.
 
 ### Constraints
 
-Here are the constraints to be followed when defining the `<target-platform>` in your package.xml:
+Here are the constraints to be followed when defining the `<target-platform>` in your `package.xml`:
 
-- Both `<name>` and `<version>` tags are **required** inside `<target-platform>`
-- The `<name>` is case sensitive and must be an **exact match** of the `org.nuxeo.distribution.name` property of the Nuxeo platform
-- The `<version>` syntax follows these rules
+- Both `<name>` and `<version>` tags are **required** inside `<target-platform>`.
 
-    | Version Range	    | Meaning         |
-    | --------- | --------------- |
-    | 1.0	    | x == 1.0        |
-    | (,1.0]    | x <= 1.0        |
-    | (,1.0)    | x < 1.0         |
-    | [1.0]	    | x == 1.0        |
-    | [1.0,)    | x >= 1.0        |
-    | (1.0,)    | x > 1.0         |
-    | (1.0,2.0)	| 1.0 < x < 2.0   |
-    | [1.0,2.0]	| 1.0 <= x <= 2.0 |
+- The `<name>` is case sensitive and must be an **exact match** of the `org.nuxeo.distribution.name` property of the Nuxeo platform.
 
-- The `<version>` must refer to the `org.nuxeo.distribution.version` property of the Nuxeo platform
-- Only one range can be defined and **exclusion is not possible**. To achieve the same purpose, use the `<conflicts>` tag and/or do separate specific releases of your package
+- The `<version>` syntax follows these rules:
 
-### Patterns (former way)
+| Version Range | Meaning         |
+| ------------- | --------------- |
+| 1.0           | x == 1.0        |
+| (,1.0]        | x <= 1.0        |
+| (,1.0)        | x < 1.0         |
+| [1.0]         | x == 1.0        |
+| [1.0,)        | x >= 1.0        |
+| (1.0,)        | x > 1.0         |
+| (1.0,2.0)     | 1.0 < x < 2.0   |
+| [1.0,2.0]     | 1.0 <= x <= 2.0 |
 
-Although it is not the recommanded way, it is still possible to use the former `<platforms>` tag to declare pattern(s) matching the *[name]-[version]* couple of the targeted Nuxeo platforms:
+
+- The `<version>` must refer to the `org.nuxeo.distribution.version` property of the Nuxeo platform.
+
+- Only one range can be defined and **exclusion is not possible**. To achieve the same purpose, use the `<conflicts>` tag and/or do separate specific releases of your package.
+
+### Patterns (Former Way)
+
+Although it is not the recommended way, it is still possible to use the former `<platforms>` tag to declare pattern(s) matching the *[name]-[version]* couple of the targeted Nuxeo platforms:
 
 ```xml
   <platforms>
@@ -289,10 +294,9 @@ Although it is not the recommanded way, it is still possible to use the former `
   </platforms>
 
 ```
+
 {{#> callout type='note' }}
-
-The new `<target-platform>` tag takes precedence on the former `<platforms>` tag if both are defined in the package.xml
-
+The new `<target-platform>` tag takes precedence on the former `<platforms>` tag if both are defined in the `package.xml`.
 {{/callout}}
 
 ## Package Dependencies
