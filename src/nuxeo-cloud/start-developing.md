@@ -32,12 +32,12 @@ The DEV & UAT Environments share a MongoDB and Elasticsearch server, but each ha
 ## Prerequesites
 
 The Nuxeo Cloud Team needs:
-- A Github project URL for the custom developments. 
+- A Github project URL for the custom developments.
 - SSh keys to be included to the Nuxeo Cloud DEV CI/CD chain to deploy your custom package. Please refer to the [Github Documentation Page](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 {{#> callout type='Note' heading='Additional information'}}
-- These elements are mandatory even if the Nuxeo application will deploy only a Nuxeo Studio project.
-- The Github project cannot be created inside the Nuxeo Github organisation: every client has to own their Github project.
+- Git repositories are required for all Dev Sandboxes, even if the Nuxeo Studio project is the primary means for updates to the Nuxeo platform.
+- Customers who purchase the Dev Sandbox are required to setup their own Github project/repository to support any custom code development integrations.
 {{/callout}}
 
 ## OpenShift Web Console
