@@ -37,4 +37,4 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'permissions' space='userdoc' page='permissions'}}}
+{{{multiexcerpt name='permissions' space='userdoc' page='permissions'}}}
