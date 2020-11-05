@@ -3,7 +3,7 @@ title: Data Modeling
 description: This page summarizes all the main concepts about documents, access to documents and document storage.
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2020-11-04'
     status: ok
 labels:
     - lts2016-ok

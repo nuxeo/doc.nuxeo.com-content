@@ -76,7 +76,7 @@ You can very easily import document by moving them from a desktop folder to a Nu
 
 ## Automated Metadata Extraction
 
-{{{multiexcerpt 'automated-metadata-extraction-excerpt' page='userdoc/creating-content'}}}
+{{{multiexcerpt 'automated-metadata-extraction-excerpt' page='creating-content'}}}
 
 Read the [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) documentation for more information.
 

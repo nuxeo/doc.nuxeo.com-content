@@ -3,7 +3,7 @@ title: Persistence Architecture
 description: The persistence layer of the Nuxeo Platform repository is configurable. Several options can be chosen depending on your scalability, integration, and performance constraints.
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2020-11-04'
     status: ok
 labels:
     - content-review-lts2016

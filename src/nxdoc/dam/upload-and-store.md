@@ -53,7 +53,7 @@ Read the [Nuxeo Live Connect documentation]({{page version='' space='nxdoc' page
 
 ## Automated Metadata Extraction
 
-{{{multiexcerpt 'automated-metadata-extraction-excerpt' page='userdoc/creating-content'}}}
+{{{multiexcerpt 'automated-metadata-extraction-excerpt' page='creating-content'}}}
 
 Read the [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) documentation for more information.
 

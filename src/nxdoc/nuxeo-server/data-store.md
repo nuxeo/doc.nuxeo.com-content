@@ -3,7 +3,7 @@ title: Data Store
 description: Browse the Core Server section of the developer documentation.
 review:
     comment: ''
-    date: '2018-06-12'
+    date: '2020-11-04'
     status: ok
 labels:
     - lts2017-ok
@@ -19,7 +19,7 @@ version_override:
 {{#> panel type='secondary' match_height='true'}}
 ### Data Modeling
 
-{{{excerpt space='nxdoc' page='data-modeling'}}}
+This page summarizes all the main concepts about documents, access to documents and document storage.
 
 [More <i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='nxdoc' page='data-modeling'}})
 {{/panel}}
