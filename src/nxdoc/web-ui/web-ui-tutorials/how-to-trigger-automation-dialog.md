@@ -238,4 +238,4 @@ You should end up with the following contribution:
 
 ### Check Result
 
-<img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/copy-move/copy-move.png"/>
+![copy-move.png](https://raw.githubusercontent.com/nuxeo/nuxeo-studio-community-cookbook/master/modules/nuxeo/copy-move/copy-move.png)
