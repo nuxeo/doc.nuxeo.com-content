@@ -3,7 +3,7 @@ title: Nuxeo for Adobe CC
 description: 'The Nuxeo for Adobe CC addon enables creative users to interact directly with Nuxeo repository assets from within InDesign, Photoshop or Illustrator.'
 review:
     comment: ''
-    date: '2019-06-20'
+    date: '2020-11-06'
     status: ok
 labels:
     - adobe-cc
@@ -56,7 +56,7 @@ Installation is made of two steps:
   {{#> callout type='info' }}
   If you have previously used a Nuxeo Adobe connector, clear the application preferences by pressing and holding `Alt+Control+Shift` (on Windows) or `Option+Command+Shift` (on macOS) as you start Photoshop/InDesign/Illustrator
   {{/callout}}
-2. Please contact Nuxeo Sales at contact@nuxeo.com for access to the local client side plugin installation.
+2. Please contact your Nuxeo Account Executive for access to the local client side plugin installation.
 
 Once the installation done, a new extension "Nuxeo CC Connector" is available on your Photoshop, InDesign or Illustrator application.
 
