@@ -68,7 +68,7 @@ In this tutorial, we will automatically start the validation period from today's
 
 The idea is to override the default Nuxeo Web UI slot contribution by using the same **name**, to avoid having two layouts added to the DOM.
 
-We will use the **priority** attribute to control the order of contributions with the same name. It allows you to control the merge of these contributions (e.g: disabling existing ones, requires the disabled contribution to come after the one you want to disable). 
+We will use the **priority** attribute to control the order of contributions with the same name. It allows you to control the merge of these contributions (e.g: disabling existing ones, requires the disabled contribution to come after the one you want to disable).
 
 The default priority is 0: higher priority wins, therefore this contribution will result in an override of the default slot content template.
 
@@ -80,16 +80,16 @@ It is important **to select the right branch** on the `nuxeo-web-ui` repository 
 
 For LTS 2019 (10.10), choose the `10.10` branch: [https://github.com/nuxeo/nuxeo-web-ui/tree/10.10/elements](https://github.com/nuxeo/nuxeo-web-ui/tree/10.10/elements).
 
-1. Copy the the element you need to edit: in our case, this is the `nuxeo-document-page` available [here](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/elements/document/nuxeo-document-page.html). T
+1. Copy the the element you need to edit: in our case, this is the `nuxeo-document-page` available [here](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/elements/document/nuxeo-document-page.html).
 
   {{#> callout type='note'}}
   The ` nuxeo-collapsible-document-page` is the element used for folderish documents.
   {{/callout}}
 
 1. Go to **Nuxeo Studio Designer** and paste the code in a custom element, and adjust the element name: Under the **Resources** tab of Nuxeo Studio Designer:
-  1. Create a folder called `custom-elements`
+  1. Create a folder called `custom-elements`.
   1. In the `custom-elements` folder, create an empty file called `nuxeo-document-page-validity.html` and paste the code of the `nuxeo-document-page`: The new element name must be different from the original one.
-1. Make sure you've substituted all the references of `nuxeo-document-page` by `nuxeo-document-page-validity` (there should be 4 references at least) in the file.
+1. Make sure you've replaced all the references of `nuxeo-document-page` by `nuxeo-document-page-validity` (there should be 4 references at least) in the file.
 1. Comment all the element imports at the beginning of the file (like `<link rel="import" href="nuxeo-document-metadata.html">`)
 
 {{#> callout type='warning'}}
@@ -134,7 +134,7 @@ Then, simply import the new element with:
 <link rel="import" href="custom-elements/nuxeo-document-page-validity.html">
 ```
 
-### Replace the original page by the custom page
+### Replace the Original Page by the Custom Page
 
 At this stage, the new element is imported but does not replace the default element yet. To do so, you need to update the default slot contribution of Nuxeo Web UI.
 
