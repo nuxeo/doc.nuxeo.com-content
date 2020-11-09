@@ -80,14 +80,16 @@ It is important **to select the right branch** on the `nuxeo-web-ui` repository 
 
 For LTS 2019 (10.10), choose the `10.10` branch: [https://github.com/nuxeo/nuxeo-web-ui/tree/10.10/elements](https://github.com/nuxeo/nuxeo-web-ui/tree/10.10/elements).
 
-1. Copy the the element you need to edit: in our case, this is the `nuxeo-document-page` available [here](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/elements/document/nuxeo-document-page.html).
+1. Copy the the element you need to edit: in our case, this is the `nuxeo-document-page` available [here](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/elements/document/nuxeo-document-page.html). T
+
   {{#> callout type='note'}}
   The ` nuxeo-collapsible-document-page` is the element used for folderish documents.
   {{/callout}}
 
 1. Go to **Nuxeo Studio Designer** and paste the code in a custom element, and adjust the element name: Under the **Resources** tab of Nuxeo Studio Designer:
   1. Create a folder called `custom-elements`
-  1. In the `custom-elements` folder, create an empty file called `nuxeo-document-page.html` and paste the code of the `nuxeo-document-page`.
+  1. In the `custom-elements` folder, create an empty file called `nuxeo-document-page-validity.html` and paste the code of the `nuxeo-document-page`: The new element name must be different from the original one.
+1. Make sure you've substituted all the references of `nuxeo-document-page` by `nuxeo-document-page-validity` (there should be 4 references at least) in the file.
 1. Comment all the element imports at the beginning of the file (like `<link rel="import" href="nuxeo-document-metadata.html">`)
 
 {{#> callout type='warning'}}
@@ -129,7 +131,7 @@ To create it, just click on the default studio bundle file listing below the `UI
 Then, simply import the new element with:
 
 ```html
-<link rel="import" href="custom-elements/nuxeo-document-page.html">
+<link rel="import" href="custom-elements/nuxeo-document-page-validity.html">
 ```
 
 ### Replace the original page by the custom page
@@ -144,13 +146,12 @@ To override the default behavior:
 In our case, we will add the following contribution in our custom bundle file:
 
 ```
-<!-- Default order is 10 -->
-<nuxeo-slot-content name="documentViewPage" slot="DOCUMENT_VIEWS_PAGES" order="20">
+<nuxeo-slot-content name="documentViewPage" slot="DOCUMENT_VIEWS_PAGES" order="10">
   <template>
     <nuxeo-filter document="[[document]]" expression="document.facets.indexOf('Folderish') === -1
                                                    && document.facets.indexOf('Collection') === -1">
       <template>
-        <nuxeo-document-page name="view" document="[[document]]" opened></nuxeo-document-page>
+        <nuxeo-document-page-validity name="view" document="[[document]]" opened></nuxeo-document-page-validity>
       </template>
     </nuxeo-filter>
   </template>
