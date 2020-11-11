@@ -124,7 +124,7 @@ In your `web.config` on your Sitecore instance, add to your existing Content-Sec
 {{/callout}}
 
 ```
-<add name="Content-Security-Policy" value="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://apps.sitecore.net https://code.jquery.com https://dam-solution-east.cloud.nuxeo.com; img-src 'self' data: https://dam-solution-east.cloud.nuxeo.com https://dam-solution-east-10-10-bucket.s3.amazonaws.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' 'unsafe-inline' https://fonts.gstatic.com; upgrade-insecure-requests; block-all-mixed-content;" />
+<add name="Content-Security-Policy" value="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://apps.sitecore.net https://code.jquery.com https://yournuxeoserver.com; img-src 'self' data: https://yournuxeoserver.com https://yournuxeobucket.s3.amazonaws.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' 'unsafe-inline' https://fonts.gstatic.com; upgrade-insecure-requests; block-all-mixed-content;" />
 ```
 
 There is nothing to install on your Nuxeo instance. See Configuration section for necessary additions to your `nuxeo.conf` file.
