@@ -120,11 +120,11 @@ Upon successful installation, you’ll see the next dialog box, where you can si
 {{#> callout type='warning' }}
 If you are using **Sitecore version 9.3** or newer, you will need to update the security policy in your `web.config` file in your sitecore instance. This is new in 9.3 and should not be necessary for older versions. </br>
 To do:</br>
-In your `web.config` on your Sitecore instance, add to your existing Content-Security-Policy the following:
+In your `web.config` on your Sitecore instance, add to your existing Content-Security-Policy the following (if you already have a specific security policy entry, you will need to add the Nuxeo info to that existing policy, just note in the example below the plaement of the various URLs).:
 {{/callout}}
 
 ```
-<add name="Content-Security-Policy" value="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://apps.sitecore.net https://code.jquery.com https://dam-solution-east.cloud.nuxeo.com; img-src 'self' data: https://dam-solution-east.cloud.nuxeo.com https://dam-solution-east-10-10-bucket.s3.amazonaws.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' 'unsafe-inline' https://fonts.gstatic.com; upgrade-insecure-requests; block-all-mixed-content;" />
+<add name="Content-Security-Policy" value="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://apps.sitecore.net https://code.jquery.com https://yournuxeoservername.com/nuxeo/; img-src 'self' https://yournuxeoservername.com/ data: https://yournuxeoservername.com/ https://yournuxeostoragebucket.s3.amazonaws.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' 'unsafe-inline' https://fonts.gstatic.com; upgrade-insecure-requests; block-all-mixed-content;" />
 ```
 
 There is nothing to install on your Nuxeo instance. See Configuration section for necessary additions to your `nuxeo.conf` file.
