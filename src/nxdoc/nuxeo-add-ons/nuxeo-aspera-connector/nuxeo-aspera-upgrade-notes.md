@@ -15,7 +15,7 @@ This chapter highlights some major information about upgrade from Nuxeo Aspera C
 For a listing of improvements and functional enhancements in version 3.0.x, please see the [release notes]() {{! /excerpt}}
 
 {{#> callout type='warning'}}
-Because of the changes to parameters in the nuxeo.conf file, this release is labeled as a major release.  Transfers that exist in your system **that were started/created with a previous version will not work with this release and attempts to complete them will fail with this realse**.
+Because of the changes to parameters in the nuxeo.conf file as well as code/API changes described below, this release is labeled as a major release.  Transfers that exist in your system **that were started/created with a previous version will not work with this release and attempts to complete them will fail with this release**. Updating the Connector to version 3.0.0 is not recommended if you have _ongoing_ transfers.
 {{/callout}}
 
 ## Installation and Configuration
@@ -53,7 +53,7 @@ Because of the changes to parameters in the nuxeo.conf file, this release is lab
 
 ### Requirements
 - Aspera Desktop Client - [latest version]
-- Nuxeo Server LTS 2019 (10.10, HF 31, at least) with access to AWS S3 Storage along with the [Amazon S3 Online Storage plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=11.2.13)
+- Nuxeo Server LTS 2019 (10.10, HF 31, at least) with access to AWS S3 Storage along with the [Amazon S3 Online Storage plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=1.9.12)
 - IBM Aspera on Cloud Subscription (see note above about Aspera self-hosted)
 
 
@@ -113,7 +113,7 @@ see [NXP-29467](https://jira.nuxeo.com/browse/nxp-29467)
 ### Transfer edit
 Removed `nuxeo-aspera-upload-edit-dialog` element
 
-see [NXP-28207](https://jira.nuxeo.com/browse/nxp-28207
+see [NXP-28207](https://jira.nuxeo.com/browse/nxp-28207)[](https://youtu.be/k3pltmw6cmI)
 
 
 ## Complementary Information

@@ -22,12 +22,14 @@ Now, in addition to files, users have the ability to upload content in folders a
 
 See [NXP-27573](https://jira.nuxeo.com/browse/NXP-27573)
 
+As with files, the Nuxeo Aspera Connector relies on The Nuxeo Platform to determine the types of folders to create. Please be sure to read the Functional description to understand how this works.
+
 
 ### UI/UX improvements
 Since the 2.0.x releases, many updates have been made to improve styling as well as UX for some behaviors. Many of these changes can be found under [this Epic](https://jira.nuxeo.com/browse/NXP-27477).
 
 ### Transfer Dashboard improvements
-Improvements have been made to the transfer dashboard pagination so that users can better access to transfers they have permissions to.  In addition, users can now filter by transfer status.
+Improvements have been made to the transfer dashboard pagination so that users can better access transfers they have permissions to.  In addition, users can now filter by transfer status.
 
 See [NXP- 29406](https://jira.nuxeo.com/browse/NXP-29406)
 
@@ -38,6 +40,8 @@ Since the last release, we've worked on increasing the performance and stability
 There has been extensive work behind the seems to incorporate more testing as part of the development process.
 
 See [NXP-29407](https://jira.nuxeo.com/browse/NXP-29407)
+
+With this latest release, you can now configure the Aspera SDK url.  This will allow you to either run the latest version (with some known caveats), "lock in" a specific sdk version, or even host the SDK yourselves. See our "Configuration" section in the main Nuxeo Aspera Connector documentation page.
 
 
 
