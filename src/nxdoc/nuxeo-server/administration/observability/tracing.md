@@ -68,6 +68,20 @@ tracing.datadog.enabled=true
 tracing.datadog.url=http://localhost:8126/v0.3/traces
 ```
 
+### GCP Trace (Stackdriver)
+
+You need to provide a valid GCP project identifier.
+
+ ```
+metrics.enabled=true
+
+tracing.stackdriver.enabled=true
+tracing.stackdriver.timeout=30s
+tracing.stackdriver.gcpProjectId=MY-GCP-PROJECT-ID
+ ```
+
+![stackdriver]({{file name='stackdriver-trace.png'}} ?w=650,border=true)
+
 ## Configuring What is Traced
 
 Which request is traced can be determined by sampling probability using the option `tracing.sampler.probability`.
