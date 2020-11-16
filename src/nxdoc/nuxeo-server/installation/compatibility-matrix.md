@@ -157,16 +157,21 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
+<th colspan="1">LTS 2021</th>
 <th colspan="1">LTS 2019</th>
 <th colspan="1">LTS 2017</th>
 <th colspan="1">LTS 2016</th>
 </tr>
 <tr><th colspan="1">Elasticsearch</th>
 <td colspan="1">
+Library: 7.9.2<br/>
+Cluster: 7.7 to 7.9 RestClient protocol only.
+</td>
+<td colspan="1">
 Library: 6.5.3<br/>
 Cluster:
 - 6.5.x to 6.8.x when using the RestClient protocol.<br/>
-- 6.5.x when using the TransportClient.<br/>
+- 6.5.x when using the TransportClient.
 </td>
 <td colspan="1">
 Library: 5.6.3<br/>
@@ -202,7 +207,7 @@ More information can be found on the [Elasticsearch Setup]({{page page='elastics
 <tbody>
 <tr>
   <th colspan="1">Nuxeo Platform Version:</th>
-  <th colspan="1">11.1</th>
+  <th colspan="1">LTS 2021</th>
   <th colspan="1">LTS 2019</th>
   <th colspan="1">LTS 2017</th>
 </tr>
