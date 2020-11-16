@@ -9,18 +9,20 @@ review:
 toc: true
 ---
 
-
 {{! excerpt}}
-This chapter highlights some major information about upgrade from Nuxeo Aspera Connector 2.x to Nuxeo Aspera Connector 3.0.x.
-For a listing of improvements and functional enhancements in version 3.0.x, please see the [release notes]() {{! /excerpt}}
+This chapter highlights some major information about upgrade from Nuxeo Aspera Connector 2.x to Nuxeo Aspera Connector 3.0.x.</br>
+For a listing of improvements and functional enhancements in version 3.0.x, please see the [release notes]({{page page='nuxeo-aspera-release-notes'}})
+{{! /excerpt}}
 
 {{#> callout type='warning'}}
-Because of the changes to parameters in the nuxeo.conf file as well as code/API changes described below, this release is labeled as a major release.  Transfers that exist in your system **that were started/created with a previous version will not work with this release and attempts to complete them will fail with this release**. Updating the Connector to version 3.0.0 is not recommended if you have _ongoing_ transfers.
+Because of the changes to parameters in the `nuxeo.conf` file as well as code/API changes described below, this release is labeled as a major release.</br>
+Transfers that exist in your system **that were started/created with a previous version will not work with this release and attempts to complete them will fail with this release**.</br>
+Updating the Connector to version 3.0.0 is not recommended if you have _ongoing_ transfers.
 {{/callout}}
 
 ## Installation and Configuration
 
-### Changed/modified Parameters
+### Changed/Modified Parameters
 
 <div class="table-scroll">
 <table class="hover">
@@ -52,69 +54,75 @@ Because of the changes to parameters in the nuxeo.conf file as well as code/API 
 </div>
 
 ### Requirements
+
 - Aspera Desktop Client - [latest version]
 - Nuxeo Server LTS 2019 (10.10, HF 31, at least) with access to AWS S3 Storage along with the [Amazon S3 Online Storage plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=1.9.12)
 - IBM Aspera on Cloud Subscription (see note above about Aspera self-hosted)
 
-
 ## Code/Element Changes
 
-### Transfer status
-`updateTransferStatuses` deprecated - use `syncTransfer`(CoreSession, String) instead. 
+### Transfer Status
 
-see [NXP-9425] (https://jira.nuxeo.com/browse/NXP-29425)
+`updateTransferStatuses` deprecated - use `syncTransfer`(CoreSession, String) instead.
 
-### Transfer 'tab' behavior
-`nuxeo-aspera-upload-page` element: Replaced `aspera-tab-update` event by `aspera-page-update` event
+See [NXP-29425](https://jira.nuxeo.com/browse/NXP-29425).
 
-`nuxeo-aspera-page` element: changed `selectedtab` property into `selectedPage` property
+### Transfer 'tab' Behavior
 
-see [NXP-29130](https://jira.nuxeo.com/browse/nxp-29130)
+- `nuxeo-aspera-upload-page` element: Replaced `aspera-tab-update` event by `aspera-page-update` event.
+- `nuxeo-aspera-page` element: changed `selectedtab` property into `selectedPage` property.
 
-### Transfer page
-On `nuxeo-aspera-transfer-page`: removes property `transferGroups`
+See [NXP-29130](https://jira.nuxeo.com/browse/nxp-29130).
 
-see [NXP-29497](https://jira.nuxeo.com/browse/nxp-29497)
+### Transfer Page
 
-`nuxeo-aspera-transfer-page` element: removes properties aggregates, params and quickFilters
+- On `nuxeo-aspera-transfer-page`: removes property `transferGroups`.
 
-see [NXP-29592](https://jira.nuxeo.com/browse/nxp-29592)
+See [NXP-29497](https://jira.nuxeo.com/browse/nxp-29497)
 
-`nuxeo-aspera-transfer-page` element removes properties: `transfers`, `offset` and `isPreviousPageAvailable`
+- `nuxeo-aspera-transfer-page` element: removes properties aggregates, params and quickFilters.
 
-see [NXP-29282](https://jira.nuxeo.com/browse/nxp-29282)
+See [NXP-29592](https://jira.nuxeo.com/browse/nxp-29592).
 
+- `nuxeo-aspera-transfer-page` element removes properties: `transfers`, `offset` and `isPreviousPageAvailable`
 
-### Storing message files
-Deprecated `getOrCreateTransferDocument` methods (which was a deprecated Aspera method)
+See [NXP-29282](https://jira.nuxeo.com/browse/nxp-29282).
 
-see [NXP-29590](https://jira.nuxeo.com/browse/NXP-29590)
+### Storing Message Files
 
-### Workers' status
-Deprecated `bmExecute(Transfer transfer)` and introduces `bmExecute()` instead
+Deprecated `getOrCreateTransferDocument` methods (which was a deprecated Aspera method).
 
-see [NXP-29589](https://jira.nuxeo.com/browse/NXP-29589)
+See [NXP-29590](https://jira.nuxeo.com/browse/NXP-29590).
 
-### Transfer change event
-Deprecating `transfer-changed` event. Use `aspera-uploads-refresh` instead
+### Workers' Status
 
-see [NXP-29302](https://jira.nuxeo.com/browse/nxp-29302)
+Deprecated `bmExecute(Transfer transfer)` and introduces `bmExecute()` instead.
 
-### Aspera Connect download
-Removes `linkActive` and `download` properties from `nuxeo-aspera-connect`
+See [NXP-29589](https://jira.nuxeo.com/browse/NXP-29589).
 
-see [NXP-28412](https://jira.nuxeo.com/browse/NXP-28412)
+### Transfer Change Event
 
-### Transfer complete event
+`transfer-changed` event is deprecated, use `aspera-uploads-refresh` instead.
+
+See [NXP-29302](https://jira.nuxeo.com/browse/nxp-29302).
+
+### Aspera Connect Download
+
+Removes `linkActive` and `download` properties from `nuxeo-aspera-connect`.
+
+See [NXP-28412](https://jira.nuxeo.com/browse/NXP-28412).
+
+### Transfer Complete Event
+
 Removed the `aspera-transfer-complete` event and its listeners. From now on, there is no such event being fired.
 
-see [NXP-29467](https://jira.nuxeo.com/browse/nxp-29467)
+See [NXP-29467](https://jira.nuxeo.com/browse/nxp-29467).
 
-### Transfer edit
-Removed `nuxeo-aspera-upload-edit-dialog` element
+### Transfer Edit
 
-see [NXP-28207](https://jira.nuxeo.com/browse/nxp-28207)[](https://youtu.be/k3pltmw6cmI)
+Removed `nuxeo-aspera-upload-edit-dialog` element.
 
+See [NXP-28207](https://jira.nuxeo.com/browse/nxp-28207).
 
 ## Complementary Information
 
