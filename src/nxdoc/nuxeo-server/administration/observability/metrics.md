@@ -40,6 +40,7 @@ By default, since Nuxeo 11, we have the following metric reporters:
 - Graphite
 - Datadog
 - Prometheus
+- GCP Metrics (previously known as Stackdriver)
 
 It is possible to activate multiple reporters at the same time.
 
@@ -83,6 +84,11 @@ that express the work `queue` dimension, the metric name is translated into:
   <th>Prometheus</th>
   <td>dimensional</td>
   <td>dropwizard5_nuxeo_works_global_queue_scheduled_gauge{instance="nuxeo:8888",job="nuxeo",queue="videoConversion"}</td>
+</tr>
+<tr>
+  <th>GCP Metrics (Stackdriver)</th>
+  <td>dimensional</td>
+  <td>custom.googleapis.com/nuxeo/dropwizard5_nuxeo.works.global.queue.scheduled queue:videoConversion</td>  
 </tr>
 </tbody>
 </table>
@@ -194,6 +200,20 @@ Note that the Dropwizzard Metrics are exposed using [Opencensus](opencensus.io/)
 and suffixed depending on metric types (`_gauge`, `_count` and `_timer`).
 
 ![prometheus]({{file name='prometheus-nav.png'}} ?w=650,border=true)
+
+### GCP Metrics (Stackdriver)
+
+You need to provide a valid GCP project identifier.
+
+Configuration:
+```
+metrics.stackdriver.enabled=true
+metrics.stackdriver.gcpProjectId=MY-GCP-PROJECT-ID
+```
+
+The metrics will be prefixed by `custom.googleapis.com/nuxeo/dropwizard5_`
+
+![stackdriver]({{file name='stackdriver-metric.png'}} ?w=650,border=true)
 
 ## Metrics Filtering
 
