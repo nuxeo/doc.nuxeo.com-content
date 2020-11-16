@@ -473,16 +473,11 @@ This page provides several configuration use cases for [Elasticsearch](https://w
 
 ### Elasticsearch Supported Versions
 
-The Nuxeo Platform can communicate with Elasticsearch using 2 different protocols:
-- The [transport client](https://www.elastic.co/guide/en/elasticsearch/client/java-api/5.6/transport-client.html) protocol
-  (using port 9300 by default), in this case you are encouraged to use the same major version on client and cluster sides as described in the matrix below.
-  We recommend to use the same JVM version for all Elasticsearch nodes and Nuxeo.
-- The [HTTP Rest protocol](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/5.6/java-rest-high.html)
-  (using port 9200 by default), which provides looser coupling with Elasticsearch, this protocol is supported since Nuxeo 9.3,
-  it is the default choice since Nuxeo 10.2.
-
+The Nuxeo Platform communicates with Elasticsearch using the [HTTP Rest protocol](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/5.6/java-rest-high.html)
+  (port 9200 by default), which provides looser coupling with Elasticsearch.
+  
 {{#> callout type='warning' }}
-The transport client will be deprecated in Elasticsearch 7.x.
+The transport client has been deprecated in Elasticsearch 7.x.
 {{/callout}}
 
 {{{multiexcerpt 'elasticsearch_supported_versions' page='Compatibility Matrix'}}}
@@ -713,11 +708,37 @@ If you want to disable Elasticsearch and use the SQL database as the default bac
 audit.elasticsearch.enabled=false
 ```
 
-## Rebuilding the Repository Index
+## Rebuilding the Repository Index{{> anchor 'reindex'}}
 
-If you need to reindex the whole repository, you can do this from the [Nuxeo Dev Tool Browser Extension]({{page page='nuxeo-dev-tools-extension'}}#features).
+If you need to reindex the whole repository, you have different possibilities:
 
-You can fine tune the indexing process using the following options:
+### Re-index the Repository Using the WorkManager (the legacy way)
+ 
+There are 3 ways to run it:
+ 
+1. you can do this from the [Nuxeo Dev Tool Browser Extension]({{page page='nuxeo-dev-tools-extension'}}#features).
+
+2. you can do that from the JSF UI > Admin center > Elasticsearch > Admin
+
+3. you can simply use `curl`
+
+```bash
+curl -X POST "<NUXEO_URL>/nuxeo/site/automation/Elasticsearch.Index" -u Administrator:<PASSWORD> -H 'content-type: application/json' -d '{"params":{},"context":{}}'
+```
+
+Look at the `server.log` you should have 3 WARNs in the logs:
+```
+# start of re-indexing
+WARN  [http-nio-0.0.0.0-8080-exec-31] [org.nuxeo.elasticsearch.web.admin.ElasticSearchManager] Re-indexing the entire repository: default
+...
+# all the repository have been scrolled we know how much document are going to be re-indexed
+WARN  [Nuxeo-Work-elasticSearchIndexing-1:785116626625974.1486048658] [org.nuxeo.elasticsearch.work.ScrollingIndexingWorker] Re-indexing job: /elasticSearchIndexing:785116626625974.1486048658 has submited 270197 documents in 541 bucket workers
+...
+# end of the re-indexing
+WARN  [Nuxeo-Work-elasticSearchIndexing-1:785120666169686.1890981267] [org.nuxeo.elasticsearch.work.BucketIndexingWorker] Re-indexing job: /elasticSearchIndexing:785116626625974.1486048658 completed.
+```
+ 
+You can fine tune the WorkManager indexing process using the following options:
 
 - Sizing the indexing worker thread pool. The default size is `4`, using more threads will crawl the repository faster:
 
@@ -733,6 +754,40 @@ You can fine tune the indexing process using the following options:
     # Reindexing option, number of documents to submit to Elasticsearch per bulk command
     elasticsearch.reindex.bucketWriteSize=50
     ```
+
+### Re-index the repository Using the Bulk Service
+
+Run a bulk command to re-index the repository, the command id is returned:
+```bash
+curl -s -X POST "<SERVER_URL>/nuxeo/site/automation/Elasticsearch.BulkIndex" -u Administrator:<PASSWORD> -H 'content-type: application/json' -d '{"params":{},"context":{}}'
+
+{"commandId": "21aeaea1-0ef0-4a89-a92d-fa8f679361de"}
+```
+
+At any time, you can request the status of the re-indexing using the previous command id:
+```bash
+curl -s -X GET "<SERVER_URL>/nuxeo/api/v1/bulk/21aeaea1-0ef0-4a89-a92d-fa8f679361de" -u Administrator:<PASSWORD> -H 'content-type: application/json'
+
+{
+  "entity-type": "bulkStatus",
+  "commandId": "21aeaea1-0ef0-4a89-a92d-fa8f679361de",
+  "state": "RUNNING",
+  "processed": 200,
+  "error": false,
+  "errorCount": 0,
+  "total": 42932,
+  "action": "index",
+  "username": "Administrator",
+  "submitted": "2020-11-16T15:26:50.346Z",
+  "scrollStart": "2020-11-16T15:26:50.432Z",
+  "scrollEnd": "2020-11-16T15:26:50.446Z",
+  "processingStart": null,
+  "processingEnd": null,
+  "completed": null,
+  "processingMillis": 0
+}
+```
+
 
 ## Changing the Mappings and Settings of Indexes
 
