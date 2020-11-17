@@ -2,7 +2,7 @@
 title: Schema Fields
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2020-11-17'
     status: ok
 labels:
     - lts2016-ok
@@ -163,11 +163,11 @@ The standard usage to add a value "count" to a property "myprop" is:&nbsp;
 ```java
 long count = 1;
 Number oldValue = (Number) doc.getPropertyValue("myprop");
-Number newValue = DeltaLong.deltaOrLong(oldValue, count);
+Number newValue = DeltaLong.valueOf(oldValue, count);
 doc.setPropertyValue("myprop", newValue);
 ```
 
-`DeltaLong.deltaOrLong(oldValue, count)`&nbsp;should be used in preference over `new DeltaLong(oldValue, count)` because it can deal with the case where the old value is `null` or already a `DeltaLong`&nbsp;(the latter can happen if you're re-updating a property which hasn't been saved yet).
+`DeltaLong.valueOf(oldValue, count)`&nbsp;should be used in preference over `new DeltaLong(oldValue, count)` because it can deal with the case where the old value is `null` or already a `DeltaLong`&nbsp;(the latter can happen if you're re-updating a property which hasn't been saved yet).
 
 When using a SQL backend, this will emit code like (supposing the old value was 41):
 
