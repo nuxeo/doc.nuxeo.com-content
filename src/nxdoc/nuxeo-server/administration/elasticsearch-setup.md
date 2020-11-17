@@ -475,7 +475,7 @@ This page provides several configuration use cases for [Elasticsearch](https://w
 
 The Nuxeo Platform communicates with Elasticsearch using the [HTTP Rest protocol](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/5.6/java-rest-high.html)
   (port 9200 by default), which provides looser coupling with Elasticsearch.
-  
+
 {{#> callout type='warning' }}
 The transport client has been deprecated in Elasticsearch 7.x.
 {{/callout}}
@@ -713,14 +713,14 @@ audit.elasticsearch.enabled=false
 If you need to reindex the whole repository, you have different possibilities:
 
 ### Re-index the Repository Using the WorkManager (the legacy way)
- 
+
 There are 3 ways to run it:
- 
-1. you can do this from the [Nuxeo Dev Tool Browser Extension]({{page page='nuxeo-dev-tools-extension'}}#features).
 
-2. you can do that from the JSF UI > Admin center > Elasticsearch > Admin
+1. From the [Nuxeo Dev Tool Browser Extension]({{page page='nuxeo-dev-tools-extension'}}#features).
 
-3. you can simply use `curl`
+2. From JSF UI (DEPRECATED) > Admin center > Elasticsearch > Admin
+
+3. Using `curl`
 
 ```bash
 curl -X POST "<NUXEO_URL>/nuxeo/site/automation/Elasticsearch.Index" -u Administrator:<PASSWORD> -H 'content-type: application/json' -d '{"params":{},"context":{}}'
@@ -737,7 +737,7 @@ WARN  [Nuxeo-Work-elasticSearchIndexing-1:785116626625974.1486048658] [org.nuxeo
 # end of the re-indexing
 WARN  [Nuxeo-Work-elasticSearchIndexing-1:785120666169686.1890981267] [org.nuxeo.elasticsearch.work.BucketIndexingWorker] Re-indexing job: /elasticSearchIndexing:785116626625974.1486048658 completed.
 ```
- 
+
 You can fine tune the WorkManager indexing process using the following options:
 
 - Sizing the indexing worker thread pool. The default size is `4`, using more threads will crawl the repository faster:
@@ -755,7 +755,7 @@ You can fine tune the WorkManager indexing process using the following options:
     elasticsearch.reindex.bucketWriteSize=50
     ```
 
-### Re-index the repository Using the Bulk Service
+### Re-index Repository Using Bulk Service
 
 Run a bulk command to re-index the repository, the command id is returned:
 ```bash
@@ -789,9 +789,9 @@ curl -s -X GET "<SERVER_URL>/nuxeo/api/v1/bulk/21aeaea1-0ef0-4a89-a92d-fa8f67936
 ```
 
 
-## Changing the Mappings and Settings of Indexes
+## Changing Mappings and Settings of Indexes
 
-### Updating the Repository Index Configuration
+### Updating Repository Index Configuration
 
 Nuxeo comes with a default mapping that sets the locale for full-text and declares some fields as being date or numeric.
 

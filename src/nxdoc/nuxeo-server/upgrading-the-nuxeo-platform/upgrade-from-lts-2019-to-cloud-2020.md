@@ -323,8 +323,8 @@ Workflow page providers now used the `ecm:isTrashed` attribute.
 
 Since Nuxeo 11.4, Elasticsearch client library version 7.9.2 is used.
 
-Once you have adapted your application to follow the behavior changes of Elasticsearch 7.x, 
-you need to upgrade your existing Elasticsearch cluster to version 7.9 (7.7 or 7.8 are also supported). 
+Once you have adapted your application to follow the behavior changes of Elasticsearch 7.x,
+you need to upgrade your existing Elasticsearch cluster to version 7.9 (7.7 or 7.8 are also supported).
 
 ### Behavior Changes
 
@@ -346,16 +346,16 @@ Here are a few breaking changes to take into account when upgrading from Elastic
 
 #### Don't Use the TransportClient
 
-The connection to Elasticsearch should use the `RestClient` (default since Nuxeo LTS 2017), 
+The connection to Elasticsearch should use the `RestClient` (default since Nuxeo LTS 2017),
 the `TransportClient` is deprecated in version 7.x.
 
 Technically, it can work if the index exists, but re-indexing is going to fail.
 
-There is no advantage of using the `TransportClient` over the default `RestClient`. 
+There is no advantage of using the `TransportClient` over the default `RestClient`.
 
 #### Warnings in Unit Test with Embedded Elasticsearch Instance
 
-Your unit tests may have the following WARN messages: 
+Your unit tests may have the following WARN messages:
 
 ```
 2020-11-16 11:10:43,561 [main] WARN  [DanglingIndicesState] gateway.auto_import_dangling_indices is disabled, dangling indices will not be automatically detected or imported and must be managed manually
@@ -374,12 +374,12 @@ You can ignore them by editing your `log4j2` test configuration to add:
 
 #### Adapt Your Custom Elasticsearch Queries
 
-If you use the [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}),
+If you use the [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}}),
 or if you use directly the [elasticsearch query builder](https://github.com/nuxeo/nuxeo/blob/v11.4.32/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-core/src/main/java/org/nuxeo/elasticsearch/query/NxQueryBuilder.java#L164),
 make sure your query works in Elasticsearch 7.x.
- 
-One of the biggest changes is that the Elasticsearch document type has been removed, 
-for instance, this changes the URL pattern to access a Nuxeo document from http://elastic:9200/nuxeo/doc/<DOC_ID> to: http://elastic:9200/nuxeo/<DOC_ID>.
+
+One of the biggest changes is that the Elasticsearch document type has been removed,
+for instance, this changes the URL pattern to access a Nuxeo document from `http://elastic:9200/nuxeo/doc/<DOC_ID>` to: `http://elastic:9200/nuxeo/<DOC_ID>`.
 
 #### Make Elasticsearch Hints an Extension Point
 
@@ -412,7 +412,7 @@ More details in the [Nuxeo How to documentation]({{page space='nxdoc' page='how-
 
 The procedure depends on when your instance has been created:
 
-#### Elasticsearch Indexes Created in Elasticsearch 6.x (Nuxeo 10.10/LTS 2019) 
+#### Elasticsearch Indexes Created in Elasticsearch 6.x (Nuxeo 10.10/LTS 2019)
 
 Elasticsearch 7.x can read indexes created in version 6.0 or above.
 
@@ -421,20 +421,20 @@ This means that there is no migration to do if your Nuxeo instance has been crea
 Follow the [Elasticsearch upgrade documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/setup-upgrade.html) to upgrade your Elasticsearch Cluster.
 
 #### Migration of Elastic Indexes Created in Elasticsearch 5.x (Nuxeo 9.10/LTS 2017)
- 
+
 An Elasticsearch 7.x node will not start in the presence of indexes created in a version of Elasticsearch before 6.0.
 Indexes created in Elasticsearch 5.x or before will need to be reindexed with Elasticsearch 6.x in order to be readable by Elasticsearch 7.x.
 
 Nuxeo uses 3 indexes:
 
-1. The repository index, named `nuxeo` by default, doesn't need this migration because the repository 
+1. The repository index, named `nuxeo` by default, doesn't need this migration because the repository
  will be re-indexed in the next step, so, once this index has been backed up, you can delete it.
 
 2. The sequence index named `nuxeo-uidgen` will be re-created at startup, so, once this index has been backed up, you can delete it.
 
 3. The audit index named `nuxeo-audit` needs to be migrated. Follow the [re-index upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/reindex-upgrade.html).
 
-Once the Elasticsearch cluster is upgraded, start Nuxeo LTS 2021 and proceed to a [repository re-index]({{page page='elasticsearch-setup#reindex'}).
+Once the Elasticsearch cluster is upgraded, start Nuxeo LTS 2021 and proceed to a [repository re-index]({{page page='elasticsearch-setup'}}#reindex).
 
 ## Import
 
