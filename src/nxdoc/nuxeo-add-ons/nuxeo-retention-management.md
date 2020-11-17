@@ -45,7 +45,11 @@ The Nuxeo Retention Management addon has been designed to be fully compliant wit
 The Nuxeo Retention Management addon allows 2 modes:
  - **Standard mode**: this is the default mode when installing the addon. It allows using all the retention features with all storage media supported by Nuxeo Platform. This mode is not compliant with [SEC Rule 17a-4](#sec-rule-17a4).
  - **Compliance mode**: this mode is required to be compliant with [SEC Rule 17a-4](#sec-rule-17a4). It offers the same features than the standard mode but it requires the usage of Amazon S3 [Compliance mode]({{page page='nuxeo-retention-installation'}}#s3-configuration-requirements). It also involves some functional [limitations](#limitations).
-
+ 
+    {{#> callout type='warning' }}
+There is no out of the box configuration for the retention addon, you must apply a configuration in a custom contribution. See [Configure the records bucket in amazon s3 online storage]({{page page='nuxeo-retention-installation'}}#configure-the-records-bucket-in-amazon-s3-online-storage).
+    {{/callout}}
+    
 ## Main Principles
 
 ### Record
