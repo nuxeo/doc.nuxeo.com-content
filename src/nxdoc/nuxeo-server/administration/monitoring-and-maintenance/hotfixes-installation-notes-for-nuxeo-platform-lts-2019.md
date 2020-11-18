@@ -92,6 +92,56 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 34
+
+### SameSite Attribute
+
+A new configuration property `nuxeo.server.cookies.sameSite` is added to allow setting the same site cookie policy.
+In 10.10 this property is unset by default so we don't introduce a breaking change but in newer versions the default value is `strict`.
+When setting the same site cookie policy to `none` to allow sending cookies cross origin these will be automatically set to be secure since this is a requirement and as such the server needs to use https.
+
+This change brings a breaking change for configuration where the context path has been changed. In this configuration, the file `templates/common-base/conf/Catalina/localhost/nuxeo.xml.nxftl` has been replaced by a file whose name corresponds to the new context path. The hotfix 34 embeds a new version of `nuxeo.xml.nxftl`, so the replacement must be done again.
+And the file `conf/Catalina/localhost/nuxeo.xml` must be removed if the error `NuxeoException: Cannot register standby command` is thrown during the startup.
+
+### Improved Showconf
+
+`nuxeoctl showconf` output now dumps the full effective configuration of a Nuxeo Server. Please read the description of [NXP-29729](https://jira.nuxeo.com/browse/NXP-29729) for more details.
+
+## Hotfix 32
+
+### ACL on Versions
+
+A new configuration property `org.nuxeo.version.acl.disabled` controls whether ACLs on versions are disabled. Setting it to true disables all use of ACLs on versions for permission checks. The value `legacy` is also possible, to disable for direct access but enable for queries.
+This code allows to set ACL on versions:
+```
+  <require>org.nuxeo.ecm.core.versioning.config</require>
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="org.nuxeo.version.acl.disabled">false</property>
+  </extension>
+```
+The  default behavior in 10.10 is unchanged from before for compatibility: `legacy` is used.
+
+### ReadVersion permission
+
+[NXP-28370](https://jira.nuxeo.com/browse/NXP-28370) introduces a new behavior around the access to Version documents. Please read its description carefully to understand the changes.
+The new configuration property `org.nuxeo.version.readversion.disabled` controls whether the `ReadVersion` permission is disabled. The behavior in 10.10 is unchanged from before for compatibility: `true` is used.
+To enable the new behavior, use this contribution:
+```
+  <require>org.nuxeo.ecm.core.versioning.config</require>
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="org.nuxeo.version.readversion.disabled">false</property>
+  </extension>
+```
+
+### Bypass Allowed Subtype Check
+
+Since 10.10-HF32, the allowed subtype check done by the FileManager can be bypassed using this code
+```
+FileImporterContext.builder(coreSession, blob, parentpath)
+        .bypassAllowedSubtypeCheck(true)
+        .build();
+```
+
 ## Hotfix 31
 
 ### Direct Upload with SSE-KMS Enabled on S3 Buckets
