@@ -76,7 +76,7 @@ To use the framework on custom projects, you need to create an npm package with 
   "version": "1.0.0",
   "scripts": {
     "test": "nuxeo-web-ui-ftest --report --screenshots",
-    "test:watch": "nuxeo-web-ui-ftest --tags=@watch",
+    "test:watch": "nuxeo-web-ui-ftest --tags=@watch"
   },
   "license": "Apache-2.0",
   "dependencies": {
