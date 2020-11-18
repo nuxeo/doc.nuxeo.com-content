@@ -92,7 +92,7 @@ To ensure that you can access *SNAPSHOT* versions of the framework, you need to 
 {{#> panel type='code' heading='~/.npmrc'}}
 ```
 ...
-@nuxeo:registry=https://mavenin.nuxeo.com/nexus/repository/npmjs-nuxeo/
+@nuxeo:registry=https://packages.nuxeo.com/repository/npm-public-archives/
 ...
 ```
 {{/panel}}
