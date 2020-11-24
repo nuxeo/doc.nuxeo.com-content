@@ -1,6 +1,6 @@
 ---
 title: How to Fill a JIRA Ticket
-description: This page lists the best practices to fill in a JIRA ticket so that's it's correctly handled by our Support team. 
+description: This page lists the best practices to fill in a JIRA ticket so that's it's correctly handled by our Support team.
 review:
     comment: ''
     date: ''
@@ -434,9 +434,9 @@ Here are some good practices to improve the ticket:
 <div class="column medium-6">
 {{#> panel heading='Related pages'}}
 
-- [JIRA Tickets Workflow]({{page space='connect' page='jira-tickets-workflow'}})
-- [Ticket Follow Up]({{page space='connect' page='ticket-follow-up'}})
-- [Support / JIRA]({{page space='connect' page='support-jira'}})
+- [JIRA Tickets Workflow]({{page page='jira-tickets-workflow'}})
+- [Ticket Follow Up]({{page page='ticket-follow-up'}})
+- [Support / JIRA]({{page page='support-jira'}})
 
 {{/panel}}
 </div>

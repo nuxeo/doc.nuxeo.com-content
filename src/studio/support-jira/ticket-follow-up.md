@@ -88,9 +88,9 @@ In order to make it easy to know which tickets the customer must address, Nuxeo 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-- [How to Fill a JIRA Ticket]({{page space='connect' page='how-to-fill-a-jira-ticket'}})
-- [JIRA Tickets Workflow]({{page space='connect' page='jira-tickets-workflow'}})
-- [Support / JIRA]({{page space='connect' page='support-jira'}})
+- [How to Fill a JIRA Ticket]({{page page='how-to-fill-a-jira-ticket'}})
+- [JIRA Tickets Workflow]({{page page='jira-tickets-workflow'}})
+- [Support / JIRA]({{page page='support-jira'}})
 
 {{/panel}}</div><div class="column medium-6">
 

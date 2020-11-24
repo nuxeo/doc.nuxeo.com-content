@@ -87,9 +87,9 @@ However, you can ask for a complementary answer in a comment, without reopening 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
-- [Ticket Follow Up]({{page space='connect' page='ticket-follow-up'}})
-- [How to Fill a JIRA Ticket]({{page space='connect' page='how-to-fill-a-jira-ticket'}})
-- [Support / JIRA]({{page space='connect' page='support-jira'}})
+- [Ticket Follow Up]({{page page='ticket-follow-up'}})
+- [How to Fill a JIRA Ticket]({{page page='how-to-fill-a-jira-ticket'}})
+- [Support / JIRA]({{page page='support-jira'}})
 
 {{/panel}}</div><div class="column medium-6">
 

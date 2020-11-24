@@ -60,9 +60,9 @@ Afin de faciliter l'identification des tickets sur lesquels le client doit agir,
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Pages connexes'}}
 
-- [Comment remplir un ticket Jira]({{page space='connect' page='comment-remplir-un-ticket-jira'}})
-- [Comment interagir avec un ticket]({{page space='connect' page='comment-interagir-avec-un-ticket'}})
-- [G&eacute;rer vos tickets de support]({{page space='connect' page='gandeacuterer-vos-tickets-de-support'}})
+- [Comment remplir un ticket Jira]({{page page='comment-remplir-un-ticket-jira'}})
+- [Comment interagir avec un ticket]({{page page='comment-interagir-avec-un-ticket'}})
+- [G&eacute;rer vos tickets de support]({{page page='gerer-vos-tickets-de-support'}})
 
 {{/panel}}</div><div class="column medium-6">
 

@@ -457,9 +457,9 @@ Quelques conseils pour améliorer la qualité du ticket&nbsp;:
 <div class="column medium-6">
 {{#> panel heading='Pages connexes'}}
 
-- [Comment interagir avec un ticket]({{page space='connect' page='comment-interagir-avec-un-ticket'}})
-- [Suivi des tickets client]({{page space='connect' page='suivi-des-tickets-client'}})
-- [Gérer vos tickets de support]({{page space='connect' page='gandeacuterer-vos-tickets-de-support'}})
+- [Comment interagir avec un ticket]({{page page='comment-interagir-avec-un-ticket'}})
+- [Suivi des tickets client]({{page page='suivi-des-tickets-client'}})
+- [Gérer vos tickets de support]({{page page='gerer-vos-tickets-de-support'}})
 
 {{/panel}}
 </div>
