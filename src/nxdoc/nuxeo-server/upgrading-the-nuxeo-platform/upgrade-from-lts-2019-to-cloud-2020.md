@@ -344,6 +344,9 @@ Here are a few breaking changes to take into account when upgrading from Elastic
 
   The field needs to be of `text` type.
 
+
+If you have to adapt your setting or mapping, you will need to re-index the repository to apply the change.
+
 #### Don't Use the TransportClient
 
 The connection to Elasticsearch should use the `RestClient` (default since Nuxeo LTS 2017),
@@ -419,6 +422,9 @@ Elasticsearch 7.x can read indexes created in version 6.0 or above.
 This means that there is no migration to do if your Nuxeo instance has been created with Nuxeo LTS 2019.
 
 Follow the [Elasticsearch upgrade documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/setup-upgrade.html) to upgrade your Elasticsearch Cluster.
+
+If you had to adapt your Elasticsearch settings or mappings for 7.x,
+you have to proceed to a [repository re-index]({{page page='elasticsearch-setup'}}#reindex) in order to apply the new configuration.
 
 #### Migration of Elastic Indexes Created in Elasticsearch 5.x (Nuxeo 9.10/LTS 2017)
 
