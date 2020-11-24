@@ -41,3 +41,6 @@ npm-debug.log.*
 
 # Generated nginx redirects file
 redirects.txt
+
+# Dot Env file
+.env
