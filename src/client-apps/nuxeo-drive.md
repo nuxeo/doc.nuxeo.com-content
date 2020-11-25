@@ -408,7 +408,7 @@ List of document types where Direct Transfer is not allowed.
     "Section",
 ]
 ```
-- Version added: 4.4.6
+- Version added: 4.5.0
 
 * * *
 
