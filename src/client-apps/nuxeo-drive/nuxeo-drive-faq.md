@@ -143,6 +143,47 @@ Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/
 - Windows 8.1, both 32 and 64 bits
 - Windows 10, both 32 and 64 bits
 
+### Obsolete Windows version
+
+For out-of-date Windows versions, Nuxeo Drive may not start on it.
+You may need to install KB3063858.
+
+You can install it with [chocolatey](https://chocolatey.org/packages/KB3063858):
+
+```sh
+choco install kb3063858
+```
+
+#### Windows 7 32 bits
+
+- Download link: [Windows6.1-KB3063858-x86.msu](https://download.microsoft.com/download/C/9/6/C96CD606-3E05-4E1C-B201-51211AE80B1E/Windows6.1-KB3063858-x86.msu)
+- Checksum (SHA256): `A95DDA6B57B8012B0ADA9543BA667F48A99DE8FE93030A8FE8C9D5C2E5C038C1`
+
+#### Windows 7
+
+- Download link: [Windows6.1-KB3063858-x64.msu](https://download.microsoft.com/download/0/8/E/08E0386B-F6AF-4651-8D1B-C0A95D2731F0/Windows6.1-KB3063858-x64.msu)
+- Checksum (SHA256): `6FEC4E38CDCBDAA334937A2EF38BAD6800E9C80CB513183451B4049E84479A85`
+
+#### Windows 8 32 bits
+
+- Download link: [Windows8-RT-KB3063858-x86.msu](https://download.microsoft.com/download/E/9/B/E9B2ACE6-4291-400E-86D0-B6E708B58843/Windows8-RT-KB3063858-x86.msu)
+- Checksum (SHA256): `4643AEF02CCC6EB7BFA95DA515EC43520D7A4D7AB1CC745B006E2CA231B0438F`
+
+#### Windows 8
+
+- Download link: [Windows8-RT-KB3063858-x64.msu](https://download.microsoft.com/download/9/E/E/9EEB707E-2896-4890-8082-2D9FB930C615/Windows8-RT-KB3063858-x64.msu)
+- Checksum (SHA256): `64ACF31484023625E19DD45613AA8926AA3837218AA5B2A955745EED9FBFF7DF`
+
+#### Windows Server 2008 R2
+
+- Download link: [Windows6.1-KB3063858-x64.msu](https://download.microsoft.com/download/D/0/7/D0757054-F917-4728-935B-200AEAFE0308/Windows6.1-KB3063858-x64.msu)
+- Checksum (SHA256): `6FEC4E38CDCBDAA334937A2EF38BAD6800E9C80CB513183451B4049E84479A85`
+
+#### Windows Server 2012
+
+- Download link: [Windows8-RT-KB3063858-x64.msu](https://download.microsoft.com/download/9/E/E/9EEB707E-2896-4890-8082-2D9FB930C615/Windows8-RT-KB3063858-x64.msu)
+- Checksum (SHA256): `64ACF31484023625E19DD45613AA8926AA3837218AA5B2A955745EED9FBFF7DF`
+
 ### Supported GNU/Linux Distributions
 
 {{#> callout type='note' }}
