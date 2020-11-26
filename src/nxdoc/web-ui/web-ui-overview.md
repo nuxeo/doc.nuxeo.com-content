@@ -237,3 +237,10 @@ The drawer's content is managed by `<iron-pages>` which toggles between its chil
 The main area is reserved for displaying the current page's content. Our router relies on [page.js](https://visionmedia.github.io/page.js/) and is in charge of parsing the URL and setting the current page and context data in `<nuxeo-app>` accordingly.
 
 ![]({{file name='Web UI search page.png'}} ?w=959,h=614,border=true)
+
+## Section 508 Compliance (VPAT)
+
+**Date**: February, 2020
+**Product**: Nuxeo Web UI
+
+The document is available [here]({{file name='Nuxeo Web UI-VPAT 2020.pdf'}}).
