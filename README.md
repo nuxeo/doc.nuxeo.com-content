@@ -7,7 +7,7 @@ See [the main project requirements](https://github.com/nuxeo/doc.nuxeo.com/blob/
 ## Installation
 Clone the repository to your local machine (and remember where it's saved :)), using your favorite git client or the command line:
 ```bash
-git lfs clone https://github.com/nuxeo/doc.nuxeo.com-content
+git lfs clone https://github.com/nuxeo/doc.nuxeo.com-content.git
 cd doc.nuxeo.com-content
 git lfs install
 git reset --hard
