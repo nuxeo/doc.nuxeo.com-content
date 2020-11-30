@@ -32,7 +32,7 @@ node_modules
 
 # Build output
 site/
-nx_assets
+assets/nx_assets
 
 webpack.stats.json
 
@@ -41,3 +41,6 @@ npm-debug.log.*
 
 # Generated nginx redirects file
 redirects.txt
+
+# Dot Env file
+.env
