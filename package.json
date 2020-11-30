@@ -11,19 +11,20 @@
   },
   "dependencies": {
     "co": "^4.6.0",
+    "dotenv": "^8.2.0",
     "lodash.defaultsdeep": "^4.6.1",
-    "node-yaml-config": "0.0.5",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v13.1.0",
-    "thenify": "^3.2.1"
+    "node-yaml-config": "0.0.6",
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com",
+    "thenify": "^3.3.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
     "bs-fullscreen-message": "^1.1.0",
-    "eslint": "^6.4.0",
+    "eslint": "^7.8.1",
     "eslint-config-prettier": "^6.3.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "prettier": "^1.14.2",
-    "tap": "^14.6.5"
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.1",
+    "tap": "^14.10.8"
   },
   "main": "build.js",
   "config": {
