@@ -240,7 +240,7 @@ The main area is reserved for displaying the current page's content. Our router 
 
 ## Section 508 Compliance (VPAT)
 
-**Date**: February, 2020
-**Product**: Nuxeo Web UI
+- **Date**: February, 2020
+- **Product**: Nuxeo Web UI
 
-The document is available [here]({{file name='Nuxeo Web UI-VPAT 2020.pdf'}}).
+The Voluntary Product Accessibility Template for Web UI is available [here]({{file name='Nuxeo Web UI-VPAT 2020.pdf'}}).
