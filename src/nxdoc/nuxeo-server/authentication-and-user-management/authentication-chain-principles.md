@@ -46,7 +46,7 @@ When used in conjunction with `UserIdentificationInfoCallback` (Nuxeo custom Cal
 
 ### NuxeoLoginModule Plugins
 
-Because validating user identity can be more complex that just checking login/password, `NuxeoLoginModule` exposes an extension point to contribute new LoginPlugins. Each LoginPlugin has to implement the [`org.nuxeo.ecm.platform.login.LoginPlugin`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.login.LoginPluginRegistry) interface.
+Because validating user identity can be more complex that just checking login/password, `NuxeoLoginModule` exposes an extension point to contribute new LoginPlugins. Each LoginPlugin has to implement the [`org.nuxeo.ecm.platform.login.LoginPlugin`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.platform.login.LoginPluginRegistry) interface.
 
 This interface exposes the User Identity validation logic from the `UserIdentificationInfo` object populated by the Authenticator (see the [Pluggable Web Authentication Filter](#pluggable-web-authentication-filter) section):
 

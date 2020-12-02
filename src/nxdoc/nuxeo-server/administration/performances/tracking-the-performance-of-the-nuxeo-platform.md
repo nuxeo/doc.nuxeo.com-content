@@ -312,7 +312,7 @@ However, if you define documents with a lot of meta-data (some people have sever
 *   The database: because queries will be more complex.
 *   The display layer: because correctly configuring prefetch will be very important.
 
-For configuring the prefetch settings, please see the&nbsp;[configuration extension point of the TypeService](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration).
+For configuring the prefetch settings, please see the&nbsp;[configuration extension point of the TypeService](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration).
 
 The default configuration is adequate for the default Nuxeo ContentViews, but you may need to adjust that for your use cases.
 

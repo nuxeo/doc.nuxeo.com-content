@@ -145,7 +145,7 @@ Watch the related courses on Nuxeo University:
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute
 
 Whatever the tools you're using ([Nuxeo Studio](https://www.nuxeo.com/products/studio/) or [Nuxeo CLI]({{page page='nuxeo-cli'}})), your first step is to find the open door configuration where you want to contribute. We call these open doors **Extension points**.
-Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/).
+Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/10.10/).
 
 1. Click on `Extension points`.
 1. Filter what you want using the combobox.
@@ -153,7 +153,7 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
     The documentation of this extension point is displayed.
     ![]({{file name='Nuxeo-explorer.png'}} ?w=600,border=true)
 1. Then, if you click on any link in the **Contributions** section, you will see all the default contributions implemented into your Nuxeo instance.
-    There are [hundreds of configuration possibilities](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listExtensionPoints).
+    There are [hundreds of configuration possibilities](https://explorer.nuxeo.com/nuxeo/site/distribution/10.10/listExtensionPoints).
 
 ## {{> anchor 'xml-extension-studio'}}Contributing Using Nuxeo Studio
 

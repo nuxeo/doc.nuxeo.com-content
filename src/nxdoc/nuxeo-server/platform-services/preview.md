@@ -156,9 +156,9 @@ When previewing a document, the logic executed goes through several layers (from
   An example could be `http://localhost:8080/nuxeo/site/api/v1/repo/default/id/23d871d2-052a-4f58-8f90-4b07c5a074ea/@blob/file:content/@preview/image`.
   It gets the HTML preview by getting the `HtmlPreviewAdapter` from the document model.
 
-- **The [`HtmlPreviewAdapter`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.preview.adapters--adapters)** is a standard Nuxeo Platform adapter, that is fetched using `doc.getAdapter(HtmlPreviewAdapter.class)`. This adapter is a way to get access to the service below.
+- **The [`HtmlPreviewAdapter`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewContribution/org.nuxeo.ecm.platform.preview.adapters--adapters)** is a standard Nuxeo Platform adapter, that is fetched using `doc.getAdapter(HtmlPreviewAdapter.class)`. This adapter is a way to get access to the service below.
 
-- **The [`PreviewAdapterManagerComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.preview.adapter.PreviewAdapterManagerComponent)** and its `getAdapter(DocumentModel doc)` method that returns, depending on the document type of `doc` and the contributions that have been made to [extension `AdapterFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.preview.adapter.PreviewAdapterManagerComponent--AdapterFactory) of this component, an object whose type implements the interface.
+- **The [`PreviewAdapterManagerComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.platform.preview.adapter.PreviewAdapterManagerComponent)** and its `getAdapter(DocumentModel doc)` method that returns, depending on the document type of `doc` and the contributions that have been made to [extension `AdapterFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.platform.preview.adapter.PreviewAdapterManagerComponent--AdapterFactory) of this component, an object whose type implements the interface.
 
 
 ### HtmlPreviewAdapter Details

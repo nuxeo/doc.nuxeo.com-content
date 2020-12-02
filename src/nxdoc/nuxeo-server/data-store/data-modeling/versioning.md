@@ -198,8 +198,8 @@ The system is not triggered before update if the document is already checked in.
 The system is not triggered after update if a manual versioning is asked (`VersioningService.VERSIONING_OPTION` in document context data).
 
 To contribute new policies and filters, check out the extension points documentation:
-- [policies](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.versioning.VersioningService--policies)
-- [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.versioning.VersioningService--filters)
+- [policies](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.api.versioning.VersioningService--policies)
+- [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.api.versioning.VersioningService--filters)
 
 ### {{> anchor 'versioning-policies'}}Versioning Policies
 

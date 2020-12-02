@@ -286,7 +286,7 @@ history:
         version: '1'
 
 ---
-The bulk edit screen offers a form that allows to edit several documents at the same time. This is implemented using the [BulkEditService](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.webapp.bulkedit.BulkEditService) component. You can customize it with Studio by creating a form layout named `bulkEdit`. The "Edit" layout will be used on the bulk edit popup. The default bulk edit layout can be found on [GitHub](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/layouts-contrib.xml) or in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp--layouts).
+The bulk edit screen offers a form that allows to edit several documents at the same time. This is implemented using the [BulkEditService](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.webapp.bulkedit.BulkEditService) component. You can customize it with Studio by creating a form layout named `bulkEdit`. The "Edit" layout will be used on the bulk edit popup. The default bulk edit layout can be found on [GitHub](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/layouts-contrib.xml) or in the [Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewContribution/org.nuxeo.ecm.platform.forms.layouts.webapp--layouts).
 
 ![]({{file name='default_bulk_edit.png'}} ?w=350,border=true)
 
@@ -392,7 +392,7 @@ When configuring a widget to select collections, the field that needs to be refe
 
 When users edit several documents at the same time using the bulk edit form, a new version of the documents is saved before applying the modifications. The default versioning policy is to create a minor version.
 
-This versioning policy can be configured through the [versioning](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.webapp.bulkedit.BulkEditService--versioning) extension point:
+This versioning policy can be configured through the [versioning](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.webapp.bulkedit.BulkEditService--versioning) extension point:
 
 ```xml
 <extension target="org.nuxeo.ecm.webapp.bulkedit.BulkEditService"

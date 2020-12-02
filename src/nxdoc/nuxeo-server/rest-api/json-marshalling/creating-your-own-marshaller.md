@@ -140,7 +140,7 @@ public class ProductListJsonReader extends DefaultListJsonReader<Product> {
 
 ### Registering Your Marshallers
 
-The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.MarshallerRegistry/marshallers`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.io.MarshallerRegistry--marshallers) . It allows to add new marshallers, override existing ones or unregister some.
+The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.MarshallerRegistry/marshallers`](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.io.MarshallerRegistry--marshallers) . It allows to add new marshallers, override existing ones or unregister some.
 
 {{#> panel type='code' heading='marshallers-contrib.xml'}}
 

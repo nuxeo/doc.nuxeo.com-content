@@ -91,7 +91,7 @@ The views on documents, the forms to create or edit them, how lists of documents
 
 ## UI Document Types
 
-After the structural document type, a UI registration for our document type must be done for the type to be visible in the Nuxeo DM interface (or in other applications based on Nuxeo Platform). This is done through a contribution to the **types** extension point of the [`org.nuxeo.ecm.platform.types.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.types.TypeService) component (which is a different component than for the structural types, despite also ending in `TypeService`).
+After the structural document type, a UI registration for our document type must be done for the type to be visible in the Nuxeo DM interface (or in other applications based on Nuxeo Platform). This is done through a contribution to the **types** extension point of the [`org.nuxeo.ecm.platform.types.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.platform.types.TypeService) component (which is a different component than for the structural types, despite also ending in `TypeService`).
 
 For example, in `OSGI-INF/ui-types-contrib.xml` we will define:
 

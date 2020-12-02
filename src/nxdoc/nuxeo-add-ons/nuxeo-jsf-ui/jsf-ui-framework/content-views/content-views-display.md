@@ -158,8 +158,8 @@ These actions display allows to use [any action type (including fancy boxes)]({{
 
 To handle document content views categories, rendering is done using methods set on generic Seam components:
 
-*   [`contentViewActions`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:contentViewActions) (`org.nuxeo.ecm.webapp.contentbrowser.ContentViewActions`)
-*   [`documentContentViewActions`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:documentContentViewActions) (`org.nuxeo.ecm.webapp.contentbrowser.DocumentContentViewActions`)
+*   [`contentViewActions`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewSeamComponent/seam:contentViewActions) (`org.nuxeo.ecm.webapp.contentbrowser.ContentViewActions`)
+*   [`documentContentViewActions`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewSeamComponent/seam:documentContentViewActions) (`org.nuxeo.ecm.webapp.contentbrowser.DocumentContentViewActions`)
 
 A typical usage of content views, to render the results, would be:
 

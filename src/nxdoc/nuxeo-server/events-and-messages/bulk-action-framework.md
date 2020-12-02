@@ -268,7 +268,7 @@ Once you have submitted a bulk command, you can use these REST APIs:
 
 ## Bulk Automation Operation
 
-It is possible to submit a command through the [Bulk.RunAction](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Bulk.RunAction) automation operation.
+It is possible to submit a command through the [Bulk.RunAction](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewOperation/Bulk.RunAction) automation operation.
 
 The following is an example of use of operation:
 
@@ -284,7 +284,7 @@ curl -u Administrator:Administrator \
         }'
 ```
 
-For testing purpose, it is possible to wait for the end of a bulk action with the [Bulk.WaitForAction](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Bulk.WaitForAction) automation operation.
+For testing purpose, it is possible to wait for the end of a bulk action with the [Bulk.WaitForAction](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewOperation/Bulk.WaitForAction) automation operation.
 
 ## Testing a Bulk Action with REST API
 

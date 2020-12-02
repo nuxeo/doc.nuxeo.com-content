@@ -510,7 +510,7 @@ The XML extensions contributed in Nuxeo Studio are not processed by the Studio u
 Since the Platform evolves, you will also need to upgrade your custom code:
 
 1.  Identify your customization in your code so as to be able to easily find where changes may be needed on the test phase of the upgrade.
-    *   Contributions to the extension points you defined: although we maintain compatibility between versions, you may need to check the extension point definition in the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints) to see if the descriptor has changed (new attributes for instance) ;
+    *   Contributions to the extension points you defined: although we maintain compatibility between versions, you may need to check the extension point definition in the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/listExtensionPoints) to see if the descriptor has changed (new attributes for instance) ;
     *   The XHTML templates from the Nuxeo Platform you overrode to get a custom behavior: some of these templates may have changed (sometimes a lot if you plan to upgrade several versions up) and you have to identify the modifications you did before in order to apply them to the new version of these Nuxeo templates;
     *   The API you used in your custom Java code: some APIs were deprecated, other ones removed (like everything around jBPM).
 2.  At server startup, check for error or warn logs that could give deprecation or upgrade information.

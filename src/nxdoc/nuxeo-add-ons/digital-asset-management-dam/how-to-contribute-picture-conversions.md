@@ -155,7 +155,7 @@ history:
 ---
 Picture conversions are used to fill the picture views (stored in the `picture:views`&nbsp;field of a document having the&nbsp;`Picture` facet). The default ones are: Thumbnail, Small, Medium, FullHD, OriginalJpeg.
 
-Picture conversions are simple XML contributions done on the&nbsp;[`pictureConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) extension point of the&nbsp;[`org.nuxeo.ecm.platform.picture.ImagingComponent`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.picture.ImagingComponent) component.
+Picture conversions are simple XML contributions done on the&nbsp;[`pictureConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) extension point of the&nbsp;[`org.nuxeo.ecm.platform.picture.ImagingComponent`](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.platform.picture.ImagingComponent) component.
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University

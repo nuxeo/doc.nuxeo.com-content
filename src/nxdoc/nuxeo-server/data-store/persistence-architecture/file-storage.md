@@ -300,7 +300,7 @@ Reads content stored on an external file system.
 
 </td></tr></tbody></table></div>
 
-To register a new Blob Provider, use the [`blobprovider`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.blob.BlobManager--configuration)&nbsp;extension point with the Java class for your Blob Provider:
+To register a new Blob Provider, use the [`blobprovider`](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.blob.BlobManager--configuration)&nbsp;extension point with the Java class for your Blob Provider:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">

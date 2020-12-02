@@ -266,7 +266,7 @@ history:
         version: '1'
 
 ---
-This page explains how to add validation constraints to a document type by using the Nuxeo component [`org.nuxeo.ecm.core.api.DocumentValidationService`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.api.DocumentValidationService).
+This page explains how to add validation constraints to a document type by using the Nuxeo component [`org.nuxeo.ecm.core.api.DocumentValidationService`](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.core.api.DocumentValidationService).
 
 Document validation is a feature which:
 

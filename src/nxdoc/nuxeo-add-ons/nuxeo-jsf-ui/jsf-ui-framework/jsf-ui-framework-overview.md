@@ -79,12 +79,12 @@ Here is a very quick walk-through of the main principles with some examples and 
 
 The Nuxeo Theme is a page layout engine that also handles resources management. See the page [Theme]({{page page='theme'}}) for a general introduction. A part of the theme definition can be configured via Nuxeo Studio (the CSS and Flavor part).
 
-As any other Nuxeo component, the [Theme system](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.theme.styling.service) uses extension points to define:
+As any other Nuxeo component, the [Theme system](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.theme.styling.service) uses extension points to define:
 
-- [pages](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--pages): Define what slots should be available in the page
-- [styles](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--styles): Define CSS styles
-- [flavors](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--flavors): Define variables used in CSS
-- [resources](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.theme.styling.service--resources): Define JavaScript to be injected in the page
+- [pages](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.theme.styling.service--pages): Define what slots should be available in the page
+- [styles](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.theme.styling.service--styles): Define CSS styles
+- [flavors](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.theme.styling.service--flavors): Define variables used in CSS
+- [resources](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.theme.styling.service--resources): Define JavaScript to be injected in the page
 
 Let's see how Document Management and Digital Asset Management pages as examples.
 

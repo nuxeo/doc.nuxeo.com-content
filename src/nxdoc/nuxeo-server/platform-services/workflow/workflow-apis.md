@@ -115,13 +115,13 @@ Note that most of the time provided Automation operations will do what you want 
 
 The framework provides a few interesting Automation operation, in the category "Workflow Context".
 
-*   [Start Workflow](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Context.StartWorkflow): Starts a workflow with the given `id` and to initialize its workflow variable. The document id of the created workflow instance is available under the `workflowInstanceId` context variable.
+*   [Start Workflow](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/Context.StartWorkflow): Starts a workflow with the given `id` and to initialize its workflow variable. The document id of the created workflow instance is available under the `workflowInstanceId` context variable.
     The `id` parameter is the id of the workflow definition, as it was configured in Studio.
-*   [Cancel Workflow](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Context.CancelWorkflow): Cancels a workflow giving its id. The `id` parameter is the id of the document representing the workflow instance.
-*   [Resume Workflow](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Workflow.ResumeNodeOperation): Allows to resume a node of the workflow. It probably was suspended waiting for a task to be solved. This operation allows to force the resuming, and will let the task in a "cancelled" state.
-*   [Complete task](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Workflow.CompleteTaskOperation): Allows to close a task as if it was done via the user interface, with the ability to pass some data, as if it came from a form.
+*   [Cancel Workflow](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/Context.CancelWorkflow): Cancels a workflow giving its id. The `id` parameter is the id of the document representing the workflow instance.
+*   [Resume Workflow](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/Workflow.ResumeNodeOperation): Allows to resume a node of the workflow. It probably was suspended waiting for a task to be solved. This operation allows to force the resuming, and will let the task in a "cancelled" state.
+*   [Complete task](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/Workflow.CompleteTaskOperation): Allows to close a task as if it was done via the user interface, with the ability to pass some data, as if it came from a form.
 *   [Set Workflow Variable](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewOperation/Context.SetWorkflowVar): Allows to set workflow variables, either from within the execution of a workflow automation chain (input, output, transition) or externally, provided the workflow instance id.
-*   [Set Node Variable](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Workflow.SetNodeVariable): Allows to set node variables within the execution of a workflow automation chain (input, output, transition).
+*   [Set Node Variable](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewOperation/Workflow.SetNodeVariable): Allows to set node variables within the execution of a workflow automation chain (input, output, transition).
 
 ## REST API{{> anchor 'wfrestapi'}}
 

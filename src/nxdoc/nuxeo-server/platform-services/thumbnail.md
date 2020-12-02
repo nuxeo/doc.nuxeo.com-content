@@ -220,8 +220,8 @@ Here are the different components of the thumbnail feature:
  The service that handles thumbnail factories contributions.
  * Interface: [`ThumbnailService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailService.html)
  * Implementation: [`ThumbnailServiceImpl`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailServiceImpl.html)
- * Component: [`org.nuxeo.ecm.core.api.thumbnail.ThumbnailService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService)
- * Extension point: [`thumbnailFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService--thumbnailFactory)
+ * Component: [`org.nuxeo.ecm.core.api.thumbnail.ThumbnailService`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService)
+ * Extension point: [`thumbnailFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService--thumbnailFactory)
 
 * **Default Thumbnail factories**
 

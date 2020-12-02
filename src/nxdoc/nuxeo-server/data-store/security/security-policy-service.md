@@ -99,7 +99,7 @@ Watch the related course on Nuxeo University:</br>
 
 A security policy is a class implementing the [`org.nuxeo.ecm.core.security.SecurityPolicy`](http://community.nuxeo.com/api/nuxeo/10.10/javadoc/org/nuxeo/ecm/core/security/SecurityPolicy.html) interface; it is strongly advised to extend `org.nuxeo.ecm.core.security.AbstractSecurityPolicy` for future compatibility.
 
-The class must be registered through the [`policies`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--policies) extension point of the [`org.nuxeo.ecm.core.security.SecurityService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.security.SecurityService) component.
+The class must be registered through the [`policies`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--policies) extension point of the [`org.nuxeo.ecm.core.security.SecurityService`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.core.security.SecurityService) component.
 
 A security policy has two important aspects, materialized by different methods of the interface:
 

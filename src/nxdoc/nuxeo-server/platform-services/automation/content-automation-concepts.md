@@ -489,7 +489,7 @@ If you need to dynamically define the values of the operation parameters you can
 
 An operation is a Java class with specific annotations, that usually is associated to an action. This action can be triggered by the user either directly through the user interface, or by responding to an event, or by a REST call to a remote server.
 
-The operations an user can invoke usually deal with the document repository (like creating or updating documents), but they can also do some other tasks like sending emails, converting binaries, etc. The Automation service already provides [tens of frequently used operations](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listOperations) that you may need when building your business logic. Developers can [contribute their own operations]({{page page='contributing-an-operation'}}).
+The operations an user can invoke usually deal with the document repository (like creating or updating documents), but they can also do some other tasks like sending emails, converting binaries, etc. The Automation service already provides [tens of frequently used operations](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/listOperations) that you may need when building your business logic. Developers can [contribute their own operations]({{page page='contributing-an-operation'}}).
 
 The main elements that compose an operation are:
 
@@ -534,7 +534,7 @@ There are several types of predefined parameters:
 - **blob**: A Nuxeo blob (the raw content of the blob in the case of a REST invocation)
 - **documents**: A list of documents
 - **bloblist**: A list of blobs
-- Any other object that is convertible from a string: you can register new object converters trough the [`adapters`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--adapters) extension point of the [`org.nuxeo.ecm.core.operation.OperationServiceComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.operation.OperationServiceComponent) component
+- Any other object that is convertible from a string: you can register new object converters trough the [`adapters`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--adapters) extension point of the [`org.nuxeo.ecm.core.operation.OperationServiceComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.core.operation.OperationServiceComponent) component
 - **An expression**: This represents a MVEL expression (which is compatible with basic EL expressions) that can output dynamic values. When using expressions you must prepend it with the prefix `expr:` or between `@{ }`.
     Example:
 
@@ -801,7 +801,7 @@ If inside a chain you need to execute some operations under the identity of anot
 
 ## Main Automation Categories Available
 
-You now understand how powerful the Automation module is. All available operations are listed [on the Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listOperations). You can also write your [own operations]({{page page='contributing-an-operation'}}). In this section, we just stop by a few noteworthy ones.
+You now understand how powerful the Automation module is. All available operations are listed [on the Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/listOperations). You can also write your [own operations]({{page page='contributing-an-operation'}}). In this section, we just stop by a few noteworthy ones.
 
 ### Conversion
 

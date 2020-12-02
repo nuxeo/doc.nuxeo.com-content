@@ -94,7 +94,7 @@ Note that fancybox actions cannot currently be used as form actions (e.g present
 
 When referencing a XHTML template via the&nbsp;`include` property, if this template holds a form, it should be using the variable `fancyboxFormId` as its form id for the fancybox to be reopened on validation errors.
 
-The bulk edit action can be taken as an example, see the [action "CURRENT_SELECTION_EDIT" registration](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.actions--actions) and [referenced template](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/incl/bulk_edit_box.xhtml).
+The bulk edit action can be taken as an example, see the [action "CURRENT_SELECTION_EDIT" registration](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewContribution/org.nuxeo.ecm.platform.actions--actions) and [referenced template](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/incl/bulk_edit_box.xhtml).
 
 View online reference: [http://showcase.nuxeo.com/nuxeo/layoutDemo/fancyboxAction](http://showcase.nuxeo.com/nuxeo/layoutDemo/fancyboxAction)
 

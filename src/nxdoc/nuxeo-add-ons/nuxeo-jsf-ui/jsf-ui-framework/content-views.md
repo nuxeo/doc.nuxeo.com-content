@@ -537,7 +537,7 @@ In the previous example, activating "myQuickFilter" will display the children of
 
 The `pageSize` element defines the default page size, it can also be changed later. The `pageSizeBinding` element can also be defined: it can resolve an EL expression in case the page size is held by a third party instance (document, Seam component...), and will be used instead of the default page size if not null.
 
-The optional `maxPageSize` element can be placed at the same level than `pageSize`. It makes it possible to define the maximum page size so that the content view does not overload the server when retrieving a large number of items. When not set, the default value "1000" will be used: even when asking for all the results with a page size with value "0" (when exporting the content view in CSV format for instance), only 1000 items will be returned. This is configurable by [contributing the property `nuxeo.pageprovider.default-max-page-size`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.query.properties--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+The optional `maxPageSize` element can be placed at the same level than `pageSize`. It makes it possible to define the maximum page size so that the content view does not overload the server when retrieving a large number of items. When not set, the default value "1000" will be used: even when asking for all the results with a page size with value "0" (when exporting the content view in CSV format for instance), only 1000 items will be returned. This is configurable by [contributing the property `nuxeo.pageprovider.default-max-page-size`](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewContribution/org.nuxeo.ecm.core.query.properties--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
 ###### {{> anchor 'maxresults'}} maxResults elements
 
@@ -545,7 +545,7 @@ The optional `maxPageSize` element can be placed at the same level than `pageSiz
 
 To set this limit you need to add a `maxResults` parameter to `coreQueryPageProvider`, either using an integer value or one of the following keywords:
 
-*   `DEFAULT_NAVIGATION_RESULTS`: Used by most of the navigation page provider. The default is 200 and it can be overridden by [contributing the property `org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.query.api.PageProviderService--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+*   `DEFAULT_NAVIGATION_RESULTS`: Used by most of the navigation page provider. The default is 200 and it can be overridden by [contributing the property `org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults`](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewContribution/org.nuxeo.ecm.platform.query.api.PageProviderService--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
 *   `PAGE_SIZE`: this is useful when you are interested in a single page or if you don't need a total count.
 
@@ -556,7 +556,7 @@ Note that when using an Elasticsearch page provider, the `maxResults` limit is n
 For performance reason by default Elasticsearch does not allow you to do unlimited deep scrolling on results.
 Only the `index.max_result_window` results (which defaults to 10000) are accessible. Content view will not allow you to access pages out of this window to prevent errors.
 
-If you change the Elasticsearch configuration you can adapt the Nuxeo limit by contributing the property `org.nuxeo.elasticsearch.provider.maxResultWindow` to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+If you change the Elasticsearch configuration you can adapt the Nuxeo limit by contributing the property `org.nuxeo.elasticsearch.provider.maxResultWindow` to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
 {{/callout}}
 
@@ -838,7 +838,7 @@ When caching only one instance, setting the `cacheSize` element to more than "1"
 
 If a cache key is given, but no cache size is set, "5" will be used by default. Using "0" means no caching at all (and the cache key will be ignored).
 
-Caching is done by a Seam component named [`contentViewActions`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:contentViewActions) . Although the cache key, cache size and events configurations handle the most common use cases, it is sometimes useful to call this bean methods directly when forcing a refresh.
+Caching is done by a Seam component named [`contentViewActions`](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewSeamComponent/seam:contentViewActions) . Although the cache key, cache size and events configurations handle the most common use cases, it is sometimes useful to call this bean methods directly when forcing a refresh.
 
 The `refresh` and `reset` elements configurations make it possible to refresh/reset this content view when receiving the listed Seam event names. Only `documentChanged` and `documentChildrenChanged` are handled by default, but it is possible to react to new events by adding a method with an observer on this event on a custom Seam component, and call the method `contentViewActions.refreshOnSeamEvent(String seamEventName)` or `contentViewActions.resetPageProviderOnSeamEvent(String seamEventName)`.
 

@@ -409,7 +409,7 @@ history:
 
 ---
 
-The Nuxeo Platform provides an extensible and customizable marshalling service: [MarshallerRegistry](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewService/org.nuxeo.ecm.core.io.registry.MarshallerRegistry). This service allows you to use built-in marshallers but also to register your own
+The Nuxeo Platform provides an extensible and customizable marshalling service: [MarshallerRegistry](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewService/org.nuxeo.ecm.core.io.registry.MarshallerRegistry). This service allows you to use built-in marshallers but also to register your own
 
 MarshallerRegistry allows you to:
   * extend or override existing marshallers
