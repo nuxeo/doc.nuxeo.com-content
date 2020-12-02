@@ -413,4 +413,4 @@ public class MyComponent extends DefaultComponent {
 }
 ```
 
-As a reference, this declared start order is visible on the [Explorer Component Listing](ttps://explorer.nuxeo.com/nuxeo/site/distribution/latest/listComponents).
+As a reference, this declared start order is visible on the [Explorer Component Listing](ttps://explorer.nuxeo.com/nuxeo/site/distribution/10.10/listComponents).
