@@ -554,7 +554,7 @@ For that, the XML component needs to:
 *   Specify a target extension point,
 *   Provide the XML content expected by the target extension point.
 
-Expected XML syntax is defined by the XMap object referenced in the extension point declaration.
+Expected XML syntax is defined by the [XMap object]({{page page='how-to-define-a-runtime-xmap-object'}}) referenced in the extension point declaration.
 
 Here is an example contribution to an extension point:
 
