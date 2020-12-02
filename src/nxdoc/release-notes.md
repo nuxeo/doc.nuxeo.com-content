@@ -16,7 +16,7 @@ Discover here new features, improvements and bug fixes for each of our products 
 {{#> panel type='secondary' match_height='true'}}
 ### Server
 
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='next' space='nxdoc' page='nuxeo-server-release-notes'}})
+[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nxdoc/next/nuxeo-server-release-notes'}})
 
 {{/panel}}
 </div>
@@ -25,7 +25,7 @@ Discover here new features, improvements and bug fixes for each of our products 
 {{#> panel type='secondary' match_height='true'}}
 ### Web UI
 
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='next' space='nxdoc' page='web-ui-release-notes'}})
+[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nxdoc/next/web-ui-release-notes'}})
 
 {{/panel}}
 </div>
