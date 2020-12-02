@@ -592,7 +592,8 @@ For that, the XML component needs to:
 - Specify a target extension point,
 - Provide the XML content expected by the target extension point.
 
-Expected XML syntax is defined by the [XMap object]({{page page='how-to-create-a-service'}}#xmap-annotated-object) referenced in the extension point declaration. This oject's javadoc is also visible on the extension point page in the Explorer, see [*Contribution Descriptors* on a sample page](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.event.EventServiceComponent--listener#toc1).
+Expected XML syntax is defined by the [XMap object]({{page page='how-to-define-a-runtime-xmap-object'}}) referenced in the extension point declaration.
+This oject's javadoc is also visible on the extension point page in the Explorer, see [*Contribution Descriptors* on a sample page](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.event.EventServiceComponent--listener#toc1).
 
 Here is an example contribution to the extension point presented above:
 
