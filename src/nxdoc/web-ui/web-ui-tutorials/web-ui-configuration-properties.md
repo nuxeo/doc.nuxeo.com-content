@@ -112,6 +112,13 @@ An example of its usage can be found on the [Nuxeo Date Picker](https://github.c
 </component>
 ```
 
+### Timezone
+
+By default, Web UI displays dates according to the timezone detected by the user's web browser.
+However, by configuring the `timezone` setting, it's possible to specify the name of a specific timezone (according to the [IANA tz database](https://www.iana.org/time-zones)) to be used globally instead.
+For the moment, the only valid value for this setting is `Etc/UTC`, which assumes that the time specified by the user is UTC.  
+
+
 ### Others
 
 By default, there are also two more settings defined related to [Amazon S3 Direct Upload for Web UI]({{page page='amazon-s3-direct-upload'}}) and [Page Providers]({{page page='page-providers'}}).
