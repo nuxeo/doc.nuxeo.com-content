@@ -143,7 +143,7 @@ public class MyComponent extends DefaultComponent implements MyService {
 
 {{> anchor 'xmap-annotated-object'}}Now let's define an extension point for this component, to accept configurable objects, and maybe use them in the service API.
 
-This involves creating a XMap object, here is a sample:
+This involves [creating a XMap object]({{page page='how-to-define-a-runtime-xmap-object'}}), here is a sample:
 ```
 package org.mycompany.myproject.api;
 
@@ -160,12 +160,13 @@ public class SampleDescriptor {
     String title;
 
     @XNodeList(value = "display/on", type = ArrayList.class, componentType = String.class)
-    List<String> displays = new ArrayList<>();
+    List<String> displays;
 
     @XNodeMap(value = "properties/property", key = "@name", type = HashMap.class, componentType = String.class)
-    Map<String, String> properties = new HashMap<>();
+    Map<String, String> properties;
 
     // add convenient getters here
+
 }
 ```
 
