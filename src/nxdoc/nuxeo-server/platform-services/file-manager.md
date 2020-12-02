@@ -84,6 +84,17 @@ The File Manager is used to create documents from simple binaries.
 
 From a user perspective, the Nuxeo Platform offers many ways to capture a binary so as to make it a document with a binary property. It can be done from the browser's [drag and drop]({{page space='userdoc' page='content-create'}}#importing-documents-using-drag-and-drop), from the [upload REST API]({{page page='howto-upload-file-nuxeo-using-rest-api'}}), from [WebDAV]({{page space='nxdoc' page='working-with-webdav'}}), from [CMIS]({{page page='cmis'}}), from [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}), ...
 
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related expert session on Nuxeo University:</br>
+- [File Manager Expert Session](https://university.nuxeo.com/learn/course/external/view/elearning/218/file-manager)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-file-manager-expert-session
+    name: Screenshot 2020-12-02 at 10.17.38.png
+    server#screenshot#up_to_date
+--}}
+![university-file-manager-expert-session](nx_asset://63299896-c493-4ad3-9e78-d7ffdd32c0ff ?w=450,border=true)
+{{/callout}}
+
 The File Manager service is a traditional Nuxeo Platform service that offers some methods that help standardize what happens when a file is captured in the Platform, in regard to:
 
 - What document type should be created.
