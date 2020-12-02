@@ -330,7 +330,7 @@ There is one more annotation provided by the automation service: the `@Context` 
 
 When registering an automation chain, the chain will be checked to find a path from the first operation to the last one to be sure the chain can be executed at runtime. This means identifying at least one method in each operation that matches the signature of the next operation. If such a path cannot be found, an error is thrown (at registration time). For more details on registering an operation chain, see [Automation Chain]({{page page='automation-chain'}}).
 
-To register your operation, create a Nuxeo XML extension and contribute it to the [`operations` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--operations). Example:
+To register your operation, create a Nuxeo XML extension and contribute it to the [`operations` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--operations). Example:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="operations">

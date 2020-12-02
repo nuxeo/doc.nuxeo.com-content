@@ -134,7 +134,7 @@ The `PublisherService` mainly works with three concepts:
 
 Publishing in local Sections is the default way to publish documents.
 
-Here is the default contribution you can find in [rendition-publisher-contrib.xml](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.rendition.publisher) located in the `nuxeo-platform-rendition-publisher` project:
+Here is the default contribution you can find in [rendition-publisher-contrib.xml](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.platform.rendition.publisher) located in the `nuxeo-platform-rendition-publisher` project:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.publisher.impl.service.PublisherServiceImpl"

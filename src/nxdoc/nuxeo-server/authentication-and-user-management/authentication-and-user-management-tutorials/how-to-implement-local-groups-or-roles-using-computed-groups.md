@@ -203,7 +203,7 @@ We can summarize the Computed Group Service as follows:
 - You can register a class that implements a method that will be called just after each user connection.
 - The list of strings returned by your method will be considered as the list of virtual groups the user belongs to.
 
-{{#> callout type='info' }}You should first have a quick first look to the [Javadoc of the ComputedGroupService](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/computedgroups/ComputedGroupsService.html) and the explorer.nuxeo.org documentation around this service ([computer](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl--computer), [computerChain](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl--computerChain)) and get back to it after having played this tutorial! {{/callout}}
+{{#> callout type='info' }}You should first have a quick first look to the [Javadoc of the ComputedGroupService](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/computedgroups/ComputedGroupsService.html) and the explorer.nuxeo.org documentation around this service ([computer](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl--computer), [computerChain](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl--computerChain)) and get back to it after having played this tutorial! {{/callout}}
 
 ### Preparing the Project
 

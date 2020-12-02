@@ -149,7 +149,7 @@ Sometimes, you may need to do a check globally, without any underlying context. 
 *   Use groups (or virtual groups) to check for a capacity.
     This is how we manage global screens in the Nuxeo Platform.
     Virtual groups and roles are basically the same.
-    You can contribute specific virtual groups using the [GroupComputer Service](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl--computer).
+    You can contribute specific virtual groups using the [GroupComputer Service](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl--computer).
 
 *   Use the `Role` attribute of the Principal.
     Via UserManager you can contribute your own principal.

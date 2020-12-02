@@ -197,7 +197,7 @@ See [NXP-21891](https://jira.nuxeo.com/browse/NXP-21891).
 
 {{! multiexcerpt name='upgrade-9.1-deprecated.automatic-versioning'}}
 
-We introduced a new automatic versioning system in 9.1. We deprecated [versioningRules](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningRules) extension point. You now have to use new extension points, see [documentation]({{page page='versioning#automatic-versioning-system'}}).
+We introduced a new automatic versioning system in 9.1. We deprecated [versioningRules](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningRules) extension point. You now have to use new extension points, see [documentation]({{page page='versioning#automatic-versioning-system'}}).
 
 Nuxeo provides a backward compatibility mechanism, but it could be not accurate.
 
@@ -342,7 +342,7 @@ Directories are now stored in MongoDB when enabling the `mongodb` template. You 
 
 **Migrating your directories to MongoDB**
 
-To migrate your custom directories to MongoDB, enable the `mongodb` template and use the extension point [`org.nuxeo.ecm.directory.GenericDirectory`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.directory.GenericDirectory--directories) instead of [`org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-9.2/viewExtensionPoint/org.nuxeo.ecm.directory.sql.SQLDirectoryFactory--directories). See [NXP-19175](https://jira.nuxeo.com/browse/NXP-19175).
+To migrate your custom directories to MongoDB, enable the `mongodb` template and use the extension point [`org.nuxeo.ecm.directory.GenericDirectory`](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.directory.GenericDirectory--directories) instead of [`org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-9.2/viewExtensionPoint/org.nuxeo.ecm.directory.sql.SQLDirectoryFactory--directories). See [NXP-19175](https://jira.nuxeo.com/browse/NXP-19175).
 
 **Using MongoDB with SQL directories**
 

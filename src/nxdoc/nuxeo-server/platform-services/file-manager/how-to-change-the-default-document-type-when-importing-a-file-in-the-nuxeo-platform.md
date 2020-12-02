@@ -109,7 +109,7 @@ In this how-to, [importing a file]({{page version='' space='userdoc' page='conte
 
 When we drag and drop a file on a folder or workspace, a new document of type (File, Image, Picture, Contract...) is automatically created depending on the MIME Type and file extension. For example, dragging a .png file creates a Picture.
 
-The mechanism to create a Nuxeo document with an import is tight to the [plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins) extension point from the `FileManager` service.
+The mechanism to create a Nuxeo document with an import is tight to the [plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins) extension point from the `FileManager` service.
 
 According to the MIME type of the file you try to import, a specific plugin will be called. And most of the time, it's the `DefaultFileImporter` plugin that will be used.
 

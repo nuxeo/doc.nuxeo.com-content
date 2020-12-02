@@ -83,7 +83,7 @@ history:
         version: '1'
 
 ---
-As described on the page [Managing Permissions]({{page space='userdoc' page='managing-permissions'}}), the Edit permission visible in the UI contains the permission to remove content. This means that you cannot grant the Edit permission and deny the Remove access right at the same level of the repository. So you need to override the [default&nbsp;`Write` permission](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions) to be able to do that.
+As described on the page [Managing Permissions]({{page space='userdoc' page='managing-permissions'}}), the Edit permission visible in the UI contains the permission to remove content. This means that you cannot grant the Edit permission and deny the Remove access right at the same level of the repository. So you need to override the [default&nbsp;`Write` permission](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions) to be able to do that.
 
 ## Procedure
 

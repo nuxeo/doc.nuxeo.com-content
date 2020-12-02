@@ -35,7 +35,7 @@ version_override:
 The Nuxeo Platform reads configuration properties that you can set either:
 
 - In a nuxeo.conf file
-- By contributing to the [Configuration Service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute)
+- By contributing to the [Configuration Service](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute)
 - From the Setup tab in the Admin Center (if Nuxeo JSF UI is installed)
 
 ## nuxeo.conf File {{> anchor 'conf-manual-edition'}}
@@ -77,7 +77,7 @@ You can also take a look at the [following page]({{page page='setup-best-practic
 
 ## Configuration Parameters Index
 
-The properties that can be set in nuxeo.conf are below. Properties that can be contributed to the Configuration service are available [from the Nuxeo Platform Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+The properties that can be set in nuxeo.conf are below. Properties that can be contributed to the Configuration service are available [from the Nuxeo Platform Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
 #### `JAVA_HOME`
 

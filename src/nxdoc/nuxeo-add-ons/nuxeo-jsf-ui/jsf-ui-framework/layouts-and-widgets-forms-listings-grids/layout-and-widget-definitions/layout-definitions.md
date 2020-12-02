@@ -115,7 +115,7 @@ Layouts can be used to display various kinds of information, in various renderin
 
 ## Layout Registration
 
-Layouts are registered using a regular [extension point]({{page page='runtime-and-component-model#extensions'}}) on the [Nuxeo ECM layout service](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.forms.layout.WebLayoutManager). Here is a sample contribution.
+Layouts are registered using a regular [extension point]({{page page='runtime-and-component-model#extensions'}}) on the [Nuxeo ECM layout service](http://explorer.nuxeo.org/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.platform.forms.layout.WebLayoutManager). Here is a sample contribution.
 
 ```
 <?xml version="1.0"?>

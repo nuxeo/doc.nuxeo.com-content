@@ -588,7 +588,7 @@ One can use `<deny>*</deny>` to disallow all previously-allowed classes. Other c
 
 ### Contributing Automation Scripting Operations
 
-Automation scripting operation is made through an XML contribution on the [`operation` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.automation.scripting.internals.AutomationScriptingComponent--operation):
+Automation scripting operation is made through an XML contribution on the [`operation` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.automation.scripting.internals.AutomationScriptingComponent--operation):
 
 ```xml
 <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="operation">

@@ -243,7 +243,7 @@ The Users & Groups step of the [startup wizard]({{page page='configuration-wizar
 
 The wizard will actually generate a contribution to the `userManager` extension point and some contributions for declaring users and groups directories, and it will copy them in the `nxserver/config` folder (ex: `default-ldap-users-directory-bundle.xml`).
 
-You can find a [full example of contribution to the userManager](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager) extension point on the explorer. Here is a review of the specific useful parts.
+You can find a [full example of contribution to the userManager](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager) extension point on the explorer. Here is a review of the specific useful parts.
 
 Users are defined on the `users` element:
 

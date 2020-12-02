@@ -93,11 +93,11 @@ Renditions are alternative representations of a document, or its content such as
 
 ## Rendition Contributions
 
-Renditions are declared on a document through rendition definition contributions. They are done on the  [`org.nuxeo.ecm.platform.rendition.service.RenditionService`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.rendition.service.RenditionService) .
+Renditions are declared on a document through rendition definition contributions. They are done on the  [`org.nuxeo.ecm.platform.rendition.service.RenditionService`](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewComponent/org.nuxeo.ecm.platform.rendition.service.RenditionService) .
 
 ### Rendition Definitions
 
-A rendition definition can be contributed through the  [`renditionDefinitions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.rendition.service.RenditionService--renditionDefinitions) extension point.
+A rendition definition can be contributed through the  [`renditionDefinitions`](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.platform.rendition.service.RenditionService--renditionDefinitions) extension point.
 
 {{#> panel type='code' heading='Sample contribution for a PDF rendition'}}
 ```xml
@@ -162,7 +162,7 @@ Since 7.2, both contributions can be filtered through standard filters we alread
 
 ### Default Rendition{{> anchor 'default_rendition'}}
 
-A [default rendition extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.rendition.service.RenditionService--defaultRendition) allows to configure which rendition should be produced according to contextual data:
+A [default rendition extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.platform.rendition.service.RenditionService--defaultRendition) allows to configure which rendition should be produced according to contextual data:
 
 - a `reason`
 - the `CurrentUser`
