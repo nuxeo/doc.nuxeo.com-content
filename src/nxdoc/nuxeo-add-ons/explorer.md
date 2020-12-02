@@ -12,6 +12,17 @@ tree_item_index: 630
 
 [Explorer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer) is a Nuxeo addon that allows to introspect the [Nuxeo Runtime Configuration]({{page page='runtime-and-component-model'}}) of the live application, export it as a *distribution*, and import similar distributions for reference and documentation.
 
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related expert session on Nuxeo University:</br>
+- [Nuxeo Explorer Expert Session](https://university.nuxeo.com/learn/course/external/view/elearning/219/nuxeo-explorer)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-explorer-expert-session
+    name: university-explorer-expert-session.png
+    addins#screenshot#up_to_date
+--}}
+![university-explorer-expert-session](nx_asset://a45659b9-47a3-4dea-a71e-3e8a1ec6d250 ?w=450,border=true)
+{{/callout}}
+
 The Nuxeo Explorer reference instance is available at [explorer.nuxeo.com](http://explorer.nuxeo.com). It displays reference distributions for all major Nuxeo releases and is referenced in this documentation page. The live Runtime introspection has been disabled on this server.
 
 ## Installation
