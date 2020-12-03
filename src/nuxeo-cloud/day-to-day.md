@@ -4,6 +4,7 @@ review:
     comment: ''
     date: '03-19-2020'
     status: ok
+is_overview: true
 labels:
     - nuxeo-cloud
 tree_item_index: 300
