@@ -123,10 +123,8 @@ The File Manager service is a traditional Nuxeo Platform service that offers som
 - There is also the [`FileManager.ImportWithProperties` Automation operation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/FileManager.ImportWithProperties), which provides a way to create in one REST call a document from a binary **and** set properties on it.
 
 {{#> callout type='info' }}
-
-- The versioning policies applied to the File Manager are the ones defined globally for the platform, see the [Automatic Versioning]({{page page='versioning'}}#automatic-versioning-system) section of the Versioning page.
-- Please note that if the file name of [FileImporterContext](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/nuxeo-platform-filemanager-api/src/main/java/org/nuxeo/ecm/platform/filemanager/api/FileImporterContext.java) is missing then it will be filled with the [Blob's](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-core/nuxeo-core-api/src/main/java/org/nuxeo/ecm/core/api/Blob.java) file name.
-
+The versioning policies applied to the File Manager are the ones defined globally for the platform, see the [Automatic Versioning]({{page page='versioning'}}#automatic-versioning-system) section of the Versioning page.</br>
+Please note that if the file name of [FileImporterContext](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/nuxeo-platform-filemanager-api/src/main/java/org/nuxeo/ecm/platform/filemanager/api/FileImporterContext.java) is missing then it will be filled with the [Blob's](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-core/nuxeo-core-api/src/main/java/org/nuxeo/ecm/core/api/Blob.java) file name.
 {{/callout}}
 
 ## Implementing Your Own Plugin
