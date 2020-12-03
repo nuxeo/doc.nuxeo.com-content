@@ -7,6 +7,7 @@ review:
 labels:
     - release-notes
 tree_item_index: 790
+is_overview: true
 ---
 
 Discover here new features, improvements and bug fixes for each of our products available in the latest release.  
