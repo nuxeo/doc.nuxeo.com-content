@@ -14,7 +14,7 @@ tree_item_index: 630
 
 {{#> callout type='info'  heading='Nuxeo University'}}
 Watch the related expert session on Nuxeo University:</br>
-- [Nuxeo Explorer Expert Session](https://university.nuxeo.com/learn/course/external/view/elearning/219/nuxeo-explorer)
+[Nuxeo Explorer Expert Session](https://university.nuxeo.com/learn/course/external/view/elearning/219/nuxeo-explorer)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-explorer-expert-session
     name: university-explorer-expert-session.png
