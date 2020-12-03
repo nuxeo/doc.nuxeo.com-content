@@ -9,6 +9,7 @@ labels:
     - nuxeo-drive
     - mschoentgen
 tree_item_index: 400
+is_overview: true
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
