@@ -25,6 +25,7 @@ confluence:
     source_link: /display/NXDOC/Marketplace+Add-Ons
 section_parent: addons
 tree_item_index: 500
+is_overview: true
 version_override:
     LTS 2015: 710/nxdoc/marketplace-add-ons
     '6.0': 60/nxdoc/marketplace-add-ons

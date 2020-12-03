@@ -12,6 +12,7 @@ labels:
     - lts2017-ok
 section_parent: sdks
 tree_item_index: 600
+is_overview: true
 version_override:
     LTS 2015: 710/nxdoc/clients
     '6.0': 60/nxdoc/clients
