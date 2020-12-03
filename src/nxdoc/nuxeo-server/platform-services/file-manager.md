@@ -86,7 +86,7 @@ From a user perspective, the Nuxeo Platform offers many ways to capture a binary
 
 {{#> callout type='info'  heading='Nuxeo University'}}
 Watch the related expert session on Nuxeo University:</br>
-- [File Manager Expert Session](https://university.nuxeo.com/learn/course/external/view/elearning/218/file-manager)
+[File Manager Expert Session](https://university.nuxeo.com/learn/course/external/view/elearning/218/file-manager)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-file-manager-expert-session
     name: Screenshot 2020-12-02 at 10.17.38.png
