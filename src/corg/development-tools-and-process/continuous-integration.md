@@ -16,6 +16,18 @@ Setting up continuous integration on your project is a good practice to prevent 
 This page intends to give guidelines on bootstrapping CI chain for your project. It won't explain how to do it step by step: too many factors may vary to explain this in a generic way.
 {{/callout}}
 
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University:</br>
+- [Expert Session - Build a custom Nuxeo instance with Docker, Jenkins and Kubernetes](https://university.nuxeo.com/learn/course/external/view/elearning/220/jenkins-docker-k8s)
+- [Expert Session - Nuxeo Software Factory](https://university.nuxeo.com/learn/course/external/view/elearning/136/software-factory)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/ci-university.png
+    name: ci-university.png
+    server#screenshot#up_to_date
+--}}
+![ci-university.png](nx_asset://94087de0-3b91-4ca3-8afe-02c8a2a2bf85 ?w=450,border=true)
+{{/callout}}
+
 ## Define Expectations
 
 The architecture to set up depends on:
