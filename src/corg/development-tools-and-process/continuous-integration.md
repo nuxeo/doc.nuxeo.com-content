@@ -18,8 +18,8 @@ This page intends to give guidelines on bootstrapping CI chain for your project.
 
 {{#> callout type='info'  heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
-- [Expert Session - Build a custom Nuxeo instance with Docker, Jenkins and Kubernetes](https://university.nuxeo.com/learn/course/external/view/elearning/220/jenkins-docker-k8s)
-- [Expert Session - Nuxeo Software Factory](https://university.nuxeo.com/learn/course/external/view/elearning/136/software-factory)
+&#8226; [Expert Session - Build a custom Nuxeo instance with Docker, Jenkins and Kubernetes](https://university.nuxeo.com/learn/course/external/view/elearning/220/jenkins-docker-k8s)</br>
+&#8226; [Expert Session - Nuxeo Software Factory](https://university.nuxeo.com/learn/course/external/view/elearning/136/software-factory)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/ci-university.png
     name: ci-university.png
