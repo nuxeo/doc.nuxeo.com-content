@@ -101,7 +101,7 @@ An example of its usage can be found on the [Nuxeo Date Picker](https://github.c
 <component name="org.nuxeo.web.ui.properties.contrib">
   <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
 
-     <!-- Date (time) format -->
+    <!-- Date (time) format -->
     <property name="org.nuxeo.web.ui.dateFormat">LL</property>
     <property name="org.nuxeo.web.ui.dateTimeFormat">LLL</property>
 
@@ -118,6 +118,16 @@ By default, Web UI displays dates according to the timezone detected by the user
 However, by configuring the `timezone` setting, it's possible to specify the name of a specific timezone (according to the [IANA tz database](https://www.iana.org/time-zones)) to be used globally instead.
 For the moment, the only valid value for this setting is `Etc/UTC`, which assumes that the time specified by the user is UTC.  
 
+```xml
+<component name="org.nuxeo.web.ui.properties.contrib">
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+
+    <!-- Timezone -->
+    <property name="org.nuxeo.web.ui.timezone">Etc/UTC</property>
+
+  </extension>
+</component>
+```
 
 ### Others
 
