@@ -110,10 +110,10 @@ public class MyComponent extends DefaultComponent {
     @Override
     public <T> T getAdapter(Class<T> adapter) {
         if (adapter.isAssignableFrom(MyService.class)) {
-            return service;
+            return (T) service;
         }
         if (adapter.isAssignableFrom(MyOtherService.class)) {
-            return otherService;
+            return (T) otherService;
         }
         return null;
     }
@@ -133,7 +133,7 @@ public class MyComponent extends DefaultComponent implements MyService {
             return (T) this;
         }
         if (adapter.isAssignableFrom(MyOtherService.class)) {
-            return otherService;
+            return (T) otherService;
         }
         return null;
     }
@@ -151,19 +151,19 @@ package org.mycompany.myproject.api;
 public class SampleDescriptor {
 
     @XNode("@id")
-    String id;
+    protected String id;
 
     @XNode("@class")
-    String klass;
+    protected String klass;
 
     @XNode("title")
-    String title;
+    protected String title;
 
     @XNodeList(value = "display/on", type = ArrayList.class, componentType = String.class)
-    List<String> displays;
+    protected List<String> displays;
 
     @XNodeMap(value = "properties/property", key = "@name", type = HashMap.class, componentType = String.class)
-    Map<String, String> properties;
+    protected Map<String, String> properties;
 
     // add convenient getters here
 
@@ -319,10 +319,12 @@ Defining an extension point is not strictly necessary if you just want to expose
 
         protected static final String MY_PROP_NAME = "org.mycompany.myproject.myprop";
 
+        protected static final String DEFAULT_VALUE = "defaultValue";
+
         @Override
         public void start(ComponentContext context) {
             super.start(context);
-            String myPropValue = Framework.getService(ConfigurationService.class).getString(MY_PROP_NAME);
+            String myPropValue = Framework.getService(ConfigurationService.class).getString(MY_PROP_NAME, DEFAULT_VALUE);
         }
 
     }
@@ -330,33 +332,34 @@ Defining an extension point is not strictly necessary if you just want to expose
     It can also be retrieved from other Java classes in the code, outside the component implementation.
 1.  Yet another alternative is possible if this configuration property needs to be changed easily depending on the infrastructure, from `nuxeo.conf` properties or [Configuration Templates]({{page page='configuration-templates'}}):
     ```
-    import org.nuxeo.runtime.services.config.ConfigurationService;
-
     public class MyComponent extends DefaultComponent {
 
         protected static final String MY_PROP_NAME = "org.mycompany.myproject.myprop";
 
+        protected static final String DEFAULT_VALUE = "defaultValue";
+
         @Override
         public void start(ComponentContext context) {
             super.start(context);
-            String myPropValue = Framework.getProperty(MY_PROP_NAME);
+            String myPropValue = Framework.getProperty(MY_PROP_NAME, DEFAULT_VALUE);
         }
 
     }
     ```
-1.  Last but not least, using the `ConfigurationService` and the environment property can be combined, by using a variable in the ConfigurationService contribution:
+1.  Last but not least, using the `ConfigurationService` and the Nuxeo property can be combined, by using a variable in the ConfigurationService contribution:
     ```
     <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
       <property name="org.mycompany.myproject.myprop">
-        ${org.mycompany.myproject.mypropFromEnv:=myDefaultValue}
+        ${org.mycompany.myproject.mypropFromNuxeoConf:=myDefaultValue}
       </property>
     </extension>
     ```
     Retrieving this property from the code can be done through the same previous lookup
-    `Framework.getService(ConfigurationService.class).getString(MY_PROP_NAME)`: during the deployment, if the environment property `org.mycompany.myproject.mypropFromEnv` is defined in the `nuxeo.conf` or in configuration templates, this value will be used. </br>
+    `Framework.getService(ConfigurationService.class).getString(MY_PROP_NAME, DEFAULT_VALUE)`: during the deployment, if the Nuxeo property `org.mycompany.myproject.mypropFromNuxeoConf` is defined in the `nuxeo.conf` or in configuration templates, this value will be used. </br>
     Otherwise, the default value (after the `:=` marker) will be resolved.
 
-    Note that, using the same property name, a warning will be issued at startup, to avoid confusions: the environment property will be ignored in this case.
+    Note that, using the same property name, a warning will be issued at startup, to avoid confusions, but the
+    Nuxeo property value will still be taken into account.
 
 ## {{> anchor 'handling-dependencies'}}Handling Dependencies
 
@@ -376,7 +379,7 @@ To make sure your component is **resolved** after another one, the `<require>` t
 
 Note that, you do not need to require another component if you contribute to it: this dependency is implicit. In the previous example where a contribution was made to the `org.nuxeo.runtime.ConfigurationService` extension point `configuration`, no requirement is needed.
 
-To make sure you component is **started** after another one, the `#getApplicationStartedOrder` method should be implemented on the component:
+To make sure your component is **started** after another one, the `#getApplicationStartedOrder` method should be implemented on the component:
 ```
 public class MyComponent extends DefaultComponent {
 
