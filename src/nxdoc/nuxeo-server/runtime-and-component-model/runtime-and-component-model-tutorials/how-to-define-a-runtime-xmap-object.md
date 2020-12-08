@@ -11,12 +11,11 @@ tree_item_index: 700
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University:</br>
 [Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
-![]({{file name='university-extension-points.png' page='university'}} ?w=450,border=true)
+![]({{file name='university-extension-points.png' page='university'}} ?w=300,border=true)
 {{/callout}}
 
 Runtime contributions follow a XML format defined by a Java POJO, sometimes referred to as a "descriptor".
-This Java class is referenced on the extension point declaration, using specific Java annotations that will allow
-performing deserialization when parsing XML contributions.
+This Java class is referenced on the extension point declaration, using specific Java annotations that will allow performing deserialization when parsing XML contributions.
 
 Here is a sample XML fragment to be resolved:
 
@@ -29,8 +28,7 @@ Here is a sample XML fragment to be resolved:
 ```
 
 If this fragment should be contributed to the extension point name `myPoint` for component
-`org.mycompany.myproject.MyService`, the extension point declaration will need to reference a Java class using
-the `<object>` element:
+`org.mycompany.myproject.MyService`, the extension point declaration will need to reference a Java class using the `<object>` element:
 
 ```
 <?xml version="1.0"?>
@@ -47,8 +45,7 @@ the `<object>` element:
 </component>
 ```
 
-The corresponding class needs to be annotated with the `@XObject` annotation. Additional `@XNode` annotations are
-needed to specifiy node or attribute retrieval.
+The corresponding class needs to be annotated with the `@XObject` annotation. Additional `@XNode` annotations are needed to specify node or attribute retrieval.
 
 Here is the sample annotated class for the given XML format:
 
@@ -91,9 +88,7 @@ Here is a reference of supported built-in types:
 - Duration
 - Enum
 
-Note that primitive types can also be used (boolean instead of Boolean for instance) but a default value will
-automatically be resolved in that case, and it will not be possible to check whether the XML held the corresponding
-mapping or not (and this can be important for contribution merging logics).
+Note that primitive types can also be used (boolean instead of Boolean for instance) but a default value will automatically be resolved in that case, and it will not be possible to check whether the XML held the corresponding mapping or not (and this can be important for contribution merging logics).
 
 More complex structure like lists and maps are also supported:
 
@@ -132,8 +127,7 @@ public class SampleDescriptor {
 }
 ```
 
-Note that the resulting lists and maps will not be null by default, unless the annotation attribute "nullByDefault" is
-set to "true".
+Note that the resulting lists and maps will not be null by default, unless the annotation attribute "nullByDefault" is set to "true".
 
 It is also possible to define sub objects, also annotated, to be referenced within the original object.
 Here is a sample map of annotated objects:
@@ -184,10 +178,6 @@ This will resolve the corresponding sample format:
 </sample>
 ```
 
-If you'd like to properly handle hot-reload on the target component, or handle merging of descriptors, it can be
-useful to make the descriptor implement the `org.nuxeo.runtime.model.Descriptor` interface, that comes with needed
-`#getId` and `#merge` methods.
+If you'd like to properly handle hot-reload on the target component, or handle merging of descriptors, it can be useful to make the descriptor implement the `org.nuxeo.runtime.model.Descriptor` interface, that comes with needed `#getId` and `#merge` methods.
 
-The string marker `Descriptor#UNIQUE_DESCRIPTOR_ID` can be used as an id, when handling only one single instance of
-the contribution on the component, instead of multiple contributions (to hold simple configuration for instance).
-
+The string marker `Descriptor#UNIQUE_DESCRIPTOR_ID` can be used as an id, when handling only one single instance of the contribution on the component, instead of multiple contributions (to hold simple configuration for instance).
