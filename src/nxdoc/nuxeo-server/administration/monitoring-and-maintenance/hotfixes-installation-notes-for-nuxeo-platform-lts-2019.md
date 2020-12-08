@@ -656,6 +656,8 @@ SELECT nx_rebuild_read_acls();
 
 ### StreamWorkManager Configuration
 
+Prerequisite: To apply this configuration the `nuxeo.conf` should contain `nuxeo.stream.work.enabled=true`.
+
 It is possible to use the StreamWorkManager implementation with large works that exceed 1MB when serialized. The value is stored outside of the stream, in an external storage. For now the possible storages are the KeyValue store and the Transient store.
 
 Here are the `nuxeo.conf` options to use to activate this feature for the StreamWorkManager:
