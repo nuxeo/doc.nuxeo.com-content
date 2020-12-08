@@ -1,5 +1,5 @@
 ---
-title: Call an external application from within Nuxeo
+title: Call an External Application From Nuxeo
 toc: true
 review:
     comment: ''
@@ -8,61 +8,56 @@ review:
 tree_item_index: 50
 ---
 
-This chapter will focus on having Nuxeo calls an external application to trigger a processing, send data or retrieve data.
+This chapter will focus on having Nuxeo calls an external application to trigger processing, send data or retrieve data.
 
 <img src="https://app.lucidchart.com/publicSegments/view/ed826c37-96c2-481d-b4f6-56b8d55cf2e1/image.png" width="800px"/>
 
-## Challenges to address
+## Challenges
 
 ### Security
 
-The goals is to handle:
-
+The goal is to handle:
 - Authentication
-  - How do we present credential to the external application?
+  - How do we present a credential to the external application?
 - Identity propagation
   - Do we want to use a service account or not?
 
 Nuxeo provides several **authentication protocols**:
- 
-- [OAuth2]({{page version='' space='nxdoc' page='using-oauth2'}} support / Cloud Services (prefered option}})
-- Basic Authentication 
-- Any kind of custom token 
+- [OAuth2]({{page page='using-oauth2'}})
+- Basic Authentication
+- Any kind of custom token
 
-### Handling errors
+### Handling Errors
 
 The goal is to handle:
-
 - Exceptions in the external application
 - Availability of the external application
 - By extension, we may also need to address retry and back-off policies.
 
 For interactive integration, the right approach is probably to let the exceptions and errors bubble. If needed, Nuxeo integrates the `failsafe` [library](https://jodah.net/failsafe/). For asynchronous/batch integration, the Nuxeo infrastructure already provides patterns to do automatic retries.
 
-### Result handling
+### Result Handling
 
 The goal is to handle asynchronous requests and callback/resume.
 
 On the Nuxeo side, the standard way to address that is to:
-
 - Store the call context inside the key/value store
 - Expose a callback endpoint that will restore the context from the key/value store
 - Store the final result into the transient store
 
 In addition, all steps of the calls can be tracked inside the Audit Log.
 
-## Interactive / API level integration
+## Interactive/API level integration
 
-Here the idea is to extend or hook onto the Nuxeo API so that the call to the external service is executed when a Nuxeo API is called
+The idea here is, to extend or hook onto the Nuxeo API so that the call to the external service is executed when a Nuxeo API is called.
 
 ### Possible Implementations
 
 #### Automation Scripting
 
-Automation Scripting allows to deploy JavaScript code that wraps Automation Operations.
+Automation scripting allows deploying JavaScript code that wraps Automation Operations.
 
 Interesting operations are:
-
 - Call external HTTP Service
   - `Blob.PostToURL`
   - `HTTP.Call` from [nuxeo-labs-operations](https://github.com/nuxeo/nuxeo-labs/tree/master/nuxeo-labs-operations)
@@ -71,23 +66,20 @@ Interesting operations are:
  	- `Audit.LogEvent`
 
 Current limitations:
-
 - No direct support for OAuth Service providers
 - No API to access the transient store or the key/value store
 
-#### Custom Java operation 
+#### Custom Java Operation
 
 The idea is to build a custom Automation Operation that will:
-
 - Contain the java logic to handle the remote call
-- Expose a API for the rest of the platform including the client side
+- Expose an API for the rest of the platform including the client-side
 
 Interesting APIs and services:
-
-- HTTP Client libraries
- 	- Jersey Http Client
- 	- Apache httpcore
- 	- Google Http Client
+- HTTP Client libraries:
+ 	- Jersey HTTP Client
+ 	- Apache HttpCore
+ 	- Google HTTP Client
 - OAuth2ServiceProvider
 - KeyValueStore
 - TransientStore
@@ -101,11 +93,8 @@ A service wrapper allows you to:
 - Expose a native Nuxeo service
 - Bring consistency
 - Implement unit tests
-
-Leverage extension point system to configure calls to external service.
-
-Access Existing Nuxeo Services through OAuth Service Providers registration and the Transient Store / Blob Store.
-
+- Leverage extension point system to configure calls to external service
+- Access Existing Nuxeo Services through OAuth Service Providers registration and the Transient Store / Blob Store
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Integration/service-wrapper
@@ -114,10 +103,8 @@ Access Existing Nuxeo Services through OAuth Service Providers registration and 
 --}}
 ![service-wrapper](nx_asset://7947ecbc-36cf-40f3-b9f1-2f56336aac60 ?w=650,border=true)
 
-
 Associated gains:
-
-- Easier to use from the pure java code (Listener, Enricher, etc.)
+- Easier to use from the pure Java code (Listener, Enricher, etc.)
 - Leverage extension point system
 
 ### API Integration
@@ -127,7 +114,7 @@ Two options are possible:
 - Automation API
   - Automation Script or Automation Operation are exposed as part of the command API (RPC)
 - Enrichers and adapters
- 	- Integrate result of call to external service into existing Nuxeo API result 
+ 	- Integrate result of calls to external service into existing Nuxeo API result
 
   {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Integration/automation-rest-api.png
@@ -149,12 +136,12 @@ The idea is to trigger the call to the external service via an event
 ![streams-intro](nx_asset://46fa57db-00c2-4930-8f8a-eddde23e23a3 ?w=650,border=true)
 
 
-### Possible implementation
+### Possible Implementation
 
 #### Native Nuxeo Integration
 
 - Event Listener
-  - Synchronous or asynchronous Java class 
+  - Synchronous or asynchronous Java class
 - Work
  	- Asynchronous batch
 - Computation
@@ -167,19 +154,19 @@ The idea is to trigger the call to the external service via an event
 Leverage `nuxeo-stream` API or even directly Kafka API:
 
 - Leverage events or messages published by Nuxeo in Kafka
-- Deploy a Kafka Consumer/Producer
-  - Only depend on Kafka API
+- Deploy a Kafka Consumer/Producer:
+  - Only depends on Kafka API
  	- Read or write messages to communicate with Nuxeo
 
 <img src="https://app.lucidchart.com/publicSegments/view/a55374e0-b5b3-432b-927d-c5b80a341974/image.png" width="600px"/>
 
-##### Code sample for the Kafka integration
+##### Code Sample for the Kafka Integration
 
-You can check the `nuxeo-external-service-sample` [Github repository](https://github.com/nuxeo-sandbox/nuxeo-external-service-sample), which contains a sample code to manage communication between a Nuxeo Server and an external service using `nuxeo-stream` (Kafka).
+You can check the `nuxeo-external-service-sample` [GitHub repository](https://github.com/nuxeo-sandbox/nuxeo-external-service-sample), which contains a sample code to manage communication between a Nuxeo Server and an external service using `nuxeo-stream` (Kafka).
 
 <img src="https://github.com/nuxeo-sandbox/nuxeo-external-service-sample/raw/master/doc/principles.png" width="600px"/>
 
-## Event and CallBack system
+## Event and CallBack System
 
 Define a model for Async / Callback system
 
@@ -193,11 +180,11 @@ Review complete flow based on how it currently works for AWS Lambda
 I think that it would make sense to extract a standard code sample for implementing such a flow:
 
  - standard structure in KVStore
- 	- call ID 
+ 	- call ID
  	- Context info
  		- user
  		- target document/documents
- 		- info needed to resume processing after callback 
+ 		- info needed to resume processing after callback
  - standard structure in Transient Store
  	- blobs and result
  - standard callback endpoint
@@ -208,15 +195,15 @@ I think that it would make sense to extract a standard code sample for implement
  		- Work?
  		- Computation?
  -->
- 
-## Client side
+
+## Client-side
 
 Here are the possible approaches to integrate an external application inside Nuxeo UI on the front-end side:
 
 - Direct JavaScript
  	- Custom JavaScript to call external API
-- Custom Webcomponents
-- IFrame / Popup integration	
+- Custom Web components
+- IFrame / Popup integration
 
 Challenges to address:
 

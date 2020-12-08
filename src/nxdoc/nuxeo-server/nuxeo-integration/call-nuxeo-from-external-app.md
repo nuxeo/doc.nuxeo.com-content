@@ -1,5 +1,5 @@
 ---
-title: Call Nuxeo from within an external Application
+title: Call Nuxeo From an External Application
 toc: true
 review:
     comment: ''
@@ -22,7 +22,7 @@ Here are some examples:
 - Use **REST API operation**. The REST API documentation is versioned and available in the [Nuxeo Documentation](https://doc.nuxeo.com/rest-api/1/) website.
 - Use the **supported Nuxeo clients**: Java, Javascript, Python, .NET and PHP. More information on the [Client SDKs section](https://doc.nuxeo.com/nxdoc/client-sdks/)
 
-## Main considerations
+## Main Considerations
 
 ### Server side API
 
@@ -36,10 +36,9 @@ Several approaches exists:
   - Using the `@Async` adapter
 
 Challenges to address:
-
-  - Authentication
-  - Handling errors and availability
-  - Asynchronous and Callback system
+- Authentication
+- Handling errors and availability
+- Asynchronous and Callback system
 
 ### Client side API
 
@@ -52,9 +51,9 @@ Approaches:
 
 Here are the links of the most useful documentation pages:
 
-- [Nuxeo REST API Web Adapter](https://doc.nuxeo.com/nxdoc/rest-api-web-adapters/)
-- [Nuxeo REST API Enrichers](https://doc.nuxeo.com/nxdoc/content-enrichers/)
-- [Nuxeo Extended Fields](https://doc.nuxeo.com/nxdoc/document-json-extended-fields/)
+- [Nuxeo REST API Web Adapter]({{page version='' space='nxdoc' page='rest-api-web-adapters'}})
+- [Nuxeo REST API Enrichers]({{page version='' space='nxdoc' page='content-enrichers'}})
+- [Nuxeo Extended Fields]({{page version='' space='nxdoc' page='document-json-extended-fields'}})
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Don't forget to take the developer learning plan, available in Nuxeo University (**Home** > **Getting Started** > **Learning Plans**)
