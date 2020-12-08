@@ -1,11 +1,11 @@
 ---
-title: Integrate Nuxeo in Your Application
+title: Call Nuxeo From an External Application
 toc: true
 review:
     comment: ''
     date: '2020-08-31'
     status: ok
-tree_item_index: 400
+tree_item_index: 100
 ---
 
 ## Goal
@@ -19,16 +19,41 @@ Here are some examples:
 ## General Recommendations
 
 - Use the default **Nuxeo automation operations**. You can get the list of all default operation in [Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202019-10.10/listOperations). Indeed, the external application should make as few as possible assumptions about the Nuxeo side. Using automation operations is a good way to do that. On the other hand, the logic that has nothing to do with Nuxeo should be in the external app.
-- Use **REST API operation**. The REST API documentation is versioned and available in the [Nuxeo Documentation](https://doc.nuxeo.com/rest-api/1/) website.
-- Use the **supported Nuxeo clients**: Java, Javascript, Python, .NET and PHP. More information on the [Client SDKs section](https://doc.nuxeo.com/nxdoc/client-sdks/)
+- Use **REST API operation**. The REST API documentation is versioned and available in the [Nuxeo Documentation]({{page version='1' space='rest-api' page='index'}}) website.
+- Use the **supported Nuxeo clients**: Java, Javascript, Python, .NET and PHP. More information on the [Client SDKs section]({{page version='' space='nxdoc' page='client-sdks'}})
+
+## Main Considerations
+
+### Server side API
+
+Several approaches exists:
+
+- Call Nuxeo REST API
+  - Using the Java / Python / Javascript clients
+  - Raw REST API
+- Handle asynchronous processing
+  - Using the [Bulk Action Framework]({{page version='' space='nxdoc' page='bulk-action-framework'}})
+  - Using the `@Async` adapter
+
+Challenges to address:
+- Authentication
+- Handling errors and availability
+- Asynchronous and Callback system
+
+### Client side API
+
+Approaches:
+
+ - Nuxeo Javascript Client
+ - Reusable UI blocks (Using WebComponents or Nuxeo Elements)
 
 ## Links
 
 Here are the links of the most useful documentation pages:
 
-- [Nuxeo REST API Web Adapter](https://doc.nuxeo.com/nxdoc/rest-api-web-adapters/)
-- [Nuxeo REST API Enrichers](https://doc.nuxeo.com/nxdoc/content-enrichers/)
-- [Nuxeo Extended Fields](https://doc.nuxeo.com/nxdoc/document-json-extended-fields/)
+- [Nuxeo REST API Web Adapter]({{page version='' space='nxdoc' page='rest-api-web-adapters'}})
+- [Nuxeo REST API Enrichers]({{page version='' space='nxdoc' page='content-enrichers'}})
+- [Nuxeo Extended Fields]({{page version='' space='nxdoc' page='document-json-extended-fields'}})
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Don't forget to take the developer learning plan, available in Nuxeo University (**Home** > **Getting Started** > **Learning Plans**)
