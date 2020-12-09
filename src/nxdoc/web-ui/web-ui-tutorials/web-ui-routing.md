@@ -17,13 +17,13 @@ tree_item_index: 200
 ---
 ## Web UI Routing Mechanism
 
-The [nuxeo-app.html](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html) is the very top element of the Web UI.
+The [nuxeo-app.html](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js) is the very top element of the Web UI.
 
 Its main content is composed of:
- - a [paper-drawer-panel](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L220) which has:
- - a [paper-listbox](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L229) defining the left drawer menu buttons.
-   - collapsible [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L243) defining the left menu content associated to each menu button.
- - a [paper-header-panel](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L269) defining the main content with [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270):
+ - a [paper-drawer-panel](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L300-L306) which has:
+ - a [paper-listbox](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L314-L320) defining the left drawer menu buttons.
+   - collapsible [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L342-L348) defining the left menu content associated to each menu button.
+ - a [paper-header-panel](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L380) defining the main content with [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L381):
 
 
 ```xml
@@ -42,21 +42,21 @@ Its main content is composed of:
 </iron-pages>
 ```
 
-On [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270), you can see the `selected` attributes bound to the [page](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L350) property. When this [page](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#lL350) property changes its value, the [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270) will display the content element which has the same `name`.
+On [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L381), you can see the `selected` attributes bound to the [page](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L482-L485) property. When this [page](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L482-L485) property changes its value, the [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L381) will display the content element which has the same `name`.
 
-For instance, on [nuxeo-home](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L274), when clicking a recently viewed document, it will call the [navigateTo](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-home.html#L215) method defined on `Nuxeo.RoutingBehavior`.
+For instance, on [nuxeo-home](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L384), when clicking a recently viewed document, it will call the [navigateTo](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-home.html#L333) method defined on `Nuxeo.RoutingBehavior`.
 
 ```javascript
   this.navigateTo(detail.doc);
 ```
 
-This will trigger the display of the [nuxeo-browser](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L276) element in the main [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270), showing the clicked document.
+This will trigger the display of the [nuxeo-browser](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L386-L392) element in the main [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-app.js#L381), showing the clicked document.
 
 ## Routing Behavior
 
 The `Nuxeo.RoutingBehavior` is a behavior which provides convenient methods such as `urlFor` to insert inner links in the Web UI.
 
-For instance, [nuxeo-document-tree](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-document-tree/nuxeo-document-tree.html) which is the navigation tree in the left menu uses `urlFor` on each tree node to navigate to the associated document.
+For instance, [nuxeo-document-tree](https://github.com/nuxeo/nuxeo-web-ui/blob/72abdc5/elements/nuxeo-document-tree/nuxeo-document-tree.js) which is the navigation tree in the left menu uses `urlFor` on each tree node to navigate to the associated document.
 
 ```xml
 <a href$="[[urlFor(item)]]">
