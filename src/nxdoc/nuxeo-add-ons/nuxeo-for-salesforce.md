@@ -267,7 +267,9 @@ Server requirements:
 
 ### Salesforce package installation.
 
-Prerequesite: you must have installed the [Salesforce CLI](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.get_started_cli) and have it authenticated against your Salesforce organization. 
+Prerequesites:
+- You must have installed the [Salesforce CLI](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.get_started_cli) and have it authenticated against your Salesforce organization.
+- Your Salesforce organization must be on Salesforce lightening. Salesforce Aurora is not supported.
 
 The Nuxeo Salesforce package is currently made available as an [unlocked package](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_unlocked_pkg_intro.htm). Nuxeo will longer term publish it as a managed package on Salesforce marketplace. 
 
@@ -308,3 +310,110 @@ NB: you will need Nuxeo instance admin credentials.
 
 You can validate your set up is correct by using the Nuxeo Salesforce lightening component on a given SF object's page (ex: an Opportunity record), by clicking on "Edit page" with an admin user of the org and then dropping the Nuxeo component inside the page layout. Activate the configuration (select Dekstop) and then save and go back to  user screen. 
 You shoudl be able to click on a "Log in" button, that will open a pop up asking for authentication against the Nuxeo server if the user is not already authenticated in there. You can then drop a document in the library, it will be created in Nuxeo: everything is working!
+
+## User documentation
+
+## Configuration / Customization
+
+### Salesforce UI configuration
+
+The Nuxeo Lightening Network component is available for being integrated in customized Salesforce UIs. You can drop it inside any Salesforce Lightening container component (tabs, sections, pannels, etc...). You can drop the Nuxeo component several times on the same page. You can entitle it to Saleseforce permission framework.
+Once you dropped the component, you must choose the behaviour type among:
+
+- Library: this will expose a library browser with ability to drag'n drop documents.
+- Content list: this will expose the result of a query , with the ability to do a mapping between the salesfoce current record and the documents.
+- Search: this will display a global search component.
+
+You can also specify a custom configuration, see "Nuxeo Saelsforce service extension point" in the section after.
+
+Limitation: the component cannot be activated on the Salesforce mobile view.
+
+### Nuxeo Salesforce service extension point
+
+The Nuxeo Salesforce connector addon deploys a new "Salesforce configuration" service in the Nuxeo Platform with an extension point that allows to contribute various configurations. When dropping the Nuxeo component on the page layout, a `configuration` attribute allows to specify a configuration (as a string). The component when being loaded queries the configured configuration to Nuxeo server, which then asks the Salesforce configuration service for the specified configuration and returns it to the Salesforce ligthening component.
+
+This configuration object is used to configure several behaviours of the component: used pageproviders, custom salesforce properties / nuxeo properties mappings, enablement/disablement of some user actions, etc... We provide below an example of such a configuration. You can [contribute this extension from Studio](how-to-contribute-to-an-extension).
+
+`
+<extension target="org.nuxeo.salesforce.SalesforceComponent"
+      point="config">
+            
+      <library name="my">
+        <title>My Library</title>
+      	<root>/default-domain/workspaces/salesforce</root>
+      	<nuxeo-drive>false</nuxeo-drive>
+      	<sobject type='Opportunity'>Name,Description,Amount</sobject>
+      </library>
+      <listing name="my">
+      	<title>My Listing</title>
+      	<upload>false</upload>
+      	<link-operation>Salesforce.MyLink</link-operation>
+      	<link-test>function(doc, recordId) { return doc.properties['dc:source'] === recordId }</link-test>
+      	<nuxeo-drive>true</nuxeo-drive>
+      	<sobject type='Opportunity'>Name,Description,Amount</sobject>
+      	<query>
+      	function(context, params) {
+      		params.pageProvider = "my-second-page-provider";
+      		params.customerName = context.record.Name;
+      	}
+      	</query>
+      </listing>
+      <search name="my">
+      	<title>My Search</title>
+        <nuxeo-drive>true</nuxeo-drive>
+      	<page-provider>advanced_search</page-provider>
+      </search>
+      
+  </extension>
+
+`
+### Configuration use cases
+
+#### Disabling Nuxeo Drive Direct Edit action
+
+#### Changing the root path where the folders are created for the library behaviour
+
+#### Changing the title of the application
+
+#### Defining a new link operation for the Content List behaviour 
+includes changing the linkTest
+
+#### Defining a new link operation for the Content
+
+#### Updating the page provider and properties mapping for the content list behaviour
+
+
+   jg.writeStringField("type", LIBRARY_APP);
+            jg.writeStringField("name", libraryApp.name);
+            jg.writeStringField("title", libraryApp.title);
+            jg.writeStringField("root", libraryApp.root);
+            jg.writeBooleanField("nuxeoDrive", libraryApp.nuxeoDrive);
+            if (recordType != null && libraryApp.sobjectFields != null) {
+                writeFields(jg, libraryApp.sobjectFields.get(recordType));
+
+
+ jg.writeStringField("type", DOCLIST_APP);
+            jg.writeStringField("name", listingApp.name);
+            jg.writeStringField("title", listingApp.title);
+            jg.writeBooleanField("upload", listingApp.upload);
+            jg.writeStringField("linkTest", listingApp.linkTest);
+            jg.writeStringField("linkOp", listingApp.linkOp);
+            jg.writeStringField("query", listingApp.query);
+            jg.writeBooleanField("nuxeoDrive", listingApp.nuxeoDrive);
+            if (recordType != null && listingApp.sobjectFields != null) {
+                writeFields(jg, listingApp.sobjectFields.get(recordType));
+            }
+
+
+jg.writeStringField("type", SEARCH_APP);
+            jg.writeStringField("name", searchApp.name);
+            jg.writeStringField("title", searchApp.title);
+            jg.writeStringField("pageProvider", searchApp.pageProvider);
+            jg.writeBooleanField("nuxeoDrive", searchApp.nuxeoDrive);
+
+
+
+[Operations](https://github.com/nuxeo/nuxeo-salesforce/blob/10.10/nuxeo-salesforce-core/src/main/resources/OSGI-INF/automation-contrib.xml):
+Salesforce.TouchSFLibrary
+Salesforce.LinkAsSource
+
