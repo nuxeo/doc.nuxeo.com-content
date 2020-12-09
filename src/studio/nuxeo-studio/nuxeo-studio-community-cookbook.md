@@ -36,6 +36,22 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![color-search.png](nx_asset://19020243-4c2b-4bfa-9fc1-2ad6fd487f31 ?w=150,border=true)
+    </td>
+    <td>[Similar Color Search](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/color-search)</td>
+    <td>Nuxeo</td>
+    <td>Search, AI, Layouts</td>
+  </tr>
+  <tr>
+    <td>
+    ![copy-move.png](nx_asset://6d59bfc0-d874-4aff-8b92-3f2a0a6718d6 ?w=150,border=true)
+    </td>
+    <td>[Copy or move documents without the clipboard](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/copy-move)</td>
+    <td>Nuxeo</td>
+    <td>Layouts</td>
+  </tr>
+  <tr>
+    <td>
     ![nuxeo-date-time-picker2.png](nx_asset://31837bfd-dd61-4d11-b0a2-84c0e3eedb90 ?w=150,border=true)
     </td>
     <td>[Date Time Picker](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/nuxeo-date-time-picker)</td>
@@ -49,22 +65,6 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>[Local Group Admins](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/user-group-management)</td>
     <td>Nuxeo</td>
     <td>Administration</td>
-  </tr>
-  <tr>
-    <td>
-    ![geodistance.png](nx_asset://439fd2e0-751c-4387-9603-bc2451589e3e ?w=150,border=true)
-    </td>
-    <td>[Geodistance and Google Map Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/geodistance-search-and-google-map)</td>
-    <td>Nuxeo</td>
-    <td>Layouts, Search, Automation</td>
-  </tr>
-  <tr>
-    <td>
-    ![CreateFromTemplate.png](nx_asset://1d18ff33-5085-45f7-af63-51e3fc2f650f ?w=150,border=true)
-    </td>
-    <td>[Create a New Document From a Template List](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/create-from-template)</td>
-    <td>Nuxeo</td>
-    <td>Document Templates</td>
   </tr>
 </table>
 
@@ -108,6 +108,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+  <tr>
+    <td>
+    ![copy-move.png](nx_asset://6d59bfc0-d874-4aff-8b92-3f2a0a6718d6 ?w=150,border=true)
+    </td>
+    <td>[Copy or move documents without the clipboard](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/copy-move)</td>
+    <td>Nuxeo</td>
+    <td>Layouts</td>
+  </tr>
   <tr>
     <td>
     ![nuxeo-date-time-picker2.png](nx_asset://31837bfd-dd61-4d11-b0a2-84c0e3eedb90 ?w=150,border=true)
@@ -274,6 +282,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+  <tr>
+    <td>
+    ![color-search.png](nx_asset://19020243-4c2b-4bfa-9fc1-2ad6fd487f31 ?w=150,border=true)
+    </td>
+    <td>[Similar Color Search](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/color-search)</td>
+    <td>Nuxeo</td>
+    <td>Search, AI, Layouts</td>
+  </tr>
 <tr>
   <td>![ocr.png](nx_asset://11827a7a-3273-483b-9e1d-2ed226132815 ?w=150,border=true)</td>
   <td>[Extract Text from an Image-Based PDF with Google Vision](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/google-vision-ocr)</td>
