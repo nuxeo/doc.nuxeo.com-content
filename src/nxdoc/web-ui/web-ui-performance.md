@@ -12,7 +12,8 @@ labels:
 tree_item_index: 350
 ---
 
-In this page, we go through the different aspects of customization that may impact the performance of your Web UI apps.
+In this page, we go through different aspects of customization and usage that may impact the performance of your Web UI apps.
+
 
 ## Document Property Resolution
 
@@ -197,3 +198,22 @@ Then you can see the `visible` property to only fetch the books when the page is
 ```
 
 Thanks to this pattern, you can prevent useless requests from being sent and make sure your tab content is refreshed each time you display it.
+
+## Clipboard Usage
+
+Web UI clipboard is designed to guarantee that the move / copy operations can work up until 1500 documents roughly, and knowing that waiting time increases with the number of documents to handle.
+
+The clipboard operations leverage regular automation calls to the server, meaning that an operation is handled as a single transaction, and can timeout if it takes too long to execute (5 minutes by default).
+
+From a user experience standpoint the feature was designed to work in optimal conditions up to 100 documents.
+
+Below are some benchmarks ran on the feature to consider as a starting point to plan for your application usage.
+
+| Number of Documents | Copy | Move
+| :------------- | :----------: | -----------: |
+| 50 | 5/6 seconds | 3/4 seconds
+| 100 | 11/12 seconds | 5/6 seconds
+| 200 | 19/20 seconds | 6 seconds
+| 500 | 48/49 seconds | 12/13 seconds
+| 1000 | 1 min 33/34 seconds | 27/28 seconds
+| 2000 | 3m 15 seconds | 1 min 48 seconds
