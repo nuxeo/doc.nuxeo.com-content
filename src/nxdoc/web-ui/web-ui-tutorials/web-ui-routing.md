@@ -44,29 +44,28 @@ Its main content is composed of:
 
 On [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270), you can see the `selected` attributes bound to the [page](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L350) property. When this [page](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#lL350) property changes its value, the [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270) will display the content element which has the same `name`.
 
-For instance, on [nuxeo-home](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L274), when clicking a recently viewed document, it will call the [navigateTo](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-home.html#L215) method
+For instance, on [nuxeo-home](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L274), when clicking a recently viewed document, it will call the [navigateTo](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-home.html#L215) method defined on `Nuxeo.RoutingBehavior`.
 
 ```javascript
-  this.navigateTo('browse', detail.doc.path);
+  this.navigateTo(detail.doc);
 ```
 
-defined on `Nuxeo.RoutingBehavior`. It will navigate to the `/browse` part of the Web UI and therefore display the [nuxeo-browser](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L276) element in the main [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270) which shows the clicked document.
+This will trigger the display of the [nuxeo-browser](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L276) element in the main [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270), showing the clicked document.
 
 ## Routing Behavior
 
 The `Nuxeo.RoutingBehavior` is a behavior which provides convenient methods such as `urlFor` to insert inner links in the Web UI.
 
-For instance, [nuxeo-document-tree.html](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-document-tree/nuxeo-document-tree.html) which is the navigation tree in the left menu uses `urlFor` on each tree node to navigate to the associated document.
+For instance, [nuxeo-document-tree](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-document-tree/nuxeo-document-tree.html) which is the navigation tree in the left menu uses `urlFor` on each tree node to navigate to the associated document.
 
 ```xml
-<a href$="[[urlFor('browse', item.path)]]" class="layout horizontal">
-  <span><iron-icon icon="icons:chevron-left" class="flex"></iron-icon></span>
+<a href$="[[urlFor(item)]]">
+  <span><iron-icon icon="icons:chevron-left"></iron-icon></span>
   <span class="parent">[[item.title]]</span>
 </a>
 ```
 ![]({{file name='NAVIGATION_TREE.png'}} ?w=400,border=true)
 
-
-Another example use case of the routing mechanism are:
+Other use case examples of the routing mechanism are:
  - the [USER_MENU]({{page page='web-ui-slots#user_menu'}}) slot
  - when [adding a new search]({{page version='' space='nxdoc' page='web-ui-search'}})
