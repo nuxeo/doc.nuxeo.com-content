@@ -14,7 +14,6 @@ tree_item_index: 350
 
 In this page, we go through different aspects of customization and usage that may impact the performance of your Web UI apps.
 
-
 ## Document Property Resolution
 
 When fetching a document from the Rest API, you can request to resolve some document's [extended fields]({{page version='' space='nxdoc' page='document-json-extended-fields'}}). An extended field references other entities such as:
@@ -205,7 +204,7 @@ Web UI clipboard is designed to guarantee that the move / copy operations can wo
 
 The clipboard operations leverage regular automation calls to the server, meaning that an operation is handled as a single transaction, and can timeout if it takes too long to execute (5 minutes by default).
 
-From a user experience standpoint the feature was designed to work in optimal conditions up to 100 documents.
+From a user experience standpoint, the feature was designed to work in optimal conditions up to 100 documents.
 
 Below are some benchmarks ran on the feature to consider as a starting point to plan for your application usage.
 
