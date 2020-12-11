@@ -2,7 +2,7 @@
 title: 2 - Configure Nuxeo Platform
 review:
     comment: ''
-    date: '2020-09-15'
+    date: '2020-12-11'
     status: ok
 labels:
     - studio
@@ -32,39 +32,54 @@ First, we'll set up the Nuxeo Platform so it's ready for you to configure.
 
 DOWNLOAD AND REGISTER THE NUXEO PLATFORM
 
-1.  [Download Nuxeo Platform](https://www.nuxeo.com/downloads/) and unzip the archive.
+1. [Download Nuxeo Platform](https://www.nuxeo.com/downloads/) and unzip the archive.
 
-2.  Start Nuxeo Server:
+2. Use your **Nuxeo Online Services** credentials to register your instance. If you don't have a **NOS** account yet, you can sign up for your 30-day free trial through the [registration page](https://connect.nuxeo.com/register)
+
+3. Create a [Nuxeo Online Services token]({{page version='' space='studio' page='token-management/#creating-a-token'}}).  
+
+4.  Register your Nuxeo Server, using your account ID and NOS token previously generated:
 
 {{#> panel heading='**MAC OS** / **Linux**'}}
 
 ```bash
 $ chmod +x ./bin/nuxeoctl
-$ ./bin/nuxeoctl start
+$ ./bin/nuxeoctl register
 ```
 {{/panel}}
 
 {{#> panel heading='**Windows**'}}
 
 ```bash
-> .\bin\nuxeoctl.bat start
+> .\bin\nuxeoctl.bat register
 ```
 {{/panel}}
 
-### Wizard
 
-1.  Open Chrome or Firefox and navigate to `http://NUXEO_SERVER/nuxeo`.
+5. Install Nuxeo Web UI:
 
-2.  Follow the steps in Nuxeo Platform Wizard to complete the installation.
+<!-- Nuxeo DAM is included OOTB in the default Nuxeo distrib -->
 
-3.  Use your **Nuxeo Online Services** credentials to register your instance. If you don't have a **NOS** account yet, you can sign up for your 30-day free trial through the wizard.
+{{#> panel heading='**MAC OS** / **Linux**'}}
 
-4.  Be sure to select the addons needed for this Tutorial:
-    *  DAM
-    *  WEB UI
+```bash
+$ chmod +x ./bin/nuxeoctl
+$ ./bin/nuxeoctl mp-install nuxeo-web-ui
+```
+{{/panel}}
 
-5. The server will restart at the end. While you're waiting for your server to restart, install [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) for Chrome or Firefox.
+{{#> panel heading='**Windows**'}}
 
+```bash
+> .\bin\nuxeoctl.bat mp-install nuxeo-web-ui
+```
+{{/panel}}
+
+6.  Open Chrome or Firefox and navigate to `http://NUXEO_SERVER/nuxeo`.
+
+7. The server will restart at the end. While you're waiting for your server to restart, install [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) for Chrome or Firefox.
+
+start nuxeo
 
 ### Template
 
