@@ -346,7 +346,7 @@ On the **View** tab of your document:
 
 ### Create a Retention Event
 
-To create a new [retention event]({{page page='nuxeo-retention-management'}}#retention-events):
+To create a new [retention event](#based-on-an-event):
 1. Go to the Retention menu.
 2. Click on **Retention events**.
 3. Fill the fields on the **Fire event** section:
@@ -396,7 +396,7 @@ On the **History** tab of your document, you can see all the events related to t
 
 #### General History
 
-On the **Administration** > **Audit** page, you can see all the events related to the retention, including the [retention events]({{page page='nuxeo-retention-management'}}#retention-events) that have been created on the platform.
+On the **Administration** > **Audit** page, you can see all the events related to the retention, including the [retention events](#based-on-an-event) that have been created on the platform.
 
 ### Put a Document Under Legal Hold
 
