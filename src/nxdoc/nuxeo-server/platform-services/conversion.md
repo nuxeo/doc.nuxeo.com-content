@@ -355,7 +355,7 @@ The Conversion Service supports a global configuration via XML file in order to 
       <!-- GC interval in minutes (default = 10 minutes ) -->
       <gcInterval>10</gcInterval>
       <!-- maximum size for disk cache in KB (default to 10*1024) -->
-      <diskCacheSize>1024</diskCacheSize>
+      <diskCacheSize>10240</diskCacheSize>
       <!-- Enables or disables caching (default = true)-->
       <enableCache>true</enableCache>
     </configuration>
