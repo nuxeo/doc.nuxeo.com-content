@@ -36,50 +36,40 @@ DOWNLOAD AND REGISTER THE NUXEO PLATFORM
 
 2. Use your **Nuxeo Online Services** credentials to register your instance. If you don't have a **NOS** account yet, you can sign up for your 30-day free trial through the [registration page](https://connect.nuxeo.com/register)
 
-3. Create a [Nuxeo Online Services token]({{page version='' space='studio' page='token-management/#creating-a-token'}}).  
+3. Create a [Nuxeo Online Services token]({{page version='' space='studio' page='token-management'}}#creating-a-token).  
 
 4.  Register your Nuxeo Server, using your account ID and NOS token previously generated:
+    {{#> panel heading='**MAC OS** / **Linux**'}}
+    ```bash
+    $ chmod +x ./bin/nuxeoctl
+    $ ./bin/nuxeoctl register
+    ```
+    {{/panel}}
 
-{{#> panel heading='**MAC OS** / **Linux**'}}
-
-```bash
-$ chmod +x ./bin/nuxeoctl
-$ ./bin/nuxeoctl register
-```
-{{/panel}}
-
-{{#> panel heading='**Windows**'}}
-
-```bash
-> .\bin\nuxeoctl.bat register
-```
-{{/panel}}
-
-
+    {{#> panel heading='**Windows**'}}
+    ```bash
+    > .\bin\nuxeoctl.bat register
+    ```
+    {{/panel}}
 5. Install Nuxeo Web UI:
-
 <!-- Nuxeo DAM is included OOTB in the default Nuxeo distrib -->
+    {{#> panel heading='**MAC OS** / **Linux**'}}
+    ```bash
+    $ chmod +x ./bin/nuxeoctl
+    $ ./bin/nuxeoctl mp-install nuxeo-web-ui
+    ```
+    {{/panel}}
 
-{{#> panel heading='**MAC OS** / **Linux**'}}
-
-```bash
-$ chmod +x ./bin/nuxeoctl
-$ ./bin/nuxeoctl mp-install nuxeo-web-ui
-```
-{{/panel}}
-
-{{#> panel heading='**Windows**'}}
-
-```bash
-> .\bin\nuxeoctl.bat mp-install nuxeo-web-ui
-```
-{{/panel}}
-
+    {{#> panel heading='**Windows**'}}
+    ```bash
+    > .\bin\nuxeoctl.bat mp-install nuxeo-web-ui
+    ```
+    {{/panel}}
 6.  Open Chrome or Firefox and navigate to `http://NUXEO_SERVER/nuxeo`.
 
 7. The server will restart at the end. While you're waiting for your server to restart, install [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) for Chrome or Firefox.
 
-start nuxeo
+8. Start Nuxeo.
 
 ### Template
 
