@@ -194,17 +194,16 @@ The licenses used are:
 
 | Jar Name | Project | Version | License |
 | --- | --- |--- | --- |
-| activation-1.1.jar | [JavaBeans Activation Framework](http://www.oracle.com/technetwork/java/jaf11-139815.html) | 1.1 | CDDL 1.0 |
-| affinity-3.1.7.jar |   | 3.1.7 | AL 2.0 |
-| aggs-matrix-stats-client-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| analysis-common-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| analytics-1.0.7.jar |   | 1.0.7 | MIT |
-| annotations-7.0.3.jar |   | 7.0.3 | AL 2.0 |
-| ant-1.7.0.jar | [Apache Ant](http://ant.apache.org) | 1.7.0 | AL 2.0 |
-| ant-launcher-1.7.0.jar | [Apache Ant](http://ant.apache.org) | 1.7.0 | AL 2.0 |
-| antisamy-1.5.7.jar | [AntiSamy](http://code.google.com/p/owaspantisamy/) | 1.5.7 | BSD 3 |
+| aggs-matrix-stats-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| amqp-client-5.5.3.jar |   | 5.5.3 | ASL 2.0, GPL v2, MPL 1.1 |
+| analysis-common-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| animal-sniffer-annotations-1.18.jar |   | 1.18 | MIT |
+| annotations-19.0.0.jar |   | 19.0.0 | AL 2.0 |
+| annotations-4.1.1.4.jar |   | 4.1.1.4 | AL 2.0 |
+| ant-1.10.9.jar | [Apache Ant](http://ant.apache.org) | 1.10.9 | AL 2.0 |
+| ant-launcher-1.10.9.jar | [Apache Ant](http://ant.apache.org) | 1.10.9 | AL 2.0 |
 | antlr-2.7.7.jar | [ANTLR v2](http://www.antlr2.org) | 2.7.7 | BSD 3 |
-| antlr-runtime-3.1.3.jar | [ANTLR v3](http://www.antlr.org) | 3.1.3 | BSD |
+| antlr-runtime-3.5.2.jar | [ANTLR v3](http://www.antlr.org) | 3.5.2 | BSD 3 |
 | aopalliance-1.0.jar | [AOP Alliance](http://aopalliance.sourceforge.net) | 1.0 | PD |
 | apacheds-bootstrap-extract-1.5.1.jar | [ApacheDS](http://directory.apache.org/apacheds/1.5/) | 1.5.1 | AL 2.0 |
 | apacheds-btree-base-1.5.1.jar | [ApacheDS](http://directory.apache.org/apacheds/1.5/) | 1.5.1 | AL 2.0 |
@@ -217,90 +216,99 @@ The licenses used are:
 | apacheds-schema-bootstrap-1.5.1.jar | [ApacheDS](http://directory.apache.org/apacheds/1.5/) | 1.5.1 | AL 2.0 |
 | apacheds-schema-registries-1.5.1.jar | [ApacheDS](http://directory.apache.org/apacheds/1.5/) | 1.5.1 | AL 2.0 |
 | apacheds-utils-1.5.1.jar | [ApacheDS](http://directory.apache.org/apacheds/1.5/) | 1.5.1 | AL 2.0 |
+| api-common-1.8.1.jar |   | 1.8.1 | BSD 3 |
 | arq-2.8.8.jar | [Apache Jena](http://jena.apache.org) | 2.8.8 | BSD 3 |
-| asm-5.0.3.jar | [ASM](http://asm.ow2.org) | 5.0.3 | BSD 3 |
-| atmos-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| avro-1.8.2.jar |   | 1.8.2 | AL 2.0 |
-| aws-java-sdk-cloudfront-1.11.325.jar |   | 1.11.325 | AL 2.0 |
-| aws-java-sdk-core-1.11.325.jar |   | 1.11.325 | AL 2.0 |
-| aws-java-sdk-kms-1.11.325.jar |   | 1.11.325 | AL 2.0 |
-| aws-java-sdk-s3-1.11.325.jar |   | 1.11.325 | AL 2.0 |
-| aws-java-sdk-sts-1.11.325.jar |   | 1.11.325 | AL 2.0 |
-| aws-s3-1.9.2.jar |   | 1.9.2 | AL 2.0 |
+| asm-7.3.1.jar | [ASM](http://asm.ow2.org) | 7.3.1 | BSD 3 |
+| asm-analysis-5.0.3.jar |   | 5.0.3 | BSD 3 |
+| asm-commons-5.0.3.jar |   | 5.0.3 | BSD 3 |
+| asm-tree-5.0.3.jar |   | 5.0.3 | BSD 3 |
+| asm-util-5.0.3.jar |   | 5.0.3 | BSD 3 |
+| auto-value-1.4.jar |   | 1.4 | AL 2.0 |
+| avro-1.9.2.jar |   | 1.9.2 | AL 2.0 |
+| aws-java-sdk-cloudfront-1.11.885.jar |   | 1.11.885 | AL 2.0 |
+| aws-java-sdk-core-1.11.885.jar |   | 1.11.885 | AL 2.0 |
+| aws-java-sdk-kms-1.11.885.jar |   | 1.11.885 | AL 2.0 |
+| aws-java-sdk-s3-1.11.885.jar |   | 1.11.885 | AL 2.0 |
+| aws-java-sdk-sts-1.11.885.jar |   | 1.11.885 | AL 2.0 |
 | azure-storage-3.1.0.jar |   | 3.1.0 | AL 2.0 |
-| azureblob-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| base64-2.3.8.jar |   | 2.3.8 | PD |
-| batik-css-1.7.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.7 | AL 2.0 |
-| batik-util-1.7.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.7 | AL 2.0 |
-| bcpkix-jdk15on-1.59.jar |   | 1.59 | MIT |
-| bcprov-jdk15on-1.59.jar |   | 1.59 | MIT |
+| batik-constants-1.13.jar |   | 1.13 | AL 2.0 |
+| batik-css-1.13.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.13 | AL 2.0 |
+| batik-i18n-1.13.jar |   | 1.13 | AL 2.0 |
+| batik-shared-resources-1.13.jar |   | 1.13 | AL 2.0 |
+| batik-util-1.13.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.13 | AL 2.0 |
+| bcpkix-jdk15on-1.66.jar |   | 1.66 | MIT |
+| bcprov-jdk15on-1.66.jar |   | 1.66 | MIT |
 | box-java-sdk-1.1.0.jar |   | 1.1.0 | AL 2.0 |
-| c3p0-0.9.1.1.jar | [c3p0](http://sourceforge.net/projects/c3p0/) | 0.9.1.1 | LGPL 2.1 |
-| chemistry-opencmis-client-api-1.0.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.0.0 | AL 2.0 |
-| chemistry-opencmis-client-bindings-1.0.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.0.0 | AL 2.0 |
-| chemistry-opencmis-client-impl-1.0.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.0.0 | AL 2.0 |
-| chemistry-opencmis-commons-api-1.0.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.0.0 | AL 2.0 |
-| chemistry-opencmis-commons-impl-1.0.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.0.0 | AL 2.0 |
-| chemistry-opencmis-server-bindings-1.0.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.0.0 | AL 2.0 |
-| chemistry-opencmis-server-support-1.0.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.0.0 | AL 2.0 |
-| chronicle-bytes-1.16.15.jar |   | 1.16.15 | AL 2.0 |
-| chronicle-core-1.16.10.jar |   | 1.16.10 | AL 2.0 |
-| chronicle-queue-5.16.4.jar |   | 5.16.4 | AL 2.0 |
-| chronicle-threads-1.16.1.jar |   | 1.16.1 | AL 2.0 |
-| chronicle-wire-1.16.6.jar |   | 1.16.6 | AL 2.0 |
+| bsh-2.0b6.jar |   | 2.0b6 | AL 2.0 |
+| bson-4.1.1.jar |   | 4.1.1 | AL 2.0 |
+| c3p0-0.9.5.4.jar |   | 0.9.5.4 | EPL 1.0, LGPL 2.1 |
+| checker-qual-3.5.0.jar |   | 3.5.0 | MIT |
+| chemistry-opencmis-client-api-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
+| chemistry-opencmis-client-bindings-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
+| chemistry-opencmis-client-impl-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
+| chemistry-opencmis-commons-api-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
+| chemistry-opencmis-commons-impl-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
+| chemistry-opencmis-server-bindings-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
+| chemistry-opencmis-server-support-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
+| chronicle-bytes-2.20.10.jar |   | 2.20.10 | AL 2.0 |
+| chronicle-core-2.20.21.jar |   | 2.20.21 | AL 2.0 |
+| chronicle-queue-5.20.20.jar |   | 5.20.20 | AL 2.0 |
+| chronicle-threads-2.17.25.jar |   | 2.17.25 | AL 2.0 |
+| chronicle-wire-2.20.22.jar |   | 2.20.22 | AL 2.0 |
 | com-duosecurity-java-client-1.0.0.jar |   | 1.0.0 | BSD 3 |
-| com.noelios.restlet-1.0.7.jar | [Restlet](http://www.restlet.org) | 1.0.7 | CDDL 1.0, GPL 2 |
-| com.noelios.restlet.ext.httpclient-1.0.7.jar |   | 1.0.7 | CDDL 1.0, GPL 2 |
-| com.noelios.restlet.ext.servlet-1.0.7.jar | [Restlet](http://www.restlet.org) | 1.0.7 | CDDL 1.0, GPL 2 |
-| commons-beanutils-1.9.3.jar | [Apache Commons BeanUtils](http://commons.apache.org/beanutils/) | 1.9.3 | AL 2.0 |
+| common-utils-6.0.0.jar |   | 6.0.0 | AL 2.0 |
+| commons-beanutils-1.9.4.jar | [Apache Commons BeanUtils](http://commons.apache.org/beanutils/) | 1.9.4 | AL 2.0 |
 | commons-cli-1.4.jar |   | 1.4 | AL 2.0 |
-| commons-codec-1.11.jar | [Apache Commons Codec](http://commons.apache.org/codec/) | 1.11 | AL 2.0 |
+| commons-codec-1.15.jar | [Apache Commons Codec](http://commons.apache.org/codec/) | 1.15 | AL 2.0 |
 | commons-collections-3.2.2.jar | [Apache Commons Collections](http://commons.apache.org/collections/) | 3.2.2 | AL 2.0 |
-| commons-collections4-4.1.jar |   | 4.1 | AL 2.0 |
-| commons-compress-1.8.1.jar |   | 1.8.1 | AL 2.0 |
-| commons-csv-1.5.jar |   | 1.5 | AL 2.0 |
-| commons-dbcp-1.4.jar | [Apache Commons DBCP](http://commons.apache.org/dbcp/) | 1.4 | AL 2.0 |
+| commons-collections4-4.4.jar |   | 4.4 | AL 2.0 |
+| commons-compress-1.20.jar |   | 1.20 | AL 2.0 |
+| commons-csv-1.8.jar |   | 1.8 | AL 2.0 |
+| commons-dbcp2-2.8.0.jar |   | 2.8.0 | AL 2.0 |
 | commons-digester-2.1.jar | [Apache Commons Digester](http://commons.apache.org/digester/) | 2.1 | AL 2.0 |
-| commons-fileupload-1.3.3.jar | [Apache Commons FileUpload](http://commons.apache.org/fileupload/) | 1.3.3 | AL 2.0 |
+| commons-exec-1.3.jar |   | 1.3 | AL 2.0 |
+| commons-fileupload-1.4.jar | [Apache Commons FileUpload](http://commons.apache.org/fileupload/) | 1.4 | AL 2.0 |
 | commons-httpclient-3.1.jar | [Apache Commons HttpClient](http://hc.apache.org/httpclient-3.x/) | 3.1 | AL 2.0 |
 | commons-imaging-1.0a1.jar |   | 1.0a1 | AL 2.0 |
-| commons-io-2.5.jar | [Apache Commons IO](http://commons.apache.org/io/) | 2.5 | AL 2.0 |
+| commons-io-2.8.0.jar | [Apache Commons IO](http://commons.apache.org/io/) | 2.8.0 | AL 2.0 |
 | commons-jexl-1.1.jar |   | 1.1 | AL 2.0 |
 | commons-jexl-2.0.1.jar | [Apache Commons JEXL](http://commons.apache.org/jexl/) | 2.0.1 | AL 2.0 |
+| commons-jexl3-3.1.jar |   | 3.1 | AL 2.0 |
 | commons-lang-2.6.jar |   | 2.6 | AL 2.0 |
-| commons-lang3-3.6.jar |   | 3.6 | AL 2.0 |
+| commons-lang3-3.11.jar |   | 3.11 | AL 2.0 |
 | commons-logging-1.2.jar |   | 1.2 | AL 2.0 |
-| commons-pool-1.5.4.jar | [Apache Commons Pool](http://commons.apache.org/pool/) | 1.5.4 | AL 2.0 |
-| commons-pool2-2.4.2.jar |   | 2.4.2 | AL 2.0 |
-| commons-text-1.1.jar |   | 1.1 | AL 2.0 |
-| commons-validator-1.5.1.jar |   | 1.5.1 | AL 2.0 |
-| commons-vfs2-2.1.jar |   | 2.1 | AL 2.0 |
-| compiler-0.9.3.jar |   | 0.9.3 | AL 2.0 |
-| connector-api-1.5.jar | [J2EE Connector Architecture (JSR 112)](http://jcp.org/en/jsr/detail?id=112) | 1.5 | CDDL 1.0 |
+| commons-math3-3.6.1.jar |   | 3.6.1 | AL 2.0 |
+| commons-pool2-2.9.0.jar |   | 2.9.0 | AL 2.0 |
+| commons-text-1.9.jar |   | 1.9 | AL 2.0 |
+| commons-validator-1.7.jar |   | 1.7 | AL 2.0 |
+| commons-vfs2-2.6.0.jar |   | 2.6.0 | AL 2.0 |
+| compiler-0.9.6.jar |   | 0.9.6 | AL 2.0 |
+| compiler-2.3.6.jar |   | 2.3.6 | AL 2.0 |
 | core-1.0-b02.jar |   | 1.0-b02 | CDDL 1.0, GPL 2 |
-| cors-filter-2.4.jar |   | 2.4 | AL 2.0 |
-| cssparser-0.9.18.jar |   | 0.9.18 | LGPL 2.1 |
-| curvesapi-1.04.jar |   | 1.04 | BSD 3 |
-| daisydiff-1.2-NX2.jar |   | 1.2-NX2 | AL 2.0 |
-| dom4j-1.6.1.jar | [dom4j](http://dom4j.sourceforge.net/) | 1.6.1 | BSD |
-| dropbox-core-sdk-2.1.2.jar |   | 2.1.2 | MIT |
-| ecj-3.12.3.jar |   | 3.12.3 | Eclipse Public License |
-| ehcache-core-2.5.2.jar | [Ehcache](http://ehcache.org) | 2.5.2 | AL 2.0 |
-| ejb-3.0-RC8.jar |   | 3.0-RC8 | CDDL 1.0, GPL 2 CPE |
-| elasticsearch-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| elasticsearch-cli-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| elasticsearch-core-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| elasticsearch-rest-client-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| elasticsearch-rest-high-level-client-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| elasticsearch-secure-sm-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| elasticsearch-x-content-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| esapi-2.0.1.jar |   | 2.0.1 | BSD 3, CC BY-SA 3.0 |
-| expiringmap-0.5.8.jar |   | 0.5.8 | AL 2.0 |
-| ezmorph-1.0.4.jar | [EZMorph](http://ezmorph.sourceforge.net/) | 1.0.4 | AL 2.0 |
+| cors-filter-2.9.jar |   | 2.9 | AL 2.0 |
+| curvesapi-1.06.jar |   | 1.06 | BSD 3 |
+| disruptor-3.4.2.jar |   | 3.4.2 | AL 2.0 |
+| dom4j-2.1.3.jar |   | 2.1.3 | BSD 3 |
+| ecj-3.23.0.jar |   | 3.23.0 | EPL 2.0 |
+| ehcache-core-2.6.11.jar | [Ehcache](http://ehcache.org) | 2.6.11 | AL 2.0 |
+| elasticsearch-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| elasticsearch-cli-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| elasticsearch-core-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| elasticsearch-geo-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| elasticsearch-rest-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| elasticsearch-rest-high-level-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| elasticsearch-secure-sm-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| elasticsearch-ssl-config-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| elasticsearch-x-content-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| error_prone_annotations-2.3.4.jar |   | 2.3.4 | AL 2.0 |
+| esapi-2.2.1.1.jar |   | 2.2.1.1 | BSD 3, CC BY-SA 3.0 |
+| expiringmap-0.5.9.jar |   | 0.5.9 | AL 2.0 |
+| externalsortinginjava-0.6.0.jar |   | 0.6.0 | PD |
 | failsafe-1.1.0.jar |   | 1.1.0 | AL 2.0 |
-| fluent-hc-4.5.3.jar |   | 4.5.3 | AL 2.0 |
+| failureaccess-1.0.1.jar |   | 1.0.1 | AL 2.0 |
+| fluent-hc-4.5.13.jar |   | 4.5.13 | AL 2.0 |
 | flute-1.3.0.gg2.jar | [Flute](http://code.google.com/p/google-web-toolkit/source/browse/tools/lib/w3c/flute/) | 1.3.0.gg2 | W3C |
-| fontbox-1.8.9.jar | [Apache PDFBox](http://pdfbox.apache.org) | 1.8.9 | AL 2.0 |
+| fontbox-2.0.21.jar | [Apache PDFBox](http://pdfbox.apache.org) | 2.0.21 | AL 2.0 |
 | fr.opensagres.xdocreport.converter-1.0.5.jar |   | 1.0.5 | MIT |
 | fr.opensagres.xdocreport.core-1.0.5.jar |   | 1.0.5 | MIT |
 | fr.opensagres.xdocreport.document-1.0.5.jar |   | 1.0.5 | MIT |
@@ -310,286 +318,326 @@ The licenses used are:
 | fr.opensagres.xdocreport.remoting.resources-1.0.5.jar |   | 1.0.5 | MIT |
 | fr.opensagres.xdocreport.template-1.0.5.jar |   | 1.0.5 | MIT |
 | fr.opensagres.xdocreport.template.freemarker-1.0.5.jar |   | 1.0.5 | MIT |
-| freemarker-2.3.26-incubating.jar |   | 2.3.26-incubating | AL 2.0 |
-| geronimo-connector-2.2.1-NX1.jar | [Apache Geronimo](http://geronimo.apache.org) | 2.2.1-NX1 | AL 2.0 |
-| geronimo-transaction-2.2.1.jar | [Apache Geronimo](http://geronimo.apache.org) | 2.2.1 | AL 2.0 |
-| google-api-client-1.19.1.jar |   | 1.19.1 | AL 2.0 |
+| freemarker-2.3.30.jar |   | 2.3.30 | AL 2.0 |
+| gax-1.47.1.jar |   | 1.47.1 | BSD 3 |
+| gax-grpc-1.47.1.jar |   | 1.47.1 | BSD 3 |
+| gax-httpjson-0.61.0.jar |   | 0.61.0 | BSD 3 |
+| geronimo-transaction-3.1.4.jar | [Apache Geronimo](http://geronimo.apache.org) | 3.1.4 | AL 2.0 |
+| google-api-client-1.25.0.jar |   | 1.25.0 | AL 2.0 |
 | google-api-services-drive-v2-rev161-1.19.1.jar |   | v2-rev161-1.19.1 | AL 2.0 |
-| google-api-services-youtube-v3-rev124-1.19.0.jar |   | v3-rev124-1.19.0 | AL 2.0 |
+| google-api-services-storage-v1-rev20190426-1.28.0.jar |   | v1-rev20190426-1.28.0 | AL 2.0 |
+| google-auth-library-credentials-0.20.0.jar |   | 0.20.0 | BSD 3 |
+| google-auth-library-oauth2-http-0.16.2.jar |   | 0.16.2 | BSD 3 |
+| google-cloud-core-1.82.0.jar |   | 1.82.0 | AL 2.0 |
+| google-cloud-core-grpc-1.82.0.jar |   | 1.82.0 | AL 2.0 |
+| google-cloud-core-http-1.76.0.jar |   | 1.76.0 | AL 2.0 |
+| google-cloud-monitoring-1.82.0.jar |   | 1.82.0 | AL 2.0 |
+| google-cloud-storage-1.76.0.jar |   | 1.76.0 | AL 2.0 |
+| google-cloud-trace-0.100.0-beta.jar |   | 0.100.0-beta | AL 2.0 |
 | google-http-client-1.19.0.jar |   | 1.19.0 | AL 2.0 |
+| google-http-client-appengine-1.29.1.jar |   | 1.29.1 | AL 2.0 |
 | google-http-client-jackson2-1.19.0.jar |   | 1.19.0 | AL 2.0 |
 | google-oauth-client-1.20.0.jar |   | 1.20.0 | AL 2.0 |
 | groovy-all-2.4.12.jar | [Groovy](http://groovy.codehaus.org) | 2.4.12 | AL 2.0 |
-| gson-2.2.2.jar | [Google Gson](http://code.google.com/p/google-gson/) | 2.2.2 | AL 2.0 |
-| guava-18.0.jar |   | 18.0 | AL 2.0 |
+| grpc-alts-1.21.0.jar |   | 1.21.0 | AL 2.0 |
+| grpc-auth-1.27.2.jar |   | 1.27.2 | AL 2.0 |
+| grpc-context-1.27.2.jar |   | 1.27.2 | AL 2.0 |
+| grpc-core-1.27.2.jar |   | 1.27.2 | AL 2.0 |
+| grpc-grpclb-1.21.0.jar |   | 1.21.0 | AL 2.0 |
+| grpc-netty-shaded-1.27.2.jar |   | 1.27.2 | AL 2.0 |
+| grpc-protobuf-1.21.0.jar |   | 1.21.0 | AL 2.0 |
+| grpc-protobuf-lite-1.21.0.jar |   | 1.21.0 | AL 2.0 |
+| grpc-stub-1.27.2.jar |   | 1.27.2 | AL 2.0 |
+| gson-2.8.6.jar | [Google Gson](http://code.google.com/p/google-gson/) | 2.8.6 | AL 2.0 |
+| guava-30.0-jre.jar |   | 30.0-jre | AL 2.0 |
 | guice-3.0.jar | [Google Guice](http://code.google.com/p/google-guice/) | 3.0 | AL 2.0 |
-| guice-assistedinject-3.0.jar | [Google Guice](http://code.google.com/p/google-guice/) | 3.0 | AL 2.0 |
-| guice-multibindings-3.0.jar |   | 3.0 | AL 2.0 |
-| h2-1.4.177-NX01.jar |   | 1.4.177-NX01 | EPL 1.0, MPL 2.0 |
+| h2-1.4.200.jar |   | 1.4.200 | EPL 1.0, MPL 2.0 |
+| hadoop-hdfs-client-3.2.1.jar |   | 3.2.1 | AL 2.0 |
 | HdrHistogram-2.1.9.jar |   | 2.1.9 | CC0 |
 | hibernate-annotations-3.4.0.GA.jar | [Hibernate](http://www.hibernate.org/) | 3.4.0.GA | LGPL 2.1 |
 | hibernate-commons-annotations-3.1.0.GA.jar | [Hibernate](http://www.hibernate.org/) | 3.1.0.GA | LGPL 2.1 |
 | hibernate-core-3.3.2.GA.jar | [Hibernate](http://www.hibernate.org/) | 3.3.2.GA | LGPL 2.1 |
 | hibernate-entitymanager-3.4.0.GA.jar | [Hibernate](http://www.hibernate.org/) | 3.4.0.GA | LGPL 2.1 |
-| hibernate-validator-3.1.0.GA.jar | [Hibernate](http://www.hibernate.org/) | 3.1.0.GA | LGPL 2.1 |
-| howl-1.0.1-1.jar | [HOWL](http://howl.ow2.org/) | 1.0.1-1 | BSD 3 |
-| hpcloud-objectstorage-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| hppc-0.7.1.jar |   | 0.7.1 | AL 2.0 |
-| hsqldb-1.8.0.1.jar | [HSQLDB](http://hsqldb.org/) | 1.8.0.1 | BSD |
-| httpasyncclient-4.1.2.jar |   | 4.1.2 | AL 2.0 |
-| httpclient-4.5.3.jar | [Apache HttpComponents](http://hc.apache.org) | 4.5.3 | AL 2.0 |
-| httpclient-cache-4.5.3.jar |   | 4.5.3 | AL 2.0 |
-| httpclient-osgi-4.5.3.jar |   | 4.5.3 | AL 2.0 |
-| httpcore-4.4.6.jar | [Apache HttpComponents](http://hc.apache.org) | 4.4.6 | AL 2.0 |
-| httpcore-nio-4.4.5.jar |   | 4.4.5 | AL 2.0 |
-| httpcore-osgi-4.4.6.jar |   | 4.4.6 | AL 2.0 |
-| httpmime-4.5.3.jar |   | 4.5.3 | AL 2.0 |
-| icu4j-51.1.jar | [ICU](http://site.icu-project.org) | 51.1 | Unicode |
+| HikariCP-java7-2.4.13.jar |   | 2.4.13 | AL 2.0 |
+| hppc-0.8.1.jar |   | 0.8.1 | AL 2.0 |
+| httpasyncclient-4.1.4.jar |   | 4.1.4 | AL 2.0 |
+| httpclient-4.5.13.jar | [Apache HttpComponents](http://hc.apache.org) | 4.5.13 | AL 2.0 |
+| httpcore-4.4.13.jar | [Apache HttpComponents](http://hc.apache.org) | 4.4.13 | AL 2.0 |
+| httpcore-nio-4.4.13.jar |   | 4.4.13 | AL 2.0 |
+| icu4j-67.1.jar | [ICU](http://site.icu-project.org) | 67.1 | Unicode |
 | ion-java-1.0.2.jar |   | 1.0.2 | AL 2.0 |
 | iri-0.8.jar | [Apache Jena](http://jena.apache.org) | 0.8 | BSD 3 |
-| isoparser-1.9.27.jar |   | 1.9.27 | AL 2.0 |
-| jackson-annotations-2.9.5.jar |   | 2.9.5 | AL 2.0 |
-| jackson-core-2.9.5.jar |   | 2.9.5 | AL 2.0 |
+| isoparser-1.9.41.jar |   | 1.9.41 | AL 2.0 |
+| j2objc-annotations-1.3.jar |   | 1.3 | AL 2.0 |
+| jackson-annotations-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-core-2.11.3.jar |   | 2.11.3 | AL 2.0 |
 | jackson-core-asl-1.8.1.jar | [Jackson](http://jackson.codehaus.org) | 1.8.1 | AL 2.0 |
-| jackson-databind-2.9.5.jar |   | 2.9.5 | AL 2.0 |
-| jackson-dataformat-cbor-2.8.10.jar |   | 2.8.10 | AL 2.0 |
-| jackson-dataformat-smile-2.8.10.jar |   | 2.8.10 | AL 2.0 |
-| jackson-dataformat-yaml-2.8.10.jar |   | 2.8.10 | AL 2.0 |
+| jackson-databind-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-dataformat-cbor-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-dataformat-properties-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-dataformat-smile-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-dataformat-xml-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-dataformat-yaml-2.11.3.jar |   | 2.11.3 | AL 2.0 |
 | jackson-jaxrs-1.9.2.jar |   | 1.9.2 | AL 2.0, LGPL 2.1 |
+| jackson-jaxrs-base-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-jaxrs-json-provider-2.11.3.jar |   | 2.11.3 | AL 2.0 |
 | jackson-mapper-asl-1.8.1.jar | [Jackson](http://jackson.codehaus.org) | 1.8.1 | AL 2.0 |
-| jackson-xc-1.9.9.jar |   | 1.9.9 | AL 2.0, LGPL 2.1 |
+| jackson-module-jaxb-annotations-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-xc-1.9.2.jar |   | 1.9.2 | AL 2.0, LGPL 2.1 |
+| jaeger-client-0.33.1.jar |   | 0.33.1 | AL 2.0 |
+| jaeger-core-0.33.1.jar |   | 0.33.1 | AL 2.0 |
+| jaeger-thrift-0.33.1.jar |   | 0.33.1 | AL 2.0 |
+| jaeger-tracerresolver-0.33.1.jar |   | 0.33.1 | AL 2.0 |
+| jakarta.activation-api-1.2.1.jar |   | 1.2.1 | EDL 1.0 |
+| jakarta.xml.bind-api-2.3.3.jar |   | 2.3.3 | EDL 1.0 |
 | jaudiotagger-2.0.3.jar |   | 2.0.3 | LGPL 2.1 |
 | java-cup-0.11a.jar |   | 0.11a | HPND |
-| java-dogstatsd-client-2.0.7.jar |   | 2.0.7 | MIT |
-| java-jwt-3.4.0.jar |   | 3.4.0 | MIT |
-| java-property-utils-1.9.1.jar |   | 1.9.1 | AL 2.0 |
-| java-xmlbuilder-1.1.jar |   | 1.1 | AL 2.0 |
+| java-dogstatsd-client-2.6.1.jar |   | 2.6.1 | MIT |
+| java-jwt-3.11.0.jar |   | 3.11.0 | MIT |
+| java-property-utils-1.13.jar |   | 1.13 | AL 2.0 |
 | javacc-4.0.jar | [JavaCC](http://java.net/projects/javacc) | 4.0 | BSD 3 |
 | javasimon-core-2.5.0.jar | [Simon](http://code.google.com/p/javasimon/) | 2.5.0 | LGPL 2.1 |
 | javasimon-jdbc3-2.5.0.jar | [Simon](http://code.google.com/p/javasimon/) | 2.5.0 | LGPL 2.1 |
 | javasimon-jmx-2.5.0.jar | [Simon](http://code.google.com/p/javasimon/) | 2.5.0 | LGPL 2.1 |
-| javassist-3.21.0-GA.jar | [Javassist](http://www.jboss.org/javassist) | 3.21.0-GA | AL 2.0, LGPL 2.1, MPL 1.1 |
+| javassist-3.27.0-GA.jar | [Javassist](http://www.jboss.org/javassist) | 3.27.0-GA | AL 2.0, LGPL 2.1, MPL 1.1 |
+| javax.activation-1.2.0.jar |   | 1.2.0 | CDDL 1.0, GPL 2 CPE |
+| javax.annotation-api-1.3.2.jar |   | 1.3.2 | CDDL 1.0, GPL 2 CPE |
 | javax.inject-1.jar | [Dependency Injection for Java (JSR 330)](http://www.jcp.org/en/jsr/detail?id=330) | 1 | AL 2.0 |
-| javax.json-1.0.4.jar |   | 1.0.4 | CDDL 1.1, GPL 2 |
-| javax.servlet-api-3.1.0.jar |   | 3.1.0 | CDDL 1.0, GPL 2 CPE |
-| jaxb-core-2.2.11.jar |   | 2.2.11 | CDDL 1.0, GPL 2 |
-| jaxb-impl-2.2.11.jar | [JAXB RI](http://jaxb.java.net) | 2.2.11 | CDDL 1.0, GPL 2 |
-| jaxen-1.1.6.jar |   | 1.1.6 | BSD 3 |
+| javax.json-1.1.4.jar |   | 1.1.4 | CDDL 1.1, GPL 2 |
+| javax.servlet-api-4.0.1.jar |   | 4.0.1 | CDDL 1.0, GPL 2 CPE |
+| javax.transaction-api-1.3.jar |   | 1.3 | CDDL 1.0, GPL 2 CPE |
+| javax.xml.soap-api-1.4.0.jar |   | 1.4.0 | CDDL 1.0, GPL 2 CPE |
+| jaxb-impl-2.3.3.jar | [JAXB RI](https://eclipse-ee4j.github.io/jaxb-ri) | 2.3.3 | EDL 1.0 |
+| jaxen-1.2.0.jar |   | 1.2.0 | BSD 3 |
+| jaxws-api-2.3.1.jar |   | 2.3.1 | CDDL 1.0, GPL 2 CPE |
 | jbig2-imageio-2.99.0-NX1.jar |   | 2.99.0-NX1 | AL 2.0 |
 | jboss-el-1.0_02.CR6.jar | [Seam](http://www.seamframework.org) | 1.0_02.CR6 | LGPL 2.1 |
-| jboss-logging-3.1.4.GA.jar |   | 3.1.4.GA | AL 2.0 |
-| jboss-seam-2.3.1.Final.NX03.jar | [Seam](http://www.seamframework.org) | 2.3.1.Final.NX03 | LGPL 2.1 |
-| jboss-seam-excel-2.3.1.Final.jar | [Seam](http://www.seamframework.org) | 2.3.1.Final | LGPL 2.1 |
-| jboss-seam-pdf-2.3.1.Final.jar | [Seam](http://www.seamframework.org) | 2.3.1.Final | LGPL 2.1 |
-| jboss-seam-remoting-2.3.1.Final.NX02.jar | [Seam](http://www.seamframework.org) | 2.3.1.Final.NX02 | LGPL 2.1 |
-| jboss-seam-rss-2.3.1.Final.jar | [Seam](http://www.seamframework.org) | 2.3.1.Final | LGPL 2.1 |
-| jboss-seam-ui-2.3.1.Final.jar | [Seam](http://www.seamframework.org) | 2.3.1.Final | LGPL 2.1 |
+| jboss-logging-3.3.2.Final.jar |   | 3.3.2.Final | AL 2.0 |
 | jcifs-1.2.19.jar |   | 1.2.19 | LGPL 2.1 |
 | jcip-annotations-1.0.jar | [Java Concurrency in Practice](http://jcip.net) | 1.0 | CC BY 2.5 |
-| jcl-over-slf4j-1.7.21.jar |   | 1.7.21 | MIT |
-| jclouds-allblobstore-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| jclouds-blobstore-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| jclouds-core-1.9.2.jar |   | 1.9.2 | AL 2.0 |
+| jcl-over-slf4j-1.7.26.jar |   | 1.7.26 | MIT |
 | jdbm-1.0.jar | [JDBM](http://jdbm.sourceforge.net) | 1.0 | BSD |
 | jedis-2.9.0.jar |   | 2.9.0 | MIT |
-| jempbox-1.8.9.jar | [Apache PDFBox](http://pdfbox.apache.org) | 1.8.9 | AL 2.0 |
 | jena-2.6.4-NX.jar | [Apache Jena](http://jena.apache.org) | 2.6.4-NX | BSD |
-| jericho-html-3.2.jar | [Jericho HTML Parser](http://jericho.htmlparser.net/) | 3.2 | EPL 1.0, LGPL 2.1 |
-| jersey-apache-client4-1.18.3.jar |   | 1.18.3 | CDDL 1.1, GPL 2 CPE |
-| jersey-client-1.18.3.jar |   | 1.18.3 | CDDL 1.1, GPL 2 CPE |
-| jersey-core-1.18.3.jar | [Jersey](http://jersey.java.net) | 1.18.3 | CDDL 1.1, GPL 2 CPE |
-| jersey-json-1.18.3.jar |   | 1.18.3 | CDDL 1.1, GPL 2 CPE |
-| jersey-multipart-1.18.3.jar |   | 1.18.3 | CDDL 1.1, GPL 2 CPE |
-| jersey-server-1.18.3.jar | [Jersey](http://jersey.java.net) | 1.18.3 | CDDL 1.1, GPL 2 CPE |
-| jersey-servlet-1.18.3.jar | [Jersey](http://jersey.java.net) | 1.18.3 | CDDL 1.1, GPL 2 CPE |
-| jettison-1.3.7.jar |   | 1.3.7 | AL 2.0 |
+| jericho-html-3.4.jar | [Jericho HTML Parser](http://jericho.htmlparser.net/) | 3.4 | AL 2.0, EPL 1.0, LGPL 2.1 |
+| jersey-client-1.19.4.jar |   | 1.19.4 | CDDL 1.1, GPL 2 CPE |
+| jersey-core-1.19.4.jar | [Jersey](http://jersey.java.net) | 1.19.4 | CDDL 1.1, GPL 2 CPE |
+| jersey-json-1.19.4.jar |   | 1.19.4 | CDDL 1.1, GPL 2 CPE |
+| jersey-multipart-1.19.4.jar |   | 1.19.4 | CDDL 1.1, GPL 2 CPE |
+| jersey-server-1.19.4.jar | [Jersey](http://jersey.java.net) | 1.19.4 | CDDL 1.1, GPL 2 CPE |
+| jersey-servlet-1.19.4.jar | [Jersey](http://jersey.java.net) | 1.19.4 | CDDL 1.1, GPL 2 CPE |
+| jettison-1.4.1.jar |   | 1.4.1 | AL 2.0 |
+| jffi-1.2.15.jar |   | 1.2.15 | AL 2.0 |
 | jgrapht-core-1.0.1.jar |   | 1.0.1 | EPL 1.0, LGPL 2.1 |
-| jline-0.9.94.jar | [JLine](http://jline.sourceforge.net) | 0.9.94 | BSD 3 |
 | jmd-0.8.1-tomasol-3e60e36137.jar | [JMD](https://github.com/tomasol/jmd) | 0.8.1-tomasol-3e60e36137 | MIT |
-| jmespath-java-1.11.325.jar |   | 1.11.325 | AL 2.0 |
+| jmespath-java-1.11.885.jar |   | 1.11.885 | AL 2.0 |
 | jmimemagic-0.1.2.jar | [jMimeMagic](http://jmimemagic.sourceforge.net/index.html) | 0.1.2 | AL 2.0 |
-| jms-1.1.jar |   | 1.1 | CDDL 1.0, GPL 2 CPE |
-| jna-4.4.0.jar |   | 4.4.0 | AL 2.0, LGPL 2.1 |
-| jna-4.5.1.jar |   | 4.5.1 | AL 2.0 |
-| jna-platform-4.4.0.jar |   | 4.4.0 | AL 2.0, LGPL 2.1 |
-| joda-time-2.8.2.jar | [Joda Time](http://joda-time.sourceforge.net) | 2.8.2 | AL 2.0 |
+| jnr-constants-0.9.8.jar |   | 0.9.8 | AL 2.0 |
+| jnr-enxio-0.16.jar |   | 0.16 | AL 2.0 |
+| jnr-ffi-2.1.4.jar |   | 2.1.4 | AL 2.0 |
+| jnr-posix-3.0.35.jar |   | 3.0.35 | CPL 1.0, GPL 2, LGPL 2.1 |
+| jnr-unixsocket-0.18.jar |   | 0.18 | AL 2.0 |
+| jnr-x86asm-1.0.2.jar |   | 1.0.2 | MIT |
+| joda-time-2.10.6.jar | [Joda Time](http://joda-time.sourceforge.net) | 2.10.6 | AL 2.0 |
 | jodreports-2.4.0.jar |   | 2.4.0 | LGPL 2.1 |
-| jolokia-core-1.3.3.jar |   | 1.3.3 | AL 2.0 |
 | jopt-simple-5.0.4.jar |   | 5.0.4 | MIT |
-| jsf-api-2.2.6.jar | [JavaServer Faces](http://javaserverfaces.java.net/) | 2.2.6 | CDDL 1.0, GPL 2 |
-| jsf-impl-2.2.6-NX01.jar | [JavaServer Faces](http://javaserverfaces.java.net/) | 2.2.6-NX01 | CDDL 1.0, GPL 2 |
 | json-1.0.0.jar |   | 1.0.0 | MIT |
-| json-20070829.jar | [JSON](http://www.json.org/java/index.html) | 20070829 | MIT |
+| json-20200518.jar | [JSON](http://www.json.org/java/index.html) | 20200518 | MIT |
 | json-lib-2.4.jar | [JSON-lib](http://json-lib.sourceforge.net) | 2.4 | AL 2.0 |
-| json-simple-1.1.jar | [JSON.simple](http://code.google.com/p/json-simple/) | 1.1 | AL 2.0 |
 | json-smart-1.1.1.jar |   | 1.1.1 | AL 2.0 |
 | jsonevent-layout-1.7.jar |   | 1.7 | AL 2.0 |
 | jsp-api-2.2.jar |   | 2.2 | CDDL 1.0, GPL 2 CPE |
 | jsr250-api-1.0.jar | [Common Annotations for Java (JSR 250)](http://jcp.org/en/jsr/detail?id=250) | 1.0 | CDDL 1.0 |
 | jsr305-3.0.2.jar |   | 3.0.2 | AL 2.0 |
-| jstl-1.1.2.jar | [JSP Standard Tag Library](http://jstl.java.net) | 1.1.2 | CDDL 1.1, GPL 2 CPE |
+| jsr311-api-1.1.1.jar |   | 1.1.1 | CDDL 1.0 |
+| jstl-1.2.jar | [JSP Standard Tag Library](http://jstl.java.net) | 1.2 | CDDL 1.1, GPL 2 CPE |
 | jta-1.1.jar | [Java Transaction API](http://www.oracle.com/technetwork/java/javaee/jta/index.html) | 1.1 | CDDL 1.0 |
-| juh-3.1.0.jar | [Java Uno Helper](http://www.openoffice.org/udk/) | 3.1.0 | LGPL 3 |
-| jurt-3.1.0.jar | [Java Uno Runtime](http://www.openoffice.org/udk/) | 3.1.0 | LGPL 3 |
-| jxl-2.6.12-NX1.jar | [Java Excel API](http://jexcelapi.sourceforge.net) | 2.6.12-NX1 | LGPL 3 |
-| jxls-core-1.0.6-NX01.jar |   | 1.0.6-NX01 | LGPL 2.1 |
-| jxls-reader-1.0.6-NX01.jar |   | 1.0.6-NX01 | LGPL 2.1 |
-| kafka-clients-1.1.0.jar |   | 1.1.0 | AL 2.0 |
-| kafka_2.12-1.1.0.jar |   | 1.1.0 | AL 2.0 |
-| keycloak-adapter-core-1.3.1.Final.jar |   | 1.3.1.Final | AL 2.0 |
-| keycloak-core-1.3.1.Final.jar |   | 1.3.1.Final | AL 2.0 |
-| keycloak-tomcat-core-adapter-1.3.1.Final.jar |   | 1.3.1.Final | AL 2.0 |
-| keycloak-tomcat8-adapter-1.3.1.Final.jar |   | 1.3.1.Final | AL 2.0 |
-| lang-mustache-client-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| log4j-1.2.17.jar |   | 1.2.17 | AL 2.0 |
-| log4j-api-2.9.1.jar |   | 2.9.1 | AL 2.0 |
-| log4j-core-2.9.1.jar |   | 2.9.1 | AL 2.0 |
-| logback-classic-1.2.3.jar |   | 1.2.3 | EPL 1.0, LGPL 2.1 |
+| jutf7-1.0.0.jar |   | 1.0.0 | MIT |
+| jxls-2.8.1.jar |   | 2.8.1 | AL 2.0 |
+| jxls-core-1.0.6-NX02.jar |   | 1.0.6-NX02 | LGPL 2.1 |
+| jxls-poi-2.8.1.jar |   | 2.8.1 | AL 2.0 |
+| jxls-reader-1.0.6-NX02.jar |   | 1.0.6-NX02 | LGPL 2.1 |
+| kafka-avro-serializer-6.0.0.jar |   | 6.0.0 | AL 2.0 |
+| kafka-clients-2.6.0.jar |   | 2.6.0 | AL 2.0 |
+| kafka-schema-registry-client-6.0.0.jar |   | 6.0.0 | AL 2.0 |
+| kafka-schema-serializer-6.0.0.jar |   | 6.0.0 | AL 2.0 |
+| keycloak-adapter-core-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
+| keycloak-adapter-spi-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
+| keycloak-authz-client-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
+| keycloak-common-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
+| keycloak-core-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
+| keycloak-tomcat-adapter-spi-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
+| keycloak-tomcat-core-adapter-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
+| keycloak-tomcat8-adapter-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
+| lang-mustache-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| libthrift-0.11.0.jar |   | 0.11.0 | AL 2.0 |
+| listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar |   | 9999.0-empty-to-avoid-conflict-with-guava | AL 2.0 |
+| log4j-api-2.13.3.jar |   | 2.13.3 | AL 2.0 |
+| log4j-core-2.13.3.jar |   | 2.13.3 | AL 2.0 |
+| log4j-jcl-2.13.3.jar |   | 2.13.3 | AL 2.0 |
+| log4j-slf4j-impl-2.13.3.jar |   | 2.13.3 | AL 2.0 |
 | logback-core-1.2.3.jar |   | 1.2.3 | EPL 1.0, LGPL 2.1 |
-| lucene-analyzers-common-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-backward-codecs-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-core-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-grouping-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-highlighter-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-join-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-memory-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-misc-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-queries-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-queryparser-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-sandbox-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-spatial-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-spatial-extras-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-spatial3d-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lucene-suggest-7.3.1.jar |   | 7.3.1 | AL 2.0 |
-| lz4-java-1.4.jar |   | 1.4 | AL 2.0 |
-| mail-1.4.5.jar |   | 1.4.5 | CDDL 1.0, GPL 2 CPE |
-| mariadb-java-client-1.6.4.jar |   | 1.6.4 | LGPL 2.1 |
-| marklogic-xcc-8.0.5.jar |   | 8.0.5 | AL 2.0 |
-| metrics-core-2.2.0.jar |   | 2.2.0 | AL 2.0 |
-| metrics-core-3.0.0.jar |   | 3.0.0 | AL 2.0 |
-| metrics-datadog-1.0.2.jar |   | 1.0.2 | BSD 3 |
-| metrics-graphite-3.0.0.jar |   | 3.0.0 | AL 2.0 |
-| metrics-jvm-3.0.0.jar |   | 3.0.0 | AL 2.0 |
-| metrics-log4j-3.0.0.jar |   | 3.0.0 | AL 2.0 |
+| lucene-analyzers-common-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-backward-codecs-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-core-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-grouping-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-highlighter-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-join-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-memory-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-misc-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-queries-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-queryparser-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-sandbox-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-spatial-extras-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-spatial3d-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lucene-suggest-8.6.2.jar |   | 8.6.2 | AL 2.0 |
+| lz4-java-1.7.1.jar |   | 1.7.1 | AL 2.0 |
+| mail-1.4.7.jar |   | 1.4.7 | CDDL 1.0, GPL 2 CPE |
+| mapper-extras-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| mariadb-java-client-1.7.4.jar |   | 1.7.4 | LGPL 2.1 |
+| mchange-commons-java-0.2.15.jar |   | 0.2.15 | EPL 1.0, LGPL 2.1 |
+| metrics-core-4.0.2.jar |   | 4.0.2 | AL 2.0 |
+| metrics-core-5.0.0-rc3.jar |   | 5.0.0-rc3 | AL 2.0 |
+| metrics-datadog-2.0.0-RC1.jar |   | 2.0.0-RC1 | BSD 3 |
+| metrics-graphite-5.0.0-rc3.jar |   | 5.0.0-rc3 | AL 2.0 |
+| metrics-jmx-5.0.0-rc3.jar |   | 5.0.0-rc3 | AL 2.0 |
+| metrics-jvm-5.0.0-rc3.jar |   | 5.0.0-rc3 | AL 2.0 |
+| metrics-log4j2-5.0.0-rc3.jar |   | 5.0.0-rc3 | AL 2.0 |
 | mimepull-1.9.3.jar | [MIME Pull](http://mimepull.java.net) | 1.9.3 | CDDL 1.1, GPL 2 CPE |
 | mina-core-1.1.2.jar | [Apache MINA](http://mina-core) | 1.1.2 | AL 2.0 |
 | minimal-json-0.9.1.jar |   | 0.9.1 | EPL 1.0 |
-| mongo-java-driver-3.4.3.jar |   | 3.4.3 | AL 2.0 |
-| mvel2-2.2.4.FinalNX01.jar | [MVEL](http://mvel.codehaus.org) | 2.2.4.FinalNX01 | AL 2.0 |
-| mysql-connector-java-5.1.44.jar |   | 5.1.44 | GPL 2 |
-| nekohtml-1.9.22.jar | [NekoHTML](http://nekohtml.sourceforge.net) | 1.9.22 | AL 2.0 |
-| netty-buffer-4.1.16.Final.jar |   | 4.1.16.Final | AL 2.0 |
-| netty-codec-4.1.16.Final.jar |   | 4.1.16.Final | AL 2.0 |
-| netty-codec-http-4.1.16.Final.jar |   | 4.1.16.Final | AL 2.0 |
-| netty-common-4.1.16.Final.jar |   | 4.1.16.Final | AL 2.0 |
-| netty-handler-4.1.16.Final.jar |   | 4.1.16.Final | AL 2.0 |
-| netty-resolver-4.1.16.Final.jar |   | 4.1.16.Final | AL 2.0 |
-| netty-transport-4.1.16.Final.jar |   | 4.1.16.Final | AL 2.0 |
+| mongodb-driver-core-4.1.1.jar |   | 4.1.1 | AL 2.0 |
+| mongodb-driver-sync-4.1.1.jar |   | 4.1.1 | AL 2.0 |
+| mssql-jdbc-7.0.0.jre8.jar |   | 7.0.0.jre8 | MIT |
+| mvel2-2.4.10.Final.jar | [MVEL](http://mvel.codehaus.org) | 2.4.10.Final | AL 2.0 |
+| mysql-connector-java-8.0.22.jar |   | 8.0.22 | GPL 2 UFOSS |
+| netty-buffer-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
+| netty-codec-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
+| netty-codec-http-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
+| netty-common-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
+| netty-handler-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
+| netty-resolver-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
+| netty-transport-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
 | not-yet-commons-ssl-0.3.9.jar |   | 0.3.9 | AL 2.0 |
 | oauth-20090531.jar | [OAuth](http://oauth.net/code/) | 20090531 | AL 2.0 |
 | oauth-provider-20090531.jar | [OAuth](http://oauth.net/code/) | 20090531 | AL 2.0 |
-| openpdf-1.0.5.jar |   | 1.0.5 | LGPL 3, MPL 2.0 |
+| okhttp-2.7.5.jar |   | 2.7.5 | AL 2.0 |
+| okhttp-3.9.1.jar |   | 3.9.1 | AL 2.0 |
+| okio-1.6.0.jar |   | 1.6.0 | AL 2.0 |
+| opencensus-api-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-contrib-dropwizard5-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-contrib-exemplar-util-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-contrib-grpc-metrics-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-contrib-http-servlet-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-contrib-http-util-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-contrib-resource-util-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-contrib-zpages-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-exporter-metrics-util-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-exporter-stats-prometheus-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-exporter-stats-stackdriver-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-exporter-trace-datadog-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-exporter-trace-jaeger-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-exporter-trace-stackdriver-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-exporter-trace-util-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-exporter-trace-zipkin-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-impl-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| opencensus-impl-core-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| openpdf-1.3.22.jar |   | 1.3.22 | LGPL 3, MPL 2.0 |
 | opensaml-2.6.4.jar |   | 2.6.4 | AL 2.0 |
-| openstack-common-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| openstack-keystone-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| openstack-swift-1.9.2.jar |   | 1.9.2 | AL 2.0 |
+| opentracing-api-0.31.0.jar |   | 0.31.0 | AL 2.0 |
+| opentracing-noop-0.31.0.jar |   | 0.31.0 | AL 2.0 |
+| opentracing-tracerresolver-0.1.5.jar |   | 0.1.5 | AL 2.0 |
+| opentracing-util-0.31.0.jar |   | 0.31.0 | AL 2.0 |
 | openws-1.5.4.jar |   | 1.5.4 | AL 2.0 |
 | org.eclipse.core.jobs-3.5.0.v20100515.jar |   | 3.5.0.v20100515 | EPL 1.0 |
 | org.eclipse.equinox.common-3.6.0.v20100503.jar | [Eclipse Equinox](http://www.eclipse.org/equinox/) | 3.6.0.v20100503 | EPL 1.0 |
 | org.eclipse.equinox.p2.cudf-1.17-NX.jar | [CUDF Resolver](http://wiki.eclipse.org/Equinox/p2/CUDFResolver) | 1.17-NX | EPL 1.0 |
 | org.osgi.compendium-4.2.0.jar | [OSGi](http://www.osgi.org/) | 4.2.0 | AL 2.0 |
 | org.osgi.core-4.2.0.jar |   | 4.2.0 | AL 2.0 |
-| org.restlet-1.0.7.jar | [Restlet](http://www.restlet.org) | 1.0.7 | CDDL 1.0, GPL 2 |
-| org.restlet.ext.fileupload-1.0.7.jar | [Restlet](http://www.restlet.org) | 1.0.7 | CDDL 1.0, GPL 2 |
+| org.restlet-2.4.2.jar |   | 2.4.2 | AL 2.0, CDDL 1.0, EPL 1.0, LGPL 2.1, LGPL 3 |
 | org.sat4j.core-2.3.1.jar | [Sat4j](http://www.sat4j.org) | 2.3.1 | EPL 1.0, LGPL 2.1 |
 | org.sat4j.pb-2.3.1.jar | [Sat4j](http://www.sat4j.org) | 2.3.1 | EPL 1.0, LGPL 2.1 |
 | oro-2.0.8.jar | [Apache Jakarta ORO](http://jakarta.apache.org/oro/) | 2.0.8 | AL 2.0 |
-| paranamer-2.8.jar |   | 2.8 | BSD 3 |
-| parent-join-client-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| pdf-html-1.0.5.jar |   | 1.0.5 | LGPL 3, MPL 2.0 |
-| pdf-rtf-1.0.5.jar |   | 1.0.5 | LGPL 3, MPL 2.0 |
-| pdf-xml-1.0.5.jar |   | 1.0.5 | LGPL 3, MPL 2.0 |
-| pdfbox-1.8.9.jar | [Apache PDFBox](http://pdfbox.apache.org) | 1.8.9 | AL 2.0 |
-| percolator-client-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| persistence-api-1.0.jar | [Java Persistence API](http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html) | 1.0 | CDDL 1.0 |
+| owasp-java-html-sanitizer-20190103.NX1.jar |   | 20190103.NX1 | AL 2.0 |
+| parent-join-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| pdfbox-2.0.21.jar | [Apache PDFBox](http://pdfbox.apache.org) | 2.0.21 | AL 2.0 |
+| pdfbox-debugger-2.0.21.jar |   | 2.0.21 | AL 2.0 |
+| pdfbox-tools-2.0.21.jar |   | 2.0.21 | AL 2.0 |
+| percolator-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| perfmark-api-0.19.0.jar |   | 0.19.0 | AL 2.0 |
+| persistence-api-1.0.2.jar | [Java Persistence API](http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html) | 1.0.2 | CDDL 1.0 |
 | plexus-utils-1.5.6.jar | [Plexus Common Utilities](http://plexus.codehaus.org/plexus-utils/) | 1.5.6 | AL 2.0 |
-| poi-3.17.jar | [Apache POI](http://poi.apache.org) | 3.17 | AL 2.0 |
-| poi-ooxml-3.17.jar | [Apache POI](http://poi.apache.org) | 3.17 | AL 2.0 |
-| poi-ooxml-schemas-3.17.jar |   | 3.17 | AL 2.0 |
-| poi-scratchpad-3.17.jar | [Apache POI](http://poi.apache.org) | 3.17 | AL 2.0 |
-| postgresql-42.1.1.jar |   | 42.1.1 | BSD 2 |
-| quartz-2.2.3.jar |   | 2.2.3 | AL 2.0 |
-| quartz-mongodb-2.0.0-NX2.jar |   | 2.0.0-NX2 | AL 2.0 |
-| rackspace-cloudfiles-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| rackspace-cloudfiles-uk-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| rackspace-cloudfiles-us-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| rackspace-cloudidentity-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| rank-eval-client-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| reindex-client-6.3.0.jar |   | 6.3.0 | AL 2.0 |
+| poi-4.1.2.jar | [Apache POI](http://poi.apache.org) | 4.1.2 | AL 2.0 |
+| poi-ooxml-4.1.2.jar | [Apache POI](http://poi.apache.org) | 4.1.2 | AL 2.0 |
+| poi-ooxml-schemas-4.1.2.jar |   | 4.1.2 | AL 2.0 |
+| poi-scratchpad-4.1.2.jar | [Apache POI](http://poi.apache.org) | 4.1.2 | AL 2.0 |
+| postgresql-42.2.18.jar |   | 42.2.18 | BSD 2 |
+| proto-google-cloud-monitoring-v3-1.64.0.jar |   | 1.64.0 | AL 2.0 |
+| proto-google-cloud-trace-v1-0.65.0.jar |   | 0.65.0 | AL 2.0 |
+| proto-google-cloud-trace-v2-0.65.0.jar |   | 0.65.0 | AL 2.0 |
+| proto-google-common-protos-1.16.0.jar |   | 1.16.0 | AL 2.0 |
+| proto-google-iam-v1-0.12.0.jar |   | 0.12.0 | AL 2.0 |
+| protobuf-java-3.7.1.jar |   | 3.7.1 | BSD 3 |
+| protobuf-java-util-3.7.1.jar |   | 3.7.1 | BSD 3 |
+| quartz-2.3.2.jar |   | 2.3.2 | AL 2.0 |
+| quartz-mongodb-2.2.0-rc2.jar |   | 2.2.0-rc2 | AL 2.0 |
+| rank-eval-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| reindex-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | relaxngDatatype-20020414.jar | [RELAX NG](http://sourceforge.net/projects/relaxng/) | 20020414 | BSD 3 |
-| richfaces-4.5.12.Final-NX1.jar |   | 4.5.12.Final-NX1 | LGPL 2.1 |
-| richfaces-a4j-4.5.12.Final-NX1.jar |   | 4.5.12.Final-NX1 | LGPL 2.1 |
-| richfaces-core-4.5.12.Final-NX1.jar |   | 4.5.12.Final-NX1 | LGPL 2.1 |
-| ridl-3.1.0.jar | [Java Runtime Interface Definition Library](http://www.openoffice.org/udk/) | 3.1.0 | LGPL 3 |
-| rocoto-6.2.jar |   | 6.2 | AL 2.0 |
-| s3-1.9.2.jar |   | 1.9.2 | AL 2.0 |
 | sac-1.3.jar | [Simple API for CSS](http://www.w3.org/Style/CSS/SAC/Overview.en.html) | 1.3 | W3C |
-| scala-library-2.12.3.jar |   | 2.12.3 | BSD 3 |
-| scala-logging_2.12-3.9.0.jar |   | 3.9.0 | AL 2.0 |
-| scala-reflect-2.12.4.jar |   | 2.12.4 | BSD 3 |
 | scim-sdk-1.7.1.jar |   | 1.7.1 | GPL 2, LGPL 2.1, UnboundID |
+| serializer-2.7.2.jar |   | 2.7.2 | AL 2.0 |
 | shared-asn1-0.9.7.jar | [ApacheDS](http://directory.apache.org/apacheds/1.5/) | 0.9.7 | AL 2.0 |
 | shared-ldap-0.9.7.jar | [ApacheDS](http://directory.apache.org/apacheds/1.5/) | 0.9.7 | AL 2.0 |
 | shared-ldap-constants-0.9.7.jar | [ApacheDS](http://directory.apache.org/apacheds/1.5/) | 0.9.7 | AL 2.0 |
-| slf4j-api-1.7.21.jar | [SLF4J](http://www.slf4j.org) | 1.7.21 | MIT |
-| slf4j-log4j12-1.7.21.jar | [SLF4J](http://www.slf4j.org) | 1.7.21 | MIT |
-| snakeyaml-1.13.jar | [SnakeYAML](http://code.google.com/p/snakeyaml/) | 1.13 | AL 2.0 |
-| snappy-java-1.1.7.1.jar |   | 1.1.7.1 | AL 2.0 |
-| sqljdbc-4.2.6420.jar |   | 4.2.6420 | MIT |
-| standard-1.1.2.jar |   | 1.1.2 | AL 2.0 |
-| stax-api-1.0.1.jar | [StAX](http://stax.codehaus.org) | 1.0.1 | AL 2.0 |
-| stax2-api-3.1.1.jar | [StAX](http://stax.codehaus.org) | 3.1.1 | BSD 3 |
-| stringtemplate-3.2.jar | [StringTemplate](http://www.stringtemplate.org) | 3.2 | BSD 3 |
-| sts-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| swift-1.9.2.jar |   | 1.9.2 | AL 2.0 |
+| simpleclient-0.6.0.jar |   | 0.6.0 | AL 2.0 |
+| simpleclient_common-0.9.0.jar |   | 0.9.0 | AL 2.0 |
+| simpleclient_httpserver-0.9.0.jar |   | 0.9.0 | AL 2.0 |
+| slf4j-api-1.7.30.jar | [SLF4J](http://www.slf4j.org) | 1.7.30 | MIT |
+| snakeyaml-1.27.jar | [SnakeYAML](http://code.google.com/p/snakeyaml/) | 1.27 | AL 2.0 |
+| snappy-java-1.1.7.3.jar |   | 1.1.7.3 | AL 2.0 |
+| SparseBitSet-1.2.jar |   | 1.2 | AL 2.0 |
+| stax2-api-4.2.1.jar | [StAX](http://stax.codehaus.org) | 4.2.1 | BSD 3 |
+| swagger-annotations-1.6.2.jar |   | 1.6.2 | AL 2.0 |
 | t-digest-3.2.jar |   | 3.2 | AL 2.0 |
-| tomcat-annotations-api-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-api-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-catalina-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-coyote-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-dbcp-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-jasper-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-jasper-el-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-jaspic-api-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-jdbc-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-jni-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-jsp-api-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-juli-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-util-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tomcat-util-scan-8.5.23.jar |   | 8.5.23 | AL 2.0 |
-| tranql-connector-1.8.jar |   | 1.8 | AL 2.0 |
-| transport-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| transport-netty4-client-6.3.0.jar |   | 6.3.0 | AL 2.0 |
-| unoil-3.1.0.jar | [Uno Interface Library](http://www.openoffice.org/udk/) | 3.1.0 | LGPL 3 |
+| taglibs-standard-impl-1.2.5.jar |   | 1.2.5 | AL 2.0 |
+| threetenbp-1.3.3.jar |   | 1.3.3 | BSD 3 |
+| tomcat-api-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-catalina-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-coyote-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-dbcp-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-el-api-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-jasper-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-jasper-el-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-jaspic-api-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-jdbc-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-jni-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-jsp-api-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-juli-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-util-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-util-scan-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| transport-7.9.2.jar |   | 7.9.2 | AL 2.0 |
+| transport-netty4-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | vaadin-sass-compiler-0.9.12-NX01.jar |   | 0.9.12-NX01 | AL 2.0 |
 | validation-api-1.0.0.GA.jar |   | 1.0.0.GA | AL 2.0 |
 | velocity-1.7.jar |   | 1.7 | AL 2.0 |
-| webdav-jaxrs-1.1.1.jar | [WebDAV Support for JAX-RS](http://java.net/projects/webdav-jaxrs) | 1.1.1 | LGPL 2.1 |
+| webdav-jaxrs-1.2.1-nx1.jar | [WebDAV Support for JAX-RS](http://java.net/projects/webdav-jaxrs) | 1.2.1-nx1 | LGPL 2.1 |
 | wem-2.0.2.jar | [WikiModel](http://wikimodel.sourceforge.net/) | 2.0.2 | EPL 1.0 |
-| woodstox-core-asl-4.2.0.jar | [Woodstox](http://woodstox.codehaus.org) | 4.2.0 | AL 2.0 |
-| wro4j-core-1.7.7.jar |   | 1.7.7 | AL 2.0 |
-| xbean-naming-3.9.jar | [Apache Geronimo](http://geronimo.apache.org) | 3.9 | AL 2.0 |
-| xercesImpl-2.11.0.jar | [Apache Xerces2](http://xerces.apache.org/xerces2-j/) | 2.11.0 | AL 2.0 |
-| xml-apis-1.4.01.jar |   | 1.4.01 | AL 2.0, PD, W3C |
-| xmlbeans-2.6.0.jar | [XMLBeans](http://xmlbeans.apache.org) | 2.6.0 | AL 2.0 |
-| xmlsec-1.5.7.jar |   | 1.5.7 | AL 2.0 |
+| woodstox-core-6.2.3.jar |   | 6.2.3 | AL 2.0 |
+| wro4j-core-1.9.0.jar |   | 1.9.0 | AL 2.0 |
+| xalan-2.7.2.jar |   | 2.7.2 | AL 2.0 |
+| xbean-naming-4.18.jar | [Apache Geronimo](http://geronimo.apache.org) | 4.18 | AL 2.0 |
+| xercesImpl-2.12.0-nx1.jar | [Apache Xerces2](http://xerces.apache.org/xerces2-j/) | 2.12.0-nx1 | AL 2.0 |
+| xmlbeans-3.1.0.jar | [XMLBeans](http://xmlbeans.apache.org) | 3.1.0 | AL 2.0 |
+| xmlgraphics-commons-2.4.jar |   | 2.4 | AL 2.0 |
+| xmlsec-2.2.0.jar |   | 2.2.0 | AL 2.0 |
 | xmltooling-1.4.4.jar |   | 1.4.4 | AL 2.0 |
-| xmlunit-1.3.jar |   | 1.3 | BSD 3 |
-| xom-1.2.5.jar |   | 1.2.5 | LGPL 2.1 |
+| xom-1.2.10.jar |   | 1.2.10 | LGPL 2.1 |
+| xom-1.3.5.jar |   | 1.3.5 | LGPL 2.1 |
 | xpp3-1.1.4c.jar |   | 1.1.4c | AL 1.1, BSD 4, PD |
 | xsom-20140925.jar | [XSOM](http://xsom.java.net) | 20140925 | CDDL 1.1, GPL 2 |
-| xstream-1.4.10.jar | [XStream](http://xstream.codehaus.org) | 1.4.10 | BSD 3 |
-| xz-1.5.jar |   | 1.5 | PD |
-| yarfraw-0.92.jar | [YARFRAW](http://yarfraw.sourceforge.net) | 0.92 | AL 2.0 |
-| zkclient-0.10.jar |   | 0.10 | AL 2.0 |
-| zookeeper-3.4.10.jar |   | 3.4.10 | AL 2.0 |
+| xstream-1.4.13.jar | [XStream](http://xstream.codehaus.org) | 1.4.13 | BSD 3 |
+| zipkin-2.12.0.jar |   | 2.12.0 | AL 2.0 |
+| zipkin-reporter-2.7.14.jar |   | 2.7.14 | AL 2.0 |
+| zipkin-sender-urlconnection-2.7.14.jar |   | 2.7.14 | AL 2.0 |
+| zstd-jni-1.4.4-7.jar |   | 1.4.4-7 | BSD 2 |
