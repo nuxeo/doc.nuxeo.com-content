@@ -66,11 +66,11 @@ To modify them in Studio Designer go to **UI** > **Layouts** > **Workflows**.
 
 ## Default Easyshare Configuration
 
-This application template provides the default configuration for the [Easyshare addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare), allowing you to update the default EasyShareFolder document type definition and layouts. It also imports the default extensions as well as the UI element to add a document into an easyshare folder. Please note you need to select the Nuxeo Web UI and Easyshare packages in the Application Dependencies screen to use this project. Once the project is imported, you will have Nuxeo Studio validation errors: you can safely ignore them.
+This application template provides the default configuration for the [Easyshare addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare), allowing you to update the default EasyShareFolder document type definition and layouts. It also imports the default extensions as well as the UI element to add a document into an Easyshare folder. Please note you need to select the Nuxeo Web UI and Easyshare packages in the Application Dependencies screen to use this project. Once the project is imported, you will have Nuxeo Studio validation errors: you can safely ignore them.
 
 ## DAM Dashboard
 
-This external template allows you for creating a visual dashboard. It is composed of several pictures redirecting to a specific document (a folder, a collection, a video...). The dashboard is configured from the Administration menu (Submenu called "Dashboard Configuration"). Once installed, assign values to the different areas and save. 
+This external template allows you to create a visual dashboard. It is composed of several pictures redirecting to a specific document (a folder, a collection, a video...). The dashboard is configured from the Administration menu (Submenu called "Dashboard Configuration"). Once installed, assign values to the different areas and save.
 
 ## Default Adobe CC Connector Configuration
 
@@ -78,7 +78,7 @@ This external template allows you to configure the different page providers used
 
 ## Smart Collections
 
-This contribution helps you create smart collections, providing a user friendly document type to dynamically link documents according to a query (with a visual editor). You can either use the default properties or write your custom property in the freehand input. A smart collection can be public, private or restricted, and you have the ability to override the generated NXQL query. A new drawer item is created to list all smart collections available for the user. 
+This contribution helps you create smart collections, providing a user-friendly document type to dynamically link documents according to a query (with a visual editor). You can either use the default properties or write your custom property in the freehand input. A smart collection can be public, private or restricted, and you have the ability to override the generated NXQL query. A new drawer item is created to list all smart collections available for the user.
 
 ## Video Utils
 
