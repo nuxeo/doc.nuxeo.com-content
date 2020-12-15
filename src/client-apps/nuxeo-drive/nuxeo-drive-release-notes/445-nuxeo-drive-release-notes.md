@@ -39,7 +39,7 @@ Available options are:
 - **Ignore**: the transfer will be cancelled, preventing the duplicate creation.
 - **Override**: the document will be replaced on the server.
 
-![]({{file name='duplicates-behavior-dt.png' page='nuxeo-drive-release-notes'}})
+![]({{file name='duplicates-behavior-dt.png' page='445-nuxeo-drive-release-notes'}})
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2234](https://jira.nuxeo.com/browse/NXDRIVE-2234)
 
