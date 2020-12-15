@@ -4,7 +4,7 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: ''
-  date: '2020-12-'
+  date: '2020-12-15'
   status: ok
 toc: true
 ---
@@ -12,7 +12,7 @@ toc: true
 Welcome to the Release Notes for **Nuxeo Drive 4.5.0**
 
 **Status**: <font color="#FF0000">**Beta**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.4.4.md)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.5.0.md)
 
 ## Important Changes
 
@@ -24,23 +24,35 @@ This is the first release that officially supports the new macOS version: Big Su
 
 ### Direct Transfer
 
-#### Fixed Multi-Screen Centering
-
-When opening the settings of Direct Transfer window, it is centered on the screen. But that was not working well for multi-screens setup. This is now fixed and the window will be centered on the screen where the mouse cursor is located.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2353](https://jira.nuxeo.com/browse/NXDRIVE-2353)
-
 #### Sessions for Direct Transfer
 
 It is now possible for the user to see and interact with the Direct Transfer sessions through the GUI. Two dedicated tabs have been added to the Direct Transfer window to show sessions statuses. These tabs list ongoing and completed sessions with some useful informations about them. It is also possible to pause/resume/cancel an ongoing session through this interface. The previously existing list of transferred items has been moved to a third tab called _Monitoring_.
 
 The Monitoring tab now only shows transfers uploaded by chunks ([NXDRIVE-2432](https://jira.nuxeo.com/browse/NXDRIVE-2432)). And it is no more possible to pause a single transfer from that view, you will have to pause the session instead ([NXDRIVE-2433](https://jira.nuxeo.com/browse/NXDRIVE-2433)).
 
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='DT-sessions-running.png' page='nuxeo-drive-release-notes'}} ?w=300)</b></td>
+<td colspan="1"><b>![]({{file name='DT-sessions-history.png' page='nuxeo-drive-release-notes'}} ?w=300)</b></td>
+<td colspan="1"><b>![]({{file name='DT-sessions-monitoring.png' page='nuxeo-drive-release-notes'}} ?w=300)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2309](https://jira.nuxeo.com/browse/NXDRIVE-2309)
+
+#### Fixed Multi-Screen Centering
+
+When opening the settings of Direct Transfer window, it is centered on the screen. But that was not working well for multi-screens setup. This is now fixed and the window will be centered on the screen where the mouse cursor is located.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2353](https://jira.nuxeo.com/browse/NXDRIVE-2353)
 
 #### New Parameter to Control Forbidden Doc Types
 
-The new [`disallowed_types_for_dt`]({{page version='' space='client-apps' page='nuxeo-drive'}}#disallowed-types-for-dt) parameter can be used to control custom document types where doing a direct Transfer is not allowed. Typically, Domain and Section are such types.
+The new [`disallowed_types_for_dt`]({{page version='' space='client-apps' page='nuxeo-drive'}}#disallowed-types-for-dt) parameter can be used to control custom document types where doing a Direct Transfer is not allowed. Typically, Domain and Section are such types.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2311](https://jira.nuxeo.com/browse/NXDRIVE-2311)
 
@@ -78,6 +90,8 @@ The old maximum value for the [chunk_limit]({{page version='' space='client-apps
 
 We reworked message boxes to get rid of the ugly all-bold text. There is now a clear title and more complete and useful message.
 
+![]({{file name='NXDRIVE-2359.png' page='nuxeo-drive-release-notes'}} ?w=350)
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2359](https://jira.nuxeo.com/browse/NXDRIVE-2359)
 
 ## Fixes
@@ -105,6 +119,5 @@ This introduces a small change for macOS users: by default the app will not be s
 
 ## Download Links
 
-- [GNU/Linux](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.0-x86_64.AppImage)
 - [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.0.dmg)
 - [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.0.exe)
