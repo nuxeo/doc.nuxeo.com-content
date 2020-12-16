@@ -22,7 +22,7 @@ confluence:
     shortlink: qoYZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/qoYZAQ'
     source_link: /display/NXDOC/Nuxeo+Platform+User+Registration
-tree_item_index: 2400
+tree_item_index: 2460
 history:
     -
         author: Manon Lumeau
