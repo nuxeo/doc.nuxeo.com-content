@@ -90,7 +90,16 @@ The old maximum value for the [chunk_limit]({{page version='' space='client-apps
 
 We reworked message boxes to get rid of the ugly all-bold text. There is now a clear title and more complete and useful message.
 
-![]({{file name='NXDRIVE-2359.png' page='nuxeo-drive-release-notes'}} ?w=350)
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='NXDRIVE-2359-before.png' page='nuxeo-drive-release-notes'}} ?w=300)</b></td>
+<td colspan="1"><b>![]({{file name='NXDRIVE-2359-after.png' page='nuxeo-drive-release-notes'}} ?w=300)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2359](https://jira.nuxeo.com/browse/NXDRIVE-2359)
 
