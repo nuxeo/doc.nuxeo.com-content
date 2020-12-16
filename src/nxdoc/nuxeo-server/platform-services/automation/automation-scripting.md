@@ -429,12 +429,12 @@ function run(input, params) {
 
 ### Event Context
 
-It is possible to access to the event context. This can be really usefull when trying to access some repository information before the document is created: Typically, you can't access parent properties on the "About to create" event without `ctx.Event.getProperty`:
+It is possible to access to the event context. This can be really usefull when trying to access some repository information before the document is created: Typically, you can't access parent properties on the "About to create" event without `ctx.Event.context.getProperty`:
 
 ```js
 function run(input, params) {
   /* Use parentPath for Empty document created event, and parentRef for About to create event */
-  var parentPath = ctx.Event.getProperty("parentPath");
+  var parentPath = ctx.Event.context.getProperty("parentPath");
   var parentDoc = Repository.GetDocument(null, {"value": parentPath});
   ...
 }
