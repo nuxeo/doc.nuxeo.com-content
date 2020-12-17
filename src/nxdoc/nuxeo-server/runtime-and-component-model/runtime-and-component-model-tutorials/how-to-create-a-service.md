@@ -85,7 +85,7 @@ The service interface and the component implementation should then be referenced
 </component>
 ```
 
-Only one component implementation can be given here. But multiple `<provide>` elements can be added inside the `<service>` element: the logics inside the `#getAdapter` method just need to be changed to return the right Java object depending on the target interface:
+Only one component implementation can be given here. But multiple `<provide>` elements can be added inside the `<service>` element: the logic inside the `#getAdapter` method just need to be changed to return the right Java object depending on the target interface:
 ```
 <?xml version="1.0"?>
 <component name="org.mycompany.myproject.MyService">
@@ -148,9 +148,11 @@ This involves [creating a XMap object]({{page page='how-to-define-a-runtime-xmap
 package org.mycompany.myproject.api;
 
 @XObject("sample")
+@XRegistry
 public class SampleDescriptor {
 
     @XNode("@id")
+    @XRegistryId
     protected String id;
 
     @XNode("@class")
@@ -185,11 +187,7 @@ This will allow parsing a contribution with a format similar to:
 </sample>
 ```
 
-If you'd like to properly handle hot-reload on your component, or handle merging of descriptors, it can be useful to make the descriptor implement the `org.nuxeo.runtime.model.Descriptor` interface, that comes with needed `#getId` and `#merge` methods.
-
-The string marker `Descriptor#UNIQUE_DESCRIPTOR_ID` can be used as an id, when handling only one single instance of the contribution on the component, instead of multiple contributions (to hold simple configuration for instance).
-
-This descriptor also needs to be referenced in the component declaration:
+This class needs to be referenced in the component declaration for the target extension point:
 ```
 <?xml version="1.0"?>
 <component name="org.mycompany.myproject.MyService">
@@ -204,11 +202,15 @@ This descriptor also needs to be referenced in the component declaration:
 
 </component>
 ```
-Note that multiple descriptors can be defined on the same extension point.
 
-Now it's time to define a registry to actually have access to contributions in the Java code, and implement corresponding service logics.
+The `@XRegistry` annotation on this class will automatically create a [registry to handle contributions]({{page page='how-to-define-a-runtime-xmap-object'}}#defining-registry). If the `@XRegistryId` annotation is present, contributions will be identified by the corresponding String identifier field. Otherwise, the registry will assume that only one single contribution should be handled.
 
-When implementing the `org.nuxeo.runtime.model.Descriptor` interface, this can be done in the component `#start` method:
+Default registries will handle merge, enablement, removal and hot-reload behaviors on contributions. Note that multiple descriptors can be defined on the same extension point, but a custom registry class will be needed in this case.
+
+Now let's see how to access contributions in the Java code, and implement corresponding service logic.
+
+When the component is started, all registries for their extension points are initialized: XML content is parsed and Java contributions can be retrieved thanks to helper methods:
+
 ```
 public class MyComponent extends DefaultComponent {
 
@@ -217,35 +219,47 @@ public class MyComponent extends DefaultComponent {
     @Override
     public void start(ComponentContext context) {
         super.start(context);
-        List<SampleDescriptor> descriptors = getDescriptors(XP_NAME);
-        // implement custom logics here
-        // (typically fill a map of descriptors by id, for easier later retrieval)
+        List<SampleDescriptor> descriptors = getRegistryContributions(XP_NAME);
+        // implement custom logic here
     }
 
 }
 ```
 
-Otherwise, custom logics can be implemented in the `#registerContribution` method:
+Calls to this registry can also be done directly when implementing the component service API (assuming these methods are not called during deployment, when registries might not have registered all contributions yet):
+
 ```
-public class MyComponent extends DefaultComponent {
+public class MyComponent extends DefaultComponent implements MyService {
 
     protected static final XP_NAME = "myPoint";
 
     @Override
-    public void registerContribution(Object contribution, String extensionPoint, ComponentInstance contributor) {
-        if (XP_NAME.equals(extensionPoint)) {
-            // if only one descriptor is defined for this extension point, the cast below can be done directly
-            SampleDescriptor desc = (SampleDescriptor) contribution;
-            // implement custom logics here
-            // (typically fill a map of descriptors by id, for easier later retrieval)
-        }
+    public void myServiceMethod() {
+        List<SampleDescriptor> descriptors = getRegistryContributions(XP_NAME);
+        // implement custom logic here
+    }
+
+    @Override
+    public void myServiceMethodWithParam(String id) {
+        Optional<SampleDescriptor> descriptor = getRegistryContribution(XP_NAME, id);
+        // implement custom logic here
     }
 
 }
 ```
 
-At this point, the component is ready to receive contributions, and
-[corresponding unit tests]({{page space='corg' page='unit-testing'}}) can pass.
+Existing API to retrieve contributions depends on the registry implementation, typically `org.nuxeo.common.xmap.registry.MapRegistry` for contributions declaring an identifier, and `org.nuxeo.common.xmap.registry.SingleRegistry` otherwise.
+
+It is also possible to retrieve a registry outside of the component declaring the related extension point, by using the `ComponentManager` API:
+
+```
+MapRegistry sampleReg = Framework.getRuntime()
+                                 .getComponentManager()
+                                 .getExtensionPointRegistry("org.mycompany.myproject.MyService", "myPoint")
+                                 .orElseThrow(() -> new IllegalArgumentException("Missing myPoint"));
+```
+
+At this point, the component is ready to receive contributions, and [corresponding unit tests]({{page space='corg' page='unit-testing'}}) can pass.
 
 Here is a full sample contribution to the target extension point:
 ```
