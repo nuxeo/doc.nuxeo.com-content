@@ -93,6 +93,72 @@ msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nux
 
 ### Server-side
 
+The Nuxeo Outlook Integration Server components are packaged altogether in the handy Nuxeo package zip format.
+
+You can use the default Nuxeo Installation guide as described in [here]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
+
+#### Apply Licenses on Server
+
+The Nuxeo Outlook Integration needs to be purchased at Nuxeo. Please contact your sales representative for further information and subscription options.
+
+With the subscription, you will be provided with two license files
+- Server license file
+- Client license file
+As a user with admin permissions, open the Admin Section within the Nuxeo Web UI.
+
+![]({{file name='AdminPage.png'}} ?w=350)
+
+Open the Outlook Integration page
+
+**Client license**</br>
+You have two option regarding the application of the client license
+
+1. Import the client license into the server</br>
+    Click the Import Client License button, select your client license file and upload it.</br>
+    The license string will be displayed.
+
+    This option is helpful, if you are using automated software rollout to your clients, as the license will be applied to each client, once the Nuxeo repository is being accessed via the Nuxeo Outlook Integration.
+
+1. Leave the section empty and provide the client license string to your users manually.
+    This option can be used if your want to control the licensed clients "manually".</br>
+    The user then needs to apply the license string manually, which is described in the settings documentation of the Nuxeo Outlook Client.</br>
+
+**Server License**
+1. Click the Import Server License button.
+1. Select your server License from your Explorer window and hit open to upload it.
+1. Once the license is validated, you will get your license detail displayed.
+1. If the license cannot be validated, an appropriate error message will be displayed instead.
+
+#### Setting up OAuth2
+
+To use OAuth2, your Nuxeo instance needs to be set up with a dedicated OAuth2 client ID for the Outlook Integration. This can be done via REST or cURL. The client ID is configurable on client side so the name can be customized.
+
+Rest call:
+**OAuth2 add clientId to Nuxeo**
+```
+POST http://localhost:8080/nuxeo/api/v1/directory/oauth2Clients
+
+POST api/v1/directory/oauth2Clients
+{
+"entity-type": "directoryEntry",
+"directoryName": "oauth2Clients",
+"properties": {
+"name": "Nuxeo Outlook Integration",
+"clientId": "nuxeo-oi",
+"redirectURIs": "webbrowser",
+"autoGrant": "true",
+"enabled": "true"
+}
+}
+```
+
+The redirect URL is not necessary as the Outlook Integration handles the return in an embedded browser.
+
+cURL
+**OAuth2 add clientId to Nuxeo via cURL**
+```
+curl -u Administrator:xxxx\   -H 'Content-Type: application/json' \   -X POST https://ecm-2020.cloud.nuxeo.com/nuxeo/api/v1/directory/oauth2Clients \   -d @- << EOF   {     "entity-type": "directoryEntry",     "directoryName": "oauth2Clients",     "properties": {       "name": "Nuxeo Salesforce Client",       "clientId": "nuxeo-sfdc",       "redirectURIs": "https://momentum-flow-9907-dev-ed.cs82.my.salesforce.com/apex/nuxeoauth",       "autoGrant": "true",       "enabled": "true"     }   }
+```
 
 ## Configuration
 
