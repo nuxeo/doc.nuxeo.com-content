@@ -673,6 +673,21 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo Outlook Connector<br/>
+`nuxeo-outlook-integration-package`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-outlook-connector'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-outlook-integration-package)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo Platform 3D<br/>
 `nuxeo-platform-3d`
 </td>
