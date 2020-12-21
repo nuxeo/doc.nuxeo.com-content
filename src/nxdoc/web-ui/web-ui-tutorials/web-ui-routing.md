@@ -66,6 +66,20 @@ For instance, [nuxeo-document-tree](https://github.com/nuxeo/nuxeo-web-ui/blob/7
 ```
 ![]({{file name='NAVIGATION_TREE.png'}} ?w=400,border=true)
 
+By default, Web UI navigation is based on document path, but it can be configured to be based on document UID instead.
+To enable navigation by UID (instead of path), the `org.nuxeo.web.ui.router.key.document` property can overridden with an XML contribution as follows:
+
+```xml
+<component name="org.nuxeo.web.ui.properties.contrib">
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+
+    <!-- Navigation by UID -->
+    <property name="org.nuxeo.web.ui.router.key.document">uid</property>
+
+  </extension>
+</component>
+```
+
 Other use case examples of the routing mechanism are:
  - the [USER_MENU]({{page page='web-ui-slots#user_menu'}}) slot
  - when [adding a new search]({{page version='' space='nxdoc' page='web-ui-search'}})
