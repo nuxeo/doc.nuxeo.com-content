@@ -1,9 +1,9 @@
 ---
-title: Upgrading Nuxeo Web UI from LTS 2019 to 11.1
-description: Upgrade notes from Nuxeo Web UI LTS 2019 (10.10) to 11.1
+title: Upgrading Nuxeo Web UI from LTS 2019 to 11.x
+description: Upgrade notes from Nuxeo Web UI LTS 2019 (10.10) to 11.x
 review:
     comment: ''
-    date: '2020-06-24'
+    date: '2020-12-28'
     status: ok
 toc: true
 labels:
@@ -19,7 +19,7 @@ This page mentions how to do a technical upgrade. Have a look at the [release no
 {{/callout}}
 {{! /multiexcerpt}}
 
-## Upgrading from Web UI LTS 2019 to Web UI 11.1
+## Upgrading from Web UI LTS 2019 to Web UI 11.x
 
 ### Polymer 3 Migration
 
@@ -53,6 +53,12 @@ In order to keep compatibility, Nuxeo [exports some of the previous options](htt
 
 You can keep using them, although we recommend limiting the imports to the subset that is required in order to get a better overall performance and to keep your code cleaner.
 
+ Further examples of exposed options in global namespace include:
+- Iron Behaviors (see [NXP-28375](https://jira.nuxeo.com/browse/NXP-28375))
+- Moment library (see [NXP-28401](https://jira.nuxeo.com/browse/NXP-28401))
+- Routing override (see [WEBUI-15](https://jira.nuxeo.com/browse/WEBUI-15))
+- Polymer templatizer (see [WEBUI-69](https://jira.nuxeo.com/browse/WEBUI-69))
+
 ### Workflow Task Endpoint is Paginable
 
 The _ActionContext_ variable *does not* contain anymore an array called _tasks_ with all the tasks available for the current user/group.
@@ -79,5 +85,81 @@ Removed variables can be safely deleted from your themes or elements. Deprecated
 * Removed `--nuxeo-results-view-min-height` (added in [NXP-27652](https://jira.nuxeo.com/browse/NXP-27652)).
 * Deprecated `--nuxeo-document-content-min-height` in favor of `--nuxeo-document-content-height` (affects `nuxeo-document-content`).
 * Deprecated `--nuxeo-document-trash-content-min-height` in favor of `--nuxeo-document-trash-content-height` (affects `nuxeo-document-trash-content`).
+* Deprecated `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height` in favor of the mixin `--nuxeo-document-create-selection-icon` (affects `nuxeo-document-create`).
+
+### Nuxeo dropzone API change
+
+As of [NXP-28263](https://jira.nuxeo.com/browse/NXP-28263), `nuxeo-dropzone` exposes a new API that allows the element to be bound to a document field through the *value property*, which is more consistent with the API exposed by the other widgets. The previous API is deprecated but still supported (see [NXP-29391](https://jira.nuxeo.com/browse/NXP-29391)).
+
+### Use of atomic permissions
+
+Several elements of Nuxeo Web UI and Nuxeo Elements were updated to make use of `atomic permissions` instead of composite permissions. This was once one of the major causes to fork actions elements, which should now be reverted (see [WEBUI-5](https://jira.nuxeo.com/browse/WEBUI-5)).
+
+### Missing labels on actions menu
+
+Starting from 10.3, Nuxeo introduced an `actions menu` to wrap document actions (see [NXP-25146](https://jira.nuxeo.com/browse/NXP-25146)). Projects that forked action elements or have custom actions based on code from 9.10 won’t display a label unless they are upgraded as described in the documentation. This is mostly a cosmetic change, as actions will still work as they previously did, without the label.
+
+### Label deprecation
+
+Since [WEBUI-116](https://jira.nuxeo.com/browse/WEBUI-116), the `document history` and `audit page` use the same component and the new prefix `audit`. The following are some examples of the deprecated labels and their replacement:
+
+| Deprecated labels             | New Labels          |
+|-------------------------------|---------------------|
+| documentHistory.category      | audit.category      |
+| documentHistory.comment       | audit.comment       |
+| documentHistory.date          | audit.date          |
+| documentHistory.filter.after  | audit.filter.after  |
+| documentHistory.filter.before | audit.filter.before |
+
+### Reference to invalid packages in the project
+
+The reference to packages that no longer exist, such as `nuxeo-dam` or `nuxeo-spreadsheet`, or the presence of JSF specific contributions, might cause conflicts and prevent a project from working properly.
+
+#### Nuxeo DAM addon removal
+
+Nuxeo DAM no longer exists as an addon and its contributions are now default on Web UI. If you're using Nuxeo Studio, you will see the Nuxeo DAM in the removed addons list when upgrading your project through the application definition page.
+
+#### Spreadsheet addon removal
+
+Spreadsheet addon is now loaded by default but the button contribution is disabled. Users can rely on Studio Designer to re-enable the `spreadSheet` *button* in the `RESULTS_ACTIONS` slot (see [WEBUI-90](https://jira.nuxeo.com/browse/WEBUI-90)).
+
+### BROWSER_ACTIONS slot removal
+
+The `BROWSER_ACTIONS` nuxeo slot was removed under [NXP-26184](https://jira.nuxeo.com/browse/NXP-26184). It was already deprecated since Web UI 0.9 and had no known usage. It was replaced by the `RESULTS_SELECTION_ACTIONS` slot.
+
+### Forked nuxeo-document-content might lose selection actions
+
+After [NXP-25345](https://jira.nuxeo.com/browse/NXP-25345), Nuxeo Web UI introduced the ability to override selection actions. Elements that were forked from an older version of `nuxeo-document-content` and that override the `selectionActions` native slot with new content will be missing the contributions to the `RESULTS_SELECTION_ACTIONS` nuxeo slot. This can be rectified by adding the desired actions to the new slot, and by deleting the following piece of code:
+
+```
+<div slot=“selectionActions”>
+  <nuxeo-slot slot=“BROWSE_ACTIONS” model=“[[browseActionContext]]“></nuxeo-slot>
+</div>
+```
+
+### Picture document page being displayed on doctypes using the Picture facet
+
+Since [NXP-25740](https://jira.nuxeo.com/browse/NXP-25740), the `nuxeo-picture-document-page` is now displayed for documents with `Picture` **facet** instead of documents with `Picture` **type**. This means that on migrated projects, the `nuxeo-picture-document-page` might be displayed on documents where it was not expected. If this is not desirable, the contribution can simply be overridden to only display the page for documents with `Picture` **type**:
+
+```
+<nuxeo-slot-content name="pictureDocumentViewPage" slot="DOCUMENT_VIEWS_PAGES" order="5">
+  <template>
+    <nuxeo-filter document="[[document]]" type="Picture">
+      <template>
+        <nuxeo-picture-document-page name="view" document="[[document]]"></nuxeo-picture-document-page>
+      </template>
+    </nuxeo-filter>
+  </template>
+</nuxeo-slot-content>
+
+```
+
+### Deprecate usage of nuxeo-document-history
+
+The use of `nuxeo-document-history` was deprecated in favor of `nuxeo-audit-search`.
+
+### Drop support for Edge Legacy
+
+Starting from 11.x, Nuxeo Web UI no longer supports *Microsoft Edge Legacy*. See [here](https://doc.nuxeo.com/nxdoc/web-ui-overview/) for the complete list of supported browsers.
 
 {{! /multiexcerpt}}
