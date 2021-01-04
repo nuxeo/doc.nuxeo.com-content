@@ -11,7 +11,7 @@ toc: true
 
 Welcome to the Release Notes for **Nuxeo Drive 4.5.0**
 
-**Status**: <font color="#FF0000">**Beta**</font> </br>
+**Status**: <font color="#0066ff">**Release**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.5.0.md)
 
 ## Important Changes
