@@ -470,7 +470,7 @@ Example of how to use the `@Deploy` annotations to deploy additional bundles and
 @RunWith(FeaturesRunner.class)
 @Features(RuntimeFeature.class)
 @Deploy("org.nuxeo.ecm.core.schema")
-@Deploy("org.nuxeo.rutime:OSGI-INF/my-test-contribution.xml")
+@Deploy("org.nuxeo.runtime:OSGI-INF/my-test-contribution.xml")
 public class DeployTest {
     @Inject
     SchemaManager schemas;
