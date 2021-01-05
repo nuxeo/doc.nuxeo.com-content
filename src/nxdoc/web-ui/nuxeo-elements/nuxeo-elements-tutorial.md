@@ -29,10 +29,10 @@ Watch the related courses on Nuxeo University:</br>
 
 ## Requirements
 
-- **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first (last verified versions for this tutorial are node v10.12.0 and npm 6.4.1)
+- **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first, according to the requirements described in the [Nuxeo Elements repository](https://github.com/nuxeo/nuxeo-elements/blob/master/README.md#dependencies).
 - **[Bower](http://bower.io/)** is currently **the** tool for managing web application definition.
-- **[Nuxeo CLI]({{page page='nuxeo-cli'}})** to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend (last verified version for this tutorial is 1.9.0)
-- **[Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli)** to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service (last verified version for this tutorial is 1.9.5)
+- **[Nuxeo CLI]({{page page='nuxeo-cli'}})** to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend (last verified version for this tutorial is 1.9.0).
+- **[Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli)** to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service (last verified version for this tutorial is 1.9.5).
 
 ## Scaffolding
 
