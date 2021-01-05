@@ -9,7 +9,7 @@ toc: true
 ---
 
 {{! excerpt}}
-This page provides clarifies all options available in the current Nuxeo framework.
+This page provides information about all options available in the current Nuxeo framework.
 {{! /excerpt}}
 
 ## Glossary
@@ -17,9 +17,8 @@ This page provides clarifies all options available in the current Nuxeo framewor
 Let's review first the main concepts:
 - **Environment variables**: variables set in the OS that cannot be changed at runtime
 - **System properties**: variables set on the Java command line using the `-Dpropertyname=value` syntax, that can be added at runtime using `System#setProperties` or `System.getProperties#load` method, retrieved through the various `System#getProperty` methods.
-- **Nuxeo configuration properties**: variables set in the [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file.
+- **Nuxeo configuration properties**: variables set in the [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}) file.
 - **Nuxeo template properties**: variables set via Nuxeo configuration templates properties files loaded via Java properties utilities.
-
 
 ## Variables Retrieval
 
@@ -38,7 +37,7 @@ Java class [ConfigurationGenerator](https://github.com/nuxeo/nuxeo/blob/master/m
 1. If an environment variable `NUXEO_ENVIRONMENT` is set, for instance to value `prod`, the map is then filled with properties held by file at `NUXEO_HOME/templates/nuxeo.prod`.
 1. The map is then filled with System properties via `System#getProperties`.
 1. The map is then filled with `nuxeo.conf` variable properties.
-1. Then templates are resolved thanks to the property `nuxeo.templates` (*).
+1. Then templates are resolved thanks to the property `nuxeo.templates` (\*).
 This resolution supports “included templates” resolution thanks to the `nuxeo.template.includes` property resolution. Templates are ordered so that they follow the declaration order, and so that included templates are taken into account before the template including them.
 1. If an environment variable `NUXEO_PROFILES` is set, the value is added to the list of templates previously resolved. Multiple profiles can be defined, separated by a comma.
 1. For each template, following the order of the list of template names previously resolved, the map is then filled by properties held by file at `TEMPLATE_DIRECTORY/nuxeo.defaults`, and if an environment variable `NUXEO_ENVIRONMENT` is set, for instance to value `prod`, the map is then filled with properties held by file at `TEMPLATE_DIRECTORY/nuxeo.prod`.
@@ -138,7 +137,7 @@ As a reference, here is the ordered list of configuration files (except from the
 
 During Runtime startup, properties pushed to the main map can be expanded when they are declared with the pattern `${propertyName}` or `${propertyName:=defaultValue}`.
 
-This expansion happen **on-the-fly** when calling the getter methods `Framework#getProperty` or `Framework#expandVars`.
+This expansion happens **on-the-fly** when calling the getter methods `Framework#getProperty` or `Framework#expandVars`.
 
 Expansion happens within the map of properties described above, and can be recursive: it is possible to define a property and reference it in another property, for instance:
 
@@ -166,9 +165,9 @@ If the Nuxeo Runtime properties hold the variable name, it will be resolved, oth
 
 XML content is parsed as a single string: variables can be placed anywhere in the content.
 
-### Component properties
+### Component Properties
 
-Java components accept “simple” properties configuration, the drawback is that these properties cannot be overridden via XML contributions:
+Java components accept "simple" properties configuration, the drawback is that these properties cannot be overridden via XML contributions:
 
 ```xml
 <?xml version="1.0"?>
@@ -243,7 +242,7 @@ public class MyComponent extends DefaultComponent {
 }
 ```
 
-### ConfigurationService Properties mixed with Properties
+### ConfigurationService Properties Mixed With Properties
 
 Using the ConfigurationService and a Runtime property can be combined, by referencing a variable expression in the ConfigurationService contribution:
 
@@ -257,4 +256,4 @@ Using the ConfigurationService and a Runtime property can be combined, by refere
 
 These properties can be retrieved from the JAVA API in the same way as in the previous case, through the ConfigurationService API.
 
-Note that if a ConfigurationService contribution uses the same property name than a Runtime property, a warning will be issued at startup, to avoid confusions and ease up migrations, as a number of properties were moved out of nuxeo.conf files to be declared to the ConfigurationService when it was introduced. Variable expansion still applies, if it can help with migrations: if the code looks for this value on the ConfigurationService and a static value is used for it instead of an expression, the property with the same name declared in the nuxeo.conf file, for instance, will not be taken into account.
+Note that if a ConfigurationService contribution uses the same property name than a Runtime property, a warning will be issued at startup, to avoid confusions and ease up migrations, as a number of properties were moved out of `nuxeo.conf` files to be declared to the ConfigurationService when it was introduced. Variable expansion still applies, if it can help with migrations: if the code looks for this value on the ConfigurationService and a static value is used for it instead of an expression, the property with the same name declared in the `nuxeo.conf` file, for instance, will not be taken into account.
