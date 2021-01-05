@@ -5,13 +5,13 @@ review:
     date: '2020-12-14'
     status: ok
 tree_item_index: 90
-toc: true
+is_overview: true
 ---
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### Variables and Configuration Pattern
+### Variables & Configuration Pattern
 <br/>
 Understand how variables are resolved in Nuxeo platform, and get a view on all options available in the current Nuxeo framework.
 <br/>
@@ -25,9 +25,9 @@ Understand how variables are resolved in Nuxeo platform, and get a view on all o
 </div>
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### Configuration parameters (nuxeo.conf)
+### Configuration Parameters
 <br/>
-Nuxeo Platform reads configuration properties in the nuxeo.conf file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files.
+Nuxeo Platform reads configuration properties in the `nuxeo.conf` file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files.
 <br/>
 <br/>
 [Go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='call-nuxeo-from-external-app'}})
@@ -35,7 +35,7 @@ Nuxeo Platform reads configuration properties in the nuxeo.conf file. Those para
 </div>
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### Configuration templates
+### Configuration Templates
 <br/>
 <br/>
 Nuxeo applications integrate a configuration templates system to ease configuration and maintenance of configuration files.
