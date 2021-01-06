@@ -193,7 +193,7 @@ history:
         version: '1'
 
 ---
-Nuxeo Marketplace is Nuxeo ECM application store. It offers Nuxeo Packages that enable you to easily add features to your Nuxeo application.
+The Nuxeo Marketplace is the Nuxeo application store for DAM and ECM. It offers Nuxeo Packages that enable you to easily add features to your Nuxeo application. Create your own application by connecting to your existing systems, adding new features to your application or even make your package available to a wider audience! 
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Nuxeo Marketplace/Connect Marketplace
