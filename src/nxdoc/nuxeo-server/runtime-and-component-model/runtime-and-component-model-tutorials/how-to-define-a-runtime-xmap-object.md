@@ -371,24 +371,24 @@ Using these registries will allow benefitting from default merge, enablement and
 
 If a sample contribution with id "myid" was previously resolved on the target extension point, the following contributions will result in the following behavior:
 
-1. the final sample contribution will hold all previous configuration, as well as the updated title value:
+1. The final sample contribution will hold all previous configuration, as well as the updated title value:
 ```
 <sample id="myid" merge="true">
   <title>My updated title</title>
 </sample>
 ```
-1.  the final sample contribution will not hold previous configuration and will be completely re-defined:
+1. The final sample contribution will not hold previous configuration and will be completely re-defined:
 ```
 <sample id="myid" merge="false">
   <title>My updated title</title>
   <order>10</order>
 </sample>
 ```
-1.  the final sample contribution will be filtered from the registry API and a following re-enablement will show previous configuration:
+1. The final sample contribution will be filtered from the registry API and a following re-enablement will show previous configuration:
 ```
 <sample id="myid" enable="false" />
 ```
-1.  the final sample contribution will be removed from the registry API and a following re-definition will not show previous configuration:
+1. The final sample contribution will be removed from the registry API and a following re-definition will not show previous configuration:
 ```
 <sample id="myid" remove="true" />
 ```
@@ -403,7 +403,7 @@ Similar behaviors are also implemented for registries handling a single final co
 
 List and map fields are also merged by default according to the contribution merge behavior.
 It is possible to define specific merge and removal behaviors on lists and maps content using the `@XMerge` and `@XRemove` annotation next to the `@XNodeList` or `@XNodeMap` annotation.
-For instance, the following configuration will allow emptying explicitely the list of persons on merge, while merging the rest of the definition:
+For instance, the following configuration will allow emptying explicitly the list of persons on merge, while merging the rest of the definition:
 
 ```
 @XObject("sample")
@@ -513,7 +513,7 @@ public class SampleDescriptor {
 }
 ```
 
-The default enablement behavior has been disabled in the `@XRegistry` annotation so that the custom enablement behavior is taken into account. It consists of mappin the existing "isEnabled" attribute so that it is taken into account, as well as the "fallback" default behavior linked to the "enable" attribute.
+The default enablement behavior has been disabled in the `@XRegistry` annotation so that the custom enablement behavior is taken into account. It consists of mapping the existing `isEnabled` attribute so that it is taken into account, as well as the "fallback" default behavior linked to the `enable` attribute.
 
 Both following contributions will result in standard enablement behavior when re-defining the contribution:
 
