@@ -15,7 +15,7 @@ hidden: true
 
 {{! multiexcerpt name='matching-notes'}}
 {{#> callout type='info' heading='Release Notes'}}
-This page mentions how to do a technical upgrade. Have a look at the [release notes]({{{page version='next' space='nxdoc' page='web-ui-11-1-release-notes'}}) to see what's new.
+This page mentions how to do a technical upgrade. Have a look at the [release notes]({{page version='next' space='nxdoc' page='web-ui-11-1-release-notes'}}) to see what's new.
 {{/callout}}
 {{! /multiexcerpt}}
 
