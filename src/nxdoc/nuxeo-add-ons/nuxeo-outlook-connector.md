@@ -26,71 +26,6 @@ Search inside your Nuxeo repository
 
 ## Installation
 
-### Client-side
-
-#### Manual Installation
-
-If you are distributing the Nuxeo Outlook Client across an organization, see [Scripted Installation](#scripted-installation) section.
-
-- Extract the contents of the archive (usually called `Nuxeo-EmailClientOutlookPlugin-x.x.x.zip`) and choose the x86 or x64 version dependent on your current system
-
-- Choose either the `msi` or `exe` (both will work, the `msi` file is needed for the scripted installation). </br>
-  An installation wizard will open.
-
-- Follow the installation process
-
-- Open Microsoft Outlook</br>
-  You will see the Nuxeo Outlook Integration docked to the right. You can access the settings (i.e. to apply a license) by pressing the gear icon
-
-#### Command-line Installation
-
-This is useful for larger companies who do not want their single clients to run the installation by themselves. Besides the actual client, the installation will copy a configuration file into the user profile folder (alias in Windows Explorer: `%USERPROFILE%`). If there already is a user configuration present, the existing parameters will not be overwritten.
-
-There are two ways client can be installed using CMD parameters:
-- Interactive installation
-- Quiet installation (performs in a silent mode w/o any user interaction).
-
-In order to run an installation, you need to do the following steps:
-
-1. Run the Command Prompt as an Administrator (even if you are an Administrator on the machine) to force all operations to be performed under administrative permissions.
-
-1. Navigate to the folder where the `NuxeoOutlookIntegration....msi` file is located. Depending on the OS running on the client machine, you have to choose between "x86" (32 bit) or "x64" (64 bit).</br>
-    Optionally you can type the exact file-path instead.
-
-1. Execute the following command:
-    - For **interactive installation**: msiexec /i NuxeoOutlookIntegration.msi LIST OF PARAMETERS (i.e. msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nuxeo" OAUTH2CLIENTID="nuxeo-oi")
-
-    - For **quiet installation**: msiexec /i NuxeoOutlookIntegration.msi LIST OF PARAMETERS /quiet (i.e. msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nuxeo" OAUTH2CLIENTID="nuxeo-oi" /quiet)
-
-**Command line parameters:**
-- **HOSTNAME** - Sets Nuxeo server URL. (format: <http | https>://<hostname> ). The name has to point to the API endpoint, which is usually i.e. https://nuxeoserverinstance/nuxeo (but may differ on your installation).
-- **OAUTH2CLIENTID** - Set the name of the OAuth2 client Id used for authentication with OAuth2
-- **AUTH** - Sets the type of authentication. "Basic" or "OAuth2"
-- **NUXEODRIVEENABLED** - Enables or disables the context menu for "Edit with Nuxeo Drive" - default is false
-- **OFFICEONLINEENABLED** - Enables or disables the context menu for "Edit with Office Online" - default is false
-- **LANGUAGE** - Sets the language (format examples: "de-DE", "fr-FR", "en-US")
-
-Culture settings, available languages:
-- en-US = English
-- fr-FR = French
-- de-DE = German
-
-**Example:**
-- The URL of your Nuxeo instance is "https://mynuxeoinstance.com/nuxeo".
-- Authentication should be set to OAuth2, your OAuth2 client Id is `nuxeo-oi`.
-- Your company has set up the Nuxeo Drive for editing but has no Office Online integration.
-- You want the default language to be french (can be changed by the user later)
-
-It should look like this:
-```
-msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nuxeo" AUTH="OAuth2" OAUTH2CLIENTID="nuxeo-mi" NUXEODRIVEENABLED="true" LANGUAGE="fr-FR"
-```
-
-If you want the same installation to run quietly, you can just add /quiet:
-```
-msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nuxeo" AUTH="OAuth2" OAUTH2CLIENTID="nuxeo-mi" NUXEODRIVEENABLED="true" LANGUAGE="fr-FR" /quiet
-```
-
 ### Server-side
 
 The Nuxeo Outlook Integration Server components are packaged altogether in the handy Nuxeo package zip format.
@@ -159,6 +94,75 @@ cURL
 ```
 curl -u Administrator:xxxx\   -H 'Content-Type: application/json' \   -X POST https://ecm-2020.cloud.nuxeo.com/nuxeo/api/v1/directory/oauth2Clients \   -d @- << EOF   {     "entity-type": "directoryEntry",     "directoryName": "oauth2Clients",     "properties": {       "name": "Nuxeo Salesforce Client",       "clientId": "nuxeo-sfdc",       "redirectURIs": "https://momentum-flow-9907-dev-ed.cs82.my.salesforce.com/apex/nuxeoauth",       "autoGrant": "true",       "enabled": "true"     }   }
 ```
+
+### Client-side
+
+#### Manual Installation
+
+If you are distributing the Nuxeo Outlook Client across an organization, see [Scripted Installation](#scripted-installation) section.
+
+- Extract the contents of the archive (usually called `Nuxeo-EmailClientOutlookPlugin-x.x.x.zip`) and choose the x86 or x64 version dependent on your current system
+
+- Choose either the `msi` or `exe` (both will work, the `msi` file is needed for the scripted installation). </br>
+  An installation wizard will open.
+
+- Follow the installation process
+
+- Open Microsoft Outlook</br>
+  You will see the Nuxeo Outlook Integration docked to the right. You can access the settings (i.e. to apply a license) by pressing the gear icon
+
+#### Command-line Installation
+
+This is useful for larger companies who do not want their single clients to run the installation by themselves. Besides the actual client, the installation will copy a configuration file into the user profile folder (alias in Windows Explorer: `%USERPROFILE%`). If there already is a user configuration present, the existing parameters will not be overwritten.
+
+There are two ways client can be installed using CMD parameters:
+- Interactive installation
+- Quiet installation (performs in a silent mode w/o any user interaction).
+
+In order to run an installation, you need to do the following steps:
+
+1. Run the Command Prompt as an Administrator (even if you are an Administrator on the machine) to force all operations to be performed under administrative permissions.
+
+1. Navigate to the folder where the `NuxeoOutlookIntegration....msi` file is located. Depending on the OS running on the client machine, you have to choose between "x86" (32 bit) or "x64" (64 bit).</br>
+    Optionally you can type the exact file-path instead.
+
+1. Execute the following command:
+    - For **interactive installation**: msiexec /i NuxeoOutlookIntegration.msi LIST OF PARAMETERS (i.e. msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nuxeo" OAUTH2CLIENTID="nuxeo-oi")
+
+    - For **quiet installation**: msiexec /i NuxeoOutlookIntegration.msi LIST OF PARAMETERS /quiet (i.e. msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nuxeo" OAUTH2CLIENTID="nuxeo-oi" /quiet)
+
+**Command line parameters:**
+- **HOSTNAME** - Sets Nuxeo server URL. (format: <http | https>://<hostname> ). The name has to point to the API endpoint, which is usually i.e. https://nuxeoserverinstance/nuxeo (but may differ on your installation).
+- **OAUTH2CLIENTID** - Set the name of the OAuth2 client Id used for authentication with OAuth2
+- **AUTH** - Sets the type of authentication. "Basic" or "OAuth2"
+- **NUXEODRIVEENABLED** - Enables or disables the context menu for "Edit with Nuxeo Drive" - default is false
+- **OFFICEONLINEENABLED** - Enables or disables the context menu for "Edit with Office Online" - default is false
+- **LANGUAGE** - Sets the language (format examples: "de-DE", "fr-FR", "en-US")
+
+Culture settings, available languages:
+- en-US = English
+- fr-FR = French
+- de-DE = German
+
+**Example:**
+- The URL of your Nuxeo instance is "https://mynuxeoinstance.com/nuxeo".
+- Authentication should be set to OAuth2, your OAuth2 client Id is `nuxeo-oi`.
+- Your company has set up the Nuxeo Drive for editing but has no Office Online integration.
+- You want the default language to be french (can be changed by the user later)
+
+It should look like this:
+```
+msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nuxeo" AUTH="OAuth2" OAUTH2CLIENTID="nuxeo-mi" NUXEODRIVEENABLED="true" LANGUAGE="fr-FR"
+```
+
+If you want the same installation to run quietly, you can just add /quiet:
+```
+msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nuxeo" AUTH="OAuth2" OAUTH2CLIENTID="nuxeo-mi" NUXEODRIVEENABLED="true" LANGUAGE="fr-FR" /quiet
+```
+
+{{#> callout type='warning'}}
+Once the installation is done, make sure that the [Nuxeo IMAP connector]({{page version='' space='userdoc' page='nuxeo-imap-connector'}}) has been correctly installed on your instance, as the Nuxeo Outlook connector depends on it to work correctly.  
+{{/callout}}
 
 ## Configuration
 
