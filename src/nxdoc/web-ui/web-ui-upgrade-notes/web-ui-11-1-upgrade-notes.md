@@ -3,7 +3,7 @@ title: Upgrading Nuxeo Web UI from LTS 2019 to 11.x
 description: Upgrade notes from Nuxeo Web UI LTS 2019 (10.10) to 11.x
 review:
     comment: ''
-    date: '2020-12-28'
+    date: '2021-01-07'
     status: ok
 toc: true
 labels:
@@ -78,15 +78,6 @@ The `workflowModelName` parameter is deprecated as it requires to retrieve all t
 
 From now on, retrieving tasks needs to be made using a paginable approach. Some methods in the `DocumentRoutingService` have been deprecated to reflect that change and should be updated.
 
-### Style Update
-
-Removed variables can be safely deleted from your themes or elements. Deprecated variables should be replaced by the new ones on themes and custom elements making use of them:
-
-* Removed `--nuxeo-results-view-min-height` (added in [NXP-27652](https://jira.nuxeo.com/browse/NXP-27652)).
-* Deprecated `--nuxeo-document-content-min-height` in favor of `--nuxeo-document-content-height` (affects `nuxeo-document-content`).
-* Deprecated `--nuxeo-document-trash-content-min-height` in favor of `--nuxeo-document-trash-content-height` (affects `nuxeo-document-trash-content`).
-* Deprecated `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height` in favor of the mixin `--nuxeo-document-create-selection-icon` (affects `nuxeo-document-create`).
-
 ### Nuxeo dropzone API change
 
 As of [NXP-28263](https://jira.nuxeo.com/browse/NXP-28263), `nuxeo-dropzone` exposes a new API that allows the element to be bound to a document field through the *value property*, which is more consistent with the API exposed by the other widgets. The previous API is deprecated but still supported (see [NXP-29391](https://jira.nuxeo.com/browse/NXP-29391)).
@@ -99,21 +90,13 @@ Several elements of Nuxeo Web UI and Nuxeo Elements were updated to make use of 
 
 Starting from 10.3, Nuxeo introduced an `actions menu` to wrap document actions (see [NXP-25146](https://jira.nuxeo.com/browse/NXP-25146)). Projects that forked action elements or have custom actions based on code from 9.10 won’t display a label unless they are upgraded as described in the documentation. This is mostly a cosmetic change, as actions will still work as they previously did, without the label.
 
-### Label deprecation
-
-Since [WEBUI-116](https://jira.nuxeo.com/browse/WEBUI-116), the `document history` and `audit page` use the same component and the new prefix `audit`. The following are some examples of the deprecated labels and their replacement:
-
-| Deprecated labels             | New Labels          |
-|-------------------------------|---------------------|
-| documentHistory.category      | audit.category      |
-| documentHistory.comment       | audit.comment       |
-| documentHistory.date          | audit.date          |
-| documentHistory.filter.after  | audit.filter.after  |
-| documentHistory.filter.before | audit.filter.before |
-
 ### Reference to invalid packages in the project
 
 The reference to packages that no longer exist, such as `nuxeo-dam` or `nuxeo-spreadsheet`, or the presence of JSF specific contributions, might cause conflicts and prevent a project from working properly.
+
+#### Nuxeo DAM addon removal
+
+Nuxeo DAM no longer exists as an addon and its contributions are now default on Web UI. If you're using Nuxeo Studio, you will see the Nuxeo DAM in the removed addons list when upgrading your project through the application definition page.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Web UI 11.x upgrade notes/Package removal in Studio's Application Definition
@@ -121,10 +104,6 @@ The reference to packages that no longer exist, such as `nuxeo-dam` or `nuxeo-sp
     1.1.3#screenshot#up_to_date
 --}}
 ![Package removal in Studio's Application Definition](nx_asset://b47d5c8b-c1ba-4d2a-ab0b-8b8378d73c8d ?w=650,border=true)
-
-#### Nuxeo DAM addon removal
-
-Nuxeo DAM no longer exists as an addon and its contributions are now default on Web UI. If you're using Nuxeo Studio, you will see the Nuxeo DAM in the removed addons list when upgrading your project through the application definition page.
 
 #### Spreadsheet addon removal
 
@@ -137,11 +116,13 @@ Spreadsheet addon is now loaded by default but the button contribution is disabl
 --}}
 ![Spreadsheet package enable button in Designer](nx_asset://b8fd28dd-0272-43b1-a083-dfde295c312b ?w=650,border=true)
 
-### BROWSER_ACTIONS slot removal
+### Breaking changes
+
+#### BROWSER_ACTIONS slot removal
 
 The `BROWSER_ACTIONS` nuxeo slot was removed under [NXP-26184](https://jira.nuxeo.com/browse/NXP-26184). It was already deprecated since Web UI 0.9 and had no known usage. It was replaced by the `RESULTS_SELECTION_ACTIONS` slot.
 
-### Forked nuxeo-document-content might lose selection actions
+#### Forked nuxeo-document-content might lose selection actions
 
 After [NXP-25345](https://jira.nuxeo.com/browse/NXP-25345), Nuxeo Web UI introduced the ability to override selection actions. Elements that were forked from an older version of `nuxeo-document-content` and that override the `selectionActions` native slot with new content will be missing the contributions to the `RESULTS_SELECTION_ACTIONS` nuxeo slot. This can be rectified by adding the desired actions to the new slot, and by deleting the following piece of code:
 
@@ -151,7 +132,7 @@ After [NXP-25345](https://jira.nuxeo.com/browse/NXP-25345), Nuxeo Web UI introdu
 </div>
 ```
 
-### Picture document page being displayed on doctypes using the Picture facet
+#### Picture document page being displayed on doctypes using the Picture facet
 
 Since [NXP-25740](https://jira.nuxeo.com/browse/NXP-25740), the `nuxeo-picture-document-page` is now displayed for documents with `Picture` **facet** instead of documents with `Picture` **type**. This means that on migrated projects, the `nuxeo-picture-document-page` might be displayed on documents where it was not expected. If this is not desirable, the contribution can simply be overridden to only display the page for documents with `Picture` **type**:
 
@@ -168,9 +149,42 @@ Since [NXP-25740](https://jira.nuxeo.com/browse/NXP-25740), the `nuxeo-picture-d
 
 ```
 
-### Deprecate usage of nuxeo-document-history
+### Deprecations
+
+#### nuxeo-document-history element
 
 The use of `nuxeo-document-history` was deprecated in favor of `nuxeo-audit-search`.
+
+#### Labels
+
+Since [WEBUI-116](https://jira.nuxeo.com/browse/WEBUI-116), the `document history` and `audit page` use the same component and the new prefix `audit`. The following are some examples of the deprecated labels and their replacement:
+
+| Deprecated labels             | New Labels          |
+|-------------------------------|---------------------|
+| documentHistory.category      | audit.category      |
+| documentHistory.comment       | audit.comment       |
+| documentHistory.date          | audit.date          |
+| documentHistory.filter.after  | audit.filter.after  |
+| documentHistory.filter.before | audit.filter.before |
+
+#### CSS variables
+
+Deprecated variables should be replaced by the new ones on themes and custom elements making use of them:
+
+* `--nuxeo-document-content-min-height` in favor of `--nuxeo-document-content-height` (affects `nuxeo-document-content`).
+* `--nuxeo-document-trash-content-min-height` in favor of `--nuxeo-document-trash-content-height` (affects `nuxeo-document-trash-content`).
+* `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height` in favor of the mixin `--nuxeo-document-create-selection-icon` (affects `nuxeo-document-create`).
+* `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height` in favor of the `--nuxeo-document-create-selection-icon` mixin (see [NXP-27037](https://jira.nuxeo.com/browse/NXP-27037)).
+
+Additionally, the variable `--nuxeo-results-view-min-height` (added in 11.1 [NXP-27652](https://jira.nuxeo.com/browse/NXP-27652)) was removed and can now be safely deleted from your themes or elements.
+
+#### Testing helpers
+
+With the extraction of the test helpers to a shared package (see [ELEMENTS-1153](https://jira.nuxeo.com/browse/ELEMENTS-1153)), the `login test helper` was deprecated in favor of the `MockClient`.
+
+#### slot property in nuxeo-slots
+
+Since [ELEMENTS-1012](https://jira.nuxeo.com/browse/ELEMENTS-1012), `nuxeo-slot` name is now defined by the `name` property, instead of `slot`.
 
 ### Drop support for Edge Legacy
 
