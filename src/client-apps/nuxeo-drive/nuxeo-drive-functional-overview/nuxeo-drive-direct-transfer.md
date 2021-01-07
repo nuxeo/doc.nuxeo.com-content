@@ -3,7 +3,7 @@ title: Direct Transfer
 description: 'Direct Transfer adds a third core capability to Nuxeo Drive: one-time transfer of content between the user desktop and the Nuxeo server.'
 review:
     comment: ''
-    date: '2020-07-20'
+    date: '2021-01-07'
     status: ok
 labels:
     - nuxeo-drive
@@ -22,21 +22,19 @@ Nuxeo Drive upload capability provides a productive and network resilient way of
 
 ## Create a Transfer
 
-1. Open Nuxeo Drive from your desktop and click on **Direct Transfer**.</br>
+1. Open Nuxeo Drive from your desktop and click on **Upload Content** button.</br>
     The Direct Transfer popup opens.
+    SCREENSHOT
+1. Click on **New transfer** at the top right of the popup.        
     ![]({{file name='direct-transfer-creation.png'}})
-1. From this popup you can decide to **Add files** or **Add a folder**.</br>
+1. From this view, you can decide to **Add files** or **Add a folder**.</br>
     The files selection popup opens.    
 1. Select the document(s) you want to transfer and click on **Open**.</br>
 1. Select the remote folder where you want the document(s) or folders to be uploaded.</br>
     The selected path will update depending on the remote folder selected.
-1. Click on **OK** to launch the transfer.
+1. Click on **OK** to launch the transfer session.
 
 ### Options{{> anchor 'duplicates-behavior'}}
-
-{{#> callout type='info' heading='Duplicate Management'}}
-The Options section is only available on the **Beta** channel update version.
-{{/callout}}
 
 On this section you need to choose what to do when a transfer would create a duplicate document on the server.
 The setting is effective for all files that will be sent at the same time (it is called the *session*). Each *session* has its own duplicates behavior.
@@ -46,17 +44,31 @@ Available options are:
 - **Ignore**: the transfer will be cancelled, preventing the duplicate creation.
 - **Override**: the document will be replaced on the server.
 
-## Launch a Transfer
+## Manage Sessions
 
-Once a transfer is launched, a new popup appears.
+The Direct Transfer popup displays 3 tabs that will help you manage your transfers.
 
-![]({{file name='direct-transfer-running.png'}} ?w=450)
+### Running Tab
 
-From there you have full control on your transfer, you can:
-- pause/resume or cancel any upload.
-- monitor each upload thanks to the progress bar.
+Once a transfer is launched, you'll be redirected to the **Running** tab where the current running session(s) are displayed.
 
-Once transfers are done, the popup closes and a desktop notification lets you know that the transfer is complete (works only for files > 25 MiB).
+![]({{file page='nuxeo-drive-release-notes' name='DT-sessions-running.png'}} ?w=350)
+
+From there you have full control on your session(s), you can pause/resume or cancel any upload.</br>
+Some information is displayed: filename(s), date and time, number of files, and target remote folder.
+
+### History Tab
+
+Once the session is uploaded, it goes to the **History** tab and appears as "Completed".</br>
+If you decided to cancel the session it will also be displayed there as "Cancelled".
+
+![]({{file page='nuxeo-drive-release-notes' name='DT-sessions-history.png'}} ?w=350)
+
+### Monitoring Tab
+
+When a session is running you can navigate to the **Monitoring** tab, it displays the upload progress of each file. From there you can decide to cancel some transfers.
+
+![]({{file page='nuxeo-drive-release-notes' name='DT-sessions-monitoring.png'}} ?w=350)
 
 <!--
 ## Limitations
