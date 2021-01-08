@@ -24,10 +24,10 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
 ## Requirements
 
-*   **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first.
+*   **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first, according to the requirements described in the [Nuxeo Elements repository](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-2.2.x/README.md#dependencies).
 *   **[Bower](http://bower.io/)** is currently **the** tool for managing web application definition.
 *   **[Nuxeo CLI]({{page page='nuxeo-cli'}})** to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend.
-*   **[Polymer CLI](https://github.com/Polymer/polymer-cli)** to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service
+*   **[Polymer CLI](https://github.com/Polymer/polymer-cli)** to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service.
 
 ## Scaffolding
 
