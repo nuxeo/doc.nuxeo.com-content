@@ -3,7 +3,7 @@ title: Installing and Setting Up Related Software
 description: The Nuxeo Platform modules use external software for some features. They need to be installed on the server in addition to Nuxeo application.
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2021-01-11'
     status: ok
 labels:
     - lts2016-ok
@@ -26,7 +26,7 @@ confluence:
     shortlink: zgJc
     shortlink_source: 'https://doc.nuxeo.com/x/zgJc'
     source_link: /display/NXDOC/Installing+and+Setting+Up+Related+Software
-tree_item_index: 300
+tree_item_index: 100
 version_override:
     LTS 2015: 710/admindoc/installing-and-setting-up-related-software
     '6.0': 60/admindoc/installing-and-setting-up-related-software
@@ -549,7 +549,7 @@ On a naked default Nuxeo Platform, you need the following software:
 - For thumbnail generation: ImageMagick and Ghostscript for most file formats. UFRaw for RAW files.
 - For processing WordPerfect documents: libwpd
 
-If you installed the Nuxeo DAM addon, you will need these additional requirements:
+If you are using Picture, Video or Audio document types, you will need these additional requirements:
 
 - For metadata extraction: Exiftool
 - For picture preview and tilling: ImageMagick (already required for thumbnails)
@@ -564,7 +564,7 @@ Thumbnails and previews are created when documents are imported into Nuxeo, not 
 Under Debian or Ubuntu, most of these can be installed by the following command:
 
 ```bash
-$ sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool
+$ sudo apt-get install imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool
 ```
 
 {{#> callout type='warning' }}
@@ -624,7 +624,7 @@ $ sudo ./build-package.sh
 
 ## Installing on macOS and OS X  {{> anchor 'Installing-on-macOS-and-OS-X'}}
 
-The macOS installation instructions provided use [Homebrew](http://mxcl.github.com/homebrew/).
+The macOS installation instructions provided use [Homebrew](http://brew.sh/).
 
 ### LibreOffice and pdftohtml for Office and PDF Preview
 
@@ -660,7 +660,7 @@ $ brew install poppler
 
 {{! multiexcerpt name='imagemagick-intro'}}
 
-ImageMagick is used in association with Ghostscript to generate the document thumbnails. It is also used by the Nuxeo DAM addon for the preview and tiling of pictures.
+ImageMagick is used in association with Ghostscript to generate the document thumbnails. It is also used for the preview  of pictures.
 
 {{! /multiexcerpt}}
 
@@ -690,7 +690,7 @@ $ brew install ghostscript
 
 {{! multiexcerpt name='ffmpeg-intro'}}
 
-FFmpeg is required by the Nuxeo DAM addon. It is used to create the storyboard of videos and convert them to additional formats.
+FFmpeg is required for the Video document type. It is used to create the storyboard of videos and convert them to additional formats.
 
 {{! /multiexcerpt}}
 
@@ -762,26 +762,6 @@ $ brew install ccextractor
 
 ## Installing on Windows  {{> anchor 'Installing-on-Windows'}}
 
-The following software are already included when using the .exe installer:
-
-*   FFmpeg
-*   ImageMagick
-*   pdftohtml
-*   ghostscript
-*   Exiftool
-*   OpenJDK 8 JDK.
-
-The installer does not install them globally in Windows: they are available from the `3rdparty` folder of the server tree and added to the `PATH` by the nuxeoctl.bat script.
-
-If not already present on the system, you will have the option to automatically install LibreOffice and PostgreSQL.
-
-{{> anchor 'imagemagick-convert-conflict'}}**Warning about ImageMagick**: Some versions of Windows come with a System utility command named `convert` whose name conflicts with the ImageMagick's command of the same name. After installing Nuxeo, you can check if there will be a conflict:
-
-1.  Open a terminal and use the `where convert` command.
-    The output will tell you which command is in the `PATH`.
-2.  If you don't see ImageMagick in the result (it must be the first of the list, or the only one), then you must copy the path to ImageMagick and add it to the `PATH` System variable.
-{{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
-
 ### LibreOffice and pdftohtml
 
 {{{multiexcerpt 'ooo-pdftohtml-intro' page='Installing and Setting up Related Software'}}}
@@ -814,15 +794,19 @@ If you'll be working with non-latin languages:
 
 #### Installing ImageMagick
 
-ImageMagick is installed by the Nuxeo Platform Windows installer (.exe), but here are the steps to install it manually in case you used the .ZIP distribution.
-
 1.  Download the ImageMagick installer from [http://www.imagemagick.org/](http://www.imagemagick.org/).
 2.  Run the installer and make sure you check the option to add ImageMagick to the `PATH`.
 
-    {{#> callout type='warning' }}
-    Some versions of Windows come with a System utility command named `convert` whose name conflicts with the ImageMagick's command of the same name
-    See the [ImageMagick Note above](#imagemagick-convert-conflict).
-    {{/callout}}
+{{#> callout type='warning' }}
+Some versions of Windows come with a System utility command named `convert` whose name conflicts with the ImageMagick's command of the same name
+See the [ImageMagick Note below](#imagemagick-convert-conflict).
+After installing Nuxeo, you can check if there will be a conflict:
+
+1.  Open a terminal and use the `where convert` command.
+    The output will tell you which command is in the `PATH`.
+2.  If you don't see ImageMagick in the result (it must be the first of the list, or the only one), then you must copy the path to ImageMagick and add it to the `PATH` System variable.
+{{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
+{{/callout}}
 
 #### Controlling ImageMagick Multi-Threads
 

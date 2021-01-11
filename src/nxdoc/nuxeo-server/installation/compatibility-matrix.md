@@ -3,7 +3,7 @@ title: Compatibility Matrix
 description: This page presents the compatibility matrix for the Nuxeo Platform.
 review:
     comment: ''
-    date: '2018-07-25'
+    date: '2021-01-11'
     status: ok
 labels:
     - lts2016-ok
@@ -71,23 +71,31 @@ history:
 ---
 ## Java
 
-Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 11** (Azul's Zulu OpenJDK or Oracle's JDK){{! /multiexcerpt}}.
-
-As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version, for instance the latest bugfix version of Java 11 was 11.0.8 at the time of this writing.
-
-More information is available from the [Installation]({{page page='installation'}}) page.
+Supported Java version: {{! multiexcerpt name='java_requirement'}}**JDK 11** (Azul's Zulu OpenJDK or Oracle's JDK){{! /multiexcerpt}}.
 
 ## Databases
 
-The Nuxeo Platform supports the following databases:
+The Nuxeo Platform supports the following databases.
 {{! multiexcerpt name='all-supported-databases'}}
 <ul>
-<li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.3{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 4.0 and 4.4{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='MySQL-supported'}}MySQL 8.0{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='Oracle-supported'}}Oracle 18c{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='PostgreSQL-supported'}}PostgreSQL 11{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='SQLserver-supported'}}SQL Server 2017{{! /multiexcerpt}}</li>
+  <li>
+    Recommended, validated by continuous integration:
+    <ul>
+      <li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 4.4{{! /multiexcerpt}}</li>
+      <li>{{! multiexcerpt name='PostgreSQL-supported'}}PostgreSQL 13{{! /multiexcerpt}}</li>
+    </ul>
+  </li>
+  <li>
+    Supported, not validated by continuous integration:
+    <ul>
+      <li>MongoDB 4.0 and 4.2</li>
+      <li>PostgreSQL 11 and 12</li>
+      <li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.3{{! /multiexcerpt}}</li>
+      <li>{{! multiexcerpt name='MySQL-supported'}}MySQL 8.0{{! /multiexcerpt}}</li>
+      <li>{{! multiexcerpt name='Oracle-supported'}}Oracle 18c{{! /multiexcerpt}}</li>
+      <li>{{! multiexcerpt name='SQLserver-supported'}}SQL Server 2017{{! /multiexcerpt}}</li>
+    </ul>
+  </li>
 </ul>
 {{! /multiexcerpt}}
 
@@ -105,7 +113,7 @@ Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). The supporte
 
 {{! multiexcerpt name='supported-app-servers-versions'}}
 <ul>
-<li>Tomcat 9.0.14</li>
+<li>Tomcat 9.0.x</li>
 </ul>
 {{! /multiexcerpt}}
 
@@ -186,15 +194,6 @@ Cluster: 2.3.x to 2.4.x</td>
 </tbody>
 </table>
 </div>{{! /multiexcerpt}}
-
-{{#> callout type='warning' }}
-Note that there are [known problems](https://jira.nuxeo.com/browse/NXP-25252) on using the following stack:
-- Elasticsearch 6.3.0
-- Java 10
-- Amazon latest generation instance type (c5 or m5)
-
-For now you should either use c4 instance either c5 with java 8.
-{{/callout}}
 
 More information can be found on the [Elasticsearch Setup]({{page page='elasticsearch-setup'}}) page.
 

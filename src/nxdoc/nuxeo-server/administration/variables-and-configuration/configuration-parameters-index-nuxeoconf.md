@@ -3,7 +3,7 @@ title: Configuration Parameters Index (nuxeo.conf)
 description: Manage your configuration properties around the Nuxeo Platform.
 review:
     comment: ''
-    date: '2017-12-11'
+    date: '2021-01-12'
     status: ok
 labels:
     - content-review-lts2016
@@ -1078,9 +1078,37 @@ The Nuxeo Platform reads configuration properties that you can set either:
 
 ## nuxeo.conf File {{> anchor 'conf-manual-edition'}}
 
-Nuxeo Platform reads configuration properties in the `nuxeo.conf` file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files. By default, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in `%APPDATA%\Nuxeo\conf` (check the page [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)&nbsp;for more information).
+Nuxeo Platform reads configuration properties in the `nuxeo.conf` file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files.
 
-If you plan to use the application in production, you should [move the configuration file outside the Nuxeo home directory]({{page page='setup-best-practices'}}), to make upgrades easier and more secured: your data and configuration won't risk to be overridden or lost.
+Existing configuration parameters are listed in the index section below.
+
+### Docker Image
+
+In the Docker image, the `nuxeo.conf` file is located in `/etc/nuxeo`. Thus, the `NUXEO_CONF` environment variable is set to `/etc/nuxeo/nuxeo.conf`.
+
+To add some configuration properties when running a container from a Nuxeo image, you can mount property files as volumes into the `/etc/nuxeo/conf.d` directory of the container. Each property file will be appended to `nuxeo.conf` during startup, ordered by filename.
+
+For instance, to append the following `postgresql.conf` file to `nuxeo.conf`:
+
+```properties
+nuxeo.db.name=nuxeo
+nuxeo.db.user=nuxeo
+nuxeo.db.password=nuxeo
+nuxeo.db.host=localhost
+nuxeo.db.port=5432
+```
+
+you can run:
+
+```shell
+docker run --name nuxeo -p 8080:8080 -v /path/to/postgresql.conf:/etc/nuxeo/conf.d/postgresql.conf docker.packages.nuxeo.com/nuxeo/nuxeo
+```
+
+### Tomcat Server ZIP
+
+In the Tomcat server ZIP, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`.
+
+If you plan to use the application in production, you should [move the configuration file outside the Nuxeo home directory]({{page page='setup-best-practices'}}#moving-configuration-data-and-log-directories-outside-nuxeo), to make upgrades easier and more secured: your data and configuration won't risk to be overridden or lost.
 
 {{! multiexcerpt name='nuxeo-conf-editor-warning'}} {{#> callout type='warning' heading='For Windows users'}}
 
@@ -1089,8 +1117,6 @@ Do not use Office writers, nor Notepad.
 Wordpad is fine, Notepad++ and SciTE are good text editors, there are lots of [other text editors](http://en.wikipedia.org/wiki/List_of_text_editors).
 
 {{/callout}}{{! /multiexcerpt}}
-
-Existing configuration parameters are listed in the index section below.
 
 ## Admin Center/Setup Tab {{> anchor 'setup-admincenter'}}
 
