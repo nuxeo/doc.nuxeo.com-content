@@ -291,7 +291,7 @@ For Windows users, its equivalent is the `nuxeoctl.bat` script, also located in 
 
 Here is the script usage:
 
-```
+```shell
 nuxeoctl <command> [options] [--] [command parameters]
 ```
 
@@ -313,7 +313,7 @@ Particularities:
 
 ### Per-command Usage
 
-```
+```shell
 nuxeoctl encrypt [--encrypt <algorithm>] [<clearValue>..] [-d [<categories>]|-q]
         Output encrypted value for <clearValue>.
         If <clearValue> is not provided, it is read from stdin.
@@ -364,320 +364,320 @@ nuxeoctl connect-report [--output <file>|--gzip <*true|false|yes|no>|--pretty-pr
 ### Options
 
 <table>
-<tbody>
-<tr>
-  <th>Option</th>
-  <th>default</th>
-  <th>Since</th>
-  <th>Description</th>
-</tr>
-<tr>
-  <td>`-h,--help`</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>Show detailed help.</td>
-</tr>
-<tr>
-  <td>`-q,--quiet`</td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-  <td>Suppress information messages.</td>
-</tr>
-<tr>
-  <td>`-d,--debug <categories>`</td>
-  <td>`org.nuxeo.launcher`</td>
-  <td>7.4</td>
-  <td>Activate debug messages.</br>
-  `<categories>`: comma-separated Java categories to debug.</td>
-</tr>
-<tr>
-  <td>`-dc <categories>`</td>
-  <td></td>
-  <td>5.6</td>
-  <td>Deprecated: see `<categories>` on `--debug` option.</td>
-</tr>
-<tr>
-  <td>`--debug-launcher`</td>
-  <td></td>
-  <td>5.9.4</td>
-  <td>Linux-only. Activate Java debugging mode on the Launcher.</td>
-</tr>
-<tr>
-  <td>`--clid <arg>`</td>
-  <td></td>
-  <td>6.0</td>
-  <td>Use the provided instance CLID file.</td>
-</tr>
-<tr>
-  <td>`--xml`</td>
-  <td></td>
-  <td>5.6</td>
-  <td>Output XML for `mp-*` commands.</td>
-</tr>
-<tr>
-  <td>`--json`</td>
-  <td></td>
-  <td>5.6</td>
-  <td>Output JSON for `mp-*` commands.</td>
-</tr>
-<tr>
-  <td>`--gui [true,false,yes,no]`</td>
-  <td>`true` on Windows</br>
-  `false` on other platforms</td>
-  <td>5.6</td>
-  <td>Start the Graphical User Interface, aka Nuxeo Control Panel. Tomcat server ZIP only.</td>
-</tr>
-<tr>
-  <td>`--nodeps`</td>
-  <td></td>
-  <td>5.6</td>
-  <td>Ignore package dependencies and constraints.</td>
-</tr>
-<tr>
-  <td>`--relax [true,false,yes,no,ask]`</td>
-  <td>`ask`</td>
-  <td>5.6</td>
-  <td>Allow relax constraint on current platform.</td>
-</tr>
-<tr>
-  <td>`--accept [true,false,yes,no,ask]`</td>
-  <td>`ask`</td>
-  <td>5.6</td>
-  <td>Accept, refuse or ask confirmation for all changes.</br>
-  In non interactive mode, `--accept=true` also sets `--relax=true` if needed.</td>
-</tr>
-<tr>
-  <td>`-s,--snapshot`</td>
-  <td></td>
-  <td>5.9.1</td>
-  <td>Allow use of SNAPSHOT Marketplace packages.</br>
-  This option is implicit:</br>
-  - on SNAPSHOT distributions (daily builds),</br>
-  - if the command explicitly requests a SNAPSHOT package.</td>
-</tr>
-<tr>
-  <td>`-f,--force`</td>
-  <td></td>
-  <td>5.9.1</td>
-  <td>Deprecated since 11.1: strict mode is the default.</td>
-</tr>
-<tr>
-  <td>`--strict`</td>
-  <td></td>
-  <td>7.4</td>
-  <td>Deprecated since 11.1: strict mode is the default.</td>
-</tr>
-<tr>
-  <td>{{> anchor 'lenient'}}`--lenient`</td>
-  <td></td>
-  <td>11.1</td>
-  <td>Do not abort in error the start command when a component cannot be activated or if a server is already running.</td>
-</tr>
-<tr>
-  <td>`-im,--ignore-missing`</td>
-  <td></td>
-  <td>6.0</td>
-  <td>Ignore unknown packages on `mp-add`, `mp-install` and `mp-set` commands.</td>
-</tr>
-<tr>
-  <td>`-hdw,--hide-deprecation-warnings`</td>
-  <td></td>
-  <td>5.6</td>
-  <td>Hide deprecation warnings.</td>
-</tr>
-<tr>
-  <td>`--encrypt <algorithm>`</td>
-  <td>`AES/ECB/PKCS5Padding` (Advanced Encryption Standard, Electronic Cookbook Mode, PKCS5-style padding)</td>
-  <td>7.4</td>
-  <td>Activate encryption on the `config` command.</br>
-  This option can be used on the `encrypt` command to customize the encryption algorithm.</br>
-  `<algorithm>` is a cipher transformation of the form: "algorithm/mode/padding" or "algorithm".
-  </td>
-</tr>
-<tr>
-  <td>`--gzip`</td>
-  <td></td>
-  <td></td>
-  <td>Compress the output. </td>
-</tr>
-<tr>
-  <td>`--pretty-print`</td>
-  <td></td>
-  <td></td>
-  <td>Pretty print the output.</td>
-</tr>
-<tr>
-  <td>`--output <file>`</td>
-  <td></td>
-  <td></td>
-  <td>Write output in specified file.</td>
-</tr>
-<tr>
-  <td>`--set <template>`</td>
-  <td></td>
-  <td>7.4</td>
-  <td>Set the value for a given key.</br>
-  The value is stored in `nuxeo.conf` by default unless a template name is provided; if so, it is then stored in the template's `nuxeo.defaults` file.</br>
-  If the value is empty (''), then the property is unset.</br>
-  This option is implicit if no `--get` or `--get-regexp` option is used and there are exactly two parameters (key value).</td>
-</tr>
-<tr>
-  <td>`--get-regexp`</td>
-  <td></td>
-  <td>7.4</td>
-  <td>Get the value for all keys matching the given regular expression(s).</td>
-</tr>
-<tr>
-  <td>`--get`</td>
-  <td></td>
-  <td>7.4</td>
-  <td>Get the value for a given key.</br>
-  Returns error code **6** if the key was not found.</br>
-  This option is implicit if `--set` option is not used and there are more or less than two parameters.</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>Option</th>
+      <th>default</th>
+      <th>Since</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>`-h,--help`</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Show detailed help.</td>
+    </tr>
+    <tr>
+      <td>`-q,--quiet`</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>Suppress information messages.</td>
+    </tr>
+    <tr>
+      <td>`-d,--debug <categories>`</td>
+      <td>`org.nuxeo.launcher`</td>
+      <td>7.4</td>
+      <td>Activate debug messages.</br>
+      `<categories>`: comma-separated Java categories to debug.</td>
+    </tr>
+    <tr>
+      <td>`-dc <categories>`</td>
+      <td></td>
+      <td>5.6</td>
+      <td>Deprecated: see `<categories>` on `--debug` option.</td>
+    </tr>
+    <tr>
+      <td>`--debug-launcher`</td>
+      <td></td>
+      <td>5.9.4</td>
+      <td>Linux-only. Activate Java debugging mode on the Launcher.</td>
+    </tr>
+    <tr>
+      <td>`--clid <arg>`</td>
+      <td></td>
+      <td>6.0</td>
+      <td>Use the provided instance CLID file.</td>
+    </tr>
+    <tr>
+      <td>`--xml`</td>
+      <td></td>
+      <td>5.6</td>
+      <td>Output XML for `mp-*` commands.</td>
+    </tr>
+    <tr>
+      <td>`--json`</td>
+      <td></td>
+      <td>5.6</td>
+      <td>Output JSON for `mp-*` commands.</td>
+    </tr>
+    <tr>
+      <td>`--gui [true,false,yes,no]`</td>
+      <td>`true` on Windows</br>
+      `false` on other platforms</td>
+      <td>5.6</td>
+      <td>Start the Graphical User Interface, aka Nuxeo Control Panel. Tomcat server ZIP only.</td>
+    </tr>
+    <tr>
+      <td>`--nodeps`</td>
+      <td></td>
+      <td>5.6</td>
+      <td>Ignore package dependencies and constraints.</td>
+    </tr>
+    <tr>
+      <td>`--relax [true,false,yes,no,ask]`</td>
+      <td>`ask`</td>
+      <td>5.6</td>
+      <td>Allow relax constraint on current platform.</td>
+    </tr>
+    <tr>
+      <td>`--accept [true,false,yes,no,ask]`</td>
+      <td>`ask`</td>
+      <td>5.6</td>
+      <td>Accept, refuse or ask confirmation for all changes.</br>
+      In non interactive mode, `--accept=true` also sets `--relax=true` if needed.</td>
+    </tr>
+    <tr>
+      <td>`-s,--snapshot`</td>
+      <td></td>
+      <td>5.9.1</td>
+      <td>Allow use of SNAPSHOT Marketplace packages.</br>
+      This option is implicit:</br>
+      - on SNAPSHOT distributions (daily builds),</br>
+      - if the command explicitly requests a SNAPSHOT package.</td>
+    </tr>
+    <tr>
+      <td>`-f,--force`</td>
+      <td></td>
+      <td>5.9.1</td>
+      <td>Deprecated since 11.1: strict mode is the default.</td>
+    </tr>
+    <tr>
+      <td>`--strict`</td>
+      <td></td>
+      <td>7.4</td>
+      <td>Deprecated since 11.1: strict mode is the default.</td>
+    </tr>
+    <tr>
+      <td>{{> anchor 'lenient'}}`--lenient`</td>
+      <td></td>
+      <td>11.1</td>
+      <td>Do not abort in error the start command when a component cannot be activated or if a server is already running.</td>
+    </tr>
+    <tr>
+      <td>`-im,--ignore-missing`</td>
+      <td></td>
+      <td>6.0</td>
+      <td>Ignore unknown packages on `mp-add`, `mp-install` and `mp-set` commands.</td>
+    </tr>
+    <tr>
+      <td>`-hdw,--hide-deprecation-warnings`</td>
+      <td></td>
+      <td>5.6</td>
+      <td>Hide deprecation warnings.</td>
+    </tr>
+    <tr>
+      <td>`--encrypt <algorithm>`</td>
+      <td>`AES/ECB/PKCS5Padding` (Advanced Encryption Standard, Electronic Cookbook Mode, PKCS5-style padding)</td>
+      <td>7.4</td>
+      <td>Activate encryption on the `config` command.</br>
+      This option can be used on the `encrypt` command to customize the encryption algorithm.</br>
+      `<algorithm>` is a cipher transformation of the form: "algorithm/mode/padding" or "algorithm".
+    </td>
+    </tr>
+    <tr>
+      <td>`--gzip`</td>
+      <td></td>
+      <td></td>
+      <td>Compress the output. </td>
+    </tr>
+    <tr>
+      <td>`--pretty-print`</td>
+      <td></td>
+      <td></td>
+      <td>Pretty print the output.</td>
+    </tr>
+    <tr>
+      <td>`--output <file>`</td>
+      <td></td>
+      <td></td>
+      <td>Write output in specified file.</td>
+    </tr>
+    <tr>
+      <td>`--set <template>`</td>
+      <td></td>
+      <td>7.4</td>
+      <td>Set the value for a given key.</br>
+      The value is stored in `nuxeo.conf` by default unless a template name is provided; if so, it is then stored in the template's `nuxeo.defaults` file.</br>
+      If the value is empty (''), then the property is unset.</br>
+      This option is implicit if no `--get` or `--get-regexp` option is used and there are exactly two parameters (key value).</td>
+    </tr>
+    <tr>
+      <td>`--get-regexp`</td>
+      <td></td>
+      <td>7.4</td>
+      <td>Get the value for all keys matching the given regular expression(s).</td>
+    </tr>
+    <tr>
+      <td>`--get`</td>
+      <td></td>
+      <td>7.4</td>
+      <td>Get the value for a given key.</br>
+      Returns error code **6** if the key was not found.</br>
+      This option is implicit if `--set` option is not used and there are more or less than two parameters.</td>
+    </tr>
+  </tbody>
 </table>
 
 ### Commands {{> anchor 'nuxeoctl-commands'}}
 
 <div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th colspan="1">Command</th>
-<th colspan="1">Description</th>
-</tr>
-<tr>
-<td colspan="1">`help`</td>
-<td colspan="1">Print this message.</td>
-</tr>
-<tr>
-<td colspan="1">`gui`</td>
-<td colspan="1">Deprecated: use `start --gui true` option instead.</td>
-</tr>
-<tr>
-<td colspan="1">`start`</td>
-<td colspan="1">Start Nuxeo server in background, waiting for effective start.<br/>
-Useful for batch executions requiring the server being immediately available after the script returned.<br/>
-**Note**: On Windows with the Tomcat server ZIP, the `start` command launches the Control Panel.</td>
-</tr>
-<tr>
-<td colspan="1">`stop`</td>
-<td colspan="1">Stop any Nuxeo server started with the same `nuxeo.conf` file.</td>
-</tr>
-<tr>
-<td colspan="1">`restart`</td>
-<td colspan="1">Restart Nuxeo server.</td>
-</tr>
-<tr>
-<td colspan="1">`config`</td>
-<td colspan="1">Get and set template or global parameters.</td>
-</tr>
-<tr>
-<td colspan="1">`encrypt`</td>
-<td colspan="1">Output encrypted value for a given parameter.</td>
-</tr>
-<tr>
-<td colspan="1">`decrypt`</td>
-<td colspan="1">Output decrypted value for a given parameter.</td>
-</tr>
-<tr>
-<td colspan="1">`configure`</td>
-<td colspan="1">Configure Nuxeo server with parameters from `nuxeo.conf`.</td>
-</tr>
-<tr>
-<td colspan="1">`console`</td>
-<td colspan="1">Start Nuxeo server in a console mode. `Ctrl+C` will stop it.</td>
-</tr>
-<tr>
-<td colspan="1">`status`</td>
-<td colspan="1">Print server running status.</td>
-</tr>
-<tr>
-<td colspan="1">`startbg`</td>
-<td colspan="1">Start Nuxeo server in background, without waiting for effective start.<br/>
-Useful for starting Nuxeo as a service.</td>
-</tr>
-<tr>
-<td colspan="1">`restartbg`</td>
-<td colspan="1">Restart Nuxeo server with a call to `startbg` after `stop`.</td>
-</tr>
-<tr>
-<td colspan="1">`pack`</td>
-<td colspan="1">Build a static archive.</td>
-</tr>
-<tr>
-<td colspan="1">`showconf`</td>
-<td colspan="1">Display the server configuration.</td>
-</tr>
-<tr>
-<td>`connect-report`</td>
-<td>Dump a json report about the running server.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-list`</td>
-<td colspan="1">List local Marketplace packages (including hotfixes).</td>
-</tr>
-<tr>
-<td colspan="1">`mp-listall`</td>
-<td colspan="1">List all Marketplace packages.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-update`</td>
-<td colspan="1">Update cache of Marketplace packages list.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-add`</td>
-<td colspan="1">Add Marketplace package(s) to local cache. You must provide the package file(s), name(s) or ID(s) as parameter.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-install`</td>
-<td colspan="1">Run Marketplace package installation. It is automatically called at startup if `installAfterRestart.log` file exists in data directory. Else you must provide the package file(s), name(s) or ID(s) as parameter.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-uninstall`</td>
-<td colspan="1">Uninstall Marketplace package(s). You must provide the package name(s) or ID(s) as parameter (see `mp-list` command).<br/>
-If uninstalling a package by its ID and other versions of the same package are available, the most up-to-date will be installed instead.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-remove`</td>
-<td colspan="1">Remove Marketplace package(s). You must provide the package name(s) or ID(s) as parameter (see `mp-list` command).</td>
-</tr>
-<tr>
-<td colspan="1">`mp-reset`</td>
-<td colspan="1">Reset all packages to DOWNLOADED state. May be useful after a manual server upgrade.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-set`</td>
-<td colspan="1">(Since Nuxeo 5.9.2) Install a list of Marketplace packages and remove those not in the list.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-request`</td>
-<td colspan="1">Install and uninstall Marketplace package(s) in one command. You must provide a **quoted** list of package names or IDs prefixed with `+` (install) or `-` (uninstall).</td>
-</tr>
-<tr>
-<td colspan="1">`mp-purge`</td>
-<td colspan="1">Uninstall and remove all packages from the local cache.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-hotfix`</td>
-<td colspan="1">Install all the available hotfixes for the current platform, but do not upgrade already installed hotfixes versions. For the latter, please use `mp-upgrade` (to upgrade everything) or `mp-install` with the desired version (to install a specific package) instead. (requires a registered instance).
-</td>
-</tr>
-<tr>
-<td colspan="1">`mp-upgrade`</td>
-<td colspan="1">Get all the available upgrades for the Nuxeo Packages currently installed (including installed hotfixes and Studio package(s)). If a snapshot package is installed, it will not be reinstalled even if it has been updated. In this case, you should use `mp-remove` then `mp-install` instead.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-show`</td>
-<td colspan="1">(Since Nuxeo 5.7.1) Show Marketplace package(s) information. You must provide the package file(s), name(s) or ID(s) as parameter.</td>
-</tr>
-<tr>
-<td colspan="1">`register`</td>
-<td colspan="1">Register your instance with an existing Connect account. You must provide the credentials, the project name or ID, its type and a description.</td>
-</tr>
-</tbody>
-</table>
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Command</th>
+        <th colspan="1">Description</th>
+      </tr>
+      <tr>
+        <td colspan="1">`help`</td>
+        <td colspan="1">Print this message.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`gui`</td>
+        <td colspan="1">Deprecated: use `start --gui true` option instead.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`start`</td>
+        <td colspan="1">Start Nuxeo server in background, waiting for effective start.<br/>
+        Useful for batch executions requiring the server being immediately available after the script returned.<br/>
+        **Note**: On Windows with the Tomcat server ZIP, the `start` command launches the Control Panel.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`stop`</td>
+        <td colspan="1">Stop any Nuxeo server started with the same `nuxeo.conf` file.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`restart`</td>
+        <td colspan="1">Restart Nuxeo server.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`config`</td>
+        <td colspan="1">Get and set template or global parameters.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`encrypt`</td>
+        <td colspan="1">Output encrypted value for a given parameter.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`decrypt`</td>
+        <td colspan="1">Output decrypted value for a given parameter.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`configure`</td>
+        <td colspan="1">Configure Nuxeo server with parameters from `nuxeo.conf`.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`console`</td>
+        <td colspan="1">Start Nuxeo server in a console mode. `Ctrl+C` will stop it.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`status`</td>
+        <td colspan="1">Print server running status.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`startbg`</td>
+        <td colspan="1">Start Nuxeo server in background, without waiting for effective start.<br/>
+        Useful for starting Nuxeo as a service.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`restartbg`</td>
+        <td colspan="1">Restart Nuxeo server with a call to `startbg` after `stop`.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`pack`</td>
+        <td colspan="1">Build a static archive.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`showconf`</td>
+        <td colspan="1">Display the server configuration.</td>
+      </tr>
+      <tr>
+        <td>`connect-report`</td>
+        <td>Dump a json report about the running server.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-list`</td>
+        <td colspan="1">List local Marketplace packages (including hotfixes).</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-listall`</td>
+        <td colspan="1">List all Marketplace packages.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-update`</td>
+        <td colspan="1">Update cache of Marketplace packages list.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-add`</td>
+        <td colspan="1">Add Marketplace package(s) to local cache. You must provide the package file(s), name(s) or ID(s) as parameter.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-install`</td>
+        <td colspan="1">Run Marketplace package installation. It is automatically called at startup if `installAfterRestart.log` file exists in data directory. Else you must provide the package file(s), name(s) or ID(s) as parameter.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-uninstall`</td>
+        <td colspan="1">Uninstall Marketplace package(s). You must provide the package name(s) or ID(s) as parameter (see `mp-list` command).<br/>
+        If uninstalling a package by its ID and other versions of the same package are available, the most up-to-date will be installed instead.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-remove`</td>
+        <td colspan="1">Remove Marketplace package(s). You must provide the package name(s) or ID(s) as parameter (see `mp-list` command).</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-reset`</td>
+        <td colspan="1">Reset all packages to DOWNLOADED state. May be useful after a manual server upgrade.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-set`</td>
+        <td colspan="1">(Since Nuxeo 5.9.2) Install a list of Marketplace packages and remove those not in the list.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-request`</td>
+        <td colspan="1">Install and uninstall Marketplace package(s) in one command. You must provide a **quoted** list of package names or IDs prefixed with `+` (install) or `-` (uninstall).</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-purge`</td>
+        <td colspan="1">Uninstall and remove all packages from the local cache.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-hotfix`</td>
+        <td colspan="1">Install all the available hotfixes for the current platform, but do not upgrade already installed hotfixes versions. For the latter, please use `mp-upgrade` (to upgrade everything) or `mp-install` with the desired version (to install a specific package) instead. (requires a registered instance).
+        </td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-upgrade`</td>
+        <td colspan="1">Get all the available upgrades for the Nuxeo Packages currently installed (including installed hotfixes and Studio package(s)). If a snapshot package is installed, it will not be reinstalled even if it has been updated. In this case, you should use `mp-remove` then `mp-install` instead.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`mp-show`</td>
+        <td colspan="1">(Since Nuxeo 5.7.1) Show Marketplace package(s) information. You must provide the package file(s), name(s) or ID(s) as parameter.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`register`</td>
+        <td colspan="1">Register your instance with an existing Connect account. You must provide the credentials, the project name or ID, its type and a description.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 The following commands cannot be executed on a running server: `pack`, `mp-purge`, `mp-add`, `mp-install`, `mp-uninstall`, `mp-request`, `mp-remove`, `mp-hotfix`, `mp-upgrade`, `mp-reset`.
@@ -701,39 +701,42 @@ All parameters following a command which accepts no parameter are passed to the 
 Here are the OS environment variables which are read by `nuxeoctl`.
 
 <div class="table-scroll">
-<table class="hover"><tbody><tr><th colspan="1">Variable</th>
-<th colspan="1">Description</th>
-</tr>
-<tr>
-<td colspan="1">`NUXEO_HOME`</td>
-<td colspan="1">Path to server root directory.</td>
-</tr>
-<tr>
-<td colspan="1">`NUXEO_CONF`</td>
-<td colspan="1">Path to `nuxeo.conf` file.</td>
-</tr>
-<tr>
-<td colspan="1">`PATH`</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`JAVA`</td>
-<td colspan="1">Path to the `java` executable.</td>
-</tr>
-<tr>
-<td colspan="1">`JAVA_HOME`</td>
-<td colspan="1">Path to the Java home directory. Can also be defined in `nuxeo.conf`.</td>
-</tr>
-<tr>
-<td colspan="1">`JAVA_OPTS`</td>
-<td colspan="1">Optional values passed to the JVM. Can also be defined in `nuxeo.conf`.</td>
-</tr>
-<tr>
-<td colspan="1">`REQUIRED_JAVA_VERSION`</td>
-<td colspan="1">Nuxeo requirement on Java version.</td>
-</tr>
-</tbody>
-</table>
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Variable</th>
+        <th colspan="1">Description</th>
+      </tr>
+      <tr>
+        <td colspan="1">`NUXEO_HOME`</td>
+        <td colspan="1">Path to server root directory.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`NUXEO_CONF`</td>
+        <td colspan="1">Path to `nuxeo.conf` file.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`PATH`</td>
+        <td colspan="1">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="1">`JAVA`</td>
+        <td colspan="1">Path to the `java` executable.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`JAVA_HOME`</td>
+        <td colspan="1">Path to the Java home directory. Can also be defined in `nuxeo.conf`.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`JAVA_OPTS`</td>
+        <td colspan="1">Optional values passed to the JVM. Can also be defined in `nuxeo.conf`.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`REQUIRED_JAVA_VERSION`</td>
+        <td colspan="1">Nuxeo requirement on Java version.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 ## Java Usage
@@ -743,7 +746,7 @@ The equivalent Java command to Shell command is printed at startup. See the line
 
 Here is the Java usage:
 
-```
+```shell
 java [-Dlauncher.java.opts="JVM options"] [-Dnuxeo.home="/path/to/nuxeo"] [-Dnuxeo.conf="/path/to/nuxeo.conf"] \
      [-Djvmcheck=nofail] -jar "path/to/nuxeo-launcher.jar" \
      [options] <command> [command parameters]
@@ -753,30 +756,30 @@ java [-Dlauncher.java.opts="JVM options"] [-Dnuxeo.home="/path/to/nuxeo"] [-Dnux
 ### Java Options
 
 <div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th colspan="1">Option</th>
-<th colspan="1">Description</th>
-</tr>
-<tr>
-<td colspan="1">`launcher.java.opts`</td>
-<td colspan="1">Parameters for the server JVM (default are `-Xms512m -Xmx1024m -XX:MaxPermSize=512m`).</td>
-</tr>
-<tr>
-<td colspan="1">`nuxeo.home`</td>
-<td colspan="1">Nuxeo server root path (default is parent of called script).</td>
-</tr>
-<tr>
-<td colspan="1">`nuxeo.conf`</td>
-<td colspan="1">Path to nuxeo.conf file (default is `$NUXEO_HOME/bin/nuxeo.conf`).</td>
-</tr>
-<tr>
-<td colspan="1">`jvmcheck`</td>
-<td colspan="1">If equals to "nofail", will continue execution even if JVM does not fit requirements, else will exit.</td>
-</tr>
-</tbody>
-</table>
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Option</th>
+        <th colspan="1">Description</th>
+      </tr>
+      <tr>
+        <td colspan="1">`launcher.java.opts`</td>
+        <td colspan="1">Parameters for the server JVM (default are `-Xms512m -Xmx1024m -XX:MaxPermSize=512m`).</td>
+      </tr>
+      <tr>
+        <td colspan="1">`nuxeo.home`</td>
+        <td colspan="1">Nuxeo server root path (default is parent of called script).</td>
+      </tr>
+      <tr>
+        <td colspan="1">`nuxeo.conf`</td>
+        <td colspan="1">Path to nuxeo.conf file (default is `$NUXEO_HOME/bin/nuxeo.conf`).</td>
+      </tr>
+      <tr>
+        <td colspan="1">`jvmcheck`</td>
+        <td colspan="1">If equals to "nofail", will continue execution even if JVM does not fit requirements, else will exit.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 ### Commands
@@ -794,66 +797,66 @@ Exit code values are following the [Linux Standard Base Core Specification 4.1](
 If the status command was requested, `nuxeoctl` will return the following exit status codes:
 
 <div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<td colspan="1">0</td>
-<td colspan="1">Program is running or service is OK</td>
-</tr>
-<tr>
-<td colspan="1">3</td>
-<td colspan="1">Program is not running</td>
-</tr>
-<tr>
-<td colspan="1">4</td>
-<td colspan="1">Program or service status is unknown</td>
-</tr>
-</tbody>
-</table>
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td colspan="1">0</td>
+        <td colspan="1">Program is running or service is OK</td>
+      </tr>
+      <tr>
+        <td colspan="1">3</td>
+        <td colspan="1">Program is not running</td>
+      </tr>
+      <tr>
+        <td colspan="1">4</td>
+        <td colspan="1">Program or service status is unknown</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 In case of an error while processing any action except for status, `nuxeoctl` shall print an error message and exit with a non-zero status code:
 
 <div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<td colspan="1">1</td>
-<td colspan="1">Generic or unspecified error</td>
-</tr>
-<tr>
-<td colspan="1">2</td>
-<td colspan="1">Invalid or excess argument(s)</td>
-</tr>
-<tr>
-<td colspan="1">3</td>
-<td colspan="1">Unimplemented feature</td>
-</tr>
-<tr>
-<td colspan="1">4</td>
-<td colspan="1">User had insufficient privilege</td>
-</tr>
-<tr>
-<td colspan="1">5</td>
-<td colspan="1">Program is not installed</td>
-</tr>
-<tr>
-<td colspan="1">6</td>
-<td colspan="1">Program is not configured</td>
-</tr>
-<tr>
-<td colspan="1">7</td>
-<td colspan="1">Program is not running</td>
-</tr>
-</tbody>
-</table>
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td colspan="1">1</td>
+        <td colspan="1">Generic or unspecified error</td>
+      </tr>
+      <tr>
+        <td colspan="1">2</td>
+        <td colspan="1">Invalid or excess argument(s)</td>
+      </tr>
+      <tr>
+        <td colspan="1">3</td>
+        <td colspan="1">Unimplemented feature</td>
+      </tr>
+      <tr>
+        <td colspan="1">4</td>
+        <td colspan="1">User had insufficient privilege</td>
+      </tr>
+      <tr>
+        <td colspan="1">5</td>
+        <td colspan="1">Program is not installed</td>
+      </tr>
+      <tr>
+        <td colspan="1">6</td>
+        <td colspan="1">Program is not configured</td>
+      </tr>
+      <tr>
+        <td colspan="1">7</td>
+        <td colspan="1">Program is not running</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
+- [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
 
 {{/panel}}</div><div class="column medium-6">
 
