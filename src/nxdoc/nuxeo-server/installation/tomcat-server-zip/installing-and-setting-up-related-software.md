@@ -544,8 +544,8 @@ The Nuxeo Platform modules use external software for some features. They need to
 On a naked default Nuxeo Platform, you need the following software:
 
 - For web preview of office documents: LibreOffice and pdftohtml
-    - LibreOffice (version >= 5): converts office file into PDF
-    - pdftohtml: converts converted PDF into HTML preview
+  - LibreOffice (version >= 5): converts office file into PDF
+  - pdftohtml: converts converted PDF into HTML preview
 - For thumbnail generation: ImageMagick and Ghostscript for most file formats. UFRaw for RAW files.
 - For processing WordPerfect documents: libwpd
 
@@ -558,13 +558,12 @@ If you are using Picture, Video or Audio document types, you will need these add
 
 Thumbnails and previews are created when documents are imported into Nuxeo, not on the fly when browsing documents. So in order to check if the third party software work properly on your Nuxeo instance, you must import new documents.
 
-
 ## Installing on Linux  {{> anchor 'Installing-on-Linux'}}
 
 Under Debian or Ubuntu, most of these can be installed by the following command:
 
 ```bash
-$ sudo apt-get install imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool
+sudo apt-get install imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool
 ```
 
 {{#> callout type='warning' }}
@@ -590,8 +589,8 @@ You need to add the path to `soffice` program to your path: Edit the `PATH` envi
 
 If you'll be working with non-latin languages:
 
-1.  Start LibreOffice manually.
-2.  Install the additional fonts you may need for non-default languages.
+1. Start LibreOffice manually.
+2. Install the additional fonts you may need for non-default languages.
 {{! /multiexcerpt}}
 
 ### Controlling Threads Used by ImageMagick
@@ -601,8 +600,8 @@ By default ImageMagick is multi threaded and will use all the available CPUs. Th
 
 Hopefully you can control the number of threads used by ImageMagick either by:
 
-*   Editing `/etc/ImageMagick/policy.xml` and setting `<policy domain="resource" name="thread" value="1"/>`.
-*   adding an environment variable `export MAGICK_THREAD_LIMIT=1` in the nuxeo user `.bash_profile`.
+- Editing `/etc/ImageMagick/policy.xml` and setting `<policy domain="resource" name="thread" value="1"/>`.
+- Adding an environment variable `export MAGICK_THREAD_LIMIT=1` in the nuxeo user `.bash_profile`.
 {{! /multiexcerpt}}
 
 ### CCExtractor Installation
@@ -614,12 +613,12 @@ Installing [CCExtractor](http://ccextractor.org) on a GNU/Linux distribution req
 To generate a package (by default for the latest Ubuntu LTS) issue the following commands:
 
 ```bash
-$ sudo apt-get update
-$ sudo apt-get install docker.io
-$ cd /tmp
-$ git clone https://github.com/nuxeo/nuxeo-tools-docker.git
-$ cd nuxeo-tools-docker/ccextractor
-$ sudo ./build-package.sh
+sudo apt-get update
+sudo apt-get install docker.io
+cd /tmp
+git clone https://github.com/nuxeo/nuxeo-tools-docker.git
+cd nuxeo-tools-docker/ccextractor
+sudo ./build-package.sh
 ```
 
 ## Installing on macOS and OS X  {{> anchor 'Installing-on-macOS-and-OS-X'}}
@@ -653,7 +652,7 @@ Download and install LibreOffice from [http://www.libreoffice.org/](http://www.l
 To install pdftohtml using Homebrew:
 
 ```bash
-$ brew install poppler
+brew install poppler
 ```
 
 ### ImageMagick
@@ -667,7 +666,7 @@ ImageMagick is used in association with Ghostscript to generate the document thu
 To install ImageMagick using Homebrew:
 
 ```bash
-$ brew install imagemagick
+brew install imagemagick
 ```
 
 {{! multiexcerpt imagemagick-multi-threads' page='installing-and-setting-up-related-software'}}
@@ -683,7 +682,7 @@ Ghostscript is used in association with ImageMagick to generate the thumbnails o
 To install Ghostscript using Homebrew:
 
 ```bash
-$ brew install ghostscript
+brew install ghostscript
 ```
 
 ### FFmpeg
@@ -695,9 +694,11 @@ FFmpeg is required for the Video document type. It is used to create the storybo
 {{! /multiexcerpt}}
 
 To install FFmpeg using Homebrew:
+
 ```bash
-$ brew install ffmpeg
+brew install ffmpeg
 ```
+
 {{#> callout type='note' }}
 Since recent versions, FFmpeg for brew does not allow anymore installing third-party libraries for fine tuning of the compilation/installation of FFmpeg.
 Please, see the [FFmpeg documentation](https://trac.ffmpeg.org/wiki/CompilationGuide/macOS) for alternatives.
@@ -715,7 +716,7 @@ UFRaw is used in association with ImageMagick and Ghostscript to generate RAW do
 To install UFRaw using Homebrew:
 
 ```bash
-$ brew install ufraw
+brew install ufraw
 ```
 
 ### libwpd
@@ -729,7 +730,7 @@ libwpd used to process WordPerfect documents.
 To install libwpd using Homebrew:
 
 ```bash
-$ brew install libwpd
+brew install libwpd
 ```
 
 ### ExifTool
@@ -743,7 +744,7 @@ ExifTool is required by the Nuxeo Binary Metadata addon. It is used to extract a
 To install ExifTool using Homebrew:
 
 ```bash
-$ brew install exiftool
+brew install exiftool
 ```
 
 ### CCExtractor
@@ -757,7 +758,7 @@ CCExtractor is used to extract subtitles from videos.
 To install CCExtractor using Homebrew:
 
 ```bash
-$ brew install ccextractor
+brew install ccextractor
 ```
 
 ## Installing on Windows  {{> anchor 'Installing-on-Windows'}}
@@ -778,14 +779,14 @@ You need to add the path to `soffice` program to your path: Edit the `Path` syst
 
 If you'll be working with non-latin languages:
 
-1.  Start LibreOffice manually.
-2.  Install the additional fonts you may need for non-default languages.
+1. Start LibreOffice manually.
+2. Install the additional fonts you may need for non-default languages.
 
 #### pdftohtml
 
-1.  Install the poppler binary (available from [this blogpost](http://blog.alivate.com.au/poppler-windows/)).
+1. Install the poppler binary (available from [this blogpost](http://blog.alivate.com.au/poppler-windows/)).
     {{#> callout type='info' }} Old pdftohtml binaries are available from [http://sourceforge.net/projects/pdftohtml/files/](http://sourceforge.net/projects/pdftohtml/files/%7Chttp://sourceforge.net/projects/pdftohtml/files/), but they are obsolete. It is recommended to use poppler. {{/callout}}
-2.  Copy the path to the `bin` folder inside Poppler's installation directory (e.g. `C:\Program Files (x86)\Poppler\bin`) and add it to the `PATH` system variable.
+2. Copy the path to the `bin` folder inside Poppler's installation directory (e.g. `C:\Program Files (x86)\Poppler\bin`) and add it to the `PATH` system variable.
 {{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
 
 ### ImageMagick {{> anchor 'windows-imagemagick'}}
@@ -794,17 +795,17 @@ If you'll be working with non-latin languages:
 
 #### Installing ImageMagick
 
-1.  Download the ImageMagick installer from [http://www.imagemagick.org/](http://www.imagemagick.org/).
-2.  Run the installer and make sure you check the option to add ImageMagick to the `PATH`.
+1. Download the ImageMagick installer from [http://www.imagemagick.org/](http://www.imagemagick.org/).
+2. Run the installer and make sure you check the option to add ImageMagick to the `PATH`.
 
 {{#> callout type='warning' }}
 Some versions of Windows come with a System utility command named `convert` whose name conflicts with the ImageMagick's command of the same name
 See the [ImageMagick Note below](#imagemagick-convert-conflict).
 After installing Nuxeo, you can check if there will be a conflict:
 
-1.  Open a terminal and use the `where convert` command.
+1. Open a terminal and use the `where convert` command.
     The output will tell you which command is in the `PATH`.
-2.  If you don't see ImageMagick in the result (it must be the first of the list, or the only one), then you must copy the path to ImageMagick and add it to the `PATH` System variable.
+2. If you don't see ImageMagick in the result (it must be the first of the list, or the only one), then you must copy the path to ImageMagick and add it to the `PATH` System variable.
 {{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
 {{/callout}}
 
@@ -818,16 +819,16 @@ Hopefully you can control the number of threads used by ImageMagick by setting a
 
 {{{multiexcerpt 'ghostscript-intro' page='Installing and Setting up Related Software'}}}
 
-1.  Use the installer available from the [Ghostscript download page](http://www.ghostscript.com/download/gsdnld.html).
-2.  Copy the path to the bin folder inside Ghostscript's installation directory (e.g. `C:\Program Files\gs\gs9.20\bin`) and add it to the `PATH` system variable.
+1. Use the installer available from the [Ghostscript download page](http://www.ghostscript.com/download/gsdnld.html).
+2. Copy the path to the bin folder inside Ghostscript's installation directory (e.g. `C:\Program Files\gs\gs9.20\bin`) and add it to the `PATH` system variable.
 {{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
 
 ### FFmpeg
 
 {{{multiexcerpt 'ffmpeg-intro' page='Installing and Setting up Related Software'}}}
 
-1.  Download FFmpeg from [http://ffmpeg.zeranoe.com/builds/](http://ffmpeg.zeranoe.com/builds/).
-2.  Extract the FFmpeg archive into a new folder, named `C:\Program Files\FFmpeg` for instance.
+1. Download FFmpeg from [http://ffmpeg.zeranoe.com/builds/](http://ffmpeg.zeranoe.com/builds/).
+2. Extract the FFmpeg archive into a new folder, named `C:\Program Files\FFmpeg` for instance.
 
     {{#> callout type='tip' }}
 
@@ -835,13 +836,13 @@ Hopefully you can control the number of threads used by ImageMagick by setting a
 
     {{/callout}}
 
-3.  Copy the path to the bin folder inside FFmpeg's directory (e.g. `C:\Program Files\FFmpeg\bin`) and add it to the `PATH` system variable. This can be done by:
+3. Copy the path to the bin folder inside FFmpeg's directory (e.g. `C:\Program Files\FFmpeg\bin`) and add it to the `PATH` system variable. This can be done by:
 {{! multiexcerpt name='windows-add-to-path'}}
-    1.  Open File Explorer, right-click on "This PC" and click on **Properties**.
+    1. Open File Explorer, right-click on "This PC" and click on **Properties**.
 
-    2.  On the System panel select **Advanced system settings**.
+    2. On the System panel select **Advanced system settings**.
 
-    3.  On the **Advanced** tab, click **Environment Variables...** and edit the `PATH` system variable to add the path you copied (use a `;` to separate values).
+    3. On the **Advanced** tab, click **Environment Variables...** and edit the `PATH` system variable to add the path you copied (use a `;` to separate values).
 {{! /multiexcerpt}}
         ![]({{file name='DAM-Ffmpeg-variable.png'}} ?w=250,h=291,border=true)
 
@@ -849,8 +850,8 @@ Hopefully you can control the number of threads used by ImageMagick by setting a
 
 {{{multiexcerpt 'ufraw-intro' page='Installing and Setting up Related Software'}}}
 
-1.  Download and install UFRaw from [http://ufraw.sourceforge.net/Install.html#MS](http://ufraw.sourceforge.net/Install.html#MS).
-2.  Copy the path to the bin folder inside UFRaw's installation directory (e.g. `C:\Program Files (x86)\UFRaw\bin`) and add it to the `PATH` system variable.
+1. Download and install UFRaw from [http://ufraw.sourceforge.net/Install.html#MS](http://ufraw.sourceforge.net/Install.html#MS).
+2. Copy the path to the bin folder inside UFRaw's installation directory (e.g. `C:\Program Files (x86)\UFRaw\bin`) and add it to the `PATH` system variable.
 {{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
 
 ### Exiftool
@@ -859,17 +860,17 @@ Here are some quick installation steps to install Exiftool. Full installation st
 
 To install Exiftool:
 
-1.  Download the [standalone distribution](http://www.sno.phy.queensu.ca/~phil/exiftool/index.html).
-2.  Unzip the distribution to a folder, named `C:\Program Files (x86)\exiftool` for example.
+1. Download the [standalone distribution](http://www.sno.phy.queensu.ca/~phil/exiftool/index.html).
+2. Unzip the distribution to a folder, named `C:\Program Files (x86)\exiftool` for example.
 3. Copy the path to the `exiftool` folder and add it to the `PATH` environment variable.
 {{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
-4.  Rename the extracted .exe into `exiftool.exe`.
+4. Rename the extracted .exe into `exiftool.exe`.
 
 ### CCExtractor
 
 {{{multiexcerpt 'ccextractor-intro' page='Installing and Setting up Related Software'}}}
 
-1.  Download the [windows binaries](http://www.ccextractor.org/doku.php?id=public:general:downloads).
-2.  Unzip the contents to a folder, for example `C:\Program Files (x86)\CCExtractor`. Copy the path to it and add it to the the `PATH` system variable.
+1. Download the [windows binaries](http://www.ccextractor.org/doku.php?id=public:general:downloads).
+2. Unzip the contents to a folder, for example `C:\Program Files (x86)\CCExtractor`. Copy the path to it and add it to the the `PATH` system variable.
 {{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
-3.  Rename `ccextractorwin.exe` to `ccextractor.exe`.
+3. Rename `ccextractorwin.exe` to `ccextractor.exe`.

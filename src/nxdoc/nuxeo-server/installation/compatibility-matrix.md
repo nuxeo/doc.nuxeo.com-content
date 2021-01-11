@@ -103,7 +103,7 @@ The Nuxeo Platform supports the following databases.
 
 {{! multiexcerpt name='supported-databases-notes'}}
 Nuxeo Platform will likely work with greater versions of the aforementioned databases. Do not hesitate to inform Nuxeo support of your attempts with different versions.
-More information can be found on the [Database Configuration]({{page version='' space='nxdoc' page='database-configuration'}}) page.<br/>
+More information can be found on the [Database Configuration]({{page page='database-configuration'}}) page.<br/>
 Note that Nuxeo Server is shipped with an embedded H2 database, for quick evaluation purposes. One of the listed databases is required for a production set up or for a more thorough evaluation, like performance testing.
 {{! /multiexcerpt}}
 
@@ -113,7 +113,7 @@ Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). The supporte
 
 {{! multiexcerpt name='supported-app-servers-versions'}}
 <ul>
-<li>Tomcat 9.0.x</li>
+  <li>Tomcat 9.0.x</li>
 </ul>
 {{! /multiexcerpt}}
 
@@ -125,33 +125,36 @@ Nuxeo is shipped with an embedded Tomcat server.
 
 {{! multiexcerpt name='redis_supported_versions'}}
 <div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th colspan="1">Nuxeo Platform Version:</th>
-<th colspan="1">LTS 2019</th>
-<th colspan="1">LTS 2017</th>
-<th colspan="1">LTS 2016</th>
-</tr>
-<tr>
-<th colspan="1">Redis</th>
-<td colspan="1">2.8.x <br />
-3.0.x <br />
-3.2.x <br />
-4.0.x <br />
-5.0.x <br />
-6.0.x</td>
-<td colspan="1">2.8.x <br />
-3.0.x <br />
-3.2.x <br />
-4.0.x</td>
-<td colspan="1">2.8.x <br />
-3.0.x <br />
-3.2.x <br />
-4.0.x</td>
-</tr>
-</tbody>
-</table>
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Nuxeo Platform Version:</th>
+        <th colspan="1">LTS 2019</th>
+        <th colspan="1">LTS 2017</th>
+        <th colspan="1">LTS 2016</th>
+      </tr>
+      <tr>
+        <th colspan="1">Redis</th>
+        <td colspan="1">2.8.x <br />
+          3.0.x <br />
+          3.2.x <br />
+          4.0.x <br />
+          5.0.x <br />
+          6.0.x
+        </td>
+        <td colspan="1">2.8.x <br />
+          3.0.x <br />
+          3.2.x <br />
+          4.0.x
+        </td>
+        <td colspan="1">2.8.x <br />
+          3.0.x <br />
+          3.2.x <br />
+          4.0.x
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 {{! /multiexcerpt}}
 
@@ -161,39 +164,46 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 
 {{! multiexcerpt name='elasticsearch_supported_versions'}}
 <div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th colspan="1">Nuxeo Platform Version:</th>
-<th colspan="1">LTS 2021</th>
-<th colspan="1">LTS 2019</th>
-<th colspan="1">LTS 2017</th>
-<th colspan="1">LTS 2016</th>
-</tr>
-<tr><th colspan="1">Elasticsearch</th>
-<td colspan="1">
-Library: 7.9.2<br/>
-Cluster: 7.7 to 7.9 RestClient protocol only.
-</td>
-<td colspan="1">
-Library: 6.5.3<br/>
-Cluster:
-- 6.5.x to 6.8.x when using the RestClient protocol.<br/>
-- 6.5.x when using the TransportClient.
-</td>
-<td colspan="1">
-Library: 5.6.3<br/>
-Cluster: 5.6.x</td>
-<td colspan="1">**From 8.1 to 8.3:**<br/>
-Library: 1.5.2<br/>
-Cluster: 1.5.2 to 1.7.x<br/>
-**From 8.10:**<br/>
-Library: 2.3.5<br />
-Cluster: 2.3.x to 2.4.x</td>
-</tr>
-</tbody>
-</table>
-</div>{{! /multiexcerpt}}
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Nuxeo Platform Version:</th>
+        <th colspan="1">LTS 2021</th>
+        <th colspan="1">LTS 2019</th>
+        <th colspan="1">LTS 2017</th>
+        <th colspan="1">LTS 2016</th>
+      </tr>
+      <tr>
+        <th colspan="1">Elasticsearch</th>
+        <td colspan="1">
+          Library: 7.9.2<br/>
+          Cluster: 7.7 to 7.9 RestClient protocol only.
+        </td>
+        <td colspan="1">
+          Library: 6.5.3<br/>
+          Cluster:
+          <ul>
+            <li>6.5.x to 6.8.x when using the RestClient protocol.</li>
+            <li>6.5.x when using the TransportClient.</li>
+          </ul>
+        </td>
+        <td colspan="1">
+          Library: 5.6.3<br/>
+          Cluster: 5.6.x
+        </td>
+        <td colspan="1">
+          **From 8.1 to 8.3:**<br/>
+          Library: 1.5.2<br/>
+          Cluster: 1.5.2 to 1.7.x<br/>
+          **From 8.10:**<br/>
+          Library: 2.3.5<br />
+          Cluster: 2.3.x to 2.4.x
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{{! /multiexcerpt}}
 
 More information can be found on the [Elasticsearch Setup]({{page page='elasticsearch-setup'}}) page.
 
@@ -202,32 +212,32 @@ More information can be found on the [Elasticsearch Setup]({{page page='elastics
 {{! multiexcerpt name='kafka_supported_versions'}}
 
 <div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-  <th colspan="1">Nuxeo Platform Version:</th>
-  <th colspan="1">LTS 2021</th>
-  <th colspan="1">LTS 2019</th>
-  <th colspan="1">LTS 2017</th>
-</tr>
-<tr>
-  <th colspan="1">Kafka</th>
-<td colspan="1">
-  Library: 2.6.0 scala 2.12<br/>
-  Cluster: 1.x, 2.x
-</td>
-<td colspan="1">
-  Library: 2.1.1 scala 2.12 since HF15<br/>
-  Library: 2.1.0 scala 2.12 from HF01 to HF14<br/>
-  Cluster: 1.x, 2.x
-</td>
-<td colspan="1">
-  Library: 1.0.0 scala 2.11<br/>
-  Cluster: 1.x, 2.0.0
-</td>
-</tr>
-</tbody>
-</table>
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Nuxeo Platform Version:</th>
+        <th colspan="1">LTS 2021</th>
+        <th colspan="1">LTS 2019</th>
+        <th colspan="1">LTS 2017</th>
+      </tr>
+      <tr>
+        <th colspan="1">Kafka</th>
+        <td colspan="1">
+          Library: 2.6.0 scala 2.12<br/>
+          Cluster: 1.x, 2.x
+        </td>
+        <td colspan="1">
+          Library: 2.1.1 scala 2.12 since HF15<br/>
+          Library: 2.1.0 scala 2.12 from HF01 to HF14<br/>
+          Cluster: 1.x, 2.x
+        </td>
+        <td colspan="1">
+          Library: 1.0.0 scala 2.11<br/>
+          Cluster: 1.x, 2.0.0
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 {{! /multiexcerpt}}
 
@@ -238,6 +248,7 @@ we still advice to use the latest available stable version.
 
 {{! multiexcerpt name='supported-browsers'}}
 Depending on the user interface addon or applications you use, the browser requirements can differ. See the relevant pages:
-- [Nuxeo JSF UI]({{page version='' space='nxdoc' page='nuxeo-jsf-ui'}})
-- [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui-overview'}}#requirements)
+
+- [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
+- [Nuxeo Web UI]({{page page='web-ui-overview'}}#requirements)
 {{! /multiexcerpt}}
