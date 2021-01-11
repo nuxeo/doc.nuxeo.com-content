@@ -2,7 +2,7 @@
 title: Internet Information Services (IIS)
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2021-01-18'
     status: ok
 labels:
     - content-review-lts2016
@@ -77,7 +77,7 @@ history:
 
 ---
 {{! multiexcerpt name='internet-information-services-iis-content'}}
-This documentation gives you the guidelines to install a Nuxeo instance on a Windows Server and use IIS as a frontal web server. This documentation is more focused on the IIS configuration. For more details about the installation of the Nuxeo Platform or IIS, please refer to the relevant documentation.
+This documentation gives you the guidelines to install a Nuxeo instance on a Windows Server with the Tomcat server ZIP and use IIS as a frontal web server. This documentation is more focused on the IIS configuration. For more details about the installation of the Nuxeo Platform or IIS, please refer to the relevant documentation.
 
 Requirements:
 
@@ -90,11 +90,10 @@ Requirements:
 
 ### Nuxeo Installation
 
-1.  [Check Java is correctly installed]({{page page='installation#java-check'}}).
-2.  Download the [Nuxeo Windows distribution](http://www.nuxeo.com/downloads/) (.exe).
-3.  [Install the Nuxeo Platform]({{page page='installing-the-nuxeo-platform-on-windows'}}).
-4.  [Start the Nuxeo instance]({{page page='server-start-and-stop#start-windows'}}).
-5.  Open the Browser from the Windows Server (firewalls must be configured so as to allow this) at the address `http://NUXEO_SERVER/nuxeo`.
+1.  [Check Java is correctly installed]({{page page='tomcat-server-zip#java-check'}}).
+1.  [Install the Nuxeo Platform]({{page page='installing-the-nuxeo-platform-on-windows'}}).
+1.  [Start the Nuxeo instance]({{page page='server-start-and-stop#start-windows'}}).
+1.  Open the Browser from the Windows Server (firewalls must be configured so as to allow this) at the address `http://NUXEO_SERVER/nuxeo`.
 
 ### Enabling Web Server (IIS)
 

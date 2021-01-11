@@ -3,7 +3,7 @@ title: Installing the Nuxeo Platform on Windows
 description: Discover how to install Nuxeo Platform on Windows.
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2021-01-11'
     status: ok
 labels:
     - lts2016-ok
@@ -23,7 +23,7 @@ confluence:
     shortlink: 2YON
     shortlink_source: 'https://doc.nuxeo.com/x/2YON'
     source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+on+Windows
-tree_item_index: 600
+tree_item_index: 400
 version_override:
     LTS 2015: 710/admindoc/installing-the-nuxeo-platform-on-windows
     '6.0': 60/admindoc/installing-the-nuxeo-platform-on-windows
@@ -221,62 +221,16 @@ history:
         version: '1'
 
 ---
-You can install the Nuxeo Platform on Windows using one of several methods:
-
-*   the Windows installer (.exe)
-*   the ZIP archive (.zip)
-*   the Virtual Machine Image (.ovf, .vmdk, .vmx)
-
-See our [Download page](https://www.nuxeo.com/downloads/).
 
 ## Checking Requirements
 
-Check out the [Hardware and Software Requirements]({{page page='installation'}}) for detailed steps to check your Java version and install it.
+First, have a look at the detailed steps to [check your Java version]({{page page='tomcat-server-zip'}}#java-check) and install it.
 
-## Installing the Nuxeo Platform from the Windows Installer
+## Installing the Nuxeo Platform From the ZIP Archive
 
-The Nuxeo Platform is available with a Windows installer that guides you in the install process.
+**To install the Nuxeo Platform:**
 
-{{#> callout type='note' }}
-
-The Windows installer requires Administrator privileges.
-
-{{/callout}}
-
-**To install the application using the Windows installer (.exe):**
-
-1. Double-click on the .exe installer you downloaded</br>
-    A popup window appears.
-    ![]({{file name='windows-installer-more-info.png'}} ?w=350, border=true)
-1. Click on the **More info** link
-    ![]({{file name='windows-installer-run-anyway.png'}} ?w=350, border=true)
-1. Click on **Run anyway** and follow the instructions displayed.
-
-**Installation path**
-
-On Windows in general, and especially on Windows 7 or later versions, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,...
-
-![]({{file name='DM-Windows_installer.png'}} ?w=300)
-
-{{#> callout type='note' }}
-
-*   The Windows installer includes a full JDK installation. You will get an error while installing the **JavaFX** portion. The JavaFX platform is not used by Nuxeo, therefore, when the error appears, click **Close** and continue with the installation.
-*   When you launch the Nuxeo services for the first time, you will see an error window that says **pdftohtml.exe** **has stopped working**. To get the pdftohtml utility to work properly, install the **Visual C++ Redistributable for Visual Studio 2012&nbsp;**available on [Microsoft's website](http://www.microsoft.com/en-us/download/details.aspx?id=30679).
-*   If you are using PostgreSQL, please review the [PostgreSQL]({{page page='postgresql'}}) document and use the recommended configurations.
-
-{{/callout}}
-
-**What's next?**
-You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).
-
-## Installing the Nuxeo Platform from the ZIP Archive
-
-Installing the Nuxeo Platform using the ZIP archive installs the Nuxeo Platform only. External dependencies must be installed separately.
-
-**To install the Nuxeo Platform ZIP archive:**
-
-Unzip the .zip archive.
+Download the [ZIP](https://packages.nuxeo.com/repository/maven-public/org/nuxeo/ecm/distribution/nuxeo-server-tomcat/11.4.42/nuxeo-server-tomcat-11.4.42.zip) archive and unzip it using your favorite tool.
 
 {{#> callout type='warning' }}
 
@@ -290,61 +244,8 @@ Recommended: [7-Zip](http://www.7-zip.org/).
 On Windows in general, and especially on Windows 7 or later versions, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,...
 
 **What's next?**
-You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).
-
-## Installing a Nuxeo Virtual Machine Image
-
-{{! multiexcerpt name='install-vm'}}
-
-The Nuxeo Platform is available as ready-to-use 64 bits virtual machine images from [nuxeo.com](http://www.nuxeo.com). VM images are available for VMware and Virtual Box. They provide a full environment (OS, database&hellip;) and all required dependencies to make the Nuxeo Platform work.
-
-**To install the Nuxeo virtual machine image and start Nuxeo:**
-
-1.  Unzip the downloaded package.
-
-    {{#> callout type='warning' }}
-
-    Do not use the Windows built-in ZIP functionality (aka "zipfldr.dll" or "Compressed Folders Module"), it reports incorrect uncompressed size.
-    Recommended: [7-Zip](http://www.7-zip.org/).
-
-    {{/callout}}
-
-    You will see a folder with the required file for the virtual machine image to run.
-
-    {{#> callout type='tip' }}
-
-    If using VMware Player 14 on Windows, you might have to configure your VMware Player network settings for the image to have network connectivity.
-
-    {{/callout}}
-
-2.  Start the virtual machine image in your virtual machine application by double-clicking on it.
-
-    *   For the VMware package, double-click on the file "nuxeo.vmx".
-    *   For the OVF package: in VirtualBox, go to the File menu and choose Import Appliance. Then start the imported virtual machine.The VM image starts.
-    ![]({{file name='DM-VM-starting.png'}} ?w=350)
-    Then, the Nuxeo application automatically starts.
-    ![]({{file name='DM-VM-server-starting.png'}} ?w=350)
-    When the Nuxeo application is started, it displays the address at which it is available.
-    ![]({{file name='DM-VM-server-started.png'}} ?w=350)
-3.  In your browser, type the indicated address.
-
-    {{#> callout type='info' heading='Shell root access'}}
-
-    The password for the&nbsp;`root` and&nbsp;`nuxeo` users are generated the first time you start the virtual machine and are displayed on the console.&nbsp;
-
-    {{/callout}}
-
-**Limitations:**
-
-*   As a 64 bits virtual image, it cannot be installed on a 32 bit system.
-*   MP4 video conversion is not supported because of distribution rights limitations.
-
-{{! /multiexcerpt}}
-
-&nbsp;
-
-&nbsp;
+Do you want to evaluate the platform? You can now [start the server]({{page page='server-start-and-stop'}}).
+You want to do a complete installation, that is compatible for a production environment? You should [prepare your environment]({{page page='setup-best-practices'}}) now.
 
 * * *
 
@@ -355,7 +256,6 @@ The Nuxeo Platform is available as ready-to-use 64 bits virtual machine images f
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
-- [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 - [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 - [Discover Nuxeo Platform APIs]({{page page='discover-nuxeo-platform-apis'}})
 
