@@ -3,7 +3,7 @@ title: Installing the Nuxeo Platform on macOS
 description: Discover how to install Nuxeo Platform on macOS.
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2021-01-11'
     status: ok
 labels:
     - lts2016-ok
@@ -23,7 +23,7 @@ confluence:
     shortlink: 4oON
     shortlink_source: 'https://doc.nuxeo.com/x/4oON'
     source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+on+Mac+OS
-tree_item_index: 500
+tree_item_index: 300
 version_override:
     LTS 2015: 710/admindoc/installing-the-nuxeo-platform-on-mac-os
     '6.0': 60/admindoc/installing-the-nuxeo-platform-on-mac-os
@@ -171,49 +171,20 @@ history:
         version: '1'
 
 ---
-On macOS, you can install the Nuxeo Platform using two different packages:
-
-- The `nuxeo-server-<version>-tomcat.zip` archive
-- The virtual machine image (VirtualBox or VMware)
 
 ## Checking Requirements
 
-{{{multiexcerpt 'requirements-intro' page='Installation'}}}
+First, have a look at the detailed steps to [check your Java version]({{page page='tomcat-server-zip'}}#java-check) and install it.
 
-Check out the [Installation page]({{page page='installation'}}) for detailed steps to check your Java version and install it.
+## Installing the Nuxeo Platform From the ZIP Archive
 
-## Installing the Nuxeo Platform From the .zip Archive
+**To install the Nuxeo Platform:**
 
-Installing the Nuxeo Platform using the .zip package installs the Nuxeo Platform only. External dependencies must be installed separately.
-
-**To install the Nuxeo Platform zip archive:**
-Unzip the .zip archive using your favorite tool.
+Download the [ZIP](https://packages.nuxeo.com/repository/maven-public/org/nuxeo/ecm/distribution/nuxeo-server-tomcat/11.4.42/nuxeo-server-tomcat-11.4.42.zip) archive and unzip it using your favorite tool.
 
 **What's next?**
-You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).
-
-## Installing the Nuxeo Platform Using Homebrew
-
-If you are not familiar with Homebrew, you can have a look at&nbsp;[their documentation](http://brew.sh/).
-
-To install Nuxeo using Homebrew:
-
-```
-brew install nuxeo
-```
-
-The nuxeo.conf file will be in located in `/usr/local/etc/nuxeo.conf`. You can now start your server with [nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}}) as it is added in your PATH.
-
-## Installing the Nuxeo Platform Using Docker
-
-If you are familiar with docker, you can also get the Nuxeo Docker image, you can find more information on [Docker hub](https://hub.docker.com/_/nuxeo/).
-
-You can also have a look to [Setting up your Nuxeo]({{page page='setting-up-your-nuxeo-environment'}}) page which explain more about usage of Nuxeo Docker image.
-
-## Installing a Nuxeo Virtual Machine Image
-
-{{{multiexcerpt 'install-vm' page='Installing the Nuxeo Platform on Windows'}}}
+Do you want to evaluate the platform? You can now [start the server]({{page page='server-start-and-stop'}}).
+You want to do a complete installation, that is compatible for a production environment? You should [prepare your environment]({{page page='setup-best-practices'}}) now.
 
 * * *
 
@@ -229,7 +200,6 @@ You can also have a look to [Setting up your Nuxeo]({{page page='setting-up-your
 <div class="column medium-6">
 {{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
-- [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 - [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 - [Discover Nuxeo Platform APIs]({{page page='discover-nuxeo-platform-apis'}})
 

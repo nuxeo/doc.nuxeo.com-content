@@ -3,7 +3,7 @@ title: nuxeoctl and Control Panel Usage
 description: The nuxeoctl script is located in the bin folder of your Nuxeo installation. It enables various options and commands.
 review:
     comment: ''
-    date: '2019-10-21'
+    date: '2021-01-11'
     status: ok
 labels:
     - lts2016-ok
@@ -14,6 +14,7 @@ labels:
     - bootstrap-component
     - lts2017-ok
 toc: true
+tree_item_index: 300
 confluence:
     ajs-parent-page-id: '6030087'
     ajs-parent-page-title: Server Start and Stop
@@ -277,17 +278,30 @@ history:
         version: '1'
 
 ---
-The `nuxeoctl` script is located in the `bin` folder of your Nuxeo installation. It enables various options and commands (explained in details below). For MS Windows users, its equivalent is the `nuxeoctl.bat` script.
+
+The `nuxeoctl` script enables various options and commands, explained in details below.
+
+It is available as an executable in the Docker image.
+
+If you have installed Nuxeo from the Tomcat server ZIP, its location is the `bin` folder of the Nuxeo server.
+
+For Windows users, its equivalent is the `nuxeoctl.bat` script, also located in the `bin` folder.
 
 ## nuxeoctl Usage
 
-Here is the Shell/Batch script usage:
+Here is the script usage:
 
 ```
 nuxeoctl <command> [options] [--] [command parameters]
 ```
 
-Issue `nuxeoctl help` to print this information.
+Issue `nuxeoctl help` to print this information:
+
+```shell
+docker run docker.packages.nuxeo.com/nuxeo/nuxeo nuxeoctl help
+```
+
+Particularities:
 
 - You can use multiple options at once but only one command.
 - The values separated by `|` are choices (`|` means "exclusive or").
@@ -296,10 +310,6 @@ Issue `nuxeoctl help` to print this information.
 - Some options also have a shortcut (ie. `-h` equals to `--help`).
 - Two dots (`..`) means the command accepts repeated parameters.
 - Commands may need to be prefixed with `--` to separate them from options when confusion arises.
-
-{{#> callout type='tip' }}
-See [the Environment variables page]({{page page='setup-best-practices'}}#define-environment-variables) for setting Nuxeo Home and Configuration paths.
-{{/callout}}
 
 ### Per-command Usage
 
@@ -415,7 +425,7 @@ nuxeoctl connect-report [--output <file>|--gzip <*true|false|yes|no>|--pretty-pr
   <td>`true` on Windows</br>
   `false` on other platforms</td>
   <td>5.6</td>
-  <td>Start the Graphical User Interface (aka Nuxeo Control Panel).</td>
+  <td>Start the Graphical User Interface, aka Nuxeo Control Panel. Tomcat server ZIP only.</td>
 </tr>
 <tr>
   <td>`--nodeps`</td>
@@ -549,7 +559,7 @@ nuxeoctl connect-report [--output <file>|--gzip <*true|false|yes|no>|--pretty-pr
 <td colspan="1">`start`</td>
 <td colspan="1">Start Nuxeo server in background, waiting for effective start.<br/>
 Useful for batch executions requiring the server being immediately available after the script returned.<br/>
-**Note**: On Windows, the `start` command launches the Control Panel.</td>
+**Note**: On Windows with the Tomcat server ZIP, the `start` command launches the Control Panel.</td>
 </tr>
 <tr>
 <td colspan="1">`stop`</td>
@@ -670,8 +680,6 @@ If uninstalling a package by its ID and other versions of the same package are a
 </table>
 </div>
 
-The following commands are always executed in console/headless mode (no GUI): `configure`, `mp-purge`, `mp-add`, `mp-install`, `mp-uninstall`, `mp-request`, `mp-remove`, `mp-hotfix`, `mp-upgrade`, `mp-reset`, `mp-list`, `mp-listall`, `mp-update`, `status`, `showconf`, `mp-show`, `mp-set`, `config`, `encrypt`, `decrypt`, `help`.
-
 The following commands cannot be executed on a running server: `pack`, `mp-purge`, `mp-add`, `mp-install`, `mp-uninstall`, `mp-request`, `mp-remove`, `mp-hotfix`, `mp-upgrade`, `mp-reset`.
 
 {{#> callout type='tip' }}
@@ -727,11 +735,6 @@ Here are the OS environment variables which are read by `nuxeoctl`.
 </tbody>
 </table>
 </div>
-
-Here is the console usage:
-```
-[NUXEO_CONF=/etc/nuxeo/nuxeo.conf] [...] ./nuxeoctl start
-```
 
 ## Java Usage
 

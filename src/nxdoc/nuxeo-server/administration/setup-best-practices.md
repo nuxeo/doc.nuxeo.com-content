@@ -3,7 +3,7 @@ title: Setup Best Practices
 description: Nuxeo applications come as ready-to-use applications that you can quickly install and evaluate. However, if you want to go to production, you may want to follow best practices.
 review:
   comment: ''
-  date: '2017-12-13'
+  date: '2021-01-18'
   status: ok
 labels:
   - content-review-lts2016
@@ -166,9 +166,7 @@ history:
     version: '1'
 ---
 
-Nuxeo applications come as ready-to-use applications, that you can quickly install and evaluate. However, if you plan to go in production, have several Nuxeo applications on the same machine or do some performance tests, here are some changes of configuration that we recommend to do, especially for advanced testing or before going into production.
-
-The steps given below are given using the [Admin tab]({{page page='admin-tab-overview'}}). They can of course also be done by [editing the `nuxeo.conf` file manually]({{page page='configuration-parameters-index-nuxeoconf'}}).
+Nuxeo applications come as ready-to-use applications, that you can quickly install and evaluate. However, if you plan to go in production, here are some changes of configuration that we recommend to do.
 
 ## Global Recommendation
 
@@ -176,91 +174,36 @@ Nuxeo is designed by and for customization and extensibility: it is never requir
 
 You must never edit the content of the server but use [the configuration properties]({{page page='configuration-parameters-index-nuxeoconf'}}), [the configuration templates]({{page page='configuration-templates'}}) and the [contributions]({{page page='how-to-contribute-to-an-extension'}}).
 
-## Moving Configuration, data and log Directories Outside Nuxeo
+## Mounting Data, Log and Temporary Directories as Volumes
 
-The configuration of your application is saved in the `nuxeo.conf` configuration file, whatever the means you use to configure your application (manual edit or Admin tab). It is better, although not mandatory, to store your customized configuration outside the Nuxeo Platform. This way, you will be able to easily upgrade the Nuxeo Platform, keeping your configuration safely apart of Nuxeo directory.
+{{#> callout type='info' }}
+The following recommendations are for the Nuxeo Docker image. If you are using [the Tomcat server ZIP](#tomcat-server-zip), please read the related section.
+{{/callout}}
 
-**To move the configuration file outside the Nuxeo directory:**
+Any data written by Nuxeo should be stored outside the container run from the Nuxeo Docker image. This ensures that the data is persisted and independent from the container that could be killed and removed at any time. It also eases backups and upgrades.
 
-1.  Move the `nuxeo.conf` file from its default location.
-2.  After you moved `nuxeo.conf`, you need to [define its location as an environment variable](#nuxeo_conf).
+Thus, the following directories should be mounted as external volumes in the container run from the Nuxeo Docker image:
 
-By default, `data` and `log` directories are stored inside the Nuxeo tree. To ease backup and upgrades, it is highly recommended to move them outside the Nuxeo tree.
+```shell
+/var/lib/nuxeo
+/var/log/nuxeo
+/tmp
+```
 
-**To move the data and log directories:**
+For instance:
 
-{{{multiexcerpt name='JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
+```shell
+docker run --name nuxeo \
+  -p 8080:8080 \
+  -v /path/to/nuxeo/data:/var/lib/nuxeo \
+  -v /path/to/nuxeo/log:/var/log/nuxeo \
+  -v /path/to/tmp:/tmp \
+  docker.packages.nuxeo.com/nuxeo/nuxeo
+```
 
-1.  In the Admin tab **System Information** > **Setup** tab, type the path to the location where you want the directories to be stored (see the table below).
-2.  Click on **Save**.
-3.  Restart your server.
-    The `data` and `log` directories are created at the location you typed.
+## Add Configuration Properties
 
-**Data and log directories configuration**
-
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-Field / Property
-
-</th><th colspan="1">
-
-Description
-
-</th></tr><tr><td colspan="1">
-
-Data directory
-`nuxeo.data.dir`
-
-</td><td colspan="1">
-
-Data directory (absolute or relative to NUXEO_HOME). It involves all data not being stored in the database.
-Linux recommended path: `/var/lib/nuxeo/...`
-
-</td></tr><tr><td colspan="1">
-
-Log directory
-`nuxeo.log.dir`
-
-</td><td colspan="1">
-
-Log directory (absolute or relative to NUXEO_HOME).
-Linux recommended path: `/var/log/nuxeo/...`
-
-</td></tr></tbody></table></div>
-
-## Defining Environment Variables {{> anchor 'define-environment-variables'}}
-
-When the server starts, it guesses where the Nuxeo home directory and the Nuxeo configuration file (`nuxeo.conf`) are located. If it doesn't find it or if you want to force it to use a specific home directory and/or a specific configuration file, you can define their location as environment variables.
-
-### `NUXEO_HOME`
-
-Here is how Nuxeo home is guessed when the server starts: If `NUXEO_HOME` is not set, then we use the parent of the directory `nuxeoctl` is launched from.
-
-Setting the Nuxeo home directory as an environment variable is recommended in the following cases:
-
-- if you installed several Nuxeo applications on the same machine (for evaluation or production purpose),
-- if you want to use other scripts than the `$NUXEO_HOME/bin/nuxeoctl` script (such as a service in `/ect/init.d`).
-
-You must then set `NUXEO_HOME=/path/to/nuxeo/` in the system environment variables:
-
-- Windows users must write `"set NUXEO_HOME=..."` or use the control panel interface to define user environment parameters (like it's done for `%PATH%`).
-- Linux and macOS X users will write `"export NUXEO_HOME=...`." in `~/.bashrc` or `~/.profile`.
-
-### `NUXEO_CONF`
-
-You need to set the location of the `nuxeo.conf` file as an environment variable if you moved your configuration outside of the Nuxeo directory.
-
-Moving the data and configuration outside the Nuxeo directory is recommended in a production environment because it makes upgrades easier and more secured: Your data and configuration won't risk to be overridden or lost. You must then set `NUXEO_CONF=/path/to/nuxeo.conf` in the system environment variables.
-
-#### Windows Specific Case
-
-Under Windows, the location of the `nuxeo.conf` is defined by that order of priority (i.e. first one of those found is used):
-
-- Registry key `HKEY_LOCAL_MACHINE\SOFTWARE\%PRODNAME%\ConfigFile` with `%PRODNAME%` equals to "Nuxeo" (or in older versions, "Nuxeo CAP", "Nuxeo DM", "Nuxeo DAM", ...),
-- Environment variable `NUXEO_CONF`,
-- `"nuxeo.conf"` file in the working directory,
-- `"nuxeo.conf"` file on the Desktop,
-- `"nuxeo.conf"` file in the same location as `nuxeoctl.bat`.
+To add or update some configuration properties for the Nuxeo Platform, please read the related section about [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}#nuxeoconf-file).
 
 ## Changing the Default Embedded Database
 
@@ -275,7 +218,7 @@ They are respectively equivalent to the `Xms` and `Xmx` options, using a percent
 The default values are:
 
 ```
-InitialRAMPercentage = 1.5625
+InitialRAMPercentage = 3
 MaxRAMPercentage = 25
 ```
 
@@ -317,6 +260,17 @@ This is achieved by using the same percentage for `InitialRAM` as for `MaxRAM`, 
 JAVA_OPTS=-XX:InitialRAMPercentage=50 -XX:MaxRAMPercentage=50
 ```
 
+You can override or add some JVM setting by passing the `JAVA_OPTS` environment variable to the Nuxeo Docker image.
+
+For instance, to make the Nuxeo Launcher display the JVM settings in the console, run:
+
+```shell
+docker run --name nuxeo \
+  -p 8080:8080 \
+  -e JAVA_OPTS=-XshowSettings:vm \
+  docker.packages.nuxeo.com/nuxeo/nuxeo
+```
+
 #### Non Container Environment
 
 You can either:
@@ -326,6 +280,94 @@ You can either:
 ```
 JAVA_OPTS=-Xms1g -Xmx1g
 ```
+
+## Tomcat Server ZIP
+
+### Moving Configuration, data and log Directories Outside Nuxeo
+
+The configuration of your application is saved in the `nuxeo.conf` configuration file, whatever the means you use to configure your application (manual edit or Admin tab). It is better, although not mandatory, to store your customized configuration outside the Nuxeo Platform. This way, you will be able to easily upgrade the Nuxeo Platform, keeping your configuration safely apart of Nuxeo directory.
+
+**To move the configuration file outside the Nuxeo directory:**
+
+1.  Move the `nuxeo.conf` file from its default location.
+2.  After you moved `nuxeo.conf`, you need to [define its location as an environment variable](#nuxeo_conf).
+
+By default, `data` and `log` directories are stored inside the Nuxeo tree. To ease backup and upgrades, it is highly recommended to move them outside the Nuxeo tree.
+
+**To move the data and log directories:**
+
+{{{multiexcerpt name='JSF-UI-required' page='generic-multi-excerpts'}}}
+
+1.  In the Admin tab **System Information** > **Setup** tab, type the path to the location where you want the directories to be stored (see the table below).
+2.  Click on **Save**.
+3.  Restart your server.
+    The `data` and `log` directories are created at the location you typed.
+
+**Data and log directories configuration**
+
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+
+Field / Property
+
+</th><th colspan="1">
+
+Description
+
+</th></tr><tr><td colspan="1">
+
+Data directory
+`nuxeo.data.dir`
+
+</td><td colspan="1">
+
+Data directory (absolute or relative to NUXEO_HOME). It involves all data not being stored in the database.
+Linux recommended path: `/var/lib/nuxeo/...`
+
+</td></tr><tr><td colspan="1">
+
+Log directory
+`nuxeo.log.dir`
+
+</td><td colspan="1">
+
+Log directory (absolute or relative to NUXEO_HOME).
+Linux recommended path: `/var/log/nuxeo/...`
+
+</td></tr></tbody></table></div>
+
+### Defining Environment Variables {{> anchor 'define-environment-variables'}}
+
+When the server starts, it guesses where the Nuxeo home directory and the Nuxeo configuration file (`nuxeo.conf`) are located. If it doesn't find it or if you want to force it to use a specific home directory and/or a specific configuration file, you can define their location as environment variables.
+
+#### `NUXEO_HOME`
+
+Here is how Nuxeo home is guessed when the server starts: If `NUXEO_HOME` is not set, then we use the parent of the directory `nuxeoctl` is launched from.
+
+Setting the Nuxeo home directory as an environment variable is recommended in the following cases:
+
+- if you installed several Nuxeo applications on the same machine (for evaluation or production purpose),
+- if you want to use other scripts than the `$NUXEO_HOME/bin/nuxeoctl` script (such as a service in `/ect/init.d`).
+
+You must then set `NUXEO_HOME=/path/to/nuxeo/` in the system environment variables:
+
+- Windows users must write `"set NUXEO_HOME=..."` or use the control panel interface to define user environment parameters (like it's done for `%PATH%`).
+- Linux and macOS X users will write `"export NUXEO_HOME=...`." in `~/.bashrc` or `~/.profile`.
+
+#### `NUXEO_CONF`
+
+You need to set the location of the `nuxeo.conf` file as an environment variable if you moved your configuration outside of the Nuxeo directory.
+
+Moving the data and configuration outside the Nuxeo directory is recommended in a production environment because it makes upgrades easier and more secured: Your data and configuration won't risk to be overridden or lost. You must then set `NUXEO_CONF=/path/to/nuxeo.conf` in the system environment variables.
+
+##### Windows Specific Case
+
+Under Windows, the location of the `nuxeo.conf` is defined by that order of priority (i.e. first one of those found is used):
+
+- Registry key `HKEY_LOCAL_MACHINE\SOFTWARE\%PRODNAME%\ConfigFile` with `%PRODNAME%` equals to "Nuxeo" (or in older versions, "Nuxeo CAP", "Nuxeo DM", "Nuxeo DAM", ...),
+- Environment variable `NUXEO_CONF`,
+- `"nuxeo.conf"` file in the working directory,
+- `"nuxeo.conf"` file on the Desktop,
+- `"nuxeo.conf"` file in the same location as `nuxeoctl.bat`.
 
 &nbsp;
 
