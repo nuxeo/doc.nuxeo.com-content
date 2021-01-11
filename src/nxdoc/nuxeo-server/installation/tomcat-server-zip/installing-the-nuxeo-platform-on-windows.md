@@ -228,7 +228,7 @@ First, have a look at the detailed steps to [check your Java version]({{page pag
 
 ## Installing the Nuxeo Platform From the ZIP Archive
 
-**To install the Nuxeo Platform:**
+### Install the Nuxeo Platform
 
 Download the [ZIP](https://packages.nuxeo.com/repository/maven-public/org/nuxeo/ecm/distribution/nuxeo-server-tomcat/11.4.42/nuxeo-server-tomcat-11.4.42.zip) archive and unzip it using your favorite tool.
 
@@ -239,11 +239,12 @@ Recommended: [7-Zip](http://www.7-zip.org/).
 
 {{/callout}}
 
-**Installation path**
+### Installation Path
 
 On Windows in general, and especially on Windows 7 or later versions, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,...
 
-**What's next?**
+### What's Next?
+
 Do you want to evaluate the platform? You can now [start the server]({{page page='server-start-and-stop'}}).
 You want to do a complete installation, that is compatible for a production environment? You should [prepare your environment]({{page page='setup-best-practices'}}) now.
 

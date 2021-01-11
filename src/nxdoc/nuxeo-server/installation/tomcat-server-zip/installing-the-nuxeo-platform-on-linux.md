@@ -319,14 +319,16 @@ First, have a look at the detailed steps to [check your Java version]({{page pag
 
 ## Installing the Nuxeo Platform From the ZIP Archive
 
-**To install the Nuxeo Platform:**
+### Install the Nuxeo Platform
 
 Download the [ZIP](https://packages.nuxeo.com/repository/maven-public/org/nuxeo/ecm/distribution/nuxeo-server-tomcat/11.4.42/nuxeo-server-tomcat-11.4.42.zip) archive and unzip it using your favorite tool.
 
-**Installation path**
+### Installation Path
+
 The usual directory into which install the server is `/opt`.
 
-**What's next?**
+### What's Next?
+
 Do you want to evaluate the platform? You can now [start the server]({{page page='server-start-and-stop'}}).
 You want to do a complete installation, that is compatible for a production environment? You should [prepare your environment]({{page page='setup-best-practices'}}) now.
 
@@ -336,8 +338,8 @@ You want to do a complete installation, that is compatible for a production envi
 
 Like any Java application you should prevent the JVM Heap from being swapped to disk, which will crush server performance. You have two options here:
 
-*   Disable the swap with `sudo swapoff -a` you'll need to edit your `/etc/fstab` to disable swap permanently. Note that before doing this you need to make sure that you have enough memory for all the processes that run on the server (Nuxeo JVM, converters, other custom process and the OS).
-*   Limit the swapiness of the OS using `sysctl` to set `vm.swappiness=1`.
+- Disable the swap with `sudo swapoff -a` you'll need to edit your `/etc/fstab` to disable swap permanently. Note that before doing this you need to make sure that you have enough memory for all the processes that run on the server (Nuxeo JVM, converters, other custom process and the OS).
+- Limit the swapiness of the OS using `sysctl` to set `vm.swappiness=1`.
 
 ### Temporary Folder
 

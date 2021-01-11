@@ -248,9 +248,9 @@ The Nuxeo Platform comes with a Control Panel that allows you to start and stop 
 
 The Control Panel gives you access to:
 
-*   A summary of the server status: is it running, is stopped, etc...
-*   The logs of the server: the console and server logs are information of the tasks the server is doing and messages on how it is processing these tasks.
-*   The [Nuxeo Shell]({{page page='nuxeo-shell'}}): the administrators' Swiss Army knife.
+- A summary of the server status: is it running, is stopped, etc...
+- The logs of the server: the console and server logs are information of the tasks the server is doing and messages on how it is processing these tasks.
+- The [Nuxeo Shell]({{page page='nuxeo-shell'}}): the administrators' Swiss Army knife.
 
 ## Starting Your Nuxeo Application
 
@@ -258,84 +258,83 @@ The Control Panel gives you access to:
 
 Nuxeo applications are started using scripts.
 
-1.  &nbsp;Launch a terminal and go to your installation directory.
-2.  Start the server using the `nuxeoctl` script (located in the `bin` directory):
+1. Launch a terminal and go to your installation directory.
+1. Start the server using the `nuxeoctl` script (located in the `bin` directory):
 
-    ```
-    ./bin/nuxeoctl start --gui true
-    ```
+  ```shell
+  ./bin/nuxeoctl start --gui true
+  ```
 
-    {{#> callout type='tip' }}
+  {{#> callout type='tip' }}
 
-    The command used to launch the Control Panel may not be executable by default. If it is the case, in the terminal go to the `bin` directory of Nuxeo and type the line below to be able to use it:
+  The command used to launch the Control Panel may not be executable by default. If it is the case, in the terminal go to the `bin` directory of uxeo and type the line below to be able to use it:
 
-    ```
-    chmod +x *.sh *ctl
-    ```
+  ```shell
+  chmod +x *.sh *ctl
+  ```
 
-    {{/callout}}
+  {{/callout}}
 
-    The Control Panel opens.
+  The Control Panel opens.
 
-3.  Click on the **Start** button.
-    Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware.
-    When the server is started, the **Start** button becomes a **Stop** button.
-4.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
-    The login page is displayed so you can use the application.
+1. Click on the **Start** button.
+   Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware.
+   When the server is started, the **Start** button becomes a **Stop** button.
+1. Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
+   The login page is displayed so you can use the application.
 
 ### macOS {{> anchor 'start-macos'}}
 
 #### Using the Control Panel
 
-1.  From the Finder, click on `Start Nuxeo.command`.
-    You can also drag and drop the start script in the terminal and press Enter.
+1. From the Finder, click on `Start Nuxeo.command`.
+   You can also drag and drop the start script in the terminal and press Enter.
 
-    {{#> callout type='tip' }}
+  {{#> callout type='tip' }}
 
-    The command may not be executable by default. If it is the case, in the terminal go to the `bin` directory of Nuxeo and type the line below:
+  The command may not be executable by default. If it is the case, in the terminal go to the `bin` directory of Nuxeo and type the line below:
 
-    ```
-    chmod +x *.command
-    ```
+  ```shell
+  chmod +x *.command
+  ```
 
-    {{/callout}}
+  {{/callout}}
 
-    The Control Panel opens and the server starts.
-    Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware.
-    When the server is started, the **Start** button becomes a **Stop** button.
+  The Control Panel opens and the server starts.
+  Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware.
+  When the server is started, the **Start** button becomes a **Stop** button.
 
-2.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
-    The login page is displayed so you can use the application.
+1. Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
+   The login page is displayed so you can use the application.
 
 #### Using the nuxeoctl Script
 
-1.  Open a terminal and go to the&nbsp;`/bin` directory of your Nuxeo application.
+1. Open a terminal and go to the&nbsp;`/bin` directory of your Nuxeo application.
 
-    ```
-    cd $NUXEO_HOME/bin
-    ```
+  ```shell
+  cd $NUXEO_HOME/bin
+  ```
 
-2.  Execute the&nbsp;`nuxeoctl` script with the&nbsp;`start` command.
+1. Execute the&nbsp;`nuxeoctl` script with the&nbsp;`start` command.
 
-    ```
-    ./nuxeoctl start --gui true
-    ```
+  ```shell
+  ./nuxeoctl start --gui true
+  ```
 
-    The Control Panel opens and the server starts.
-    Check out the page [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}}) for more commands and options of the `nuxeoctl` script, like the `console` command.
+  The Control Panel opens and the server starts.
+  Check out the page [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}}) for more commands and options of the nuxeoctl` script, like the `console` command.
 
 ### Windows {{> anchor 'start-windows'}}
 
 #### Using the Control Panel
 
-1.  Open the Nuxeo Control Panel:
-
-    *   In the folder `C:\Nuxeo application`, double-click on `Start Nuxeo.bat`.
-    *   In the folder `C:\Nuxeo application\bin\`, double-click on `nuxeoctl.bat`.The Nuxeo Control Panel opens and the server starts.
+1. Open the Nuxeo Control Panel:
+    - In the folder `C:\Nuxeo application`, double-click on `Start Nuxeo.bat`.
+    - In the folder `C:\Nuxeo application\bin\`, double-click on `nuxeoctl.bat`.The Nuxeo Control Panel opens and the server starts.
     Starting the Nuxeo server takes between a few seconds and several minutes, depending on your hardware.
     When the server is started, the **Start** button becomes a **Stop** button.
-2.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
-    The login page is displayed so you can use the application.
+2. Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
+   The login page is displayed so you can use the application.
 
 {{! multiexcerpt name='infos_windows'}} {{#> callout type='info' }}
 
@@ -349,30 +348,30 @@ On Windows, it is possible to start Nuxeo as a service. Please report the [Insta
 
 #### Using the nuxeoctl Script
 
-1.  Launch a command prompt and go to the `/bin` directory of your Nuxeo application.
+1. Launch a command prompt and go to the `/bin` directory of your Nuxeo application.
 
-    ```
-    cd %NUXEO_HOME%/bin
-    ```
+  ```shell
+  cd %NUXEO_HOME%/bin
+  ```
 
-2.  Execute the `nuxeoctl.bat` script with the `start` command.
+1. Execute the `nuxeoctl.bat` script with the `start` command.
 
-    ```
-    nuxeoctl.bat start
-    ```
+  ```shell
+  nuxeoctl.bat start
+  ```
 
-    The Control Panel opens and the server starts.
-    Check out the page [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}}) for more commands and options of the `nuxeoctl` script, like the `console` command.
+  The Control Panel opens and the server starts.
+  Check out the page [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}}) for more commands and options of the `nuxeoctl` script, like the `console` command.
 
 ## Stopping Your Nuxeo Application
 
 The steps to stop your Nuxeo application are the same for all operating systems.
 
-#### Using the Control Panel
+### Using the Control Panel
 
-1.  On the Control Panel, click on the **Stop** button.
-    Stopping the server takes several seconds. When the server is stopped, the **Stop** button becomes a **Start** button.
-2.  Close the Control Panel.
+1. On the Control Panel, click on the **Stop** button.
+   Stopping the server takes several seconds. When the server is stopped, the **Stop** button becomes a **Start** button.
+2. Close the Control Panel.
 
 {{#> callout type='tip' }}
 
@@ -380,21 +379,21 @@ If you started the server using the `nuxeoctl start` command in the terminal, us
 
 {{/callout}}
 
-#### Using the nuxeoctl Script
+### Using the nuxeoctl Script
 
 If you started the server using the `nuxeoctl start` command, in a terminal execute the&nbsp;`nuxeoctl` script with the&nbsp;`stop` command:
 
-*   Linux / macOS
+- Linux / macOS
 
-    ```
-    ./nuxeoctl stop
-    ```
+  ```shell
+  ./nuxeoctl stop
+  ```
 
-*   Windows
+- Windows
 
-    ```
-    nuxeoctl.bat stop
-    ```
+  ```shell
+  nuxeoctl.bat stop
+  ```
 
 If you started the server using the&nbsp;`nuxeoctl console` command, use `Ctrl+C` to stop the server.
 
@@ -402,7 +401,7 @@ If you started the server using the&nbsp;`nuxeoctl console` command, use `Ctrl+C
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
+- [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
 
 {{/panel}}</div><div class="column medium-6">
 
