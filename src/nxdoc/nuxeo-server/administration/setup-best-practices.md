@@ -217,7 +217,7 @@ Since Java 10, the JVM has better support for container environments. It offers 
 They are respectively equivalent to the `Xms` and `Xmx` options, using a percentage of the Control Group memory limit (`cgroup`), the memory available for the Java process.
 The default values are:
 
-```
+```shell
 InitialRAMPercentage = 3
 MaxRAMPercentage = 25
 ```
@@ -230,7 +230,7 @@ Let's see how we satisfy this minimum `Xmx` requirement using the new options.
 
 By default, in `nuxeo.conf`, we define the following settings:
 
-```
+```properties
 JAVA_OPTS=-XX:InitialRAMPercentage=3 -XX:MaxRAMPercentage=25
 ```
 
@@ -256,7 +256,7 @@ When running in a Linux container, the JVM will automatically detect the `cgroup
 By default, the Nuxeo Docker image overrides the `JAVA_OPTS` property in `nuxeo.conf` to set the heap size to a fixed size, equal to 50% of the `cgroup` memory limit.
 This is achieved by using the same percentage for `InitialRAM` as for `MaxRAM`, resulting in equal `Xms` and `Xmx`.
 
-```
+```properties
 JAVA_OPTS=-XX:InitialRAMPercentage=50 -XX:MaxRAMPercentage=50
 ```
 
@@ -274,10 +274,11 @@ docker run --name nuxeo \
 #### Non Container Environment
 
 You can either:
+
 - Use the same settings as for a container environment.
 - Choose the exact heap size with, at the very least:
 
-```
+```properties
 JAVA_OPTS=-Xms1g -Xmx1g
 ```
 
@@ -289,8 +290,8 @@ The configuration of your application is saved in the `nuxeo.conf` configuration
 
 **To move the configuration file outside the Nuxeo directory:**
 
-1.  Move the `nuxeo.conf` file from its default location.
-2.  After you moved `nuxeo.conf`, you need to [define its location as an environment variable](#nuxeo_conf).
+1. Move the `nuxeo.conf` file from its default location.
+2. After you moved `nuxeo.conf`, you need to [define its location as an environment variable](#nuxeo_conf).
 
 By default, `data` and `log` directories are stored inside the Nuxeo tree. To ease backup and upgrades, it is highly recommended to move them outside the Nuxeo tree.
 
@@ -298,42 +299,43 @@ By default, `data` and `log` directories are stored inside the Nuxeo tree. To ea
 
 {{{multiexcerpt name='JSF-UI-required' page='generic-multi-excerpts'}}}
 
-1.  In the Admin tab **System Information** > **Setup** tab, type the path to the location where you want the directories to be stored (see the table below).
-2.  Click on **Save**.
-3.  Restart your server.
-    The `data` and `log` directories are created at the location you typed.
+1. In the Admin tab **System Information** > **Setup** tab, type the path to the location where you want the directories to be stored (see the table below).
+2. Click on **Save**.
+3. Restart your server.
+   The `data` and `log` directories are created at the location you typed.
 
 **Data and log directories configuration**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-Field / Property
-
-</th><th colspan="1">
-
-Description
-
-</th></tr><tr><td colspan="1">
-
-Data directory
-`nuxeo.data.dir`
-
-</td><td colspan="1">
-
-Data directory (absolute or relative to NUXEO_HOME). It involves all data not being stored in the database.
-Linux recommended path: `/var/lib/nuxeo/...`
-
-</td></tr><tr><td colspan="1">
-
-Log directory
-`nuxeo.log.dir`
-
-</td><td colspan="1">
-
-Log directory (absolute or relative to NUXEO_HOME).
-Linux recommended path: `/var/log/nuxeo/...`
-
-</td></tr></tbody></table></div>
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Field / Property</th>
+        <th colspan="1">Description</th>
+      </tr>
+      <tr>
+        <td colspan="1">
+          Data directory<br/>
+          `nuxeo.data.dir`
+        </td>
+        <td colspan="1">
+          Data directory (absolute or relative to NUXEO_HOME). It involves all data not being stored in the database.<br/>
+          Linux recommended path: `/var/lib/nuxeo/...`
+        </td>
+      </tr>
+      <tr>
+        <td colspan="1">
+          Log directory<br/>
+          `nuxeo.log.dir`
+        </td>
+        <td colspan="1">
+          Log directory (absolute or relative to NUXEO_HOME).<br/>
+          Linux recommended path: `/var/log/nuxeo/...`
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Defining Environment Variables {{> anchor 'define-environment-variables'}}
 
