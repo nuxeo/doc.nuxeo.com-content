@@ -3,7 +3,7 @@ title: Server Start and Stop
 description: Nuxeo applications come with a Control Panel that allows you to start and stop the server easily, and to access more administration features, discover how to use it.
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2021-01-11'
     status: ok
 labels:
     - content-review-lts2016
@@ -22,7 +22,7 @@ confluence:
     shortlink: BwNc
     shortlink_source: 'https://doc.nuxeo.com/x/BwNc'
     source_link: /display/NXDOC/Server+Start+and+Stop
-tree_item_index: 1100
+tree_item_index: 500
 version_override:
     LTS 2015: 710/admindoc/server-start-and-stop
     '6.0': 60/admindoc/server-start-and-stop
@@ -240,9 +240,9 @@ history:
         version: '1'
 
 ---
-On this page, you will see how to start and stop your Nuxeo application.
+On this page, you will see how to start and stop your Nuxeo application installed from the Tomcat ZIP server.
 
-Nuxeo applications come with a Control Panel that allows you to start and stop the server easily, and to access more administration features.
+The Nuxeo Platform comes with a Control Panel that allows you to start and stop the server easily, and to access more administration features.
 
 ![]({{file name='Nuxeo_Control_Panel.png'}} ?w=300)
 
