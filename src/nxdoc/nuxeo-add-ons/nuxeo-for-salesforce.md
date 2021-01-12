@@ -346,7 +346,7 @@ The Nuxeo connector for Salesforce provide a way to access lists of documents, r
 - **Data tab**: displays generic metadata of the document (version label, state, list of tags, date of creation and modification and creator), a list of renditions available on the doc (PDF, thumbnail, ...), additionnal attachments (as they can be attached from Web UI)
 - **History**: displays the last five audit entries on the document. The audit tracks all events happening on a document (modifications, creation, move, copy, ...).
 
-#### Content Library
+### Content Library
 The Content library mode is ideal when you want to offer a minimalistic document managemnt system for each Salesforce objects. Typical use case can be when you want to manage the documents you exchange both ways with a prospect or a customer, on an opportunity or a case. When the Nuxeo component is configured on a record page for the content library use case, the first time a user drops content on a Salesforce record instance, the Nuxeo component will create a folder in the Nuxeo repository with the same name and title as the record title, and create the dropped file underneath. From there user can create a set of folders and sub folders and organize content the way he needs.
 On the content library component, the user can:
 - Create folders, clicking on "New Folder"
@@ -355,6 +355,8 @@ On the content library component, the user can:
 - Search within the folder. The executed search looks for content starting from the currently opened folder.
 - On each listed documents, user has a set of actions: main file download, Open In Nuxeo, Edit with Nuxeo Drive, Delete
 - Clicking on the document name opens the Document pannel described in the previous section.
+
+The created folder in Web UI holds a `salesforce` facet and some metadata are set automatically on the associated salesforce schema. By default, "sf:objectId","sf:objectType", "sf:objectAmount". See the configuration section to change that behaviour.
 
 ### Content List
 The Content list mode is ideal when you want to display to the user a specific list of content that comes from the Nuxeo repository. Typical use case is for instance to display a list of relevant knowledge articles based on the context defined by the metadata of your open case. The list of content is specified by configuration in Nuxeo Studio with a Page provider, the same  way all documents lists and searches are specified in your customized Nuxeo Web UI. In the default behaviour without customization, the query made lists all documents for which the *dc:source* metadata of the document contains the current Salesforce obeject record id.
@@ -382,15 +384,17 @@ Once you dropped the component, you must choose the behaviour type among:
 - Content list: this will expose the result of a query , with the ability to do a mapping between the salesfoce current record and the documents.
 - Search: this will display a global search component.
 
-You can also specify a custom configuration, see "Nuxeo Saelsforce service extension point" in the section after.
+You can also specify a custom configuration, see "Nuxeo Salesforce service extension point" in the section after.
+
+Note that you can drop the Nuxeo component as many time as you need on a given page, and on as many different pages / Salesforce objects you need, there is no limitation.
 
 Limitation: the component cannot be activated on the Salesforce mobile view.
 
 ### Nuxeo Salesforce service extension point
 
-The Nuxeo Salesforce connector addon deploys a new "Salesforce configuration" service in the Nuxeo Platform with an extension point that allows to contribute various configurations. When dropping the Nuxeo component on the page layout, a `configuration` attribute allows to specify a configuration (as a string). The component when being loaded queries the configured configuration to Nuxeo server, which then asks the Salesforce configuration service for the specified configuration and returns it to the Salesforce ligthening component.
+The Nuxeo Salesforce connector addon installled via the Nuxeo Salesforce connector marketplace package deploys a new "Salesforce configuration" service in the Nuxeo Platform with an extension point that allows to contribute various configurations. When dropping the Nuxeo component on the page layout in the Lightning app builder, a `configuration` attribute allows to specify a configuration id (as a string). The lightning component when being loaded queries the configured configuration to Nuxeo server via an automation operation, which then asks to the Salesforce configuration service for the specified configuration and returns it to the Salesforce ligthening component. 
 
-This configuration object is used to configure several behaviours of the component: used pageproviders, custom salesforce properties / nuxeo properties mappings, enablement/disablement of some user actions, etc... We provide below an example of such a configuration. You can [contribute this extension from Studio](how-to-contribute-to-an-extension).
+This configuration object is used to configure several behaviours of the component: used pageproviders, custom salesforce properties / nuxeo properties mappings, enablement/disablement of some user actions, etc. We provide below an example of such a configuration. You can [contribute this extension from Nuxeo Studio](how-to-contribute-to-an-extension).
 
 `
 <extension target="org.nuxeo.salesforce.SalesforceComponent"
@@ -423,51 +427,42 @@ This configuration object is used to configure several behaviours of the compone
       </search>
       
   </extension>
-
 `
+Note that you can contribute as many configurations you need, there is no limitation.
+
 ### Configuration use cases
 
 #### Disabling Nuxeo Drive Direct Edit action
+You may want to disable the **Edit** user action if your users do not use Nuxeo Drive, to avoid confusing them. You can do so with the following element under the root configuration element:
+`<nuxeo-drive>true</nuxeo-drive>
+`
 
 #### Changing the root path where the folders are created for the library behaviour
+When using the Content library mode, a folder will be created for each Salesforce object. It is possible to configure the Nuxeo repository path under which the folders will be created with the element
 
-#### Changing the title of the application
+`<root>/default-domain/workspaces/salesforce</root>`
+under the `<library>` element.
 
-#### Defining a new link operation for the Content List behaviour 
-includes changing the linkTest
-
-#### Defining a new link operation for the Content
+### Changing the the document type of the folder created for the library behaviour or more
+The folder is creating calling an automation script named `Salesforce.TouchSFLibrary`. It is possible to override this automation script. See [the source](https://github.com/nuxeo/nuxeo-salesforce/blob/lts-2021/nuxeo-salesforce-core/src/main/resources/OSGI-INF/automation-contrib.xml) of the script for a better udnerstanding of its behaviour.
+  
+#### Changing labels
+The Nuxeo components is implemented using the internationalisation framework of Salesforce. As a consequence by enabling the translation workbench, it is possible to change the label of any of the displayed labels in the component and translate it for any language.
+The only label that is not translated with the Salesforce framework is the title of the component, that displays "Content Library" and "Content list". You can contribute another label using the element 
+`<title></title>` 
+The string provided will also be looked up as a key in the translation workbench.
 
 #### Updating the page provider and properties mapping for the content list behaviour
 
 
-   jg.writeStringField("type", LIBRARY_APP);
-            jg.writeStringField("name", libraryApp.name);
-            jg.writeStringField("title", libraryApp.title);
-            jg.writeStringField("root", libraryApp.root);
-            jg.writeBooleanField("nuxeoDrive", libraryApp.nuxeoDrive);
-            if (recordType != null && libraryApp.sobjectFields != null) {
-                writeFields(jg, libraryApp.sobjectFields.get(recordType));
+#### Defining a new link operation for the Content List behaviour 
+The "Link Content" action  provides to the users the ability to click on a Link button on each document of the search result. The behaviour associated to the Link/Unlink buttons can be changed by configuring another operation to call. The default one is `Salesforce.LinkAsSource`. See [the source](https://github.com/nuxeo/nuxeo-salesforce/blob/lts-2021/nuxeo-salesforce-core/src/main/resources/OSGI-INF/automation-contrib.xml) of the operation.
+
+There is also a configurable test made to know when to display the Link or the Unlink button, see the following contribution:
+`<link-test>function(doc, recordId) { return doc.properties['dc:source'] === recordId }</link-test>`
 
 
- jg.writeStringField("type", DOCLIST_APP);
-            jg.writeStringField("name", listingApp.name);
-            jg.writeStringField("title", listingApp.title);
-            jg.writeBooleanField("upload", listingApp.upload);
-            jg.writeStringField("linkTest", listingApp.linkTest);
-            jg.writeStringField("linkOp", listingApp.linkOp);
-            jg.writeStringField("query", listingApp.query);
-            jg.writeBooleanField("nuxeoDrive", listingApp.nuxeoDrive);
-            if (recordType != null && listingApp.sobjectFields != null) {
-                writeFields(jg, listingApp.sobjectFields.get(recordType));
-            }
 
-
-jg.writeStringField("type", SEARCH_APP);
-            jg.writeStringField("name", searchApp.name);
-            jg.writeStringField("title", searchApp.title);
-            jg.writeStringField("pageProvider", searchApp.pageProvider);
-            jg.writeBooleanField("nuxeoDrive", searchApp.nuxeoDrive);
 
 
 
