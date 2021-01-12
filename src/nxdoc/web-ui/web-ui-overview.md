@@ -3,7 +3,7 @@ title: Web UI Overview
 description: 'Nuxeo Web UI is a standard web application for Nuxeo Server, built upon a framework of Web components, that connects via HTTP and displays the platform features to users.'
 review:
     comment: ''
-    date: '2019-07-19'
+    date: '2020-01-24'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,6 @@ labels:
     - nsilva
     - polymer
     - lts2017-ok
-    - lts2019-ok
     - university
 toc: true
 tree_item_index: 100
@@ -106,41 +105,38 @@ version_override:
 
 ![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
 
-It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full-screen suggester and several other features built to provide a rich user experience. Here are the most important topics on getting started with Web UI, customizing it and building new web apps using Nuxeo Elements:
+It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester and several other features built to provide a rich user experience. Here are the most important topics on getting started with Web UI, customizing it and building new web apps using Nuxeo Elements:
 
-<div class="row">
-<div class="column medium-4" align="center">
-{{#> panel type='primary'}}
+<div class="row"><div class="column medium-4">{{#> panel type='primary'}}
+
 [Polymer Guide]({{page page='polymer-guide'}})
-{{/panel}}
-</div>
-<div class="column medium-4" align="center">
-{{#> panel type='primary'}}
+
+{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
+
 [Nuxeo Elements]({{page page='nuxeo-elements'}})
-{{/panel}}
-</div>
-<div class="column medium-4" align="center">
-{{#> panel type='primary'}}
+
+{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
+
 [Customization]({{page page='web-ui-customization'}})
-{{/panel}}
-</div>
-</div>
+
+{{/panel}}</div></div>
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
-[Course on the Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/76/nuxeo-web-ui-stack-introduction).</br>
-[Course to Start with Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui).
+Watch the related courses on Nuxeo University
+- [Course on the Web UI Stack](https://university.nuxeo.com/learn/course/164/web-ui-development).
+- [Course to Start with Web UI](https://university.nuxeo.com/learn/course/156/IntroductiontoWebComponentsandPolymer).
 ![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Requirements
 
 {{! multiexcerpt name='webui-requirements'}}
-Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard Web Components and Google Polymer 2.0 framework (legacy mode). The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
+Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard Web Components and Google Polymer 3.0 framework. The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
 
 {{#> callout type='warning' heading='Polymer 2.0 legacy mode'}}
-Previous versions of Nuxeo Web UI (1.x) relied on Polymer 1 so for compatibility reasons and to ensure a simple incremental upgrade the current version of Nuxeo Web UI is running
-Polymer 2 in legacy mode thus using the Polymer factory method, not the ES6 class-based syntax. Most of the 1.0 APIs are thus still available, as are any new 2.x APIs.
+
+Since previous versions of Nuxeo Web UI relied on Polymer 1 and 2, we keep compatibility with their APIs. [You can check the upgrade notes here.](https://doc.nuxeo.com/nxdoc/next/web-ui-upgrade-notes/)
+
 {{/callout}}
 
 The following browsers are supported:
@@ -153,17 +149,120 @@ The following browsers are supported:
 - Chrome Android
 {{! /multiexcerpt}}
 
-Edge, Firefox, and Chrome are called “evergreen browsers”: they are automatically updated at a high pace. The UI code of the version of Nuxeo relies on Polymer 2, supported by Google on those evergreen browsers. Nuxeo guarantees to support Web UI and fix bugs caused by misuse of the Polymer 2 framework.  Nuxeo cannot guarantee to provide fixes for bugs inherent to the underlying Polymer 2 framework, especially when those bugs will happen with future versions of the above-mentioned browsers.
-Nevertheless, Nuxeo is committed to using the latest supported version of the Polymer 2.X framework, provided by Google to the community, when it helps fixing bugs, especially against evergreen browsers.
+Edge, Firefox, and Chrome are called “evergreen browsers”: they are automatically updated at a high pace. The UI code of the version of Nuxeo relies on Polymer 3, supported by Google on those evergreen browsers. Nuxeo guarantees to support Web UI and fix bugs caused by misuse of the Polymer 3 framework.  Nuxeo cannot guarantee to provide fixes for bugs inherent to the underlying Polymer 3 framework, especially when those bugs will happen with future versions of the above-mentioned browsers.
+Nevertheless, Nuxeo is committed to using the latest supported version of the Polymer 3.X framework, provided by Google to the community, when it helps fixing bugs, especially against evergreen browsers.
 {{! /multiexcerpt}}
 
 When developing using Nuxeo Web UI, make sure to set up your development environment according to the requirements described in the [Nuxeo Web UI repository](https://github.com/nuxeo/nuxeo-web-ui/blob/master/README.md#install-dependencies).
 
 {{{multiexcerpt 'webui-functional-overview' page='userdoc/cloud/web-ui'}}}
+## Functional Overview
 
+Nuxeo Web UI is a responsive application with three main layout regions:
+
+![]({{file name='web_ui.png'}} ?w=650,border=true)
+
+1. [The header toolbar](#header-toolbar-functional-overview)
+2. [The side menu](#side-menu-functional-overview)
+3. [The main view](#main-view-functional-overview)
+
+### {{> anchor 'header-toolbar-functional-overview'}} Header Toolbar
+
+![]({{file name='header_toolbar.png'}} ?w=650,border=true)
+
+1.  **Domain and Breadcrumbs**: The title of the selected page / document and its breadcrumb.
+2.  **Sub-Views**: The sub-views available.
+3.  **Document Actions**: Displays actions available for the current document.
+4.  **Quick search**: Search by keywords or users.
+
+### {{> anchor 'side-menu-functional-overview'}} Side Menu
+
+The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this section.
+
+![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
+
+This new pattern allows to start browsing without changing the context of work.
+
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='dashboard_home.png'}})</td><td colspan="1">
+
+**Dashboard:** Displays the dashboard
+
+</td></tr><tr><td colspan="1">![]({{file name='browse.png'}})</td><td colspan="1">
+
+**Browse:** Shows the navigation tree to let you browse your content
+
+</td></tr><tr><td colspan="1">![]({{file name='recently_viewed.png'}})</td><td colspan="1">
+
+**Recently Viewed:** Shows the 10 last documents viewed
+
+</td></tr><tr><td colspan="1">![]({{file name='searches.png'}})</td><td colspan="1">
+
+**Search Filters:** Search content using full text and metadata
+
+</td></tr><tr><td colspan="1">![]({{file name='expired.png'}})</td><td colspan="1">
+
+**Expired Queue:** Queue displaying expired documents
+
+</td></tr><tr><td colspan="1">![]({{file name='tasks.png'}})</td><td colspan="1">
+
+**Tasks:** Shows the list of pending workflow tasks
+
+</td></tr><tr><td colspan="1">![]({{file name='assets.png'}})</td><td colspan="1">
+
+**Assets:**  Search multimedia files (pictures, audio and video). Requires DAM add-on installation.
+
+</td></tr><tr><td colspan="1">![]({{file name='favorites.png'}})</td><td colspan="1">
+
+**Favorites:** The list of documents added to Favorites
+
+</td></tr><tr><td colspan="1">![]({{file name='collections.png'}})</td><td colspan="1">
+
+**Collections:** The list of collections you can access
+
+</td></tr><tr><td colspan="1">![]({{file name='personal_space.png'}})</td><td colspan="1">
+
+**Personal Space:** Access to your personal workspace, which is the default location for your Favorites and Collections folders
+
+</td></tr><tr><td colspan="1">![]({{file name='clipboard.png'}})</td><td colspan="1">
+
+**Clipboard:** Clipboard to copy and move documents
+
+</td>
+</tr>
+<tr><td colspan="1">![]({{file name='trash-side-menu.png'}})</td><td colspan="1">
+
+**Trash:** Search deleted documents using full text and metadata
+
+</td>
+</tr>
+<tr>
+<td colspan="1">![]({{file name='user_menu.png'}})</td>
+<td colspan="1">
+
+**User Settings:** Displays a **Themes** tab to manage branding and possibly other tabs depending on Nuxeo addons installed. For instance when Nuxeo Drive is installed a **Drive** tab is available to manage the user's synchronization roots.
+
+</td></tr><tr><td colspan="1">![]({{file name='administration.png'}})</td><td colspan="1">
+
+**Administration:** Displays the **Administration** tab.
+
+</td></tr></tbody></table></div>
+
+### {{> anchor 'main-view-functional-overview'}} Main View
+
+The main view display depends on what has been selected on the side menu. The main view will usually show lists of documents or a document and its details.
+Lists of documents are presented in a table that proposes different functionalities like infinite scroll instead of pagination, faceted filters in the header, easy columns selection with persistence of the user's choice and a great visibility of selected elements.
+
+
+**Results Actions**: At the top of the main view, a utility toolbar is displayed with actions available for the current result listing.
+
+![]({{file name='results_toolbar.png'}} ?w=77,border=true)
+
+A create button ![]({{file name='create_button.png'}} ?w=20) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents from anywhere in the application.
+
+{{! /multiexcerpt}}
 ## Technical Overview
 
-Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application. With Nuxeo Web UI we wanted to review our approach, make it simpler so anyone familiar with web development couple easily customize it or even just take is as an example of what can be achieved and build their own.
+Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application. With Nuxeo Web UI we wanted to review our approach, make it simpler so anyone familiar with web development could easily customize it or even just take is as an example of what can be achieved and build their own.
 Hence the shift from a highly configurable and pluggable UI to a more modular and composable one.
 
 With the introduction of **Web Components**, browsers now offer a well-defined high performance component model out of the box and has a familiar API. By leveraging DOM as the framework and extending HTML with our own custom tags we can empower web developers to use the tools and frameworks they are already familiar with to build rich web applications.
@@ -227,7 +326,7 @@ Our Web UI is built itself with Polymer too. Goals were to not only ensure the s
 
 ### Web UI elements
 
-Everything in the web UI is built as a custom element with `<nuxeo-app>` as top level component. This application element acts as application data store / mediator storing context data as properties which are then forwarded through the hierarchy thanks to data binding. To learn more about data binding and its relation to the mediator pattern you can read the [article](http://www.nuxeo.com/blog/polymer-questions-to-bind-or-not-to-bind/) on our "[Polymer](http://www.nuxeo.com/blog/tag/polymer/)" series.
+Everything in the web UI is built as a custom element with `<nuxeo-app>` as top level component. This application element acts as application data store / mediator storing context data as properties which are then forwarded through the hierarchy thanks to data binding. To learn more about data binding and its relation to the mediator pattern you can read the [article](http://www.nuxeo.com/blog/polymer-questions-to-bind-or-not-to-bind/).
 
 `<nuxeo-app>` relies on our data elements (`<nuxeo-document>`, `<nuxeo-resource>`, etc..) to fetch application wide data and it is in charge of refreshing this data when changes are made. We are not relying on two way binding in order to keep the data flux manageable thus parent elements act as data stores and children fire events to notify of changes causing data to be refreshed and then propagated down through the DOM tree. Alternative would be to rely on a custom event / action system like many framework do but, although this would avoid the cost inherent to event bubbling, it would make our elements dependent on the the existence of such as bus and introducing framework lock-in.
 
@@ -235,13 +334,16 @@ Everything in the web UI is built as a custom element with `<nuxeo-app>` as top 
 
 The drawer's content is managed by `<iron-pages>` which toggles between its children depending on current selection in the left icon menu of the UI.
 
-The main area is reserved for displaying the current page's content. Our router relies on [page.js](https://visionmedia.github.io/page.js/) and is in charge of parsing the URL and setting the current page and context data in `<nuxeo-app>` accordingly.
+The main area is reserved for displaying the current page's content. Our router relies on [Nuxeo Router Behavior](https://doc.nuxeo.com/nxdoc/web-ui-routing/) and it is in charge of parsing the URL and setting the current page and context data in `<nuxeo-app>` accordingly.
 
 ![]({{file name='Web UI search page.png'}} ?w=959,h=614,border=true)
 
-## Section 508 Compliance (VPAT)
+## Accessibility
+
+Nuxeo is committed to making Web UI accessible and keeping a high level of quality on that front. Our target is the WCAG standard level AA. Our current level of support for accessibility is controlled regularly, and we publish the results using the standard section 508 Compliance (VPAT) document. Its latest iteration can be found below.
 
 - **Date**: February, 2020
 - **Product**: Nuxeo Web UI
+- **Link**: [Voluntary Product Accessibility Template for Web UI]({{file name='Nuxeo Web UI-VPAT 2020.pdf'}}).
 
 The Voluntary Product Accessibility Template for Web UI is available [here]({{file name='Nuxeo Web UI-VPAT 2020.pdf'}}).

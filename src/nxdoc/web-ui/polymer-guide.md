@@ -3,23 +3,24 @@ title: Polymer Guide
 description: Polymer is as a simple JavaScript library that enables using and creating Web Components in modern browsers.
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2021-01-07'
     status: ok
 toc: true
 labels:
     - lts2016-ok
     - lts2017-ok
+    - lts2019-ok
 tree_item_index: 200
 
 ---
 
 ## Why Polymer?
 
-Polymer presents itself as a simple JavaScript library that enables using and creating Web Components in modern browsers. It leverage the browser as the platform, and offers polyfills to enable features not yet available in all browsers.
+Polymer presents itself as a simple JavaScript library that enables using and creating Web Components in modern browsers. It leverages the browser as the platform, and offers polyfills to enable features not yet available in all browsers.
 
 We recommend reading our blog posts [Web Components - a Great Standard for a Platform Approach](https://www.nuxeo.com/blog/web-components-a-great-standard-for-a-platform-approach/) and [Web Components - Getting started](https://www.nuxeo.com/blog/web-components-started/) which provides a good overview about Web Components and why we've decided to use Polymer.
 
-If you're new to Polymer the best place to start is at [www.polymer-project.org](https://www.polymer-project.org/). The Polymer documentation provides some simple guides and tutorials to help you [build an element](https://www.polymer-project.org/1.0/start/first-element/intro) or even [build an app](https://www.polymer-project.org/1.0/start/toolbox/set-up) from the ground.
+If you're new to Polymer the best place to start is at [www.polymer-project.org](https://www.polymer-project.org/). The Polymer documentation provides some simple guides and tutorials to help you [build an element](https://polymer-library.polymer-project.org/3.0/docs/first-element/intro).
 
 ## Best Practices
 
@@ -43,7 +44,7 @@ When developing applications with lots of elements and/or involving complex data
 
 In summary, as a rule of thumb, an element should communicate (pass data) to children elements using one-way binding through properties, and the other way around child elements should fire events that parent elements can listen to.
 
-Once you become more familiar with Polymer we strongly recommend reading our [Polymer blog post series](https://www.nuxeo.com/blog/tag/polymer/). They provide useful information, code samples, and insights through the journey of migrating our UI from server side to client side. Some examples that might be useful:
+Once you become more familiar with Polymer we strongly recommend reading our [blog](https://www.nuxeo.com/blog/). It provides useful information, code samples, and insights through the journey of migrating our UI from server side to client side. Some examples that might be useful:
 
  - [Making Friendly Polymer Apps](https://www.nuxeo.com/blog/making-friendly-polymer-apps/)
  - [Build a Workflow Based Application with Polymer](https://www.nuxeo.com/blog/build-a-workflow-based-application-with-polymer/)
@@ -55,8 +56,6 @@ Once you become more familiar with Polymer we strongly recommend reading our [Po
 
 ## Other Useful Resources
 
- - [Codelabs](https://codelabs.developers.google.com/polymer-summit)
- "Google codelabs provide guided, tutorial, hands-on coding experiences. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application."
  - [Polycasts](https://www.youtube.com/playlist?list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
   "Learn about the basic building blocks that make up a Polymer application, and see how to compose those elements into buttery smooth mobile experiences. The future of front end development is all here, on the Polycasts playlist!"
  - [Web Component Tester](https://github.com/Polymer/web-component-tester)
