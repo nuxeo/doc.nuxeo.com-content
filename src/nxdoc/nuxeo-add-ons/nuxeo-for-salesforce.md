@@ -334,8 +334,17 @@ In all of those modes, user can open a given document and see many details on it
 
 ### Document view
 The Nuxeo connector for Salesforce provide a way to access lists of documents, related to a search or the content of a folder. When clicking on the document title in the result, it opens a document pannel organized by tabs and with some actions bars. User can find the following areas in the document pannel:
-- Document actions: user can 
-- 
+- Document actions, all grouped on the top right of the pannel. By order:
+   - *Edit with Nuxeo Drive*: displayed when user has the permission Write on the document, it allows to open the document for editing it with its native editor, like MS Word, or MS Excel. 
+   - *Open in Nuxeo*: open the document in the Web UI user interface.
+   - *Download*: performs a download of the main file (stored under the document property "file:content")
+   - *Upload file*: available when the user has the Write permission on the document, to replace the main file (stored under the document property "file:content")
+   - *Lock*:  available when the user has the Write permission on the document, allows to lock the document. See [user documentation about locking](https://doc.nuxeo.com/userdoc/content-lock/).
+   - *Maximise*: maximises the document pannel, usually for having more space to previw the open content.
+   - *Close*: closes the document pannel
+- Preview tab: opens a the preview.
+- Data tab: opens a data tab.
+
 
 
 ## Configuration / Customization
