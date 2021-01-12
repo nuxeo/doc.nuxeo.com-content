@@ -299,15 +299,18 @@ Currently, Salesforce doesn't support assigning permission sets to **Public Grou
 #### Add the target Nuxeo domain URL to CSP Trusted Sites.
 
 Go to `Setup > CSP Trusted Sites` and create a new **Trusted Site** using the base https URL of the target Nuxeo server - without the trailing `/nuxeo` path. Example: `https://your.nuxeo-instance.com`
+Make sure to select all the sources.
+Note: the CSP policy is not always taken into account immediately. To avoid some cache issues, we recommend that you log out and log in again.
 
 #### Create a Nuxeo Connection.
 
-As a `Nuxeo_admins` user open the **Nuxeo** tab (this tab is only visible for Nuxeo_Admins) and follow the connection setup wizard. Don't forget to set the right username / password for the cURL call.
+As a `Nuxeo_admins` user open the **Nuxeo** tab (this tab is only visible for Nuxeo_Admins) and follow the connection setup wizard. Don't forget to set the right username / password for the cURL call.  
 NB: you will need Nuxeo instance admin credentials.
+You can detect a cache issue when validating your connection if you don't get the confirmation of the correct configuration. Opening the dev console you will see some errors related to content policy on CMIS endpoint
 
-### Validating your set up
+### Validate your set up
 
-You can validate your set up is correct by using the Nuxeo Salesforce lightening component on a given SF object's page (ex: an Opportunity record).
+You can validate that your set up is correct by using the Nuxeo Salesforce Lightening component on a given SF object's page (ex: an Opportunity record).
 - Browse an opportunity record (or create one if you have none).
 - Click on "Edit page" with an admin user of the org
 - On the Layout design page of the record view, drop the Nuxeo component somewhere inside the layout.
