@@ -2,7 +2,7 @@
 title: Nuxeo Salesforce Connector
 review:
     comment: ''
-    date: '2017-12-19'
+    date: '2021-01-14'
     status: ok
 labels:
     - lts2016-ok
@@ -332,9 +332,9 @@ The Nuxeo Salesforce lightening component can behave in three different ways dep
 
 In all of those modes, user can open a given document and see many details on it. We will start by documented that "document view", and then review each of the modes to provide functionnal help on using them.
 
-### Document view
+### Document panel
 The Nuxeo connector for Salesforce provide a way to access lists of documents, related to a search or the content of a folder. When clicking on the document title in the result, it opens a document pannel organized by tabs and with some actions bars. User can find the following areas in the document pannel:
-- Document actions, all grouped on the top right of the pannel. By order:
+- **Document actions**, all grouped on the top right of the pannel. By order:
    - *Edit with Nuxeo Drive*: displayed when user has the permission Write on the document, it allows to open the document for editing it with its native editor, like MS Word, or MS Excel. 
    - *Open in Nuxeo*: open the document in the Web UI user interface.
    - *Download*: performs a download of the main file (stored under the document property "file:content")
@@ -342,10 +342,34 @@ The Nuxeo connector for Salesforce provide a way to access lists of documents, r
    - *Lock*:  available when the user has the Write permission on the document, allows to lock the document. See [user documentation about locking](https://doc.nuxeo.com/userdoc/content-lock/).
    - *Maximise*: maximises the document pannel, usually for having more space to previw the open content.
    - *Close*: closes the document pannel
-- Preview tab: opens a the preview.
-- Data tab: opens a data tab.
+- **Preview tab**: opens a preview of the document. Office documents are rendered in PDF, images are displayed as they are and videos are displayed with a player, using a smaller rendition than the original file.
+- **Data tab**: displays generic metadata of the document (version label, state, list of tags, date of creation and modification and creator), a list of renditions available on the doc (PDF, thumbnail, ...), additionnal attachments (as they can be attached from Web UI)
+- **History**: displays the last five audit entries on the document. The audit tracks all events happening on a document (modifications, creation, move, copy, ...).
 
+#### Content Library
+The Content library mode is ideal when you want to offer a minimalistic document managemnt system for each Salesforce objects. Typical use case can be when you want to manage the documents you exchange both ways with a prospect or a customer, on an opportunity or a case. When the Nuxeo component is configured on a record page for the content library use case, the first time a user drops content on a Salesforce record instance, the Nuxeo component will create a folder in the Nuxeo repository with the same name and title as the record title, and create the dropped file underneath. From there user can create a set of folders and sub folders and organize content the way he needs.
+On the content library component, the user can:
+- Create folders, clicking on "New Folder"
+- Upload new files, either by drag'n drop (it supports multiple files at once) or using the "Upload files" action.
+- Browse the hierachy using the breadcrumb
+- Search within the folder. The executed search looks for content starting from the currently opened folder.
+- On each listed documents, user has a set of actions: main file download, Open In Nuxeo, Edit with Nuxeo Drive, Delete
+- Clicking on the document name opens the Document pannel described in the previous section.
 
+### Content List
+The Content list mode is ideal when you want to display to the user a specific list of content that comes from the Nuxeo repository. Typical use case is for instance to display a list of relevant knowledge articles based on the context defined by the metadata of your open case. The list of content is specified by configuration in Nuxeo Studio with a Page provider, the same  way all documents lists and searches are specified in your customized Nuxeo Web UI. In the default behaviour without customization, the query made lists all documents for which the *dc:source* metadata of the document contains the current Salesforce obeject record id.
+
+"*Link content*" button on top of the documents list allows to search for some content within the whole Nuxeo repository, and then to "link" it. In the standard configuration, clicking on "Link" on a given document will set the dc:source value of the document equal to the current Salesforce record id. It is possible to adapt what it does by configuration in Nuxeo studio, see section after.
+
+Without any configuration, you can use the Content list mode as a way for the user to search for a document in the repository and "bookmark" it on the object. Current implementation requires ot have the write permission on the document and is limited to attach a docuemnt to one record only, but both of those limitations will be removed in the next version. Also, note that it is not possible to bookmark a proxy (= a published document).
+
+### Search
+The Search mode provides a simple search interface with a search input field that performs a full text search across the whole repository and returns documents the user has the persmision to see. The search result is made of tiles that display:
+- the title of the document
+- modification date
+- text extract of the match of the searc input, in the title, the description of the binary content, with highlight of the searched term. 
+
+Note that the search mode can be added on a Salesforce object layout as well as a menu action on the general top bar. To do so, you can search for "Nuxeo" on the left launcher and select "Nuxeo Search" to add it for all users.
 
 ## Configuration / Customization
 
