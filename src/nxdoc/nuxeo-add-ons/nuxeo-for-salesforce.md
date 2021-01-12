@@ -287,7 +287,7 @@ After installing the package, you need to configure Salesforce to be able to use
 
 Add the `Nuxeo_Admins` permission set to the Salesforce user(s) that are allowed to configure the Nuxeo application (user bound to sfdx authentication already has the permission set so this is an optional step):
 
-Go to `Setup > Users`, enter the target user, then go to the `Permission Set Assignments` section to add the permission set.
+Go to `Setup > Users`, click on the name of the target user, then go to the `Permission Sets` section to add the permission set, choose "Permission Set Assignments", then select `Nuxeo_Admins`.
 
 This can also be done from commandline using the `sfdx force:user:permset:assign` command
 
@@ -329,7 +329,11 @@ The Nuxeo Salesforce lightening component can behave in three different ways dep
 
 In all of those modes, user can open a given document and see many details on it. We will start by documented that "document view", and then review each of the modes to provide functionnal help on using them.
 
-### 
+### Document view
+The Nuxeo connector for Salesforce provide a way to access lists of documents, related to a search or the content of a folder. When clicking on the document title in the result, it opens a document pannel organized by tabs and with some actions bars. User can find the following areas in the document pannel:
+- Document actions: user can 
+- 
+
 
 ## Configuration / Customization
 
