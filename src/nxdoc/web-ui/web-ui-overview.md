@@ -157,6 +157,7 @@ Edge, Firefox, and Chrome are called “evergreen browsers”: they are automati
 Nevertheless, Nuxeo is committed to using the latest supported version of the Polymer 2.X framework, provided by Google to the community, when it helps fixing bugs, especially against evergreen browsers.
 {{! /multiexcerpt}}
 
+When developing using Nuxeo Web UI, make sure to set up your development environment according to the requirements described in the [Nuxeo Web UI repository](https://github.com/nuxeo/nuxeo-web-ui/blob/maintenance-3.0.x/README.md#install-dependencies).
 
 {{{multiexcerpt 'webui-functional-overview' space='userdoc' page='web-ui'}}}
 
