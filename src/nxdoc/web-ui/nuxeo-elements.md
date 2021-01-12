@@ -92,6 +92,9 @@ These are:
   ```
   $ bower install --save nuxeo/nuxeo-dataviz-elements
   ```
+  
+When developing using Nuxeo Elements, make sure to set up your development environment according to the requirements described in the [Nuxeo Elements repository](https://github.com/nuxeo/nuxeo-elements/blob/master/README.md#dependencies).
+
 Nuxeo Elements' development is supported by several tools and strategies, to keep quality, performance and security in check.
 Please see the [Quality Assurance page]({{page page='quality-assurance'}}) for more information on this subject, and
 also our [Custom App Tutorial]({{page page='nuxeo-elements-tutorial'}}) for a quick introduction to development with Nuxeo Elements.
