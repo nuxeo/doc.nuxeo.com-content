@@ -208,7 +208,7 @@ In order to get a clean installation, we will make use of Nuxeo CLI. So let's in
 
 1. Install [Git](https://git-scm.com/).
 2. Install [node.js](https://nodejs.org/) and ensure [NPM](https://www.npmjs.com/) is installed.
-3. In a terminal, use NPM to install the CLI tool:
+3. In a terminal, use npm to install the CLI tool:
 
   ```bash
   $ npm install -g nuxeo-cli
@@ -271,7 +271,7 @@ In order to get a clean installation, we will make use of Nuxeo CLI. So let's in
   }
   ```
 
-### Step 4 - Understanding NPM Command List
+### Step 4 - Understanding npm Command List
 
 All commands are accessible using the `npm run` base command. For instance, if you'd like to execute the `start` command:
 

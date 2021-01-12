@@ -38,11 +38,10 @@ history:
 
 ---
 **Nuxeo Elements** is a set of libraries of web components leveraging emerging Web standards, built upon the same goals
-of simplicity and pluggability. Although still a work in progress, Nuxeo Elements already provides the means to build custom
-content-centric front-end applications, while taking full advantage of the technologies under the Web Components umbrella.
+of simplicity and pluggability. Nuxeo Elements provides the means to build custom content-centric front-end applications, while taking full advantage of the technologies under the Web Components umbrella.
 The main advantage of this framework-agnostic approach is that these technologies are part of the browser, thus allowing
 DOM to be the "framework" and HTML to define the syntax. Therefore, there's no need for external frameworks for it to work,
-although it should integrate with most frameworks without major problems. Sure, not all browsers fully support the Web Components spec **yet**, but there are polyfills to help in the meantime.
+although it should integrate with most frameworks with little effort.
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
@@ -76,21 +75,24 @@ is a singleton, we ensure there's only one Nuxeo client shared by all the instan
 There are three libraries covered by the Nuxeo Elements family, which can be explored in the [Nuxeo Elements Catalog](https://www.webcomponents.org/author/nuxeo).
 These are:
 
-- [Nuxeo (Core) Elements](https://www.webcomponents.org/element/nuxeo/nuxeo-elements) ([GitHub](https://github.com/nuxeo/nuxeo-elements)):
+- [Nuxeo (Core) Elements](https://www.webcomponents.org/element/nuxeo/nuxeo-elements) ([GitHub](https://github.com/nuxeo/nuxeo-elements/tree/maintenance-3.0.x)):
   A library of core data elements that allows connecting to the server and enables CRUD on Nuxeo resources and the execution
-  of operations and queries using page providers. You can install it with bower:
+  of operations and queries using page providers. You can install it with npm:
   ```
-  $ bower install --save nuxeo/nuxeo-elements
+  $ npm i @nuxeo/nuxeo-elements
   ```
-- [Nuxeo UI Elements](https://www.webcomponents.org/element/nuxeo/nuxeo-ui-elements) ([GitHub](https://github.com/nuxeo/nuxeo-ui-elements)):
-  Provides elements for displaying data and interacting with the user. It can be installed with bower:
+- [Nuxeo UI Elements](https://www.webcomponents.org/element/@nuxeo/nuxeo-ui-elements) ([GitHub](https://github.com/nuxeo/nuxeo-elements/tree/maintenance-3.0.x/ui)):
+  Provides elements for displaying data and interacting with the user. It can be installed with npm:
   ```
-  $ bower install --save nuxeo/nuxeo-ui-elements
+  $ npm i @nuxeo/nuxeo-ui-elements
   ```
-- {{> anchor 'nuxeo-dataviz-elements'}}[Nuxeo Dataviz Elements](https://www.webcomponents.org/element/nuxeo/nuxeo-dataviz-elements) ([github](https://github.com/nuxeo/nuxeo-dataviz-elements)):
-  A library of data visualization elements targeted at building rich dashboards. It can be installed with bower:
+  {{#> callout type='info' heading='Nuxeo Elements is now a monorepo'}}
+    Since version 3.0.0, Nuxeo Elements was converted into a monorepo. The UI repository was moved into its folder with the same name.
+  {{/callout}}
+- {{> anchor 'nuxeo-dataviz-elements'}}[Nuxeo Dataviz Elements](https://www.webcomponents.org/element/@nuxeo/nuxeo-dataviz-elements) ([github](https://github.com/nuxeo/nuxeo-elements/tree/maintenance-3.0.x/dataviz)):
+  A library of data visualization elements targeted at building rich dashboards. It can be installed with npm:
   ```
-  $ bower install --save nuxeo/nuxeo-dataviz-elements
+  $ npm i @nuxeo/nuxeo-dataviz-elements
   ```
   
 When developing using Nuxeo Elements, make sure to set up your development environment according to the requirements described in the [Nuxeo Elements repository](https://github.com/nuxeo/nuxeo-elements/blob/master/README.md#dependencies).
