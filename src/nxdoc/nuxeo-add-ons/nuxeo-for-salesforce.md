@@ -305,13 +305,31 @@ Go to `Setup > CSP Trusted Sites` and create a new **Trusted Site** using the ba
 As a `Nuxeo_admins` user open the **Nuxeo** tab (this tab is only visible for Nuxeo_Admins) and follow the connection setup wizard. Don't forget to set the right username / password for the cURL call.
 NB: you will need Nuxeo instance admin credentials.
 
-
 ### Validating your set up
 
-You can validate your set up is correct by using the Nuxeo Salesforce lightening component on a given SF object's page (ex: an Opportunity record), by clicking on "Edit page" with an admin user of the org and then dropping the Nuxeo component inside the page layout. Activate the configuration (select Dekstop) and then save and go back to  user screen. 
-You shoudl be able to click on a "Log in" button, that will open a pop up asking for authentication against the Nuxeo server if the user is not already authenticated in there. You can then drop a document in the library, it will be created in Nuxeo: everything is working!
+You can validate your set up is correct by using the Nuxeo Salesforce lightening component on a given SF object's page (ex: an Opportunity record).
+- Browse an opportunity record (or create one if you have none).
+- Click on "Edit page" with an admin user of the org
+- On the Layout design page of the record view, drop the Nuxeo component somewhere inside the layout.
+- Activate the configuration (select Desktop)
+- Save
+- Go back to the record screen. 
+
+If all previous steps went ok, you should be able to click on a "Log in" button, that will open a pop up asking for authentication against the Nuxeo server if the user is not already authenticated in there. You can then drop a document in the library, it will be created in the Nuxeo repository: everything is working!
+
+### Next steps
+You will see below that there are three modes for the Nuxeo component. You can use all of the modes in various places of your salesforce application, as many time as you need. We advise you to get familiar functionnaly with the various modes and their goals reading the generic functionnal documentation,  and then to focus on configuring each components you need in regards to your business requirements, reading the configuration/ customization documentation.
 
 ## User documentation
+The Nuxeo Salesforce lightening component can behave in three different ways depending on its configuration:
+
+- **Library**: this mode exposes a content library browser with the ability for the user to drag'n drop documents and create folders.
+- **Content list**: this mode exposes the result of a query in the Nuxeo repository matching the list of content required for a given business context, with an option for searching for additionnal documents to add to that list
+- **Search**: this mode displays a simple search user interface to look for documents across all the Nuxeo repository, with respect to security. 
+
+In all of those modes, user can open a given document and see many details on it. We will start by documented that "document view", and then review each of the modes to provide functionnal help on using them.
+
+### 
 
 ## Configuration / Customization
 
