@@ -453,7 +453,16 @@ The only label that is not translated with the Salesforce framework is the title
 The string provided will also be looked up as a key in the translation workbench.
 
 #### Updating the page provider and properties mapping for the content list behaviour
-
+The content list is designed for being able to configure the query used to fetch the documents it displays and allows to do a mapping between some of the properties of the Salesforce record and the parameters expected by the Nuxeo query. The following part of the configuration under the <listing> element does exactly this:
+  
+`<query>
+      	function(context, params) {
+      		params.pageProvider = "list-of-procedures-provider";
+      		params.customerName = context.record.Name;
+      	}
+  </query>
+  `
+In this example, the developer must have configured the **list-of-procedures-provider** page provider initially in Nuxeo Studio. Then the "record" object inside the "context" map is used to get access to the properties of the current salesforce object, while the page providers parameters are under the "params" map.
 
 #### Defining a new link operation for the Content List behaviour 
 The "Link Content" action  provides to the users the ability to click on a Link button on each document of the search result. The behaviour associated to the Link/Unlink buttons can be changed by configuring another operation to call. The default one is `Salesforce.LinkAsSource`. See [the source](https://github.com/nuxeo/nuxeo-salesforce/blob/lts-2021/nuxeo-salesforce-core/src/main/resources/OSGI-INF/automation-contrib.xml) of the operation.
@@ -462,11 +471,4 @@ There is also a configurable test made to know when to display the Link or the U
 `<link-test>function(doc, recordId) { return doc.properties['dc:source'] === recordId }</link-test>`
 
 
-
-
-
-
-[Operations](https://github.com/nuxeo/nuxeo-salesforce/blob/10.10/nuxeo-salesforce-core/src/main/resources/OSGI-INF/automation-contrib.xml):
-Salesforce.TouchSFLibrary
-Salesforce.LinkAsSource
 
