@@ -264,6 +264,7 @@ Server requirements:
 - You also must set sames-site cookie policy in `nuxeo.conf`:
 `nuxeo.server.cookies.sameSite=none` 
 - Server must always be accessed in https
+- If you deploy with direct download enabled, you will have to deploy a cors configuration on the S3 bucket to allow downloads from  *force.com* type of URLs.
 
 ### Salesforce package installation.
 
@@ -469,6 +470,21 @@ The "Link Content" action  provides to the users the ability to click on a Link 
 
 There is also a configurable test made to know when to display the Link or the Unlink button, see the following contribution:
 `<link-test>function(doc, recordId) { return doc.properties['dc:source'] === recordId }</link-test>`
+
+
+# Upcoming evolutions in the next version:
+Next version of the addon is targeted for end of february and will include:
+- New JWT Exchange authentication scheme, with the removal of the need of the "Login" button.
+- All actions and data sections displa is configurable (so as to be able to remove any unwanted section)
+- Business metadata section for custom metadata in the data tab, with the use of freemarker template authored in Nuxeo Studio for rendering the section. 
+- The rendition used for the preview tab is configurable via an automation script.
+- Ability to attach the Nuxeo component into the utility bar and detach it into a seprate screen for co-displa of the Salesforce obejct and contextual documents thpe of use case
+- Adding document actions on all document listings consistently (search, library and listing modes)
+- A full text search input on top of the document list
+- Two place holder actions are added for more custom actions, plugged to some automation scripts.
+- Default behaviour of the liking script is improved to support multiple attachments to the same document and for being able to link even iwthout the Write permission on the document.
+
+
 
 
 
