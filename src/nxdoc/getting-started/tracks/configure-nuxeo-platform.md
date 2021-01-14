@@ -70,15 +70,17 @@ $ ./bin/nuxeoctl start
 
 INSTALL THE GETTING STARTED TEMPLATE
 
-1.  Log into Nuxeo Platform with the credentials *Administrator* / *Administrator*.
+1. Log into Nuxeo Platform with the credentials *Administrator* / *Administrator*.
 
-2.  Open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) and under **Useful Links**, click on **Go To Studio Project**.
+2. Open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) and under **Useful Links**, click on **Go To Studio Project**.
 
-3.  Log into Studio with your **NOS** credentials.
+3. Log into Studio with your **NOS** credentials.
 
-4.  Under the **Configuration** menu in Studio, select **External Templates** and install the **Nuxeo Training: Getting Started** template by clicking on **Import this package**.
+4. Under the **Configuration** menu in Studio, select **External Templates** and install the **Nuxeo Training: Getting Started** template by clicking on **Import this package**.
 
-5.  From Nuxeo Platform, open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) again and click the **Hot Reload** button to update your instance with configurations from the template.
+5. Under the **Application Definition** menu in Studio, in **Packages to Install**, add **Nuxeo DAM**.
+
+6. From Nuxeo Platform, open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) again and click the **Hot Reload** button to update your instance with configurations from the template.
   {{#> callout type='warning' }}
   You must have Administrator access and Dev Mode should be activated to use the hot reload.
   {{/callout}}
