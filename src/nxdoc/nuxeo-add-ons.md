@@ -793,6 +793,21 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo Salesforce Connector<br/>
+`nuxeo-salesforce`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-for-salesforce'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo Sample<br/>
 `nuxeo-sample`
 </td>

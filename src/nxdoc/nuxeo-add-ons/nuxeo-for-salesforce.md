@@ -9,7 +9,7 @@ labels:
     - salesforce
 toc: true
 confluence:
-tree_item_index: 2510
+tree_item_index: 2560
 history:
     -
         author: Solen Guitter
@@ -525,7 +525,7 @@ There is also a configurable test made to know when to display the **Link** or t
 <link-test>function(doc, recordId) { return doc.properties['dc:source'] === recordId }</link-test>
 ```
 
-## Upcoming Evolutions in the Next Version
+## Upcoming Evolutions
 
 Next version of the addon is targeted for the end of February and will include:
 
