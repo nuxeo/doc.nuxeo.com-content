@@ -88,6 +88,36 @@ $ nuxeoctl start --lenient
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20418](https://jira.nuxeo.com/browse/NXP-20418)
 
+#### Simplify install packages script
+
+To simplify the installation of packages while building a Docker image, we have merged both install-packages.sh and install-local-packages.sh scripts into only one install-packages.sh that will handle both packages from Connect and from local packages while offline.
+
+```
+FROM <DOCKER_REGISTRY>/nuxeo:<TAG>
+...
+# Install a local package without its dependencies (`mp-install --nodeps`)
+RUN /install-packages.sh --offline $NUXEO_HOME/local-packages/local-package-nodeps.zip
+# Install remote packages and a local package with its dependencies
+RUN /install-packages.sh --clid ${CLID} --connect-url ${CONNECT_URL} nuxeo-web-ui nuxeo-drive $NUXEO_HOME/local-packages/local-package.zip
+...
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29825](https://jira.nuxeo.com/browse/NXP-29825)
+
+#### Chrome SameSite cookie configuration
+
+This introduces a new `nuxeo.server.cookies.sameSite` configuration property which allows setting the same site cookie policy.
+In 10.10 this property is unset by default so we don't introduce a breaking change but in newer versions the default value is "strict".
+When setting the same site cookie policy to "none" to allow sending cookies cross origin these will be automatically set to be secure since this is a requirement and as such the server needs to use https.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29709](https://jira.nuxeo.com/browse/NXP-29709)
+
+#### Increase of the default number of partitions for Bulk Action and StreamWorkManager queues
+
+The default number of partitions is increased for Bulk Action and StreamWorkManager queues (from 2 to 6).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29677](https://jira.nuxeo.com/browse/NXP-29677)
+
 ## Core Storage
 
 ### Behavior Changes
@@ -142,7 +172,7 @@ You can also relax the constraint on a secured property, for example dc:creator 
 
 ## Nuxeo API Changes
 
-#### New Endpoint to Get All Comments for 50+ Annotations Documents
+### New Endpoint to Get All Comments for 50+ Annotations Documents
 
 - **REST API**:
     The endpoint GET `/nuxeo/api/v1/id/DOC_ID/@annotation/comments` has been deprecated in favor of POST `/nuxeo/api/v1/id/DOC_ID/@annotation/comments`.
@@ -231,6 +261,22 @@ Instead, the following APIs should be used:
 - `TransactionHelper.runWithoutTransaction`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-274915](https://jira.nuxeo.com/browse/NXP-27491)
+
+### Fix HTTP status for batch upload's "Resume Incomplete"
+
+When doing a
+```
+POST /nuxeo/api/v1/upload/{batchId}/{fileIdx}
+```
+to upload a chunk (i.e., with header X-Upload-Type: chunked), the server will now return 202 instead of 308 when not all chunks have been uploaded.
+
+The same applies to
+```
+GET /nuxeo/api/v1/upload/{batchId}/{fileIdx}
+```
+which gets the status of an upload.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29796](https://jira.nuxeo.com/browse/NXP-29796)
 
 ## Operations and Automation
 
@@ -732,6 +778,192 @@ try (MockServerClient client = new MockServerClient("localhost", PORT)) {
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28818](https://jira.nuxeo.com/browse/NXP-28818)
 
+#### Merge of Maven modules
+
+Some Maven modules have been merged resulting in removed and added Maven dependencies and removed and added Nuxeo Bundles, see below:
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Former Maven Dependencies (Removed)</th>
+<th colspan="1">Current Maven Dependencies (Existing or Added)</th>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-3d-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-3d-convert<br>
+org.nuxeo.ecm.platform:nuxeo-platform-3d-core</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-3d</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-filemanager-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-filemanager-core<br>
+org.nuxeo.ecm.platform:nuxeo-platform-filemanager-core-listener</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-filemanager</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-imaging-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-imaging-convert</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-imaging-core</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.liveconnect:nuxeo-liveconnect-core<br>
+org.nuxeo.ecm.liveconnect:nuxeo-liveconnect-core-dependencies<br>
+org.nuxeo.ecm.liveconnect:nuxeo-liveconnect-google-drive-core<br>
+org.nuxeo.ecm.liveconnect:nuxeo-liveconnect-box-core</td>
+<td colspan="1">org.nuxeo.ecm.liveconnect:nuxeo-liveconnect</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-mail-core<br>
+org.nuxeo.ecm.platform:nuxeo-platform-mail-types</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-mail</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-notification-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-notification-core</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-notification</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-publisher-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-publisher-core<br>
+org.nuxeo.ecm.platform:nuxeo-platform-publisher-core-contrib<br>
+org.nuxeo.ecm.platform:nuxeo-platform-publisher-task</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-publisher</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-quota-automation<br>
+org.nuxeo.ecm.platform:nuxeo-quota-core<br>
+org.nuxeo.ecm.platform:nuxeo-quota-core-dependencies</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-quota</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-tag-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-tag-core</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-tag</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-types-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-types-core</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-types</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-url-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-url-core</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-url</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-usermanager-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-usermanager-core</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-usermanager</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-userworkspace-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-userworkspace-core<br>
+org.nuxeo.ecm.platform:nuxeo-platform-userworkspace-types</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-userworkspace</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-video-api<br>
+org.nuxeo.ecm.platform:nuxeo-platform-video-core<br>
+org.nuxeo.ecm.platform:nuxeo-platform-video-convert</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-platform-video</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-filesystem-connectors<br>
+org.nuxeo.ecm.platform:nuxeo-webdav-test</td>
+<td colspan="1">org.nuxeo.ecm.platform:nuxeo-webdav</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Former Nuxeo Bundles (Removed)</th>
+<th colspan="1">Current Nuxeo Bundles (Existing or Added)</th>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.threed.api<br>
+org.nuxeo.ecm.platform.threed.convert<br>
+org.nuxeo.ecm.platform.threed.core</td>
+<td colspan="1">org.nuxeo.ecm.platform.threed</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.filemanager.api<br>
+org.nuxeo.ecm.platform.filemanager.core<br>
+org.nuxeo.ecm.platform.filemanager.core.listener</td>
+<td colspan="1">org.nuxeo.ecm.platform.filemanager</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.picture.api<br>
+org.nuxeo.ecm.platform.picture.convert</td>
+<td colspan="1">org.nuxeo.ecm.platform.picture.core</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.liveconnect.box.core<br>
+org.nuxeo.ecm.liveconnect.core<br>
+org.nuxeo.ecm.liveconnect.google.drive.core</td>
+<td colspan="1">org.nuxeo.ecm.liveconnect</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.mail.types</td>
+<td colspan="1">org.nuxeo.ecm.platform.mail</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.notification.api<br>
+org.nuxeo.ecm.platform.notification.core</td>
+<td colspan="1">org.nuxeo.ecm.platform.notification</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.publisher.api<br>
+org.nuxeo.ecm.platform.publisher.core<br>
+org.nuxeo.ecm.platform.publisher.core.contrib<br>
+org.nuxeo.ecm.platform.publisher.task</td>
+<td colspan="1">org.nuxeo.ecm.platform.publisher</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.quota.automation<br>
+org.nuxeo.ecm.quota.core</td>
+<td colspan="1">org.nuxeo.ecm.quota</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.tag.api</td>
+<td colspan="1">org.nuxeo.ecm.platform.tag</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.types.api<br>
+org.nuxeo.ecm.platform.types.core</td>
+<td colspan="1">org.nuxeo.ecm.platform.types</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.url.api<br>
+org.nuxeo.ecm.platform.url.core</td>
+<td colspan="1">org.nuxeo.ecm.platform.url</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.usermanager.api</td>
+<td colspan="1">org.nuxeo.ecm.platform.usermanager</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.userworkspace.api<br>
+org.nuxeo.ecm.platform.userworkspace.core<br>
+org.nuxeo.ecm.platform.userworkspace.types</td>
+<td colspan="1">org.nuxeo.ecm.platform.userworkspace</td>
+</tr>
+<tr>
+<td colspan="1">org.nuxeo.ecm.platform.video.api<br>
+org.nuxeo.ecm.platform.video.core<br>
+org.nuxeo.ecm.platform.video.convert</td>
+<td colspan="1">org.nuxeo.ecm.platform.video</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29730](https://jira.nuxeo.com/browse/NXP-29730)
+
 ## Farewell
 
 ### Remove Deprecated `org.nuxeo.ecm.core.model.LockManager`
@@ -753,6 +985,8 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28891](https://jira.nuxeo.com/browse/NXP-28891)
 
 ## Dependencies Upgrade Versions
+
+### Summary
 
 <div class="table-scroll">
 <table class="hover">
@@ -1090,7 +1324,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">MongoDB Java Driver</td>
 <td colspan="1">3.8.1</td>
-<td colspan="1">3.12.1</td>
+<td colspan="1">4.1</td>
 </tr>
 <tr>
 <td colspan="1">Mongo quartz</td>
@@ -1210,6 +1444,15 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 </tbody>
 </table>
 </div>
+
+### Behavior changes
+
+#### MongoDB Java Driver upgrade to 4.1
+
+MongoDB Java Driver has been upgraded from 3.x to 4.1 which brings breaking changes, you may need to adapt your code if you were using the driver directly.
+See [MongoDB upgrade notes](https://mongodb.github.io/mongo-java-driver/4.1/upgrading/#upgrading-from-the-3-12-java-driver).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29696](https://jira.nuxeo.com/browse/NXP-29696)
 
 ## Dependencies Removal
 

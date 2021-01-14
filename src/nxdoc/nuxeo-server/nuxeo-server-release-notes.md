@@ -18,6 +18,7 @@ You can also find detailed JIRA release notes:
 - [11.1 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=19367)
 - [11.2 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20630)
 - [11.3 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20723)
+- [11.4 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20815)
 
 The upgrade notes are available [here]({{page page='upgrade-from-lts-2019-to-cloud-2020'}}).
 
@@ -428,6 +429,14 @@ AbstractFileImporter#doSecurityCheck(CoreSession documentManager, String path, S
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29138](https://jira.nuxeo.com/browse/NXP-29138)
+
+### More robust blob upload to GCP (upload in chunks)
+
+Blobs are uploaded to Google Cloud Storage in chunks to benefit from the retriable API.
+
+We now upload Blobs to Google Cloud Storage in chunks. The default chunk size is 2MB and can be adjusted via storage.upload.chunk.size binary manager property or via nuxeo.gcp.storage.upload.chunk.size nuxeo.conf property.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29836](https://jira.nuxeo.com/browse/NXP-29836)
 
 ### Core Storage
 
@@ -843,7 +852,13 @@ SELECT nx_rebuild_read_acls();
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27200](https://jira.nuxeo.com/browse/NXP-27200)
 
-### Rendition
+#### Fix the conditions when DuplicatedCollectionListener will process the documents
+
+Children documents are now kept in a collection when the parent container is versioned.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29450](https://jira.nuxeo.com/browse/NXP-29450)
+
+### Rendition and conversion
 
 #### Ability to Disable the Rendition Computations
 
@@ -865,7 +880,27 @@ Thumbnail recomputation is now done using the Bulk Action Framework.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27605](https://jira.nuxeo.com/browse/NXP-27605)
 
+#### Improve concurrency management for conversions
+(also available in 10.10)
+
+Nuxeo Server better handles concurrency management for conversion and prevent override of conversions.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29769](https://jira.nuxeo.com/browse/NXP-29769)
+
+#### Synchronously reindex document removed from a collection
+(also available in 10.10)
+
+Removing a document from a collection triggers a synchronous reindexing in Elasticsearch.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29645](https://jira.nuxeo.com/browse/NXP-29645)
+
 ### Elasticsearch
+
+#### Elasticsearch 7.9
+
+Elasticsearch 7.9 is the recommended version with Nuxeo Server Cloud 2020.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29529](https://jira.nuxeo.com/browse/NXP-29529)
 
 #### Elasticsearch `nested` Operator
 (also available in 10.10)
@@ -906,6 +941,26 @@ Previously, the Bulk Service Processor (the scroller and status computations) re
 Elasticsearch scroller is usable with the Bulk Service.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28086](https://jira.nuxeo.com/browse/NXP-28086)
+
+#### Limit the number of documents of a Bulk command
+
+CSV Export is now limited to 100k rows by default.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29585](https://jira.nuxeo.com/browse/NXP-29585)
+
+####  Bulk scroller threshold to write records downstream 
+
+The Bulk scroller writes records downstream when the number of documents reaches a configured threshold.
+
+The scroller that materializes the document set of a bulk command will write records downstream if there are more than 1m documents, this is in order to prevent OOM, in this case, if there is a failure on the scroller there will be duplicate processing.
+This threshold of 1m can be configured using the config service:
+```
+<!-- disable the immediate produce threshold -->
+ <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+     <property name="nuxeo.core.bulk.scroller.produceImmediateThreshold">0</property>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29587](https://jira.nuxeo.com/browse/NXP-29587)
 
 ### Monitoring
 
@@ -1037,6 +1092,19 @@ The new configuration property `org.nuxeo.version.readversion.disabled` controls
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28370](https://jira.nuxeo.com/browse/NXP-28370)
+
+#### Filter user on subgroups in the `UserGroup.Suggestion` operation
+
+The operation `UserGroup/Suggestion` has a new parameter to filter users on subgroups.
+
+This new parameter is a new boolean parameter allowSubGroupsRestriction to take into account subgroups of the group given in the groupRestriction parameter.
+
+Example of use in Web UI:
+```
+<nuxeo-user-suggestion role="widget" value=" " label="List of users in Group1" params='{"groupRestriction":"Group1","allowSubGroupsRestriction":"true"}' search-type="USER_TYPE" min-chars="0" required="true"></nuxeo-user-suggestion>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29720](https://jira.nuxeo.com/browse/NXP-29720)
 
 ### Comment Service
 
@@ -1170,6 +1238,19 @@ The new API `BatchHandler.refreshToken(batchId)` can be used to get new credenti
 It is implemented for `S3DirectBatchHandler`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28869](https://jira.nuxeo.com/browse/NXP-28869)
+
+### Optimize task endpoint
+
+The size of the response for the task endpoint has been reduced and it dramatically decreases the response time when a user belongs to many groups/subgroups.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29759](https://jira.nuxeo.com/browse/NXP-29759)
+
+### Lexical error returns 400-class error when calling Repository.Query via REST
+(also available in 10.10)
+
+A lexical error when calling the operation Repository.Query returns a HTTP 400 (Bad Request) error.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29699](https://jira.nuxeo.com/browse/NXP-29699)
 
 ### AWS Service
 
@@ -1678,6 +1759,12 @@ The Template Rendering Samples has been removed.
 The Nuxeo Agenda `nuxeo-agenda` addon has been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27271](https://jira.nuxeo.com/browse/NXP-27271)
+
+### jclouds blob provider
+
+The Nuxeo jclouds blob provider `JCloudsBinaryManager` has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29885](https://jira.nuxeo.com/browse/NXP-29885)
 
 ### Others Packages
 
