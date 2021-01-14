@@ -2,7 +2,7 @@
 title: Variables and Configuration
 review:
     comment: ''
-    date: '2020-12-14'
+    date: '2021-01-14'
     status: ok
 tree_item_index: 90
 is_overview: true
@@ -20,7 +20,7 @@ Understand how variables are resolved in Nuxeo platform, and get a view on all o
 <br/>
 <br/>
 <br/>
-[Go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='call-external-app-from-nuxeo'}})
+[Go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='variables-and-configuration-pattern'}})
 {{/panel}}
 </div>
 <div class="column medium-4">
@@ -30,7 +30,7 @@ Understand how variables are resolved in Nuxeo platform, and get a view on all o
 Nuxeo Platform reads configuration properties in the `nuxeo.conf` file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files.
 <br/>
 <br/>
-[Go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='call-nuxeo-from-external-app'}})
+[Go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='configuration-parameters-index-nuxeoconf'}})
 {{/panel}}
 </div>
 <div class="column medium-4">
@@ -44,7 +44,7 @@ Nuxeo applications integrate a configuration templates system to ease configurat
 <br/>
 <br/>
 <br/>
-[Go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='call-nuxeo-from-external-app'}})
+[Go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='configuration-templates'}})
 {{/panel}}
 </div>
 </div>
