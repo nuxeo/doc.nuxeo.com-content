@@ -25,7 +25,7 @@ tree_item_index: 850
 ---
 
 {{! excerpt}}
-The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package) connector enables [Adobe Creative Cloud users](https://www.nuxeo.com/integration/adobe-creative-suite/) to import assets into an InDesign document directly from the Nuxeo repository. Link to the repository is maintained so as to facilitate updates of the referenced assets. Users can access the assets directly from Illustrator or Photoshop to make edits and trigger update warnings in InDesign.
+The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package) connector enables [Adobe Creative Cloud users](https://www.nuxeo.com/content-services-platform/integration/adobe-creative-suite/) to import assets into an InDesign document directly from the Nuxeo repository. Link to the repository is maintained so as to facilitate updates of the referenced assets. Users can access the assets directly from Illustrator or Photoshop to make edits and trigger update warnings in InDesign.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}

@@ -132,7 +132,7 @@ Jump between any Studio feature or menu in a snap by typing its name. This actio
 
 {{! multiexcerpt name='what-is-nuxeo-platform'}}
 
-The Nuxeo Platform provides a content repository for [document management](https://www.nuxeo.com/products/document-management/), [digital asset management](http://www.nuxeo.com/products/digital-asset-management/) and [case management](http://www.nuxeo.com/products/case-management/) business applications.
+The Nuxeo Platform provides a content repository for [document management](https://www.nuxeo.com/solutions/document-management/), [digital asset management](https://www.nuxeo.com/solutions/dam-digital-asset-management/) and [case management](https://www.nuxeo.com/solutions/case-management/) business applications.
 
 {{! /multiexcerpt}}
 

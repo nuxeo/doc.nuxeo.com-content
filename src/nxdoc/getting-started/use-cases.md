@@ -59,7 +59,7 @@ Control the creation, distribution, use, maintenance, and disposition of **recor
 Create, share, use and manage the knowledge and information of an organization, such as **project information**.<br/>
 
 <br/><br/><br/><br/>
-[Let's go<i class="fa fa-long-arrow-right" aria-hidden="true"></i>](https://www.nuxeo.com/products/knowledge-management/)
+[Let's go<i class="fa fa-long-arrow-right" aria-hidden="true"></i>](https://www.nuxeo.com/solutions/knowledge-management/)
 {{/panel}}
 </div>
 
