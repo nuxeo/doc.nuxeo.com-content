@@ -466,7 +466,7 @@ history:
 ---
 
 {{! excerpt}}
-This page provides several configuration use cases for [Elasticsearch](https://www.nuxeo.com/integration/elasticsearch/).
+This page provides several configuration use cases for [Elasticsearch](https://www.nuxeo.com/partners/technology/elasticsearch/).
 {{! /excerpt}}
 
 ## Setting up an Elasticsearch Cluster

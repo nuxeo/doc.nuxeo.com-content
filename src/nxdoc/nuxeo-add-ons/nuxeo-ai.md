@@ -12,7 +12,7 @@ toc: true
 tree_item_index: 1030
 ---
 {{! excerpt}}
-The [Nuxeo AI](https://www.nuxeo.com/products/ai/) package integrates Machine Learning Services into the
+The [Nuxeo AI](https://www.nuxeo.com/content-services-platform/ai/) package integrates Machine Learning Services into the
 Nuxeo platform. This can be used on several tasks like Data Enrichment.
 {{! /excerpt}}
 
