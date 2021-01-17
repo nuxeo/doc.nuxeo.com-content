@@ -11,26 +11,17 @@ tree_item_index: 730
 
 Discover upcoming and recent changes in Nuxeo Studio.
 
-## Upcoming Changes
-
-### Translation Keys used by Default in Studio Designer
-
-Whenever you generate a layout, Studio Designer will use translation keys automatically generated as explained in our [managing translations]({{page space='nxdoc' page='web-ui-managing-translations'}}) page.
-
-### More Upcoming Changes
-
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'4.0.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2020-07-08-09-changes' page='studio-updates-2020-07-08-09'}}}
+{{{multiexcerpt 'studio-updates-2021-01-02-03-changes' page='studio-updates-2021-01-02-03'}}}
 
 ### Other Noteworthy Mentions
 
-{{{multiexcerpt 'studio-updates-2020-07-08-09-bugfix' page='studio-updates-2020-07-08-09'}}}
+{{{multiexcerpt 'studio-updates-2021-01-02-03-bugfix' page='studio-updates-2021-01-02-03'}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.34.0','3.34.1','3.34.2'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'4.1.0','4.1.1','4.1.2'%29) is available in our bug tracking tool.
 
 ---
 
@@ -38,6 +29,7 @@ Whenever you generate a layout, Studio Designer will use translation keys automa
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [October 2020 to January 2021]({{page page='studio-updates-2021-01-02-03-changes'}})     | todo |
 | [July to September 2020]({{page page='studio-updates-2020-07-08-09'}})     | Automatically generated translation keys, interface for account management |
 | [June 2020]({{page page='studio-updates-2020-06'}})     | Improved layout blocks experience |
 | [May 2020]({{page page='studio-updates-2020-05'}})     | Widgets Drag and Drop Instead of Mode |
