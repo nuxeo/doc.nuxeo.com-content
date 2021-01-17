@@ -90,6 +90,7 @@ The Nuxeo Platform supports the following databases:
 </ul>
 {{! /multiexcerpt}}
 
+
 **Notes**
 
 {{! multiexcerpt name='supported-databases-notes'}}
@@ -97,6 +98,10 @@ Nuxeo Platform will likely work with greater versions of the aforementioned data
 More information can be found on the [Database Configuration]({{page version='' space='nxdoc' page='database-configuration'}}) page.<br/>
 Note that Nuxeo Server is shipped with an embedded H2 database, for quick evaluation purposes. One of the listed databases is required for a production set up or for a more thorough evaluation, like performance testing.
 {{! /multiexcerpt}}
+
+{{#> callout type='warning' heading='MongoDB 4.4'}}
+Nuxeo Platform LTS 2019 (10.10) is not, and will never be, compatible with MongoDB 4.4 as it brings breaking changes and prevents the LTS 2019 version from working properly.
+{{/callout}}
 
 ## Application Servers
 
