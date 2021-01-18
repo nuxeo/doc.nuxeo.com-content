@@ -11,7 +11,6 @@ tree_item_index: 730
 
 Discover upcoming and recent changes in Nuxeo Studio.
 
-
 ## Recently Released Changes
 
 {{{multiexcerpt 'studio-updates-2021-01-02-03-changes' page='studio-updates-2021-01-02-03'}}}
@@ -26,7 +25,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [October 2020 to January 2021]({{page page='studio-updates-2021-01-02-03-changes'}})     | todo |
+| [October to December 2020]({{page page='studio-updates-2021-01-02-03-changes'}})     | Translation Keys used by Default in Studio Designer |
 | [July to September 2020]({{page page='studio-updates-2020-07-08-09'}})     | Automatically generated translation keys, interface for account management |
 | [June 2020]({{page page='studio-updates-2020-06'}})     | Improved layout blocks experience |
 | [May 2020]({{page page='studio-updates-2020-05'}})     | Widgets Drag and Drop Instead of Mode |
