@@ -109,7 +109,7 @@ After Nuxeo Drive has been installed on the server, a Nuxeo Drive tab in the use
 ![]({{file name='drive-webui-newtab.png' page='nuxeo-drive'}} ?w=550)
 
 {{#> callout type='warning' }}
-Once the installation is done, make sure that the `drive` template is correctly installed in your `nuxeo.conf` configuration file. If not, it will prevent Nuxeo Drive from working properly.
+Once the installation is done, make sure that the `drive` template is correctly installed by setting the `nuxeo.templates` property in your `nuxeo.conf` configuration file. If not, it will prevent Nuxeo Drive from working properly.
 {{/callout}}
 
 ### Starting Nuxeo Drive
