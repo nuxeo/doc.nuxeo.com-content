@@ -298,7 +298,7 @@ nuxeoctl <command> [options] [--] [command parameters]
 Issue `nuxeoctl help` to print this information:
 
 ```shell
-docker run docker.packages.nuxeo.com/nuxeo/nuxeo nuxeoctl help
+docker run docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021 nuxeoctl help
 ```
 
 Particularities:

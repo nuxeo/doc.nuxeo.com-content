@@ -198,7 +198,7 @@ docker run --name nuxeo \
   -v /path/to/nuxeo/data:/var/lib/nuxeo \
   -v /path/to/nuxeo/log:/var/log/nuxeo \
   -v /path/to/tmp:/tmp \
-  docker.packages.nuxeo.com/nuxeo/nuxeo
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 ```
 
 ## Add Configuration Properties
@@ -268,7 +268,7 @@ For instance, to make the Nuxeo Launcher display the JVM settings in the console
 docker run --name nuxeo \
   -p 8080:8080 \
   -e JAVA_OPTS=-XshowSettings:vm \
-  docker.packages.nuxeo.com/nuxeo/nuxeo
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 ```
 
 #### Non Container Environment

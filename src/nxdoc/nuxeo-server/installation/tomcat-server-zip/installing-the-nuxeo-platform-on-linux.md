@@ -321,7 +321,11 @@ First, have a look at the detailed steps to [check your Java version]({{page pag
 
 ### Install the Nuxeo Platform
 
-Download the [ZIP](https://packages.nuxeo.com/repository/maven-public/org/nuxeo/ecm/distribution/nuxeo-server-tomcat/11.4.42/nuxeo-server-tomcat-11.4.42.zip) archive and unzip it using your favorite tool.
+Download the ZIP archive from the [Nuxeo distribution download site](https://connect.nuxeo.com/nuxeo/site/connect/distributions) and unzip it using your favorite tool.
+
+{{#> callout type='warning' heading='PRIVATE DISTRIBUTION'}}
+You should contact your Nuxeo Administrator or Nuxeo sales representative to get access to this distribution.
+{{/callout}}
 
 ### Installation Path
 

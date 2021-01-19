@@ -65,7 +65,7 @@ nuxeo.db.port=5432
 you can run:
 
 ```shell
-docker run --name nuxeo -p 8080:8080 -v /path/to/postgresql.conf:/etc/nuxeo/conf.d/postgresql.conf docker.packages.nuxeo.com/nuxeo/nuxeo
+docker run --name nuxeo -p 8080:8080 -v /path/to/postgresql.conf:/etc/nuxeo/conf.d/postgresql.conf docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 ```
 
 ### Tomcat Server ZIP
