@@ -14,7 +14,7 @@ tree_item_index: 95
 For the general upgrade process, see the page [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}}).
 
 {{! excerpt}}
-This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2019 (10.10) to Nuxeo Platform Cloud 2020 (10.10). We strongly encourage you to also have a quick read of the upgrade notes.
+This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2019 (10.10) to Nuxeo Platform Cloud 2020 (11.x). We strongly encourage you to also have a quick read of the upgrade notes.
 {{! /excerpt}}
 
 ## Prerequisites
