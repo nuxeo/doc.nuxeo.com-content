@@ -35,22 +35,26 @@ Based on CentOS 7, it includes:
 
 ## Running the Image
 
-Currently, the image is hosted in our public [Docker registry](https://packages.nuxeo.com/#browse/search/docker).
+Currently, the image is hosted in our private [Docker registry](https://packages.nuxeo.com/#browse/search/docker=attributes.docker.imageName%3Dnuxeo%2Fnuxeo%20AND%20attributes.docker.imageTag%3D2021*%20AND%20repository_name%3Ddocker-private).
+
+{{#> callout type='warning' heading='PRIVATE IMAGE'}}
+You should contact your Nuxeo Administrator or Nuxeo sales representative to get access to this image.
+{{/callout}}
 
 To pull the latest tag of the `nuxeo/nuxeo` image from the Docker registry and run a container from it, run:
 
 ```shell
-docker run --name nuxeo -p 8080:8080 docker.packages.nuxeo.com/nuxeo/nuxeo
+docker run --name nuxeo -p 8080:8080 docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 ```
 
-The `latest` tag points to the latest release, for instance [11.4](https://github.com/nuxeo/nuxeo/releases/tag/v11.4).
+The `2021` tag points to the latest release, for instance [2021.0](https://github.com/nuxeo/nuxeo-lts/releases/tag/v2021.0).
 
-To get the latest build, versioned `11.x.y`, you can use the `11.x` tag.
+To get the latest build, versioned `2021.x.y`, you can use the `2021.x` tag.
 
 The default command executed when running a container is `nuxeoctl console`. It can be overridden by specifying an argument to `docker run`. For instance, to open a bash shell in the container and automatically remove the container when it exits, just run:
 
 ```shell
-docker run -it --rm docker.packages.nuxeo.com/nuxeo/nuxeo bash
+docker run -it --rm docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021 bash
 ```
 
 For a production setup and general best practices, please read about [Mounting Data, Log and Temporary Directories as Volumes]({{page page='setup-best-practices'}}#mounting-data-log-and-temporary-directories-as-volumes).
@@ -84,7 +88,7 @@ For instance, to make the Nuxeo Launcher display the JVM settings in the console
 docker run --name nuxeo \
   -p 8080:8080 \
   -e JAVA_OPTS=-XshowSettings:vm \
-  docker.packages.nuxeo.com/nuxeo/nuxeo
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 ```
 
 #### NUXEO_CLID
@@ -97,7 +101,7 @@ For instance, to run a container with a registered Nuxeo instance:
 docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CLID=<NUXEO_CLID> \
-  docker.packages.nuxeo.com/nuxeo/nuxeo
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 ```
 
 #### NUXEO_CONNECT_URL
@@ -110,7 +114,7 @@ For instance, to run a container with another Connect URL than the default one:
 docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CONNECT_URL=<NUXEO_CONNECT_URL> \
-  docker.packages.nuxeo.com/nuxeo/nuxeo
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 ```
 
 #### NUXEO_PACKAGES
@@ -124,7 +128,7 @@ docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CLID=<NUXEO_CLID> \
   -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-drive" \
-  docker.packages.nuxeo.com/nuxeo/nuxeo
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 ```
 
 ### Shell Scripts
