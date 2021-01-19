@@ -74,8 +74,8 @@ history:
         date: '2013-07-11 01:09'
         message: ''
         version: '1'
-
 ---
+
 {{! multiexcerpt name='internet-information-services-iis-content'}}
 This documentation gives you the guidelines to install a Nuxeo instance on a Windows Server with the Tomcat server ZIP and use IIS as a frontal web server. This documentation is more focused on the IIS configuration. For more details about the installation of the Nuxeo Platform or IIS, please refer to the relevant documentation.
 
@@ -90,9 +90,9 @@ Requirements:
 
 ### Nuxeo Installation
 
-1.  [Check Java is correctly installed]({{page page='tomcat-server-zip#java-check'}}).
+1.  [Check Java is correctly installed]({{page page='tomcat-server-zip'}}#java-check).
 1.  [Install the Nuxeo Platform]({{page page='installing-the-nuxeo-platform-on-windows'}}).
-1.  [Start the Nuxeo instance]({{page page='server-start-and-stop#start-windows'}}).
+1.  [Start the Nuxeo instance]({{page page='server-start-and-stop'}}#start-windows).
 1.  Open the Browser from the Windows Server (firewalls must be configured so as to allow this) at the address `http://NUXEO_SERVER/nuxeo`.
 
 ### Enabling Web Server (IIS)
