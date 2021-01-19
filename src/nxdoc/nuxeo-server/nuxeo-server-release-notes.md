@@ -143,7 +143,7 @@ AbstractFileImporter#doSecurityCheck(CoreSession documentManager, String path, S
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29138](https://jira.nuxeo.com/browse/NXP-29138)
 
-#### Support Double format for Long properties values in document model
+#### Support Double Format for Long Properties Values in Document Model
 (also available in 10.10)
 
 Number values can now be written to both Long and Double properties.
@@ -157,7 +157,7 @@ Number values can now be written to both Long and Double properties.
 Nuxeo DBS MongoDB implementation is now compatible and continuously tested with MongoDB 4.x.
 
 MongoDB Java Driver has been upgraded from 3.x to 4.1 which brings breaking changes, you may need to re-compile your code if you were using the driver directly.
-See https://mongodb.github.io/mongo-java-driver/4.1/upgrading/#upgrading-from-the-3-12-java-driver
+See [MongoDB related documentation](https://mongodb.github.io/mongo-java-driver/4.1/upgrading/#upgrading-from-the-3-12-java-driver).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29636](https://jira.nuxeo.com/browse/NXP-29636)
 
@@ -245,7 +245,7 @@ These headers are NOT modified for subsequent changes to the document, they are 
 #### Better Management of Temporary Files for the Encrypted (AES) Blob Provider
 (also available in 10.10)
 
-A new implementation of the AESBinaryManager has been added to improve temporary files management.
+A new implementation of the `AESBinaryManager` has been added to improve temporary files management.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28456](https://jira.nuxeo.com/browse/NXP-28456)
 
@@ -587,7 +587,7 @@ To improve performances, new indexes have been added on the metadata `rend:sourc
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26676](https://jira.nuxeo.com/browse/NXP-26676)
 
-#### Improved concurrent updates removing elements from lists on MongoDB
+#### Improved Concurrent Updates Removing Elements From Lists on Mongodb
 
 The way elements are removed from lists on MongoDB is improved during concurrent updates, to prevent any update loss.
 
@@ -724,9 +724,10 @@ nuxeo.work.processing.enabled=false
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29361](https://jira.nuxeo.com/browse/NXP-29361)
 
-#### New REST API endpoint to expose the Stream introspection
+#### New Rest API Endpoint to Expose the Stream Introspection
 
-You can now introspect the Nuxeo Stream configuration and state for an entire cluster:
+You can now introspect the Nuxeo Stream configuration and state for an entire cluster.
+
 First configure your Nuxeo with:
 ```
 metrics.enabled=true
@@ -738,12 +739,12 @@ A JSON representation is available at the following endpoint:
 curl -u Administrator:Administrator http://nuxeo.docker.localhost/nuxeo/api/v1/management/stream
 ```
 
-It is also available as a PUML representation
+It is also available as a PUML representation:
 ```
 curl -u Administrator:Administrator http://nuxeo.docker.localhost/nuxeo/api/v1/management/stream/puml/ > /tmp/streams.puml
 ```
 
-A SVG chart can be generated using plantuml.jar:
+A SVG chart can be generated using `plantuml.jar`:
 ```
 java  -DPLANTUML_LIMIT_SIZE=16384  -jar ~/Downloads/plantuml.jar /tmp/streams.puml -tsvg
 ```
@@ -763,7 +764,7 @@ For instance, it is now possible to fire a document rendition done Event once al
 #### New metrics for Works DLQ usage
 (also available in 10.10)
 
-Introduce a new metric nuxeo.works.dlq.count that counts the Works in failure that has been put in the dead letter queue (DLQ) stream since the instance is up.
+Introduce a new metric `nuxeo.works.dlq.count` that counts the Works in failure that has been put in the dead letter queue (DLQ) stream since the instance is up.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27673](https://jira.nuxeo.com/browse/NXP-27673)
 
@@ -784,7 +785,7 @@ You can now use `nuxeo.work.processing.disable=true` to disable WorkManager proc
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24314](https://jira.nuxeo.com/browse/NXP-24314)
 
-#### Get Work main properties of the default WorkManager queue
+#### Get Work Main Properties of the Default WorkManager Queue
 
 There is now a way to get statistics (Work class, category, name) on the type of Works that are processed in the default WorkManager queue:
 ```
@@ -899,7 +900,7 @@ Thumbnail recomputation is now done using the Bulk Action Framework.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27605](https://jira.nuxeo.com/browse/NXP-27605)
 
-#### Improved ZIP preview
+#### Improved ZIP Preview
 
 The ZIP preview doesn't require anymore to unzip the file.
 
@@ -1084,7 +1085,7 @@ The new configuration property `org.nuxeo.version.readversion.disabled` controls
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28370](https://jira.nuxeo.com/browse/NXP-28370)
 
-#### UserProfile enricher can write all schemas
+#### UserProfile Enricher Can Write All Schemas
 
 `UserProfile` enricher can now writes all schemas (and not only `userprofile` schema).
 
@@ -1223,9 +1224,9 @@ It is implemented for `S3DirectBatchHandler`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28869](https://jira.nuxeo.com/browse/NXP-28869)
 
-### New REST API endpoint to get Server Version Information
+### New REST API Endpoint to Get Server Version Information
 
-The endpoint GET /api/v1/capabilities has been added to Nuxeo in order to retrieve the server capabilities, see below its response format:
+The endpoint `GET /api/v1/capabilities` has been added to Nuxeo in order to retrieve the server capabilities, see below its response format:
 ```
 {
   "entity-type": "capabilities",
@@ -1241,20 +1242,21 @@ The endpoint GET /api/v1/capabilities has been added to Nuxeo in order to retrie
   }
 }
 ```
-This endpoint leverages the new CapabilitiesService which exposes the APIs below:
 
- - void `registerCapabilities(String name, Map<String, Object> map)`
+This endpoint leverages the new `CapabilitiesService` which exposes the APIs below:
+
+ - void `registerCapabilities(String name, Map<String, Object> map)`:</br>
 register a static server capability and expose it under name in the JSON response
- - void `registerCapabilities(String name, Supplier<Map<String, Object>> supplier)`
+ - void `registerCapabilities(String name, Supplier<Map<String, Object>> supplier)`:</br>
 register a dynamic server capability and expose it under name in the JSON response
- - Capabilities `getCapabilities()`
+ - Capabilities `getCapabilities()`:</br>
 compute the server capabilities and return them as an immutable object
 
 Registering capabilities might be done during the Component start step.
 
 By default, two capabilities are registered into the application:
- - the server capability registered by the CapabilitiesService
- - the cluster capability registered by the ClusterService
+ - the server capability registered by the `CapabilitiesService`
+ - the cluster capability registered by the `ClusterService`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29798](https://jira.nuxeo.com/browse/NXP-29798)
 
@@ -1450,7 +1452,7 @@ Redis 6.0.x is the recommended version for Nuxeo Platform LTS 2021.
 
 ### Miscellaneous
 
-### New login page UI
+### New Login Page UI
 
 The login page UI has been redesigned with Inter font and updated styling.
 
@@ -1544,9 +1546,9 @@ This release also comes with hundreds of bugs fixed and also code cleanups, maki
 
 ### S3 Direct Upload - Support S3-like Storage
 
-We now allow using the accelerate mode of S3, more details here: https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html
+We now allow using the accelerate mode of S3, more details on [S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html).
 
-S3 direct upload now has new `nuxeo.conf` parameters to configure a custom S3 endpoint and activate path-style access:
+S3 direct upload has new `nuxeo.conf` parameters to configure a custom S3 endpoint and activate path-style access:
 ```
 nuxeo.s3storage.transient.endpoint (default empty)
 nuxeo.s3storage.transient.pathstyleaccess (default false)
@@ -1562,7 +1564,7 @@ Note that path-style access is incompatible with accelerate mode ([NXP-27657](ht
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28526](https://jira.nuxeo.com/browse/NXP-28526)
 
-### S3 direct upload - Importing the Same File at the Same Time Fails
+### S3 Direct Upload - Importing the Same File at the Same Time Fails
 
 A universally unique identifier is now used as key identifier for files.
 
