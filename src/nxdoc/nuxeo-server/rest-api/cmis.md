@@ -741,7 +741,7 @@ Here is the list of the most important properties:
 
 ### Source Code
 
-- The Nuxeo OpenCMIS connector source code on GitHub: [https://github.com/nuxeo/nuxeo-chemistry](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-chemistry).
+- The Nuxeo OpenCMIS connector source code on GitHub: [https://github.com/nuxeo/nuxeo-chemistry](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-chemistry).
 - The Apache Chemistry OpenCMIS source code on Apache's Subversion server: [https://svn.apache.org/repos/asf/chemistry/opencmis/trunk](https://svn.apache.org/repos/asf/chemistry/opencmis/trunk).
 
 ### Documentation
