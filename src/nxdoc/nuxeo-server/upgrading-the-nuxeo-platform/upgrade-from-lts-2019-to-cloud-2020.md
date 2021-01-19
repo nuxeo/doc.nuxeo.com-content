@@ -88,9 +88,9 @@ $ nuxeoctl start --lenient
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20418](https://jira.nuxeo.com/browse/NXP-20418)
 
-#### Simplify install packages script
+#### Simplify Install Packages Script
 
-To simplify the installation of packages while building a Docker image, we have merged both install-packages.sh and install-local-packages.sh scripts into only one install-packages.sh that will handle both packages from Connect and from local packages while offline.
+To simplify the installation of packages while building a Docker image, we have merged both `install-packages.sh` and `install-local-packages.sh` scripts into only one `install-packages.sh` that will handle both packages from Connect and from local packages while offline.
 
 ```
 FROM <DOCKER_REGISTRY>/nuxeo:<TAG>
@@ -104,15 +104,16 @@ RUN /install-packages.sh --clid ${CLID} --connect-url ${CONNECT_URL} nuxeo-web-u
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29825](https://jira.nuxeo.com/browse/NXP-29825)
 
-#### Chrome SameSite cookie configuration
+#### Chrome SameSite Cookie Configuration
 
-This introduces a new `nuxeo.server.cookies.sameSite` configuration property which allows setting the same site cookie policy.
+This introduces a new `nuxeo.server.cookies.sameSite` configuration property which allows setting the same site cookie policy.</br>
 In 10.10 this property is unset by default so we don't introduce a breaking change but in newer versions the default value is "strict".
-When setting the same site cookie policy to "none" to allow sending cookies cross origin these will be automatically set to be secure since this is a requirement and as such the server needs to use https.
+
+When setting the same site cookie policy to `none` to allow sending cookies cross origin, these will be automatically set to be secure since this is a requirement and as such the server needs to use HTTPS.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29709](https://jira.nuxeo.com/browse/NXP-29709)
 
-#### Increase of the default number of partitions for Bulk Action and StreamWorkManager queues
+#### Increase of the Default Number of Partitions for Bulk Action and StreamWorkManager Queues
 
 The default number of partitions is increased for Bulk Action and StreamWorkManager queues (from 2 to 6).
 
@@ -262,15 +263,15 @@ Instead, the following APIs should be used:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-274915](https://jira.nuxeo.com/browse/NXP-27491)
 
-### Fix HTTP status for batch upload's "Resume Incomplete"
+### Fix HTTP Status for Batch Upload's "Resume Incomplete"
 
-When doing a
+When doing a:
 ```
 POST /nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
 to upload a chunk (i.e., with header X-Upload-Type: chunked), the server will now return 202 instead of 308 when not all chunks have been uploaded.
 
-The same applies to
+The same applies to:
 ```
 GET /nuxeo/api/v1/upload/{batchId}/{fileIdx}
 ```
@@ -778,7 +779,7 @@ try (MockServerClient client = new MockServerClient("localhost", PORT)) {
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28818](https://jira.nuxeo.com/browse/NXP-28818)
 
-#### Merge of Maven modules
+#### Merge of Maven Modules
 
 Some Maven modules have been merged resulting in removed and added Maven dependencies and removed and added Nuxeo Bundles, see below:
 
@@ -1445,9 +1446,9 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 </table>
 </div>
 
-### Behavior changes
+### Behavior Changes
 
-#### MongoDB Java Driver upgrade to 4.1
+#### MongoDB Java Driver Upgrade to 4.1
 
 MongoDB Java Driver has been upgraded from 3.x to 4.1 which brings breaking changes, you may need to adapt your code if you were using the driver directly.
 See [MongoDB upgrade notes](https://mongodb.github.io/mongo-java-driver/4.1/upgrading/#upgrading-from-the-3-12-java-driver).
