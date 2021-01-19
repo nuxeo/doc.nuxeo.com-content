@@ -496,7 +496,7 @@ Directory where _templateName_ files will be deployed.
 
 **Default Value**
 
-`server/default/deploy/nuxeo.ear`
+`nxserver`
 
 * * *
 
