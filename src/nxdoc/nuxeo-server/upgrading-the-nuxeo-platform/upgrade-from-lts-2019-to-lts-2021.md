@@ -1,9 +1,9 @@
 ---
-title: Upgrade from LTS 2019 to Nuxeo Platform Cloud 2020
-description: Instructions to upgrade your Nuxeo Platform instance from LTS 2019 version to Nuxeo Cloud 2020.
+title: Upgrade from LTS 2019 to LTS 2021
+description: Instructions to upgrade your Nuxeo Platform instance from LTS 2019 version to LTS 2021.
 review:
     comment: ''
-    date: '2020-07-29'
+    date: '2021-01-15'
     status: ok
 labels:
     - multiexcerpt
@@ -14,7 +14,7 @@ tree_item_index: 95
 For the general upgrade process, see the page [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}}).
 
 {{! excerpt}}
-This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2019 (10.10) to Nuxeo Platform Cloud 2020 (10.10). We strongly encourage you to also have a quick read of the upgrade notes.
+This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2019 (10.10) to Nuxeo Platform LTS 2021 (2021.x). We strongly encourage you to also have a quick read of the upgrade notes.
 {{! /excerpt}}
 
 ## Prerequisites
@@ -321,7 +321,7 @@ Workflow page providers now used the `ecm:isTrashed` attribute.
 
 ## Elasticsearch
 
-Since Nuxeo 11.4, Elasticsearch client library version 7.9.2 is used.
+Elasticsearch client library version is now 7.9.2.
 
 Once you have adapted your application to follow the behavior changes of Elasticsearch 7.x,
 you need to upgrade your existing Elasticsearch cluster to version 7.9 (7.7 or 7.8 are also supported).
@@ -448,7 +448,7 @@ Once the Elasticsearch cluster is upgraded, start Nuxeo LTS 2021 and proceed to 
 
 #### Initialize Filename With Blob Name in FileImporterContext
 
-Since 11.1 if the file name of the `FileImporterContext` is missing then it will be filled with the Blob's file name.
+If the file name of the `FileImporterContext` is missing, then it will now be filled with the Blob's file name.
 
 This means that you no longer need to add control to avoid an empty filename outside of the `FileImporterContext` class, for example see the snippet code below  AudioImporter:
 ```

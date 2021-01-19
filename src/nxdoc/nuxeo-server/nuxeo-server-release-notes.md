@@ -1,9 +1,9 @@
 ---
-title: Nuxeo Server Cloud 2020 Release Notes
-description: This page relates to the release notes of Nuxeo Server and related addons for the 11 cycle, a.k.a Cloud release 2020 cycle.
+title: Nuxeo Server LTS 2021 Release Notes
+description: This page relates to the release notes of Nuxeo Server and related addons for the 2021 cycle.
 review:
    comment: ''
-   date: '2020-06-30'
+   date: '2021-01-15'
    status: ok
 labels:
     - release-notes
@@ -11,15 +11,14 @@ toc: true
 tree_item_index: 10000
 ---
 
-This page relates to the release notes of Nuxeo Server and related addons for 11 cycle, a.k.a Cloud release 2020 cycle. It will list the improvements and features that are successively shipped with the 11.x releases. Evolutions are grouped by components.
+This page relates to the release notes of Nuxeo Server and related addons for LTS 2021 cycle. It will list the improvements and features that are successively shipped with the 2021.x releases.
 
 You can also find detailed JIRA release notes:
 
-- [11.1 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=19367)
-- [11.2 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20630)
-- [11.3 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20723)
+- [2021.0 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20889)
+- [2021.1 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20958)
 
-The upgrade notes are available [here]({{page page='upgrade-from-lts-2019-to-cloud-2020'}}).
+The upgrade notes are available [here]({{page page='upgrade-from-lts-2019-to-lts-2021'}}).
 
 ## Nuxeo Server
 
@@ -81,291 +80,6 @@ When in record mode the blob providers behave differently:
  - They have hooks to store additional metadata alongside the blob (for diagnostics/recovery).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27435](https://jira.nuxeo.com/browse/NXP-27435)
-
-#### New Implementation `S3BlobProvider`
-
-A new blob provider `org.nuxeo.ecm.blob.s3.S3BlobProvider` is available.
-It has the same configuration properties as the old `org.nuxeo.ecm.core.storage.sql.S3BinaryManager` but in addition:
- - it allows configuration in record or transactional mode (see [NXP-28276](https://jira.nuxeo.com/browse/NXP-28276))
- - it allows additional metadata in S3 (see [NXP-25712](https://jira.nuxeo.com/browse/NXP-25712))
- - it allows interaction with Glacier storage (see [NXP-28417](https://jira.nuxeo.com/browse/NXP-28417))
- - it allows direct configuration of CloudFront (without using CloudFrontBinaryManager).
-
-The CloudFront properties are:
- - `cloudfront.enabled`: must be true to activate CloudFront
- - `cloudfront.privKey`: the path to the private key
- - `cloudfront.privKeyId`: the id of the private key
- - `cloudfront.distribDomain`: the distribution domain
- - `cloudfront.protocol`: the protocol (http or https)
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28460](https://jira.nuxeo.com/browse/NXP-28460)
-
-#### Allow Simple S3 Blob Provider Implementation Override, and Use Proper Require
-
-To switch to the new S3 blob provider implementation from [NXP-28460](https://jira.nuxeo.com/browse/NXP-28460) add in `nuxeo.conf`:
-```
-nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider
-```
-
-This assumes of course that the s3binaries template is used (which is automatically done when installing the [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) package).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28716](https://jira.nuxeo.com/browse/NXP-28716)
-
-#### Blob Properties Should Expose Final URL If Possible
-
-If a document's blob provider is configured for direct download, it's now possible to get direct links to the final download URL (to S3 or CloudFront typically) returned in the JSON document output.
-
-To activate this feature, the following must be configured:
-```
-<require>org.nuxeo.ecm.core.io.download.DownloadService</require>
-  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
-    <property name="org.nuxeo.download.url.follow.redirect">true</property>
-  </extension>
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28599](https://jira.nuxeo.com/browse/NXP-28599)
-
-#### Make `S3BinaryManager.abortOldUploads` Async and Optional
-
-The startup process that cleans up old (> 1 day) S3 multipart uploads can be disabled by defining:
-```
-<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
-    <blobprovider name="default">
-      ...
-      <property name="multipart.cleanup.disabled">true</property>
-    </blobprovider>
-  </extension>
-```
-
-Or for backward compatibility when XML configuration is not possible by setting the `nuxeo.conf` property:
-```
-nuxeo.s3storage.multipart.cleanup.disabled=true
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28571](https://jira.nuxeo.com/browse/NXP-28571)
-
-#### Use AWS TransferManager in S3DirectBatchHandler
-
-AWS TransferManager is used for copy by S3DirectBatchHandler.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29292](https://jira.nuxeo.com/browse/NXP-29292)
-
-#### S3 Direct Upload for Little Files (SSE-KMS)
-
-S3 Direct upload now works with SSE-KMS enabled.
-
-It introduces a new configuration property to setup SSE/KMS on the transient bucket (for direct upload):
-```
-nuxeo.s3storage.transient.crypt.kms.key=<sse-kms-key-id>
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29496](https://jira.nuxeo.com/browse/NXP-29496)
-
-#### Allow Using Arbitrary File Keys in S3
-
-Objects can be stored in S3 with an arbitrary file key instead of MD5 digest.
-
-To be able to use arbitrary file keys generated either by the provider or by a trusted upload client, the new S3BlobProvider should be used and the key strategy should be set to `managed` (default key strategy is `digest`): 
-```
-nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider
-nuxeo.core.blobstore.keyStrategy=managed
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29319](https://jira.nuxeo.com/browse/NXP-29319)
-
-#### Allow Blob Provider to Do Optimized Byte Range Requests
-
-The internal API `BlobProvider.getStream(blobKey, byteRange)` can be used by code that needs to access a byte range of a blob without fetching the full blob.
-This assumes that the blob provider implementation is compatible with this, and that `BlobProvider.allowByteRange()` returns true (which is the case when the blob provider has been registered with `<property name="allowByteRange">true</property>)`.
-This is implemented for the `S3BlobProvider`.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28919](https://jira.nuxeo.com/browse/NXP-28919)
-
-#### Allow Blob Provider to Access Document When Reading Blob
-
-The new API `BlobProvider.readBlob(BlobInfoContext)` should be implemented by blob providers that wish to get information about the `Document` or the blob's XPath while reading the blob.
-
-This is mostly useful for blob providers that implement "virtual" blobs whose information is derived from properties of the document itself.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28900](https://jira.nuxeo.com/browse/NXP-28900)
-
-#### Add `BlobProvider.supportsSync()` to Avoid Relying on Binarymanager for Sync Tests
-
-New API: `BlobProvider.supportsSync()`</br>
-Sync refers to the fact that a blob from this provider may be synced with a remote system (like Nuxeo Drive) or with a process that updates things in the blob (like Binary Metadata or WOPI).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28488](https://jira.nuxeo.com/browse/NXP-28488)
-
-#### Allow Avoiding Use of the HTTP Proxy for S3 Connections If the S3 Endpoint Is Internal
-
-To disable usage of the proxy environment variables (`nuxeo.http.proxy.*`) for the connection to the S3 endpoint, defined the `nuxeo.conf` property:
-```
-nuxeo.s3.proxy.disabled=true
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28185](https://jira.nuxeo.com/browse/NXP-28185)
-
-#### Refactor Blob Providers Infrastructure for More Flexibility
-
-New implementation of BlobProvider:
- - `org.nuxeo.ecm.core.blob.LocalBlobProvider`
-
-They have the same configuration properties as the old ones, with additions. The XML configuration can now also include:
- - `<property name="record">true</property>`: to activate Record mode (see [NXP-27435](https://jira.nuxeo.com/browse/NXP-27435)). This mode is also transactional.
- - `<property name="transactional">true</property>`: to activate transactional mode independently of the record mode (useful for other features like Glacier).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28276](https://jira.nuxeo.com/browse/NXP-28276)
-
-#### Add Full Regexp-Based Match to DefaultBlobDispatcher
-
-The default blob dispatcher now has a new operator `^` to match based on a full regexp (in addition to the already-existing glob-based match using `~`).
-
-For instance the following will match any document somewhere under a folder named images:
-```
-<property name="ecm:path^.*/images/.*">test</property>
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28267](https://jira.nuxeo.com/browse/NXP-28267)
-
-#### Add `ecm:path` Variable to the Default Blob Dispatcher
-
-The default blob dispatcher now has a pseudo-property `ecm:path` representing the document path.
-
-For example the following will match any JPG document somewhere under a folder named images:
-```
-<property name="ecm:path~*/images/*">test</property>
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28227](https://jira.nuxeo.com/browse/NXP-28227)
-
-#### S3BinaryManager: Allow Configurable Digest
-
-The digest algorithm to use to compute a unique key when storing blobs in S3 can now be configured, using:
-```
-nuxeo.s3storage.digest=SHA-256
-```
-
-Or if a full XML configuration is used (necessary if there are several different S3 blob providers):
-```
-<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
-  <blobprovider name="default">
-    <class>org.nuxeo.ecm.core.storage.sql.S3BinaryManager</class>
-    ...
-    <property name="digest">SHA-256</property>
-    ...
-  </blobprovider>
-</extension>
-```
-
-The default is MD5. The valid digest algorithms are those available to the Java runtime, the standard ones are listed here for Java 8 and here for Java 11.
-
-This feature is not compatible with S3 Direct Upload.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27805](https://jira.nuxeo.com/browse/NXP-27805)
-
-#### Enable S3 Transfer Acceleration
-
-The S3 connector now has new `nuxeo.conf` parameters to configure S3 accelerate mode:
- - `nuxeo.s3storage.accelerateMode` (default `false`)
- - `nuxeo.s3storage.transient.accelerateMode` (default `false`) (for direct upload)
-
-For example:
- - `nuxeo.s3storage.accelerateMode=true`
- - `nuxeo.s3storage.transient.accelerateMode=true`
-
-Note that accelerate mode is incompatible with path-style access ([NXP-27805](https://jira.nuxeo.com/browse/NXP-27805), see S3 documentation.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27657](https://jira.nuxeo.com/browse/NXP-27657)
-
-#### Enforce the Server Side Encryption Header in S3 Client Request
-
-S3 copy (used during direct upload in particular) now correctly takes into account the server-side encryption configuration for the destination bucket.</b>
-For direct upload, this requires setting the property:
-```
-nuxeo.s3storage.transient.crypt.serverside=true
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26901](https://jira.nuxeo.com/browse/NXP-26901)
-
-#### S3 Multipart Part Size Should Be Configurable
-
-There is a new configuration property `nuxeo.s3.multipart.copy.part.size` to change the S3 multipart copy part size. The default is `5242880` (5MB).
-
-It can be changed with:
-```
-<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
-    <property name="nuxeo.s3.multipart.copy.part.size">5242880</property>
-</extension>
-```
-
-Note that the maximum allowed by S3 is `5368709120` (5GB).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26899](https://jira.nuxeo.com/browse/NXP-26899)
-
-#### Allow Storing Extracted Fulltext in Blobs
-
-Fulltext extracted from binaries can be stored in a blob provider instead of metadata in the repository by defining:
-```
-nuxeo.vcs.fulltext.storedInBlob=true
-```
-
-(Note that despite the `vcs` in the name, which is here for regularity with other properties, it also applies to DBS/MongoDB.)
-
-When doing so, by default a BlobProvider named fulltext will be used to store these blobs. When using a custom blob provider configuration instead of the default local filesystem storage, this fulltext blob provider must be defined accordingly. Usage of this specific blob provider is configured through a blob dispatcher in the default configuration, which may be overridden if needed.
-
-When defining additional repositories, fulltext blob storage will need to be enabled with XML in the repository contribution:
-```
-<fulltext ... storedInBlob="true" ... />
-```
-
-and a custom blob dispatcher configuration will be needed to take into account this repository.
-Note that when fulltext blob storage is enabled, repository-based fulltext search is automatically disabled (equivalent to `nuxeo.vcs.fulltext.search.disabled=true` or `<fulltext ... searchDisabled="true" ... />`).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26704](https://jira.nuxeo.com/browse/NXP-26704)
-
-#### New Implementation for the Encrypted (AES) Blob Provider
-
-A new blob provider `org.nuxeo.ecm.core.blob.AESBlobProvider` is available.
-
-It has the same configuration properties as the old:
-```
-org.nuxeo.ecm.core.blob.binary.AESBinaryManager
-```
-
-To encrypt a binary, an AES key is needed. This key can be retrieved from a keystore, or generated from a password using PBKDF2 (in which case each stored file contains a different salt for security reasons).
-
-The blob provider configuration holds the keystore information to retrieve the AES key, or the password that is used to generate a per-file key using PBKDF2.
-
-For keystore use, the following properties are available:
- - `keyStoreType`: the keystore type, for instance JCEKS
- - `keyStoreFile`: the path to the keystore, if applicable
- - `keyStorePassword`: the keystore password
- - `keyAlias`: the alias (name) of the key in the keystore
- - `keyPassword`: the key password
-
-And for PBKDF2 use:
- - `password`: the password
-
-In addition, the following property may be specified to define where the encrypted blobs are stored:
- - `path`: the filesystem path for the storage (if relative, under nxserver/data). The default is binaries.
-
-For backward compatibility, the encryption properties can also be included in the `<property name="key">prop1=value1,prop2=value2,...</property>` of the blob provider configuration.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28456](https://jira.nuxeo.com/browse/NXP-28456)
-
-#### S3DirectBatchHandler Must Work With the New S3BlobProvider
-
-A new S3 permission (action) is necessary to use DirectUpload with the new `S3BlobProvider`: `s3:GetBucketVersioning`
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29122](https://jira.nuxeo.com/browse/NXP-29122)
-
-#### Define `nuxeo.binarystores.root` for the Root of All Binaries Store
-
-A new property `nuxeo.binarystores.root` is now available, and its use is recommended over the now-deprecated `repository.binary.store`.
-
-The old `repository.binary.store` is equivalent to `${nuxeo.binarystores.root}/binaries`
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27109](https://jira.nuxeo.com/browse/NXP-27109)
 
 #### Support Flagging Repositories as Headless
 
@@ -429,6 +143,13 @@ AbstractFileImporter#doSecurityCheck(CoreSession documentManager, String path, S
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29138](https://jira.nuxeo.com/browse/NXP-29138)
 
+#### Support Double format for Long properties values in document model
+(also available in 10.10)
+
+Number values can now be written to both Long and Double properties.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29840](https://jira.nuxeo.com/browse/NXP-29840)
+
 ### Core Storage
 
 #### Compatibility with MongoDB 4.X
@@ -440,6 +161,11 @@ See https://mongodb.github.io/mongo-java-driver/4.1/upgrading/#upgrading-from-th
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29636](https://jira.nuxeo.com/browse/NXP-29636)
 
+#### PostgreSQL 13.x
+
+PostgreSQL 13.x is the recommended PostgreSQL Server version for Nuxeo Platform LTS 2021 (PostgreSQL 11 and 12 are also supported).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29734](https://jira.nuxeo.com/browse/NXP-29734)
 
 #### Allow Optimized MongoDB Ids With Shorter Size
 (also available in 10.10)
@@ -544,6 +270,291 @@ In some situations, the S3BinaryManager needs to connect to a local S3-compatibl
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28185](https://jira.nuxeo.com/browse/NXP-28185)
 
+#### New Implementation `S3BlobProvider`
+
+A new blob provider `org.nuxeo.ecm.blob.s3.S3BlobProvider` is available.
+It has the same configuration properties as the old `org.nuxeo.ecm.core.storage.sql.S3BinaryManager` but in addition:
+ - it allows configuration in record or transactional mode (see [NXP-28276](https://jira.nuxeo.com/browse/NXP-28276))
+ - it allows additional metadata in S3 (see [NXP-25712](https://jira.nuxeo.com/browse/NXP-25712))
+ - it allows interaction with Glacier storage (see [NXP-28417](https://jira.nuxeo.com/browse/NXP-28417))
+ - it allows direct configuration of CloudFront (without using CloudFrontBinaryManager).
+
+The CloudFront properties are:
+ - `cloudfront.enabled`: must be true to activate CloudFront
+ - `cloudfront.privKey`: the path to the private key
+ - `cloudfront.privKeyId`: the id of the private key
+ - `cloudfront.distribDomain`: the distribution domain
+ - `cloudfront.protocol`: the protocol (http or https)
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28460](https://jira.nuxeo.com/browse/NXP-28460)
+
+#### Allow Simple S3 Blob Provider Implementation Override, and Use Proper Require
+
+To switch to the new S3 blob provider implementation from [NXP-28460](https://jira.nuxeo.com/browse/NXP-28460) add in `nuxeo.conf`:
+```
+nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider
+```
+
+This assumes of course that the s3binaries template is used (which is automatically done when installing the [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) package).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28716](https://jira.nuxeo.com/browse/NXP-28716)
+
+#### Blob Properties Should Expose Final URL If Possible
+
+If a document's blob provider is configured for direct download, it's now possible to get direct links to the final download URL (to S3 or CloudFront typically) returned in the JSON document output.
+
+To activate this feature, the following must be configured:
+```
+<require>org.nuxeo.ecm.core.io.download.DownloadService</require>
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="org.nuxeo.download.url.follow.redirect">true</property>
+  </extension>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28599](https://jira.nuxeo.com/browse/NXP-28599)
+
+#### Make `S3BinaryManager.abortOldUploads` Async and Optional
+
+The startup process that cleans up old (> 1 day) S3 multipart uploads can be disabled by defining:
+```
+<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+    <blobprovider name="default">
+      ...
+      <property name="multipart.cleanup.disabled">true</property>
+    </blobprovider>
+  </extension>
+```
+
+Or for backward compatibility when XML configuration is not possible by setting the `nuxeo.conf` property:
+```
+nuxeo.s3storage.multipart.cleanup.disabled=true
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28571](https://jira.nuxeo.com/browse/NXP-28571)
+
+#### Use AWS TransferManager in S3DirectBatchHandler
+
+AWS TransferManager is now used for copy by S3DirectBatchHandler.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29292](https://jira.nuxeo.com/browse/NXP-29292)
+
+#### S3 Direct Upload for Little Files (SSE-KMS)
+
+S3 Direct upload now works with SSE-KMS enabled.
+
+It introduces a new configuration property to setup SSE/KMS on the transient bucket (for direct upload):
+```
+nuxeo.s3storage.transient.crypt.kms.key=<sse-kms-key-id>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29496](https://jira.nuxeo.com/browse/NXP-29496)
+
+#### Allow Using Arbitrary File Keys in S3
+
+Objects can now be stored in S3 with an arbitrary file key instead of MD5 digest.
+
+To be able to use arbitrary file keys generated either by the provider or by a trusted upload client, the new S3BlobProvider should be used and the key strategy should be set to `managed` (default key strategy is `digest`): 
+```
+nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider
+nuxeo.core.blobstore.keyStrategy=managed
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29319](https://jira.nuxeo.com/browse/NXP-29319)
+
+#### Allow Blob Provider to Do Optimized Byte Range Requests
+
+The internal API `BlobProvider.getStream(blobKey, byteRange)` can now be used by code that needs to access a byte range of a blob without fetching the full blob.
+This assumes that the blob provider implementation is compatible with this, and that `BlobProvider.allowByteRange()` returns true (which is the case when the blob provider has been registered with `<property name="allowByteRange">true</property>)`.
+This is implemented for the `S3BlobProvider`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28919](https://jira.nuxeo.com/browse/NXP-28919)
+
+#### Allow Blob Provider to Access Document When Reading Blob
+
+The new API `BlobProvider.readBlob(BlobInfoContext)` should be implemented by blob providers that wish to get information about the `Document` or the blob's XPath while reading the blob.
+
+This is mostly useful for blob providers that implement "virtual" blobs whose information is derived from properties of the document itself.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28900](https://jira.nuxeo.com/browse/NXP-28900)
+
+#### Add `BlobProvider.supportsSync()` to Avoid Relying on Binarymanager for Sync Tests
+
+New API: `BlobProvider.supportsSync()`</br>
+Sync refers to the fact that a blob from this provider may be synced with a remote system (like Nuxeo Drive) or with a process that updates things in the blob (like Binary Metadata or WOPI).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28488](https://jira.nuxeo.com/browse/NXP-28488)
+
+#### Allow Avoiding Use of the HTTP Proxy for S3 Connections If the S3 Endpoint Is Internal
+
+To disable usage of the proxy environment variables (`nuxeo.http.proxy.*`) for the connection to the S3 endpoint, defined the `nuxeo.conf` property:
+```
+nuxeo.s3.proxy.disabled=true
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28185](https://jira.nuxeo.com/browse/NXP-28185)
+
+#### More flexibility in the Blob Providers Infrastructure
+
+New implementation of BlobProvider:
+ - `org.nuxeo.ecm.core.blob.LocalBlobProvider`
+
+They have the same configuration properties as the old ones, with additions. The XML configuration can now also include:
+ - `<property name="record">true</property>`: to activate Record mode (see [NXP-27435](https://jira.nuxeo.com/browse/NXP-27435)). This mode is also transactional.
+ - `<property name="transactional">true</property>`: to activate transactional mode independently of the record mode (useful for other features like Glacier).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28276](https://jira.nuxeo.com/browse/NXP-28276)
+
+#### Add Full Regexp-Based Match to DefaultBlobDispatcher
+
+The default blob dispatcher now has a new operator `^` to match based on a full regexp (in addition to the already-existing glob-based match using `~`).
+
+For instance the following will match any document somewhere under a folder named images:
+```
+<property name="ecm:path^.*/images/.*">test</property>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28267](https://jira.nuxeo.com/browse/NXP-28267)
+
+#### Add `ecm:path` Variable to the Default Blob Dispatcher
+
+The default blob dispatcher now has a pseudo-property `ecm:path` representing the document path.
+
+For example the following will match any JPG document somewhere under a folder named images:
+```
+<property name="ecm:path~*/images/*">test</property>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28227](https://jira.nuxeo.com/browse/NXP-28227)
+
+#### Allow Configurable Digest with the S3BinaryManager
+
+The digest algorithm to use to compute a unique key when storing blobs in S3 can now be configured, using:
+```
+nuxeo.s3storage.digest=SHA-256
+```
+
+Or if a full XML configuration is used (necessary if there are several different S3 blob providers):
+```
+<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+  <blobprovider name="default">
+    <class>org.nuxeo.ecm.core.storage.sql.S3BinaryManager</class>
+    ...
+    <property name="digest">SHA-256</property>
+    ...
+  </blobprovider>
+</extension>
+```
+
+The default is MD5. The valid digest algorithms are those available to the Java runtime, the standard ones are listed here for Java 8 and here for Java 11.
+
+This feature is not compatible with S3 Direct Upload.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27805](https://jira.nuxeo.com/browse/NXP-27805)
+
+#### Support of S3 Transfer Acceleration
+
+The S3 connector now has new `nuxeo.conf` parameters to configure S3 accelerate mode:
+ - `nuxeo.s3storage.accelerateMode` (default `false`)
+ - `nuxeo.s3storage.transient.accelerateMode` (default `false`) (for direct upload)
+
+For example:
+ - `nuxeo.s3storage.accelerateMode=true`
+ - `nuxeo.s3storage.transient.accelerateMode=true`
+
+Note that accelerate mode is incompatible with path-style access ([NXP-27805](https://jira.nuxeo.com/browse/NXP-27805), see S3 documentation.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27657](https://jira.nuxeo.com/browse/NXP-27657)
+
+#### Enforce the Server Side Encryption Header in S3 Client Request
+
+S3 copy (used during direct upload in particular) now correctly takes into account the server-side encryption configuration for the destination bucket.</b>
+For direct upload, this requires setting the property:
+```
+nuxeo.s3storage.transient.crypt.serverside=true
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26901](https://jira.nuxeo.com/browse/NXP-26901)
+
+#### Allow S3 Multipart Part Size configuration
+
+There is a new configuration property `nuxeo.s3.multipart.copy.part.size` to change the S3 multipart copy part size. The default is `5242880` (5MB).
+
+It can be changed with:
+```
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="nuxeo.s3.multipart.copy.part.size">5242880</property>
+</extension>
+```
+
+Note that the maximum allowed by S3 is `5368709120` (5GB).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26899](https://jira.nuxeo.com/browse/NXP-26899)
+
+#### Allow Storing Extracted Fulltext in Blobs
+
+Fulltext extracted from binaries can be stored in a blob provider instead of metadata in the repository by defining:
+```
+nuxeo.vcs.fulltext.storedInBlob=true
+```
+
+(Note that despite the `vcs` in the name, which is here for regularity with other properties, it also applies to DBS/MongoDB.)
+
+When doing so, by default a BlobProvider named fulltext will be used to store these blobs. When using a custom blob provider configuration instead of the default local filesystem storage, this fulltext blob provider must be defined accordingly. Usage of this specific blob provider is configured through a blob dispatcher in the default configuration, which may be overridden if needed.
+
+When defining additional repositories, fulltext blob storage will need to be enabled with XML in the repository contribution:
+```
+<fulltext ... storedInBlob="true" ... />
+```
+
+and a custom blob dispatcher configuration will be needed to take into account this repository.
+Note that when fulltext blob storage is enabled, repository-based fulltext search is automatically disabled (equivalent to `nuxeo.vcs.fulltext.search.disabled=true` or `<fulltext ... searchDisabled="true" ... />`).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26704](https://jira.nuxeo.com/browse/NXP-26704)
+
+#### New Implementation for the Encrypted (AES) Blob Provider
+
+A new blob provider `org.nuxeo.ecm.core.blob.AESBlobProvider` is available.
+
+It has the same configuration properties as the old:
+```
+org.nuxeo.ecm.core.blob.binary.AESBinaryManager
+```
+
+To encrypt a binary, an AES key is needed. This key can be retrieved from a keystore, or generated from a password using PBKDF2 (in which case each stored file contains a different salt for security reasons).
+
+The blob provider configuration holds the keystore information to retrieve the AES key, or the password that is used to generate a per-file key using PBKDF2.
+
+For keystore use, the following properties are available:
+ - `keyStoreType`: the keystore type, for instance JCEKS
+ - `keyStoreFile`: the path to the keystore, if applicable
+ - `keyStorePassword`: the keystore password
+ - `keyAlias`: the alias (name) of the key in the keystore
+ - `keyPassword`: the key password
+
+And for PBKDF2 use:
+ - `password`: the password
+
+In addition, the following property may be specified to define where the encrypted blobs are stored:
+ - `path`: the filesystem path for the storage (if relative, under nxserver/data). The default is binaries.
+
+For backward compatibility, the encryption properties can also be included in the `<property name="key">prop1=value1,prop2=value2,...</property>` of the blob provider configuration.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28456](https://jira.nuxeo.com/browse/NXP-28456)
+
+#### S3DirectBatchHandler Must Work With the New S3BlobProvider
+
+A new S3 permission (action) is necessary to use DirectUpload with the new `S3BlobProvider`: `s3:GetBucketVersioning`
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29122](https://jira.nuxeo.com/browse/NXP-29122)
+
+#### Define `nuxeo.binarystores.root` for the Root of All Binaries Store
+
+A new property `nuxeo.binarystores.root` is now available, and its use is recommended over the now-deprecated `repository.binary.store`.
+
+The old `repository.binary.store` is equivalent to `${nuxeo.binarystores.root}/binaries`
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27109](https://jira.nuxeo.com/browse/NXP-27109)
+
 #### Better Management of Authentication Parameters for Google Storage
 (also available in 10.10)
 
@@ -551,26 +562,11 @@ We can now reference a file with the JSON content rather than the JSON value its
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27925](https://jira.nuxeo.com/browse/NXP-27925)
 
-#### Configurable Digest in S3BinaryManager
-(also available in 10.10)
-
-The digest algorithm to use to compute a unique key when storing blobs in S3 can now be configured among standard algorithms listed here for Java 11.
-
-The default value is MD5.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27805](https://jira.nuxeo.com/browse/NXP-27805)
-
 #### S3 Cache and Connection Parameters Configurable Through `nuxeo.conf`
 
 Instead of editing the template defining the S3 blob provider, we can now set the S3 cache and the connection parameters in `nuxeo.conf`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27777](https://jira.nuxeo.com/browse/NXP-27777)
-
-#### S3 Transfer Acceleration Support
-
-We now allow using the accelerate mode of S3, more details here: https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27657](https://jira.nuxeo.com/browse/NXP-27657)
 
 #### Configure S3 Multipart Part Size
 (also available in 10.10)
@@ -591,11 +587,11 @@ To improve performances, new indexes have been added on the metadata `rend:sourc
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26676](https://jira.nuxeo.com/browse/NXP-26676)
 
-#### H2 1.4.200
+#### Improved concurrent updates removing elements from lists on MongoDB
 
-The Nuxeo Platform now relies on H2 1.4.200
+The way elements are removed from lists on MongoDB is improved during concurrent updates, to prevent any update loss.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28956](https://jira.nuxeo.com/browse/NXP-28956)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30010](https://jira.nuxeo.com/browse/NXP-30010)
 
 ### Directory
 
@@ -647,10 +643,10 @@ Workflow instances related to deleted documents are now also removed.
 
 ### Nuxeo Streams
 
-#### Kafka 2.5.0
-The Nuxeo Platform now relies on Kafka 2.5.0.
+#### Kafka 2.6.x
+The Nuxeo Platform now relies on Kafka 2.6.x (2.5.x is also supported).
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29045](https://jira.nuxeo.com/browse/NXP-29045)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29740](https://jira.nuxeo.com/browse/NXP-29740)
 
 #### Report Stream lag and latency from Nuxeo
 
@@ -663,7 +659,7 @@ Stream lag and latency are now directly delivered by Nuxeo Server.
 #### Expose Nuxeo Stream latency metrics to Datadog
 (also available in 10.10)
 
-In the same way, it has been done for Graphite (cf. [NXP-26248](https://jira.nuxeo.com/browse/NXP-26248)), we can now expose Nuxeo Stream lag and latency in Datadog.
+Similarly to what has been done for Graphite (cf. [NXP-26248](https://jira.nuxeo.com/browse/NXP-26248)), we can now expose Nuxeo Stream lag and latency in Datadog.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28508](https://jira.nuxeo.com/browse/NXP-28508)
 
@@ -675,7 +671,7 @@ The default Nuxeo health check that is used by the `runningstatus` REST endpoint
 
 #### Nuxeo Stream expose latency to Prometheus
 
-Nuxeo deployments with Nuxeo Stream/Kafka on Kubernetes/OpenShift exposes latency to Prometheus, the metrics and monitoring engine commonly bundled with Kubernetes/OpenShift.
+Nuxeo deployments with Nuxeo Stream/Kafka on Kubernetes/OpenShift now expose latency to Prometheus, the metrics and monitoring engine commonly bundled with Kubernetes/OpenShift.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26416](https://jira.nuxeo.com/browse/NXP-26416)
 
@@ -703,7 +699,7 @@ A new counter metric has been added when the processing enters in termination du
 
 #### Stream Processor Probe in The `runningstatus`
 
-Since 11.1, you can activate a health check probe to check the status of stream processors.
+You can now activate a health check probe to check the status of stream processors.
 The option to activate in `nuxeo.conf` is:`nuxeo.stream.healthCheck.enabled=true`
 
 If a stream processor fails after retries and its failover policy is to stop on error the `runningstatus` will be in error.</br>
@@ -714,7 +710,7 @@ Note that, by default, the health check probe is not activated.
 
 #### Allow to Disable Stream Processing
 
-An option is available to disable Stream Processing on a given node.
+An option is now available to disable Stream Processing on a given node.
 
 All Stream Processors can be disabled on a Nuxeo node using:
 ```
@@ -727,6 +723,32 @@ nuxeo.work.processing.enabled=false
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29361](https://jira.nuxeo.com/browse/NXP-29361)
+
+#### New REST API endpoint to expose the Stream introspection
+
+You can now introspect the Nuxeo Stream configuration and state for an entire cluster:
+First configure your Nuxeo with:
+```
+metrics.enabled=true
+metrics.streams.enabled=true
+```
+
+A JSON representation is available at the following endpoint:
+```
+curl -u Administrator:Administrator http://nuxeo.docker.localhost/nuxeo/api/v1/management/stream
+```
+
+It is also available as a PUML representation
+```
+curl -u Administrator:Administrator http://nuxeo.docker.localhost/nuxeo/api/v1/management/stream/puml/ > /tmp/streams.puml
+```
+
+A SVG chart can be generated using plantuml.jar:
+```
+java  -DPLANTUML_LIMIT_SIZE=16384  -jar ~/Downloads/plantuml.jar /tmp/streams.puml -tsvg
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29940](https://jira.nuxeo.com/browse/NXP-29940)
 
 ### WorkManager
 
@@ -761,6 +783,18 @@ Note that in cluster mode when NOT using Kafka you need to run this automation o
 You can now use `nuxeo.work.processing.disable=true` to disable WorkManager processing
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24314](https://jira.nuxeo.com/browse/NXP-24314)
+
+#### Get Work main properties of the default WorkManager queue
+
+There is now a way to get statistics (Work class, category, name) on the type of Works that are processed in the default WorkManager queue:
+```
+ ./bin/stream.sh workCat --chronicle /var/lib/nuxeo/stream/ -l work/default -n 10 --codec avro
+...
+pos,class,fullname,category,name
+work-default-01:+79907866542080,ListenerWork,org.nuxeo.ecm.core.event.impl.AsyncEventExecutor.ListenerWork,pictureViewsGenerationListener,ListenerWork(Listener...
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29945](https://jira.nuxeo.com/browse/NXP-29945)
 
 ### Scheduler
 
@@ -865,7 +899,19 @@ Thumbnail recomputation is now done using the Bulk Action Framework.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27605](https://jira.nuxeo.com/browse/NXP-27605)
 
+#### Improved ZIP preview
+
+The ZIP preview doesn't require anymore to unzip the file.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29938](https://jira.nuxeo.com/browse/NXP-29938)
+
 ### Elasticsearch
+
+#### Elasticsearch 7.9
+
+Elasticsearch 7.9 is the recommended version with Nuxeo Platform LTS 2021 (7.7 or 7.8 are also supported).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29529](https://jira.nuxeo.com/browse/NXP-29529)
 
 #### Elasticsearch `nested` Operator
 (also available in 10.10)
@@ -1014,7 +1060,7 @@ User and group events/categories have been added to the Audit directories.
 
 A new configuration property allows to set permissions on versions.
 
-The new configuration property `org.nuxeo.version.acl.disabled` controls whether ACLs on versions are disabled. The default value in 11.x is false. Setting it to true disables all use of ACLs on versions for permission checks. The value legacy is also possible, to disable for direct access but enable for queries.
+The new configuration property `org.nuxeo.version.acl.disabled` controls whether ACLs on versions are disabled. The default value in LTS 2021 is false. Setting it to true disables all use of ACLs on versions for permission checks. The value legacy is also possible, to disable for direct access but enable for queries.
 ```
   <require>org.nuxeo.ecm.core.versioning.config</require>
   <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
@@ -1037,6 +1083,12 @@ The new configuration property `org.nuxeo.version.readversion.disabled` controls
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28370](https://jira.nuxeo.com/browse/NXP-28370)
+
+#### UserProfile enricher can write all schemas
+
+`UserProfile` enricher can now writes all schemas (and not only `userprofile` schema).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29939](https://jira.nuxeo.com/browse/NXP-29939)
 
 ### Comment Service
 
@@ -1171,6 +1223,41 @@ It is implemented for `S3DirectBatchHandler`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28869](https://jira.nuxeo.com/browse/NXP-28869)
 
+### New REST API endpoint to get Server Version Information
+
+The endpoint GET /api/v1/capabilities has been added to Nuxeo in order to retrieve the server capabilities, see below its response format:
+```
+{
+  "entity-type": "capabilities",
+  "server": {
+    "distributionName": "server",
+    "distributionVersion": "2021.1",
+    "distributionServer": "tomcat",
+    "hotfixVersion": 1
+  },
+  "cluster": {
+    "enabled": true,
+    "nodeId": "foobar"
+  }
+}
+```
+This endpoint leverages the new CapabilitiesService which exposes the APIs below:
+
+ - void `registerCapabilities(String name, Map<String, Object> map)`
+register a static server capability and expose it under name in the JSON response
+ - void `registerCapabilities(String name, Supplier<Map<String, Object>> supplier)`
+register a dynamic server capability and expose it under name in the JSON response
+ - Capabilities `getCapabilities()`
+compute the server capabilities and return them as an immutable object
+
+Registering capabilities might be done during the Component start step.
+
+By default, two capabilities are registered into the application:
+ - the server capability registered by the CapabilitiesService
+ - the cluster capability registered by the ClusterService
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29798](https://jira.nuxeo.com/browse/NXP-29798)
+
 ### AWS Service
 
 #### Multiple Configurations for AWSConfigurationService
@@ -1275,11 +1362,11 @@ We improved OpenID provider to be able to choose between authentication though q
 
 ### Packaging / Distribution / Installation
 
-#### Tomcat 9.0.35
+#### Tomcat 9.0.41
 
-The Nuxeo Platform now relies on Tomcat 9.0.35.
+The Nuxeo Platform now relies on Tomcat 9.0.41.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29093](https://jira.nuxeo.com/browse/NXP-29093)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29948](https://jira.nuxeo.com/browse/NXP-29948)
 
 #### Other Upgrades
 
@@ -1297,15 +1384,15 @@ For example, if we have `nuxeo.templates=mongodb,mongodb-audit` in `nuxeo.conf` 
 
 ```
 $ NUXEO_PROFILES=perf bash nuxeoctl console
-Nuxeo home:          /opt/nuxeo-server-tomcat-11.1-SNAPSHOT
-Nuxeo configuration: /opt/nuxeo-server-tomcat-11.1-SNAPSHOT/bin/nuxeo.conf
+Nuxeo home:          /opt/nuxeo-server-tomcat
+Nuxeo configuration: /opt/nuxeo-server-tomcat/bin/nuxeo.conf
 Nuxeo profiles:      perf
-Include template: /opt/nuxeo-server-tomcat-11.1-SNAPSHOT/templates/common-base
-Include template: /opt/nuxeo-server-tomcat-11.1-SNAPSHOT/templates/common
-Include template: /opt/nuxeo-server-tomcat-11.1-SNAPSHOT/templates/default
-Include template: /opt/nuxeo-server-tomcat-11.1-SNAPSHOT/templates/mongodb
-Include template: /opt/nuxeo-server-tomcat-11.1-SNAPSHOT/templates/mongodb-audit
-Include template: /opt/nuxeo-server-tomcat-11.1-SNAPSHOT/templates/perf
+Include template: /opt/nuxeo-server-tomcat/templates/common-base
+Include template: /opt/nuxeo-server-tomcat/templates/common
+Include template: /opt/nuxeo-server-tomcat/templates/default
+Include template: /opt/nuxeo-server-tomcat/templates/mongodb
+Include template: /opt/nuxeo-server-tomcat/templates/mongodb-audit
+Include template: /opt/nuxeo-server-tomcat/templates/perf
 ```
 
 We can see that the perf profile is deployed after the template parameter value.
@@ -1353,7 +1440,21 @@ Nuxeo startup is now checking ElasticSearch availability.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22843](https://jira.nuxeo.com/browse/NXP-22843)
 
+### Redis
+
+#### Redis 6.0.x
+
+Redis 6.0.x is the recommended version for Nuxeo Platform LTS 2021.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29734](https://jira.nuxeo.com/browse/NXP-29734)
+
 ### Miscellaneous
+
+### New login page UI
+
+The login page UI has been redesigned with Inter font and updated styling.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29860](https://jira.nuxeo.com/browse/NXP-29860)
 
 #### Remove Post Commit Listeners
 
@@ -1411,7 +1512,7 @@ New test annotations are available on classes and methods:
 
 #### Allow Underscore Character in LDAP Queries
 
-Starting with 11.1, the `UserManager.searchUsers(pattern)` and `UserManager.searchGroups(pattern)` APIs interpret the pattern as a generic string with arbitrary characters that will be matched exactly (depending on the directory substring match style).
+The `UserManager.searchUsers(pattern)` and `UserManager.searchGroups(pattern)` APIs now interpret the pattern as a generic string with arbitrary characters that will be matched exactly (depending on the directory substring match style).
 
 If compatibility with previous versions is needed, to use a pattern where % and _ are interpreted as LIKE escapes, the following must be set:
 ```
@@ -1442,6 +1543,8 @@ This release also comes with hundreds of bugs fixed and also code cleanups, maki
 ## Addons
 
 ### S3 Direct Upload - Support S3-like Storage
+
+We now allow using the accelerate mode of S3, more details here: https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html
 
 S3 direct upload now has new `nuxeo.conf` parameters to configure a custom S3 endpoint and activate path-style access:
 ```
@@ -1520,7 +1623,57 @@ For instance, those functions can be used in filters to filter picture conversio
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28918](https://jira.nuxeo.com/browse/NXP-28918)
 
+## Deprecation
+
+### Nuxeo JSF UI
+
+The Nuxeo JSF UI addon is deprecated.
+
+### Maria DB
+
+The usage of Maria DB database is now deprecated.
+
+### MySQL
+
+The usage of MySQL database is now deprecated.
+
+### MS SQL Server
+
+The usage of MS SQL Server database is now deprecated.
+
 ## Farewell
+
+### Nuxeo Wizard
+
+The Nuxeo Wizard has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28621](https://jira.nuxeo.com/browse/NXP-28621)
+
+### Nuxeo Windows installer (.exe)
+
+The Nuxeo Windows installer (.exe) has been removed.
+
+### Nuxeo Homebrew installer
+
+The Nuxeo Homebrew installer has been removed.
+
+### Nuxeo Static WAR
+
+The `nuxeoctl` pack command used to generate a static WAR has been removed as well as the `nuxeo-distribution/nuxeo-war-tests` module testing it.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28100](https://jira.nuxeo.com/browse/NXP-28100)
+
+### Nuxeo SDK Distribution
+
+The Nuxeo Server Tomcat SDK build has been removed. The Maven profile `sdk` does not exist anymore.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28101](https://jira.nuxeo.com/browse/NXP-28101)
+
+### Nuxeo Shell
+
+The Nuxeo Shell `nuxeo-shell` addon has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27312](https://jira.nuxeo.com/browse/NXP-27312)
 
 ### Apache Derby
 
@@ -1579,23 +1732,11 @@ Usage of NXCore is deprecated and its usage is removed from the platform.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22532](https://jira.nuxeo.com/browse/NXP-22532)
 
-### Nuxeo Static WAR
-
-The `nuxeoctl` pack command used to generate a static WAR has been removed as well as the `nuxeo-distribution/nuxeo-war-tests` module testing it.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28100](https://jira.nuxeo.com/browse/NXP-28100)
-
-### Nuxeo SDK Distribution
-
-The Nuxeo Server Tomcat SDK build has been removed. The Maven profile `sdk` does not exist anymore.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28101](https://jira.nuxeo.com/browse/NXP-28101)
-
 ### Post Commit Listeners
 
 Post-commit listeners have been converted to asynchronous listeners.
 
-From 11.1, the post commit event listeners were made either asynchronous or synchronous. We strongly recommend to do the same thing with any custom event listener.
+The post commit event listeners can now be made either asynchronous or synchronous. We strongly recommend to do the same thing with any custom event listener.
 
 Later on, we will deprecate the post commit event listener execution mechanism relying on PostCommitEventExecutor, see [NXP-27986](https://jira.nuxeo.com/browse/NXP-27986).
 
@@ -1631,7 +1772,7 @@ The related `nuxeo.old.jsf.preview` (introduced with [NXP-25110](https://jira.nu
 
 ### Nuxeo DAM Dependency
 
-The Nuxeo DAM Package and Nuxeo DAM JSF UI Package have been removed for Nuxeo 11.1.
+The Nuxeo DAM Package and Nuxeo DAM JSF UI Package have been removed for Nuxeo Server.
 All the features (Picture, Video, ...) installed through those packages are now integrated by default in a Nuxeo Server.
 You do not need to depend on `nuxeo-dam` package anymore on your Nuxeo package, for instance:
 ```
@@ -1642,12 +1783,6 @@ You do not need to depend on `nuxeo-dam` package anymore on your Nuxeo package, 
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28626](https://jira.nuxeo.com/browse/NXP-28626)
-
-### Nuxeo Wizard
-
-The Nuxeo Wizard has been removed.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28621](https://jira.nuxeo.com/browse/NXP-28621)
 
 ### Marklogic Connector
 
@@ -1660,12 +1795,6 @@ The Marklogic connector has been removed.
 The Nuxeo Connect Report Tools `nuxeo-connect-tools` has been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27864](https://jira.nuxeo.com/browse/NXP-27864)
-
-### Nuxeo Shell
-
-The Nuxeo Shell `nuxeo-shell` addon has been removed.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27312](https://jira.nuxeo.com/browse/NXP-27312)
 
 ### Template Rendering Samples
 
