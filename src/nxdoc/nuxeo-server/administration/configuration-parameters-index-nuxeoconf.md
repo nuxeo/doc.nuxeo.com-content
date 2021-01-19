@@ -785,7 +785,7 @@ NT Lan Manager (NTLM) Proxy. Domain name to authenticate against.
 
 Proxy auto-config (PAC) file URL.
 
-## `facelets.REFRESH_PERIOD`
+#### `facelets.REFRESH_PERIOD`
 
 Indicates to the compiler the number of seconds to wait between subsequent checks for changes in modified JSF facelets in a running application. Useful for facelet debugging.<br/>
 To disable this compiler check use a value of -1 which is a recommended value for production deployments as compiler checks have an impact on application performance.<br/>
