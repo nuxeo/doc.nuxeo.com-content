@@ -19,7 +19,7 @@ Contact your IBM Aspera team for more information and assistance.
 {{! /excerpt}}
 
 {{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
+Watch the related video on Nuxeo University:</br>
 - [Product News on Nuxeo Aspera Connector](https://university.nuxeo.com/learn/course/external/view/elearning/223/aspera-connector)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_aspera.png
