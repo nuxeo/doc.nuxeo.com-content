@@ -9,9 +9,9 @@ default:
     branch: '1010'
     dev_browser_path: nxdoc/1010
     versions:
-      - label: LTS 2021
       - label: Cloud
         url_path: 'cloud'
+      - label: LTS 2021
       - label: LTS 2019
         url_path: '1010'
         is_current_version: true
