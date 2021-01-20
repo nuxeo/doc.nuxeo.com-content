@@ -129,12 +129,20 @@ Nuxeo is shipped with an embedded Tomcat server.
     <tbody>
       <tr>
         <th colspan="1">Nuxeo Platform Version:</th>
+        <th colspan="1">LTS 2021</th>
         <th colspan="1">LTS 2019</th>
         <th colspan="1">LTS 2017</th>
         <th colspan="1">LTS 2016</th>
       </tr>
       <tr>
         <th colspan="1">Redis</th>
+        <td colspan="1">2.8.x <br />
+          3.0.x <br />
+          3.2.x <br />
+          4.0.x <br />
+          5.0.x <br />
+          6.0.x
+        </td>
         <td colspan="1">2.8.x <br />
           3.0.x <br />
           3.2.x <br />
