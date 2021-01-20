@@ -6,7 +6,7 @@ default:
         space_name: Developer Documentation Center
       - space_path: userdoc
         space_name: Nuxeo Platform User Documentation
-    branch: master
+    branch: '2021'
     dev_browser_path: nxdoc
     versions:
       - label: Cloud
