@@ -3,7 +3,7 @@ title: Configuration Templates
 description: Nuxeo applications integrate a configuration templates system to ease configuration and maintenance of configuration files.
 review:
     comment: ''
-    date: '2019-08-16'
+    date: '2021-01-21'
     status: ok
 labels:
     - templates
@@ -167,6 +167,8 @@ Here are the templates provided by default:
 - `common`: Common template used by other templates
 - `custom`: Sample custom templates. Of course, this template is empty by default. One should copy it outside `$NUXEO_HOME` and adapt to their needs. See related section below.
 - [`default`]({{page page='connecting-nuxeo-to-the-database'}}): default Nuxeo configuration template for test purpose
+- `docker`: Template to be used in the [Docker image]({{page page='docker-image'}}) to only append the server logs to the console, not to a `server.log` file. Also, see the page about [Logs]({{page page='logs'}}).
+- `docker-json`: Same as the `docker` template but allows to append the console logs as JSON.
 - [`https`]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) Template to make the server listen to port 443 (HTTPS)
 - [`mariadb`]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used)
 - `mariadb-quartz-cluster`
