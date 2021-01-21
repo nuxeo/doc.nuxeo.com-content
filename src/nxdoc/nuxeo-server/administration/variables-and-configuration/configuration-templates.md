@@ -150,6 +150,7 @@ Nuxeo templates allow you to provide a specific configuration layer to any Nuxeo
 It is possible to enable one layer on a specific Nuxeo instance easily. In theory, all environments can share the configuration files and then update only the value of templates setting in the local `nuxeo.conf`.
 
 For instance, users can create templates for development, pre-production, and production environments; each template will include a different set of XML contributions:
+
 - **Users and Group**: To manage user and group authentication against different authentication systems.
 - **Database**: To store connection properties for a specific database environment.
 - **Specific needs**: To add any custom configuration, as you can add custom properties to the `nuxeo.conf` file.
@@ -162,21 +163,22 @@ Templates are located in the "templates" directory (`$NUXEO_HOME/templates`). To
 Here are the templates provided by default:
 
 {{! multiexcerpt name='default-configuration-templates'}}
-*   `common`: Common template used by other templates
-*   [`default`]({{page page='connecting-nuxeo-to-the-database'}}): default Nuxeo configuration template for test purpose
-*   [`https`]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) Template to make the server listen to port 443 (HTTPS)
-*   [`postgresql`]({{page page='postgresql'}}): PostgreSQL configuration template
-*   `postgresql-quartz-cluster`
-*   [`mssql`]({{page page='microsoft-sql-server'}}): MS SQL Server configuration template
-*   `mssql-quartz-cluster`
-*   [`mysql`]({{page page='mysql'}}): MySQL configuration template
-*   `mysql-quartz-cluster`
-*   [`mariadb`]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used)
-*   `mariadb-quartz-cluster`
-*   [`mongodb`]({{page page='mongodb'}}): MongoDB configuration template
-*   [`oracle`]({{page page='oracle'}}): Oracle configuration template
-*   `oracle-quartz-cluster`;
-*   `custom`: Sample custom templates. Of course, this template is empty by default. One should copy it outside `$NUXEO_HOME` and adapt to their needs. See related section below.
+
+- `common`: Common template used by other templates
+- `custom`: Sample custom templates. Of course, this template is empty by default. One should copy it outside `$NUXEO_HOME` and adapt to their needs. See related section below.
+- [`default`]({{page page='connecting-nuxeo-to-the-database'}}): default Nuxeo configuration template for test purpose
+- [`https`]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) Template to make the server listen to port 443 (HTTPS)
+- [`mariadb`]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used)
+- `mariadb-quartz-cluster`
+- [`mongodb`]({{page page='mongodb'}}): MongoDB configuration template
+- [`mssql`]({{page page='microsoft-sql-server'}}): MS SQL Server configuration template
+- `mssql-quartz-cluster`
+- [`mysql`]({{page page='mysql'}}): MySQL configuration template
+- `mysql-quartz-cluster`
+- [`oracle`]({{page page='oracle'}}): Oracle configuration template
+- `oracle-quartz-cluster`;
+- [`postgresql`]({{page page='postgresql'}}): PostgreSQL configuration template
+- `postgresql-quartz-cluster`
 {{! /multiexcerpt}}
 
 {{#> callout type='tip' }}
@@ -209,11 +211,11 @@ You may want the variable to be resolved at runtime instead. In that case you ca
 
 The "custom" template folder allows you to add customization such as using multiple databases, configuring services, etc.
 
-1.  Add your own template files in `templates/custom` directory.
+1. Add your own template files in `templates/custom` directory.
     You can use either existing or new parameters in these new template files.
-2.  From the Admin tab or by manually [editing the `nuxeo.conf` file]({{page page='configuration-parameters-index-nuxeoconf'}}), set your parameters' values and set `nuxeo.templates=custom`.
+2. From the Admin tab or by manually [editing the `nuxeo.conf` file]({{page page='configuration-parameters-index-nuxeoconf'}}), set your parameters' values and set `nuxeo.templates=custom`.
     You can refer to custom templates directory with a relative path or to your own custom templates directory with an absolute path.
-3.  Edit `custom/nuxeo.defaults` and set `nuxeo.template.includes` parameter to define the list of existing templates to include (comma separated values); your custom template will be used at last.
+3. Edit `custom/nuxeo.defaults` and set `nuxeo.template.includes` parameter to define the list of existing templates to include (comma separated values); your custom template will be used at last.
     `nuxeo.defaults` files from included templates are also read.
 
 In case you need multiple customizations, create multiple directories and reference them in a dedicated `nuxeo.conf` for each server.
@@ -222,11 +224,11 @@ In case you need multiple customizations, create multiple directories and refere
 
 The following properties cannot be configured from a configuration template (in `nuxeo.defaults`) and must be defined in `nuxeo.conf`:
 
-*   `nuxeo.data.dir`
-*   `nuxeo.log.dir`
-*   `nuxeo.pid.dir`
-*   `nuxeo.tmp.dir`
-*   `nuxeo.mp.dir`
+- `nuxeo.data.dir`
+- `nuxeo.log.dir`
+- `nuxeo.pid.dir`
+- `nuxeo.tmp.dir`
+- `nuxeo.mp.dir`
 
 {{/callout}}
 
@@ -236,29 +238,29 @@ The "custom" template folder is a sample configuration template that you can use
 
 For instance, under Linux, you could setup:
 
-*   Configuration files (custom templates and nuxeo.conf) under `/etc/`
+- Configuration files (custom templates and nuxeo.conf) under `/etc/`
 
-    <pre>/etc/nuxeo/
-    ├── nuxeo.conf
-    └── some-custom-template</pre>
+  <pre>/etc/nuxeo/
+  ├── nuxeo.conf
+  └── some-custom-template</pre>
 
-*   Data under `/var/lib/`.
-    It is common to also place the server itself under `/var/lib/`. Other common locations for the server are `/opt/nuxeo/`, `~nuxeo/nuxeo-cap-x.y-tomcat/`...
+- Data under `/var/lib/`.
+  It is common to also place the server itself under `/var/lib/`. Other common locations for the server are `/opt/nuxeo/`, `~nuxeo/nuxeo-cap-x.y-tomcat/`...
 
-    <pre>/var/lib/nuxeo/
-    ├── data
-    └── server (NUXEO_HOME)
-    &nbsp;&nbsp;&nbsp; ├── conf
-    &nbsp;&nbsp;&nbsp; ├── lib
-    &nbsp;&nbsp;&nbsp; ├── nxserver
-    &nbsp;&nbsp;&nbsp; ├── packages
-    &nbsp;&nbsp;&nbsp; ├── templates
-    &nbsp;&nbsp;&nbsp; ├── webapps
-    &nbsp;&nbsp;&nbsp; └── work</pre>
+  <pre>/var/lib/nuxeo/
+  ├── data
+  └── server (NUXEO_HOME)
+  &nbsp;&nbsp;&nbsp; ├── conf
+  &nbsp;&nbsp;&nbsp; ├── lib
+  &nbsp;&nbsp;&nbsp; ├── nxserver
+  &nbsp;&nbsp;&nbsp; ├── packages
+  &nbsp;&nbsp;&nbsp; ├── templates
+  &nbsp;&nbsp;&nbsp; ├── webapps
+  &nbsp;&nbsp;&nbsp; └── work</pre>
 
-*   Log files under&nbsp;`/var/log/`
-*   PID files under&nbsp;`/var/run/`
-*   Temporary files under&nbsp;`/tmp/`
+- Log files under&nbsp;`/var/log/`
+- PID files under&nbsp;`/var/run/`
+- Temporary files under&nbsp;`/tmp/`
 
 * * *
 
