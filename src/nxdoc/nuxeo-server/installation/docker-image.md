@@ -33,6 +33,10 @@ Based on CentOS 7, it includes:
 - The environment variables required by the server, typically `NUXEO_HOME` and `NUXEO_CONF`.
 - The exposed port `8080`.
 
+{{#> callout type='warning' }}
+To use the video related features in Nuxeo, such as conversions, storyboarding and metadata extraction, you need to have [FFMpeg](https://ffmpeg.org/) installed in the image. Please read the [FFmpeg]({{page page='build-a-custom-docker-image'}}#installing-ffmpeg) section to understand why it is not included in the Nuxeo image and how to build an image including it.
+{{/callout}}
+
 ## Running the Image
 
 Currently, the image is hosted in our private [Docker registry](https://packages.nuxeo.com/#browse/search/docker=attributes.docker.imageName%3Dnuxeo%2Fnuxeo%20AND%20attributes.docker.imageTag%3D2021*%20AND%20repository_name%3Ddocker-private).
