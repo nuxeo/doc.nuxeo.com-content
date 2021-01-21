@@ -495,7 +495,9 @@ public class SampleDescriptor {
 }
 ```
 
-Disabling the default behavior is not recommended, but is also necessary when re-defining custom behaviors thanks to `@XMerge`, `@XEnable` or `@XRemove` field annotations. Here is an example for compatibility management for the enablement behavior:
+Disabling the default behavior is not recommended, but is also necessary when re-defining custom behaviors thanks to `@XMerge`, `@XEnable` or `@XRemove` field annotations.
+
+Here is an example for compatibility management for the enablement behavior:
 
 ```
 @XObject("sample")
@@ -513,7 +515,7 @@ public class SampleDescriptor {
 }
 ```
 
-The default enablement behavior has been disabled in the `@XRegistry` annotation so that the custom enablement behavior is taken into account. It consists of mapping the existing `isEnabled` attribute so that it is taken into account, as well as the "fallback" default behavior linked to the `enable` attribute.
+The default enablement behavior has been disabled in the `@XRegistry` annotation so that the custom enablement behavior is taken into account. It consists of mapping the existing `isEnabled` attribute so that it is taken into account, as well as the "fallback" default behavior linked to the `isEnabled` attribute.
 
 Both following contributions will result in standard enablement behavior when re-defining the contribution:
 
@@ -522,6 +524,36 @@ Both following contributions will result in standard enablement behavior when re
 ```
 ```
 <sample id="myid" enable="false" />
+```
+
+Here is an example for compatibility management for the merge behavior:
+
+```
+@XObject("sample")
+@XRegistry(merge = false)
+public class SampleDescriptor {
+
+    @XNode("@id")
+    @XRegistryId
+    protected String id;
+
+    @XNode(value = XMerge.MERGE, fallback = "@append")
+    @XMerge(defaultAssignment = false)
+    protected boolean append;
+
+}
+```
+
+The default merge behavior has been disabled in the `@XRegistry` annotation so that the custom merge behavior is taken into account. It consists of mapping the existing `append` attribute so that it is taken into account, as well as the "fallback" default behavior linked to the `append` attribute.
+The default value for this merge behavior needs to be defined directly on the `@Merge` annotation.
+
+Both following contributions will result in standard merge behavior when re-defining the contribution (except that the merge will not be done by default when none of these attributes are present, as per `defaultAssignment` value on the `@XMerge` annotation):
+
+```
+<sample id="myid" append="true" />
+```
+```
+<sample id="myid" merge="true" />
 ```
 
 If additional logic is needed, declaring a custom registry as described above will help achieving any custom behavior.
