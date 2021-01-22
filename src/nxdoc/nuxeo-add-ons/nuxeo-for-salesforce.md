@@ -216,7 +216,12 @@ history:
 {{#> callout type='info' heading='University'}}
 Watch the related course on Nuxeo University:</br>
 [Nuxeo Salesforce Connector](https://university.nuxeo.com/learn/course/external/view/elearning/221/salesforce-connector)
-![]({{file version='1010' page='nuxeo-for-salesforce' name='nuxeo-salesforce-connector.png'}} ?w=350)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_salesforce.png
+    name: university_salesforce.png
+    addins#screenshot#up_to_date
+--}}
+![university_salesforce.png](nx_asset://1c31f400-41c3-408e-8ad2-a60786038dd6 ?w=450,border=true)
 {{/callout}}
 
 The [Nuxeo Salesforce connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce) covers several use cases of integration between the Nuxeo Repository and Salesforce:
