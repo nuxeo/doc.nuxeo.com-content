@@ -1,7 +1,7 @@
 ---
 title: Docker Image
 review:
-  date: '2021-01-11'
+  date: '2021-01-26'
   status: ok
 labels:
   - multiexcerpt
@@ -10,6 +10,10 @@ toc: true
 description: Discover how to install the Nuxeo Platform with the Docker image.
 tree_item_index: 250
 ---
+
+## Preamble
+
+This page explains how to install the Nuxeo server with the base Nuxeo Docker image. Yet, to build an application from Nuxeo, most of the time, you will need to customize this image and build your own. For this purpose, we strongly recommend to use an immutable image by [building a custom Docker image]({{page page='build-a-custom-docker-image'}}) from the Nuxeo one.
 
 ## Requirements
 
@@ -61,7 +65,7 @@ For a production setup and general best practices, please read about [Mounting D
 
 ## Configuring the Image at Runtime
 
-Though we encourage to have immutable images configured at build time, in some cases it makes sense to configure a container at runtime. This typically applies to the address and credentials of each back-end store (database, Elasticsearch, S3, etc.) that are specific to a given deployment: development, staging, production, etc.
+Though we encourage to have immutable images [configured at build time]({{page page='build-a-custom-docker-image'}}), in some cases it makes sense to configure a container at runtime. This typically applies to the address and credentials of each back-end store (database, Elasticsearch, S3, etc.) that are specific to a given deployment: development, staging, production, etc.
 
 ### Configuration Properties
 
