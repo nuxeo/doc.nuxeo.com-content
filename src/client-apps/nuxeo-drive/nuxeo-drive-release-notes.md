@@ -16,6 +16,13 @@ Welcome to the Release Notes for **Nuxeo Drive 4.5.1**
 
 ## Important Changes
 
+### End of Windows 7 Support
+
+We plan to add ARM support on macOS to be compatible with new Apple Silicon machines.
+As a side-effect, we will need to upgrade the Python version used in the application to at least 3.9. But Python dropped the Windows 7 support starting with 3.9. As a consequence, Nuxeo Drive 4.5.1 will be the last version supporting Windows 7.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2482](https://jira.nuxeo.com/browse/NXDRIVE-2482)
+
 ### Direct Transfer
 
 #### Added Create Folder Button Within the Upload Flow
@@ -23,7 +30,7 @@ Welcome to the Release Notes for **Nuxeo Drive 4.5.1**
 A new button has been added in the Direct Transfer options. This button lets the user create a new folder in the selected remote path.</br>
 Selected files and folders will be uploaded inside that new remote folder then.
 
-![]({{file name='new-remote-folder.png' page='nuxeo-drive-release-notes'}})
+![]({{file name='new-remote-folder.gif' page='nuxeo-drive-release-notes'}} ?w=450)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2413](https://jira.nuxeo.com/browse/NXDRIVE-2413)
 
@@ -66,7 +73,7 @@ Buttons colors have been aligned on the Nuxeo guidelines.
 
 ## Fixes
 
-### GNU/Linux Release 
+### GNU/Linux Release
 
 In the previous release ([4.5.0](https://doc.nuxeo.com/client-apps/450-nuxeo-drive-release-notes/#gnulinux-release)) we temporary stopped publishing GNU/Linux releases as the support had been lost due to changes in the project we use to freeze the application code.
 
