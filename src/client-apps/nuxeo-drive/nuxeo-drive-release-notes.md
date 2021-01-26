@@ -4,129 +4,72 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: ''
-  date: '2020-12-15'
+  date: '2021-01-26'
   status: ok
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 4.5.0**
+Welcome to the Release Notes for **Nuxeo Drive 4.5.1**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.5.0.md)
+**Status**: <font color="#ff0000">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.5.1.md)
 
 ## Important Changes
 
-### macOS Big Sur Support
-
-This is the first release that officially supports the new macOS version: Big Sur.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2270](https://jira.nuxeo.com/browse/NXDRIVE-2270)
-
 ### Direct Transfer
 
-#### Sessions for Direct Transfer
+#### Added Create Folder Button Within the Upload Flow
 
-It is now possible for the user to see and interact with the Direct Transfer sessions through the GUI. Two dedicated tabs have been added to the Direct Transfer window to show sessions statuses. These tabs list ongoing and completed sessions with some useful informations about them. It is also possible to pause/resume/cancel an ongoing session through this interface. The previously existing list of transferred items has been moved to a third tab called _Monitoring_.
+A new button has been added in the Direct Transfer options. This button lets the user create a new folder in the selected remote path.</br>
+Selected files and folders will be uploaded inside that new remote folder then.
 
-The Monitoring tab now only shows transfers uploaded by chunks ([NXDRIVE-2432](https://jira.nuxeo.com/browse/NXDRIVE-2432)). And it is no more possible to pause a single transfer from that view, you will have to pause the session instead ([NXDRIVE-2433](https://jira.nuxeo.com/browse/NXDRIVE-2433)).
+![]({{file name='new-remote-folder.png' page='nuxeo-drive-release-notes'}})
 
-<div>
-<table class="hover" style="border: 0px;">
-<tbody>
-<tr>
-<td colspan="1"><b>![]({{file name='DT-sessions-running.png' page='nuxeo-drive-release-notes'}} ?w=300)</b></td>
-<td colspan="1"><b>![]({{file name='DT-sessions-history.png' page='nuxeo-drive-release-notes'}} ?w=300)</b></td>
-<td colspan="1"><b>![]({{file name='DT-sessions-monitoring.png' page='nuxeo-drive-release-notes'}} ?w=300)</b></td>
-</tr>
-</tbody>
-</table>
-</div>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2413](https://jira.nuxeo.com/browse/NXDRIVE-2413)
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2309](https://jira.nuxeo.com/browse/NXDRIVE-2309)
+#### Multiple Transfers Reusing a Same File
 
-#### Fixed Multi-Screen Centering
+It is now possible for the user to add the same file to multiple Direct Transfert sessions. For a file to be uploaded, other sessions containing the same file will need to be either paused or finished. This is a requirements from the OS because one file cannot be read by two different threads at the same time.
 
-When opening the settings of Direct Transfer window, it is centered on the screen. But that was not working well for multi-screens setup. This is now fixed and the window will be centered on the screen where the mouse cursor is located.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2394](https://jira.nuxeo.com/browse/NXDRIVE-2394)
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2353](https://jira.nuxeo.com/browse/NXDRIVE-2353)
+#### Preventing Duplicate Folder Uploads
 
-#### New Parameter to Control Forbidden Doc Types
+There is a duplicate creation option for Direct Transfer sessions. It was badly named as it is only effective for files. We renamed the option to be more specific.
+And it is now forbidden to upload a folder if a document has the same name on the server. In that case, the entire session will be cancelled.
 
-The new [`disallowed_types_for_dt`]({{page version='' space='client-apps' page='nuxeo-drive'}}#disallowed-types-for-dt) parameter can be used to control custom document types where doing a Direct Transfer is not allowed. Typically, Domain and Section are such types.
+![]({{file name='DT-duplicate-folder.png' page='nuxeo-drive-release-notes'}})
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2311](https://jira.nuxeo.com/browse/NXDRIVE-2311)
-
-### GNU/Linux Release
-
-We temporary stop publishing GNU/Linux releases as the support has been lost due to changes in the project we use to freeze the application code (meaning converting all Python code to something understandable by the OS without the need for the Python interpreter to be installed on your machine).
-
-We are sorry for the inconvenience and will get back the GNU/Linux support ASAP.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2399](https://jira.nuxeo.com/browse/NXDRIVE-2399)
-
-## Improvements
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2438](https://jira.nuxeo.com/browse/NXDRIVE-2438)
 
 ### Direct Edit
 
-#### Fixed Broken Document Previews
+#### Direct Edit now handles default URL ports
 
-When uploading changes done with Direct Edit to the server, the document preview was broken if the upload provider was S3. The issue was a missing HTTP header to set the appropriate content type of the document that would then be used by the server to detect the specific converter to call.
+It is now possible to use Direct Edit when the user registered an account with a server URL containing 443 or 80 ports.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2380](https://jira.nuxeo.com/browse/NXDRIVE-2380)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2410](https://jira.nuxeo.com/browse/NXDRIVE-2410)
 
-#### Direct Edit Lock Permission Errors
+## Improvements
 
-Direct Edit lock permission errors are now handled and a warning is displayed to the user.
+### GUI Refresh After a Feature State Has Changed
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2380](https://jira.nuxeo.com/browse/NXDRIVE-2380)
+Until now, it was mandatory for the user to restart the application to apply the change of a feature state on the GUI. The interface is now refreshed on a state change and there is no need to restart the application anymore.
 
-### New chunk_limit Maximum Value
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2329](https://jira.nuxeo.com/browse/NXDRIVE-2329)
 
-The old maximum value for the [chunk_limit]({{page version='' space='client-apps' page='nuxeo-drive'}}#chunk-limit) parameter was 20 MiB. We push that limit to 5,120 MiB (5 GiB) to be able to fully leverage S3 upload capabilities.
+### Align Buttons
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2368](https://jira.nuxeo.com/browse/NXDRIVE-2368)
+Buttons colors have been aligned on the Nuxeo guidelines.
 
-### More Friendly Message Boxes
-
-We reworked message boxes to get rid of the ugly all-bold text. There is now a clear title and more complete and useful message.
-
-<div>
-<table class="hover" style="border: 0px;">
-<tbody>
-<tr>
-<td colspan="1"><b>![]({{file name='NXDRIVE-2359-before.png' page='nuxeo-drive-release-notes'}} ?w=300)</b></td>
-<td colspan="1"><b>![]({{file name='NXDRIVE-2359-after.png' page='nuxeo-drive-release-notes'}} ?w=300)</b></td>
-</tr>
-</tbody>
-</table>
-</div>
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2359](https://jira.nuxeo.com/browse/NXDRIVE-2359)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2354](https://jira.nuxeo.com/browse/NXDRIVE-2354)
 
 ## Fixes
 
-### PAC files Support
+### GNU/Linux Release 
 
-Dealing with PAC files set at the OS level (the registry on Windows and the system preferences on macOS) was done correctly since the beginning. But one could not enter a PAC file directly into proxy settings. This is now possible.
+In the previous release ([4.5.0](https://doc.nuxeo.com/client-apps/450-nuxeo-drive-release-notes/#gnulinux-release)) we temporary stopped publishing GNU/Linux releases as the support had been lost due to changes in the project we use to freeze the application code.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2435](https://jira.nuxeo.com/browse/NXDRIVE-2435)
+We are now happy to announce that this is old time and GNU/Linux releases are back again!
 
-### Large File Uploads Robustness
-
-We fixed a tricky issue when using S3 as the upload provider on large files. For some people the upload would never finish, but for others it would finish with success. We introduced the keepalive TCP option for all HTTPS requests to fix that. The original patch was merged into the Python client so that everybody using it will benefit of the bug fix.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2373](https://jira.nuxeo.com/browse/NXDRIVE-2373)
-
-### Start on Boot Alteration on Windows
-
-If you disabled the start on boot option from the settings window, the auto-updater was always reverting back the setting. This is now fixed.
-
-This introduces a small change for macOS users: by default the app will not be startup on boot. The feature must be selected from the settings window.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2330](https://jira.nuxeo.com/browse/NXDRIVE-2330)
-
-
-## Download Links
-
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.0.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.0.exe)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2400](https://jira.nuxeo.com/browse/NXDRIVE-2400)
