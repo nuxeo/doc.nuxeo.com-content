@@ -1,7 +1,7 @@
 ---
 title: Build a Custom Docker Image
 review:
-  date: '2021-01-21'
+  date: '2021-01-26'
   status: ok
 labels:
   - multiexcerpt
@@ -11,7 +11,30 @@ description: Discover how to build a custom Docker image.
 tree_item_index: 100
 ---
 
-To build an application from Nuxeo, most of the time, you will need to customize the Nuxeo Docker Image. Let's see how you can do this.
+To build an application from Nuxeo, we strongly recommend to customize the Nuxeo Docker Image by building a Docker image from the Nuxeo one. Let's see how you can do this.
+
+## Build a Custom Docker Image From the Nuxeo One
+
+You can simply write a [Dockerfile](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) using the Nuxeo image as [parent image](https://docs.docker.com/glossary/#parent_image).
+A good practice is to use a [build argument](https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact) before the `FROM` instruction to easily set the version of the Nuxeo parent image, as in the example below:
+
+```Dockerfile
+ARG NUXEO_VERSION=latest
+
+FROM docker.packages.nuxeo.com/nuxeo/nuxeo:${NUXEO_VERSION}
+
+# Execute some commands to add layers on top of the parent image
+```
+
+Then, the custom image can be built by running the following command in the directory of the `Dockerfile`:
+
+```shell
+docker build -t mycompany/myapplication:mytag --build-arg NUXEO_VERSION=11.4 .
+```
+
+To upgrade the custom image to a newer version of Nuxeo, for instance from 11.4 to 11.5, you can just rebuild the custom image by updating the `NUXEO_VERSION` build argument.
+
+Below, you can find some examples of customization that can be done in such a custom Docker image.
 
 ## Installing Nuxeo Packages
 
