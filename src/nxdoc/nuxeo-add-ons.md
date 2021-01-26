@@ -132,7 +132,7 @@ history:
         version: '1'
 ---
 {{! excerpt}}
-This chapter presents the list of Nuxeo Packages available on the Nuxeo Marketplace, for the latest version of the Nuxeo Platform.
+This chapter presents the list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.
 {{! /excerpt}}
 
 {{! multiexcerpt name='MP-packages-list'}}
@@ -524,6 +524,21 @@ Registered access
 </td>
 <td colspan="1">
 [Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-wopi)
+</td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Outlook Connector<br/>
+`nuxeo-outlook-integration-package`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-outlook-connector'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-outlook-integration-package)
 </td>
 </tr>
 <tr>
