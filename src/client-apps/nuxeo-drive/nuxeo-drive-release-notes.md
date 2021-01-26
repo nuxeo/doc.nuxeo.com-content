@@ -75,8 +75,14 @@ Buttons colors have been aligned on the Nuxeo guidelines.
 
 ### GNU/Linux Release
 
-In the previous release ([4.5.0](https://doc.nuxeo.com/client-apps/450-nuxeo-drive-release-notes/#gnulinux-release)) we temporary stopped publishing GNU/Linux releases as the support had been lost due to changes in the project we use to freeze the application code.
+In the previous release ([4.5.0]({{page page='450-nuxeo-drive-release-notes'}}#gnulinux-release)) we temporary stopped publishing GNU/Linux releases as the support had been lost due to changes in the project we use to freeze the application code.
 
 We are now happy to announce that this is old time and GNU/Linux releases are back again!
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2400](https://jira.nuxeo.com/browse/NXDRIVE-2400)
+
+### Fixed Subfolders Synchronization When Unfiltering
+
+On Windows, after applying a filter on a synchronized subfolder, it wasn't possible anymore to re-synchronize the subfolder's content when unfiltering. The issue has been fixed and subfolders content will be synchronized again on unfiltering.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2489](https://jira.nuxeo.com/browse/NXDRIVE-2489)
