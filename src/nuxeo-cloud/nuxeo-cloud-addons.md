@@ -10,6 +10,10 @@ tree_item_index: 500
 toc: true
 ---
 
+## Development Sandbox
+
+Nuxeo Cloud customers can purchase a Development Sandbox as part of the standard cloud offering. The Dev Sandbox provides customers with 2 Nuxeo Environments and access to a pre-configured CI/CD chain to manage the building, publishing and deploying of changes to the sandbox environments. 
+
 ## Additional Environments
 
 Nuxeo Cloud customers can choose to purchase additional environments. These additional environments can be used to support additional training or testing efforts. 
