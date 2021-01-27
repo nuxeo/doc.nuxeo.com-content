@@ -24,7 +24,7 @@ Nuxeo Drive upload capability provides a productive and network resilient way of
 
 1. Open Nuxeo Drive from your desktop and click on **Upload Content** button.</br>
     The Direct Transfer popup opens.
-    SCREENSHOT
+    ![]({{file name='direct-transfer-popup.png'}})
 1. Click on **New transfer** at the top right of the popup.        
     ![]({{file name='direct-transfer-creation.png'}})
 1. From this view, you can decide to **Add files** or **Add a folder**.</br>
@@ -32,9 +32,10 @@ Nuxeo Drive upload capability provides a productive and network resilient way of
 1. Select the document(s) you want to transfer and click on **Open**.</br>
 1. Select the remote folder where you want the document(s) or folders to be uploaded.</br>
     The selected path will update depending on the remote folder selected.
-1. Click on **OK** to launch the transfer session.
 
 ### Options{{> anchor 'duplicates-behavior'}}
+
+#### Files Duplicate Management
 
 On this section you need to choose what to do when a transfer would create a duplicate document on the server.
 The setting is effective for all files that will be sent at the same time (it is called the *session*). Each *session* has its own duplicates behavior.
@@ -43,6 +44,21 @@ Available options are:
 - **Create**: this is the default option. A duplicate document will be created, this is the same behavior as when adding a new file from Web UI.
 - **Ignore**: the transfer will be cancelled, preventing the duplicate creation.
 - **Override**: the document will be replaced on the server.
+
+#### New Remote Folder
+
+{{#> callout type='info' }}
+This option is only available on **Nuxeo Drive 4.5.1 Beta** version.
+{{/callout}}
+
+This field lets you create your remote folder directly from the Direct Transfer popup. You don't have to go back to your instance to create it, you can handle everything at the same place.</br>
+To do so:
+1. Click on **Set**</br>
+    A popup opens.
+1. Type your new remote folder name and click **OK**.
+1. You can still update it, by clicking once again on **Set**.
+1. Once you've set your new remote folder click on **OK** to launch your transfer.
+![]({{file name='new-remote-folder.gif' page='nuxeo-drive-release-notes'}} ?w=450)
 
 ## Manage Sessions
 
