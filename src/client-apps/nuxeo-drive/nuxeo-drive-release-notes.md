@@ -36,7 +36,7 @@ Selected files and folders will be uploaded inside that new remote folder then.
 
 #### Multiple Transfers Reusing a Same File
 
-It is now possible for the user to add the same file to multiple Direct Transfert sessions. For a file to be uploaded, other sessions containing the same file will need to be either paused or finished. This is a requirements from the OS because one file cannot be read by two different threads at the same time.
+It is now possible for the user to add the same file to multiple Direct Transfert sessions. For a file to be uploaded, other sessions containing the same file will need to be either paused or finished. This is a requirement from the OS because one file cannot be read by two different threads at the same time.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2394](https://jira.nuxeo.com/browse/NXDRIVE-2394)
 
