@@ -32,7 +32,7 @@ version_override:
 
 ## Nuxeo Docker Image
 
-The [Nuxeo Platform](https://www.nuxeo.com/) can be installed on many operating systems by running the Nuxeo [Docker image]({{page page='docker-image'}}).
+The [Nuxeo Platform](https://www.nuxeo.com/content-services-platform/) can be installed on many operating systems by running the Nuxeo [Docker image]({{page page='docker-image'}}).
 
 Using a Docker image has several advantages:
 
