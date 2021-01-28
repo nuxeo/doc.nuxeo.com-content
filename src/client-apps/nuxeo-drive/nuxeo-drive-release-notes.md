@@ -30,7 +30,7 @@ As a side-effect, we will need to upgrade the Python version used in the applica
 A new button has been added in the Direct Transfer options. This button lets the user create a new folder in the selected remote path.</br>
 Selected files and folders will be uploaded inside that new remote folder then.
 
-![]({{file name='new-remote-folder.gif' page='nuxeo-drive-release-notes'}} ?w=450)
+![]({{file name='new-remote-folder.gif' page='nuxeo-drive-release-notes'}})
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2413](https://jira.nuxeo.com/browse/NXDRIVE-2413)
 
@@ -86,3 +86,9 @@ We are now happy to announce that this is old time and GNU/Linux releases are ba
 On Windows, after applying a filter on a synchronized subfolder, it wasn't possible anymore to re-synchronize the subfolder's content when unfiltering. The issue has been fixed and subfolders content will be synchronized again on unfiltering.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2489](https://jira.nuxeo.com/browse/NXDRIVE-2489)
+
+## Download Links
+
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.1-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.1.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.1.exe)
