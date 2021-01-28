@@ -161,11 +161,11 @@ Setting `NUXEO_DEV=true` allows to run the Nuxeo image in development mode, mean
     docker run --name nuxeo \
       -p 8080:8080 \
       -e NUXEO_DEV=true \
-      docker.packages.nuxeo.com/nuxeo/nuxeo
+      docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 
     docker ps
     CONTAINER ID   IMAGE
-    0eee2751d09d   docker.packages.nuxeo.com/nuxeo/nuxeo
+    0eee2751d09d   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 
     docker exec 0eee2751d09d nuxeoctl restart
     ```
