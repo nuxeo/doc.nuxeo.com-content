@@ -5,6 +5,7 @@ review:
     date: '2020-08-31'
     status: ok
 tree_item_index: 100
+is_overview: true
 ---
 
 <div class="row" data-equalizer data-equalize-on="medium">
