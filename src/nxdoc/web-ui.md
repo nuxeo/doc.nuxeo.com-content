@@ -16,12 +16,11 @@ labels:
 is_overview: true
 tree_item_index: 300
 section_parent: web-ui
-
 ---
 <div class="column">
 {{#> panel type='primary'}}
 
-[You migrated your user interface from JSF UI to Web UI? You will find all the necessary information here!]({{page version='' space='userdoc' page='from-jsf-ui-to-web-ui'}})
+[Did you migrate your user interface from JSF UI to Web UI? You will find all the necessary information here!]({{page page='jsf-ui-to-web-ui'}})
 
 {{/panel}}
 </div>
@@ -55,12 +54,11 @@ of simplicity and pluggability.
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Tutorials
+### Web UI User Documentation
 
-- [HOWTO: Customize Document Layouts]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
-- [HOWTO: Customize Workflow Tasks]({{page version='' space='nxdoc' page='web-ui-workflow-tasks'}})
+Discover Nuxeo Web UI through the functional documentation.
 
-[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='web-ui-tutorials'}})
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='web-ui'}})
 {{/panel}}
 </div>
 
