@@ -3,11 +3,10 @@ title: Nuxeo Platform Features
 description: This page lists the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons.
 review:
     comment: ''
-    date: '2020-08-04'
+    date: '2021-01-29'
     status: ok
 labels:
-    - lts2016-ok
-    - content-review-lts2017
+    - lts2021-ok
 confluence:
     ajs-parent-page-id: '19235677'
     ajs-parent-page-title: Quick Start Series
@@ -224,12 +223,7 @@ history:
         version: '1'
 ---
 
-This page lists the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons. It provides links to the relevant documentation and indicates if the features are available without any UI (through the REST API), in [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) or in [Nuxeo Web UI]({{page page='web-ui'}}).
-
-{{#> callout type='warning' }}
-
-The JSF UI addon has been deprecated since Nuxeo Platform LTS 2019 (10.10).
-{{/callout}}
+This page lists the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons. It provides links to the relevant documentation and indicates if the features are available without any UI (through the REST API) or in [Nuxeo Web UI]({{page page='web-ui'}}).
 
 The tables below use the following notation:
 - &#10003;: Available
@@ -245,26 +239,16 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
-</tr>
-<tr>
-    <td colspan="1">Agenda</td>
-    <td colspan="1">[Nuxeo Agenda](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda)</td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td>N/A</td>
-    <td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc' page='nuxeo-agenda'}})</td>
 </tr>
 <tr>
     <td colspan="1">Audio</td>
     <td colspan="1">[Nuxeo DAM](http://www.nuxeo.com/solutions/digital-asset-management/)</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td>
@@ -274,13 +258,11 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
     <td colspan="1">Collection</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -293,7 +275,6 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -301,21 +282,11 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo IMAP connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Nuxeo IMAP Connector user documentation]({{page space='userdoc' page='nuxeo-imap-connector'}})</td>
-</tr>
-<tr>
-    <td colspan="1">Event</td>
-    <td colspan="1">[Nuxeo Agenda](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda)</td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td>N/A</td>
-    <td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc' page='nuxeo-agenda'}})</td>
 </tr>
 <tr>
     <td>EasyShare Folder</td>
     <td>EasyShare</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>[EasyShare documentation]({{page version='' space='userdoc' page='easyshare'}})</td>
@@ -325,13 +296,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page version='' space='userdoc' page='document-types-in-web-ui'}})</td>
 </tr>
 <tr>
     <td colspan="1">Folder</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page version='' space='userdoc' page='document-types-in-web-ui'}})</td>
@@ -341,13 +310,11 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
     <td colspan="1">Note</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page version='' space='userdoc' page='document-types-in-web-ui'}})</td>
@@ -357,13 +324,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page version='' space='userdoc' page='document-types-in-web-ui'}})</td>
 </tr>
 <tr>
     <td colspan="1">Personal workspace</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
@@ -373,13 +338,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
     <td colspan="1">Section</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page space='userdoc' page='share'}})</td>
@@ -389,13 +352,11 @@ The tables below use the following notation:
     <td>[Template Rendering](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td>[Template rendering documentation]({{page version='' space='nxdoc' page='template-rendering-addon'}})</td>
 </tr>
 <tr>
     <td colspan="1">Workspace</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page version='' space='userdoc' page='document-types-in-web-ui'}})</td>
@@ -405,13 +366,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
     <td colspan="1">Video</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
@@ -428,12 +387,11 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
@@ -443,7 +401,6 @@ The tables below use the following notation:
     [Bulk Document Importer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer)<br/>
     [Scan Documents Importer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer)</td>
     <td>&#10003;<br/>&#10003;<br/>&#10003;<br/>&#10003;</td>
-    <td>&#10003;<br/>&#10003;<br/>N/A<br/>N/A</td>
     <td>&#10003;<br/>&#10003;<br/>N/A<br/>N/A</td>
     <td colspan="1">
     [Document creation user documentation]({{page space='userdoc' page='content-create'}})<br/>
@@ -457,7 +414,6 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">Box, Google Drive<br/>
     [Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})
 </td>
@@ -467,14 +423,12 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page space='userdoc' page='content-create'}})</td>
 </tr>
 <tr>
     <td colspan="1">HTML 5 drag and drop</td>
     <td colspan="1">Default distribution</td>
     <td>NR</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
     [User Documentation]({{page space='userdoc' page='content-create'}}#importing-documents-using-drag-and-drop)<br/>
@@ -484,7 +438,6 @@ The tables below use the following notation:
 <tr>
     <td colspan="1">Metadata processing at import</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[Binary Metadata]({{page page='binary-metadata'}})</td>
@@ -501,18 +454,16 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Attachments</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
@@ -524,7 +475,6 @@ The tables below use the following notation:
     [Nuxeo Spreadsheet](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
     </td>
     <td>&#10003;</td>
-    <td>&#10003;<br/>&#10003;</td>
     <td>N/A<br/>&#10003;</td>
     <td colspan="1">
     [Document modification user documentation]({{page space='userdoc' page='content-edit'}})<br/>
@@ -537,7 +487,6 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">Box, Dropbox, Google Drive, Microsoft OneDrive<br/>
     [Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})
     </td>
@@ -547,13 +496,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Copying and Moving Documents]({{page space='userdoc' page='content-edit'}})</td>
 </tr>
 <tr>
     <td colspan="1">Edit Form</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
@@ -563,7 +510,6 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -571,13 +517,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
     <td colspan="1">Versioning of documents</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -589,7 +533,6 @@ The tables below use the following notation:
     <td colspan="1">Versioning of folders</td>
     <td colspan="1">[Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td>N/A</td>
     <td>[Documentation]({{page page='nuxeo-tree-snapshot'}})</td>
 </tr>
@@ -600,7 +543,6 @@ The tables below use the following notation:
     Nuxeo DAM</td>
     <td>&#10003;<br/>&#10003;<br/>&#10003;</td>
     <td>&#10003;<br/>&#10003;<br/>&#10003;</td>
-    <td>&#10003;<br/>&#10003;<br/>&#10003;</td>
     <td>PDF conversion in default distribution<br/>
     [Template Rendering documentation]({{page version='' space='nxdoc' page='template-rendering-addon'}})<br/>
     [Nuxeo DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})</td>
@@ -609,7 +551,6 @@ The tables below use the following notation:
     <td>Electronic signature of documents</td>
     <td>Digital Signature</td>
     <td>NR</td>
-    <td>&#10003;</td>
     <td>N/A</td>
     <td>[Digital Signature documentation]({{page version='' space='nxdoc' page='digital-signature'}})</td>
 </tr>
@@ -624,19 +565,17 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Compare Metadata</td>
     <td colspan="1">Default Distribution</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
     [Documentation]({{page version='' space='userdoc' page='compare'}})
@@ -647,14 +586,12 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Documentation]({{page version='' space='userdoc' page='compare'}})</td>
 </tr>
 <tr>
     <td colspan="1">Compare Document</td>
     <td colspan="1">[Nuxeo Enhanced Viewer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector)</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[Documentation]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}})</td>
 </tr>
@@ -669,19 +606,17 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Edit in native application from web application</td>
     <td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
     [Documentation]({{page space='client-apps' page='nuxeo-drive'}})
@@ -692,7 +627,6 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Documentation]({{page space='client-apps' page='nuxeo-drive'}})</td>
 </tr>
 <tr>
@@ -700,13 +634,11 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Documentation]({{page space='client-apps' page='nuxeo-drive'}})</td>
 </tr>
 <tr>
     <td colspan="1">WebDav protocol</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -724,19 +656,17 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Approval workflow</td>
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
     [User Documentation]({{page version='' space='userdoc' page='task'}})<br/>
@@ -749,7 +679,6 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">
     [User Documentation]({{page version='' space='userdoc' page='task'}})<br/>
     [Developer Documentation]({{page page='workflow'}})<br/>
@@ -759,7 +688,6 @@ The tables below use the following notation:
 <tr>
     <td colspan="1">Content routing</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -773,17 +701,8 @@ The tables below use the following notation:
     <td colspan="1"></td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td>[Tasks in Web UI]({{page version='' space='userdoc' page='task'}})<br/>
     [How to set up a task dashboard]({{page version='' space='nxdoc' page='how-to-set-up-a-tasks-dashboard'}})</td>
-</tr>
-<tr>
-    <td colspan="1">Workflow analytics</td>
-    <td colspan="1">[Nuxeo Review Workflows Dashboards](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-review-workflows-dashboards)</td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td colspan="1">{{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}</td>
 </tr>
 </tbody>
 </table>
@@ -796,19 +715,17 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Document Publication</td>
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
     [User Documentation]({{page space='userdoc' page='share'}}#publishing)<br/>
@@ -818,7 +735,6 @@ The tables below use the following notation:
 <tr>
     <td colspan="1">Bulk Publication</td>
     <td colspan="1">Default distribution</td>
-    <td>N/A</td>
     <td>N/A</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -830,7 +746,6 @@ The tables below use the following notation:
     <td colspan="1">Publication approval workflow</td>
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1">
     [User Documentation]({{page space='userdoc' page='share'}}#publishing)<br/>
@@ -841,18 +756,8 @@ The tables below use the following notation:
     <td>Folder publication</td>
     <td colspan="1">[Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1"></td>
-</tr>
-<tr>
-    <td colspan="1">Publication to media hosting websites</td>
-    <td colspan="1">[Nuxeo Media Publishing](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)</td>
-    <td>N/A</td>
-    <td>&#10003;</td>
-    <td>N/A</td>
-    <td colspan="1">The Nuxeo Media Publishing addon is deprecated since Nuxeo Platform LTS 2019.
-    </td>
 </tr>
 </tbody>
 </table>
@@ -865,18 +770,16 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Dashboard (static)</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -889,13 +792,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Browsing Content]({{page space='userdoc' page='browse'}})</td>
 </tr>
 <tr>
     <td colspan="1">Tags</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -904,19 +805,8 @@ The tables below use the following notation:
     </td>
 </tr>
 <tr>
-    <td colspan="1">Virtual navigation</td>
-    <td colspan="1">[Nuxeo Virtual Navigation](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation)</td>
-    <td>N/A</td>
-    <td>&#10003;</td>
-    <td>N/A</td>
-    <td colspan="1">[Nuxeo Virtual Navigation developer documentation]({{page page='nuxeo-virtual-navigation'}})<br/>
-    {{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}
-    </td>
-</tr>
-<tr>
     <td colspan="1">Quick access to tasks</td>
     <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -927,7 +817,6 @@ The tables below use the following notation:
     <td colspan="1">Quick access to recently viewed documents</td>
     <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
     <td>&#10003;</td>
-    <td>N/A</td>
     <td>&#10003;</td>
     <td colspan="1">
     [Documentation]({{page version='' space='nxdoc' page='web-ui-overview'}})
@@ -937,7 +826,6 @@ The tables below use the following notation:
     <td colspan="1">Quick access to expired documents</td>
     <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
     <td>&#10003;</td>
-    <td>N/A</td>
     <td>&#10003;</td>
     <td colspan="1">
     [Documentation]({{page version='' space='nxdoc' page='web-ui-overview'}})
@@ -954,18 +842,16 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Advanced search</td>
     <td colspan="1">&nbsp;</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
@@ -975,13 +861,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
     <td colspan="1">Faceted search</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -993,14 +877,12 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
   <td>Search highlights</td>
   <td>Nuxeo Web UI</td>
   <td>&#10003;</td>
-  <td>N/A</td>
   <td>&#10003;</td>
   <td></td>
 </tr>
@@ -1008,7 +890,6 @@ The tables below use the following notation:
     <td colspan="1">Asset-dedicated search</td>
     <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
     <td>&#10003;</td>
-    <td>N/A</td>
     <td>&#10003;</td>
     <td colspan="1"></td>
 </tr>
@@ -1017,14 +898,12 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">Comes with suggestion and Elasticsearch by default.</td>
 </tr>
 <tr>
     <td colspan="1">Quick search with suggestion</td>
     <td colspan="1">Default distribution</td>
     <td>NR</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
@@ -1039,18 +918,16 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Read / Edit / Manage permissions</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -1063,7 +940,6 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">Requires configuration</td>
 </tr>
 <tr>
@@ -1071,7 +947,6 @@ The tables below use the following notation:
     <td colspan="1">Default distribution<br/>
     [Nuxeo User Registration]({{page version='' space='nxdoc' page='nuxeo-platform-user-registration'}})</td>
     <td>&#10003;<br/>N/A</td>
-    <td>&#10003;<br/>&#10003;</td>
     <td>&#10003;<br/>N/A</td>
     <td colspan="1"></td>
 </tr>
@@ -1080,13 +955,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
     <td colspan="1">Search on permissions</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1"></td>
@@ -1095,7 +968,6 @@ The tables below use the following notation:
     <td colspan="1">Permission purge</td>
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1"></td>
 </tr>
@@ -1103,7 +975,6 @@ The tables below use the following notation:
     <td colspan="1">Permission audit</td>
     <td colspan="1">[Nuxeo Groups and Rights Audit](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1">
     [Developer Documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
@@ -1116,7 +987,6 @@ The tables below use the following notation:
     [EasyShare](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare)</td>
     <td>&#10003;<br/>N/A</td>
     <td>&#10003;<br/>&#10003;</td>
-    <td>&#10003;<br/>&#10003;</td>
     <td colspan="1">[User Documentation]({{page space='userdoc' page='permissions'}})<br/>
     [EasyShare Documentation]({{page version='' space='userdoc' page='easyshare'}})</td>
 </tr>
@@ -1124,7 +994,6 @@ The tables below use the following notation:
     <td>Multi-tenancy</td>
     <td>[Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant)</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>N/A</td>
     <td>[Nuxeo Multi-tenant documentation]({{page version='' space='userdoc' page='nuxeo-multi-tenant'}})</td>
 </tr>
@@ -1139,18 +1008,16 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Document history</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1"></td>
@@ -1159,14 +1026,12 @@ The tables below use the following notation:
     <td colspan="1">Activity feed on document</td>
     <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
     <td>&#10003;</td>
-    <td>N/A</td>
     <td>&#10003;</td>
     <td colspan="1"></td>
 </tr>
 <tr>
     <td>Global event audit</td>
     <td>Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1"></td>
@@ -1176,7 +1041,6 @@ The tables below use the following notation:
     <td colspan="1">Default distribution<br/>
     [Nuxeo Groups and Rights Audit](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)</td>
     <td>N/A<br/>N/A</td>
-    <td>&#10003;<br/>&#10003;</td>
     <td>N/A<br/>N/A</td>
     <td colspan="1">
     [Developer Documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
@@ -1194,18 +1058,16 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td>Metadata extraction</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">IPTC, EXIF, video file metadata, audio file metadata <br/>
@@ -1216,7 +1078,6 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td></td>
 </tr>
 <tr>
@@ -1224,14 +1085,12 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td>[Nuxeo DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})</td>
 </tr>
 <tr>
     <td>Media dedicated search</td>
     <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
     <td>&#10003;</td>
-    <td>N/A</td>
     <td>&#10003;</td>
     <td colspan="1"></td>
 </tr>
@@ -1240,14 +1099,12 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>NR</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1"></td>
 </tr>
 <tr>
     <td>Media specific view of documents</td>
     <td colspan="1">Default distribution</td>
     <td>NR</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[Nuxeo DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})</td>
 </tr>
@@ -1257,8 +1114,6 @@ The tables below use the following notation:
         [Nuxeo Diff Pictures](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)</td>
     <td>N/A< br/>
         N/A</td>
-    <td>N/A<br />
-        &#10003;</td>
     <td>&#10003;
         N/A</td>
     <td>[Developer documentation]({{page page='nuxeo-diff'}})<br/>
@@ -1269,15 +1124,13 @@ The tables below use the following notation:
     <td>Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td>[Nuxeo DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})<br/>
     [How to contribute a new video conversion]({{page version='' space='nxdoc' page='how-to-contribute-a-new-video-conversion'}})<br/>
     [How to contribute picture conversions]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}})</td>
 </tr>
 <tr>
     <td>Integration with Media processing software</td>
-    <td>[Nuxeo Adobe CC Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace)</td>
-    <td>&#10003;</td>
+    <td>[Nuxeo Adobe CC Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>[Nuxeo Adobe CC Connector documentation]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}})</td>
@@ -1287,25 +1140,14 @@ The tables below use the following notation:
     <td>[Nuxeo Platform 3D](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td>[Nuxeo Platform 3D documentation]({{page version='' space='nxdoc' page='nuxeo-3d'}})</td>
 </tr>
     <td colspan="1">Computer vision services</td>
     <td colspan="1">[Nuxeo Vision](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">Google Vision API<br/>
     [Nuxeo Vision documentation]({{page version='' space='nxdoc' page='nuxeo-vision'}})<br/>
-    </td>
-</tr>
-<tr>
-    <td colspan="1">Publication to media hosting websites</td>
-    <td colspan="1">[Nuxeo Media Publishing](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)</td>
-    <td>N/A</td>
-    <td>&#10003;</td>
-    <td>N/A</td>
-    <td colspan="1">The Nuxeo Media Publishing addon is deprecated since Nuxeo Platform LTS 2019.
     </td>
 </tr>
 </tbody>
@@ -1319,18 +1161,16 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Alerts / Follow</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[Documentation]({{page version='' space='userdoc' page='alerts'}})</td>
@@ -1340,7 +1180,6 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page version='' space='userdoc' page='content-edit'}}#commenting)</br>
     [Developer Documentation]({{page version='' space='nxdoc' page='comments'}})</td>
 </tr>
@@ -1349,13 +1188,11 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Enhanced Viewer]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}})</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Documentation]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}})</td>
 </tr>
 <tr>
     <td colspan="1">Preview</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -1367,7 +1204,6 @@ The tables below use the following notation:
     <td colspan="1">Relations</td>
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1">
     [User Documentation]({{page space='userdoc' page='editing-content'}}#relations)<br/>
@@ -1377,7 +1213,6 @@ The tables below use the following notation:
 <tr>
     <td colspan="1">Trash</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
@@ -1390,13 +1225,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Developer Documentation]({{page page='thumbnail'}})</td>
 </tr>
 <tr>
     <td colspan="1">User profile</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
@@ -1412,18 +1245,16 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Excel export of content view</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1">&nbsp;</td>
@@ -1432,7 +1263,6 @@ The tables below use the following notation:
     <td>Export of a folder structure</td>
     <td>Default distribution<br/>
     [Nuxeo File System Exporter](https://connect.nuxeo.com/nuxeo/site/marketplace/package/fs-exporter)</td>
-    <td>&#10003;<br/>&#10003;</td>
     <td>&#10003;<br/>&#10003;</td>
     <td>&#10003;<br/>N/A</td>
     <td>[User Documentation]({{page space='userdoc' page='exporting-documents'}})<br/>
@@ -1443,13 +1273,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page space='userdoc' page='share'}}#exporting)</td>
 </tr>
 <tr>
     <td colspan="1">XML export</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page space='userdoc' page='share'}}#exporting)</td>
@@ -1459,13 +1287,13 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[User Documentation]({{page space='userdoc' page='share'}}#exporting)</td>
 </tr>
 </tbody>
 </table>
 </div>
 
+<!--
 ## Local Configuration
 <div class="table-scroll">
 <table class="hover">
@@ -1534,6 +1362,7 @@ The tables below use the following notation:
 </tbody>
 </table>
 </div>
+-->
 
 ## Authentication
 <div class="table-scroll">
@@ -1542,18 +1371,16 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">CAS2 Authentication</td>
     <td colspan="1">[CAS2 Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication)</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[CAS2 Authentication documentation]({{page page='using-cas2-authentication'}})</td>
@@ -1563,13 +1390,11 @@ The tables below use the following notation:
     <td colspan="1">[Kerberos Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[Kerberos Authentication documentation]({{page page='kerberos-authentication'}})</td>
 </tr>
 <tr>
     <td colspan="1">LDAP authentication</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
@@ -1579,27 +1404,11 @@ The tables below use the following notation:
     <td colspan="1">[SAML 2.0 Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">[SAML 2.0 Authentication documentation]({{page page='saml-20-authentication'}})</td>
-</tr>
-<tr>
-    <td colspan="1">Shibboleth integration</td>
-    <td colspan="1">
-    [Shibboleth Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication)<br/>
-    [Shibboleth Invitation Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shibboleth-invitation)
-    </td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td colspan="1">
-    [Shibboleth Authentication admin documentation]({{page page='shibboleth-authentication'}})<br/>
-    [Shibboleth Invitation Addon documentation]({{page page='nuxeo-shibboleth-invitation'}})
-</td>
 </tr>
 <tr>
     <td>OpenID authentication</td>
     <td>[OpenID Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication)</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td></td>
@@ -1607,7 +1416,6 @@ The tables below use the following notation:
 <tr>
     <td>2-step authentication</td>
     <td>[Nuxeo DuoWeb Two Factors Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication)</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>[Nuxeo DuoWeb Two Factors Authentication documentation]({{page version='' space='nxdoc' page='nuxeo-duoweb-two-factor-authentication'}})</td>
@@ -1623,19 +1431,17 @@ The tables below use the following notation:
 <tr>
     <th rowspan="2">Feature</th>
     <th rowspan="2">Comes with</th>
-    <th colspan="3">UI possibilities</th>
+    <th colspan="2">UI possibilities</th>
     <th rowspan="2">Comment</th>
 </tr>
 <tr>
     <th>API</th>
-    <th>JSF UI</th>
     <th>Web UI</th>
 </tr>
 <tr>
     <td colspan="1">Monitoring</td>
     <td colspan="1">Default distribution, [Nuxeo Datadog reporter](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter)</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1">Some monitoring features are available by default in the Admin tab of the Nuxeo Platform. You can complete these features by using addons, such as Nuxeo Datadog reporter.<br/>
     [Metrics and Monitoring admin documentation]({{page page='metrics'}})<br/>
@@ -1647,14 +1453,12 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">`nuxeoctl` command for non UI apps. Admin tab for JSF UI.</td>
 </tr>
 <tr>
     <td colspan="1">OAuth configuration</td>
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
@@ -1663,7 +1467,6 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>N/A</td>
-    <td>N/A</td>
     <td colspan="1">[Sensitive Configuration Data Encryption]({{page page='sensitive-configuration-data-encryption'}})</td>
 </tr>
 <tr>
@@ -1671,13 +1474,11 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
     <td colspan="1">Update Center</td>
     <td colspan="1">Default distribution</td>
-    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1"></td>
@@ -1687,7 +1488,6 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -1695,19 +1495,14 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
     <td>Statistics</td>
-    <td>Default distribution<br/>
-    [Nuxeo Quota](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota)</td>
-    <td>&#10003;<br/>&#10003;</td>
+    <td>Default distribution</td>
     <td>&#10003;<br/>&#10003;</td>
     <td>&#10003;<br/>N/A</td>
-    <td>[JSF UI Activity tab]({{page version='' space='nxdoc' page='admin-tab-overview'}}#activity)<br/>
-    [Web UI administration]({{page version='' space='userdoc' page='administration'}})<br/>
-    [Nuxeo Quota documentation]({{page version='' space='nxdoc' page='nuxeo-quota'}})</td>
+    <td>[Web UI administration]({{page version='' space='userdoc' page='administration'}})</td>
 </tr>
 </tbody>
 </table>
