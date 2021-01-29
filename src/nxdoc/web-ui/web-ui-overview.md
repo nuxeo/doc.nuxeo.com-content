@@ -159,7 +159,7 @@ Nevertheless, Nuxeo is committed to using the latest supported version of the Po
 
 When developing using Nuxeo Web UI, make sure to set up your development environment according to the requirements described in the [Nuxeo Web UI repository](https://github.com/nuxeo/nuxeo-web-ui/blob/master/README.md#install-dependencies).
 
-{{{multiexcerpt 'webui-functional-overview' space='userdoc' page='web-ui'}}}
+{{{multiexcerpt 'webui-functional-overview' page='userdoc/cloud/web-ui'}}}
 
 ## Technical Overview
 
