@@ -1,7 +1,7 @@
 ---
-title: Docker Image
+title: Install Nuxeo with the Docker Image
 review:
-  date: '2021-01-26'
+  date: '2021-01-29'
   status: ok
 labels:
   - multiexcerpt
@@ -17,9 +17,7 @@ This page explains how to install the Nuxeo server with the base Nuxeo Docker im
 
 ## Requirements
 
-The only requirement to run the Nuxeo Docker image is [Docker](https://docs.docker.com/get-docker/) itself.
-
-Java, as well as all the external software, are integrated in the Docker image.
+{{{multiexcerpt 'lts2021-docker-prerequesites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ## What's in the Nuxeo Image
 
@@ -43,11 +41,11 @@ To use the video related features in Nuxeo, such as conversions, storyboarding a
 
 ## Running the Image
 
-Currently, the image is hosted in our private [Docker registry](https://packages.nuxeo.com/#browse/search/docker=attributes.docker.imageName%3Dnuxeo%2Fnuxeo%20AND%20attributes.docker.imageTag%3D2021*%20AND%20repository_name%3Ddocker-private).
+First, you need to be authenticated in order to pull the Docker image:
 
-{{#> callout type='warning' heading='PRIVATE IMAGE'}}
-You should contact your Nuxeo Administrator or Nuxeo sales representative to get access to this image.
-{{/callout}}
+```shell
+docker login docker-private.packages.nuxeo.com -u <username> -p <token_pass_code>
+```
 
 To pull the latest tag of the `nuxeo/nuxeo` image from the Docker registry and run a container from it, run:
 
@@ -101,7 +99,7 @@ docker run --name nuxeo \
 
 #### NUXEO_CLID
 
-The value of `NUXEO_CLID` is copied to `/var/lib/nuxeo/instance.clid` at startup.
+The value of `NUXEO_CLID` is copied to `/var/lib/nuxeo/instance.clid` at startup. Please check the [Registering your Nuxeo Instance]({{page version='' space='nxdoc' page='registering-your-nuxeo-instance#registering-offline-using-nuxeoctl'}}) documentation page to create a valid CLID.
 
 For instance, to run a container with a registered Nuxeo instance:
 

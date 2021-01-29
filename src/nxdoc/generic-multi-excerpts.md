@@ -142,3 +142,25 @@ This requires to have the JSF UI addon installed on your server that is deprecat
 Please refer to the [Web UI documentation](https://doc.nuxeo.com/nxdoc/web-ui/).
 {{/callout}}
 {{! /multiexcerpt}}
+
+{{! multiexcerpt name='lts2021-general-prerequesites'}}
+
+You need to check the following items in order to install Nuxeo Platform LTS 2021:
+- Get a Nuxeo Online Services account. If not, please check the [Nuxeo Download page](https://www.nuxeo.com/downloads/) and create a trial account.
+- Make sure you have a valid Nuxeo Connect token to register your instance. Please check the [Token Management]({{page version='' space='studio' page='token-management'}}) documentation page.
+
+{{#> callout type='info' }}
+These steps are not required if you **only** pull the default Nuxeo Docker image.
+{{/callout}}
+
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='lts2021-docker-prerequesites'}}
+
+In terms of software, the only requirement to run the Nuxeo Docker image is [Docker](https://docs.docker.com/get-docker/) itself: Java, as well as all the external software, are integrated in the Docker image.
+
+{{#> callout type='warning' heading='PRIVATE IMAGE'}}
+You should have access to our private [Docker registry](https://packages.nuxeo.com/#browse/search/docker=attributes.docker.imageName%3Dnuxeo%2Fnuxeo%20AND%20attributes.docker.imageTag%3D2021*%20AND%20repository_name%3Ddocker-private). Contact your Nuxeo Administrator or Nuxeo sales representative to get access to this image.
+{{/callout}}
+
+{{! /multiexcerpt}}
