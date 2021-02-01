@@ -139,6 +139,43 @@ docker run --name nuxeo \
   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 ```
 
+#### NUXEO_DEV
+
+Setting `NUXEO_DEV=true` allows to run the Nuxeo image in development mode, meaning:
+
+1. Enable the following configuration properties, see the [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) page for more details:
+
+  ```properties
+  org.nuxeo.dev=true
+  org.nuxeo.rest.stack.enable=true
+  # for hot reload
+  nuxeo.server.sdk=true
+  nuxeo.server.sdkInstallReloadTimer=true
+  ```
+
+1. Override the default command executed when running a container, allowing to execute some `nuxeoctl` commands inside the container without killing it. This way, you can for instance:
+
+    - Copy some JAR files to the `nxserver/bundles` directory of the server and restart it with `nuxeoctl restart`:
+
+    ```shell
+    docker run --name nuxeo \
+      -p 8080:8080 \
+      -e NUXEO_DEV=true \
+      docker.packages.nuxeo.com/nuxeo/nuxeo
+
+    docker ps
+    CONTAINER ID   IMAGE
+    0eee2751d09d   docker.packages.nuxeo.com/nuxeo/nuxeo
+
+    docker exec 0eee2751d09d nuxeoctl restart
+    ```
+
+    - Register your instance with `nuxeoctl register`.
+    - Use hot reload with the [Nuxeo Dev Tools Extension]({{page page='nuxeo-dev-tools-extension'}}).
+    - Use hot reload with [Nuxeo CLI]({{page page='nuxeo-cli'}}).
+
+1. Activate debugging for the `nuxeoctl mp-install` command run when installing Nuxeo packages with [`NUXEO_PACKAGES`](#nuxeo_packages).
+
 ### Shell Scripts
 
 To run some shell scripts when starting a container from a Nuxeo image, you can add
