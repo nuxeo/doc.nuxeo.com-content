@@ -2,7 +2,7 @@
 title: Setting up Your Nuxeo Environment
 review:
     comment: ''
-    date: '2020-09-15'
+    date: '2021-02-01'
     status: ok
 toc: true
 labels:
@@ -296,35 +296,15 @@ next_link: nxdoc/setting-up-your-javascript-environment
 ---
 {{! excerpt}}
 
-This how-to is the first step of the tutorial Getting Started with the Nuxeo Platform, allowing you to explore the Nuxeo Platform through its REST API. It provides instructions for installing and running a Nuxeo Platform instance using Docker, Homebrew or the ZIP package.
+This how-to is the first step of the tutorial Getting Started with the Nuxeo Platform, allowing you to explore the Nuxeo Platform through its REST API. It provides instructions for installing and running a Nuxeo Platform instance using Docker or the ZIP package.
 
 {{! /excerpt}}
 
 ## Docker
 
-OS: Linux, Mac OS, Windows
-
 ### Installation
 
-1.  Install Docker: Follow the [Docker Installation documentation](https://docs.docker.com/engine/installation/).
-
-2.  Download and start the Nuxeo Platform:
-
-    ```bash
-    $ docker run -ti --name mynuxeo -p 8080:8080 nuxeo/nuxeo:discover-ft
-    ```
-
-3.  Register your Nuxeo instance on Nuxeo Online Services:
-
-    ```
-    # You don't have a Nuxeo Online Service account
-    $ docker exec -ti mynuxeo bin/nuxeoctl register-trial
-    # OR
-    # You already have a Nuxeo Online Service account
-    $ docker exec -ti mynuxeo bin/nuxeoctl register
-    ```
-
-    And follow the instructions displayed.
+Follow the installation steps described in the [Docker installation documentation page]({{page version='' space='nxdoc' page='docker-image#running-the-image'}}).
 
 ### Setting up Environment
 
@@ -332,181 +312,54 @@ You now have a Nuxeo Platform instance ready to run. At this step, you need to i
 
 The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance, that we will leverage all through this tutorial.
 
-1.  Stop the server.
-
-    ```
-    $ docker exec mynuxeo bin/nuxeoctl stop
-    ```
-
-1.  Get the list of local Nuxeo addons.
-
-    ```
-    $ docker exec mynuxeo bin/nuxeoctl mp-list
-    ```
-
-    You get the list of local addons, whose status is downloaded.
-
-1.  Install the addons required for this tutorial.
-
-    ```
-    $ docker exec -ti mynuxeo bin/nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
-    ```
-
-1.  Validate the dependency resolution step.
-
-    ```
-    Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.4.3/nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
-      Packages to download (3):      nuxeo-web-ui:2.4.0, nuxeo-dam:6.4.3, nuxeo-platform-getting-started:1.3.3
-
-    Do you want to continue (yes/no)? [yes]
-    ```
-
-1.  Check the Nuxeo addons were correctly installed.
-
-    ```
-    $ docker exec mynuxeo bin/nuxeoctl mp-list
-    [...]
-    Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
-    ```
-
-    The installed addons now have the status started.
-
-1.  Start the server:
-
-    ```bash
-    $ docker exec mynuxeo bin/nuxeoctl start
-    [...]
-    Server started with process ID 973.
-
-    ```
-
-    Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
-
-The addon brings the following document types:
-{{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Docker documentation](https://docs.docker.com/)
-*   [Nuxeo Docker repository](https://hub.docker.com/_/nuxeo/)
-*   [Our Installation documentation]({{page page='installation'}})
-
+{{#> callout type='warning' heading='PRIVATE IMAGE'}}
+You should contact your Nuxeo Administrator or Nuxeo sales representative to get access to this image.
 {{/callout}}
 
-## Homebrew
-
-OS: Mac OS
-
-### Installation
-
-1.  Install Homebrew: Follow [their documentation](http://brew.sh/).
-2.  Install the Nuxeo Platform:
-
-    ```bash
-    $ brew install nuxeo
-    ```
-
-3.  Register your Nuxeo instance on Nuxeo Online Services:
+1.  Log in docker-private.packages.nuxeo.com
 
     ```
-    # You don't have a Nuxeo Online Service account
-    $ nuxeoctl register-trial
-    # You already have a Nuxeo Online Service account
-    $ nuxeoctl register
+    $ docker login docker-private.packages.nuxeo.com -u <username> -p <token_pass_code>
     ```
 
-    And follow the instructions displayed.
+1. Install the addons required for this tutorial and start Nuxeo in development mode
 
-### Setting up Environment
-
-You now have a Nuxeo Platform instance ready to run. At this step, you need to install some addons, in particular the addon Getting started with the Nuxeo Platform.
-
-The addon Getting started with the Nuxeo Platform will add some business logic and documents to your Nuxeo Platform instance, that we will leverage all through this tutorial.
-
-To install a Nuxeo Package:
-
-1.  Get the list of local Nuxeo addons.
-
-    ```
-    $ nuxeoctl mp-list
-    ```
-
-    You get the list of local addons, whose status is downloaded.
-
-2.  Install the addons required for this tutorial.
-
-    ```
-    $ nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
-    ```
-
-3.  Validate the dependency resolution step.
-
-    ```
-    Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.4.3/nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
-      Packages to download (3):      nuxeo-web-ui:2.4.0, nuxeo-dam:6.4.3, nuxeo-platform-getting-started:1.3.3
-
-    Do you want to continue (yes/no)? [yes]
-    ```
-
-4.  Check the Nuxeo addons were correctly installed.
-
-    ```
-    $ nuxeoctl mp-list
-    [...]
-    Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
-    ```
-
-    The installed addons now have the status started.
-
-5.  Start the server
-
-    ```
-    $ nuxeoctl console
-    ```
-
-    Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
-
-The addon brings the following document types:
-{{{multiexcerpt 'studio_configuration_desc' page='Setting up Your Nuxeo Environment'}}}
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Our Installation documentation]({{page page='installation'}})
-*   [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
-
+{{#> callout type='warning' heading='Dev Mode'}}
+Running Nuxeo in DEV MODE is insecure and not production-ready, and should only be used for local development purposes
 {{/callout}}
 
+  ```
+  $ docker run --name nuxeo \
+    -e NUXEO_CLID="<NUXEO_CLID>" \
+    -e NUXEO_DEV=true \
+    -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-platform-getting-started" \
+    docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+  ```
+
+Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
+
+### Going further with Nuxeo Docker deployment
+
+- If you're not familiar with Docker images and containers, we recommend you to use the [CTOP](https://github.com/bcicen/ctop) utility, which provides a concise and condensed overview of real-time metrics for multiple containers, with the ability to start, stop, delete, view logs for each container.
+- It is recommended to use Docker Compose to run Nuxeo with Docker: you can find an example in this [Nuxeo Sandbox GitHub repository](https://github.com/nuxeo-sandbox/nuxeo-presales-docker).
+- You can easily customize the Nuxeo Docker Image by building a Docker image from the Nuxeo one: read the [Build a Custom Docker Image]({{page version='cloud' space='nxdoc' page='build-a-custom-docker-image'}}) documentation page.
 
 ## Universal ZIP Package
 
-OS: Linux, Mac OS, Windows
+Contrarily to the Docker image, the universal ZIP package comes without the related software needed for this tutorial. Please [install and set up related software]({{page page='installing-and-setting-up-related-software'}}) before going to the next step.
 
-Contrarily to the Brew installation or Docker image, the universal ZIP package comes without the related software needed for this tutorial. Please [install and set up related software]({{page page='installing-and-setting-up-related-software'}}) before going to the next step.
+{{{multiexcerpt 'lts2021-general-prerequesites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ### Installation
 
-1.  Unzip the [Nuxeo Platform .zip](http://www.nuxeo.com/downloads/).
+1.  Unzip the ZIP distribution from [Nuxeo Connect Distribution section](https://connect.nuxeo.com/nuxeo/site/connect/distributions).
 2.  Register your Nuxeo instance on Nuxeo Online Services:
 
     ```
     # Linux and Mac OS
-    # You don't have a Nuxeo Online Service account
-    $ ./$NUXEO_HOME/bin/nuxeoctl register-trial
-    # You already have a Nuxeo Online Service account
     $ ./$NUXEO_HOME/bin/nuxeoctl register
 
     # Windows
-    # You don't have a Nuxeo Online Service account
-    $ .\$NUXEO_HOME\bin\nuxeoctl.bat register-trial
-    # You already have a Nuxeo Online Service account
     $ .\$NUXEO_HOME\bin\nuxeoctl.bat register
     ```
 
@@ -536,18 +389,18 @@ To install a Nuxeo Package:
 
     ```
     # Linux and Mac OS
-    $ ./nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
+    $ ./nuxeoctl mp-install nuxeo-web-ui nuxeo-platform-getting-started
 
     # Windows
-    $ .\nuxeoctl.bat mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
+    $ .\nuxeoctl.bat mp-install nuxeo-web-ui nuxeo-platform-getting-started
     ```
 
 3.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.4.3/nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
-      Packages to download (3):      nuxeo-web-ui:2.4.0, nuxeo-dam:6.4.3, nuxeo-platform-getting-started:1.3.3
+      Installation order (2):        nuxeo-web-ui-3.0.2/nuxeo-platform-getting-started-2021.0.0
+      Packages to download (2):      nuxeo-web-ui:3.0.2, nuxeo-platform-getting-started:2021.0.0
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -559,17 +412,15 @@ To install a Nuxeo Package:
     $ ./nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
+       addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-2021.0.0)
+       addon     started	nuxeo-web-ui (id: nuxeo-web-ui-3.0.2)
 
     # Windows
     $ .\nuxeoctl.bat mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
-     addon     started  nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
+       addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-2021.0.0)
+       addon     started	nuxeo-web-ui (id: nuxeo-web-ui-3.0.2)
     ```
 
     The installed addons now have the status 'started'.
@@ -578,13 +429,15 @@ To install a Nuxeo Package:
 
     ```
     # Linux and Mac OS
-    $ ./nuxeoctl console
+    $ ./nuxeoctl start
 
     # Windows
-    $ .\nuxeoctl.bat console
+    $ .\nuxeoctl.bat start
     ```
 
     Your server is now running with the addon Getting started with the Nuxeo Platform.
+
+## Content of the Getting Started Addon
 
 The addon brings the following document types:
 {{! multiexcerpt name='studio_configuration_desc'}}
