@@ -109,6 +109,10 @@ Copying and moving documents requires to have at least **Read** permission on th
 
 Once documents have been copied or moved using the clipboard, please note that they have their own working logic. Applying tags, versions, comments, etc., on a copied document is done on the working document itself. It is not shared between the source and target document.
 
+{{#> callout type='note'}}
+We recommend ~500 files in copy and ~1000 files in move, to be sure that the operation is optimal and takes less than a minute.
+{{/callout}}
+
 ## Managing Attachments
 
 ![]({{file name='replace.png'}} ?w=300,border=true)
