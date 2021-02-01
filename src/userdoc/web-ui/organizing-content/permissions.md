@@ -27,7 +27,6 @@ tree_item_index: 400
 <ul>
 <li>Consult content</li>
 <li>Comment documents</li>
-<li>Tag documents</li>
 <li>Collect content</li>
 <li>Follow content</li>
 </ul>
@@ -36,7 +35,6 @@ tree_item_index: 400
 <ul>
 <li>Consult content</li>
 <li>Comment documents</li>
-<li>Tag documents</li>
 <li>Follow content</li>
 </ul>
 </td>
@@ -47,6 +45,7 @@ tree_item_index: 400
 <ul>
 <li>Create documents</li>
 <li>Edit documents</li>
+<li>Tag documents</li>
 <li>Add / remove relations</li>
 <li>Start a workflow</li>
 <li>Delete documents</li>
@@ -56,6 +55,7 @@ tree_item_index: 400
 <td colspan="1">
 <ul>
 <li>Create sections</li>
+<li>Tag documents</li>
 <li>Unpublish documents</li>
 <li>Delete sub-sections</li>
 <li>+ Read actions</li>
