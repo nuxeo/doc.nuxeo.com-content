@@ -94,6 +94,12 @@ When upgrading your target platform in Studio, Studio will take care of generati
 
 {{! /excerpt}}
 
+## Upgrading to LTS 2021 or 11.x
+
+{{{multiexcerpt 'studio-lts2021-addons-upgrade-spreadsheet' space='nxdoc' page='web-ui-11-1-upgrade-notes'}}}
+
+{{{multiexcerpt 'studio-lts2021-addons-upgrade-dam' space='nxdoc' page='web-ui-11-1-upgrade-notes'}}}
+
 ## Upgrading to LTS 2015 and LTS 2016
 
 Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the content views, layouts, tabs and search customizations to be available.
@@ -167,5 +173,3 @@ If you want to keep your content views available in a DAM dedicated main tab:
 Since [NXP-11845](https://jira.nuxeo.com/browse/NXP-11845), the default content view presenting ordering actions only presents actions with category&nbsp;`ORDERABLE_CURRENT_SELECTION_LIST` (labeled "Orderable Document List Toolbar" in Studio). It previously presented also actions available to non-orderable content views,&nbsp;`CURRENT_SELECTION_LIST` (labeled "Document List Toolbar" in Studio).
 
 When upgrading to 5.8 or higher, Studio User Actions using this category will need to be duplicated to use the "Orderable Document List Toolbar" category so that actions are still available on the default content view `orderable_document_content`.
-
-&nbsp;
