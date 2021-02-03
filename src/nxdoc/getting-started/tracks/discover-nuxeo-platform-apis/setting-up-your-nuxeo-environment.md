@@ -292,19 +292,18 @@ history:
         message: ''
         version: '1'
 next_link: nxdoc/setting-up-your-javascript-environment
-
 ---
+
 {{! excerpt}}
-
-This how-to is the first step of the tutorial Getting Started with the Nuxeo Platform, allowing you to explore the Nuxeo Platform through its REST API. It provides instructions for installing and running a Nuxeo Platform instance using Docker or the ZIP package.
-
+This how-to is the first step of the tutorial Getting Started with the Nuxeo Platform, allowing you to explore the Nuxeo Platform through its REST API.</br>
+It provides instructions for installing and running a Nuxeo Platform instance using Docker or the ZIP package.
 {{! /excerpt}}
 
 ## Docker
 
 ### Installation
 
-Follow the installation steps described in the [Docker installation documentation page]({{page version='' space='nxdoc' page='docker-image#running-the-image'}}).
+Follow the installation steps described in the [Docker installation documentation page]({{page version='' space='nxdoc' page='docker-image'}}#running-the-image).
 
 ### Setting up Environment
 
@@ -316,39 +315,38 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 You should contact your Nuxeo Administrator or Nuxeo sales representative to get access to this image.
 {{/callout}}
 
-1.  Log in docker-private.packages.nuxeo.com
+1.  Log into `docker-private.packages.nuxeo.com`:
 
     ```
     $ docker login docker-private.packages.nuxeo.com -u <username> -p <token_pass_code>
     ```
 
-1. Install the addons required for this tutorial and start Nuxeo in development mode
+1. Install the addons required for this tutorial and start Nuxeo in development mode:
+  {{#> callout type='warning' heading='Dev Mode'}}
+  Running Nuxeo in DEV MODE is insecure and not production-ready, and should only be used for local development purposes.
+  {{/callout}}
 
-{{#> callout type='warning' heading='Dev Mode'}}
-Running Nuxeo in DEV MODE is insecure and not production-ready, and should only be used for local development purposes
-{{/callout}}
+    ```
+    $ docker run --name nuxeo \
+      -e NUXEO_CLID="<NUXEO_CLID>" \
+      -e NUXEO_DEV=true \
+      -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-platform-getting-started" \
+      docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+    ```
 
-  ```
-  $ docker run --name nuxeo \
-    -e NUXEO_CLID="<NUXEO_CLID>" \
-    -e NUXEO_DEV=true \
-    -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-platform-getting-started" \
-    docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
-  ```
-
-Your server is now running. You benefit from the following features brought by the addon Getting started with the Nuxeo Platform.
+Your server is now running. You benefit from the [features](#content-of-the-getting-started-addon) brought by the addon Getting started with the Nuxeo Platform.
 
 ### Going further with Nuxeo Docker deployment
 
-- If you're not familiar with Docker images and containers, we recommend you to use the [CTOP](https://github.com/bcicen/ctop) utility, which provides a concise and condensed overview of real-time metrics for multiple containers, with the ability to start, stop, delete, view logs for each container.
-- It is recommended to use Docker Compose to run Nuxeo with Docker: you can find an example in this [Nuxeo Sandbox GitHub repository](https://github.com/nuxeo-sandbox/nuxeo-presales-docker).
+- If you're not familiar with Docker images and containers, we recommend you to use the [CTOP](https://github.com/bcicen/ctop) utility, which provides a concise and condensed overview of real-time metrics for multiple containers, with the ability to start, stop, delete and view logs for each container.
+- It is recommended to use Docker Compose to run Nuxeo with Docker: you can find an example in the [Nuxeo Sandbox GitHub repository](https://github.com/nuxeo-sandbox/nuxeo-presales-docker).
 - You can easily customize the Nuxeo Docker Image by building a Docker image from the Nuxeo one: read the [Build a Custom Docker Image]({{page version='cloud' space='nxdoc' page='build-a-custom-docker-image'}}) documentation page.
 
 ## Universal ZIP Package
 
 Contrarily to the Docker image, the universal ZIP package comes without the related software needed for this tutorial. Please [install and set up related software]({{page page='installing-and-setting-up-related-software'}}) before going to the next step.
 
-{{{multiexcerpt 'lts2021-general-prerequesites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2021-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ### Installation
 
@@ -356,7 +354,7 @@ Contrarily to the Docker image, the universal ZIP package comes without the rela
 2.  Register your Nuxeo instance on Nuxeo Online Services:
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     $ ./$NUXEO_HOME/bin/nuxeoctl register
 
     # Windows
@@ -376,7 +374,7 @@ To install a Nuxeo Package:
 1.  Get the list of local Nuxeo addons.
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     $ ./nuxeoctl mp-list
 
     # Windows
@@ -388,7 +386,7 @@ To install a Nuxeo Package:
 2.  Install the addons required for this tutorial.
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     $ ./nuxeoctl mp-install nuxeo-web-ui nuxeo-platform-getting-started
 
     # Windows
@@ -408,7 +406,7 @@ To install a Nuxeo Package:
 4.  Check that the Nuxeo addons were correctly installed.
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     $ ./nuxeoctl mp-list
     [...]
     Local packages:
@@ -428,7 +426,7 @@ To install a Nuxeo Package:
 5.  Start the server.
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     $ ./nuxeoctl start
 
     # Windows
@@ -439,7 +437,7 @@ To install a Nuxeo Package:
 
 ## Content of the Getting Started Addon
 
-The addon brings the following document types:
+Once installed, the addon brings the following document types:
 {{! multiexcerpt name='studio_configuration_desc'}}
 - The portfolio document type (`BCPortfolio`) holds the contracts of a customer. Its holds properties about the customer: the company name, industry and size, and the customer's juridical contact information.
 - The contract document type (`BCContract`) have several properties: an owner (an application user), some dates (signature, start, expiration dates), a type, an amount. It inherits customer information from its portfolio.
@@ -448,8 +446,6 @@ The addon brings the following document types:
 - Some business logic through automation chains and event handlers make contracts inherit properties from its portfolio, and evolve following its lifecycle{{! /multiexcerpt}}
 
 {{#> callout type='info' heading='Learn more'}}
-
-- [Our Installation documentation]({{page page='installation'}})
+- [Installation documentation]({{page page='installation'}})
 - [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
-
 {{/callout}}
