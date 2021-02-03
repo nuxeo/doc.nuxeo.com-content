@@ -22,7 +22,7 @@ This addon allows you to edit data in your repository as if you were in a spread
 
 ![]({{file name='spreadsheet-view.png' page='nuxeo-spreadsheet'}} ?w=450,border=true)
 
-Read the [Nuxeo Spreadsheet documentation]({{page version='' space='nxdoc' page='nuxeo-spreadsheet'}}) for more information.
+Read the [Nuxeo Spreadsheet documentation]({{page space='nxdoc' page='nuxeo-spreadsheet'}}) for more information.
 
 ## Versioning
 
@@ -37,7 +37,7 @@ Each version has:
 
 The versioning service is configurable so you can define the numbering policy.
 
-For more information about the versioning system of Nuxeo Platform, read the [Versioning documentation]({{page version='' space='nxdoc' page='versioning'}}).
+For more information about the versioning system of Nuxeo Platform, read the [Versioning documentation]({{page space='nxdoc' page='versioning'}}).
 
 ## Archive Assets
 
@@ -45,7 +45,7 @@ At any time you can decide to archive a version of your document. The History ta
 
 All users can consult the previous versions of a document.
 
-Read the [Versioning documentation]({{page version='' space='nxdoc' page='versioning'}}) for more information.
+Read the [Versioning documentation]({{page space='nxdoc' page='versioning'}}) for more information.
 
 ## Workflows
 
@@ -65,11 +65,11 @@ Let's take a fictive creative review and approval process:
 
 ![Rainier creative review approval](nx_asset://20b0dc36-d5d0-4cb3-8ad8-75292af0162a ?border=true)
 
-1. Josh is a photographer, and is an external user engaged for a photoshoot to get images for the campaign. He uploads his pictures into Dropbox. Then, Nuxeo Platform automatically indexes them – without moving the images themselves – and adds tags automatically using [Nuxeo Vision]({{page version='' space='nxdoc' page='nuxeo-vision'}}).
+1. Josh is a photographer, and is an external user engaged for a photoshoot to get images for the campaign. He uploads his pictures into Dropbox. Then, Nuxeo Platform automatically indexes them – without moving the images themselves – and adds tags automatically using [Nuxeo Vision]({{page space='nxdoc' page='nuxeo-vision'}}).
 
 1. For the Nuxeo Web UI search, Alice finds the assets she's looking for in the system, picks the shots she likes best, and shares them with the creative team to turn into ads.
 
-1. Bob's been assigned to work on the project, and he gets to work in his favorite tool, Photoshop. He can access the Nuxeo Platform from right within his Adobe Creative applications to create the ads with the [Nuxeo Adobe CC Conector]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}}), and even send them for review without ever leaving his desktop.
+1. Bob's been assigned to work on the project, and he gets to work in his favorite tool, Photoshop. He can access the Nuxeo Platform from right within his Adobe Creative applications to create the ads with the [Nuxeo Adobe CC Conector]({{page space='nxdoc' page='nuxeo-for-adobe-cc'}}), and even send them for review without ever leaving his desktop.
 
 1. His Art Director, Lisa, reviews and annotates content and can send it back to Bob, but once she's satisfied, she can mark it as creative approved.
 
