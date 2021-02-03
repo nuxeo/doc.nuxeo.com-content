@@ -2,7 +2,7 @@
 title: How to Estimate Volume Usage
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2021-02-03'
     status: ok
 details:
     howto:
@@ -11,12 +11,11 @@ details:
         tool: ''
         topics: Database
 labels:
-    - lts2016-ok
+    - lts2021-ok
     - database
     - kleturc
     - howto
     - excerpt
-    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
