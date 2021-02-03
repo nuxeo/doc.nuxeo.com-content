@@ -99,7 +99,7 @@ docker run --name nuxeo \
 
 #### NUXEO_CLID
 
-The value of `NUXEO_CLID` is copied to `/var/lib/nuxeo/instance.clid` at startup. Please check the [Registering your Nuxeo Instance]({{page version='' space='nxdoc' page='registering-your-nuxeo-instance#registering-offline-using-nuxeoctl'}}) documentation page to create a valid CLID.
+The value of `NUXEO_CLID` is copied to `/var/lib/nuxeo/instance.clid` at startup. Please check the [Registering your Nuxeo Instance]({{page version='' space='nxdoc' page='registering-your-nuxeo-instance'}}#registering-offline-using-nuxeoctl) documentation page to create a valid CLID.
 
 For instance, to run a container with a registered Nuxeo instance:
 
