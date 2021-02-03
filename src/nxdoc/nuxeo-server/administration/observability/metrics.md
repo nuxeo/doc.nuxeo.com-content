@@ -166,6 +166,7 @@ metrics.graphite.prefix=
 
 Configuration:
 ```
+metrics.enabled=true
 metrics.datadog.enabled=true
 metrics.datadog.pollInterval=60
 metrics.datadog.apiKey=YOUR_API_KEY
@@ -189,6 +190,7 @@ Metrics are polled from Nuxeo and pushed to Datadog using the defined `pollInter
 
 Configuration:
 ```
+metrics.enabled=true
 metrics.prometheus.enabled=true
 metrics.prometheus.port=9090
 ```
@@ -207,6 +209,7 @@ You need to provide a valid GCP project identifier.
 
 Configuration:
 ```
+metrics.enabled=true
 metrics.stackdriver.enabled=true
 metrics.stackdriver.gcpProjectId=MY-GCP-PROJECT-ID
 ```
@@ -265,12 +268,12 @@ This filter can be found in `common-base` template in the [metrics-config.xml](h
           <prefix>org.apache.logging.log4j.core.Appender.trace</prefix>
           <prefix>org.nuxeo.ecm.core.management.standby.StandbyComponent</prefix>
           <!-- Timer expansion to remove -->
-          <expansion>sum</expansion>
+          <expansion>stddev</expansion>
+          <expansion>p75</expansion>
+          <expansion>p98</expansion>
           <expansion>p999</expansion>
-          <expansion>p99</expansion>
-          <expansion>p95</expansion>
-          <expansion>m15_rate</expansion>
           <expansion>m5_rate</expansion>
+          <expansion>m15_rate</expansion>
           <expansion>mean_rate</expansion>
         </deny>
       </filter>
