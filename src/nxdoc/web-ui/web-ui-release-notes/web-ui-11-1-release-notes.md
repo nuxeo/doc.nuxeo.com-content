@@ -15,7 +15,7 @@ hidden: true
 
 {{! multiexcerpt name='matching-notes'}}
 {{#> callout type='info' heading='Upgrade Notes'}}
-This page mentions what's new. Refer to the [upgrade notes]({{page page='nxdoc/next/web-ui-11-1-upgrade-notes'}}) to transition to this version.
+This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-upgrade-notes'}}) to transition to this version.
 {{/callout}}
 {{! /multiexcerpt}}
 
