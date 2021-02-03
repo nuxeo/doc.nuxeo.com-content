@@ -13,7 +13,7 @@ tree_item_index: 275
 
 ## Requirements
 
-{{{multiexcerpt 'lts2021-general-prerequesites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2021-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ## General Installation Process
 

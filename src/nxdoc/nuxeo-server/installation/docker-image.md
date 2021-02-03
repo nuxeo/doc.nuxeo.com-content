@@ -17,7 +17,7 @@ This page explains how to install the Nuxeo server with the base Nuxeo Docker im
 
 ## Requirements
 
-{{{multiexcerpt 'lts2021-docker-prerequesites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2021-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ## What's in the Nuxeo Image
 

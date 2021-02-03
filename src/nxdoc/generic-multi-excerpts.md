@@ -143,7 +143,7 @@ Please refer to the [Web UI documentation](https://doc.nuxeo.com/nxdoc/web-ui/).
 {{/callout}}
 {{! /multiexcerpt}}
 
-{{! multiexcerpt name='lts2021-general-prerequesites'}}
+{{! multiexcerpt name='lts2021-general-prerequisites'}}
 
 You need to check the following items in order to install Nuxeo Platform LTS 2021:
 - Get a Nuxeo Online Services account. If not, please check the [Nuxeo Download page](https://www.nuxeo.com/downloads/) and create a trial account.
@@ -155,7 +155,7 @@ These steps are not required if you **only** pull the default Nuxeo Docker image
 
 {{! /multiexcerpt}}
 
-{{! multiexcerpt name='lts2021-docker-prerequesites'}}
+{{! multiexcerpt name='lts2021-docker-prerequisites'}}
 
 In terms of software, the only requirement to run the Nuxeo Docker image is [Docker](https://docs.docker.com/get-docker/) itself: Java, as well as all the external software, are integrated in the Docker image.
 
