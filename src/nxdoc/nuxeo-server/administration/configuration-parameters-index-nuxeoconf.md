@@ -1189,7 +1189,7 @@ _Default value:_ `500`
 
 Reindexing option, number of documents to submit to Elasticsearch per bulk command
 
-_Default value:_ `50`
+_Default value:_ `100`
 
 #### `elasticsearch.indexing.maxThreads`
 
@@ -1221,7 +1221,7 @@ _Default value:_ `false`
 
 A timeout in milliseconds until a connection is established
 
-_Default value:_ `5000`
+_Default value:_ `30000`
 
 #### `elasticsearch.restClient.socketTimeoutMs`
 
