@@ -225,7 +225,7 @@ List<DocumentModel> documents = pp.getCurrentPage();
 
 Here you can see that the page provider properties (needed for the query to be executed) and its parameters (needed for the query to be built) cannot be resolved from EL expressions: they need to be given explicitly to the page provider service.
 
-There is also a syntax to reference "named parameters" in the page provider fixed part. This is mostly useful when working with page providers from the [Search Endpoints]({{page page='search-endpoints'}}). You can also find [extensive test cases in the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/nuxeo-platform-query-api/src/test/java/org/nuxeo/ecm/platform/query/core/TestPageProviderNamedParameters.java).
+There is also a syntax to reference "named parameters" in the page provider fixed part. This is mostly useful when working with page providers from the [Search Endpoints]({{page page='search-endpoints'}}). You can also find [extensive test cases in the code](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-query-api/src/test/java/org/nuxeo/ecm/platform/query/core/TestPageProviderNamedParameters.java).
 
 ### Available Parameters
 
