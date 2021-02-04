@@ -14,7 +14,7 @@ toc: true
 
 {{{multiexcerpt name='definition-collection' page='userdoc/collections-web-ui'}}}
 
-![]({{file name='collections-tab-web-ui.png' page='userdoc/collections-web-ui'}} ?w=250,border=true)
+![]({{file name='collections-tab-web-ui.png' version='1010' page='userdoc/collections-web-ui'}} ?w=250,border=true)
 
 A collection can be shared with other users, it means [giving permissions]({{page space='userdoc' page='permissions'}}) to specific users on the collection. Collections created in the default domain in a shared workspace or folder are automatically shared to all the workspace or folder's users, following the [rights inheritance principle]({{page space='userdoc' page='permissions'}}#blocking-rights-inheritance).
 

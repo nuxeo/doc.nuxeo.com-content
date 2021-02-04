@@ -23,7 +23,7 @@ You can use drag and drop to easily import documents into a workspace or just to
 
 You can also drag and drop a file directly in the file view in order to replace the already uploaded file.
 
-![]({{file space='userdoc' name='import-popup-web-ui.png' page='content-create'}} ?w=450,border=true)
+![]({{file space='userdoc' version= '1010' name='import-popup-web-ui.png' page='content-create'}} ?w=450,border=true)
 
 #### Import Button
 
@@ -31,7 +31,7 @@ You can also drag and drop one or more files of any type from the Import tab of 
 
 From this Import button you will be able to import with properties, which means fill in metadata of the document(s) before they are created in the workspace.
 
-![]({{file space='userdoc' name='add-properties-web-ui.png' page='content-create'}} ?w=450,border=true)
+![]({{file space='userdoc' version= '1010' name='add-properties-web-ui.png' page='content-create'}} ?w=450,border=true)
 
 ### From Nuxeo Drive
 
@@ -47,7 +47,7 @@ SCREENSHOT
 
 Nuxeo Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
 
-![]({{file name='LiveConnect-file-creation-webui.png' page='nuxeo-live-connect'}} ?w=450,border=true)
+![]({{file name='LiveConnect-file-creation-webui.png' version= '1010' page='nuxeo-live-connect'}} ?w=450,border=true)
 
 Read the [Nuxeo Live Connect documentation]({{page version='' space='nxdoc' page='nuxeo-live-connect'}}) for more information.
 

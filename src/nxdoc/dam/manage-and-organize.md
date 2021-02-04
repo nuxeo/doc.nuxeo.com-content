@@ -20,7 +20,7 @@ The Nuxeo Spreadsheet addon allows to bulk edit documents starting from a conten
 
 This addon allows you to edit data in your repository as if you were in a spreadsheet-like grid, like copy and paste by dragging the cell's value.
 
-![]({{file name='spreadsheet-view.png' page='nuxeo-spreadsheet'}} ?w=450,border=true)
+![]({{file name='spreadsheet-view.png' version= '1010' page='nuxeo-spreadsheet'}} ?w=450,border=true)
 
 Read the [Nuxeo Spreadsheet documentation]({{page space='nxdoc' page='nuxeo-spreadsheet'}}) for more information.
 
