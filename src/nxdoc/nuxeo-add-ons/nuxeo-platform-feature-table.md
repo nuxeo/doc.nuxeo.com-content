@@ -248,7 +248,7 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td colspan="1">Audio</td>
-    <td colspan="1">[Nuxeo DAM](http://www.nuxeo.com/solutions/digital-asset-management/)</td>
+    <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td>
