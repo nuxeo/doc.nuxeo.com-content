@@ -36,7 +36,7 @@ Once assets documents created, a new search type is displayed in the left menu, 
 
 Quick search can be accessed from any site page. At any time, you can search a document by typing keywords in the search box located at the upper right corner of the page.
 
-![]({{file name='quick-search-web-ui.png' version='1010' page='userdoc/search'}} ?w=600,border=true)
+![]({{file name='quick-search-web-ui.png' version='1010' space='userdoc' page='search'}} ?w=600,border=true)
 
 When doing a quick search in the suggestion box, Web UI displays the matched terms and metadata so as to understand why the result item is returned.
 
