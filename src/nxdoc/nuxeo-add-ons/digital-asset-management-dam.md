@@ -297,6 +297,8 @@ history:
         version: '1'
 ---
 
+{{{multiexcerpt 'addon-default-distribution' version='cloud' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 [The Digital Asset Management addon](http://www.nuxeo.com/en/products/dam) of the Nuxeo Platform provides multimedia files management (pictures, audio and video).
 {{! /excerpt}}

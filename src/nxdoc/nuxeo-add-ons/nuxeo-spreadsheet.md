@@ -112,6 +112,8 @@ history:
         version: '1'
 ---
 
+{{{multiexcerpt 'addon-default-distribution' version='cloud' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 The Nuxeo Spreadsheet addon allows to bulk edit documents starting from a content view result set, providing a spreadsheet-like user experience.
 {{! /excerpt}}
