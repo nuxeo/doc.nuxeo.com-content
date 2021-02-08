@@ -164,3 +164,9 @@ You should have access to our private [Docker registry](https://packages.nuxeo.c
 {{/callout}}
 
 {{! /multiexcerpt}}
+
+{{! multiexcerpt name='addon-default-distribution'}}
+{{#> callout type='warning' }}
+Starting from Nuxeo Platform LTS 2021, this addon is integrated by default in the distribution.
+{{/callout}}
+{{! /multiexcerpt}}
