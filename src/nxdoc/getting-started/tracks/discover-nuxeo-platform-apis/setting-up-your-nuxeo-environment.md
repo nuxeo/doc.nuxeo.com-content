@@ -330,6 +330,7 @@ You should contact your Nuxeo Administrator or Nuxeo sales representative to get
     $ docker run --name nuxeo \
       -e NUXEO_CLID="<NUXEO_CLID>" \
       -e NUXEO_DEV=true \
+      -p 8080:8080 \
       -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-platform-getting-started" \
       docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
     ```
