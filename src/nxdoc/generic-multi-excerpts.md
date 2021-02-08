@@ -142,3 +142,9 @@ This requires to have the JSF UI addon installed on your server that is deprecat
 Please refer to the [Web UI documentation](https://doc.nuxeo.com/nxdoc/web-ui/).
 {{/callout}}
 {{! /multiexcerpt}}
+
+{{! multiexcerpt name='addon-default-distribution'}}
+{{#> callout type='warning' }}
+Starting from Nuxeo Platform LTS 2021, this addon is integrated by default in the distribution.
+{{/callout}}
+{{! /multiexcerpt}}
