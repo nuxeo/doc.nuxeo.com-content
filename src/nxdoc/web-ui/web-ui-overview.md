@@ -110,23 +110,17 @@ It leverages the web as a platform and allows enhanced productivity with direct 
 <div class="row">
 <div class="column medium-4" align="center">
 {{#> panel type='primary'}}
-
 [Polymer Guide]({{page page='polymer-guide'}})
-
 {{/panel}}
 </div>
 <div class="column medium-4" align="center">
 {{#> panel type='primary'}}
-
 [Nuxeo Elements]({{page page='nuxeo-elements'}})
-
 {{/panel}}
 </div>
 <div class="column medium-4" align="center">
 {{#> panel type='primary'}}
-
 [Customization]({{page page='web-ui-customization'}})
-
 {{/panel}}
 </div>
 </div>
@@ -144,9 +138,7 @@ Watch the related courses on Nuxeo University:</br>
 Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard Web Components and Google Polymer 3.0 framework. The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
 
 {{#> callout type='warning' heading='Polymer 2.0 legacy mode'}}
-
 Since previous versions of Nuxeo Web UI relied on Polymer 1 and 2, we keep compatibility with their APIs. [You can check the upgrade notes here]({{page version='' space='nxdoc' page='web-ui-upgrade-notes'}}).
-
 {{/callout}}
 
 The following browsers are supported:
