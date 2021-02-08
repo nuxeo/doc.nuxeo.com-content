@@ -89,6 +89,6 @@ On Windows, after applying a filter on a synchronized subfolder, it wasn't possi
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.1-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.1.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.1.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.5.1-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.5.1.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.5.1.exe)
