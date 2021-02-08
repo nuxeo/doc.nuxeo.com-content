@@ -17,7 +17,12 @@ tree_item_index: 100
 
 Creating a document using the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30) enables you to select the type of document you want to create among all Nuxeo Platform's document types.
 
-![]({{file name='creation-popup-web-ui.png'}} ?w=450,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Creating and importing content/creation-popup-web-ui.png
+    name: creation-popup-web-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![creation-popup-web-ui.png](nx_asset://aa45f688-decc-43aa-88ec-2211b982b6ad ?w=450,border=true)
 
 To create a document using the **Create** button:
 1. Click on the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30).
