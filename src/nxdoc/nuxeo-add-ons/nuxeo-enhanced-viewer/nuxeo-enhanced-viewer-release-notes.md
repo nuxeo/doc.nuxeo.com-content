@@ -37,7 +37,7 @@ toc: true
 </div>
 
 In a nutshell, this new version includes the following changes:
- - Several optimisations on how files are streamed, renditions performances, scalability, monitoring, logs
+ - Several optimisations on how files are streamed, renditions performances, scalability
  - UX improvements on the sticky notes, arrows, and annotation left section
  - “Download with FDF annotations” feature is enabled by default (annotations are seen as Adobe annotations when viewing the document in Adobe Reader)
  - Sound can now be turned off when annotating a video
