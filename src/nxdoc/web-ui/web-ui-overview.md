@@ -3,7 +3,7 @@ title: Web UI Overview
 description: 'Nuxeo Web UI is a standard web application for Nuxeo Server, built upon a framework of Web components, that connects via HTTP and displays the platform features to users.'
 review:
     comment: ''
-    date: '2019-07-19'
+    date: '2021-01-24'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,6 @@ labels:
     - nsilva
     - polymer
     - lts2017-ok
-    - lts2019-ok
     - university
 toc: true
 tree_item_index: 100
@@ -106,7 +105,7 @@ version_override:
 
 ![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
 
-It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full-screen suggester and several other features built to provide a rich user experience. Here are the most important topics on getting started with Web UI, customizing it and building new web apps using Nuxeo Elements:
+It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester and several other features built to provide a rich user experience. Here are the most important topics on getting started with Web UI, customizing it and building new web apps using Nuxeo Elements:
 
 <div class="row">
 <div class="column medium-4" align="center">
@@ -128,19 +127,18 @@ It leverages the web as a platform and allows enhanced productivity with direct 
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
-[Course on the Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/76/nuxeo-web-ui-stack-introduction).</br>
-[Course to Start with Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui).
+[Course on the Web UI Stack](https://university.nuxeo.com/learn/course/164/web-ui-development).</br>
+[Course to Start with Web UI](https://university.nuxeo.com/learn/course/156/IntroductiontoWebComponentsandPolymer).
 ![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Requirements
 
 {{! multiexcerpt name='webui-requirements'}}
-Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard Web Components and Google Polymer 2.0 framework (legacy mode). The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
+Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard Web Components and Google Polymer 3.0 framework. The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
 
 {{#> callout type='warning' heading='Polymer 2.0 legacy mode'}}
-Previous versions of Nuxeo Web UI (1.x) relied on Polymer 1 so for compatibility reasons and to ensure a simple incremental upgrade the current version of Nuxeo Web UI is running
-Polymer 2 in legacy mode thus using the Polymer factory method, not the ES6 class-based syntax. Most of the 1.0 APIs are thus still available, as are any new 2.x APIs.
+Since previous versions of Nuxeo Web UI relied on Polymer 1 and 2, we keep compatibility with their APIs. [You can check the upgrade notes here]({{page version='' space='nxdoc' page='web-ui-upgrade-notes'}}).
 {{/callout}}
 
 The following browsers are supported:
@@ -153,17 +151,17 @@ The following browsers are supported:
 - Chrome Android
 {{! /multiexcerpt}}
 
-Edge, Firefox, and Chrome are called “evergreen browsers”: they are automatically updated at a high pace. The UI code of the version of Nuxeo relies on Polymer 2, supported by Google on those evergreen browsers. Nuxeo guarantees to support Web UI and fix bugs caused by misuse of the Polymer 2 framework.  Nuxeo cannot guarantee to provide fixes for bugs inherent to the underlying Polymer 2 framework, especially when those bugs will happen with future versions of the above-mentioned browsers.
-Nevertheless, Nuxeo is committed to using the latest supported version of the Polymer 2.X framework, provided by Google to the community, when it helps fixing bugs, especially against evergreen browsers.
+Edge, Firefox, and Chrome are called “evergreen browsers”: they are automatically updated at a high pace. The UI code of the version of Nuxeo relies on Polymer 3, supported by Google on those evergreen browsers. Nuxeo guarantees to support Web UI and fix bugs caused by misuse of the Polymer 3 framework.  Nuxeo cannot guarantee to provide fixes for bugs inherent to the underlying Polymer 3 framework, especially when those bugs will happen with future versions of the above-mentioned browsers.
+Nevertheless, Nuxeo is committed to using the latest supported version of the Polymer 3.X framework, provided by Google to the community, when it helps fixing bugs, especially against evergreen browsers.
 {{! /multiexcerpt}}
 
-When developing using Nuxeo Web UI, make sure to set up your development environment according to the requirements described in the [Nuxeo Web UI repository](https://github.com/nuxeo/nuxeo-web-ui/blob/maintenance-3.0.x/README.md#install-dependencies).
+When developing using Nuxeo Web UI, make sure to set up your development environment according to the requirements described in the [Nuxeo Web UI repository](https://github.com/nuxeo/nuxeo-web-ui/blob/master/README.md#install-dependencies).
 
-{{{multiexcerpt 'webui-functional-overview' space='userdoc' page='web-ui'}}}
+{{{multiexcerpt 'webui-functional-overview' page='userdoc/cloud/web-ui'}}}
 
 ## Technical Overview
 
-Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application. With Nuxeo Web UI we wanted to review our approach, make it simpler so anyone familiar with web development couple easily customize it or even just take is as an example of what can be achieved and build their own.
+Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application. With Nuxeo Web UI we wanted to review our approach, make it simpler so anyone familiar with web development could easily customize it or even just take is as an example of what can be achieved and build their own.
 Hence the shift from a highly configurable and pluggable UI to a more modular and composable one.
 
 With the introduction of **Web Components**, browsers now offer a well-defined high performance component model out of the box and has a familiar API. By leveraging DOM as the framework and extending HTML with our own custom tags we can empower web developers to use the tools and frameworks they are already familiar with to build rich web applications.
@@ -227,7 +225,7 @@ Our Web UI is built itself with Polymer too. Goals were to not only ensure the s
 
 ### Web UI elements
 
-Everything in the web UI is built as a custom element with `<nuxeo-app>` as top level component. This application element acts as application data store / mediator storing context data as properties which are then forwarded through the hierarchy thanks to data binding. To learn more about data binding and its relation to the mediator pattern you can read the [article](http://www.nuxeo.com/blog/polymer-questions-to-bind-or-not-to-bind/) on our "[Polymer](http://www.nuxeo.com/blog/tag/polymer/)" series.
+Everything in the web UI is built as a custom element with `<nuxeo-app>` as top level component. This application element acts as application data store / mediator storing context data as properties which are then forwarded through the hierarchy thanks to data binding. To learn more about data binding and its relation to the mediator pattern you can read this [article](http://www.nuxeo.com/blog/polymer-questions-to-bind-or-not-to-bind/).
 
 `<nuxeo-app>` relies on our data elements (`<nuxeo-document>`, `<nuxeo-resource>`, etc..) to fetch application wide data and it is in charge of refreshing this data when changes are made. We are not relying on two way binding in order to keep the data flux manageable thus parent elements act as data stores and children fire events to notify of changes causing data to be refreshed and then propagated down through the DOM tree. Alternative would be to rely on a custom event / action system like many framework do but, although this would avoid the cost inherent to event bubbling, it would make our elements dependent on the the existence of such as bus and introducing framework lock-in.
 
@@ -235,13 +233,14 @@ Everything in the web UI is built as a custom element with `<nuxeo-app>` as top 
 
 The drawer's content is managed by `<iron-pages>` which toggles between its children depending on current selection in the left icon menu of the UI.
 
-The main area is reserved for displaying the current page's content. Our router relies on [page.js](https://visionmedia.github.io/page.js/) and is in charge of parsing the URL and setting the current page and context data in `<nuxeo-app>` accordingly.
+The main area is reserved for displaying the current page's content. Our router relies on [Nuxeo Router Behavior]({{page version='' space='nxdoc' page='web-ui-routing'}}) and it is in charge of parsing the URL and setting the current page and context data in `<nuxeo-app>` accordingly.
 
 ![]({{file name='Web UI search page.png'}} ?w=959,h=614,border=true)
 
-## Section 508 Compliance (VPAT)
+## Accessibility
+
+Nuxeo is committed to making Web UI accessible and keeping a high level of quality on that front. Our target is the WCAG standard level AA. Our current level of support for accessibility is controlled regularly, and we publish the results using the standard section 508 Compliance (VPAT) document. Its latest iteration can be found below.
 
 - **Date**: February, 2020
 - **Product**: Nuxeo Web UI
-
-The Voluntary Product Accessibility Template for Web UI is available [here]({{file name='Nuxeo Web UI-VPAT 2020.pdf'}}).
+- **Link**: [Voluntary Product Accessibility Template for Web UI]({{file name='Nuxeo Web UI-VPAT 2020.pdf'}}).
