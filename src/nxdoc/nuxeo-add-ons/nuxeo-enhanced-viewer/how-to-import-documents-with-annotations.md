@@ -23,7 +23,9 @@ The recommendation is to use the Nuxeo REST API to create annotation object and 
 
 All the annotations displayed on ARender are stored on Nuxeo as Annotations objects (cf. https://doc.nuxeo.com/nxdoc/comments/).
 
-The Nuxeo annotation object includes several datas as the origin of the annotation. The main part is the “entity” one which includes the annotation content (annotation type, text, position in the document, color,…) in the ARender format. You can find an example of ARender annotation expected format [here](https://nuxeowiki.atlassian.net/wiki/spaces/PROD/pages/1904967934/How+to+import+documents+with+NEV+annotations#Annotations-samples).
+The Nuxeo annotation object includes several datas as the origin of the annotation. The main part is the “entity” one which includes the annotation content (annotation type, text, position in the document, color,…) in the ARender format. 
+
+You can find an example of ARender annotation expected format below in this page.
 
 Below an example of the Nuxeo annotations for a document with 3 ARender annotations:
 ```
