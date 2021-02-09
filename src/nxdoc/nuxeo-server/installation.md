@@ -2,7 +2,7 @@
 title: Installation
 review:
   comment: ''
-  date: '2021-01-11'
+  date: '2021-01-29'
   status: ok
 labels:
   - lts2016-ok
@@ -29,10 +29,20 @@ version_override:
   '6.0': 60/admindoc/installation
   '5.8': 58/admindoc/installation
 ---
+{{! excerpt}}
+Nuxeo Platform LTS 2021 can be deployed with the **Nuxeo Docker image** (recommended) or using the **ZIP distribution**. It can be installed on all major operating system such as Windows (client or server), Linux distributions, macOS, etc.
+{{! /excerpt}}
 
-## Nuxeo Docker Image
+- [Install Nuxeo with the Docker Image]({{page version='' space='nxdoc' page='docker-image'}})
+- [Install Nuxeo with the ZIP distribution]({{page version='' space='nxdoc' page='tomcat-server-zip'}})
 
-The [Nuxeo Platform](https://www.nuxeo.com/) can be installed on many operating systems by running the Nuxeo [Docker image]({{page page='docker-image'}}).
+{{{multiexcerpt 'lts2021-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+
+## Why using the Nuxeo Docker Image?
+
+{{{multiexcerpt 'lts2021-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+
+The [Nuxeo Platform](https://www.nuxeo.com/content-services-platform/) can be installed on many operating systems by running the Nuxeo [Docker image]({{page page='docker-image'}}).
 
 Using a Docker image has several advantages:
 
@@ -40,12 +50,6 @@ Using a Docker image has several advantages:
 - It provides an abstraction layer that eases installation and administration. For instance, the Docker image embeds most of the external software needed by the Nuxeo Platform.
 - It's what we're using internally at Nuxeo, especially in [Nuxeo Cloud]({{page space='nuxeo-cloud'}}).
 - Docker and the container ecosystem are widely maintained by the open source community.
-
-Before installing the nuxeo Platform, make sure you have a look at the [Hardware and Software Requirements](#hardware-and-software-requirements) in the section below. You may also want to read our page regarding [required storage space]({{page page='how-to-estimate-volume-usage'}}).
-
-{{#> callout type='info' heading='Tomcat server ZIP'}}
-Though it is not the recommended way, you can also install the Nuxeo Platform with the [Tomcat server ZIP]({{page page='tomcat-server-zip'}}) archive, which works on any operating system that supports a Java Development Kit.
-{{/callout}}
 
 ## Hardware and Software Requirements
 
