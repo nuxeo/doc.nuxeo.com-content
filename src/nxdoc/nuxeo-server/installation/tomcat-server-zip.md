@@ -1,7 +1,7 @@
 ---
-title: Tomcat Server ZIP
+title: Install Nuxeo with the ZIP distribution
 review:
-  date: '2021-01-11'
+  date: '2021-01-29'
   status: ok
 labels:
   - multiexcerpt
@@ -10,6 +10,10 @@ toc: true
 description: Discover how to install the Nuxeo Platform with the Tomcat server ZIP.
 tree_item_index: 275
 ---
+
+## Requirements
+
+{{{multiexcerpt 'lts2021-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ## General Installation Process
 
@@ -122,3 +126,51 @@ Java packages and instructions for installation are available from the Azul webs
 As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version
 
 {{! /multiexcerpt}}
+
+## Installing Nuxeo Platform
+
+Download the ZIP archive from the [Nuxeo distribution download site](https://connect.nuxeo.com/nuxeo/site/connect/distributions) and unzip it using your favorite tool.
+
+## OS Specificities
+
+### Linux
+
+#### Installation Path
+
+The usual directory into which install the server is `/opt`.
+
+#### Prevent Swapping
+
+Like any Java application you should prevent the JVM Heap from being swapped to disk, which will crush server performance. You have two options here:
+
+- Disable the swap with `sudo swapoff -a` you'll need to edit your `/etc/fstab` to disable swap permanently. Note that before doing this you need to make sure that you have enough memory for all the processes that run on the server (Nuxeo JVM, converters, other custom process and the OS).
+- Limit the swapiness of the OS using `sysctl` to set `vm.swappiness=1`.
+
+#### Temporary Folder
+
+While setting `nuxeo.tmp.dir` property in nuxeo.conf, we recommend not to use the system temporary folder `/tmp` because this one can be cleaned up by the operating system. This is the case on Red Hat Enterprise Linux in particular, where `systemd-tmpfiles` service is deleting old files from `/tmp`.
+
+### Windows
+
+#### Unzip the ZIP Distribution
+
+Do not use the Windows built-in ZIP functionality (aka "zipfldr.dll" or "Compressed Folders Module"), it reports incorrect uncompressed size.
+Recommended: [7-Zip](http://www.7-zip.org/).
+
+#### Installation Path
+
+On Windows in general, and especially on Windows 7 or later versions, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,...
+
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+- [Server Start and Stop]({{page version='' space='nxdoc' page='server-start-and-stop'}})
+- [Setup Best Practices]({{page version='' space='nxdoc' page='setup-best-practices'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+&nbsp;
+
+</div></div>
