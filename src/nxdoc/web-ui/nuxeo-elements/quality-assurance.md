@@ -2,7 +2,7 @@
 title: Nuxeo Elements Quality Assurance
 review:
     comment: ''
-    date: '2019-02-25'
+    date: '2021-02-03'
     status: ok
 toc: true
 labels:
@@ -22,7 +22,7 @@ Using our experience, here we share some best practices and our views on these d
 
 ## Formatting and Linting
 
-A *linter* is a code quality tool that scans your code and flags bugs, unoptimized code and other suspicious constructs. *Linting* is important because it keeps the code clean and enforces a predefined set of rules and good practices. Because JavaScript is a loosely-typed language, it is very easy to introduce bugs in the code. Therefore, a JavaScript linter becomes a crucial tool to help developers identify problems in the code without having to execute it. Our linter of choice is [ESLint](http://eslint.org/), and you can use our Nuxeo Web UI [config file](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/.eslintrc.json) as a sample.
+A *linter* is a code quality tool that scans your code and flags bugs, unoptimized code and other suspicious constructs. *Linting* is important because it keeps the code clean and enforces a predefined set of rules and good practices. Because JavaScript is a loosely-typed language, it is very easy to introduce bugs in the code. Therefore, a JavaScript linter becomes a crucial tool to help developers identify problems in the code without having to execute it. Our linter of choice is [ESLint](http://eslint.org/), and you can use our Nuxeo Web UI [config file](https://github.com/nuxeo/nuxeo-web-ui/blob/maintenance-3.0.x/.eslintrc.js) as a sample.
 
 You can find a quick guide on how to run and setup ESLint in their [online documentation](http://eslint.org/docs/user-guide/getting-started).
 
@@ -152,7 +152,7 @@ With Nuxeo platform, you have two ways of fetching data from the server for buil
 - Via 'direct' queries
 - Via [`pageproviders`]({{page version='' space='nxdoc' page='page-providers'}})
 
-Depending on your environment, you perform searches with Nuxeo Server on top of your **database** (Mysql/MariaDB, Postgresql, MongoDB, Oracle...) or on top of your [**ElasticSearch**]({{page version='' space='nxdoc' page='elasticsearch-setup'}}) **(recommended)**.
+Depending on your environment, you perform searches with Nuxeo Server on top of your **database** (PostgreSQL, MongoDB) or on top of your [**ElasticSearch**]({{page version='' space='nxdoc' page='elasticsearch-setup'}}) **(recommended)**.
 
 For Elasticsearch (ES), use `pageproviders` which [can be activated for ES]({{page version='' space='nxdoc' page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) via the `nuxeo.conf` file and the following Nuxeo elements with related properties:
 
@@ -161,53 +161,46 @@ For Elasticsearch (ES), use `pageproviders` which [can be activated for ES]({{pa
 
 ## Test Strategies
 
-Testing your custom elements is paramount if you want to have reliable and easy to maintain components. The Polymer team already provides the [Web Component Tester](https://github.com/Polymer/tools/tree/master/packages/web-component-tester)
-(hereafter referred to as **WCT**), a handy library that allows you to **unit test** your elements. This is the library we use to individually test our custom components. However, testing how your custom elements work together and whether they actually play the role they are supposed to play becomes crucial as your application grows. That's what **functional and integration testing** are for! In the Web UI, we use [Cucumber](https://cucumber.io/) and [WebdriverIO](http://webdriver.io/) for Behavior-Driven Testing (or **BDD** for short), and to test the UI as a whole. Alternative solutions, such as [NighwatchJS](http://nightwatchjs.org/), have proven to be valuable tools in testing applications that use web components, while following both **BDD** and more test-driven approaches to development (**TDD**).
+Testing your custom elements is paramount if you want to have reliable and easy to maintain components. We are [Karma](https://karma-runner.github.io/latest/index.html). It is a handy library that allows you to **unit test** your elements. Along with Karma, we are using [Mocha](http://mochajs.org/) as the test framework, [Chai](http://chaijs.com/) for the assertions and [Sinon](http://sinonjs.org/) to mock server responses.
 
-### Web Component Tester
-
-[WCT](https://github.com/Polymer/tools/tree/master/packages/web-component-tester) is Polymer's approach to testing custom elements. This library relies on several frameworks to provide a flexible test environment for your components. It includes
-[Mocha](http://mochajs.org/) as the test framework, [Chai](http://chaijs.com/) for the assertions, [Sinon](http://sinonjs.org/) to mock server responses, and [WD](http://admc.io/wd/) to provide an interface to communicate with the web browser.
-
-WCT is best used from the [Polymer CLI](https://polymer-library.polymer-project.org/2.0/docs/tools/polymer-cli).
-We recommend reading Polymer's Documentation on [WCT](https://polymer-library.polymer-project.org/2.0/docs/tools/tests) and watching Polycasts [#36](https://www.youtube.com/watch?v=YBNBr9ECXLo) and [#37](https://www.youtube.com/watch?v=_9qARcdCAn4) for a better understanding on how to setup and run your tests before proceeding to the next section.
+However, testing how your custom elements work together and whether they actually play the role they are supposed to play becomes crucial as your application grows. That's what **functional and integration testing** are for! In the Web UI, we use [Cucumber](https://cucumber.io/) and [WebdriverIO](http://webdriver.io/) for Behavior-Driven Testing (or **BDD** for short), and to test the UI as a whole.
 
 #### Quick Guide
 
-All the elements to be tested, or to support testing directly, should be declared as a `test-fixture`. Imagine we want to unit test the `nuxeo-collections` element. We must declare the test fixture as follows:
+All the elements to be tested, or to support testing directly, should be passed as an argument to the `fixture` function. Imagine we want to unit test the `nuxeo-collections` element. We must declare the test fixture as follows:
 
-```html
-<test-fixture id="collections">
-  <template>
-    <nuxeo-collections visible></nuxeo-collections>
-  </template>
-</test-fixture>
+```js
+const nuxeoConnection = await fixture(
+  html`
+    <nuxeo-connection></nuxeo-connection>
+  `,
+);
 ```
 
 Most of our custom elements need to communicate with an instance of Nuxeo server, and that is true for `nuxeo-collections` as well. We must then declare a `nuxeo-connection` as a test-fixture beforehand, so that the Nuxeo JavaScript Client is properly initialized and `nuxeo-collections` can issue requests to the server:
 
-```html
-<test-fixture id="nx">
-  <template>
+```js
+const nuxeoConnection = await fixture(
+  html`
     <nuxeo-connection url="/dummy"></nuxeo-connection>
-  </template>
-</test-fixture>
+  `,
+);
 ```
 
 When defining your main test suite, you must setup a fake server using `sinon`, which will provide fake responses to your element's requests, and also initialize the `nuxeo-connection` element by logging in:
 
 ```JavaScript
-setup(function() {
-  server = sinon.fakeServer.create();
-  server.autoRespond = true;
-  // login
-  var nx = fixture('nx');
-  return login(server, nx);
+suite('nuxeo-workflow-data', () => {
+  let server;
+
+  setup(async () => {
+    server = await login();
+  });
 });
 ```
 
 {{#> callout type='tip' heading='Test Helpers'}}
-Here, the `login` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-2.4.x/test/test-helpers.js), which also includes several other support methods. Feel free to import them on your own test suites.
+Here, the `login` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-3.0.x/testing-helpers/test-helpers.js#L148), which also includes several other support methods. Feel free to import them on your own test suites.
 {{/callout}}
 
 Oftentimes you'll want to perform more than one bundle of tests inside the same test file. In this case you can define *inner* test suites, i.e., test suites inside your main test suite. Inside these you should setup the responses that the fake server should issue to your custom elements.
@@ -215,7 +208,7 @@ Oftentimes you'll want to perform more than one bundle of tests inside the same 
 So, imagine we want to test how our collections element behaves when there are collections to display. We can create a dedicated suite and setup a fake response with only a single entry:
 
 ```JavaScript
-setup(function() {
+setup(() => {
   server.respondWith(
     'GET',
     '/dummy/api/v1/query/user_collections?currentPageIndex=0&pageSize=40&sortBy=dc%3Amodified&sortOrder=desc&searchTerm=%25&user=%24currentUser',
@@ -245,35 +238,46 @@ For more information about how to setup fake responses, please check the officia
 We now want to create a test case that verifies that our element actually displays the collection and that its DOM reflects this. We can do it by adding a test inside our test suite:
 
 ```JavaScript
-test('it should display collections', function() {
-    var element = fixture('collections'), collections;
-    var table = Polymer.dom(element.root).querySelector('nuxeo-data-list');
+test('it should display collections', () => {
+    const  nuxeoConnection = await fixture(
+      html`
+        <nuxeo-connection url="/dummy"></nuxeo-connection>
+      `,
+    );
+    const table = nuxeoError.shadowRoot.querySelector('nuxeo-data-list');
     // let's wait for the nuxeo-page-loaded event to be fired once before testing
     // only then will we have the data from the server
-    return waitForEvent(table, 'nuxeo-page-loaded', 1).then(function() {
-      collections = Polymer.dom(table.root).querySelectorAll('.collection-box');
-      expect(collections.length).to.be.equal(1); // there should be only one item
-      expect(collections[0].querySelector('.collection-name').textContent).to.be.equal('My Collection'); // and its collection name should be "My Collection"
-    });
+    await waitForEvent(table, 'nuxeo-page-loaded', 1);
+    await flush();
+
+    const collections = table.shadowRoot.querySelectorAll('.collection-box');
+    expect(collections.length).to.be.equal(1); // there should be only one item
+    expect(collections[0].querySelector('.collection-name').textContent).to.be.equal('My Collection'); // and its collection name should be "My Collection
   });
 });
 ```
 
 {{#> callout type='tip' heading='Test Helpers'}}
-Again, the `waitForEvent` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-2.4.x/test/test-helpers.js). This method waits for an event to be fired a specific amount of times before returning a promise. Similarly, you can use `waitChanged` to wait for a particular
-property to change on an element, provided that it's set to `notify: true`. Please, check the Polymer documentation on [data-binding](https://polymer-library.polymer-project.org/2.0/docs/devguide/data-binding) for more information on this subject.
+Again, the `waitForEvent` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-3.0.x/testing-helpers/index.js). This method waits for an event to be fired a specific amount of times before returning a promise. Similarly, you can use `waitChanged` to wait for a particular
+property to change on an element, provided that it's set to `notify: true`. Please, check the Polymer documentation on [data-binding](https://polymer-library.polymer-project.org/3.0/docs/devguide/data-binding) for more information on this subject.
 {{/callout}}
 
 {{#> callout type='note' heading='Chai API'}}
 For more information about how perform test asserts, please check the official [Chai documentation](http://chaijs.com/api/), which provides both BDD and TDD oriented APIs.
 {{/callout}}
 
-You can then run your tests using `polymer test` or run them interactively via `polymer serve`. Check the Polymer documentation on [WCT](https://polymer-library.polymer-project.org/2.0/docs/tools/tests) for more on this subject.
+You can then run your tests using `npm run test`. This will run Karma and, in the case of the nuxeo-elements repository, it will check our three folders: Core, UI, and Dataviz. 
+
+If you want to test your own element, you can always pass some handy arguments into your terminal:
+
+```bash
+    $ npm run test:watch -- --browsers Chrome --grep nuxeo-connection.test.js --package ui
+```
+
+Here we are using the `watch` parameter which will give you the possibility to see the test running on a browser. Using the flag `--browsers` let us specify in which browser do we want to run our test. We are also using the flag `--grep` to search our file. Since, in this example, `nuxeo-connection-test.js` is part of our UI folder, we need to also specify the `--package`.
 
 For more examples on testing custom elements, please check our repositories:
-- [nuxeo-elements](https://github.com/nuxeo/nuxeo-elements/tree/maintenance-2.4.x/test)
-- [nuxeo-dataviz-elements](https://github.com/nuxeo/nuxeo-dataviz-elements/tree/maintenance-2.4.x/test)
-- [nuxeo-ui-elements](https://github.com/nuxeo/nuxeo-ui-elements/tree/maintenance-2.4.x/test)
+- [nuxeo-elements unit tests](https://github.com/nuxeo/nuxeo-elements/tree/maintenance-3.0.x/ui/test)
 
 ### Cucumber
 
@@ -293,52 +297,23 @@ Scenario: Admin center
 Step definitions bridge the gap between features and the system being tested. They translate plain text into interactions with the system. Step definitions are platform-dependent, and they use a regular expression the match the steps defined in the feature files, and implement the code required to execute the step.
 
 ```JavaScript
-this.Given('I login as {string}', (username) => this.username = username);
+Given('I login as {string}', function(username) {
+  this.username = username;
+});
 
-this.When('I click the {word} button', (button) => this.ui.drawer.open(button));
+When('I click the {word} button', function(button) {
+  this.ui.drawer.open(button);
+});
 
-this.Then('I can see the administration menu', () => this.ui.drawer.administration.isVisible().should.be.true);
+Then('I can see the administration menu', function() {
+  this.ui.drawer.administration.isVisible().should.be.true;
+});
 ```
 
 Cucumber allows for BDD using human-readable specifications. The advantages are two-fold: first, it allows specifications to be implemented by developers, but written in natural language by someone else, such as QA or business analyst; second, it makes error identification simpler for developers and non-developers alike, by showing clearly in plain language what steps failed. Please check [Cucumber](https://docs.cucumber.io/) and [Cucumber.js](https://github.com/cucumber/cucumber-js) documentation for more details.
 
 For a more in-depth explanation on functional tests, please check the
 [Web UI functional testing]({{page page='web-ui-functional-testing'}}) page!
-
-### NighwatchJS
-
-Nightwatch.js is an automated testing framework for web applications and websites, written in Node.js and using the W3C WebDriver API (formerly Selenium WebDriver).
-
-It is a complete browser (End-to-End) testing solution which aims to simplify the process of setting up Continuous Integration and writing automated tests. Nightwatch can also be used for writing Node.js unit tests.
-
-#### Browser/IDE Setup
-
-Here is the [Nightwatch.js wiki](https://github.com/nightwatchjs/nightwatch/wiki) for more information about browser test setup and running/debugging in your favorite IDE.
-
-#### Configuration
-
-The test runner expects a configuration file to be passed, using by default a `nightwatch.json` file from the current directory, if present. A `nightwatch.conf.js` file will also be loaded by default, if found. Click [here](http://nightwatchjs.org/gettingstarted#settings-file) to view an example.
-
-#### Page Object API
-
-In order to factorize your tests, the Page Object API has been introduced in Nightwatchjs and allows developers to create different page descriptors with the related selectors for re-using them easily in the IT tests. Click [here](https://github.com/nightwatchjs/nightwatch/wiki/Page-Object-API) for more information.
-
-#### The Command Queue
-
-When Nightwatch runs a test, it processes its commands in a list known as the command queue. This list manages the asynchronous execution of the commands defined in that test. Click [here](https://github.com/nightwatchjs/nightwatch/wiki/Understanding-the-Command-Queue) for more information.
-
-#### API
-
-Please refer to this [developer guide](http://nightwatchjs.org/guide) to see how to use:
-
-- Default commands
-- CSS or XPath Selectors
-- Pages
-- APIs
-
-#### Nuxeo Maven Package Example
-
-[An example](https://github.com/nuxeo/nuxeo-marketplace-sample/edit/master/ftest/nightwatchjs) of a Nuxeo package to run with Maven and npm nightwatchjs tests.
 
 ## Security Strategies
 
