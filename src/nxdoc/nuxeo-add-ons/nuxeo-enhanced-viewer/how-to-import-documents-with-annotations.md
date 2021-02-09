@@ -326,9 +326,8 @@ public class NuxeoARenderMapper {
 You will need the following maven dependencies:
 ```
 <properties>
-    <!-- properties were taken from 10.3.x -->
-    <!-- see https://github.com/nuxeo/nuxeo-arender-connector/wiki/Release-Matrix -->
-    <arender.version>4.0.9.NX1.0</arender.version>
+    <!-- properties were taken from 10.4.x -->
+    <arender.version>4.2.0.NX1.2</arender.version>
     <!-- doesn't change a lot -->
     <nuxeo.java.client.version>3.8.0</nuxeo.java.client.version>
   </properties>
