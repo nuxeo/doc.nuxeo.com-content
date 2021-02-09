@@ -30,7 +30,7 @@ toc: true
 </tr>
 <tr>
 <th colspan="1">Upgraded components</th>
-<td colspan="1">ARender, Previewer (ARender connector), Nuxeo addon (nuxeo-arender package)</td>
+<td colspan="1">ARender software, Previewer (ARender connector), Nuxeo addon (nuxeo-arender package)</td>
 </tr>
 </tbody>
 </table>
@@ -47,7 +47,7 @@ In a nutshell, this new version includes the following changes:
 
 #### Download with FDF annotations
 
-The "Download with FDF annotations" action allows to download a document as a PDF with annotations in the Forms Data Format (FDF). Then you can for instance open the document in Adobe Reader and see the annotations as if you have created them into Adobe area.
+The "Download with FDF annotations" action allows to download a document as a PDF with annotations in the Forms Data Format (FDF). Then you can for instance open the document in Adobe Reader and see the annotations as if you have created them into Adobe Reader.
 
 See [NEV-323](https://jira.nuxeo.com/browse/NEV-323).
 
