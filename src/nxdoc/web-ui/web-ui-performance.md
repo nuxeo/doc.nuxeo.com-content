@@ -2,7 +2,7 @@
 title: 'Web UI Performance'
 review:
     comment: ''
-    date: '2019-01-15'
+    date: '2021-01-07'
     status: ok
 toc: true
 labels:
@@ -23,7 +23,7 @@ When fetching a document from the Rest API, you can request to resolve some docu
 
 in order to be able to display them. For example, in a document layout, when it comes to display who created the document (`dc:creator` field), if we don't ask the REST API to resolve this field, we'll only be able to display the username. With a resolved field, we can display the firstname, lastname, email, etc.
 
-By default, Web UI requests any available field when navigating to a particular document. However, depending on your custom document types, resolving every single field may result in an overload.
+By default, Web UI requests any available field when navigating to a particular document. However, depending on your custom document types, resolving every single field may result in degraded performance.
 
 Since 10.10 ([NXP-26520](https://jira.nuxeo.com/browse/NXP-26520) and [NXP-25512](https://jira.nuxeo.com/browse/NXP-25512)), you can limit the list of fields that should be resolved with a contribution such as the following:
 
@@ -113,7 +113,7 @@ skipAggregates: {
 ```
 which is set to true only if the fulltext parameter is not empty:
 ```javascript
-_skipAggregates : function() {
+_skipAggregates() {
   return !this.params || !this.params.ecm_fulltext || this.params.ecm_fulltext.length === 0;
 }
 ```
@@ -132,7 +132,7 @@ On server restart or hot-reload:
  - On first reload previous SW will still be installed and will still serve resources with previous TS. Updated SW gets installed on page load.
  - On subsequent hits updated SW will add updated TS to requests
 
-Other static resources such as images (`\*.png`, `\*jpeg`, `\*svg`, etc.) have a default cache define in [`browser-cache-contrib.xml` contribution](https://github.com/nuxeo/nuxeo-web-ui/blob/release-10.3/src/main/resources/OSGI-INF/browser-cache-contrib.xml#L12) which you can override to fit your needs.
+Other static resources such as images (`\*.png`, `\*jpeg`, `\*svg`, etc.) have a default cache define in [`browser-cache-contrib.xml` contribution](https://github.com/nuxeo/nuxeo-web-ui/blob/maintenance-3.0.x/plugin/web-ui/addon/src/main/resources/OSGI-INF/browser-cache-contrib.xml#L12) which you can override to fit your needs.
 
 {{#> callout type='tip' }}
 According to the [specs](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#shift-reload) SWs are not active during a hard reload (e.g. Ctrl+Shift+R on most browsers).
@@ -142,7 +142,7 @@ According to the [specs](https://developers.google.com/web/fundamentals/primers/
 
 Since 10.3 ([NXP-25385](https://jira.nuxeo.com/browse/NXP-25385)), resource URLs for document previews, thumbnails, blobs, etc. have the document's `changeToken` appended as a query parameter.
 
-Such URLs have a very aggressive cache (approximately 1 year) defined in [web-request-controller-contrib.xml#L47](https://github.com/nuxeo/nuxeo/blob/release-10.3/nuxeo-services/nuxeo-platform-web-common/src/main/resources/OSGI-INF/web-request-controller-contrib.xml#L47). As a matter of fact, each time the document changes, its `changeToken` also changes and the resource is invalidated by the browser cache.
+Such URLs have a very aggressive cache (approximately 1 year) defined in [web-request-controller-contrib.xml#L47](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-web-common/src/main/resources/OSGI-INF/web-request-controller-contrib.xml#L47). As a matter of fact, each time the document changes, its `changeToken` also changes and the resource is invalidated by the browser cache.
 
 ## Document Tabs
 
@@ -154,46 +154,55 @@ Pages introduced in the [DOCUMENT_VIEWS_PAGES]({{page version='' space='nxdoc' p
 
 Here is a concrete example. We add a new tab to list the `Book` documents associated to an `Author` document:
 
-```xml
-<nuxeo-page-provider id="bookPP"
+```js
+
+class AuthorBookListing extends mixinBehaviors([I18nBehavior, LayoutBehavior], Nuxeo.Element) {
+  static get template() {
+    return html`
+      <nuxeo-page-provider id="bookPP"
                      provider="BOOK_PAGE_PROVIDER"
                      enrichers="thumbnail"
                      params='{"book_author": [[document.uid]]};'
                      page-size="40"
                      schemas="dublincore,book">
-</nuxeo-page-provider>
+      </nuxeo-page-provider>
 
-<nuxeo-data-table id="table" nx-provider="bookPP">
-  <nuxeo-data-table-column name="[[i18n('book.title')]]" flex="100" sort-by="book:title" filter-by="book_title">
-    <template>
-      <nuxeo-document-thumbnail document="[[item]]"></nuxeo-document-thumbnail>
-      <a class="title ellipsis" href$="[[urlFor('browse', item.path)]]">[[item.title]]</a>
-    </template>
-  </nuxeo-data-table-column>
-</nuxeo-data-table>
+      <nuxeo-data-table id="table" nx-provider="bookPP">
+        <nuxeo-data-table-column name="[[i18n('book.title')]]" flex="100" sort-by="book:title" filter-by="book_title">
+          <template>
+            <nuxeo-document-thumbnail document="[[item]]"></nuxeo-document-thumbnail>
+            <a class="title ellipsis" href$="[[urlFor('browse', item.path)]]">[[item.title]]</a>
+          </template>
+        </nuxeo-data-table-column>
+      </nuxeo-data-table>
+    `;
+  }
+
+  static get is() {
+    return 'author-book-listing';
+  }
+
+  customElements.define(AuthorBookListing.is, AuthorBookListing);
+}
 ```
 Then you can see the `visible` property to only fetch the books when the page is displayed:
 
-```javascript
-  Polymer({
-    is: 'author-book-listing',
-    behaviors: [Nuxeo.LayoutBehavior],
-    properties: {
-      document: Object,
-      visible: Boolean
+```js
+static get properties() {
+  return {
+    document: {
+      type: Object,
     },
+    visible: {
+      type: Boolean,
+      value: false,
+    },
+  };
+}
 
-    observers: [
-      'refresh(document, visible)'
-    ],
-
-    refresh: function() {
-      if (this.document && this.visible) {
-        this.$.table.fetch();
-      }
-    }
-
-  });
+static get observers() {
+  return ['refresh(document, visible)'];
+}
 ```
 
 Thanks to this pattern, you can prevent useless requests from being sent and make sure your tab content is refreshed each time you display it.
