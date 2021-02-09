@@ -4,14 +4,14 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: ''
-  date: '2021-01-26'
+  date: '2021-01-28'
   status: ok
 toc: true
 ---
 
 Welcome to the Release Notes for **Nuxeo Drive 4.5.1**
 
-**Status**: <font color="#ff0000">**Beta**</font> </br>
+**Status**: <font color="#0066ff">**Release**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.5.1.md)
 
 ## Important Changes
@@ -89,6 +89,6 @@ On Windows, after applying a filter on a synchronized subfolder, it wasn't possi
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.5.1-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.5.1.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.5.1.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.1-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.1.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-4.5.1.exe)
