@@ -115,12 +115,6 @@ Clicking on the button with repeat mode didn't correctly stop the repeat mode, i
 
 See [NEV-335](https://jira.nuxeo.com/browse/NEV-335).
 
-### ARender health and liveness resources missing
-
-Following authentication changes, some resources where missing preventing to correctly display the ARender liveness and health pages.
-
-See [NEV-339](https://jira.nuxeo.com/browse/NEV-339) and [NEV-338](https://jira.nuxeo.com/browse/NEV-338)
-
 ### Learn More
 
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+%22Nuxeo+Enhanced+Viewer%22+and+resolution+not+in%28%22Cannot+Reproduce%22%2C%22Won%27t+Fix%22%2C%22Won%27t+Do%22%2CDuplicate%2CUnresolved%29+and+fixVersion+in+%2810.4.0%2C+10.4.1%2C10.4.2%29++++&src=confmacro) is available in our ticket tracking tool.
