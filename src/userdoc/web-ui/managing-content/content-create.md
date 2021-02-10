@@ -45,7 +45,12 @@ To import content into Nuxeo, drag an item from your computer and drop it into a
 
 - You can drag and drop one or more files of any type in Nuxeo, directly in the workspace concerned.
 - You can also drag and drop one or more files of any type from the **Import** tab of the creation popup. On this popup you can also edit the **Location** of your import.
-  ![]({{file name='import-popup-web-ui.png'}} ?w=450,border=true)
+  {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Import popup on Web UI
+    name: import-popup-web-ui.png
+    1.1.3#popup#up_to_date
+  --}}
+  ![Import popup on Web UI](nx_asset://1ab73cdc-61c5-4dec-b0d1-990cd15c78fe ?w=450,border=true)
 
 ### Import with Properties
 
@@ -61,7 +66,7 @@ It is possible to do a drag and drop import of documents with an additional step
     The file is uploaded. When the upload is done, the creation popup on the **Import** tab is displayed.
     ![]({{file name='dnd-web-ui.png'}} ?w=350,border=true)
 
-2. Click on **ADD PROPERTIES**.
+2. Click on **Add Properties**.
 3. Fill in the properties that you need and then decide if you want to **EDIT NEXT** or **APPLY TO ALL** your modifications.
     ![]({{file name='add-properties-web-ui.png'}} ?w=350,border=true)
 4. Once it's done click on **CREATE**.
