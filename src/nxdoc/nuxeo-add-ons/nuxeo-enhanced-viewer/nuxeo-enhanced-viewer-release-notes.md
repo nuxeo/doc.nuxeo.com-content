@@ -37,17 +37,17 @@ toc: true
 </div>
 
 In a nutshell, this new version includes the following changes:
- - Several optimisations on how files are streamed, renditions performances, scalability
+ - Several optimizations on how files are streamed, renditions performances, scalability
  - UX improvements on the sticky notes, arrows, and annotation left section
  - “Download with FDF annotations” feature is enabled by default (annotations are seen as Adobe annotations when viewing the document in Adobe Reader)
  - Sound can now be turned off when annotating a video
- - Bug fixes (MP3 rendition, preview on HTML , email and ZIP, repeat mode,…)
+ - Bug fixes (MP3 rendition, preview on HTML, email and ZIP, repeat mode,…)
 
 ### Improvements
 
-#### Download with FDF annotations
+#### Download with FDF Annotations
 
-The "Download with FDF annotations" action allows to download a document as a PDF with annotations in the Forms Data Format (FDF). Then you can for instance open the document in Adobe Reader and see the annotations as if you have created them into Adobe Reader.
+The "Download with FDF annotations" action allows downloading a document as a PDF with annotations in the Forms Data Format (FDF). Then, you can for instance open the document in Adobe Reader and see the annotations as if you have created them into Adobe Reader.
 
 See [NEV-323](https://jira.nuxeo.com/browse/NEV-323).
 
@@ -59,21 +59,21 @@ See [NEV-45](https://jira.nuxeo.com/browse/NEV-45).
 
 ### UI/UX
 
-#### Replace sticky notes pointers by pointers with numbers
+#### Replace Sticky Notes Pointers by Pointers With Numbers
 
 The sticky notes annotations have a new look & feel. They now include a number into the pointer to easily link the annotation in the document to the text into the left section of the Annotations tab.
 
 See [NEV-349](https://jira.nuxeo.com/browse/NEV-349).
 
-#### Better icons into the Arrow annotation bar
+#### Better Icons Into the Arrow Annotation Bar
 
-The arrow annotation bar includes a button to customise each side of the arrow. This new version improves those buttons icons for a better visibility.
+The arrow annotation bar includes a button to customize each side of the arrow. This new version improves those buttons icons for a better visibility.
 
 See [NEV-238](https://jira.nuxeo.com/browse/NEV-238).
 
-#### Empty annotation look & feel
+#### Empty Annotation Look & Feel
 
-The left annotation section has been improved for empty annotations, in order to reflect that the annotation is editable
+The left annotation section has been improved for empty annotations, in order to reflect that the annotation is editable.
 
 See [NEV-250](https://jira.nuxeo.com/browse/NEV-250).
 
@@ -83,33 +83,33 @@ The new version of ARender includes stability improvements, mostly on the rendit
 
 ### Major Fixes
 
-#### Rendition of MP3 files
+#### Rendition of MP3 Files
 
 MP3 files are now correctly rendered in the Annotations tab.
 
 See [NEV-332](https://jira.nuxeo.com/browse/NEV-332).
 
-#### Rendition of HTML files
+#### Rendition of HTML Files
 
 Some HTML files were not correctly rendered in the Annotations tab.
 
 See [NEV-354](https://jira.nuxeo.com/browse/NEV-354).
 
-### Renditions of emails
+### Renditions of Emails
 
-The rendition of emails has been improved with better support of eml and msg files.
+The rendition of emails has been improved with better support of EML and msg files.
 
-We also fix language issue.
+We also fixed language issue.
 
 See [NEV-370](https://jira.nuxeo.com/browse/NEV-370) and [NEV-330](https://jira.nuxeo.com/browse/NEV-330).
 
-### Renditions of ZIP files
+### Renditions of ZIP Files
 
 ZIP files are now correctly rendered in the Annotations tab.
 
 See [NEV-370](https://jira.nuxeo.com/browse/NEV-370).
 
-### Stop repeat mode button is not working well
+### Stop Repeat Mode Button Is Not Working Well
 
 Clicking on the button with repeat mode didn't correctly stop the repeat mode, involving to create a last annotation before it stopped.
 
