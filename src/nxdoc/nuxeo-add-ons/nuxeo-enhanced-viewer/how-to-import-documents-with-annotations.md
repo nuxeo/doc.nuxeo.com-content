@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Import documents with NEV annotations'
+title: 'HOWTO: Import Documents With Nev Annotations'
 description: 'Step by step instructions to import into Nuxeo documents including annotations in a supported format for Nuxeo Enhanced Viewer'
 review:
     comment: ''
@@ -13,21 +13,21 @@ toc: true
 tree_item_index: 100
 ---
 
-This tutorial provides guidelines on how to import documents with annotations in a way that allow to have those annotations available in ARender.
+This tutorial provides guidelines on how to import documents with annotations in a way that allow having those annotations available in ARender.
 
-The main use cases is for migration from a legacy system to Nuxeo.
+The main use case is the migration from a legacy system to Nuxeo.
 
-## General process
+## General Process
 
 The recommendation is to use the Nuxeo REST API to create annotation object and add it to the document.
 
-All the annotations displayed on ARender are stored on Nuxeo as Annotations objects (cf. https://doc.nuxeo.com/nxdoc/comments/).
+All the annotations displayed on ARender are stored on Nuxeo as Annotations objects (cf. [Comments documentation]({{page space='nxdoc' page='comments'}})).
 
-The Nuxeo annotation object includes several datas as the origin of the annotation. The main part is the “entity” one which includes the annotation content (annotation type, text, position in the document, color,…) in the ARender format. 
+The Nuxeo annotation object includes several datas as the origin of the annotation. The main part is the “entity” one which includes the annotation content (annotation type, text, position in the document, color,…) in the ARender format.
 
-You can find an example of ARender annotation expected format below in this page.
+You can find an example of ARender [annotation expected format](#annotations-samples) below in this page.
 
-Below an example of the Nuxeo annotations for a document with 3 ARender annotations:
+Here is an example of the Nuxeo annotations for a document with 3 ARender annotations:
 ```
 {
   "entity-type": "annotations",
@@ -183,9 +183,9 @@ Below an example of the Nuxeo annotations for a document with 3 ARender annotati
 }
 ```
 
-## Code sample
+## Code Sample
 
-You can find below a simple method to use if you want to migrate former annotations with java code:
+You can find below a simple method to use if you want to migrate former annotations with Java code:
 ```
 package com.nuxeo.arender;
 
@@ -323,7 +323,7 @@ public class NuxeoARenderMapper {
 }
 ```
 
-You will need the following maven dependencies:
+You will need the following Maven dependencies:
 ```
 <properties>
     <!-- properties were taken from 10.4.x -->
@@ -368,11 +368,11 @@ You will need the following maven dependencies:
 ```
 
 
-## Annotations samples
+## Annotations Samples
 
-Below an example of ARender annotation format for each kind of annotation.
+Below is an example of ARender annotation format for each kind of annotation.
 
-### Arrow annotation sample
+### Arrow Annotation Sample
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -393,7 +393,7 @@ Below an example of ARender annotation format for each kind of annotation.
 ```
 
 
-### Freetext annotation sample
+### Freetext Annotation Sample
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -413,7 +413,7 @@ Below an example of ARender annotation format for each kind of annotation.
 </ns0:xfdf>
 ```
 
-### Sticky note annotation sample
+### Sticky Note Annotation Sample
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -433,7 +433,7 @@ Below an example of ARender annotation format for each kind of annotation.
 </ns0:xfdf>
 ```
 
-### Circle annotation sample
+### Circle Annotation Sample
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -453,7 +453,7 @@ Below an example of ARender annotation format for each kind of annotation.
 </ns0:xfdf>
 ```
 
-### Freehand annotation sample
+### Freehand Annotation Sample
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -476,7 +476,7 @@ Below an example of ARender annotation format for each kind of annotation.
 </ns0:xfdf>
 ```
 
-### Strike through text annotation sample
+### Strike Through Text Annotation Sample
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -496,7 +496,7 @@ Below an example of ARender annotation format for each kind of annotation.
 </ns0:xfdf>
 ```
 
-### Highlight text annotation sample
+### Highlight Text Annotation Sample
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -516,7 +516,7 @@ Below an example of ARender annotation format for each kind of annotation.
 </ns0:xfdf>
 ```
 
-### Stamp annotation sample
+### Stamp Annotation Sample
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
