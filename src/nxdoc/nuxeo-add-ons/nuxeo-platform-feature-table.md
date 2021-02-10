@@ -675,7 +675,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Documentation]({{page version='' space='nxdoc' page='nuxeo-arender-connector'}})</td>
+    <td colspan="1">[Documentation]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}})</td>
 </tr>
 </tbody>
 </table>
@@ -1367,11 +1367,11 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td colspan="1">Annotations</td>
-    <td colspan="1">[ARender Connector]({{page version='' space='nxdoc' page='nuxeo-arender-connector'}})</td>
+    <td colspan="1">[ARender Connector]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}})</td>
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Documentation]({{page version='' space='nxdoc' page='nuxeo-arender-connector'}})</td>
+    <td colspan="1">[Documentation]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}})</td>
 </tr>
 <tr>
     <td colspan="1">Preview</td>

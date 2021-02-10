@@ -337,7 +337,7 @@ Nuxeo Annotations with ARender<br/>
 Registered access
 </td>
 <td colspan="1">
-[Documentation]({{page page='nuxeo-arender-connector'}})
+[Documentation]({{page version='1010' space='nxdoc' page='nuxeo-enhanced-viewer'}})
 </td>
 <td colspan="1">
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender)

@@ -657,7 +657,7 @@ See details about the endpoints on the linked ticket.
 
 To integrate with external collaboration tools, a new generic external comment facet has been added to the Comments addon, that allows to deal with comments that are managed by external systems: reference them and even serialise their content. This has been designed for now within the scope of the ARender integration.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page page='nuxeo-arender-connector'}}) and JIRA ticket [NXP-25070](https://jira.nuxeo.com/browse/NXP-25070).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}}) and JIRA ticket [NXP-25070](https://jira.nuxeo.com/browse/NXP-25070).
 
 ### Automation
 
@@ -1363,7 +1363,7 @@ It is now possible to use drag and drop user interaction to move and copy docume
 
 Introduces a new file-based document tab to allow annotations with ARender.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page page='nuxeo-arender-connector'}}) and JIRA ticket [NXP-25107](https://jira.nuxeo.com/browse/NXP-25107)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}}) and JIRA ticket [NXP-25107](https://jira.nuxeo.com/browse/NXP-25107)
 
 #### Configuration Service on Web UI {{since '10.3'}}
 
@@ -1709,7 +1709,7 @@ Integrated with Web UI upload with real-time upload progress. For 10.2 we have a
 
 A first implementation of the ARender SPI bridge has been done so as to be able to preview content stored in Nuxeo using the [ARender previewer](https://ARender.io/). It allows to preview and annotate content, may it be an office file, an image or a video, with respect to the repository security, using JWT tokens. A first integration to Web UI is done in the addon, the ARender previewer appears in a new "annotations" tab. Also, comments made for a given annotation are synced with Nuxeo Comments. Deeper integration will be done in the future. The connector also exposes an operation for getting an URL that will open a diff view of binary content (`Document.ARenderGetDiffUrl`). A package is available on the marketplace.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page page='nuxeo-arender-connector'}}) and following JIRA tickets [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104),[NXP-24724](https://jira.nuxeo.com/browse/NXP-24724), [NXP-25071](https://jira.nuxeo.com/browse/NXP-25071) and [NXP-25444](https://jira.nuxeo.com/browse/NXP-25444).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}}) and following JIRA tickets [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104),[NXP-24724](https://jira.nuxeo.com/browse/NXP-24724), [NXP-25071](https://jira.nuxeo.com/browse/NXP-25071) and [NXP-25444](https://jira.nuxeo.com/browse/NXP-25444).
 
 ### MS Office 365 Integration: WOPI Implementation {{since '10.3'}}
 
