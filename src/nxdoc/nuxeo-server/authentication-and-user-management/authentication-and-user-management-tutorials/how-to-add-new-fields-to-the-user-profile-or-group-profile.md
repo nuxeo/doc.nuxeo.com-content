@@ -69,7 +69,7 @@ Create a `manager_user_field.xsd` file with the following content from the defau
 ### Deploy the New Field in Studio Modeler
 
 1. Open your Nuxeo Studio Project and Navigate to **Studio Modeler** > **CONFIGURATION** > **Resources** > **Schemas**.
-1. Upload the `my_custom_user.xsd` file.
+1. Upload the `manager_user_field.xsd` file.
 1. Go to **CONFIGURATION** > **Content Model** > **Schemas** and click on **New**. </br>
     Fill in the popup window like this:
     {{!--     ### nx_asset ###
