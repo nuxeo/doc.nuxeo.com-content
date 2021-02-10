@@ -132,7 +132,7 @@ Main components of the Nuxeo Platform are:
 
 - **Nuxeo Drive**: a desktop application that maps a Nuxeo repository's content to a Desktop's file system, with synchronization logics and offline access and edit capabilities, in the spirit of Enterprise File Sharing Systems like Dropbox or Box.
 
-- **Nuxeo Mobile**: Native Android and iOS applications developed with React Native and available on respective stores. A React Native framework to build custom mobile applications is being developed and will be released later in the year 2017.
+- **Nuxeo Mobile**: Native Android and iOS applications developed with React Native and available on respective stores.
 
 - **Build, QA and Performance analysis tooling** All the tooling we use for building, maintaining and testing our software artifacts is free and open source. It is available for your own project, as a great catalyzer of your engineering practices.
 
