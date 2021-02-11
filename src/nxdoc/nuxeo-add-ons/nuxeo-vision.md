@@ -133,7 +133,7 @@ The [Nuxeo Vision](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxe
 Watch the related courses on Nuxeo University
 - [DAM with Nuxeo Vision](https://university.nuxeo.com/learn/public/course/view/elearning/101/dam-with-nuxeo-vision)
 - [Expert Session - Going further with Nuxeo Vision](https://university.nuxeo.com/learn/public/course/view/elearning/147/expert-session-going-further-with-nuxeo-vision)
-![]({{file name='university-nuxeo-vision.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-nuxeo-vision.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Installation and Configuration

@@ -254,8 +254,7 @@ Browsers that block pop-ups may affect the behavior of Nuxeo Live Connect. If yo
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
 [Live Connect](https://university.nuxeo.com/learn/public/course/view/elearning/56/understanding-live-connect)
-
-  ![]({{file name='university-live-connect.png' page='nxdoc/university'}} ?w=450,border=true)
+  ![]({{file name='university-live-connect.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 Live Connect allows you to create a content application that handles cloud files (Google Drive, Box, ...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.

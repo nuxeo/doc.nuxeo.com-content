@@ -160,7 +160,7 @@ Picture conversions are simple XML contributions done on the&nbsp;[`pictureConve
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration).
-![]({{file name='university-dam-configuration.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-dam-configuration.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 Picture conversions are working only on documents having the&nbsp;`Picture` facet.

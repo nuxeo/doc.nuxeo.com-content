@@ -29,9 +29,9 @@ In this tutorial you will learn how to create and reuse custom elements in Studi
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University:</br>
-- [Expert Session on Nuxeo Elements Creation](https://university.nuxeo.com/learn/public/course/view/elearning/148/expert-session-creating-nuxeo-elements-with-studio-designer)</br>
-- [Course on Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
-![]({{file name='university-new-nuxeo-element.png' page='nxdoc/university'}} ?w=450,border=true)
+[Expert Session on Nuxeo Elements Creation](https://university.nuxeo.com/learn/public/course/view/elearning/148/expert-session-creating-nuxeo-elements-with-studio-designer)</br>
+[Course on Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
+![]({{file name='university-new-nuxeo-element.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Requirements

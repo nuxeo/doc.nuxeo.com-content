@@ -162,7 +162,7 @@ Learn how to manage a contract validation workflow using the REST API. Log in as
 Watch the related courses on Nuxeo University
 - [Course on the Nuxeo Workflow Engine](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine)
 - [Course on the REST API](https://university.nuxeo.com/learn/public/course/view/elearning/66/rest-api)
-![]({{file name='university-restapi.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-restapi.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 The contract validation workflow follows the following steps:

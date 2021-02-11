@@ -98,9 +98,9 @@ Nuxeo Studio allows you to translate the vocabulary values of your application.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Expert Session on Translations](https://university.nuxeo.com/learn/public/course/view/elearning/140/expert-session-translations).
-![]({{file name='university-translations.png' page='nxdoc/university'}} ?w=450,border=true)
+Watch the related courses on Nuxeo University:</br>
+[Expert Session on Translations](https://university.nuxeo.com/learn/public/course/view/elearning/140/expert-session-translations).
+![]({{file name='university-translations.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 {{#> panel type='primary'}}

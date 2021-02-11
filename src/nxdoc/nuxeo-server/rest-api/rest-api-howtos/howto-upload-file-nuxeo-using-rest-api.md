@@ -133,7 +133,7 @@ The Nuxeo Platform allows you to [upload binaries under a given "batch ID"]({{pa
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [Nuxeo REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/91/nuxeo-rest-api-import).
-![]({{file name='university-rest-api-importer.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-rest-api-importer.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 There are two ways to upload a file:

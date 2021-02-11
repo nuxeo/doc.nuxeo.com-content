@@ -47,7 +47,7 @@ although it should integrate with most frameworks with little effort.
 Watch the related courses on Nuxeo University
 - [Introduction to Nuxeo Elements](https://university.nuxeo.com/learn/public/course/view/elearning/79/introduction-to-nuxeo-elements)
 - [Expert Session on Nuxeo Elements Creation](https://university.nuxeo.com/learn/public/course/view/elearning/148/expert-session-creating-nuxeo-elements-with-studio-designer)
-![]({{file name='university-nuxeo-elements.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-nuxeo-elements.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 Polymer pushes for a very declarative approach to building web applications with the "everything is an element" philosophy.
@@ -94,7 +94,7 @@ These are:
   ```
   $ npm i @nuxeo/nuxeo-dataviz-elements
   ```
-  
+
 When developing using Nuxeo Elements, make sure to set up your development environment according to the requirements described in the [Nuxeo Elements repository](https://github.com/nuxeo/nuxeo-elements/blob/master/README.md#dependencies).
 
 Nuxeo Elements' development is supported by several tools and strategies, to keep quality, performance and security in check.

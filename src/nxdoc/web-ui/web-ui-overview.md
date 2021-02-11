@@ -129,7 +129,7 @@ It leverages the web as a platform and allows enhanced productivity with direct 
 Watch the related courses on Nuxeo University:</br>
 [Course on the Web UI Stack](https://university.nuxeo.com/learn/course/164/web-ui-development).</br>
 [Course to Start with Web UI](https://university.nuxeo.com/learn/course/156/IntroductiontoWebComponentsandPolymer).
-![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-webui.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Requirements

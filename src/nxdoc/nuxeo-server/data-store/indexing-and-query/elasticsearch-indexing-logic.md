@@ -191,7 +191,7 @@ history:
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
 [Configuring Searches in Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer).
-![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-search.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Indexing

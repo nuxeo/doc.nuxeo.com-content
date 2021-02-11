@@ -298,11 +298,11 @@ history:
 ---
 
 {{#> callout type='info' heading='Nuxeo University' }}
-Watch the related courses on Nuxeo University
+Watch the related courses on Nuxeo University:
 - [Course on Document Type Layouts with Studio Designer](https://university.nuxeo.com/learn/public/course/view/elearning/80/document-and-workflow-task-layouts-with-nuxeo-studio-designer)
 - [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
 - [Exercises on Nuxeo Studio](https://university.nuxeo.com/learn/public/course/view/elearning/103/nuxeo-studio-exercises)
-![]({{file name='university-studio-exercises.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-studio-exercises.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Introduction

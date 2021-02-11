@@ -539,7 +539,7 @@ This page explains the organization and scope of the existing endpoints and othe
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [Course on the REST API](https://university.nuxeo.com/learn/public/course/view/elearning/66/rest-api).
-![]({{file name='university-restapi.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-restapi.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Scope and Concepts

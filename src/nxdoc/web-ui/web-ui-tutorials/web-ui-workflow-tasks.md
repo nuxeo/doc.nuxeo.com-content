@@ -31,7 +31,7 @@ In this tutorial you will learn how to create a custom workflow tasks layout in 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
 [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner).
-![]({{file name='university-doc-layout.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-doc-layout.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Prerequisites

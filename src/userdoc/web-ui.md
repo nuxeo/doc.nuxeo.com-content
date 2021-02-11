@@ -13,7 +13,7 @@ labels:
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
 [Getting Started with Nuxeo Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui).
-![]({{file name='university-webui.png' page='university'}} ?w=450,border=true)
+![]({{file name='university-webui' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 {{! multiexcerpt name='webui-functional-overview'}}

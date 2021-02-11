@@ -48,7 +48,7 @@ Since 7.1, there is a new converter class&nbsp;`CommandLineConverter`&nbsp;that 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration).
-![]({{file name='university-dam-configuration.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-dam-configuration.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 Let's see how we can contribute a new converter changing the format of an image using <span style="color: rgb(0,0,0);">ImageMagick</span>.

@@ -414,7 +414,7 @@ Watch the related courses on Nuxeo University
 - [Course on Nuxeo CLI](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools)
 - [Course on Nuxeo Platform Developer Basics](https://university.nuxeo.com/learn/public/course/view/elearning/11/nuxeo-platform-developer-basics).
 - [Expert Session on Nuxeo Software Factory](https://university.nuxeo.com/learn/public/course/view/elearning/136/expert-session-nuxeo-software-factory)
-![]({{file name='university-nuxeo-cli.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-nuxeo-cli.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Prerequisites

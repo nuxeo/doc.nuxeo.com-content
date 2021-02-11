@@ -288,7 +288,7 @@ history:
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
 - [Nuxeo Bulk Importer](https://university.nuxeo.com/learn/public/course/view/elearning/90/nuxeo-bulk-importer) on Nuxeo University.
-![]({{file name='university-bulk-umporter.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-bulk-umporter.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 {{! multiexcerpt name='bulk-importer'}}

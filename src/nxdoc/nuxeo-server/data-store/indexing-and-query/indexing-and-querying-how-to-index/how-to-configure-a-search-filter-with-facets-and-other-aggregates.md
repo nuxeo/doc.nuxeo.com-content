@@ -236,9 +236,9 @@ Aggregation is a function where the data are grouped together according to certa
 Before you start using aggregates you may want to take a look to the document about the [different type of aggregates supported]({{page page='aggregate-widget-types'}}) and the [Page Provider]({{page page='page-provider-aggregates'}}).
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Nuxeo University:
 - [Configuring Searches in Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer).
-![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-search.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 Nuxeo Platform supports six different types of aggregates: Terms, Significant Terms, Range, Date Range, Histogram and Date Histogram. This how-to will help you to understand how to use them.

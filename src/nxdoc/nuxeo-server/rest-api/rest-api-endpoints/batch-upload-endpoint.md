@@ -203,7 +203,7 @@ This endpoint allows to upload a batch of files to a Nuxeo server. The uploaded 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
 [Nuxeo REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/91/nuxeo-rest-api-import).
-![]({{file name='university-rest-api-importer.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-rest-api-importer.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Batch Upload Endpoint

@@ -306,7 +306,7 @@ Nuxeo supported modules handle English translations for each of their bundles. O
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
 [Expert Session on Translations](https://university.nuxeo.com/learn/public/course/view/elearning/140/expert-session-translations).
-![]({{file name='university-translations.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-translations.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 Languages that are sufficiently translated are available in the released default distribution. The conditions for a language to be available by default are that it is translated at 95% and approved at 75% minimum.
