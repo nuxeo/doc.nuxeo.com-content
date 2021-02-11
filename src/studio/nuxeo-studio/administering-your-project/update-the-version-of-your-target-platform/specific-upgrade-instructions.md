@@ -86,19 +86,35 @@ history:
         date: '2014-08-20 17:17'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 When upgrading your target platform in Studio, Studio will take care of generating the corresponding code for your target platform. Usually, no manual configuration changes are needed. This page lists a few exceptions.
-
 {{! /excerpt}}
 
 ## Upgrading to LTS 2021 or 11.x
 
-{{{multiexcerpt 'studio-lts2021-addons-upgrade-spreadsheet' space='nxdoc' page='web-ui-11-1-upgrade-notes'}}}
+### Nuxeo Spreadsheet
 
-{{{multiexcerpt 'studio-lts2021-addons-upgrade-dam' space='nxdoc' page='web-ui-11-1-upgrade-notes'}}}
+Spreadsheet addon is now loaded by default but the button contribution is disabled. Users can rely on Studio Designer to re-enable the `spreadSheet` *button* in the `RESULTS_ACTIONS` slot (see [WEBUI-90](https://jira.nuxeo.com/browse/WEBUI-90)).
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Web UI 11.x upgrade notes/Spreadsheet package enable button in Designer
+    name: spreadsheet-package-enable-button-designer.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Spreadsheet package enable button in Designer](nx_asset://b8fd28dd-0272-43b1-a083-dfde295c312b ?w=650,border=true)
+
+### Nuxeo DAM 
+
+Nuxeo DAM no longer exists as an addon and its contributions are now default on Web UI. If you are using it in Nuxeo Studio, you will see the Nuxeo DAM in the removed addons list when upgrading your project through the application definition page.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Web UI 11.x upgrade notes/Package removal in Studio's Application Definition
+    name: app-def-package-removal.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Package removal in Studio's Application Definition](nx_asset://b47d5c8b-c1ba-4d2a-ab0b-8b8378d73c8d ?w=650,border=true)
 
 ## Upgrading to LTS 2015 and LTS 2016
 
