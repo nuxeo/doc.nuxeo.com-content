@@ -17,7 +17,7 @@ Discover here new features, improvements and bug fixes for each of our products 
 {{#> panel type='secondary' match_height='true'}}
 ### Server
 
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nxdoc/next/nuxeo-server-release-notes'}})
+[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
 
 {{/panel}}
 </div>
@@ -46,7 +46,7 @@ Discover here new features, improvements and bug fixes for each of our products 
 ### Nuxeo Addons
 
 &#8211; &nbsp; [Drive]({{page space='client-apps' page='nuxeo-drive-release-notes'}})</br>
-&#8211; &nbsp; [Aspera]({{page space='nxdoc' page='nuxeo-aspera-release-notes'}})
+&#8211; &nbsp; [Aspera]({{page version='cloud' space='nxdoc' page='nuxeo-aspera-release-notes'}})
 
 {{/panel}}
 

@@ -217,7 +217,7 @@ It finds all keys prefixed with `nuxeo:work:run` then delete these keys.
 - [Redis Configuration]({{page page='redis-configuration'}})
 - [Work and WorkManager]({{page page='work-and-workmanager'}})
 - [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
-- [No-Redis Nuxeo Clustering Configuration]({{page page='nxdoc/kafka/#andquotno-redisandquot-nuxeo-cluster'}})
+- [No-Redis Nuxeo Clustering Configuration]({{page page='kafka'}}#andquotno-redisandquot-nuxeo-cluster)
 
 {{/panel}}</div><div class="column medium-6">
 
