@@ -89,7 +89,7 @@ To set up a custom global Trust Store and Key Store, you just have to add the fo
 
 For instance you could add the following parameters to your `JAVA_OPTS`:
 
-{{#> panel type='code' heading='$NUXEO_HOME/bin/nuxeo.conf'}}
+{{#> panel type='code'}}
 **`trustStore`**
 ```
 JAVA_OPTS=$JAVA_OPTS -Djavax.net.ssl.trustStore=/path/to/truststore.jks -Djavax.net.ssl.trustStoreType=jks -Djavax.net.ssl.trustStorePassword=changeit
