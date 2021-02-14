@@ -90,7 +90,7 @@ curl -u Administrator:Administrator \
            "dc:nature": "article",
            "dc:subjects": ["art/architecture"],
            "disableAuditLogger": true,
-           "versioningOption": "NONE"
+           "VersioningOption": "NONE"
          }'
 ```
 {{! /multiexcerpt}}

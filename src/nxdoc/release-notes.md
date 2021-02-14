@@ -15,18 +15,14 @@ Discover here new features, improvements and bug fixes for each of our products 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Server
-
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nxdoc/next/nuxeo-server-release-notes'}})
+### [Server &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nxdoc/next/nuxeo-server-release-notes'}})
 
 {{/panel}}
 </div>
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Web UI
-
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nxdoc/next/web-ui-release-notes'}})
+### [Web UI &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nxdoc/next/web-ui-release-notes'}})
 
 {{/panel}}
 </div>
@@ -35,9 +31,7 @@ Discover here new features, improvements and bug fixes for each of our products 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Nuxeo Studio
-
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='studio' page='nuxeo-studio-release-notes'}})
+### [Nuxeo Studio &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='studio' page='nuxeo-studio-release-notes'}})
 {{/panel}}
 </div>
 
@@ -46,7 +40,9 @@ Discover here new features, improvements and bug fixes for each of our products 
 ### Nuxeo Addons
 
 &#8211; &nbsp; [Drive]({{page space='client-apps' page='nuxeo-drive-release-notes'}})</br>
-&#8211; &nbsp; [Aspera]({{page space='nxdoc' page='nuxeo-aspera-release-notes'}})
+&#8211; &nbsp; [Aspera]({{page space='nxdoc' page='nuxeo-aspera-release-notes'}})</br>
+&#8211; &nbsp; [Nuxeo Enhanced Viewer]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer-release-notes'}})
+
 
 {{/panel}}
 
