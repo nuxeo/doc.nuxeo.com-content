@@ -178,11 +178,11 @@ Linux recommended path: `/var/log/nuxeo/...`
 
 #### `nuxeo.pid.dir`
 
-Directory where to store Nuxeo PID file.
+Directory where to store Nuxeo PID file (absolute or relative to `NUXEO_HOME`).
 
 **Default Value**
 
-`bin`
+`log`
 
 * * *
 
@@ -193,13 +193,13 @@ Linux recommended path: `/var/lib/nuxeo/...`
 
 **Default Value**
 
-`data`
+`nxserver/data`
 
 * * *
 
 #### `nuxeo.tmp.dir`
 
-Location of the temporary files.
+Location of the temporary files (absolute or relative to NUXEO_HOME).
 
 **Default Value**
 
@@ -209,9 +209,7 @@ Location of the temporary files.
 
 #### `nuxeo.mp.dir`
 
-**Since Nuxeo 5.9.4**
-
-Nuxeo Packages directory.
+Nuxeo Packages directory (absolute or relative to NUXEO_HOME).
 
 **Default Value**
 
@@ -235,7 +233,7 @@ If "`false`", configuration changes are ignored.
 
 Comma separated list of templates to include.<br/>
 Templates paths are absolute or relative to `$NUXEO_HOME/templates/`.<br/>
-Available templates: postgresql, mysql, mssql, oracle, custom, ...
+Available templates: postgresql, mongodb, custom, ...
 
 **Default Value**
 
@@ -274,6 +272,16 @@ Since 10.3. Configure the Tomcat `connectionUploadTimeout` to specify the timeou
 
 * * *
 
+#### `nuxeo.server.ajp.enabled`
+
+Enable Tomcat AJP connector.
+
+**Default Value**
+
+`false`
+
+* * *
+
 #### `nuxeo.server.ajp.port`
 
 Server AJP listen port.
@@ -281,6 +289,20 @@ Server AJP listen port.
 **Default Value**
 
 `8009`
+
+* * *
+
+#### `nuxeo.server.cookies.sameSite`
+
+**Since Nuxeo 10.10-HF34, Nuxeo 11.4 and Nuxeo LTS 2021**
+
+Allows setting the same site cookie policy.
+
+Possible values: none, lax or strict.
+
+**Default Value**
+
+`lax`
 
 * * *
 
@@ -368,25 +390,11 @@ This is only useful if you have modified the application server to use HTTPS.
 
 * * *
 
-#### `nuxeo.server.emptySessionPath`
-
-**Since Nuxeo 5.5, until Nuxeo 5.7.1**
-
-(Tomcat only)If set to true, all paths for session cookies will be set to `/`.<br/>
-May be useful to enable authentication on proxyfied WebEngine applications (see [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})).<br/>
-Removed since Nuxeo 5.7.2 (see [http://tomcat.apache.org/migration-7.html#Session_cookie_configuration](http://tomcat.apache.org/migration-7.html#Session_cookie_configuration)).
-
-**Default Value**
-
-`false`
-
-* * *
-
 #### `nuxeo.server.signature`
 
 **Since Nuxeo 6.0**
 
-(Tomcat only)If set, this will replace the default value of the "Server:" HTTP response header.
+If set, this will replace the default value of the "Server:" HTTP response header.
 
 **Default Value**
 
@@ -436,7 +444,7 @@ Product name, displayed in the page title on your browser.
 
 **Since Nuxeo 5.6**
 
-This property uses the "dev" mode when running the Nuxeo application. This parameter should not be set to `true` on a production server, as it disables some caches, and enables hot redeploy of some JARs (Studio JARs for instance). For more information about the dev mode, see [How to do incremental deployment (hot reload) in the JSF-Seam layer]({{page space='corg' page='supporting-hot-reload'}}).
+This property uses the "dev" mode when running the Nuxeo application. This parameter should not be set to `true` on a production server, as it disables some caches, and enables hot redeploy of some JARs (Studio JARs for instance). For more information about the dev mode, see [How to do incremental deployment (hot reload)]({{page space='corg' page='supporting-hot-reload'}}).
 
 Before 5.6, setting this property to true stopped the runtime when an error occured at deployment. This behaviour has been removed from the dev mode and is now controlled by the property `org.nuxeo.runtime.strict`.
 
@@ -515,13 +523,19 @@ By default, all automation executions are 'printable' (appear in logs) when auto
 
 * * *
 
-#### `templateName.target`
+#### `templateName.include` - only available in template properties
 
-Directory where *templateName* files will be deployed.
+Templates to include prior to the one being included.
+
+* * *
+
+#### `templateName.target` - only available in template properties
+
+Directory where *templateName* files will be deployed (relative to NUXEO_HOME).
 
 **Default Value**
 
-`server/default/deploy/nuxeo.ear`
+`nxserver`
 
 * * *
 
@@ -941,46 +955,6 @@ Note: Changing this parameter is not enough. See [How to Change Context Path]({{
 
 * * *
 
-#### `org.nuxeo.ecm.platform.transform.ooo.host.name`
-
-**DEPRECATED.**
-
-**Default Value**
-
-`127.0.0.1`
-
-* * *
-
-#### `org.nuxeo.ecm.platform.transform.ooo.host.port`
-
-DEPRECATED.
-
-**Default Value**
-
-`8100`
-
-* * *
-
-#### `org.nuxeo.ecm.platform.transform.ooo.version`
-
-DEPRECATED.
-
-**Default Value**
-
-`2.2.1`
-
-* * *
-
-#### `org.nuxeo.ecm.platform.transform.ooo.enableDaemon`
-
-**DEPRECATED.**
-
-**Default Value**
-
-`true`
-
-* * *
-
 #### `repository.clustering.enabled`
 
 **DEPRECATED**, use `nuxeo.cluster.enabled`</br>Activate clustering mode.
@@ -1024,7 +998,11 @@ Allows the configuration of VCS cluster invalidations. The value `default` uses 
 **DEPRECATED.**</br>
 Defines the folder where binaries are stored. Useful when using clustering or to change the location of binaries to another location. This parameter is still in use in existing configurations: for new installation, use `nuxeo.binarystores.root`
 
-_Default value:_ default
+**Default Value**
+
+`default`
+
+* * *
 
 #### `nuxeo.binarystores.root`
 
@@ -1036,13 +1014,17 @@ Defines the root folder where all binaries are stored. Useful when using cluster
 
 Activate clustering mode.
 
-_Default value:_ false
+**Default Value**
+
+`false`
+
+* * *
 
 #### `nuxeo.cluster.nodeid`
 
-The cluster node id for this Nuxeo instance. This can be any arbitrary string.
-
 **Since Nuxeo 11.1**
+
+The cluster node id for this Nuxeo instance. This can be any arbitrary string.
 
 * * *
 
@@ -1057,18 +1039,6 @@ Custom class for the Binary Manager, to replace the default file-base storage.
 **Since Nuxeo 6.0**
 
 Key configuration for the binary manager, if applicable.
-
-* * *
-
-#### `nuxeo.templates.parsing.extensions`
-
-**DEPRECATED since Nuxeo 5.6**
-
-Files extensions being parsed for parameters replacement when copying templates.
-
-**Default Value**
-
-`xml,properties`
 
 * * *
 
