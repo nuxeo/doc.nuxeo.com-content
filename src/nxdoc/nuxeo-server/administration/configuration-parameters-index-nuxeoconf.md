@@ -150,11 +150,11 @@ Linux recommended path: `/var/log/nuxeo/...`
 
 #### `nuxeo.pid.dir`
 
-Directory where to store Nuxeo PID file.
+Directory where to store Nuxeo PID file (absolute or relative to `NUXEO_HOME`).
 
 **Default Value**
 
-`bin`
+`log`
 
 * * *
 
@@ -165,13 +165,13 @@ Linux recommended path: `/var/lib/nuxeo/...`
 
 **Default Value**
 
-`data`
+`nxserver/data`
 
 * * *
 
 #### `nuxeo.tmp.dir`
 
-Location of the temporary files.
+Location of the temporary files (absolute or relative to NUXEO_HOME).
 
 **Default Value**
 
@@ -185,7 +185,7 @@ Location of the temporary files.
 
 **Since Nuxeo 5.9.4**
 
-Since Nuxeo 5.9.4\. Nuxeo Packages directory.
+Nuxeo Packages directory (absolute or relative to NUXEO_HOME).
 
 **Default Value**
 
@@ -209,7 +209,7 @@ If "`false`", configuration changes are ignored.
 
 Comma separated list of templates to include.<br/>
 Templates paths are absolute or relative to `$NUXEO_HOME/templates/`.<br/>
-Available templates: postgresql, mysql, mssql, oracle, custom, ...
+Available templates: postgresql, mysql, mssql, oracle, mongodb, custom, ...
 
 **Default Value**
 
@@ -250,6 +250,16 @@ Since 10.3. Configure the Tomcat `connectionUploadTimeout` to specify the timeou
 
 * * *
 
+#### `nuxeo.server.ajp.enabled`
+
+Enable Tomcat AJP connector.
+
+**Default Value**
+
+`false`
+
+* * *
+
 #### `nuxeo.server.ajp.port`
 
 Server AJP listen port.<br/>
@@ -258,6 +268,20 @@ This is not available on Jetty.
 **Default Value**
 
 `8009`
+
+* * *
+
+#### `nuxeo.server.cookies.sameSite`
+
+**Since Nuxeo 10.10-HF34, Nuxeo 11.4 and Nuxeo LTS 2021**
+
+Allows setting the same site cookie policy.
+
+Possible values: none, lax or strict.
+
+**Default Value**
+
+`lax`
 
 * * *
 
@@ -361,7 +385,9 @@ Removed since Nuxeo 5.7.2 (see [http://tomcat.apache.org/migration-7.html#Sessio
 
 #### `nuxeo.server.signature`
 
-(Tomcat only) Since Nuxeo 6.0\. If set, this will replace the default value of the "Server:" HTTP response header.
+**Since Nuxeo 6.0**
+
+If set, this will replace the default value of the "Server:" HTTP response header.
 
 **Default Value**
 
@@ -411,7 +437,7 @@ Product name, displayed in the page title on your browser.
 
 **Since Nuxeo 5.6**
 
-Since Nuxeo 5.6, this property uses the "dev" mode when running the Nuxeo application. This parameter should not be set to `true` on a production server, as it disables some caches, and enables hot redeploy of some JARs (Studio JARs for instance). For more information about the dev mode, see [How to do incremental deployment (hot reload) in the JSF-Seam layer]({{page space='corg' page='supporting-hot-reload'}}).
+This property uses the "dev" mode when running the Nuxeo application. This parameter should not be set to `true` on a production server, as it disables some caches, and enables hot redeploy of some JARs (Studio JARs for instance). For more information about the dev mode, see [How to do incremental deployment (hot reload) in the JSF-Seam layer]({{page space='corg' page='supporting-hot-reload'}}).
 
 Before 5.6, setting this property to true stopped the runtime when an error occured at deployment. This behaviour has been removed from the dev mode and is now controlled by the property `org.nuxeo.runtime.strict`.
 
@@ -490,9 +516,15 @@ By default, all automation executions are 'printable' (appear in logs) when auto
 
 * * *
 
-#### `templateName.target`
+#### `templateName.include` - only available in template properties
 
-Directory where _templateName_ files will be deployed.
+Templates to include prior to the one being included.
+
+* * *
+
+#### `templateName.target` - only available in template properties
+
+Directory where *templateName* files will be deployed (relative to NUXEO_HOME).
 
 **Default Value**
 
@@ -1033,7 +1065,7 @@ Custom class for the Binary Manager, to replace the default file-base storage.
 
 **Since Nuxeo 6.0**
 
-Since Nuxeo 6.0\. Key configuration for the binary manager, if applicable.
+Key configuration for the binary manager, if applicable.
 
 * * *
 
@@ -1041,7 +1073,7 @@ Since Nuxeo 6.0\. Key configuration for the binary manager, if applicable.
 
 **Deprecated since Nuxeo 5.6**
 
-Deprecated since Nuxeo 5.6\. Files extensions being parsed for parameters replacement when copying templates.
+Files extensions being parsed for parameters replacement when copying templates.
 
 **Default Value**
 
