@@ -185,7 +185,7 @@ You can block this inheritance. It enables you to block the access of a sub-work
 
 **To block rights inheritance:**
 1. Click on the **Permissions** tab of the space of which you want to the access rights. The Access Rights sub-tab is displayed.
-1. Click on the **Block** button located under the **PERMISSIONS INHERITED FROM UPPER LEVELS** table.
+1. Click on the **Block** button located under the **Permissions inherited from upper levels** table.
 
     Now that only local permissions are applied, any change made on parent document won't affect the access conditions to this document. You and the administrators will be added to local permissions.
 
