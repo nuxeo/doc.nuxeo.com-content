@@ -1779,7 +1779,7 @@ Reindexing option, number of documents to submit to Elasticsearch per bulk comma
 
 **Default Value**
 
-`50`
+`100`
 
 * * *
 
@@ -1831,7 +1831,7 @@ A timeout in milliseconds until a connection is established
 
 **Default Value**
 
-`5000`
+`30000`
 
 * * *
 
