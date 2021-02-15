@@ -2221,7 +2221,7 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <tr>
 <td colspan="1">`elasticsearch.reindex.bucketWriteSize`</td>
 <td colspan="1">Reindexing option, number of documents to submit to Elasticsearch per bulk command</td>
-<td colspan="1">`50`</td>
+<td colspan="1">`100`</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -2251,7 +2251,7 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <tr>
 <td colspan="1">`elasticsearch.restClient.connectionTimeoutMs`</td>
 <td colspan="1">A timeout in milliseconds until a connection is established</td>
-<td colspan="1">`5000`</td>
+<td colspan="1">`30000`</td>
 <td colspan="1">Since 9.10</td>
 </tr>
 <tr>
