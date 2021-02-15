@@ -137,8 +137,7 @@ Client | 7.10 | 8.10 | 9.10 | 10.10
 Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/support.md#client)):
 
 - GNU/Linux, 64 bits
-- macOS >= 10.12, 64 bits
-- Windows 7 SP1, both 32 and 64 bits
+- macOS >= 10.13, 64 bits
 - Windows 8, both 32 and 64 bits
 - Windows 8.1, both 32 and 64 bits
 - Windows 10, both 32 and 64 bits
@@ -153,16 +152,6 @@ You can install it with [chocolatey](https://chocolatey.org/packages/KB3063858):
 ```sh
 choco install kb3063858
 ```
-
-#### Windows 7 32 bits
-
-- Download link: [Windows6.1-KB3063858-x86.msu](https://download.microsoft.com/download/C/9/6/C96CD606-3E05-4E1C-B201-51211AE80B1E/Windows6.1-KB3063858-x86.msu)
-- Checksum (SHA256): `A95DDA6B57B8012B0ADA9543BA667F48A99DE8FE93030A8FE8C9D5C2E5C038C1`
-
-#### Windows 7
-
-- Download link: [Windows6.1-KB3063858-x64.msu](https://download.microsoft.com/download/0/8/E/08E0386B-F6AF-4651-8D1B-C0A95D2731F0/Windows6.1-KB3063858-x64.msu)
-- Checksum (SHA256): `6FEC4E38CDCBDAA334937A2EF38BAD6800E9C80CB513183451B4049E84479A85`
 
 #### Windows 8 32 bits
 
