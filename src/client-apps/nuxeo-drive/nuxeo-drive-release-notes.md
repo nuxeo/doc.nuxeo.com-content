@@ -16,7 +16,7 @@ Welcome to the Release Notes for **Nuxeo Drive 5.0.0**
 
 ## Important Changes
 
-### Drop Support for macOS 10.12 (Sierra)
+### End of macOS Sierra Support
 
 The support of macOS Sierra (10.12) has been dropped. It was needed in order to benefit of upcoming improvements in the synchronization engine.
 
