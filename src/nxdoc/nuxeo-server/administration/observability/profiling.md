@@ -27,7 +27,7 @@ jcmd Boot JFR.start duration=60s filename=/tmp/capture.jfr
 
 This will produce a JFR file `/tmp/capture.jfr`.
 
-You now need to install [Java Mission Control 7](https://jdk.java.net/jmc/) and open the JFR file.
+You now need to install [Zulu Mission Control](https://www.azul.com/products/zulu-mission-control/) and open the JFR file.
 
 This is a very powerful way to report a performance problem because in addition of the profiling,
 the JFR file also contains a capture of the CPU activity, memory pressure, and thread dumps.
