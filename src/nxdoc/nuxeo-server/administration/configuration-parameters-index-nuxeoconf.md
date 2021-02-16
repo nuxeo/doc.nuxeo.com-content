@@ -264,7 +264,7 @@ Server HTTP listen port.
 
 #### `nuxeo.server.http.connectionUploadTimeout`
 
-Since 10.3. Configure the Tomcat `connectionUploadTimeout` to specify the timeout, in milliseconds, to use while a data upload is in progress.
+Configure the Tomcat `connectionUploadTimeout` to specify the timeout, in milliseconds, to use while a data upload is in progress.
 
 **Default Value**
 
@@ -294,8 +294,6 @@ Server AJP listen port.
 
 #### `nuxeo.server.cookies.sameSite`
 
-**Since Nuxeo 10.10-HF34, Nuxeo 11.4 and Nuxeo LTS 2021**
-
 Allows setting the same site cookie policy.
 
 Possible values: none, lax or strict.
@@ -317,8 +315,6 @@ Server AJP route for load-balancing
 * * *
 
 #### `nuxeo.server.tomcat_admin.host`
-
-**Since Nuxeo 7.3**
 
 Tomcat server's "admin" host.<br/>
 This is the address on which the server waits for a shutdown command.
@@ -344,8 +340,6 @@ This is only useful if you have another Tomcat server running and want to avoid 
 
 #### `nuxeo.server.tomcat_admin.port`
 
-**Since Nuxeo 5.6**
-
 Tomcat server's "admin" port.<br/>
 Replaces `nuxeo.server.tomcat-admin.port`. This is only useful if you have another Tomcat server running and want to avoid port conflicts.
 
@@ -357,8 +351,6 @@ Replaces `nuxeo.server.tomcat-admin.port`. This is only useful if you have anoth
 
 #### `nuxeo.server.tomcat_error.show_report`
 
-**Since Nuxeo 9.3**
-
 Tomcat report displayed or not on Tomcat error page.
 
 **Default Value**
@@ -368,8 +360,6 @@ Tomcat report displayed or not on Tomcat error page.
 * * *
 
 #### `nuxeo.server.tomcat_error.show_server_info`
-
-**Since Nuxeo 9.3**
 
 Tomcat version info (as Tomcat server version) displayed or not on Tomcat error page.
 
@@ -391,8 +381,6 @@ This is only useful if you have modified the application server to use HTTPS.
 * * *
 
 #### `nuxeo.server.signature`
-
-**Since Nuxeo 6.0**
 
 If set, this will replace the default value of the "Server:" HTTP response header.
 
@@ -442,8 +430,6 @@ Product name, displayed in the page title on your browser.
 
 #### {{> anchor 'orgnuxeodev'}} `org.nuxeo.dev`
 
-**Since Nuxeo 5.6**
-
 This property uses the "dev" mode when running the Nuxeo application. This parameter should not be set to `true` on a production server, as it disables some caches, and enables hot redeploy of some JARs (Studio JARs for instance). For more information about the dev mode, see [How to do incremental deployment (hot reload)]({{page space='corg' page='supporting-hot-reload'}}).
 
 Before 5.6, setting this property to true stopped the runtime when an error occured at deployment. This behaviour has been removed from the dev mode and is now controlled by the property `org.nuxeo.runtime.strict`.
@@ -456,8 +442,6 @@ Before 5.6, setting this property to true stopped the runtime when an error occu
 
 #### `org.nuxeo.prod`
 
-**Since Nuxeo 5.8**
-
 Setting this property to "true" will display a quite visible warning message in the Admin tab, stating that this is a production instance. This is useful for administrators who are sometimes confusing their Nuxeo production server with their test server (not to rat anyone out).
 
 **Default Value**
@@ -469,8 +453,6 @@ Setting this property to "true" will display a quite visible warning message in 
 #### {{! multiexcerpt name='org.nuxeo.rest.stack.enable'}}`org.nuxeo.rest.stack.enable`
 
 {{! /multiexcerpt}}
-
-**Since Nuxeo 6.0**
 
 {{! multiexcerpt name='org.nuxeo.rest.stack.enable-description'}}
 You can enable this mode if you'd like to display exception stacktraces in JSON response when error occurs after REST calls.
@@ -774,8 +756,6 @@ Database maximum pool size for Nuxeo datasources.
 
 #### `nuxeo.db.idle-timeout-minutes`
 
-**Since Nuxeo 6.0**
-
 Database timeout after which connections not in use are removed from the pool.
 
 **Default Value**
@@ -816,8 +796,6 @@ Database maximum pool size for Nuxeo repository (VCS).
 
 #### `nuxeo.vcs.blocking-timeout-millis`
 
-**Since Nuxeo 5.8**
-
 Database maximum wait time to get a connection from the pool when all connections are in use, for Nuxeo repository (VCS).
 
 **Default Value**
@@ -827,8 +805,6 @@ Database maximum wait time to get a connection from the pool when all connection
 * * *
 
 #### `nuxeo.vcs.idle-timeout-minutes`
-
-**Since Nuxeo 5.8**
 
 Database timeout after which connections not in use are removed from the pool, for Nuxeo repository (VCS).
 
@@ -840,8 +816,6 @@ Database timeout after which connections not in use are removed from the pool, f
 
 #### `nuxeo.vcs.fulltext.disabled`
 
-**Since Nuxeo 5.8**
-
 Whether full text indexing and querying should be completely disabled in the repository. See [VCS]({{page page='vcs'}}) for details.
 
 **Default Value**
@@ -851,8 +825,6 @@ Whether full text indexing and querying should be completely disabled in the rep
 * * *
 
 #### `nuxeo.vcs.fulltext.search.disabled`
-
-**Since Nuxeo 6.0**
 
 Full text querying from VCS (database backend) is disabled, full text extraction is done. See [VCS]({{page page='vcs'}}) for details.
 
@@ -864,8 +836,6 @@ Full text querying from VCS (database backend) is disabled, full text extraction
 
 #### `nuxeo.vcs.fulltext.analyzer.language`
 
-**Since Nuxeo 7.3**
-
 Full text analyzer language. Only applies to`postgresql` and `mssql` database types.
 
 **Default Value**
@@ -875,8 +845,6 @@ Full text analyzer language. Only applies to`postgresql` and `mssql` database ty
 * * *
 
 #### `nuxeo.vcs.noddl`
-
-**Since Nuxeo 5.8**
 
 Where DDL generation should be disabled in the repository. See [VCS]({{page page='vcs'}}) for details.
 
@@ -888,8 +856,6 @@ Where DDL generation should be disabled in the repository. See [VCS]({{page page
 
 #### `nuxeo.vcs.ddlmode`
 
-**Since Nuxeo 7.10-HF01 and Nuxeo 8.1**
-
 What kind of DDL generation is done. See [VCS]({{page page='vcs'}}) for details.
 
 **Default Value**
@@ -900,8 +866,6 @@ What kind of DDL generation is done. See [VCS]({{page page='vcs'}}) for details.
 
 #### `nuxeo.vcs.idtype`
 
-**Since Nuxeo 5.8**
-
 The type of `id` column. See [VCS]({{page page='vcs'}}) for details.
 
 **Default Value**
@@ -911,8 +875,6 @@ The type of `id` column. See [VCS]({{page page='vcs'}}) for details.
 * * *
 
 #### `nuxeo.vcs.copy.findFreeName.disabled`
-
-**Since Nuxeo 7.3**
 
 Set to true to disable free-name detection and let the database raise a constraint error in case of collisions **if the constraints have been added by hand**.
 
@@ -957,7 +919,7 @@ Note: Changing this parameter is not enough. See [How to Change Context Path]({{
 
 #### `repository.clustering.enabled`
 
-**DEPRECATED**, use `nuxeo.cluster.enabled`</br>Activate clustering mode.
+**DEPRECATED since LTS 2021**, use `nuxeo.cluster.enabled`</br>Activate clustering mode.
 
 **Default Value**
 
@@ -967,9 +929,7 @@ Note: Changing this parameter is not enough. See [How to Change Context Path]({{
 
 #### `repository.clustering.id`
 
-**Since Nuxeo 7.3**
-
-**DEPRECATED**, use `nuxeo.cluster.nodeid`</br>The cluster node id for this Nuxeo instance. This can be any arbitrary string.
+**DEPRECATED since LTS 2021**, use `nuxeo.cluster.nodeid`</br>The cluster node id for this Nuxeo instance. This can be any arbitrary string.
 
 * * *
 
@@ -1010,8 +970,6 @@ Defines the root folder where all binaries are stored. Useful when using cluster
 
 #### `nuxeo.cluster.enabled`
 
-**Since Nuxeo 11.1**
-
 Activate clustering mode.
 
 **Default Value**
@@ -1021,8 +979,6 @@ Activate clustering mode.
 * * *
 
 #### `nuxeo.cluster.nodeid`
-
-**Since Nuxeo 11.1**
 
 The cluster node id for this Nuxeo instance. This can be any arbitrary string.
 
@@ -1036,15 +992,11 @@ Custom class for the Binary Manager, to replace the default file-base storage.
 
 #### `nuxeo.core.binarymanager_key`
 
-**Since Nuxeo 6.0**
-
 Key configuration for the binary manager, if applicable.
 
 * * *
 
 #### `nuxeo.plaintext_parsing_extensions`
-
-**Since Nuxeo 5.6**
 
 Files extensions being parsed for parameters replacement when copying templates.
 
@@ -1055,8 +1007,6 @@ Files extensions being parsed for parameters replacement when copying templates.
 * * *
 
 #### `zip.entry.encoding`
-
-**Modified since Nuxeo 7.1**
 
 Choose how to encode filename when exporting documents to zip in the worklist.<br/>
 The ZIP entries names are encoded in UTF8 by default. If you want to get the old behavior back (having entry name encoded in ascii), use `zip.entry.encoding=ascii`.
@@ -1107,8 +1057,6 @@ NT Lan Manager (NTLM) Proxy. Domain name to authenticate against.
 
 #### `nuxeo.http.proxy.pac.url`
 
-**Since Nuxeo 5.9.3**
-
 Proxy auto-config (PAC) file URL.
 
 * * *
@@ -1117,7 +1065,7 @@ Proxy auto-config (PAC) file URL.
 
 Indicates to the compiler the number of seconds to wait between subsequent checks for changes in modified JSF facelets in a running application. Useful for facelet debugging.<br/>
 To disable this compiler check use a value of -1 which is a recommended value for production deployments as compiler checks have an impact on application performance.<br/>
-Since Nuxeo 5.6, the parameter [`undefined`](#orgnuxeodev) should be used instead as it forces this parameter to value "2".
+The parameter [`undefined`](#orgnuxeodev) should be used instead as it forces this parameter to value "2".
 
 **Default Value**
 
@@ -1153,8 +1101,6 @@ Session timeout (see [web.xml session-timeout](http://www.google.com/search?q=we
 * * *
 
 #### `session.config.tracking.mode.cookie`
-
-**Since Nuxeo 10.2**
 
 Session tracking mode.<br/>
 If `true`, prevents Tomcat from appending the `jsessionid` parameter to the URLs, for example a file download URL. Yet, cookies need to be enabled in the browser.<br/>
@@ -1198,8 +1144,6 @@ Disables login synchronization.
 
 #### `nuxeo.jsf.numberOfConversationsInSession`
 
-**Since Nuxeo 5.7.2**
-
 Parameter to control the number of conversation states that are saved in session. Each conversation holds a number of view states that is defined by `nuxeo.jsf.numberOfViewsInSession`
 
 **Default Value**
@@ -1209,8 +1153,6 @@ Parameter to control the number of conversation states that are saved in session
 * * *
 
 #### `nuxeo.jsf.numberOfViewsInSession`
-
-**Since Nuxeo 5.7.2**
 
 Parameter to control the JSF init parameter `com.sun.faces.numberOfViewsInSession`
 
@@ -1222,8 +1164,6 @@ Parameter to control the JSF init parameter `com.sun.faces.numberOfViewsInSessio
 
 #### `nuxeo.jsf.numberOfLogicalViews`
 
-**Since Nuxeo 5.7.2 (5.6-HF20)**
-
 Parameter to control the JSF init parameter `com.sun.faces.numberOfLogicalViews`
 
 **Default Value**
@@ -1233,8 +1173,6 @@ Parameter to control the JSF init parameter `com.sun.faces.numberOfLogicalViews`
 * * *
 
 #### `nuxeo.jsf.tmp.dir`
-
-**Since Nuxeo 6.0**
 
 Faces Servlet multi-part config: an absolute path to a directory on the file system. The location attribute does  **not** support a path relative to the application context. This location is used to store files temporarily while the parts are processed or when the size of the file exceeds the specified `fileSizeThreshold` setting. The default location is "".
 
@@ -1246,8 +1184,6 @@ Faces Servlet multi-part config: an absolute path to a directory on the file sys
 
 #### `nuxeo.jsf.maxFileSize`
 
-**Since Nuxeo 6.0**
-
 Faces Servlet multi-part config: the maximum size allowed for uploaded files, in bytes. The default size is unlimited.
 
 **Default Value**
@@ -1257,8 +1193,6 @@ Faces Servlet multi-part config: the maximum size allowed for uploaded files, in
 * * *
 
 #### `nuxeo.jsf.maxRequestSize`
-
-**Since Nuxeo 6.0**
 
 Faces Servlet multi-part config: the maximum size allowed for a `multipart/form-data` request, in bytes. The default size is unlimited.
 
@@ -1270,8 +1204,6 @@ Faces Servlet multi-part config: the maximum size allowed for a `multipart/form-
 
 #### `nuxeo.jsf.fileSizeThreshold`
 
-**Since Nuxeo 6.0**
-
 Faces Servlet multi-part config: The file size in bytes after which the file will be temporarily stored on disk. The default size is 0 bytes.
 
 **Default Value**
@@ -1281,8 +1213,6 @@ Faces Servlet multi-part config: The file size in bytes after which the file wil
 * * *
 
 #### `nuxeo.vcs.use-nulls-last-on-desc`
-
-**Since Nuxeo 5.8**
 
 Ask the database to use "NULLS LAST" when sorting DESC. True by default to get the same result order between different databases.<br/>
 Also turning this option to false enable PostgreSQL and Oracle to use an index on the sorted column which can be huge performance improvement.
@@ -1295,8 +1225,6 @@ Also turning this option to false enable PostgreSQL and Oracle to use an index o
 
 #### `org.nuxeo.connect.connector.cache.duration`
 
-**Since Nuxeo 5.6**
-
 Nuxeo Packages list cache (in minutes).
 
 **Default Value**
@@ -1306,8 +1234,6 @@ Nuxeo Packages list cache (in minutes).
 * * *
 
 #### `org.nuxeo.connect.server.reachable`
-
-**Since Nuxeo 5.7**
 
 Launcher online/offline mode for connections to Nuxeo Connect.
 
@@ -1339,8 +1265,6 @@ Enable/Disable multi-line strings escaped with a trailing \ when using `Document
 
 #### `org.nuxeo.cmis.joins`
 
-**Since Nuxeo 6.0**
-
 When true, CMISQL JOINs are allowed if VCS is used.
 
 **Default Value**
@@ -1350,8 +1274,6 @@ When true, CMISQL JOINs are allowed if VCS is used.
 * * *
 
 #### `org.nuxeo.cmis.proxies`
-
-**Since Nuxeo 7.10-HF08 and Nuxeo 8.3**
 
 If false, proxies are not visible through CMIS. Cannot be `true` if `org.nuxeo.cmis.joins` is `true`.
 
@@ -1363,8 +1285,6 @@ If false, proxies are not visible through CMIS. Cannot be `true` if `org.nuxeo.c
 
 #### `org.nuxeo.cmis.enableComplexProperties`
 
-**Since Nuxeo 7.1**
-
 When true, complex properties are exposed as JSON-encoded strings.
 
 **Default Value**
@@ -1374,8 +1294,6 @@ When true, complex properties are exposed as JSON-encoded strings.
 * * *
 
 #### `nuxeo.security.allowNegativeACL`
-
-**Since Nuxeo 6.0**
 
 When true, enables adding negative ACL (deny permissions) in the UI, otherwise only grant permissions are available.
 
@@ -1387,8 +1305,6 @@ When true, enables adding negative ACL (deny permissions) in the UI, otherwise o
 
 #### `audit.elasticsearch.enabled`
 
-**Since Nuxeo 7.3**
-
 See [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-elasticsearch-for-audit-logs).<br/>
 Defaults to false on server upgrade, true on new install.
 
@@ -1399,8 +1315,6 @@ Defaults to false on server upgrade, true on new install.
 * * *
 
 #### `audit.elasticsearch.indexName`
-
-**Since Nuxeo 7.10**
 
 Name of the Elasticsearch index for audit logs.
 
@@ -1422,8 +1336,6 @@ Name of the Elasticsearch index for the uid sequencer.
 
 #### `audit.elasticsearch.migration`
 
-**Since Nuxeo 7.3**
-
 See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='710' space='admindoc' page='elasticsearch-setup'}}#triggering-sql-to-elasticsearch-audit-logs-migration)
 
 **Default Value**
@@ -1433,8 +1345,6 @@ See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='710' 
 * * *
 
 #### `audit.elasticsearch.migration.batchSize`
-
-**Since Nuxeo 7.3**
 
 See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='710' space='admindoc' page='elasticsearch-setup'}}#triggering-sql-to-elasticsearch-audit-logs-migration)
 
@@ -1446,8 +1356,6 @@ See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='710' 
 
 #### `elasticsearch.httpReadOnly.baseUrl`
 
-**Since Nuxeo 7.10**
-
 Required when using a standalone Elasticsearch instance. See [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}}#requirement)
 
 **Default Value**
@@ -1457,8 +1365,6 @@ Required when using a standalone Elasticsearch instance. See [Elasticsearch Pass
 * * *
 
 #### `org.nuxeo.cmis.elasticsearch`
-
-**Since Nuxeo 7.2**
 
 To send the CMISQL queries to Elasticsearch, set to true.
 
@@ -1470,8 +1376,6 @@ To send the CMISQL queries to Elasticsearch, set to true.
 
 #### `nuxeo.redis.enabled`
 
-**Since Nuxeo 5.8**
-
 Set to true to activate Redis.
 
 **Default Value**
@@ -1482,8 +1386,6 @@ Set to true to activate Redis.
 
 #### `nuxeo.redis.host`
 
-**Since Nuxeo 5.8**
-
 **Default Value**
 
 `redishost`
@@ -1491,8 +1393,6 @@ Set to true to activate Redis.
 * * *
 
 #### `nuxeo.redis.port`
-
-**Since Nuxeo 5.8**
 
 **Default Value**
 
@@ -1502,13 +1402,9 @@ Set to true to activate Redis.
 
 #### `nuxeo.redis.password`
 
-**Since Nuxeo 5.8**
-
 * * *
 
 #### `nuxeo.redis.database`
-
-**Since Nuxeo 5.8**
 
 **Default Value**
 
@@ -1518,8 +1414,6 @@ Set to true to activate Redis.
 
 #### `nuxeo.redis.timeout`
 
-**Since Nuxeo 5.8**
-
 **Default Value**
 
 `2000`
@@ -1527,8 +1421,6 @@ Set to true to activate Redis.
 * * *
 
 #### `nuxeo.redis.maxTotal`
-
-**Since Nuxeo 8.2**
 
 The maximum size of the Redis connections pool.
 
@@ -1540,8 +1432,6 @@ The maximum size of the Redis connections pool.
 
 #### `nuxeo.redis.maxIdle`
 
-**Since Nuxeo 8.2**
-
 The maximum number of Redis idle connections in the pool.
 
 **Default Value**
@@ -1551,8 +1441,6 @@ The maximum number of Redis idle connections in the pool.
 * * *
 
 #### `nuxeo.redis.prefix`
-
-**Since Nuxeo 5.8**
 
 This allows you to use a single Redis server between several Nuxeo cluster installations by having a different prefix for each cluster. See the page [Redis Configuration]({{page page='redis-configuration'}}) for more details.
 
@@ -1564,8 +1452,6 @@ This allows you to use a single Redis server between several Nuxeo cluster insta
 
 #### `server.crypt.secretkey`
 
-**Since Nuxeo 7.4**
-
 Custom secret key used for sensitive configuration data encryption. It takes either a raw value or an URL (e.g. <a class="external-link" rel="nofollow">file:///path/to/secretkey</a> or [http://some.online.file.com](http://some.online.file.com)).
 
 **Default Value**
@@ -1575,8 +1461,6 @@ Custom secret key used for sensitive configuration data encryption. It takes eit
 * * *
 
 #### `server.crypt.keystore.path`
-
-**Since Nuxeo 7.4**
 
 Path to the keystore to use for sensitive configuration data encryption.
 
@@ -1588,8 +1472,6 @@ Path to the keystore to use for sensitive configuration data encryption.
 
 #### `server.crypt.keystore.pass`
 
-**Since Nuxeo 7.4**
-
 The password used to protect the integrity of the keystore contents.
 
 **Default Value**
@@ -1600,15 +1482,11 @@ The password used to protect the integrity of the keystore contents.
 
 #### `server.crypt.keyalias`
 
-**Since Nuxeo 7.4**
-
 The alias prefix where to retrieve the secret key from the keystore. It is automatically suffixed with the algorithm ("AES" or "DES").
 
 * * *
 
 #### `nuxeo.virtual.host`
-
-**Since Nuxeo 7.4**
 
 This parameter can be used to replace the nuxeo-virtual-host request header (usually when using HTTPS) when it is not possible to set it at the reverse-proxy level.<br/>
 The use of the header is still preferred as the parameter forces your Nuxeo instance to be accessible from one URL only.<br/>
@@ -1617,8 +1495,6 @@ Example: https://my.nuxeo.com/
 * * *
 
 #### `elasticsearch.enabled`
-
-**Since 6.0**
 
 Switch to enable/disable Elasticsearch usage
 
@@ -1629,8 +1505,6 @@ Switch to enable/disable Elasticsearch usage
 * * *
 
 #### `elasticsearch.client`
-
-**Since 9.3**
 
 Choose between TransportClient and RestClient protocols
 
@@ -1777,8 +1651,6 @@ Reindex the repository content on startup if the index is empty
 
 #### `elasticsearch.restClient.connectionTimeoutMs`
 
-**Since 9.10**
-
 A timeout in milliseconds until a connection is established
 
 **Default Value**
@@ -1788,8 +1660,6 @@ A timeout in milliseconds until a connection is established
 * * *
 
 #### `elasticsearch.restClient.socketTimeoutMs`
-
-**Since 9.10**
 
 A maximum period, in milliseconds, of inactivity between two consecutive data packets
 
@@ -1801,15 +1671,11 @@ A maximum period, in milliseconds, of inactivity between two consecutive data pa
 
 #### `elasticsearch.restClient.username`
 
-**Since 9.10-HF01**
-
 A username for client basic authentication
 
 * * *
 
 #### `elasticsearch.restClient.password`
-
-**Since 9.10-HF01**
 
 A password for client basic authentication
 
@@ -1817,23 +1683,17 @@ A password for client basic authentication
 
 #### `elasticsearch.restClient.keystorePath`
 
-**Since 9.10-HF01**
-
 A path to a valid keystore
 
 * * *
 
 #### `elasticsearch.restClient.keystorePassword`
 
-**Since 9.10-HF01**
-
 The keystore password
 
 * * *
 
 #### `elasticsearch.restClient.keystoreType`
-
-**Since 9.10-HF01**
 
 The type of keystore, e.g. jks
 
@@ -1845,8 +1705,6 @@ Default Java system keystore type
 
 #### `elasticsearch.index.translog.durability`
 
-**Since 10.3**
-
 The translog durability for Elasticsearch indexes. To reduce disk IO and increase performance this can be tuned to `async`.
 
 **Default Value**
@@ -1856,8 +1714,6 @@ The translog durability for Elasticsearch indexes. To reduce disk IO and increas
 * * *
 
 #### `nuxeo.directory.type`
-
-**Since 6.0**
 
 Type of directory, used for LDAP or multi-directory configuration. Possible values are `default`, `ldap`, `multi`.
 
@@ -1869,8 +1725,6 @@ Type of directory, used for LDAP or multi-directory configuration. Possible valu
 
 #### `nuxeo.user.anonymous.enable`
 
-**Since 6.0**
-
 When LDAP is enabled and this parameter is set to `true`, allows anonymous login with `Guest` user
 
 **Default Value**
@@ -1880,8 +1734,6 @@ When LDAP is enabled and this parameter is set to `true`, allows anonymous login
 * * *
 
 #### `nuxeo.user.emergency.enable`
-
-**Since 6.0**
 
 When LDAP is enabled and this parameter is set to `true`, declares an emergency user to connect to Nuxeo in case of LDAP issues
 
@@ -1893,8 +1745,6 @@ When LDAP is enabled and this parameter is set to `true`, declares an emergency 
 
 #### `nuxeo.user.emergency.username`
 
-**Since 6.0**
-
 The username of emergency user when `nuxeo.user.emergency.enable` is set to `true`
 
 **Default Value**
@@ -1904,8 +1754,6 @@ The username of emergency user when `nuxeo.user.emergency.enable` is set to `tru
 * * *
 
 #### `nuxeo.user.emergency.password`
-
-**Since 6.0**
 
 The password of emergency user when `nuxeo.user.emergency.enable` is set to `true`
 
@@ -1917,23 +1765,17 @@ The password of emergency user when `nuxeo.user.emergency.enable` is set to `tru
 
 #### `nuxeo.user.emergency.firstname`
 
-**Since 6.0**
-
 The firstname of emergency user when `nuxeo.user.emergency.enable` is set to `true`
 
 * * *
 
 #### `nuxeo.user.emergency.lastname`
 
-**Since 6.0**
-
 The lastname of emergency user when `nuxeo.user.emergency.enable` is set to `true`
 
 * * *
 
 #### `nuxeo.picture.migration.enabled`
-
-**Since 8.10**
 
 When set to `false` allows to disable the picture migration that is run on startup and that can be slow on big volume.
 
@@ -1945,8 +1787,6 @@ When set to `false` allows to disable the picture migration that is run on start
 
 #### `nuxeo.dbs.cache.enabled`
 
-**Since 8.10-HF01**
-
 Whether or not the cache is enabled
 
 **Default Value**
@@ -1956,8 +1796,6 @@ Whether or not the cache is enabled
 * * *
 
 #### `nuxeo.dbs.cache.concurrencyLevel`
-
-**Since 8.10-HF01**
 
 Guava cache parameter: Guides the allowed concurrency among update operations. Used as a hint for internal sizing. The table is internally partitioned to try to permit the indicated number of concurrent updates without contention. Because assignment of entries to these partitions is not necessarily uniform, the actual concurrency observed may vary. Ideally, you should choose a value to accommodate as many threads as will ever concurrently modify the table. Using a significantly higher value than you need can waste space and time, and a significantly lower value can lead to thread contention. But overestimates and underestimates within an order of magnitude do not usually have much noticeable impact. A value of one permits only one thread to modify the cache at a time, but since read operations and cache loading computations can proceed concurrently, this still yields higher concurrency than full synchronization.
 
@@ -1969,8 +1807,6 @@ Guava cache parameter: Guides the allowed concurrency among update operations. U
 
 #### `nuxeo.dbs.cache.maxSize`
 
-**Since 8.10-HF01**
-
 The maximum size of DBS cache
 
 **Default Value**
@@ -1980,8 +1816,6 @@ The maximum size of DBS cache
 * * *
 
 #### `nuxeo.dbs.cache.ttl`
-
-**Since 8.10-HF01**
 
 The expire after write value in minutes
 
@@ -1993,8 +1827,6 @@ The expire after write value in minutes
 
 #### `kafka.enabled`
 
-**Since 9.3**
-
 Switch the default Stream configuration to Apache Kafka
 
 **Default Value**
@@ -2005,7 +1837,7 @@ Switch the default Stream configuration to Apache Kafka
 
 #### `kafka.zkServers`
 
-**Since 9.3, deprecated since 10.2, 9.10-HF04**, Nuxeo doesn't need Zookeeper access
+**Deprecated since 10.2**, Nuxeo doesn't need Zookeeper access
 
 **Default Value**
 
@@ -2014,8 +1846,6 @@ Switch the default Stream configuration to Apache Kafka
 * * *
 
 #### `kafka.bootstrap.servers`
-
-**Since 9.3**
 
 host:port comma separated list of Kafka Brokers
 
@@ -2027,8 +1857,6 @@ host:port comma separated list of Kafka Brokers
 
 #### `kafka.default.replication.factor`
 
-**Since 10.3**
-
 Default replication factor per partition when creating a new Topic
 
 **Default Value**
@@ -2038,8 +1866,6 @@ Default replication factor per partition when creating a new Topic
 * * *
 
 #### `kafka.topicPrefix`
-
-**Since 9.3**
 
 The prefix applied to any Kafka Topic
 
@@ -2051,8 +1877,6 @@ The prefix applied to any Kafka Topic
 
 #### `kafka.request.timeout.ms`
 
-**Since 9.3**
-
 Request timeout between Nuxeo and a Kafka broker
 
 **Default Value**
@@ -2062,8 +1886,6 @@ Request timeout between Nuxeo and a Kafka broker
 * * *
 
 #### `kafka.default.api.timeout.ms`
-
-**Since 11.1, 10.10-HF22**
 
 Default timeout for consumer API related to position
 
@@ -2075,8 +1897,6 @@ Default timeout for consumer API related to position
 
 #### `kafka.max.poll.interval.ms`
 
-**Since 9.3**
-
 Maximum delay between poll invocation
 
 **Default Value**
@@ -2086,8 +1906,6 @@ Maximum delay between poll invocation
 * * *
 
 #### `kafka.max.poll.records`
-
-**Since 9.3**
 
 Maximum number of records to read per poll
 
@@ -2099,8 +1917,6 @@ Maximum number of records to read per poll
 
 #### `kafka.session.timeout.ms`
 
-**Since 9.3**
-
 Consumers that don't send heartbeat during this delay are removed from the group
 
 **Default Value**
@@ -2110,8 +1926,6 @@ Consumers that don't send heartbeat during this delay are removed from the group
 * * *
 
 #### `kafka.heartbeat.interval.ms`
-
-**Since 9.3**
 
 Heartbeat interval
 
@@ -2123,8 +1937,6 @@ Heartbeat interval
 
 #### `kafka.delivery.timeout.ms`
 
-**Since 11.1, 10.10-HF22**
-
 Timeout for a producer to get an acknowledgement
 
 **Default Value**
@@ -2134,8 +1946,6 @@ Timeout for a producer to get an acknowledgement
 * * *
 
 #### `kafka.acks`
-
-**Since 11.1, 10.10-HF22**
 
 The number of acknowledgments expected by a producer
 
@@ -2147,8 +1957,6 @@ The number of acknowledgments expected by a producer
 
 #### `kafka.sasl.enabled`
 
-**Since 10.3/9.10-HF22**
-
 Enable SASL authentication to communicate with Kafka brokers
 
 **Default Value**
@@ -2158,8 +1966,6 @@ Enable SASL authentication to communicate with Kafka brokers
 * * *
 
 #### `kafka.security.protocol`
-
-**Since 10.3/9.10-HF22**
 
 When using SASL authentication, choose the protocol to communicate with brokers, valid values are: PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL
 
@@ -2171,8 +1977,6 @@ When using SASL authentication, choose the protocol to communicate with brokers,
 
 #### `kafka.sasl.mechanism`
 
-**Since 10.3/9.10-HF22**
-
 SASL mechanism used for client connections
 
 **Default Value**
@@ -2183,15 +1987,11 @@ SASL mechanism used for client connections
 
 #### `kafka.sasl.jaas.config`
 
-**Since 10.3/9.10-HF22**
-
 JAAS login context parameters for SASL connections in the format used by JAAS configuration files. See [Kafka documentation for more information](https://kafka.apache.org/documentation/#security_sasl_scram_clientconfig).
 
 * * *
 
 #### `kafka.ssl`
-
-**Since 10.3/9.10-HF22**
 
 Use SSL to communicate with Kafka Broker
 
@@ -2203,15 +2003,11 @@ Use SSL to communicate with Kafka Broker
 
 #### `kafka.truststore.path`
 
-**Since 10.3/9.10-HF22**
-
 The location of the trust store file, empty path means no truststore.
 
 * * *
 
 #### `kafka.truststore.type`
-
-**Since 10.3/9.10-HF22**
 
 The file format of the trust store file
 
@@ -2223,23 +2019,17 @@ The file format of the trust store file
 
 #### `kafka.truststore.password`
 
-**Since 10.3/9.10-HF22**
-
 The password for the trust store file. If a password is not set access to the truststore is still available, but integrity checking is disabled.
 
 * * *
 
 #### `kafka.keystore.path`
 
-**Since 10.3/9.10-HF22**
-
 The location of the key store file used by the client for two-way authentication, empty value means no keystore.
 
 * * *
 
 #### `kafka.keystore.type`
-
-**Since 10.3/9.10-HF22**
 
 The file format of the key store file
 
@@ -2251,15 +2041,11 @@ The file format of the key store file
 
 #### `kafka.keystore.password`
 
-**Since 10.3/9.10-HF22**
-
 The store password for the key store file
 
 * * *
 
 #### `nuxeo.stream.chronicle.dir`
-
-**Since 9.3**
 
 The directory where Chronicle Queue files are stored.
 
@@ -2271,8 +2057,6 @@ The directory where Chronicle Queue files are stored.
 
 #### `nuxeo.stream.chronicle.retention.duration`
 
-**Since 9.3**
-
 Default retention for Chronicle Queue Log, default to 4 days.
 
 **Default Value**
@@ -2282,8 +2066,6 @@ Default retention for Chronicle Queue Log, default to 4 days.
 * * *
 
 #### `nuxeo.stream.audit.enabled`
-
-**Since 9.3**
 
 Enable the Nuxeo Stream Audit Writer implementation
 
@@ -2295,8 +2077,6 @@ Enable the Nuxeo Stream Audit Writer implementation
 
 #### `nuxeo.stream.audit.log.config`
 
-**Since 9.3**
-
 The Log configuration to use for the Stream Audit Writer
 
 **Default Value**
@@ -2306,8 +2086,6 @@ The Log configuration to use for the Stream Audit Writer
 * * *
 
 #### `nuxeo.stream.audit.batch.size`
-
-**Since 9.3**
 
 The entries batch size to submit the the audit backend
 
@@ -2319,8 +2097,6 @@ The entries batch size to submit the the audit backend
 
 #### `nuxeo.stream.audit.batch.threshold.ms`
 
-**Since 9.3**
-
 Do not wait more than this threshold if the batch is not full
 
 **Default Value**
@@ -2330,8 +2106,6 @@ Do not wait more than this threshold if the batch is not full
 * * *
 
 #### `nuxeo.stream.work.enabled`
-
-**Since 9.3**
 
 Supersed the default WorkManager with the Sream WorkManager
 
@@ -2343,8 +2117,6 @@ Supersed the default WorkManager with the Sream WorkManager
 
 #### `nuxeo.stream.work.log.config`
 
-**Since 9.3**
-
 The Log configuration to use for the Stream WorkManager
 
 **Default Value**
@@ -2354,8 +2126,6 @@ The Log configuration to use for the Stream WorkManager
 * * *
 
 #### `nuxeo.stream.work.over.provisioning.factor`
-
-**Since 9.3**
 
 The factor to use on the Work Thread pool size to get the number of Log partition.
 
@@ -2367,8 +2137,6 @@ The factor to use on the Work Thread pool size to get the number of Log partitio
 
 #### `nuxeo.stream.work.computation.filter.enabled`
 
-**Since 9.10**
-
 Filter work with a serialized size that exceed a threshold so they are stored outside of the stream.
 
 **Default Value**
@@ -2378,8 +2146,6 @@ Filter work with a serialized size that exceed a threshold so they are stored ou
 * * *
 
 #### `nuxeo.stream.work.computation.filter.thresholdSize`
-
-**Since 9.10**
 
 Threshold in bytes that is used to store work outside of the stream.
 
@@ -2391,8 +2157,6 @@ Threshold in bytes that is used to store work outside of the stream.
 
 #### `nuxeo.stream.work.computation.filter.class`
 
-**Since 9.10**
-
 The class that implement the external storage of large work. Default is using a Transient store, there is also a KeyValue implementation `org.nuxeo.ecm.core.work.KeyValueStoreOverflowRecordFilter`.
 
 **Default Value**
@@ -2402,8 +2166,6 @@ The class that implement the external storage of large work. Default is using a 
 * * *
 
 #### `nuxeo.stream.work.computation.filter.storeName`
-
-**Since 9.10**
 
 The storage name to use.
 
@@ -2415,8 +2177,6 @@ The storage name to use.
 
 #### `nuxeo.stream.work.computation.filter.storeKeyPrefix`
 
-**Since 9.10**
-
 A key prefix to use on the external storage.
 
 **Default Value**
@@ -2426,8 +2186,6 @@ A key prefix to use on the external storage.
 * * *
 
 #### `nuxeo.stream.work.computation.filter.storeTTL`
-
-**Since 9.10**
 
 The time to live used the KeyValue storage implementation.
 This does not apply to the Transient store where the retention is fixed by its configuration.
@@ -2439,8 +2197,6 @@ This does not apply to the Transient store where the retention is fixed by its c
 * * *
 
 #### `org.nuxeo.runtime.reload_strategy`
-
-**Since 9.2**
 
 The strategy to use when hot reloading Nuxeo Server.<br/>
 There're two possible values, changing slightly the before/after reload logic:
