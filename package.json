@@ -14,7 +14,7 @@
     "dotenv": "^8.2.0",
     "lodash.defaultsdeep": "^4.6.1",
     "node-yaml-config": "0.0.6",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com",
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#master",
     "thenify": "^3.3.1"
   },
   "devDependencies": {
