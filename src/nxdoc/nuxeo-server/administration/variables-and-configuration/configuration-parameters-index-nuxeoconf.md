@@ -241,6 +241,31 @@ Available templates: postgresql, mongodb, custom, ...
 
 * * *
 
+#### `nuxeo.append.templates.*`
+
+Comma separated list of templates to include after the ones included by `nuxeo.templates`.<br/>
+The `*` is to be replaced by something relevant to what you want to append.<br/>
+For example, you could use `mongo` to append `mongodb` and `mongodb-audit` templates as below:
+
+```properties
+nuxeo.templates=docker
+nuxeo.append.templates.mongo=mongodb,mongodb-audit
+```
+
+The included templates will be: `docker,mongodb,mongodb-audit`.
+
+When several `nuxeo.append.templates.*` are present, they are first sorted alphabetically, then appended, so in the example below:
+
+```properties
+nuxeo.templates=docker
+nuxeo.append.templates.mongo=mongodb,mongodb-audit
+nuxeo.append.templates.binary=s3binaries
+```
+
+The included templates will be: `docker,s3binaries,mongodb,mongodb-audit`.
+
+* * *
+
 #### `nuxeo.bind.address`
 
 Server binding address. "0.0.0.0" means "all available network interfaces".<br/>
