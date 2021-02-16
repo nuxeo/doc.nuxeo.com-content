@@ -24,7 +24,7 @@ The upgrade notes are available [here]({{page page='upgrade-from-lts-2019-to-lts
 
 ### Core Repository
 
-#### Record, Retention and Hold Low-Level Implementation
+#### Record, Retention and Hold Low-Level Implementation {{> tag 'admin'}}
 
 The notion of a document being a record is added. The notion of retention date and legal hold is added to records. Once a document is a record, this is forever. Copies of records (including versions) are not initially records.
 When a record has a legal hold or has a retention date in the future, modification or deletion of the main blob (`file:content`) is prevented, even indirectly through removal of the document or of an ancestor, even for Administrators.
@@ -81,7 +81,7 @@ When in record mode the blob providers behave differently:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27435](https://jira.nuxeo.com/browse/NXP-27435)
 
-#### Support Flagging Repositories as Headless
+#### Support Flagging Repositories as Headless {{> tag 'new'}}{{> tag 'end user'}}
 
 A new "headless" attribute has been added to the repository descriptor to allow flagging repositories as headless:
 
