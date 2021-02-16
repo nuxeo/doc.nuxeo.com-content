@@ -188,7 +188,7 @@ Directory where to store Nuxeo PID file (absolute or relative to `NUXEO_HOME`).
 
 #### `nuxeo.data.dir`
 
-Data directory (absolute or relative to NUXEO_HOME). It involves all data not being stored in database.<br/>
+Data directory (absolute or relative to `NUXEO_HOME`). It involves all data not being stored in database.<br/>
 Linux recommended path: `/var/lib/nuxeo/...`
 
 **Default Value**
@@ -199,7 +199,7 @@ Linux recommended path: `/var/lib/nuxeo/...`
 
 #### `nuxeo.tmp.dir`
 
-Location of the temporary files (absolute or relative to NUXEO_HOME).
+Location of the temporary files (absolute or relative to `NUXEO_HOME`).
 
 **Default Value**
 
@@ -209,7 +209,7 @@ Location of the temporary files (absolute or relative to NUXEO_HOME).
 
 #### `nuxeo.mp.dir`
 
-Nuxeo Packages directory (absolute or relative to NUXEO_HOME).
+Nuxeo Packages directory (absolute or relative to `NUXEO_HOME`).
 
 **Default Value**
 
@@ -531,7 +531,7 @@ Templates to include prior to the one being included.
 
 #### `templateName.target` - only available in template properties
 
-Directory where *templateName* files will be deployed (relative to NUXEO_HOME).
+Directory where *templateName* files will be deployed (relative to `NUXEO_HOME`).
 
 **Default Value**
 
@@ -566,7 +566,7 @@ e-Mail server.
 
 **Default Value**
 
-localhost
+`localhost`
 
 * * *
 
@@ -574,7 +574,7 @@ localhost
 
 **Default Value**
 
-anonymous
+`anonymous`
 
 * * *
 
@@ -622,7 +622,7 @@ SMTP gateway server.
 
 **Default Value**
 
-localhost
+`localhost`
 
 * * *
 
@@ -660,7 +660,7 @@ Use TLS for the SMTP connection.
 
 **Default Value**
 
-anonymous
+`anonymous`
 
 * * *
 
@@ -668,7 +668,7 @@ anonymous
 
 **Default Value**
 
-password
+`password`
 
 * * *
 
