@@ -120,17 +120,19 @@ This page non exhaustively lists frequently asked questions about Nuxeo Drive
 
 In order to be fully compatible with Nuxeo Drive, the minimum required version of the `nuxeo-drive` server addon is:
 
-- **7.10**: 1.5.7
-- **8.10**: 1.6.6
-- **9.10**: 1.7.3
+- **Cloud**: 11.1.47
+- **LTS 2021**: 2021.0.17
 - **10.10**: 1.8.1
+- **9.10**: 1.7.3
+- **8.10**: 1.6.6
+- **7.10**: 1.5.7
 
 And the minimum required installed Hotfix (HF) is:
 
-Client | 7.10 | 8.10 | 9.10 | 10.10
---- | --- | --- | --- | ---
-3.x | HF43 | HF33 | HF12 | HF11
-4.x | HF47 | HF39 | HF22 | HF11
+Client | Cloud | LTS 2021 | 10.10 | 9.10 | 8.10 | 7.10
+--- | --- | --- | --- | --- | --- | ---
+3.x | n/a | n/a | HF11 | HF12 | HF33 | HF43
+4.x | n/a | n/a | HF11 | HF22 | HF39 | HF47
 
 ## What are the supported OS?
 
@@ -321,16 +323,10 @@ Currently Nuxeo Drive has some limitations:
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Drive Related Documentation'}}
-
-- [Nuxeo Drive developer documentation]({{page space='nxdoc' page='nuxeo-drive'}})
-- [HOWTO: Configure Nuxeo Drive Globally]({{page space='nxdoc' page='how-to-configure-nuxeo-drive-globally'}})
-- [HOWTO: Manually Initialize or Deploy a Nuxeo Drive Instance]({{page space='nxdoc' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
-- [Nuxeo Drive Update Site]({{page space='nxdoc' page='nuxeo-drive-update-site'}})
-
+- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [HOWTO: Configure Nuxeo Drive Globally]({{page page='how-to-configure-nuxeo-drive-globally'}})
+- [HOWTO: Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
 {{/panel}}
-
-</div><div class="column medium-6">{{#> panel heading='Other Related Documentation '}}
-
-- [Nuxeo Support Documentation]({{page space='studio' page='how-to-fill-a-jira-ticket'}})
-
-{{/panel}}</div></div>
+</div>
+</div>
