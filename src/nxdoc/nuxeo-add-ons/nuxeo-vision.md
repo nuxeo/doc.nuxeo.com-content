@@ -125,8 +125,12 @@ history:
         date: '2016-03-15 17:40'
         message: ''
         version: '1'
-
 ---
+
+{{#> callout type='note' }}
+This addon is deprecated since Nuxeo Platform LTS 2021. It has been replaced by [Nuxeo AI]({{page page='nuxeo-ai'}}) addon. 
+{{/callout}}
+
 The [Nuxeo Vision](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision) addon provides a gateway to computer vision services. Currently it supports the Google Vision API and Amazon Rekognition API. Other services can be easily integrated as they become available. These external services allow you to understand the content of an image by encapsulating powerful machine learning models. This gateway provides a wide range of features including shape recognition, auto-classification of images, OCR, face detection and more.
 
 {{#> callout type='info' heading='Nuxeo University'}}
