@@ -22,6 +22,12 @@ The support of macOS Sierra (10.12) has been dropped. It was needed in order to 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2518](https://jira.nuxeo.com/browse/NXDRIVE-2518)
 
+### End of Windows 7 Support
+
+The support of Windows 7 has been dropped. It was needed in order to benefit of upcoming improvements in the product.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2015](https://jira.nuxeo.com/browse/NXDRIVE-2015)
+
 ## Improvements
 
 ### Implementation of Mutual TLS Authentication
