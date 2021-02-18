@@ -51,6 +51,14 @@ The new behavior is as simple as opening the document on Web-UI. If the user wan
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2501](https://jira.nuxeo.com/browse/NXDRIVE-2501)
 
+### Fixed a Database Corruption on GNU/Linux
+
+A database corruption issue on GNU/Linux that was causing Drive to not detect anymore registered accounts has been fixed.
+
+**No data has been impacted or lost**, the issue only concerned the store where the data’s address are saved.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2524](https://jira.nuxeo.com/browse/NXDRIVE-2524)
+
 ### Capability to Edit Custom Xpath
 
 A regression introduced in 4.5.1 where it was no more possible to use the Direct Edit feature on a custom xpath has been fixed.
