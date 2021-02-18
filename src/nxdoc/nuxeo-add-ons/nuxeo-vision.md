@@ -127,6 +127,12 @@ history:
         version: '1'
 
 ---
+{{#> callout type='warning'}}
+DEPRECATED
+The addon Google Vision is now deprecated. The feature has been moved to the generic [Nuxeo AI addon]({{page page='nuxeo-ai'}}), in the [Nuxeo AI GCP Integrations plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-gcp).
+{{/callout}}
+
+
 The [Nuxeo Vision](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision) addon provides a gateway to computer vision services. Currently it supports the Google Vision API and Amazon Rekognition API. Other services can be easily integrated as they become available. These external services allow you to understand the content of an image by encapsulating powerful machine learning models. This gateway provides a wide range of features including shape recognition, auto-classification of images, OCR, face detection and more.
 
 {{#> callout type='info' heading='Nuxeo University'}}
