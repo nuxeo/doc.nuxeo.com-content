@@ -134,6 +134,7 @@ Nuxeo instances should be configured with a Redis server (in addition to the reg
     *   A distributed [Transient Store]({{page page='transient-store'}}), required for [Batch Upload]({{page page='batch-upload-endpoint'}}) and [Asynchronous Conversion Works]({{page page='conversion'}}#-anchor-java-api-async-conversions-asynchronous-conversions) (Redis is not needed anymore for this since Nuxeo 10.10, see below).
     *   Relying on the `RedisCache` as a distributed implementation of the [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}) synchronization roots cache.
     *   [Cluster cache invalidations]({{page page='nuxeo-and-redis'}}#clustering-invalidation)
+3.  Your infrastructure is willing to store less than **hundred millions** of documents, otherwise you should consider using [Kafka]({{page page='kafka'}}).
 
 Until Nuxeo 9.10 for a robust production instance, the first point is always necessary, which means that Redis should always be used.
 Visit [the Nuxeo and Redis page]({{page page='nuxeo-and-redis'}}) for more information.
