@@ -107,6 +107,10 @@ history:
 Nuxeo provides a Redis integration via the `nuxeo-core-redis` bundle.
 {{! /excerpt}}
 
+{{#> callout type='warning' }}
+If you are targetting to store more than hundred millions of document, you should consider using [Kafka]({{page page='kafka'}}) instead of Redis.
+{{/callout}}
+
 Redis is not a hard requirement for running the Nuxeo Platform; it is used as a backend to provide alternate implementation of some services inside the platform. However, we do provide these implementations because we think they can be useful.
 
 {{#> callout type='info' }}
