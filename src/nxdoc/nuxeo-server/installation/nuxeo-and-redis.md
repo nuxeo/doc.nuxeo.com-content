@@ -185,9 +185,9 @@ A Nuxeo No-Redis cluster configuration can be applied at certain conditions, see
 
 The `RedisTransientStore`&nbsp;is a Redis-based implementation of the [Transient Store]({{page page='transient-store'}}).
 
-It is not anymore the **default** Transient Store when Redis is enabled since **LTS2019**, more details in: https://jira.nuxeo.com/browse/NXP-26581.
+It is not anymore the **default** Transient Store when Redis is enabled since **LTS2019**, more details in: [NXP-26581](https://jira.nuxeo.com/browse/NXP-26581).
 
-The old Redis Transient Store can still be used with `nuxeo.transientstore.provider=redis` set in the `nuxeo.conf`, but it is not cluster safe. Binaries are temporarly stored in the Nuxeo node's file system. More details in: https://jira.nuxeo.com/browse/NXP-21871.
+The old Redis Transient Store can still be used with `nuxeo.transientstore.provider=redis` set in the `nuxeo.conf`, but it is not cluster safe. Binaries are temporarily stored in the Nuxeo node's file system. More details in: [NXP-21871](https://jira.nuxeo.com/browse/NXP-21871).
 
 ## Clean-up
 
