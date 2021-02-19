@@ -1535,7 +1535,7 @@ Choose between TransportClient and RestClient protocols
 
 **Default Value**
 
-`TransportClient`
+`RestClient`
 
 * * *
 
