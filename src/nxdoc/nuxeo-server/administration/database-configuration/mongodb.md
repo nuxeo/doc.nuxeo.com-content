@@ -227,7 +227,7 @@ history:
 ---
 {{{multiexcerpt 'DBS-definition' page='GLOS:DBS'}}}
 
-An implementation is available for [MongoDB](http://www.nuxeo.com/mongodb/).
+An implementation is available for [MongoDB](https://www.nuxeo.com/partners/technology/mongodb/).
 
 Nuxeo supports the following MongoDB version:
 
