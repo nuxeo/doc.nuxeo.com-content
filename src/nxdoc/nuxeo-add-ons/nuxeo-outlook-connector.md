@@ -12,6 +12,12 @@ toc: true
 tree_item_index: 2450
 ---
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related course on Nuxeo University:</br>
+- [Nuxeo Outlook Connector](https://university.nuxeo.com/learn/course/external/view/elearning/222/outlook-connector)
+![]({{file name='university-nuxeo-outlook.png' page='university'}} ?w=450,border=true)
+{{/callout}}
+
 The Nuxeo Outlook Integration allows you to archive emails and files as documents to your Nuxeo instance and access the repository without leaving Microsoft Outlook.
 
 **Features of the Nuxeo Outlook Integration include:**
