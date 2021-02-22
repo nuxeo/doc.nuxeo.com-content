@@ -494,7 +494,7 @@ There are 3 steps shown by 3 tabs to brand your application:
 
 ![]({{file name='jsf_branding_tabs.png'}} ?w=310,h=42)
 
-*   The [**Main Pages**](#mainp) tab will let you manage the global rendering of your application
+*   The [**Main Pages**](#mainpages) tab will let you manage the global rendering of your application
 *   The [**Login Page**](#login) tab will let you manage the login page rendering
 *   The [**Custom CSS**](#css) will let you define your CSS rules that will be applied on each page of Nuxeo
 
@@ -616,6 +616,7 @@ That way, you're sure that your new style will be stronger than the original sty
 
 </td><td colspan="1">Your title is pink now. You can see that your new rule is displayed at the top of the default one, and the original black color value is striked, so not used anymore.</td></tr></tbody></table></div>
 
+<!--
 ### Specifying the Default Branding, Disabling a Theme Branding {{> anchor 'specify'}}
 
 #### Specifying a Default Branding
@@ -631,3 +632,4 @@ Create a new branding implies that it will be the default branding used in your 
 If you don't want to use your branding during a test you can disable your default branding without deleting it.
 
 Just tick the **Disable theme branding** option above the tabs. The tabs and their content will be displayed under a gray overlay.
+-->

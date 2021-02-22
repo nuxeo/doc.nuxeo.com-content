@@ -15,6 +15,7 @@ confluence:
     shortlink: gAJu
     shortlink_source: 'https://doc.nuxeo.com/x/gAJu'
     source_link: /display/Studio/Automated+validation
+is_overview: true
 tree_item_index: 300
 history:
     -

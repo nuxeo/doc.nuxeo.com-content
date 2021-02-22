@@ -27,8 +27,8 @@ history:
         date: '2016-03-18 11:00'
         message: ''
         version: '1'
-
 ---
+
 The Application Information page will let you define the way your Studio project is published.
 
 {{!--     ### nx_asset ###

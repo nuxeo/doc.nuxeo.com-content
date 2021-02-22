@@ -4,7 +4,6 @@ review:
   comment: ''
   date: ''
   status: ok
-toc: true
 confluence:
   ajs-parent-page-id: '12911781'
   ajs-parent-page-title: Working in Studio
@@ -140,8 +139,8 @@ Define the commit policy that is applied when saving changes by selecting your s
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-to'}}
 
-- [How to Collaborate on a Studio Project]({{page page='how-to-collaborate-on-a-studio-project'}})
-- [How to Implement Features Using Branches]({{page page='how-to-implement-features-using-branches'}})
-- [How to Work with Maintenance Branches]({{page page='how-to-work-with-maintenance-branches'}})
+- [HOWTO: Collaborate on a Studio Project]({{page page='how-to-collaborate-on-a-studio-project'}})
+- [HOWTO: Implement Features Using Branches]({{page page='how-to-implement-features-using-branches'}})
+- [HOWTO: Work with Maintenance Branches]({{page page='how-to-work-with-maintenance-branches'}})
 
 {{/panel}}</div></div>

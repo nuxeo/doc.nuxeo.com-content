@@ -237,4 +237,4 @@ We strongly encourage you to follow these, especially if you are a beginner.
 | Actions | Pascal case naming convention, suffixed by `Action` | ContractUpdateLifecycleAction |
 | Themes | Pascal case naming convention, suffixed by `Theme` | ContractManagementTheme |
 
-- Translations: All translations should respect [translation rules](https://doc.nuxeo.com/nxdoc/web-ui-managing-translations/)
+- Translations: All translations should respect [translation rules]({{page space='nxdoc' page='web-ui-automated-translation-labels'}})

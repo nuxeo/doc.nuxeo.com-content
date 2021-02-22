@@ -91,8 +91,8 @@ Examples are provided for each registry type.
 {{#> panel heading='Related Documentation'}}
 - [Referencing an Externally Defined Type]({{page page='referencing-an-externally-defined-type'}})
 - [Referencing an Externally Defined Operation]({{page page='referencing-an-externally-defined-operation'}})
-- [How to Contribute a New "User Registration Request" Document Type]({{page space='nxdoc' page='how-to-contribute-a-new-user-registration-request-document-type'}})
-- [How to Add a New Action Category on a Document Tab]({{page space='nxdoc' page='how-to-add-a-new-action-category-on-a-document-tab'}})
+- [HOWTO: Contribute a New "User Registration Request" Document Type]({{page space='nxdoc' page='how-to-contribute-a-new-user-registration-request-document-type'}})
+- [HOWTO: Add a New Action Category on a Document Tab]({{page space='nxdoc' page='how-to-add-a-new-action-category-on-a-document-tab'}})
 {{/panel}}
 </div>
 <div class="column medium-6">
