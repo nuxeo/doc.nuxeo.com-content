@@ -125,11 +125,10 @@ history:
         date: '2016-03-15 17:40'
         message: ''
         version: '1'
-
 ---
+
 {{#> callout type='warning'}}
-DEPRECATED
-The addon Google Vision is now deprecated. The feature has been moved to the generic [Nuxeo AI addon]({{page page='nuxeo-ai'}}), in the [Nuxeo AI GCP Integrations plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-gcp).
+This addon is deprecated since Nuxeo Platform LTS 2021. The feature has been moved to the generic [Nuxeo AI addon]({{page page='nuxeo-ai'}}), into the [Nuxeo AI GCP Integrations](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-gcp) extension.
 {{/callout}}
 
 
