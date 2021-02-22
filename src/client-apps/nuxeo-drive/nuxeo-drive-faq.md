@@ -131,8 +131,9 @@ And the minimum required installed Hotfix (HF) is:
 
 Client | Cloud | LTS 2021 | 10.10 | 9.10 | 8.10 | 7.10
 --- | --- | --- | --- | --- | --- | ---
-3.x | n/a | n/a | HF11 | HF12 | HF33 | HF43
+5.x | n/a | n/a | HF11 | HF22 | HF39 | HF47
 4.x | n/a | n/a | HF11 | HF22 | HF39 | HF47
+3.x | n/a | n/a | HF11 | HF12 | HF33 | HF43
 
 ## What are the supported OS?
 
