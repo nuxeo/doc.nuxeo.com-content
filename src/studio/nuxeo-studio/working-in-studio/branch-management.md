@@ -194,7 +194,12 @@ To work on a given branch, you need to check out the branch which creates a Work
 1. Go to **Source Control** > **Branch Management**
 1. At the top-right, click **New Branch**.
 1. Enter the name of your new branch.
-1. Save.
+
+{{#> callout type='warning' title='naming convention for a new branch'}}
+The branch should respect the following pattern `[a-zA-Z_]+.*`, so do not start your branch name with digits 
+{{/callout}}
+
+3. Save.
 
 The new branch will be created from the content of the last branch you checked out into your workspace.
 
