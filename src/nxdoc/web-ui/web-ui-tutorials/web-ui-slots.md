@@ -214,7 +214,7 @@ The `DOCUMENT_ACTIONS` has therefore the following:
 {{/callout}}
 
 {{#> callout type='tip' }}
-  The model of every slot exposed by Web UI as the current user available under the `user` property.
+  The model of every slot exposed by Web UI has the current user available under the `user` property.
 {{/callout}}
 
 #### DOCUMENT_VIEWS_ITEMS{{> anchor 'document_view_items'}}
