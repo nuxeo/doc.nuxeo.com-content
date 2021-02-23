@@ -229,6 +229,8 @@ The [Nuxeo Salesforce connector](https://connect.nuxeo.com/nuxeo/site/marketplac
 - presenting to salesforce users object-contextual lists of documents based on custom metadata queries
 - general search across the Nuxeo repository
 
+The Nuxeo Salesforce connector is currently designed to integrate more specificaly Sales and Services apps of Salesforce with Nuxeo, as well as custom applications made using Salesforce Lightning framework. The team in charge of the Salesforce connector is open to add to the scope additionnal use cases such as Salesforce Marketing (to integrate Nuxeo DAM with the content authoring tool of Salesforce) and Salesforce Knowledge Base, for instance. To not hesitate to contact your sales representative to get more information or present your requirements and expectations. 
+
 See [GitHub Readme](https://github.com/nuxeo/nuxeo-salesforce) for the Dev project description.
 
 ## Installation
