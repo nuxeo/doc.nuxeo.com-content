@@ -407,9 +407,6 @@ However, there are some impacts in moving a synchronous listener to an asynchron
 *   Because the listener runs in a separate transaction it cannot rollback the source transaction (it is too late anyway).
 *   The listener code needs to be aware that it may have to deal with new cases; typically, the listener may receive an event about a document that has since been deleted.
 
-## Forwarding Events to an External Event Bus
-
-The beginning of an integration with [RabbitMQ](https://www.rabbitmq.com/) is available [in the nuxeo-sandbox GitHub repository](https://github.com/nuxeo-sandbox/nuxeo-rabbitmq). While it would require more implementation work for being used in a production environment, it provides a good sample of how to integrate with an external event bus.
 
 ## Performance and Monitoring
 
