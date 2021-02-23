@@ -99,22 +99,22 @@ history:
         date: '2015-03-05 16:38'
         message: ''
         version: '1'
-
 ---
+
 ## Principles
 
 {{! excerpt}}
-
 Nuxeo provides a Redis integration via the `nuxeo-core-redis` bundle.
-
 {{! /excerpt}}
 
-The idea is that, at least for now, Redis is not a hard requirement for running the Nuxeo Platform; We simply use Redis as a backend to provide alternate implementation of some services inside the platform. However, we do provide these implementations because we think they can be useful.
+{{#> callout type='warning' }}
+If you are targetting to store more than hundred millions of document, you should consider using [Kafka]({{page page='kafka'}}) instead of Redis.
+{{/callout}}
+
+Redis is not a hard requirement for running the Nuxeo Platform; it is used as a backend to provide alternate implementation of some services inside the platform. However, we do provide these implementations because we think they can be useful.
 
 {{#> callout type='info' }}
-
-Nuxeo can use Redis to store both data to be persisted (e.g. jobs list) and transient data (e.g. cache data). After a normal cluster shutdown, you can flush (erase) the transient data in Redis. Note however that Nuxeo can not work with a Redis configured as an [LRU cache](http://redis.io/topics/lru-cache); there should be no eviction under memory pressure.
-
+Nuxeo can use Redis to store both data to be persisted (e.g. jobs list) and transient data (e.g. cache data). After a normal cluster shutdown, you can flush (erase) the transient data in Redis. However, Nuxeo can not work with a Redis configured as an [LRU cache](http://redis.io/topics/lru-cache); there should be no eviction under memory pressure.  
 {{/callout}}
 
 ## Nuxeo Core Cache
@@ -180,9 +180,9 @@ Since Nuxeo 8.10 the DBS layer (used by MongoDB or Marklogic backends) [has a ca
 
 The `RedisTransientStore`&nbsp;is a Redis-based implementation of the [Transient Store]({{page page='transient-store'}}).
 
-It is the one used by the default Transient Store if Redis is enabled.
+It is not anymore the **default** Transient Store when Redis is enabled since **LTS 2019**, more details in: [NXP-26581](https://jira.nuxeo.com/browse/NXP-26581).
 
-It allows the parameters associated to the stored blobs to be shared accross cluster nodes.
+The old Redis Transient Store can still be used with `nuxeo.transientstore.provider=redis` set in the `nuxeo.conf`, but it is not cluster safe. Binaries are temporarily stored in the Nuxeo node's file system. More details in: [NXP-21871](https://jira.nuxeo.com/browse/NXP-21871).
 
 ## Clean-up
 
