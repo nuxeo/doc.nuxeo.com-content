@@ -27,7 +27,10 @@ default:
                 space_name: Nuxeo Retention Management Documentation
             -
                 space_path: nuxeo-cloud
-                space_name: Nuxeo Cloud Documentation    
+                space_name: Nuxeo Cloud Documentation
+            -
+                space_path: javadoc
+                space_name: Nuxeo Javadoc        
         branch: 'static'
 
 development:
