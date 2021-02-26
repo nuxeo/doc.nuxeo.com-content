@@ -13,6 +13,16 @@ toc: true
 tree_item_index: 100
 ---
 
+## Current Versions
+
+| Channel | Version |
+| ------- | -------- |
+| Release | [4.5.1](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D)    |
+| Beta    | [5.0.0](https://community.nuxeo.com/static/drive-updates/beta/?C=M;O=D)    |
+| Alpha   | [5.0.1.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D)      |
+
+Find more information about our release cycle on [this page]({{page version='' space='client-apps' page='nuxeo-drive-release-cycle'}}).
+
 <!--
 ## Requirements
 To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer.
