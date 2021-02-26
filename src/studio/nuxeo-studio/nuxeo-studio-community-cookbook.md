@@ -34,6 +34,18 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <th>Contributor</th>
     <th>Category</th>
   </tr>
+    <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search/search-pdf-metadata.png" width="120px"/></a></td>
+    <td>Interactive PDF Search</td>
+    <td>Nuxeo</td>
+    <td>Search</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views/cookbook-custom-views2.png" width="120px"/></a></td>
+    <td>Custom Preview and Thumbnail</td>
+    <td>Nuxeo</td>
+    <td>Layouts</td>
+  </tr>
   <tr>
     <td>
     ![color-search.png](nx_asset://19020243-4c2b-4bfa-9fc1-2ad6fd487f31 ?w=150,border=true)
@@ -108,6 +120,24 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+    <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search/search-pdf-metadata.png" width="120px"/></a></td>
+    <td>Interactive PDF Search</td>
+    <td>Nuxeo</td>
+    <td>Search</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views/cookbook-custom-views2.png" width="120px"/></a></td>
+    <td>Custom Preview and Thumbnail</td>
+    <td>Nuxeo</td>
+    <td>Layouts</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/color-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/color-search/color.png" width="120px"/></a></td>
+    <td>Similar Color Search</td>
+    <td>Nuxeo</td>
+    <td>Search, AI, Layouts</td>
+  </tr>
   <tr>
     <td>
     ![copy-move.png](nx_asset://6d59bfc0-d874-4aff-8b92-3f2a0a6718d6 ?w=150,border=true)
@@ -161,14 +191,6 @@ Feel free to submit your own contribution, following our [guidelines and templat
   ![highlight-logo.png](nx_asset://dde8cbf0-b7c2-4b77-b02a-0bd0416d40ac ?w=150, border=true)
   </td>
   <td>[Custom Searches with Highlight](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/highlight)</td>
-  <td>Nuxeo</td>
-  <td>Search</td>
-</tr>
-<tr>
-  <td>
-  ![comments.png](nx_asset://38adf904-b98c-4050-96d3-4be11652eab1 ?w=150,border=true)
-  </td>
-  <td>[Comment Indexing](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/comment-indexing)</td>
   <td>Nuxeo</td>
   <td>Search</td>
 </tr>
@@ -259,6 +281,12 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+    <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/color-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/color-search/color.png" width="120px"/></a></td>
+    <td>Similar Color Search</td>
+    <td>Nuxeo</td>
+    <td>Search, AI, Layouts</td>
+  </tr>
 <tr>
   <td>![video-thumbnail2.png](nx_asset://036ceb07-af4c-4e3e-9870-e18adfdf7002 ?w=150,border=true)</td>
   <td>[Sets the Video Poster and Search Thumbnail](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/video-thumbnail)</td>
