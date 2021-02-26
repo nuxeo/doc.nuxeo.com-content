@@ -6,3 +6,5 @@ review:
     date: ''
     status: ok
 ---
+
+{{> children}}
