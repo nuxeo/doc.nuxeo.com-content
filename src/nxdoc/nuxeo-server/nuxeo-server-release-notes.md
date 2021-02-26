@@ -83,7 +83,7 @@ When in record mode the blob providers behave differently:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27435](https://jira.nuxeo.com/browse/NXP-27435)
 
-#### New Implementation `S3BlobProvider` {{> tag 'dev'}}
+#### New Implementation `S3BlobProvider` {{> tag 'dev'}} {{> tag 'admin'}}
 
 A new blob provider `org.nuxeo.ecm.blob.s3.S3BlobProvider` is available.
 It has the same configuration properties as the old `org.nuxeo.ecm.core.storage.sql.S3BinaryManager` but in addition:
@@ -278,7 +278,7 @@ Note that accelerate mode is incompatible with path-style access ([NXP-27805](ht
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27657](https://jira.nuxeo.com/browse/NXP-27657)
 
-#### Enforce the Server Side Encryption Header in S3 Client Request {{> tag 'dev'}}
+#### Enforce the Server Side Encryption Header in S3 Client Request {{> tag 'dev'}} {{> tag 'admin'}}
 
 S3 copy (used during direct upload in particular) now correctly takes into account the server-side encryption configuration for the destination bucket.</b>
 For direct upload, this requires setting the property:
@@ -801,7 +801,7 @@ For a MongoDB key/value store, the key is stored in the collection `kv.cluster`
 
 ### Audit
 
-#### Export Audit in CSV Files {{> tag 'dev'}}
+#### Export Audit in CSV Files {{> tag 'user'}}
 (also available in 10.10)
 
 Audit is now exportable as a CSV file.
@@ -810,7 +810,7 @@ Audit is now exportable as a CSV file.
 
 ### Query
 
-#### NOW Expression in NXQL {{> tag 'dev'}}
+#### NOW Expression in NXQL {{> tag 'dev'}} {{> tag 'user'}}
 (also available in 10.10)
 
 NXQL can now use a `NOW()` function.
@@ -860,7 +860,7 @@ Children documents are now kept in a collection when the parent container is ver
 
 ### Rendition and conversion
 
-#### Ability to Disable the Rendition Computations {{> tag 'dev'}} {{> tag 'user'}}
+#### Ability to Disable the Rendition Computations {{> tag 'dev'}} {{> tag 'admin'}}
 
 Previously, the renditions were automatically and systematically computed/re-computed when adding or updating a file content.</br>
 It is now possible to configure Nuxeo Server to disable this behavior.
@@ -1066,7 +1066,7 @@ User and group events/categories have been added to the Audit directories.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29200](https://jira.nuxeo.com/browse/NXP-29200)
 
-#### Allow ACLs on Versions {{> tag 'dev'}}
+#### Allow ACLs on Versions {{> tag 'dev'}} {{> tag 'user'}}
 
 A new configuration property allows to set permissions on versions.
 
@@ -1732,19 +1732,19 @@ The Nuxeo Wizard has been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28621](https://jira.nuxeo.com/browse/NXP-28621)
 
-### Marklogic Connector {{> tag 'dev'}}
+### Marklogic Connector {{> tag 'dev'}} {{> tag 'admin'}}
 
 The Marklogic connector has been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26571](https://jira.nuxeo.com/browse/NXP-26571)
 
-### Nuxeo Connect Report Tools {{> tag 'dev'}}
+### Nuxeo Connect Report Tools {{> tag 'dev'}} {{> tag 'admin'}}
 
 The Nuxeo Connect Report Tools `nuxeo-connect-tools` has been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27864](https://jira.nuxeo.com/browse/NXP-27864)
 
-### Nuxeo Shell {{> tag 'dev'}}
+### Nuxeo Shell {{> tag 'dev'}} {{> tag 'admin'}}
 
 The Nuxeo Shell `nuxeo-shell` addon has been removed.
 
