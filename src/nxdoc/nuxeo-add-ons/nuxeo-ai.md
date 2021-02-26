@@ -312,23 +312,11 @@ You can set these in your `nuxeo.conf`. They are used in combination with the ot
 </table>
 </div>
 
-* * *
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
-
-- [Display Sensitive Data Details Contained in a Document](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/sensitive-data)
-
-{{/panel}}</div><div class="column medium-6">
-</div></div>
-
-
-
 ### GCP
 
-Nuxeo AI introduces support of fundamental Google Vision and OCR services implemented in  [`nuxeo-ai-gcp`](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-gcp) package. Nuxeo AI GCP effort intends to replace the deprecated [Nuxeo Vision](https://doc.nuxeo.com/nxdoc/nuxeo-vision/).
+Nuxeo AI introduces support of fundamental Google Vision and OCR services implemented in  [`nuxeo-ai-gcp`](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-gcp) package. Nuxeo AI GCP effort intends to replace the deprecated [Nuxeo Vision](https://doc.nuxeo.com/nxdoc/nuxeo-vision/) addon.
 
-With the add-on you can use following features:
-
+With this addon you can use the following features:
 - [Face Detection](https://cloud.google.com/vision/docs/detecting-faces)
 - [Label Detection](https://cloud.google.com/vision/docs/labels)
 - [Landmark Detection](https://cloud.google.com/vision/docs/detecting-landmarks)
@@ -339,15 +327,17 @@ With the add-on you can use following features:
 
 <a name="gcp_credentials"></a>
 
-Before using the add-on you must obtain credentials from GCP console. Follow Google offical [documentation](https://cloud.google.com/vision/product-search/docs/auth)
+Before using this addon you must obtain credentials from GCP console. Follow Google official [documentation](https://cloud.google.com/vision/product-search/docs/auth) to do so.
 
-The result should be a json file. Credentials discovery uses two possible approaches:
+The result should be a JSON file.
 
+Credentials discovery uses two possible approaches:
 1. Through an environment variable `GOOGLE_CREDENTIALS_PATH`
-2. `nuxeo.conf` variable `nuxeo.gcp.credentials` with the path to the credential location.
+1. `nuxeo.conf` variable `nuxeo.gcp.credentials` with the path to the credential location.
 
 {{#> callout type='info' }}
-Nuxeo AI GCP add-on relies on synchronous REST calls that brings limitations to the file size. Maximum file size that can be used for prediction is 10MB
+Nuxeo AI GCP addon relies on synchronous REST calls that brings limitations to the file size.</br>
+Maximum file size that can be used for prediction is 10MB.
 {{/callout}}
 
 #### Installation
@@ -362,7 +352,7 @@ Nuxeo AI GCP add-on relies on synchronous REST calls that brings limitations to 
    ./bin/nuxeoctl mp-install nuxeo-ai-gcp
    ```
 
-2. Add the following parameters to `nuxeo.conf`.
+1. Add the following parameters to `nuxeo.conf`.
 
    ```
    nuxeo.ai.images.enabled=true
@@ -374,11 +364,9 @@ Nuxeo AI GCP add-on relies on synchronous REST calls that brings limitations to 
    nuxeo.enrichment.raiseEvent=true
    ```
 
-3. Set your GCP [credentials](#gcp_credentials)
-
-4. Start Nuxeo and upload an image.
-
-5. Wait 10 seconds then look at the document tags and document JSON `enrichment:items` facet.
+1. Set your GCP [credentials](#gcp_credentials)
+1. Start Nuxeo and upload an image.
+1. Wait 10 seconds then look at the document tags and document JSON `enrichment:items` facet.
 
 #### Nuxeo Configuration
 
@@ -409,3 +397,12 @@ You can set these in your `nuxeo.conf`. They are used in combination with the ot
 </tbody>
 </table>
 </div>
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Display Sensitive Data Details Contained in a Document](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/sensitive-data)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
