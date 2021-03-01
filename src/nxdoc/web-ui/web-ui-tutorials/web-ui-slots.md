@@ -207,14 +207,11 @@ The `DOCUMENT_ACTIONS` has therefore the following:
 | Property    | Description                        |
 |:------------|:-----------------------------------|
 | `document`  | The current document.              |
+| `user`      | The current user.                  |
 | `clipboard` | The application clipboard content. |
 
 {{#> callout type='info' }}
   Discover how to [insert a new user action on Web UI with Studio Designer]({{page version='' space='nxdoc' page='how-to-insert-user-action'}}).
-{{/callout}}
-
-{{#> callout type='tip' }}
-  The model of every slot exposed by Web UI has the current user available under the `user` property.
 {{/callout}}
 
 #### DOCUMENT_VIEWS_ITEMS{{> anchor 'document_view_items'}}
@@ -230,6 +227,7 @@ Each new item of **DOCUMENT_VIEWS_ITEMS** slot triggers a navigation to a page d
 | Property   | Description           |
 |:-----------|:----------------------|
 | `document` | The current document. |
+| `user`     | The current user.     |
 
 
 #### DOCUMENT_VIEWS_PAGES{{> anchor 'document_view_pages'}}
@@ -245,6 +243,8 @@ The **DOCUMENT_VIEWS_PAGES** slot define the pages introduced by the **DOCUMENT_
 | Property   | Description           |
 |:-----------|:----------------------|
 | `document` | The current document. |
+| `user`     | The current user.     |
+
 
 #### BLOB_ACTIONS{{> anchor 'blob_actions'}}
 
@@ -282,6 +282,7 @@ This slot is displayed when selecting one or more children documents of a folder
 | `items`         | Array of all loaded documents.               |
 | `columns`       | Array with the available table columns       |
 | `document`      | The current document                         |
+| `user`          | The current user.                            |
 
 #### RESULTS_ACTIONS {{> anchor 'results_actions'}}
 
@@ -304,6 +305,7 @@ This slot allows to provide additional action buttons on folderish documents or 
 | `items`         | Array of displayed documents, selected or not. (Note: more documents could be loaded if you keep scrolling for results). |
 | `columns`       | Array with the available table columns.                                                                                  |
 | `document`      | The current document.                                                                                                    |
+| `user`          | The current user.                                                                                                        |
 
 ### Main Application Menu Slots
 
@@ -369,6 +371,7 @@ which will be inserted in [nuxeo-app.html](https://github.com/nuxeo/nuxeo-web-ui
 | `clipboardDocCount` | Number of documents in the clipboard.                    |
 | `clipboard`         | The clipboard element.                                   |
 | `userWorkspace`     | The user workspace path.                                 |
+| `user`              | The current user.                                        |
 
 #### DRAWER_PAGES and PAGES {{> anchor 'drawer_pages'}}
 
@@ -387,6 +390,7 @@ The `DRAWER_PAGES` allows you to add new items to the main left drawer menu (see
 | `clipboardDocCount` | Number of documents in the clipboard.                    |
 | `clipboard`         | The clipboard element.                                   |
 | `userWorkspace`     | The user workspace path.                                 |
+| `user`              | The current user.                                        |
 
 ### Document Creation
 
@@ -402,6 +406,7 @@ This slot displays actions when hovering over the bottom right **Floating Action
 |:--------------|:-------------------------------------------------------------------------|
 | `hostVisible` | Boolean which is true if hovering over the FAB.                          |
 | `subtypes`    | Array of the document types that can be created in the current location. |
+| `user`        | The current user.                                                        |
 
 #### CREATE_POPUP_ITEMS and CREATE_POPUP_PAGES{{> anchor 'create_popup_items'}}
 
@@ -416,6 +421,7 @@ Each new item of **CREATE_POPUP_ITEMS** slot triggers a navigation to a page def
 |:---------|:------------------------------------------------------------------------------------------------------------|
 | `parent` | The document that was opened when the pop-up was triggered or the folderish document where it is contained. |
 | `i18n`   | The i18n function helper to localize labels.                                                                |
+| `user`   | The current user.                                                                                           |
 
 #### FILE_UPLOAD_ACTIONS{{> anchor 'file_upload_actions'}}
 
@@ -442,6 +448,7 @@ The screen to browse Search results and Collection contents are very similar. Wh
 | `collection`    | The current document, corresponding to the current opened collection                                                           |
 | `items`         | Array of displayed collection members, selected or not. (Note: more members could be loaded if you keep scrolling for results) |
 | `selectedItems` | Array of selected collection members.                                                                                          |
+| `user`          | The current user.                                                                                                              |
 
 ### Other Slots
 
