@@ -491,6 +491,53 @@ You may want to disable the **Edit** user action if your users do not use Nuxeo 
 ```
 <nuxeo-drive>true</nuxeo-drive>
 ```
+#### Hiding some sections, tabs and actions
+You can control which doc tab, data section, doc action or nav actions are visible. If not specified or empty all items are visible. To specify a custom display, add under the `<library>`, `<Listing>` or `<search>` configuration:
+` 	
+
+	<doc-tabs>preview,data,history</doc-tabs> 
+	<data-sections>metadata,business-metadata,attachments,renditions,mlt</data-sections>
+	<doc-actions>edit,open,download,upload,lock</doc-actions>
+	<nav-actions>download,open,edit,delete</nav-actions>
+`
+#### Adding Custom Actions
+
+The custom actions are added to the built-in nav-actions. You should define a label, a Salesforce icon ID 
+      	and an operation to be invoked by the action .
+`
+
+      	<custom-nav-actions>
+      		<action name='myaction' label="My Action" icon="action:new_note" operation="Salesforce.MyAction" />
+      		...
+      	</custom-nav-actions>
+`
+
+#### Configuring the renditions used by the content pannel previewer
+
+To configure the preview, add under the `<library>`, `<Listing>` or `<search>`:
+
+`
+
+	<preview>
+      	function(doc) {
+      		// the doc object is an instance of the FileDoc class from force-app/main/default/lwc/nuxeoClient/model.js
+      		// the doc.doc object is the Nuxeo document defined in nuxeo javascript client.
+      		// Refer to FileDoc for more on the API it expose.
+      		// You can return null (or falsy) to let the client use the default rendition detection.         		
+      		return {
+      			viewer: "video" | "audio" | "image" | "pdf" | "html" | "text" | "binary",
+      			rendition: renditionId
+      			content: xpath
+      			type: mime-type // optional mime type - must be specified for videos.
+      		}
+      	}
+      	</preview>
+
+`
+
+#### Configuring the business metadata section rendering
+
+The business metadata section relies on calling a freemarker rendering using a the automation script [Salesforce.RenderBusinessMetadata](https://github.com/nuxeo/nuxeo-salesforce/blob/10.10/nuxeo-salesforce-core/src/main/resources/OSGI-INF/business-metadata.xml). You can override that script for changing the display of that section. Or you can limit your effort to customize the [default](https://github.com/nuxeo/nuxeo-salesforce/blob/10.10/nuxeo-salesforce-core/src/main/resources/OSGI-INF/salesforce-business-metadata.ftl) freekmarker template used if you don't have any complex conditionnal logic. The default one has been designed on purpose to show various cases of complex metadata display situations (directories, lists, users, translations). 
 
 #### Changing the Root Path Where the Folders Are Created for the Library Behavior
 
@@ -517,6 +564,8 @@ The string provided will also be looked up as a key in the translation workbench
 
 #### Updating the Page Provider and Properties Mapping for the Content List Behavior
 
+#### Defining the mapping and choosing the page provider to use
+
 The content list is designed for being able to configure the query used to fetch the documents it displays and allows to do a mapping between some of the properties of the Salesforce record and the parameters expected by the Nuxeo query. The following part of the configuration under the `<listing>` element does exactly this:
 
 ```
@@ -530,6 +579,47 @@ The content list is designed for being able to configure the query used to fetch
 
 In this example, the developer must have configured the `list-of-procedures-provider` page provider initially in Nuxeo Studio. Then the "record" object inside the "context" map is used to get access to the properties of the current salesforce object, while the page providers parameters are under the "params" map.
 
+{{#> callout type='note' }}
+The page provider must have a `ecm:fulltext` parameter. This is required for the full text search input field to be operational.
+{{/callout}}
+
+##### User object in the context
+
+You  have acces in the context in which the mapping is exected to a User object (`context.user:`).
+
+Default user object fields are:
+- Id, 
+- UserName,
+- Email
+- Type
+- Name
+- LastName
+- FirstName
+- RoleId
+- TimeZone
+- Locale
+- Language
+- ProfileId
+- OrganizationId
+- OrganizationName
+
+You can configure the availability of custom fields by adding under the `<library>`, `<Listing>` or `<search>`:
+
+`
+	<user-field>field1,field2</user-field>
+`
+##### Passing through additionnal custom values in the context
+
+External lightening components can inject properties using the global `window._NUXEO_` property. This is useful if you want to use custom objects (not the main salesforce one of your page) for mapping values of the parameters of your content query. 
+`window._NUXEO_` object is the available in the client context as the *env* property: `context.env`.
+When defining properties inside `window._NUXEO_` you should avoid replacing the existing object if any (which can be set by other components). Ex:
+`
+
+	const nuxeo = window._NUXEO_ || {};
+	nuxeo.myProp = true;
+	window._NUXEO_ = nuxeo;
+  `
+
 #### Defining a New Link Operation for the Content List Behavior
 
 The **Link Content** action  provides to the users the ability to click on a Link button on each document of the search result. The behavior associated to the Link/Unlink buttons can be changed by configuring another operation to call, the default one is `Salesforce.LinkAsSource`.
@@ -541,24 +631,15 @@ There is also a configurable test made to know when to display the **Link** or t
 <link-test>function(doc, recordId) { return doc.properties['dc:source'] === recordId }</link-test>
 ```
 
+
+### Configuring a utility item
+
+The `nuxeoApp` utility item component is named `nuxeoAppUtility`. For installing it, go to `Setup > Apps > App Manager` and select the application you want to customize (let's say we want to customize the **Sales** application). Note that you **must** use the **Lightning Sales** application. Then on the dropdown menu associated with the lightning Sales application click on Edit.  \
+Then, open the Utility Items section and click on Add utility item. Select `nuxeoAppUtility` and then configure it as needed.
+
 ## Upcoming Evolutions
 
-Next version of the addon is targeted for the end of February and will include:
+Next version of the addon is targeted for mid march and will include:
 
 - New JWT Exchange authentication scheme, with the removal of the **Login** button.
 
-- All actions and data sections displayed are configurable (to be able to remove any unwanted section)
-
-- Business metadata section for custom metadata in the data tab, with the use of FreeMarker template authored in Nuxeo Studio for rendering the section.
-
-- The rendition used for the preview tab is configurable through an automation script.
-
-- Ability to attach the Nuxeo component into the utility bar and detach it into a separate screen for co-display of the Salesforce object and contextual documents type of use case
-
-- Adding document actions on all document listings consistently (search, library and listing modes)
-
-- A full-text search input on top of the document list
-
-- Two place holder actions are added for more custom actions, plugged to some automation scripts.
-
-- Default behavior of the liking script is improved to support multiple attachments to the same document and for being able to link even without the Write permission on the document.
