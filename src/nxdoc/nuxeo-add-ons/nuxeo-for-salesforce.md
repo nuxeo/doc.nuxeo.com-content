@@ -364,11 +364,13 @@ User can find the following fields in the document panel:
    - **Maximise**: maximize the document panel, usually for having more space to preview the open content.
    - **Close**: closes the document panel.
 
-- **Preview tab**: opens a preview of the document. Office documents are rendered in PDF, images are displayed as they are and videos are displayed with a player, using a smaller rendition than the original file.
+- **Preview tab**: opens a preview of the document. Office documents are rendered in PDF, images are displayed (including any content that renders as an image through the "Picture" facet, like a PSD for instance)and videos are displayed with a player, using a smaller rendition than the original file. You can configure the logic of what rendition to use for the preview. This is typically useful if your document is only metadata based and you want to display a summary of the metadata values rendered in HTML.
 
-- **Data tab**: displays generic metadata of the document (version label, state, list of tags, date of creation and modification and creator), a list of renditions available on the doc (PDF, thumbnail, ...), additional attachments (as they can be attached from Web UI).
+- **Data tab**: displays generic metadata of the document (version label, state, list of tags, date of creation and modification and creator), business metadata of the document, a list of renditions available on the doc (PDF, thumbnail, ...), additional attachments (as they can be attached from Web UI). The business metadata section shows by default some additionnal properties of the dublin core schema, you can configure it to display the custom metadata you configured on your repository.
 
 - **History**: displays the last five audit entries on the document. The audit tracks all events happening on a document (modifications, creation, move, copy, ...).
+
+You can by configuration disable any of those sections when you have no use case for preventing them to the users.
 
 ### Content Library
 
@@ -382,18 +384,19 @@ On the content library component, the user can:
 - Upload new files, either by drag and drop (it supports multiple files at once) or using the "Upload files" action.
 - Browse the hierarchy using the breadcrumb.
 - Search within the folder. The executed search looks for content starting from the currently opened folder.
-- On each listed documents, the user has a set of actions: main file download, Open in Nuxeo, Edit with Nuxeo Drive, Delete.
+- On each listed documents, the user has a set of actions: main file download, Open in Nuxeo, Edit with Nuxeo Drive, Delete. You can also configure additionnal custom actions.
 - Clicking on the document name opens the Document panel described in the [previous section](#document-panel).
 
 The created folder in Web UI holds a `salesforce` facet and some metadata are set automatically on the associated salesforce schema. By default, `sf:objectId`,`sf:objectType`, `sf:objectAmount`. See the configuration section to change that behavior.
 
 ### Content List
 
-The Content list mode is ideal when you want to display to the user a specific list of content that comes from the Nuxeo repository. A typical use case is for instance to display a list of relevant knowledge articles based on the context defined by the metadata of your open case. The list of content is specified by configuration in Nuxeo Studio with a Page provider, the same way all documents lists and searches are specified in your customized Nuxeo Web UI. In the default behavior without customization, the query made lists all documents for which the `dc:source` metadata of the document contains the current Salesforce object record id.
+The Content list mode is ideal when you want to display to the user a specific list of content that comes from the Nuxeo repository. A typical use case is for instance to display a list of relevant knowledge articles based on the context defined by the metadata of your open case. The list of content is specified by configuration in Nuxeo Studio with a Page provider, the same way all documents lists and searches are specified in your customized Nuxeo Web UI. In the default behavior without customization, the query made lists all documents for which the `dc:source` metadata of the document contains the current Salesforce object record id. Additionnally, user can filter the content of the list via a full text-search.
 
-**Link content** button on top of the documents list allows to search for some content within the whole Nuxeo repository, and then to "link" it. In the standard configuration, clicking on **Link** on a given document will set the `dc:source` value of the document equal to the current Salesforce record ID. It is possible to adapt what it does by using Nuxeo Studio configuration, see section after.
+**Link content** button on top of the documents list allows to search for some content within the whole Nuxeo repository, and then to "link" it. In the standard configuration, clicking on **Link** on a given document will add the reference of the current Salesforce record ID to the `dc:source` property of the document. This behaviour is intended to be customized on your project. You can also decide to not display the Link action if you don't have any use case for it and only want to display a list of documents.
+Without any configuration, you can use the Content list mode as a way for the user to search for a document in the repository and "bookmark" it on the object. Also, note that it is not possible to bookmark a proxy (= a published document).
 
-Without any configuration, you can use the Content list mode as a way for the user to search for a document in the repository and "bookmark" it on the object. The current implementation requires to have the Write permission on the document and is limited to attach a document to one record only, but both of those limitations will be removed in the next version. Also, note that it is not possible to bookmark a proxy (= a published document).
+In the list view, in addition to the default actions displayed for each document, you can browse all 
 
 ### Search
 
@@ -406,6 +409,12 @@ The Search mode provides a simple search interface with a search input field tha
 {{#> callout type='note' }}
 The search mode can be added on a Salesforce object layout as well as a menu action on the general top bar. To do so, you can search for "Nuxeo" on the left launcher and select **Nuxeo Search** to add it for all users.
 {{/callout}}
+
+You can configure the page provider (= the query) made when searching.
+
+### Utility bar
+
+In some situations it is more confortable for the user to display the content list or the content library in the [utility bar section](https://developer.salesforce.com/docs/atlas.en-us.api_console.meta/api_console/sforce_api_console_js_utility.htm) of Salesforce. One of the advantages is that user can detach the window to display the content in a side screen. Even when detached, content is updated according to the Salesforce record browsed. Content List, Content Library and Content Search modes of the Nuxeo Ligthening element can be used to configure new utility bar items.
 
 ## Configuration / Customization
 
