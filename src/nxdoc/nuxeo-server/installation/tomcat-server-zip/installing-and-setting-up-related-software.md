@@ -544,7 +544,7 @@ The Nuxeo Platform modules use external software for some features. They need to
 On a naked default Nuxeo Platform, you need the following software:
 
 - For web preview of office documents: LibreOffice and pdftohtml
-  - LibreOffice (version >= 5): converts office file into PDF
+  - LibreOffice (version >= **6.4.7**): converts office file into PDF
   - pdftohtml: converts converted PDF into HTML preview
 - For thumbnail generation: ImageMagick and Ghostscript for most file formats. UFRaw for RAW files.
 - For processing WordPerfect documents: libwpd
@@ -577,7 +577,7 @@ Installing the FFmpeg package from your distribution's repository may not provid
 {{! multiexcerpt name='libreoffice-5'}}
 **Minimum required version**
 
-The minimum version required is LibreOffice 5. The path to the soffice program must be added to the PATH environment variable.
+The minimum version required is LibreOffice 6.4.7. The path to the soffice program must be added to the PATH environment variable.
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='ooo-libreoffice-configuration'}}
