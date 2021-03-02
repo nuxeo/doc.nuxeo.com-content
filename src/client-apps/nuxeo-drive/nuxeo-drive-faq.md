@@ -166,11 +166,6 @@ choco install kb3063858
 - Download link: [Windows8-RT-KB3063858-x64.msu](https://download.microsoft.com/download/9/E/E/9EEB707E-2896-4890-8082-2D9FB930C615/Windows8-RT-KB3063858-x64.msu)
 - Checksum (SHA256): `64ACF31484023625E19DD45613AA8926AA3837218AA5B2A955745EED9FBFF7DF`
 
-#### Windows Server 2008 R2
-
-- Download link: [Windows6.1-KB3063858-x64.msu](https://download.microsoft.com/download/D/0/7/D0757054-F917-4728-935B-200AEAFE0308/Windows6.1-KB3063858-x64.msu)
-- Checksum (SHA256): `6FEC4E38CDCBDAA334937A2EF38BAD6800E9C80CB513183451B4049E84479A85`
-
 #### Windows Server 2012
 
 - Download link: [Windows8-RT-KB3063858-x64.msu](https://download.microsoft.com/download/9/E/E/9EEB707E-2896-4890-8082-2D9FB930C615/Windows8-RT-KB3063858-x64.msu)
