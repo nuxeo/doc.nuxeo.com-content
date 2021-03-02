@@ -17,7 +17,7 @@ tree_item_index: 100
 
 | Channel | Version |
 | ------- | -------- |
-| Release | [4.5.1](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D)    |
+| Release | [5.0.0](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D)    |
 | Beta    | [5.0.0](https://community.nuxeo.com/static/drive-updates/beta/?C=M;O=D)    |
 | Alpha   | [5.0.1.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D)      |
 
