@@ -142,8 +142,10 @@ Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/
 - GNU/Linux, 64 bits
 - macOS >= 10.13, 64 bits
 - Windows 8, both 32 and 64 bits
+- Windows Server 2012, 64 bits
 - Windows 8.1, both 32 and 64 bits
 - Windows 10, both 32 and 64 bits
+- Windows Server 2019, 64 bits
 
 ### Obsolete Windows version
 
