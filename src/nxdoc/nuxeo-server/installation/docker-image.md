@@ -27,6 +27,7 @@ Based on CentOS 7, it includes:
 
 - Azul's [Zulu OpenJDK 11](https://www.azul.com/downloads/zulu-community/?version=java-11-lts&package=jdk).
 - A bare Nuxeo server without any package installed.
+- A default embedded database, H2 (only valid for test purposes)
 - Some basic Open Source converters, e.g.: ImageMagick, LibreOffice.
 - A `nuxeo` user with the `900` fixed UID.
 - The directories required to have the Nuxeo configuration, data and logs outside of the server directory, with appropriate permissions.
