@@ -8,6 +8,7 @@ review:
 tree_item_index: 400
 toc: true
 ---
+
 ![]({{file space='main' page='blog' name='jgit_logo.png'}})
 
 Many of you must be familiar with the version control system [Git](https://git-scm.com/). At Nuxeo, we are extremely fond of it and use it for our sources and version management in [Nuxeo Studio](https://www.nuxeo.com/products/studio/). To easily use the Git commands in our Java code, we rely on a great and easy-to-use API: **JGit**.
@@ -114,3 +115,11 @@ formatter.format(diff);
 ```
 
 I hope these few examples helped you get the basics of JGit. To go deeper into the examples of JGit, I recommend [this cookbook](https://github.com/centic9/jgit-cookbook). It’s an excellent source of documentation. If you do not find what you are looking for, main use-cases are described [here in StackOverflow](https://stackoverflow.com/questions/tagged/jgit).
+
+* * *
+
+**About Nuxeo**
+
+Nuxeo, developer of the leading Content Services Platform, is reinventing [enterprise content management](https://www.nuxeo.com/products/enterprise-content-management/?utm_source&#61;2019%20Forrester%20ECM%20CP%20Wave&amp;utm_medium&#61;press%20release&amp;utm_campaign&#61;2019%20Forrester%20ECM%20CP%20Wave) (ECM) and [digital asset management](https://www.nuxeo.com/solutions/dam-digital-asset-management/?utm_source=2019%20Forrester%20ECM%20CP%20Wave&utm_medium=press%20release&utm_campaign=2019%20Forrester%20ECM%20CP%20Wave) (DAM). Nuxeo makes it easy to build smart content applications that enhance customer experiences, improve decision making, and accelerate products to market.
+
+Its cloud-native, low-code platform has been deployed by large enterprises worldwide. Customers like Electronic Arts, TBWA, ABN AMRO, and CVS have used Nuxeo's technology to transform the way they do business. Founded in 2000, the company is based in New York with offices across the United States, Europe, and Asia. Learn more at [www.nuxeo.com](https://www.nuxeo.com/?utm_source&#61;2019%20Forrester%20ECM%20CP%20Wave&amp;utm_medium&#61;press%20release&amp;utm_campaign&#61;2019%20Forrester%20ECM%20CP%20Wave).

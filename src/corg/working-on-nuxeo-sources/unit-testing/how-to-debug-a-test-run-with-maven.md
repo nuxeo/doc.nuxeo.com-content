@@ -1,6 +1,6 @@
 ---
 title: How to Debug a Test Run with Maven
-description: Discover how to debug a test run with Maven using Eclipse. 
+description: Discover how to debug a test run with Maven using Eclipse.
 review:
     comment: ''
     date: ''
@@ -165,3 +165,11 @@ To debug the `MySuperClassTest` class:
 More information is available on the [maven-surefire-plugin page](http://maven.apache.org/plugins/maven-surefire-plugin/index.html).
 
 &nbsp;
+
+* * *
+
+**About Nuxeo**
+
+Nuxeo, developer of the leading Content Services Platform, is reinventing [enterprise content management](https://www.nuxeo.com/products/enterprise-content-management/?utm_source&#61;2019%20Forrester%20ECM%20CP%20Wave&amp;utm_medium&#61;press%20release&amp;utm_campaign&#61;2019%20Forrester%20ECM%20CP%20Wave) (ECM) and [digital asset management](https://www.nuxeo.com/solutions/dam-digital-asset-management/?utm_source=2019%20Forrester%20ECM%20CP%20Wave&utm_medium=press%20release&utm_campaign=2019%20Forrester%20ECM%20CP%20Wave) (DAM). Nuxeo makes it easy to build smart content applications that enhance customer experiences, improve decision making, and accelerate products to market.
+
+Its cloud-native, low-code platform has been deployed by large enterprises worldwide. Customers like Electronic Arts, TBWA, ABN AMRO, and CVS have used Nuxeo's technology to transform the way they do business. Founded in 2000, the company is based in New York with offices across the United States, Europe, and Asia. Learn more at [www.nuxeo.com](https://www.nuxeo.com/?utm_source&#61;2019%20Forrester%20ECM%20CP%20Wave&amp;utm_medium&#61;press%20release&amp;utm_campaign&#61;2019%20Forrester%20ECM%20CP%20Wave).
