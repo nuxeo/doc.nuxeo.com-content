@@ -35,7 +35,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <th>Category</th>
   </tr>
     <tr>
-    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search/search-pdf-metadata.png" width="120px"/></a></td>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/interactive-pdf-search/search-pdf-metadata.png" width="120px"/></a></td>
     <td>Interactive PDF Search</td>
     <td>Nuxeo</td>
     <td>Search</td>
@@ -121,7 +121,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Category</th>
 </tr>
     <tr>
-    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search/search-pdf-metadata.png" width="120px"/></a></td>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/interactive-pdf-search/search-pdf-metadata.png" width="120px"/></a></td>
     <td>Interactive PDF Search</td>
     <td>Nuxeo</td>
     <td>Search</td>
@@ -133,7 +133,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>Layouts</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/color-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/color-search/color.png" width="120px"/></a></td>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/color-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/color-search/color.png" width="120px"/></a></td>
     <td>Similar Color Search</td>
     <td>Nuxeo</td>
     <td>Search, AI, Layouts</td>
