@@ -28,7 +28,9 @@ Based on CentOS 7, it includes:
 - Azul's [Zulu OpenJDK 11](https://www.azul.com/downloads/zulu-community/?version=java-11-lts&package=jdk).
 - A bare Nuxeo server without any package installed.
 - A default embedded database, H2 (only valid for testing purposes).
+- An embedded Elasticsearch (only valid for testing purposes too).
 - Some basic Open Source converters, e.g.: ImageMagick, LibreOffice.
+- Chronicle Queue to run the Nuxeo Stream library and services.
 - A `nuxeo` user with the `900` fixed UID.
 - The directories required to have the Nuxeo configuration, data and logs outside of the server directory, with appropriate permissions.
 - An entrypoint script to configure the server.
