@@ -61,6 +61,11 @@ Don't forget to save your modifications, by clicking on the Save button {{!--   
 
 This action enables you to discard all the modifications that you have done on a layout and revert to the default view.
 
-To do so, click on the discard changes button at the top right hand-corner of the screen. ![]({{file name='discard-changes.png'}} ?w=80,) A pop-up window appears. Click yes to confirm your choice.
+To do so, click on the discard changes button at the top right hand-corner of the screen. {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Main View/Discard Changes Designer
+    name: revert-action-vd.png
+    studio_designer#screenshot#up_to_date
+--}}
+![Discard Changes Designer](nx_asset://607d8356-f3c9-4ef8-a19e-b9ad5a466137 ?w=20,border=true) A pop-up window appears. Click yes to confirm your choice.
 
 Your layout is back as its initial state, before you click on the **CONFIGURE** button.
