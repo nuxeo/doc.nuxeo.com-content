@@ -149,8 +149,8 @@ This tutorial is composed of different steps to guides you on a tour of the Nuxe
 <br/>
 This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.<br/>
 
-<br/>
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='configure-nuxeo-platform'}})
+<br/><br/>
+[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='first-package-with-studio'}})
 {{/panel}}
 </div>
 <div class="column medium-4">
@@ -160,7 +160,7 @@ This tutorial introduces you to a few important aspects of **Nuxeo Studio** so t
 This tutorial takes a contract's start date and add three months to it, but you can think of integrating any **custom logic in your Java class**.
 
 <br/><br/>
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='develop-with-nuxeo-platform'}})
+[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='develop-your-own-java-code'}})
 {{/panel}}
 </div>
 </div>

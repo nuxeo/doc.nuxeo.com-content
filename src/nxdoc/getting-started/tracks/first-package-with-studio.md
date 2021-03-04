@@ -1,5 +1,5 @@
 ---
-title: 2 - Configure Nuxeo Platform
+title: 2 - First package with Studio
 review:
     comment: ''
     date: '2020-12-11'
@@ -454,3 +454,21 @@ CUSTOMIZE THE LOGIN PAGE
 {{#> callout type='tip' }}
 Our teams are working round the clock to improve the themes and styling of Web UI so that you can apply your own branding. Check in again soon to see the improvements we've made and to further customize your Nuxeo application.
 {{/callout}}
+
+## Application Definition
+
+INSTALL NEW PACKAGES
+
+1. In Studio, select **Application Definition** from the **Settings** menu.
+   ![]({{file name='AppDef1.png' page='first-package-with-studio'}} ?w=450,border=true)
+
+2. Enter the package name you are looking for in the **Package to Install** input, and select it. You should have a summary about packages changes.
+   ![]({{file name='AppDef2.png' page='first-package-with-studio'}} ?w=450,border=true)
+   ![]({{file name='AppDef3.png' page='first-package-with-studio'}} ?w=450,border=true)
+
+4. Save your changes. The package will be installed when installing the Studio package and its registries are available in the Studio project.
+   ![]({{file name='AppDef4.png' page='first-package-with-studio'}} ?w=450,border=true)
+
+## What to do Next
+
+You should learn to [create your own Operation](https://doc.nuxeo.com/nxdoc/cloud/develop-with-nuxeo-platform/).
