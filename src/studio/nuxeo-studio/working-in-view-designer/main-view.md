@@ -21,7 +21,12 @@ The code editor mode is an HTML editor designed to let you inspect every element
 
 The HTML mode includes a few helpers such as auto-completion for document properties, tasks properties, functions and polymer behaviours. The annotation `@doctype`, `@schema` or `@task` defined for each property defines the auto-completion for that property.
 
-Don't forget to save your modifications, by clicking on the Save button ![]({{file name='save-action-vd.png'}} ?w=20,border=true) at the top right hand corner of your application.
+Don't forget to save your modifications, by clicking on the Save button {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Main View/Save Action Designer
+    name: save-action-vd.png
+    studio_designer#screenshot#up_to_date
+--}}
+![Save Action Designer](nx_asset://4c9b9f92-aca9-4e64-b796-620e6d498d22 ?w=20,border=true) at the top right hand corner of your application.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Main View/Code Editor Designer
