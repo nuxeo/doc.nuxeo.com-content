@@ -310,7 +310,7 @@ The chain should look like this:
 
 ## Step 3: Creating the Button to Generate the CSV File
 
-The only step left is to [create a button]({{page page='how-to-create-an-automation-chain#binding-to-a-buttonaction'}}) (**User Action** -> **New Action Feature**) that will trigger this operation chain.
+The only step left is to [create a button]({{page page='how-to-create-an-automation-chain'}}#automation-chain-binding-button) (**User Action** -> **New Action Feature**) that will trigger this operation chain.
 
 * * *
 
