@@ -41,7 +41,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>Search</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views/cookbook-custom-views2.png" width="120px"/></a></td>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/custom-views/cookbook-custom-views2.png" width="120px"/></a></td>
     <td>Custom Preview and Thumbnail</td>
     <td>Nuxeo</td>
     <td>Layouts</td>
@@ -127,7 +127,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>Search</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views/cookbook-custom-views2.png" width="120px"/></a></td>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/custom-views/cookbook-custom-views2.png" width="120px"/></a></td>
     <td>Custom Preview and Thumbnail</td>
     <td>Nuxeo</td>
     <td>Layouts</td>
