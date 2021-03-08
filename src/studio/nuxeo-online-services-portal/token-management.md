@@ -38,6 +38,12 @@ For more details on when to use the token, see the <a href="#token-usage">token 
 Tokens are only used for command line tools and APIs. You still need to use your password as usual when you log in to Nuxeo Online Services in your browser, for instance when accessing Nuxeo Studio.
 {{/callout}}
 
+{{#> callout type='warning'}}
+The NOS token shouldn't be used to authenticate for packages/hotfixes: 
+
+→ The NOS token authenticates to https://connect.nuxeo.com, where the Studio project comes from, not to https://packages.nuxeo.com, where hotfixes are located.
+{{/callout}}
+
 ## Creating a Token
 
 To generate a token:
