@@ -8,7 +8,7 @@ labels:
   - multiexcerpt-include
 toc: true
 description: Discover how to build a custom Docker image.
-tree_item_index: 100
+tree_item_index: 200
 ---
 
 To build an application from Nuxeo, we strongly recommend to customize the Nuxeo Docker Image by building a Docker image from the Nuxeo one. Let's see how you can do this.
