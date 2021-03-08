@@ -304,10 +304,8 @@ Nuxeo holds a Maven repository here: [http://maven.nuxeo.org/](http://maven.nuxe
 
 ### Installing Maven
 
-{{#> callout type='note' }}
-
+{{#> callout type='note'}}
 **Since Nuxeo 5.9.2, Maven 3.1.1+ is required (3.3+ recommended).** Maven 2.2.1 is required up to Nuxeo 5.9.1.
-
 {{/callout}}
 
 You should install Maven on your development box by downloading the latest archive from [http://maven.apache.org/download.html](http://maven.apache.org/download.html) and then extract the archive into `/opt` (for instance).
@@ -329,10 +327,8 @@ Maven home: /opt/apache-maven-3.3.3
 Java version: 1.8.0_51, vendor: Oracle Corporation
 ```
 
-{{#> callout type='info' }}
-
+{{#> callout type='info'}}
 Maven relies on JAVA_HOME rather than PATH for Java.
-
 {{/callout}}
 
 ### Configure Repositories
@@ -529,12 +525,40 @@ Maven plugins are considered as special artifacts: their repositories must also 
 
 The [maven-eclipse-plugin](http://maven.apache.org/plugins/maven-eclipse-plugin/usage.html) provides a goal (`eclipse:configure-workspace`) for automatically configuring Eclipse with Maven but it's easy to manually configure: in Eclipse, go to `Preferences/Java/Build Path/Classpath Variables`, click `New`, name `M2_REPO` and browse to your local Maven repository (usually `~/.m2/repository`).
 
+## Maven usage for LTS 2021
+
+Nuxeo Platform LTS2021 artefacts are **private**. Consequently, you'll need to create a support ticket to ask access to the Nuxeo Central Repository, https://packages.nuxeo.com/. 
+
+Once your Okta account is assigned the “**Sonatype Nexus**“ application, go to https://nuxeo-nos-admin.okta.com/ and click on the application. You should then connect to packages using the “single sign-on” feature and then click on its username to generate a user token. 
+
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CORG/Maven Usage/user-token-maven.png
+    name: user-token-maven.png
+    server#screenshot#up_to_date
+--}}
+![user-token-maven.png](nx_asset://6a6b4fa0-efb6-468a-8a16-7f038bcc42f8 ?w=450,border=true)
+
+You'll be able to get your credentials for the XML file:
+
+```xml
+Use the following in your Maven settings.xml:
+<server>
+<id>${server}</id>
+  <username><MY_NEXUS_USERNAME></username>
+  <password><MY_NEXUS_PASSWORD></password>
+</server>
+
+Use the following for a base64 representation of "user:password":
+<MY_BASE_64_REPRESENTATION_CREDENTIALS>
+``` 
+
+Finally, update your POM file with the credentials you've just generated.
+
 ## Generate a New Project with the Nuxeo-Archetype-Start Archetype
 
-{{#> callout type='warning' }}
-
+{{#> callout type='warning'}}
 This is currently deprecated
-
 {{/callout}}
 
 The goal of the nuxeo-archetype-start template is to setup a development environment to work on a Nuxeo Platform plugin.
@@ -594,14 +618,11 @@ Skip only the Integration Tests execution with `-DskipITs`.
 
 Skip only the Unit Tests execution with `-Dskip.surefire.tests=true`.
 
-{{#> callout type='warning' }}
-
+{{#> callout type='warning'}}
 Avoid use of `-Dmaven.test.skip=true` which also skips the tests compilation.
-
-{{/callout}} {{#> callout type='info' }}
+{{/callout}} 
 
 In the Maven Surefire Test Framework:
-
 *   Unit Tests are managed by the [`maven-surefire-plugin`](http://maven.apache.org/surefire/maven-surefire-plugin/) during the `test` phase.
 *   Integration Tests are managed by the [`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/) during the `integration-test` and `verify` phases.
 *   Test classes selection is based on the filename patterns and the plugin configuration: see [Surefire Inclusions and Exclusions of Tests](http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html) and [Failsafe Inclusions and Exclusions of Tests](http://maven.apache.org/surefire/maven-failsafe-plugin/examples/inclusion-exclusion.html).
@@ -613,9 +634,6 @@ In the Nuxeo Test Framework:
 *   Integration Tests designate Functional and Performance Tests.
 *   Selenium, FunkLoad and other custom Integration Tests are managed by the [`ant-assembly-maven-plugin`](https://github.com/nuxeo/ant-assembly-maven-plugin) which mimics [`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/) behaviors, honoring its main properties and output format.
 *   WebDriver Integration Tests are managed by the [`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/); the [`ant-assembly-maven-plugin`](https://github.com/nuxeo/ant-assembly-maven-plugin) acts only during `pre-integration-test` and `post-integration-test` phases for the environment set up and tear down.
-
-{{/callout}}
-
 
 
 ## Basic Maven Options
