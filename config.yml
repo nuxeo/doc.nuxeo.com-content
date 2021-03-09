@@ -7,11 +7,11 @@ default:
       - space_path: userdoc
         space_name: Nuxeo Platform User Documentation
     branch: master
-    dev_browser_path: nxdoc/cloud
+    dev_browser_path: nxdoc/master
     versions:
-      - label: Cloud
+      - label: Master
         is_current_version: true
-        url_path: 'cloud'
+        url_path: 'master'
       - label: LTS 2021
       - label: LTS 2019
         url_path: '1010'
