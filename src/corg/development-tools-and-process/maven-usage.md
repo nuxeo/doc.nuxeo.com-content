@@ -529,8 +529,10 @@ The [maven-eclipse-plugin](http://maven.apache.org/plugins/maven-eclipse-plugin/
 
 Nuxeo Platform LTS2021 artefacts are **private**. Consequently, you'll need to create a support ticket to ask access to the Nuxeo Central Repository, https://packages.nuxeo.com/. 
 
-Once your Okta account is assigned the “**Sonatype Nexus**“ application, go to https://nuxeo-nos-admin.okta.com/ and click on the application. You should then connect to packages using the “single sign-on” feature and then click on its username to generate a user token. 
-
+Once your Okta account is assigned the “**Sonatype Nexus**“ application, go to  https://auth.nuxeo.com and click on the application. You should then connect to packages using the “single sign-on” feature and then:
+- click on its username
+- click on User Token menu 
+- push the button "Access user token" to generate a token to download the artifacts from Maven 
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CORG/Maven Usage/user-token-maven.png
