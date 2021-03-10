@@ -22,6 +22,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/U4CRAQ'
     source_link: /display/NXDOC/Nuxeo+Datadog+Reporter
 tree_item_index: 1300
+hidden: true
 history:
     -
         author: Manon Lumeau
