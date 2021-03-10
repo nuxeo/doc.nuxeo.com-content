@@ -1,59 +1,47 @@
 ---
 title: Nuxeo Cloud
 review:
-    comment: ''
-    date: '19-03-2020'
-    status: ok
+  comment: ''
+  date: '19-03-2020'
+  status: ok
 is_overview: true
 labels:
-    - nuxeo-cloud
+  - nuxeo-cloud
 ---
 
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6" align='center'>
-{{#> panel type='secondary' }}
+<div class="text-center flex-boxes">
+<div class="callout secondary flex-box">
+<a href="{{page page='what-is-nuxeo-cloud'}}">
 ![]({{file name='cloud-settings.png'}})
-
-### [What's Nuxeo Cloud]({{page page='what-is-nuxeo-cloud'}})
-{{/panel}}
+<h3>What's Nuxeo Cloud</h3>
+</a>
 </div>
-<div class="column medium-6" align='center'>
-{{#> panel type='secondary'}}
+
+<div class="callout secondary flex-box">
+<a href="{{page page='new-to-nuxeo-cloud'}}">
 ![]({{file name='cloud-new.png'}})
-
-### [New to Nuxeo Cloud]({{page page='new-to-nuxeo-cloud'}})
-
-{{/panel}}
-</div>
+<h3>New to Nuxeo Cloud</h3>
+</a>
 </div>
 
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-4" align='center'>
-{{#> panel type='secondary' match_height='true'}}
+<div class="callout secondary flex-box">
+<a href="{{page page='day-to-day'}}">
 ![]({{file name='cloud-timeout.png'}})
-
-### [Nuxeo Cloud Day-to-day]({{page page='day-to-day'}})
-
-{{/panel}}
+<h3>Nuxeo Cloud Day-to-day</h3>
+</a>
 </div>
 
-
-<div class="column medium-4" align='center'>
-{{#> panel type='secondary' match_height='true'}}
+<div class="callout secondary flex-box">
+<a href="{{page page='start-developing'}}">
 ![]({{file name='cloud-edit.png'}})
-
-### [Start Developing an Application]({{page page='start-developing'}})
-
-{{/panel}}
+<h3>Start Developing an Application</h3>
+</a>
 </div>
 
-<div class="column medium-4" align='center'>
-{{#> panel type='secondary' match_height='true'}}
+<div class="callout secondary flex-box">
+<a href="{{page page='nuxeo-cloud-addons'}}">
 ![]({{file name='content-box.png'}})
-
-### [Nuxeo Cloud Addons]({{page page='nuxeo-cloud-addons'}})
-
-{{/panel}}
+<h3>Nuxeo Cloud Addons</h3>
+</a>
 </div>
-
 </div>
