@@ -99,6 +99,12 @@ This addon is deprecated since Nuxeo Platform LTS 2019.
 {{/callout}}
 {{! /multiexcerpt}}
 
+{{! multiexcerpt name='DeprecatedAddon_2021'}}
+{{#> callout type='note' }}
+This addon is deprecated since Nuxeo Platform LTS 2021.
+{{/callout}}
+{{! /multiexcerpt}}
+
 {{! multiexcerpt name='JSF-UI-required'}}
 {{#> callout type='note' heading='JSF UI Deprecation' }}
 This requires to have the JSF UI addon installed on your server that is deprecated since Nuxeo Platform LTS 2019.</br>
