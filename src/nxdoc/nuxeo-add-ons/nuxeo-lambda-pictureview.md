@@ -10,6 +10,7 @@ labels:
     - lts2017-ok
     - university
 toc: true
+hidden: true
 tree_item_index: 2060
 ---
 

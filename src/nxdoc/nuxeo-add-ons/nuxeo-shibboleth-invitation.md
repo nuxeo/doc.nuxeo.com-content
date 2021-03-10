@@ -12,6 +12,7 @@ labels:
   - lts2017-ok
   - lts2019-ok
 toc: true
+hidden: true
 confluence:
   ajs-parent-page-id: '16089349'
   ajs-parent-page-title: Nuxeo Add-Ons
