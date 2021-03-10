@@ -39,9 +39,7 @@ Tokens are only used for command line tools and APIs. You still need to use your
 {{/callout}}
 
 {{#> callout type='warning'}}
-The NOS token shouldn't be used to authenticate for packages/hotfixes: 
-
-→ The NOS token authenticates to https://connect.nuxeo.com, where the Studio project comes from, not to https://packages.nuxeo.com, where hotfixes are located.
+The NOS token authenticates to https://connect.nuxeo.com, where the Studio project comes from. The NOS token cannot be used to authenticate to https://packages.nuxeo.com, where hotfixes are located.
 {{/callout}}
 
 ## Creating a Token
