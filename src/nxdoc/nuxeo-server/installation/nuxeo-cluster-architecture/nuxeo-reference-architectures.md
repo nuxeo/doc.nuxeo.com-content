@@ -1,10 +1,10 @@
 ---
-title: Standard High Availability Nuxeo Cluster Architecture
+title: Nuxeo Reference Architectures
 description: This page details standard architecture options to deploy a Nuxeo cluster.
 review:
     status: ok
     comment: ''
-    date: '2019-04-17'
+    date: '2021-03-11'
 labels:
     - lts2016-ok
     - deployment
@@ -26,7 +26,7 @@ confluence:
     shortlink: GoAO
     shortlink_source: 'https://doc.nuxeo.com/x/GoAO'
     source_link: /display/NXDOC/Deployment+Options
-tree_item_index: 1240
+tree_item_index: 400
 version_override:
     LTS 2016: 810/nxdoc/deployment-options
     LTS 2015: 710/nxdoc/deployment-options
@@ -244,37 +244,106 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
-This page details standard architecture options to deploy a Nuxeo cluster.
-{{! /excerpt}}
+## General considerations
 
-{{#> callout type='info' heading='Before Reading'}}
-This page assumes you already are familiar with the different components of a Nuxeo cluster. If not, you should have a look at our [Nuxeo architecture introduction]({{page page='nuxeo-cluster-architecture-introduction'}}) page first.
-{{/callout}}
+### Applications on the same machine
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
-[Nuxeo Reference Architecture](https://university.nuxeo.com/learn/course/external/view/elearning/201/NuxeoReferenceArchitecture)</br>
-[Expert Session on Disaster Recovery](https://university.nuxeo.com/learn/public/course/view/elearning/137/expert-session-disaster-recovery)
+A frequently asked question is whether some applications can be merged on the same machine or not. The answer is yes! We will show such an option here and explain the design choices.
+
+We see here how applications can be merged.
+1. The load balancers are usually deployed on separate machines from where the Nuxeo server nodes will be, as otherwise stopping a Nuxeo node could have consequences on serving the requests.
+2. On the machines where Nuxeo server nodes will be installed, a reverse proxy can be installed as well. It is lightweight, and having a reverse proxy for each Nuxeo node makes sense: if it fails for some reason, only the Nuxeo node behind it will be affected.
+3. Redis, if used, can be installed on the same machine as Nuxeo server: our Redis usage is usually low enough for that.
+4. Elasticsearch nodes have to be installed on dedicated machines for performance reasons. Elasticsearch uses half of the machine's memory for its heap and half for the system, and is not designed to share memory with another application using the JVM.
+5. Kafka cluster is better on dedicated machines for isolation purpose.
+
+
+## Deployment options
+
+### Basic deployment
+
+- no worker node / node dedicated to batch processing
+- no kafka
+
+<!-- Source: https://lucid.app/lucidchart/8db3f1df-ea81-4796-ae42-d7f77ab3a9fd/edit?beaconFlowId=CD3C7B1BC539200B&page=0_0#-->
+
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_reference_architecture.png
-    name: university_reference_architecture.png
-    server#screenshot#up_to_date
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Reference Architectures/1-basic-architecture.png
+    name: 1-basic-architecture.png
+    server#schema#up_to_date
 --}}
-![university_reference_architecture.png](nx_asset://2a075e0b-c150-4eeb-b248-b92650771b5a ?w=450,border=true)
-{{/callout}}
+![1-basic-architecture.png](nx_asset://e8b0853a-283e-44bd-97f8-27fd16fe98b9 ?w=650,border=true)
 
-## High Availability Production Architecture
+Or 
 
-![]({{file name='nuxeo-cluster-logical-architecture.png'}} ?border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Reference Architectures/1-basic-architecture-v2.png
+    name: 1-basic-architecture-v2.png
+    server#schema#up_to_date
+--}}
+![1-basic-architecture-v2.png](nx_asset://a48c5a80-712c-4b08-a4c2-7cbe46f48c98 ?w=650,border=true)
+Providing transparent upgrades without service interruption using a very limited number of machines is also possible, at the cost of some limitations. The following architecture example demonstrates this option.
 
-The standard Nuxeo cluster architecture providing high availability is composed of:
-1. Two load balancers in front with sticky sessions handling incoming requests and directing them to the appropriate Nuxeo server nodes.
-1. A reverse proxy to protect each Nuxeo server node (usually Apache or Nginx).
-1. At least two Nuxeo server nodes. You can add any number of nodes to scale out performances.
-1. At least three nodes for the Elasticsearch cluster, same for Kafka and Redis if used. Contrarily to Nuxeo server nodes, these components always require an odd number of nodes to avoid the split-brain problem, which means you need to add nodes by batches of two minimum when wishing to scale out performances.
-1. A database system providing high availability. Each solution has its own options for this, therefore we can't go into further details here.
-1. A shared file system that is used to store binary files.
+In this architecture:
+1. A load balancer with sticky sessions is used.
+1. A total of two machines are prepared for the application cluster. Each machine holds a Nuxeo server node, a Redis node, and a reverse proxy. More machines can be added later for scalability purpose.
+1. Since we have two Redis nodes, we take advantage from it to configure Redis in [master / slave mode](https://redis.io/topics/replication).
+1. A single Elasticsearch node is used.
+
+#### Limitations
+
+##### Potential Single Point of Failures
+
+Two potential single points of failure exist in this architecture: the Elasticsearch server and the database server.
+
+###### Database Server
+
+The database server is the most impacting of the two; if it fails, you won't able to store or retrieve documents anymore. To prevent the database server from becoming a single point of failure, you have several options:
+
+- Use database replication
+- Use a clusterized database (like Oracle RAC)
+- Use a distributed / failsafe database like MongoDB
+
+###### Elasticsearch Server
+
+Some features won't be available in your application during an Elasticsearch downtime: search screens and views that depend on the Elasticsearch index mainly. But even in a hard failure situation leading to complete data loss, it will not be that impacting as long as you configure your Nuxeo Server to store audit and sequences in the database: after reinstalling Elasticsearch the document index can be rebuilt easily using Nuxeo Server.
+
+#### Redis in Master / Slave Mode
+Redis server is known to be very resilient, and is less impacting when failing; this is why we considered deploying it in master / slave mode in our architecture schema. If it ever fails, consequences will be rather low as it mainly stores transient data, but you would still lose pending asynchronous jobs in the process. Losing these jobs will result in a loss of features in the application, but will not prevent it from working overall.
+
+Depending on the importance of these jobs in your application (for instance they could be considered mission critical in a DAM application), you have options to provide high availability using Redis. You can refer to our [Nuxeo architecture introduction]({{page page='nuxeo-cluster-architecture-components'}}#redis) page for details. Remember that if choosing sentinel you will need at least 3 Redis nodes to prevent the split-brain problem.
+
+## Standard Kafka deployment
+
+- no worker node / node dedicated to batch processing
+
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Reference Architectures/2-simple-architecture-with-kafka.png
+    name: 2-simple-architecture-with-kafka.png
+    server#diagram#up_to_date
+--}}
+![2-simple-architecture-with-kafka.png](nx_asset://db5d61db-04c5-4fb0-be9b-ab4b3252905a ?w=650,border=true)
+
+## Optimum deployment
+
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Reference Architectures/3-optimal-architecture-with-kafka.png
+    name: 3-optimal-architecture-with-kafka.png
+    server#schema#up_to_date
+--}}
+![3-optimal-architecture-with-kafka.png](nx_asset://8733d268-94bb-4ba2-a7e6-75041e80cbcd ?w=650,border=true)
+
+
+
+
+
+
+
+
+
+
 
 ### Deploying in Cloud or Container Based Deployment
 
@@ -304,59 +373,6 @@ The same idea is true for all the cloud specific services like provisioning and 
 - Nuxeo exposes its metrics via JMX
     - CloudWatch can monitor Nuxeo
     - We can use autoscaling
-
-## Compacting Deployment
-
-### Compact Deployment With High Availability
-
-A frequently asked question is whether some applications can be merged on the same machine or not. The answer is yes! We will show such an option here and explain the design choices.
-
-![]({{file name='nuxeo-cluster-compact-architecture.png'}} ?border=true)
-<!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
-
-We see here how applications can be merged.
-1. The load balancers are usually deployed on separate machines from where the Nuxeo server nodes will be, as otherwise stopping a Nuxeo node could have consequences on serving the requests.
-2. On the machines where Nuxeo server nodes will be installed, a reverse proxy can be installed as well. It is lightweight, and having a reverse proxy for each Nuxeo node makes sense: if it fails for some reason, only the Nuxeo node behind it will be affected.
-3. Redis, if used, can be installed on the same machine as Nuxeo server: our Redis usage is usually low enough for that.
-4. Elasticsearch nodes have to be installed on dedicated machines for performance reasons. Elasticsearch uses half of the machine's memory for its heap and half for the system, and is not designed to share memory with another application using the JVM.
-5. Kafka cluster is better on dedicated machines for isolation purpose.
-
-### Compact Deployment With Limited Failover
-
-Providing transparent upgrades without service interruption using a very limited number of machines is also possible, at the cost of some limitations. The following architecture example demonstrates this option.
-
-![]({{file name='nuxeo-cluster-ha-limited-machines-architecture.png'}} ?border=true)
-<!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
-
-In this architecture:
-1. A load balancer with sticky sessions is used.
-1. A total of two machines are prepared for the application cluster. Each machine holds a Nuxeo server node, a Redis node, and a reverse proxy. More machines can be added later for scalability purpose.
-1. Since we have two Redis nodes, we take advantage from it to configure Redis in [master / slave mode](https://redis.io/topics/replication).
-1. A single Elasticsearch node is used.
-1. A single Kafka node is used.
-
-#### Limitations
-
-##### Potential Single Point of Failures
-
-Two potential single points of failure exist in this architecture: the Elasticsearch server and the database server.
-
-###### Database Server
-
-The database server is the most impacting of the two; if it fails, you won't able to store or retrieve documents anymore. To prevent the database server from becoming a single point of failure, you have several options:
-
-- Use database replication
-- Use a clusterized database (like Oracle RAC)
-- Use a distributed / failsafe database like MongoDB
-
-###### Elasticsearch Server
-
-Some features won't be available in your application during an Elasticsearch downtime: search screens and views that depend on the Elasticsearch index mainly. But even in a hard failure situation leading to complete data loss, it will not be that impacting as long as you configure your Nuxeo Server to store audit and sequences in the database: after reinstalling Elasticsearch the document index can be rebuilt easily using Nuxeo Server.
-
-#### Redis in Master / Slave Mode
-Redis server is known to be very resilient, and is less impacting when failing; this is why we considered deploying it in master / slave mode in our architecture schema. If it ever fails, consequences will be rather low as it mainly stores transient data, but you would still lose pending asynchronous jobs in the process. Losing these jobs will result in a loss of features in the application, but will not prevent it from working overall.
-
-Depending on the importance of these jobs in your application (for instance they could be considered mission critical in a DAM application), you have options to provide high availability using Redis. You can refer to our [Nuxeo architecture introduction]({{page page='nuxeo-cluster-architecture-introduction'}}#redis) page for details. Remember that if choosing sentinel you will need at least 3 Redis nodes to prevent the split-brain problem.
 
 * * *
 

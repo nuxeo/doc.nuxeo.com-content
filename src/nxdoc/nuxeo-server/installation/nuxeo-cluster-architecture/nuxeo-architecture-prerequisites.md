@@ -10,26 +10,15 @@ labels:
     - lts2019-ok
 review:
     comment: ''
-    date: '2019-08-13'
+    date: '2021-03-10'
     status: ok
 toc: true
-tree_item_index: 1210
+tree_item_index: 100
 ---
 
 {{! excerpt}}
 This page mentions the prerequisites that should be applied every time a Nuxeo architecture is set up.
 {{! /excerpt}}
-
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
-[Nuxeo Reference Architecture](https://university.nuxeo.com/learn/course/external/view/elearning/201/NuxeoReferenceArchitecture).
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_reference_architecture.png
-    name: university_reference_architecture.png
-    server#screenshot#up_to_date
---}}
-![university_reference_architecture.png](nx_asset://2a075e0b-c150-4eeb-b248-b92650771b5a ?w=450,border=true)
-{{/callout}}
 
 ## Compatibility Matrix
 
@@ -45,7 +34,7 @@ For every component, the Nuxeo architecture must follow the compatibility matrix
 Monitoring is critical; all components of the Nuxeo architecture should be supervised to make sure that the platform is running efficiently and make adjustments if bottlenecks or performance issues are identified. This is about monitoring the server capabilities in terms of CPU consumption, RAM, JVM performance, etc. Once monitoring is set up, the architecture should be benchmarked and stress tested.
 
 {{#> callout type='info' heading='Useful links'}}
-[Metrics and Monitoring]({{page version='' space='nxdoc' page='metrics'}})
+[Metrics and Monitoring]({{page version='' space='nxdoc' page='observability'}})
 {{/callout}}
 
 ## Component Tuning
@@ -71,7 +60,7 @@ Finally, if some of the Nuxeo features are not needed, non-necessary services ca
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Next Steps'}}
-- [Standard High Availability Nuxeo Cluster Architecture]({{page page='standard-high-availability-nuxeo-cluster-architecture'}})
+- [Recommended High Availability Nuxeo Cluster Architecture]({{page page='recommended-high-availability-nuxeo-cluster-architecture'}})
 - [Scale your Nuxeo cluster]({{page page='nuxeo-cluster-scalability-options'}})
 {{/panel}}
 </div>

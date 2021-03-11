@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Cluster Scalability Options
+title: Nuxeo Scalability Options
 description: This page describes how your Nuxeo cluster can scale depending on your needs.
 labels:
     - deployment
@@ -13,7 +13,7 @@ review:
     comment: ''
     date: '2019-04-17'
 toc: true
-tree_item_index: 1260
+tree_item_index: 300
 ---
 
 {{! excerpt}}
