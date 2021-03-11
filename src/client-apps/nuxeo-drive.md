@@ -400,7 +400,7 @@ Define if SSL errors should be ignored.
 
 Asynchronously send custom metrics from time to time to the server.
 
-- Default value (bool): True
+- Default value (bool): `True`
 - Version added: 5.1.0
 
 * * *
