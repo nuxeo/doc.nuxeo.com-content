@@ -30,7 +30,7 @@ Nuxeo Platform have built-in critical features (Document trashing, CSV export, d
 <tr>
   <td colspan="1"></th>
   <th colspan="1">WorkManager</th>
-  <th colspan="1">Bulk Service</th>
+  <th colspan="1">Nuxeo Stream/Bulk Service</th>
   <th colspan="1">KeyValue Store</th>
   <th colspan="1">PubSub Service</th>
 </tr>
@@ -77,7 +77,7 @@ Nuxeo Platform have built-in critical features (Document trashing, CSV export, d
 
 ## Recommendation
 
-Nuxeo Stream is shipped with Kafka implementations and brings more resilience and a greater distribution capability, for example, having several consumer threads for the same queue. For this reason, deploying Kafka is recommended to have a highly reliable Bulk Service.
+Nuxeo Stream is shipped with Kafka implementations and brings more resilience and a greater distribution capability, for example, having several consumer threads for the same queue. For this reason, **deploying Kafka is recommended to have a highly reliable Bulk Service**.
 
 {{#> callout type='info' heading='Kafka in the Cloud'}}
 You can consider [Amazon MSK](https://aws.amazon.com/msk/) or [Confluent Cloud for Kafka](https://www.confluent.io/confluent-cloud) as a managed service to go with Kafka.
@@ -86,7 +86,7 @@ You can consider [Amazon MSK](https://aws.amazon.com/msk/) or [Confluent Cloud f
   Technically both implementations work in unit tests, but we discourage the use of Chronicle Queue on a production setup:
 
 - The Chronicle Queue storage is local to the node, it is not replicated and in case of file system failure, scheduled processing are lost.  More concretely while indexing processing is reproducible, a deletion of folders that would be missed will be missed forever. The system won’t be able to capture the user intent, in case of damage on the hard drive of the Nuxeo node. 
-- Asynchronous jobs (content indexing, thumbnail computations, etc…) cannot be distributed.  Any processing submitted on a front node will be executed in the same node, in the same JVM,  providing limited experience in case of massive bulk import, content re-indexing, bulk processing with the upcoming “Select All “ capability in user interface, up to system not responding, not serving web pages.
+- Asynchronous jobs (content indexing, thumbnail computations, etc…) cannot be distributed.  Any processing submitted on a front node will be executed in the same node, in the same JVM,  providing limited experience in case of massive bulk import, content re-indexing, bulk processing with the upcoming “Select All“ capability in user interface, up to system not responding, not serving web pages.
 - Nuxeo don't provide backup restore procedures related to a set up leveraging Chronicle Queue.
 Nuxeo doesn’t provide recommendation on the required disk space of the Nuxeo node in case of using Chronicle Queue in production 
 

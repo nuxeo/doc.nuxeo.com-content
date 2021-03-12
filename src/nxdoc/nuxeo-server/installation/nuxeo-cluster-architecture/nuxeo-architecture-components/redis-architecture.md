@@ -29,8 +29,9 @@ Redis Sentinel is the open-source option to provide automatic Redis node failove
 
 ## Configuration
 
-The Elasticsearch configuration is detailed in the following documentation:
--  [Elasticsearch cluster recommended tuning]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#installing-the-elasticsearch-cluster) 
+Redis server is known to be very resilient, and is less impacting when failing; this is why we considered deploying it in master / slave mode in our architecture schema. If it ever fails, consequences will be rather low as it mainly stores transient data, but you would still lose pending asynchronous jobs in the process. Losing these jobs will result in a loss of features in the application, but will not prevent it from working overall.
+
+Depending on the importance of these jobs in your application (for instance they could be considered mission critical in a DAM application), you have options to provide high availability using Redis. You can refer to our [Nuxeo architecture introduction]({{page page='redis-architecture'}}) page for details. Remember that if choosing sentinel you will need at least 3 Redis nodes to prevent the split-brain problem.
 
 * * *
 

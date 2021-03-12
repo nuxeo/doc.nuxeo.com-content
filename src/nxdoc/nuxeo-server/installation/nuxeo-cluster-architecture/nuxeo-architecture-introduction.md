@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Architecture Prerequisites
+title: Nuxeo Architecture Introduction
 description: This page mentions the prerequisites that should be applied every time a Nuxeo architecture is set up.
 labels:
     - deployment
@@ -17,7 +17,7 @@ tree_item_index: 100
 ---
 
 {{! excerpt}}
-This page mentions the prerequisites that should be applied every time a Nuxeo architecture is set up.
+This page mentions the key elements that should be in mind every time a Nuxeo architecture is set up.
 {{! /excerpt}}
 
 ## Compatibility Matrix
@@ -54,23 +54,3 @@ Finally, if some of the Nuxeo features are not needed, non-necessary services ca
 {{#> callout type='info' heading='Useful links'}}
 [Indexing options]({{page version='' space='nxdoc' page='repository-configuration'}}#indexing-options)
 {{/callout}}
-
-* * *
-
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6">
-{{#> panel heading='Next Steps'}}
-- [Recommended High Availability Nuxeo Cluster Architecture]({{page page='recommended-high-availability-nuxeo-cluster-architecture'}})
-- [Scale your Nuxeo cluster]({{page page='nuxeo-cluster-scalability-options'}})
-{{/panel}}
-</div>
-
-<div class="column medium-6">
-{{#> panel heading='Related Documentation'}}
-- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
-- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
-- [Redis Configuration]({{page page='redis-configuration'}})
-- [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
-{{/panel}}
-</div>
-</div>

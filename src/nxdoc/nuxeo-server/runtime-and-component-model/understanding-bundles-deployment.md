@@ -325,7 +325,7 @@ NuxeoCtl provides:
 
 {{#> panel heading='Related Documentation'}}
 
-- [Recommended High Availability Nuxeo Cluster Architecture]({{page page='recommended-high-availability-nuxeo-cluster-architecture'}})
+- [Nuxeo Reference Architectures]({{page page='nuxeo-reference-architectures'}})
 - [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
 - [Configuration Templates]({{page page='configuration-templates'}})
 

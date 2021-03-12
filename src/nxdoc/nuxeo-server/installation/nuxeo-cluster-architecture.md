@@ -5,7 +5,7 @@ review:
     comment: ''
     date: '2021-03-10'
     status: ok
-toc: false
+toc: true
 tree_item_index: 290
 ---
 
@@ -34,8 +34,8 @@ In order to scale out and provide high availability (HA), Nuxeo provides a simpl
 ## Going further
 
 The Nuxeo cluster documentation pages are structured in a logical order:
-1. Understand the [prerequisites]({{page version='' space='nxdoc' page='nuxeo-architecture-prerequisites'}}) of a Nuxeo cluster architecture 
+1. Understand the [main concepts]({{page version='' space='nxdoc' page='nuxeo-architecture-introduction'}}) of a Nuxeo cluster architecture 
 1. Explore each [components]({{page version='' space='nxdoc' page='nuxeo-architecture-components'}}), with a clear explanation of the component role, the related Nuxeo recommendations and required configuration
+1. Discover the different [reference architectures]({{page version='' space='nxdoc' page='nuxeo-reference-architectures'}})
 1. Get a view on how to [scale out]({{page version='' space='nxdoc' page='nuxeo-scalability-options'}}) a particular Nuxeo architecture component
-1. Discover the different [deployment options]({{page version='' space='nxdoc' page='nuxeo-reference-architectures'}})
 

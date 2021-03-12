@@ -2244,7 +2244,7 @@ There're two possible values, changing slightly the before/after reload logic:
 
 {{#> panel heading='Related content'}}
 - [Setup Best Practices]({{page page='setup-best-practices'}})
-- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+- [Nuxeo Architecture Components - Configuration]({{page page='nuxeo-architecture-components'}})
 {{/panel}}
 </div>
 
