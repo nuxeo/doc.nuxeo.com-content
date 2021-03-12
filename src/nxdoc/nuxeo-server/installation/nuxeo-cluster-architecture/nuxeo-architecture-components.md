@@ -74,3 +74,5 @@ This diagram represents the logical architecture for a Nuxeo cluster. It contain
 
 </center>
 </div>
+
+*Note: Redis and PubSub are at the same level as the "File Storage", the "Database", "Elasticsearch" and "Async processing" bricks: a new line is added for readability purposes*

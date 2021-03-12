@@ -43,7 +43,7 @@ This architecture can be improved by externalizing the Redis node inside a speci
 - Chronicle Queue has to be deployed on the Nuxeo server and consumes JVM when a lot of work is queued, with possible impacts on the Nuxeo Server performance.  
 - Using Redis to manage the WorkManager implies that the job queues are in the JVM memory. Consequently, stacking a lot of jobs will consume JVM Memory. In cluster mode, each Nuxeo node maintains its own queue so when a Nuxeo server is restarted, all the queued jobs are lost.
 
-**→ Jump to the [Compact architecture with Kafka]({{page page='compact-architecture-with-kafka'}}) to:**
+**→ Jump to the [Compact architecture with Kafka]({{page page='compact-architecture-with-kafka'}})** to:
 - Remove Redis and Chronicle Queue limitations
 - Benefits from Kafka advantages
 

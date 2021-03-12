@@ -26,6 +26,8 @@ A database system providing high availability. Each solution has its own options
 
 Best performances are obtained using **MongoDB** because it is a document based database. It is built to manage large volumes and is highly scalable. Moreover, using MongoDB allows you to manage key/value stores, and therefore avoid a Redis deployment.
 
+If you have no choice but relying on a SQL based database, then go for PostgreSQL.
+
 ## Configuration
 
 Each database has its own solutions for high availability, therefore we may not recommend a specific option here. You may however refer to our [database configuration]({{page page='database-configuration'}}) documentation for further details.

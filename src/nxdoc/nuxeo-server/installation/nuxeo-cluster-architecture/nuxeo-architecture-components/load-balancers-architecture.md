@@ -47,7 +47,6 @@ ProxyPass /nuxeo balancer://sticky-balancer stickysession=JSESSIONID|jsessionid 
   BalancerMember http://192.168.2.101:8080/nuxeo route=nxworker1
   BalancerMember http://192.168.2.102:8080/nuxeo route=nxworker2
 </Proxy>
-
 ```
 
 ### Quartz Scheduler Cluster Configuration
@@ -127,14 +126,12 @@ To test that the load balancer forwards the HTTP requests of a given session to 
 
         ```xml
         <html><body>Node 1</body></html>
-
         ```
 
     *   and on the second node:
 
         ```xml
         <html><body>Node 2</body></html>
-
         ```
 
 2.  Using a browser with an active Nuxeo session (an already logged-in user), go to `http://yourloadbalancer/nuxeo/clusterinfo.html` and check that you always return to the same node when hitting the refresh button of the browser.

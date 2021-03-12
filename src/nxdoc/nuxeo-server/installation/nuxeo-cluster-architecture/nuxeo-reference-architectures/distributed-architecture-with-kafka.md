@@ -31,6 +31,6 @@ In this architecture:
 
 At this stage, this architecture is fault tolerant and in high availability, and the architecture should be tuned depending on the kind of requests and loads.
 
-**→ Check the [scalability options]({{page page='nuxeo-scalability-options'}}) to:**
+**→ Check the [scalability options]({{page page='nuxeo-scalability-options'}})** to:
 - Add Nuxeo nodes for specific loads (API node, worker node and import nodes)
 - Set up data partitionning with database sharding and a multi repository approach
