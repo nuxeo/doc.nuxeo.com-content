@@ -33,6 +33,15 @@ The created CSV file contains default filled fields that make it directly usable
 
 ## Improvements
 
+### Usage Metrics
+
+Usage metrics have been added using custom HTTP headers. Those metrics are only and exclusively sent to the platform when the application calls specifics operations or endpoints.
+Some of those metrics are sent in a specific process to avoid spamming the platform and can be disabled through the [custom-metric]({{page page='nuxeo-drive'}}#custom-metrics) parameter.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2476](https://jira.nuxeo.com/browse/NXDRIVE-2476)
+
+## Fixes
+
 ### Improved Stability of S3 Direct Uploads
 
 We fixed a tricky issue when S3 direct upload was enabled for the synchronization. It was generating false conflicts and duplicates documents errors.
@@ -44,13 +53,21 @@ See [NXPY-204](https://jira.nuxeo.com/browse/NXPY-204) and [NXPY-205](https://ji
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2479](https://jira.nuxeo.com/browse/NXDRIVE-2479)
 
-## Fixes
-
 ### Preventing Crashes
 
 The issue was not visible quickly but when Drive was running a long time with a lot of synchronization actions. Each thread was opening multiple connections to the SQLite database, but they were never released. Resulting in an increase of the number of opened file descriptors and it was consuming more and more memory (RAM). Both situations were ending with a hard crash: the OS was killing the application in both cases.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2523](https://jira.nuxeo.com/browse/NXDRIVE-2523)
+
+### Preventing Server Deletions
+
+In Nuxeo Drive 4.1.0 we introduced a "deletion behavior" to change the way file deletions are impacted on the server (cf [NXDRIVE-1501](https://jira.nuxeo.com/browse/NXDRIVE-1501)). It appeared to be effective only when the application was running.
+
+But it will not be taken into account when files were deleted while the application was not running. In that scenario, when the chosen deletion behavior was to simply unsynchronize documents, it would just delete files on the server.
+
+That is now fixed and in such scenario, if the user did not choose any deletion behavior, then the default action will be to unsynchronize files to prevent unwanted remote deletions.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2538](https://jira.nuxeo.com/browse/NXDRIVE-2538)
 
 ## Download Links
 
