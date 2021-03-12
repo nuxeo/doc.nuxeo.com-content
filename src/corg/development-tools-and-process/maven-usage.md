@@ -260,8 +260,8 @@ history:
         date: '2010-10-25 15:48'
         message: ''
         version: '1'
-
 ---
+
 ## Overview and Online Documentation
 
 See [http://maven.apache.org/users/index.html](http://maven.apache.org/users/index.html).
@@ -527,12 +527,14 @@ The [maven-eclipse-plugin](http://maven.apache.org/plugins/maven-eclipse-plugin/
 
 ## Maven usage for LTS 2021
 
-Nuxeo Platform LTS2021 artefacts are **private**. Consequently, you'll need to create a support ticket to ask access to the Nuxeo Central Repository, https://packages.nuxeo.com/. 
+Nuxeo Platform LTS2021 artefacts are **private**. Consequently, you'll need to create a support ticket to request access to the Nuxeo Central Repository, https://packages.nuxeo.com/.
 
-Once your Okta account is assigned the “**Sonatype Nexus**“ application, go to  https://auth.nuxeo.com and click on the application. You should then connect to packages using the “single sign-on” feature and then:
-- click on its username
-- click on User Token menu 
-- push the button "Access user token" to generate a token to download the artifacts from Maven 
+Once your Okta account is assigned the “**Sonatype Nexus**“ application, go to  https://auth.nuxeo.com and click on the application.
+
+You should then connect to packages using the “single sign-on” feature and then:
+1. Click on its username,
+1. Click on User Token menu,
+1. Push the button **Access user token** to generate a token to download the artifacts from Maven.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CORG/Maven Usage/user-token-maven.png
@@ -622,7 +624,7 @@ Skip only the Unit Tests execution with `-Dskip.surefire.tests=true`.
 
 {{#> callout type='warning'}}
 Avoid use of `-Dmaven.test.skip=true` which also skips the tests compilation.
-{{/callout}} 
+{{/callout}}
 
 In the Maven Surefire Test Framework:
 *   Unit Tests are managed by the [`maven-surefire-plugin`](http://maven.apache.org/surefire/maven-surefire-plugin/) during the `test` phase.
