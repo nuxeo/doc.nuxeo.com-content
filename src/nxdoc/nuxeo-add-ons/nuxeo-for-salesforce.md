@@ -552,7 +552,7 @@ When using the Content library mode, a folder will be created for each Salesforc
 
 #### Changing the Document Type of the Folder Created for the Library Behavior or More
 
-The folder is creating calling an automation script named `Salesforce.TouchSFLibrary`. It is possible to override this automation script. See [the source](https://github.com/nuxeo/nuxeo-salesforce/blob/lts-2021/nuxeo-salesforce-core/src/main/resources/OSGI-INF/automation-contrib.xml) of the script for a better understanding of its behavior.
+The folder is creating calling an automation script named `Salesforce.TouchSFLibrary`. It is possible to override this automation script. See [the source](https://github.com/nuxeo/nuxeo-salesforce/blob/10.10/nuxeo-salesforce-core/src/main/resources/OSGI-INF/automation-contrib.xml) of the script for a better understanding of its behavior.
 
 #### Changing Labels
 
@@ -629,7 +629,7 @@ Ex:
 
 The **Link Content** action provides to the users the ability to click on a Link button on each document of the search result. The behavior associated to the Link/Unlink buttons can be changed by configuring another operation to call, the default one is `Salesforce.LinkAsSource`.
 
-See [the source](https://github.com/nuxeo/nuxeo-salesforce/blob/lts-2021/nuxeo-salesforce-core/src/main/resources/OSGI-INF/automation-contrib.xml) of the operation.
+See [the source](https://github.com/nuxeo/nuxeo-salesforce/blob/10.10/nuxeo-salesforce-core/src/main/resources/OSGI-INF/automation-contrib.xml) of the operation.
 
 There is also a configurable test made to know when to display the **Link** or the **Unlink** button, see the following contribution:
 ```
