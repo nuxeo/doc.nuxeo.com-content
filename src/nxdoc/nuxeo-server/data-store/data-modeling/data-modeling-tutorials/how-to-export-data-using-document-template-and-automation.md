@@ -294,7 +294,6 @@ The chain should look like this:
     filename: mygeneratedfile.csv
     mimetype: text/csv
     type: ftl
-- Seam.DownloadFile
 ```
 
 **Notes**
@@ -304,7 +303,7 @@ The chain should look like this:
 
 ## Step 3: Creating the Button to Generate the CSV File
 
-The only step left is to [create a button]({{page page='how-to-create-an-automation-chain'}}#automation-chain-binding-button) (**User Action** -> **New Action Feature**) that will trigger this operation chain.
+The only step left is to [create a button]({{page page='how-to-create-an-automation-chain'}}#automation-chain-binding-button) (**User Action** -> **New Action Feature**) that will trigger this operation chain. Don't forget to check the **Download** attribute checkbox so that the result of the automation chain is downloaded on the client machine. 
 
 * * *
 
