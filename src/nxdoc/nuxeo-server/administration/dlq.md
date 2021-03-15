@@ -5,16 +5,15 @@ review:
     comment: ''
     date: '2021-03-15'
     status: ok
+toc: true
 tree_item_index: 1490
 ---
 
 ## Concept
- 
-A work that is in failure after retries is skipped, resulting in a possible consistency problem. For instance, an indexing work that is failing after retries will be skipped resulting in a discrepancy between the documents in the repository and the one that is indexed.
 
-When the cause of the failure requires manual intervention: fix a misconfiguration, restart a service, fix a disk full, re-deployment etc... a retry policy is not enough.
-
-So the **Dead Letter Queue (DLQ) stream goal is to store Work in failure**.
+Dead Letter Queue (DLQ) stream goal is to store Work in failure: 
+- A work that is in failure after retries is skipped, resulting in a possible consistency problem. For instance, an indexing work that is failing after retries will be skipped resulting in a discrepancy between the documents in the repository and the one that is indexed.
+- When the cause of the failure requires manual intervention: fix a misconfiguration, restart a service, fix a disk full, re-deployment etc... a retry policy is not enough.
 
 ## Frequently Asked Questions
 
@@ -49,13 +48,13 @@ You can get more details about this operation by reading the [Nuxeo Explorer doc
 
 Let's see now how to use the Nuxeo REST API endpoint for run works in failure:
 
-**Call without params**
+##### Call without params
 
 ```
 curl -X POST -u Administrator:Administrator http://localhost:8080/nuxeo/site/management/workmanager/runworksinfailure
 ``` 
 
-**Call with `timeoutSeconds` param**
+##### Call with `timeoutSeconds` param
 
 ```
 curl -X POST -u Administrator:Administrator -d timeoutSeconds=10 http://localhost:8080/nuxeo/site/management/workmanager/runworksinfailure
