@@ -123,7 +123,7 @@ In the **View** tab of the document concerned, drag and drop the attachment in t
 In the **View** tab of the document concerned, click on ![]({{file name='delete_web-ui.png' page='icons-index'}} ?w=16) next to the attachment concerned. The attachment is immediately deleted.
 
 {{#> callout type='note' heading='Limitations'}}
-- Attached files are not synchronized with [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}).
+Attached files are not synchronized with [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}).
 {{/callout}}
 
 ### Picture
