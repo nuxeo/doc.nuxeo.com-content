@@ -92,11 +92,21 @@ All information displayed on content views, except document titles, can be filte
 
 Once in the view of a document, the side details bar can be collapsed by clicking ![]({{file name='details-collapsible-sidebar.png'}} ?w=20) at the top of the sidebar.
 
-![]({{file name='view-sidebar.png'}} ?w=600,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Document View with sidebar
+    name: view-sidebar.png
+    1.1.3#screenshot#to_be_updated
+--}}
+![Document View with sidebar](nx_asset://5284dbcb-db38-4466-accc-ddaa05c3e29a ?w=600,border=true)
 
 It enables you to have a more focused view on the document preview.
 
-![]({{file name='without-sidebar.png'}} ?w=600,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Document view collapsed sidebar
+    name: without-sidebar.png
+    1.1.3#screenshot#to_be_updated
+--}}
+![Document view collapsed sidebar](nx_asset://2df976a7-5f45-4899-86d1-a814b4d88ab9 ?w=600,border=true)
 
 ## Keyboard Shortcuts
 

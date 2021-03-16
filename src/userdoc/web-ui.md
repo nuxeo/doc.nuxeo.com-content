@@ -263,7 +263,7 @@ At the top of the main view toolbars are displayed according to the content bein
     name: document_toolbar.png
     1.1.3#screenshot#up_to_date
 --}}
-![Document Toolbar](nx_asset://161bd276-c70c-4397-85aa-febbe96686e6 ?w=650)
+![Document Toolbar](nx_asset://161bd276-c70c-4397-85aa-febbe96686e6 ?w=450)
 
 **Results Actions**: Displays actions available for the current result listing
 

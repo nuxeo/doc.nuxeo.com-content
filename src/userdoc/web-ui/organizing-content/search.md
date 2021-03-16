@@ -10,11 +10,13 @@ description: Web UI user documentation about Search
 labels:
   - search
 ---
+
 {{! excerpt}}
 The Nuxeo Platform provides different ways to search your documents: a Search tab in the side menu and a quick search at the top of the page.
 {{! /excerpt}}
 
 ## Quick Search
+
 Quick search can be accessed from any site page. At any time, you can search a document by typing keywords in the search box located at the upper right corner of the page.
 
 ![]({{file name='quick-search-web-ui.png'}} ?w=600,border=true)

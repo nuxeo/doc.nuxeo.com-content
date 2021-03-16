@@ -7,7 +7,6 @@ review:
 labels:
     - workflow
     - content-review-lts2017
-toc: true
 tree_item_index: 300
 description: Web UI User Documentation about Workflows
 ---
