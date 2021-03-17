@@ -1,7 +1,7 @@
 ---
-title: Install Nuxeo with the Docker Image
+title: Docker Image
 review:
-  date: '2021-01-29'
+  date: '2021-01-26'
   status: ok
 labels:
   - multiexcerpt
@@ -17,7 +17,9 @@ This page explains how to install the Nuxeo server with the base Nuxeo Docker im
 
 ## Requirements
 
-{{{multiexcerpt 'lts2021-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+The only requirement to run the Nuxeo Docker image is [Docker](https://docs.docker.com/get-docker/) itself.
+
+Java, as well as all the external software, are integrated in the Docker image.
 
 ## What's in the Nuxeo Image
 
@@ -41,26 +43,22 @@ To use the video related features in Nuxeo, such as conversions, storyboarding a
 
 ## Running the Image
 
-First, you need to be authenticated in order to pull the Docker image:
-
-```shell
-docker login docker-private.packages.nuxeo.com -u <username> -p <token_pass_code>
-```
+Currently, the image is hosted in our public [Docker registry](https://packages.nuxeo.com/#browse/search/docker).
 
 To pull the latest tag of the `nuxeo/nuxeo` image from the Docker registry and run a container from it, run:
 
 ```shell
-docker run --name nuxeo -p 8080:8080 docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+docker run --name nuxeo -p 8080:8080 docker.packages.nuxeo.com/nuxeo/nuxeo
 ```
 
-The `2021` tag points to the latest release, for instance [2021.0](https://github.com/nuxeo/nuxeo-lts/releases/tag/v2021.0).
+The `latest` tag points to the latest release, for instance [11.4](https://github.com/nuxeo/nuxeo/releases/tag/v11.4).
 
-To get the latest build, versioned `2021.x.y`, you can use the `2021.x` tag.
+To get the latest build, versioned `11.x.y`, you can use the `11.x` tag.
 
 The default command executed when running a container is `nuxeoctl console`. It can be overridden by specifying an argument to `docker run`. For instance, to open a bash shell in the container and automatically remove the container when it exits, just run:
 
 ```shell
-docker run -it --rm docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021 bash
+docker run -it --rm docker.packages.nuxeo.com/nuxeo/nuxeo bash
 ```
 
 For a production setup and general best practices, please read about [Mounting Data, Log and Temporary Directories as Volumes]({{page page='setup-best-practices'}}#mounting-data-log-and-temporary-directories-as-volumes).
@@ -94,12 +92,12 @@ For instance, to make the Nuxeo Launcher display the JVM settings in the console
 docker run --name nuxeo \
   -p 8080:8080 \
   -e JAVA_OPTS=-XshowSettings:vm \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+  docker.packages.nuxeo.com/nuxeo/nuxeo
 ```
 
 #### NUXEO_CLID
 
-The value of `NUXEO_CLID` is copied to `/var/lib/nuxeo/instance.clid` at startup. Please check the [Registering your Nuxeo Instance]({{page version='' space='nxdoc' page='registering-your-nuxeo-instance'}}#registering-offline-using-nuxeoctl) documentation page to create a valid CLID.
+The value of `NUXEO_CLID` is copied to `/var/lib/nuxeo/instance.clid` at startup.
 
 For instance, to run a container with a registered Nuxeo instance:
 
@@ -107,7 +105,7 @@ For instance, to run a container with a registered Nuxeo instance:
 docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CLID=<NUXEO_CLID> \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+  docker.packages.nuxeo.com/nuxeo/nuxeo
 ```
 
 #### NUXEO_CONNECT_URL
@@ -120,7 +118,7 @@ For instance, to run a container with another Connect URL than the default one:
 docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CONNECT_URL=<NUXEO_CONNECT_URL> \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+  docker.packages.nuxeo.com/nuxeo/nuxeo
 ```
 
 #### NUXEO_PACKAGES
@@ -134,7 +132,7 @@ docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CLID=<NUXEO_CLID> \
   -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-drive" \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+  docker.packages.nuxeo.com/nuxeo/nuxeo
 ```
 
 #### NUXEO_DEV
@@ -159,11 +157,11 @@ Setting `NUXEO_DEV=true` allows to run the Nuxeo image in development mode, mean
     docker run --name nuxeo \
       -p 8080:8080 \
       -e NUXEO_DEV=true \
-      docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+      docker.packages.nuxeo.com/nuxeo/nuxeo
 
     docker ps
     CONTAINER ID   IMAGE
-    0eee2751d09d   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+    0eee2751d09d   docker.packages.nuxeo.com/nuxeo/nuxeo
 
     docker exec 0eee2751d09d nuxeoctl restart
     ```
