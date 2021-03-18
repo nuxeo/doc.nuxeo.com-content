@@ -195,6 +195,14 @@ The old Redis Transient Store can still be used with `nuxeo.transientstore.provi
 
 ## Clean-up
 
+It could happen that because of a Nuxeo cluster failure, Redis is keeping corrupted data. The following commands will help you restore a stable state.
+
+{{#> callout type='warning' }}
+In the following commands, the `nuxeo` prefix is used. If a different value is set in `nuxeo.conf`, `nuxeo.redis.prefix`, consider updating the code samples accordingly.
+More detail in [Configuring Nuxeo for Redis](https://doc.nuxeo.com/nxdoc/redis-configuration/#configuring-nuxeo-for-redis).
+{{/callout}}
+
+### Running workers
 The following code can be used with the Redis client to delete old workers marked as running:
 ```
 local keys = redis.call('KEYS', 'nuxeo:work:run:*')
@@ -203,12 +211,28 @@ for _,k in ipairs(keys) do
 	redis.call('DEL', k)
 end
 ```
-Copy this code to a file named `delete_running_works.lua`, change the Redis prefix if required (the default prefix value is `nuxeo`) run the following command line:
+Copy this code to a file named `delete_running_works.lua`:
 ```
 redis-cli --eval /path/to/delete_running_works.lua
 ```
 
-It finds all keys prefixed with `nuxeo:work:run` then delete these keys.
+It finds all keys prefixed with `nuxeo:work:run` and delete them.
+
+### Scheduled workers
+The following code can be used with the Redis client to delete old workers marked as scheduled:
+```
+local keys = redis.call('KEYS', 'nuxeo:work:sched:*')
+
+for _,k in ipairs(keys) do
+  redis.call('DEL', k)
+end
+```
+Copy this code to a file named `delete_scheduled_works.lua`:
+```
+redis-cli --eval /path/to/delete_scheduled_works.lua
+```
+
+It finds all keys prefixed with `nuxeo:work:sched` and delete them.
 
 * * *
 
