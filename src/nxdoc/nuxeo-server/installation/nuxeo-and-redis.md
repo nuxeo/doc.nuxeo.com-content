@@ -173,16 +173,16 @@ By default Lock managed on documents are stored in the repository backend. When 
 
 ## Clustering invalidation
 
-### Visual Content Store ([VCS](https://doc.nuxeo.com/nxdoc/vcs/)) Row Cache Invalidation
+### Visual Content Store ([VCS]({{page page='vcs'}})) Row Cache Invalidation
 
 Managing *VCS* (Meaning RDBMS) row cache invalidations with [Redis instead of using the database](https://jira.nuxeo.com/browse/NXP-14923) can improve performance on concurrent writes and provides synchronous invalidations.
 
-### Document Based Storage ([DBS](https://doc.nuxeo.com/nxdoc/dbs/)) Cache Invalidation
+### Document Based Storage ([DBS]({{page page='dbs'}})) Cache Invalidation
 
 For Nuxeo 8.10 and 9.10 the *DBS* layer (used to connect with MongoDB or Marklogic) [has a cache](https://jira.nuxeo.com/browse/NXP-20640) its invalidation in cluster mode requires Redis.
 
 {{#> callout type='warning' }}
-A Nuxeo No-Redis cluster configuration can be applied at certain conditions, see: [No-Redis Nuxeo Cluster Configuration](https://doc.nuxeo.com/nxdoc/kafka/#andquotno-redisandquot-nuxeo-cluster) for more info.
+A Nuxeo No-Redis cluster configuration can be applied at certain conditions, see: [No-Redis Nuxeo Cluster Configuration]({{page page='nxdoc/kafka/#andquotno-redisandquot-nuxeo-cluster') for more info.
 {{/callout}}
 
 ## Transient Store
@@ -195,11 +195,11 @@ The old Redis Transient Store can still be used with `nuxeo.transientstore.provi
 
 ## Clean-up
 
-It could happen that because of a Nuxeo cluster failure, Redis is keeping corrupted data. The following commands will help you restore a stable state.
+After a Nuxeo node crash (low-level error, machine reboot, etc.), Redis may still contain data that Nuxeo didn't have the opportunity to clean up.
 
-{{#> callout type='warning' }}
-In the following commands, the `nuxeo` prefix is used. If a different value is set in `nuxeo.conf`, `nuxeo.redis.prefix`, consider updating the code samples accordingly.
-More detail in [Configuring Nuxeo for Redis](https://doc.nuxeo.com/nxdoc/redis-configuration/#configuring-nuxeo-for-redis).
+{{#> callout type='info' }}
+In the following Lua scripts, the `nuxeo:` prefix is used for Redis keys. If a different value is set for `nuxeo.redis.prefix` in `nuxeo.conf`, you should update the code samples accordingly.
+More detail in [Configuring Nuxeo for Redis]({{page page='nxdoc/redis-configuration/#configuring-nuxeo-for-redis').
 {{/callout}}
 
 ### Running workers
@@ -216,7 +216,7 @@ Copy this code to a file named `delete_running_works.lua`:
 redis-cli --eval /path/to/delete_running_works.lua
 ```
 
-It finds all keys prefixed with `nuxeo:work:run` and delete them.
+It finds all keys prefixed with `nuxeo:work:run` and deletes them.
 
 ### Scheduled workers
 The following code can be used with the Redis client to delete old workers marked as scheduled:
@@ -232,7 +232,7 @@ Copy this code to a file named `delete_scheduled_works.lua`:
 redis-cli --eval /path/to/delete_scheduled_works.lua
 ```
 
-It finds all keys prefixed with `nuxeo:work:sched` and delete them.
+It finds all keys prefixed with `nuxeo:work:sched` and deletes them.
 
 * * *
 
