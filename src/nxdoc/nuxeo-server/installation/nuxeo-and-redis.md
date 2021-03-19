@@ -182,7 +182,7 @@ Managing *VCS* (Meaning RDBMS) row cache invalidations with [Redis instead of us
 For Nuxeo 8.10 and 9.10 the *DBS* layer (used to connect with MongoDB or Marklogic) [has a cache](https://jira.nuxeo.com/browse/NXP-20640) its invalidation in cluster mode requires Redis.
 
 {{#> callout type='warning' }}
-A Nuxeo No-Redis cluster configuration can be applied at certain conditions, see: [No-Redis Nuxeo Cluster Configuration]({{page page='nxdoc/kafka/#andquotno-redisandquot-nuxeo-cluster'}}) for more info.
+A Nuxeo No-Redis cluster configuration can be applied at certain conditions, see: [No-Redis Nuxeo Cluster Configuration]({{page page='nxdoc/kafka'}}#andquotno-redisandquot-nuxeo-cluster) for more info.
 {{/callout}}
 
 ## Transient Store
@@ -199,7 +199,7 @@ After a Nuxeo node crash (low-level error, machine reboot, etc.), Redis may stil
 
 {{#> callout type='info' }}
 In the following Lua scripts, the `nuxeo:` prefix is used for Redis keys. If a different value is set for `nuxeo.redis.prefix` in `nuxeo.conf`, you should update the code samples accordingly.
-More detail in [Configuring Nuxeo for Redis]({{page page='nxdoc/redis-configuration/#configuring-nuxeo-for-redis'}}).
+More detail in [Configuring Nuxeo for Redis]({{page page='nxdoc/redis-configuration'}}#configuring-nuxeo-for-redis).
 {{/callout}}
 
 ### Running workers
@@ -245,7 +245,7 @@ It finds all keys prefixed with `nuxeo:work:sched` and deletes them.
 - [Redis Configuration]({{page page='redis-configuration'}})
 - [Work and WorkManager]({{page page='work-and-workmanager'}})
 - [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
-- [No-Redis Nuxeo Clustering Configuration]({{page page='nxdoc/kafka/#andquotno-redisandquot-nuxeo-cluster'}})
+- [No-Redis Nuxeo Clustering Configuration]({{page page='nxdoc/kafka'}}#andquotno-redisandquot-nuxeo-cluster)
 
 {{/panel}}</div><div class="column medium-6">
 
