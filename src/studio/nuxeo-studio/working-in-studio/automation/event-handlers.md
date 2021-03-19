@@ -141,7 +141,7 @@ To let you understand what event handlers are we can do a parallel with:
 
 {{{multiexcerpt 'disabling-feature' page='branding'}}}
 
-You'll read more about event handlers in the [developer documentation]({{page space='nxdoc' page='events-and-listeners'}}).
+You'll read more about event handlers in the [developer documentation]({{page space='nxdoc' page='events-and-messages'}}).
 
 ## Creating an Event Handler
 
@@ -170,7 +170,7 @@ You'll read more about event handlers in the [developer documentation]({{page sp
 ### Event Handler Definition
 
 *   **Events**: Select a list of events for which the automation chain referenced later will be processed. If you don't find the event you are looking for, you can add a new one [using the registries.]({{page page='registries'}})
-*   **Is Asynchroneous**: The automation chain bound to the event will be processed asynchroneously, outside the transaction. More details on the [developer documentation]({{page space='nxdoc' page='events-and-listeners'}}).This is an advanced option, most of the time you won't check this option.
+*   **Is Asynchroneous**: The automation chain bound to the event will be processed asynchroneously, outside the transaction. More details on the [developer documentation]({{{page version='2021' space='nxdoc' page='events-and-messages'}}).This is an advanced option, most of the time you won't check this option.
 
 ### Event Handler Enablement
 
