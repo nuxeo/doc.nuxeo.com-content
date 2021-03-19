@@ -25,7 +25,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [January 2021]({{page page='studio-updates-2021-01-02-03'}})     | Range Support for Marketplace Packages |
+| [January to February 2021]({{page page='studio-updates-2021-01-02'}})     | Range Support for Marketplace Packages |
 | [July to September 2020]({{page page='studio-updates-2020-07-08-09'}})     | Automatically generated translation keys, interface for account management |
 | [June 2020]({{page page='studio-updates-2020-06'}})     | Improved layout blocks experience |
 | [May 2020]({{page page='studio-updates-2020-05'}})     | Widgets Drag and Drop Instead of Mode |
