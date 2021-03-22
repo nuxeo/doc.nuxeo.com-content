@@ -1,6 +1,6 @@
 ---
-title: Dead Letter Queue (DLQ)
-description: Concept and FAQ about FAQ
+title: WorkManager Dead Letter Queue (DLQ)
+description: Concept and FAQ about WorkManager DLQ
 review:
     comment: ''
     date: '2021-03-15'
