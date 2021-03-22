@@ -5,7 +5,7 @@ review:
     comment: ''
     date: '2021-03-10'
     status: ok
-toc: false
+is_overview: true
 tree_item_index: 200
 ---
 
@@ -20,37 +20,37 @@ This diagram represents the logical architecture for a Nuxeo cluster. It contain
 
 <div class="column medium-12">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Load Balancer]({{page version='' space='nxdoc' page='load-balancers-architecture'}})</h3>
+<h3>[Load Balancer]({{page page='load-balancers-architecture'}})</h3>
 {{/panel}}
 </div>
 
 <div class="column medium-12">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Reverse Proxy]({{page version='' space='nxdoc' page='reverse-proxy-architecture'}})</h3> 
+<h3>[Reverse Proxy]({{page page='reverse-proxy-architecture'}})</h3>
 {{/panel}}
 </div>
 
 <div class="column medium-12">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Nuxeo Server]({{page version='' space='nxdoc' page='nuxeo-server-architecture'}})</h3>
+<h3>[Nuxeo Server]({{page page='nuxeo-server-architecture'}})</h3>
 {{/panel}}
 </div>
 
 <div class="column medium-3">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[File Storage]({{page version='' space='nxdoc' page='file-storage-architecture'}})</h3>
+<h3>[File Storage]({{page page='file-storage-architecture'}})</h3>
 {{/panel}}
 </div>
 
 <div class="column medium-3">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Database]({{page version='' space='nxdoc' page='database-architecture'}})</h3>
+<h3>[Database]({{page page='database-architecture'}})</h3>
 {{/panel}}
 </div>
 
 <div class="column medium-3">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Elasticsearch]({{page version='' space='nxdoc' page='elasticsearch-architecture'}})</h3>
+<h3>[Elasticsearch]({{page page='elasticsearch-architecture'}})</h3>
 {{/panel}}
 </div>
 
@@ -75,4 +75,6 @@ This diagram represents the logical architecture for a Nuxeo cluster. It contain
 </center>
 </div>
 
-*Note: Redis and PubSub are at the same level as the "File Storage", the "Database", "Elasticsearch" and "Async processing" bricks: a new line is added for readability purposes*
+{{#> callout type='note' }}
+**Redis** and **PubSub** are at the same level as the **File Storage**, **Database**, **Elasticsearch** and **Async processing** bricks. A new line has been added for readability purpose.
+{{/callout}}

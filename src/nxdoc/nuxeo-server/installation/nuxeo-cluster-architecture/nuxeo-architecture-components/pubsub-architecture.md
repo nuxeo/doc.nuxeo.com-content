@@ -1,6 +1,6 @@
 ---
-title: PubSub service
-description: 
+title: PubSub Service
+description:
 review:
     comment: ''
     date: '2021-03-10'
@@ -13,9 +13,9 @@ tree_item_index: 900
 
 The PubSub service is used to send instant messages to all Nuxeo nodes, mainly to do cache invalidation.
 
-## Recommandation
+## Recommendation
 
-There is no specific recommandation on the PubSub service.
+There is no specific recommendation for the PubSub service.
 
 ## Configuration
 

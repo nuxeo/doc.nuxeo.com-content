@@ -244,7 +244,7 @@ history:
         version: '1'
 ---
 
-## Deployment options
+## Deployment Options
 
 We will present different Nuxeo reference architectures, from the most compact to the most complex, allowing you to provide a full high availability and fault tolerant Nuxeo architecture. The composition and limitation of each architecture are presented in each case.
 
@@ -253,48 +253,48 @@ We will present different Nuxeo reference architectures, from the most compact t
 
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Compact architecture with Redis]({{page version='' space='nxdoc' page='compact-architecture-with-redis'}})<br/><br/>★</h3>
+<h3>[Compact Architecture With Redis]({{page version='' space='nxdoc' page='compact-architecture-with-redis'}})<br/><br/>★</h3>
 {{/panel}}
 </div>
 
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Compact architecture with Kafka]({{page version='' space='nxdoc' page='compact-architecture-with-kafka'}})<br/><br/>★★</h3> 
+<h3>[Compact Architecture With Kafka]({{page version='' space='nxdoc' page='compact-architecture-with-kafka'}})<br/><br/>★★</h3>
 {{/panel}}
 </div>
 
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Distributed architecture with Kafka]({{page version='' space='nxdoc' page='distributed-architecture-with-kafka'}})<br/><br/>★★★</h3>
+<h3>[Distributed Architecture with Kafka]({{page version='' space='nxdoc' page='distributed-architecture-with-kafka'}})<br/><br/>★★★</h3>
 {{/panel}}
 </div>
 
 </center>
 </div>
 
-## General considerations
+## General Considerations
 
-### Applications on the same machine
+### Applications on the Same Machine
 
 A frequently asked question is whether some applications can be merged on the same machine or not. The answer is yes! We will show such an option here and explain the design choices.
 
-We see here how applications can be merged.
-1. The **load balancers** are usually deployed on separate machines from where the Nuxeo server nodes will be, as otherwise stopping a Nuxeo node could have consequences on serving the requests.
-1. On the machines where Nuxeo server nodes will be installed, a **reverse proxy** can be installed as well. It is lightweight, and having a reverse proxy for each Nuxeo node makes sense: if it fails for some reason, only the Nuxeo node behind it will be affected.
-1. **Elasticsearch nodes** have to be installed on dedicated machines for performance reasons. Elasticsearch uses half of the machine's memory for its heap and half for the system, and is not designed to share memory with another application using the JVM.
-1. **Kafka cluster** is better on dedicated machines for isolation purpose.
-1. A **Zookeeper node** is a lightweight, component and can be installed on the Nuxeo nodes.
-1. **Redis**, if used, can be installed on the same machine as Nuxeo server: our Redis usage is usually low enough for that.
+Let's see how applications can be merged.
+- The **load balancers** are usually deployed on separate machines from where the Nuxeo server nodes will be, as otherwise stopping a Nuxeo node could have consequences on serving the requests.
+- On the machines where Nuxeo server nodes will be installed, a **reverse proxy** can be installed as well. It is lightweight, and having a reverse proxy for each Nuxeo node makes sense: if it fails for some reason, only the Nuxeo node behind it will be affected.
+- **Elasticsearch nodes** have to be installed on dedicated machines for performance reasons. Elasticsearch uses half of the machine's memory for its heap and half for the system, and is not designed to share memory with another application using the JVM.
+- **Kafka cluster** is better on dedicated machines for isolation purpose.
+- A **Zookeeper node** is a lightweight, component and can be installed on the Nuxeo nodes.
+- **Redis**, if used, can be installed on the same machine as Nuxeo server: our Redis usage is usually low enough for that.
 
 ### Deploying in Cloud or Container Based Deployment
 
 This diagram translates perfectly to an on-premise deployment using a container-based technology like docker and we provide a ready-to-use [docker image]({{page version='' space='nxdoc' page='setting-up-your-nuxeo-environment'}}#docker) for Nuxeo Server.
 
-Nuxeo Platform also makes it easy to deploy in the cloud since:
-- We are standard-based
+Nuxeo Platform also makes it easy to deploy in the Cloud since:
+- We are standard-based,
 - The pluggable component model (extension points) allows you to easily change backend implementation when needed.
 
-For example, considering Amazon AWS as a possible cloud infrastructure provider:
+For example, considering Amazon AWS as a possible Cloud infrastructure provider:
 
 ![]({{file name='aws-deployment.png'}} ?border=true)
 <!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
@@ -306,12 +306,12 @@ For example, considering Amazon AWS as a possible cloud infrastructure provider:
 - Database can be handled through Amazon RDS, this is a native plug as there is nothing specific to Amazon in this case. MongoDB Atlas is also an option for a hosted MongoDB cluster.
 - An Amazon S3 bucket can be used for replicated file storage. Our BinaryManager is pluggable and we use it to leverage the S3 Storage capabilities.
 
-The same idea is true for all the cloud specific services like provisioning and monitoring. We try to provide everything so that the deployment in the target IaaS is easy and painless:
+The same idea is true for all the Cloud specific services like provisioning and monitoring. We try to provide everything so that the deployment in the target IaaS is easy and painless:
 
-- Nuxeo is packaged (among other options) as Debian packages or a docker image
+- Nuxeo is packaged (among other options) as Debian packages or a docker image:
     - We can easily setup Nuxeo on top of Amazon Machine Images
     - We can use CloudFormation and we provide a template for it
-- Nuxeo exposes its metrics via JMX
+- Nuxeo exposes its metrics via JMX:
     - CloudWatch can monitor Nuxeo
     - We can use autoscaling
 
@@ -326,7 +326,7 @@ The same idea is true for all the cloud specific services like provisioning and 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Nuxeo Architecture Components - Configuration]({{page page='nuxeo-architecture-components'}})
-- [Elasticsearch setup]({{page page='elasticsearch-setup'}})
+- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 - [Redis Configuration]({{page page='redis-configuration'}})
 - [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
 

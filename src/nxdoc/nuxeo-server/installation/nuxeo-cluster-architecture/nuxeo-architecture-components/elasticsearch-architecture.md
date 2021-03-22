@@ -1,6 +1,6 @@
 ---
 title: Elasticsearch
-description: 
+description:
 labels:
     - deployment
     - bchauvin
@@ -23,15 +23,15 @@ Elasticsearch is used to relieve the database from the costliest operations:
 - It stores the document's audit log. Since every operation on a document in Nuxeo is stored for possible audit purposes, the corresponding table would grow very rapidly and possibly reach millions of tuples when stored in the database. Using Elasticsearch, this is not a problem anymore.
 - It scales horizontally and provides constant performance even with growing content size.
 
-Elasticsearch is a mandatory component of the Nuxeo architecture: in a development environment, it makes sense to use the embedded Elasticsearch, but a Nuxeo production enviornment expects an externalized Elasticsearch cluster. Refer to the [Elasticsearch setup]({{page page='elasticsearch-setup'}}) documentation for more information.
+Elasticsearch is a mandatory component of the Nuxeo architecture: in a development environment, it makes sense to use the embedded Elasticsearch, but a Nuxeo production environment expects an externalized Elasticsearch cluster. Refer to the [Elasticsearch setup]({{page page='elasticsearch-setup'}}) documentation for more information.
 
 ## Recommendation
 
-At least three nodes for the Elasticsearch cluster, same for Kafka and Redis if used. Contrarily to Nuxeo server nodes, **you always need to have an odd number of machines for Redis and Elasticsearch** (3, 5, 7,etc.). It is required in order to safely handle failover when a network partitioning error occurs. 
+At least three nodes for the Elasticsearch cluster, same for Kafka and Redis if used. Contrary to Nuxeo server nodes, **you always need to have an odd number of machines for Redis and Elasticsearch** (3, 5, 7, etc.). It is required in order to safely handle failover when a network partitioning error occurs.
 
 - Imagine that your cluster gets cut in half: 2 nodes on side A cannot communicate anymore with the third node on side B. In this situation, if the master node is the one isolated on side B, failover can be achieved properly because a majority (the 2 nodes on side A) can elect a new master node between them and keep service available. If you had 4 nodes in the same situation, service wouldn't be available anymore because a majority could not be obtained when voting. This is known as the split-brain problem. This also means that the minimum number of nodes to obtain high availability is 3.
 
 ## Configuration
 
 The Elasticsearch configuration is detailed in the following documentation:
--  [Elasticsearch cluster recommended tuning]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#installing-the-elasticsearch-cluster) 
+-  [Elasticsearch Cluster Recommended Tuning]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#installing-the-elasticsearch-cluster)

@@ -1,6 +1,6 @@
 ---
 title: Load Balancers
-description: 
+description:
 labels:
     - deployment
     - bchauvin
@@ -24,7 +24,7 @@ Load balancers are used to allocate the load between Nuxeo nodes. They can be co
 
 Load balancing can be managed by software or hardware, but in all cases (even if you use Nuxeo as a bare server without a UI) the only constraint we ask for is to have a load balancer configured with sticky sessions.
 
-## Recommandation
+## Recommendation
 
 For high availability, **two load balancers are necessary**, with sticky sessions handling incoming requests and directing them to the appropriate Nuxeo server nodes.
 
@@ -34,9 +34,9 @@ For high availability, **two load balancers are necessary**, with sticky session
 
 Set up an HTTP or AJP load balancer such as Apache with `mod_proxy` or `mod_proxy_ajp` or Pound, and configure it to keep session affinity by tracking the value of the `JSESSIONID` cookie and the `;jsessionid` URL parameter.
 
-If you use a stateless load balancer such as Apache modules such as `mod_jk` and `mod_proxy_balancer`, you need to make the HTTP server generate `JSESSIONID` cookies with values that end with `.nxworker_n_` , where `nxworker_n_` is a string suffix specific to each node (you can use any string).
+If you use a stateless load balancer, such as Apache modules such as `mod_jk` and `mod_proxy_balancer`, you need to make the HTTP server generate `JSESSIONID` cookies with values that end with `.nxworker_n_` , where `nxworker_n_` is a string suffix specific to each node (you can use any string).
 
-1.  In `nuxeo.conf` specify a different `nuxeo.server.jvmRoute` for each node, for instance `nuxeo.server.jvmRoute=nxworker1`.
+1.  In `nuxeo.conf` specify a different `nuxeo.server.jvmRoute` for each node, for instance `nuxeo.server.jvmRoute=nxworker1`.</br>
     This will instruct the Nuxeo preprocessing phase to correctly fill the `jvmRoute` attribute of the `Engine` element in the generated `server.xml`.
 2.  Configure you stateless balancer to follow these routes, for instance here is the relevant configuration fragment when using `mod_proxy_balancer`:
 
@@ -57,7 +57,7 @@ For DBS (MongoDB) everything is done automatically, you don't have to use any sp
 
 For VCS (SQL databases) the standard configuration is available from Nuxeo templates; each node in the cluster should be configured to include the relevant `<database>-quartz-cluster` template.
 
-1.  Populate the database with the tables needed by Quartz (names `QRTZ_*`).
+1.  Populate the database with the tables needed by Quartz (names `QRTZ_*`).</br>
     The DDL scripts come from the standard Quartz distribution and are available in the Nuxeo templates in `$NUXEO_HOME/templates/<database>-quartz-cluster/bin/create-quartz-tables.sql`.
 2.  Enable the Quartz-specific cluster templates by adding the template `<database>-quartz-cluster`.
 
@@ -96,22 +96,18 @@ That's why having a session based authentication + session affinity can make sen
 
 If the session affinity can not be restored, for example because the target server has been shut down:
 
-*   stateless authentication will be automatically replayed (ex: Basic Auth)
-*   for stateful authentication:
-
-    *   if you have a SSO this will be transparent
-    *   if you don't have a SSO, user will have to authenticate again.
+- stateless authentication will be automatically replayed (ex: Basic Auth)
+- for stateful authentication:
+    - if you have a SSO this will be transparent
+    - if you don't have a SSO, user will have to authenticate again.
 
 #### State Management and UI Rendering
 
 The UI can be stateful or stateless:
-
-*   The default Web UI is stateless,
-*   JSF is stateful.
+- The default Web UI is stateless,
+- JSF is stateful.
 
 If the UI layer you use is stateful, you have to use stateful load balancing for session affinity.
-
-
 
 To enable automatic unhealthy instance eviction on your balancer, you may require an health check.
 The following ensures Nuxeo runtime is initialized and up: `HTTP:200:/nuxeo/running_status?info=reload`.
@@ -122,17 +118,14 @@ To test that the load balancer forwards the HTTP requests of a given session to 
 
 1.  Add a new file on each node (after Tomcat started), `$NUXEO_HOME/nxserver/nuxeo.war/clusterinfo.html`,
 
-    *   On the first node:
-
+    - On the first node:
         ```xml
         <html><body>Node 1</body></html>
         ```
 
-    *   and on the second node:
-
+    - and on the second node:
         ```xml
         <html><body>Node 2</body></html>
         ```
 
 2.  Using a browser with an active Nuxeo session (an already logged-in user), go to `http://yourloadbalancer/nuxeo/clusterinfo.html` and check that you always return to the same node when hitting the refresh button of the browser.
-

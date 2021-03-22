@@ -1,6 +1,6 @@
 ---
 title: Reverse Proxy
-description: 
+description:
 labels:
     - deployment
     - bchauvin
@@ -28,7 +28,7 @@ A reverse proxy is used to avoid users from accessing the Nuxeo server directly.
 
 Additionally, when some clients use a WAN to access the server, the reverse proxy can be used to protect the server against slow connections that may use server-side resources for a long time. You may refer to the [reverse proxy configuration]({{page page='http-and-https-reverse-proxy-configuration'}}) for more details.
 
-## Recommandation
+## Recommendation
 
 A reverse proxy **to protect each Nuxeo server node** (usually Apache or Nginx).
 

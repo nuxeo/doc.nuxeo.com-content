@@ -1,6 +1,6 @@
 ---
-title: Distributed architecture with Kafka
-description: 
+title: Distributed Architecture with Kafka
+description:
 review:
     comment: ''
     date: '2021-03-12'
@@ -8,17 +8,18 @@ review:
 toc: true
 tree_item_index: 300
 ---
+
 ## Architecture description
 
-Compared to the the [Compact Architecture with Kafka]({{page page='compact-architecture-with-redis'}}), this architecture includes a Kafka cluster and a Zookeeper cluster so that SPOF no longer exists, and consequently provides a full high availability and fault tolerant Nuxeo architecture.
+Compared to the [Compact Architecture with Kafka]({{page page='compact-architecture-with-redis'}}), this architecture includes a Kafka cluster and a Zookeeper cluster so that SPOF (single point of failure) no longer exists, and consequently provides a full high availability and fault tolerant Nuxeo architecture.
 
 In this architecture:
-1. A load balancer with sticky sessions is used.
-1. A total of two machines are prepared for the application cluster. Each machine holds a Nuxeo server node and a reverse proxy. More machines can be added later for scalability purpose.
-1. An Elasticsearch cluster with at least 3 nodes
-1. A database cluster with at least 2 nodes
-1. A **Kafka cluster**, with at least 2 nodes, as the default implementation for Nuxeo Stream
-1. A **Zookeeper cluster**, with at least 3 nodes, to orchestrate the Kafka cluster nodes, Kafka topics, partitions etc.   
+- A load balancer with sticky sessions is used.
+- A total of two machines are prepared for the application cluster. Each machine holds a Nuxeo server node and a reverse proxy. More machines can be added later for scalability purpose.
+- An Elasticsearch cluster with at least 3 nodes
+- A database cluster with at least 2 nodes
+- A **Kafka cluster**, with at least 2 nodes, as the default implementation for Nuxeo Stream
+- A **Zookeeper cluster**, with at least 3 nodes, to orchestrate the Kafka cluster nodes, Kafka topics, partitions etc.   
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Reference Architectures/2-simple-architecture-with-kafka.png
@@ -33,4 +34,4 @@ At this stage, this architecture is fault tolerant and in high availability, and
 
 **→ Check the [scalability options]({{page page='nuxeo-scalability-options'}})** to:
 - Add Nuxeo nodes for specific loads (API node, worker node and import nodes)
-- Set up data partitionning with database sharding and a multi repository approach
+- Set up data partitioning with database sharding and a multi-repository approach
