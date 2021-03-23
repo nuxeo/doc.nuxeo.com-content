@@ -244,9 +244,9 @@ This field indicates the type of incident described by the ticket. Possible tick
 
 Identifying the type of issue is important because it determines what elements will be needed to describe the ticket (see the [Description section](#field-description)).
 
-## {{> anchor 'field-description'}}Description
+## {{> anchor 'field-description'}}Ticket Types
 
-The content of this field depends on the [type of the ticket](#field-issue-type) and is necessary to its process. You should then carefully fill this field in.
+The content of the ticket depends on the [type of the ticket](#field-issue-type) and is necessary to its process. You should then carefully fill all required fields.
 
 ### {{> anchor 'ticket-question'}}Question Ticket
 
@@ -286,6 +286,18 @@ On a production environment, it is important to identify the date at which the i
 ### {{> anchor 'ticket-improvement'}}Improvement Ticket
 
 This type is for behaviors that are not available by default on the Nuxeo Platform and that you would like to implement. It enables you to ask the Nuxeo team for advices or good practices to implement a new behavior. For this type of ticket, you just need to indicate the wanted behavior and possible constraints in the Description field.
+
+### {{> anchor 'ticket-question'}}Nuxeo Cloud Deployment Ticket
+
+This ticket type is used to request a deployment or configuration update to a Nuxeo Cloud Production or Pre-Production environment.
+
+### {{> anchor 'ticket-question'}}Nuxeo Cloud Incident Ticket
+
+This ticket type is used to report a non-outage issue with a Nuxeo Cloud site, including any performance or Development Sandbox issue.
+
+### {{> anchor 'ticket-question'}}Nuxeo Cloud Outage Ticket
+
+This ticket type is used to report an outage in a Nuxeo Cloud Pre-Production or Production environment where the site is unavailable.
 
 ## {{> anchor 'field-affects-version'}}Affects Versions
 
