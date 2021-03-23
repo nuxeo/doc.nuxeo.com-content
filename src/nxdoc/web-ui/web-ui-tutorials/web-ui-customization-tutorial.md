@@ -25,7 +25,7 @@ tree_item_index: 300
 ---
 
 {{! excerpt}}
-In this tutorial we'll guide you through customizing Nuxeo Web UI and deploying your customization. We're going to address to different customization approaches: by **overriding dynamic layouts** and via **slots**. In the former case we'll edit a view layout for a popular document type, whereas in the latter we're going to contribute a new [Document Action]({{page page='web-ui-slots'}}/#document_actions).
+In this tutorial we'll guide you through customizing Nuxeo Web UI and deploying your customization. We're going to address to different customization approaches: by **overriding dynamic layouts** and via **slots**. In the former case we'll edit a view layout for a popular document type, whereas in the latter we're going to contribute a new [Document Action]({{page page='web-ui-slots'}}#document_actions).
 {{! /excerpt}}
 
 ## Setup
@@ -92,7 +92,7 @@ to `resources/OSGI-INF`:
 
 Our bundle can be built simply by running `mvn install`, and it can be deployed by copying the resulting jar file, in this
 case `nuxeo-customization-sample-core/target/nuxeo-customization-sample-core-1.0-SNAPSHOT.jar`, to `$NUXEO_HOME/nxserver/bundles`.
-For more information about building and deploying bundles, please check the [documentation]({{page page='how-to-create-an-empty-bundle'}}/#install-and-check-the-deployment-of-your-bundle).
+For more information about building and deploying bundles, please check the [documentation]({{page page='how-to-create-an-empty-bundle'}}#install-and-check-the-deployment-of-your-bundle).
 
 ## Contributing Dynamic Layouts{{> anchor 'contributing_dynamic_layouts'}}
 
@@ -113,7 +113,7 @@ To override or contribute new layouts for a document type, we must add a file wi
 {{/panel}}
 
 {{#> callout type='note' heading='Extending the Web UI'}}
-Please check the [deployment documentation]({{page page='web-ui-deployment'}}/#structure) for more information on how
+Please check the [deployment documentation]({{page page='web-ui-deployment'}}#structure) for more information on how
 to extend the Web UI.
 {{/callout}}
 
@@ -123,7 +123,7 @@ You can now build your bundle and deploy it. Then, by navigating to a file that 
 
 ## Contributing to a Nuxeo Slot{{> anchor 'contributing_to_a_nuxeo_slot'}}
 
-Nuxeo Slots are an important mechanism to extend Nuxeo Web UI. Here we're going to contribute a new action to the [DOCUMENT_ACTIONS]({{page page='web-ui-slots'}}/#document_actions) slot, which will be displayed whenever a user browses to a document.
+Nuxeo Slots are an important mechanism to extend Nuxeo Web UI. Here we're going to contribute a new action to the [DOCUMENT_ACTIONS]({{page page='web-ui-slots'}}#document_actions) slot, which will be displayed whenever a user browses to a document.
 
 ![]({{file name='DOCUMENT_ACTIONS.png' page='web-ui-slots'}} ?w=600,border=true)
 
@@ -202,7 +202,7 @@ Our new element must now be added to the `DOCUMENT_ACTIONS` slot. To achieve thi
 {{/panel}}
 
 Note that the `document` property of our element is bound to the `document` property provided by the action context. For
-more information about what property are available in this slot, please check the [DOCUMENT_ACTIONS documentation]({{page page='web-ui-slots'}}/#document_actions) .
+more information about what property are available in this slot, please check the [DOCUMENT_ACTIONS documentation]({{page page='web-ui-slots'}}#document_actions) .
 
 From within a bundle, content for a Nuxeo Slot must be contributed as a `WebResource`. Therefore, we must add a new `xml`
 file to the `resources/OSGI-INF` folder, contributing `sample.html` as a web resource:
