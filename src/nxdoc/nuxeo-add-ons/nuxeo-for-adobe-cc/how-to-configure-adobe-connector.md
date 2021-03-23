@@ -21,7 +21,7 @@ The Nuxeo for Adobe CC connector comes with 3 tabs: Search, Browse and Other. Th
 
 Make sure that these addons are installed on your instance:
   - Nuxeo Web UI
-  - Nuxeo DAM
+  - Nuxeo DAM (For Nuxeo 2019. Included by default in LTS 2021)
   - Nuxeo for Adobe CC
 
 In your Studio project, go to **External Templates** and install **Default Adobe CC Connector Configuration**</br>

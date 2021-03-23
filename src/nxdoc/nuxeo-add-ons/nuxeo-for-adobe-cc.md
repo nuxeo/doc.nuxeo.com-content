@@ -3,7 +3,7 @@ title: Nuxeo for Adobe CC
 description: 'The Nuxeo for Adobe CC addon enables creative users to interact directly with Nuxeo repository assets from within InDesign, Photoshop or Illustrator.'
 review:
     comment: ''
-    date: '2020-11-06'
+    date: '2021-04-13'
     status: ok
 labels:
     - adobe-cc
@@ -25,7 +25,7 @@ tree_item_index: 850
 ---
 
 {{! excerpt}}
-The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package) connector enables [Adobe Creative Cloud users](https://www.nuxeo.com/content-services-platform/integration/adobe-creative-suite/) to import assets into an InDesign document directly from the Nuxeo repository. Link to the repository is maintained so as to facilitate updates of the referenced assets. Users can access the assets directly from Illustrator or Photoshop to make edits and trigger update warnings in InDesign.
+The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package) connector enables [Adobe Creative Cloud users](https://www.nuxeo.com/content-services-platform/integration/adobe-creative-suite/) to import assets into an InDesign document directly from the Nuxeo repository. Link to the repository is maintained so as to facilitate updates of the referenced assets. Additionally, creative users can access assets directly from Illustrator or Photoshop to make edits and trigger update warnings in InDesign.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -41,28 +41,36 @@ Watch the related courses on Nuxeo University:</br>
 
 ## Requirements
 
-Nuxeo for Adobe CC is compliant with Adobe CC 2018 and 2019 and requires Nuxeo Platform 9.10 or newer, along with the Nuxeo for Adobe CC marketplace package installed on your Nuxeo instance.
+Nuxeo for Adobe CC works with Adobe CC 2020 and 2021 and requires Nuxeo Platform 10.10 or newer, along with the appropriate Nuxeo for Adobe CC marketplace package installed on your Nuxeo instance.
 Make sure that the Nuxeo DAM addon is installed on your instance and, ideally, that the DAM external template has been included in your Studio package (template should not be required, however).
+
+{{#> callout type='info' }}
+Beginning with Nuxeo 2021, many of the DAM features have been embedded into the Platform and no longer exist as an addon, and the DAM addon no longer needs to be installed separately.
+{{/callout}}
 
 ## Support
 
-For support related to the connector, please contact Nuxeo Support via your regular support channels.
+For support related to the Connector, please contact Nuxeo Support via your regular support channels.
 
 ## Installation
 
 Installation is made of two steps:
 
 1. Install the [server-side Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package) available from the marketplace.
-  {{#> callout type='info' }}
-  If you have previously used a Nuxeo Adobe connector, clear the application preferences by pressing and holding `Alt+Control+Shift` (on Windows) or `Option+Command+Shift` (on macOS) as you start Photoshop/InDesign/Illustrator
-  {{/callout}}
-2. Please contact your Nuxeo Account Executive for access to the local client side plugin installation.
+2. SSO support requires an additional cloud consumer redirect URI (https://5tlkhjwj6g.execute-api.us-west-1.amazonaws.com/Prod/callback/nuxeo) be added to the existing oauth2 cloud consumer entry included as part of the marketplace package. This can be modified by an Administrator via the jsf/webui administration panel/cloud services section for cloud consummers or via API as decribed in our [Nuxeo documentation](https://doc.nuxeo.com/nxdoc/using-oauth2/).
 
-Once the installation done, a new extension "Nuxeo CC Connector" is available on your Photoshop, InDesign or Illustrator application.
+1. Please contact your Nuxeo Account Executive for access to the local client side plugin installation pkg (Mac) or exe (Windows).
+2. Install the local client package on each machine where the connector will be used.
+
+	{{#> callout type='info' }}
+  If you have used a previous version of the Nuxeo Adobe Connector, clear the application preferences by pressing and holding `Alt+Control+Shift` (on Windows) or `Option+Command+Shift` (on macOS) as you start Photoshop/InDesign/Illustrator
+  {{/callout}}
+
+Once the installation is done, a new extension "Nuxeo CC Connector" is available within your Photoshop, InDesign or Illustrator application.
 
 ### Licensing Information
 
-Once Nuxeo for Adobe CC is properly installed, launch InDesign CC 2018/2019/2020 (licensing dialog does not appear in Photoshop or Illustrator) to see a dialog requesting license information:
+Once Nuxeo for Adobe CC is properly installed, launch InDesign CC 2020/2021 (licensing dialog does not appear in Photoshop or Illustrator) to see a dialog requesting license information:
 
 - If you have a license key for Nuxeo CC Connector (provided to you by Nuxeo Sales), click “Yes” to activate now, or click “No” to activate later. You can activate in InDesign later via the Nuxeo dropdown menu item.
 
@@ -70,7 +78,13 @@ If you have questions related to licensing, contact your Nuxeo sales representat
 
 ## Using Nuxeo CC Connector
 
+The below information pertains to the local client install of **1.2.16 or newer** (available since October 2021).
+
 ### Logging into Your Server
+
+{{#> callout type='info' }}
+Before using the Connector, know your Nuxeo instance url.  The Nuxeo instance url is typically composed of 2 parts: the base url (https://myNuxeoServer.com) and the context path (/nuxeo is used by default).  So your "complete" instance url might look like `https://myNuxeoServer.com/nuxeo`
+{{/callout}}
 
 From the main InDesign, Photoshop or Illustrator menu, choose **Window** > **Extensions** > **Nuxeo CC Connector**
 
@@ -81,7 +95,7 @@ From the main InDesign, Photoshop or Illustrator menu, choose **Window** > **Ext
 --}}
 ![Adobe Extension Connector](nx_asset://1e5e80d2-537d-4f49-8fc5-046623d3b567 ?w=350,border=true)
 
-This will launch Connector and the Server Setup panel.
+This will launch the Connector and the Server Setup panel.
 
 {{!--     ### NX_ASSET ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Connector Setup tab
@@ -91,16 +105,34 @@ This will launch Connector and the Server Setup panel.
 ![Adobe Connector Setup tab](nx_asset://d7a36c14-7a39-47c8-a8ba-d0a199ee44f5 ?w=150,border=true)
 
 Initially, you will need to create a server listing for your Nuxeo Instance. Once the listing is created, you can simply select it to log in.</br>
+
+Before moving any further, locate your Nuxeo instance url and determine if you are using the default `/nuxeo` context path or something else that has been configured by your Nuxeo Administrator.
+
+If you are using a configured context path, please do the following.  Otherwise, if you are using the default `/nuxeo` context path, please jump to `To create your server listing`
+
+To modify the context path for the connector to use:
+1. With the connector panel opened as described above, click on the Connector burger menu and choose **Preferences**. 
+2. In the **Context Path** section, choose to **Use custom context path** and in the box, type in the portion of the Nuxeo instance url that follows the / in your Nuxeo instance url (your context path as decribed in the info section above).  In the example below; `myNuxeoContext`.  Note **do not include the slash / as part of the context path, only what follows.**
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo for Adobe CC /Adobe modify context path
+    name: Adobe modify context path.png
+    addins#screenshot#up_to_date
+--}}
+![Adobe modify context path](nx_asset://d8d0cedd-0054-49c8-9e52-1f3dddbec0e2)
+
+Close the Preferences panel and continue with **To create your server listing.**
+
 To create your server listing:
+
 1. Fill in the field **New Server Name** with a "friendly value" to represent your Nuxeo instance.
-1. Fill in the field **New Server URL** with the address of your Nuxeo instance (this is the same URL you would use to access your Nuxeo instance via the web. Be sure to include the `http/https` value and leave off any `/nuxeo` that might be included).
+2. Fill in the field **New Server URL** with the address of your Nuxeo instance (this is the same URL you would use to access your Nuxeo instance via the web. Be sure to include the `http/https` value and leave off any `/nuxeo` that might be included).
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo for Adobe CC /Adobe Add server to list
     name: image16.png
     addins#popup#up_to_date
   --}}
   ![Adobe Add server to list](nx_asset://daff5596-bd62-41af-93e7-14753d921e31 ?w=200,border=true)
-1. Click **Add Server to List** button. You should now see this value in your “Server List”
+3. Click **Add Server to List** button. You should now see this value in your “Server List”
   {{!--     ### NX_ASSET ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Select Server name
       name: image4.png
@@ -109,8 +141,8 @@ To create your server listing:
   ![Adobe Select Server name](nx_asset://93a5cd9d-53bf-44c3-978e-017e7e50760c ?w=200,border=true)
 
 To login:
-1. Select your server from the list and click **Connect**. This will launch the Nuxeo login panel.
-1. Enter your username and password and click **Log In**.
+1. Select your server from the list and click **Connect**. This will launch the Nuxeo login via your default browser.  
+1. Enter your username and password and click **Log In**. If you have an existing authentication token, you should not need to fill in the username and password.  Depending on your browser, once the token has been created/retrieved, you will be automatically redirected back to your Adobe application.  If not, simply return to your Adobe application.
 
 {{!--     ### NX_ASSET ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe login connector
@@ -119,10 +151,11 @@ To login:
 --}}
 ![Adobe login connector](nx_asset://60bb96ca-75a3-4dc4-92d4-0e1a5cdf90bf ?w=350,border=true)
 
-You should now see the connector populated with images that reside in your Nuxeo Instance.
+You should now see the Connector populated with images that reside in your Nuxeo instance.
+
 
 {{#> callout type='info'}}
-If, however, you see something like this, then contact your Nuxeo Admin to confirm the Nuxeo for Adobe CC marketplace package is installed.
+If, however, you see something like this, then contact your Nuxeo Admin to confirm the proper Nuxeo for Adobe CC marketplace package is installed.  
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo for Adobe CC /No mp installed error
     name: error-no-package-installed.png
@@ -131,7 +164,9 @@ If, however, you see something like this, then contact your Nuxeo Admin to confi
 ![Error no package installed](nx_asset://bc366077-1ebf-43e3-9ecf-b50a0bfa3b36 ?w=350,border=true)
 {{/callout}}
 
-To logout, simply select **Log Out** from the Nuxeo Connector fly out menu.
+Since version 1.2.12 of the local client install (available April 2021), there is a new cloud consumer item to add to your Nuxeo setup.  If you have used the Connector before but still get an error message, it is likely that you don't have the additional cloud consumer redirect uri.  Contact your Nuxeo Administrator to verify the they have updated the cloud consumer entry as described in the Installation section.
+
+To logout, simply select **Log Out** from the Nuxeo Connector fly out menu.``
 
 {{!--     ### NX_ASSET ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Connector Populated
@@ -141,12 +176,12 @@ To logout, simply select **Log Out** from the Nuxeo Connector fly out menu.
 ![Adobe Connector Populated](nx_asset://c6d1d869-c0c1-41f9-9d69-82779c45aa7c ?w=350,border=true)
 
 {{#> callout type='info'}}
-You can always access the fly out menu by clicking on the burger menu in the upper right corner of the connector.
+You can always access the fly out menu by clicking on the burger menu in the upper right corner of the Connector.
 {{/callout}}
 
 ### Preferences
 
-The connector has a number of customizable preferences to enhance your workflow. Below are the preferences available within InDesign.
+The Connector has a number of customizable preferences to enhance your workflow. Below are the preferences available within InDesign.
 
 {{!--     ### NX_ASSET ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Preferences
@@ -157,36 +192,40 @@ The connector has a number of customizable preferences to enhance your workflow.
 
 **Place Options (InDesign only)**
 - Replace Selected on place
-  - when checked: Replaces any selected object with the asset you drag onto the page.
-  - When unchecked: Dragging an item to the page, places it as a new object.
+  - When checked: replaces any selected object with the asset you drag onto the page.
+  - When unchecked: dragging an item to the page, places it as a new object.
 - Choose between High and Low Resolution on Place
 
 **Download Options**
 - Open File on Download
-  - when checked: Opens any downloaded file if possible (depends on Adobe app).
-- Save to default folder: Saves downloaded files to your `User Documents\nuxeo_connector_files\downloads` folder.
-  - When unchecked: the User will be presented with the System browser to choose a folder.
-- Choose folder location: Select the location for your downloads.
+  - When checked: opens any downloaded file if possible (depends on Adobe app).  It is best to have this checked if you intend to use the Connector for interacting with Indesign files, as it is the most efficient way to open Indesign files with the Connector.
+- Save to default folder: saves downloaded files to your `User Documents\nuxeo_connector_files\downloads` folder.
+  - When unchecked: the User will be presented with the system browser to choose a folder.
+- Choose folder location: select the location for your downloads.
 
 **Asset View**
-- Use Grid view: Displays assets in a gallery.
-- Use List view: Displays individual assets at width of the Connector panel, providing file name when hovered over the bottom of each asset.
+- Use Grid view: displays assets in a gallery.
+- Use List view: displays individual assets at width of the Connector panel, providing file name when hovered over the bottom of each asset.
+
+**Context Path**
+- Choose to use a configured context path (only if your Nuxeo Administrator has already configured one for your instance).
+- Set the context path to use with your base server url.  Do not include any / slashes in this entry.
 
 **Troubleshooting**
-- Write to log file: When checked, creates a log file in your `Documents/nuxeo_connector_files` folder
-- Clear log file: Click this to clear the log file.
+- Write to log file: when checked, creates a log file in your `Documents/nuxeo_connector_files` folder
+- Clear log file: click this to clear the log file.
 
 ## Functional Overview
 
 ### Finding Content (InDesign, Photoshop and Illustrator)
 
-The connector has three tabs, each with slightly different behavior: Search, Browse and Other.
+The Connector has three tabs, each with slightly different behavior: Search, Browse and Other.
 
 Each tab uses a different page provider, included with the server-side Nuxeo for Adobe CC package, to control behavior. The page providers can be overridden in Nuxeo Studio to reflect your own content model and needs, such as displaying more results per page. For more information on page providers and overriding them, read the [related documentation]({{page version='' space='nxdoc' page='page-providers'}})
 
 #### Search Tab
 
-By default, when logging into the repository via the connector, the first view you see is the search tab.
+When logging into the repository via the Connector, the first view you see is the search tab.
 The search bar supports wildcard operations, as in the example, and search the full-text index of the repository (including file names, and metadata fields).
 
 {{!--     ### NX_ASSET ###
@@ -204,7 +243,7 @@ Results are shown in pages and you can navigate between pages using the arrow ke
 
 You can also jump to a given page.
 
-Whenever using the connector, if you want to perform a search, you can choose **Search** from the Nuxeo CC Connector panel fly out menu, or just click on the Search widget.
+Whenever using the Connector, if you want to perform a search, you can choose **Search** from the Nuxeo CC Connector panel fly out menu, or just click on the Search widget.
 
 To see more information about the object, double click the thumbnail to see more information.
 Each object comes with a detail view containing:
@@ -218,7 +257,11 @@ Each object comes with a detail view containing:
 --}}
 ![Adobe Ryan Walton Copyright](nx_asset://b9a94926-47fc-49cb-ac23-f98e0906a734 ?w=250,border=true)
 
+To open a copy of an image, drag and drop the object into your application (you can drag and drop multiple items at one time).
+
 To download a copy of an asset from Nuxeo CC Connector, click the blue download arrow to the right of the thumbnail to begin the download process. For more information, see Download Options in [Preferences section](#preferences).
+
+**While you can search and open from the search tab, you cannot save directly into the repository from search.  You must first navigate to where you want the content to be saved using the Browse tab, then you can save the content.**
 
 #### Browse Tab
 
@@ -229,9 +272,9 @@ To download a copy of an asset from Nuxeo CC Connector, click the blue download 
 --}}
 ![Adobe Browse tab](nx_asset://56631c62-1a5a-4e54-a683-00658ebf0b31 ?w=350,border=true)
 
-The Browse tab allows you to browse through the hierarchical setup of the repository. It uses the `adobe-connector-browse` page provider. While browsing, you can still use the search bar; the search content is limited to the level in the hierarchy that you are currently viewing. You have the choice between a grid view (default) and a list view. You can toggle between view options using the buttons near the search bar.
+The Browse tab allows you to browse through the hierarchical setup of the repository. It uses the `adobe-connector-browse` page provider. While browsing, you can still use the search bar; the search content is scoped to the level in the hierarchy that you are currently viewing. You have the choice between a grid view (default) and a list view. You can toggle between view options using the buttons near the search bar.
 
-The browse tab is easy to use by clicking on the folders in the hierarchy. Note that as you click through the repository, a breadcrumb is generated just above the content view, which allows you to easily go back to any point within your path. Simply click on one of the levels to change location. If your path becomes too long to fit the panel, a slider appears to allow you to move “up” or “down” the path.
+The Browse tab is easy to use by clicking on the folders in the hierarchy. Note that as you click through the repository, a breadcrumb is generated just above the content view, which allows you to easily go back to any point within your path. Simply click on one of the levels to change location. If your path becomes too long to fit the panel, a slider appears to allow you to move “up” or “down” the path.
 
 As indicated earlier, to see more information about an object, double click into the item to see the detail view, where you can also download the file.
 
@@ -263,14 +306,14 @@ Nuxeo CC Connector Menu Listings (accessed via the burger menu)
 The Nuxeo CC Connector fly out menu has several options to assist the user:
 - **About** takes you to our [website](https://www.nuxeo.com/)
 - **Refresh** re-establishes an updated connection to your current folder
-- **Upload from Disk** opens your System Browser to upload an asset to your current Connector folder
-- **Upload Selected** uploads locally placed assets in InDesign to your current Connector folder (be sure to use “Relink…” as described below once saved)
+- **Upload from Disk** opens your System file browser to upload an asset to your current Connector folder
+- **Upload Selected** uploads **locally** placed assets in InDesign to your current Connector folder.  After the uploads have occurred, you will notice that the Connector will also "re-link" your assets and you should see a Nuxeo URL pointing to the asset in your links panel (instead of a local path).
 - **Upload InDesign Document** uploads open (If saved) InDesign doc to your current Connector folder. You will be presented with an Upload option to either, Upload New File, or Replace.
 - **Compound Doc Info** ensures HTTP links record a proper ID on the Nuxeo Server
-- **Upload All Non-HTTP Assets** uploads all locally placed InDesign assets from your open InDesign document to your current Connector folder
-- **Relink to Current Folder** relinks locally placed InDesign assets to the Current Connector folder, if they can be found there
+- **Upload All Non-HTTP Assets** uploads all locally placed InDesign assets from your open InDesign document to your current Connector folder.  After the uploads have occurred, you will notice that the Connector will also "re-link" your assets and you should see a Nuxeo URL pointing to the asset in your links panel (instead of a local path).
+- **Relink to Current Folder** relinks locally placed InDesign assets to the current Connector folder, if they have been saved to the location using one of the above methods.  In many cases, the connector is taking care of relinking content stored in the repository, and this action is not necessary.
 - **Preferences** opens Nuxeo CC Connector Preferences
-- **About Silicon Publishing** takes you to siliconpublishing.com
+- **About Silicon Publishing** takes you to https://siliconpublishing.com
 
 
 We can use the above menu items to work with the Nuxeo repository from within the Creative Cloud application
@@ -282,12 +325,15 @@ Starting from a **new INDD file**:
     {{#> callout type='note' }}
     Before dropping it, releasing your mouse button to load your cursor with the asset’s thumbnail. Then drag your image to size and place it into your document.
     {{/callout}}
-1. If you are a power user who needs InDesign’s **Show Import Options** for PDF or other image types, hold down the alt/option key when you drag and drop.
-1. For local files, place them as usual, then use the connector menu panel to upload them to the repository.
+    {{#> callout type='info' }}
+    Formats supported for placing include: jpg, png, ai, eps, psd, eps, tif/tiff, and bmp.
+    {{/callout}}
+
+1. For local files, place them as usual, then use the Connector menu panel to upload them to the repository.
 1. Select the local files and choose to “upload selected items” in the menu list
 or
 1. Use the menu list and choose to “upload non-http items”
-1. Once local items are in the repository, be sure to “relink to current location” from the menu list. This will ensure the links are maintained server side.
+1. Once local items are in the repository, be sure to check that the links have been updated to reflect the location in the repository.  If not, then use the “relink to current location” from the Connector burger menu list. This will ensure the links are maintained server side.
 1. If you have not already browsed to the location where you want to store the InDesign file, use the browse tab to navigate to your intended destination.
 Upload the INDD document using the Nuxeo CC Connector fly out menu (Upload Indesign Document).
 
@@ -303,16 +349,16 @@ You will be asked if you want to **Upload new file** or **Replace**. As a new fi
 
 
 {{#> callout type='warning' }}
-If you intend to continue working on this document, **immediately after** the initial save to the repository, **YOU MUST** first close the document, then open again by dragging and dropping the file from the panel, into the main InDesign window. This ensures future uploads of the file will be recognized as replacements for this file.
+If you intend to continue working on this document, **immediately after** the initial save to the repository, **YOU MUST** first close the document, then open again by downloading the file from the details view. This ensures future uploads of the file will be recognized as replacements for this file.
 {{/callout}}
 
 Working with an existing repository InDesign file:
-To open InDesign files stored in the repository, simply drag and drop the file from the panel to the main view of the application.
+To open InDesign files stored in the repository, double click on the item in the panel to open the "detail" view for the object (as described above).  Use the "download" action/button to open the file.  If you do not see the item open, please open the preferences for the Connector as described above and choose to 'open file on download'.
 
 After you have worked on your file (following instructions above for placing assets), use the Nuxeo Adobe Connector fly out menu to upload the file as before. Use "Replace" to update the same file in the DAM. Use "New" to create a new file in the DAM.
 
 {{#> callout type='note' }}
-If you did not open the InDesign file from the Connector panel (via drag and drop) and you choose “Replace”, you will still get a “new”/duplicate file in the repository.
+If you did not open the InDesign file from the Connector panel and you choose “Replace”, you will still get a “new”/duplicate file in the repository.
 {{/callout}}
 
 Using the Nuxeo CC Connector includes features within the traditional InDesign Links panel as well.
@@ -324,16 +370,21 @@ Using the Nuxeo CC Connector includes features within the traditional InDesign L
 --}}
 ![](nx_asset://8b19591e-f3a8-43fb-9fa6-04c3116200e2 ?w=350,border=true)
 
-Choose to work with the high resolution (HQ) or low resolution (LQ) rendition of the file by double clicking the entry in the Nuxeo column in the panel (you might need to expose the column in the “Panel Options” seen in the panel fly out).
+Choose to work with the high resolution (HQ) or low resolution (LQ) rendition of the file by double clicking the entry in the Nuxeo column in the panel (you might need to expose the column in the “Panel Options” seen in the links panel fly out).
+
 Be notified when updates have been made to the placed repository items, so that you can update the items in the InDesign document (note - you also see this on the placed image within the document)
 Select a link and choose to “Reveal in Nuxeo” which will open the file in your Nuxeo web instance to see more information about the file.
 
+Using the Nuxeo for Adobe CC Connector for creating and placing content has the added benefit of capturing incredibly useful information.  When you use repository content and link your assets and your InDesign files and then save the InDesign document to the repository,  behind the scenes, Nuxeo captures the id's of the placed assets and saves them as metadata in the repository for the InDesign file (as part of a compound doc schema).  The information is not exposed by default, but can be used by your Nuxeo team to create searches and views that show where content is used as part of other files.
+
+We are working on a sample to show you how this can be used in real life.  Check back here for updates.
+
 #### Working in Photoshop/Illustrator
 
-Photoshop and Illustrator have both access to Nuxeo CC Connector when you install the program.
+Photoshop and Illustrator have access to Nuxeo CC Connector when you install the program.
 
 If you want to edit an existing file from your Nuxeo account:
-1. Drag and Drop your asset from Connector, just like you would in InDesign.</br>
+1. Drag and Drop your asset from the connector.</br>
     A copy of the file will be saved locally at `nuxeo_connector_files\downloads` in your Documents folder, and then opened in your Adobe application.
 1. Make your edits in Photoshop or Illustrator and **save**.
 1. Once your local file is saved, choose **Upload Photoshop (Illustrator) Document** from the Nuxeo CC Connector fly out menu.</br>
@@ -347,7 +398,7 @@ If you want to edit an existing file from your Nuxeo account:
     ![](nx_asset://d435ccfb-4624-4e6f-8ca9-91c440b856b9 ?w=350,border=true)
 
 
-When edits are made to repository content using the Connector, users in InDesign who have placed the content will be notified that updates are available.
+When edits are made to repository content using the connector, users in InDesign who have placed the content will be notified that updates are available.
 
 <!--## Known limitations
 
@@ -373,6 +424,7 @@ Nuxeo CC Connector has two parts: an extension to provide the panel and a plug-i
 ```
 
 ### On Windows
+
 You can use the Windows Control Panel to uninstall Nuxeo for Adobe CC like you would do with any other installed application. If you need to uninstall manually, you can remove the following folders:
 - Remove the extension folder:
 ```
@@ -385,6 +437,7 @@ C:\Program Files\Adobe\Adobe InDesign CC 201x\Plug-Ins\SiliconConnectorNuxeo.
 ```
 
 ## Network Considerations (for Nuxeo Administrators)
+
 Since Nuxeo CC Connector requires network access to Nuxeo and the Silicon Publishing licensing server, there are certain network requirements to consider. You may find that working from home, where there is not proxy or firewall, you can use Silicon Connector for Box without a problem, but at work you run into errors when trying to activate or use it.
 
 ### Proxy
