@@ -1,5 +1,5 @@
 ---
-title: User Actions
+title: User Actions (JSF UI Only)
 review:
     comment: ''
     date: ''

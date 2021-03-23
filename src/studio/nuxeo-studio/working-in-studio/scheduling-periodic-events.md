@@ -118,6 +118,16 @@ history:
 The [Scheduler Service](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewService/org.nuxeo.ecm.core.scheduler.SchedulerService) is a Nuxeo Platform service to schedule events at periodic times. This is the best way in Nuxeo Platform to execute things every night, every hour, every five minutes, or at whatever granularity you require.
 {{! /excerpt}}
 
+{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+[Implement Business Logic](https://university.nuxeo.com/learn/public/course/view/elearning/46/automation-chains-automation-scripting-and-events)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/implement-business-logic.png
+    name: implement-business-logic.png
+    studio_modeler#schema#up_to_date
+--}}
+![implement-business-logic.png](nx_asset://7c0aebe9-3299-4784-becf-72725a332e68 ?w=450,border=true)
+{{/callout}}
+
 ## Scheduler Contribution
 
 To schedule an event, you contribute a `<schedule>` to the [schedule](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.scheduler.SchedulerService--schedule) extension point of the [SchedulerService](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.scheduler.SchedulerService) component.
