@@ -70,10 +70,14 @@ history:
 
 Automation Scripting is a Nuxeo module which provides ability to create and contribute Automation chain/operation in JavaScript.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Video on Automation Scripting](https://university.nuxeo.com/learn/public/course/view/elearning/47/implementing-your-own-operation-with-automation-scripting)
-![]({{file version='' space='nxdoc' page='university' name='university-scripting.png'}} ?w=450,border=true)
+{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+[Implement Business Logic](https://university.nuxeo.com/learn/public/course/view/elearning/46/automation-chains-automation-scripting-and-events)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/implement-business-logic.png
+    name: implement-business-logic.png
+    studio_modeler#schema#up_to_date
+--}}
+![implement-business-logic.png](nx_asset://7c0aebe9-3299-4784-becf-72725a332e68 ?w=450,border=true)
 {{/callout}}
 
 {{#> callout type='note' }}
