@@ -25,8 +25,11 @@ Nuxeo is available 24x7 to support site availability issues. If other issues are
 ### Opening a support ticket on Cloud Environments
 
 When [filling a JIRA Ticket]({{page version='' space='studio' page='how-to-fill-a-jira-ticket'}}), there are some important aspects:
-- There are 3 JIRA Issue types for Nuxeo Cloud requests - Nuxeo Cloud Deployments, Nuxeo Cloud Outages, and Nuxeo Cloud Incidents  
-- Nuxeo logs, configuration parameters and Marketplace Package versions are not required for the creation of Nuxeo Cloud support issues. 
+- There are 3 JIRA Issue types for Nuxeo Cloud requests:
+    - Nuxeo Cloud Deployments
+    - Nuxeo Cloud Outages
+    - Nuxeo Cloud Incidents  
+- Nuxeo logs, configuration parameters and Marketplace Package versions are not required for the creation of Nuxeo Cloud support issues.
 - If the issue identified, is related to a recent deployment or configuration change, please identify this in the support ticket.
 - Screenshots, reproduction steps and any additional context is always useful.
 
