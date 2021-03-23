@@ -41,7 +41,7 @@ Watch the related courses on Nuxeo University:</br>
 
 ## Requirements
 
-Nuxeo for Adobe CC is compliant with Adobe CC 2018 and 2019 and requires Nuxeo Platform 9.10 or newer, along with the Nuxeo for Adobe CC marketplace package installed on your Nuxeo instance.
+Nuxeo for Adobe CC is compliant with Adobe CC 2020 and 2021 and requires Nuxeo Platform 9.10 or newer, along with the Nuxeo for Adobe CC marketplace package installed on your Nuxeo instance.
 Make sure that the Nuxeo DAM addon is installed on your instance and, ideally, that the DAM external template has been included in your Studio package (template should not be required, however).
 
 ## Support
