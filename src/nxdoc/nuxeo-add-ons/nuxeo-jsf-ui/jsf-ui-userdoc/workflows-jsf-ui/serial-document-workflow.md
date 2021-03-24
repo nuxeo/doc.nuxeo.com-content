@@ -128,7 +128,7 @@ You need to have editing or management permissions to start a workflow.
 
 Once the workflow has been started, users added on the workflow's roadmap can review the document and approve or reject it.
 
-When they have a task on a document, users are displayed it on their [dashboard]({{page page='browsing-content#dashboard'}}) in the "My tasks" gadget and in their home **Workflow** tab. They also receive an email to inform them that they were assigned a task on a document:
+When they have a task on a document, users are displayed it on their [dashboard]({{page page='browsing-content'}}#dashboard) in the "My tasks" gadget and in their home **Workflow** tab. They also receive an email to inform them that they were assigned a task on a document:
 
 {{! multiexcerpt name='workflow-notification'}}
 > A task on the document Document_Title was assigned to you or to a group you belong to. You can consult the document following this link: Document_Title

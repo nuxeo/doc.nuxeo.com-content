@@ -162,7 +162,7 @@ Documents containing `hello` followed by `world` and also containing `smurf`:
 The following limitations apply:
 
 *   A query term (sequence of `AND`-ed words without an `OR`) containing only negations will not match anything.
-*   Depending on the back-end database and its configuration, different word stemming strategies may be used, which means that `universes` and `universal` (for instance) may or may not be considered the same word. Check your [database configuration]({{page page='database-configuration'}}) for more on this, and the [ "analyzer" parameter used in the Nuxeo configuration ]({{page page='repository-configuration#vcs-full-text-configuration'}}) for your database.
+*   Depending on the back-end database and its configuration, different word stemming strategies may be used, which means that `universes` and `universal` (for instance) may or may not be considered the same word. Check your [database configuration]({{page page='database-configuration'}}) for more on this, and the [ "analyzer" parameter used in the Nuxeo configuration ]({{page page='repository-configuration'}}#vcs-full-text-configuration) for your database.
 *   Phrase search using a PostgreSQL back-end database is supported and cannot use word stemming (i.e. a query of `"hello worlds"` will not match a document containing just `hello world` without a final `s`). This is due to way this feature is implemented, which is detailed at [NXP-6720](https://jira.nuxeo.com/browse/NXP-6720).
 *   MongoDB does not support prefix matching, so a query for `hel*` will **not** match `hello`.
 

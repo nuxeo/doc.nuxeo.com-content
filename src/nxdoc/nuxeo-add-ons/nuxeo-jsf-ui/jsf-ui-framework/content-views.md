@@ -618,7 +618,7 @@ The `fixedPart` element also accepts attributes to better control its behavior:
 
 {{#> callout type='info' }}
 
-Note that when using an Elasticsearch page provider you can use [NXQL hints]({{page space='NXDOC' page='NXQL#NXQL-ElasticsearchNXQLHints'}}) inside predicates like this:
+Note that when using an Elasticsearch page provider you can use [NXQL hints]({{page page='nxql'}}#elasticsearch-nxql-hints) inside predicates like this:
 
 ```xml
 <predicate hint="ES: INDEX(dc:title,dc:description)" parameter="dc:title" operator="FULLTEXT">

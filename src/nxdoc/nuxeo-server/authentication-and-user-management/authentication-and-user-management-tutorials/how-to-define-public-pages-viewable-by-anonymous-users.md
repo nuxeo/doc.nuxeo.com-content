@@ -244,7 +244,7 @@ The first step you need to take is to enable the anonymous user.
         Your filename must end with `-config.xml` to work properly.
         {{/callout}}
     *   Or you can use template system and copy it into `template/common/config/`.
-    *   Or you can add the `extension` element [as an **XML Extension** in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}}).
+    *   Or you can add the `extension` element [as an **XML Extension** in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension'}}#xml-extension-studio).
 2.  Modify `nuxeo.conf` and set&nbsp;`nuxeo.user.anonymous.enable=true`.
 3.  Restart the application server.&nbsp;
     After the server is up and running, when accessing Nuxeo again, the anonymous user will be used and logged into the application.

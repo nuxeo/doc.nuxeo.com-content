@@ -81,5 +81,5 @@ To enable navigation by UID (instead of path), the `org.nuxeo.web.ui.router.key.
 ```
 
 Other use case examples of the routing mechanism are:
- - the [USER_MENU]({{page page='web-ui-slots#user_menu'}}) slot
+ - the [USER_MENU]({{page page='web-ui-slots'}}#user_menu) slot
  - when [adding a new search]({{page version='' space='nxdoc' page='web-ui-search'}})

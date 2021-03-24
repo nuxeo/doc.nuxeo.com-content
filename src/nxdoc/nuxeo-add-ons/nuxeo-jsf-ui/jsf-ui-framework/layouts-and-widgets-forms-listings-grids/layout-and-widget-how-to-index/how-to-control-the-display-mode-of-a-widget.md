@@ -204,7 +204,7 @@ For instance, when you are editing a document layout, whether it is the creation
 *   `#{nxd:hasPermission(layoutValue, 'Editorial')?'edit':'view'}`
     This expression says that the widget will be editable only for users having the Editorial permission.
 
-You can also see the [reference documentation on layouts]({{page page='layout-and-widget-definitions'}}), more specifically the [EL expressions in layouts and widgets]({{page page='layout-and-widget-definitions#el-expressions-in-layouts-and-widgets'}}) section.
+You can also see the [reference documentation on layouts]({{page page='layout-and-widget-definitions'}}), more specifically the [EL expressions in layouts and widgets]({{page page='layout-and-widget-definitions'}}#el-expressions-in-layouts-and-widgets) section.
 
 * * *
 

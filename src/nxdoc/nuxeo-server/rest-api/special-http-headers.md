@@ -157,7 +157,7 @@ In order to have more control over REST API Calls, you can use the following spe
       <tr>
         <td>`source`</td>
         <td></td>
-        <td>Set this property in document context data to be used for automatic source-based versioning. See [source-based versioning]({{page page='versioning#source-based-versioning'}}) for more details.</td>
+        <td>Set this property in document context data to be used for automatic source-based versioning. See [source-based versioning]({{page page='versioning'}}#source-based-versioning) for more details.</td>
         <td>`source: REST`</td>
       </tr>
       <tr>
@@ -176,7 +176,7 @@ In order to have more control over REST API Calls, you can use the following spe
         <td>
           `depth: children` <br/>
           Accepted values: `root`, `children`, `max`. <br/>
-          See [Aggregating Marshallers and Avoiding Infinite Loops]({{page page='parameterizing-reusing-marshallers#aggregating-marshallers-infinite-loops'}}) for more details.
+          See [Aggregating Marshallers and Avoiding Infinite Loops]({{page page='parameterizing-reusing-marshallers'}}#aggregating-marshallers-infinite-loops) for more details.
         </td>
       </tr>
       <tr>
@@ -206,7 +206,7 @@ In order to have more control over REST API Calls, you can use the following spe
 {{#> panel heading='Related Documentation'}}
 
 - [JSON Marshalling]({{page page='json-marshalling'}})
-- [Ngnix bug]({{page space='ADMINDOC' page='HTTP and+HTTPS+Reverse-Proxy+Configuration#HTTPandHTTPSReverse-ProxyConfiguration-Ngnixissue'}})
+- [Ngnix bug]({{page page='http-and-https-reverse-proxy-configuration'}}#ngnix-issue)
 {{/panel}}
   </div>
 </div>

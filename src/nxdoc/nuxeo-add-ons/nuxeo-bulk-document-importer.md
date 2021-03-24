@@ -675,7 +675,7 @@ The format of this `.properties` file is the same as the one described above. If
 
 To use this node type you need to redefine the importer. There are two ways to do so:
 
-*   [ Add an XML extension in your Nuxeo Studio project]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}})with the following content:
+*   [Add an XML extension in your Nuxeo Studio project]({{page page='how-to-contribute-to-an-extension'}}#xml-extension-studio)with the following content:
 
     ```xml
      <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
@@ -721,7 +721,7 @@ The structure used by this class is identical to what **FileWithIndividualMetada
 
 To enable this node type, redefine the importer using one of these methods:
 
-*   [Add an XML extension in your Nuxeo Studio project]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}})with the following content:
+*   [Add an XML extension in your Nuxeo Studio project]({{page page='how-to-contribute-to-an-extension'}}#xml-extension-studio)with the following content:
 
     ```xml
     <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>

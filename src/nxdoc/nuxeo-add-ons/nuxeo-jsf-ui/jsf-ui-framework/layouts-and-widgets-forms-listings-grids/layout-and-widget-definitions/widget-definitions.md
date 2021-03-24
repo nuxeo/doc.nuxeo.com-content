@@ -349,7 +349,7 @@ You can also reference global widgets for subwidgets. Here is a sample configura
 </widget>
 ```
 
-If you need a richer structure to handle subwidgets, you can also consider using a ["layout" widget type]({{page page='advanced-widget-types#layout'}}) to render a layout via a widget.
+If you need a richer structure to handle subwidgets, you can also consider using a ["layout" widget type]({{page page='advanced-widget-types'}}#layout) to render a layout via a widget.
 
 ## {{> anchor 'controls'}}Widget Controls
 

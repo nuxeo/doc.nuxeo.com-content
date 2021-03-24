@@ -220,7 +220,7 @@ In this case, the ID of the document is the parent document's ID, and the `name`
 
 ### Updating a Document
 
-To update a document, use PUT on the document resource and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types#document'}}) as data. You could pass the full set of data but it's not mandatory.
+To update a document, use PUT on the document resource and pass a reduced version of the [entity type content]({{page page='rest-api-entity-types'}}#document) as data. You could pass the full set of data but it's not mandatory.
 
 {{#> panel type='code' heading='PUT Request'}}
 

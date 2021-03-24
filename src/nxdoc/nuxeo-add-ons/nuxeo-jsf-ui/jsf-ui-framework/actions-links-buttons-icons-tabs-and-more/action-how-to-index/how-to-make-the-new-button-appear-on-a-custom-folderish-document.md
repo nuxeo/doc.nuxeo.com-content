@@ -168,7 +168,7 @@ The steps below explain how to have the same **New** button as the one on the Co
 3.  On the Layout widget editor:
 
     1.  Check the **Hide label** box.
-    2.  Choose the category "[Folder Toolbar]({{page space='studio' page='user-actions-categories#subview_upper_list'}})".&nbsp;
+    2.  Choose the category "[Folder Toolbar]({{page space='studio' page='user-actions-categories'}}#subview_upper_list)".&nbsp;
     3.  In the **Action display** list, select "Button".
 4.  Click on **Save**.
     The **New** button will be available in your custom tab.

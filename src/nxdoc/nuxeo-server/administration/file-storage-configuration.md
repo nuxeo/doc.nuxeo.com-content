@@ -197,8 +197,8 @@ To register a new blob provider, use the [`blobprovider`](http://explorer.nuxeo.
 
 You will find existing implementations in the binary store main documentation page, with links to specific configuration instructions:
 
-*   [the ones that can be configured without additional addon]({{page page='file-storage#filestorage-defaultblobproviders'}})
-*   [the ones that require installation of an addon]({{page page='file-storage#filestorage-additionalblobproviders'}}).
+*   [the ones that can be configured without additional addon]({{page page='file-storage'}}#default-blob-provider)
+*   [the ones that require installation of an addon]({{page page='file-storage'}}#additional-blob-providers).
 
 Usually, if you don't use the advanced Blob Dispatcher capabilities, you will need one binary manager per Nuxeo repository. By default Nuxeo uses a binary manager with the same name as each repository, for instance the "default" repository will use the "default" binary manager. For a standard Nuxeo instance with a single repository, this is all taken care of for you by the default template.
 

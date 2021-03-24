@@ -170,7 +170,7 @@ And you gain the limit/offset options.
 
 {{#> callout type='warning' }}
 
-For now the select clause support is limited to scalar properties. See the page [Elasticsearch limitations]({{page space='NXDOC' page='Elasticsearch Indexing+Logic#ElasticsearchIndexingLogic-SearchingandLimitations'}}) for more information.
+For now the select clause support is limited to scalar properties. See the page [Elasticsearch limitations]({{page page='elasticsearch-indexing-logic'}}#searching-and-limitations) for more information.
 
 {{/callout}}
 
@@ -238,11 +238,11 @@ DROP INDEX fulltext_fulltext_title_idx;
 
 {{/callout}}
 
-## Going further with Elasticsearch
+## Going Further with Elasticsearch
 
 ### Searching over Multiple Repositories
 
-If you have set up a [multi repositories configuration]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-ConfigurationforMultiRepositories'}}) to query over them just use the `searchOnAllRepositories` option:
+If you have set up a [multi repositories configuration]({{page page='elasticsearch-setup'}}#configuration-for-multi-repositories) to query over them just use the `searchOnAllRepositories` option:
 
 ```
 docs = ess.query(new NxQueryBuilder(session).nxql(nxql).searchOnAllRepositories());

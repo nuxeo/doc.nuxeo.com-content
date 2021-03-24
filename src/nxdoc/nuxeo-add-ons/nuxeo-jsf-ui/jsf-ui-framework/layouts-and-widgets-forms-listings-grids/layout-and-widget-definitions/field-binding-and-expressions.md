@@ -199,7 +199,7 @@ Using the `field` property means that you expect the layout system to perform th
 
 ### Listing Use Case
 
-Depending on the value given to the `nxl:layout` tag, the field definition may change. For instance, in a listing, the layout is not usually rendered on the document, but on a [`PageSelection`](http://community.nuxeo.com/api/nuxeo/7.4/javadoc/org/nuxeo/ecm/platform/query/api/PageSelection.html) element, wrapping the&nbsp; [`DocumentModel`](http://community.nuxeo.com/api/nuxeo/7.4/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to handle selection information. So a [ `text` widget]({{page page='basic-widget-types#widget-text'}}) showing the widget `title` would have the field binding `data['dc']['title']` instead of `dc:title`.
+Depending on the value given to the `nxl:layout` tag, the field definition may change. For instance, in a listing, the layout is not usually rendered on the document, but on a [`PageSelection`](http://community.nuxeo.com/api/nuxeo/7.4/javadoc/org/nuxeo/ecm/platform/query/api/PageSelection.html) element, wrapping the&nbsp; [`DocumentModel`](http://community.nuxeo.com/api/nuxeo/7.4/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to handle selection information. So a [ `text` widget]({{page page='basic-widget-types'}}#widget-text) showing the widget `title` would have the field binding `data['dc']['title']` instead of `dc:title`.
 
 ```xml
 <widget name="title" type="text">
