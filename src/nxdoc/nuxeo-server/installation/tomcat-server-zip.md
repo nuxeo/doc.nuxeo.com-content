@@ -131,6 +131,20 @@ As for any software, we very strongly recommend upgrading to the latest bugfix v
 
 Download the ZIP archive from the [Nuxeo distribution download site](https://connect.nuxeo.com/nuxeo/site/connect/distributions) and unzip it using your favorite tool.
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Install Nuxeo with the ZIP distribution/connect_distribution.png
+    name: connect_distribution.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![connect_distribution.png](nx_asset://d0115b27-1597-44d0-86f1-3fc036cce797 ?w=650,border=true)
+
+Then:
+1. Unzip the file
+1. Navigate to the `bin` directory
+1. Register your Nuxeo instance running `nuxeoctl register`
+1. Optionnaly, install your addons with `nuxeoctl mp-install <package_name>` command line
+1. Start your Nuxeo server with `nuxeoctl start`
+
 ## OS Specificities
 
 ### Linux
