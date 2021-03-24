@@ -472,8 +472,8 @@ Make sure no jobs are still queued or running before starting the upgrade proced
         {{#> callout type='warning' }}
         Be very careful about the two properties allowing to configure the backend for audit logs, make sure you read the related documentation:
 
-        *   `audit.elasticsearch.enabled`: [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup#disablingelasticsearchforauditlogs'}})
-        *   `audit.elasticsearch.migration`: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page page='elasticsearch-setup#triggeringsqltoelasticsearchauditlogsmigration'}})
+        *   `audit.elasticsearch.enabled`: [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-elasticsearch-for-audit-logs)
+        *   `audit.elasticsearch.migration`: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='810' page='elasticsearch-setup'}}#triggering-sql-to-elasticsearch-audit-logs-migration)
         {{/callout}}
         *   Replace the old nuxeo.conf file with this new one.
 6.  [Upgrade your Nuxeo Packages](#marketplace-packages-upgrade).

@@ -268,7 +268,7 @@ These variables can be used to control the layout rendering. For instance, the d
 This template also shows that:
 
 *   Layout templates can handle properties set on the layout definition (here to control the display of its subwidgets via a property named&nbsp;`widgetsDisplay`).
-*   Layout templates can check [controls set on widgets configuration]({{page page='widget-definitions#controlswidgetcontrols'}}) (here to add a form around the widget or not).
+*   Layout templates can check [controls set on widgets configuration]({{page page='widget-definitions'}}#widget-controls) (here to add a form around the widget or not).
 
 ## Listing Template
 
@@ -490,7 +490,7 @@ Some helper methods make it easier to check the widget mode, here is the complet
 
 Note that extra spaces have been removed when rendering in the "plain" mode as these spaces may appear on the final rendering (in CSV columns for instance).
 
-When this template is included in the page, the&nbsp;`widget` variable is made available. For a complete list of available variables, please refer to the [EL expressions documentation]({{page page='field-binding-and-expressions#el-expressions-in-layout-widgets'}}).
+When this template is included in the page, the&nbsp;`widget` variable is made available. For a complete list of available variables, please refer to the [EL expressions documentation]({{page page='field-binding-and-expressions'}}#el-expressions-in-layout-widgets).
 
 Some rules must be followed when writing XHTML to be included in templates:
 

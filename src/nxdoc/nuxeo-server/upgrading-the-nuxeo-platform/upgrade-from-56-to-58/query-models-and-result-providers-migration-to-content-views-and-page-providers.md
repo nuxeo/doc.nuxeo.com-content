@@ -156,7 +156,7 @@ Old templates displaying paged lists of documents have been removed, the templat
 
 {{/panel}}
 
-Also, the old templates displaying listings of documents were not relying on layouts, so migration may include defining [ listing layouts ]({{page page='layout-definitions#listing-layout'}}) and widget templates when migrating to content views.
+Also, the old templates displaying listings of documents were not relying on layouts, so migration may include defining [ listing layouts ]({{page page='layout-definitions'}}#listing-layout) and widget templates when migrating to content views.
 
 ## Migration Use Cases
 

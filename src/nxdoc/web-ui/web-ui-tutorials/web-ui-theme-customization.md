@@ -44,7 +44,7 @@ All the resources for each theme are located on the `/themes/{name}` folder, whe
 
 - `/themes/{name}/background.png` image used as background (optional, available for some themes only).
 
-To add a new theme or customize one of the provided ones you can simply deploy and override theme resources as described in [How to deploy additional Web UI resources]({{page page='web-ui-deployment#deploy_or_override'}}).
+To add a new theme or customize one of the provided ones you can simply deploy and override theme resources as described in [How to deploy additional Web UI resources]({{page page='web-ui-deployment'}}#deploy_or_override).
 
 ## Create a Theme
 
@@ -110,7 +110,7 @@ html {
 
 And add a `background.png` image to `/themes/new-light` to use as background.
 
-Now, to make the new theme avaliable, you need to add the new-light theme as a [slot]({{page page='web-ui-slots'}}) contribution, using the [THEMES]({{page page='web-ui-slots#themes'}}) slot as follows:
+Now, to make the new theme avaliable, you need to add the new-light theme as a [slot]({{page page='web-ui-slots'}}) contribution, using the [THEMES]({{page page='web-ui-slots'}}#themes) slot as follows:
 
 ```xml
 <nuxeo-slot-content name="new-light-theme" slot="THEMES" order="50">

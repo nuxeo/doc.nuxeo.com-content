@@ -166,7 +166,7 @@ Since 7.4, a new audit category called **Routing** has been added for the follow
 *   `afterWorkflowTaskReassigned`
 *   `afterWorkflowTaskDelegated`
 
-For all these events, we log useful information regarding the workflow and/or node state in the [extended info]({{page page='audit#extendedinfo'}}) of the audit entry. The table below summarizes which extended info is logged depending on the event.
+For all these events, we log useful information regarding the workflow and/or node state in the [extended info]({{page page='audit'}}#extendedinfo) of the audit entry. The table below summarizes which extended info is logged depending on the event.
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1"></th><th colspan="1">modelName</th><th colspan="1">modelId</th><th colspan="1">workflowInitator</th><th colspan="1">taskActor</th><th colspan="1">workflowVariables</th><th colspan="1">nodeVariables</th><th colspan="1">action</th><th colspan="1">timeSinceWfStarted</th><th colspan="1">timeSinceTaskStarted</th></tr><tr><th colspan="1">afterWorkflow
 Finish</th><td colspan="1">x</td><td colspan="1">x</td><td colspan="1">x</td><td colspan="1"></td><td colspan="1">x</td><td colspan="1"></td><td colspan="1"></td><td colspan="1">x</td><td colspan="1"></td></tr><tr><th colspan="1">afterWorkflow
@@ -191,7 +191,7 @@ Where:
 
 {{#> callout type='info' }}
 
-Note that since Nuxeo 7.3, the audit is stored by default as an Elasticsearch index which offers the possibility to store the [extended info]({{page page='audit#extendedinfo'}}) as plain JSON objects. The `workflowVariables` and `nodeVariables` are indeed maps of primitive types and therefore are stored in their current forms except for blob variables which are omitted.
+Note that since Nuxeo 7.3, the audit is stored by default as an Elasticsearch index which offers the possibility to store the [extended info]({{page page='audit'}}#extendedinfo) as plain JSON objects. The `workflowVariables` and `nodeVariables` are indeed maps of primitive types and therefore are stored in their current forms except for blob variables which are omitted.
 
 {{/callout}}
 
@@ -363,7 +363,7 @@ Then the user completes the task associated to the `wf.travelExpenses.create` no
     }
     ```
 
-    At this stage, the [extended info]({{page page='audit#extendedinfo'}}) contains interesting data such as `timeSinceWfStarted`, `timeSinceTaskStarted`, `action` (i.e. the button the user clicked to complete the task), etc.
+    At this stage, the [extended info]({{page page='audit'}}#extendedinfo) contains interesting data such as `timeSinceWfStarted`, `timeSinceTaskStarted`, `action` (i.e. the button the user clicked to complete the task), etc.
 
 *   Another one for the `afterWorkflowTaskCreated` event because the workflow creates a task associated to the `Accept/Reject` node right after:
 

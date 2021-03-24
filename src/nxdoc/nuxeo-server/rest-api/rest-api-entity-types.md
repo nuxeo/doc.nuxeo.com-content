@@ -449,7 +449,7 @@ The list of properties depends on the schema of the directory. See the [develope
 }
 ```
 
-*   **properties**: those are the properties defined for the user. [They can be customized]({{page page='authentication-and-user-management#authenticationandusermanagement-addingnewfieldstotheuserprofileorgroupprofile'}}).
+*   **properties**: those are the properties defined for the user. [They can be customized]({{page page='how-to-add-new-fields-to-the-user-profile-or-group-profile'}}).
 
 *   **extendedGroups**: this section gathers the explicit groups and the computed groups (See an [exemple of using the computed groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})). This section is computed server-side and is not taken into account when posting a user object.
 

@@ -203,7 +203,7 @@ Draft version 0.0 is not archived. See the page [Editing Content]({{page page='e
 
 {{/callout}}
 
-Archived versions have few actions available: you can only [create relations]({{page page='editing-content#relations'}}) from it to another document and subscribe to [notifications]({{page page='collaborative-features#alerts'}}).
+Archived versions have few actions available: you can only [create relations]({{page page='editing-content'}}#relations) from it to another document and subscribe to [notifications]({{page page='collaborative-features'}}#alerts).
 
 ![]({{file name='archived-versions.png'}} ?w=650,border=true)
 

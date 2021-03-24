@@ -198,13 +198,13 @@ See [NXP-21891](https://jira.nuxeo.com/browse/NXP-21891).
 
 {{! multiexcerpt name='upgrade-9.1-deprecated.automatic-versioning'}}
 
-We introduced a new automatic versioning system in 9.1. We deprecated [versioningRules](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningRules) extension point. You now have to use new extension points, see [documentation]({{page page='versioning#automatic-versioning-system'}}).
+We introduced a new automatic versioning system in 9.1. We deprecated [versioningRules](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningRules) extension point. You now have to use new extension points, see [documentation]({{page page='versioning'}}#automatic-versioning-system).
 
 Nuxeo provides a backward compatibility mechanism, but it could be not accurate.
 
 Previous automatic versioning mechanisms were removed or upgraded to new system:
 
-- File manager and bulk edit don't automatically version documents since 9.1, you could put back this behavior by contributing a new rule and use [source]({{page page='versioning#source-based-versioning'}}) parameter to restrict versioning to this functionalities (for instance use: `fileimporter-{name-of-your-importer}` or `bulkEdit`)
+- File manager and bulk edit don't automatically version documents since 9.1, you could put back this behavior by contributing a new rule and use [source]({{page page='versioning'}}#source-based-versioning) parameter to restrict versioning to this functionalities (for instance use: `fileimporter-{name-of-your-importer}` or `bulkEdit`)
 - Nuxeo Drive is not responsible of automatic versioning anymore. The last contributor rule is now a default policy, and delay rule is introduced by Nuxeo Drive and rely on [source]({{page page='versioning#source-based-versioning'}}) parameter mechanism.
 
 {{#> callout type='note' }}

@@ -201,7 +201,7 @@ To complete this how-to, you need the elements below to be already configured in
 
 **To implement the metadata inheritance listener:**
 
-1.  Create a new **Event Handler** (see [how to bind an automation chain to an event handler]({{page page='how-to-create-an-automation-chain#automation-chain-binding-event-handler'}})).
+1.  Create a new **Event Handler** (see [how to bind an automation chain to an event handler]({{page page='how-to-create-an-automation-chain'}}#to-an-event-handler)).
 2.  Fill in the filtering information below:
     *   Events: Document created
     *   Current document has one of the types: `DocumentationItem`

@@ -141,7 +141,7 @@ In this example, you will define a filter for the action "`New`", which should b
     ![]({{file name='uidevmode.png'}} ?w=600,border=true)
 2.  Add a contribution in your Studio project to create a filter for the action we would like to hide. This contribution extends the service `org.nuxeo.ecm.platform.actions.ActionService` for the point `actions`. Create also the filter `denyForGroup1`: In the same contribution, you have to extend the service `org.nuxeo.ecm.platform.actions.ActionService` for the point `filters`. Please refer to the section about [Filters and Access Controls]({{page page='filters-and-access-controls'}}).
 
-    If you are not familiar with the contribution of an extension in Studio, please read this documentation: [How to Contribute to an Extension]({{page space='NXDOC' page='How to+Contribute+to+an+Extension#HowtoContributetoanExtension-ContributingUsingNuxeoStudio'}}).
+    If you are not familiar with the contribution of an extension in Studio, please read this documentation: [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}}#contributing-using-nuxeo-studio).
 
     {{#> panel type='code' heading='src/main/resources/OSGI-INF/actions-contribution.xml'}}
 

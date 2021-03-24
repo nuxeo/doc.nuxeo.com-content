@@ -150,7 +150,7 @@ There are several kinds of products built by the `nuxeo-distribution` module:
 *   Static resources like configuration templates.
 *   The Nuxeo NXR for use in package assemblies.
 *   The Nuxeo Server Tomcat distribution.
-*   Standalone products to embed in a final package like the Launcher (aka [NuxeoCtl]({{page page='understanding-bundles-deployment#nuxeoctl'}})).
+*   Standalone products to embed in a final package like the Launcher (aka [NuxeoCtl]({{page page='understanding-bundles-deployment'}}#nuxeoctl)).
 
 Sample usage:
 

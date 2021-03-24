@@ -175,7 +175,7 @@ The following elements are not available on the published document:
 *   The relations
 
     {{#> callout type='info' }}
-    It is possible to [enable the duplication of relations]({{page space='nxdoc' page='publisher#publication-relations-duplication'}}) when the document is published.
+    It is possible to [enable the duplication of relations]({{page space='nxdoc' page='publisher'}}#publication-relations-duplication) when the document is published.
     {{/callout}}
 *   The archived versions of the document
 
