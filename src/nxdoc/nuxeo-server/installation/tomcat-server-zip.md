@@ -15,6 +15,18 @@ tree_item_index: 275
 
 {{{multiexcerpt 'lts2021-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University:</br>
+- [Nuxeo Platform Quickstart](https://university.nuxeo.com/learn/course/external/view/elearning/143/nuxeo-platform-quickstart)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_quickstart.png
+    name: university_quickstart.png
+    server#screenshot#up_to_date
+--}}
+![university_quickstart.png](nx_asset://2e9054c7-c6f3-4d2b-ae10-6221e17b3be8 ?w=450,border=true)
+{{/callout}}
+
+
 ## General Installation Process
 
 Installing the Nuxeo Platform requires a few steps:
