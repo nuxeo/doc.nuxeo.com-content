@@ -85,8 +85,10 @@ history:
         date: '2013-07-11 19:36'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'JSF-UI-required' space='nxdoc' page='generic-multi-excerpts'}}}
+
 ## Concept
 
 User actions are meant to execute a predefined action or list of actions (namely an operation chain) when clicking on a link or button. You can read more about them in the [developers section]({{page space='nxdoc' page='actions-links-buttons-icons-tabs-and-more'}}).
