@@ -12,6 +12,8 @@ labels:
 toc: true
 tree_item_index: 100
 ---
+New image:
+
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/TEST DOC ADDON/mydocassettest
     name: workflow_web-ui.png
