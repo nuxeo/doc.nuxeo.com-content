@@ -1,5 +1,5 @@
 ---
-title: Install Nuxeo with the ZIP distribution
+title: Install Nuxeo With the ZIP Distribution
 review:
   date: '2021-01-29'
   status: ok
@@ -151,11 +151,11 @@ Download the ZIP archive from the [Nuxeo distribution download site](https://con
 ![connect_distribution.png](nx_asset://d0115b27-1597-44d0-86f1-3fc036cce797 ?w=650,border=true)
 
 Then:
-1. Unzip the file
-1. Navigate to the `bin` directory
-1. Register your Nuxeo instance running `nuxeoctl register`
-1. Optionnaly, install your addons with `nuxeoctl mp-install <package_name>` command line
-1. Start your Nuxeo server with `nuxeoctl start`
+1. Unzip the file,
+1. Navigate to the `bin` directory,
+1. Register your Nuxeo instance running `nuxeoctl register`,
+1. Optionally, install your addons with `nuxeoctl mp-install <package_name>` command line,
+1. Start your Nuxeo server with `nuxeoctl start`. 
 
 ## OS Specificities
 
