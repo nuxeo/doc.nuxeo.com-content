@@ -363,7 +363,7 @@ Elasticsearch for audit logs is set as the default back-end for new install but 
     nuxeoctl config audit.elasticsearch.migration false
     ```
 
-Take into account the audit related Elasticsearch indexes when backing up / restoring a Nuxeo instance, so make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{{page page='backup-and-restore'}}#backing-up-and-restoring-the-audit-elasticsearch-index) section.
+Take into account the audit related Elasticsearch indexes when backing up / restoring a Nuxeo instance, so make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}#backing-up-and-restoring-the-audit-elasticsearch-index) section.
 
 **Related Configuration Parameters**
 
