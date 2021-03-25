@@ -251,8 +251,6 @@ The Nuxeo Marketplace package can be found [here](https://connect.nuxeo.com/nuxe
 
 Server requirements:
 - You must be on HF-34 at least to benefit from all required bugfixes for an optimal experience with the Salesforce connector.
-- You also must set `sameSite` cookie policy in `nuxeo.conf`:
-`nuxeo.server.cookies.sameSite=none`.
 - Server must always be accessed in HTTPS.
 - If you deploy with direct download enabled, you will have to deploy a CORS configuration on the S3 bucket to allow downloads from  *force.com* type of URLs.
 
@@ -268,10 +266,11 @@ The Nuxeo Salesforce package is currently made available as an [unlocked package
 To install the version of the unlocked salesforce package, that has been validated with the version of the Nuxeo marketplace package installed on your pre-production Nuxeo server instance, using `sfdx` client:
 
 ```
-sfdx force:package:install -p 04t7R000001WYVjQAO -k nxapp@sfdc
+sfdx force:package:install -p SFpackageID -k nxapp@sfdc
 ```
 
-`04t7R000001WYVjQAO` is the version id of the salesforce package for 10.10.14 version of the Nuxeo Marketplace package. We will let on the Nuxeo Package description on the Nuxeo Marketplace the right Salesforce package version id to use for a given Nuxeo package version.  
+`SFpackageID` is the salesforce package version ID. You can ask to Nuxeo Support for getting the version ID required with the version of the Salesforce package you are installing.  
+
 
 ### Post Installation Setup
 
