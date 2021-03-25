@@ -238,7 +238,7 @@ nuxeo.security.allowNegativeACL=true
 
 ### Upgrading Your Production Architecture
 
-Elasticsearch is not mandatory: you can [keep on querying VCS (the database)]({{{page page='elasticsearch-setup'}}#disabling-elasticsearch) and use the database full-text index.
+Elasticsearch is not mandatory: you can [keep on querying VCS (the database)]({{page page='elasticsearch-setup'}}#disabling-elasticsearch) and use the database full-text index.
 
 {{#> callout type='warning' }}
 
