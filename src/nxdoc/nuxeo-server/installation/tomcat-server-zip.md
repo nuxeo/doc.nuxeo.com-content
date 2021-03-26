@@ -16,8 +16,8 @@ tree_item_index: 275
 {{{multiexcerpt 'lts2021-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 {{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
-- [Nuxeo Platform Quickstart](https://university.nuxeo.com/learn/course/external/view/elearning/143/nuxeo-platform-quickstart)
+Watch the related course on Nuxeo University:</br>
+[Nuxeo Platform Quickstart](https://university.nuxeo.com/learn/course/external/view/elearning/143/nuxeo-platform-quickstart)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_quickstart.png
     name: university_quickstart.png
@@ -155,7 +155,7 @@ Then:
 1. Navigate to the `bin` directory,
 1. Register your Nuxeo instance running `nuxeoctl register`,
 1. Optionally, install your addons with `nuxeoctl mp-install <package_name>` command line,
-1. Start your Nuxeo server with `nuxeoctl start`. 
+1. Start your Nuxeo server with `nuxeoctl start`.
 
 ## OS Specificities
 
