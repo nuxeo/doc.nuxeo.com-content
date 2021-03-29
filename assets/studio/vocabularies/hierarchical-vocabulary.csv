@@ -1,7 +1,0 @@
-"id","label","parent","obsolete"
-"europe","Europe","","0"
-"france","France","europe","0"
-"spain","Espagne","europe","0"
-"america","America","","0"
-"usa","United States of America","america","0"
-"mexico","Mexico","america","0"
