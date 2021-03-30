@@ -114,6 +114,7 @@ To get high availability, we need a Kafka cluster with 2 Kafka nodes. To orchest
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Going further'}}
 
 - [Kafka configuration]({{page version='' space='nxdoc' page='kafka'}}#configuration)
+- [Redis configuration]({{page version='' space='nxdoc' page='redis-configuration'}})
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>

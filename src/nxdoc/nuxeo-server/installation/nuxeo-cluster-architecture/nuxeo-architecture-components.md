@@ -75,4 +75,7 @@ This diagram represents the logical architecture for a Nuxeo cluster. It contain
 </center>
 </div>
 
-*Note: Redis and PubSub are at the same level as the "File Storage", the "Database", "Elasticsearch" and "Async processing" bricks: a new line is added for readability purposes*
+{{#> callout type='note'}}
+- **Redis** and **PubSub** are at the same level as the **File Storage**, **Database**, **Elasticsearch** and **Async processing** bricks. A new line has been added for readability purpose.
+- **Redis** is not a mandatory architecture component if **Kafka** is deployed.
+{{/callout}}
