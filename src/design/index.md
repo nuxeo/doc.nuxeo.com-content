@@ -1,6 +1,6 @@
 ---
-title: Nuxeo Technical Blog
-description: Blog posts for Nuxeo Technologies
+title: Nuxeo Design Guidelines
+description: Design Guidelines discussing and describing visual design language and components
 review:
   comment: ''
   date: ''
