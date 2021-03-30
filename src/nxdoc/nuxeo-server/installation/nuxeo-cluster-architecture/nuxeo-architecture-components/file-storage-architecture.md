@@ -1,6 +1,6 @@
 ---
 title: File Storage
-description: 
+description:
 labels:
     - deployment
     - bchauvin
@@ -20,17 +20,19 @@ tree_item_index: 400
 
 Nuxeo stores binaries attached to the documents on a file system by default. That can be a shared file system, a NAS, an Amazon S3 bucket or its Microsoft Azure equivalent, etc. More options are available depending on your target deployment. This is described in the [Storage Alternatives](#storage-alternatives) section below.
 
-## Recommandation
+## Recommendation
 
 ### File Sharing
 
-- The shared filesystem is usually an NFS mount. You **must not** share the whole Nuxeo installation tree (see below). The complete Nuxeo instance hierarchy **must not** be shared between all instances. However the following things must be shared.
-- All the binary stores **must** be shared by all Nuxeo instances in order for the document repository and transient stores to function correctly.
-- The temporary directory configured through `nuxeo.tmp.dir` **must not** be shared by all instances, because there are still a few name collision issues that may occur, especially during startup.
+The shared filesystem is usually an NFS mount. You **must not** share the whole Nuxeo installation tree (see below).
 
-### Storage recommandation
+The complete Nuxeo instance hierarchy **must not** be shared between all instances. However the following things must be shared:
+  - All the binary stores **must** be shared by all Nuxeo instances in order for the document repository and transient stores to function correctly.
+  - The temporary directory configured through `nuxeo.tmp.dir` **must not** be shared by all instances, because there are still a few name collision issues that may occur, especially during startup.
 
-You can store your binaries on a local storage (like a NAS). However, we recommend to use the **Amazon S3 Online Storage** with **S3 Direct Upload** whenever possible, with Client-Side Encryption. 
+### Storage Recommendation
+
+You can store your binaries on a local storage (like a NAS). However, we recommend to use the **Amazon S3 Online Storage** with **S3 Direct Upload** whenever possible, with Client-Side Encryption.
 
 ## Configuration
 
@@ -55,7 +57,6 @@ Therefore in a cluster setting you should point `repository.binary.store` to a f
 - etc.
 
 You can of course use a different path than `/var/lib/nuxeo/binaries`.
-
 The above does not apply if binaries are stored in a network-based location, like S3.
 
 ### Temporary Directory

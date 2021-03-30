@@ -1,6 +1,6 @@
 ---
 title: Database
-description: 
+description:
 labels:
     - deployment
     - bchauvin
@@ -36,7 +36,7 @@ Each database has its own solutions for high availability, therefore we may not 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Going further'}}
 
-- [MongoDB configuration]({{page version='' space='nxdoc' page='mongodb'}})
+- [MongoDB Configuration]({{page page='mongodb'}})
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>

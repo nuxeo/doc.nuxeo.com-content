@@ -1,6 +1,6 @@
 ---
 title: Redis
-description: 
+description:
 review:
     comment: ''
     date: '2021-03-10'
@@ -17,7 +17,7 @@ When a Redis instance or cluster is set up, you can safely stop your Nuxeo serve
 
 Keep in mind that Redis is always limited by its available memory which can be a problem on a mass operation.
 
-## Recommandation
+## Recommendation
 
 For high availability, a Redis cluster with a minimum of **three nodes** is required (for the same reasons as Elasticsearch).
 
@@ -37,7 +37,7 @@ Depending on the importance of these jobs in your application (for instance they
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Going further'}}
 
-- [Redis configuration]({{page version='' space='nxdoc' page='redis-configuration'}})
+- [Redis Configuration]({{page version='' space='nxdoc' page='redis-configuration'}})
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>

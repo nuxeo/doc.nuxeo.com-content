@@ -1,6 +1,6 @@
 ---
-title: Compact architecture with Kafka
-description: 
+title: Compact Architecture with Kafka
+description:
 review:
     comment: ''
     date: '2021-03-12'
@@ -9,18 +9,18 @@ toc: true
 tree_item_index: 200
 ---
 
-## Architecture description
+## Architecture Description
 
-Compared to the the [Compact Architecture with Redis]({{page page='compact-architecture-with-redis'}}), this architecture includes Kafka in the architecture. Consequently, Nuxeo Stream and the Bulk Service relies on Kafka, providing significant performance improvement compared to a Redis-based infrastructure. Redis and Chronicle Queue are no longer necessary by the Nuxeo architecture.
+Compared to the [Compact Architecture with Redis]({{page page='compact-architecture-with-redis'}}), this one works with Kafka. Consequently, Nuxeo Stream and the Bulk Service relies on Kafka, providing significant performance improvement compared to a Redis-based infrastructure. Redis and Chronicle Queue are no longer necessary by the Nuxeo architecture.
 
-This is a compact architecture because it includes a single node for Kafka, so you don't need to deploy Zookeeper to keep track of status of the Kafka cluster nodes, Kafka topics, partitions etc. 
+This is a compact architecture because it includes a single node for Kafka, so you don't need to deploy Zookeeper to keep track of status of the Kafka cluster nodes, Kafka topics, partitions etc.
 
 In this architecture:
-1. A load balancer with sticky sessions is used.
-1. A total of two machines are prepared for the application cluster. Each machine holds a Nuxeo server node and a reverse proxy. More machines can be added later for scalability purpose.
-1. An Elasticsearch cluster with at least 3 nodes
-1. A database cluster with at least 2 nodes
-1. A **Kafka node** as the default implementation for Nuxeo Stream
+- A load balancer with sticky sessions is used.
+- A total of two machines are prepared for the application cluster. Each machine holds a Nuxeo server node and a reverse proxy. More machines can be added later for scalability purpose.
+- An Elasticsearch cluster with at least 3 nodes
+- A database cluster with at least 2 nodes
+- A **Kafka node** as the default implementation for Nuxeo Stream
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Scalability Options/compact-with-kafka-1.png
@@ -31,6 +31,6 @@ In this architecture:
 
 ## Limitations
 
-- Kafka is the single point of failure, so, in case of failure, scheduled jobs might be lost. To solve this issue, several Kafka nodes are needed, as well as Zookeeper.
+- Kafka is the single point of failure. In case of failure, scheduled jobs might be lost. To solve this issue, several Kafka nodes are needed, as well as Zookeeper.
 
 **→ Jump to the [Distributed architecture with Kafka]({{page page='distributed-architecture-with-kafka'}})** to provide a full high availability and fault tolerant Nuxeo architecture.

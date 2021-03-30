@@ -9,13 +9,11 @@ toc: false
 tree_item_index: 1390
 ---
 
-## Storage Alternatives
-
 Nuxeo is pluggable so that it can be adapted to different deployment environments and use cases.
 
-This means you can define where you want to manage your data, and because the answer may depend on the type of data. Nuxeo provides different types of backend for different types of storage.
+This means you can define where you want to manage your data, and because the answer may depend on the type of data. Nuxeo provides different types of backends for different types of storage.
 
-### Document Storage
+## Document Storage
 
 You can configure:
 
@@ -52,7 +50,7 @@ You can configure:
 </div>
 
 
-### Indexes
+## Indexes
 
 You can also select where you store the indexes (including the full-text)
 
@@ -63,7 +61,7 @@ You can also select where you store the indexes (including the full-text)
 
 Since 6.0, the default configuration uses Elasticsearch.
 
-### Others
+## Others
 
 In the same logic, you can choose:
 - Where you store the caches and transient data
