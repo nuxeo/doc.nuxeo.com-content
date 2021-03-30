@@ -84,6 +84,10 @@ This is a recurrent demand from our customers. So here is a quick guide to add a
 
 {{! /excerpt}}
 
+{{#> callout type='warning' }}
+This page describes the main principles and steps to integrate an antivirus with Nuxeo Platform. However this integration has never been implemented or tested by Nuxeo team. And it may require more efforts to plug all the services which manipulates files and blobs.
+{{/callout}}
+
 ## Main Guidelines
 
 One way to implement an antivirus scan for uploaded documents without any significant performance hit at creation time would be to:
