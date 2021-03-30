@@ -204,7 +204,7 @@ The Nuxeo Marketplace is the Nuxeo application store for DAM and ECM. It offers 
 
 The list of available packages is available to everyone, but only Connect subscribers can [install them on their application]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}), after they have registered their instances. As a Connect user, you can also comment on packages.
 
-The Marketplace offers packages aimed at developers and other that provide new features to end-users. The list of all Nuxeo Packages is [on the Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/product/all).
+The Marketplace offers packages aimed at developers and other that provide new features to end-users. The list of all Nuxeo Packages is [on the Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace).
 
 Each package has a dedicated page on the Marketplace, that describes the feature the package enables, if there are prerequisites, etc. Here is the information available about the packages from the Marketplace:
 
