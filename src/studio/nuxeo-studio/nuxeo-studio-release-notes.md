@@ -13,7 +13,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2021-03' page='studio-updates-2021-03'}}}
+{{{multiexcerpt 'studio-updates-2021-03' page='studio-updates-2021-04'}}}
 
 
 ## Learn More
@@ -22,9 +22,12 @@ Discover upcoming and recent changes in Nuxeo Studio.
 ---
 
 ## Previous Release Notes
+<br>
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [April 2021]({{page page='studio-updates-2021-04'}})     | Document Trashed and Untrashed event handlers |
+| [March 2021]({{page page='studio-updates-2021-03'}})     | Update of Studio Designer Catalog |
 | [January to February 2021]({{page page='studio-updates-2021-01-02'}})     | Range Support for Marketplace Packages |
 | [July to September 2020]({{page page='studio-updates-2020-07-08-09'}})     | Automatically generated translation keys, interface for account management |
 | [June 2020]({{page page='studio-updates-2020-06'}})     | Improved layout blocks experience |
@@ -38,4 +41,6 @@ Discover upcoming and recent changes in Nuxeo Studio.
 ## We Want Your Feedback!
 
 Feel free to let us know how we could [make Studio better](https://portal.prodpad.com/eb062eda-6d54-11e7-8513-22000a2145da) for you!
+<br>
+
 {{! /multiexcerpt}}
