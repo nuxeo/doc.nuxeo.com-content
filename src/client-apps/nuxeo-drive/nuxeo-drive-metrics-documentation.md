@@ -88,7 +88,7 @@ Description: TBD
 
 ## `NX-metric-drive-request`
 
-This header will be sent with each request to the platform, and will contain usage and behaviour informations about Drive features.
+This header is sent with each request to the platform, and contains usage and behaviour information about Nuxeo Drive features.
 
 ### Direct Edit metrics
 
