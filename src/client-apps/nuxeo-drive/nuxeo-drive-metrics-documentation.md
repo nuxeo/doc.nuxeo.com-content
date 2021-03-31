@@ -30,32 +30,14 @@ This header is sent for each and every requests to the platform and contains gen
 ### Available Metrics
 
 - `installation.type`: description
-
-
 - `execution.profile`: description
-
-
 - `execution.session.uid`: description
-
-
 - `metrics.custom`: description
-
-
 - `metrics.ga`: description
-
-
 - `metrics.sentry`: description
-
-
 - `updater.channel`: description
-
-
 - `execution.locale`: description
-
-
 - `os.machine`: description
-
-
 - `os.locale`: description
 
 
@@ -66,14 +48,8 @@ This header is sent for specific requests only and contains usage and behaviour 
 ### Direct Edit
 
 - `directEdit.conflict.hit`: description
-
-
 - `directEdit.recovery.hit`: description
-
-
 - `directEdit.error.count`: description
-
-
 - `directEdit.save.count`: description
 
 
@@ -81,25 +57,15 @@ This header is sent for specific requests only and contains usage and behaviour 
 ### Direct Transfer
 
 - `directTransfer.session.number`: description
-
-
 - `directTransfer.duplicate.file.behavior`: description
-
-
 - `directTransfer.option.newFolder`: description
-
-
 - `directTransfer.session.status`: description
 
 
 ### Synchronization
 
 - `sync.error.label`: description
-
-
 - `sync.action`: description
-
-
 - `sync.time`: description
 
 
@@ -107,11 +73,7 @@ This header is sent for specific requests only and contains usage and behaviour 
 ### Other
 
 - `app.crashed.hit`: description
-
-
 - `app.crashed.trace`: description
-
-
 - `filters.syncRoot.count`: description
 
 
