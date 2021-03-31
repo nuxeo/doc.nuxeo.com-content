@@ -31,16 +31,16 @@ This header is sent for each and every requests to the platform and contains gen
 
 ### Available Metrics
 
-- `execution.locale`: description
-- `execution.profile`: description
-- `execution.session.uid`: description
-- `installation.type`: description
-- `metrics.custom`: description
-- `metrics.ga`: description
-- `metrics.sentry`: description
-- `os.locale`: description
-- `os.machine`: description
-- `updater.channel`: description
+- `execution.locale`: Drive selected language.
+- `execution.profile`: Profile of execution (`private` for qa/dev/sources otherwise `public`).
+- `execution.session.uid`: Unique uuid generated at Drive startup.
+- `installation.type`: Installation type (`system-wide` or `user-only`).
+- `metrics.custom`: Custom metrics are enabled.
+- `metrics.ga`: Google Analytics is enabled.
+- `metrics.sentry`: Sentry is enabled.
+- `os.locale`: Operating System locale.
+- `os.machine`: The machine type (e.g. `i386`).
+- `updater.channel`: Current update channel.
 
 ## `NX-metric-drive-request`
 
@@ -48,29 +48,29 @@ This header is sent for specific requests only and contains usage and behaviour 
 
 ### Direct Edit
 
-- `directEdit.conflict.hit`: description
-- `directEdit.error.count`: description
-- `directEdit.recovery.hit`: description
-- `directEdit.save.count`: description
+- `directEdit.conflict.hit` (async): A conflict has been encountered.
+- `directEdit.error.count` (async): Number of errors during a file edition.
+- `directEdit.recovery.hit` (async): A file has been recovered.
+- `directEdit.save.count` (async): Number of save done while editing a file.
 
 ### Direct Transfer
 
-- `directTransfer.duplicate.file.behavior`: description
-- `directTransfer.option.newFolder`: description
-- `directTransfer.session.number`: description
-- `directTransfer.session.status`: description
+- `directTransfer.duplicate.file.behavior`: File duplicate creation option (`create|ignore|override`).
+- `directTransfer.option.newFolder`: A new remote folder is created.
+- `directTransfer.session.number`: The session number.
+- `directTransfer.session.status` (async): Final session status (`cancelled|done`).
 
 ### Synchronization
 
-- `sync.action`: description
-- `sync.error.label`: description
-- `sync.time`: description
+- `sync.action` (async): Event that triggered the transfer (`remotely_created|locally_modified|...`).
+- `sync.error.label` (async): Lower-case error label.
+- `sync.time` (async): Time between the event trigger and the end of the action, in nanoseconds.
 
 ### Other
 
-- `app.crashed.hit`: description
-- `app.crashed.trace`: description
-- `filters.syncRoot.count`: description
+- `app.crashed.hit` (async): The app crashed during the previous run.
+- `app.crashed.trace` (async): The application crash stacktrace.
+- `filters.syncRoot.count` (async): Synchronization roots count.
 
 # Asynchronous Metrics
 
