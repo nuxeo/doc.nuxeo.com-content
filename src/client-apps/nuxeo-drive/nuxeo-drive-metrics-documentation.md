@@ -9,20 +9,20 @@ review:
 toc: true
 ---
 
-In the Nuxeo Drive [release 5.1.0](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.1.0.md) usage metrics have been added using custom HTTP headers. Those metrics are sent to the Nuxeo platform and exclusively when the application calls specifics operations or endpoints.
+In the Nuxeo Drive [release 5.1.0](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.1.0.md) usage metrics have been added using custom HTTP headers. Those metrics are sent to the Nuxeo platform, exclusively when the application calls specific operations or endpoints.
 
-On this page, you will find the details about these metrics and their contents
+On this page, you will find the details about these metrics and their content.
 
-Some of those metrics will be marked with the `ASYNC` tag, meaning that they are sent in a specific process to avoid spamming the platform with too much request. More documentation about this can be found in the [Nuxeo Drive asynchronous metrics](#Nuxeo-Drive-asynchronous-metrics) section.
+Some of these metrics are marked with the `ASYNC` tag, meaning that they are sent in a specific process to avoid spamming the platform with too many requests. More documentation about this can be found in the [Nuxeo Drive asynchronous metrics](#Nuxeo-Drive-asynchronous-metrics) section.
 
 
 # Nuxeo Drive headers
 
-Nuxeo Drive custom metrics are sent under JSON format into 2 distinct headers that are {{NX-metric-drive-global}} and {{NX-metric-drive-request}}.
+Nuxeo Drive custom metrics are sent under JSON format into 2 distinct headers that are `NX-metric-drive-global` and `NX-metric-drive-request`.
 
 ## `NX-metric-drive-global`
 
-This header will be sent with each request to the platform, and will contain generic informations about the Drive installation, configuration and the Operating System.
+This header is sent with each request to the platform, and  contains generic information about the Drive installation, configuration and the Operating System.
 
 ### Available metrics
 
@@ -186,7 +186,7 @@ Description: TBD
 
 # Nuxeo Drive asynchronous metrics
 
-Some of custom the metrics are calculated asynchronously over a period of time and thus cannot be sent directly to the server.</br>
-This metrics are sent to the `/site/api/v1/me` endpoint once calculated.
-To avoid spamming the endpoint to much and causing performance issues, Drive will send this metrics in a batch every 15 minutes (not configurable).</br>
-If the user want, this process can be deactivated throught the Nuxeo Drive configuration using [this](https://doc.nuxeo.com/client-apps/nuxeo-drive/#custom-metrics) option.
+Some of the metrics are calculated asynchronously over a period of time and thus cannot be sent directly to the server.</br>
+These metrics are sent to the `/site/api/v1/me` endpoint once calculated.
+To avoid spamming the endpoint too much and causing performance issues, Nuxeo Drive sends these metrics in a batch every 15 minutes (not configurable).</br>
+If the user wants, this process can be deactivated through the Nuxeo Drive configuration using [this](https://doc.nuxeo.com/client-apps/nuxeo-drive/#custom-metrics) option.
