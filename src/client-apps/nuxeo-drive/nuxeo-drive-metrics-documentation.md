@@ -13,11 +13,13 @@ Starting with Nuxeo Drive 5.1.0 usage metrics have been added using custom HTTP 
 
 On this page, you will find the details about these metrics and their content.
 
----
+{{#> callout type='note' }}
+Most metrics are sent in real-time, directly attached to the request made against the appropriate endpoint or operation.
 
-Some of these metrics are marked with the `ASYNC` tag, meaning that they are sent in a specific process to avoid spamming the platform with too many requests. More documentation about this can be found in the [asynchronous metrics](#asynchronous-metrics) section.
+Some of them are sent asynchronously to the /site/api/v1/me endpoint every 15 minutes (default value). This can be changed with the custom-metrics-poll-interval option (exprimed in seconds).
 
----
+That asynchronous process can be disabled through the configuration using the [custom-metrics](https://doc.nuxeo.com/client-apps/nuxeo-drive/#custom-metrics) option.
+{{/callout}}
 
 # HTTP Headers
 
@@ -29,17 +31,16 @@ This header is sent for each and every requests to the platform and contains gen
 
 ### Available Metrics
 
-- `installation.type`: description
+- `execution.locale`: description
 - `execution.profile`: description
 - `execution.session.uid`: description
+- `installation.type`: description
 - `metrics.custom`: description
 - `metrics.ga`: description
 - `metrics.sentry`: description
-- `updater.channel`: description
-- `execution.locale`: description
-- `os.machine`: description
 - `os.locale`: description
-
+- `os.machine`: description
+- `updater.channel`: description
 
 ## `NX-metric-drive-request`
 
@@ -48,34 +49,28 @@ This header is sent for specific requests only and contains usage and behaviour 
 ### Direct Edit
 
 - `directEdit.conflict.hit`: description
-- `directEdit.recovery.hit`: description
 - `directEdit.error.count`: description
+- `directEdit.recovery.hit`: description
 - `directEdit.save.count`: description
-
-
 
 ### Direct Transfer
 
-- `directTransfer.session.number`: description
 - `directTransfer.duplicate.file.behavior`: description
 - `directTransfer.option.newFolder`: description
+- `directTransfer.session.number`: description
 - `directTransfer.session.status`: description
-
 
 ### Synchronization
 
-- `sync.error.label`: description
 - `sync.action`: description
+- `sync.error.label`: description
 - `sync.time`: description
-
-
 
 ### Other
 
 - `app.crashed.hit`: description
 - `app.crashed.trace`: description
 - `filters.syncRoot.count`: description
-
 
 # Asynchronous Metrics
 
