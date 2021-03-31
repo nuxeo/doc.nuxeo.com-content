@@ -13,8 +13,11 @@ Starting with Nuxeo Drive 5.1.0 usage metrics have been added using custom HTTP 
 
 On this page, you will find the details about these metrics and their content.
 
+---
+
 Some of these metrics are marked with the `ASYNC` tag, meaning that they are sent in a specific process to avoid spamming the platform with too many requests. More documentation about this can be found in the [asynchronous metrics](#asynchronous-metrics) section.
 
+---
 
 # HTTP Headers
 
@@ -26,65 +29,35 @@ This header is sent for each and every requests to the platform and contains gen
 
 ### Available Metrics
 
-#### `installation.type`
+- `installation.type`: description
 
-Description: TBD
-- Example: `null`
-- type: `str`
 
-#### `execution.profile`
+- `execution.profile`: description
 
-Description: TBD
-- type: `str`
-- Example: `null`
 
-#### `execution.session.uid`
+- `execution.session.uid`: description
 
-Description: TBD
-- type: `str`
-- Example: `null`
 
-#### `metrics.custom`
+- `metrics.custom`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
-#### `metrics.ga`
+- `metrics.ga`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
-#### `metrics.sentry`
+- `metrics.sentry`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
-#### `updater.channel`
+- `updater.channel`: description
 
-Description: TBD
-- type: `str`
-- Example: `null`
 
-#### `execution.locale`
+- `execution.locale`: description
 
-Description: TBD
-- type: `str`
-- Example: `null`
 
-#### `os.machine`
+- `os.machine`: description
 
-Description: TBD
-- type: `str`
-- Example: `null`
 
-#### `os.locale`
+- `os.locale`: description
 
-Description: TBD
-- type: `str`
-- Example: `null`
 
 ## `NX-metric-drive-request`
 
@@ -92,101 +65,59 @@ This header is sent for specific requests only and contains usage and behaviour 
 
 ### Direct Edit
 
-#### `directEdit.conflict.hit`
+- `directEdit.conflict.hit`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
-#### `directEdit.recovery.hit`
+- `directEdit.recovery.hit`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
-#### `directEdit.error.count`
+- `directEdit.error.count`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
-#### `directEdit.save.count`
+- `directEdit.save.count`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
 
 ### Direct Transfer
 
-#### `directTransfer.session.number`
+- `directTransfer.session.number`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
-#### `directTransfer.duplicate.file.behavior`
+- `directTransfer.duplicate.file.behavior`: description
 
-Description: TBD
-- type: `str`
-- Example: `null`
 
-#### `directTransfer.option.newFolder`
+- `directTransfer.option.newFolder`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
-#### `directTransfer.session.status`
+- `directTransfer.session.status`: description
 
-Description: TBD
-- type: `str`
-- Example: `null`
 
 ### Synchronization
 
-#### `sync.error.label`
+- `sync.error.label`: description
 
-Description: TBD
-- type: `str`
-- Example: `null`
 
-#### `sync.action`
+- `sync.action`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
-#### `sync.time`
+- `sync.time`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
 
 ### Other
 
-#### `app.crashed.hit`
+- `app.crashed.hit`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
-#### `app.crashed.trace`
+- `app.crashed.trace`: description
 
-Description: TBD
-- type: `str`
-- Example: `null`
 
-#### `filters.syncRoot.count`
+- `filters.syncRoot.count`: description
 
-Description: TBD
-- type: `int`
-- Example: `null`
 
 # Asynchronous Metrics
 
 Some of the metrics are calculated asynchronously over a period of time and thus cannot be sent directly to the server.</br>
 These metrics are sent to the `/site/api/v1/me` endpoint once calculated.
-To avoid spamming the endpoint too much and causing performance issues, Nuxeo Drive sends these metrics in a batch every 15 minutes (not configurable).</br>
+To avoid spamming the endpoint too much and causing performance issues, Nuxeo Drive sends these metrics in a batch every 15 minutes (default value). This can be changed with the "private" `custom-metrics-poll-interval` (in seconds) option.</br>
 This process can be deactivated through the configuration using the [custom-metrics](https://doc.nuxeo.com/client-apps/nuxeo-drive/#custom-metrics) option.

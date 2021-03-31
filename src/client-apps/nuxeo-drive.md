@@ -702,9 +702,9 @@ As this is targeting server actions, this parameter cannot be set via the local 
 
 Available behaviors:
 
-| Parameter         | Default Value (bool) | Version Added | Description                         |
-| ----------------- | -------------------- | ------------- | ----------------------------------- |
-| `server_deletion` | true                 | 4.4.2         | Allow or disallow server deletions. |
+| Parameter | Default Value (bool) | Version Added | Description
+|---|---|---|---
+| `server_deletion` | true | 4.4.2 | Allow or disallow server deletions.
 
 Here is how to tweak behaviors via the server configuration file:
 
@@ -725,12 +725,12 @@ If the same feature is defined locally and remotely, then only the local value w
 
 Available features:
 
-| Parameter         | Default Value (bool) | Version Added | Description                                       |
-| ----------------- | -------------------- | ------------- | ------------------------------------------------- |
-| `auto_update`     | true                 | 4.4.2         | Allow or disallow auto-updates.                   |
-| `direct_edit`     | true                 | 4.4.2         | Allow or disallow Direct Edit.                    |
-| `direct_transfer` | true                 | 4.4.2         | Allow or disallow Direct Transfer.                |
-| `s3`              | true                 | 4.4.2         | Allow or disallow using Amazon S3 direct uploads. |
+| Parameter | Default Value (bool) | Version Added | Description
+|---|---|---|---
+| `auto_update` | true | 4.4.2 | Allow or disallow auto-updates.
+| `direct_edit` | true | 4.4.2 | Allow or disallow Direct Edit.
+| `direct_transfer` | true | 4.4.2 | Allow or disallow Direct Transfer.
+| `s3` | true | 4.4.2 | Allow or disallow using Amazon S3 direct uploads.
 
 Here is how to tweak features via the local configuration file:
 
