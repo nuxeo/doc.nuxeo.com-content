@@ -9,24 +9,24 @@ review:
 toc: true
 ---
 
-In the Nuxeo Drive [release 5.1.0](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.1.0.md) usage metrics have been added using custom HTTP headers. Those metrics are sent to the Nuxeo platform, exclusively when the application calls specific operations or endpoints.
+Starting with Nuxeo Drive 5.1.0 usage metrics have been added using custom HTTP headers. Those metrics are sent to the Nuxeo platform exclusively when the application calls specific operations or endpoints.
 
 On this page, you will find the details about these metrics and their content.
 
-Some of these metrics are marked with the `ASYNC` tag, meaning that they are sent in a specific process to avoid spamming the platform with too many requests. More documentation about this can be found in the [Nuxeo Drive asynchronous metrics](#Nuxeo-Drive-asynchronous-metrics) section.
+Some of these metrics are marked with the `ASYNC` tag, meaning that they are sent in a specific process to avoid spamming the platform with too many requests. More documentation about this can be found in the [asynchronous metrics](#asynchronous-metrics) section.
 
 
-# Nuxeo Drive headers
+# HTTP Headers
 
-Nuxeo Drive custom metrics are sent under JSON format into 2 distinct headers that are `NX-metric-drive-global` and `NX-metric-drive-request`.
+Custom metrics are sent under JSON format into two distinct headers that are `NX-metric-drive-global` and `NX-metric-drive-request`.
 
 ## `NX-metric-drive-global`
 
-This header is sent with each request to the platform, and  contains generic information about the Drive installation, configuration and the Operating System.
+This header is sent for each and every requests to the platform and contains generic information about the Nuxeo Drive installation, configuration and operating system.
 
-### Available metrics
+### Available Metrics
 
-#### `installation.- type`
+#### `installation.type`
 
 Description: TBD
 - Example: `null`
@@ -88,9 +88,9 @@ Description: TBD
 
 ## `NX-metric-drive-request`
 
-This header is sent with each request to the platform, and contains usage and behaviour information about Nuxeo Drive features.
+This header is sent for specific requests only and contains usage and behaviour information about Nuxeo Drive features.
 
-### Direct Edit metrics
+### Direct Edit
 
 #### `directEdit.conflict.hit`
 
@@ -117,7 +117,7 @@ Description: TBD
 - Example: `null`
 
 
-### Direct Transfer metrics
+### Direct Transfer
 
 #### `directTransfer.session.number`
 
@@ -143,7 +143,7 @@ Description: TBD
 - type: `str`
 - Example: `null`
 
-Synchronization metrics:
+### Synchronization
 
 #### `sync.error.label`
 
@@ -164,7 +164,7 @@ Description: TBD
 - Example: `null`
 
 
-### Other metrics
+### Other
 
 #### `app.crashed.hit`
 
@@ -184,9 +184,9 @@ Description: TBD
 - type: `int`
 - Example: `null`
 
-# Nuxeo Drive asynchronous metrics
+# Asynchronous Metrics
 
 Some of the metrics are calculated asynchronously over a period of time and thus cannot be sent directly to the server.</br>
 These metrics are sent to the `/site/api/v1/me` endpoint once calculated.
 To avoid spamming the endpoint too much and causing performance issues, Nuxeo Drive sends these metrics in a batch every 15 minutes (not configurable).</br>
-If the user wants, this process can be deactivated through the Nuxeo Drive configuration using [this](https://doc.nuxeo.com/client-apps/nuxeo-drive/#custom-metrics) option.
+This process can be deactivated through the configuration using the [custom-metrics](https://doc.nuxeo.com/client-apps/nuxeo-drive/#custom-metrics) option.
