@@ -34,6 +34,12 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <th>Contributor</th>
     <th>Category</th>
   </tr>
+   <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/document-load-and-preview"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/document-load-and-preview/eye.png" width="120px"/></a></td>
+    <td>Document Load and Preview</td>
+    <td>Nuxeo</td>
+    <td>Layouts</td>
+  </tr>
     <tr>
     <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/interactive-pdf-search/search-pdf-metadata.png" width="120px"/></a></td>
     <td>Interactive PDF Search</td>
@@ -120,6 +126,12 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+  <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/document-load-and-preview"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/document-load-and-preview/eye.png" width="120px"/></a></td>
+    <td>Document Load and Preview</td>
+    <td>Nuxeo</td>
+    <td>Layouts</td>
+  </tr>
     <tr>
     <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/interactive-pdf-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/interactive-pdf-search/search-pdf-metadata.png" width="120px"/></a></td>
     <td>Interactive PDF Search</td>
