@@ -92,6 +92,26 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 45
+
+### Support for Google Drive Shared Files
+
+The hotfix 45 ships a fix to support the upload of Google Drive shared files thanks to NXP-30241. Once the hotfix is installed, you must upgrade the version of the `nuxeo-liveconnect` addon to [1.3.4](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect?version=1.3.4).
+```
+./nuxeoctl mp-install nuxeo-liveconnect-1.3.4
+```
+{{#> callout type='warning' }}
+If you do not upgrade the addon `nuxeo-liveconnect`, the following error will occur because of a missing new library
+```
+java.lang.NoSuchMethodError: com.google.api.services.drive.Drive$Files$Get.setSupportsAllDrives(Ljava/lang/Boolean;)Lcom/google/api/services/drive/Drive$Files$Get;
+    at org.nuxeo.ecm.liveconnect.google.drive.GoogleDriveBlobProvider.getDriveFile(GoogleDriveBlobProvider.java:544) ~[nuxeo-liveconnect-google-drive-core-10.10-HF44.jar:?]
+    at org.nuxeo.ecm.liveconnect.google.drive.GoogleDriveBlobProvider.retrieveFile(GoogleDriveBlobProvider.java:520) ~[nuxeo-liveconnect-google-drive-core-10.10-HF44.jar:?]
+    at org.nuxeo.ecm.liveconnect.core.AbstractLiveConnectBlobProvider.getFile(AbstractLiveConnectBlobProvider.java:278) ~[nuxeo-liveconnect-core-10.10-HF21.jar:?]
+    at org.nuxeo.ecm.liveconnect.core.AbstractLiveConnectBlobProvider.toBlob(AbstractLiveConnectBlobProvider.java:215) ~[nuxeo-liveconnect-core-10.10-HF21.jar:?]
+    at org.nuxeo.ecm.liveconnect.core.AbstractLiveConnectBlobProvider.readBlob(AbstractLiveConnectBlobProvider.java:101) ~[nuxeo-liveconnect-core-10.10-HF21.jar:?]
+```
+{{/callout}}
+
 ## Hotfix 34
 
 ### SameSite Attribute
