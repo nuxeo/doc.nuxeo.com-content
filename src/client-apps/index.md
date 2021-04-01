@@ -34,8 +34,8 @@ history:
         date: '2016-04-15 15:36'
         message: ''
         version: '1'
-
 ---
+
 <div class="row" data-equalizer data-equalize-on="medium">
 
 <div class="column medium-6">
@@ -44,9 +44,24 @@ history:
 
 The Nuxeo Drive addon enables bidirectional synchronization of content between the local desktop and the Nuxeo content repository. It handles offline modification of files and deals with concurrent updates.
 
+</br>
 [Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-drive'}})
 {{/panel}}
 </div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Nuxeo for Adobe CC
+
+The Nuxeo for Adobe CC connector enables Adobe Creative Cloud users to import assets into an InDesign document directly from the Nuxeo repository. Users can access the assets directly from Illustrator or Photoshop to make edits and trigger update warnings in InDesign.
+
+[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='nxdoc' page='nuxeo-for-adobe-cc'}})
+{{/panel}}
+</div>
+
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
@@ -57,5 +72,6 @@ The Nuxeo mobile application lets you access content stored in Nuxeo Platform se
 [Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-mobile'}})
 {{/panel}}
 </div>
+
 
 </div>
