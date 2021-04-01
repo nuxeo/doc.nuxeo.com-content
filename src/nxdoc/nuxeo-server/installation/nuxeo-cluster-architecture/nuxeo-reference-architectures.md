@@ -248,6 +248,10 @@ history:
 
 We will present different Nuxeo reference architectures, from the most compact to the most complex, allowing you to provide a full high availability and fault tolerant Nuxeo architecture. The composition and limitation of each architecture are presented in each case.
 
+{{#> callout type='info'}}
+The Nuxeo reference architectures are a starting point to setup your production Nuxeo infrastructure. However, **it remains crucial to test and adjust it** according to the expected volume and workloads, the complexity of your data model, the custom packages deployed on your instance etc.
+{{/callout}}
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <center>
 
