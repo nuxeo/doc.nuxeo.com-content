@@ -29,9 +29,9 @@ This header is sent for each request to the platform and contains generic inform
 
 ### Available Metrics
 
-- `execution.locale`: Drive selected language.
-- `execution.profile`: Profile of execution (`private` for qa/dev/sources otherwise `public`).
-- `execution.session.uid`: Unique uuid generated at Drive startup.
+- `execution.locale`: Selected language in Nuxeo Drive settings.
+- `execution.profile`: Profile of execution (`private` for QA/dev people otherwise `public`).
+- `execution.session.uid`: Unique identifier generated at Nuxeo Drive startup.
 - `installation.type`: Installation type (`system-wide` or `user-only`).
 - `metrics.custom`: Custom metrics are enabled.
 - `metrics.ga`: Google Analytics is enabled.
@@ -46,26 +46,26 @@ This header is sent for specific requests only and contains usage and behavior i
 
 ### Direct Edit
 
-- `directEdit.conflict.hit` (async): A conflict has been encountered.
-- `directEdit.error.count` (async): Number of errors during a file edition.
-- `directEdit.recovery.hit` (async): A file has been recovered.
-- `directEdit.save.count` (async): Number of save done while editing a file.
+- `directEdit.conflict.hit` (async): A conflict has been encountered while sending updates to the server.
+- `directEdit.error.count` (async): Errors count occured while uploading changes to the server.
+- `directEdit.recovery.hit` (async): The file has been recovered from a previous Direct Edit session.
+- `directEdit.save.count` (async): Saves count done while editing the file, e.g.: how many times the user hit CTRL-S or COMMAND-S.
 
 ### Direct Transfer
 
 - `directTransfer.duplicate.file.behavior`: File duplicate creation option (`create|ignore|override`).
-- `directTransfer.option.newFolder`: A new remote folder is created.
+- `directTransfer.option.newFolder`: The new remote folder option was used for that session.
 - `directTransfer.session.number`: The session number.
 - `directTransfer.session.status` (async): Final session status (`cancelled|done`).
 
 ### Synchronization
 
 - `sync.action` (async): Event that triggered the transfer (`remotely_created|locally_modified|...`).
-- `sync.error.label` (async): Lower-case error label.
+- `sync.error.label` (async): Lower-cased error label that happened when processing the document.
 - `sync.time` (async): Time between the event trigger and the end of the action, in nanoseconds.
 
 ### Other
 
 - `app.crashed.hit` (async): The app crashed during the previous run.
-- `app.crashed.trace` (async): The application crash stack trace.
-- `filters.syncRoot.count` (async): Synchronization roots count.
+- `app.crashed.trace` (async): The application crash stack trace, when available.
+- `filters.syncRoot.count` (async): Enabled synchronization roots count.
