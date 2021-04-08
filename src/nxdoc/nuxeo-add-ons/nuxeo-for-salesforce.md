@@ -369,7 +369,8 @@ The Nuxeo Salesforce lightning component can behave in three different ways depe
 
 - **Search**: this mode displays a simple search user interface to look for documents across all the Nuxeo repository, with respect to security.
 
-In all of those modes, the user can open a given document and see many details on it. We will start by documented that "document view", and then review each of the modes to provide functional help on using them.
+In all of those modes, the user can open a given document and see many details on it. We will start by documenting that "content pannel", and then review each of the modes to provide functional help on using them.
+Note that it is possible by configuration to change the behaviour so that instead of opening the "content pannel", clicking on the documen title opens a new browser tab to navigate to Nuxeo Web UI on the document view directly (see the configuration section). 
 
 ### Document Panel
 
@@ -411,6 +412,7 @@ On the content library component, the user can:
 - Clicking on the document name opens the Document panel described in the [previous section](#document-panel).
 
 The created folder in Web UI holds a `salesforce` facet and some metadata are set automatically on the associated salesforce schema. By default, `sf:objectId`,`sf:objectType`, `sf:objectAmount`. See the configuration section to change that behavior.
+It is possibe by configuration to hide some columns of the content table. See the configuratino section.
 
 ### Content List
 
@@ -419,7 +421,7 @@ The Content list mode is ideal when you want to display to the user a specific l
 **Link content** button on top of the documents list allows to search for some content within the whole Nuxeo repository, and then to "link" it. In the standard configuration, clicking on **Link** on a given document will add the reference of the current Salesforce record ID to the `dc:source` property of the document. This behavior is intended to be customized on your project. You can also decide to not display the Link action if you don't have any use case for it and only want to display a list of documents.</br>
 Without any configuration, you can use the Content list mode as a way for the user to search for a document in the repository and "bookmark" it on the object. Also, note that it is not possible to bookmark a proxy (= a published document).
 
-In the list view, in addition to the default actions displayed for each document, you can browse all.
+It is possibe by configuration to hide some columns of the content table.
 
 ### Search
 
@@ -507,6 +509,13 @@ You can contribute as many configurations as needed, there is no limitation.
 {{/callout}}
 
 ### Configuration Use Cases
+
+### Disabling the opening of the content pannel
+For all modes (listing, search, library), adding in the root configuratin element:
+```
+<open-doc-in-nuxeo>true</open-doc-in-nuxeo>
+```
+will enable opening the document in Nuxeo instead of opening the content pannel.
 
 #### Disabling Nuxeo Drive Direct Edit action
 
@@ -647,6 +656,14 @@ Ex:
 	window._NUXEO_ = nuxeo;
 ```
 
+#### Hiding columns on listing and library modes
+
+For a given instance of the Nuxeo Lightening Element, you can hide the following columns: type, size, author, lastModified.
+By default the type column is hidden.
+To do so, add the following to the extension pont configuration of your component:
+
+```<doclist-hidden-columns>type,size</doclist-hidden-columns>```
+
 #### Defining a New Link Operation for the Content List Behavior
 
 The **Link Content** action provides to the users the ability to click on a Link button on each document of the search result. The behavior associated to the Link/Unlink buttons can be changed by configuring another operation to call, the default one is `Salesforce.LinkAsSource`.
@@ -667,6 +684,11 @@ The `nuxeoApp` utility item component is named `nuxeoAppUtility`.
 
 1. Then on the dropdown menu associated with the lightning Sales application click on Edit.
 1. Then, open the Utility Items section and click on Add utility item. Select `nuxeoAppUtility` and then configure it as needed.
+
+#### Configuring the "Open In Nuxeo" link
+To use a different link than the one opening the document view in Web UI, you can declare a custom enricher under the root element of the configuration:
+```<doc-url-enricher>myCustomDocumentURL</doc-url-enricher>```
+By default the documentURL enricher is used.
 
 ## Upcoming Evolutions
 
