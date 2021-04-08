@@ -2,7 +2,7 @@
 title: Nuxeo Salesforce Connector
 review:
     comment: ''
-    date: '2021-01-14'
+    date: '2021-04-8'
     status: ok
 labels:
     - lts2020-ok
@@ -234,6 +234,9 @@ Do not hesitate to contact your sales representative to get more information or 
 
 See [GitHub Readme](https://github.com/nuxeo/nuxeo-salesforce) for the Dev project description.
 
+## Version for which this documenation applies
+This documentation is for the version 17 of the Nuxeo Salesforce connector. 
+
 ## Installation
 
 ### Architecture
@@ -269,32 +272,13 @@ To install the version of the unlocked salesforce package, that has been validat
 sfdx force:package:install -p SFpackageID -k nxapp@sfdc
 ```
 
-`SFpackageID` is the salesforce package version ID. You can ask to Nuxeo Support for getting the version ID required with the version of the Salesforce package you are installing.  
+`SFpackageID` is the salesforce package version ID. You can ask to Nuxeo Support for getting the version ID required with the version of the Salesforce package you are installing.  This documentation is for the version 17 of the Salesforce package.
 
 
 ### Post Installation Setup
 
 After installing the package, you need to configure Salesforce to be able to use the Nuxeo application.
 
-#### Define the Nuxeo Application Administrators
-
-Add the `Nuxeo_Admins` permission set to the Salesforce user(s) that are allowed to configure the Nuxeo application (user bound to `sfdx` authentication already has the permission set so this is an optional step):
-
-1. Go to **Setup** > **Users**,
-1. Click on the name of the target user,
-1. Then go to the `Permission Sets` section to add the permission set,
-1. Choose "Permission Set Assignments",
-1. Then select `Nuxeo_Admins`.
-
-This can also be done from command-line using the command:
-```
-sfdx force:user:permset:assign
-```
-
-#### Define the Nuxeo Application Users
-
-Add the `Nuxeo_Users` permission set to the Salesforce users allowed to use the Nuxeo application, as we explained above. You can also use **Permission Set Groups** to easily assign permission groups to multiple users.</br>
-Currently, Salesforce doesn't support assigning permission sets to **Public Groups**.
 
 #### Add the Target Nuxeo Domain URL to CSP Trusted Sites
 
@@ -307,15 +291,56 @@ Currently, Salesforce doesn't support assigning permission sets to **Public Grou
 The CSP policy is not always taken into account immediately. To avoid some cache issues, we recommend that you log out and log in again.
 {{/callout}}
 
-#### Create a Nuxeo Connection
-
-As a `Nuxeo_admins` user open the **Nuxeo** tab (this tab is only visible for Nuxeo_Admins) and follow the connection setup wizard. Don't forget to set the right username/password for the cURL call.  
-
 {{#> callout type='note' }}
-You will need Nuxeo instance admin credentials.
+If the Nuxeo Server you connect to is configured with S3 Direct Download, you will also need to add the corresponding S3 bucket url as a trusted site, otherwise you will encounter some display errors. 
 {{/callout}}
 
-You can detect a cache issue when validating your connection if you don't get the confirmation of the correct configuration. Opening the dev console you will see some errors related to content policy on CMIS endpoint.
+#### Configure the Authentitcation
+
+1.	Go to Setup> Certificate and Key
+Management 
+2.1. Click on  Create Self Signed Certificate 
+2.2. Use “Nuxeo” as a name
+2.3. Download the certificate, you get a file `Nuxeo.crt`
+3.	Go to Setup > Named Credential 
+Create a new named credential, like this one (see all attributes values)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Salesforce Connector/Authentification - Named Credential configuration
+    name: sfdc_named_credentials_configuration.png
+    addins#screenshot#up_to_date
+--}}
+![Authentification - Named Credential configuration](nx_asset://f82d6e81-db3d-4500-a887-237fdc745836 ?border=true)
+
+Pay attention to:
+-	Label: Nuxeo
+-	Name: Must be Nuxeo
+-	URL: the url of your Nuxeo repository
+-	Issuer: sfdc in this example, can be anything. 
+-	JWT Signing Certificate: use the certificate you created at step 2
+-	Callout Options: make sure to uncheck “Generate Authorization Header” that is checked by default, and to check “Allow Merge Fields in HTTP Body
+
+Note: you need to make sure you chose an issuer string that doesn’t correspond to an existing oAuth client on the Nuxeo oauth2Clients directory. To list existing client IDs, you can do (adapt server name and user/password)
+
+```curl -u "Administrator:Administrator" https://salesforce-preview-1010.napps.dev.nuxeo.com/nuxeo/api/v1/directory/oauth2Clients```
+
+4.	In a terminal run (adapt server name and user/password, as well as the path of the certificate you downloaded at step 2):
+```curl -u "Administrator:Administrator" -H "Content-Type:text/plain" -k -X POST --data-binary "@/Users/aescaffre/Downloads/Nuxeo.crt" https://salesforce-preview-1010.napps.dev.nuxeo.com/nuxeo/api/sfdc/issuers/sfdc```
+
+This command will upload the certificate into a protected Nuxeo directory dedicated to storing certificates.
+Pay attention to the @ before the path of your certificate (this is a curl instruction to post the referenced file and not the string that corresponds to the file name)
+Pay attention to what comes after “/api/sfdc/issuers/” it is the issuer that you referenced at step 3 (sfdc in our example).
+
+You can check that you correctly uploaded the certificate by listing existing certificates (adapt servername and user/password):
+
+```curl -u "Administrator:Administrator" https://salesforce-preview-1010.napps.dev.nuxeo.com/nuxeo/api/sfdc/keystore```
+
+5. You are done! 
+
+{{#> callout type='note' }}
+Note that the mapping is made on the user email: the email field of the salesforce user must be equal to the email field of the Nuxeo user. If there is no user in Nuxeo with the same email, you will get an error.
+{{/callout}}
+
 
 ### Validate Your Setup
 
@@ -328,9 +353,7 @@ You can validate that your setup is correct by using the Nuxeo Salesforce lightn
 1. Save.
 1. Go back to the record screen.
 
-If all previous steps went ok, you should be able to click on a **Log in** button, that will open a pop up asking for authentication against the Nuxeo server if the user is not already authenticated in there.
-
-You can then drop a document in the library, it will be created in the Nuxeo repository: everything is working!
+If all previous steps went ok, you should see the document library. You can then drop a document in the library, it will be created in the Nuxeo repository: everything is working!
 
 ### Next Steps
 
