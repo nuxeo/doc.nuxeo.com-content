@@ -297,11 +297,11 @@ If the Nuxeo Server you connect to is configured with S3 Direct Download, you wi
 
 #### Configure the Authentitcation
 
-1.	Go to Setup> Certificate and Key
+1.	Go to Setup > Certificate and Key
 Management 
-1.1. Click on  Create Self Signed Certificate 
-1.1. Use “Nuxeo” as a name
-1.1. Download the certificate, you get a file `Nuxeo.crt`
+  1. Click on  Create Self Signed Certificate 
+  1. Use “Nuxeo” as a name
+  1. Download the certificate, you get a file `Nuxeo.crt`
 1.	Go to Setup > Named Credential 
 Create a new named credential, like this one (see all attributes values)
 {{!--     ### nx_asset ###
