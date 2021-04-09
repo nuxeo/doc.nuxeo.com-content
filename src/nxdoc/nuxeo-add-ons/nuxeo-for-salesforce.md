@@ -299,12 +299,11 @@ If the Nuxeo Server you connect to is configured with S3 Direct Download, you wi
 
 1.	Go to Setup> Certificate and Key
 Management 
-2.1. Click on  Create Self Signed Certificate 
-2.2. Use “Nuxeo” as a name
-2.3. Download the certificate, you get a file `Nuxeo.crt`
-3.	Go to Setup > Named Credential 
+1.1. Click on  Create Self Signed Certificate 
+1.1. Use “Nuxeo” as a name
+1.1. Download the certificate, you get a file `Nuxeo.crt`
+1.	Go to Setup > Named Credential 
 Create a new named credential, like this one (see all attributes values)
-
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Salesforce Connector/Authentification - Named Credential configuration
     name: sfdc_named_credentials_configuration.png
