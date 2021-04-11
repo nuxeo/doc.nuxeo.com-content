@@ -10,6 +10,7 @@ labels:
     - history
 tree_item_index: 100
 ---
+
 ## Domain
 
 {{! multiexcerpt name='definition-domain'}}
@@ -64,14 +65,12 @@ To change the content's order, select a document using the checkbox on the left 
 You can move groups of documents. Moving groups of documents up or down joins the group items and positions them one row up or one row down. Moving groups does not affect the rest of the order.
 {{! /multiexcerpt}}
 
-
 ### File
 
 {{! multiexcerpt name='definition-file'}}
 A file document is a basic binary container and is composed of an attached file that you upload on the application. You can upload files of any format.
 
 A file is composed of:
-
 - A title (mandatory),
 - A description (optional),
 - An attached file.
@@ -105,7 +104,7 @@ Format | The format of the automatically created file used to export notes from 
 You can also create a note by importing a .txt, a .html or a .xml file [using drag and drop]({{page page='content-create'}}#importing-documents-using-drag-and-drop).
 When the note is created, users can enhance it by attaching files on it or just [editing it]({{page page='content-edit'}}).
 
-#### Attachments
+### Attachments
 
 It is possible to add attachments to [Files](#file) and [Notes](#note) using the Files tab. This tab is available to users with at least Edit permission. There is no limit to the number of attachments.
 
@@ -114,10 +113,10 @@ It is possible to add attachments to [Files](#file) and [Notes](#note) using the
 In the **View** tab of the document concerned, drag and drop the attachment in the field or click on **Upload attachment** and a popup lets you select the attachment from your computer.
 
 **To remove attachment:**
-In the **View** tab of the document concerned, click on ![]({{file name='delete_web-ui.png' page='icons-index'}}) next to the attachment concerned. The attachment is immediately deleted.
+In the **View** tab of the document concerned, click on ![]({{file name='delete_web-ui.png' page='icons-index'}} ?w=20) next to the attachment concerned. The attachment is immediately deleted.
 
 {{#> callout type='note' heading='Limitations'}}
-- Attached files are not synchronized with [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}).
+Attached files are not synchronized with [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}).
 {{/callout}}
 
 ### Picture
@@ -143,14 +142,12 @@ For more information about picture document, take a look to the [Digital Asset M
 Video is a document type dedicated to the management of videos files. It provides the following specific features:
 - A player to view the video from the application
 - A storyboard to navigate in the video and alternative video formats.
-
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Document types/video_document_type-webui.png
     name: video_document_type-webui.png
     1.1.3#screenshot#up_to_date
 --}}
 ![video_document_type-webui.png](nx_asset://6727e42c-dd47-4863-98c1-57e9e3a35ad7 ?w=600,border=true)
-
 For more information about video document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).
 {{! /multiexcerpt}}
 
@@ -186,8 +183,8 @@ In a few words, don't try to manage workspaces' permissions with Templates (this
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
 
-- [Creating Content]({{page page='nxdoc/creating-content'}})
-- [Editing Content]({{page page='nxdoc/editing-content'}})
+- [Creating Content]({{page space='userdoc' page='content-create'}})
+- [Editing Content]({{page space='userdoc'  page='content-edit'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
