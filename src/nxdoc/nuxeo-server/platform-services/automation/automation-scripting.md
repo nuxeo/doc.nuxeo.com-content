@@ -208,25 +208,22 @@ history:
         date: '2015-05-25 16:25'
         message: ''
         version: '1'
-
 ---
 
 {{! excerpt}}
-
 Automation Scripting is a Nuxeo module which provides ability to create and contribute Automation chain/operation in JavaScript.
-
 {{! /excerpt}}
 
 This enables you to benefit from:
 
-*   Loops
-*   Conditions
-*   Smooth Automation implementation maintenance
+- Loops
+- Conditions
+- Smooth Automation implementation maintenance
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Course on Automation chains, Automation scripting and Events](https://university.nuxeo.com/learn/public/course/view/elearning/46/automation-chains-automation-scripting-and-events)
-![]({{file name='university-automation.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
+Watch the related course on Nuxeo University:
+[Course on Automation chains, Automation scripting and Events](https://university.nuxeo.com/learn/public/course/view/elearning/46/automation-chains-automation-scripting-and-events)
+![]({{file name='university-automation.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Requirements
@@ -398,7 +395,7 @@ Automation scripts can be called like any operation or chain using the Automatio
 
 ### Using Helpers
 
-Platform Functions Helpers are available in Automation Scripting. You can use (like in [MVEL expression]({{page space='nxdoc60' page='use-of-mvel-in-automation-chains'}})) functions as follow:
+Platform Functions Helpers are available in Automation Scripting. You can use (like in [MVEL expression]({{page version='' space='nxdoc' page='use-of-mvel-in-automation-chains'}})) functions as follow:
 
 ```
 Fn.getEmail("Administrator")
@@ -429,12 +426,12 @@ function run(input, params) {
 
 ### Event Context
 
-It is possible to access to the event context. This can be really usefull when trying to access some repository information before the document is created: Typically, you can't access parent properties on the "About to create" event without `ctx.Event.getProperty`:
+It is possible to access to the event context. This can be really useful when trying to access some repository information before the document is created: Typically, you can't access parent properties on the "About to create" event without `ctx.Event.context.getProperty`:
 
 ```js
 function run(input, params) {
   /* Use parentPath for Empty document created event, and parentRef for About to create event */
-  var parentPath = ctx.Event.getProperty("parentPath");
+  var parentPath = ctx.Event.context.getProperty("parentPath");
   var parentDoc = Repository.GetDocument(null, {"value": parentPath});
   ...
 }
@@ -693,7 +690,7 @@ assertEquals("Hello John", result.toString());
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Automation Scripting in Nuxeo Studio]({{page space='studio' page='automation-scripting'}})
+- [Automation Scripting in Nuxeo Studio]({{page space='studio' page='automation-scripting'}})
 
 {{/panel}}</div><div class="column medium-6">
 
