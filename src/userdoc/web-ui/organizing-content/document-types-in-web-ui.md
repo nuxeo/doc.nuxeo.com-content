@@ -173,9 +173,8 @@ Templates are the easiest way to automate the creation of workspace tree structu
 3. Once a new Template has been created, you can create many workspaces from this template.
 
 {{#> callout type='info' heading='Templates and User Rights Management'}}
-- When you set permissions on the 1st-level workspace of a template - here IT project workspace structure-, it will be inherited in the new workspaces. For example, a user who is not allowed to read "IT project workspace structure" will not be able to see it when creating a workspace.
-
-- When you set permissions on the content of a workspace in a template, it won't be inherited in the new workspaces. For example, a user who can't read a folder like "Meeting reports" in a workspace but have reading access on the 1st-level workspace, will be allowed to see "Meeting reports".
+* When you set permissions on the 1st-level workspace of a template - here IT project workspace structure-, it will be inherited in the new workspaces. For example, a user who is not allowed to read "IT project workspace structure" will not be able to see it when creating a workspace.</br>
+* When you set permissions on the content of a workspace in a template, it won't be inherited in the new workspaces. For example, a user who can't read a folder like "Meeting reports" in a workspace but have reading access on the 1st-level workspace, will be allowed to see "Meeting reports".
 In a few words, don't try to manage workspaces' permissions with Templates (this can be done other ways, like using [Studio]({{page space='studio'}}) configuration tool).
 {{/callout}}
 
