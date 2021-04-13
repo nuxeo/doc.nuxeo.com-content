@@ -30,7 +30,10 @@ default:
                 space_name: Nuxeo Cloud Documentation
             -
                 space_path: javadoc
-                space_name: Nuxeo Javadoc        
+                space_name: Nuxeo Javadoc
+            -
+                space_path: nuxeo-insight
+                space_name: Nuxeo Insight Documentation  
         branch: 'static'
 
 development:
