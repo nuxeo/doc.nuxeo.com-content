@@ -760,7 +760,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <th colspan="1">Component</th>
 <th colspan="1">Nuxeo Platform LTS 2019</th>
-<th colspan="1">Nuxeo Platform Cloud 2020</th>
+<th colspan="1">Nuxeo Platform LTS 2021</th>
 </tr>
 <tr>
 <td colspan="1">ant-maven-assembly-plugin</td>
@@ -785,7 +785,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">assertj-core</td>
 <td colspan="1">3.8.0</td>
-<td colspan="1">3.14.0</td>
+<td colspan="1">3.17.2</td>
 </tr>
 <tr>
 <td colspan="1">avro</td>
@@ -795,7 +795,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">AWS SDK</td>
 <td colspan="1">1.11.516</td>
-<td colspan="1">1.11.738</td>
+<td colspan="1">1.11.885</td>
 </tr>
 <tr>
 <td colspan="1">Axiom</td>
@@ -810,7 +810,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">BouncyCastle</td>
 <td colspan="1">1.60</td>
-<td colspan="1">1.64</td>
+<td colspan="1">1.66</td>
 </tr>
 <tr>
 <td colspan="1">bsh</td>
@@ -875,7 +875,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">CORS Filter</td>
 <td colspan="1">2.6</td>
-<td colspan="1">2.8</td>
+<td colspan="1">2.9</td>
 </tr>
 <tr>
 <td colspan="1">dependency-check-maven</td>
@@ -900,7 +900,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">ESAPI</td>
 <td colspan="1">2.1.0.1</td>
-<td colspan="1">2.2.0.0</td>
+<td colspan="1">2.2.1.1</td>
 </tr>
 <tr>
 <td colspan="1">fast-classpath-scanner</td>
@@ -930,7 +930,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">ICU4J</td>
 <td colspan="1">62.1</td>
-<td colspan="1">65.1</td>
+<td colspan="1">67.1</td>
 </tr>
 <tr>
 <td colspan="1">ISOParser</td>
@@ -945,7 +945,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">Jackson</td>
 <td colspan="1">2.9.10</td>
-<td colspan="1">2.10.2</td>
+<td colspan="1">2.12.0</td>
 </tr>
 <tr>
 <td colspan="1">jacoco-maven-plugin</td>
@@ -970,7 +970,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">Java JWT</td>
 <td colspan="1">3.4.0</td>
-<td colspan="1">3.9.0</td>
+<td colspan="1">3.11.0</td>
 </tr>
 <tr>
 <td colspan="1">javax.json</td>
@@ -992,7 +992,6 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <td colspan="1">2.2.11</td>
 <td colspan="1">jakarta.xml.bind:jakarta.xml.bind-api:2.3.3</td>
 </tr>
-
 <tr>
 <td colspan="1">jaxen</td>
 <td colspan="1">1.1.6</td>
@@ -1021,7 +1020,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">joda-time</td>
 <td colspan="1">2.9.2</td>
-<td colspan="1">2.10.5</td>
+<td colspan="1">2.10.6</td>
 </tr>
 <tr>
 <td colspan="1">Jolokia</td>
@@ -1045,12 +1044,12 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">Jxls</td>
 <td colspan="1">jxls 1.0.6-NX01</td>
-<td colspan="1">jxls 1.0.6-NX02, jxls2 2.8.0</td>
+<td colspan="1">jxls 1.0.6-NX02, jxls2 2.8.1</td>
 </tr>
 <tr>
 <td colspan="1">Log4j</td>
 <td colspan="1">2.11.1</td>
-<td colspan="1">2.13.0</td>
+<td colspan="1">2.13.3</td>
 </tr>
 <tr>
 <td colspan="1">maven-compiler-plugin</td>
@@ -1115,12 +1114,12 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">OpenPDF</td>
 <td colspan="1">1.2.1</td>
-<td colspan="1">1.3.12</td>
+<td colspan="1">1.3.22</td>
 </tr>
 <tr>
 <td colspan="1">PDFBox</td>
 <td colspan="1">1.8.16</td>
-<td colspan="1">2.0.19</td>
+<td colspan="1">2.0.21</td>
 </tr>
 <tr>
 <td colspan="1">pdf-html</td>
@@ -1229,4 +1228,4 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 
 ## Complementary Information
 
-- [Release notes for Nuxeo Cloud Platform 2020]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+- [Release notes for Nuxeo Platform LTS 2021]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
