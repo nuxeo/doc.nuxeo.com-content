@@ -34,6 +34,12 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <th>Contributor</th>
     <th>Category</th>
   </tr>
+  <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/partners/genus/nev-viewer"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/partners/genus/nev-viewer/screenshot.png" width="120px"/></a></td>
+    <td>Nuxeo Enhanced Viewer Document Preview</td>
+    <td>Genus</td>
+    <td>Layouts</td>
+  </tr>
    <tr>
     <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/document-load-and-preview"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/document-load-and-preview/eye.png" width="120px"/></a></td>
     <td>Document Load and Preview</td>
@@ -75,14 +81,6 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>[Date Time Picker](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/nuxeo-date-time-picker)</td>
     <td>Nuxeo</td>
     <td>Layouts</td>
-  </tr>
-  <tr>
-    <td>
-    ![user-group-management.png](nx_asset://39abd0e2-a21a-4855-8980-59a5da0da115 ?w=150,border=true)
-    </td>
-    <td>[Local Group Admins](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/user-group-management)</td>
-    <td>Nuxeo</td>
-    <td>Administration</td>
   </tr>
 </table>
 
@@ -126,6 +124,12 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+    <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/partners/genus/nev-viewer"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/partners/genus/nev-viewer/screenshot.png" width="120px"/></a></td>
+    <td>Nuxeo Enhanced Viewer Document Preview</td>
+    <td>Genus</td>
+    <td>Layouts</td>
+  </tr>
   <tr>
     <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/document-load-and-preview"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/document-load-and-preview/eye.png" width="120px"/></a></td>
     <td>Document Load and Preview</td>
