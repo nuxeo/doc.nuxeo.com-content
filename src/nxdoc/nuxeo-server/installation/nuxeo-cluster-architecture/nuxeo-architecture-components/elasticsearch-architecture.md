@@ -1,5 +1,5 @@
 ---
-title: Elasticsearch
+title: Search Engine
 description:
 labels:
     - deployment
@@ -27,7 +27,7 @@ Elasticsearch is a mandatory component of the Nuxeo architecture: in a developme
 
 ## Recommendation
 
-At least three nodes for the Elasticsearch cluster, same for Kafka and Redis if used. Contrary to Nuxeo server nodes, **you always need to have an odd number of machines for Redis and Elasticsearch** (3, 5, 7, etc.). It is required in order to safely handle failover when a network partitioning error occurs.
+At least three nodes for the Elasticsearch cluster: Remember **you always need to have an odd number of machines for Elasticsearch** (3, 5, 7, etc.). It is required in order to safely handle failover when a network partitioning error occurs.
 
 - Imagine that your cluster gets cut in half: 2 nodes on side A cannot communicate anymore with the third node on side B. In this situation, if the master node is the one isolated on side B, failover can be achieved properly because a majority (the 2 nodes on side A) can elect a new master node between them and keep service available. If you had 4 nodes in the same situation, service wouldn't be available anymore because a majority could not be obtained when voting. This is known as the split-brain problem. This also means that the minimum number of nodes to obtain high availability is 3.
 

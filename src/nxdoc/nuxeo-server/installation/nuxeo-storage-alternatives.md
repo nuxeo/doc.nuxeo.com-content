@@ -22,7 +22,6 @@ You can configure:
     - MongoDB
 - Where you store the binary streams (the files you attach to documents)
     - Simple FileSystem
-    - SQL Database
     - S3, Azure
     - Leveraging Content Delivery Networks for caching content securely all around the globe.
 
@@ -66,7 +65,7 @@ Since 6.0, the default configuration uses Elasticsearch.
 In the same logic, you can choose:
 - Where you store the caches and transient data
     - In Memory (per instance basis)
-    - Redis (shared memory)
+    - Redis (shared memory, only for the transient data, not the caches)
 - Where you store [Users and Groups]({{page page='data-lists-and-directories'}})
     - SQL Database
     - LDAP or Active Directory

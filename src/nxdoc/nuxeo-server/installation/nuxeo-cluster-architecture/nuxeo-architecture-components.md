@@ -44,13 +44,13 @@ This diagram represents the logical architecture for a Nuxeo cluster. It contain
 
 <div class="column medium-3">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Database]({{page page='database-architecture'}})</h3>
+<h3>[Data Structure]({{page page='database-architecture'}})</h3>
 {{/panel}}
 </div>
 
 <div class="column medium-3">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Elasticsearch]({{page page='elasticsearch-architecture'}})</h3>
+<h3>[Search Engine]({{page page='elasticsearch-architecture'}})</h3>
 {{/panel}}
 </div>
 
@@ -60,22 +60,7 @@ This diagram represents the logical architecture for a Nuxeo cluster. It contain
 {{/panel}}
 </div>
 
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-<h3>[Redis]({{page version='' space='nxdoc' page='redis-architecture'}})</h3>
-{{/panel}}
-</div>
-
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-<h3>[PubSub Service]({{page version='' space='nxdoc' page='pubsub-architecture'}})</h3>
-{{/panel}}
-</div>
-
 </center>
 </div>
 
-{{#> callout type='note'}}
-- **Redis** and **PubSub** are at the same level as the **File Storage**, **Database**, **Elasticsearch** and **Async processing** bricks. A new line has been added for readability purpose.
-- **Redis** is not a mandatory architecture component if **Kafka** is deployed.
-{{/callout}}
+

@@ -6,12 +6,16 @@ review:
     date: '2021-03-10'
     status: ok
 toc: true
-tree_item_index: 800
+tree_item_index: 100
 ---
 
 ## Concepts
 
 Redis can be used for the WorkManager, KeyValue Store and PubSub service.
+
+{{#> callout type='note'}}
+**Redis** is not a mandatory architecture component if **Kafka** is deployed.
+{{/callout}}
 
 When a Redis instance or cluster is set up, you can safely stop your Nuxeo server nodes anytime without being worried about losing these jobs in the process.
 

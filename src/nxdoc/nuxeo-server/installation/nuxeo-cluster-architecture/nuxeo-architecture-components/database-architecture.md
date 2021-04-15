@@ -1,5 +1,5 @@
 ---
-title: Database
+title: Data Structure
 description:
 labels:
     - deployment
@@ -24,7 +24,7 @@ The database is a core component for your Nuxeo cluster infrastructure, since it
 
 A database system providing high availability. Each solution has its own options for this, therefore we can't go into further details here.
 
-Best performances are obtained using **MongoDB** because it is a document based database. It is built to manage large volumes and is highly scalable. Moreover, using MongoDB allows you to manage key/value stores, and therefore avoid a Redis deployment.
+Best performances are obtained using **MongoDB** because it is a document based database. It is built to manage large volumes and is highly scalable.
 
 If you have no choice but relying on a SQL based database, then go for PostgreSQL.
 

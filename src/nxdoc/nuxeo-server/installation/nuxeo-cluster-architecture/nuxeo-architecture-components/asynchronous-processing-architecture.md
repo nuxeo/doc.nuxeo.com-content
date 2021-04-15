@@ -17,7 +17,7 @@ When running in cluster mode, the Nuxeo nodes need to communicate so the followi
 
 - The **[WorkManager]({{page page='work-and-workmanager'}})** can distribute its Works among nodes and share a common state.
 - **[Nuxeo Stream]({{page page='nuxeo-stream'}})** and the **[Bulk Service]({{page page='bulk-action-framework'}})** distribute processing among nodes and handle failover.
-- The **KeyValue Store** enabling distributed cache and a shared [Transient Store]({{page page='transient-store'}}).
+- The **KeyValue Store** enabling a shared [Transient Store]({{page page='transient-store'}}).
 - The **PubSub Service** can publish messages to all nodes and is used for cache invalidation.
 
 Nuxeo Platform have built-in critical features (Document trashing, CSV export, document deletion etc.) relying on the Nuxeo Platform Bulk Service. The bulk service is implemented with Nuxeo Stream that provides two implementation:
@@ -80,7 +80,14 @@ Nuxeo Stream is shipped with Kafka implementations and brings more resilience an
 {{#> callout type='info' heading='Kafka in the Cloud'}}
 You can consider [Amazon MSK](https://aws.amazon.com/msk/) or [Confluent Cloud for Kafka](https://www.confluent.io/confluent-cloud) as a managed service to go with Kafka.
 {{/callout}}
- 
+
+Consequently, we recommend:
+
+- **Kafka** for the WorkManager, Nuxeo Stream / Bulk Service and the PubSub.
+- **MongoDB** for the KeyValue Store.
+
+### Chronicle Queue and Kafka
+
   Technically both implementations work in unit tests, but we discourage the use of Chronicle Queue on a production setup:
 
 - The Chronicle Queue storage is local to the node, it is not replicated and in case of file system failure, scheduled processing are lost. More concretely while indexing processing is reproducible, a deletion of folders that would be missed will be missed forever. The system won’t be able to capture the user intent, in case of damage on the hard drive of the Nuxeo node. 
@@ -93,7 +100,7 @@ In this last scenario:
 - Mongo handles the KeyValue Store
 - Redis for the WorkManager and the PubSub Service
 
-### Configuration
+## Configuration
 
 Since Nuxeo Platform LTS 2019 (10.10), Kafka is recommended in cluster mode so the Bulk Service can be distributed and handles failover between Nuxeo nodes.
 
@@ -110,13 +117,7 @@ To get high availability, we need a Kafka cluster with 2 Kafka nodes. To orchest
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Going further'}}
-
-<<<<<<< HEAD
 - [Kafka configuration]({{page version='' space='nxdoc' page='kafka'}}#configuration)
 - [Redis configuration]({{page version='' space='nxdoc' page='redis-configuration'}})
-=======
-- [Kafka Configuration]({{page page='kafka'}}#configuration)
->>>>>>> 05edc0da61e064683a7940c885c1a302f9f9c152
-
 {{/panel}}</div><div class="column medium-6">
 </div></div>

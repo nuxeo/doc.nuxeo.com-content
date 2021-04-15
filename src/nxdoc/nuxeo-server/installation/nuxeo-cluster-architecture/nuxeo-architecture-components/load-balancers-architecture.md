@@ -32,8 +32,6 @@ For high availability, **two load balancers are necessary**, with sticky session
 
 ### HTTP Load Balancer Configuration
 
-Set up an HTTP or AJP load balancer such as Apache with `mod_proxy` or `mod_proxy_ajp` or Pound, and configure it to keep session affinity by tracking the value of the `JSESSIONID` cookie and the `;jsessionid` URL parameter.
-
 If you use a stateless load balancer, such as Apache modules such as `mod_jk` and `mod_proxy_balancer`, you need to make the HTTP server generate `JSESSIONID` cookies with values that end with `.nxworker_n_` , where `nxworker_n_` is a string suffix specific to each node (you can use any string).
 
 1.  In `nuxeo.conf` specify a different `nuxeo.server.jvmRoute` for each node, for instance `nuxeo.server.jvmRoute=nxworker1`.</br>
