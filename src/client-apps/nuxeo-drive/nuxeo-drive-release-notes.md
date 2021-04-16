@@ -9,68 +9,80 @@ review:
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.1.0**
+Welcome to the Release Notes for **Nuxeo Drive 5.1.1**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.1.0.md)
+**Status**: <font color="#ff0000">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.1.1.md)
 
 ## Important Changes
 
-### Direct Transfer
+### S3 Direct Upload
 
-#### Status Change
+We improved uploads robustness when going through S3 direct upload in several situations:
+- when a non-chunked upload fails because of expired credentials;
+- when refreshed credentials are still expired because of a misconfiguration of the ARN;
+- when the original `batchId` is removed from the transient store while the upload is still ongoing on the S3 side.
+These use cases will now restart the transfer from the ground because there is no possibility to continue an upload with a different batchId.
 
-The Direct Transfer feature is now enabled by default.
+Similar tickets: [NXDRIVE-2595](https://jira.nuxeo.com/browse/NXDRIVE-2595) and [NXDRIVE-2598](https://jira.nuxeo.com/browse/NXDRIVE-2598).
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2537](https://jira.nuxeo.com/browse/NXDRIVE-2537)
+### macOS Auto-Update Change
 
-#### CSV Export Capability for Direct Transfer Sessions
+By default, the app is installed in the `/Applications` folder. It implies several issues because that folder is protected and one needs to enter a password to apply changes. We found it blocked several users when the app is auto-updating itself.
 
-It is now possible for the user to export a Direct Transfer session to a CSV file. When a session is completed, a link will appear, allowing the user to generate an export on demand.
-The created CSV file contains default filled fields that make it directly usable in the Nuxeo CSV importer.
+A better location for apps is the $HOME/Application folder. It is not password-protected and allows separate apps for all users from ones from the current user.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2382](https://jira.nuxeo.com/browse/NXDRIVE-2382)
+Starting with Nuxeo Drive 5.1.1 the auto-updater will automatically move the app from /Applications to $HOME/Applications. It should be transparent for the user.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2163](https://jira.nuxeo.com/browse/NXDRIVE-2163)
+
+### Idempotent Requests
+
+To improve uploads resiliency, we introduced idempotent requests for several calls.
+Improvement thanks to such requests are no more duplicate creations or missing on the server when uploading a lot of files; ensuring the app will not create duplicates after a hard crash, and more generally it will make the upload experience more fluid.
+
+As the performances impact is not yet known, we put the feature behind the [`use-idempotent-requests`]({{page page='nuxeo-drive'}}#use-idempotent-requests) option, and it is disabled by default. We will work on benchmarks in the coming weeks and if the feature is safe enough, it will be enabled by default in a future release.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2463](https://jira.nuxeo.com/browse/NXDRIVE-2463)
 
 ## Improvements
 
-### Usage Metrics
+### Direct Transfer
 
-Usage metrics have been added using custom HTTP headers. Those metrics are only and exclusively sent to the platform when the application calls specifics operations or endpoints.
-Some of those metrics are sent in a specific process to avoid spamming the platform and can be disabled through the [custom-metric]({{page page='nuxeo-drive'}}#custom-metrics) parameter.
+#### End of Direct Transfer Session Notification Clickable
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2476](https://jira.nuxeo.com/browse/NXDRIVE-2476)
+Once a session of Direct Transfer is done, the notification has been made clickable and now redirects the user to the destination folder in the browser.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2427](https://jira.nuxeo.com/browse/NXDRIVE-2427)
+
+#### Updated Permission Check in Direct Transfer
+
+The atomic permission `AddChildren` is now used instead of the `ReadWrite` permission group to define the possible upload destinations in Direct Transfer.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2572](https://jira.nuxeo.com/browse/NXDRIVE-2572)
 
 ## Fixes
 
-### Improved Stability of S3 Direct Uploads
+### Windows Certificate Renewal
 
-We fixed a tricky issue when S3 direct upload was enabled for the synchronization. It was generating false conflicts and duplicates documents errors.
-The synchronization is now fully "safe", just as the synchronization using the default upload provider.
+The certificate used to ship Windows binaries has been renewed. For a small amount of time, users may see the Windows Smart Screen alert as below:
 
-We also improved non-chunked S3 direct uploads by removing one HTTP call for each and every upload.
+![]({{file name='windows-smart-screen-nuxeo-drive-5.1.1.png' page='nuxeo-drive-release-notes'}} ?w=350)
 
-See [NXPY-204](https://jira.nuxeo.com/browse/NXPY-204) and [NXPY-205](https://jira.nuxeo.com/browse/NXPY-205) for additional details.
+This is a temporary warning and it is completely safe to use Nuxeo Drive.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2479](https://jira.nuxeo.com/browse/NXDRIVE-2479)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2577](https://jira.nuxeo.com/browse/NXDRIVE-2577)
 
-### Preventing Crashes
+### Fixed Conflicted Documents With Non-Standard Digest
 
-The issue was not visible quickly but when Drive was running a long time with a lot of synchronization actions. Each thread was opening multiple connections to the SQLite database, but they were never released. Resulting in an increase of the number of opened file descriptors and it was consuming more and more memory (RAM). Both situations were ending with a hard crash: the OS was killing the application in both cases.
+In Nuxeo Drive [5.0.0]({{page page='5.0.0-nuxeo-drive-release-notes'}}) we improved the handling of documents having non-standard digests. At the time we did not take care of conflicts for such documents, this is now done.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2523](https://jira.nuxeo.com/browse/NXDRIVE-2523)
+The conflict resolution will be delayed until a valid digest will be sent by the server.
 
-### Preventing Server Deletions
-
-In Nuxeo Drive 4.1.0 we introduced a "deletion behavior" to change the way file deletions are impacted on the server (cf [NXDRIVE-1501](https://jira.nuxeo.com/browse/NXDRIVE-1501)). It appeared to be effective only when the application was running.
-
-But it will not be taken into account when files were deleted while the application was not running. In that scenario, when the chosen deletion behavior was to simply unsynchronize documents, it would just delete files on the server.
-
-That is now fixed and in such scenario, if the user did not choose any deletion behavior, then the default action will be to unsynchronize files to prevent unwanted remote deletions.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2538](https://jira.nuxeo.com/browse/NXDRIVE-2538)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2587](https://jira.nuxeo.com/browse/NXDRIVE-2587)
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.1.0-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.1.0.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.1.0.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.1.1-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.1.1.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.1.1.exe)
