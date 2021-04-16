@@ -147,7 +147,7 @@ Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/
 - Windows 10, both 32 and 64 bits
 - Windows Server 2019, 64 bits
 
-### MacOS ARM64 Support
+### macOS ARM64 Support
 
 Nuxeo Drive 5.0 and newer will run on macOS ARM64 as soon as the 11.2.2 or newer OS update will be installed.
 
