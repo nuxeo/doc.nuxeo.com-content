@@ -26,15 +26,17 @@ These use cases will now restart the transfer from the ground because there is n
 
 Similar tickets: [NXDRIVE-2595](https://jira.nuxeo.com/browse/NXDRIVE-2595) and [NXDRIVE-2598](https://jira.nuxeo.com/browse/NXDRIVE-2598).
 
-### macOS Auto-Update Change
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2590](https://jira.nuxeo.com/browse/NXDRIVE-2590).
+
+### macOS Auto-Update
 
 By default, the app is installed in the `/Applications` folder. It implies several issues because that folder is protected and one needs to enter a password to apply changes. We found it blocked several users when the app is auto-updating itself.
 
-A better location for apps is the $HOME/Application folder. It is not password-protected and allows separate apps for all users from ones from the current user.
+A better location for apps is the `$HOME/Application` folder. It is not password-protected and allows separate apps for all users from ones from the current user.
 
-Starting with Nuxeo Drive 5.1.1 the auto-updater will automatically move the app from /Applications to $HOME/Applications. It should be transparent for the user.
+Starting with Nuxeo Drive 5.1.1, the auto-updater will automatically move the app from `/Applications` to `$HOME/Applications`. It should be transparent for the user.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2163](https://jira.nuxeo.com/browse/NXDRIVE-2163)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2163](https://jira.nuxeo.com/browse/NXDRIVE-2163).
 
 ### Idempotent Requests
 
@@ -43,7 +45,7 @@ Improvement thanks to such requests are no more duplicate creations or missing o
 
 As the performances impact is not yet known, we put the feature behind the [`use-idempotent-requests`]({{page page='nuxeo-drive'}}#use-idempotent-requests) option, and it is disabled by default. We will work on benchmarks in the coming weeks and if the feature is safe enough, it will be enabled by default in a future release.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2463](https://jira.nuxeo.com/browse/NXDRIVE-2463)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2463](https://jira.nuxeo.com/browse/NXDRIVE-2463).
 
 ## Improvements
 
@@ -53,13 +55,13 @@ As the performances impact is not yet known, we put the feature behind the [`use
 
 Once a session of Direct Transfer is done, the notification has been made clickable and now redirects the user to the destination folder in the browser.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2427](https://jira.nuxeo.com/browse/NXDRIVE-2427)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2427](https://jira.nuxeo.com/browse/NXDRIVE-2427).
 
 #### Updated Permission Check in Direct Transfer
 
 The atomic permission `AddChildren` is now used instead of the `ReadWrite` permission group to define the possible upload destinations in Direct Transfer.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2572](https://jira.nuxeo.com/browse/NXDRIVE-2572)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2572](https://jira.nuxeo.com/browse/NXDRIVE-2572).
 
 ## Fixes
 
@@ -71,7 +73,7 @@ The certificate used to ship Windows binaries has been renewed. For a small amou
 
 This is a temporary warning and it is completely safe to use Nuxeo Drive.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2577](https://jira.nuxeo.com/browse/NXDRIVE-2577)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2577](https://jira.nuxeo.com/browse/NXDRIVE-2577).
 
 ### Fixed Conflicted Documents With Non-Standard Digest
 
@@ -79,7 +81,7 @@ In Nuxeo Drive [5.0.0]({{page page='5.0.0-nuxeo-drive-release-notes'}}) we impro
 
 The conflict resolution will be delayed until a valid digest will be sent by the server.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2587](https://jira.nuxeo.com/browse/NXDRIVE-2587)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2587](https://jira.nuxeo.com/browse/NXDRIVE-2587).
 
 ## Download Links
 
