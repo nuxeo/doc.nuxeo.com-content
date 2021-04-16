@@ -140,7 +140,7 @@ Client | Cloud | LTS 2021 | 10.10 | 9.10 | 8.10 | 7.10
 Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/support.md#client)):
 
 - GNU/Linux, 64 bits
-- macOS >= 10.13, 64 bits
+- macOS >= 10.13, 64 bits and ARM64
 - Windows 8, both 32 and 64 bits
 - Windows Server 2012, 64 bits
 - Windows 8.1, both 32 and 64 bits
