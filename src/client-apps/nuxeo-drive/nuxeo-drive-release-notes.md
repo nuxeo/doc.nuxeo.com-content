@@ -14,6 +14,18 @@ Welcome to the Release Notes for **Nuxeo Drive 5.1.1**
 **Status**: <font color="#ff0000">**Beta**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.1.1.md)
 
+## Important Changes
+
+### Windows Certificate Renewal
+
+The certificate used to ship Windows binaries has been renewed. For a small amount of time, users may see the Windows Smart Screen alert as below:
+
+![]({{file name='windows-smart-screen-nuxeo-drive-5.1.1.png' page='nuxeo-drive-release-notes'}} ?w=350)
+
+This is a temporary warning and it is completely safe to use Nuxeo Drive.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2577](https://jira.nuxeo.com/browse/NXDRIVE-2577).
+
 ## Improvements
 
 ### Direct Transfer
@@ -61,15 +73,6 @@ Starting with Nuxeo Drive 5.1.1, the auto-updater will automatically move the ap
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2163](https://jira.nuxeo.com/browse/NXDRIVE-2163).
 
-### Windows Certificate Renewal
-
-The certificate used to ship Windows binaries has been renewed. For a small amount of time, users may see the Windows Smart Screen alert as below:
-
-![]({{file name='windows-smart-screen-nuxeo-drive-5.1.1.png' page='nuxeo-drive-release-notes'}} ?w=350)
-
-This is a temporary warning and it is completely safe to use Nuxeo Drive.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2577](https://jira.nuxeo.com/browse/NXDRIVE-2577).
 
 ### Fixed Conflicted Documents With Non-Standard Digest
 
