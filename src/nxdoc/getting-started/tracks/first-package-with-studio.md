@@ -1,5 +1,5 @@
 ---
-title: 2 - First package with Studio
+title: 2 - First Package With Studio
 review:
     comment: ''
     date: '2020-12-11'
@@ -39,7 +39,7 @@ DOWNLOAD AND REGISTER THE NUXEO PLATFORM
 3. Create a [Nuxeo Online Services token]({{page version='' space='studio' page='token-management'}}#creating-a-token).  
 
 4.  Register your Nuxeo Server, using your account ID and NOS token previously generated:
-    {{#> panel heading='**MAC OS** / **Linux**'}}
+    {{#> panel heading='**macOS** / **Linux**'}}
     ```bash
     $ chmod +x ./bin/nuxeoctl
     $ ./bin/nuxeoctl register
@@ -53,7 +53,7 @@ DOWNLOAD AND REGISTER THE NUXEO PLATFORM
     {{/panel}}
 5. Install Nuxeo Web UI:
 <!-- Nuxeo DAM is included OOTB in the default Nuxeo distrib -->
-    {{#> panel heading='**MAC OS** / **Linux**'}}
+    {{#> panel heading='**macOS** / **Linux**'}}
     ```bash
     $ chmod +x ./bin/nuxeoctl
     $ ./bin/nuxeoctl mp-install nuxeo-web-ui
@@ -87,7 +87,6 @@ INSTALL THE GETTING STARTED TEMPLATE
   {{#> callout type='warning' }}
   You must have Administrator access and Dev Mode should be activated to use the hot reload.
   {{/callout}}
-
 
 ### Users and Groups
 
@@ -221,7 +220,6 @@ This field is directly related to the **BC Contract** document type, but if you 
 {{#> callout type='tip' }}
 Using the code editor ![]({{file name='code_editor.png'}} ?w=25), you can drag and drop the property into a Polymer `dom-if` template. The one we've created will only appear in the document view layout if the contract has been cancelled.
 {{/callout}}
-
 
 ```html
 <template is="dom-if" if="[[document.properties.bccontract:cancelled]]">
@@ -469,6 +467,6 @@ INSTALL NEW PACKAGES
 4. Save your changes. The package will be installed when installing the Studio package and its registries are available in the Studio project.
    ![]({{file name='AppDef4.png' page='first-package-with-studio'}} ?w=450,border=true)
 
-## What to do Next
+## Going Further
 
-You should learn to [create your own Operation](https://doc.nuxeo.com/nxdoc/cloud/develop-with-nuxeo-platform/).
+Let's learn how to [create your own operation](https://doc.nuxeo.com/nxdoc/cloud/develop-with-nuxeo-platform/).

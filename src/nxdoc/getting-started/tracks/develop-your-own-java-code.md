@@ -1,5 +1,5 @@
 ---
-title: 3 - Develop your own Java code
+title: 3 - Develop Your Own Java Code
 review:
     comment: ''
     date: '2021-03-02'
@@ -20,11 +20,6 @@ labels:
 toc: true
 tree_item_index: 300
 history:
-    -
-        author: Florian Bématol
-        date: '2021-03-02 16:20'
-        message: ''
-        version: '78'
     -
         author: Thibaud Arguillere
         date: '2016-08-26 17:56'
@@ -415,7 +410,7 @@ history:
 Here we want to add some server side Java logic that will update the contract's renegotiation date. In our example it will simply take the contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class, including a connection to an external webservice or an ERP.
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Nuxeo University:
 - [Course on Nuxeo CLI](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools)
 - [Course on Nuxeo Platform Developer Basics](https://university.nuxeo.com/learn/public/course/view/elearning/11/nuxeo-platform-developer-basics).
 - [Expert Session on Nuxeo Software Factory](https://university.nuxeo.com/learn/public/course/view/elearning/136/expert-session-nuxeo-software-factory)
@@ -424,14 +419,13 @@ Watch the related courses on Nuxeo University
 
 ## Prerequisites
 
-* A Contract document type created on this [page]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
-* An IDE that integrates with Maven.
+- A Contract document type created on this [page]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
+- An IDE that integrates with Maven.</br>
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
-* Java 11 with JDK
-* Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}}))
-* The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
-* npm 2.12.0+
-
+- Java 11 with JDK
+- Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}}))
+- The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
+- npm 2.12.0+
 
 ## Step 1 - Install Nuxeo CLI
 
@@ -445,7 +439,7 @@ $ npm install -g nuxeo-cli
 
 We'll use it to generate a new Nuxeo project and a custom operation.
 
-## Step 2 - Bootstrap your project
+## Step 2 - Bootstrap Your Project
 
 From a command line:
 
@@ -456,7 +450,7 @@ From a command line:
   $ cd contract-mgt-project
   ```
 
-2.  Generate an "Multi module" project structure:
+2.  Generate a "Multi module" project structure:
 
   ```bash
   $ nuxeo bootstrap
@@ -475,7 +469,7 @@ From a command line:
     Once complete, Nuxeo CLI will automatically start the process to create a "Single Module" project (the operation will be implemented here).
 
 4.  Fill in the following values to generate the "Single Module" project:
-  
+
     ```
     ? Project Group id: com.bigcorp.contractmgt
     ? Project Artifact id: contract-mgt-project-core
@@ -485,7 +479,7 @@ From a command line:
 
     Now that the project is generated, it can be used in **any IDE**.
 
-## Step 3 - Link with Studio
+## Step 3 - Link With Studio
 
 From a command line, inside your project directory:
 
@@ -504,7 +498,7 @@ From a command line, inside your project directory:
   ? Do you want to update your Maven settings.xml file accordingly? (Y/n) Y
   ```
 
-##### Encrypt your password
+##### Encrypt Your Password
 
 It is strongly recommended that you encrypt your Studio password (aka your Nuxeo Connect account password):
 
@@ -513,9 +507,9 @@ It is strongly recommended that you encrypt your Studio password (aka your Nuxeo
   ```bash
   $ mvn --encrypt-master-password
   ```
-  
+
   The command will prompt you for your master password and produce an encrypted version, something like this:
-  
+
   ```bash
   {jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}
   ```
@@ -535,7 +529,7 @@ It is strongly recommended that you encrypt your Studio password (aka your Nuxeo
   ```
 
 4. Store the encrypted Studio password in your `~/.m2/settings.xml` file as below:
-   
+
 ```xml
   <servers>
     ....
@@ -550,7 +544,7 @@ It is strongly recommended that you encrypt your Studio password (aka your Nuxeo
 
 This configures your Maven client to use authentication when accessing the Studio Maven repository.
 
-##### Import Studio constants
+##### Import Studio Constants
 
 1. Import constants used in your Studio project:
 
@@ -566,15 +560,18 @@ This configures your Maven client to use authentication when accessing the Studi
   ```
 
 Nuxeo CLI generates a new Java class with a list of constants containing everything defined in your Studio application.  
-By default, the Java class is created to `contract-mgt-project/contract-mgt-project-core/src/main/java/com/nuxeo/studio/StudioConstant.java`.
+By default, the Java class is created to:
+```
+contract-mgt-project/contract-mgt-project-core/src/main/java/com/nuxeo/studio/StudioConstant.java
+```
 
-## Step 4 - Implement your Operation
+## Step 4 - Implement Your Operation
 
 We want to create an operation that indicates the date of renegotiation of a contract. This will be done by fetching the document's start date and adding three months to it.
 
 A custom operation is a Java class in which you can put custom business logic. Custom operations usually serve one of two purposes: to support business logic that is too complex to express via an Automation Chain; or to provide functionality that does not exist within existing operations.
 
-Once created, the operation can be exposed in Nuxeo Studio and used just like any other operation via automation chains and automation scripts. See the [Automation]({{page page='automation'}}) section for more information about operations.
+Once created, the operation can be exposed in Nuxeo Studio and used just like any other operation via automation chains and automation scripts. See the [Automation]({{page page='automation'}}) page for more information about operations.
 
 1. In your terminal, generate an operation code template:
 
@@ -590,11 +587,15 @@ Once created, the operation can be exposed in Nuxeo Studio and used just like an
   ? Operation label: Contract Updater
   ```
 
-3. Nuxeo CLI will generate a new Java class for the operation at `contract-mgt-project/contract-mgt-project-core/src/main/java/com/bigcorp/contractmgt/ContractUpdater.java` like so:
+3. Nuxeo CLI will generate a new Java class for the operation at:
+    ```
+    contract-mgt-project/contract-mgt-project-core/src/main/java/com/bigcorp/contractmgt/ContractUpdater.java
+    ```
+    like so:
 
   ```java
   package com.bigcorp.contractmgt;
-  
+
   import org.apache.commons.lang3.StringUtils;
   import org.nuxeo.ecm.automation.core.Constants;
   import org.nuxeo.ecm.automation.core.annotations.Context;
@@ -604,7 +605,7 @@ Once created, the operation can be exposed in Nuxeo Studio and used just like an
   import org.nuxeo.ecm.core.api.CoreSession;
   import org.nuxeo.ecm.core.api.DocumentModel;
   import org.nuxeo.ecm.core.api.PathRef;
-  
+
   /**
    *
    */
@@ -630,7 +631,7 @@ Once created, the operation can be exposed in Nuxeo Studio and used just like an
 
   ```java
   package com.bigcorp.contractmgt;
-  
+
   import java.util.Calendar;
   import org.nuxeo.ecm.automation.core.Constants;
   import org.nuxeo.ecm.automation.core.annotations.Operation;
@@ -639,13 +640,13 @@ Once created, the operation can be exposed in Nuxeo Studio and used just like an
   import org.nuxeo.ecm.core.api.DocumentModel;
   import org.nuxeo.ecm.core.api.NuxeoException;
   import com.nuxeo.studio.StudioConstant;
-  
+
   /**
    *
    */
   @Operation(id = ContractUpdater.ID, category = Constants.CAT_DOCUMENT, label = "Contract Updater", description = "On a contract, sets the reminder date to three months after its start date.")
   public class ContractUpdater {
-  
+
       public static final String ID = "Document.ContractUpdater";
 
       @OperationMethod(collector = DocumentModelCollector.class)
@@ -654,7 +655,7 @@ Once created, the operation can be exposed in Nuxeo Studio and used just like an
               throw new NuxeoException("Operation works only with "
                       + StudioConstant.CONTRACT_DOC_TYPE + " document type.");
           }
-  
+
           Calendar start = (Calendar) input.getPropertyValue(StudioConstant.CONTRACT_SCHEMA_START_PROPERTY);
           Calendar reminder = (Calendar) start.clone();
           reminder.add(Calendar.MONTH, 3);
@@ -663,8 +664,8 @@ Once created, the operation can be exposed in Nuxeo Studio and used just like an
       }
   }
   ```
-    
-## Step 5 - Export registries and use them in Studio
+
+## Step 5 - Export Registries and Use Them in Studio
 
 We want to make visible what is defined in our Java code into the Studio project. For instance, we'll be able to use `Document.ContractUpdater` in an Automation Chain.
 
@@ -676,17 +677,21 @@ We want to make visible what is defined in our Java code into the Studio project
 
 2. On your Studio project under **Settings** > **Automatic Registries** > **Automation Operations**, you should see:
    ![]({{file name='OperationExport1.png' page='develop-your-own-java-code'}} ?w=450,border=true)
-   
+
 3. Your operation can be used in **Configuration** > **Automation** > **Automations Chains**, as follow:
    ![]({{file name='OperationExport2.png' page='develop-your-own-java-code'}} ?w=450,border=true)
 
-## Step 6 - Unit testing
+## Step 6 - Unit Testing
 
 The code can either be tested through unit tests or manually. You need to bind the Studio project first to have it deployed during the unit tests or on the server when testing manually.
 
 ### Update the Unit Test
 
-Nuxeo CLI automatically created a unit test class for the Operation at `contract-mgt-project/contract-mgt-project-core/src/test/java/com/bigcorp/contractmgt/TestContractUpdater.java`. This test must be made to pass in order to compile and deploy your project.
+Nuxeo CLI automatically created a unit test class for the Operation at:
+```
+contract-mgt-project/contract-mgt-project-core/src/test/java/com/bigcorp/contractmgt/TestContractUpdater.java
+```
+This test must be made to pass in order to compile and deploy your project.
 
 1.  Replace `TestContractUpdater.java` with the following code:
 
@@ -751,7 +756,7 @@ Nuxeo CLI automatically created a unit test class for the Operation at `contract
           }
     }
     ```
-    
-## What do next 
 
-You should learn to [package, publish, deploy and hotreload](https://doc.nuxeo.com/nxdoc/cloud/package-publish-deploy-hotreload/) your studio project.
+## Going Further
+
+Let's learn how to [package, publish, deploy and hot reload](https://doc.nuxeo.com/nxdoc/cloud/package-publish-deploy-hotreload/) your studio project.
