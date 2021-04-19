@@ -231,6 +231,17 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
         *   Or by configuring it manually on the IdP. In that case, you should use as the SAML consumer endpoints:
             - `http://<nuxeo_url>/nuxeo/nxstartup.faces` if you have the JSF UI (or both UIs)
             - `http://<nuxeo_url>/nuxeo/ui` if you are using the web UI alone
+
+1.  Configure the following CORS filter to allow the IDP redirect
+
+    ```xml
+    <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig"> 
+      <corsConfig name="idp" supportedMethods="POST" allowOrigin="https://myIdpDomain">
+       <pattern>/.*</pattern> 
+      </corsConfig> 
+    </extension>
+    ```
+
 1.  Optionally generate a keystore for enabling encryption. If you want to enable signing and/or encryption (not mandatory with some IdP) you have to generate a keystore and add the proper configuration to `nxserver/config` (ex: `saml-keystore-config.xml`):
 
     ```xml
