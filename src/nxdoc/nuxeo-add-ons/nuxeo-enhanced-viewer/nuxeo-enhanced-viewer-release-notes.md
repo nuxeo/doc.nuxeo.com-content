@@ -17,7 +17,7 @@ toc: true
 <table class="hover">
 <tbody>
 <tr>
-<th colspan="1">NEV Version</th>
+<th colspan="1">NEV version</th>
 <td colspan="1">10.5</td>
 </tr>
 <tr>
@@ -38,19 +38,21 @@ toc: true
 
 ### Improvements
 
-#### Make the rendition service "Document File Storage" HA (High Availability)
+#### Make the Rendition Service "Document File Storage" HA
 
-The rendition service "Document File Storage" is now HA to support high level of charge and prevent service degradation in case of an instance crashes.
+The rendition service "Document File Storage" is now HA (High Availability) to support a high level of charge and prevent service degradation in case of an instance crash.
 
 See [NEV-425](https://jira.nuxeo.com/browse/NEV-425).
 
 ### Major Fixes
 
-#### Infinite loop when opening some TIF files
+#### Infinite Loop When Opening TIFF Files
 
-Opening some TIFF files can occur infinite loop on the rendition service that may involve slowness in the preview of the files.
+An infinite loop occurred when opening some TIFF files on the rendition service, producing slowness in the preview of the files.
 
 See [NEV-429](https://jira.nuxeo.com/browse/NEV-429).
+
+* * *
 
 ## NEV 10.4.6
 
@@ -101,6 +103,7 @@ Since the NEV 10.3.x release, the files copied inside the docker image don't hav
 
 See [NEV-345](https://jira.nuxeo.com/browse/NEV-345).
 
+* * *
 
 ## NEV 10.4.5
 
@@ -151,6 +154,8 @@ We upgraded the java version on ARender containers as the previous version has a
 
 See [NEV-395](https://jira.nuxeo.com/browse/NEV-395).
 
+* * *
+
 ## NEV 10.4.3
 
 ### Summary
@@ -187,6 +192,8 @@ This new version is dedicated to bug fixing.
 ARender Broker and Renderer services were crashing and restart at the same time due to healcheck probes unstability.
 
 See [NEV-381](https://jira.nuxeo.com/browse/NEV-381).
+
+* * *
 
 ## NEV 10.4.2
 
