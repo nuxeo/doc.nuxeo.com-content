@@ -4,10 +4,189 @@ description: Release notes for Nuxeo Enhanced Viewer.
 tree_item_index: 100
 review:
   comment: ''
-  date: '2021-02-03'
+  date: '2021-04-20'
   status: ok
 toc: true
 ---
+
+## NEV 10.5
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.5</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.2.0.NX2.0</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">April 20th 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">ARender software, Previewer (ARender connector), Nuxeo addon (nuxeo-arender package)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Improvements
+
+#### Make the rendition service "Document File Storage" HA (High Availability)
+
+The rendition service "Document File Storage" is now HA to support high level of charge and prevent service degradation in case of an instance crashes.
+
+See [NEV-425](https://jira.nuxeo.com/browse/NEV-425).
+
+### Major Fixes
+
+#### Infinite loop when opening some TIF files
+
+Opening some TIFF files can occur infinite loop on the rendition service that may involve slowness in the preview of the files.
+
+See [NEV-429](https://jira.nuxeo.com/browse/NEV-429).
+
+## NEV 10.4.6
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.4.6</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.2.0.NX1.7</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">April 2nd 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">ARender software, Previewer (ARender connector), Nuxeo addon (nuxeo-arender package)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+This new version is dedicated to bug fixing.
+
+### Major Fixes
+
+#### Thread deadlock on the Document File Storage service
+
+Additional Deadlocks have been fixed following the initial fix [NEV-399](https://jira.nuxeo.com/browse/NEV-399)
+
+See [NEV-418](https://jira.nuxeo.com/browse/NEV-418).
+
+#### Fix the DFS oldStyleJPG error
+
+Clean logs by removing irrelevant exception error in the logs of the Document File Storage service.
+
+See [NEV-404](https://jira.nuxeo.com/browse/NEV-404).
+
+#### Fix group permission on files copied to previewer image
+
+Since the NEV 10.3.x release, the files copied inside the docker image don't have the group write permissions which is an issue when mounting additional configuration inside /docker-entrypoint-init.d because the entrypoint can't append to destination file.
+
+See [NEV-345](https://jira.nuxeo.com/browse/NEV-345).
+
+
+## NEV 10.4.5
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.4.5</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.2.0.NX1.6</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">March 19th 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">ARender software, Previewer (ARender connector), Nuxeo addon (nuxeo-arender package)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+This new version is dedicated to bug fixing.
+
+### Major Fixes
+
+#### Slowness and preview failures with high volume of users
+
+Deadlocks on the Document File Storage micro-service involved slowness and rendering failures.
+
+See [NEV-399](https://jira.nuxeo.com/browse/NEV-399).
+
+#### Share the OkHttp ConnectionPool to avoid thread leak
+
+We improved the OkHttp ConnectionPool management to avoid threak leak and so slowness for the users.
+
+See [NEV-401](https://jira.nuxeo.com/browse/NEV-401).
+
+#### Upgrade Java from 12-ea+29 to at least 12+33
+
+We upgraded the java version on ARender containers as the previous version has a bug for some Intel CPUs, see https://bugs.openjdk.java.net/browse/JDK-8219151.
+
+See [NEV-395](https://jira.nuxeo.com/browse/NEV-395).
+
+## NEV 10.4.3
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.4.3</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.2.0.NX1.3</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">February 11th 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">ARender software, Previewer (ARender connector), Nuxeo addon (nuxeo-arender package)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+This new version is dedicated to bug fixing.
+
+### Major Fixes
+
+#### ARender Broker and Renderer stability improvement
+
+ARender Broker and Renderer services were crashing and restart at the same time due to healcheck probes unstability.
+
+See [NEV-381](https://jira.nuxeo.com/browse/NEV-381).
 
 ## NEV 10.4.2
 
