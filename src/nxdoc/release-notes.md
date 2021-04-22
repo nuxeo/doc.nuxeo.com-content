@@ -15,14 +15,14 @@ Discover here new features, improvements and bug fixes for each of our products 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### [Server &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='cloud' space='nxdoc' page='nuxeo-server-release-notes'}})
+### [Server &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-server-release-notes'}})
 
 {{/panel}}
 </div>
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### [Web UI &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='cloud' space='nxdoc' page='web-ui-release-notes'}})
+### [Web UI &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='web-ui-release-notes'}})
 
 {{/panel}}
 </div>
@@ -40,8 +40,8 @@ Discover here new features, improvements and bug fixes for each of our products 
 ### Nuxeo Addons
 
 &#8211; &nbsp; [Drive]({{page space='client-apps' page='nuxeo-drive-release-notes'}})</br>
-&#8211; &nbsp; [Aspera]({{page version='cloud' space='nxdoc' page='nuxeo-aspera-release-notes'}})</br>
-&#8211; &nbsp; [Nuxeo Enhanced Viewer]({{page version='cloud' space='nxdoc' page='nuxeo-enhanced-viewer-release-notes'}})
+&#8211; &nbsp; [Aspera]({{page page='nuxeo-aspera-release-notes'}})</br>
+&#8211; &nbsp; [Nuxeo Enhanced Viewer]({{page page='nuxeo-enhanced-viewer-release-notes'}})
 
 {{/panel}}
 

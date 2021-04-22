@@ -47,7 +47,7 @@ although it should integrate with most frameworks with little effort.
 Watch the related courses on Nuxeo University
 - [Introduction to Nuxeo Elements](https://university.nuxeo.com/learn/public/course/view/elearning/79/introduction-to-nuxeo-elements)
 - [Expert Session on Nuxeo Elements Creation](https://university.nuxeo.com/learn/public/course/view/elearning/148/expert-session-creating-nuxeo-elements-with-studio-designer)
-![]({{file name='university-nuxeo-elements.png' version='cloud' space='nxdoc' page='university'}} ?w=450,border=true)
+![]({{file name='university-nuxeo-elements.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 
 Polymer pushes for a very declarative approach to building web applications with the "everything is an element" philosophy.
