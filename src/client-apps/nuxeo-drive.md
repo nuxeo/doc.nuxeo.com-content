@@ -17,8 +17,7 @@ tree_item_index: 100
 
 | Channel | Version                                                                    |
 | ------- | -------------------------------------------------------------------------- |
-| Release | [5.1.0](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
-| Beta    | [5.1.1](https://community.nuxeo.com/static/drive-updates/beta/?C=M;O=D)    |
+| Release | [5.1.1](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
 | Alpha   | [5.1.2.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D) |
 
 Find more information about our release cycle on [this page]({{page version='' space='client-apps' page='nuxeo-drive-release-cycle'}}).
