@@ -419,7 +419,7 @@ Watch the related courses on Nuxeo University:
 
 ## Prerequisites
 
-- A Contract document type created on this [page]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
+- A Contract document type created on this [page]({{page page='web-ui-document-layouts'}})
 - An IDE that integrates with Maven.</br>
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
 - Java 11 with JDK
@@ -676,10 +676,10 @@ We want to make visible what is defined in our Java code into the Studio project
    ```
 
 2. On your Studio project under **Settings** > **Automatic Registries** > **Automation Operations**, you should see:
-   ![]({{file name='OperationExport1.png' page='develop-your-own-java-code'}} ?w=450,border=true)
+   ![]({{file name='OperationExport1.png'}} ?w=450,border=true)
 
 3. Your operation can be used in **Configuration** > **Automation** > **Automations Chains**, as follow:
-   ![]({{file name='OperationExport2.png' page='develop-your-own-java-code'}} ?w=450,border=true)
+   ![]({{file name='OperationExport2.png'}} ?w=450,border=true)
 
 ## Step 6 - Unit Testing
 

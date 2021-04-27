@@ -130,10 +130,10 @@ This section provides step-by-step instructions to help you understand how to im
 - Nuxeo REST API
 - Nuxeo Javascript Client
 - Nuxeo Studio
-- nuxeocli
+- Nuxeo CLI
 
 <div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-4">
+<div class="column medium-3">
 {{#> panel type='secondary' match_height='true'}}
 ### 1 - Discover
 <br/>
@@ -143,17 +143,17 @@ This tutorial is composed of different steps to guides you on a tour of the Nuxe
 [Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='discover-nuxeo-platform-apis'}})
 {{/panel}}
 </div>
-<div class="column medium-4">
+<div class="column medium-3">
 {{#> panel type='secondary' match_height='true' }}
 ### 2 - Configure
 <br/>
 This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.<br/>
 
-<br/><br/>
+<br/>
 [Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='first-package-with-studio'}})
 {{/panel}}
 </div>
-<div class="column medium-4">
+<div class="column medium-3">
 {{#> panel type='secondary' match_height='true'}}
 ### 3 - Develop
 <br/>
@@ -161,6 +161,16 @@ This tutorial takes a contract's start date and add three months to it, but you 
 
 <br/><br/>
 [Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='develop-your-own-java-code'}})
+{{/panel}}
+</div>
+<div class="column medium-3">
+{{#> panel type='secondary' match_height='true'}}
+### 4 - Publish
+<br/>
+This tutorial will show you how to package, hot reload, release and finally publish your project using **Nuxeo CLI**.
+
+<br/><br/><br/><br/>
+[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='package-publish-deploy-hotreload'}})
 {{/panel}}
 </div>
 </div>

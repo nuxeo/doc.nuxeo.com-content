@@ -67,7 +67,7 @@ DOWNLOAD AND REGISTER THE NUXEO PLATFORM
     {{/panel}}
 6.  Open Chrome or Firefox and navigate to `http://NUXEO_SERVER/nuxeo`.
 
-7. The server will restart at the end. While you're waiting for your server to restart, install [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) for Chrome or Firefox.
+7. The server will restart at the end. While you're waiting for your server to restart, install [Nuxeo Dev Tools]({{page page='nuxeo-dev-tools-extension'}}) for Chrome or Firefox.
 
 8. Start Nuxeo.
 
@@ -83,7 +83,7 @@ INSTALL THE GETTING STARTED TEMPLATE
 
 4.  Under the **Configuration** menu in Studio, select **External Templates** and install the **Nuxeo Training: Getting Started** template by clicking on **Import this package**.
 
-5.  From Nuxeo Platform, open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) again and click the **Hot Reload** button to update your instance with configurations from the template.
+5.  From Nuxeo Platform, open [Nuxeo Dev Tools]({{page page='nuxeo-dev-tools-extension'}}) again and click the **Hot Reload** button to update your instance with configurations from the template.
   {{#> callout type='warning' }}
   You must have Administrator access and Dev Mode should be activated to use the hot reload.
   {{/callout}}
