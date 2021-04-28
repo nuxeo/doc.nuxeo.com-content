@@ -19,7 +19,7 @@ You can simply write a [Dockerfile](https://docs.docker.com/develop/develop-imag
 A good practice is to use a [build argument](https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact) before the `FROM` instruction to easily set the version of the Nuxeo parent image, as in the example below:
 
 ```Dockerfile
-ARG NUXEO_VERSION=latest
+ARG NUXEO_VERSION=LTS-2019
 
 FROM docker.packages.nuxeo.com/nuxeo/nuxeo:${NUXEO_VERSION}
 
@@ -41,7 +41,8 @@ We provide a utility script to install remote Nuxeo packages from [Nuxeo Connect
 For instance, you can use this script in the following `Dockerfile`:
 
 ```Dockerfile
-FROM docker.packages.nuxeo.com/nuxeo/nuxeo
+ARG NUXEO_VERSION=LTS-2019
+FROM docker.packages.nuxeo.com/nuxeo/nuxeo:${NUXEO_VERSION}
 
 ARG CLID
 ARG CONNECT_URL
@@ -81,7 +82,8 @@ COPY /path/to/my-configuration.properties /etc/nuxeo/conf.d/my-configuration.pro
 As it contains some non-free codecs, FFmpeg isn't part of the Nuxeo image. However, you can build a custom Docker image, based on the Nuxeo one, including the `ffmpeg` package provided by [RPM Fusion](https://rpmfusion.org/), see the `Dockerfile` sample  below. The resulting `ffmpeg` binary embeds all the codecs required for Nuxeo video conversions.
 
 ```Dockerfile
-FROM docker.packages.nuxeo.com/nuxeo/nuxeo
+ARG NUXEO_VERSION=LTS-2019
+FROM docker.packages.nuxeo.com/nuxeo/nuxeo:${NUXEO_VERSION}
 
 # we need to be root to run yum commands
 USER 0
