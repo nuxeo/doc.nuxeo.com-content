@@ -90,7 +90,7 @@ history:
 ---
 
 {{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
+Watch the related course on Nuxeo University:</br>
 [Course on Nuxeo Workflow Configuration](https://university.nuxeo.com/learn/course/external/view/elearning/39/workflow-engine-2021)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-wf.png

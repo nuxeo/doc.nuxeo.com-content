@@ -36,17 +36,6 @@ history:
 
 ---
 
-{{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
-[Course on Nuxeo Workflow Configuration](https://university.nuxeo.com/learn/course/external/view/elearning/39/workflow-engine-2021)
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-wf.png
-    name: university-wf.png
-    studio_modeler#screenshot#up_to_date
---}}
-![university-wf.png](nx_asset://76c9aa68-cc25-4ad5-b007-827c0eb0c188 ?w=450,border=true)
-{{/callout}}
-
 <div class="row" data-equalizer data-equalize-on="medium">
 
 <div class="column medium-6">
@@ -75,7 +64,16 @@ The company OhMyDoc has decided to set up a validation workflow for its press re
 
 [Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='workflow-escalation-rules-example'}})
 {{/panel}}
-
+</div>
 </div>
 
-</div>
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related course on Nuxeo University:</br>
+[Course on Nuxeo Workflow Configuration](https://university.nuxeo.com/learn/course/external/view/elearning/39/workflow-engine-2021)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-wf.png
+    name: university-wf.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![university-wf.png](nx_asset://76c9aa68-cc25-4ad5-b007-827c0eb0c188 ?w=450,border=true)
+{{/callout}}
