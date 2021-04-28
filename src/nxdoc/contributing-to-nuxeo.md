@@ -2,15 +2,14 @@
 title: Contributing to Nuxeo
 review:
     comment: ''
-    date: '2020-06-12'
+    date: '2021-04-21'
     status: ok
 labels:
-    - content-review-lts2016
     - git
     - akervern
     - link-update
     - multiexcerpt
-    - lts2017-ok
+    - lts2019-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950332'
@@ -25,11 +24,6 @@ confluence:
     source_link: /display/NXDOC/Contributing+to+Nuxeo
 tree_item_index: 700
 history:
--
-        author: Jackie Aldama
-        date: '2021-04-21 09:27'
-        message: ''
-        version: '53'
     -
         author: Manon Lumeau
         date: '2016-09-05 15:59'
@@ -311,7 +305,7 @@ Nuxeo is always happy when someone offers to help in the improvement of the prod
 Before describing this process, here are a few points that are the basis of the Nuxeo development process and that should always be kept in mind.
 
 - Don’t start coding without warning the [Product Manager](mailto:product-team@nuxeo.com). This is really important because maybe the code was going to be completely refactored, or the fix was planned and assigned for the next team sprint, or your idea is simply not aligned with our product roadmap and you don’t want to lose your time!
-- Any change in the Nuxeo sources should match with a JIRA issue ([Nuxeo Platform](https://jira.nuxeo.com/browse/NXP) or any other corresponding product: [Nuxeo Elements](https://jira.nuxeo.com/browse/ELEMENTS), [Browser Developer Extensions](https://jira.nuxeo.com/browse/BDE), etc.). 
+- Any change in the Nuxeo sources should match with a JIRA issue ([Nuxeo Platform](https://jira.nuxeo.com/browse/NXP) or any other corresponding product: [Nuxeo Elements](https://jira.nuxeo.com/browse/ELEMENTS), [Browser Developer Extensions](https://jira.nuxeo.com/browse/BDE), etc.).
 - If you do not have access to create NXP tickets in JIRA, consider creating a Support Ticket first (https://jira.nuxeo.com/browse/SUPNXP). In the Support Ticket, please indicate that you would like Support to open an NXP on your behalf.
 - Any code change must be documented in English.
 - Any code change must be unit-tested, this is required to ensure non-regression.
