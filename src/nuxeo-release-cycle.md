@@ -2,7 +2,7 @@
 title: Nuxeo Release Cycle
 review:
     comment: ''
-    date: '2017-08-09'
+    date: '2021-04-29'
     status: ok
 confluence:
     ajs-parent-page-id: '3868746'
@@ -54,12 +54,25 @@ history:
         message: ''
         version: '1'
 ---
-The release cycle consists in providing two kinds of releases: Fast Track releases and LTS releases.
 
-LTS (for Long Term Support) releases are maintained for three years. These versions will get all the hotfixes during that time span, but new features will only be available for version releases, which will happen about once a year. LTS versions are named from the year they are released, so LTS 2015, LTS 2016, etc. LTS version number ends with .10 and the major number matches the Fast Track cycle that led to the LTS. The LTS 2016 is the results the 8.x Fast Track versions and so its number is 8.10.
+The Nuxeo release cycle is centered around **two release types**:
 
-Fast Track releases are for those who can't wait to see the new features the team is developing. Fast Track versions are released roughly every 3 months. This release cycle is better for customers who prefer flexibility and fast availability of new features over maintenance duration. Fast Track releases are commonly used for testing and prototyping. They won&rsquo;t have regular hotfixes unless there&rsquo;s a blocker issue: the idea is to move to the next LTS release for all the fixes. It will also be supported only for our most common environment: Linux, Tomcat, PostgreSQL/Oracle.
+- **LTS releases every 18 to 24 months**. LTS releases can be seen as major releases. They can introduce non-transparent architecture, data, or code migration steps.
 
-On the same principle, LTS 2017 documentation will be created from FT documentation when Nuxeo Platform LTS 2017 is released.
+- **LTS updates every three weeks during the active phase** of the LTS (More on “Active” status below) and monthly when in the maintenance phase. LTS updates do not require any architecture, data, or code migration steps, making them easy and secure to install regularly.
 
-![](https://www.lucidchart.com/publicSegments/view/917d1d9e-1c2b-417f-9660-ddd0af4269f6/image.png ?w=600,h=195,border=true)
+_As always, critical security fix updates are scheduled for release as soon as they are ready._
+
+Nuxeo defines three distinct phases of the LTS lifecycle:
+
+- **Active**: The LTS updates deliver both bug fixes and new features and improvements. The active window lasts at least a year and until the next LTS version is released. When we deliver an LTS Update that includes new features that affect user interfaces, we will flag these changes and disable them by default. Examples include a new user action, a new menu entry, a new document tree, etc. Application builders can review the list of new features available along the LTS lifecycle and enable them individually. Flagged features will become the default option in the next active LTS release.
+
+- **Maintenance**: The LTS updates deliver bug fixes only. The maintenance phase for a given LTS lasts two years after its active phase. LTS releases are available for at least three years. For instance, if the active period lasts two years, then the entire LTS cycle will last four years.
+
+- **End of Life** (end of maintenance end): once the maintenance phase ends, the LTS version will no longer receive updates.
+
+LTS versions take the number of the year during which they are released. For example, our latest LTS release, which was launched earlier this year, is LTS 2021. Below is an example of a projection for currently maintained and upcoming LTS releases. Note that defined release dates in this diagram for LTS are subject to change. LTS releases are driven by the release’s scope, which explains the variation of the period between two LTS releases.
+
+![]({{file name='lts-release-cycle.png'}} ?w=650)
+
+As you can see, the major releases trend provides our customers more time to migrate while still benefiting from the most recent product evolutions.
