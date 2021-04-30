@@ -21,7 +21,7 @@ A good practice is to use a [build argument](https://docs.docker.com/engine/refe
 ```Dockerfile
 ARG NUXEO_VERSION=LTS-2019
 
-FROM docker.packages.nuxeo.com/nuxeo/nuxeo:${NUXEO_VERSION}
+FROM nuxeo:${NUXEO_VERSION}
 
 # Execute some commands to add layers on top of the parent image
 ```
@@ -42,7 +42,7 @@ For instance, you can use this script in the following `Dockerfile`:
 
 ```Dockerfile
 ARG NUXEO_VERSION=LTS-2019
-FROM docker.packages.nuxeo.com/nuxeo/nuxeo:${NUXEO_VERSION}
+FROM nuxeo:${NUXEO_VERSION}
 
 ARG CLID
 ARG CONNECT_URL
@@ -63,27 +63,13 @@ RUN rm -rf $NUXEO_HOME/local-packages
 USER 900
 ```
 
-## Adding Configuration Properties
-
-As described in this [section]({{page page='configuration-parameters-index-nuxeoconf'}}#docker-image) about the `nuxeo.conf` file, the files from the `/etc/nuxeo/conf.d` directory of the Nuxeo image have their properties appended to the final `nuxeo.conf` file used by the server.
-
-If you want to embed some additional configuration properties in your custom image, you can simply copy some properties files to the `/etc/nuxeo/conf.d` directory when building the custom image.
-
-For instance:
-
-```Dockerfile
-FROM docker.packages.nuxeo.com/nuxeo/nuxeo
-
-COPY /path/to/my-configuration.properties /etc/nuxeo/conf.d/my-configuration.properties
-```
-
 ## Installing FFmpeg
 
 As it contains some non-free codecs, FFmpeg isn't part of the Nuxeo image. However, you can build a custom Docker image, based on the Nuxeo one, including the `ffmpeg` package provided by [RPM Fusion](https://rpmfusion.org/), see the `Dockerfile` sample  below. The resulting `ffmpeg` binary embeds all the codecs required for Nuxeo video conversions.
 
 ```Dockerfile
 ARG NUXEO_VERSION=LTS-2019
-FROM docker.packages.nuxeo.com/nuxeo/nuxeo:${NUXEO_VERSION}
+FROM nuxeo:${NUXEO_VERSION}
 
 # we need to be root to run yum commands
 USER 0
