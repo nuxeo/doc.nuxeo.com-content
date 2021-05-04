@@ -43,6 +43,8 @@ toc: true
 In order to support Chinese and Korean text, we added new fonts to the available ones in the ARender Rendition.
 See [NEV-426](https://jira.nuxeo.com/browse/NEV-426).
 
+* * *
+
 ## NEV 10.5
 
 ### Summary
