@@ -75,10 +75,10 @@ Nuxeo defines three distinct phases of the LTS lifecycle:
 LTS versions take the number of the year during which they are released. For example, our latest LTS release, which was launched earlier this year, is LTS 2021. Below is an example of a projection for currently maintained and upcoming LTS releases. Note that defined release dates in this diagram for LTS are subject to change. LTS releases are driven by the release’s scope, which explains the variation of the period between two LTS releases.
 
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Release Cycle/LTS release cycle
-    name: lts-release-cycle.png
-    server#diagram#up_to_date
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Release Cycle/release-cycle-diagram
+    name: release-cycle-diagram.png
+    server#screenshot#up_to_date
 --}}
-![LTS release cycle ](nx_asset://732b7378-0a93-4d7d-ad1f-82a3a5cb2549 ?w=650,border=true)
+![release-cycle-diagram](nx_asset://06844453-da73-4c66-9fd3-e420214f1bc7 ?w=650)
 
 As you can see, the major releases trend provides our customers more time to migrate while still benefiting from the most recent product evolutions.
