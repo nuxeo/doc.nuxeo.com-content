@@ -43,7 +43,7 @@ Nuxeo Drive uses the same authentication way as any user would do with its brows
 
 ### Installing Nuxeo Drive on Your Computer
 
-If you try to synchronize a folder and you haven't installed the Nuxeo Drive client yet or haven't provided your credentials to the Nuxeo Drive client, you are automatically directed to the Nuxeo Drive home tab to install it.
+If you try to use Nuxeo Drive and haven't installed the Nuxeo Drive client yet or haven't provided your credentials to the Nuxeo Drive client, you are automatically directed to the Nuxeo Drive home tab to install it.
 
 <div>
 <table style="border-width:0px;">
