@@ -19,7 +19,7 @@ tree_item_index: 600
 ## Concept
 
 Elasticsearch is used to relieve the database from the costliest operations:
-- It keeps indexes on the documents in order to allow blazingly fast searches and modern search options like realtime filtering (AKA facets), even on very high volumes.
+- It keeps indexes on the documents to improve search performance, on very high volumes.
 - It stores the document's audit log. Since every operation on a document in Nuxeo is stored for possible audit purposes, the corresponding table would grow very rapidly and possibly reach millions of tuples when stored in the database. Using Elasticsearch, this is not a problem anymore.
 - It scales horizontally and provides constant performance even with growing content size.
 

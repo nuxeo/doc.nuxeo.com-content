@@ -1,5 +1,5 @@
 ---
-title: Data Structure
+title: Data Storage
 description:
 labels:
     - deployment
@@ -18,7 +18,9 @@ tree_item_index: 500
 
 ## Concept
 
-The database is a core component for your Nuxeo cluster infrastructure, since it will store the document hierarchy, all document properties, and will be used as well for various queries. Nuxeo supports many databases, both NoSQL and relational ones. Among them, MongoDB and PostgreSQL currently provide the best overall performances for Nuxeo usage.
+The database is a core component for your Nuxeo cluster infrastructure, since it will store the document hierarchy, all document properties, and will be used as well for various queries. In addition to the document repository, the database is also used to persist directories and KeyValue service content.
+
+Nuxeo supports many databases, both NoSQL and relational ones. Among them, MongoDB and PostgreSQL currently provide the best overall performances for Nuxeo usage.
 
 ## Recommendation
 

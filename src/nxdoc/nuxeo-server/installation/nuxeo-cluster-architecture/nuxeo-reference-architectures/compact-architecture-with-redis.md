@@ -39,7 +39,7 @@ This architecture can be improved by externalizing the Redis node inside a speci
 
 ## Limitations
 
-- As detailed in the [asynchronous processing component description]({{page version='' space='nxdoc' page='asynchronous-processing-architecture'}}#recommendation), Chronicle Queue doesn't provide a distributed and fault tolerant architecture: in case of failure, scheduled jobs might be lost.
+- As detailed in the [asynchronous processing component description]({{page version='' space='nxdoc' page='messaging-system-architecture'}}#recommendation), Chronicle Queue doesn't provide a distributed and fault tolerant architecture: in case of failure, scheduled jobs might be lost.
 - Chronicle Queue has to be deployed on the Nuxeo server and consumes JVM when a lot of work is queued, with possible impacts on the Nuxeo Server performance.  
 - Using Redis to manage the WorkManager implies that the job queues are in the JVM memory. Consequently, stacking a lot of jobs will consume JVM Memory. In cluster mode, each Nuxeo node maintains its own queue so when a Nuxeo server is restarted, all the queued jobs are lost.
 

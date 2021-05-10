@@ -44,7 +44,7 @@ This diagram represents the logical architecture for a Nuxeo cluster. It contain
 
 <div class="column medium-3">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Data Structure]({{page page='database-architecture'}})</h3>
+<h3>[Data Storage]({{page page='database-architecture'}})</h3>
 {{/panel}}
 </div>
 
@@ -56,7 +56,7 @@ This diagram represents the logical architecture for a Nuxeo cluster. It contain
 
 <div class="column medium-3">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Async Processing]({{page version='' space='nxdoc' page='asynchronous-processing-architecture'}})</h3>
+<h3>[Messaging System]({{page version='' space='nxdoc' page='messaging-system-architecture'}})</h3>
 {{/panel}}
 </div>
 

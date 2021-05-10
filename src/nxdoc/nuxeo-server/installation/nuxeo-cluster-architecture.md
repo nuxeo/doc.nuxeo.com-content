@@ -24,11 +24,12 @@ The goal of this section is to explain the principles and components that can be
 
 ## Cluster Basics
 
-Setting up a Nuxeo cluster consists of answering two main constraint types, independently or combined:
-- **Scalability**: The setup has to scale easily without sacrificing performances to adapt to a varying load.
-- **High Availability**: When something goes wrong, you should be able to restore service quickly, losing as little data as possible in the process.
+Running Nuxeo in cluster mode addresses two important cases:
 
-In order to scale out and provide high availability (HA), Nuxeo provides a simple clustering solution. When cluster mode is enabled, you can have several Nuxeo server nodes connected to the same components, and you can easily add more Nuxeo server nodes if needed to serve more requests.
+- **Scalability**: Adapt to varying load by adding or removing nodes
+- **High Availability**: Supporting node failure without impacting activity
+
+In order to scale out and provide high availability (HA), Nuxeo provides a simple clustering solution. When cluster mode is enabled, you can have several Nuxeo server nodes connected to the same services.
 
 ## Going Further
 
