@@ -5,36 +5,26 @@ review:
   comment: ''
   date: ''
   status: ok
+is_overview: true
 ---
 
-## Visual Design Language:
+<div class="row" data-equalizer data-equalize-on="medium">
 
-- Layout
-  - Responsive Layout Grid
-  - [Spacing]({{page page='spacing'}})
-  - UI Regions
-- [Color]({{page page='color'}})
-- [Typography]({{page page='typography'}})
-  - Typeface
-  - Type scale
-  - Type color
-- [Icons]({{page page='icons'}})
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Visual Design Guidelines
+</br>
+[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-drive'}})
+{{/panel}}
+</div>
 
-## Components:
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Components
+</br>
+[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='nxdoc' page='nuxeo-for-adobe-cc'}})
+{{/panel}}
+</div>
 
-- Menus
-- Navigation
-- [Form]({{page page='form'}})
-- Cards
-- [Modal dialogs]({{page page='modal-dialogs'}})
-- [File uploader]({{page page='file-uploader'}})
-- [Buttons]({{page page='buttons'}})
-- [Radio Buttons]({{page page='radio'}})
-- [Checkboxes]({{page page='checkboxes'}})
-- [Toggle]({{page page='toggle'}})
-- [Select]({{page page='select'}})
-- [Selectivity]({{page page='selectivity'}})
-- Tooltip
-- Data tables
-- Filters
-- Tags
+</div>
+</div>
