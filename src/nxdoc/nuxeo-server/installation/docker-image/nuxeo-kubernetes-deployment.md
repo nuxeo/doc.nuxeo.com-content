@@ -93,7 +93,7 @@ A [Kubernetes service](https://kubernetes.io/docs/concepts/services-networking/s
 
 [Kubernetes ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) are Kubernetes objects that allow you to separate configuration data/files from image content to keep containerized applications portable. ConfigMaps bind configuration files, command-line arguments, surroundings variables, port numbers, and alternative configuration artifacts to your Pods containers and system parts at run-time. ConfigMaps are helpful for storing and sharing non-sensitive, unencrypted configuration data. 
 
-If you need to store and manage sensitive information, such as passwords, OAuth tokens, and ssh keys, then you'll have to use [Kubernetes Secrets]() Storing confidential information in a Secret is safer and more flexible than putting it verbatim in a Pod definition or in a container image. 
+If you need to store and manage sensitive information, such as passwords, OAuth tokens, and ssh keys, then you can use [Kubernetes Secrets]() Storing confidential information in a Secret is safer and more flexible than putting it verbatim in a Pod definition or in a container image. 
 
 ConfigMaps and Secrets can be produced from files and with yaml declaration.
 
