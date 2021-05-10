@@ -42,7 +42,7 @@ Kubernetes with its declarative constructs and its ops friendly approach has fun
 ### Cloud Computing Platform
 
 
-The Kubernetes Engine has to be available in your preferred Cloud Computing Platform. Due to Kubernetes success and popularity, the majority offered a secured and fully managed Kubernetes service, and allow you to create a Kubernetes cluster and scale up easily to hundreds nodes and leverage a high-availability control plane including multi-zonal and regional clusters:
+The Kubernetes Engine has to be available in your preferred Cloud Computing Platform. Due to Kubernetes success and popularity, the majority offer a secured and fully managed Kubernetes service, and allow you to create a Kubernetes cluster and scale up easily to hundreds nodes and leverage a high-availability control plane including multi-zonal and regional clusters:
 
 - [Amazon Elastic Kubernetes Service(EKS)](https://aws.amazon.com/eks/) for Amazon Web Services 
 - [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine) for Google Cloud
@@ -180,4 +180,3 @@ The `nuxeo` chart is not production-ready by default. It suits for a development
 - [Kubernetes Official Documentation Website](https://kubernetes.io/docs/home/)
 - [Multi-tenant deployment on Kubernetes](https://github.com/tiry/nuxeo-helm-chart)
 - [Nuxeo Operator](https://operatorhub.io/operator/nuxeo-operator)
-
