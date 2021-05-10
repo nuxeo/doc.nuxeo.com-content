@@ -155,7 +155,7 @@ In Kubernetes, these 2 types of nodes are deployed via two dedicated deployments
 
 Make sure you've followed the best practices when setting up a Kubernetes Cluster:
 - Deploy your application in a specific namespace and avoid granting permission on components cluster-wide. If you target to deploy Nuxeo for different client, then you can use the multi-tenancy approach described [here](https://github.com/tiry/nuxeo-helm-chart) and create a namespace for each tenant.
-- Deploy a deploy load balancer and an internal DNS (Like Route)
+- Deploy a load balancer and an internal DNS (Like Route)
 - It is a good practice to access the Kubernetes cluster using its native API to secure its access 
 - Set a user policy for all the people going to access on the Kubernetes cluster
 - Use user policy per user working on k8s cluster
