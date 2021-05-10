@@ -14,7 +14,7 @@ is_overview: true
 {{#> panel type='secondary' match_height='true'}}
 ### Visual Design Guidelines
 </br>
-[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-drive'}})
+[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='visual-design-guidelines'}})
 {{/panel}}
 </div>
 
@@ -22,7 +22,7 @@ is_overview: true
 {{#> panel type='secondary' match_height='true'}}
 ### Components
 </br>
-[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='nxdoc' page='nuxeo-for-adobe-cc'}})
+[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='components'}})
 {{/panel}}
 </div>
 
