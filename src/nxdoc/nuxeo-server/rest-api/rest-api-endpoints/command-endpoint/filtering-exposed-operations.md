@@ -194,6 +194,8 @@ Here is the complete list of attributes and elements you can use in the extensio
   </table>
 </div>
 
+This is a great thing to have added
+
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [REST API]({{page page='rest-api'}})
