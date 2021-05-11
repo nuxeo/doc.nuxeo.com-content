@@ -11,24 +11,24 @@ toc: true
 
 {{! multiexcerpt name='studio-updates-2021-05'}}
 
-### WebUI by default 
+### Web UI by Default
 
-We've added WebUI by default for all newly created Studio projects. 
+We've added Web UI by default for all newly created Studio projects.
 
-### Recursive resolution of dependent Studio registries 
+### Recursive Resolution of Dependent Studio Registries
 
-The recursive computation of the registries of dependent Studio projects will be enforced. 
+The recursive computation of the registries of dependent Studio projects will be enforced.
 
-### New events added in Studio standard configuration 
+### New Events Added in Studio Standard Configuration
 
-We've added "pictureViewsGenerationDone" and "videoConversionsDone" events out of the box.
+We've added `pictureViewsGenerationDone` and `videoConversionsDone` events out of the box.
 
-### Removed blocking scenario, empty parameter in registry  
+### Removed Blocking Scenario, Empty Parameter in Registry
 
-We've added default parameters to operations contributed by the registries, in cases where these are empty. Previously these empty parameters caused automation chain errors. 
+We've added default parameters to operations contributed by the registries, in case these are empty. Previously these empty parameters caused automation chain errors.
 
-### Removed blocking scenario, corrupted translation files 
+### Removed Blocking Scenario, Corrupted Translation Files
 
-Corrupted i18n JSON files no longer block project builds. 
+Corrupted i18n JSON files no longer block project builds.
 
 {{! /multiexcerpt}}
