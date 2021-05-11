@@ -12,7 +12,7 @@ toc: true
 Welcome to the Release Notes for **Nuxeo Drive 5.2.0**
 
 **Status**: <font color="#ff0000">**Beta**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.1.1.md)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.0.md)
 
 ## General
 
@@ -56,7 +56,7 @@ Moreover, with the old behavior the application was watching huge trees for noth
 
 #### Windows and UNC Paths
 
-Options taking a path a value are now supporting UNC paths (shared folders).
+Options taking a path as value are now supporting UNC paths (shared folders).
 This completes the UNC paths support on Windows.
 
 Reminder: to be able to use a UNC path for the synchronization folder, it is required to set `nofscheck = true` in the local configuration file.
@@ -75,7 +75,7 @@ The configuration file parser has been fixed to handle again path-like options.
 
 #### Fresh Account Tab
 
-The Accounts tab in the Settings screen has been improved and is now visually closer to the interface of Direct Transfer and the new Synchronization tab.
+The Accounts tab in the Settings screen has been improved and is now visually closer to the interface of Direct Transfer window and the new Synchronization tab.
 
 SCREENSHOT
 
@@ -83,7 +83,7 @@ SCREENSHOT
 
 #### About Features Sates
 
-In order to follow the [wygiwys principle](https://en.wikipedia.org/wiki/WYSIWYG), when manually changing the state of a feature, the state of all features will now be written into the local configuration file. the old behavior was saving only the impacted feature.
+In order to follow the [wygiwys principle](https://en.wikipedia.org/wiki/WYSIWYG), when manually changing the state of a feature, the state of all features will now be written into the local configuration file. The old behavior was saving only the impacted feature.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2612](https://jira.nuxeo.com/browse/NXDRIVE-2612).
 
@@ -109,7 +109,7 @@ The option can be set globally from the server configuration, and it will be tak
 
 ### Fixes
 
-When choosing a folder or a file in the direct Transfer window, symbolic links are now ignored to prevent dangerous or unhandled behaviors.
+When choosing a folder or a file in the Direct Transfer window, symbolic links are now ignored to prevent dangerous or unhandled behaviors.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2635](https://jira.nuxeo.com/browse/NXDRIVE-2635).
 
