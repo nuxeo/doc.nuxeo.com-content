@@ -166,7 +166,7 @@ These steps are not required if you **only** pull the default Nuxeo Docker image
 In terms of software, the only requirement to run the Nuxeo Docker image is [Docker](https://docs.docker.com/get-docker/) itself: Java, as well as all the external software, are integrated in the Docker image.
 
 {{#> callout type='warning' heading='PRIVATE IMAGE'}}
-You should have access to our private [Docker registry](https://packages.nuxeo.com/#browse/search/docker=attributes.docker.imageName%3Dnuxeo%2Fnuxeo%20AND%20attributes.docker.imageTag%3D2021*%20AND%20repository_name%3Ddocker-private). If you are a Nuxeo client, please ask access to the Docker image through a support ticket. If not, contact your Nuxeo Administrator or Nuxeo sales representative to get access to this image.
+You should have access to our private [Docker registry](https://packages.nuxeo.com/#browse/search/docker=attributes.docker.imageName%3Dnuxeo%2Fnuxeo%20AND%20attributes.docker.imageTag%3D2021*%20AND%20repository_name%3Ddocker-private). If you are a Nuxeo client, please ask access to the Docker image through a support ticket. Once provided, follow [these instructions](https://doc.nuxeo.com/corg/maven-usage/#maven-usage-for-lts-2021). If not, contact your Nuxeo Administrator or Nuxeo sales representative to get access to this image.
 {{/callout}}
 
 {{! /multiexcerpt}}
