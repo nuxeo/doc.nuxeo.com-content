@@ -29,6 +29,8 @@ The `synchronization-enabled` option is now deprecated and should not be used an
 
 A new tab for the synchronization feature has been added in settings. This tab contains all synchronization options that were previously in the **Accounts** and **General** tabs. This tab will only be accessible when there is at least one account registered and the synchronization feature is enabled.
 
+![]({{file page='nuxeo-drive-release-notes' name='drive-sync-tab-5.2.0.png'}})
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2583](https://jira.nuxeo.com/browse/NXDRIVE-2583).
 
 #### OAuth2 Support
@@ -39,9 +41,7 @@ A bunch of new options are now available to customize OAuth 2 connection: [oauth
 
 For now the legacy Nuxeo token authentication is still the default. To use OAuth 2, first add an [OAuth 2 consumer]({{page version='' space='nxdoc' page='using-oauth2'}}#client-registration), then when adding a new account in Nuxeo Drive, simply uncheck the **Use legacy authentication** checkbox.
 
-Related tickets: [NXDRIVE-2627](https://jira.nuxeo.com/browse/NXDRIVE-2627) and [NXDRIVE-2403](https://jira.nuxeo.com/browse/NXDRIVE-2403).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-826](https://jira.nuxeo.com/browse/NXDRIVE-826).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-826](https://jira.nuxeo.com/browse/NXDRIVE-826), [NXDRIVE-2627](https://jira.nuxeo.com/browse/NXDRIVE-2627) and [NXDRIVE-2403](https://jira.nuxeo.com/browse/NXDRIVE-2403).
 
 ### Fixes
 
@@ -61,9 +61,7 @@ This completes the UNC paths support on Windows.
 
 Reminder: to be able to use a UNC path for the synchronization folder, it is required to set `nofscheck = true` in the local configuration file.
 
-Related ticket: [NXDRIVE-33](https://jira.nuxeo.com/browse/NXDRIVE-33).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2630](https://jira.nuxeo.com/browse/NXDRIVE-2630).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2630](https://jira.nuxeo.com/browse/NXDRIVE-2630) and [NXDRIVE-33](https://jira.nuxeo.com/browse/NXDRIVE-33).
 
 #### Paths in Local Config File
 
@@ -77,7 +75,7 @@ The configuration file parser has been fixed to handle again path-like options.
 
 The Accounts tab in the Settings screen has been improved and is now visually closer to the interface of Direct Transfer window and the new Synchronization tab.
 
-SCREENSHOT
+![]({{file page='nuxeo-drive-release-notes' name='drive-account-tab-5.2.0.png'}})
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2618](https://jira.nuxeo.com/browse/NXDRIVE-2618).
 
@@ -87,15 +85,27 @@ In order to follow the [wygiwys principle](https://en.wikipedia.org/wiki/WYSIWYG
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2612](https://jira.nuxeo.com/browse/NXDRIVE-2612).
 
+#### Improved Large File Upload via S3
+
+When uploading a large file through S3, given the server configuration in-place, it may happen that the `batchId` on the Nuxeo side is deleted from the transient store while the binary is still being sent to S3.
+
+To improve the situation a sysadmin could set higher values for those properties:
+  - `nuxeo.transientstore.ttl`
+  - `nuxeo.transientstore.ttl2`
+  - `nuxeo.s3storage.transient.ttl`
+  - `nuxeo.s3storage.transient.ttl2`
+
+On the Nuxeo Drive side, the `batchId` will now be pinged on a regular basis (every 55 minutes) to update its TTL and prevent its deletion from the transient store.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2332](https://jira.nuxeo.com/browse/NXDRIVE-2332).
+
 ## Direct Edit
 
 ### Fixes
 
 The Direct Edit experience has been made more robust by better handling HTTP 404 (Not Found), 502 (Bad Gateway), 503 (Service Unavailable) and 504 (Gateway Timeout) errors.
 
-Related ticket: [NXDRIVE-2621](https://jira.nuxeo.com/browse/NXDRIVE-2621).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2608](https://jira.nuxeo.com/browse/NXDRIVE-2608).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2608](https://jira.nuxeo.com/browse/NXDRIVE-2608) and [NXDRIVE-2621](https://jira.nuxeo.com/browse/NXDRIVE-2621).
 
 ## Direct Transfer
 
@@ -119,9 +129,7 @@ When choosing a folder or a file in the Direct Transfer window, symbolic links a
 
 The synchronization engine has been made more robust against HTTP 405 (Method Not Allowed), 408 (Request Timeout) and 504 (Gateway Timeout) errors.
 
-Related tickets: [NXDRIVE-2624](https://jira.nuxeo.com/browse/NXDRIVE-2624) and [NXDRIVE-2636](https://jira.nuxeo.com/browse/NXDRIVE-2636).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2609](https://jira.nuxeo.com/browse/NXDRIVE-2609).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2609](https://jira.nuxeo.com/browse/NXDRIVE-2609), [NXDRIVE-2624](https://jira.nuxeo.com/browse/NXDRIVE-2624) and [NXDRIVE-2636](https://jira.nuxeo.com/browse/NXDRIVE-2636).
 
 ## Download Links
 
