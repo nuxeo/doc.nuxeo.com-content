@@ -135,7 +135,9 @@ Java packages and instructions for installation are available from the Azul webs
 - [Download](https://www.azul.com/downloads/zulu-community/?architecture=x86-64-bit&package=jdk)
 - [Instructions](https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/Title.htm)
 
-As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version
+As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version.
+
+After installing the Java Development Kit, verify that the JAVA_HOME system variable correctly points to the Java Development Kit intended for running the Nuxeo Platform.   JAVA_HOME should be set if it is not present.
 
 {{! /multiexcerpt}}
 
