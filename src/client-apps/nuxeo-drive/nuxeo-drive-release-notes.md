@@ -4,7 +4,7 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: ''
-  date: '2021-04-15'
+  date: '2021-05-14'
   status: ok
 toc: true
 ---
