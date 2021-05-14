@@ -57,7 +57,7 @@ Moreover, with the old behavior the application was watching huge trees for noth
 #### Windows and UNC Paths
 
 Options taking a path as value are now supporting UNC paths (shared folders).
-This completes the UNC paths support on Windows.
+This improves the UNC paths support on Windows.
 
 Reminder: to be able to use a UNC path for the synchronization folder, it is required to set `nofscheck = true` in the local configuration file.
 
