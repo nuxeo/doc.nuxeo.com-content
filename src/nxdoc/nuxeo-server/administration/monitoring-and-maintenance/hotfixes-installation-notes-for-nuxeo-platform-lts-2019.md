@@ -96,7 +96,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### Manual replacement of nuxeoctl
 
-The hotfix 47 brings a fix to hide password in nuxeoctl.log when nuxeoctl is used to encrypt properties thanks to [NXP-30265](https://jira.nuxeo.com/browse/NXP-30265). But the hotfix mechanism cannot replace a file being run or change permissions on a file. Because of that, people who wants to benefit from this fix must replace it manually by downloading it from [NXP-30265](https://jira.nuxeo.com/browse/NXP-30265):
+The hotfix 47 brings a fix to hide passwords in nuxeoctl.log when `nuxeoctl` is used to encrypt properties, thanks to [NXP-30265](https://jira.nuxeo.com/browse/NXP-30265). Yet, the hotfix mechanism cannot replace a file being run or change permissions on a file. Because of that, people who want to benefit from this fix must replace it manually by downloading it from [NXP-30265](https://jira.nuxeo.com/browse/NXP-30265):
 
 Download [nuxeoctl.10.10](https://jira.nuxeo.com/secure/attachment/104454/nuxeoctl.10.10) file and replace `$NUXEO/bin/nuxeoctl`. And then change permissions to add the "execute" right:
 
