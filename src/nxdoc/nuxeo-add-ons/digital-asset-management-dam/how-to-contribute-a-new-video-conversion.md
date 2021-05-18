@@ -1,8 +1,8 @@
 ---
-title: 'HOWTO: Contribute a New Video Conversion'
+title: 'HOWTO: Contribute Video Conversion'
 review:
     comment: ''
-    date: '2018-01-15'
+    date: '2021-05-12'
     status: ok
 details:
     howto:
@@ -72,24 +72,42 @@ history:
 
 ---
 {{! excerpt}}
-Let's see how to contribute a new video conversion to convert a video to WebM format (assuming all the needed codecs are installed with FFmpeg).
+This page explains how video conversions are structured, and provide instructions to perform the standard video conversion operations.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration).
-![]({{file name='university-dam-configuration.png' page='university'}} ?w=450,border=true)
+{{#> callout type='info' heading='DAM Introduction'}}
+If you're interested to get more information about the Nuxeo DAM features, checkout the [Nuxeo DAM section]({{page page='digital-asset-management-dam'}}).
 {{/callout}}
 
-A video conversion depends of a `command`, a `converter`&nbsp;and a `videoConversion`&nbsp;contributions.
+## Video conversion concepts
 
-## Contributing the Command
+Video conversions are used to fill the video conversions (stored in the `vid:transcodedVideos` field of a document having the `Video` facet). The default ones are `MP4 480p`, `Ogg 480p` and `WebM 480p`. The video storyboard info are stored in the `vid:storyboard` property.
 
-{{#> panel type='code' heading='Command contribution'}}
+Video conversions are simple XML contributions done on the [`videoConversions`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) extension point of the [`org.nuxeo.ecm.platform.video.service.VideoService`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.video.service.VideoService) component. The default video conversions launched after the creation of a Video document are declared in the [`automaticVideoConversions`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--automaticVideoConversions) extension point.
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University: [DAM Concepts](https://university.nuxeo.com/learn/course/internal/view/elearning/97/NuxeoDigitalAssetManagementDAMConcepts)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_dam.png
+    name: university_dam.png
+    addins#screenshot#up_to_date
+--}}
+![university_dam.png](nx_asset://ed2467b9-4529-4cca-9843-0b46f8cd3d62 ?w=650,border=true)
+{{/callout}}
+
+A video conversion depends of a `command`, a `converter` and a `videoConversion` contributions.
+
+Video conversions are working only on documents having the `Video` facet.
+
+## Common conversion contributions
+
+### Register a new converter
+
+- Contribute an XML extension to register a new command line converter called `ffmpeg-towebm`:
+
 ```xml
 <extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
   point="command">
-
   <command name="ffmpeg-towebm" enabled="true">
     <commandLine>ffmpeg</commandLine>
     <parameterString> -i #{inFilePath} -s #{width}x#{height} -acodec libvorbis -v 0 #{outFilePath}</parameterString>
@@ -97,24 +115,19 @@ A video conversion depends of a `command`, a `converter`&nbsp;and a `videoConver
       You need to install FFmpeg from http://ffmpeg.org (apt-get install ffmpeg)
     </installationDirective>
   </command>
-
 </extension>
 ```
-{{/panel}}
 
 **Parameters**:
 
-*   `inFilePath`&nbsp;and `outFilePath` will be filled by Nuxeo,
+*   `inFilePath` and `outFilePath` will be filled by Nuxeo,
 *   `width` and `height` can be used in your command, they will be passed by the generic `VideoConversionConverter`.
 
-## Contributing the Converter
-
-The converter contribution depends of an already defined `command`.
+- Contribute an XML extension to register a converter that uses our new `ffmpeg-towebm` command line.
 
 ```xml
 <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"
   point="converter">
-
   <converter name="convertToWebM" class="org.nuxeo.ecm.platform.video.convert.VideoConversionConverter">
     <sourceMimeType>video/mpeg</sourceMimeType>
     <sourceMimeType>video/mp4</sourceMimeType>
@@ -131,11 +144,12 @@ The converter contribution depends of an already defined `command`.
       <parameter name="tmpDirectoryPrefix">convertToWebM</parameter>
     </parameters>
   </converter>
-
 </extension>
 ```
 
-Here we use the generic `VideoConversionConverter`&nbsp;converter, only the `sourceMimeType`s and `parameters` need to be filled.
+The converter contribution depends of an already defined `command`.
+
+Here we use the generic `VideoConversionConverter` converter, only the `sourceMimeType`s and `parameters` need to be filled.
 
 **Parameters**:
 
@@ -165,7 +179,7 @@ For instance, the converter to convert to MP4 looks like:
 </converter>
 ```
 
-## Contributing the Video Conversion
+### Add a new video conversion
 
 The video conversion contribution depends on an already defined converter. The same converter could be used for more than one video conversion if you wanted different sizes.
 
@@ -181,9 +195,9 @@ The video conversion contribution depends on an already defined converter. The s
 *   `converter`: the already defined converter to use when running this video conversion
 *   `height`: the max height of the video. The width and height of the new video will be computed and passed through the command, where we reference `#{width}` and `#{height}`.
 
-## Running the Video Conversion Manually
+### Running the video conversion manually
 
-Assuming `videoDocument`&nbsp;is a Document with the `Video` facet, to launch the "WebM 480p" video conversion on it:
+Assuming `videoDocument` is a Document with the `Video` facet, to launch the "WebM 480p" video conversion on it:
 
 ```java
 DocumentModel videoDocument = ...
@@ -191,7 +205,7 @@ VideoService videoService = Framework.getService(VideoService.class);
 videoService.launchConversion(videoDocument, "WebM 480p");
 ```
 
-## Running the Video Conversion Automatically
+### Running the video conversion automatically
 
 When importing Video, you can configure which video conversions will be run (asynchronously) automatically.
 
@@ -204,21 +218,60 @@ To run the "WebM 480p" video conversion automatically:
 </extension>
 ```
 
-&nbsp;
+### Filter video conversions
+
+You can filter the video conversion execution the same way [picture conversions are filtered]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}}#filter-picture-conversions).
+
+### Disable or update a default conversion 
+
+If you need to disable a default conversion, just override the [`videoConversions`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) extension point, and add the `enabled=false` attribute:
+
+```xml
+<extension point="videoConversions" target="org.nuxeo.ecm.platform.video.service.VideoService">
+    <videoConversion enabled=false converter="convertToMP4" height="480" name="MP4 480p" rendition="true"/>
+</extension>
+```
+
+In this scenario, the MP4 480p conversion won't be automated anymore and won't be displayed as available conversion in Nuxeo Web UI.
+
+### Display a custom conversion in the preview section
+
+The default document view layout of Nuxeo Web UI displays the main file preview (i.e. the binary stored in `file:content`). To display a specific conversion, you need to edit the view layout by
+
+- Commenting the default previewer
+
+```html
+<!-- comment this section -->
+<nuxeo-document-viewer role="widget" document="[[document]]"></nuxeo-document-viewer>
+```
+
+- Add the `nuxeo-document-preview` element to fetch a specific rendition. 
+
+```html
+<nuxeo-card>
+  <nuxeo-document-preview document="[[document]]" 
+  xpath="vid:transcodedVideos/1/content">
+  </nuxeo-document-preview>
+</nuxeo-card>
+```
+
+The `1` value in the `xpath` attribute corresponds to the order of the picture conversion in the list of video conversions.
+
+### Set security on a specific conversion  
+
+Use the same procedure as for [picture conversions]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}}#set-security-on-a-specific-conversion).
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
-- [HOWTO: Contribute a New Video Conversion]({{page space='NXDOC' page='How to+Contribute+a+New+Video+Conversion'}})
-- [Conversion]({{page space='NXDOC' page='Conversion'}})
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+
+- [Contribute a Command Line Converter]({{page space='NXDOC' page='How to+Contribute+a+Command+Line+Converter'}})
+- [Contribute Picture Conversions]({{page space='NXDOC' page='How to+Contribute+Picture+Conversions'}})
+
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
+
+- [Digital Asset Management (DAM) Section]({{page page='digital-asset-management-dam'}})
+- [Conversion]({{page page='conversion'}})
 - [Supported File Formats]({{page space='NXDOC' page='Supported File+Formats'}})
-- [HOWTO: Automatically Convert a Document to PDF]({{page space='NXDOC' page='How to+Automatically+Convert+a+Document+to+PDF'}})
-- [HOWTO: Contribute a Command Line Converter]({{page space='NXDOC' page='How to+Contribute+a+Command+Line+Converter'}})
-- [HOWTO: Contribute Picture Conversions]({{page space='NXDOC' page='How to+Contribute+Picture+Conversions'}})
-- [HOWTO: Quickly Generate a PDF Using Document Template]({{page space='NXDOC' page='How to+Quickly+Generate+a+PDF+Using+Document+Template'}})
-- [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
-{{/panel}}</div><div class="column medium-6">
-{{#> panel heading='Related pages in other documentation'}}
-- [User actions categories]({{page space='Studio' page='User actions+categories'}})<span class="smalltext">(Nuxeo Online Services)</span>
 
 {{/panel}}</div></div>
