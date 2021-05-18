@@ -237,7 +237,7 @@ A versioning filter defines the condition(s) the document has to fulfill so that
 - **Type**: On which document type the versioning applies
 - **Schema**: Apply the versioning if the document contains this schema
 - **Facet**: Apply the versioning if the document contains this facet
-- **Condition**: Defines a condition in [EL]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo#main-differences-between-languages'}}) to access properties of the document before/after modification
+- **Condition**: Defines a condition in [EL]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}#main-differences-between-languages) to access properties of the document before/after modification
 
 Example:
 

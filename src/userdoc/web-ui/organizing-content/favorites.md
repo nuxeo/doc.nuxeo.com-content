@@ -5,7 +5,6 @@ review:
     date: '2020-06-08'
     status: ok
 description: null
-toc: true
 labels:
     - favorites
 tree_item_index: 300

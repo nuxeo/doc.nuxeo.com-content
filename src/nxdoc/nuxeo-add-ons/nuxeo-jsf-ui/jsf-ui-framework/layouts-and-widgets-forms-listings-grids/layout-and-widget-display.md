@@ -141,7 +141,7 @@ The more common way to display a given layout for a document is to use the [`nxl
 
 ```
 
-Layouts that are referenced on a document type definition can use other helper tags, see the [corresponding documentation]({{page page='document-layouts#display'}}).
+Layouts that are referenced on a document type definition can use other helper tags, see the [corresponding documentation]({{page page='document-layouts'}}#display).
 
 {{#> callout type='note' }}
 

@@ -269,7 +269,7 @@ file, that you should copy to `NUXEO_HOME/nxserver/config/cors-config.xml`:
 ```
 
 We can then add a `nuxeo-document` to our template, which is a data element responsible for retrieving documents from a
-Nuxeo instance, either by `path` or `id`. This document relies on [two REST API endpoints]({{page page='rest-api'}}/#resources-endpoints):
+Nuxeo instance, either by `path` or `id`. This document relies on [two REST API endpoints]({{page page='rest-api'}}#resources-endpoints):
 `/api/v1/path` and `/api/v1/id`. For now, let's just retrieve `/default-domain`:
 
 {{#> panel type='code' heading='src/my-doc-reader.js'}}

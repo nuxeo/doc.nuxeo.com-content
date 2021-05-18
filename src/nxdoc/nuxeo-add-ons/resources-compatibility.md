@@ -21,6 +21,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/voAPAQ'
     source_link: /display/NXDOC/Resources+Compatibility
 tree_item_index: 3000
+hidden: true
 history:
     -
         author: Solen Guitter

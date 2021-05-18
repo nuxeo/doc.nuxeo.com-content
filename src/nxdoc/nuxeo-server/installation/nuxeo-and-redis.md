@@ -173,16 +173,16 @@ By default Lock managed on documents are stored in the repository backend. When 
 
 ## Clustering invalidation
 
-### Visual Content Store ([VCS](https://doc.nuxeo.com/nxdoc/vcs/)) Row Cache Invalidation
+### Visual Content Store ([VCS]({{page page='vcs'}})) Row Cache Invalidation
 
 Managing *VCS* (Meaning RDBMS) row cache invalidations with [Redis instead of using the database](https://jira.nuxeo.com/browse/NXP-14923) can improve performance on concurrent writes and provides synchronous invalidations.
 
-### Document Based Storage ([DBS](https://doc.nuxeo.com/nxdoc/dbs/)) Cache Invalidation
+### Document Based Storage ([DBS]({{page page='dbs'}})) Cache Invalidation
 
 For Nuxeo 8.10 and 9.10 the *DBS* layer (used to connect with MongoDB or Marklogic) [has a cache](https://jira.nuxeo.com/browse/NXP-20640) its invalidation in cluster mode requires Redis.
 
 {{#> callout type='warning' }}
-A Nuxeo No-Redis cluster configuration can be applied at certain conditions, see: [No-Redis Nuxeo Cluster Configuration](https://doc.nuxeo.com/nxdoc/kafka/#andquotno-redisandquot-nuxeo-cluster) for more info.
+A Nuxeo No-Redis cluster configuration can be applied at certain conditions, see: [No-Redis Nuxeo Cluster Configuration]({{page page='kafka'}}#andquotno-redisandquot-nuxeo-cluster) for more info.
 {{/callout}}
 
 ## Transient Store
@@ -195,6 +195,14 @@ The old Redis Transient Store can still be used with `nuxeo.transientstore.provi
 
 ## Clean-up
 
+After a Nuxeo node crash (low-level error, machine reboot, etc.), Redis may still contain data that Nuxeo didn't have the opportunity to clean up.
+
+{{#> callout type='info' }}
+In the following Lua scripts, the `nuxeo:` prefix is used for Redis keys. If a different value is set for `nuxeo.redis.prefix` in `nuxeo.conf`, you should update the code samples accordingly.
+More detail in [Configuring Nuxeo for Redis]({{page page='redis-configuration'}}#configuring-nuxeo-for-redis).
+{{/callout}}
+
+### Running workers
 The following code can be used with the Redis client to delete old workers marked as running:
 ```
 local keys = redis.call('KEYS', 'nuxeo:work:run:*')
@@ -203,12 +211,28 @@ for _,k in ipairs(keys) do
 	redis.call('DEL', k)
 end
 ```
-Copy this code to a file named `delete_running_works.lua`, change the Redis prefix if required (the default prefix value is `nuxeo`) run the following command line:
+Copy this code to a file named `delete_running_works.lua`:
 ```
 redis-cli --eval /path/to/delete_running_works.lua
 ```
 
-It finds all keys prefixed with `nuxeo:work:run` then delete these keys.
+It finds all keys prefixed with `nuxeo:work:run` and deletes them.
+
+### Scheduled workers
+The following code can be used with the Redis client to delete old workers marked as scheduled:
+```
+local keys = redis.call('KEYS', 'nuxeo:work:sched:*')
+
+for _,k in ipairs(keys) do
+  redis.call('DEL', k)
+end
+```
+Copy this code to a file named `delete_scheduled_works.lua`:
+```
+redis-cli --eval /path/to/delete_scheduled_works.lua
+```
+
+It finds all keys prefixed with `nuxeo:work:sched` and deletes them.
 
 * * *
 
@@ -220,8 +244,9 @@ It finds all keys prefixed with `nuxeo:work:run` then delete these keys.
 
 - [Redis Configuration]({{page page='redis-configuration'}})
 - [Work and WorkManager]({{page page='work-and-workmanager'}})
-- [Nuxeo Architecture Components - Configuration]({{page page='nuxeo-architecture-components'}})
-- [No-Redis Nuxeo Clustering Configuration]({{page page='nxdoc/kafka/#andquotno-redisandquot-nuxeo-cluster'}})
+- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+- [No-Redis Nuxeo Clustering Configuration]({{page page='kafka'}}#andquotno-redisandquot-nuxeo-cluster)
+
 
 {{/panel}}</div><div class="column medium-6">
 

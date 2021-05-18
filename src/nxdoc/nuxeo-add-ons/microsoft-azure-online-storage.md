@@ -145,6 +145,15 @@ Do not forget to use [data encryption]({{page page='sensitive-configuration-data
 </table>
 </div>
 
+## Limitations
+
+### Maximum File Upload Size
+
+- Standard, 2 GB
+- V1 Medium WAF gateways, 100 MB
+- V1 Large WAF gateways, 500 MB
+- V2 WAF, 750 MB
+
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}

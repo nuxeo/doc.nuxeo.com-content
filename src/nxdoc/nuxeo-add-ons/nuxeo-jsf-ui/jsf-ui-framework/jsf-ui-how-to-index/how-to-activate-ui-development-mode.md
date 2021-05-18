@@ -62,7 +62,7 @@ history:
 
 The following steps will allow you to activate the UI development mode. This mode displays additional information about rendered layouts/widgets.
 
-1.  Set up the dev mode, the process is detailed on the page [Supporting Hot Reload]({{page space='CORG' page='Supporting Hot+Reload#SupportingHotReload-SettinguptheDevMode'}}).
+1.  Set up the dev mode, the process is detailed on the page [Supporting Hot Reload]({{page space='corg' page='supporting-hot-reload'}}#setting-up-the-dev-mode).
 2.  Click on the link **Activate UI Development Mode**.
     ![]({{file name='linkActivate.png'}} ?w=600,border=true)
 3.  To get the information of an element in the UI, keep the 'shift' key pressed and mouse hover the element you are looking for.

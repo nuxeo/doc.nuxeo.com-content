@@ -482,21 +482,6 @@ Public
 </td>
 <tr>
 <td colspan="1">
-Nuxeo Media Publishing<br/>
-`nuxeo-mediapublishing`
-</td>
-<td colspan="1">
-Public
-</td>
-<td colspan="1">
-[Documentation]({{page page='nuxeo-media-publishing'}})
-</td>
-<td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)
-</td>
-</tr>
-<tr>
-<td colspan="1">
 Nuxeo Multi-tenant<br/>
 `nuxeo-multi-tenant`
 </td>
@@ -631,6 +616,7 @@ Registered access
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce)
 </td>
 </tr>
+<!--
 <tr>
 <td colspan="1">
 Nuxeo Sample<br/>
@@ -646,6 +632,7 @@ Public
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample)
 </td>
 </tr>
+-->
 <tr>
 <td colspan="1">
 Nuxeo Showcase Content<br/>
@@ -682,21 +669,6 @@ Public
 <td>Public</td>
 <td>[Documentation]({{page page='nuxeo-tree-snapshot'}})</td>
 <td>[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)
-</td>
-</tr>
-<tr>
-<td colspan="1">
-Nuxeo Vision<br/>
-`nuxeo-vision`
-</td>
-<td colspan="1">
-Registered access
-</td>
-<td colspan="1">
-[Documentation]({{page page='nuxeo-vision'}})
-</td>
-<td colspan="1">
-[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision)
 </td>
 </tr>
 <tr>
@@ -789,6 +761,7 @@ Public
 [Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering)
 </td>
 </tr>
+<!--
 <tr>
 <td colspan="1">
 Template Rendering Samples<br/>
@@ -804,6 +777,7 @@ Public
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples)
 </td>
 </tr>
+-->
 <tr>
 <td colspan="1">Nuxeo Zapier Integration<br/>
 `nuxeo-zapier`
@@ -849,17 +823,6 @@ Public
 <td colspan="1">
 [Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-marklogic-connector)</br>
 Deprecated since LTS 2019 (10.10)
-</td>
-</tr>
-<tr>
-<td colspan="1">Nuxeo Adobe CC Connector<br/>
-`nuxeo-cc-connector-marketplace`
-</td>
-<td colspan="1">Registered access</td>
-<td colspan="1">[Documentation]({{page page='nuxeo-adobe-cc-connector'}})</td>
-<td colspan="1">
-[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.8)<br/>
-Deprecated since LTS 2017 (9.10)
 </td>
 </tr>
 <tr>
@@ -988,6 +951,22 @@ Deprecated since LTS 2019 (10.10)
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo Media Publishing<br/>
+`nuxeo-mediapublishing`
+</td>
+<td colspan="1">
+Public
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-media-publishing'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)</br>
+Deprecated since LTS 2019 (10.10)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo Quota<br/>
 `nuxeo-quota`
 </td>
@@ -1019,53 +998,20 @@ Deprecated since LTS 2019 (10.10)
 </td>
 </tr>
 <tr>
-<td colspan="1">Nuxeo Review Workflows Dashboards<br/>
-`nuxeo-review-workflows-dashboards`
-</td>
-<td colspan="1">Public</td>
-<td colspan="1">&nbsp;</td>
 <td colspan="1">
-[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-review-workflows-dashboards?version=1.2.3)<br/>
-Deprecated since LTS 2016 (8.10)
-</td>
-</tr>
-<tr>
-<td colspan="1">
-Nuxeo Travel Expenses<br/>
-`nuxeo-travel-expenses`
+Nuxeo Vision<br/>
+`nuxeo-vision`
 </td>
 <td colspan="1">
-Public
+Registered access
 </td>
 <td colspan="1">
-[Documentation]({{page page='data-visualization'}}#travel-expenses-sample-dashboard)
+[Documentation]({{page page='nuxeo-vision'}})
 </td>
 <td colspan="1">
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-travel-expenses?version=1.1.2)</br>
-Deprecated since LTS 2019 (10.10)
+[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision)</br>
+Deprecated since LTS 2021
 </td>
-</tr>
-<tr>
-<td colspan="1">Nuxeo Virtual Navigation<br/>
-`nuxeo-virtualnavigation`
-</td>
-<td colspan="1">Public</td>
-<td colspan="1">
-[Documentation]({{page page='nuxeo-virtual-navigation'}})
-</td>
-<td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.3.3)<br/>
-Deprecated since LTS 2016 (8.10)
-</td>
-</tr>
-<tr>
-<td>ReactJS Sample<br/>
-`reactjs-sample`</td>
-<td>Registered access</td>
-<td>
-</td>
-<td>[Released for 9.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/reactjs-sample?version=1.1.0)<br/>
-Deprecated since LTS 2019 (10.10)</td>
 </tr>
 <tr>
 <td colspan="1">
@@ -1097,20 +1043,6 @@ Public
 <td colspan="1">
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shibboleth-invitation)<br/>
 Deprecated since LTS 2019 (10.10)
-</td>
-</tr>
-<tr>
-<td colspan="1">Smart Search<br/>
-`nuxeo-platform-smart-search`
-</td>
-<td colspan="1">Public</td>
-<td colspan="1">
-[Developer documentation]({{page version='810' page='smart-search'}})<br/>
-[User documentation]({{page version='810' space='userdoc' page='smart-search'}})
-</td>
-<td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.9.3)<br/>
-Deprecated since LTS 2016 (8.10)
 </td>
 </tr>
 </tbody>

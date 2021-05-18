@@ -117,7 +117,7 @@ Here is a complete example, taken from the default Nuxeo Summary layout, and sho
 
 {{/panel}}
 
-This layout is using a [grid]({{page page='layout-definitions#gridlayoutdefinition'}}), so that widgets are piled up within grid slots and stacked up correctly when some widgets are not displayed.
+This layout is using a [grid]({{page page='layout-definitions'}}#grid-layout-definition), so that widgets are piled up within grid slots and stacked up correctly when some widgets are not displayed.
 
 Let's look at the `summary_panel_left` widget configuration:
 

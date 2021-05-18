@@ -272,7 +272,7 @@ Referring to [Web UI deployment]({{page version='' page='web-ui-deployment'}}) d
 
 ### Add New Searches
 
-You can insert a new search in the left drawer menu the same exact way you insert any slot contribution to it, by using the [DRAWER_ITEMS]({{page page='web-ui-slots#drawer_pages'}}) slot.
+You can insert a new search in the left drawer menu the same exact way you insert any slot contribution to it, by using the [DRAWER_ITEMS]({{page page='web-ui-slots'}}#drawer_pages) slot.
 
 #### The DAM Example
 
@@ -287,7 +287,7 @@ The [Nuxeo DAM](https://github.com/nuxeo/nuxeo-dam/blob/9.10/nuxeo-dam-web-ui/sr
 </nuxeo-slot-content>
 ```
 
-And the corresponding [DRAWER_PAGE]({{page page='web-ui-slots#drawer_page'}}) slot, containing a `nuxeo-search-form` element.
+And the corresponding [DRAWER_PAGE]({{page page='web-ui-slots'}}#drawer_page) slot, containing a `nuxeo-search-form` element.
 
 ```xml
 <nuxeo-slot-content name="damSearchMenuButtons" slot="DRAWER_PAGES">

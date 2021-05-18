@@ -1,5 +1,5 @@
 ---
-title: 2 - Configure Nuxeo Platform
+title: 2 - First Package With Studio
 review:
     comment: ''
     date: '2020-12-11'
@@ -39,7 +39,7 @@ DOWNLOAD AND REGISTER THE NUXEO PLATFORM
 3. Create a [Nuxeo Online Services token]({{page version='' space='studio' page='token-management'}}#creating-a-token).  
 
 4.  Register your Nuxeo Server, using your account ID and NOS token previously generated:
-    {{#> panel heading='**MAC OS** / **Linux**'}}
+    {{#> panel heading='**macOS** / **Linux**'}}
     ```bash
     $ chmod +x ./bin/nuxeoctl
     $ ./bin/nuxeoctl register
@@ -53,7 +53,7 @@ DOWNLOAD AND REGISTER THE NUXEO PLATFORM
     {{/panel}}
 5. Install Nuxeo Web UI:
 <!-- Nuxeo DAM is included OOTB in the default Nuxeo distrib -->
-    {{#> panel heading='**MAC OS** / **Linux**'}}
+    {{#> panel heading='**macOS** / **Linux**'}}
     ```bash
     $ chmod +x ./bin/nuxeoctl
     $ ./bin/nuxeoctl mp-install nuxeo-web-ui
@@ -67,7 +67,7 @@ DOWNLOAD AND REGISTER THE NUXEO PLATFORM
     {{/panel}}
 6.  Open Chrome or Firefox and navigate to `http://NUXEO_SERVER/nuxeo`.
 
-7. The server will restart at the end. While you're waiting for your server to restart, install [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) for Chrome or Firefox.
+7. The server will restart at the end. While you're waiting for your server to restart, install [Nuxeo Dev Tools]({{page page='nuxeo-dev-tools-extension'}}) for Chrome or Firefox.
 
 8. Start Nuxeo.
 
@@ -83,11 +83,10 @@ INSTALL THE GETTING STARTED TEMPLATE
 
 4.  Under the **Configuration** menu in Studio, select **External Templates** and install the **Nuxeo Training: Getting Started** template by clicking on **Import this package**.
 
-5.  From Nuxeo Platform, open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) again and click the **Hot Reload** button to update your instance with configurations from the template.
+5.  From Nuxeo Platform, open [Nuxeo Dev Tools]({{page page='nuxeo-dev-tools-extension'}}) again and click the **Hot Reload** button to update your instance with configurations from the template.
   {{#> callout type='warning' }}
   You must have Administrator access and Dev Mode should be activated to use the hot reload.
   {{/callout}}
-
 
 ### Users and Groups
 
@@ -221,7 +220,6 @@ This field is directly related to the **BC Contract** document type, but if you 
 {{#> callout type='tip' }}
 Using the code editor ![]({{file name='code_editor.png'}} ?w=25), you can drag and drop the property into a Polymer `dom-if` template. The one we've created will only appear in the document view layout if the contract has been cancelled.
 {{/callout}}
-
 
 ```html
 <template is="dom-if" if="[[document.properties.bccontract:cancelled]]">
@@ -454,3 +452,21 @@ CUSTOMIZE THE LOGIN PAGE
 {{#> callout type='tip' }}
 Our teams are working round the clock to improve the themes and styling of Web UI so that you can apply your own branding. Check in again soon to see the improvements we've made and to further customize your Nuxeo application.
 {{/callout}}
+
+## Application Definition
+
+INSTALL NEW PACKAGES
+
+1. In Studio, select **Application Definition** from the **Settings** menu.
+   ![]({{file name='AppDef1.png' page='first-package-with-studio'}} ?w=450,border=true)
+
+2. Enter the package name you are looking for in the **Package to Install** input, and select it. You should have a summary about packages changes.
+   ![]({{file name='AppDef2.png' page='first-package-with-studio'}} ?w=450,border=true)
+   ![]({{file name='AppDef3.png' page='first-package-with-studio'}} ?w=450,border=true)
+
+4. Save your changes. The package will be installed when installing the Studio package and its registries are available in the Studio project.
+   ![]({{file name='AppDef4.png' page='first-package-with-studio'}} ?w=450,border=true)
+
+## Going Further
+
+Let's learn how to [create your own operation](https://doc.nuxeo.com/nxdoc/cloud/develop-with-nuxeo-platform/).

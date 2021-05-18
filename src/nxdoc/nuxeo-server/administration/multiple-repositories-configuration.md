@@ -193,7 +193,7 @@ In the above repository configuration, we defined `<property name="path">binarie
 
 ## Elasticsearch Configuration
 
-There must be an Elasticsearch index associated for each repository. See the [Elasticsearch multi repository configuration documentation]({{page page='elasticsearch-setup#conf_multi_repositories'}}) for more information.
+There must be an Elasticsearch index associated for each repository. See the [Elasticsearch multi repository configuration documentation]({{page page='elasticsearch-setup'}}#configuration-for-multi-repositories) for more information.
 
 &nbsp;
 

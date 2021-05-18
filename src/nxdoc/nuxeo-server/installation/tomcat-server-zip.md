@@ -1,5 +1,5 @@
 ---
-title: Install Nuxeo with the ZIP distribution
+title: Install Nuxeo With the ZIP Distribution
 review:
   date: '2021-01-29'
   status: ok
@@ -14,6 +14,18 @@ tree_item_index: 275
 ## Requirements
 
 {{{multiexcerpt 'lts2021-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related course on Nuxeo University:</br>
+[Nuxeo Platform Quickstart](https://university.nuxeo.com/learn/course/external/view/elearning/143/nuxeo-platform-quickstart)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_quickstart.png
+    name: university_quickstart.png
+    server#screenshot#up_to_date
+--}}
+![university_quickstart.png](nx_asset://2e9054c7-c6f3-4d2b-ae10-6221e17b3be8 ?w=450,border=true)
+{{/callout}}
+
 
 ## General Installation Process
 
@@ -130,6 +142,20 @@ As for any software, we very strongly recommend upgrading to the latest bugfix v
 ## Installing Nuxeo Platform
 
 Download the ZIP archive from the [Nuxeo distribution download site](https://connect.nuxeo.com/nuxeo/site/connect/distributions) and unzip it using your favorite tool.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Install Nuxeo with the ZIP distribution/connect_distribution.png
+    name: connect_distribution.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![connect_distribution.png](nx_asset://d0115b27-1597-44d0-86f1-3fc036cce797 ?w=650,border=true)
+
+Then:
+1. Unzip the file,
+1. Navigate to the `bin` directory,
+1. Register your Nuxeo instance running `nuxeoctl register`,
+1. Optionally, install your addons with `nuxeoctl mp-install <package_name>` command line,
+1. Start your Nuxeo server with `nuxeoctl start`.
 
 ## OS Specificities
 

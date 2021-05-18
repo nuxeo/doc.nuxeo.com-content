@@ -186,8 +186,8 @@ history:
         date: '2014-04-17 18:26'
         message: ''
         version: '1'
-
 ---
+
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
 [Configuring Searches in Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer).

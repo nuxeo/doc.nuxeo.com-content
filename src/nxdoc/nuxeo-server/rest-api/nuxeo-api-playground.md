@@ -347,7 +347,7 @@ For example, to get information about the `userWorkspaceRoot` document:
 
 ### {{> anchor 'resources-endpoints'}}Resources Endpoints
 
-In this section you can perform calls to all the [Resources Endpoints]({{page page='rest-api-endpoints#resources-endpoints'}}).
+In this section you can perform calls to all the [Resources Endpoints]({{page page='rest-api-endpoints'}}#resources-endpoints).
 
 ![]({{file name='playground_resources_endpoints_section.png'}} ?w=300,h=111,border=true)
 
@@ -381,7 +381,7 @@ The command endpoint section lists all the available [operations and chain of op
 
 1.  Click on the operation category and then on the operation you want to run.
 2.  Fill in the operation parameters form.
-    See [Operation Parameters documentation]({{page page='content-automation-concepts#operation-parameters'}}) or the [list of Operations on Nuxeo Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/listOperations) for more information on the parameters.
+    See [Operation Parameters documentation]({{page page='content-automation-concepts'}}#operation-parameters) or the [list of Operations on Nuxeo Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/listOperations) for more information on the parameters.
 
     **Tip:**
     For document input, click on the icon ![]({{file name='playground_browse_icon.png'}}) to browse the repository tree and select your document instead of typing the whole document path.

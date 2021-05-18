@@ -105,7 +105,7 @@ Here is a typical content view display:
 
 ## Content View Widget Type Definition
 
-From Studio, the easiest way to render a content view is to insert the [Content View Widget Type]({{page page='tab-designer-widget-types#contentviewwithformscontentview'}}) in a tab.
+From Studio, the easiest way to render a content view is to insert the [Content View Widget Type]({{page page='tab-designer-widget-types'}}#content-view) in a tab.
 
 ## Content View Actions Definition
 
@@ -113,7 +113,7 @@ From Studio, the easiest way to render a content view is to insert the [Content 
 
 Content view actions are visible on the top right corner. Since 6.0, these actions use the category `CONTENT_VIEW_ACTIONS`.
 
-By default, some filters apply to these actions. These filters have access to the [Seam/JSF context]({{page page='filters-and-access-controls#elexpressionsandavailablecontextvariables'}}), and they also have access to the additional variable `contentView`, representing the current content view instance being displayed.
+By default, some filters apply to these actions. These filters have access to the [Seam/JSF context]({{page page='filters-and-access-controls'}}el-expressions-and-available-context-variables), and they also have access to the additional variable `contentView`, representing the current content view instance being displayed.
 
 This allows to use expressions like `#{contentView.showRefreshCommand}` or `#{contentView.currentResultLayout.showCSVExport}`, but additional variables have also been added to the context, to help filtering on rendering information coming from a content view widget configuration, for instance. Default filters usually use this variable if defined, and fallback on the content view configuration if not.
 
@@ -129,7 +129,7 @@ Here is the list of the default actions:
 *   `contentViewEditColumns` opens a fancybox to select visible columns, variable `showEditColumns` is available in context,
 *   `contentViewEditRows` opens a fancybox to select visible rows (similar to the previous action, but using a different wording when listed data is not presenting columns, for instance thumbnail listings), variable `showEditRows` is available in context,
 
-If you'd like to disable or override these actions behaviour, please read [the chapter explaining how to redefine an action]({{page page='actions-overview#redefininganaction'}}).
+If you'd like to disable or override these actions behaviour, please read [the chapter explaining how to redefine an action]({{page page='actions-overview'}}#redefining-an-action).
 
 You should make sure to add the following requirement to your extension point contribution to ensure proper override:
 
@@ -139,19 +139,19 @@ You should make sure to add the following requirement to your extension point co
 
 Most of the original contributions are declared in [https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-contentview-jsf/src/main/resources/OSGI-INF/actions-contrib.xml](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-contentview-jsf/src/main/resources/OSGI-INF/actions-contrib.xml).
 
-Actions are displayed using a [Toolbar Actions]({{page page='tab-designer-widget-types#documentactionswithformstoolbaractions'}}) widget, allowing to use [any action type (including fancy boxes)]({{page page='standard-action-types'}}).
+Actions are displayed using a [Toolbar Actions]({{page page='tab-designer-widget-types'}}#toolbar-actions) widget, allowing to use [any action type (including fancy boxes)]({{page page='standard-action-types'}}).
 
 ## Content View Selection Actions Definition
 
 ![]({{file name='cv_selection_actions.png'}} ?w=600,h=157,border=true)
 
-Content view selection actions are displayed on the bottom left corner. The default category used is `CURRENT_SELECTION_LIST` but [this can be configured on the content view]({{page page='content-views#thecontentviewselectionactions'}}).
+Content view selection actions are displayed on the bottom left corner. The default category used is `CURRENT_SELECTION_LIST` but [this can be configured on the content view]({{page page='content-views'}}#the-content-view-selection-actions).
 
-Selection actions rely on a [selection list]({{page page='content-views#thecontentviewselectionlist'}}) to retrieve the list of checked documents. The default list is named `CURRENT_SELECTION`, default actions will rely on it.
+Selection actions rely on a [selection list]({{page page='content-views'}}#the-content-view-selection-list) to retrieve the list of checked documents. The default list is named `CURRENT_SELECTION`, default actions will rely on it.
 
-These filters have access to the [Seam/JSF context]({{page page='filters-and-access-controls#elexpressionsandavailablecontextvariables'}}), and they also have access to the additional variable `contentView`, representing the current content view instance being displayed, as well as `selectedDocuments`, corresponding to the list of selected documents.
+These filters have access to the [Seam/JSF context]({{page page='filters-and-access-controls'}}#el-expressions-and-available-context-variables), and they also have access to the additional variable `contentView`, representing the current content view instance being displayed, as well as `selectedDocuments`, corresponding to the list of selected documents.
 
-If you'd like to disable or override these actions behaviour, please read [the chapter explaining how to redefine an action]({{page page='actions-overview#redefininganaction'}}). Using the UI development mode can help you find the action identifier for easier override.
+If you'd like to disable or override these actions behaviour, please read [the chapter explaining how to redefine an action]({{page page='actions-overview'}}#redefining-an-action). Using the UI development mode can help you find the action identifier for easier override.
 
 These actions display allows to use [any action type (including fancy boxes)]({{page page='standard-action-types'}}).
 

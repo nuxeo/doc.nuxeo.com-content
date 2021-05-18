@@ -472,8 +472,8 @@ Make sure no jobs are still queued or running before starting the upgrade proced
         {{#> callout type='warning' }}
         Be very careful about the two properties allowing to configure the backend for audit logs, make sure you read the related documentation:
 
-        *   `audit.elasticsearch.enabled`: [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup#disablingelasticsearchforauditlogs'}})
-        *   `audit.elasticsearch.migration`: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page page='elasticsearch-setup#triggeringsqltoelasticsearchauditlogsmigration'}})
+        *   `audit.elasticsearch.enabled`: [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-elasticsearch-for-audit-logs)
+        *   `audit.elasticsearch.migration`: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='810' page='elasticsearch-setup'}}#triggering-sql-to-elasticsearch-audit-logs-migration)
         {{/callout}}
         *   Replace the old nuxeo.conf file with this new one.
 6.  [Upgrade your Nuxeo Packages](#marketplace-packages-upgrade).
@@ -515,11 +515,11 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 
 ## Detailed Upgrade by Version
 
-### To Nuxeo Platform Cloud 2020 from LTS 2019
-See [Upgrade from LTS 2019 to Cloud Release 2020]({{page version='' space='' page='upgrade-from-lts-2019-to-cloud-2020'}}) to upgrade to the latest Cloud release of Nuxeo Platform.
+### To Nuxeo LTS 2021 from LTS 2019
+See [Upgrade from LTS 2019 to LTS 2021]({{page version='' space='nxdoc' page='upgrade-from-lts-2019-to-lts-2021'}}) to upgrade to the LTS 2021 version of Nuxeo Platform.
 
 Release Notes:
-- [Nuxeo Platform Cloud 2020 Release notes]({{page version='' space='' page='nuxeo-server-release-notes'}})
+- [Nuxeo Platform LTS 2021 Release notes]({{page version='' space='' page='nuxeo-server-release-notes'}})
 
 ### To LTS 2019 from LTS 2017
 See [Upgrade from LTS 2017 to LTS 2019]({{page version='' space='nxdoc' page='upgrade-from-lts-2017-to-lts-2019'}}) to upgrade to the LTS 2019 version or [Upgrade from LTS 2017 following Fast Tracks]({{page page='upgrade-from-lts-2017-following-fast-tracks'}}) to upgrade from a Fast Track version to LTS 2019.

@@ -25,167 +25,167 @@ version_override:
     LTS 2015: 710/admindoc/upgrade-from-58-to-60
     '6.0': 60/admindoc/upgrade-from-58-to-60
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-10 15:36'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-06 07:25'
         message: Fix link to page How to upgrade Nuxeo
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 17:01'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 15:47'
         message: 'NXDOC-747: Add section Setting up Caches for Directories'
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-27 15:33'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '29'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-09-07 07:41'
         message: ''
         version: '28'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-05-12 13:57'
         message: Added Document interface change
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 14:20'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 15:55'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-05 15:54'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-25 15:07'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-25 14:34'
         message: 'fix typos, add links, cap titles'
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-25 11:08'
         message: ''
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-25 11:06'
         message: ''
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-25 00:34'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-25 00:33'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-25 00:31'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-25 00:31'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-25 00:30'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-24 16:22'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-18 16:09'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-24 10:43'
         message: Add PDF export of upgrades note
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-23 17:16'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2014-08-08 17:29'
         message: Fix issues filter links
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-08 17:12'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-08 17:12'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-23 11:57'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-23 11:57'
         message: Added missing 5.9.3 and 5.9.4 upgrade and release notes
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-18 11:19'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-18 09:25'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-12 11:22'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-12 11:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-12 11:20'
         message: ''
@@ -206,7 +206,7 @@ This chapter highlights some major information about upgrade from Nuxeo Platform
 
 You can read [how to Update the Version of Your Target Platform in Studio]({{page space='studio' page='update-the-version-of-your-target-platform'}}).
 
-Due to some feature moves, you should also report to the page [Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions#to-60'}}) to migrate your project.
+Due to some feature moves, you should also report to the page [Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions'}}#upgrading-to-60) to migrate your project.
 
 </div>
 
@@ -238,11 +238,11 @@ nuxeo.security.allowNegativeACL=true
 
 ### Upgrading Your Production Architecture
 
-Elasticsearch is not mandatory: you can [keep on querying VCS (the database)]({{page space='ADMINDOC60' page='Elasticsearch Setup#ElasticsearchSetup-DisablingElasticsearch'}}) and use the database full-text index.
+Elasticsearch is not mandatory: you can [keep on querying VCS (the database)]({{page page='elasticsearch-setup'}}#disabling-elasticsearch) and use the database full-text index.
 
 {{#> callout type='warning' }}
 
-If you want to benefit from the Elasticsearch Indexing Service in production, which is enabled by default, you should setup[ an Elasticsearch cluster]({{page space='admindoc60' page='elasticsearch-setup'}}) and you need to [index the existing content]({{page space='ADMINDOC60' page='Elasticsearch Setup#ElasticsearchSetup-RebuildingtheIndex'}}).
+If you want to benefit from the Elasticsearch Indexing Service in production, which is enabled by default, you should setup[ an Elasticsearch cluster]({{page space='admindoc60' page='elasticsearch-setup'}}) and you need to [index the existing content]({{page space='ADMINDOC60' page='Elasticsearch Setup'}}#rebuilding-the-repository-index).
 
 {{/callout}}
 
