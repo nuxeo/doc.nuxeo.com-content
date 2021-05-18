@@ -183,7 +183,7 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
         <th colspan="1">Elasticsearch</th>
         <td colspan="1">
           Library: 7.9.2<br/>
-          Cluster: 7.7 to 7.9 RestClient protocol only.
+          Cluster: 7.x with x >= 7 RestClient protocol only (Elastic ensures forward compatibility on minor version, 7.7 has been validated).
         </td>
         <td colspan="1">
           Library: 6.5.3<br/>
