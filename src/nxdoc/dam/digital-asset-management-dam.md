@@ -1,9 +1,9 @@
 ---
-title: Digital Asset Management (DAM)
-description: The Digital Asset Management addon of the Nuxeo Platform provides multimedia files management (pictures, audio and video).
+title: DAM Functional and Technical Description
+description: Nuxeo Platform provides multimedia files management (pictures, audio and video).
 review:
     comment: ''
-    date: '2019-09-18'
+    date: '2021-05-20'
     status: ok
 labels:
     - lts2016-ok
@@ -28,7 +28,7 @@ confluence:
     shortlink: UAA7
     shortlink_source: 'https://doc.nuxeo.com/x/UAA7'
     source_link: /pages/viewpage.action?pageId=3866704
-tree_item_index: 400
+tree_item_index: 500
 history:
     -
         author: Manon Lumeau
@@ -300,20 +300,12 @@ history:
 {{{multiexcerpt 'addon-default-distribution' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
-[The Digital Asset Management addon](http://www.nuxeo.com/en/products/dam) of the Nuxeo Platform provides multimedia files management (pictures, audio and video).
+This page gives a functional and technical overview of the Nuxeo Platform DAM capabilities.
 {{! /excerpt}}
-
-{{#> callout type='info' heading='DAM Introduction'}}
-If you're interested to get a functional tour of the main Nuxeo DAM features, checkout the [Nuxeo DAM section]({{page page='digital-asset-management-dam'}}).
-{{/callout}}
 
 ## Installation
 
-{{! multiexcerpt name='MP-installation-easy'}}
-This addon requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page page='installing-a-new-package-on-your-instance'}}).
-{{! /multiexcerpt}}
-
-However some features depend on external software for conversion and transcoding. See the page [Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
+Some features depend on external software for conversion and transcoding. See the page [Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
 
 ## Functional Overview
 
@@ -448,10 +440,9 @@ When navigating on an existing Video document in Nuxeo, clicking the User Action
 
 ##### Concatenate Videos
 
-To merge two or more videos together sequentially, a User Action can be added to the Document List Toolbar so that Video documents in the same folder can easily be selected and concatenated:
+To merge two or more videos together sequentially, a button can be added to the Document Selection slot so that Video documents in the same folder can easily be selected and concatenated:
 
 ```
-- Seam.GetSelectedDocuments
 - Video.Concat
 - WebUI.DownloadFile
 ```
@@ -460,7 +451,7 @@ The resulting video is then automatically downloaded. **The videos you wish to c
 
 ##### Slice Videos
 
-You can edit the length of the videos using the Video Slice operations. The following automation chain will download a zip file with 5-second snippets of the original video:
+You can edit the length of the videos using the Video Slice operations. The following automation chain will generate a zip file with 5-second snippets of the original video:
 
 ```
 - Context.FetchDocument
@@ -468,7 +459,6 @@ You can edit the length of the videos using the Video Slice operations. The foll
     duration: 00:00:05
 - Blob.CreateZip:
     filename: SlicedVideos
-- WebUI.DownloadFile
 ```
 
 Or you can specify the start time and duration of the clip and download it directly:
@@ -479,18 +469,16 @@ Or you can specify the start time and duration of the clip and download it direc
     duration: 00:00:10
     encode: 'true'
     startAt: 00:00:23
-- WebUI.DownloadFile
 ```
 
 ##### Extract Video Subtitles
 
-Creating a separate transcript of a Video document is easily done if the video has subtitles. By adding a User Action that triggers the following automation chain on all Video documents, you can instantly download a simple text file of the video's subtitles.
+Creating a separate transcript of a Video document is easily done if the video has subtitles. By adding a button that triggers the following automation chain on all Video documents, you can instantly generate a simple text file of the video's subtitles.
 
 ```
 - Context.FetchDocument
 - Video.ExtractClosedCaptions:
-    outFormat: ttxt
-- WebUI.DownloadFile
+    outFormat: txt
 ```
 
 #### Exposed Extension Points
@@ -517,7 +505,7 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
       point="automaticVideoConversions">
       <automaticVideoConversion name="MP4 480p" order="0" />
       <automaticVideoConversion name="WebM 480p" order="10" />
-    </extension> 
+    </extension> 
     ```
     {{/panel}}
 
