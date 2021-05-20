@@ -49,7 +49,7 @@ The Kubernetes Engine has to be available in your preferred Cloud Computing Plat
 - [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/) for Microsoft Azure
 
 {{#> callout type='info' heading="recommandation"}}
-Nuxeo can be deployed on **any Cloud Computing Platform using Kubernetes**. The Nuxeo team has a deeper experience with EKS, as [Nuxeo Cloud](https://doc.nuxeo.com/nuxeo-cloud/) relies on a AWS infrastructure, and on GCP to set up our preview environnements.
+Nuxeo can be deployed on **any Cloud Computing Platform using Kubernetes**. The Nuxeo team has a deeper experience with EKS, as [Nuxeo Cloud](https://doc.nuxeo.com/nuxeo-cloud/) relies on a AWS infrastructure, and on GCP to set up our preview environments.
 {{/callout}}
 
 ### Worker Nodes
