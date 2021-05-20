@@ -157,7 +157,7 @@ Make sure you've followed the best practices when setting up a Kubernetes Cluste
 - Deploy your application in a specific namespace and avoid granting permission on components cluster-wide. If you target to deploy Nuxeo for different clients, then you can use the multi-tenancy approach described [here](https://github.com/tiry/nuxeo-helm-chart) and create a namespace for each tenant.
 - Deploy a load balancer and an internal DNS (Like Route)
 - It is a good practice to access the Kubernetes cluster using its native API to secure its access 
-- Set a user policy for all the people going to access on the Kubernetes cluster
+- Set a user policy for all the people going to access the Kubernetes cluster
 - Use user policy per user working on k8s cluster
 - Avoid sharing publicly your kubeconfig file: its access must be secured
 - Give only the needed permission for each pods (not all pods should access to the binary storage for exemple)
