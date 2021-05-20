@@ -66,7 +66,7 @@ You need **a precise idea of the workload, memory consumption, and storage used 
 
 ### Deployment and StatefulSets
 
-There are different ways to deploy an application / pods on Kubernetes using different Kubernetes resources. Below are two different resources that Kubernetes provides for deploying pods.
+There are different ways to deploy an application on Kubernetes using different resource types. Below are two different resources that Kubernetes provides for deploying pods.
 
 #### Deployment
 
