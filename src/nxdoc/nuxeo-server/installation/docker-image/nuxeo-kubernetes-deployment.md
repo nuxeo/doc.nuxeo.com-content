@@ -172,7 +172,7 @@ You need to follow the recommandations described in the [Quickstart with Nuxeo P
 You can deploy Nuxeo Platform using the [Nuxeo Helm Chart](https://github.com/nuxeo/nuxeo-helm-chart). This chart bootstraps a Nuxeo deployment on a Kubernetes cluster using the Helm package manager.
 
 {{#> callout type='note'}}
-The `nuxeo` chart is not production-ready by default. It suits for a development or staging environment such as preview.
+The `Nuxeo` chart is not production-ready by default. It is suitable for development, staging, or preview environment.
 {{/callout}}
 
 ## Useful External Resources
