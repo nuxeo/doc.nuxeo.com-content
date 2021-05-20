@@ -17,7 +17,7 @@ This page describes how to deploy Nuxeo with Kubernetes and provides best practi
 
 ## Kubernetes Introduction 
 
-[Kubernetes](https://kubernetes.io/) is an open source orchestrator for deploying and managing containerized applications at scale. Kubernetes provides all the tools necessary to build and deploy a reliable, scalable distributed Nuxeo architecture, regardless of the environment and underlying infrastructure. 
+[Kubernetes](https://kubernetes.io/) is an open-source orchestrator for deploying and managing containerized applications at scale. Kubernetes provides all the tools necessary to build and deploy a reliable, scalable distributed Nuxeo architecture, regardless of the environment and underlying infrastructure. 
 
 <img src="https://newrelic.com/sites/default/files/wp_blog_inline_files/kubernetes_architecture.jpg"/>
 
