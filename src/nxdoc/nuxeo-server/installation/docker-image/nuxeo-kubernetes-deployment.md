@@ -57,7 +57,7 @@ Nuxeo can be deployed on **any Cloud Computing Platform using Kubernetes**. The 
 A [Kubernetes node](https://kubernetes.io/docs/concepts/architecture/nodes/) is a logical collection of IT resources that supports one or more containers. Nodes contain the necessary services to run Pods (which are Kubernetes's units of containers), communicate with master components, configure networking and run assigned workloads. A Node can host one or multiple Pods. 
 
 {{#> callout type='info' heading="recommandation"}}
-You need **a precise idea of the workload, memory consumption and storage used by your application** to define the type of nodes you will create: as the worker nodes are limited by memory and CPU, and they cannot handle an infinite number of pods. Once done, you can define an affinity to deploy a component on a specific worker node, for cost reason
+You need **a precise idea of the workload, memory consumption, and storage used by your application** to define the type of nodes you will create: as the worker nodes are limited by memory and CPU, and they cannot handle an infinite number of pods. Once done, you can define an affinity to deploy a component on a specific worker node, for cost reason
 {{/callout}}
 
 ### Pods
