@@ -160,7 +160,7 @@ Make sure you've followed the best practices when setting up a Kubernetes Cluste
 - Set a user policy for all the people going to access the Kubernetes cluster
 - Use user policy per user working on k8s cluster
 - Avoid sharing publicly your kubeconfig file: its access must be secured
-- Give only the needed permission for each pods (not all pods should access to the binary storage for exemple)
+- Give only the needed permission for each pod (not all pods should access to the binary storage for example)
   - You can use a [ServiceAccount](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html) or a [User/Role IAM access](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html) to the cluster API
 
 ### Nuxeo architecture
