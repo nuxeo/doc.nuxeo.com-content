@@ -149,7 +149,7 @@ In Kubernetes, these 2 types of nodes are deployed via two dedicated deployments
 - Set up **HPA on the size of the queues and lags of stream processors on worker nodes** to scale out when the lag is too big
 {{/callout}}
 
-## General recommandations 
+## General recommendations 
 
 ### Kubernetes infrastructure
 
