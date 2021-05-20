@@ -157,10 +157,6 @@ history:
 This page explains how picture conversions are structured, and provide instructions to perform the standard picture conversion operations.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='DAM Introduction'}}
-If you're interested to get more information about the Nuxeo DAM features, checkout the [Nuxeo DAM section]({{page page='digital-asset-management-dam'}}).
-{{/callout}}
-
 ## Picture conversion concepts
 
 Picture conversions are used to fill the picture views (stored in the `picture:views` field of a document having the `Picture` facet). The default ones are: Thumbnail, Small, Medium, FullHD, OriginalJpeg.
