@@ -99,7 +99,7 @@ ConfigMaps and Secrets can be produced from files and with yaml declaration.
 
 {{#> callout type='info' heading="recommandation"}}
 <br/>
-- **Do not store sensitive data**, such as passwords, authentication tokens and SSH keys, **in plaintext on a container**.
+- **Do not store sensitive data**, such as passwords, authentication tokens or SSH keys **in plaintext**.
 - Use the **built-in secrets, or custom secrets** to define your own sensitive data and create a secret to store it.
 - Regardless of where you store secrets, **carefully map out exactly which containers need access to each of your secrets**. Don’t share secrets anywhere they aren’t absolutely needed.
 - Ensuring that the Kubernetes cluster configuration is set **to encrypt all data** at rest (within etcd) is critical to reducing the risk of broad compromise.
