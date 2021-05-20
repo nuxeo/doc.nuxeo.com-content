@@ -2,7 +2,7 @@
 title: Supported File Formats
 review:
     comment: ''
-    date: '2018-01-24'
+    date: '2021-05-17'
     status: ok
 labels:
     - lts2016-ok
@@ -10,6 +10,7 @@ labels:
     - dam
     - lmcintyre
     - lts2017-ok
+toc: true 
 confluence:
     ajs-parent-page-id: '3866704'
     ajs-parent-page-title: Digital Asset Management (DAM)
@@ -135,1169 +136,964 @@ history:
 ---
 
 {{! excerpt}}
-The Platform Digital Asset Management module supports a large number of file formats.
+Nuxeo Platform supports a large number of file formats: Office documents, pictures, videos etc. This page provides a non-exhaustive list of the supported file format, and how they are, processed within Nuxeo Platform.
 {{! /excerpt}}
 
+{{#> callout type='info' heading='DAM Introduction'}}
+If you're interested to get more information about the Nuxeo DAM features, checkout the [Nuxeo DAM section]({{page page='digital-asset-management-dam'}}).
+{{/callout}}
+
+## Introduction
+
+The file support table is based on the standard set of engines typically deployed with Nuxeo Platform. We have noted where other engines could be used. The standard engines are ImageMagick, FFMPEG, OpenOffice and accessing various embedded previews (referenced in the [Installing and Setting Up Related Software]({{page version='' space='nxdoc' page='installing-and-setting-up-related-software'}}) page). 
+
+In case there are format limitations: 
+- It is always possible to manage the native files and supply Nuxeo a readable preview (e.g. export from native app before upload). 
+- Nuxeo can integrate [new converters]({{page version='' space='nxdoc' page='how-to-contribute-a-command-line-converter'}}) and generate a new format which can be correctly interpreted.
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University: [DAM Concepts](https://university.nuxeo.com/learn/course/internal/view/elearning/97/NuxeoDigitalAssetManagementDAMConcepts)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_dam.png
+    name: university_dam.png
+    addins#screenshot#up_to_date
+--}}
+![university_dam.png](nx_asset://ed2467b9-4529-4cca-9843-0b46f8cd3d62 ?w=650,border=true)
+{{/callout}} 
+
+## File Support Table
+
+The support table contains the following columns:
+- **Metadata extraction**: Nuxeo Platform can capture basic file information. As an example, Nuxeo Platform can extract the dimensions, format, color profile, bit depth by channel, EXIF / IPTC information from picture documents.
+- **Preview**: Nuxeo Web UI can display a preview of the document without having to download it.
+- **Encode / Transcode**: Nuxeo Platform can create different conversions / renditions of the file.
+- **Mimetype recognition**: Nuxeo Platform can associate a specific file extension to a particular document type.
+- **NEV Support**: The file can be previewed and annotated thanks to the [Nuxeo Enhanced Viewer]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}})
+
+You can read the following extension point to understand the default DAM contributions, and extend it when needed:
+- [Extension point for supported file mimetypes](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.mimetype.service.MimetypeRegistryService--mimetype)
+- [Extension point related to the fileManager, and map file extensions with document types](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins)
+
+You can use this URL to access sample files: https://filesamples.com/.
+
+### Picture Files
+
+Most picture formats are supported via [ImageMagick](https://imagemagick.org/index.php).
+
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-Format
-
-</th><th colspan="1">
-
-Import in DAM
-
-</th><th colspan="1">
-
-Mimetype recognition
-
-</th><th colspan="1">
-
-Thumbnail & preview
-
-</th><th colspan="1">
-
-Metadata Extraction
-
-</th><th colspan="1">
-
-Transcode, watermarking
-
-</th></tr><tr><th colspan="1">
-
-**Pictures**
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th></tr><tr><td colspan="1">
-
-JPG
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-PNG
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-GIF
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-RAW
-</br>
-(see [ImageMagick supported formats](https://www.imagemagick.org/script/formats.php))
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-JPG2000
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-TIF
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-BMP
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-PSD
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-AI
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-EPS/PS
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-PCX
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-PICT
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-SVG
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-WMF
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-EMF
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-QXD
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-INDD
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><th colspan="1">
-
-**Video**
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th></tr><tr><td colspan="1">
-
-ogg
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-avi (divx, ...)
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-mp4
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-flv/fla
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-QT/mov
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-mpeg/mpg/mpe
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-WMV
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td>
+<th colspan="1">Metadata extraction</th>
+<th colspan="1">Preview</th>
+<th colspan="1">Encode / Transcode</th>
+<th colspan="1">Mimetype recognition</th>
+<th colspan="1">NEV Support</th>
+<th colspan="1">Additional Notes</th>
+</tr>
+<tbody>
+<tr>
+<td colspan="1">.jpeg</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
 </tr>
 <tr>
-<td colspan="1">
-
-swf
-
-</td>
-<td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td>
+<td colspan="1">.jpg</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
 </tr>
 <tr>
-<td colspan="1">
-
-DPX
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-&nbsp;
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
+<td colspan="1">.png</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
 <tr>
-<td colspan="1">
-
-MXF
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-&nbsp;
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
+<td colspan="1">.ps</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Image saved in the PostScript </td>
+</tr>
 <tr>
-<td colspan="1">
-
-GXF
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-&nbsp;
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
+<td colspan="1">.psd</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Photoshop file</td>
+</tr>
 <tr>
-<th colspan="1">
-
-**Audio**
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th></tr><tr><td colspan="1">
-
-ogg
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-mp3
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-wav
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-m4a/aac
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-ac3
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-aif/aiff/ aifc
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-au/snd
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-asf
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><th colspan="1">
-
-**Office**
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th></tr><tr><td colspan="1">
-
-pdf
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-Microsoft Office (c)
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-Open Office
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X* (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-RTF
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-Microsoft Access (c)
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-Microsoft publisher (c)
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr></tbody></table></div>
-
-*Client browser must have the associated plug-in installed
-
-**Note**: The VM distribution doesn't include MP4 conversion of videos because of distribution rights limitations.
+<td colspan="1">.raw</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"></td>
+</tr>
+<tr>
+<td colspan="1">.svg</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+
+<tr>
+<td colspan="1">.xmp</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Metadata file used by Adobe programs such as Photoshop and Bridge</td>
+</tr>
+<tr>
+<td colspan="1">.tif</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.tiff</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.eps</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Graphics file saved in the Encapsulated PostScript (EPS) file format</td>
+</tr>
+<tr>
+<td colspan="1">.gif</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.ai</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Drawing created with Adobe Illustrator</td>
+</tr>
+<tr>
+<td colspan="1">.bmp</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.jp2</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.emf</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Vector graphic saved in the Enhanced Windows Metafile (EMF) format</td>
+</tr>
+<tr>
+<td colspan="1">.cr2</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Raw camera image created by various Canon digital cameras</td>
+</tr>
+<tr>
+<td colspan="1">.crw</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Uncompressed and unprocessed Camera RAW image file from a Canon digital camera</td>
+</tr>
+<tr>
+<td colspan="1">.nef</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Raw photo captured by a Nikon digital camera</td>
+</tr>
+<tr>
+<td colspan="1">.dng</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">RAW camera image saved in the Digital Negative (DNG) format</td>
+</tr>
+<tr>
+<td colspan="1">.heif</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">So far, encoding in this format is proprietary to Apple. Besides like camera RAW is seems a one-way conversions since data is lost when moving to raster format like TIFF etc.</td>
+</tr>
+<tr>
+<td colspan="1">.cdr</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.dwg</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">AutoDesk has free player which can be integrated and used for UI display. Or as noted above save off another format to use for the preview like stl, fbx etc.</td>
+</tr>
+<tr>
+<td colspan="1">.iff</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Engines like LeadTools can support it</td>
+</tr>
+
+<tr>
+<td colspan="1">.mos</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Uncompressed digital images</td>
+</tr>
+<tr>
+<td colspan="1">.wmf</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">ImageMagick renders WMF files using the dimensions specified by the metafile header.</td>
+</tr>
+<tr>
+<td colspan="1">.tga</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+
+#### Image Profiles / Resolutions
+
+The following picture profiles can be correctly interpreted by Nuxeo Platform (Metadata extraction, preview, encode / transcode and mimetype recognition):
+
+- 72 RGB DPI
+- 150 DPI (CMYK, 39L, RGB)
+- 300 DPI (CMYK, 39L, SWOP, Gracol)
+- 600 DPI (CMYK, 39L, SWOP, Gracol)
+
+### Video Files
+
+Most video formats are supported via [FFMPEG](https://www.ffmpeg.org/general.html).
+
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<th colspan="1">Metadata extraction</th>
+<th colspan="1">Preview</th>
+<th colspan="1">Encode / Transcode</th>
+<th colspan="1">Mimetype recognition</th>
+<th colspan="1">NEV Support</th>
+<th colspan="1">Additional Notes</th>
+</tr>
+<tbody>
+<tr>
+<td colspan="1">.avi</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.flv</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.m4v</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.mov</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.mp4</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.mpeg</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.mpg</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.ogg</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.ogv</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Part of OGG format, which is supported.</td>
+</tr>
+<tr>
+<td colspan="1">.wmv</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.fla</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">This is native flash editable - not an output from Flash - but can render from flv or swf.</td>
+</tr>
+<tr>
+<td colspan="1">.hdv</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Recording of high-definition video on DV cassette tape. Not supported in FFMPEG. May be other engines - or if you use existing transcode software.</td>
+</tr>
+<tr>
+<td colspan="1">.hevc</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">High Efficiency Video Coding, also known as H.265 and MPEG-H Part 2, is a video compression standard designed as part of the MPEG-H project as a successor to the widely used Advanced Video Coding</td>
+</tr>
+<tr>
+<td colspan="1">.qt</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">QuickTime files</td>
+</tr>
+<tr>
+<td colspan="1">.swf</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">SWF is an Adobe Flash file format used for multimedia, vector graphics and ActionScript</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+#### Video Profiles / Resolutions
+
+The following video profiles can be correctly interpreted by Nuxeo Platform:
+
+- 16:9
+- 1200kbps or higher bit rate
+- 4K, 1080p, 720p, or 480p largest frame size possible(frame size should support 1080p or 720p resolutions)
+- original aspect ratio (ideally, no black bars)
+- de-interlaced or progressive scan
+
+### Audio Files
+
+Most audio formats are supported via [FFMPEG](https://www.ffmpeg.org/general.html).
+
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<th colspan="1">Metadata extraction</th>
+<th colspan="1">Preview</th>
+<th colspan="1">Encode / Transcode</th>
+<th colspan="1">Mimetype recognition</th>
+<th colspan="1">NEV Support</th>
+<th colspan="1">Additional Notes</th>
+</tr>
+<tbody>
+<tr>
+<td colspan="1">.mp3</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.mpga</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Compressed audio file encoded with MPEG-1 Layer 3 compression</td>
+</tr>
+<tr>
+<td colspan="1">.mp2</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.m3u</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Media playlist file</td>
+</tr>
+<tr>
+<td colspan="1">.wav</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.aif</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Standard data format for Audio Interchange File format</td>
+</tr>
+<tr>
+<td colspan="1">.aifc</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.aiff</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.ogg</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.oga</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.spx</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">CAM (computer-aided manufacturing) file that contains stitching instructions for creating embroideries with a Pfaff sewing machine</td>
+</tr>
+<tr>
+<td colspan="1">.flac</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.ogm</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.ogx</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.aac</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Artworks files
+
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<th colspan="1">Metadata extraction</th>
+<th colspan="1">Preview</th>
+<th colspan="1">Encode / Transcode</th>
+<th colspan="1">Mimetype recognition</th>
+<th colspan="1">NEV Support</th>
+<th colspan="1">Additional Notes</th>
+</tr>
+<tbody>
+<tr>
+<td colspan="1">.3ds</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.indd</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Requires INDD Server. Nuxeo can also manage complete INDD packages as compound documents via config. Converting from INDD requires InDesign server engine, but most forms simply save a PDF with the INDD file which Nuxeo uses as preview.</td>
+</tr>
+<tr>
+<td colspan="1">3D</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Responses based on Blender for rendering. If integrating other rendering systems then other formats may be directly supported.</td>
+</tr>
+<tr>
+<td colspan="1">.3dm</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">No direct import to Blender. Save in alternate format to use as preview (e.g. stl, fbx, obj, 3ds etc). Nuxeo can store native 3dm file but the saved rendition is used for the preview only. This could be scripted/automated. How-to save preview instructions from [Rhino](http://www.studiorola.com/tutorials/miscellaneous/bringing-rhino-files-into-blender-3d/)</td>
+</tr>
+<tr>
+<td colspan="1">.aep</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+</tr>
+<tr>
+<td colspan="1">.dfx</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Both import and export plug-in to blender are available (Possible via Blender Plug-in)</td>
+</tr>
+<tr>
+<td colspan="1">.dwg</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">AutoDesk has free player which can be integrated and used for UI display (like we use Blender for 3D). Or as noted above save off another format to use for the preview like stl, fbx or whatever.</td>
+</tr>
+<tr>
+<td colspan="1">.fbx</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">3D model saved in the Autodesk Filmbox format</td>
+</tr>
+<tr>
+<td colspan="1">.obj</td>
+<td colspan="1"> </td>
+<td colspan="1">Preview as text</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.skp</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">No direct import to Blender. Save in alternate format to use as preview (e.g. stl, fbx, obj, 3ds etc). Nuxeo can store native SKP file but the saved rendition is used for the preview only. This could be scripted/automated.</td>
+</tr>
+<tr>
+<td colspan="1">Cinema4D</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">Not tested</td>
+<td colspan="1">C4D format is proprietary and only opens in Cinema4D. So as above can save in alternate format to use as preview (e.g. stl, fbx, obj, 3ds etc). Nuxeo can store native 3dm file but the saved rendition is used for the preview only. This could be scripted/automated.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+## Office file support table
+
+### Document files
+
+Most document file formats are supported via [LibreOffice](https://www.libreoffice.org/).
+
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<th colspan="1">Preview</th>
+<th colspan="1">Encode / Transcode</th>
+<th colspan="1">Mimetype recognition</th>
+<th colspan="1">NEV Support</th>
+<th colspan="1">Additional Notes</th>
+</tr>
+<tbody>
+<tr>
+<td colspan="1">.doc</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.docx</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.odt</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.rtf</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.pdf</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.ppt</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.pptx</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.xls</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.xlsx</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.txt</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.key</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1">Apple Keynote files (for presentations)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Container files
+
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<th colspan="1">Preview</th>
+<th colspan="1">Mimetype recognition</th>
+<th colspan="1">NEV Support</th>
+<th colspan="1">Additional Notes</th>
+</tr>
+<tbody>
+<tr>
+<td colspan="1">.rar</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.sit</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.zip</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">Not tested</td>
+<td colspan="1"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Mail Files
+
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<th colspan="1">Metadata extraction</th>
+<th colspan="1">Preview</th>
+<th colspan="1">Encode / Transcode</th>
+<th colspan="1">Mimetype recognition</th>
+<th colspan="1">NEV Support</th>
+<th colspan="1">Additional Notes</th>
+</tr>
+<tbody>
+<tr>
+<td colspan="1">.eml</td>
+<td colspan="1">Only with the [Nuxeo Outlook Connector]({{page version='' space='nxdoc' page='nuxeo-outlook-connector'}})</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">This format contains HTML which can be extracted and displayed.</td>
+</tr>
+<tr>
+<td colspan="1">.msg</td>
+<td colspan="1">Only with the [Nuxeo Outlook Connector]({{page version='' space='nxdoc' page='nuxeo-outlook-connector'}})</td>
+<td colspan="1">Only with the [Nuxeo Outlook Connector]({{page version='' space='nxdoc' page='nuxeo-outlook-connector'}})</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+<td colspan="1">X</td>
+<td colspan="1">This format contains HTML which can be extracted and displayed.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Internet Files
+
+Web files can be managed and code viewed but that&#39;s different than rendering a web page based on all these web-code files. Direct preview of web code has been done but requires UI customization depending on how you want these pages to display
+
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<th colspan="1">Preview</th>
+<th colspan="1">Mimetype recognition</th>
+<th colspan="1">NEV Support</th>
+<th colspan="1">Additional Notes</th>
+</tr>
+<tbody>
+<tr>
+<td colspan="1">.css</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.htm</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.html</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.xml</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">.js</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1"> </td>
+</tr>
+</tbody>
+</table>
+</div>
