@@ -118,7 +118,7 @@ There are currently two types of storage abstracts available with Kubernetes: [V
 As a result, Kubernetes volumes are useful for storing temporary data that does not need to exist outside of the pod’s lifecycle.
 
 {{#> callout type='info' heading="recommandation"}}
-It makes sense to use **persistent storage for production environments**: the database content, the Kafka logs and the ElasticSearch indexes are concerned here. For the blob storage, we strongly encourage you to use a **cloud object storage**, as [Amazon S3](https://aws.amazon.com/s3/). 
+It makes sense to use **persistent storage for production environments**: the database content, the Kafka logs, and the ElasticSearch indexes are concerned here. For the blob storage, we strongly encourage you to use a **cloud object storage**, as [Amazon S3](https://aws.amazon.com/s3/). 
 {{/callout}}
 
 ### Security layers
