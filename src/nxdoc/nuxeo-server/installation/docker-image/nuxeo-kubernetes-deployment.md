@@ -106,7 +106,7 @@ ConfigMaps and Secrets can be produced from files and with yaml declaration.
 - If you are running in one of the major public clouds, **Cloud secret managed solutions** are a good bet ([AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), [Google Cloud KMS](https://cloud.google.com/kms), [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/))
 {{/callout}}
 
-### Data persistance
+### Data persistence
 
 There are currently two types of storage abstracts available with Kubernetes: [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/) and [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/). A Kubernetes volume exists only while the containing pod exists. Once the pod is deleted, the associated volume is also deleted. Kubernetes persistent volumes are administrator provisioned volumes. These are created with a particular filesystem, size, and identifying characteristics such as volume IDs and names. A Kubernetes persistent volume has the following attributes:
 
