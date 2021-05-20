@@ -74,7 +74,7 @@ A [Kubernetes Deployment](https://kubernetes.io/docs/concepts/workloads/controll
 
 #### StatefulSets
 
-A [Kubernetes StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) Manages the deployment and scaling of a set of Pods, and provides guarantees about the ordering and uniqueness of these Pods. StatefulSets are valuable for applications that require one or more of the following.
+A [Kubernetes StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) Manages the deployment and scaling of a set of Pods, and provides guarantees about the ordering and uniqueness of these pods. StatefulSets are valuable for applications that require one or more of the following.
 
 - Stable, unique network identifiers.
 - Stable, persistent storage.
