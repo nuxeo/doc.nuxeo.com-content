@@ -75,10 +75,6 @@ history:
 This page explains how video conversions are structured, and provide instructions to perform the standard video conversion operations.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='DAM Introduction'}}
-If you're interested to get more information about the Nuxeo DAM features, checkout the [Nuxeo DAM section]({{page page='digital-asset-management-dam'}}).
-{{/callout}}
-
 ## Video conversion concepts
 
 Video conversions are used to fill the video conversions (stored in the `vid:transcodedVideos` field of a document having the `Video` facet). The default ones are `MP4 480p`, `Ogg 480p` and `WebM 480p`. The video storyboard info are stored in the `vid:storyboard` property.
