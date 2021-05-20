@@ -35,7 +35,7 @@ These features mean that Kubernetes lends itself well to the multi-cloud strateg
 
 ### Increased developer productivity
 
-Kubernetes with its declarative constructs and its ops friendly approach has fundamentally changed deployment methodologies and it allows teams to use GitOps. Teams can scale and deploy faster than they ever could in the past. Instead of one deployment a month, teams can now deploy multiple times a day.
+Kubernetes with its declarative constructs and its ops-friendly approach has fundamentally changed deployment methodologies and it allows teams to use GitOps. Teams can scale and deploy faster than they ever could in the past. Instead of one deployment a month, teams can now deploy multiple times a day.
 
 ## Key Kubernetes Elements
 
