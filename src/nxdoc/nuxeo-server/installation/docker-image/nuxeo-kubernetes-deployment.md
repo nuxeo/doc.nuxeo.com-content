@@ -126,7 +126,7 @@ It makes sense to use **persistent storage for production environments**: the da
 Every Kubernetes cluster has a cluster root Certificate Authority (CA). The CA is generally used by cluster components to validate the API server's certificate, by the API server to validate kubelet client certificates, etc. To support this, the CA certificate bundle is distributed to every node in the cluster and is distributed as a secret attached to default service accounts. 
 
 You can [secure an application running on Kubernetes](https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/) by creating a secret that contains a TLS (Transport Layer Security) private key and certificate.
-Currently, Ingress supports a single TLS port, 443, and assumes TLS termination. The TLS secret must contain keys named tls. crt and tls. keys that contain the certificate and private key to use for TLS.
+Currently, Ingress supports a single TLS port, 443, and assumes TLS termination. The TLS secret must contain keys named `tls.crt` and `tls.keys` that contain the certificate and private key to use for TLS.
 
 {{#> callout type='info' heading="recommandation"}}
 Configure **TLS encryption** installing a Cert-Manager in the Kubernetes cluster or static wildcard certificates
