@@ -300,7 +300,7 @@ At some point in your project you need to decide about the architecture. Do you 
 {{#> callout type='info' heading='Related Documentation'}}
 
 - [Persistence Architecture]({{page page='persistence-architecture'}})
-- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+- [Nuxeo Architecture Components - Configuration]({{page page='nuxeo-architecture-components'}})
 - [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 
 {{/callout}}

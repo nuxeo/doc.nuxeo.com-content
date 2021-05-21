@@ -247,6 +247,7 @@ It finds all keys prefixed with `nuxeo:work:sched` and deletes them.
 - [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
 - [No-Redis Nuxeo Clustering Configuration]({{page page='kafka'}}#andquotno-redisandquot-nuxeo-cluster)
 
+
 {{/panel}}</div><div class="column medium-6">
 
 &nbsp;
