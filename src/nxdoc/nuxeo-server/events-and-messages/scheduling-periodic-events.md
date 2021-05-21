@@ -250,4 +250,4 @@ Check that the field **Current document is** is set to **Any** (default value is
 
 ## Clustering
 
-Note that when Nuxeo is used in cluster mode, and a proper [cluster-aware Quartz configuration]({{page page='nuxeo-clustering-configuration'}}#quartz-scheduler-cluster-configuration) is done, then a given schedule is triggered only on one of the nodes of the cluster, not on all nodes.
+Note that when Nuxeo is used in cluster mode, and a proper [cluster-aware Quartz configuration]({{page page='load-balancers-architecture'}}#quartz-scheduler-cluster-configuration) is done, then a given schedule is triggered only on one of the nodes of the cluster, not on all nodes.
