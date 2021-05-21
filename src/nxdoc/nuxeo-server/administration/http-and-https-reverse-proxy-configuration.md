@@ -552,7 +552,7 @@ Otherwise, features like the Permissions tab will not work.
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
 - [Internet Information Services (IIS)]({{page page='internet-information-services-iis'}})
-- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+- [Nuxeo Architecture Components - Configuration]({{page page='nuxeo-architecture-components'}})
 - [Default URL Patterns]({{page page='default-url-patterns'}})
 - [Navigation URLs]({{page page='navigation-urls'}})
 - [Ports Usage and Firewall Considerations]({{page page='ports-usage-and-firewall-considerations'}})
