@@ -1017,7 +1017,8 @@ The NEV Support is not provided for 3D files for now.
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
-<td colspan="1">Conversi &#10003;</td>
+<td colspan="1">Conversion requires proprietary engine</td>
+<td colspan="1"> </td>
 <td colspan="1"> </td>
 </tr>
 <tr>
