@@ -948,6 +948,6 @@ This tool is a read-only standalone tool, it requires both access to the databas
 
 - [Full-Text Queries]({{page page='full-text-queries'}})
 - [Indexing and Query]({{page page='indexing-and-query'}})
-- [Nuxeo Clustering Configuration]({{page page='nuxeo-clustering-configuration'}})
+- [Nuxeo Architecture Components - Configuration]({{page page='nuxeo-architecture-components'}})
 
 {{/panel}}</div></div>
