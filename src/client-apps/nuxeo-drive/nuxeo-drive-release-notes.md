@@ -4,135 +4,70 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: ''
-  date: '2021-05-14'
+  date: '2021-05-21'
   status: ok
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.2.0**
+Welcome to the Release Notes for **Nuxeo Drive 5.2.1**
 
 **Status**: <font color="#ff0000">**Beta**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.0.md)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.1.md)
 
 ## General
 
-### Features
-
-#### The Synchronization Mechanism is Now a Feature
-
-A new feature selector has been added in the settings to enabled/disable synchronization feature. The feature is disabled by default and can be enabled through the GUI or the configuration file.
-The `synchronization-enabled` option is now deprecated and should not be used anymore as it will be removed in a future release.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2581](https://jira.nuxeo.com/browse/NXDRIVE-2581).
-
-#### New Settings Tab: Sync!
-
-A new tab for the synchronization feature has been added in settings. This tab contains all synchronization options that were previously in the **Accounts** and **General** tabs. This tab will only be accessible when there is at least one account registered and the synchronization feature is enabled.
-
-![]({{file page='nuxeo-drive-release-notes' name='drive-sync-tab-5.2.0.png'}})
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2583](https://jira.nuxeo.com/browse/NXDRIVE-2583).
-
-#### OAuth2 Support
-
-OAuth 2 finally landed in Nuxeo Drive!
-Support for OpenID Connect Discovery and ADFS were implemented too.
-A bunch of new options are now available to customize OAuth 2 connection: [oauth2-authorization-endpoint]({{page page='nuxeo-drive'}}#oauth2-authorization-endpoint), [oauth2-client-id]({{page page='nuxeo-drive'}}#oauth2-client-id), [oauth2-client-secret]({{page page='nuxeo-drive'}}#oauth2-client-secret), [oauth2-scope]({{page page='nuxeo-drive'}}#oauth2-scope) and [oauth2-openid-configuration-url]({{page page='nuxeo-drive'}}#oauth2-openid-configuration-url). Set relevant ones in the local configuration file before starting the application.
-
-For now the legacy Nuxeo token authentication is still the default. To use OAuth 2, first add an [OAuth 2 consumer]({{page version='' space='nxdoc' page='using-oauth2'}}#client-registration), then when adding a new account in Nuxeo Drive, simply uncheck the **Use legacy authentication** checkbox.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-826](https://jira.nuxeo.com/browse/NXDRIVE-826), [NXDRIVE-2627](https://jira.nuxeo.com/browse/NXDRIVE-2627) and [NXDRIVE-2403](https://jira.nuxeo.com/browse/NXDRIVE-2403).
-
 ### Fixes
 
-#### Less Watchers
+#### Amazon S3 Credentials Renewal
 
-When starting the application, the local folder contents were watched, but also the parent folder too to detect changes on the local folder itself.
+A regression introduced in previous versions that would break credentials renewal when using Amazon S3 direct upload capabilities was fixed.
 
-Thanks to the recent `watchdog` upgrade, watching the local folder parent is no more necessary as the current watched will detect events targeting itself.
-Moreover, with the old behavior the application was watching huge trees for nothing. It was consuming resources and battery, and we would like to reduce such impact on the OS.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXPY-223](https://jira.nuxeo.com/browse/NXPY-223).
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2633](https://jira.nuxeo.com/browse/NXDRIVE-2633).
+#### Better Partition Checks
 
-#### Windows and UNC Paths
+We improved how a given local folder could be used for the synchronization content. New checks are more specifics and less restrictives.
 
-Options taking a path as value are now supporting UNC paths (shared folders).
-This improves the UNC paths support on Windows.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2644](https://jira.nuxeo.com/browse/NXDRIVE-2644).
 
-Reminder: to be able to use a UNC path for the synchronization folder, it is required to set `nofscheck = true` in the local configuration file.
+#### Database Management
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2630](https://jira.nuxeo.com/browse/NXDRIVE-2630) and [NXDRIVE-33](https://jira.nuxeo.com/browse/NXDRIVE-33).
+Our Sentry usage showed lots of errors about "database or disk is full". After deep investigations, we hope the situation will now be better: temporary databases are now handled in memory (RAM) instead of a temporary folder. The later was the source of all reported problems were it may be limited in disk space and blocking our database actions while there are still enough disk space at the current location of those databases.
 
-#### Paths in Local Config File
-
-The configuration file parser has been fixed to handle again path-like options.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2622](https://jira.nuxeo.com/browse/NXDRIVE-2622).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2646](https://jira.nuxeo.com/browse/NXDRIVE-2646).
 
 ### Improvements
 
-#### Fresh Account Tab
+#### Operations Check at Startup
 
-The Accounts tab in the Settings screen has been improved and is now visually closer to the interface of Direct Transfer window and the new Synchronization tab.
+Users were able to add an account using their credentials but for one reason or another they do not have enough rights to call `NuxeoDrive.*` automation operations. Such case is now well handled.
 
-![]({{file page='nuxeo-drive-release-notes' name='drive-account-tab-5.2.0.png'}})
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2618](https://jira.nuxeo.com/browse/NXDRIVE-2618).
-
-#### About Features Sates
-
-In order to follow the [wygiwys principle](https://en.wikipedia.org/wiki/WYSIWYG), when manually changing the state of a feature, the state of all features will now be written into the local configuration file. The old behavior was saving only the impacted feature.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2612](https://jira.nuxeo.com/browse/NXDRIVE-2612).
-
-#### Improved Large File Upload via S3
-
-When uploading a large file through S3, given the server configuration in-place, it may happen that the `batchId` on the Nuxeo side is deleted from the transient store while the binary is still being sent to S3.
-
-To improve the situation a sysadmin could set higher values for those properties:
-  - `nuxeo.transientstore.ttl`
-  - `nuxeo.transientstore.ttl2`
-  - `nuxeo.s3storage.transient.ttl`
-  - `nuxeo.s3storage.transient.ttl2`
-
-On the Nuxeo Drive side, the `batchId` will now be pinged on a regular basis (every 55 minutes) to update its TTL and prevent its deletion from the transient store.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2332](https://jira.nuxeo.com/browse/NXDRIVE-2332).
-
-## Direct Edit
-
-### Fixes
-
-The Direct Edit experience has been made more robust by better handling HTTP 404 (Not Found), 502 (Bad Gateway), 503 (Service Unavailable) and 504 (Gateway Timeout) errors.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2608](https://jira.nuxeo.com/browse/NXDRIVE-2608) and [NXDRIVE-2621](https://jira.nuxeo.com/browse/NXDRIVE-2621).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2647](https://jira.nuxeo.com/browse/NXDRIVE-2647).
 
 ## Direct Transfer
 
-### Features
-
-Allowing transfers into the Personal Space folder can be problematic. So we added a new option to hide it from the Direct Transfer window: [dt-hide-personal-space](https://doc.nuxeo.com/client-apps/nuxeo-drive/#dt-hide-personal-space).
-
-The option can be set globally from the server configuration, and it will be taken into account almost instantly by all clients without requiring a restart of the application.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2632](https://jira.nuxeo.com/browse/NXDRIVE-2632).
-
 ### Fixes
 
-When choosing a folder or a file in the Direct Transfer window, symbolic links are now ignored to prevent dangerous or unhandled behaviors.
+#### Using the Feature Right After Account Addition
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2635](https://jira.nuxeo.com/browse/NXDRIVE-2635).
+When the synchronization is disabled, there was an issue that won't start transferring files when doing a Direct Transfer right after having added a new account. This is now fixed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2643](https://jira.nuxeo.com/browse/NXDRIVE-2643).
 
 ## Synchronization
 
-### Fixes
+### Improvements
 
-The synchronization engine has been made more robust against HTTP 405 (Method Not Allowed), 408 (Request Timeout) and 504 (Gateway Timeout) errors.
+#### Polished Disabled Sync Behavior
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2609](https://jira.nuxeo.com/browse/NXDRIVE-2609), [NXDRIVE-2624](https://jira.nuxeo.com/browse/NXDRIVE-2624) and [NXDRIVE-2636](https://jira.nuxeo.com/browse/NXDRIVE-2636).
+Following the work done on the version [5.2.0]({{page page='5.2.0-nuxeo-drive-release-notes'}}#the-synchronization-mechanism-is-now-a-feature) where the synchronization became a feature, we polished even more the behavior.
+
+Now, when the synchronization is disabled, the application won't do anymore actions on the local folder (like checking its existence, checking extended attributes support, calling NuxeoDrive.* operations, ...).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2641](https://jira.nuxeo.com/browse/NXDRIVE-2641).
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.0-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.0.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.0.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.1-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.1.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.1.exe)
