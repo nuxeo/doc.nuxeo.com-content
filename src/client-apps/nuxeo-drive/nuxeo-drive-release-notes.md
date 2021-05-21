@@ -44,6 +44,12 @@ Users were able to add an account using their credentials but for one reason or 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2647](https://jira.nuxeo.com/browse/NXDRIVE-2647).
 
+#### Local Folder Button in Systray
+
+The local folder icon in the system tray menu is now disabled when the synchronization is.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2651](https://jira.nuxeo.com/browse/NXDRIVE-2651).
+
 ## Direct Transfer
 
 ### Fixes
@@ -53,6 +59,12 @@ Users were able to add an account using their credentials but for one reason or 
 When the synchronization is disabled, there was an issue that won't start transferring files when doing a Direct Transfer right after having added a new account. This is now fixed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2643](https://jira.nuxeo.com/browse/NXDRIVE-2643).
+
+#### CSV Export Button
+
+The CSV export button click area was not covering the CSV icon. One had to click on the right on the icon to apply the action. The click area is now correctly set.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2650](https://jira.nuxeo.com/browse/NXDRIVE-2650).
 
 ## Synchronization
 
