@@ -58,14 +58,21 @@ section_parent: dam
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
-  <div class="column medium-6">{{#> panel heading='Nuxeo University'}}
+  <div class="column medium-4">{{#> panel heading='DAM Tutorials'}}
+
+- [Picture Conversions]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}})
+- [Video Conversions]({{page version='' space='nxdoc' page='how-to-contribute-a-new-video-conversion'}})
+
+  {{/panel}}
+  </div>
+  <div class="column medium-4">{{#> panel heading='Nuxeo University'}}
 
 - [DAM Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/97/nuxeo-digital-asset-management-dam-concepts)
 
   {{/panel}}
   </div>
-  <div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
-
+  <div class="column medium-4">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+- [Custom thumbnail and preview](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/custom-views)
 - [Sets the video poster and search thumbnail](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/video-thumbnail)
 - [Additional video conversions](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/video-conversions)
 
