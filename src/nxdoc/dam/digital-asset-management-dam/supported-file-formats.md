@@ -759,7 +759,7 @@ Most audio formats are supported via [FFMPEG](https://www.ffmpeg.org/general.htm
 
 ### Artworks files / 3D format
 
-The [Nuxeo 3D addon]({{page version='' space='nxdoc' page='nuxeo-3d'}}) uses Blender as the render engine and three.js for the embedded viewer in Nuxeo Web UI. All formats are rendered into GTLF for display in the viewer and can natively read any of the above-referenced, Blender-supported formats. Formats that Blender can’t natively render are just supplied along with preview file for the preview. 
+Nuxeo offers multiple approaches to 3D support.  A [Nuxeo 3D addon]({{page version='' space='nxdoc' page='nuxeo-3d'}}) is available as well as an alternate approach that relies on an viewer that displays GLB files that serve as previews for any native formats. The Nuxeo 3D addon uses Blender as the render engine and three.js for the embedded viewer in Nuxeo Web UI. All formats are rendered into GTLF for display in the viewer and can natively read any of the  formats indicated below. Formats that can’t be natively rendered are supported using supplied GLB files that serve as the preview. 
 
 {{#> callout type='info' heading='Compound Asset Support'}}
 Compound Asset Support refers to supporting a set of files as a single asset object while preserving the subcomponents as individual assets and recording the relationships among them all. This is especially important most 3D formats require a set of files. 
