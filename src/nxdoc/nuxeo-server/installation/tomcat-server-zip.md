@@ -137,7 +137,7 @@ Java packages and instructions for installation are available from the Azul webs
 
 As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version.
 
-After installing the Java Development Kit, verify that the JAVA_HOME system variable correctly points to the Java Development Kit intended for running the Nuxeo Platform.   JAVA_HOME should be set if it is not present.
+After installing the Java Development Kit, verify that the `JAVA_HOME` system variable correctly points to the Java Development Kit intended for running the Nuxeo Platform (`JAVA_HOME` should be set if it is not present).
 
 {{! /multiexcerpt}}
 
