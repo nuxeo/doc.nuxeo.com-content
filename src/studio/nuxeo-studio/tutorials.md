@@ -4,6 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
+toc: false
 confluence:
     ajs-parent-page-id: '19793788'
     ajs-parent-page-title: Nuxeo Studio
