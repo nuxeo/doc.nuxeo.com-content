@@ -8,7 +8,7 @@ labels:
     - lts2019-ok
     - nuxeo-drive
     - mschoentgen
-tree_item_index: 400
+tree_item_index: 600
 is_overview: true
 ---
 <div class="row" data-equalizer data-equalize-on="medium">

@@ -8,7 +8,7 @@ review:
 labels:
     - nuxeo-drive
     - direct-transfer
-tree_item_index: 200
+tree_item_index: 100
 toc: true
 ---
 
