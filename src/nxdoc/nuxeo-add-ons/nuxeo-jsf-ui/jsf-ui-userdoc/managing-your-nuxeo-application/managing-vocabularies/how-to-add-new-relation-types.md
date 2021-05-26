@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to customize the relations predicates and add new types of relations.
         level: Beginner
         tool: Nuxeo Platform
-        topics: Vocabulary
+        topics: Vocabularies
 labels:
     - howto
     - relation
