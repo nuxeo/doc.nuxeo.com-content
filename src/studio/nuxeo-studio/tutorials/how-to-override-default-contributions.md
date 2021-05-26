@@ -8,7 +8,7 @@ details:
   howto:
     excerpt: Learn how to override Web UI Default contributions with Nuxeo Studio
     tool: Nuxeo Studio
-    topics: Nuxeo Studio
+    topics: UIElements
     level: Intermediate
 labels:
   - howto
