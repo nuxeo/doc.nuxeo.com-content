@@ -10,7 +10,7 @@ details:
     excerpt: 'Learn how to create an XML extension in Nuxeo Studio, with the Nuxeo CLI and how to override a Nuxeo contribution.'
     level: Intermediate
     tool: 'Nuxeo CLI, Studio'
-    topics: Extension point
+    topics: XMLExtensions
 labels:
   - lts2016-ok
   - xml-extension
