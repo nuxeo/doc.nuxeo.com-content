@@ -10,11 +10,12 @@ details:
         excerpt: Learn how to execute UI functions after business logic execution
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: 'Automation, UIElement'
 labels:
     - lts2019-ok
     - webui
     - designer
+    - howto
 tree_item_index: 1250
 ---
 
