@@ -11,12 +11,13 @@ details:
         excerpt: Learn how to configure global Web UI settings.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: Contributions
 labels:
     - nuxeo-web-ui
     - extension
     - customization
     - tutorial
+    - howto
 tree_item_index: 650
 ---
 
