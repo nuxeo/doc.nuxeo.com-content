@@ -8,8 +8,8 @@ details:
 	howto:
 		excerpt: Learn how to reference another document type.
 		level: Advanced
-		tool: 'Nuxeo Studio'
-		topics: 'Registries, Doctype'
+		tool: Nuxeo Studio
+		topics: Registries, Doctype
 labels:
     - howto
 confluence:
@@ -106,7 +106,6 @@ history:
         date: '2011-03-29 17:47'
         message: ''
         version: '1'
-
 ---
 Some of the features of Studio rely on displaying a list of existing document types. For instance, that is the case when:
 
