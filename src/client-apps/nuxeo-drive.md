@@ -475,6 +475,7 @@ Can be `private` for development/QA cases or `public` for production versions.
 
 - Default value (str): `public`
 - Version added: 5.10
+- Version removed: 5.2.2
 
 * * *
 
