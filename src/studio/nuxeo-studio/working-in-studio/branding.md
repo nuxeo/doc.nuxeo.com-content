@@ -7,10 +7,10 @@ review:
 toc: true
 details:
     howto:
-        excerpt: Learn how to customize your application.
+        excerpt: Learn how to create a custom login page.
         level: Beginner
         tool: Studio
-        topics: 'Theme, JSF UI'
+        topics: 'Themes'
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
     - branding

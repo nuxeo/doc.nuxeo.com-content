@@ -13,7 +13,7 @@ details:
             Studio to get a production and a maintenance branch.
         level: Intermediate
         tool: Studio
-        topics: 'Branch Management, Studio Tags'
+        topics: 'SourceControlManagement, Studio Tags'
 labels:
     - howto
     - branch-management

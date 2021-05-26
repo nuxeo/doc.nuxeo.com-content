@@ -4,86 +4,82 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: ''
-  date: '2021-04-15'
+  date: '2021-05-21'
   status: ok
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.1.1**
+Welcome to the Release Notes for **Nuxeo Drive 5.2.1**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.1.1.md)
+**Status**: <font color="#ff0000">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.1.md)
 
-## Important Changes
+## General
 
-### Windows Certificate Renewal
+### Fixes
 
-The certificate used to ship Windows binaries has been renewed. For a small amount of time, users may see the Windows Smart Screen alert as below:
+#### Amazon S3 Credentials Renewal
 
-![]({{file name='windows-smart-screen-nuxeo-drive-5.1.1.png' page='nuxeo-drive-release-notes'}} ?w=350)
+A regression introduced in previous versions that would break credentials renewal when using Amazon S3 direct upload capabilities was fixed.
 
-This is a temporary warning and it is completely safe to use Nuxeo Drive.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXPY-223](https://jira.nuxeo.com/browse/NXPY-223).
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2577](https://jira.nuxeo.com/browse/NXDRIVE-2577).
+#### Better Partition Checks
 
-## Improvements
+We improved how a given local folder could be used for the synchronization content. New checks are more specifics and less restrictives.
 
-### Direct Transfer
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2644](https://jira.nuxeo.com/browse/NXDRIVE-2644).
 
-#### End of Session Notification Clickable
+#### Database Management
 
-Once a session of Direct Transfer is done, the notification has been made clickable and now redirects the user to the destination folder in the browser.
+Our Sentry usage showed lots of errors about "database or disk is full". After deep investigations, we hope the situation will now be better: temporary databases are now handled in memory (RAM) instead of a temporary folder. The later was the source of all reported problems were it may be limited in disk space and blocking our database actions while there are still enough disk space at the current location of those databases.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2427](https://jira.nuxeo.com/browse/NXDRIVE-2427).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2646](https://jira.nuxeo.com/browse/NXDRIVE-2646).
 
-#### Updated Permission Check
+### Improvements
 
-The atomic permission `AddChildren` is now used instead of the `ReadWrite` permission group to define the possible upload destinations in Direct Transfer.
+#### Operations Check at Startup
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2572](https://jira.nuxeo.com/browse/NXDRIVE-2572).
+Users were able to add an account using their credentials but for one reason or another they do not have enough rights to call `NuxeoDrive.*` automation operations. Such case is now well handled.
 
-### Idempotent Requests
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2647](https://jira.nuxeo.com/browse/NXDRIVE-2647).
 
-To improve uploads resiliency, we introduced idempotent requests for several calls.
-Improvement thanks to such requests are no more duplicate creations or missing on the server when uploading a lot of files; ensuring the app will not create duplicates after a hard crash, and more generally it will make the upload experience more fluid.
+#### Local Folder Button in Systray
 
-As the performances impact is not yet known, we put the feature behind the [`use-idempotent-requests`]({{page page='nuxeo-drive'}}#use-idempotent-requests) option, and it is disabled by default. We will work on benchmarks in the coming weeks and if the feature is safe enough, it will be enabled by default in a future release.
+The local folder icon in the system tray menu is now disabled when the synchronization is.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2463](https://jira.nuxeo.com/browse/NXDRIVE-2463).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2651](https://jira.nuxeo.com/browse/NXDRIVE-2651).
 
-## Fixes
+## Direct Transfer
 
-### S3 Direct Upload
+### Fixes
 
-We improved uploads robustness when going through S3 direct upload in several situations:
-- when a non-chunked upload fails because of expired credentials;
-- when refreshed credentials are still expired because of a misconfiguration of the ARN;
-- when the original `batchId` is removed from the transient store while the upload is still ongoing on the S3 side.
-These use cases will now restart the transfer from the ground because there is no possibility to continue an upload with a different batchId.
+#### Using the Feature Right After Account Addition
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2590](https://jira.nuxeo.com/browse/NXDRIVE-2590), [NXDRIVE-2595](https://jira.nuxeo.com/browse/NXDRIVE-2595) and [NXDRIVE-2598](https://jira.nuxeo.com/browse/NXDRIVE-2598).
+When the synchronization is disabled, there was an issue that won't start transferring files when doing a Direct Transfer right after having added a new account. This is now fixed.
 
-### macOS Auto-Update
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2643](https://jira.nuxeo.com/browse/NXDRIVE-2643).
 
-By default, the app is installed in the `/Applications` folder. It implies several issues because that folder is protected and one needs to enter a password to apply changes. We found it blocked several users when the app is auto-updating itself.
+#### CSV Export Button
 
-A better location for apps is the `$HOME/Application` folder. It is not password-protected and allows separate apps for all users from ones from the current user.
+The CSV export button click area was not covering the CSV icon. One had to click on the right on the icon to apply the action. The click area is now correctly set.
 
-Starting with Nuxeo Drive 5.1.1, the auto-updater will automatically move the app from `/Applications` to `$HOME/Applications`. It should be transparent for the user.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2650](https://jira.nuxeo.com/browse/NXDRIVE-2650).
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2163](https://jira.nuxeo.com/browse/NXDRIVE-2163).
+## Synchronization
 
+### Improvements
 
-### Fixed Conflicted Documents With Non-Standard Digest
+#### Polished Disabled Sync Behavior
 
-In Nuxeo Drive [5.0.0]({{page page='5.0.0-nuxeo-drive-release-notes'}}#handle-documents-with-non-standard-digest) we improved the handling of documents having non-standard digests. At the time we did not take care of conflicts for such documents, this is now done.
+Following the work done on the version [5.2.0]({{page page='5.2.0-nuxeo-drive-release-notes'}}#the-synchronization-mechanism-is-now-a-feature) where the synchronization became a feature, we polished even more the behavior.
 
-The conflict resolution will be delayed until a valid digest will be sent by the server.
+Now, when the synchronization is disabled, the application won't do anymore actions on the local folder (like checking its existence, checking extended attributes support, calling NuxeoDrive.* operations, ...).
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2587](https://jira.nuxeo.com/browse/NXDRIVE-2587).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2641](https://jira.nuxeo.com/browse/NXDRIVE-2641).
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.1.1-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.1.1.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.1.1.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.1-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.1.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.1.exe)

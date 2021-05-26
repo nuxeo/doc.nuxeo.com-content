@@ -7,12 +7,10 @@ review:
   status: ok
 details:
   howto:
-    excerpt: >-
-      Learn how to use the advanced branch management feature of Nuxeo
-      Studio to collaborate on a Studio project.
-    level: Beginner
-    tool: Studio
-    topics: 'Branch Management, Studio Tags'
+    excerpt: 'Learn how to use the advanced branch management feature of Nuxeo Studio to collaborate on a Studio project.'
+    level: 'Intermediate'
+    tool: 'Nuxeo Studio'
+    topics: 'SourceControlManagement'
 labels:
   - howto
   - branch-management

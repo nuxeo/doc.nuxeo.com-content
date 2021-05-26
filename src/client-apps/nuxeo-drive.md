@@ -17,8 +17,9 @@ tree_item_index: 100
 
 | Channel | Version                                                                    |
 | ------- | -------------------------------------------------------------------------- |
-| Release | [5.1.1](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
-| Alpha   | [5.1.2.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D) |
+| Release | [5.2.0](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
+| Beta    | [5.2.1](https://community.nuxeo.com/static/drive-updates/beta/?C=M;O=D) |
+| Alpha   | [5.2.2.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D) |
 
 Find more information about our release cycle on [this page]({{page version='' space='client-apps' page='nuxeo-drive-release-cycle'}}).
 
@@ -181,6 +182,7 @@ Available features:
 | `auto_update` | true | 4.4.2 | Allow or disallow auto-updates.
 | `direct_edit` | true | 4.4.2 | Allow or disallow Direct Edit.
 | `direct_transfer` | true | 4.4.2 | Allow or disallow Direct Transfer.
+| `synchronization` | false | 5.2.0 | Enable or disable the synchronization features.
 | `s3` | true | 4.4.2 | Allow or disallow using Amazon S3 direct uploads.
 
 Here is how to tweak features via the local configuration file:
@@ -194,6 +196,7 @@ env = myFeatures
 feature.auto-update     = true
 feature.direct-edit     = true
 feature.direct-transfer = true
+feature.synchronization = true
 feature.s3              = true
 ```
 
@@ -206,6 +209,7 @@ Here is how to tweak features via the server configuration file:
     "auto-update"     : true,
     "direct-edit"     : true,
     "direct-transfer" : true,
+    "synchronization" : true,
     "s3"              : true
   }
 }

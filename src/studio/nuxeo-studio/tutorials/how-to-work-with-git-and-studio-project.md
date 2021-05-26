@@ -5,6 +5,14 @@ review:
     date: '2018-10-24'
     status: ok
     comment: ''
+details:
+  howto:
+    excerpt: 'Learn how to synchronize your Studio sources with a local instance and to make the development process of custom elements'
+    level: 'Advanced'
+    tool: 'Nuxeo CLI'
+    topics: 'Deployment'
+labels:
+  - howto
 toc: true
 tree_item_index: 1000
 ---

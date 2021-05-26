@@ -4,8 +4,14 @@ review:
     comment: ''
     date: ''
     status: ok
+details:
+  howto:
+    excerpt: 'Learn how to reference an external operation'
+    level: 'Intermediate'
+    tool: 'Nuxeo Studio'
+    topics: 'Automation, Registries'
 labels:
-    - howto-registries
+    - howto
 confluence:
     ajs-parent-page-id: '12912677'
     ajs-parent-page-title: Tutorials

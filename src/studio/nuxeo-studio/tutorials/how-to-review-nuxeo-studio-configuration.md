@@ -9,7 +9,7 @@ details:
     excerpt: Learn how to use the branch management features of Nuxeo Studio to set up a configuration process review.
     level: Intermediate
     tool: Studio
-    topics: 'Branch Management'
+    topics: 'SourceControlManagement'
 labels:
   - howto
 toc: true

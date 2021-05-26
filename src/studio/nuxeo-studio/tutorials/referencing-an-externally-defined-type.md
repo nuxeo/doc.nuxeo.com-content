@@ -4,8 +4,14 @@ review:
     comment: ''
     date: ''
     status: ok
+details:
+  howto:
+    excerpt: 'Learn how to reference another document type'
+    level: 'Intermediate'
+    tool: 'Nuxeo Studio'
+    topics: 'Registries, Doctype'
 labels:
-    - howto-registries
+  - howto
 confluence:
     ajs-parent-page-id: '12912677'
     ajs-parent-page-title: Tutorials
@@ -100,7 +106,6 @@ history:
         date: '2011-03-29 17:47'
         message: ''
         version: '1'
-
 ---
 Some of the features of Studio rely on displaying a list of existing document types. For instance, that is the case when:
 
