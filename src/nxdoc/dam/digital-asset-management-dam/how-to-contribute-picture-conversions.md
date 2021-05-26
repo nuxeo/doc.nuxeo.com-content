@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to contribute new picture conversions.
         level: Advanced
         tool: XML Extension
-        topics: 'Automation, Contribution, Layouts'
+        topics: 'Automation, XMLExtensions, Layouts'
 labels:
     - lts2016-ok
     - howto
