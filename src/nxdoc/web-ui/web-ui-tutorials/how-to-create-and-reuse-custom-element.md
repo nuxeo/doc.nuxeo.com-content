@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to create and reuse a custom element in Studio Designer.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: 'UIElements, Layouts'
 labels:
     - lts2017-ok
     - lts2019-ok
