@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to add complex fields on a document type.
         level: Beginner
         tool: Studio
-        topics: 'Document type, Schema'
+        topics: 'Doctype'
 labels:
     - content-review-lts2016
     - schema-component
