@@ -1,10 +1,10 @@
 ---
-title: Tutorials
+title: Nuxeo Studio Tutorials
 review:
     comment: ''
-    date: ''
+    date: '2021-05-26'
     status: ok
-toc: false
+toc: true
 confluence:
     ajs-parent-page-id: '19793788'
     ajs-parent-page-title: Nuxeo Studio
@@ -65,20 +65,94 @@ history:
         version: '1'
 
 ---
-Welcome on the tutorials sections of Nuxeo Studio.
+
+Welcome on the Nuxeo Studio tutorials.
 
 The goal of this section is to provide ready to use examples. They can be followed step by step to learn how to use Studio on practical use cases. The section also aims at providing solutions to commonly encountered situations.
 
-The configuration changes you will make in Nuxeo Studio require Development Mode to be enabled. Development Mode can be enabled on your Nuxeo server by going to **Admin Center > Update Center > Nuxeo Studio** and clicking the Development mode **Enable** button.
+{{#> callout type='info' heading='Nuxeo University'}}
+[Nuxeo Studio Exercises](https://university.nuxeo.com/learn/course/external/view/elearning/103/nuxeo-studio-exercises) &
+[Nuxeo Studio Learning Plan](https://university.nuxeo.com/learn/public/learning_plan/view/5/nuxeo-studio-foundations)</br>
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_studio_learning_plan.png
+    name: Screenshot 2021-05-26 at 14.30.28.png
+    addins#screenshot#up_to_date
+--}}
+![university_studio_learning_plan.png](nx_asset://4dce810e-9f1b-4e34-9a5f-4275e3ea45ba ?w=450,border=true)
+{{/callout}}
 
-## Nuxeo Studio Features How-Tos
+{{#> callout type='note' heading='DEV MODE'}}
+The configuration changes you will make in Nuxeo Studio require [Development Mode]({{page version='' space='corg' page='supporting-hot-reload'}}#setting-up-the-dev-mode) to be enabled.
+{{/callout}}
 
-{{> children}}
+## Branding and Themes
 
-## Customization How-Tos Using Nuxeo Studio
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Themes'}}}
 
-{{{table_from_details headings='Excerpt, Topics, Level, Tool' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto'}}}
+## Document type and Schemas
 
-&nbsp;
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Doctype'}}}
 
-&nbsp;
+## Layouts
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Layouts'}}}
+
+## Vocabularies
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Vocabularies'}}}
+
+## Structure Templates
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=StructureTemplates'}}}
+
+## Searches
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Searches'}}}
+
+## Automation
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Automation'}}}
+
+## Workflow
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Workflow'}}}
+
+## Source Control Management
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=SourceControlManagement'}}}
+
+## Events
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Events'}}}
+
+## Templates
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Templates'}}}
+
+## Users and Groups
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=UsersAndGroups'}}}
+
+## XML Contributions
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=XMLContributions'}}}
+
+## External Templates
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=ExternalTemplates'}}}
+
+## Registries
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Registries'}}}
+
+## UI Elements
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=UIElements'}}}
+
+## Translations
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Translations'}}}
+
+## Studio Deployment
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Deployment'}}}
