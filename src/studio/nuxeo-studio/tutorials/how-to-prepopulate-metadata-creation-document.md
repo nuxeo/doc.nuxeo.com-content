@@ -8,7 +8,7 @@ details:
   howto:
     excerpt: Learn how to prepopulate metadata in the document creation layout
     tool: Nuxeo Studio
-    topics: Nuxeo Studio
+    topics: 'Automation, Events'
     level: Beginner
 labels:
   - howto
