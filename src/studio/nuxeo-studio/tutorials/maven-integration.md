@@ -10,6 +10,8 @@ details:
     level: 'Advanced'
     tool: 'Code'
     topics: 'Deployment'
+labels:
+  - howto
 confluence:
     ajs-parent-page-id: '12912677'
     ajs-parent-page-title: Tutorials
