@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to be able to control the display mode of a widget. Nuxeo Studio enables you to implement your requirements using an expression when you configure your widget.
         level: Advanced
         tool: Studio
-        topics: 'Layout, Widget'
+        topics: 'Widget'
 labels:
     - content-review-lts2016
     - scripting
