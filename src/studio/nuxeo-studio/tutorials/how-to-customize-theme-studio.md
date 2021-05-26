@@ -11,6 +11,8 @@ details:
     level: Beginner
     tool: Nuxeo Studio
     topics: Themes
+labels:
+  - howto
 tree_item_index: 1100
 ---
 
