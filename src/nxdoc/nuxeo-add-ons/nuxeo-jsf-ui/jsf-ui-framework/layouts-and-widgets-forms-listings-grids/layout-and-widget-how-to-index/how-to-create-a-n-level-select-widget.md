@@ -12,7 +12,7 @@ details:
             a "template widget" in Studio.
         level: Advanced
         tool: Studio
-        topics: 'Layout, Widget'
+        topics: 'Widget'
 labels:
     - content-review-lts2017
     - widget
