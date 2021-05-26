@@ -11,8 +11,8 @@ details:
             Learn how to use the advanced branch management features of Nuxeo
             Studio to get a production and a feature branch.
         level: Intermediate
-        tool: Studio
-        topics: 'Branch Management, Studio Tags'
+        tool: Nuxeo Studio
+        topics: 'SourceControlManagement, Studio Tags'
 labels:
     - howto
     - branch-management
