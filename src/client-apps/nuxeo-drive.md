@@ -474,7 +474,7 @@ Define the execution profile for the application in metrics.
 Can be `private` for development/QA cases or `public` for production versions.
 
 - Default value (str): `public`
-- Version added: 5.10
+- Version added: 5.1.0
 - Version removed: 5.2.2
 
 * * *
