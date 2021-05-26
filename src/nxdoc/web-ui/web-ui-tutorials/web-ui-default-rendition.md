@@ -11,7 +11,7 @@ details:
         excerpt: Learn how to customize the default rendition used in Web UI.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: 'Conversion, XMLExtensions'
 labels:
     - tutorial
     - rendition
