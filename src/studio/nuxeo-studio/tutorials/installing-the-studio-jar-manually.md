@@ -17,6 +17,12 @@ confluence:
   shortlink: 54EV
   shortlink_source: 'https://doc.nuxeo.com/x/54EV'
   source_link: /display/Studio/Installing+the+Studio+JAR+Manually
+details:
+  howto:
+    excerpt: Learn How to Install the Studio JAR Manually
+    level: Intermediate
+    tool: Nuxeo Studio
+    topics: Deployment
 tree_item_index: 200
 history:
   - author: Solen Guitter
