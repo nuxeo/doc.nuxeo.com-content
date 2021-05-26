@@ -4,6 +4,12 @@ review:
     comment: ''
     date: '2018-03-29'
     status: ok
+details:
+  howto:
+    excerpt: 'Learn how to integrate your Studio project with Maven'
+    level: 'Advanced'
+    tool: 'Code'
+    topics: 'Deployment'
 confluence:
     ajs-parent-page-id: '12912677'
     ajs-parent-page-title: Tutorials
