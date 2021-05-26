@@ -9,7 +9,7 @@ details:
         excerpt: This how-to explains the different steps to create and configure an automation chain using Nuxeo Studio.
         level: Beginner
         tool: Studio
-        topics: 'Automation, Event handler, User action'
+        topics: 'Automation, Events, UIElements'
 labels:
     - lts2016-ok
     - howto
