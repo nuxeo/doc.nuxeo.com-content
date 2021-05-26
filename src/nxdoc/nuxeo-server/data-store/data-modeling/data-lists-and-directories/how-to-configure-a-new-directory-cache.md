@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to define a new directory cache and use it in your directoy.
         level: Intermediate
         tool: XML Extension
-        topics: 'Directory, Vocabulary'
+        topics: 'Vocabularies, Contribution'
 labels:
     - lts2016-ok
     - howto
