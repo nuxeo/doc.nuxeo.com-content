@@ -9,7 +9,7 @@ details:
     excerpt: 'Learn how to create new alert email or override existing alert emails with Nuxeo Studio.'
     level: Beginner
     tool: Studio
-    topics: Alerts
+    topics: Templates
 labels:
   - lts2016-ok
   - howto
