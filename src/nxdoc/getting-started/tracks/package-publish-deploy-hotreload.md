@@ -9,7 +9,7 @@ details:
       excerpt: Learn how to package, publish, deploy and hotreload a project.
       level: Intermediate
       tool: 'Nuxeo CLI, Nuxeo Studio'
-      topics: 'Automation, Layout'
+      topics: 'Deployment'
 labels:
   - howto
   - nuxeo-cli
