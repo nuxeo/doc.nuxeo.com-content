@@ -11,7 +11,7 @@ details:
         excerpt: Learn how to use Nuxeo Slots with Web UI.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: UIElements
 labels:
     - lts2016-ok
     - nuxeo-web-ui
