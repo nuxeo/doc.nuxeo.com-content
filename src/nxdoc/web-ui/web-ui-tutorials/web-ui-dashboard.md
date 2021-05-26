@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to customize the Web UI dashboard
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: UIElements
 labels:
     - lts2016-ok
     - nuxeo-web-ui
