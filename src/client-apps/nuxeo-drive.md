@@ -152,7 +152,6 @@ When a new version of Nuxeo Drive is available, a message is displayed at the bo
     Nuxeo Drive is updated and automatically restarted.
     ![]({{file name='drive-notif-upgrade-progress.png' page='nuxeo-drive'}} ?w=300)
 
-
 ## Behaviors
 
 The application can be tweaked using on-demand on/off options via the `behavior` parameter.</br>
