@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to use the tags and releases features of Nuxeo Studio.
         level: Intermediate
         tool: Studio
-        topics: 'Branch Management, Studio Tags'
+        topics: 'SourceControlManagement, Studio Tags'
 labels:
     - howto
 toc: true
