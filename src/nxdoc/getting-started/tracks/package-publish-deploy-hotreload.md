@@ -1,5 +1,5 @@
 ---
-title: 4 - Deploy and Publish
+title: Deploy and Publish
 review:
   comment: ''
   date: '2021-03-02'
