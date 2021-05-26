@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to contribute a new video conversion to convert a video to WebM format.
         level: Advanced
         tool: 'XML extension, Code'
-        topics: 'Automation, Contribution, Layouts'
+        topics: 'Automation, XMLExtensions, Layouts'
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - lts2016-ok
