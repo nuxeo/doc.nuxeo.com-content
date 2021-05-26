@@ -6,11 +6,11 @@ review:
     date: '2019-12-17'
     status: ok
 details:
-    howto:
-        excerpt: This page provides a turnkey solution to add new fields to the user profile or group.
-        level: Intermediate
-        tool: XML configuration
-        topics: 'LDAP, Multidirectory'
+  howto:
+    excerpt: This page provides a turnkey solution to add new fields to the user profile or group.
+    level: Intermediate
+    tool: XML configuration
+    topics: 'UsersAndGroups, Doctype'
 tree_item_index: 400
 toc: true
 labels:
