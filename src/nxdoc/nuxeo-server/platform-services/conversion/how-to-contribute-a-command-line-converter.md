@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to contribute a new command line converter.
         level: Advanced
         tool: XML Extension
-        topics: XMLExtensions
+        topics: 'XMLExtensions, Conversion'
 labels:
     - lts2016-ok
     - howto
