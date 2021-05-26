@@ -5,13 +5,13 @@ review:
     date: ''
     status: ok
 details:
-	howto:
-		excerpt: 'Learn how to reference another document type'
-		level: 'Intermediate'
-		tool: 'Nuxeo Studio'
-		topics: 'Registries, Doctype'
+  howto:
+    excerpt: 'Learn how to reference another document type'
+    level: 'Intermediate'
+    tool: 'Nuxeo Studio'
+    topics: 'Registries, Doctype'
 labels:
-    - howto
+  - howto
 confluence:
     ajs-parent-page-id: '12912677'
     ajs-parent-page-title: Tutorials
