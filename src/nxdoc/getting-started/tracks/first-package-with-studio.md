@@ -1,5 +1,5 @@
 ---
-title: 2 - First Package With Studio
+title: First Package With Studio
 review:
     comment: ''
     date: '2020-12-11'
