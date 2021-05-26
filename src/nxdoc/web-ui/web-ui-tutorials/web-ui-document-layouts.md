@@ -11,7 +11,7 @@ details:
         excerpt: Learn how to use document layouts with Web UI and Studio Designer
         level: Intermediate
         tool: 'Studio Designer, code'
-        topics: 'Web UI, Studio Designer'
+        topics: 'Layouts, Doctype'
 labels:
     - view-designer
     - nuxeo-web-ui
