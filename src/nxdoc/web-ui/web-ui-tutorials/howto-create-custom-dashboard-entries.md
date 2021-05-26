@@ -9,7 +9,7 @@ details:
         excerpt: Learn the basics of a Nuxeo module and is IDE agnostic.
         level: Advanced
         tool: Code
-        topics: Bundle
+        topics: UIElements
 labels:
     - lts2019-ok
     - dev-guide
