@@ -1,5 +1,5 @@
 ---
-title: 1 - Discover Nuxeo Platform APIs
+title: Discover Nuxeo Platform APIs
 review:
     comment: ''
     date: '2020-09-15'
