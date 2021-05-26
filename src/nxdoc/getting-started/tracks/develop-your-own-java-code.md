@@ -1,5 +1,5 @@
 ---
-title: 3 - Develop Your Own Java Code
+title: Develop Your Own Java Code
 review:
     comment: ''
     date: '2021-03-02'
