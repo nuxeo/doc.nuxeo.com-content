@@ -22,8 +22,8 @@ details:
 	howto:
 		excerpt: Learn how to reference another document type.
 		level: Advanced
-		tool: Nuxeo Studio
-		topics: Registries, Doctype
+		tool: 'Nuxeo Studio'
+		topics: 'Registries, Doctype'
 tree_item_index: 300
 history:
     -
