@@ -4,12 +4,6 @@ review:
     comment: ''
     date: ''
     status: ok
-details:
-	howto:
-		excerpt: Learn how to deploy a Nuxeo Studio release.
-		level: Advanced
-		tool: 'Nuxeo Studio'
-		topics: 'Deployment'
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
     - howto-deployement
@@ -24,6 +18,12 @@ confluence:
     shortlink: jAE7
     shortlink_source: 'https://doc.nuxeo.com/x/jAE7'
     source_link: /display/Studio/Deploying+Your+Project+in+Dev+Mode
+details:
+  howto:
+    excerpt: Learn How to Deploy a Nuxeo Studio release
+    level: Beginner
+    tool: Nuxeo Studio
+    topics: Deployment
 tree_item_index: 100
 history:
     -
