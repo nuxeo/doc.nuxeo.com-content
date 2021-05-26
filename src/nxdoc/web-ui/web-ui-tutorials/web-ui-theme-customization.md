@@ -10,7 +10,7 @@ details:
     excerpt: Learn how to customize themes in Nuxeo Web UI.
     level: Advanced
     tool: code
-    topics: Web UI
+    topics: Themes
 labels:
   - lts2016-ok
   - nuxeo-web-ui
