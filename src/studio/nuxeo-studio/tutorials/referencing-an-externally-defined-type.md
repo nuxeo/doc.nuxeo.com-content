@@ -6,10 +6,10 @@ review:
     status: ok
 details:
 	howto:
-		excerpt: Learn how to reference another document type.
-		level: Advanced
-		tool: Nuxeo Studio
-		topics: Registries, Doctype
+		excerpt: 'Learn how to reference another document type'
+		level: 'Intermediate'
+		tool: 'Nuxeo Studio'
+		topics: 'Registries, Doctype'
 labels:
     - howto
 confluence:
