@@ -4,8 +4,14 @@ review:
     comment: ''
     date: ''
     status: ok
+details:
+	howto:
+		excerpt: Learn how to reference another document type.
+		level: Advanced
+		tool: 'Nuxeo Studio'
+		topics: 'Registries, Doctype'
 labels:
-    - howto-registries
+    - howto
 confluence:
     ajs-parent-page-id: '12912677'
     ajs-parent-page-title: Tutorials
@@ -18,12 +24,6 @@ confluence:
     shortlink: GwRc
     shortlink_source: 'https://doc.nuxeo.com/x/GwRc'
     source_link: /display/Studio/Referencing+an+Externally+Defined+Type
-details:
-	howto:
-		excerpt: Learn how to reference another document type.
-		level: Advanced
-		tool: 'Nuxeo Studio'
-		topics: 'Registries, Doctype'
 tree_item_index: 300
 history:
     -
