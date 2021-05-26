@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to create a vocabulary using Nuxeo Studio.
         level: Beginner
         tool: Studio
-        topics: Vocabulary
+        topics: Vocabularies
 labels:
     - lts2016-ok
     - lts2017-ok
