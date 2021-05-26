@@ -11,7 +11,7 @@ details:
     excerpt: Learn how to create a new search screen with Studio Designer.
     level: Intermediate
     tool: 'Studio Designer, code'
-    topics: 'Web UI, Studio Designer'
+    topics: 'Searches'
 labels:
   - lts2016-ok
   - nuxeo-web-ui
@@ -21,6 +21,7 @@ labels:
   - search-tab-component
   - lts2017-ok
   - lts2019-ok
+  - howto
 tree_item_index: 600
 ---
 
