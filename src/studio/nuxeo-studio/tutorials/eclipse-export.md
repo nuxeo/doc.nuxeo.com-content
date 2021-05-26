@@ -5,6 +5,12 @@ review:
   comment: ''
   date: '2020-01-21'
   status: ok
+details:
+  howto:
+    excerpt: 'Learn how to import Studio files in Eclipse'
+    level: 'Advanced'
+    tool: 'Code'
+    topics: 'Deployment'
 tree_item_index: 1300
 ---
 
