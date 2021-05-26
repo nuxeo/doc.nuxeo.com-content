@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to create an actions menu.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: UIElements
 labels:
     - lts2017-ok
     - lts2019-ok
