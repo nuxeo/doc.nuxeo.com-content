@@ -133,9 +133,9 @@ The configuration changes you will make in Nuxeo Studio require [Development Mod
 
 {{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=UsersAndGroups'}}}
 
-## XML Contributions
+## XML Extensions
 
-{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=XMLContributions'}}}
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=XMLExtensions'}}}
 
 ## External Templates
 
