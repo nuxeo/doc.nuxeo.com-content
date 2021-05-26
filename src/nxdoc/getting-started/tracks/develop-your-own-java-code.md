@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to start working with Nuxeo CLI.
         level: Intermediate
         tool: 'Nuxeo CLI, Nuxeo Studio'
-        topics: 'Automation, Layout'
+        topics: 'Deployment'
 labels:
     - howto
     - nuxeo-cli
