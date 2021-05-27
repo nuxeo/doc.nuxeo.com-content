@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to configure the creation form to display long document type titles
         level: Intermediate
         tool: null
-        topics: 'Web UI, Studio Designer'
+        topics: 'Layouts'
 labels:
     - tutorial
     - lts2019-ok
