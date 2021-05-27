@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to use Web UI internal events.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: UIElements, Events
 labels:
     - tutorial
     - polymer
