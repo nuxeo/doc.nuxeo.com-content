@@ -11,7 +11,7 @@ details:
         excerpt: Learn how translations are managed technically in Nuxeo Web UI.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: Translations
 labels:
     - nuxeo-web-ui
     - customization
