@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to get a PDF printable version of the data stored on your document as properties using Nuxeo Studio.
         level: Beginner
         tool: Studio
-        topics: 'Automation, Conversion, Document template'
+        topics: 'Automation, Conversion, Templates'
 labels:
     - lts2016-ok
     - howto
