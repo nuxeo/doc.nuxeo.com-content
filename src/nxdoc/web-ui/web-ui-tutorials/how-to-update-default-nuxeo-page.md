@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to update the default Nuxeo document view.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: 'UIElements, Automation'
 labels:
     - tutorial
     - nuxeo-ui-elements
