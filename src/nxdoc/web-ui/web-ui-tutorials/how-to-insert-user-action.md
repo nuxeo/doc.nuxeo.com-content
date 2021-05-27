@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Insert a User Action'
+title: 'HOWTO: Insert a Button'
 review:
     comment: ''
     date: '2019-07-12'
@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to insert a new user action using the Studio Designer
         level: Intermediate
         tool: null
-        topics: 'Web UI, Studio Designer'
+        topics: 'Web UI, Studio Designer, UIElements'
 labels:
     - tutorial
     - nuxeo-elements
