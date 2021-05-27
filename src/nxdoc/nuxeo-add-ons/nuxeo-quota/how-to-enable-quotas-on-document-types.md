@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to enable Nuxeo Quota features on document types other than domains and workspaces.
         level: Beginner
         tool: Nuxeo Studio
-        topics: 'Document type, Nuxeo Quota, Statistics'
+        topics: 'Doctype, Nuxeo Quota, Statistics, XMLExtensions'
 labels:
     - lts2016-ok
     - quota
