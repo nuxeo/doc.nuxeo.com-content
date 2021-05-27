@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to translate the Nuxeo Platform
         level: Advanced
         tool: Crowdin
-        topics: 'Labels, Localization, Translation'
+        topics: 'Labels, Localization, Translations'
 labels:
     - content-review-lts2016
     - i10n
