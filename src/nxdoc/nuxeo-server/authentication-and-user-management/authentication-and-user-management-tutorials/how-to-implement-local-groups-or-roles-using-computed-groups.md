@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace).
         level: Advanced
         tool: Studio
-        topics: Permissions, Authentication
+        topics: Permissions, Authentication, XMLExtensions, UsersAndGroups
 labels:
     - lts2016-ok
     - howto
