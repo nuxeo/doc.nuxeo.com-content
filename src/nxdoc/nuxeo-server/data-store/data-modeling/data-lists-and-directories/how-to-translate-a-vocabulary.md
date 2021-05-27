@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to translate an existing vocabulary.
         level: Beginner
         tool: Studio
-        topics: Vocabulary
+        topics: 'Vocabularies, Translations'
 labels:
     - lts2016-ok
     - vocabulary
