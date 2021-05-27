@@ -11,7 +11,7 @@ details:
         excerpt: Learn how to manage translations in Nuxeo Web UI.
         level: Beginner
         tool: Studio
-        topics: Web UI
+        topics: Translations
 labels:
     - nuxeo-web-ui
     - i18n
