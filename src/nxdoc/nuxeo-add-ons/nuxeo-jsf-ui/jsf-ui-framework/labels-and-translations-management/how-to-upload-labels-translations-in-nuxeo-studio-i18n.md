@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to upload your own translation of labels in Nuxeo Studio Modeler.
         level: Advanced
         tool: Studio
-        topics: 'Labels, Localization, Translation'
+        topics: 'Labels, Localization, Translations'
 labels:
     - lts2016-ok
     - i18n
