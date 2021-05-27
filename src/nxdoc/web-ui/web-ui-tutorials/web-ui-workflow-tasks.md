@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to configure your workflow tasks
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: Workflow
 labels:
     - lts2016-ok
     - nuxeo-web-ui
