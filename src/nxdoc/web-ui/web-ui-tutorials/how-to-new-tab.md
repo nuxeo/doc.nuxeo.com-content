@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Insert a New Tab'
+title: 'HOWTO: Insert a New Search Tab'
 description: Learn how to add a new tab to a custom document type.
 review:
   comment: ''
@@ -11,7 +11,7 @@ details:
     excerpt: Learn how to insert a new tab on your custom document type
     level: Intermediate
     tool: Designer
-    topics: Web UI
+    topics: Searches
 labels:
   - lts2016-ok
   - nuxeo-web-ui
