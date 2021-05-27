@@ -10,7 +10,7 @@ details:
       Learn how to create a listing displaying custom properties of the documents contained in a given space.
     level: Intermediate
     tool: Studio
-    topics: 'Page Providers'
+    topics: 'Searches'
 labels:
   - howto
   - studio
