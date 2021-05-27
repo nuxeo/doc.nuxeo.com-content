@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Validate a Document Type Layout'
+title: 'HOWTO: Validate a Layout Content'
 review:
     comment: ''
     date: '2019-07-22'
@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to validate a document type layout.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: UIElements
 labels:
     - lts2017-ok
     - lts2019-ok
