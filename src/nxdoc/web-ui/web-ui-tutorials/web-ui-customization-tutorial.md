@@ -11,7 +11,7 @@ details:
         excerpt: Learn how to customize Web UI and deploy your customization.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: UIElements
 labels:
     - lts2019-ok
     - tutorial
