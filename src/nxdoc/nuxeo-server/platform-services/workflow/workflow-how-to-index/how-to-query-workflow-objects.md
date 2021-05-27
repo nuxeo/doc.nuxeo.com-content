@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to query workflow objects using NXQL.
         level: Advanced
         tool: Studio
-        topics: 'Workflow, NXQL, Query'
+        topics: 'Workflow, NXQL, Query, Searches'
 labels:
     - lts2016-ok
     - query-pageprovider-component
