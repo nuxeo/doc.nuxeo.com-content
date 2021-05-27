@@ -10,7 +10,7 @@ details:
         excerpt: 'Learn how to override the default Edit permission so it does not include Remove by default, and set a new ReadWriteAndRemove permission.'
         level: Intermediate
         tool: XML Extension
-        topics: Permissions
+        topics: 'Permissions, XMLExtensions'
 labels:
     - lts2016-ok
     - howto
