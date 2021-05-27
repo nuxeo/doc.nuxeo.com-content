@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to trigger an automation chain or an automation scripting from a Web UI Dialog.
         level: Intermediate
         tool: Designer
-        topics: Automation
+        topics: 'Automation, UIElements'
 toc: true
 tree_item_index: 1450
 ---
