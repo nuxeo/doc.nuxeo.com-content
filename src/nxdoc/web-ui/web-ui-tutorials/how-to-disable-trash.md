@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to disable trash and set up hard delete
         level: Intermediate
         tool: code
-        topics: Web UI
+        topics: 'UIElements'
 labels:
     - tutorial
     - polymer
