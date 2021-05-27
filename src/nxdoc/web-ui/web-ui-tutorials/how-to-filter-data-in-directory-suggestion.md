@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to Filter the data in a nuxeo-directory-suggestion element.
         level: Intermediate
         tool: code
-        topics: Web UI
+        topics: 'UIElements, Vocabularies'
 labels:
     - lts2017-ok
     - lts2019-ok
