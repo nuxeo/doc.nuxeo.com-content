@@ -11,7 +11,7 @@ details:
         excerpt: Learn how to create a new document type using Nuxeo Studio.
         level: Beginner
         tool: Studio
-        topics: Document type
+        topics: 'Doctype, Layouts'
 labels:
     - content-review-lts2016
     - howto
