@@ -9,7 +9,7 @@ details:
         excerpt: 'Learn how to use all operations that offers PDF tools operations from Nuxeo Studio: Watermarks, page numbers, document merging...'
         level: Intermediate
         tool: Studio
-        topics: 'Document type, Automation, Conversion'
+        topics: 'Doctype, Automation, Conversion'
 labels:
     - content-review-lts2016
     - howto
