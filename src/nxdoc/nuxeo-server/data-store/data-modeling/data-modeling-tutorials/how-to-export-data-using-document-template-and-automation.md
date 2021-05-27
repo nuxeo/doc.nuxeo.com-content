@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to generate a CSV file listing all the documents of your Nuxeo Platform repository.
         level: Beginner
         tool: Studio
-        topics: 'Automation, Document template'
+        topics: 'Automation, Templates'
 labels:
     - lts2016-ok
     - mvel
