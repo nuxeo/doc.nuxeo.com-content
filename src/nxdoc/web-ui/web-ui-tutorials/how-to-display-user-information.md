@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to display user information on Web UI
         level: Intermediate
         tool: code, Studio
-        topics: Web UI
+        topics: UIElements
 labels:
     - tutorial
     - polymer
