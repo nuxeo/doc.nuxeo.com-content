@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to follow a transition if the user is member of a particular group.
         level: Advanced
         tool: Studio
-        topics: 'Workflow, Transition'
+        topics: 'Workflow, Transition, UsersAndGroups'
 labels:
     - lts2016-ok
     - transition
