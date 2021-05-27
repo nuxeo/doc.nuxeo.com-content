@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to populate a directory with a CSV file.
         level: Beginner
         tool: Code
-        topics: 'Directory, Vocabulary'
+        topics: 'Directory, Vocabularies'
 labels:
     - vocabulary
     - howto
