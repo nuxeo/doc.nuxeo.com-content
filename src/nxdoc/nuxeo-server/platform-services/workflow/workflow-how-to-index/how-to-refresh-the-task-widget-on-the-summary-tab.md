@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to refresh the task widget on the Summary tab.
         level: Advanced
         tool: Studio
-        topics: 'Workflow, Widget'
+        topics: 'Workflows, Widget'
 labels:
     - lts2016-ok
     - widget
