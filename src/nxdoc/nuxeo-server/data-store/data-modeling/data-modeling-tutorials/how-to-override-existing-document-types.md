@@ -9,7 +9,7 @@ details:
     excerpt: Learn how to override an existing document type in Nuxeo Studio.
     level: Beginner
     tool: Studio
-    topics: 'Document type, Override'
+    topics: 'Doctype'
 labels:
   - lts2016-ok
   - howto
