@@ -72,7 +72,10 @@ The team made it through the complications and came out with a great modern, re
 
 With a much lighter CPU footprint and the REST binding, the application is much more flexible and scalable, allowing new nodes to be quickly added to handle increased loads.
 
-That’s the story of how one customer moved from a JSF UI framework to an AngularJS one. You can use AngularJS to build your own custom apps today too, so [download the platform and try it out](https://www.nuxeo.com/downloads/)
+That’s the story of how one customer moved from a JSF UI framework to an AngularJS one. You can use AngularJS to build your own custom apps today too, so [sign up for a free Nuxeo Platform trial](https://www.nuxeo.com/downloads/).
+
+If you are looking to hire angular developers, here is [complete guide from Toptal](https://www.toptal.com/angular-js#hiring-guide).
+
 
 * * *
 
