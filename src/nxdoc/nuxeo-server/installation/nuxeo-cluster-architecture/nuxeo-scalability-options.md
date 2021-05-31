@@ -133,7 +133,7 @@ Here is an example of what has been accomplish for the [11B Benchmark](https://b
 
 <img src="https://benchmarks.nuxeo.com/images/11b/24-phase2-sharding.png"/>
 
-#### Multi-repository Approach
+#### Multi-Repository Approach
 
 The Nuxeo Platform does provide a way to scale out the data: using several repositories.
 
@@ -152,7 +152,6 @@ Typical use cases for data partitioning include:
     - Live
         - Storage: fast storage to make work faster, lower volume
         - Indexes: fast database with few indexes to maximize write speed
-
 
 - Partitioning between read-only and read-write repositories
     - Have a read-write repository

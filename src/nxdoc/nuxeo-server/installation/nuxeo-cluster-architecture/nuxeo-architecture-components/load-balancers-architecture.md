@@ -36,7 +36,7 @@ If you use a stateless load balancer, such as Apache modules such as `mod_jk` an
 
 1.  In `nuxeo.conf` specify a different `nuxeo.server.jvmRoute` for each node, for instance `nuxeo.server.jvmRoute=nxworker1`.</br>
     This will instruct the Nuxeo preprocessing phase to correctly fill the `jvmRoute` attribute of the `Engine` element in the generated `server.xml`.
-2.  Configure you stateless balancer to follow these routes, for instance here is the relevant configuration fragment when using `mod_proxy_balancer`:
+2.  Configure your stateless balancer to follow these routes, for instance here is the relevant configuration fragment when using `mod_proxy_balancer`:
 
 ```xml
 ProxyPass /nuxeo balancer://sticky-balancer stickysession=JSESSIONID|jsessionid  nofailover=On
@@ -80,7 +80,7 @@ There are several reasons why we advise this configuration, described below.
 
 #### Invalidations
 
-The Nuxeo Cluster system takes care about propagating invalidations between all nodes of the clusters.
+The Nuxeo Cluster system takes care of propagating invalidations between all nodes of the clusters.
 
 However, for performances reasons, there is a small delay by default: this means that without affinity you could have one call creating a document and the second one not seeing the document. Of course this state is transient, and after a few milliseconds it will be ok. However in the context of a "multi-page transaction" this could be an issue.
 
@@ -96,8 +96,8 @@ If the session affinity can not be restored, for example because the target serv
 
 - stateless authentication will be automatically replayed (ex: Basic Auth)
 - for stateful authentication:
-    - if you have a SSO this will be transparent
-    - if you don't have a SSO, user will have to authenticate again.
+    - if you have an SSO this will be transparent
+    - if you don't have an SSO, user will have to authenticate again.
 
 #### State Management and UI Rendering
 
@@ -107,7 +107,7 @@ The UI can be stateful or stateless:
 
 If the UI layer you use is stateful, you have to use stateful load balancing for session affinity.
 
-To enable automatic unhealthy instance eviction on your balancer, you may require an health check.
+To enable automatic unhealthy instance eviction on your balancer, you may require a health check.
 The following ensures Nuxeo runtime is initialized and up: `HTTP:200:/nuxeo/running_status?info=reload`.
 
 #### Troubleshooting Session Affinity Problems

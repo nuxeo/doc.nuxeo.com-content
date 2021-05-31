@@ -25,7 +25,7 @@ Nuxeo Server can be deployed anywhere:
 - Inside virtual machines
 - In a containerized environment
 
-Having a lightweight embedded Nuxeo server is a solution commonly used for unit testing or offline access. For the latter, the Nuxeo server would be embedded client side (for example, on a tablet) to allow offline access, and would synchronize with a central Nuxeo server when going back online.
+Having a lightweight embedded Nuxeo server is a solution commonly used for unit testing or offline access. For the latter, the Nuxeo server would be embedded client-side (for example, on a tablet) to allow offline access, and would synchronize with a central Nuxeo server when going back online.
 
 ## Recommendation
 

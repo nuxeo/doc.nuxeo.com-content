@@ -18,7 +18,7 @@ When running in cluster mode, the Nuxeo nodes need to communicate so the followi
 - The **[WorkManager]({{page page='work-and-workmanager'}})** can distribute its Works among nodes and share a common state.
 - **[Nuxeo Stream]({{page page='nuxeo-stream'}})** and the **[Bulk Service]({{page page='bulk-action-framework'}})** distribute processing among nodes and handle failover.
 - The **KeyValue Store** is shared by all nodes and used by different services like the [Transient Store]({{page page='transient-store'}}).
-- The **PubSub Service**  is used to distribute cache invalidation among nodes.
+- The **PubSub Service** is used to distribute cache invalidation among nodes.
 
 There are two main options for the messaging system, Kafka or Redis.
 
@@ -53,8 +53,8 @@ There are two main options for the messaging system, Kafka or Redis.
 </tbody>
   </table>
   </div>
-  
-Nuxeo Platform have built-in critical features (Document trashing, CSV export, document deletion etc.) relying on the Nuxeo Platform Bulk Service. The bulk service is implemented with Nuxeo Stream that provides two implementation: Kafka and Chronicle Queue.
+
+Nuxeo Platform has built-in critical features (Document trashing, CSV export, document deletion etc.) relying on the Nuxeo Platform Bulk Service. The bulk service is implemented with Nuxeo Stream that provides two implementation: Kafka and Chronicle Queue.
 
 ## Recommendations
 
