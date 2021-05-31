@@ -69,13 +69,13 @@ history:
         date: '2014-10-21 11:58'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
 This page explains how video conversions are structured, and provide instructions to perform the standard video conversion operations.
 {{! /excerpt}}
 
-## Video conversion concepts
+## Concepts
 
 Video conversions are used to fill the video conversions (stored in the `vid:transcodedVideos` field of a document having the `Video` facet). The default ones are `MP4 480p`, `Ogg 480p` and `WebM 480p`. The video storyboard info are stored in the `vid:storyboard` property.
 
@@ -95,9 +95,9 @@ A video conversion depends of a `command`, a `converter` and a `videoConversion`
 
 Video conversions are working only on documents having the `Video` facet.
 
-## Common conversion contributions
+## Common Conversion Contributions
 
-### Register a new converter
+### Register a New Converter
 
 - Contribute an XML extension to register a new command line converter called `ffmpeg-towebm`:
 
@@ -116,8 +116,8 @@ Video conversions are working only on documents having the `Video` facet.
 
 **Parameters**:
 
-*   `inFilePath` and `outFilePath` will be filled by Nuxeo,
-*   `width` and `height` can be used in your command, they will be passed by the generic `VideoConversionConverter`.
+- `inFilePath` and `outFilePath` will be filled by Nuxeo,
+- `width` and `height` can be used in your command, they will be passed by the generic `VideoConversionConverter`.
 
 - Contribute an XML extension to register a converter that uses our new `ffmpeg-towebm` command line.
 
@@ -149,10 +149,10 @@ Here we use the generic `VideoConversionConverter` converter, only the `sourceMi
 
 **Parameters**:
 
-*   `CommandLineName`: the command to use when running this converter (the one defined earlier)
-*   `videoMimeType`: the mime-type of the converted video
-*   `videoExtension`: the extension of the converted video
-*   `tmpDirectoryPrefix`: the tmp directory where the conversion will be done
+- `CommandLineName`: the command to use when running this converter (the one defined earlier)
+- `videoMimeType`: the mime-type of the converted video
+- `videoExtension`: the extension of the converted video
+- `tmpDirectoryPrefix`: the tmp directory where the conversion will be done
 
 For instance, the converter to convert to MP4 looks like:
 
@@ -175,7 +175,7 @@ For instance, the converter to convert to MP4 looks like:
 </converter>
 ```
 
-### Add a new video conversion
+### Add a New Video Conversion
 
 The video conversion contribution depends on an already defined converter. The same converter could be used for more than one video conversion if you wanted different sizes.
 
@@ -188,10 +188,10 @@ The video conversion contribution depends on an already defined converter. The s
 
 **Parameters**:
 
-*   `converter`: the already defined converter to use when running this video conversion
-*   `height`: the max height of the video. The width and height of the new video will be computed and passed through the command, where we reference `#{width}` and `#{height}`.
+- `converter`: the already defined converter to use when running this video conversion
+- `height`: the max height of the video. The width and height of the new video will be computed and passed through the command, where we reference `#{width}` and `#{height}`.
 
-### Running the video conversion manually
+### Running the Video Conversion Manually
 
 Assuming `videoDocument` is a Document with the `Video` facet, to launch the "WebM 480p" video conversion on it:
 
@@ -201,7 +201,7 @@ VideoService videoService = Framework.getService(VideoService.class);
 videoService.launchConversion(videoDocument, "WebM 480p");
 ```
 
-### Running the video conversion automatically
+### Running the Video Conversion Automatically
 
 When importing Video, you can configure which video conversions will be run (asynchronously) automatically.
 
@@ -214,11 +214,11 @@ To run the "WebM 480p" video conversion automatically:
 </extension>
 ```
 
-### Filter video conversions
+### Filter Video Conversions
 
 You can filter the video conversion execution the same way [picture conversions are filtered]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}}#filter-picture-conversions).
 
-### Disable or update a default conversion 
+### Disable or Update a Default Conversion
 
 If you need to disable a default conversion, just override the [`videoConversions`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) extension point, and add the `enabled=false` attribute:
 
@@ -230,7 +230,7 @@ If you need to disable a default conversion, just override the [`videoConversion
 
 In this scenario, the MP4 480p conversion won't be automated anymore and won't be displayed as available conversion in Nuxeo Web UI.
 
-### Display a custom conversion in the preview section
+### Display a Custom Conversion in the Preview Section
 
 The default document view layout of Nuxeo Web UI displays the main file preview (i.e. the binary stored in `file:content`). To display a specific conversion, you need to edit the view layout by
 
@@ -241,11 +241,11 @@ The default document view layout of Nuxeo Web UI displays the main file preview 
 <nuxeo-document-viewer role="widget" document="[[document]]"></nuxeo-document-viewer>
 ```
 
-- Add the `nuxeo-document-preview` element to fetch a specific rendition. 
+- Add the `nuxeo-document-preview` element to fetch a specific rendition.
 
 ```html
 <nuxeo-card>
-  <nuxeo-document-preview document="[[document]]" 
+  <nuxeo-document-preview document="[[document]]"
   xpath="vid:transcodedVideos/1/content">
   </nuxeo-document-preview>
 </nuxeo-card>
@@ -253,7 +253,7 @@ The default document view layout of Nuxeo Web UI displays the main file preview 
 
 The `1` value in the `xpath` attribute corresponds to the order of the picture conversion in the list of video conversions.
 
-### Set security on a specific conversion  
+### Set Security on a Specific Conversion
 
 Use the same procedure as for [picture conversions]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}}#set-security-on-a-specific-conversion).
 

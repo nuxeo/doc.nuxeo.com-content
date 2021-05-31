@@ -1,5 +1,5 @@
 ---
-title: DAM Functional and Technical Description
+title: Product Overview
 description: Nuxeo Platform provides multimedia files management (pictures, audio and video).
 review:
     comment: ''
@@ -350,7 +350,7 @@ The plug-in `Imageplugin` is contributed to the File Manager to create `Picture`
 
 See [http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.filemanager.contrib--plugins).
 
-#### Picture conversions
+#### Picture Conversions
 
 Picture conversions are used to generate the picture views of document having the `Picture` facet. Default picture conversions (Thumbnail, Small, Medium and OriginalJpeg) are contributed to the `pictureConversions` extension point. They are marked as `default` and so are always generated, their associated filters are not evaluated. If the default conversions are not necessary, they can be disabled using Nuxeo Studio.
 
@@ -407,7 +407,7 @@ More complex conversions can be performed using the video conversion operations:
 
 Be sure you have both `ffmpeg` and `ccextractor` installed, both of which are required by certain operations.
 
-Locate the operation you wish to use on the **Automation Documentation** page and copy its JSON definition to the **Automation Operations Registry** in Nuxeo Studio  (**Settings > Registries > Automation Operations**) . The operation will then be exposed in Studio and can be implemented in an Automation Chain.
+Locate the operation you wish to use on the **Automation Documentation** page and copy its JSON definition to the **Automation Operations Registry** in Nuxeo Studio (**Settings > Registries > Automation Operations**). The operation will then be exposed in Studio and can be implemented in an Automation Chain.
 
 ##### Add a Photo Watermark to a Video
 
@@ -509,7 +509,7 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
     ```
     {{/panel}}
 
-### Audio 
+### Audio
 
 #### Schema
 
@@ -534,8 +534,6 @@ See [http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/o
 The plug-in `AudioImporter` is contributed to the File Manager to create `Audio` documents when the imported file mime type matches `audio/*`.
 
 See [http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.audio.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.audio.filemanager.contrib--plugins).
-
- 
 
 * * *
 

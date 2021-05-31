@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Contribute Picture Conversions'
+title: 'HOWTO: Contribute Picture Conversion'
 review:
     comment: ''
     date: '2021-05-11'
@@ -157,7 +157,7 @@ history:
 This page explains how picture conversions are structured, and provide instructions to perform the standard picture conversion operations.
 {{! /excerpt}}
 
-## Picture conversion concepts
+## Concepts
 
 Picture conversions are used to fill the picture views (stored in the `picture:views` field of a document having the `Picture` facet). The default ones are: Thumbnail, Small, Medium, FullHD, OriginalJpeg.
 
@@ -175,9 +175,9 @@ Watch the related courses on Nuxeo University: [DAM Concepts](https://university
 
 Picture conversions are working only on documents having the `Picture` facet.
 
-## Common conversion contributions
+## Common Conversion Contributions
 
-### Register a new converter
+### Register a New Converter
 
 As a sample, let's see how we can retrieve a text to use as a watermark from the picture document.
 
@@ -188,9 +188,9 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
         point="command">
   <command name="watermarkWithText" enabled="true">
   <commandLine>convert</commandLine>
-  <parameterString>#{sourceFilePath}  -gravity #{gravity} -fill #{textColor} 
-    -stroke #{strokeColor} -strokewidth #{strokeWidth} -pointsize #{textSize} 
-    -annotate #{textRotation}x#{textRotation}+#{xOffset}+#{yOffset} 
+  <parameterString>#{sourceFilePath}  -gravity #{gravity} -fill #{textColor}
+    -stroke #{strokeColor} -strokewidth #{strokeWidth} -pointsize #{textSize}
+    -annotate #{textRotation}x#{textRotation}+#{xOffset}+#{yOffset}
     #{textValue} #{targetFilePath}</parameterString>
   <installationDirective>You need to install ImageMagick.</installationDirective>
   </command>
@@ -234,27 +234,27 @@ Since Nuxeo 10.10 (LTS 2019), it is required to specify the source mime-type(s) 
 
 You can put your own chain here to do whatever you want. Just note the following:
 
-*   The chain **must** take a `Blob` as input and return a `Blob` as output (this one will be saved as the generated picture view).
-*   The chain takes a `parameters` parameter which is a map containing the expected values computed by the `ImagingService` (`width`, `height`, `depth` and `conversionFormat`).
-*   The picture document, if any, on which the conversion is done is stored in the `Context` as the `pictureDocument` variable.
-*   The chain is run outside any `Transaction` / `CoreSession` because a conversion could be long and should be done outside any `Transaction` to avoid timeouts. If you need to open a `CoreSession` yourself, you can use the `Context.RunFileOperation` operation with the parameter `newTx` set to `true` to start a new Transaction, and then the `Auth.LoginAs` operation to open a `CoreSession`.  
-        
-### Add a new picture conversion    
+- The chain **must** take a `Blob` as input and return a `Blob` as output (this one will be saved as the generated picture view).
+- The chain takes a `parameters` parameter which is a map containing the expected values computed by the `ImagingService` (`width`, `height`, `depth` and `conversionFormat`).
+- The picture document, if any, on which the conversion is done is stored in the `Context` as the `pictureDocument` variable.
+- The chain is run outside any `Transaction` / `CoreSession` because a conversion could be long and should be done outside any `Transaction` to avoid timeouts. If you need to open a `CoreSession` yourself, you can use the `Context.RunFileOperation` operation with the parameter `newTx` set to `true` to start a new Transaction, and then the `Auth.LoginAs` operation to open a `CoreSession`.  
+
+### Add a New Picture Conversion
 
 Let's declare a new picture conversion, which uses the new picture converter, by contributing on the [`pictureConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) extension point:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.picture.ImagingComponent" point="pictureConversions">
-  <pictureConversion id="Watermark" description="Watermarked image" 
+  <pictureConversion id="Watermark" description="Watermarked image"
     tag="watermark" order="0" chainId="WatermarkChain" />
 </extension>
 ```
 
 **Noteworthy Attributes**
 
-*   `order`: The order of this picture conversion in the final list of picture views, smaller first.
-*   `chainId`: the Automation chain associated to this picture conversion. Here we use the `WatermarkChain` automation chain. Another possible option would be to use the default `Image.Blob.Resize`  automation operation (If you need for exemple to just resize the image). If the `chainId` attribute is not filled, the original `Blob` will be returned and use for the generated picture view.
-*   `maxSize`: The maximum size of the width or height of the image (depending of the bigger one on the original image). Not setting the `maxSize` will put the original width and height as expected values. 
+- `order`: The order of this picture conversion in the final list of picture views, smaller first.
+- `chainId`: the Automation chain associated to this picture conversion. Here we use the `WatermarkChain` automation chain. Another possible option would be to use the default `Image.Blob.Resize`  automation operation (If you need for exemple to just resize the image). If the `chainId` attribute is not filled, the original `Blob` will be returned and use for the generated picture view.
+- `maxSize`: The maximum size of the width or height of the image (depending of the bigger one on the original image). Not setting the `maxSize` will put the original width and height as expected values.
 
 You should end up with something like this on your instance:
 
@@ -274,7 +274,7 @@ You can now click on the Watermark line to download the watermarked picture:
 --}}
 ![watermarked_pic.png](nx_asset://5c01789c-2b9e-491e-af58-6e7c472b1cb4 ?w=650,border=true)
 
-### Run a converter in a new CoreSession
+### Run a Converter in a New CoreSession
 
 If you need to open a `CoreSession` to retrieve a document, for instance the parent document which will hold the watermark text, you will need two chains, one opening a Transaction / CoreSession, and another one doing the watermarking.
 
@@ -343,23 +343,23 @@ point="pictureConversions">
   </pictureConversion>
 </extension>
 ```
-    
-### Disable or update a default conversion 
+
+### Disable or Update a Default Conversion
 
 If you need to disable a default conversion, just override the [`pictureConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) extension point, and add the `enabled=false` attribute:
 
 ```xml
-<extension point="pictureConversions" 
+<extension point="pictureConversions"
   target="org.nuxeo.ecm.platform.picture.ImagingComponent">
-  <pictureConversion enabled="false" chainId="Image.Blob.Resize" 
-    default="true" description="Medium size" 
+  <pictureConversion enabled="false" chainId="Image.Blob.Resize"
+    default="true" description="Medium size"
     id="Medium" maxSize="1000" order="200" rendition="true"/>
 </extension>
 ```
 
 In this scenario, the Medium conversion won't be automated anymore and won't be displayed as available conversion in Nuxeo Web UI.
 
-### Display a custom conversion in the preview section
+### Display a Custom Conversion in the Preview Section
 
 The default document view layout of Nuxeo Web UI displays the main file preview (i.e. the binary stored in `file:content`). To display a specific conversion, you need to edit the view layout by
 
@@ -370,11 +370,11 @@ The default document view layout of Nuxeo Web UI displays the main file preview 
 <nuxeo-document-viewer role="widget" document="[[document]]"></nuxeo-document-viewer>
 ```
 
-- Add the `nuxeo-document-preview` element to fetch a specific rendition. 
+- Add the `nuxeo-document-preview` element to fetch a specific rendition.
 
 ```html
 <nuxeo-card>
-  <nuxeo-document-preview document="[[document]]" 
+  <nuxeo-document-preview document="[[document]]"
   xpath="picture:views/1/content">
   </nuxeo-document-preview>
 </nuxeo-card>
@@ -391,9 +391,9 @@ This is what should be expected:
 --}}
 ![preview_conversion.png](nx_asset://9f01b7a1-e6b3-4372-ab1e-2a5fd00e7b63 ?w=650,border=true)
 
-### Set security on a specific conversion  
+### Set Security on a Specific Conversion
 
-If you need to grant or deny access to a specific rendition, the simplest way is to use the [File Download Security Policies]({{page version='' space='nxdoc' page='file-download-security-policies'}}). This could be helpful is you want to restrict access to a high resolution to a specific user group. 
+If you need to grant or deny access to a specific rendition, the simplest way is to use the [File Download Security Policies]({{page version='' space='nxdoc' page='file-download-security-policies'}}). This could be helpful is you want to restrict access to a high resolution to a specific user group.
 
 In this exemple, only members of the `human_ressources_department` group can access the Watermark picture.
 
@@ -402,7 +402,7 @@ In this exemple, only members of the `human_ressources_department` group can acc
     <permission name="myperm">
       <script>
         function run() {
-        if (!CurrentUser.getGroups().contains("human_ressources_department") 
+        if (!CurrentUser.getGroups().contains("human_ressources_department")
               && XPath == "picture:views/1/content") {
           return false;
           }

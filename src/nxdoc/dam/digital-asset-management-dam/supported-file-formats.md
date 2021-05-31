@@ -10,7 +10,7 @@ labels:
     - dam
     - lmcintyre
     - lts2017-ok
-toc: true 
+toc: true
 confluence:
     ajs-parent-page-id: '3866704'
     ajs-parent-page-title: Digital Asset Management (DAM)
@@ -141,10 +141,10 @@ Nuxeo Platform supports a large number of file formats: Office documents, pictur
 
 ## Introduction
 
-The file support table is based on the standard set of engines typically deployed with Nuxeo Platform. We have noted where other engines could be used. The standard engines are ImageMagick, FFMPEG, OpenOffice and accessing various embedded previews (referenced in the [Installing and Setting Up Related Software]({{page version='' space='nxdoc' page='installing-and-setting-up-related-software'}}) page). 
+The file support table is based on the standard set of engines typically deployed with Nuxeo Platform. We have noted where other engines could be used. The standard engines are ImageMagick, FFMPEG, OpenOffice and accessing various embedded previews (referenced in the [Installing and Setting Up Related Software]({{page version='' space='nxdoc' page='installing-and-setting-up-related-software'}}) page).
 
-In case there are format limitations: 
-- It is always possible to manage the native files and supply Nuxeo a readable preview (e.g. export from native app before upload). 
+In case there are format limitations:
+- It is always possible to manage the native files and supply Nuxeo a readable preview (e.g. export from native app before upload).
 - Nuxeo can integrate [new converters]({{page version='' space='nxdoc' page='how-to-contribute-a-command-line-converter'}}) and generate a new format which can be correctly interpreted.
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -155,7 +155,7 @@ Watch the related courses on Nuxeo University: [DAM Concepts](https://university
     addins#screenshot#up_to_date
 --}}
 ![university_dam.png](nx_asset://ed2467b9-4529-4cca-9843-0b46f8cd3d62 ?w=650,border=true)
-{{/callout}} 
+{{/callout}}
 
 ## File Support Table
 
@@ -177,10 +177,10 @@ You can use this URL to access sample files: https://filesamples.com/.
 Most picture formats are supported via [ImageMagick](https://imagemagick.org/index.php).
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-<th colspan="1">Metadata extraction</th>
+<th colspan="1">Metadata Extraction</th>
 <th colspan="1">Preview</th>
 <th colspan="1">Encode / Transcode</th>
-<th colspan="1">Mimetype recognition</th>
+<th colspan="1">Mimetype Recognition</th>
 <th colspan="1">NEV Support</th>
 <th colspan="1">Additional Notes</th>
 </tr>
@@ -448,10 +448,10 @@ The following picture profiles can be correctly interpreted by Nuxeo Platform (M
 Most video formats are supported via [FFMPEG](https://www.ffmpeg.org/general.html).
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-<th colspan="1">Metadata extraction</th>
+<th colspan="1">Metadata Extraction</th>
 <th colspan="1">Preview</th>
 <th colspan="1">Encode / Transcode</th>
-<th colspan="1">Mimetype recognition</th>
+<th colspan="1">Mimetype Recognition</th>
 <th colspan="1">NEV Support</th>
 <th colspan="1">Additional Notes</th>
 </tr>
@@ -610,10 +610,10 @@ The following video profiles can be correctly interpreted by Nuxeo Platform:
 Most audio formats are supported via [FFMPEG](https://www.ffmpeg.org/general.html).
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-<th colspan="1">Metadata extraction</th>
+<th colspan="1">Metadata Extraction</th>
 <th colspan="1">Preview</th>
 <th colspan="1">Encode / Transcode</th>
-<th colspan="1">Mimetype recognition</th>
+<th colspan="1">Mimetype Recognition</th>
 <th colspan="1">NEV Support</th>
 <th colspan="1">Additional Notes</th>
 </tr>
@@ -757,24 +757,24 @@ Most audio formats are supported via [FFMPEG](https://www.ffmpeg.org/general.htm
 </table>
 </div>
 
-### Artworks files / 3D format
+### Artworks Files / 3D Format
 
-The [Nuxeo 3D addon]({{page version='' space='nxdoc' page='nuxeo-3d'}}) uses Blender as the render engine and three.js for the embedded viewer in Nuxeo Web UI. All formats are rendered into GTLF for display in the viewer and can natively read any of the above-referenced, Blender-supported formats. Formats that Blender can’t natively render are just supplied along with preview file for the preview. 
+The [Nuxeo 3D addon]({{page version='' space='nxdoc' page='nuxeo-3d'}}) uses Blender as the render engine and three.js for the embedded viewer in Nuxeo Web UI. All formats are rendered into GTLF for display in the viewer and can natively read any of the above-referenced, Blender-supported formats. Formats that Blender can’t natively render are just supplied along with preview file for the preview.
 
 {{#> callout type='info' heading='Compound Asset Support'}}
-Compound Asset Support refers to supporting a set of files as a single asset object while preserving the subcomponents as individual assets and recording the relationships among them all. This is especially important most 3D formats require a set of files. 
-{{/callout}} 
+Compound Asset Support refers to supporting a set of files as a single asset object while preserving the subcomponents as individual assets and recording the relationships among them all. This is especially important most 3D formats require a set of files.
+{{/callout}}
 
 {{#> callout type='warning' heading='NEV Support'}}
 The NEV Support is not provided for 3D files for now.
-{{/callout}} 
+{{/callout}}
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-<th colspan="1">Metadata extraction</th>
+<th colspan="1">Metadata Extraction</th>
 <th colspan="1">Preview</th>
-<th colspan="1">Compound relashionship support</th>
+<th colspan="1">Compound Relationship Support</th>
 <th colspan="1">Encode / Transcode</th>
-<th colspan="1">Mimetype recognition</th>
+<th colspan="1">Mimetype Recognition</th>
 <th colspan="1">Additional Notes</th>
 </tr>
 <tbody>
@@ -1061,16 +1061,16 @@ The NEV Support is not provided for 3D files for now.
 </table>
 </div>
 
-## Office file support table
+## Office File Support Table
 
-### Document files
+### Document Files
 
 Most document file formats are supported via [LibreOffice](https://www.libreoffice.org/).
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 <th colspan="1">Preview</th>
 <th colspan="1">Encode / Transcode</th>
-<th colspan="1">Mimetype recognition</th>
+<th colspan="1">Mimetype Recognition</th>
 <th colspan="1">NEV Support</th>
 <th colspan="1">Additional Notes</th>
 </tr>
@@ -1167,11 +1167,11 @@ Most document file formats are supported via [LibreOffice](https://www.libreoffi
 </table>
 </div>
 
-### Container files
+### Container Files
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 <th colspan="1">Preview</th>
-<th colspan="1">Mimetype recognition</th>
+<th colspan="1">Mimetype Recognition</th>
 <th colspan="1">NEV Support</th>
 <th colspan="1">Additional Notes</th>
 </tr>
@@ -1207,7 +1207,7 @@ Most document file formats are supported via [LibreOffice](https://www.libreoffi
 <th colspan="1">Metadata extraction</th>
 <th colspan="1">Preview</th>
 <th colspan="1">Encode / Transcode</th>
-<th colspan="1">Mimetype recognition</th>
+<th colspan="1">Mimetype Recognition</th>
 <th colspan="1">NEV Support</th>
 <th colspan="1">Additional Notes</th>
 </tr>
@@ -1236,11 +1236,11 @@ Most document file formats are supported via [LibreOffice](https://www.libreoffi
 
 ### Internet Files
 
-Web files can be managed and code viewed but that&#39;s different than rendering a web page based on all these web-code files. Direct preview of web code has been done but requires UI customization depending on how you want these pages to display
+Web files can be managed and code viewed but that&#39;s different than rendering a web page based on all these web-code files. Direct preview of web code has been done but requires UI customization depending on how you want these pages to display.
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 <th colspan="1">Preview</th>
-<th colspan="1">Mimetype recognition</th>
+<th colspan="1">Mimetype Recognition</th>
 <th colspan="1">NEV Support</th>
 <th colspan="1">Additional Notes</th>
 </tr>
