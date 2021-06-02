@@ -25,6 +25,10 @@ The goal of this section is to provide ready to use examples. They can be follow
 
 ## Development
 
+### DevTools
+
+{{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=DevTools'}}}
+
 ### Develop a custom addon
 
 {{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Development'}}}
