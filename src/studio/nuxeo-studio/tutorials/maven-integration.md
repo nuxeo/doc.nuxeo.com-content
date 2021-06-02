@@ -9,7 +9,7 @@ details:
     excerpt: 'Learn how to integrate your Studio project with Maven'
     level: 'Advanced'
     tool: 'Code'
-    topics: 'Deployment'
+    topics: 'DevTools, Deployment'
 labels:
   - howto
 confluence:
