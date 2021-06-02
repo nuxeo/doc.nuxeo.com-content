@@ -6,7 +6,6 @@ review:
     status: ok
 toc: true
 tree_item_index: 1900
-
 ---
 
 Welcome on the Nuxeo Server tutorials.
@@ -29,7 +28,7 @@ The goal of this section is to provide ready to use examples. They can be follow
 
 {{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=DevTools'}}}
 
-### Develop a custom addon
+### Develop a Custom Addon
 
 {{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Development'}}}
 
@@ -54,4 +53,3 @@ The goal of this section is to provide ready to use examples. They can be follow
 ### Deployment
 
 {{{table_from_details headings='Excerpt, Level' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto' filter='Topics=Deployment'}}}
-
