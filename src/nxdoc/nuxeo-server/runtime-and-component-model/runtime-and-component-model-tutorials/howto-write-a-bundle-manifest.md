@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to write a Bundle Manifest.
         level: Advanced
         tool: Code
-        topics: Runtime
+        topics: 'Development, Runtime'
 labels:
     - lts2016-ok
     - runtimecomponent

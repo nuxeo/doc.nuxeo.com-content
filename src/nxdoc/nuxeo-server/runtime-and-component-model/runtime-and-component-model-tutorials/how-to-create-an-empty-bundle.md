@@ -9,7 +9,7 @@ details:
         excerpt: Learn the basics of a Nuxeo module raw creation.
         level: Advanced
         tool: Code
-        topics: Bundle
+        topics: 'Development, Bundle'
 labels:
     - lts2016-ok
     - dev-guide

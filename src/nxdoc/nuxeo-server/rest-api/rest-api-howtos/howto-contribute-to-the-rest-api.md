@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to contribute to the REST API.
         level: Advanced
         tool: Code
-        topics: REST API
+        topics: RESTAPI
 labels:
     - howto
     - rest-api

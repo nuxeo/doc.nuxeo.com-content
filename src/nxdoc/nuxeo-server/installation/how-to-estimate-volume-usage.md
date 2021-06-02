@@ -9,7 +9,7 @@ details:
         excerpt: Get some guidelines to estimate the required size for disk and database.
         level: Intermediate
         tool: ''
-        topics: Database
+        topics: 'ServerConfiguration, Database'
 labels:
     - lts2021-ok
     - database

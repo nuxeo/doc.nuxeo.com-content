@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to add a custom LDAP fields to the User interface using XML extensions.
         level: Advanced
         tool: XML extension
-        topics: 'Authentication, LDAP'
+        topics: 'UserManagement, Authentication, LDAP'
 labels:
     - lts2016-ok
     - ldap

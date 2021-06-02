@@ -9,7 +9,7 @@ details:
         excerpt: 'The Nuxeo Platform offers the capability to change the context path, i.e. /nuxeo in the URL of your application.'
         level: Intermediate
         tool: ''
-        topics: 'Server configuration, URL'
+        topics: 'ServerConfiguration, URL'
 labels:
     - content-review-lts2016
     - howto

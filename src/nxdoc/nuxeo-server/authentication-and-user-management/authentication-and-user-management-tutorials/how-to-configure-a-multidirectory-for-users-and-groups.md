@@ -9,7 +9,7 @@ details:
         excerpt: This page provides a turnkey solution to configure a multidirectory.
         level: Intermediate
         tool: XML configuration
-        topics: 'LDAP, Multidirectory'
+        topics: 'UserManagement, LDAP, Multidirectory'
 labels:
     - lts2016-ok
     - ldap

@@ -9,7 +9,7 @@ details:
   howto:
     excerpt: 'Learn how to create a service and define your own extension points'
     level: Intermediate
-    tool: 'Nuxeo CLI, Studio'
+    tool: 'Development, Nuxeo CLI, Studio'
     topics: Extension point
 toc: true
 tree_item_index: 600

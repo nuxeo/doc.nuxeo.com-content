@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to make some pages visible by anonymous users.
         level: Advanced
         tool: Code
-        topics: Access rights, Authentication
+        topics: 'UserManagement, Access rights, Authentication'
 labels:
     - lts2016-ok
     - anonymous

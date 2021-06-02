@@ -11,7 +11,7 @@ details:
         excerpt: Learn how to configure global Web UI settings.
         level: Advanced
         tool: code
-        topics: Contributions
+        topics: 'ServerConfiguration, Contributions'
 labels:
     - nuxeo-web-ui
     - extension

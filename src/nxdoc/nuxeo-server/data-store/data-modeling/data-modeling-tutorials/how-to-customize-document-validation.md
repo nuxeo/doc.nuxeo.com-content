@@ -9,7 +9,7 @@ details:
         excerpt: Leans how to customize the document validation error messages and how to add new references validation on document types.
         level: Advanced
         tool: Code Editor
-        topics: 'Doctype, Translations'
+        topics: 'Development, Doctype, Translations'
 labels:
     - lts2016-ok
     - howto

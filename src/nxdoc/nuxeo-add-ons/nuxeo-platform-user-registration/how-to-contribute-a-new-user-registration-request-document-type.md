@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to contribute new request types to the addon.
         level: Intermediate
         tool: Studio
-        topics: User registration
+        topics: 'UserManagement, User registration'
 labels:
     - lts2016-ok
     - howto
