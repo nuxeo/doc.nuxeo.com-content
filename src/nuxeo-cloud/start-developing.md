@@ -12,28 +12,28 @@ toc: true
 
 ## Overview
 
-The Nuxeo Development Sandbox is built on top of Docker containers and Kubernetes pods. Today, we use Openshift to support all Development Sandbox efforts.
+The Nuxeo Development Sandbox is built on top of Docker containers and Kubernetes pods. Today, we use Openshift to support our Development Sandbox environments.
 
-The primary focus of the Development Sandbox is to enable you to easily build and deploy applications during the development process.
+The primary focus of the Development Sandbox is to provide our customers with a self-service environment that enables you to easily build and deploy applications during the development process.
 
 The Nuxeo Development Sandbox is meant purely for Development. It does not support large data storage or data backups and should never be used to store production data.
 
 ## Environments
 
-During the application development process, there is a need to test new configurations and changes in a development environment rather than Pre-Production or Production Environments.
+During the application development process, the Development Sandbox provides an easy place to test new configurations and changes in a development environment instead of Pre-Production or Production where the Nuxeo Cloud team manages all deployments and changes.
 
-The standard Development Sandbox project provides customers with 2 sandbox environments that can be managed directly via the OpenShift developer admin:
+A standard Development Sandbox project provides customers with 2 sandbox environments that can be managed via the OpenShift console:
 
-- Development Environment (DEV): Initial environment for exploration of updates that is continuously updated with the latest changes.
-- Test Environment (UAT): Secondary environment for validation of updates that may require additional manual/user test efforts.
+- Development Environment (DEV): Initial environment for exploration of updates that is the primary location for implementing and developing changes.
+- Test Environment (UAT): Secondary environment for validation of updates that may require additional manual or user testing efforts.
 
 The DEV & UAT Environments share a MongoDB and Elasticsearch server, but each has its own MongoDB database and ElasticSearch index.
 
-## Prerequesites
+## Prerequisites
 
-The Nuxeo Cloud Team needs:
-- A Github project URL for the custom developments.
-- SSh keys to be included to the Nuxeo Cloud DEV CI/CD chain to deploy your custom package. Please refer to the [Github Documentation Page](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+In order to setup a Development Sandbox, the Nuxeo Cloud Team needs:
+- A Github project URL for custom development
+- Git SSh key to be included as part of the Development Sandbox CI/CD chain to deploy custom packages. Please refer to the [Github Documentation Page](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 {{#> callout type='Note' heading='Additional information'}}
 - Git repositories are required for all Dev Sandboxes, even if the Nuxeo Studio project is the primary means for updates to the Nuxeo platform.
@@ -42,7 +42,7 @@ The Nuxeo Cloud Team needs:
 
 ## OpenShift Web Console
 
-Access to the OpenShift administration is managed by Nuxeo through Okta. An account with Okta is required to login.
+Access to the OpenShift Console is managed by Nuxeo through Okta. A Nuxeo Okta account is required to login.
 
 https://openshift.prod.nuxeo.io
 
@@ -50,16 +50,16 @@ https://openshift.prod.nuxeo.io
 
 ### Principals
 
-If you have pushed changes to the ​Nuxeo Studio project and/or to the project GitHub repository​, you will likely need to build and deploy the latest application with these changes to one or both Sandbox environments.
+If you have pushed changes to the ​Nuxeo Studio project and/or to the project GitHub repository​, you will need to build and deploy these changes to one or both of the Sandbox environments.
 
-To do so, you can use the preconfigured default pipeline. Basically, it checks out the master branch of the Github repository containing the marketplace package module, runs a Maven build, generates the marketplace package zip, then deploys it to the Dev environment, and possibly to the UAT environment after user validation.
+To do so, you can use the preconfigured CI/CD deployment pipeline. Basically, the deployment pipeline checks out the master branch of the Github repository containing the marketplace package module, runs a Maven build, generates the marketplace package zip, and then deploys it to either the Dev or Test environment.
 
-For both Dev and UAT environments, the pipeline is by default aligned with the master branch of the Github repository, so it's not possible to deploy a certain branch to the Dev environment and another branch to UAT.
+For both Dev and Test environments, the pipeline is aligned with the master branch of the Github repository, so it's not possible to deploy a specific branch to the Dev environment and another branch to Test.
 
 ### Process
 
 To start the pipeline, go to Builds > Pipelines, choose the default one and click on Start Pipeline.
-It takes minutes to complete the pipeline (depending on test coverage). At the end of the pipeline, you can click on the yellow Input Required message asking if you want to deploy the application to the UAT environment too.
+It takes a few minutes to complete the deployment (depending on test coverage). At the end of the deployment, you can click on the yellow Input Required message asking if you want to deploy the application to the UAT environment too.
 
 - If you are asked to login, please login with Okta. Then select I’m a Nuxeo Customer.
 - Answering **Proceed** will deploy the application to the UAT environment. </br>
@@ -69,18 +69,18 @@ It takes minutes to complete the pipeline (depending on test coverage). At the e
 
 ### Principals
 
-If you wish to save the current state of the application to make it available to users as a stable version, and still be able to continue the development process, you can perform a release of the application. For instance, you would want to release the 1.0.0 version, deploy it to pre-production and production, continue to develop the application on the master branch, and then release the 1.1.0 version, 2.0.0 version... etc
+If you wish to save the current state of the application to make it available to users as a stable version, and still continue the development process, you can perform a release of the application. This will create a elease, e.g. a 1.0.0 version of your changes which can then be deployed to Pre-Production and Production by the cloud team, and still allow you to continue developing the application against the master branch, to then release subsequent versions (e.g. 1.1.0 or 2.0.0)
 
-You can use the preconfigured release pipeline. Basically, it first asks you to choose the release scope (patch, minor, major), then checks out the master branch of the Github repository, uses the Nuxeo Devtools python release script, prepares and performs a release (automatically detecting the version to release depending on the release scope you select), then deploys the release artifacts to a Nexus repository embedded in the OpenShift project.
+To do this, customers will use the preconfigured release pipeline. It will first ask you to choose the release scope (patch, minor, major), then check out the master branch of the Github repository, uses the Nuxeo Devtools python release script to prepare and perform a release (automatically detecting the version to release depending on the release scope you select), and then deploys the release artifacts to a Nexus repository embedded in the OpenShift project.
 
 ### Process
 
-To start the pipeline, go to **​Builds** > **Pipelines** > **release-pipeline** and click on **Start Pipeline**. The pipeline takes around 30 minutes to be completed.
+To start the pipeline, go to **​Builds** > **Pipelines** > **release-pipeline** and click on **Start Pipeline**. The pipeline takes around 30 minutes to complete.
 
 At the beginning of the build, you can click on the yellow Input Required message, asking you to choose the increment version release scope (patch: 1.2.3 => 1.2.4 / minor: 1.2.3 => 1.3.0 / major: 1.2.3 => 2.0.0).
 
-- Answering **Abort** cancel the release.
-- Answering **Release** release the application with the selected release scope.
+- Answering **Abort** cancels the release.
+- Answering **Release** releases the application with the selected release scope.
 
 At the end of the build, a new tag with the release version is automatically created (available in Github in Releases > Tags​), and the `pom.xml` file of the master branch of the Github repository is automatically updated with the next SNAPSHOT version in a Post release commit.s
 
@@ -132,14 +132,19 @@ Remember that any packages using `nuxeoctl` will  be removed  after  a new deplo
 
 ## Troubleshooting
 
-If something goes wrong, the first reaction you should have is to check the logs. For every build or deployment, you can click on View logs located on the left side of the running pipeline. For instance, if the pipeline build fails, you can click on View logs and you will be redirected to the Jenkins console output.
+If something goes wrong with a deployment or the environment, the first step should be to check the logs. For every build or deployment, you can click on View logs located on the left side of the running pipeline. The View logs button will redirect you to the Jenkins console output.
 
 - **Build** > **Pipelines** > **View logs**
 - Or **Applications** > **Routes** > Open the Jenkins URL
 
-The second reaction to have is to check global logs and pods status.
-Go to Monitoring​: You can see all the warning and error events on the right.
+The second step in troubleshooting is to check the global logs and pod(s) status.
+To do this, go to Monitoring​: You can see all the warning and error events on the right.
 
-The third reaction you should have in case of a failing build is simply to start a new build. Within a containerized deployment, issues with pulling packages from remote sources may make it time-out. Starting a new build, will make the remote pull attempt again and possibly a successful build.
+The third stepn in the event a build is failing is to start a new build. Within a containerized deployment, issues with pulling packages from remote sources may time out. Starting a new build, will re-try the pull request and possibly create a successful build.
 
-Finally, you can contact Nuxeo via email for more questions.
+If these steps are not helpful, you can submit a Jira support ticket asking for assistance from the Nuxeo Support and Cloud teams. The ticket should contain the following: 
+
+- Screenshot of the error
+- Date and time the error occurred
+
+These data points will help the cloud team better identify and troubleshoot the issue to provide assistance. 
