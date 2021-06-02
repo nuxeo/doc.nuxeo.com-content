@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to deploy Web UI within a Nuxeo server.
         level: Advanced
         tool: code
-        topics: Web UI
+        topics: Deployment
 labels:
     - lts2016-ok
     - nuxeo-web-ui

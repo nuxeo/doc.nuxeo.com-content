@@ -9,7 +9,7 @@ details:
         excerpt: This how-to provides an example of how to use the REST API to query the Nuxeo repository.
         level: Advanced
         tool: Code
-        topics: 'Query, REST API'
+        topics: 'Query, RESTAPI'
 labels:
     - content-review-lts2016
     - endpoint

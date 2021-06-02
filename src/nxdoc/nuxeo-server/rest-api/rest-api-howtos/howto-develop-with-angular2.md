@@ -4,6 +4,12 @@ review:
     comment: ''
     date: '2021-02-03'
     status: ok
+details:
+  howto:
+    excerpt: Learn how to develop with Angular2.
+    level: Advanced
+    tool: Code
+    topics: RESTAPI
 labels:
     - lts2016-ok
     - rest-api

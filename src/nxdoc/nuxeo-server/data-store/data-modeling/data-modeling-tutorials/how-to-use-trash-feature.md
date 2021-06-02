@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to use the trash feature in Nuxeo Platform.
         level: Advanced
         tool: 'Code'
-        topics: 'REST API'
+        topics: 'Development, RESTAPI'
 labels:
     - howto
     - trash-management

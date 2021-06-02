@@ -5,6 +5,12 @@ review:
   comment: ''
   date: '2020-12-02'
   status: ok
+details:
+  howto:
+    excerpt: Learn how to annotate a POJO class as a Runtime Contribution
+    level: Advanced
+    tool: Code
+    topics: 'Development, Runtime'
 tree_item_index: 700
 ---
 

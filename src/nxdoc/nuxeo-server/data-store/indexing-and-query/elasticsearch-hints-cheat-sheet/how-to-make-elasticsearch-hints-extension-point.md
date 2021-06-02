@@ -10,7 +10,7 @@ details:
         excerpt: 'Learn how to expose Elasticsearch hints as extention points.'
         level: Advanced
         tool: Code
-        topics: 'Elasticsearch'
+        topics: 'ElasticsearchConfiguration'
 labels:
     - addon
     - tutorial

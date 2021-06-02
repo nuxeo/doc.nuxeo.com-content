@@ -10,7 +10,7 @@ details:
         excerpt: Learn how to import a file using the Batch processing endpoint of the REST API.
         level: Advanced
         tool: Code
-        topics: 'Import, REST API'
+        topics: 'Import, RESTAPI'
 labels:
     - lts2016-ok
     - import
