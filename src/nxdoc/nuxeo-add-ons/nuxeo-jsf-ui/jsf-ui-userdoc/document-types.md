@@ -282,9 +282,7 @@ Like in a workspace, you can use drag and drop to create content in a folder.
 To create a file, in the **Content** tab of the workspace, click on **New** button. On the window **Available document types**, click on the desired document. Fill in the document's creation form and click on the **Create** button.
 
 {{#> callout type='tip' heading='Other ways to create a file'}}
-
 You can also create a file using the[ **Import** button]({{page page='creating-content'}}#import-button) or using [drag and drop]({{page page='creating-content'}}#drag-and-drop).
-
 {{/callout}}
 
 When the file is created, users can enhance it by [filling its metadata]({{page page='editing-content'}}), adding attached files on it. When the document is completed, you can [publish]({{page page='publishing-content'}}) it in one or several section(s).
@@ -292,9 +290,7 @@ When the file is created, users can enhance it by [filling its metadata]({{page 
 ### Note
 
 {{! multiexcerpt name='definition-note'}}
-
 The note is a basic rich text container that consists in a text displayed in the **Summary** tab of the document. The note is usually created using the integrated rich editor, displayed in the note creation form. This editor enables layout modifications on the text.
-
 {{! /multiexcerpt}}
 
 ![]({{file name='note.png'}} ?w=600,h=384,border=true)
@@ -304,7 +300,10 @@ The default format of the note is HTML. The other formats available are .txt, .x
 A note is composed of the fields below:
 
 <div class="table-scroll">
-<table class="hover"><tbody><tr><th colspan="1">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">
 Field
 </th>
 <th colspan="1">
@@ -420,11 +419,8 @@ The evolution of a document, each time contributors edit it, constitutes its lif
 To change the lifecycle state of a document, you need to submit it to a [workflow]({{page page='workflows-jsf-ui'}}).
 
 {{#> callout type='warning' heading='Trash behavior deprecation'}}
-
-Since 10.2, trash management is handled by `ecm:isTrashed` property and related [APIs]({{page page='trash-service'}}).
-
+Since 10.2, trash management is handled by `ecm:isTrashed` property and related [APIs]({{page page='trash-service'}}).</br>
 Changing the lifecycle state to `deleted` won't contribute to trash feature in future Nuxeo version.
-
 {{/callout}}
 
 ## Containers Logic
@@ -433,15 +429,18 @@ When a document is folderish this means its a container in which you can create 
 
 It is possible to implement rules on containers to integrate the business logic of your application. In Nuxeo Studio when you select the folderish document facet, you have to choose which children are accepted in this document type. For example, in a folderish document type Library, if I have Edit permissions I can only create a children type Book in it.
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
-
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related User Documentation'}}
 - [Creating Content]({{page page='creating-content'}})
 - [Editing Content]({{page page='editing-content'}})
 - [Digital Asset Management]({{page page='digital-asset-management-dam'}})
-
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related HOWTOs'}}
-
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Related HOWTOs'}}
 - [How to Override Existing Document Types]({{page space='nxdoc' page='how-to-override-existing-document-types'}})
 - [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>
