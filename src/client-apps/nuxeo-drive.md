@@ -13,6 +13,11 @@ toc: true
 tree_item_index: 100
 ---
 
+Nuxeo Drive proposes 3 main features:
+- [Direct Transfer]({{page page='nuxeo-drive-direct-transfer'}}): One-time transfer of content between the Nuxeo Server and the user desktop.
+- [Direct Edit]({{page page='nuxeo-drive-direct-edit'}}): Edition of document's content even if they are not synchronized.
+- [Synchronization]({{page page='nuxeo-drive-sync'}}): Bidirectional synchronization of content between the Nuxeo Server and the user desktop.
+
 ## Current Versions
 
 | Channel | Version                                                                    |

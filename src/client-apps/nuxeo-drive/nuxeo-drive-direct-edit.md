@@ -1,6 +1,6 @@
 ---
 title: Direct Edit
-description: 'Direct Edit enables you to edit any of your document content from their Summary tab even if they are not synchronized.'
+description: 'Direct Edit enables you to edit any of your document content even if they are not synchronized.'
 review:
     comment: ''
     date: '2021-05-06'
@@ -11,7 +11,7 @@ labels:
 tree_item_index: 200
 ---
 
-Direct Edit enables to edit any of your document's content from their Summary tab even if they are not synchronized. To be able to use correctly Direct Edit you need the Drive addon on your server and you must turn on Drive on your computer. This saves you the fastidious steps of opening your document, modify it and reimport it on your platform.
+Direct Edit enables to edit any of your document's content even if they are not synchronized. To be able to use correctly Direct Edit you need the Drive addon on your server and you must turn on Drive on your computer. This saves you the fastidious steps of opening your document, modify it and reimport it on your platform.
 
 The icon looks like ![]({{file name='drive-webui-direct-edit.png' page='nuxeo-drive'}} ?w=20) on Web-UI and ![]({{file name='drive-jsf-direct-edit.png' page='nuxeo-drive'}}) on JSF-UI.
 
@@ -37,8 +37,3 @@ In Web UI 10.10, Direct Edit has a new icon:
 2. Edit the document and save the modifications.
     Modifications are saved in the Nuxeo Platform directly.
 3. Close the document.
-
-## Limitations
-
-- Prior to Nuxeo Platform 6.0, online editing is available only in synchronized folders.
-- Under Windows, nothing happens if you click on the **Direct Edit icon** without having Drive installed and running on your computer.
