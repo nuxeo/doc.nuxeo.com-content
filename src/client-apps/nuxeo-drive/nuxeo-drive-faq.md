@@ -13,7 +13,7 @@ labels:
   - excerpt
   - lts2017-ok
 toc: true
-tree_item_index: 500
+tree_item_index: 700
 version_override:
   LTS 2015: 710/userdoc/nuxeo-drive-faq
   '6.0': 60/userdoc/nuxeo-drive-faq

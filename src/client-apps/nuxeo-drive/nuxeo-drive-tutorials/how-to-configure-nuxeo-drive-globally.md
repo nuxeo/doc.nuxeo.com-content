@@ -44,7 +44,7 @@ Here is what the default `nuxeo-drive-config.json` file looks like:
 }
 ```
 
-All available parameters and their description are listed on that page: [Configuration Parameters]({{page page='nuxeo-drive-installation-configuration'}}#configuration-parameters).
+All available parameters and their description are listed on that page: [Configuration Parameters]({{page page='nuxeo-drive-configuration'}}#configuration-parameters).
 
 * * *
 

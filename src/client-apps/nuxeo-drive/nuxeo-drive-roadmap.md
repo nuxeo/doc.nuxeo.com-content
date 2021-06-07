@@ -12,7 +12,7 @@ labels:
     - nuxeo-drive
     - aescaffre
     - lts2017-ok
-tree_item_index: 600
+tree_item_index: 800
 ---
 
 Below is the list of evolutions and improvements planned for Nuxeo Drive.</br>

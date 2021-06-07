@@ -25,10 +25,10 @@ Nuxeo Drive upload capability provides a productive and network resilient way of
 1. Open Nuxeo Drive from your desktop and click on **Upload Content** button.</br>
     The Direct Transfer popup opens.
     ![]({{file name='direct-transfer-popup.png'}})
-1. Click on **New transfer** at the top right of the popup.        
+1. Click on **New transfer** at the top right of the popup.
     ![]({{file name='direct-transfer-creation.png'}})
 1. From this view, you can decide to **Add files** or **Add a folder**.</br>
-    The files selection popup opens.    
+    The files selection popup opens.
 1. Select the document(s) you want to transfer and click on **Open**.</br>
 1. Select the remote folder where you want the document(s) or folders to be uploaded.</br>
     The selected path will update depending on the remote folder selected.
