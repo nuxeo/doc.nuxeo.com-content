@@ -10,7 +10,7 @@ details:
     excerpt: 'Learn how to synchronize your Studio sources with a local instance and to make the development process of custom elements'
     level: 'Advanced'
     tool: 'Nuxeo CLI'
-    topics: 'Deployment'
+    topics: 'DevTools, Deployment'
 labels:
   - howto
 toc: true

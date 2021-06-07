@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to unit test a Studio Bundle
         level: Advanced
         tool: Code, Nuxeo Studio
-        topics: Nuxeo Studio, Unit test, Deployment
+        topics: 'Development, Nuxeo Studio, Unit test, Deployment'
 labels:
     - howto
     - alerts

@@ -22,8 +22,8 @@ Nuxeo Drive proposes 3 main features:
 
 | Channel | Version                                                                    |
 | ------- | -------------------------------------------------------------------------- |
-| Release | [5.2.0](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
-| Beta    | [5.2.1](https://community.nuxeo.com/static/drive-updates/beta/?C=M;O=D) |
+| Release | [5.2.1](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
+| Beta    | [N/A](https://community.nuxeo.com/static/drive-updates/beta/?C=M;O=D) |
 | Alpha   | [5.2.2.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D) |
 
 Find more information about our release cycle on [this page]({{page version='' space='client-apps' page='nuxeo-drive-release-cycle'}}).
@@ -151,6 +151,7 @@ When a new version of Nuxeo Drive is available, a message is displayed at the bo
 3.  Click on the green icon.
     Nuxeo Drive is updated and automatically restarted.
     ![]({{file name='drive-notif-upgrade-progress.png' page='nuxeo-drive'}} ?w=300)
+
 
 ## Behaviors
 
