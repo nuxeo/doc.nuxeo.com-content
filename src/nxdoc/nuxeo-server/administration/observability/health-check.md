@@ -24,7 +24,7 @@ While it isn't reachable, the node is stopped or still starting.
 
 When returning an error HTTP code `500` it is recommended to block the incoming traffic to prevent generating unnecessary errors.
 
-Under the wood the endpoint runs different probes, you can see in the response which one has been configured,
+Under the hood the endpoint runs different probes, you can see in the response which one has been configured,
 for instance:
 ```json
 {
