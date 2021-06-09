@@ -25,6 +25,10 @@ Users and groups are defined using schemas and, as an *Extensible Platform*, Nux
 
 This page gives the step by step instructions to deploy new user information in Nuxeo Platform. For the UI configuration, it assumes you have the **Nuxeo Web UI** addon deployed.
 
+{{#> callout type='warning' heading='H2 database'}}
+This procedure **doesn't work with the embedded H2 database**: use an external database (Mongo, Postgres, etc.)
+{{/callout}}
+
 ## Extending User Properties
 
 Let's add a new user property called **manager**, corresponding to the current user's manager. This information would be helpful in the workflow context (for reassignment, escalation rules etc.)
