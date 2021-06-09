@@ -3,7 +3,7 @@ title: 'HOWTO: Add New Fields to the User Profile or Group Profile'
 description: This page provides a turnkey solution to add new fields to the user profile or group.
 review:
     comment: ''
-    date: '2019-12-17'
+    date: '2021-06-09'
     status: ok
 details:
   howto:
@@ -16,6 +16,7 @@ toc: true
 labels:
     - lts2019-ok
     - lts2017-ok
+    - lts2021-ok
     - authentication
 ---
 
@@ -102,77 +103,25 @@ This new field has to be displayed in all the pages related to the user informat
 
 It includes:
 - The user edition form _to create_ and update the new property:
-    - [nuxeo-edit-user.html](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-user-group-management/nuxeo-edit-user.html)
-    - [nuxeo-create-user.html](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-user-group-management/nuxeo-create-user.html)
+    - [nuxeo-edit-user.html](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-3.0.x/ui/nuxeo-user-group-management/nuxeo-edit-user.html)
 - The user information page _to view_ the new property:
-    - [nuxeo-view-user.html](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-user-group-management/nuxeo-view-user.html)
-    - [nuxeo-user-group-management.html](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-user-group-management.html)
-    - [nuxeo-user-group-management-page.html](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/elements/nuxeo-admin/nuxeo-user-group-management-page.html)
+    - [nuxeo-view-user.html](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-3.0.x/ui/nuxeo-user-group-management/nuxeo-view-user.html)
 
 #### Edit Layout
 
 1. In Designer, go to **Resources** and create a folder under **UI** called `custom-user-fields`. We will create all the next elements in this folder.
 1. Create a new element `nuxeo-edit-user`.
-1. Replace the existing content by the element [`nuxeo-edit-user.html`](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-user-group-management/nuxeo-edit-user.html).
+1. Replace the existing content by the element `nuxeo-edit-user.html`
 1. Add:
 ```html
-<nuxeo-user-suggestion value="\{{user.manager}}" label="[[i18n('editUser.manager')]]" search-type="USER_TYPE" name="manager"></nuxeo-user-suggestion>
+<nuxeo-user-suggestion value="{{user.manager}}" label="[[i18n('user.manager')]]" search-type="USER_TYPE" name="manager"></nuxeo-user-suggestion>
 ```
-
-#### Create Layout
-
-1. Create a new element `nuxeo-create-user`.
-1. Replace the existing content by the element [create-user.html](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-user-group-management/nuxeo-create-user.html).
-1. Add the line:
-  ```
-  <link rel="import" href="nuxeo-edit-user.html">
-  ```
-
-1. Replace:
-```html
-<nuxeo-layout id="layout" href="[[_layoutHref('nuxeo-edit-user.html')]]"
-                      model="[[_layoutModel(user, new)]]"
-                      on-element-changed="_layoutElementChanged"></nuxeo-layout>
-```
-by:
-```html
-<nuxeo-layout id="layout" href="nuxeo-edit-user.html"
-                      model="[[_layoutModel(user, new)]]"
-                      on-element-changed="_layoutElementChanged"></nuxeo-layout>
-```
-
-#### User Management Layout
-
-1. Create a new element `nuxeo-user-group-management`.
-1. Replace the existing content by the element [`nuxeo-user-group-management.html`](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-user-group-management.html).
-1. Add the following line:
-  ```
-  <link rel="import" href="nuxeo-create-user.html">
-  ```
-1. Comment the line:
-  ```
-  <link rel="import" href="nuxeo-user-group-management/nuxeo-create-user.html">
-  ```
-
-#### User Management Page Layout
-
-1. Create a new element `nuxeo-user-group-management-page`.
-1. Replace the existing content by the element [`nuxeo-user-group-management-page.html`](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/elements/nuxeo-admin/nuxeo-user-group-management-page.html).
-1. Add the following line:
-  ```
-  <link rel="import" href="nuxeo-user-group-management.html">
-  ```
-
-1. Comment the line:
-  ```
-  <link rel="import" href="../../bower_components/nuxeo-ui-elements/nuxeo-user-group-management.html">
-  ```
 
 #### View Layout
 
 1. Create a folder called `nuxeo-user-group-management` under **UI**.
 1. In this folder, create a new element `nuxeo-view-user`.
-1. Replace the existing content by the element [`nuxeo-view-user.html`](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.4.x/nuxeo-user-group-management/nuxeo-view-user.html).
+1. Replace the existing content by the element `nuxeo-view-user.html`
 1. Add the following lines:
 
 ```html
@@ -188,9 +137,6 @@ You need to reference these new elements in your `*-custom.bundle.html` file. To
 
 ```html
 <link rel="import" href="custom-user-fields/nuxeo-edit-user.html">
-<link rel="import" href="custom-user-fields/nuxeo-create-user.html">
-<link rel="import" href="custom-user-fields/nuxeo-user-group-management.html">
-<link rel="import" href="custom-user-fields/nuxeo-user-group-management-page.html">
 <link rel="import" href="nuxeo-user-group-management/nuxeo-view-user.html">
 ```
 
