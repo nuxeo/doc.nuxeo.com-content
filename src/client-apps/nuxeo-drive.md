@@ -152,128 +152,7 @@ When a new version of Nuxeo Drive is available, a message is displayed at the bo
     Nuxeo Drive is updated and automatically restarted.
     ![]({{file name='drive-notif-upgrade-progress.png' page='nuxeo-drive'}} ?w=300)
 
-## Behaviors
-
-The application can be tweaked using on-demand on/off options via the `behavior` parameter.</br>
-As this is targeting server actions, this parameter cannot be set via the local configuration file but only via the server configuration one.
-
-Available behaviors:
-
-| Parameter | Default Value (bool) | Version Added | Description
-|---|---|---|---
-| `server_deletion` | true | 4.4.2 | Allow or disallow server deletions.
-
-Here is how to tweak behaviors via the server configuration file:
-
-```json
-{
-  "behavior": {
-    "server-deletion": true
-  }
-}
-```
-
-## Features
-
-Several features can be turned on/off on-demand via the `feature` parameter.</br>
-This parameter can be set via the local configuration file and the server configuration one.
-
-If the same feature is defined locally and remotely, then only the local value will be taken into account.
-
-Available features:
-
-| Parameter | Default Value (bool) | Version Added | Description
-|---|---|---|---
-| `auto_update` | true | 4.4.2 | Allow or disallow auto-updates.
-| `direct_edit` | true | 4.4.2 | Allow or disallow Direct Edit.
-| `direct_transfer` | true | 4.4.2 | Allow or disallow Direct Transfer.
-| `synchronization` | false | 5.2.0 | Enable or disable the synchronization features.
-| `s3` | true | 4.4.2 | Allow or disallow using Amazon S3 direct uploads.
-
-Here is how to tweak features via the local configuration file:
-
-```ini
-[DEFAULT]
-env = myFeatures
-
-[myFeatures]
-; (other parameters...)
-feature.auto-update     = true
-feature.direct-edit     = true
-feature.direct-transfer = true
-feature.synchronization = true
-feature.s3              = true
-```
-
-Here is how to tweak features via the server configuration file:
-
-```json
-{
-  // (other parameters...)
-  "feature": {
-    "auto-update"     : true,
-    "direct-edit"     : true,
-    "direct-transfer" : true,
-    "synchronization" : true,
-    "s3"              : true
-  }
-}
-```
-
-### Command Line Arguments
-
-When used as a command line argument you need to prefix with the long argument modifier `--`, e.g.: `--log-level-file=DEBUG`.
-
-## Configuration File
-
-The format of the `config.ini` file is as following:
-
-```ini
-[DEFAULT]
-env = custom
-
-[no-updates]
-; Unused section
-update-check-delay = 0
-
-[custom]
-ca_bundle = C:\certificates\terena-ssl.crt
-debug = False
-feature.auto-update = true
-log-level-file = DEBUG
-ignored_suffixes =
-    .bak
-    .tmp
-    .XXX
-```
-
-The `env` option from the `[DEFAULT]` section defines in which section looking for options.
-Here, options defined in the `[custom]` section will be taken into account.
-
-### Interpolation
-
-If you are using special characters in values like:
-
-```ini
-ca_bundle = %userprofile%\.certificates
-```
-
-You may end up on such error:
-
-```python
-configparser.InterpolationSyntaxError: '%' must be followed by '%' or '(', found: '%userprofile%/.certificates'
-```
-
-This is a special processing done by the configuration parser named [values interpolation](https://docs.python.org/3/library/configparser.html#interpolation-of-values).
-
-In that case, just double the percent sign:
-
-```ini
-ca_bundle = %%userprofile%%\.certificates
-```
-
 {{! multiexcerpt name='drive-config-audit-logs'}}
-
 ## {{> anchor 'nuxeodrive-audit-logs'}}Nuxeo Drive and Audit Logs
 
 Nuxeo Drive makes an extensive use of audit logs to get a summary of the server-side changes.
@@ -333,7 +212,6 @@ To uninstall Nuxeo Drive:
 {{#> callout type='warning' }}
 At this point you have uninstalled the Nuxeo Drive program and its configuration. If you want to get rid of the synchronized data you also need to delete the Nuxeo Drive folder like you delete any regular Windows folder.
 {{/callout}}
-
 {{! /multiexcerpt}}
 
 ## Customization
