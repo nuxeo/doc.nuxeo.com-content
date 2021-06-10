@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Configure Nuxeo Drive Globally'
+title: Global Configuration
 review:
     comment: ''
     date: '2019-03-15'
@@ -16,8 +16,7 @@ labels:
     - nuxeo-drive-component
     - mschoentgen
     - lklein
-tree_item_index: 500
-
+tree_item_index: 300
 ---
 
 Some settings used by Nuxeo Drive can be configured globally from the Nuxeo server.
