@@ -248,7 +248,7 @@ See [documentation]({{page page='nuxeo-csv'}}).
 
 Direct Transfer provides a one-time transfer of content between the user desktop and the Nuxeo server. The upload capability provides a productive and network resilient way of transferring the content and leverage chunking capabilities of the platform to send content to the server.
 
-See [documentation]({{page page='nuxeo-drive-direct-transfer'}}).
+See [documentation]({{page space='client-apps' page='nuxeo-drive-direct-transfer'}}).
 
 ### Using the Bare REST API
 
