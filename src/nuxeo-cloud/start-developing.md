@@ -36,8 +36,9 @@ To set up a Development Sandbox, the Nuxeo Cloud Team needs:
 - Git SSH key to be included as part of the Development Sandbox CI/CD chain to deploy custom packages. Please refer to the [GitHub Documentation Page](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 {{#> callout type='note' heading='Additional information'}}
-- Git repositories are required for all Dev Sandboxes, even if the Nuxeo Studio project is the primary means for updates to the Nuxeo platform.
-- Customers who purchase the Dev Sandbox are required to set up their own GitHub project/repository to support any custom code development integrations.
+Git repositories are required for all Dev Sandboxes, even if the Nuxeo Studio project is the primary means for updates to the Nuxeo platform.</br>
+</br>
+Customers who purchase the Dev Sandbox are required to set up their own GitHub project/repository to support any custom code development integrations.
 {{/callout}}
 
 ## OpenShift Web Console
@@ -130,59 +131,79 @@ Within the nuxeo pod’s console you can access to the `nuxeoctl` command.
 Remember that any packages using `nuxeoctl` will be removed after a new deployment: Use Config Map instead.
 {{/callout}}
 
-### Update the Git Repo and SSH Key 
+### Update the Git Repo and SSH Key
 
 To start making these changes you will need the following:
 
-- The Github URL for the new repository.
-- The SSH key to access the Git repository (see https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- The GitHub URL for the new repository.
+- The SSH key to access the Git repository (see [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)).
 
 *Git Repo*
 
 In the Openshift project, go to **Builds** > **Pipelines** > click on the default pipeline > **Actions** > **Edit Yaml**
 
-You will find the current configuration including the Git Repo Name (PROJECT_GIT_REPO), Branch (PROJECT_GIF_REF) and SSH secret (GITHUB_SSH_KEY_NAME)
+You will find the current configuration including the Git Repo Name (PROJECT_GIT_REPO), Branch (PROJECT_GIF_REF) and SSH secret (GITHUB_SSH_KEY_NAME).
 
 Update the value for PROJECT_GIT_REPO to configure the new repository and make sure you have the right branch set.
 
 *SSH Key*
 
-In the Openshift project: go to **Resources** > **Secrets** > click on the github-ssh link > click on **Reveal Secret**
+In the Openshift project: go to **Resources** > **Secrets** > click on the github-ssh link > click on **Reveal Secret**.
 
-To update the SSH key, it must be converted into a base64 string.  You can use a tool like https://www.base64encode.org/ to convert the SSH Key into a base64 encoded string.
+To update the SSH key, it must be converted into a base64 string. You can use a tool like https://www.base64encode.org/ to convert the SSH Key into a base64 encoded string.
 
 In the Openshift project, go to **Resources** > **Secrets** > click on the github-ssh link > **Actions** > **Edit Yaml** > update the value of ssh-privatekey by copy/pasting the new base64 encoded SSH private key to replace the previous key.
 
-### Build and Deploy an Application with a targeted HotFix
+### Build and Deploy an Application with a Targeted HotFix
 
 *LTS 10.10 Builds*
 
-Customers may want to deploy an application with a targeted hotfix so that they know which hotfix has been applied and is being validated in the application. If the latest hotfix version is always acceptable the standard base image “nuxeo:10.10” is acceptable rather than something like “nuxeo:10.10-HF29”. 
+Customers may want to deploy an application with a targeted hotfix so that they know which hotfix has been applied and is being validated in the application. If the latest hotfix version is always acceptable the standard base image “nuxeo:10.10” is acceptable rather than something like “nuxeo:10.10-HF29”.
 
-The steps to build an image with a specific hotfix version are below: 
-- In Openshift, go to **Builds** > select the base-image-build > **Configuration**
-- Click on the Actions button in upper right-hand corner > **Edit**
-- In the base-image-build select **Edit** and choose the correct build image from the image tag dropdown - in this example we will select 10.10-HF28.
-- Hit **Save** then Start Build - this will create the new base image in the project which the customer can then use to run the pipeline.
+The steps to build an image with a specific hotfix version are below:
+1. In Openshift, go to **Builds** > select the base-image-build > **Configuration**,
+1. Click on the Actions button in upper right-hand corner > **Edit**,
+1. In the base-image-build select **Edit** and choose the correct build image from the image tag dropdown - in this example we will select 10.10-HF28,
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/build-image-target-hf
+      name: build-image-target-hf.png
+      server#screenshot#up_to_date
+    --}}
+    ![build-image-target-hf](nx_asset://27b3dd5e-88cc-4047-8aaf-b39fe5195334 ?w=650,border=true)
+1. Hit **Save** then Start Build - this will create the new base image in the project which the customer can then use to run the pipeline.
 
-Note: The Deployment Environment Variable “Nuxeo_Install_Hotfix” should be set to False 
+Note: The Deployment Environment Variable “Nuxeo_Install_Hotfix” should be set to `False`.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Nuxeo_Install_Hotfix
+    name: Nuxeo_Install_Hotfix.png
+    server#screenshot#up_to_date
+--}}
+![Nuxeo_Install_Hotfix](nx_asset://c6e1f317-032b-4d64-8819-dddd5258c370 ?w=650,border=true)
 
 *LTS 2021 Builds*
 
-LTS 2021 customers will follow the same steps as a 10.10 except for the image tag selection dropdown will be used to select the correct 2021.x image. 
+LTS 2021 customers will follow the same steps as a 10.10 except for the image tag selection dropdown will be used to select the correct 2021.x image.
 
-Some additional items that should be considered when building an LTS 2021 image are below: 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/image-configuration
+    name: image-configuration.png
+    server#screenshot#up_to_date
+--}}
+![image-configuration](nx_asset://302ef462-1bad-4ac0-9e57-a20d8c7fcdeb ?w=650,border=true)
+
+Some additional items that should be considered when building an LTS 2021 image are below:
 - no package variable is required
 - no templates variable is required
 - no nuxeo.conf included in the build
-- no environment specific config in the deploys 
-- all configurations have been pushed into the package 
+- no environment specific config in the deploys
+- all configurations have been pushed into the package
 
 ### Deploying Additional Services
 
-If additional services like kafka or minio are required please create a Jira support ticket and request the additional service. Some example services that are supported include: 
+If additional services like Kafka or MinIO are required, please create a Jira support ticket and request the additional service. Some example services that are supported include:
 - Kafka
-- Minio
+- MinIO
 - SAML Integrations
 
 ## Troubleshooting
@@ -207,19 +228,19 @@ These data points will help the Cloud team better identify and troubleshoot the 
 
 ### Pod Crash Looping
 
-If the application startup completes and you get the "all components are started" message but the pod is still Crash Looping look at the event logs for the cause of the crash loop.  
+If the application startup completes and you get the "all components are started" message but the pod is still Crash Looping look at the event logs for the cause of the crash loop.
 
-If it fails because of a readiness probe failure - go to **Applications** > **Deployments** > select Dev or UAT > **Actions** > **Edit Yaml** > Change the timeout seconds - initialDelaySeconds and timeoutSeconds.  
+If it fails because of a readiness probe failure - go to **Applications** > **Deployments** > select Dev or UAT > **Actions** > **Edit Yaml** > Change the timeout seconds - initialDelaySeconds and timeoutSeconds.
 
-When you save the changes, a new pod will be deployed automatically with the new changes.  
+When you save the changes, a new pod will be deployed automatically with the new changes.
 
-Example updates are below: 
-- Increased the “initialdelayseconds'' from 60 to 120
-- Increase the “TimeoutSeconds” to 5 to 60
+Example updates are below:
+- Increased the “initialdelayseconds'' from 60 to 120.
+- Increase the “TimeoutSeconds” to 5 to 60.
 
 ### Enable SMTP
 
-In order to enable SMTP from the Development Sandbox you need to add the following to the pod’s nuxeo.conf
+In order to enable SMTP from the Development Sandbox you need to add the following to the pod’s `nuxeo.conf`.
 
 Select **Resources** > **ConfigMaps**
 
@@ -227,21 +248,29 @@ Edit YAML on the interactive node and add
 
 `mail.transport.host=aws-smtp-relay.common-infra.svc`
 
-Redeploy the pod to reflect the new changes - **Applications** > **Pods** > select the pod > **Actions** > **Delete**
+Redeploy the pod to reflect the new changes - **Applications** > **Pods** > select the pod > **Actions** > **Delete**.
 
 ### Restarting the Pod
 
-Sometimes restarting the pod is the best option for resolving issues. To do this from the openshift console, go to the project –  **Applications** > **Pods** > **Jenkins** > **Actions** > **Delete**
+Sometimes restarting the pod is the best option for resolving issues. To do this from the Openshift console, go to the project – **Applications** > **Pods** > **Jenkins** > **Actions** > **Delete**.
 
-This will complete the restart
+This will complete the restart.
 
 ### Enable Debug Logging
-There are scenarios where increased logging is required to help debug an issue. In order to do this from the Openshift Console go to **Resources** > **Configmaps** > select the appropriate Environment config > **Actions** > **Edit**  
 
-Replace the `init.sh` key with either `log4j2.xml` or `log4j.xml`
+There are scenarios where increased logging is required to help debug an issue. In order to do this from the Openshift Console go to **Resources** > **Configmaps** > select the appropriate Environment config > **Actions** > **Edit**.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/debug-logging
+    name: debug-logging.png
+    server#screenshot#up_to_date
+--}}
+![debug-logging](nx_asset://e52b3879-ec81-4cac-b8f3-56351cb44c17 ?w=650,border=true)
+
+Replace the `init.sh` key with either `log4j2.xml` or `log4j.xml`.
 
 ### Pod Never Starts / Health Check Fails
 
 If this happens, change the health check to `\runningstatus?info=probe&key=runtimeStatus`
 
-After the instance starts you should be able to see which component is causing the failure
+After the instance starts you should be able to see which component is causing the failure.
