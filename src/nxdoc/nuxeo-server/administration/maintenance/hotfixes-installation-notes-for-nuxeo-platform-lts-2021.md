@@ -27,14 +27,13 @@ Use of the <copy /> command on JAR files is not recommended, prefer using <updat
 ```
 {{/callout}}
 
-Since LTS 2021, the addon "Nuxeo JSF UI" is handled outside the main Nuxeo repository on GitHub. As a consequence, the related fixes for JSF UI will not be embedded in a hotfix. 
-Therefore if the addon "Nuxeo JSF UI" is installed on your instance, you must upgrade this package after installing a hotfix by running the command
+Since LTS 2021, the addon "Nuxeo JSF UI" is handled outside the main Nuxeo repository on GitHub. As a consequence, the related fixes for JSF UI will not be embedded in a hotfix.</br>
+Therefore if the addon "Nuxeo JSF UI" is installed on your instance, you must upgrade this package after installing a hotfix by running the following command:
 
 ```
 > nuxeoctl mp-upgrade
 ```
 Note that this command will upgrade the versions of any package.
-
 
 ## Instance Registration
 
