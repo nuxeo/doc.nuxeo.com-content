@@ -13,6 +13,8 @@ tree_item_index: 200
 toc: true
 ---
 
+The local configuration file should be located at `$HOME/.nuxeo-drive/config.ini`. If it does not exist, you can simply create it.
+
 ## Configuration File
 
 The format of the `config.ini` file is as following:
