@@ -35,6 +35,24 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <th>Category</th>
   </tr>
   <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/replace-rendition"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/replace-rendition/replace-rendition-1.png" width="120px"/></a></td>
+    <td>Replace Renditions</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/parent-container-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/parent-container-search/parent-container.png" width="120px"/></a></td>
+    <td>Search for Documents via their Parent Containers</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/select-all-bulk-action"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/select-all-bulk-action/export-bulk.png" width="120px"/></a></td>
+    <td>Select All Documents and Send to Bulk Action from Search</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
     <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/partners/genus/nev-viewer"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/partners/genus/nev-viewer/screenshot.png" width="120px"/></a></td>
     <td>Nuxeo Enhanced Viewer Document Preview</td>
     <td>Genus</td>
@@ -124,6 +142,24 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+    <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/replace-rendition"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/replace-rendition/replace-rendition-1.png" width="120px"/></a></td>
+    <td>Replace Renditions</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/parent-container-search"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/parent-container-search/parent-container.png" width="120px"/></a></td>
+    <td>Search for Documents via their Parent Containers</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/select-all-bulk-action"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/nuxeo/select-all-bulk-action/export-bulk.png" width="120px"/></a></td>
+    <td>Select All Documents and Send to Bulk Action from Search</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
     <tr>
     <td><a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/partners/genus/nev-viewer"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/raw/master/modules/partners/genus/nev-viewer/screenshot.png" width="120px"/></a></td>
     <td>Nuxeo Enhanced Viewer Document Preview</td>
