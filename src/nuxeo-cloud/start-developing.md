@@ -59,12 +59,13 @@ For both Dev and Test environments, the pipeline is aligned with the master bran
 
 ### Process
 
-To start the pipeline, go to **Builds** > **Pipelines**, choose the default one and click on **Start Pipeline**.</br>
+To start the pipeline, go to **Builds** > **Pipelines**, choose the default one and click on **Start Pipeline**.
+
 It takes a few minutes to complete the deployment (depending on test coverage). At the end of the deployment, you can click on the yellow Input Required message asking if you want to deploy the application to the UAT environment too.
 
 - If you are asked to log in, please log in with Okta. Then select I’m a Nuxeo Customer.
-- Answering **Proceed** will deploy the application to the UAT environment. </br>
-  Answering **Abort**  will only deploy the application to the Dev environment.
+- Answering **Proceed** will deploy the application to the UAT environment. 
+- Answering **Abort**  will only deploy the application to the Dev environment.
 
 ## Release the Application
 
@@ -203,12 +204,12 @@ Some additional items that should be considered when building an LTS 2021 image 
 
 If additional services like Kafka or MinIO are required, please create a Jira support ticket and request the additional service. Some example services that are supported include:
 - Kafka
-- MinIO
 - SAML Integrations
 
 ## Troubleshooting
 
 If something goes wrong with a deployment or the environment:
+
 1. Check the logs: For every build or deployment, you can click on **View logs** located on the left side of the running pipeline. The **View logs** button will redirect you to the Jenkins console output.
   - **Build** > **Pipelines** > **View logs**
   - Or **Applications** > **Routes** > Open the Jenkins URL
@@ -218,7 +219,7 @@ To do this, go to **Monitoring​**: You can see all the warning and error event
 
 3. Start a new build. Within a containerized deployment, issues with pulling packages from remote sources may time out. Starting a new build, will re-try the pull request and possibly create a successful build.
 
-If these steps are not helpful, you can submit a Jira support ticket asking for assistance from the Nuxeo Support and Cloud teams. The ticket should contain the following:
+If the issue continues, users can submit a Jira support ticket asking for assistance from the Nuxeo Support and Cloud teams. The ticket should contain the following:
 - Screenshot of the error
 - Date and time the error occurred
 
