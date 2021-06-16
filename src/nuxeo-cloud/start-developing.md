@@ -202,7 +202,7 @@ Some additional items that should be considered when building an LTS 2021 image 
 
 ### Deploying Additional Services
 
-If additional services like Kafka or MinIO are required, please create a Jira support ticket and request the additional service. Some example services that are supported include:
+If additional services are required, please create a Jira support ticket and request the additional service. Some example services that are supported include:
 - Kafka
 - SAML Integrations
 
