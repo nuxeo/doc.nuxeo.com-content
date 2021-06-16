@@ -22,14 +22,12 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/KhTF'
     source_link: /display/NXDOC/Simple+Workflow+Example
 tree_item_index: 100
-
 ---
+
 ## Use Case
 
 {{! excerpt}}
-
 Company C has decided to be more rigorous on proposals sent by the sales team. A workflow has to be set up so that each proposal is reviewed by the head of operations, this one being able to decide of an additional juridical control.
-
 {{! /excerpt}}
 
 The graph we want is like this:
