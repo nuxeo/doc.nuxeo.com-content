@@ -56,6 +56,6 @@ history:
 
 -   [Content Views]({{page space='Studio' page='Content Views'}})
 -   [Form Layouts]({{page space='Studio' page='Form Layouts'}})
--   [Search / Advanced Search](https://doc.nuxeo.com/pages/viewpage.action?pageId=20517241)&nbsp;&mdash; The Nuxeo Platform 6.0 Search menu item enables you to set up a new Default Search form to replace the one available in the Nuxeo Platform Search tab. The Advanced search menu item available for previous versions of the platform enables to define a new Advanced search form.
+-   [Search / Advanced Search]({{page space='studio' page='search-advanced-search'}})&nbsp;&mdash; The Nuxeo Platform 6.0 Search menu item enables you to set up a new Default Search form to replace the one available in the Nuxeo Platform Search tab. The Advanced search menu item available for previous versions of the platform enables to define a new Advanced search form.
 -   [Tabs]({{page version='' space='studio' page='ui-designer'}}#tabs)
 -   [Virtual Navigations]({{page space='Studio' page='Virtual Navigations'}})
