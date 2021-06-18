@@ -17,8 +17,9 @@ The Nuxeo Cloud team deploys all changes to Production and Pre-Production Enviro
 JIRA deployment requests should be submitted up to 2 days before the change is required. The request should also include when the deployment should take place.
 
 Some important notes regarding deployments:
-- Snapshot or Date-Based Releases are NOT allowed. The Nuxeo Cloud Team only deploys production-ready code.
+- Snapshot or Date-Based Releases are NOT allowed in PreProd and Prod environments. The Nuxeo Cloud Team only deploys production-ready code.
 - Marketplace Package versions should be used. The Nuxeo Cloud team will NOT deploy the same Marketplace Package to the same environment multiple times.
+- If a Marketplace Package contains a configuration template please identify this in the Nuxeo Cloud Deployment request.  
 
 Nuxeo Cloud has Standard Maintenance Windows for all of our Production and Pre-Production Environments. The standard maintenance windows are used to make changes to minimize impact to users.
 
@@ -32,7 +33,7 @@ The standard 7 days a week US, EU and Japan maintenance windows are identified b
 
 All Nuxeo Cloud Deployments require a JIRA Support Ticket (SUPNXP) to be created with a ticket type of “Nuxeo Cloud Deployment” that provides the following information:
 
-- Name and Link to the correct version of the Marketplace Package.
+- Name and Link to the correct version of the Marketplace Package, including any configuration templates
 - Required 3rd Party Services or SSO services (e.g. FFMPEG, ImageMagick, Okta, etc.).
 - Nuxeo Conf Updates corresponding to packages or 3rd party services.
 - The Date and Time of the deployment including time zone, which can be done outside of established maintenance windows.
