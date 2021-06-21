@@ -28,7 +28,7 @@ Use the spacing scale when building individual components. It includes small inc
 | 3     | 48  | ![48px]({{file name='temp_img_9.svg'}}) |
 
 Example of the spacing scale applied
-![Example of the spacing scale applied]({{file name='img_1.JPEG'}})
+![Example of the spacing scale applied]({{file name='img_1.jpg'}})
 
 ## Layout Scale
 
@@ -45,4 +45,4 @@ Use the layout scale for arranging components and other UI parts into a full-pag
 | 10  | 160 | ![32px]({{file name='temp_img_17.svg'}}) |
 
 Example of the layout scale applied
-![Example of the spacing scale applied]({{file name='img_2.JPEG'}})
+![Example of the spacing scale applied]({{file name='img_2.jpg'}})
