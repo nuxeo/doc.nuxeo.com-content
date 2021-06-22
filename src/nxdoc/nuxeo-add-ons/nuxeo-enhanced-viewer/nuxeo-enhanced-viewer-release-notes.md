@@ -36,32 +36,32 @@ toc: true
 </table>
 </div>
 
-### New features
+### New Features
 
-#### Retains user's preferences
+#### Keep User Preferences
 
-Nuxeo Enhanced Viewer provides a way to customize the annotations by changing the type of arrows, font, size, line thickness, highlight, fit to page …
+Nuxeo Enhanced Viewer provides a way to customize the annotations by changing the type of arrows, font, size, line thickness, highlight, fit to page, etc.
 
 Previously, the user needed to change the annotation style for each new annotation.
-Starting with NEV 10.6, annotations style changes are now saved per user and per type of annotation. So that, for a given user, each new annotation is created with the same type than the previous one of the same kind.
+Starting from NEV 10.6, annotations style changes are now saved per user and per type of annotation. So that, for a given user, each new annotation is created with the same type as the previous one of the same kind.
 
 See [NEV-274](https://jira.nuxeo.com/browse/NEV-274).
 
 ### Improvements
 
-#### Optimizations on the temporary files management
+#### Optimizations on the Temporary Files Management
 
-The ARender file storage micro-service (Document File Storage service) has been merged with the broker service to reduce the exchanges between services and so improve the renditions performances.
+The ARender file storage micro-service (Document File Storage service) has been merged with the broker service to reduce the exchanges between services and improve the renditions performances.
 
-#### Submit and reply actions new design
+#### Submit and Reply Actions New Design
 
-The submit and reply link actions have been replaced by buttons in order to improve the user experience. It also allows to better view the action available whatever is the size of the sticky note.
+The submit and reply link actions have been replaced by buttons to improve the user experience. It also allows to quickly view the action available whatever the size of the sticky note.
 
-### Major fixes
+### Major Fixes
 
-####  Improve Download PDF/FDF action speed
+#### Improve Download PDF/FDF Action Speed
 
-The new version of NEV introduces improvement on the download PDF with FDF annotations in order to accelerate file download action.  
+The new version of NEV introduces improvement on the download PDF with FDF annotations to accelerate file download action.  
 
 See [NEV-358](https://jira.nuxeo.com/browse/NEV-358).
 
@@ -95,7 +95,6 @@ See [NEV-358](https://jira.nuxeo.com/browse/NEV-358).
 ### Major Fixes
 
 This version is dedicated to fix issues on videos previews.
-
 
 ## NEV 10.5.3
 
@@ -240,9 +239,9 @@ This new version is dedicated to increase the maximum number of connections in t
 
 ### Major Fixes
 
-#### Increase the maximum number of connections to 800
+#### Increase the Maximum Number of Connections to 800
 
-We increased the number of available connections into the Previewer in order to support until 800 simultaneous user connections.
+We increased the number of available connections into the Previewer to support up to 800 simultaneous user connections.
 
 See [NEV-451](https://jira.nuxeo.com/browse/NEV-451).
 
