@@ -4,10 +4,98 @@ description: Release notes for Nuxeo Enhanced Viewer.
 tree_item_index: 100
 review:
   comment: ''
-  date: '2021-05-21'
+  date: '2021-06-18'
   status: ok
 toc: true
 ---
+
+## NEV 10.6.2
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.6.2</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.4.2.NX1.1</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">June 18th 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">ARender software, Previewer (ARender connector), Nuxeo addon (nuxeo-arender package)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### New features
+
+#### Retains user's preferences
+
+Nuxeo Enhanced Viewer provides a way to customize the annotations by changing the type of arrows, font, size, line thickness, highlight, fit to page …
+
+Previously, the user needed to change the annotation style for each new annotation.
+Starting with NEV 10.6, annotations style changes are now saved per user and per type of annotation. So that, for a given user, each new annotation is created with the same type than the previous one of the same kind.
+
+See [NEV-274](https://jira.nuxeo.com/browse/NEV-274).
+
+### Improvements
+
+#### Optimizations on the temporary files management
+
+The ARender file storage micro-service (Document File Storage service) has been merged with the broker service to reduce the exchanges between services and so improve the renditions performances.
+
+#### Submit and reply actions new design
+
+The submit and reply link actions have been replaced by buttons in order to improve the user experience. It also allows to better view the action available whatever is the size of the sticky note.
+
+### Major fixes
+
+####  Improve Download PDF/FDF action speed
+
+The new version of NEV introduces improvement on the download PDF with FDF annotations in order to accelerate file download action.  
+
+See [NEV-358](https://jira.nuxeo.com/browse/NEV-358).
+
+## NEV 10.5.4
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.5.4</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.2.0.NX2.3</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">June 10th 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">ARender renditions services</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Major Fixes
+
+This version is dedicated to fix issues on videos previews.
+
 
 ## NEV 10.5.3
 
@@ -120,6 +208,43 @@ An infinite loop occurred when opening some TIFF files on the rendition service,
 See [NEV-429](https://jira.nuxeo.com/browse/NEV-429).
 
 * * *
+
+## NEV 10.4.7
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.4.7</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.2.0.NX1.7</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">June 22nd 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">Previewer (ARender connector)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+This new version is dedicated to increase the maximum number of connections in the Previewer.
+
+### Major Fixes
+
+#### Increase the maximum number of connections to 800
+
+We increased the number of available connections into the Previewer in order to support until 800 simultaneous user connections.
+
+See [NEV-451](https://jira.nuxeo.com/browse/NEV-451).
 
 ## NEV 10.4.6
 
