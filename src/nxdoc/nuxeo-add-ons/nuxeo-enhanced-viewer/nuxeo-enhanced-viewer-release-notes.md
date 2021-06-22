@@ -9,6 +9,124 @@ review:
 toc: true
 ---
 
+## NEV 10.6.2
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.6.2</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.4.2.NX1.1</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">June 18th 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">ARender software, Previewer (ARender connector), Nuxeo addon (nuxeo-arender package)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### New Features
+
+#### Keep User Preferences
+
+Nuxeo Enhanced Viewer provides a way to customize the annotations by changing the type of arrows, font, size, line thickness, highlight, fit to page, etc.
+
+Previously, the user needed to change the annotation style for each new annotation.
+Starting from NEV 10.6, annotations style changes are now saved per user and per type of annotation. So that, for a given user, each new annotation is created with the same type as the previous one of the same kind.
+
+See [NEV-274](https://jira.nuxeo.com/browse/NEV-274).
+
+### Improvements
+
+#### Optimizations on the Temporary Files Management
+
+The ARender file storage micro-service (Document File Storage service) has been merged with the broker service to reduce the exchanges between services and improve the renditions performances.
+
+#### Submit and Reply Actions New Design
+
+The submit and reply link actions have been replaced by buttons to improve the user experience. It also allows to quickly view the action available whatever the size of the sticky note.
+
+### Major Fixes
+
+#### Improve Download PDF/FDF Action Speed
+
+The new version of NEV introduces improvement on the download PDF with FDF annotations to accelerate file download action.  
+
+See [NEV-358](https://jira.nuxeo.com/browse/NEV-358).
+
+## NEV 10.5.4
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.5.4</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.2.0.NX2.3</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">June 10th 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">ARender renditions services</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Major Fixes
+
+This version is dedicated to fix issues on videos previews.
+
+## NEV 10.5.3
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.5.3</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.2.0.NX2.2</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">May 21th 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">ARender renditions services</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Major Fixes
+
+This version is dedicated to bug fixes on the ARender Renderer and Broker services to prevent freeze and crash down in case of high usage of the application (mainly due to temporary files management).
+
 ## NEV 10.5.1
 
 ### Summary
@@ -89,6 +207,43 @@ An infinite loop occurred when opening some TIFF files on the rendition service,
 See [NEV-429](https://jira.nuxeo.com/browse/NEV-429).
 
 * * *
+
+## NEV 10.4.7
+
+### Summary
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">10.4.7</td>
+</tr>
+<tr>
+<th colspan="1">ARender version</th>
+<td colspan="1">4.2.0.NX1.7</td>
+</tr>
+<tr>
+<th colspan="1">Release date</th>
+<td colspan="1">June 22nd 2021</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">Previewer (ARender connector)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+This new version is dedicated to increase the maximum number of connections in the Previewer.
+
+### Major Fixes
+
+#### Increase the Maximum Number of Connections to 800
+
+We increased the number of available connections into the Previewer to support up to 800 simultaneous user connections.
+
+See [NEV-451](https://jira.nuxeo.com/browse/NEV-451).
 
 ## NEV 10.4.6
 
