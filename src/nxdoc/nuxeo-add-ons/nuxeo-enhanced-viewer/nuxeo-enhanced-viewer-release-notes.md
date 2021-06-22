@@ -4,7 +4,7 @@ description: Release notes for Nuxeo Enhanced Viewer.
 tree_item_index: 100
 review:
   comment: ''
-  date: '2021-05-04'
+  date: '2021-06-22'
   status: ok
 toc: true
 ---
