@@ -9,77 +9,83 @@ review:
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.2.1**
+Welcome to the Release Notes for **Nuxeo Drive 5.2.2**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
+**Status**: <font color="#ff0000">**Beta**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.1.md)
 
 ## General
 
 ### Fixes
 
-#### Amazon S3 Credentials Renewal
+#### [macOS] Opened Files
 
-A regression introduced in previous versions that would break credentials renewal when using Amazon S3 direct upload capabilities was fixed.
+While trying to get the list of opened files, if the user closes one or more of them, then a silly error was fired and the list was not retrieved at all. We fixed the issue by doing a copy of that list as soon as possible, and then iterating on its items safely.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXPY-223](https://jira.nuxeo.com/browse/NXPY-223).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2684](https://jira.nuxeo.com/browse/NXDRIVE-2684).
 
-#### Better Partition Checks
+#### [macOS] Start On Boot Option
 
-We improved how a given local folder could be used for the synchronization content. New checks are more specifics and less restrictives.
+If, for a reason or another, the user does not have rights to write in their own local folders (typically the $HOME/Library/LaunchAgents folder), then the app cannot be registered to start on boot.
+We mitiged the issue by simply logging a warning as there is not much more that can be done.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2644](https://jira.nuxeo.com/browse/NXDRIVE-2644).
-
-#### Database Management
-
-Our Sentry usage showed lots of errors about "database or disk is full". After deep investigations, we hope the situation will now be better: temporary databases are now handled in memory (RAM) instead of a temporary folder. The later was the source of all reported problems were it may be limited in disk space and blocking our database actions while there are still enough disk space at the current location of those databases.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2646](https://jira.nuxeo.com/browse/NXDRIVE-2646).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2670](https://jira.nuxeo.com/browse/NXDRIVE-2670).
 
 ### Improvements
 
-#### Operations Check at Startup
+#### Add Account Screen
 
-Users were able to add an account using their credentials but for one reason or another they do not have enough rights to call `NuxeoDrive.*` automation operations. Such case is now well handled.
+A visual improvement has been done on the Add account screen, making it more responsive to longs server urls or local paths.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2647](https://jira.nuxeo.com/browse/NXDRIVE-2647).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2634](https://jira.nuxeo.com/browse/NXDRIVE-2634).
 
-#### Local Folder Button in Systray
+#### Sentry Enablement as an Option
 
-The local folder icon in the system tray menu is now disabled when the synchronization is.
+A new switch has been added in the Advanced Settings tab allowing the user to enable/disable errors reporting through Sentry.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2651](https://jira.nuxeo.com/browse/NXDRIVE-2651).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2678](https://jira.nuxeo.com/browse/NXDRIVE-2678).
 
-## Direct Transfer
+## Direct Edit
 
-### Fixes
+### Improvements
 
-#### Using the Feature Right After Account Addition
+#### Handling of Files With No Associated Application in Direct Edit
 
-When the synchronization is disabled, there was an issue that won't start transferring files when doing a Direct Transfer right after having added a new account. This is now fixed.
+A notification message will now be shown if no associated application is found when opening a file through Direct Edit.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2643](https://jira.nuxeo.com/browse/NXDRIVE-2643).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1995](https://jira.nuxeo.com/browse/NXDRIVE-1995).
 
-#### CSV Export Button
+#### Handling of Invalid Data From Server in Direct Edit
 
-The CSV export button click area was not covering the CSV icon. One had to click on the right on the icon to apply the action. The click area is now correctly set.
+An error notification will now be shown if the server returns invalid data when opening a file through Direct Edit.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2650](https://jira.nuxeo.com/browse/NXDRIVE-2650).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2658](https://jira.nuxeo.com/browse/NXDRIVE-2658).
+
+#### Better Experience
+
+The Direct Edit experience has been made more robust by better handling502 (Bad Gateway), 503 (Service Unavailable) and 504 (Gateway Timeout) errors during document locking/unlocking.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2681](https://jira.nuxeo.com/browse/NXDRIVE-2681).
 
 ## Synchronization
 
-### Improvements
+### Fix
 
-#### Polished Disabled Sync Behavior
+#### Windows and UNC Names
 
-Following the work done on the version [5.2.0]({{page page='5.2.0-nuxeo-drive-release-notes'}}#the-synchronization-mechanism-is-now-a-feature) where the synchronization became a feature, we polished even more the behavior.
+We fixed an issue when local trashing files was not working with UNC names.
 
-Now, when the synchronization is disabled, the application won't do anymore actions on the local folder (like checking its existence, checking extended attributes support, calling NuxeoDrive.* operations, ...).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2640](https://jira.nuxeo.com/browse/NXDRIVE-2640).
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2641](https://jira.nuxeo.com/browse/NXDRIVE-2641).
+#### Synchronization Feature State
+
+When upgrading from Nuxeo Drive < 5.2.1 to 5.2.1, users may see that the synchronization feature is disabled, even if they did not explicitly disabled it.
+We restored the correct behavior.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2686](https://jira.nuxeo.com/browse/NXDRIVE-2686).
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.1-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.1.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.1.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.2-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.2.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.2.exe)
