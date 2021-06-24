@@ -31,11 +31,27 @@ We mitiged the issue by simply logging a warning as there is not much more that 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2670](https://jira.nuxeo.com/browse/NXDRIVE-2670).
 
+#### Using UTF-8 Everywhere
+
+We made assumptions about the default encoding being always UTF-8. It seems we were not right and to prevent any problems, we are now specifying the UFT-8 encoding when reading/writing text files.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2698](https://jira.nuxeo.com/browse/NXDRIVE-2698).
+
 ### Improvements
+
+#### Device ID
+
+The unique device ID is now showed in the About tab of Settings. It can be selected and copied to ease sharing it.
+
+![]({{file name='drive-about-device-ID.png' page='nuxeo-drive-release-notes'}} ?w=350,border=true)
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2675](https://jira.nuxeo.com/browse/NXDRIVE-2675).
 
 #### Add Account Screen
 
 A visual improvement has been done on the Add account screen, making it more responsive to longs server URLs or local folders.
+
+![]({{file name='drive-add-account.png' page='nuxeo-drive-release-notes'}} ?w=350,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2634](https://jira.nuxeo.com/browse/NXDRIVE-2634).
 
@@ -46,6 +62,14 @@ A new switch has been added in the Advanced Settings tab allowing the user to en
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2678](https://jira.nuxeo.com/browse/NXDRIVE-2678).
 
 ## Direct Edit
+
+### Fix
+
+#### Handle Forbidden Filenames
+
+In previous versions it was not possible to Direct Edit a file which name contained characters that are forbidden by the OS (ex: backslash on Windows). Those files are now handled correctly.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2142](https://jira.nuxeo.com/browse/NXDRIVE-2142).
 
 ### Improvements
 
@@ -66,6 +90,16 @@ An error notification will now be shown if the server returns invalid data when 
 The Direct Edit experience has been made more robust by better handling HTTP 502 (Bad Gateway), 503 (Service Unavailable) and 504 (Gateway Timeout) errors during document locking/unlocking.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2681](https://jira.nuxeo.com/browse/NXDRIVE-2681).
+
+## Direct Transfer
+
+### Fix
+
+#### File Name Escaping
+
+We fixed file name escaping when checking for document existence on the server when it could contain the `\r` character. This is likely to happen on macOS only but the prevention is available to all platforms.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2321](https://jira.nuxeo.com/browse/NXDRIVE-2321).
 
 ## Synchronization
 
