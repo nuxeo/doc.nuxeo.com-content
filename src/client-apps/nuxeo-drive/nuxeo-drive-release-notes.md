@@ -26,7 +26,7 @@ While trying to get the list of opened files, if the user closes one or more of 
 
 #### [macOS] Start On Boot Option
 
-If, for a reason or another, the user does not have rights to write in their own local folders (typically the $HOME/Library/LaunchAgents folder), then the app cannot be registered to start on boot.
+If, for a reason or another, the user does not have rights to write in their own local folders (typically the `$HOME/Library/LaunchAgents` folder), then the app cannot be registered to start on boot.
 We mitiged the issue by simply logging a warning as there is not much more that can be done.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2670](https://jira.nuxeo.com/browse/NXDRIVE-2670).
@@ -35,7 +35,7 @@ We mitiged the issue by simply logging a warning as there is not much more that 
 
 #### Add Account Screen
 
-A visual improvement has been done on the Add account screen, making it more responsive to longs server urls or local paths.
+A visual improvement has been done on the Add account screen, making it more responsive to longs server URLs or local folders.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2634](https://jira.nuxeo.com/browse/NXDRIVE-2634).
 
@@ -49,13 +49,13 @@ A new switch has been added in the Advanced Settings tab allowing the user to en
 
 ### Improvements
 
-#### Handling of Files With No Associated Application in Direct Edit
+#### Handling of Files With No Associated Application
 
 A notification message will now be shown if no associated application is found when opening a file through Direct Edit.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1995](https://jira.nuxeo.com/browse/NXDRIVE-1995).
 
-#### Handling of Invalid Data From Server in Direct Edit
+#### Handling of Invalid Data From Server
 
 An error notification will now be shown if the server returns invalid data when opening a file through Direct Edit.
 
@@ -63,7 +63,7 @@ An error notification will now be shown if the server returns invalid data when 
 
 #### Better Experience
 
-The Direct Edit experience has been made more robust by better handling502 (Bad Gateway), 503 (Service Unavailable) and 504 (Gateway Timeout) errors during document locking/unlocking.
+The Direct Edit experience has been made more robust by better handling HTTP 502 (Bad Gateway), 503 (Service Unavailable) and 504 (Gateway Timeout) errors during document locking/unlocking.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2681](https://jira.nuxeo.com/browse/NXDRIVE-2681).
 
@@ -71,9 +71,9 @@ The Direct Edit experience has been made more robust by better handling502 (Bad 
 
 ### Fix
 
-#### Windows and UNC Names
+#### [Windows] Deletion of UNC Names
 
-We fixed an issue when local trashing files was not working with UNC names.
+We fixed an issue when local trashing files was not working with UNC names. Such mechanism is not available for shared folders and the behavior will now be to permanently delete those files (as Windows itself is doing).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2640](https://jira.nuxeo.com/browse/NXDRIVE-2640).
 

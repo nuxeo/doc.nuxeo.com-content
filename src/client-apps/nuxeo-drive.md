@@ -24,7 +24,7 @@ Nuxeo Drive proposes 3 main features:
 | ------- | -------------------------------------------------------------------------- |
 | Release | [5.2.1](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
 | Beta    | [5.2.2](https://community.nuxeo.com/static/drive-updates/beta/?C=M;O=D) |
-| Alpha   | [5.2.2.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D) |
+| Alpha   | [5.2.3.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D) |
 
 Find more information about our release cycle on [this page]({{page version='' space='client-apps' page='nuxeo-drive-release-cycle'}}).
 
