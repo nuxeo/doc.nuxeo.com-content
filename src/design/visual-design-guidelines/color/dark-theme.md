@@ -9,6 +9,10 @@ tree_item_index: 200
 toc: true
 ---
 
+{{#> callout type='note' }}
+These guidelines showcase what can be done with Nuxeo Web UI and Nuxeo Element, but don’t reflect their current state out of the box.
+{{/callout}}
+
 ![]({{file name='img_84.png'}})
 
 | Section       | Role                                                | Value                      |                                  |
