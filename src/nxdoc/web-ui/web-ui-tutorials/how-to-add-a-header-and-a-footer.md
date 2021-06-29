@@ -1,5 +1,5 @@
 ---
-title: How to add a header and a footer to Web UI
+title: 'HOWTO: Add a Header and a Footer to Web UI'
 description: Learn how to customize Web UI interface by adding an external header and footer.
 review:
     comment: ''
@@ -16,18 +16,18 @@ labels:
     - lts2021
     - tutorial
     - nuxeo-web-ui
-tree_item_index: 300
+tree_item_index: 460
 ---
 
 {{! excerpt}}
 In this tutorial, we'll guide you through customizing Nuxeo Web UI by adding a header and a footer to the interface. Even though we had the possibility of adding an external header to Web UI, we are now introducing the ability to add a footer as well.
 {{! /excerpt}}
 
-## Introduction
+## Scope
 
 There might be some situations where you need to add an external header or footer to your Nuxeo application. In some cases, you might need to have a banner with the client's brand wrapping the application; or perhaps you might need to include a footer that provides important copyright information — either way, you can now do it thanks to two CSS variables.
 
-### Let's add a header
+## Add a Header
 
 Let's say you need to have a banner on the top of your application that will have 100px of height.
 
@@ -35,7 +35,7 @@ First, let's assume that you are using the default theme (note that this tutoria
 
 Add this `CSS variable` in the beginning of the `html` tag:
 
-```js
+```
 <custom-style>
   <style is="custom-style">
     html {
@@ -47,6 +47,7 @@ This will create a space in the viewport, between the top of it and the Nuxeo ap
 For the sake of simplicity, we will now define the element inline, but of course, this could be imported as well from a separate `html` file (which is way better for maintenance purposes).
 
 So, let's go over to your custom bundle file, and let's add the following code:
+
 ```js
 <script>
   Polymer({
@@ -75,19 +76,20 @@ So, let's go over to your custom bundle file, and let's add the following code:
   document.body.appendChild(myHeader);
 </script>
 ```
+
 Here we are defining a custom element called `my-header` and that includes a simple static text inside it, with some styles to make it more visible.
 
 Then we are creating the element and appending to the document.
 
 And there you have it! You have now a header in Nuxeo Web UI.
 
-### Now, let's add a footer
+## Add a Footer
 
 Adding a footer to Nuxeo Web UI follows the same logic, except we need to give an absolute position to our element.
 
 First, let's open `theme.html` again and include the following `nuxeo-app-bottom` variable:
 
-```js
+```
 <custom-style>
   <style is="custom-style">
     html {
@@ -138,11 +140,11 @@ Similar to what we did to the header, here we define a new inline custom element
 
 This way we can have a static header and footer wrapping our Nuxeo Web UI.
 
-## Interact with data inside Nuxeo App dynamically
+## Interact With Data Inside Nuxeo App Dynamically
 
 Now, let's imagine that you need to interact with data inside Nuxeo App: in the header, you need to display the current path of your document; and in the footer, you need to display the user that is currently logged in.
 
-### Display the document's path inside the header
+### Display the Document's Path Inside the Header
 
 Let's start by the header. Going back to your custom bundle code and focusing on `my-header` element, we need include a `properties` object on it and inside it let's create another object called `document`:
 
@@ -178,7 +180,7 @@ Let's start by the header. Going back to your custom bundle code and focusing on
 </script>
 ```
 
-After it we will also need to replace the static text inside our spans with a dynamic bound property:
+After it, we will also need to replace the static text inside our spans with a dynamic bound property:
 
 ```js
 <script>
@@ -238,7 +240,8 @@ Next, we need to check if `nuxeo-app` is defined and ready in our document. To d
 
 And with that, we can interactively print the document's path.
 
-### Print which user is logged in the footer
+### Print Which User Is Logged in the Footer
+
 To do it, we need to follow the exact same logic of the header, however, in this case, we need to listen to another event.
 
 Going back to your custom bundle code and finding the `my-footer` custom element, let's add this `user` object property to it and replace the static span with a dynamic bound property:
@@ -302,4 +305,4 @@ Now, below the custom element, let's also check for the definition of the `nuxeo
 
 This event will give us the information that we need to display in our footer.
 
-And there you have it. A fully dynamic header and footer that can be responsive to what is happening inside the `nuxeo-app`.
+And there you have it! A fully dynamic header and footer that can be responsive to what is happening inside the `nuxeo-app`.
