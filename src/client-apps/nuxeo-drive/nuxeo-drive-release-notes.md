@@ -11,7 +11,7 @@ toc: true
 
 Welcome to the Release Notes for **Nuxeo Drive 5.2.2**
 
-**Status**: <font color="#ff0000">**Beta**</font> </br>
+**Status**: <font color="#0066ff">**Release**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.2.md)
 
 ## General
@@ -120,6 +120,6 @@ We restored the correct behavior.
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.2-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.2.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.2.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.2-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.2.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.2.exe)
