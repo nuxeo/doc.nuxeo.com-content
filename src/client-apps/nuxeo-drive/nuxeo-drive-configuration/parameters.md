@@ -418,6 +418,63 @@ Disable the standard check for binding, to allow installation on network filesys
 
 * * *
 
+#### `oauth2-authorization-endpoint`
+
+The URL of the authorization endpoint for OAuth 2.
+
+- Default value (str): None
+- Version added: 5.2.0
+
+* * *
+
+#### `oauth2-client-id`
+
+Oauth 2 client ID.
+
+- Default value (str): `nuxeo-drive`
+- Version added: 5.2.0
+
+* * *
+
+#### `oauth2-client-secret`
+
+OAuth 2 client secret.
+
+- Default value (str): None
+- Version added: 5.2.0
+
+* * *
+
+#### `oauth2-scope`
+
+OAuth 2 scope.
+It is a mandatory parameter when using ADFS, for instance.
+
+- Default value (str): None
+- Version added: 5.2.0
+
+* * *
+
+#### `oauth2-openid-configuration-url`
+
+The URL of the [OpenID Provider Configuration](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig) for OAuth 2.
+When specified, [oauth2-authorization-endpoint](#oauth2-authorization-endpoint) and [oauth2-token-endpoint](#oauth2-token-endpoint) parameters will be set according to values found in that document, even if they are already defined.
+
+The awaited value must be of the form `https://server.com/.well-known/openid-configuration`.
+
+- Default value (str): None
+- Version added: 5.2.0
+
+* * *
+
+#### `oauth2-token-endpoint`
+
+The URL of the token endpoint for OAuth 2.
+
+- Default value (str): None
+- Version added: 5.2.0
+
+* * *
 
 #### `proxy-exceptions`
 
