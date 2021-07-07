@@ -16,11 +16,13 @@ Welcome to the Release Notes for **Nuxeo Drive 5.2.4**
 
 ## General
 
-### Fixes
+### Fix
 
-#### `ca-bundle` Parameter
+#### Custom SSL Certificate Regression
 
+The custom SSL certificate management added in 5.2.3 introduced a regression. It is now fixed and working properly.
 
+We are sorry for the inconvenience.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2719](https://jira.nuxeo.com/browse/NXDRIVE-2719).
 
