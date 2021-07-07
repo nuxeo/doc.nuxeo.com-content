@@ -97,6 +97,20 @@ There are different ways to register a client:
 --}}
 ![OAuth2 Consumer](nx_asset://383d8afb-7570-4a3d-b6fd-db0bd9479412 ?w=500,border=true)
 
+### Using Nuxeo Drive
+
+Nuxeo Drive supports OAuth 2 authentication. To switch to OAuth 2 you need to add a Nuxeo Drive Client:
+
+1. In the left menu of Web UI, go to **Administration** > **Cloud Services** > **Consumers** tab.
+1. Click on the **Add** button:
+    - Name: Choose a name
+    - Client ID: `nuxeo-drive`
+    - Secret: Leave it empty
+    - Redirects URIs : `nxdrive://authorize`, it shouldn't be changed.</br>
+    If the Client ID and/or Secret are modified, make sure to use the [correct parameters]({{page version='' space='client-apps' page='parameters'}}#oauth2-client-id).
+
+Find more information on the Drive [related Release Notes]({{page version='' space='client-apps' page='5.2.0-nuxeo-drive-release-notes'}}#oauth2-support).
+
 ### Using JSF UI
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
