@@ -9,55 +9,24 @@ review:
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.2.3**
+Welcome to the Release Notes for **Nuxeo Drive 5.2.4**
 
 **Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.3.md)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.4.md)
 
 ## General
 
 ### Fixes
 
-#### Crash on Invalid Locale
+#### `ca-bundle` Parameter
 
-The previous version, 5.2.2, started to crash on the latest macOS upgrade (11.4) because of an unknown OS locale passed to the application. We quickly fixed it and the error is now ignored when it happens.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2714](https://jira.nuxeo.com/browse/NXDRIVE-2714).
 
-### Improvements
-
-#### Idempotent Requests
-
-HTTP calls mades to `FileManager.Import` and `NuxeoDrive.CreateFile` operations are now always using idempotent requests. It will help preventing duplicate creations and improving a lot the upload experience on network glitches or computer/application crashes.
-
-The behavior can still be disabled by setting [`use-idempotent-requests`]({{page version='' space='client-apps' page='parameters'}}#use-idempotent-requests) to `False`.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2717](https://jira.nuxeo.com/browse/NXDRIVE-2717).
-
-#### Custom SSL Certificate
-
-Custom SSL certificate management has been completely reviewed. When such a certificate is defined, it will be append to the already known Certificate Authorities (CA) integrated in the application. It was done to ease integration work for customers having custom certificates that still need original CA. Before, when a custom certificate was used, original CA were completely discarded, which worked for most of users.
-
-The application will automatically take care of handling certificate changes so that sysadmin/users do not need to think about it anymore.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2695](https://jira.nuxeo.com/browse/NXDRIVE-2695).
-
-## Direct Transfer
-
-### Fix
-
-#### Fetch All Children
-
-When selecting a remote folder in the tree view, sometimes not all folderish documents were displayed. This was a due to a unoptimized implementation.
-The new implementation is more efficient and will always fetch all documents of a selected document.
-
-As a positive side-note, the small arrow on the left of each document's name is now displayed only if the document contains at least one subfolder.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2674](https://jira.nuxeo.com/browse/NXDRIVE-2674).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2719](https://jira.nuxeo.com/browse/NXDRIVE-2719).
 
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.3-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.3.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.3.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.4-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.4.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.4.exe)
