@@ -159,7 +159,7 @@ Here is a non-exhaustive list of recommendations to get better performance:
 - [Managing Performance]({{page page='managing-performance'}})
 - [Metrics and Monitoring]({{page page='metrics'}})
 - [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
-- [Monitoring Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
+- [Monitoring Slow NXQL Queries]({{page page='logs'}}#slow-nxql-queries)
 
 {{/panel}}</div><div class="column medium-6">
 

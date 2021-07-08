@@ -187,7 +187,7 @@ With an Elasticsearch page provider, the full-text syntax used is the Elasticsea
 - [Repository configuration]({{page page='repository-configuration'}})
 - [DBS]({{page page='dbs'}})
 - [VCS]({{page page='vcs'}})
-- [Monitoring Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
+- [Monitoring Slow NXQL Queries]({{page page='logs'}}#slow-nxql-queries)
 - [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 
 {{/panel}}</div><div class="column medium-6">
