@@ -103,13 +103,15 @@ Nuxeo Drive supports OAuth 2 authentication. To switch to OAuth 2 you need to ad
 
 1. In the left menu of Web UI, go to **Administration** > **Cloud Services** > **Consumers** tab.
 1. Click on the **Add** button:
-    - Name: Choose a name
-    - Client ID: `nuxeo-drive`
-    - Secret: Leave it empty
-    - Redirects URIs : `nxdrive://authorize`, it shouldn't be changed.</br>
+    - **Name**: Choose a name.
+    - **lient ID**: `nuxeo-drive`.
+    - **Secret**: Leave it empty.
+    - **Redirects URIs**: `nxdrive://authorize`, it shouldn't be changed.</br>
     If the Client ID and/or Secret are modified, make sure to use the [correct parameters]({{page version='' space='client-apps' page='parameters'}}#oauth2-client-id).
 
-Find more information on the Drive [related Release Notes]({{page version='' space='client-apps' page='5.2.0-nuxeo-drive-release-notes'}}#oauth2-support).
+1. On Drive side, when adding a new account, simply uncheck the **Use legacy authentication** checkbox to use OAuth 2.
+
+Find more information on the Nuxeo Drive [related Release Notes]({{page version='' space='client-apps' page='5.2.0-nuxeo-drive-release-notes'}}#oauth2-support).
 
 ### Using JSF UI
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
