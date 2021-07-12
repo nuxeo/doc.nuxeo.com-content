@@ -24,6 +24,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/LoAO'
     source_link: /display/NXDOC/Monitoring+and+Maintenance
 tree_item_index: 300
+is_overview: true
 version_override:
     LTS 2019: nxdoc/monitoring-and-maintenance
     LTS 2015: 710/admindoc/monitoring-and-maintenance
