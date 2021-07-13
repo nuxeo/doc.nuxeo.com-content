@@ -13,11 +13,11 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2021-06' page='studio-updates-2021-06'}}}
+{{{multiexcerpt 'studio-updates-2021-07' page='studio-updates-2021-07'}}}
 
 ## Learn More
 
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'4.1.0','4.1.1','4.1.2'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'4.5.0','4.5.1','4.5.2','4.5.3'%29) is available in our bug tracking tool.
 
 ---
 
@@ -25,8 +25,9 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [June 2021]({{page page='studio-updates-2021-06'}})                     | CTRL + S Feature and Trial Registration Cache Resolution                           |
-| [May 2021]({{page page='studio-updates-2021-05'}})                     | Web UI by default in Studio and recursive registries resolution                             |
+| [July 2021]({{page page='studio-updates-2021-07'}})                    | Accessibility improvements for Studio Designer                             |
+| [June 2021]({{page page='studio-updates-2021-06'}})                    | CTRL + S Feature and Trial Registration Cache Resolution                   |
+| [May 2021]({{page page='studio-updates-2021-05'}})                     | Web UI by default in Studio and recursive registries resolution            |
 | [April 2021]({{page page='studio-updates-2021-04'}})                   | Document Trashed and Untrashed event handlers                              |
 | [March 2021]({{page page='studio-updates-2021-03'}})                   | Update of Studio Designer Catalog                                          |
 | [January to February 2021]({{page page='studio-updates-2021-01-02'}})  | Range Support for Marketplace Packages                                     |
