@@ -16,9 +16,7 @@ If you are using LTS 2021, <a href="https://connect.nuxeo.com/nuxeo/site/marketp
 
 As a developer most of these changes are transparent for you and will be automatically applied with the update.
 
-//TODO insert designer menus image here
-
-More specifically, anything that you configured using Studio Designer that is in the green menus automatically receives our latest accessibility updates as soon as you install Web UI 3.0.3. No need for an update on your side. Existing layouts (menus marked in yellow) need to be updated to be more accessible. New ones created starting from June 22, 2021 will benefit from the latest accessibility updates.
+More specifically, anything that you configured besides layouts automatically receives our latest accessibility updates as soon as you install Web UI 3.0.3. No need for an update on your side. Existing layouts need to be updated to be more accessible. New ones created starting from June 22, 2021 will benefit from the latest accessibility updates.
 
 Below is a more detailed breakdown of the changes.
 
