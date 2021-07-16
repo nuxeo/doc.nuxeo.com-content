@@ -725,6 +725,7 @@ SELECT * FROM Document WHERE NOT dc:title = 'My Doc'
 SELECT * FROM Document WHERE dc:title = 'My Doc' OR dc:title = 'My Other Doc'
 SELECT * FROM Document WHERE (dc:title = 'blah' OR ecm:isProxy = 1) AND dc:contributors = 'bob'
 SELECT * FROM Document WHERE file:content/name = 'testfile.txt'
+SELECT * FROM Document WHERE file:content/data IS NULL
 SELECT * FROM Document WHERE uid = 'isbn1234'
 SELECT * FROM Document WHERE file:content/name = 'testfile.txt' OR dc:title = 'testfile3_Title'
 SELECT * FROM Document WHERE file:content/name = 'testfile.txt' OR dc:contributors = 'bob'
