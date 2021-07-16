@@ -759,7 +759,7 @@ Most audio formats are supported via [FFMPEG](https://www.ffmpeg.org/general.htm
 
 ### Artworks Files / 3D Format
 
-The [Nuxeo 3D addon]({{page version='' space='nxdoc' page='nuxeo-3d'}}) uses Blender as the render engine and three.js for the embedded viewer in Nuxeo Web UI. All formats are rendered into GTLF for display in the viewer and can natively read any of the above-referenced, Blender-supported formats. Formats that Blender can’t natively render are just supplied along with preview file for the preview.
+Nuxeo offers multiple approaches to 3D support. The [Nuxeo 3D addon]({{page version='' space='nxdoc' page='nuxeo-3d'}}) is available as well as an alternate approach that relies on a viewer that displays GLB files that serve as previews for any native formats. The Nuxeo 3D addon uses Blender as the render engine and three.js for the embedded viewer in Nuxeo Web UI. All formats are rendered into GTLF for display in the viewer and can natively read any of the  formats indicated below. Formats that can’t be natively rendered are supported using supplied GLB files that serve as the preview.
 
 {{#> callout type='info' heading='Compound Asset Support'}}
 Compound Asset Support refers to supporting a set of files as a single asset object while preserving the subcomponents as individual assets and recording the relationships among them all. This is especially important most 3D formats require a set of files.
@@ -852,7 +852,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.bip</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -861,7 +861,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.ksp</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -870,7 +870,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.mb</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -879,7 +879,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.ixo</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -897,7 +897,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.abc</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Via SketchFab support</td>
@@ -906,7 +906,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.dxf</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Via SketchFab support</td>
@@ -915,7 +915,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.3dm</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -924,7 +924,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.bw</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -933,7 +933,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.zprj</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -942,7 +942,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.u3ma</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -951,7 +951,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.zfab</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -960,7 +960,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.cway</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -969,7 +969,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.dci</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -978,7 +978,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.iges</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -987,7 +987,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.step</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -1014,7 +1014,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.prt</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -1023,7 +1023,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.sldprt</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -1032,7 +1032,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.f3d</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -1041,7 +1041,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.axf</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
@@ -1050,7 +1050,7 @@ The NEV Support is not provided for 3D files for now.
 </tr>
 <tr>
 <td colspan="1">.c4d</td>
-<td colspan="1">&#10003;</td>
+<td colspan="1">with a GLB</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">&#10003;</td>
 <td colspan="1">Conversion requires proprietary engine</td>
