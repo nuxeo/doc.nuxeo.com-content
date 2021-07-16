@@ -250,7 +250,7 @@ etc.
 Contributing to an extension using Nuxeo CLI requires more steps than using Nuxeo Studio.
 
 Here we assume that you have installed [Nuxeo CLI]({{page page='nuxeo-cli'}}) and follow the page
-[Develop with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}}) to understand the basics.
+[Develop with Nuxeo Platform]({{page space='nxdoc' page='develop-your-own-java-code'}}) to understand the basics.
 
 ### Creating an XML Extension in Nuxeo CLI
 

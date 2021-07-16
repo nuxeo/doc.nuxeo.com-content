@@ -107,7 +107,7 @@ history:
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-In this how-to, we consider you already [developed with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}}) with the necessary commands in the `deployment-fragment.xml` to copy the `web` resources to `$NUXEO/nxserver/nuxeo.war`. As an example, we will explain how to install the [textcolor plug-in](http://www.tinymce.com/wiki.php/Plugin:textcolor).
+In this how-to, we consider you already [developed with Nuxeo Platform]({{page space='nxdoc' page='develop-your-own-java-code'}}) with the necessary commands in the `deployment-fragment.xml` to copy the `web` resources to `$NUXEO/nxserver/nuxeo.war`. As an example, we will explain how to install the [textcolor plug-in](http://www.tinymce.com/wiki.php/Plugin:textcolor).
 
 ## Adding the TinyMCE textcolor Plug-In
 

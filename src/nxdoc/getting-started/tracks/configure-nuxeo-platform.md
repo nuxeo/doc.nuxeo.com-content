@@ -1,5 +1,5 @@
 ---
-title: First Package With Studio
+title: Configure With Studio
 review:
     comment: ''
     date: '2020-12-11'
@@ -22,7 +22,7 @@ BigCorp has a very simple workflow on a `BCContract` document type, called `BCCo
 
 BigCorp needs a new feature added to this workflow: have someone from Accounting specify the amount to refund to the client, with a full refund automatically granted to cancellations that occur within 10 days of signing.
 
-In the steps below, we will show you how to add custom schemas, automation chains and workflow steps to fulfill this feature request.
+In the steps below, we will show you how to add custom schemas, automation chains and workflow steps to fulfil this feature request.
 
 ## Setting Up
 
@@ -469,4 +469,4 @@ INSTALL NEW PACKAGES
 
 ## Going Further
 
-Let's learn how to [create your own operation](https://doc.nuxeo.com/nxdoc/cloud/develop-with-nuxeo-platform/).
+Let's learn how to [create your own operation]({{page space='nxdoc' page='develop-your-own-java-code'}}).

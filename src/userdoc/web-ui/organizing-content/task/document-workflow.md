@@ -17,7 +17,7 @@ You need to have editing or management permissions to start a workflow on a docu
 ## Serial Document Review
 
 1. Go on the document that you want to review.
-2. Click on the icon&nbsp;![]({{file name='workflow_web-ui.png' page='icons-index'}}).
+2. Click on the icon&nbsp;![]({{file name='workflow_web-ui.png' space='userdoc' page='icons-index'}}).
 2. On the pop-up, select the **Serial document review** from the drop down list and click on **Start**.<br/>
     Two info bars are displayed at the top of the document to inform that a process has been started on this document and that you have a task to process. Clicking the **View Graph** button displays the workflow route in a pop-up window.<br/>
     ![]({{file name='process-serial-review-web-ui.png'}} ?w=500,border=true)

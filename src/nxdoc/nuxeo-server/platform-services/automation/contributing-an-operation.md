@@ -305,7 +305,7 @@ history:
 
 ---
 
-This page provides all the information necessary for implementing an operation and is a must-read for getting a good comprehension of the framework. You should also have a look at [Develop with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}}) which explain how to use Nuxeo CLI in order to create new operations quickly and easily through the provided wizard.
+This page provides all the information necessary for implementing an operation and is a must-read for getting a good comprehension of the framework. You should also have a look at [Develop with Nuxeo Platform]({{page space='nxdoc' page='develop-your-own-java-code'}}) which explain how to use Nuxeo CLI in order to create new operations quickly and easily through the provided wizard.
 
 {{#> callout type='tip' }}
 

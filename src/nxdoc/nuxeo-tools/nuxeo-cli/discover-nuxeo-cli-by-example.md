@@ -196,7 +196,7 @@ my-project
 {{#> panel heading='Related Documentation'}}
 
 - [Nuxeo CLI]({{page page='nuxeo-cli'}})
-- [Develop with Nuxeo Platform]({{page version='' space='nxdoc' page='develop-with-nuxeo-platform'}})
+- [Develop Your Own Java Code]({{page space='nxdoc' page='develop-your-own-java-code'}})
 - [Create Nuxeo Packages]({{page version='' space='nxdoc' page='creating-nuxeo-packages'}})
 
 {{/panel}}

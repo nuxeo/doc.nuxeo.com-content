@@ -122,7 +122,7 @@ For more information about the bundle deployment, do not hesitate to read the pa
 <div class="column medium-6">
 {{#> panel heading='Related How-Tos'}}
 
-- [Develop with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}})
+- [Develop with Nuxeo Platform]({{page space='nxdoc' page='develop-your-own-java-code'}})
 - [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}})
 - [How-To Index]({{page page='how-to-index'}})
 

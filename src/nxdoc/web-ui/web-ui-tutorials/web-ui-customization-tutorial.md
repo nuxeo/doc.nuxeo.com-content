@@ -37,7 +37,7 @@ resources to understand how to create and deploy a bundle:
 
 ### Creating an Empty Bundle
 
-To make our life easier, we'll use [Nuxeo CLI]({{page page='nuxeo-cli'}}). Please make sure to follow the respective [guide]({{page page='develop-with-nuxeo-platform'}}) before proceeding.
+To make our life easier, we'll use [Nuxeo CLI]({{page page='nuxeo-cli'}}). Please make sure to follow the respective [guide]({{page page='develop-your-own-java-code'}}) before proceeding.
 
 Let's start by installing Nuxeo CLI and scaffolding a new bundle:
 

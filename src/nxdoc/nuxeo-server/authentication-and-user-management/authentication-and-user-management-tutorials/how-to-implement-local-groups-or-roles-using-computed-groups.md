@@ -168,7 +168,7 @@ Development environment requirements:
 
 - A [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) project (for the Workspace modification and User action definition),
 - A [Nuxeo Platform]({{page space='nxdoc' page='installation'}}) instance ready for test,
-- [Nuxeo CLI]({{page version='' space='nxdoc' page='develop-with-nuxeo-platform'}}) (for bundle creation and computed group definition).
+- [Nuxeo CLI]({{page space='nxdoc' page='develop-your-own-java-code'}}) (for bundle creation and computed group definition).
 
 Examples of uses cases for which you will need computed groups:
 

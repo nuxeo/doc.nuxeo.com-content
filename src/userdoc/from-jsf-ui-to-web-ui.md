@@ -6,6 +6,7 @@ review:
     status: ok
 description: This documentation page will help you to migrate from JSF UI to Web UI
 tree_item_index: 50
+is_overview: true
 labels:
     - lts2017-ok
     - migration
