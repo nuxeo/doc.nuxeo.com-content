@@ -19,59 +19,137 @@ tree_item_index: 3000
 ---
 
 {{! excerpt}}
-In this tutorial you will learn how the rich text editor in Nuxeo Web UI and the associated elements can be leveraged to use Nuxeo as an articles content repository.
+In this tutorial you will learn how the rich text editor in Nuxeo Web UI and the associated elements can be leveraged to use Nuxeo as a content repository for articles.
 {{! /excerpt}}
 
-
-Using and customizing the rich text editor for article publishing
-
-Use case introduction
-What elements can I use?
-How to retrieve the content in my external system?
-How do I reference images in my article?
-How do I keep track of which images are being used in my articles?
 
 ## Use Case Introduction
 
 As a company doing heavy content publishing, you can have various websites to handle: in different languages, each with its own distinct layout and way to handle the content.
 
-Using Nuxeo can come in handy for such situations: use it to centralize all your content in a single place, retrieve it on demand and make use of the content services like renditions to retrieve your content in various formats and sizes or workflows to manage your content publishing process. Nuxeo will not replace your existing CMS. Rather, it integrates with it to make your content CMS agnostic.
+In such situations, you can use Nuxeo to centralize all your content in a single place. Make use of the content services like renditions to retrieve your content in various formats and sizes, or workflows to manage your content publishing process. Nuxeo will not replace your existing CMS. Rather, it integrates with it to make your content CMS agnostic and will be used by your content authors to write articles in Web UI using the rich text editor it provides.
 
-In this page we will provide a high level overview of how you can use the rich text editor, configure it to your liking and provide some ideas to explore further.
+In this page we will give you an overview of how you can use the rich text editor and configure it to your liking. You will also find some ideas to configure or extend it further.
 
-## Setting Up the Rich Text Editor
+{{#> callout type='info'}}
+This how-to requires Nuxeo LTS 2021 or newer.
+{{/callout}}
 
-//TODO Mention LTS2021+ only
+## Using the Rich Text Editor
 
-Configure layout
-Use the nuxeo-html-editor element for ...
-Use the other one for ...
+To test the default behavior of the rich text editor
 
-## Configuring Image Insertion
+1. In a Workspace or a Folder, create one or several `Picture` documents.
+1. In a Workspace or a Folder, create a new `Note` document and keep the `HTML` format.
+1. Type your content and save it directly while being in the document view. Use the rich text editor toolbar to leverage the various options.
 
-Explain how it works and what we do with it
+To reference one or several pictures stored in Nuxeo
 
-Configure document_picker pp in Studio
-Change the pp query to your liking
+1. Click on the `insert images from existing documents` [//TODO insert icon] toolbar icon
+1. Search for your content using the quick filter (fulltext search) option, select as many images as you want and press the `Select` button.
 
-1. In Studio Modeler, go to **Configuration** > **Page Providers**; click on **New** and name it `document_picker`.
-1. In the Query filter add the following line `AND ecm:currentLifeCycleState='Approved'`. Only approved documents.</br>
-   You should end up with something like this:
+The search form, the query used to filter pictures and the results presentation are all configurable using Nuxeo Studio.
 
-   ```
-   ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:isTrashed = 0 AND ecm:currentLifeCycleState='Approved'
-   ```
+## Accessing the Content of the Rich Text Editor
 
-## Configuring the Layout for Image Picking
+As usual with Nuxeo, anything in the UI can be accessed through an external system by using the REST API. //TODO link to the REST API doc
 
-Import template //TODO create the template
-(needed because of custom code it contains)
+When retrieving a Note document, the content will be referenced in the corresponding document property, e.g.:
 
-Configure layout in Studio
+```
+[...]
+"properties": {
+  "note:note": "Some text and now an image <img src=\&quot;https://nuxeo-server-url.nuxeo.com/nuxeo/nxfile/default/793dc397-2ecc-46ee-8840-92d1d88faed6/file:content/Away.jpg\&quot;>"
+[...]
+```
 
-## Going Further: Relations
+Any image you referenced is stored in a way that lets you parse the content and adapt it to your needs. Your own tool can easily adapt that URL to call further Nuxeo services, for example to request a particular rendition.
 
-Keeping track of images being used
-Add an event handler
-Parse the content
-Add the relation as a metadata entry
+## Configuring the Query
+
+By default, inserting images in the rich text editor will reference the current content stored in any document having the `Picture` facet.
+
+Depending on your needs, you may want to change the query to retrieve specific document types, documents in a specific state (e.g. only return approved images). You may even want users to pick only the latest version available for greater control.
+
+Here's a quick example to retrieve only the latest version of an image.
+
+//TODO check with UI team what we should provide by default in the template: e.g. results layout for people to have the custom code or not to avoid them having to maintain it?
+
+1. In Studio Modeler, go to **External Templates**; import the **Rich Text Editor Default Configuration** template.
+1. Go to **Configuration** > **Page Providers**; select the `document_picker` page provider.
+1. Replace the query filter with the following:
+
+```
+ecm:mixinType != 'HiddenInNavigation' AND ecm:mixinType = 'Picture' AND ecm:isTrashed = 0 AND ecm:isVersion = 1 AND ecm:isLatestVersion = 1
+```
+
+Save and [deploy your configuration]({{page page='nuxeo-dev-tools-extension'}}#hot-reload) to see the result. Make sure you have created a version for your pictures to see them appear in the list.
+
+## Configuring the Search Form or the Results Presentation
+
+Two options are available to configure the image picker:
+
+- Configuring the search form: to provide additional / different search criteria for the images to reference
+- Configuring the results form: to replace or provide alternate views to the default grid results display
+
+Let's add an additional search criteria to find images related to a particular area.
+
+1. In Studio Modeler, go to **Configuration** > **Page Providers**; select the `document_picker` page provider.
+1. Add a new `aggregate`. Choose the **terms** aggregate type, and map it to the **dublincore > coverage** field.
+
+//TODO insert image
+
+3. Save your configuration.
+4. Click on the **Configure Layouts in Designer** button in the top right corner of the screen. You will be taken to the layout configuration for the **document_picker** page provider in Studio Designer.
+
+Now we will configure the layout to take advantage of it.
+
+1. Click on the **Form** option to configure its search form.
+1. Drag and drop the **dublincore coverage aggregate** to the form, leave it in edit mode and confirm using the **generate** button.
+
+//TODO insert images
+
+Save and [deploy your configuration]({{page page='nuxeo-dev-tools-extension'}}#hot-reload) to see the result. This time you should edit your picture to add a coverage to it, then create a version to see it appear in the list when picking it from the rich text editor.
+
+//TODO insert image
+
+To configure the search results listing, [configure the **Results** option]({{page page="ui-designer" space="studio"}}) in Nuxeo Studio Designer for your `document_picker` page provider instead.
+
+## Going Further
+
+The following examples will be covered from a high level perspective only.
+
+### Using Multiple Rich Text Editors
+
+Let's assume you want to add a field to put a summary of your article. Or that you want to separate the introduction, the main content of the article and the conclusion to adapt your content more easily to a wider variety of website layouts.
+
+In this kind of situation, it is possible to use multiple rich text editors and to map them to different properties of your documents. Here's a summary of how you could proceed.
+
+1. Create a custom document type.
+1. Add a custom schema to it, and add your new fields using the `String` type.
+1. In Nuxeo Studio Designer, configure the edit layout for your document type.
+1. Drag and drop a `nuxeo-html-editor` element and bind it to the corresponding field. Repeat that operation for every additional field you created.
+
+### Tracking Relations Between Documents
+
+When referencing pictures in the rich text editor, Nuxeo won't keep track of which images were used for which article. To make overall maintenance and tracking easier, you may want to implement a relation system.
+
+Here's a summary of how you could proceed. Note that implementing this feature requires coding knowledge.
+
+1. Add an event handler that will be triggered on the following events for your custom document type: `About to create`, `Before document modification`.
+1. Associate an [automation script]({{page page='automation-scripting' space='studio'}}) or a [custom operation]({{page page='develop-your-own-java-code'}}) to it.
+
+It should roughly follow this logic (many variations are possible):
+
+1. Parse the content of the properties where you reference images
+1. Detect referenced images and extract the document id
+1. Store these document ids in the current document (relations from the article to the images)
+1. Store the id of the current document in each referenced image (relations from the images to the article)
+
+{{#> callout type='warning'}}
+Do not use the save parameter for automation operations / do not call the save method from the CoreSession when using Java code. You would trigger another modification event and run into an infinite loop. Your changes will be saved automatically since you are plugging your logic before writing the document into the database.
+{{/callout}}
+
+From there, all you need is to display the information in your document layout: using a document suggestion widget will map the document id to its title and provide a link to it.
+
+Of course, additional logic may be necessary depending on how you implemented your logic for the image picker in the first place. You may also want to plug logic to some additional events so that references in the images are deleted if you delete the article for example.
