@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Use Nuxeo renditions on Nuxeo Enhanced Viewer'
+title: 'HOWTO: Use Nuxeo Renditions on Nuxeo Enhanced Viewer'
 description: 'Step by step instructions to use the Nuxeo renditions into Nuxeo Enhanced Viewer instead of the original file'
 review:
     comment: ''
@@ -15,29 +15,28 @@ tree_item_index: 100
 
 This tutorial provides guidelines on how to use Nuxeo renditions instead of the original file on the advanced viewer. The main use case is for large files (around 500 MB and higher) that involve preview unavailability or slowness in Nuxeo Enhanced Viewer.
 
-## Introduction
+## Use Case
 
-In order to reduce the time to display content into Nuxeo Enhanced Viewer, we implemented a mechanism that provides to ARender a rendition of the file instead of the original file. By using a low size version of the original file, it reduces time on file transfer, conversion, and rendering.
+In order to reduce the time to display content into Nuxeo Enhanced Viewer, we implemented a mechanism that provides to ARender a rendition of the file instead of the original file. By using a low size version of the original file, it reduces time on file transfer, conversion and rendering.
 
 ## General Process
 
 This feature is based on:
- - An [Automation script]({{page space='nxdoc' page='automation-scripting'}}) to define the expected behavior: criteria to use rendition instead of the original file (document type, file format, file size, ...), expected behavior in case of missing rendition,...
- - An [XML contribution]({{page space='nxdoc' page='how-to-contribute-to-an-extension'}}) to turn on the feature,
+ - An [Automation script]({{page space='nxdoc' page='automation-scripting'}}) to define the expected behavior: criteria to use rendition instead of the original file (document type, file format, file size, ...), expected behavior in case of missing rendition, etc.
+ - An [XML contribution]({{page space='nxdoc' page='how-to-contribute-to-an-extension'}}) to turn on the feature.
 
-## {{> anchor 'automation-script-rendition'}} Automation script for rendition in NEV
+## Automation Script for Rendition in NEV
 
 The automation script requires the following attributes:
- - Input type: "document",
- - Output type: "blob",
+ - Input type: "document"
+ - Output type: "blob"
 
-
-Below an example of an automation script with the following behavior:
+Below is an example of an automation script with the following behavior:
  - NEV to use 'OriginalJpeg' rendition for pictures,
  - NEV to use 'MP4 480p' rendition for videos,
  - NEV to use the original file for other document types,
  - NEV to use the original file for pictures without the 'OriginalJpeg' rendition,
- - NEV to use the original file for videos without the 'MP4 480p' rendition,
+ - NEV to use the original file for videos without the 'MP4 480p' rendition.
 
 ```
 function run(doc, params) {
@@ -83,9 +82,9 @@ function run(doc, params) {
   return doc[blobXPath];
 ```
 
-## XML extension for renditions in NEV
+## XML Extension for Renditions in NEV
 
-The XML extension needs to reference the related automation script as described [above]({{page page='how-to-use-renditions-on-nev'}}#automation-script-rendition).
+The XML extension needs to reference the related automation script as described [above]({{page page='how-to-use-renditions-on-nev'}}#automation-script-for-rendition-in-nev).
 
 Below is an example of the expected XML extension for the automation script 'ARenderGetBlob':
 
