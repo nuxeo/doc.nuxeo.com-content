@@ -43,23 +43,37 @@ To test the default behavior of the rich text editor
 1. In a Workspace or a Folder, create a new `Note` document and keep the `HTML` format.
 1. Type your content and save it directly while being in the document view. Use the rich text editor toolbar to leverage the various options.
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/rte-view.png
+    name: rte-view.png
+    1.1.3#screenshot#up_to_date
+--}}
+![rte-view.png](nx_asset://f2526b56-ac17-48d3-86fe-a4029a9520b6 ?border=true)
+
 To reference one or several pictures stored in Nuxeo
 
-1. Click on the `insert images from existing documents` [//TODO insert icon] toolbar icon
+1. Click on the `insert images from existing documents` [//TODO insert icon] toolbar icon.
 1. Search for your content using the quick filter (fulltext search) option, select as many images as you want and press the `Select` button.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/rte-image-referencing-search.png
+    name: rte-image-referencing-search.png
+    1.1.3#screenshot#up_to_date
+--}}
+![rte-image-referencing-search.png](nx_asset://10e93a3b-87e2-400b-8a9b-7b3ac85697a7 ?border=true)
 
 The search form, the query used to filter pictures and the results presentation are all configurable using Nuxeo Studio.
 
 ## Accessing the Content of the Rich Text Editor
 
-As usual with Nuxeo, anything in the UI can be accessed through an external system by using the REST API. //TODO link to the REST API doc
+As usual with Nuxeo, anything in the UI can be accessed through an external system by using the [REST API]({{page page='rest-api'}}).
 
 When retrieving a Note document, the content will be referenced in the corresponding document property, e.g.:
 
 ```
 [...]
 "properties": {
-  "note:note": "Some text and now an image <img src=\&quot;https://nuxeo-server-url.nuxeo.com/nuxeo/nxfile/default/793dc397-2ecc-46ee-8840-92d1d88faed6/file:content/Away.jpg\&quot;>"
+  "note:note": "Some text and now an image <img src=\&quot;https://nuxeo-server-url.nuxeo.com/nuxeo/nxfile/default/793dc397-2ecc-46ee-8840-92d1d88faed6/file:content/Beach.jpg\&quot;>"
 [...]
 ```
 
@@ -73,14 +87,12 @@ Depending on your needs, you may want to change the query to retrieve specific d
 
 Here's a quick example to retrieve only the latest version of an image.
 
-//TODO check with UI team what we should provide by default in the template: e.g. results layout for people to have the custom code or not to avoid them having to maintain it?
-
 1. In Studio Modeler, go to **External Templates**; import the **Rich Text Editor Default Configuration** template.
 1. Go to **Configuration** > **Page Providers**; select the `document_picker` page provider.
 1. Replace the query filter with the following:
 
 ```
-ecm:mixinType != 'HiddenInNavigation' AND ecm:mixinType = 'Picture' AND ecm:isTrashed = 0 AND ecm:isVersion = 1 AND ecm:isLatestVersion = 1
+ecm:mixinType != 'HiddenInNavigation' AND ecm:mixinType = 'Picture' AND ecm:isTrashed = 0 AND file:content IS NOT NULL AND ecm:isVersion = 1 AND ecm:isLatestVersion = 1
 ```
 
 Save and [deploy your configuration]({{page page='nuxeo-dev-tools-extension'}}#hot-reload) to see the result. Make sure you have created a version for your pictures to see them appear in the list.
@@ -97,7 +109,12 @@ Let's add an additional search criteria to find images related to a particular a
 1. In Studio Modeler, go to **Configuration** > **Page Providers**; select the `document_picker` page provider.
 1. Add a new `aggregate`. Choose the **terms** aggregate type, and map it to the **dublincore > coverage** field.
 
-//TODO insert image
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/coverage-aggregate-modeler-configuration.png
+    name: coverage-aggregate-modeler-configuration.png
+    1.1.3#screenshot#up_to_date
+--}}
+![coverage-aggregate-modeler-configuration.png](nx_asset://e3acb068-96bd-48ca-a566-e11eee9845bb ?border=true)
 
 3. Save your configuration.
 4. Click on the **Configure Layouts in Designer** button in the top right corner of the screen. You will be taken to the layout configuration for the **document_picker** page provider in Studio Designer.
@@ -107,11 +124,28 @@ Now we will configure the layout to take advantage of it.
 1. Click on the **Form** option to configure its search form.
 1. Drag and drop the **dublincore coverage aggregate** to the form, leave it in edit mode and confirm using the **generate** button.
 
-//TODO insert images
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/coverage-aggregate-designer-catalog.png
+    name: coverage-aggregate-designer-catalog.png
+    1.1.3#screenshot#up_to_date
+--}}
+![coverage-aggregate-designer-catalog.png](nx_asset://9fe81437-386b-4386-bf11-c9f04bd53e82 ?border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/coverage-aggregate-designer-generation.png
+    name: coverage-aggregate-designer-generation.png
+    1.1.3#screenshot#up_to_date
+--}}
+![coverage-aggregate-designer-generation.png](nx_asset://afdecac0-95c2-4308-a712-6a6020373894 ?border=true)
 
 Save and [deploy your configuration]({{page page='nuxeo-dev-tools-extension'}}#hot-reload) to see the result. This time you should edit your picture to add a coverage to it, then create a version to see it appear in the list when picking it from the rich text editor.
 
-//TODO insert image
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/rte-results-with-search-filter-configured.png
+    name: rte-results-with-search-filter-configured.png
+    1.1.3#screenshot#up_to_date
+--}}
+![rte-results-with-search-filter-configured.png](nx_asset://777f47d0-2740-4e73-90a0-64ef3f57d24d ?border=true)
 
 To configure the search results listing, [configure the **Results** option]({{page page="ui-designer" space="studio"}}) in Nuxeo Studio Designer for your `document_picker` page provider instead.
 
