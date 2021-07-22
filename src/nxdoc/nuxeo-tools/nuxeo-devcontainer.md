@@ -12,11 +12,11 @@ toc: true
 ---
 
 {{! excerpt}}
-The Nuxeo DevContainer allows you to speed up your development flow by bootstrapping, developing and deploying your Nuxeo Custom Application in a containerized environment and continuing using your preferred IDE.
+The Nuxeo Development Container allows you to speed up your development flow by bootstrapping, developing and deploying your Nuxeo Custom Application in a containerized environment and continuing using your preferred IDE.
 {{! /excerpt}}
 
 {{#> callout type='warning'}}
-This project is still under heavy development.
+This new feature may be subject to some minor issues, please report issues to our support team
 {{/callout}}
 
 ## Requirements
@@ -27,20 +27,39 @@ You need to install the following tools:
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Visual Studio Code Remote Development Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
-Before going further, you need to understand a few concepts and have a basic knowledge of the following tools and be comfortable on how to bootstrap a Nuxeo Custom Application:
+Before going further, you need to have basic knowledge of the following tools and be comfortable on how to bootstrap a Nuxeo Custom Application:
 
 - [Nuxeo CLI]({{page page='nuxeo-cli'}})
 - [Nuxeo Getting Started]({{page page='getting-sarted'}})
 - [Visual Code Remote - Containers](https://code.visualstudio.com/docs/remote/containers#_getting-started)
 - [devcontainer.json Reference](https://code.visualstudio.com/docs/remote/devcontainerjson-reference)
 
-## Introduction
+Nuxeo Development Container bootstrap is available in two ways:
 
-The first step is to run our new bootstrap shell script that can create a custom project using Docker; without any other tool installed. For now, it is only designed to work on *NIX system*, but will be adapted to Windows:
+- Using an online hosted script that will bootstrap a new project from scratch; with everything you need to start working on a custom plugin for Nuxeo.
+- Using the `devcontainer` Nuxeo CLI generator.
 
-```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nuxeo-sandbox/studio-dev-env/master/start-bootstrap.sh) my-first-project"
-```
+We recommend using the online hosted script.
+
+- **When using the online hosted script:**
+
+  {{#> callout type='warn'}}
+  For now, the bootstrap script is only designed to work on *NIX system*, but it will be adapted to Windows.
+  {{/callout}}
+
+  The first step is to run our new bootstrap shell script that can create a custom project using Docker; without any other tool installed.
+
+  ```shell
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nuxeo-sandbox/studio-dev-env/master/start-bootstrap.sh) my-first-project"
+  ```
+
+- **When using the Nuxeo CLI generator**
+
+  When Nuxeo CLI is locally installed:
+
+  ```shell
+  nuxeo b operation package docker devcontainer
+  ```
 
 You will be asked for the required credentials for authenticated access to Nuxeo Online Service and packages.nuxeo.com (Nuxeo artifacts repository), the Studio project you want to bind, as well as a CLID for registering the Nuxeo instance that will be used.
 
@@ -52,42 +71,40 @@ You will be asked for the required credentials for authenticated access to Nuxeo
 
 During the generation process, you will be prompted for which version of the Nuxeo Platform you want to create your project for. You can use any version starts from `11.4`, or the `2021.1` version.
 
-The output of this execution, in your current working directory:
+The output of this execution, will be in your current working directory:
 - new empty custom plugin project `my-first-project`.
 - a script to help you start the containerized development environment as a shell: `start-shell.sh`.
 
 The containerized development environment is a Docker image that contains Nuxeo recommended tools:
 - Development tooling: Git, NodeJS, NPM, Maven, Docker CLI, Docker Compose, Zulu OpenJDK8, Zulu OpenJDK11 and Nuxeo CLI.
-- Third parties CLIs: Kafka CLI and Mongo Shell, GCloud SDK, Azure CLI and AWS CLI.
+- Third party CLIs: Kafka CLI and Mongo Shell, GCloud SDK, Azure CLI and AWS CLI.
 
 It also adds into the image `tmux` and `ohmyzsh` that you will use for shell interactions.
 
-Using our prebuilt startup scripts, the authentication for private registries of Maven, NPM and Docker against packages.nuxeo.com will be wired. The maven exec of the docker image will bind its repository in your local Maven repository, which will be created if missing. It also binds the container to your local Docker daemon to allow building and starting other containers from the development environment using the Docker in Docker pattern.
+Using our development container, the authentication for private registries of Maven, NPM and Docker against packages.nuxeo.com will be configured out of the box. It binds the container to your local Docker daemon to allow building and starting other containers from the development environment using the Docker in Docker pattern...
 
-After bootstrap is finished, we strongly recommend executing “start-shell.sh” to build your project once (`maven package`); and fill your local Docker registry with a first custom project Docker image that will be used afterwards in the `docker-compose.yaml` file.
+Then, if you use Visual Studio Code as your IDE, you can directly open the project and you will be prompted to start the development environment as a devcontainer. It allows you to open your project inside a container and take advantage of Visual Studio Code's full feature set, plugins, and so on, including an in-container pre-configured shell.
 
-Then, if you use Visual Studio Code as your IDE, you can directly open the project and you will be prompted to start the development environment as a devcontainer. It allows you to open your project inside a container and take advantage of Visual Studio Code's full feature set, including an in-container shell. Starting the devcontainer definition from Visual Studio Code will start the project's docker-compose file, and will run both the development environment and the custom application’s image.
-
-For other IDEs, we recommend you to let the container’s shell (started with ./start-shell.sh script) open to run the necessary Nuxeo CLI commands described hereafter, or any other tools command.
+For other IDEs, we recommend you to let the container’s shell (started with `./start-shell.sh` script) open to run the necessary Nuxeo CLI commands described hereafter, or any other tools command.
 
 {{#> callout type='warning'}}
 Limitations:
-- Cannot jump to VSCode devcontainer right after executing the bootstrap script; as it starts the project docker-compose file and it requires a first build of the project Docker Image.
-- CLID is required to bootstrap, but it is a chicken and egg issue, as you need to start a server before having a CLID.
-- Prompting validation is very limited for now; for instance there is no check if your credentials have access, or not, to the Studio project you enter.
+
+- CLID is required to bootstrap, create a new one associated to your project from the [Nuxeo Online Services - Applications](https://connect.nuxeo.com/nuxeo/site/connect/applications) screen.
+- Prompting validation is very basic for now; take care. For instance, there is no check if your credentials have access, or not, to the Studio project you enter.
 {{/callout}}
 
 ## Usage with Visual Studio Code
 
-Ensure your project root folder contains a `.devcontainer` folder, if not you can bootstrap it using `nuxeo b devcontainer`. Meanwhile, ensure [Visual Studio Code Remote Development Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) is installed too.
+Following the previous steps; your project should contain a `.devcontainer` folder. Otherwise, you can bootstrap it using `nuxeo b devcontainer`. Meanwhile, ensure [Visual Studio Code Remote Development Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) is installed.
 
 ### VSCode: Open the devcontainer
 
-Open your project root folder with Visual Code, and you must see a popup at the bottom right saying:</br> "Folder contains a Dev Container configuration file.", click on **Open in Container** button.
+Open your project root folder with Visual Code, and you should see a popup at the bottom right saying:</br> "Folder contains a Dev Container configuration file.", click on **Open in Container** button.
 
-Visual Studio Code must restart and start both your Docker Image and the Dev Environment. More informations: [Visual Code Remote - Containers](https://code.visualstudio.com/docs/remote/containers#_getting-started).
+Visual Studio Code must restart and launch within the Development Container. More informations: [Visual Code Remote - Containers](https://code.visualstudio.com/docs/remote/containers#_getting-started).
 
-After that step, we assume you execute commands from Visual Code with the integrated terminal.
+After that step, we assume you execute commands from Visual Code within the integrated terminal.
 
 ### VSCode: Build Your Project
 
@@ -97,7 +114,7 @@ Using the integrated terminal, everything has been configured and you only have 
 mvn package
 ```
 
-## Usage with Shell
+## Usage with a Bare Development Container Shell
 
 For the next steps; we assume you are executing the commands within the development environment shell (using `start-shell.sh` script); either from the devcontainer or from the start script.
 
@@ -107,13 +124,13 @@ When building your project, the regular `mvn package` will build as well the Doc
 
 During the Image build, your package dependencies will be resolved and might require a correct CLID if required dependencies are restricted.
 
-NB: If you are not using the development environment; and your package depends on other restricted Nuxeo packages, you will need to pass NUXEO_CLID (format: NUXEO_CLID=XXXX—XXXX—) as an environment variable to build command.
+NB: If you are not using the development environment; and your package depends on other restricted Nuxeo packages, you will need to pass NUXEO_CLID (format: NUXEO_CLID=XXXX—XXXX—) as an environment variable to the build command.
 
 ```sheel
 [NUXEO_CLID=XXXX--XXXX--] mvn package
 ```
 
-### Shell: Start the Custom Application Image
+## Deploy your Custom Application Image
 
 The `docker-compose` generator creates a basic Docker Compose description file that starts your custom image and forward the container’s port 8080 to 8080 on localhost. You can update the `docker-compose` file to start a MongoDB, Elasticsearch, ...
 
@@ -121,16 +138,47 @@ The `docker-compose` generator creates a basic Docker Compose description file t
 docker-compose up
 ```
 
-{{#> callout type='info'}}
-For development purposes, some Nuxeo server’s configurations can easily be set up in the compose file by [creating a volume](https://docs.docker.com/compose/compose-file/compose-file-v3/#volume-configuration-reference) bound to container’s `/etc/nuxeo/conf.d` folder. During the container entry point execution, all file present in that directory are append to the final `nuxeo.conf` file (https://github.com/nuxeo/nuxeo/blob/master/docker/docker-entrypoint.sh#L48-L56).
+For a more detailed list of available commands to interact with Docker Compose, see the [Docker Compose CLI Overview](https://docs.docker.com/compose/reference/) page.
+
+{{#> callout type='warning'}}
+Limitations:
+
+- For now, the generated `docker-compose.yaml` file is only deploying your custom Docker image. In the future, it will embed external services like MongoDB and Elasticsearch.
+- Using VSCode, it is **mandatory** to execute `docker-compose` outside the Development Container in order to properly mount the configuration folder; otherwise your custom configuration parameter won't be taken into account.
+- If you are outside development container, or VSCode, you have to update the `docker-compose.yaml` file to append a correct NUXEO_CLID.
+{{/callout}}
+
+### Configure Nuxeo using Docker Compose
+
+The default `docker-compose.yaml` file is mounting a `conf.d` folder within the Custom Docker image with a few sampled configuration files. All files listed within that folder are appended to the final configuration file.
+
+Default `docker-compose.yaml` file:
+
 ```yaml
+version: "3.8"
 services:
   nuxeo:
-    image: <your_custom_image>
+    image: <your-custom-image>:latest
+    ports:
+      - "8080:8080"
+      - "8787:8787"
+    environment:
+      NUXEO_DEV: "true"
+      NUXEO_CLID:
     volumes:
-      - my-local-conf.d:/etc/nuxeo/conf.d
+      - ./conf.d:/etc/nuxeo/conf.d
+      - data:/var/lib/nuxeo
+volumes:
+  data: {}
 ```
-{{/callout}}
+
+Configuration file description:
+
+- `00-docker.conf`: Some JVM tuning to optimize memory usage in a Docker environment.
+- `99-debug.conf`: Most used JVM debugging enablement; uncomment the one you want to use.
+- `99-mail.conf`: Sample SMTP configuration.
+
+You are free to update, add or remove any configuration file within the `conf.d` folder and modifications will be taken into account after a restart. See [Configuration Parameters Index](#configuration-parameters-index-nuxeoconf) for a detailed list of available configuration parameters.
 
 ## Advanced Usage
 
@@ -146,7 +194,7 @@ This file MUST not be committed, and must be kept as ignored. When several peopl
 
 Nuxeo CLI is still working as a standalone tool if installed locally.
 
-Note that some updates have been done on the way Studio is bound to your Customer Java plugin. Studio project is now installed using Project’s package dependency to enforce application dependencies resolution at runtime time.
+Note that some updates have been done on the way Studio is bound to your Customer Java plugin. The Studio project is now installed using Project’s package dependency to enforce application dependencies resolution at runtime time.
 
 Otherwise, regular commands still work:
 
