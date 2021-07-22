@@ -20,6 +20,7 @@ Some important notes regarding deployments:
 - Snapshot or Date-Based Releases are NOT allowed in PreProd and Prod environments. The Nuxeo Cloud Team only deploys production-ready code.
 - Marketplace Package versions should be used. The Nuxeo Cloud team will NOT deploy the same Marketplace Package to the same environment multiple times.
 - If a Marketplace Package contains a configuration template please identify this in the Nuxeo Cloud Deployment request.  
+- Deployments may take up to 30 minutes to complete once a Cloud team member begins the deployment process. This does not include the wait time required to address a deployment request and for it to be picked up by a cloud team member.  
 
 Nuxeo Cloud has Standard Maintenance Windows for all of our Production and Pre-Production Environments. The standard maintenance windows are used to make changes to minimize impact to users.
 
