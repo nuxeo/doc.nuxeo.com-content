@@ -1,5 +1,6 @@
 ---
 title: README Template
+description: 'Here is a template to be inspired of for README files.'
 review:
     comment: ''
     date: ''

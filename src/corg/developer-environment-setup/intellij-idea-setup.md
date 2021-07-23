@@ -1,5 +1,6 @@
 ---
 title: IntelliJ IDEA Setup
+description: Discover how to set up Intellij IDEA with Nuxeo Platform.
 review:
     comment: ''
     date: '2017-05-16'
