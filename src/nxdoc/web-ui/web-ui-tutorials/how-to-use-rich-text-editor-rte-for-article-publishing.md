@@ -36,7 +36,7 @@ This how-to requires Nuxeo LTS 2021 or newer.
 
 ## Using the Rich Text Editor
 
-**To test the default behavior of the rich text editor**
+**To test the default behavior of the rich text editor:**
 
 1. In a Workspace or a Folder, create one or several **Picture** documents.
 1. In a Workspace or a Folder, create a new **Note** document and keep the `HTML` format.
@@ -49,7 +49,7 @@ This how-to requires Nuxeo LTS 2021 or newer.
 --}}
 ![rte-view.png](nx_asset://f2526b56-ac17-48d3-86fe-a4029a9520b6 ?border=true)
 
-**To reference one or several pictures stored in Nuxeo**
+**To reference one or several pictures stored in Nuxeo:**
 
 1. Click on the **insert images from existing documents** {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/reference-images-icon.png
@@ -85,9 +85,7 @@ Any image you referenced is stored in a way that lets you parse the content and 
 
 ## Configuring the Query
 
-By default, inserting images in the rich text editor will reference the current content stored in any document having the `Picture` facet.
-
-Depending on your needs, you may want to change the query to retrieve specific document types, documents in a specific state (e.g. only return approved images). You may even want users to pick only the latest version available for greater control.
+By default, inserting images in the rich text editor will reference the current content stored in any document having the `Picture` facet. This is achieved by calling the `document_picker` page provider, which you may want to change to retrieve specific document types, documents in a specific state (e.g. only return approved images). You may even want users to pick only the latest version available for greater control.
 
 Here's a quick example to retrieve only the latest version of an image.
 
