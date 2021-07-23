@@ -23,6 +23,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/ywYuAQ'
     source_link: /display/NXDOC/How-To+Index
 tree_item_index: 1100
+is_overview: true
 history:
     -
         author: Manon Lumeau
