@@ -170,7 +170,7 @@ When referencing pictures in the rich text editor, Nuxeo won't keep track of whi
 
 Here's a summary of how you could proceed. Note that implementing this feature requires coding knowledge.
 
-1. Add an event handler that will be triggered on the following events for your custom document type: `About to create`, `Before document modification`.
+1. Add an event handler that will be triggered on the following events for your custom document type: [About to create]({{page page="common-events"}}#abouttocreate), [Before document modification]({{page page="common-events"}}#beforedocumentmodification).
 1. Associate an [automation script]({{page page='automation-scripting' space='studio'}}) or a [custom operation]({{page page='develop-your-own-java-code'}}) to it.
 
 It should roughly follow this logic (many variations are possible):
