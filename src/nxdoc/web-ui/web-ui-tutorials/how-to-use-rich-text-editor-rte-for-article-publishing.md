@@ -11,17 +11,16 @@ details:
     excerpt: Learn how to leverage the rich text editor to make Nuxeo an articles content repository
     level: Intermediate
     tool: Designer
-    topics: ???
+    topics: 'Web UI, Studio Designer, UIElements'
 labels:
   - nuxeo-web-ui
   - nuxeo-elements
-tree_item_index: 3000
+tree_item_index: 1550
 ---
 
 {{! excerpt}}
 In this tutorial you will learn how the rich text editor in Nuxeo Web UI and the associated elements can be leveraged to use Nuxeo as a content repository for articles.
 {{! /excerpt}}
-
 
 ## Use Case Introduction
 
@@ -29,7 +28,7 @@ As a company doing heavy content publishing, you can have various websites to ha
 
 In such situations, you can use Nuxeo to centralize all your content in a single place. Make use of the content services like renditions to retrieve your content in various formats and sizes, or workflows to manage your content publishing process. Nuxeo will not replace your existing CMS. Rather, it integrates with it to make your content CMS agnostic and will be used by your content authors to write articles in Web UI using the rich text editor it provides.
 
-In this page we will give you an overview of how you can use the rich text editor and configure it to your liking. You will also find some ideas to configure or extend it further.
+In this page we will give you an overview of how you can use the rich text editor and configure it to fit your needs. You will also find some ideas to configure or extend it further.
 
 {{#> callout type='info'}}
 This how-to requires Nuxeo LTS 2021 or newer.
@@ -37,10 +36,10 @@ This how-to requires Nuxeo LTS 2021 or newer.
 
 ## Using the Rich Text Editor
 
-To test the default behavior of the rich text editor
+**To test the default behavior of the rich text editor:**
 
-1. In a Workspace or a Folder, create one or several `Picture` documents.
-1. In a Workspace or a Folder, create a new `Note` document and keep the `HTML` format.
+1. In a Workspace or a Folder, create one or several **Picture** documents.
+1. In a Workspace or a Folder, create a new **Note** document and keep the `HTML` format.
 1. Type your content and save it directly while being in the document view. Use the rich text editor toolbar to leverage the various options.
 
 {{!--     ### nx_asset ###
@@ -50,10 +49,15 @@ To test the default behavior of the rich text editor
 --}}
 ![rte-view.png](nx_asset://f2526b56-ac17-48d3-86fe-a4029a9520b6 ?border=true)
 
-To reference one or several pictures stored in Nuxeo
+**To reference one or several pictures stored in Nuxeo:**
 
-1. Click on the `insert images from existing documents` [//TODO insert icon] toolbar icon.
-1. Search for your content using the quick filter (fulltext search) option, select as many images as you want and press the `Select` button.
+1. Click on the **insert images from existing documents** {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/reference-images-icon.png
+    name: reference-images-icon.png
+    1.1.3#screenshot#up_to_date
+--}}
+![reference-images-icon.png](nx_asset://59866bc2-01d7-4f98-ab38-124344076582 ?w=16) toolbar icon.
+1. Search for your content using the quick filter (fulltext search) option, select as many images as you want and press the **Select** button.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/rte-image-referencing-search.png
@@ -81,9 +85,7 @@ Any image you referenced is stored in a way that lets you parse the content and 
 
 ## Configuring the Query
 
-By default, inserting images in the rich text editor will reference the current content stored in any document having the `Picture` facet.
-
-Depending on your needs, you may want to change the query to retrieve specific document types, documents in a specific state (e.g. only return approved images). You may even want users to pick only the latest version available for greater control.
+By default, inserting images in the rich text editor will reference the current content stored in any document having the `Picture` facet. This is achieved by calling the `document_picker` page provider, which you may want to change to retrieve specific document types, documents in a specific state (e.g. only return approved images). You may even want users to pick only the latest version available for greater control.
 
 Here's a quick example to retrieve only the latest version of an image.
 
@@ -101,21 +103,19 @@ Save and [deploy your configuration]({{page page='nuxeo-dev-tools-extension'}}#h
 
 Two options are available to configure the image picker:
 
-- Configuring the search form: to provide additional / different search criteria for the images to reference
-- Configuring the results form: to replace or provide alternate views to the default grid results display
+- Configuring the search form: to provide additional/different search criteria for the images to reference.
+- Configuring the results form: to replace/provide alternate views to the default grid results display.
 
 Let's add an additional search criteria to find images related to a particular area.
 
 1. In Studio Modeler, go to **Configuration** > **Page Providers**; select the `document_picker` page provider.
 1. Add a new `aggregate`. Choose the **terms** aggregate type, and map it to the **dublincore > coverage** field.
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/coverage-aggregate-modeler-configuration.png
-    name: coverage-aggregate-modeler-configuration.png
-    1.1.3#screenshot#up_to_date
---}}
-![coverage-aggregate-modeler-configuration.png](nx_asset://e3acb068-96bd-48ca-a566-e11eee9845bb ?border=true)
-
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/coverage-aggregate-modeler-configuration.png
+      name: coverage-aggregate-modeler-configuration.png
+      1.1.3#screenshot#up_to_date
+    --}}
+    ![coverage-aggregate-modeler-configuration.png](nx_asset://e3acb068-96bd-48ca-a566-e11eee9845bb ?border=true)
 3. Save your configuration.
 4. Click on the **Configure Layouts in Designer** button in the top right corner of the screen. You will be taken to the layout configuration for the **document_picker** page provider in Studio Designer.
 
@@ -175,13 +175,13 @@ Here's a summary of how you could proceed. Note that implementing this feature r
 
 It should roughly follow this logic (many variations are possible):
 
-1. Parse the content of the properties where you reference images
-1. Detect referenced images and extract the document id
-1. Store these document ids in the current document (relations from the article to the images)
-1. Store the id of the current document in each referenced image (relations from the images to the article)
+1. Parse the content of the properties where you reference images.
+1. Detect referenced images and extract the document id.
+1. Store these document ids in the current document (relations from the article to the images).
+1. Store the id of the current document in each referenced image (relations from the images to the article).
 
 {{#> callout type='warning'}}
-Do not use the save parameter for automation operations / do not call the save method from the CoreSession when using Java code. You would trigger another modification event and run into an infinite loop. Your changes will be saved automatically since you are plugging your logic before writing the document into the database.
+Do not use the save parameter for automation operations/do not call the save method from the CoreSession when using Java code. You would trigger another modification event and run into an infinite loop. Your changes will be saved automatically since you are plugging your logic before writing the document into the database.
 {{/callout}}
 
 From there, all you need is to display the information in your document layout: using a document suggestion widget will map the document id to its title and provide a link to it.
