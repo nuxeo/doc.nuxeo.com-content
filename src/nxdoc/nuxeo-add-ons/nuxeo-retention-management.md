@@ -114,6 +114,14 @@ Note that the record object must be immutable. Specific metadata, such as unique
 </br>
 - Deletion of record object, metadata and audit trail data.
 
+## Standard Mode Specificities
+
+### Special role for deletion
+
+In standard mode, the users belonging to the **NuxeoRecordCleaners** group are allowed to delete documents under retention or legal hold. These users must still have the **Remove** permission granted on the documents to be deleted. The **NuxeoRecordCleaners** group does not exist by default, it must be created manually.
+
+The **NuxeoRecordCleaners** group has been introduced in lts2019 HF53.
+
 ## Compliance Mode Specificities
 
 ### Secured Storage
