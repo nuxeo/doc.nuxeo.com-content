@@ -202,6 +202,81 @@ db.default.update(
 )
 ```
 
+## Property Characteristics
+
+A property characteristic represents additional information a property could hold such as secured, deprecated or indexed.
+
+See below the basic contribution for a property characteristic:
+
+```xml
+<component name="my.component.name">
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <property schema="SCHEMA" name="PROPERTY" ... />
+  </extension>
+</component>
+```
+
+`SCHEMA` is the full schema name and `PROPERTY` is the path representing the property, for example:
+- `dublincore` and `created` for the `dc:created` property
+- `files` and `files/*/file/name` for the `files:files/*/file/name` property.
+
+### Secured
+
+When a property is secured, only Administrators can edit them. This prevents regular users to edit sensitive data.
+
+Contribute the xml below to make a property secured:
+
+```xml
+<component name="my.component.name">
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <property schema="SCHEMA" name="PROPERTY" secured="true" />
+  </extension>
+</component>
+```
+
+The following properties are secured by default:
+- `dc:created`
+- `dc:modified`
+- `dc:creator`
+- `dc:contributors`
+- `dc:lastContributor`
+
+### IndexOrder
+
+{{#> callout type='info' heading='Only works on MongoDB'}}
+{{/callout}}
+
+You can contribute indexes to be created at Nuxeo startup. Nuxeo supports these types of index: `ascending`, `descending`, and `none` to disable the index.
+
+Contribute the xml below to make a property indexed:
+
+```xml
+<component name="my.component.name">
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <property schema="SCHEMA" name="PROPERTY" indexOrder="ascending" />
+    <property schema="SCHEMA" name="PROPERTY" indexOrder="descending" />
+  </extension>
+</component>
+```
+
+### Deprecation
+
+You can mark a property as deprecated or removed with or without a fallback (present in the same schema).
+
+A deprecated property still has its declaration in the schema XSD. A warn log will be printed if the code tries to read or write this property. The fallback takes the precedence when reading the property, if it is null then the deprecated property is returned. During write operations, both properties receive the new value.
+
+A removed property doesn't have anymore its declaration in the schema XSD. An error log will be printed if the code tries to read or write this property. Null will be returned and nothing will be stored if no fallback is defined, otherwise, the fallback takes the precedence.
+
+Contribute the xml below to make a property deprecated or removed:
+
+```xml
+<component name="my.component.name">
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <property schema="SCHEMA" name="PROPERTY" deprecation="deprecated" />
+    <property schema="SCHEMA" name="PROPERTY" deprecation="removed" fallback="ANOTHER_PROPERTY" />
+  </extension>
+</component>
+```
 
 * * *
 
