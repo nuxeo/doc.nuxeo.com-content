@@ -4,7 +4,7 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: 'release'
-  date: '2021-07-29'
+  date: '2021-08-04'
   status: ok
 toc: true
 ---
@@ -26,7 +26,7 @@ The support for macOS 10.13 was accidentally lost after the Nuxeo Drive 5.2.1 re
 
 #### `ca-bundle` Option Ignored When No SSL Verification Done
 
-Previously, the `ca-bundle` option was set to `None` or removed when the value of `ssl-no-verify` was changed at runtime. This behaviour was bad as it could cause errors and forced the user had to manually set the option again when re-enabling the SSL verification.
+Previously, the `ca-bundle` option was set to `None` or removed when the value of `ssl-no-verify` was changed at runtime. This behaviour was bad as it could cause errors and forced the user to manually set the option again when re-enabling the SSL verification.
 
 To prevent this situation, the `ca-bundle` option is now ignored and never changed by the application when the ssl-no-verify option is set to `True`.
 
