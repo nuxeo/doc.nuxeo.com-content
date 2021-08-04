@@ -19,11 +19,6 @@ Quick search can be accessed from any site page. At any time, you can search a d
 
 ![]({{file name='quick-search-web-ui.png'}} ?w=600,border=true)
 
-Typing keywords in the search field and pressing the "Enter" key triggers a full-text search. Full-text search follows the criteria below:
-- Based on stemming
-- With AND operator (all words must be in the document)
-- Searching on the title, the description and the content (text of a note, content of the main attachment of a file)
-
 **To search a document using quick search:**
 
 1. Type your keywords in the quick search field.
@@ -35,6 +30,8 @@ When you start typing words in the quick search field, in the top right corner o
 - Documents
 - User
 - Group
+
+Pressing the "Enter" key will navigate to the first item in the suggestions. It's also possible to move the cursor (thin blue bar on the left) among the suggestions with the UP and DOWN keys and then pressing the "Enter" key will navigate to the selected item.
 
 ## Search Tab
 
