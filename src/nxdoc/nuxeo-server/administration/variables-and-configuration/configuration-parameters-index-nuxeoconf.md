@@ -2237,6 +2237,46 @@ There're two possible values, changing slightly the before/after reload logic:
 
 * * *
 
+#### `nuxeo.thumbnail.transaction.timeout.seconds`
+
+The maximum duration to generate a thumbnail for a document.
+The limit is set at the transaction level (and not at the command level) because generation may involve multiple commands.
+
+**Since LTS 2021.6**
+
+**Default Value**
+
+`300`
+
+* * *
+
+#### `nuxeo.picture.views.transaction.timeout.seconds`
+
+The maximum duration to generate picture views for a document.
+The limit is set at the transaction level (and not at the command level) because generation may involve multiple commands.
+
+**Since LTS 2021.6**
+
+**Default Value**
+
+`300`
+
+* * *
+
+#### `nuxeo.video.transaction.timeout.seconds`
+
+The maximum duration to generate video conversions for a document.
+The limit is set at the transaction level (and not at the command level) because generation may involve multiple commands.
+
+**Since LTS 2021.6**
+
+**Default Value**
+
+`600`
+
+* * *
+
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
