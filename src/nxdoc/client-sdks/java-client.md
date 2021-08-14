@@ -74,4 +74,4 @@ history:
         version: '1'
 
 ---
-{{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo-java-client/master/README.md')}}}
+[README](https://github.com/nuxeo/nuxeo-java-client/blob/master/README.md)
