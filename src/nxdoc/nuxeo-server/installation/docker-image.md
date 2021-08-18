@@ -67,9 +67,9 @@ To pull the latest tag of the `nuxeo/nuxeo` image from the Docker registry and r
 docker run --name nuxeo -p 8080:8080 docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 ```
 
-The `2021` tag points to the latest release, for instance [2021.0](https://github.com/nuxeo/nuxeo-lts/releases/tag/v2021.0).
+The `2021` tag points to the latest public release, for instance [2021.0](https://github.com/nuxeo/nuxeo-lts/releases/tag/v2021.0). 
 
-To get the latest build, versioned `2021.x.y`, you can use the `2021.x` tag.
+To get the latest development build, versioned `2021.x.y`, you can use the `2021.x` tag.
 
 The default command executed when running a container is `nuxeoctl console`. It can be overridden by specifying an argument to `docker run`. For instance, to open a bash shell in the container and automatically remove the container when it exits, just run:
 
