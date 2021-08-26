@@ -2,7 +2,7 @@
 title: Nuxeo DevContainer
 description: "The Nuxeo DevContainer allows you to bootstrap, develop and deploy your Nuxeo Custom Application in a containerized environment."
 review:
-    date: '2021-04-09'
+    date: '2021-08-26'
     status: ok
     comment: ''
 labels:
@@ -16,7 +16,7 @@ The Nuxeo Development Container allows you to speed up your development flow by 
 {{! /excerpt}}
 
 {{#> callout type='warning'}}
-This new feature may be subject to some minor issues, please report issues to our support team
+This new feature may be subject to some minor issues, please report them to the support team.
 {{/callout}}
 
 ## Requirements
@@ -43,7 +43,7 @@ We recommend using the online hosted script.
 
 - **When using the online hosted script:**
 
-  {{#> callout type='warn'}}
+  {{#> callout type='warning'}}
   For now, the bootstrap script is only designed to work on *NIX system*, but it will be adapted to Windows.
   {{/callout}}
 
@@ -53,7 +53,7 @@ We recommend using the online hosted script.
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nuxeo-sandbox/studio-dev-env/master/start-bootstrap.sh) my-first-project"
   ```
 
-- **When using the Nuxeo CLI generator**
+- **When using the Nuxeo CLI generator:**
 
   When Nuxeo CLI is locally installed:
 
@@ -83,7 +83,7 @@ It also adds into the image `tmux` and `ohmyzsh` that you will use for shell int
 
 Using our development container, the authentication for private registries of Maven, NPM and Docker against packages.nuxeo.com will be configured out of the box. It binds the container to your local Docker daemon to allow building and starting other containers from the development environment using the Docker in Docker pattern...
 
-Then, if you use Visual Studio Code as your IDE, you can directly open the project and you will be prompted to start the development environment as a devcontainer. It allows you to open your project inside a container and take advantage of Visual Studio Code's full feature set, plugins, and so on, including an in-container pre-configured shell.
+Then, if you use Visual Studio Code as your IDE, you can directly open the project and you will be prompted to start the development environment as a development container. It allows you to open your project inside a container and take advantage of Visual Studio Code's full feature set, plugins, and so on, including an in-container pre-configured shell.
 
 For other IDEs, we recommend you to let the container’s shell (started with `./start-shell.sh` script) open to run the necessary Nuxeo CLI commands described hereafter, or any other tools command.
 
@@ -132,7 +132,7 @@ NB: If you are not using the development environment; and your package depends o
 
 ## Deploy your Custom Application Image
 
-The `docker-compose` generator creates a basic Docker Compose description file that starts your custom image and forward the container’s port 8080 to 8080 on localhost. You can update the `docker-compose` file to start a MongoDB, Elasticsearch, ...
+The `docker-compose` generator creates a basic Docker Compose description file that starts your custom image and forwards the container’s port 8080 to 8080 on localhost. You can update the `docker-compose` file to start a MongoDB, Elasticsearch, ...
 
 ```shell
 docker-compose up
@@ -142,7 +142,6 @@ For a more detailed list of available commands to interact with Docker Compose, 
 
 {{#> callout type='warning'}}
 Limitations:
-
 - For now, the generated `docker-compose.yaml` file is only deploying your custom Docker image. In the future, it will embed external services like MongoDB and Elasticsearch.
 - Using VSCode, it is **mandatory** to execute `docker-compose` outside the Development Container in order to properly mount the configuration folder; otherwise your custom configuration parameter won't be taken into account.
 - If you are outside development container, or VSCode, you have to update the `docker-compose.yaml` file to append a correct NUXEO_CLID.
