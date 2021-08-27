@@ -116,7 +116,7 @@ Using Automation brings several advantages :
 
 *   Thanks to Operation Chains, you can have a single call executing several operations within the same transaction
 
-![]({{file name='Selection_109.png'}} ?w=650,border=true)
+![]({{file name='Sélection_109.png'}} ?w=650,border=true)
 
 The heart of Nuxeo SDK for Android is the Nuxeo Automation Client.
 

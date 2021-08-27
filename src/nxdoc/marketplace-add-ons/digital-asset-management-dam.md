@@ -26,272 +26,268 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/MYGyAQ'
     source_link: /pages/viewpage.action?pageId=28475697
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 11:15'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-28 11:15'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 14:25'
         message: "Remove DAM compat link, add link to How to Contribute Picture Conversions\uFEFF "
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-10 09:31'
         message: ''
         version: '47'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-23 11:11'
         message: ''
         version: '46'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-23 09:49'
         message: ''
         version: '45'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-23 09:23'
         message: ''
         version: '44'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-20 17:00'
         message: ''
         version: '43'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-20 16:58'
         message: ''
         version: '42'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-03-12 15:10'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-12 14:02'
         message: '7.2: IPTC metadata are not displayed anymore'
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-25 08:23'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:10'
         message: ''
         version: '38'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-02 19:54'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 14:21'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 13:41'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:34'
         message: Add related pages
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:16'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:12'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:12'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:11'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:11'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:11'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:10'
         message: 'Merging Nuxeo DAM user, admin and dev documentation'
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 17:25'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 16:57'
         message: ''
         version: '25'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-06 14:54'
         message: ''
         version: '24'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-06 14:37'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 09:55'
         message: Add installation
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 23:15'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 22:56'
         message: ''
         version: '20'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-03 17:20'
         message: ''
         version: '19'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-03 16:07'
         message: ''
         version: '18'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-03 15:49'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 14:57'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 14:15'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:17'
         message: Migrated to Confluence 4.0
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:17'
         message: Fixed broken link
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-03 14:46'
         message: >-
             Replaced Mercurial with GitHub and moved page to the technical
             documentation space
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-03 14:46'
         message: Updated link to PDF to download 5.6-SNAPSHOT version
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-21 14:42'
         message: Fixed broken link
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-15 15:11'
         message: Fixed PDF icon not diplayed anymore
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-15 12:18'
         message: ''
         version: '8'
-    - 
+    -
         author: Thomas Roger
         date: '2011-12-06 18:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Thomas Roger
         date: '2011-12-06 18:14'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-16 12:48'
         message: Added PDF download panel
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-05 12:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Jane Zupan
         date: '2010-08-06 17:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Jane Zupan
         date: '2010-08-06 17:04'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-08-03 00:40'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 [The Digital Asset Management addon](http://www.nuxeo.com/en/products/dam) of the Nuxeo Platform provides multimedia files management (pictures, audio and video).
-
 {{! /excerpt}}
 
 ## Installation
 
 {{! multiexcerpt name='MP-installation-easy'}}
-
 This add-on requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page space='admindoc710' page='installing-a-new-package-on-your-instance'}}).
-
 {{! /multiexcerpt}}
 
 It is also possible to install it from the [Startup wizard]({{page space='ADMINDOC' page='Setup#Setup-module-installat'}}).
@@ -304,7 +300,7 @@ After you installed Nuxeo DAM, you have three new document types available.
 
 ## Functional Overview
 
-{{{multiexcerpt 'functional_overview' page='USERDOC:Digital Asset Management with the Nuxeo Platform'}}}
+{{{multiexcerpt 'Functional_overview' space='userdoc' page='digital-asset-management-with-the-nuxeo-platform'}}}
 
 ## Technical Overview
 

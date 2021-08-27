@@ -296,26 +296,33 @@ We need two rules for this node: one that reminds Jane to review the document ev
 
     5.  The chain should be configured as following:
 
-        <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Operation</th><th colspan="1">Parameters</th></tr><tr><td colspan="1">Fetch > Context document(s)</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Notification > Send Email</td><td colspan="1">
-
-        **From:**
-        no-reply@ohmydoc.com
-        **
-        Message:**
-        This is a friendly automated reminder.
+        <div class="table-scroll">
+        <table class="hover">
+        <tbody>
+        <tr>
+        <th colspan="1">Operation</th>
+        <th colspan="1">Parameters</th>
+        </tr>
+        <tr>
+        <td colspan="1">Fetch > Context document(s)</td>
+        <td colspan="1">&nbsp;</td>
+        </tr>
+        <tr>
+        <td colspan="1">Notification > Send Email</td>
+        <td colspan="1">
+        **From:** no-reply@ohmydoc.com</br>
+        **Message:** This is a friendly automated reminder.
         Please remember that you should review the following press release:
-        <a href="${docUrl}">${Document['dc:title']}</a>
-
-        **Subject:**
-        [Reminder] Please review ${Document['dc:title']}
-
-        **To:**
-        @{Fn.getEmail("Jane")}
-
+        ${Document['dc:title']}</br>  
+        **Subject:** [Reminder] Please review ${Document['dc:title']}</br>
+        **To:** @{Fn.getEmail("Jane")}</br>
         **HTML:**
         true
-
-        </td></tr></tbody></table></div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
 4.  Click on **Save**.
     That's it! Our first rule is ready.
 

@@ -398,7 +398,7 @@ To use the Dropbox file picker with Internet Explorer 11, the following URL must
 
 On the document creation form, a Box button enables you to browse your Box content and select a document stored there.
 
-![]({{file name='8.2_LiveConnect_file_creation.png' space='nxdoc' page='nuxeo-live-connect'}} ?w=500,h=366,border=true)
+![]({{file name='8.2_LiveConnect_file_creation.png' space='nxdoc' version='810' page='nuxeo-live-connect'}} ?w=500,h=366,border=true)
 
 This option is available for the following Nuxeo document types:
 
