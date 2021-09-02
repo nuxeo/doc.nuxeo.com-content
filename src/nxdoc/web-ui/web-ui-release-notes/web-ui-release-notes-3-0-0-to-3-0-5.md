@@ -1,9 +1,9 @@
 ---
-title: Nuxeo Web UI 11.1 Release Notes
+title: Nuxeo Web UI for LTS 2021 Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
     comment: ''
-    date: '2020-06-24'
+    date: '2021-09-02'
     status: ok
 toc: true
 labels:
@@ -11,26 +11,37 @@ tree_item_index: 999
 hidden: true
 ---
 
-{{! multiexcerpt name='release-notes'}}
+{{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
 
-{{! multiexcerpt name='matching-notes'}}
-{{#> callout type='info' heading='Upgrade Notes'}}
-This page mentions what's new. Refer to the [upgrade notes]({{page page='nxdoc/cloud/web-ui-upgrade-notes'}}) to transition to this version.
-{{/callout}}
-{{! /multiexcerpt}}
+## What's New in Web UI for LTS 2021 (versions 3.0.0 to 3.0.5)
 
-## What's New in Web UI 11.1
-
+{{! multiexcerpt name='web-ui-updates'}}
 ### Upload Experience for Large Files
 
 Web UI provides a safe experience when uploading files, even for large files in the 75gb range and when the upload goes on for hours due to a slow connection.
 
 If a network problem happens, guidance is provided so that you can decide what to do with the situation: e.g. create the document anyway and upload the attachment later.
 
-- [NXP-29189](https://jira.nuxeo.com/browse/NXP-29189)
-- [NXP-28495](https://jira.nuxeo.com/browse/NXP-28495)
-- [NXP-27346](https://jira.nuxeo.com/browse/NXP-27346)
-- [NXP-27162](https://jira.nuxeo.com/browse/NXP-27162)
+- [[NXP-29189](https://jira.nuxeo.com/browse/NXP-29189)]
+- [[NXP-28495](https://jira.nuxeo.com/browse/NXP-28495)]
+- [[NXP-27346](https://jira.nuxeo.com/browse/NXP-27346)]
+- [[NXP-27162](https://jira.nuxeo.com/browse/NXP-27162)]
+
+### Configurable Header and Footer
+
+Web UI allows you to [configure a custom header and footer]({{page page='how-to-add-a-header-and-a-footer'}}) to display static and / or dynamic information on every page.
+
+[[WEBUI-306](https://jira.nuxeo.com/browse/WEBUI-306)]
+
+### Rich Text Editor Can Reference Images
+
+The rich text editor allows you to reference images stored in Nuxeo. This is useful to [leverage Nuxeo as a headless CMS]({{page page='how-to-use-rich-text-editor-rte-for-article-publishing'}}) for an article publishing use case typically. Additionally, most default buttons from QuillJS have been added to Web UI [[ELEMENTS-1379](https://jira.nuxeo.com/browse/ELEMENTS-1379)].
+
+### Accessibility Improvements
+
+An effort has been started to improve Nuxeo Web UI's accessibility, the goal being to reach full compliance with WCAG 2.1 level AA. This is a continuous effort, and many important issues have been fixed already.
+
+[[Solved Accessibility Issues](https://jira.nuxeo.com/issues/?jql="Epic Link" in %28'WEBUI-190'%2C 'WEBUI-193'%29 and resolution !%3D unresolved ORDER BY priority DESC)]
 
 ### Advanced Validation Logic for Forms
 
@@ -39,6 +50,12 @@ Form validation offers advanced options:
 - Server-side logic can also check the input and trigger an error that will be made visible to the user
 
 [[NXP-28048](https://jira.nuxeo.com/browse/NXP-28048)]
+
+### Atomic Permissions for UI components
+
+Web UI checks for granular permissions in order to display components instead of a high level one. This helps with keeping the UI accurate even if you reconfigured the permissions and how they should be made available to users.
+
+[[WEBUI-5](https://jira.nuxeo.com/browse/WEBUI-5)]
 
 ### Easier to Find and Read Audit Entries
 
@@ -90,5 +107,7 @@ The following elements were moved to the Nuxeo Elements library, improving their
 - A default HTML page is shown when no preview is available in Web UI</br> [[NXP-27648](https://jira.nuxeo.com/browse/NXP-27648)]
 - When two people complete the same task, the second person is notified and taken to the document</br> [[NXP-27462](https://jira.nuxeo.com/browse/NXP-27462)]
 
-This release also comes with over 160 bugs fixed, making Web UI more solid than ever.
+## Learn More
+
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project IN %28'WEBUI', 'ELEMENTS'%29 AND fixVersion IN %28'3.0.0','3.0.1','3.0.2','3.0.3','3.0.4','3.0.5'%29 ORDER BY type DESC, priority DESC) is available in our bug tracking tool.
 {{! /multiexcerpt}}
