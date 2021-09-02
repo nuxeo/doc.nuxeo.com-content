@@ -1,9 +1,9 @@
 ---
-title: Upgrading Nuxeo Web UI from LTS 2019 to 11.x
-description: Upgrade notes from Nuxeo Web UI LTS 2019 (10.10) to 11.x
+title: Upgrading Nuxeo Web UI from LTS 2019 to LTS 2021
+description: Upgrade notes from Nuxeo Web UI LTS 2019 (10.10) to LTS 2021
 review:
     comment: ''
-    date: '2021-01-07'
+    date: '2021-09-02'
     status: ok
 toc: true
 labels:
@@ -19,7 +19,7 @@ This page mentions how to do a technical upgrade. Have a look at the [release no
 {{/callout}}
 {{! /multiexcerpt}}
 
-## Upgrading from Web UI LTS 2019 to Web UI 11.x
+## Upgrading Web UI from LTS 2019 to LTS 2021
 
 ### Polymer 3 Migration
 
@@ -120,6 +120,10 @@ Spreadsheet addon is now loaded by default but the button contribution is disabl
 ![Spreadsheet package enable button in Designer](nx_asset://b8fd28dd-0272-43b1-a083-dfde295c312b ?w=650,border=true)
 {{! /multiexcerpt}}
 
+### Rich Text Editor Uses QuillJS by Default
+
+<a href="https://quilljs.com" target="_blank">QuillJS</a> is used as the solution for the rich text editor in Web UI. This change is [available as an option](https://jira.nuxeo.com/browse/WEBUI-291) in LTS 2019 if you want your users to get accustomed to it before migrating.
+
 ### Breaking Changes
 
 #### BROWSER_ACTIONS Slot Removal
@@ -192,6 +196,6 @@ Since [ELEMENTS-1012](https://jira.nuxeo.com/browse/ELEMENTS-1012), `nuxeo-slot`
 
 ### Drop Support for Edge Legacy
 
-Starting from 11.x, Nuxeo Web UI no longer supports *Microsoft Edge Legacy*. See [here](https://doc.nuxeo.com/nxdoc/web-ui-overview/) for the complete list of supported browsers.
+Starting from LTS 2021, Nuxeo Web UI no longer supports *Microsoft Edge Legacy*. See [here](https://doc.nuxeo.com/nxdoc/web-ui-overview/) for the complete list of supported browsers.
 
 {{! /multiexcerpt}}
