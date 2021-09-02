@@ -53,7 +53,7 @@ Form validation offers advanced options:
 
 ### Atomic Permissions for UI components
 
-Web UI checks for granular permissions in order to display components instead of a high level one. This helps with keeping the UI accurate even if you reconfigured the permissions and how they should be made available to users.
+Web UI checks for granular permissions in order to display components instead of high level permissions like "Read" or "Edit". This helps with keeping the UI accurate even if you reconfigured the permissions and how they should be made available to users.
 
 [[WEBUI-5](https://jira.nuxeo.com/browse/WEBUI-5)]
 
@@ -99,13 +99,11 @@ The following elements were moved to the Nuxeo Elements library, improving their
 
 ### Other Noteworthy Items
 
-- Document creation and edit popups size can be changed using theme variables</br> [[NXP-26938](https://jira.nuxeo.com/browse/NXP-26938)]
-- When doing a bulk download, a notification is displayed until the download starts</br> [[NXP-28478](https://jira.nuxeo.com/browse/NXP-28478)]
-- Workflow analytics are clearer by showing a label for buttons pressed instead of an id</br> [[NXP-28338](https://jira.nuxeo.com/browse/NXP-28338)]
-- Portrait dimensioned videos are better handled in conversions</br> [[NXP-28856](https://jira.nuxeo.com/browse/NXP-28856)]
-- Document type name in the creation notification confirmation is translated</br> [[NXP-28533](https://jira.nuxeo.com/browse/NXP-28533)]
-- A default HTML page is shown when no preview is available in Web UI</br> [[NXP-27648](https://jira.nuxeo.com/browse/NXP-27648)]
-- When two people complete the same task, the second person is notified and taken to the document</br> [[NXP-27462](https://jira.nuxeo.com/browse/NXP-27462)]
+- Document creation and edit popups size can be changed using theme variables<br/> [[NXP-26938](https://jira.nuxeo.com/browse/NXP-26938)]
+- A configuration property can change navigation URLs to use the document ID instead of their path<br/> [[WEBUI-14](https://jira.nuxeo.com/browse/WEBUI-14)]
+- Portrait dimensioned videos are better handled in conversions<br/> [[NXP-28856](https://jira.nuxeo.com/browse/NXP-28856)]
+- When two people complete the same task, the second person is notified and taken to the document<br/> [[NXP-27462](https://jira.nuxeo.com/browse/NXP-27462)]
+- A UI component lets you switch between available repositories<br/> [[NXP-28999](https://jira.nuxeo.com/browse/NXP-28999)]
 
 ## Learn More
 
