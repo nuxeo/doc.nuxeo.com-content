@@ -3,7 +3,7 @@ title: Upgrading Nuxeo Web UI from LTS 2019 to 11.x
 description: Upgrade notes from Nuxeo Web UI LTS 2019 (10.10) to 11.x
 review:
     comment: ''
-    date: '2021-01-07'
+    date: '2021-09-03'
     status: ok
 toc: true
 labels:
@@ -152,6 +152,10 @@ Since [NXP-25740](https://jira.nuxeo.com/browse/NXP-25740), the `nuxeo-picture-d
 </nuxeo-slot-content>
 
 ```
+
+#### Quill replaces Alloy as our default rich text editor
+
+After [ELEMENTS-1124](https://jira.nuxeo.com/browse/ELEMENTS-1124) and [NXP-28691](https://jira.nuxeo.com/browse/NXP-28691), Alloy is no longer our default rich text editor. It was replaced with [Quill](https://quilljs.com/), which is more powerful and has the ability to edit basic styling and headings, adding links, adding images, among others.
 
 ### Deprecations
 
