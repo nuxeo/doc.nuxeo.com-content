@@ -42,7 +42,7 @@ We are keeping a compatilibity layer with NodeJS v10 and the Webdriver v4 API fo
 ### Other Noteworthy Changes
 
 - Web UI is now available in the Czech language. We would like to thank all the people who participated in that translation effort.<br />[[WEBUI-403](https://jira.nuxeo.com/browse/WEBUI-403)]
-- The HTML editor works properly in a nuxeo-data-table-form. <br /> [[ELEMENTS-1393](https://jira.nuxeo.com/browse/ELEMENTS-1393)]
+- The HTML editor works properly in edit layouts and nuxeo-data-table-form. <br /> [[ELEMENTS-1393](https://jira.nuxeo.com/browse/ELEMENTS-1393)]
 
 ## Learn More
 
