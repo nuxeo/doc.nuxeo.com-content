@@ -10,4 +10,4 @@ labels:
 tree_item_index: 550
 ---
 
-{{{multiexcerpt 'upgrade-notes' page='web-ui-lts-2021-upgrade-notes'}}}
+{{{multiexcerpt 'upgrade-notes' page='web-ui-upgrade-notes-lts-2021'}}}
