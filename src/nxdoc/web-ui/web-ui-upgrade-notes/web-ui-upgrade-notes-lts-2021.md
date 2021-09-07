@@ -122,7 +122,9 @@ Spreadsheet addon is now loaded by default but the button contribution is disabl
 
 ### Rich Text Editor Uses QuillJS by Default
 
-<a href="https://quilljs.com" target="_blank">QuillJS</a> is used as the solution for the rich text editor in Web UI. This change is [available as an option](https://jira.nuxeo.com/browse/WEBUI-291) in LTS 2019 if you want your users to get accustomed to it before migrating.
+Since [ELEMENTS-1124](https://jira.nuxeo.com/browse/ELEMENTS-1124) and [NXP-28691](https://jira.nuxeo.com/browse/NXP-28691), <a href="https://quilljs.com" target="_blank">Quill</a> is used as the solution for the rich text editor in Web UI instead of Alloy. Quill is more powerful and provides an overall better experience.
+
+In LTS 2019, this change is already [available as an option](https://jira.nuxeo.com/browse/WEBUI-291). Feel free to activate it to test the editor and to allow your users to get accustomed to it before migrating.
 
 ### Breaking Changes
 
@@ -132,7 +134,7 @@ The `BROWSER_ACTIONS` nuxeo slot was removed under [NXP-26184](https://jira.nuxe
 
 #### Forked nuxeo-document-content Might Lose Selection Actions
 
-After [NXP-25345](https://jira.nuxeo.com/browse/NXP-25345), Nuxeo Web UI introduced the ability to override selection actions. Elements that were forked from an older version of `nuxeo-document-content` and that override the `selectionActions` native slot with new content will be missing the contributions to the `RESULTS_SELECTION_ACTIONS` nuxeo slot. This can be rectified by adding the desired actions to the new slot, and by deleting the following piece of code:
+Since [NXP-25345](https://jira.nuxeo.com/browse/NXP-25345), Nuxeo Web UI introduced the ability to override selection actions. Elements that were forked from an older version of `nuxeo-document-content` and that override the `selectionActions` native slot with new content will be missing the contributions to the `RESULTS_SELECTION_ACTIONS` nuxeo slot. This can be rectified by adding the desired actions to the new slot, and by deleting the following piece of code:
 
 ```
 <div slot=“selectionActions”>
