@@ -40,9 +40,9 @@ You can classify any type of document in a collection. You just need to have Rea
 {{! multiexcerpt name='collecting-web-ui'}}
 Documents can be collected:
 
-- Individually by clicking on the icon&nbsp;![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}} ?w=16) of the document
+- Individually by clicking on the icon ![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}} ?w=16) of the document
   ![]({{file name='add-to-collection-web-ui.png'}} ?w=250,border=true)
-- By batch by selecting documents from a list of documents and clicking on the icon&nbsp;![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}}) in the selection header.
+- [In bulk]({{page page='web-ui-bulk-actions' space='nxdoc'}}) by selecting documents from a list of documents and clicking on the icon ![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}}) in the selection header.
 
 In both cases you can select the collection by:
 - Browsing the collections in the list
@@ -88,8 +88,8 @@ To remove a document from a collection click on the icon ![]({{file name='delete
 To remove several documents from a collection:
 1. Go to the **Collections** tab in your side menu.
 2. Click on the collection name that you want to manage.
-3. Select the documents to remove using the checkboxes.
-4. In the selection header, click on the **Remove from collection** icon&nbsp;![]({{file name='delete-circle-icon_web-ui.png' page='icons-index'}}).
+3. Select the documents to remove individually using the checkboxes, by selecting a first document then pressing shift + click on the latest document to select a range, or by [selecting all documents]({{page page='web-ui-bulk-actions' space='nxdoc'}}).
+4. In the selection header, click on the **Remove from collection** icon ![]({{file name='delete-circle-icon_web-ui.png' page='icons-index'}}).
 
 ![]({{file name='remove-from-collection-web-ui.png'}} ?w=600,border=true)
 
