@@ -10,7 +10,7 @@ labels:
 toc: true
 tree_item_index: 1200
 version_override:
-    LTS 2021: 2021/nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2021
+    LTS 2021: /nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2021
     LTS 2017: 910/nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2017
     LTS 2016: 810/nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2016
     LTS 2015: 710/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
