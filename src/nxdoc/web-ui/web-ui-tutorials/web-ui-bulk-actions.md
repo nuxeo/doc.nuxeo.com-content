@@ -17,7 +17,7 @@ tree_item_index: 490
 Bulk actions leverage the [Bulk Action Framework]({{page page='bulk-action-framework'}}). Make sure your [architecture]({{page page='nuxeo-reference-architectures'}}) complies with it.
 {{/callout}}
 
-Bulk actions are available since LTS 2021. To prevent bringing any breaking change through an update, you need to enable this feature explicitly by adding the following property to your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
+Bulk actions were introduced to LTS 2021 with Web UI 3.0.6. To prevent bringing any breaking change through an update, you need to enable this feature explicitly by adding the following property to your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
 ```
 nuxeo.selection.selectAllEnabled=true
 ```
@@ -30,7 +30,7 @@ Once enabled, users can select all documents in a results listing and execute an
 
 //TODO image select all after filtering
 
-Clicking on the checkbox selects all documents at once, both the ones that are visible and the ones that are not currently displayed on screen. Clicking it again deselects all documents. Note that it is not possible to deselect documents individually at this stage.
+Clicking on the checkbox of the header selects all documents at once, both the ones that are visible and the ones that are not currently displayed on screen. Clicking it again deselects all documents. Note that it is not possible to deselect documents individually at this stage.
 
 ### Available Default Bulk Actions
 
