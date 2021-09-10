@@ -23,10 +23,10 @@ In this tutorial you will learn how to insert a button that can execute logic on
 ## Requirements
 
 {{#> callout type='info'}}
-This capability is available since LTS 2021.
+This capability is available since LTS 2021 with Web UI 3.0.6.
 {{/callout}}
 
-- Activate the `Select All and Bulk Actions` feature by adding the `nuxeo.selection.selectAllEnabled=true` property in your [nuxeo.conf]({{page page="configuration-parameters-index-nuxeoconf"}}) file 
+- Activate the `Select All and Bulk Actions` feature by adding the `nuxeo.selection.selectAllEnabled=true` property in your [nuxeo.conf]({{page page="configuration-parameters-index-nuxeoconf"}}) file
 {{{multiexcerpt 'requirements-bulk-action' page='how-to-insert-user-action'}}}
 
 ## Create Your Logic
