@@ -128,6 +128,26 @@ In LTS 2019, this change is already [available as an option](https://jira.nuxeo.
 
 ### Breaking Changes
 
+#### Cropper.js no longer shipped by default on Web UI
+Cropper is no longer part of our dependencies, as was the case on previous versions o Web UI.
+
+In case your project has a dependency on it, please consider the following steps:
+1. Download the package from [cropper.js website](https://fengyuanchen.github.io/cropperjs/) and find two files called cropper.min.js and cropper.min.css;
+2. In your Studio project, switch to Designer and click on the "Resources" tab;
+3. Create a folder called "cropper" and upload cropper.min.js and cropper.min.css to it;
+4. In your main bundle, add the following code:
+    ```
+    <link rel="stylesheet" href="cropper/cropper.min.css">
+    <script src="cropper/cropper.min.js"></script>
+    ```
+5. Deploy the project to your server;
+6. Check on your browser dev tools for the presence of Cropper.js in the global namespace:
+    ```
+    window.Cropper;
+    ```
+
+The console should return Cropper.js main function, thus confirming the presence of the package in the project.
+
 #### BROWSER_ACTIONS Slot Removal
 
 The `BROWSER_ACTIONS` nuxeo slot was removed under [NXP-26184](https://jira.nuxeo.com/browse/NXP-26184). It was already deprecated since Web UI 0.9 and had no known usage. It was replaced by the `RESULTS_SELECTION_ACTIONS` slot.
