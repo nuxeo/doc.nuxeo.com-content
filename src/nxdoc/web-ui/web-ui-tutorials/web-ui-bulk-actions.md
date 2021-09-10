@@ -46,7 +46,7 @@ Once the selection is made, the following default actions are available as bulk 
 The following default actions are NOT available as bulk actions:
 
 * Download all as zip. This action would not be scalable. To download files in large numbers, we recommend using [Nuxeo Drive]({{page page='nuxeo-drive'}}) instead.
-* Compare. Web UI and Nuxeo Server provide the capacity to [compare two documents]({{page space='userdoc' page='compare'}}) or versions at this stage.
+* Compare. This action is handled on the client side and does not make use of the [bulk action framework]({{page page='bulk-action-framework'}}). Web UI and Nuxeo Server provide the capacity to [compare two documents]({{page space='userdoc' page='compare'}}) or versions at this stage.
 * Add to clipboard. This action is handled on the client side and does not make use of the [bulk action framework]({{page page='bulk-action-framework'}}). If you want to integrate an action that allows you to do this at scale, you can take inspiration from our <a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/copy-move" target="_blank">copy / move cookbook</a> entry and adapt it, knowing that you can [create your custom bulk actions using Nuxeo Studio]({{page page='howto-create-bulk-actions-studio' space='studio'}}).
 * Move Document Up and Down (in the context of ordered folders). This would only cause useless processing since moving all documents up or down would yield the same result.
 
