@@ -26,9 +26,19 @@ nuxeo.selection.selectAllEnabled=true
 
 Once enabled, users can select all documents in a results listing and execute an action on them. A selection can be done while browsing content and in the context of search results. It is possible to select all documents after using filters as well to fine tune the results first. Note that adding filters, changing the display or the sort order for the results causes the current selection to be lost: this results in sending a different query to the server and we cannot keep track of the difference between the two without hurting performance.
 
-//TODO image select all and default bulk actions
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/web-ui-bulk-actions/web-ui-default-bulk-actions
+    name: web-ui-default-bulk-actions.png
+    web_ui#screenshot#up_to_date
+--}}
+![web-ui-default-bulk-actions](nx_asset://144389fc-6b04-4ef7-a9d6-caffef0b3418 ?w=650,border=true)
 
-//TODO image select all after filtering
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/web-ui-bulk-actions/web-ui-default-bulk-actions-after-filtering
+    name: web-ui-default-bulk-actions-after-filtering.png
+    web_ui#screenshot#up_to_date
+--}}
+![web-ui-default-bulk-actions-after-filtering](nx_asset://618329c7-2f7a-4eb8-a04d-da7112da1e13 ?w=650,border=true)
 
 Clicking on the checkbox of the header selects all documents at once, both the ones that are visible and the ones that are not currently displayed on screen. Clicking it again deselects all documents. Note that it is not possible to deselect documents individually at this stage.
 
@@ -56,15 +66,30 @@ When launching a bulk action, a notification is updated regularly in Web UI, pro
 
 A bulk action starts in the scheduled state, meaning that it is added to a queue, waiting to be executed. During that state, clicking the `abort` button in the notification will only remove the bulk action from the queue. No processing has happened yet.
 
-//TODO image
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/web-ui-bulk-actions/web-ui-bulk-action-scheduled
+    name: web-ui-bulk-action-scheduled.png
+    web_ui#screenshot#up_to_date
+--}}
+![web-ui-bulk-action-scheduled](nx_asset://7ea06676-5b87-44cd-ab87-73001ea4b038 ?border=true)
 
 While the action is running, clicking the `abort` button in the notification will stop any processing currently occurring. No rollback will happen on documents that have been already processed.
 
-//TODO image
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/web-ui-bulk-actions/web-ui-bulk-action-running
+    name: web-ui-bulk-action-running.png
+    web_ui#screenshot#up_to_date
+--}}
+![web-ui-bulk-action-running](nx_asset://4bbf8e6b-e8da-4879-a03f-9f1bf15945fd ?border=true)
 
 Once the action is completed, the notification will remain until the user decides to dismiss it. If an error happened, the user will be informed in the notification. Administrators can gather further information about the error from the application logs.
 
-//TODO image
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/web-ui-bulk-actions/web-ui-bulk-action-completed
+    name: web-ui-bulk-action-completed.png
+    web_ui#screenshot#up_to_date
+--}}
+![web-ui-bulk-action-completed](nx_asset://0464da0b-af30-4c3f-9de9-f59a017d2be1 ?border=true)
 
 To avoid cluttering the UI when executing many bulk actions in parallel, three (3) notifications maximum will be displayed at a time. Each bulk action counts for one notification. If more notifications have to appear in the UI, the oldest notification will be removed.
 
