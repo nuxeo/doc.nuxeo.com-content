@@ -34,8 +34,10 @@ Watch the related courses on Nuxeo University:</br>
 
 ## Requirements
 
+{{! multiexcerpt name='requirements-bulk-action'}}
 - A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Studio Modeler.
 - Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
+{{! /multiexcerpt}}
 
 ## Create an Automation Chain
 
