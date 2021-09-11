@@ -133,7 +133,7 @@ For more information about the bundle deployment, do not hesitate to read the pa
 
 - [Runtime and Component Model]({{page page='runtime-and-component-model'}})
 - [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}})
-- [Writing a Bundle Manifest]({{page page='writing-a-bundle-manifest'}})
+- [Writing a Bundle Manifest]({{page page='howto-write-a-bundle-manifest'}})
 
 {{/panel}}
 </div>

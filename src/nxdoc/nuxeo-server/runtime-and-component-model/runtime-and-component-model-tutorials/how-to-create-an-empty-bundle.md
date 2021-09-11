@@ -573,7 +573,7 @@ The other properties are:
 *   `Bundle-Vendor`: This is the name of the addon owner.
 
 Although not used in this recipe, there is one more property you should know of: `Nuxeo-Component:`.
-It contains a list of files used to define various elements of your component. Its use is detailed in [Writing a Bundle Manifest]({{page page='writing-a-bundle-manifest'}}).
+It contains a list of files used to define various elements of your component. Its use is detailed in [Writing a Bundle Manifest]({{page page='howto-write-a-bundle-manifest'}}).
 
 {{! multiexcerpt name='manifest-format-warning'}}
 {{#> callout type='warning' heading='Formatting'}}
@@ -660,6 +660,6 @@ As said in the beginning of this recipe, if you have unexpected errors or Nuxeo 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Component Model ]({{page page='runtime-and-component-model'}})
-- [Writing a Bundle Manifest ]({{page page='writing-a-bundle-manifest'}})
+- [Writing a Bundle Manifest ]({{page page='howto-write-a-bundle-manifest'}})
 
 {{/panel}}</div></div>
