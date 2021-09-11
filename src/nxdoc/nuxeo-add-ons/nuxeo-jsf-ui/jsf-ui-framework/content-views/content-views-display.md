@@ -113,7 +113,7 @@ From Studio, the easiest way to render a content view is to insert the [Content 
 
 Content view actions are visible on the top right corner. Since 6.0, these actions use the category `CONTENT_VIEW_ACTIONS`.
 
-By default, some filters apply to these actions. These filters have access to the [Seam/JSF context]({{page page='filters-and-access-controls'}}el-expressions-and-available-context-variables), and they also have access to the additional variable `contentView`, representing the current content view instance being displayed.
+By default, some filters apply to these actions. These filters have access to the [Seam/JSF context]({{page page='filters-and-access-controls'}}#el-expressions-and-available-context-variables), and they also have access to the additional variable `contentView`, representing the current content view instance being displayed.
 
 This allows to use expressions like `#{contentView.showRefreshCommand}` or `#{contentView.currentResultLayout.showCSVExport}`, but additional variables have also been added to the context, to help filtering on rendering information coming from a content view widget configuration, for instance. Default filters usually use this variable if defined, and fallback on the content view configuration if not.
 

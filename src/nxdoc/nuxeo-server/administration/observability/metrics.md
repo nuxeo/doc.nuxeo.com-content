@@ -198,7 +198,7 @@ metrics.prometheus.port=9090
 Nuxeo is exposing a Prometheus endpoint on `metrics.prometheus.port`.
 You have to manage security for this access and make sure it is accessible from Prometheus in order to scrape the metrics.
 
-Note that the Dropwizzard Metrics are exposed using [Opencensus](opencensus.io/), they are automatically prefixed by `dropwizard5_`
+Note that the Dropwizzard Metrics are exposed using [Opencensus](https://opencensus.io/), they are automatically prefixed by `dropwizard5_`
 and suffixed depending on metric types (`_gauge`, `_count` and `_timer`).
 
 ![prometheus]({{file name='prometheus-nav.png'}} ?w=650,border=true)
