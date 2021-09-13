@@ -828,7 +828,7 @@ ImageMagick is installed by the Nuxeo Platform Windows installer (.exe), but her
 
 {{{multiexcerpt 'ffmpeg-intro' page='Installing and Setting up Related Software'}}}
 
-1.  Download FFmpeg from [http://ffmpeg.zeranoe.com/builds/](http://ffmpeg.zeranoe.com/builds/).
+1.  Download FFmpeg from [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html).
 2.  Extract the FFmpeg archive into a new folder, named `C:\Program Files\FFmpeg` for instance.
 
     {{#> callout type='tip' }}
