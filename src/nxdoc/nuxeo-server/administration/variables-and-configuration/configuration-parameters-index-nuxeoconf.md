@@ -2276,7 +2276,7 @@ The limit is set at the transaction level (and not at the command level) because
 
 * * *
 
-### `nuxeo.selection.selectAllEnabled`
+#### `nuxeo.selection.selectAllEnabled`
 
 Enables users to select all documents from results listings in the UI and to execute a bulk action on them. Learn more with the [bulk actions documentation]({{page page='web-ui-bulk-actions'}}).
 

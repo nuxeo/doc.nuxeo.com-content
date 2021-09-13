@@ -1,6 +1,6 @@
 ---
-title: Nuxeo Web UI for LTS 2021 Release Notes
-description: Discover changes brought in our recent Nuxeo Web UI updates.
+title: Versions 3.0.0 to 3.0.5
+description: Discover what's new in Web UI 3.0.0 to 3.0.5.
 review:
     comment: ''
     date: '2021-09-02'
@@ -8,7 +8,6 @@ review:
 toc: true
 labels:
 tree_item_index: 999
-hidden: true
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
@@ -43,7 +42,7 @@ An effort has been started to improve Nuxeo Web UI's accessibility, the goal bei
 
 [[Solved Accessibility Issues](https://jira.nuxeo.com/issues/?jql="Epic Link" in %28'WEBUI-190'%2C 'WEBUI-193'%29 and resolution !%3D unresolved ORDER BY priority DESC)]
 
-### Advanced Validation Logic for Forms
+### Advanced Validation Logic For Forms
 
 Form validation offers advanced options:
 - Logic can be executed asynchronously to call a third party service
@@ -51,7 +50,7 @@ Form validation offers advanced options:
 
 [[NXP-28048](https://jira.nuxeo.com/browse/NXP-28048)]
 
-### Atomic Permissions for UI components
+### Atomic Permissions For UI Components
 
 Web UI checks for granular permissions in order to display components instead of high level permissions like "Read" or "Edit". This helps with keeping the UI accurate even if you reconfigured the permissions and how they should be made available to users.
 
@@ -75,7 +74,7 @@ Users can still scroll through the list of tasks as usual in order to retrieve m
 
 Web UI uses Polymer 3 instead of Polymer 2.
 
-This is a technical change that happens under the hood, and backwards compatibility is ensured for applications built on top of Nuxeo Web UI. For the technical details, refer to the [upgrade notes]({{page page='web-ui-11-1-upgrade-notes'}}).
+This is a technical change that happens under the hood, and backwards compatibility is ensured for applications built on top of Nuxeo Web UI. For the technical details, refer to the [upgrade notes]({{page page='web-ui-upgrade-notes-lts-2021'}}).
 
 ### Styling Improvements
 
@@ -99,11 +98,11 @@ The following elements were moved to the Nuxeo Elements library, improving their
 
 ### Other Noteworthy Items
 
-- Document creation and edit popups size can be changed using theme variables<br/> [[NXP-26938](https://jira.nuxeo.com/browse/NXP-26938)]
-- A configuration property can change navigation URLs to use the document ID instead of their path<br/> [[WEBUI-14](https://jira.nuxeo.com/browse/WEBUI-14)]
-- Portrait dimensioned videos are better handled in conversions<br/> [[NXP-28856](https://jira.nuxeo.com/browse/NXP-28856)]
-- When two people complete the same task, the second person is notified and taken to the document<br/> [[NXP-27462](https://jira.nuxeo.com/browse/NXP-27462)]
-- A UI component lets you switch between available repositories<br/> [[NXP-28999](https://jira.nuxeo.com/browse/NXP-28999)]
+- Document creation and edit popups size can be changed using theme variables.<br/> [[NXP-26938](https://jira.nuxeo.com/browse/NXP-26938)]
+- A configuration property can change navigation URLs to use the document ID instead of their path.<br/> [[WEBUI-14](https://jira.nuxeo.com/browse/WEBUI-14)]
+- Portrait dimensioned videos are better handled in conversions.<br/> [[NXP-28856](https://jira.nuxeo.com/browse/NXP-28856)]
+- When two people complete the same task, the second person is notified and taken to the document.<br/> [[NXP-27462](https://jira.nuxeo.com/browse/NXP-27462)]
+- A UI component lets you switch between available repositories.<br/> [[NXP-28999](https://jira.nuxeo.com/browse/NXP-28999)]
 
 ## Learn More
 

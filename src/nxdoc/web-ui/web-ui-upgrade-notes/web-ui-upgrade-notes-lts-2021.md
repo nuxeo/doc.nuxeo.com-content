@@ -15,7 +15,7 @@ hidden: true
 
 {{! multiexcerpt name='matching-notes'}}
 {{#> callout type='info' heading='Release Notes'}}
-This page mentions how to do a technical upgrade. Have a look at the [release notes]({{page page='nxdoc/cloud/web-ui-release-notes'}}) to see what's new.
+This page mentions how to do a technical upgrade. Have a look at the [release notes]({{page page='web-ui-release-notes'}}) to see what's new.
 {{/callout}}
 {{! /multiexcerpt}}
 
@@ -122,19 +122,20 @@ Spreadsheet addon is now loaded by default but the button contribution is disabl
 
 ### Rich Text Editor Uses QuillJS by Default
 
-Since [ELEMENTS-1124](https://jira.nuxeo.com/browse/ELEMENTS-1124) and [NXP-28691](https://jira.nuxeo.com/browse/NXP-28691), <a href="https://quilljs.com" target="_blank">Quill</a> is used as the solution for the rich text editor in Web UI instead of Alloy. Quill is more powerful and provides an overall better experience.
+Since [ELEMENTS-1124](https://jira.nuxeo.com/browse/ELEMENTS-1124) and [NXP-28691](https://jira.nuxeo.com/browse/NXP-28691), [Quill](https://quilljs.com) is used as the solution for the rich text editor in Web UI instead of Alloy. Quill is more powerful and provides an overall better experience.
 
 In LTS 2019, this change is already [available as an option](https://jira.nuxeo.com/browse/WEBUI-291). Feel free to activate it to test the editor and to allow your users to get accustomed to it before migrating.
 
 ### Breaking Changes
 
-#### Cropper.js no longer shipped by default on Web UI
-Cropper is no longer part of our dependencies, as was the case on previous versions o Web UI.
+#### Cropper.js No Longer Shipped by Default on Web UI
+
+Cropper is no longer part of our dependencies, as it was the case on previous versions of Web UI.
 
 In case your project has a dependency on it, please consider the following steps:
-1. Download the package from [cropper.js website](https://fengyuanchen.github.io/cropperjs/) and find two files called cropper.min.js and cropper.min.css;
+1. Download the package from [cropper.js website](https://fengyuanchen.github.io/cropperjs/) and find two files called `cropper.min.js` and `cropper.min.css`;
 2. In your Studio project, switch to Designer and click on the "Resources" tab;
-3. Create a folder called "cropper" and upload cropper.min.js and cropper.min.css to it;
+3. Create a folder called `cropper` and upload `cropper.min.js` and `cropper.min.css` to it;
 4. In your main bundle, add the following code:
     ```
     <link rel="stylesheet" href="cropper/cropper.min.css">
@@ -189,22 +190,26 @@ The use of `nuxeo-document-history` was deprecated in favor of `nuxeo-audit-sear
 
 Since [WEBUI-116](https://jira.nuxeo.com/browse/WEBUI-116), the `document history` and `audit page` use the same component and the new prefix `audit`. The following are some examples of the deprecated labels and their replacement:
 
-| Deprecated labels             | New Labels          |
-|-------------------------------|---------------------|
-| documentHistory.category      | audit.category      |
-| documentHistory.comment       | audit.comment       |
-| documentHistory.date          | audit.date          |
-| documentHistory.filter.after  | audit.filter.after  |
-| documentHistory.filter.before | audit.filter.before |
+| Deprecated labels               | New Labels            |
+| ------------------------------- | --------------------- |
+| `documentHistory.category`      | `audit.category`      |
+| `documentHistory.comment`       | `audit.comment`       |
+| `documentHistory.date`          | `audit.date`          |
+| `documentHistory.filter.after`  | `audit.filter.after`  |
+| `documentHistory.filter.before` | `audit.filter.before` |
 
 #### CSS Variables
 
 Deprecated variables should be replaced by the new ones on themes and custom elements making use of them:
 
-- `--nuxeo-document-content-min-height` in favor of `--nuxeo-document-content-height` (affects `nuxeo-document-content`).
-- `--nuxeo-document-trash-content-min-height` in favor of `--nuxeo-document-trash-content-height` (affects `nuxeo-document-trash-content`).
-- `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height` in favor of the mixin `--nuxeo-document-create-selection-icon` (affects `nuxeo-document-create`).
-- `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height` in favor of the `--nuxeo-document-create-selection-icon` (see [NXP-27037](https://jira.nuxeo.com/browse/NXP-27037)).
+- `--nuxeo-document-content-min-height`
+  - in favor of `--nuxeo-document-content-height` (affects `nuxeo-document-content`).
+- `--nuxeo-document-trash-content-min-height`
+  - in favor of `--nuxeo-document-trash-content-height` (affects `nuxeo-document-trash-content`).
+- `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height`
+  - in favor of the mixin `--nuxeo-document-create-selection-icon` (affects `nuxeo-document-create`).
+- `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height`
+  - in favor of the `--nuxeo-document-create-selection-icon` (see [NXP-27037](https://jira.nuxeo.com/browse/NXP-27037)).
 
 Additionally, the variable `--nuxeo-results-view-min-height` (added in 11.1 [NXP-27652](https://jira.nuxeo.com/browse/NXP-27652)) was removed and can now be safely deleted from your themes or elements.
 
