@@ -42,7 +42,7 @@ Documents can be collected:
 
 - Individually by clicking on the icon ![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}} ?w=16) of the document
   ![]({{file name='add-to-collection-web-ui.png'}} ?w=250,border=true)
-- [In bulk]({{page page='web-ui-bulk-actions' space='nxdoc'}}) by selecting documents from a list of documents and clicking on the icon ![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}}) in the selection header.
+- [In bulk]({{page page='web-ui-bulk-actions' space='nxdoc'}}) by selecting documents from a list of documents and clicking on the icon ![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}} ?w=16) in the selection header.
 
 In both cases you can select the collection by:
 - Browsing the collections in the list

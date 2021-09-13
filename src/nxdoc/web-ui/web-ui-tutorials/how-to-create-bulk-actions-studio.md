@@ -13,7 +13,7 @@ details:
         topics: 'Web UI, Studio Designer, UIElements, Bulk'
 labels:
     - tutorial
-tree_item_index: 1350
+tree_item_index: 495
 ---
 
 {{! excerpt}}
@@ -26,7 +26,7 @@ In this tutorial you will learn how to insert a button that can execute logic on
 This capability is available since LTS 2021 with Web UI 3.0.6.
 {{/callout}}
 
-- Activate the `Select All and Bulk Actions` feature by adding the `nuxeo.selection.selectAllEnabled=true` property in your [nuxeo.conf]({{page page="configuration-parameters-index-nuxeoconf"}}) file
+- Activate the `Select All and Bulk Actions` feature by adding the `nuxeo.selection.selectAllEnabled=true` property in your [nuxeo.conf]({{page page="configuration-parameters-index-nuxeoconf"}}) file.
 {{{multiexcerpt 'requirements-bulk-action' page='how-to-insert-user-action'}}}
 
 ## Create Your Logic
@@ -34,11 +34,11 @@ This capability is available since LTS 2021 with Web UI 3.0.6.
 {{{multiexcerpt 'quick-switcher' page='generic-multi-excerpts'}}}
 
 On Studio Modeler:
-1. Go on **Configuration** > **Automation** and then on **Automation Scripting**
-1. Click on the **New** button
-1. Give your automation script an ID, e.g. `bulkValidation`
-1. Set the input type to **documents**
-1. Click on the **Next** button
+1. Go on **Configuration** > **Automation** and then on **Automation Scripting**,
+1. Click on the **New** button,
+1. Give your automation script an ID, e.g. `bulkValidation`,
+1. Set the input type to **documents**,
+1. Click on the **Next** button,
 1. The automation scripting editor is displayed. Replace the existing code with the one below:
 ```
 function run(input, params) {
@@ -64,7 +64,7 @@ function run(input, params) {
   return;
 }
 ```
-1. Click on **Save**
+1. Click on **Save**.
 
 This script will change the state of the selected documents to `approved` for the ones that are allowed to.
 
@@ -74,7 +74,7 @@ Now that your logic is ready, you will need to bind it to a button.
 
 1. Go to Studio Designer. You will start in the **UI** tab.
 1. Open the **Buttons** menu, hover over the **Create** button and select **Button**.
-1. Fill in the form as follows:
+1. Fill in the form as below:
   1. Name: `bulkValidationButton`
   1. Slot: `Results Selection Actions`
   1. Order: `1`
