@@ -1,6 +1,6 @@
 ---
-title: Nuxeo Web UI for LTS 2021 Release Notes
-description: Discover changes brought in our recent Nuxeo Web UI updates.
+title: Version 3.0.6
+description: Discover what's new in Web UI 3.0.6.
 review:
     comment: ''
     date: '2021-09-02'
@@ -8,7 +8,6 @@ review:
 toc: true
 labels:
 tree_item_index: 998
-hidden: true
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
@@ -21,9 +20,9 @@ hidden: true
 
 This release introduces a first iteration for bulk actions. Users can now select all documents from a results listing both in a search or browsing context, then execute an action on them.
 
-Bulk actions can be executed on most default actions from Web UI like adding documents to a collection or publishing them. It is also possible to [create your custom bulk actions using Nuxeo Studio]({{page page='howto-create-bulk-actions-studio' space='studio'}}).
+Bulk actions can be executed on most default actions from Web UI like adding documents to a collection or publishing them. It is also possible to [create your custom bulk actions using Nuxeo Studio]({{page page='how-to-create-bulk-actions-studio'}}).
 
-This feature is currently disabled by default; you can activate it by adding the property `nuxeo.selection.selectAllEnabled=true` in your [nuxeo.conf](configuration-parameters-index-nuxeoconf) file. Learn more with the [bulk actions documentation]({{page page='web-ui-bulk-actions'}}).
+This feature is currently disabled by default; you can activate it by adding the property `nuxeo.selection.selectAllEnabled=true` in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file. Learn more with the [bulk actions documentation]({{page page='web-ui-bulk-actions'}}).
 
 [[WEBUI-248](https://jira.nuxeo.com/browse/WEBUI-248)]
 
@@ -41,8 +40,8 @@ We are keeping a compatilibity layer with NodeJS v10 and the Webdriver v4 API fo
 
 ### Other Noteworthy Changes
 
-- Web UI is now available in the Czech language. We would like to thank all the people who participated in that translation effort.<br />[[WEBUI-403](https://jira.nuxeo.com/browse/WEBUI-403)]
-- The HTML editor works properly in edit layouts and nuxeo-data-table-form. <br /> [[ELEMENTS-1393](https://jira.nuxeo.com/browse/ELEMENTS-1393)]
+- Web UI is now available in the Czech language. We would like to thank all the people who participated in that translation effort.<br/>[[WEBUI-403](https://jira.nuxeo.com/browse/WEBUI-403)]
+- The HTML editor works properly in edit layouts and nuxeo-data-table-form. <br/> [[ELEMENTS-1393](https://jira.nuxeo.com/browse/ELEMENTS-1393)]
 
 ## Learn More
 
