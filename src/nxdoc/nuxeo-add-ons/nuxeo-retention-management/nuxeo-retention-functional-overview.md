@@ -492,8 +492,10 @@ Confirm from the popup window.
 The legal hold will be removed for **all the documents displayed on the page**.
 {{/callout}}
 
-### Visualising retention / legal hold status easily
-To help to easily visualize if any documents are under retention or legal hold when you're navigating your files, we added a - hidden by default - column we named "flags column". This column gives some extra details about the documents, such as if the document is a favorite, is under nuxeo-coldstorage or if it's under retention or legal hold.
+### Visualising Retention/Legal Hold Status
+
+To help to easily visualize if any documents are under retention or legal hold when browsing, we added a - hidden by default - column named "flags column". </br>
+This column gives some extra details about the documents, such as if the document is a favorite, is under cold storage or if it's under retention or legal hold.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/Flags Screenshot
@@ -527,7 +529,6 @@ The following tables describe the availability of document actions:
 - The action is **disabled on instance**, meaning it's disabled for all documents on the Nuxeo instance, due to some limitations coming from the Nuxeo Management addon.
 
 ### With Standard Mode
-
 
 <div class="table-scroll">
 <table class="hover">
