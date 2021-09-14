@@ -28,7 +28,7 @@ For more details, please take a look at the [HOWTO: Contribute to an Extension](
 
 ## Default Settings
 
-The XML contribution for the configuration extension is located [here](https://github.com/nuxeo/nuxeo-web-ui/blob/master/plugin/web-ui/addon/src/main/resources/OSGI-INF/web-ui-properties.xml) and contains a set of predefined default settings using `org.nuxeo.web.ui` namespace.
+The XML contribution for the configuration extension is located [here](https://github.com/nuxeo/nuxeo-web-ui/blob/maintenance-3.0.x/plugin/web-ui/addon/src/main/resources/OSGI-INF/web-ui-properties.xml) and contains a set of predefined default settings using `org.nuxeo.web.ui` namespace.
 
 For the moment, the default settings include:
 
@@ -159,7 +159,7 @@ Overriding default settings must be done in a conscious way, as it will change t
 
 ## Usage Examples
 
-When Web UI is built, these settings will be available to be used (details [here](https://github.com/nuxeo/nuxeo-web-ui/blob/master/plugin/web-ui/addon/src/main/resources/web/nuxeo.war/ui/index.jsp#L113)).
+When Web UI is built, these settings will be available to be used (details [here](https://github.com/nuxeo/nuxeo-web-ui/blob/maintenance-3.0.x/plugin/web-ui/addon/src/main/resources/web/nuxeo.war/ui/index.jsp#L113)).
 
 The recommended way to access and use these settings is through `Nuxeo.UI.config`, and several examples can be found in Web UI.
 

@@ -601,7 +601,7 @@ See [HOWTO: Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxe
 
 1. For now, English translations are managed only on GitHub.
 
-    - For Web UI labels, edit the [Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/blob/master/i18n/messages.json) or [Nuxeo UI Elements](https://github.com/nuxeo/nuxeo-ui-elements/blob/master/i18n/messages.json) JSON files.
+    - For Web UI labels, edit the [Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/blob/maintenance-3.0.x/i18n/messages.json) or [Nuxeo UI Elements](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-3.0.x/i18n/messages.json) JSON files.
 
     - For JSF UI labels, looking at the [reference messages.properties](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-lang-ext/src/main/resources/crowdin/messages.properties) file can help you understand in which GitHub repository or module the original translation is. For instance, look for the following sample lines:
 
