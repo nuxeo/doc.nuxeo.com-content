@@ -91,7 +91,7 @@ From any [Folderish]({{page page="available-facets"}}#folderish) document (e.g. 
 
 ## Executing Multiple Bulk Actions
 
-In the example above, we used the [refresh event]({{page page="how-to-use-events"}}). Its particularity is that Web UI will request an update to the server once the logic is finished being processed. As a result, the listing is updated and the current selection is lost.
+In the example above, we used the [refresh event]({{page page="how-to-use-events"}}). Its particularity is that Web UI will request an update to the server once the logic is processed. As a result, the listing is updated and the current selection is lost.
 
 In some cases, you may want the selection to be kept so that a user can execute multiple actions on the same selection. To do that, replace the `refresh` event used above with the `refresh-display` event. This one will keep the selection after the logic is executed, but comes with the downside that the results listing will not be updated: as such it's best to use it with actions that won't have an impact with what is currently displayed on screen to the user.
 
