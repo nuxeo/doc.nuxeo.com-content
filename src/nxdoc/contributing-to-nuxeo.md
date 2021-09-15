@@ -442,7 +442,7 @@ As an external contributor, not member of the [Nuxeo](https://github.com/nuxeo/)
 
        ```shell
        git add -A
-       git --amend
+       git commit --amend
        ```
 
        You can also amend the commit message and description if needed.
