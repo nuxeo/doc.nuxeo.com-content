@@ -1,9 +1,9 @@
 ---
-title: Upgrading Nuxeo Web UI from LTS 2019 to 11.x
-description: Upgrade notes from Nuxeo Web UI LTS 2019 (10.10) to 11.x
+title: Upgrading Nuxeo Web UI from LTS 2019 to LTS 2021
+description: Upgrade notes from Nuxeo Web UI LTS 2019 (10.10) to LTS 2021
 review:
     comment: ''
-    date: '2021-01-07'
+    date: '2021-09-02'
     status: ok
 toc: true
 labels:
@@ -15,11 +15,11 @@ hidden: true
 
 {{! multiexcerpt name='matching-notes'}}
 {{#> callout type='info' heading='Release Notes'}}
-This page mentions how to do a technical upgrade. Have a look at the [release notes]({{page page='web-ui-11-1-release-notes'}}) to see what's new.
+This page mentions how to do a technical upgrade. Have a look at the [release notes]({{page page='web-ui-release-notes'}}) to see what's new.
 {{/callout}}
 {{! /multiexcerpt}}
 
-## Upgrading from Web UI LTS 2019 to Web UI 11.x
+## Upgrading Web UI from LTS 2019 to LTS 2021
 
 ### Polymer 3 Migration
 
@@ -120,7 +120,34 @@ Spreadsheet addon is now loaded by default but the button contribution is disabl
 ![Spreadsheet package enable button in Designer](nx_asset://b8fd28dd-0272-43b1-a083-dfde295c312b ?w=650,border=true)
 {{! /multiexcerpt}}
 
+### Rich Text Editor Uses QuillJS by Default
+
+Since [ELEMENTS-1124](https://jira.nuxeo.com/browse/ELEMENTS-1124) and [NXP-28691](https://jira.nuxeo.com/browse/NXP-28691), [Quill](https://quilljs.com) is used as the solution for the rich text editor in Web UI instead of Alloy. Quill is more powerful and provides an overall better experience.
+
+In LTS 2019, this change is already [available as an option](https://jira.nuxeo.com/browse/WEBUI-291). Feel free to activate it to test the editor and to allow your users to get accustomed to it before migrating.
+
 ### Breaking Changes
+
+#### Cropper.js No Longer Shipped by Default on Web UI
+
+Cropper is no longer part of our dependencies, as it was the case on previous versions of Web UI.
+
+In case your project has a dependency on it, please consider the following steps:
+1. Download the package from [cropper.js website](https://fengyuanchen.github.io/cropperjs/) and find two files called `cropper.min.js` and `cropper.min.css`;
+2. In your Studio project, switch to Designer and click on the "Resources" tab;
+3. Create a folder called `cropper` and upload `cropper.min.js` and `cropper.min.css` to it;
+4. In your main bundle, add the following code:
+    ```
+    <link rel="stylesheet" href="cropper/cropper.min.css">
+    <script src="cropper/cropper.min.js"></script>
+    ```
+5. Deploy the project to your server;
+6. Check on your browser dev tools for the presence of Cropper.js in the global namespace:
+    ```
+    window.Cropper;
+    ```
+
+The console should return Cropper.js main function, thus confirming the presence of the package in the project.
 
 #### BROWSER_ACTIONS Slot Removal
 
@@ -128,7 +155,7 @@ The `BROWSER_ACTIONS` nuxeo slot was removed under [NXP-26184](https://jira.nuxe
 
 #### Forked nuxeo-document-content Might Lose Selection Actions
 
-After [NXP-25345](https://jira.nuxeo.com/browse/NXP-25345), Nuxeo Web UI introduced the ability to override selection actions. Elements that were forked from an older version of `nuxeo-document-content` and that override the `selectionActions` native slot with new content will be missing the contributions to the `RESULTS_SELECTION_ACTIONS` nuxeo slot. This can be rectified by adding the desired actions to the new slot, and by deleting the following piece of code:
+Since [NXP-25345](https://jira.nuxeo.com/browse/NXP-25345), Nuxeo Web UI introduced the ability to override selection actions. Elements that were forked from an older version of `nuxeo-document-content` and that override the `selectionActions` native slot with new content will be missing the contributions to the `RESULTS_SELECTION_ACTIONS` nuxeo slot. This can be rectified by adding the desired actions to the new slot, and by deleting the following piece of code:
 
 ```
 <div slot=“selectionActions”>
@@ -163,22 +190,26 @@ The use of `nuxeo-document-history` was deprecated in favor of `nuxeo-audit-sear
 
 Since [WEBUI-116](https://jira.nuxeo.com/browse/WEBUI-116), the `document history` and `audit page` use the same component and the new prefix `audit`. The following are some examples of the deprecated labels and their replacement:
 
-| Deprecated labels             | New Labels          |
-|-------------------------------|---------------------|
-| documentHistory.category      | audit.category      |
-| documentHistory.comment       | audit.comment       |
-| documentHistory.date          | audit.date          |
-| documentHistory.filter.after  | audit.filter.after  |
-| documentHistory.filter.before | audit.filter.before |
+| Deprecated labels               | New Labels            |
+| ------------------------------- | --------------------- |
+| `documentHistory.category`      | `audit.category`      |
+| `documentHistory.comment`       | `audit.comment`       |
+| `documentHistory.date`          | `audit.date`          |
+| `documentHistory.filter.after`  | `audit.filter.after`  |
+| `documentHistory.filter.before` | `audit.filter.before` |
 
 #### CSS Variables
 
 Deprecated variables should be replaced by the new ones on themes and custom elements making use of them:
 
-- `--nuxeo-document-content-min-height` in favor of `--nuxeo-document-content-height` (affects `nuxeo-document-content`).
-- `--nuxeo-document-trash-content-min-height` in favor of `--nuxeo-document-trash-content-height` (affects `nuxeo-document-trash-content`).
-- `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height` in favor of the mixin `--nuxeo-document-create-selection-icon` (affects `nuxeo-document-create`).
-- `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height` in favor of the `--nuxeo-document-create-selection-icon` (see [NXP-27037](https://jira.nuxeo.com/browse/NXP-27037)).
+- `--nuxeo-document-content-min-height`
+  - in favor of `--nuxeo-document-content-height` (affects `nuxeo-document-content`).
+- `--nuxeo-document-trash-content-min-height`
+  - in favor of `--nuxeo-document-trash-content-height` (affects `nuxeo-document-trash-content`).
+- `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height`
+  - in favor of the mixin `--nuxeo-document-create-selection-icon` (affects `nuxeo-document-create`).
+- `--nuxeo-document-creation-form-icon-width` and `--nuxeo-document-creation-form-icon-height`
+  - in favor of the `--nuxeo-document-create-selection-icon` (see [NXP-27037](https://jira.nuxeo.com/browse/NXP-27037)).
 
 Additionally, the variable `--nuxeo-results-view-min-height` (added in 11.1 [NXP-27652](https://jira.nuxeo.com/browse/NXP-27652)) was removed and can now be safely deleted from your themes or elements.
 
@@ -192,6 +223,6 @@ Since [ELEMENTS-1012](https://jira.nuxeo.com/browse/ELEMENTS-1012), `nuxeo-slot`
 
 ### Drop Support for Edge Legacy
 
-Starting from 11.x, Nuxeo Web UI no longer supports *Microsoft Edge Legacy*. See [here](https://doc.nuxeo.com/nxdoc/web-ui-overview/) for the complete list of supported browsers.
+Starting from LTS 2021, Nuxeo Web UI no longer supports *Microsoft Edge Legacy*. See [here](https://doc.nuxeo.com/nxdoc/web-ui-overview/) for the complete list of supported browsers.
 
 {{! /multiexcerpt}}
