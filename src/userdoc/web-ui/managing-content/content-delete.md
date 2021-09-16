@@ -17,11 +17,11 @@ Only users with "Edit" or "Manage everything" [permissions]({{page version='' sp
 
 ## From Workspace View
 
-To delete one or several documents, select them in your workspace and click on the delete icon&nbsp;![]({{file name='delete_web-ui.png' page='icons-index'}} ?w=18) in the action toolbar.
+To delete one or several documents, select them in your workspace and click on the delete icon ![]({{file name='delete_web-ui.png' page='icons-index'}} ?w=18) in the action toolbar. This action can be [executed in bulk]({{page page='web-ui-bulk-actions' space='nxdoc'}}).
 
 ## From Document View
 
-On the document itself you can decide to delete the file of your document by clicking on the Delete icon&nbsp;![]({{file name='delete_web-ui.png' page='icons-index'}} ?w=18) next to its title and add a new one.
+On the document itself you can decide to delete the file of your document by clicking on the Delete icon ![]({{file name='delete_web-ui.png' page='icons-index'}} ?w=18) next to its title and add a new one.
 
 ## Managing Deleted Documents
 
@@ -37,6 +37,8 @@ Users with "ReadWrite" permissions can access the workspace's Trash and perform 
 
    ![]({{file name='restore-content-web-ui.png'}} ?w=600)
 
+This action can be [executed in bulk]({{page page='web-ui-bulk-actions' space='nxdoc'}}).   
+
 **Delete Permanently**
 
 1. Go to the folder that you want and click on the **Trash** view.</br>
@@ -50,6 +52,8 @@ Users with "ReadWrite" permissions can access the workspace's Trash and perform 
 {{/callout}}
 
 ![]({{file name='delete-permanently-content-web-ui.png'}} ?w=600)
+
+This action can be [executed in bulk]({{page page='web-ui-bulk-actions' space='nxdoc'}}).
 
 **Empty Trash**
 
