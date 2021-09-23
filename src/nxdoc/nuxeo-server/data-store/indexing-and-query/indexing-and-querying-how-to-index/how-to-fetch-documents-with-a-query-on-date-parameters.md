@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Fetch Documents with a Query on Date Parameters'
+description: In this how-to we will see how to make it possible to process a list of document depending on a date parameter. See our example to learn more.
 review:
     comment: ''
     date: '2017-01-26'
@@ -185,25 +186,19 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
 
 In this how-to we will see how to make it possible to process a list of document depending on a date parameter. An example would be how to display or do an operation on all documents expiring in less than 3 months.
 
-{{! /excerpt}} {{#> callout type='info' }}
-
+{{#> callout type='info' }}
 This how-to requires knowledge about:
-
 *   [Document Types Definition]({{page page='how-to-define-a-document-type'}}),
 *   [Automation chains]({{page page='content-automation-concepts'}}),
 *   [Event handlers]({{page space='studio' page='event-handlers'}}),
 *   [Content views]({{page page='how-to-define-a-new-content-view'}}).
-
 <br />
 Customization done in this how-to relates to the Nuxeo Platform's JSF UI. Before continuing:
-
 *   Make sure to select JSF UI in Nuxeo Studio's [application definition]({{page space='studio' page='application-definition'}}) screen.
 *   [Install the nuxeo-jsf-ui package]({{page page='installing-a-new-package-on-your-instance'}}) in your Nuxeo Platform instance.
-
 {{/callout}}
 
 ## Creating Dedicated Properties

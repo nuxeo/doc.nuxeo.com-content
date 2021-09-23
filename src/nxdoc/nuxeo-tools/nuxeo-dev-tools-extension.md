@@ -1,6 +1,6 @@
 ---
 title: Nuxeo Dev Tools Extension
-description: "The Nuxeo Dev Tools extension places some of the more commonly performed actions in the Nuxeo Platform at the administrator's fingertips in a convenient browser popup window."
+description: "The Nuxeo Dev Tools extension places some of the more commonly performed actions in the Nuxeo Platform at the administrator's fingertips in a browser popup window."
 review:
     date: '2017-09-22'
     status: ok

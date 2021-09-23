@@ -1,5 +1,6 @@
 ---
 title: Returning a Custom Result with Automation
+description: As automatic marshalling is not implemented into Automation server and client, only Documents and Blobs can be manipulated. See more information here.
 review:
     comment: ''
     date: '2017-12-14'
@@ -45,11 +46,8 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
 
 As automatic marshalling is not implemented into Automation server and client, only Document(s) and Blob(s) can be manipulated. Therefore, the way to return a custom type is to encapsulate the value in a Blob.
-
-{{! /excerpt}}
 
 Below is an example, based on the results returned by the method `QueryAndFetch`.
 

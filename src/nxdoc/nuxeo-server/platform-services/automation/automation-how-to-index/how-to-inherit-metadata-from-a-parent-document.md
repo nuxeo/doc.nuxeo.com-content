@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Inherit Metadata from a Parent Document'
+description: In this how-to, we will implement an event handler that will listen to the creation of documents. See examples and allow us to walk you through the process.
 review:
     comment: ''
     date: '2016-12-19'
@@ -181,14 +182,10 @@ history:
 ---
 There are cases where you want a document to inherit some metadata values from its parent. In general, the goal is to benefit from the creation context of a document to infer some metadata values. For example, you can set a `project_id` metadata on your document type and on the workspace (or any type of container). Then your document type can inherit the project id value from its parent workspace. This is also useful when most of your documents are captured via Nuxeo Drive. Since Drive doesn't allow the setting of metadata values, you can only infer them from parent containers.
 
-{{! excerpt}}
-
 In this how-to, we will implement an event handler that will listen to the creation of documents. If the created document matches some predefined criteria, the listener will execute a content automation chain. The chain will copy the Dublincore "source" metadata value from the workspace to the created document.
 
-{{! /excerpt}} {{#> callout type='info' }}
-
+{{#> callout type='info' }}
 To maintain inheritance, you need to use the event "Document Updated" and select the children document you want to update. This approach would work with a few documents below your parent documents only. For a larger number of documents, you should consider a lower level approach.
-
 {{/callout}}
 
 ## Prerequisite

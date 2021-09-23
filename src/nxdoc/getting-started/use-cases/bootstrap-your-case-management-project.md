@@ -98,8 +98,11 @@ history:
 ---
 
 {{! excerpt}}
-The Nuxeo Platform is a perfect choice for implementing a [case management project](https://www.nuxeo.com/solutions/case-management/). The platform provides all the necessary elements: strong information typing, rich form management, structure and document templating tools, event bus for plugging custom rules, powerful workflow engine, cases lists mechanisms. Nuxeo Studio allows semi-technical people to inject business requirements in the application while powerful API and great Java framework provide practically no limit in integrating with external applications or adding custom features.
+The Nuxeo Platform is a perfect choice for implementing a [case management project](https://www.nuxeo.com/solutions/case-management/). The platform provides strong information typing, rich form management and structure.
 {{! /excerpt}}
+
+The platform provides all the necessary elements: strong information typing, rich form management, structure and document templating tools, event bus for plugging custom rules, powerful workflow engine, cases lists mechanisms. Nuxeo Studio allows semi-technical people to inject business requirements in the application while powerful API and great Java framework provide practically no limit in integrating with external applications or adding custom features.
+
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Bootstrap Your Case Management Project/claim4.png

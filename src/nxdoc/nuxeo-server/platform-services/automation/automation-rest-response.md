@@ -1,5 +1,6 @@
 ---
 title: Automation REST Response
+description: When calling Automation operations through REST calls, you may want to throw custom exception and return it with the appropriate http error code.
 review:
     comment: ''
     date: '2017-12-14'
@@ -59,13 +60,9 @@ history:
         date: '2014-12-09 16:27'
         message: ''
         version: '1'
-
 ---
-{{! excerpt}}
 
 When calling Automation operations through REST calls, you may want to throw custom exception and return it with the appropriate http error code or simply return the result when the process succeed with a custom HTTP status code.
-
-{{! /excerpt}}
 
 ## Rest Custom Exception in Automation Operation and HTTP Code Error Setting
 

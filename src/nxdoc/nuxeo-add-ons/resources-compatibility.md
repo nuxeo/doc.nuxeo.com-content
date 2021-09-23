@@ -98,12 +98,10 @@ history:
         date: '2013-11-12 19:09'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
-The&nbsp;[Resources Compatibility addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/resources-compat) provides backward compatibility with web resources (icons, JavaScript, ...) that have been removed from the previous LTS release of Nuxeo Platform.
-
+The [Resources Compatibility addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/resources-compat) provides backward compatibility with web resources (icons, JS, etc.) that have been removed from the previous release of Nuxeo Platform.
 {{! /excerpt}}
 
 It requires no specific installation steps. It can be installed like any other package&nbsp;[from the Marketplace or from the Admin Center]({{page page='installing-a-new-package-on-your-instance'}}).

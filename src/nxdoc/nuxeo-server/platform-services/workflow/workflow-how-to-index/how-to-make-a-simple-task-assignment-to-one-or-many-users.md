@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Make a Simple Task Assignment to One or Many Users'
+description: When you want to assign a task to one or many users, without requiring a dedicated process model. You can create a button or link to bind it to an automation chain.
 review:
     comment: ''
     date: '2017-12-14'
@@ -130,11 +131,8 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
 
 Sometimes you want to assign a task to one or many users, without requiring a dedicated process model. You can [create a button, link or icon and bind it to an automation chain]({{page page='how-to-create-an-automation-chain'}}), that will use the "Create task" operation, in the "Services" category.
-
-{{! /excerpt}}
 
 This operation will assign a task to users or groups of users, which are defined by the parameter "variable name for actors prefixed ids". This parameter either accepts:
 

@@ -25,7 +25,7 @@ tree_item_index: 1000
 ---
 
 {{! excerpt}}
-In this tutorial you will learn how to create a custom workflow tasks layout in Studio Designer. We'll be using a custom validation workflow template linked to the Contract document type.
+Learn how to create a custom workflow tasks layout in Studio Designer. We'll be using a custom validation workflow template linked to the Contract document type.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}

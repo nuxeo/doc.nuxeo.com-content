@@ -1,5 +1,6 @@
 ---
 title: Query Models and Result Providers Migration to Content Views and Page Providers
+description: This page explains how query models and result provider farms, deprecated since version 5.4.2, can be migrated to content views and page providers.
 review:
     comment: ''
     date: '2017-02-14'
@@ -34,13 +35,11 @@ history:
         version: '1'
 
 ---
-{{! multiexcerpt name='query-models-result-providers-upgrade'}}{{! excerpt}}
+{{! multiexcerpt name='query-models-result-providers-upgrade'}}
 
 This page explains how query models and result provider farms, deprecated since version 5.4.2, can be migrated to [content views]({{page page='content-views'}}) and [page providers]({{page page='page-providers'}}).
 
 The JIRA issue {{jira server='Nuxeo Issue Tracker' key='NXP-12435'}} gives technical upgrade notes, this chapter gives more details depending on use cases.
-
-{{! /excerpt}}
 
 ## Generic Migration Steps
 

@@ -139,7 +139,7 @@ history:
 ---
 
 {{! excerpt}}
-In this how to, you will learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace). It is like implementing a "role" notion.
+Learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace). It is like implementing a "role" notion.
 {{! /excerpt}}
 
 For instance you may want to work with "members" of a workspace, as well as "administrators", and require that users with the administrator role can define who is a member and who is an administrator. This documentation will show you how to implement this kind of behavior, but for any "role" you want, and with even more complex use cases.

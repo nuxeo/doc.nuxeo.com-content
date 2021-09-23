@@ -1,5 +1,6 @@
 ---
 title: Nuxeo IMAP Connector
+description: The Nuxeo IMAP Connector provides email folders in which you can fetch emails to store and share them in your Nuxeo application. Organization is key for success.
 review:
     comment: ''
     date: '2020-06-08'
@@ -183,9 +184,7 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 The [Nuxeo IMAP Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector) provides email folders in which you can fetch emails to store and share them in your Nuxeo application. Email folders are not intended to be webmails. It will fetch the unread emails on your email server either when you manually trigger the fetch from Nuxeo interface or automatically at regular intervals.
-{{! /excerpt}}
 
 When emails are imported in Nuxeo, some metadata is automatically extracted from the email:
 

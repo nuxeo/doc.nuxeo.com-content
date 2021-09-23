@@ -1,5 +1,6 @@
 ---
 title: How to Enable CSV Import on a Custom Document Type
+description: If you installed the Nuxeo CSV addon from the Nuxeo Marketplace, you'll probably want to enable CSV import on the document types you defined. See how here.
 review:
     comment: ''
     date: '2018-01-15'
@@ -120,20 +121,15 @@ Watch the related courses on Nuxeo University
 
 {{{excerpt 'NXDOC:Nuxeo CSV'}}}
 
-{{! excerpt}}
-
 If you installed the Nuxeo CSV addon from the Nuxeo Marketplace, you'll probably want to enable CSV import on the document types you defined, either in Studio or with some code. Here is how to do that.
 
-{{! /excerpt}}
 
 1.  In [Studio]({{page space='studio'}}), on the left side, under **Configuration**, in the **Advanced Settings** menu, click on **XML Extensions**.
 2.  Click on **New** to create a new extension.
 3.  Give it an ID and click on **Next**.
 
     {{#> callout type='tip' }}
-
     You may want to check the [Studio naming conventions]({{page space='studio' page='naming-conventions'}}).
-
     {{/callout}}
 4.  Paste the following content in the text area and fill in the&nbsp;`<type>` tag with the ID of the document type on which you want to enable CSV import.
 

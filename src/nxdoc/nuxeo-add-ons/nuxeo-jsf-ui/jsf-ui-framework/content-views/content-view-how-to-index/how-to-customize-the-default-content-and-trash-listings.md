@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Customize the Default Content and Trash Listings - JSF UI'
+description: The content displayed in the Content tab of a folder is the result of a query that says that we want to display all the documents.
 review:
     comment: ''
     date: '2019-10-21'
@@ -75,12 +76,10 @@ history:
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 The content displayed in the **Content** tab of a folder is the result of a query that says that we want to display all the documents that:
 -   are the direct children of the current folder;
 -   are not "trashed";
 -   are not hidden in navigation.
-{{! /excerpt}}
 
 You can create new views that will display the results of a query you have customized. This is done using Content views. Then you can choose to use your content view in the **Content** or **Trash** tab of your document types.
 

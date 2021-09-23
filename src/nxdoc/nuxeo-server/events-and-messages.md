@@ -1,6 +1,6 @@
 ---
 title: Events and Messages
-description: When you need to integrate some features of an external application into the Nuxeo Platform, or want the Platform to push data into an external application, using the Nuxeo event system is usually a good solution.
+description: Want to integrate features of an external application into the Nuxeo Platform? or want the Platform to push data into an external application? See here.
 review:
     comment: ''
     date: '2017-12-14'
@@ -178,11 +178,8 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
 
 When you need to integrate some features of an external application into the Nuxeo Platform, or want the Platform to push data into an external application, using the Nuxeo event system is usually a good solution.
-
-{{! /excerpt}}
 
 The system allows to contribute event listeners (Java classes) or event handlers ([defined in Studio]({{page space='Studio' page='Event Handlers'}})) that subscribe to Platform events such as user login/logout, document creation, document update, document move,&nbsp; workflow started, etc. Those Java classes or automation chains are then executed either synchronously in the transaction, or synchronously out of the transaction, or asynchronously.
 

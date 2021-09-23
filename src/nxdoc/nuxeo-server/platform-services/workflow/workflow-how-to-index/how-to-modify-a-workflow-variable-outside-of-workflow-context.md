@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Modify a Workflow Variable outside of Workflow Context'
+description: If you want to modify variables outside of the workflow context, you have to fetch the workflow instance document and use the available methods on their adapters.
 review:
     comment: ''
     date: '2017-12-14'
@@ -121,11 +122,7 @@ history:
 ---
 A workflow (route instance) is stored in Nuxeo as a document of type "DocumentRoute". A node in the workflow is stored as a document of type "RouteNode". Both workflow and node variables are persisted on the workflow and node documents.
 
-{{! excerpt}}
-
 If you want to modify these variables outside of the workflow context (from a listener for example), you have to fetch the workflow instance document and you can use the available methods on their adapters, [GraphRoute](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphRoute.html) and [GraphNode:](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphNode.html)
-
-{{! /excerpt}}
 
 ```java
 void setVariables(Map<String, Serializable> map);

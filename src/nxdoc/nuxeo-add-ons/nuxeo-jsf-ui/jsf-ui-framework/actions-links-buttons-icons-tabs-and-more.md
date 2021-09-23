@@ -1,5 +1,6 @@
 ---
 title: 'Actions (Links, Buttons, Icons, Tabs and More)'
+description: Actions usually stand for commands that can be triggered via user interface interaction. Usually, it will describe a link and other information that may be used.
 review:
     comment: ''
     date: '2019-10-21'

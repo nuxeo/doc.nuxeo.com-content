@@ -1,6 +1,6 @@
 ---
 title: Nuxeo Enhanced Viewer
-description: 'Nuxeo Enhanced Viewer addon allows users to preview and annotate any content stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.'
+description: 'Nuxeo Enhanced Viewer addon allows users to preview and annotate content stored in the Nuxeo repository: documents, PDF, images, and videos with the ARender previewer.'
 review:
     comment: ''
     date: '2019-10-08'

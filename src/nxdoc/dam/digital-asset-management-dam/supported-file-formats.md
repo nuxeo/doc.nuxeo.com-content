@@ -1,5 +1,6 @@
 ---
 title: Supported File Formats
+description: 'Nuxeo Platform supports a large number of file formats: Office documents, pictures, videos etc. This page provides a non-exhaustive list of the supported file format.'
 review:
     comment: ''
     date: '2021-05-17'
@@ -135,9 +136,7 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 Nuxeo Platform supports a large number of file formats: Office documents, pictures, videos etc. This page provides a non-exhaustive list of the supported file format, and how they are, processed within Nuxeo Platform.
-{{! /excerpt}}
 
 ## Introduction
 

@@ -1,5 +1,6 @@
 ---
 title: Licenses
+description: The Nuxeo source code is licensed under various open source licenses, all compatible with each other, non viral and not limiting redistribution.
 review:
     comment: ''
     date: '2017-12-13'
@@ -150,9 +151,7 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 The Nuxeo source code is licensed under various open source licenses, all compatible with each other, non viral and not limiting redistribution. Nuxeo also uses a number of third-party libraries that come with their own licenses.
-{{! /excerpt}}
 
 There is no non-open source "enterprise" version of these products, or, in other words, the "open source versions" are already "enterprise-ready" for our customers. We encourage our customers to purchase&nbsp;[a support subscription](http://www.nuxeo.com/en/subscription/connect)&nbsp;to ensure that their Nuxeo instances stays fully operational as long as needed by its business users.
 

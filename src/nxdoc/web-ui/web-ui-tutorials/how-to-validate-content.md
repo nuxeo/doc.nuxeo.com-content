@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Validate a Layout Content'
+description:  In this example, we will see how to ensure that the end date of a contract is ulterior to its start date and how to validate the content in your own set of rules.
 review:
     comment: ''
     date: '2019-07-22'
@@ -18,9 +19,7 @@ labels:
 tree_item_index: 1600
 ---
 
-{{! excerpt}}
 This tutorial will demonstrate how to validate the content of a form in Web UI to apply your own set of rules. In this example, we will see how to ensure that the end date of a contract is ulterior to its start date.
-{{! /excerpt}}
 
 ## Prerequisites
 

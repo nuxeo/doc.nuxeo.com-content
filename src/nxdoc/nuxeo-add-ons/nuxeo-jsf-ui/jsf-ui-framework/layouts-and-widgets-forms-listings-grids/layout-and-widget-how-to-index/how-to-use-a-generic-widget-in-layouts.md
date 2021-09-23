@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Use a Generic Widget in Layouts - JSF UI'
+description: The Nuxeo Platform framework and its "Layout" module offers many widget types. If you want to use one of those existing widgets when editing, use this reference.
 review:
     comment: ''
     date: '2019-10-21'
@@ -88,9 +89,7 @@ history:
 
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 The Nuxeo Platform framework and its "Layout" module offers many widget types. Some are exposed directly in Studio interface, but some are not. If you want to use one of those existing widgets in Studio when editing a layout, you should drop a _generic widget_ from the "Advanced Widgets" category on the right, as in the screenshot below:
-{{! /excerpt}}
 
 ![]({{file name='screenshot_2011-12-02_18.39.20.png'}} ?w=200,border=true,thumbnail=true)
 

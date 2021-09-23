@@ -1,5 +1,6 @@
 ---
 title: Local Configuration
+description: Users with Manage everything permission can configure workspaces from the Nuxeo Platform user interface so they meet users specific needs. Set up your workspace today.
 review:
     comment: ''
     date: '2019-10-21'

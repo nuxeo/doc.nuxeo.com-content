@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Automatically Convert a Document to PDF'
+description: In some cases, you want the system to automatically create a PDF conversion of a document and attach it to the document. See more and let us walk you through it.
 review:
     comment: ''
     date: '2017-12-12'
@@ -153,9 +154,7 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 In some cases, you want the system to automatically create a PDF conversion of a document and attach it to the document. In Nuxeo Studio, the operation&nbsp;**Conversion > Convert To PDF**&nbsp;is provided to make this conversion.
-{{! /excerpt}}
 
 Here is how you can create an automation chain to do the conversion and attach the PDF created on the input document.
 

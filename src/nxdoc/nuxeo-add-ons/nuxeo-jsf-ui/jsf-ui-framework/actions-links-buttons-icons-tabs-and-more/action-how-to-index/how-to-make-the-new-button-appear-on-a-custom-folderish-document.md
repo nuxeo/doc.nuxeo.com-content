@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Make the New Button Appear on a Custom Folderish Document - JSF UI'
+description: If you create a folder is document type, the New button will not be displayed on the default summary view. This page explains how to add it and more.
 review:
     comment: ''
     date: '2019-10-21'
@@ -146,9 +147,7 @@ history:
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 By default, if you create a folderish document type, the **New** button will not be displayed on the default summary view. This page explains how to add it, as well as how to add the **New** button to a custom tab.&nbsp;
-{{! /excerpt}}
 
 ## Adding the New&nbsp;Button to the Content Tab
 

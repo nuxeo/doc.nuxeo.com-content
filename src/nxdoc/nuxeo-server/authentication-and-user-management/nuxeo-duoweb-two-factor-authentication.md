@@ -1,5 +1,6 @@
 ---
 title: Nuxeo DuoWeb Two-Factor Authentication
+description: The Nuxeo addon nuxeo-duoweb-authentication is an integration of DuoWeb access in Nuxeo login plugin and provides two-factor authentication.
 review:
     comment: ''
     date: '2017-12-12'
@@ -57,17 +58,14 @@ history:
         date: '2014-10-27 11:57'
         message: ''
         version: '1'
-
 ---
-{{! excerpt}}
+
 The [Nuxeo addon nuxeo-duoweb-authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication) is an integration of [DuoWeb](http://www.duosecurity.com) access in Nuxeo login plugin and provides two-factor authentication through the Nuxeo login page.
 
 This plugin is available for Nuxeo Platform 5.8 and above.
 
-{{! /excerpt}} {{#> callout type='info' heading='Configuration'}}
-
+{{#> callout type='info' heading='Configuration'}}
 Please refer to this [README](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-duoweb-authentication/README.md) to configure and activate the addon on your Nuxeo instance.
-
 {{/callout}}
 
 The two factors authentication is executing the following steps:

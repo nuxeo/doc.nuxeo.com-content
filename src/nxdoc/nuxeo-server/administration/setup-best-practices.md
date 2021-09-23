@@ -1,6 +1,6 @@
 ---
 title: Setup Best Practices
-description: Nuxeo applications come as ready-to-use applications that you can quickly install and evaluate. However, if you want to go to production, you may want to follow best practices.
+description: Nuxeo applications come as ready-to-use applications that you can quickly install and evaluate. If you want to go to production, you will want to follow best practices.
 review:
   comment: ''
   date: '2021-01-18'

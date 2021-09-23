@@ -1,5 +1,6 @@
 ---
 title: Workflow Models Packaging
+description: The goal of this page is to let you understand what Studio generates in the JAR when you use the Studio feature and how the workflow is created.
 review:
     comment: ''
     date: '2017-12-14'
@@ -83,13 +84,9 @@ history:
         date: '2013-10-18 15:00'
         message: ''
         version: '1'
-
 ---
-{{! excerpt}}
 
 This page deals with how a workflow model is created on a Nuxeo instance. Note that when using Nuxeo Studio, everything is done transparently. The goal of this page is to let you understand what Studio generates in the JAR when you use the [Studio feature]({{page space='studio' page='workflow'}}) and how the workflow is created and persisted when deploying the Studio project.
-
-{{! /excerpt}}
 
 Nuxeo workflows are declared via the following contribution:
 

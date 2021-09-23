@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Create Custom Buttons'
+description: In this tutorial, you will learn how to execute UI functions after business logic execution. See examples and allow us to walk you through the process.
 review:
     comment: ''
     date: '2020-01-20'
@@ -19,9 +20,7 @@ labels:
 tree_item_index: 1250
 ---
 
-{{! excerpt}}
 In this tutorial, you will learn how to execute UI functions after business logic execution. For example, when you create a custom button which triggers an automation chain, it is helpful to add a notification displayed upon the  successful (or unsuccessful) call of the operation.
-{{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University

@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Make a Page Provider or Content View Query Elasticsearch Index'
+description: When configuring a content view in Nuxeo Studio, you can make it query Elasticsearch instead of the Core API. See our page for steps.
 review:
     comment: ''
     date: '2017-12-14'
@@ -135,13 +136,9 @@ history:
         date: '2014-04-17 18:58'
         message: ''
         version: '1'
-
 ---
-{{! excerpt}}
 
 When [configuring a content view]({{page space='studio' page='content-view-query-and-form-tab'}}) in Nuxeo Studio, you can make it query Elasticsearch instead of the Core API. This may be interesting for performance/scalability reasons as well as for enabling aggregates support. This page lists the required steps:
-
-{{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University

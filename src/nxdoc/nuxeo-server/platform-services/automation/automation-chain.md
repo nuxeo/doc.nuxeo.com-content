@@ -1,5 +1,6 @@
 ---
 title: Automation Chain
+description: An automation chain is a pipe of parametrized atomic operations and specifies the parametrization of each operation in the chain, not only the list of operations.
 review:
     comment: ''
     date: '2017-12-14'
@@ -128,14 +129,12 @@ history:
         date: '2010-06-24 23:37'
         message: ''
         version: '1'
-
 ---
-{{#> callout type='tip' }}
 
+{{#> callout type='tip' }}
 You can use [Nuxeo Studio]({{page space='studio' page='automation'}}) for contributing new automation chains graphically.
 
 This page explains all the details of the necessary Platform contribution (that Studio produces) for an in-depth comprehension of the framework. Reading it is not necessary if you start with Automation.
-
 {{/callout}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -144,11 +143,7 @@ Watch the related courses on Nuxeo University
 ![]({{file name='university-automation.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
-{{! excerpt}}
-
 An automation chain is a pipe of parametrized atomic operations. The automation chain specifies the parametrization of each operation in the chain, not only the list of operations to execute. Thanks to this, when running an automation chain, you only specify the chain's name. The chain will be fetched from the registry and its operations will be executed one after the other, using the parametrization.
-
-{{! /excerpt}}
 
 Chain contribution is done via the [Nuxeo extension point mechanism]({{page page='runtime-and-component-model'}}). The extension point name is [`chains`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--chains) and the component exposing the extension point is [`org.nuxeo.ecm.core.operation.OperationServiceComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.operation.OperationServiceComponent) .
 

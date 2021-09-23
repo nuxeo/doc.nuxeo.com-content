@@ -1,6 +1,6 @@
 ---
 title: Elasticsearch Indexing Logic
-description: When manipulating a session to create, update or delete documents, a synchronous listener stacks the indexing commands to process. These commands are factorized and are processed either in an asynchronous job or at post commit time.
+description: When manipulating a session to create, update or delete documents, a synchronous listener stacks the indexing commands to process.
 review:
     comment: ''
     date: '2017-12-13'

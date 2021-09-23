@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Shell
+description: Nuxeo Shell works on top of Nuxeo Content Automation Client and is using the REST API provided by Automation. Shell can be used against any Nuxeo distribution.
 review:
     comment: ''
     date: '2015-12-01'
@@ -236,9 +237,7 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 Nuxeo Shell works on top of Nuxeo Content Automation Client and is using the REST API provided by the Automation framework. Because it is using HTTP to communicate with the server, the Shell can be used against any Nuxeo distribution which includes the automation framework.
-{{! /excerpt}}
 
 This also means, most of the Shell commands are implemented as remote Automation operations.
 

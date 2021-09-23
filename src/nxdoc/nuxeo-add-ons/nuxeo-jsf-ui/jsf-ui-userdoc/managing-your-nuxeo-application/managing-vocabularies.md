@@ -1,6 +1,6 @@
 ---
 title: Managing Vocabularies
-description: Vocabularies are the lists of labels used in the application, for instance in drop down lists. A vocabulary is composed of several entries, that are the options in the drop down lists.
+description: Vocabularies are the lists of labels used in the application. For example, in a drop down list, the options are a vocabulary composed of several entries.
 review:
     comment: ''
     date: '2019-10-11'

@@ -69,12 +69,10 @@ history:
         date: '2013-11-25 23:56'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
-Since Nuxeo Platform 5.8, the framework provides an easy way to get the trace of the latest execution of an automation chain, the stack of execution and the values of parameters.
-
+The Nuxeo Platform framework provides an easy way to get the trace of the latest execution of an automation chain, the stack of execution and the values of parameters.
 {{! /excerpt}}
 
 Although this feature is always usable, even out of Nuxeo Studio context, it is particularly useful when implementing automation chains using Nuxeo Studio.

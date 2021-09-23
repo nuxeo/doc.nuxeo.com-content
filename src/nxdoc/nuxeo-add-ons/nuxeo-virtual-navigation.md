@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Virtual Navigation
+description: A virtual navigation entry is a tab, just beside the browsing tree, that displays a hierarchical tree representing your vocabulary values.
 review:
     comment: ''
     date: '2019-09-18'
@@ -60,17 +61,13 @@ history:
         date: '2014-10-27 11:34'
         message: ''
         version: '1'
-
 ---
-{{multiexcerpt 'DeprecatedAddon' space='nxdoc' page='generic-multi-excerpts'}}
 
-{{! excerpt}}
+{{multiexcerpt 'DeprecatedAddon' space='nxdoc' page='generic-multi-excerpts'}}
 
 A virtual navigation entry is a tab, just beside the browsing tree, that displays a hierarchical tree representing your vocabulary values. Clicking on one of the values will filter the repository content to display only documents having that value for one of its metadata (depending on the configured query). We call it "Virtual navigation", in opposition to the real filing position, in the folders tree.
 
 The Nuxeo Virtual Navigation addon provides two navigation trees based on the Subjects and Coverage metadata instead of the folder structure.
-
-{{! /excerpt}}
 
 ## Installation
 

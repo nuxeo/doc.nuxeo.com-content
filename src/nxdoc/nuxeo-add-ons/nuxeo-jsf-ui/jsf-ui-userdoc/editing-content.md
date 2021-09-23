@@ -1,6 +1,6 @@
 ---
 title: Editing Content
-description: Editing a document means modifying its content (i.e. the attached file of a file document, the text of a note, etc.), or simply editing the title, description or any metadata of the document.
+description: Editing a document means modifying its content (i.e. the attached file of a file document), or simply editing the title, description or any metadata of the document.
 review:
     comment: ''
     date: '2019-10-18'

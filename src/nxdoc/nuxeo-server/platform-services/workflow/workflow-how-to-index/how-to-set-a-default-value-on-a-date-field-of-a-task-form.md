@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Set a Default Value on a Date Field of a Task Form'
+description: While designing your workflow in Nuxeo Studio, in order to pre-set the due_date value, you can use an input automation chain on the node.
 review:
     comment: ''
     date: '2017-12-14'
@@ -64,11 +65,7 @@ history:
 ---
 Let's say we have a workflow variable in a workflow whose name is `due_date`. In the first node of the workflow, a task asks the workflow initiator to fill-in the participants. He/She also has to set the due date, but a value is already suggested: The current date plus seven days.
 
-{{! excerpt}}
-
 While desinging your workflow in [Nuxeo Studio]({{page space='studio' page='workflow'}}), in order to pre-set the `due_date` value, you can use an `input automation chain` on the node (`General` tab of the `Node Properties` dialog). In this automation chain, you use the `Workflow Context>Set Workflow Variable`.
-
-{{! /excerpt}}
 
 Fill in the following parameters:
 

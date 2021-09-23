@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Override Existing Document Types'
+description: Any built-in document type can be overridden. See Nuxeo analysis as we provide a table that should give you all necessary information.
 review:
   comment: ''
   date: '2019-03-11'
@@ -100,9 +101,7 @@ history:
     version: '1'
 ---
 
-{{! excerpt}}
 Any built-in document type can be overridden: you just have to use the good ID, inherit the good type and add some necessary schemas and facets. We provide a table that should give you all necessary information.
-{{! /excerpt}}
 
 When inheriting from a document type, you inherit its schemas and facets. For instance, when inheriting from Document, you get the `dublincore` schema (that holds the title, description, modification date, ... metadata), as well as `common` (that holds the size of the doc) and `uid` (that holds version information and ID).
 

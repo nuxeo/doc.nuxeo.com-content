@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Security System
+description: The Nuxeo repository security relies on a list of unitary permissions that are used within the repository to grant or deny access. See examples.
 review:
     comment: ''
     date: '2017-12-13'
@@ -69,9 +70,7 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 The Nuxeo repository security relies on a list of unitary permissions that are used within the repository to grant or deny access. These atomic permissions (Read_Children, Write_Properties ...) are grouped in Permissions Groups (Read, Edit, Everything ...) so that security can be managed more easily.
-{{! /excerpt}}
 
 Nuxeo comes with a default set of permissions and permissions groups but you can contribute yours too.
 

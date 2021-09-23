@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Write Reusable Automation Chains'
+description: You might have some automation chains in a project that have a similar structure, meaning the same operations in the same order, but parameter values are different.
 review:
     comment: ''
     date: '2016-12-19'
@@ -104,9 +105,7 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 You might have some automation chains in your project that all have a similar structure, meaning the same operations in the same order, the only difference being that the parameter values sent to the composing operations are different. Usually in this case, you can factorize your implementation using parameterized chains.
-{{! /excerpt}}
 
 Let's take an example: You want to change the lifecycle of a document, while logging the company of the user who changed the document lifecycle state in the audit. If you want a chain that validates a document, you would write the following chain:
 

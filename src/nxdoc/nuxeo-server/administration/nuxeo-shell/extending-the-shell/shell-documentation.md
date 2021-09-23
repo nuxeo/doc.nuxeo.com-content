@@ -1,5 +1,6 @@
 ---
 title: Shell Documentation
+description: These annotations are used to generate the base of the command documentation. Using this information the shell automatically generates basic help for you.
 review:
     comment: ''
     date: '2015-12-01'
@@ -74,15 +75,12 @@ history:
         date: '2010-11-24 15:45'
         message: ''
         version: '1'
-
 ---
 
-{{! excerpt}}
 Commands are self documented by using annotations. These annotations are used to generate the base of the command documentation, like: short description, syntax, options, arguments etc. Using this information the shell automatically generates basic help for you.
-{{! /excerpt}} {{#> callout type='info' }}
 
+{{#> callout type='info' }}
 The generated documentation is available in both text format (for terminal) and wiki format. See [Nuxeo Shell Command Index]({{page page='nuxeo-shell-command-index'}}) for the wiki format.
-
 {{/callout}}
 
 This is the minimal documentation provided by any command and it may be enough for simple commands. But for more complex commands you may want to give more in depth instructions or examples.

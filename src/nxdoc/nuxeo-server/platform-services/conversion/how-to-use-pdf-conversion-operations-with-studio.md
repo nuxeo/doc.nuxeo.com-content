@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Use PDF conversion operations with Nuxeo Studio'
+description: See how to use pdf conversion operations with studio. Integrate PDF tools operations under the Conversion category so this can be done easily from automation chains.
 review:
     comment: ''
     date: '2018-01-15'
@@ -23,7 +24,6 @@ tree_item_index: 150
 
 ---
 
-{{! excerpt}}
 If the main document format stored in the Nuxeo repository is PDF, it should be convenient to manipulate it without having to use a desktop software. Nuxeo gives the opportunity to safely and automatically execute PDF operations from the Nuxeo interface.
 
 In this tutorial we will implement a document management security politic that requires to control each downloaded PDF files with a "confidential" watermark and ask for a password in order to open the document.
@@ -31,7 +31,7 @@ In this tutorial we will implement a document management security politic that r
 Nuxeo integrates PDF tools operations, under the **Conversion** category so that all this can be done easily from automation chains.
 
 ![]({{file name='nuxeo-studio-pdf-conversion-operations.png'}} ?w=500,border=true)
-{{! /excerpt}}
+
 
 {{#> callout type='info' }}
 This how to requires knowledge about:

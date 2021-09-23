@@ -70,12 +70,10 @@ history:
         date: '2014-11-19 23:31'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
-This document explains how the Nuxeo Platform can be used to provide an application factory system that allows to instantiate on demand applications for a given configuration.
-
+Learn how the Nuxeo Platform can be used to provide an application factory system that allows to instantiate on demand applications for a given configuration.
 {{! /excerpt}}
 
 ## Target Use Cases

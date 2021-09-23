@@ -1,6 +1,6 @@
 ---
 title: Installing a New Package on Your Instance
-description: Packages can be installed directly using the nuxeoctl script or from the Marketplace. Packages can be addons bringing new features or hotfixes providing corrections or small improvements.
+description: Packages can be installed directly using the nuxeoctl script or from the Marketplace. Packages can be addons bringing new features or hotfixes providing updates.
 review:
   comment: ''
   date: '2019-09-18'

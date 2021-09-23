@@ -1,5 +1,6 @@
 ---
 title: 'Layouts and Widgets (Forms, Listings, Grids)'
+description:  These configuration elements are used to generate page fragments from XML configurations contributed to Nuxeo Runtime extension points.
 review:
     comment: ''
     date: '2019-10-21'
@@ -331,9 +332,7 @@ history:
 
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 Layouts and widgets have been originally designed to display forms, and have been improved to handle listings as well as summary pages. These configuration elements are used to generate page fragments from XML configurations contributed to [Nuxeo Runtime extension points]({{page page='runtime-and-component-model'}}).
-{{! /excerpt}}
 
 In this chapter we will see how to define layouts and associated widgets, and use them in XHTML pages.
 

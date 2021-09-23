@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Display Non-Folderish Documents (Files, Note, ...) in the Left Tree - JSF UI'
+description: See Nuxeo sample override of an example query without the "Folderish" clause. You can contribute to the "providers" extension using the XML Extensions feature.
 review:
     comment: ''
     date: '2019-10-21'
@@ -72,9 +73,7 @@ history:
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 The left tree is built using a query that is ran recursively. One of the clauses of the query makes sure that only folderish documents are displayed (`AND&nbsp;ecm:mixinType = 'Folderish'`). The query is defined in the "tree_children" page provider. See below a sample override of this query without the "Folderish" clause. You can contribute to the "providers" extension using the[ XML Extensions]({{page page='how-to-contribute-to-an-extension'}}) feature.
-{{! /excerpt}}
 
 ```html/xml
 <require>org.nuxeo.ecm.webapp.pageproviders.contrib</require>

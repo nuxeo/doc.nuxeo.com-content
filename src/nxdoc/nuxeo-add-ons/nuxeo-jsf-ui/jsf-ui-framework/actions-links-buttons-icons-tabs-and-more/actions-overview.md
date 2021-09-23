@@ -1,5 +1,6 @@
 ---
 title: Actions Overview
+description: In this chapter, an action will stand for any kind of command that can be triggered via user interface interaction. See examples and allow us to walk you through it.
 review:
     comment: ''
     date: '2019-10-21'
@@ -115,11 +116,7 @@ history:
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 In this chapter, an action will stand for any kind of command that can be triggered via user interface interaction. In other words, it will describe a link and other information that may be used to manage its display (the link label, an icon, security information for instance).
-{{! /excerpt}}
-
-&nbsp;
 
 ## Registering a New Action
 

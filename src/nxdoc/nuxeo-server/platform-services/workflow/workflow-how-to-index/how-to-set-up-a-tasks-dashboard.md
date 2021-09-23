@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Set Up a Tasks Dashboard'
+description: In Studio, we provide the Time Off Request template that sets up a workflow for scheduling time off. Learn more and let us walk you through the process.
 review:
     comment: ''
     date: '2017-12-14'
@@ -113,11 +114,7 @@ history:
 
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
-
 In Studio, we provide the Time Off Request template that sets up a workflow for scheduling time off. If you installed this template, you would see that it displays a new tab "Workflow" in which there are the tasks queues related to the time off workflow.
-
-{{! /excerpt}}
 
 ![]({{file name='workflow_tab.png'}} ?w=500,border=true)
 

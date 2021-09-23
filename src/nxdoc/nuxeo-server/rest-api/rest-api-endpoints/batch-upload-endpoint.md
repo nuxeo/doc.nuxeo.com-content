@@ -1,6 +1,6 @@
 ---
 title: Batch Upload Resource Endpoint
-description: This endpoint allows to upload a batch of files to a Nuxeo server. The uploaded files can then be used as the input of an Automation operation or a property of a document through the REST API.
+description: Endpoint allows you to upload a batch of files to a Nuxeo server. These files can then be used as the input of an Automation operation of a document via REST API.
 review:
     comment: ''
     date: '2017-12-28'

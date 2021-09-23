@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Override a Default Style - JSF UI'
+description: If you'd like to override a default style, see Nuxeo how-to page in taking an example to override the "feedback message" styling.
 review:
     comment: ''
     date: '2019-10-21'
@@ -119,11 +120,7 @@ history:
 
 Most of the default application styling is done using "dynamic" SCSS files referring to variables and flavors. These styles can be browsed [on GitHub](https://github.com/nuxeo/nuxeo-jsf-ui/tree/master/code/nuxeo-platform-webapp-core/src/main/resources/themes/sass).
 
-{{! excerpt}}
-
 If you'd like to override a default style, here's an how-to, taking as example the override of the "feedback message" styling. Find out how it's styled by default, in case the style is using flavors and you would like to keep this feature (as variables are resolved at display time, you may not be aware that some variables are used).
-
-{{! /excerpt}}
 
 For instance, here's the default styling for the class&nbsp;`facesStatusMessage` defined in `messages_and_tooltips.scss`:
 

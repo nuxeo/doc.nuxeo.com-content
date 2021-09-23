@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Add a "Save Work in Progress" Option on a Task'
+description: This how-to will teach you how to implement an option so that work in progress can be saved, giving more flexibility to users to complete it at their own pace.
 review:
     comment: ''
     date: '2019-06-05'
@@ -18,9 +19,7 @@ toc: true
 tree_item_index: 710
 ---
 
-{{! excerpt}}
 While dealing with a workflow task, you may be interrupted, but you don't want to lose the review that you started. This how-to will teach you how to implement an option so that work in progress can be saved, giving more flexibility to users to complete it at their own pace.
-{{! /excerpt}}
 
 ## Prerequisites
 

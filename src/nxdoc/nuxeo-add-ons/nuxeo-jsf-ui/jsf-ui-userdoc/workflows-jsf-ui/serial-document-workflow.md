@@ -1,5 +1,6 @@
 ---
 title: Serial Document Workflow
+description: The default serial workflow, called "Serial document review", is an ordered workflow so that participants can review the document only when approved.
 review:
     comment: ''
     date: '2019-10-21'
@@ -89,9 +90,7 @@ history:
 
 {{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 **The default serial workflow**, called "Serial document review", is an ordered workflow. This means that participants can review the document only when the previous participant in the list has approved the document. It can be used either to approve the document or simply to review it.
-{{! /excerpt}}
 
 The workflow is composed of the steps below:
 

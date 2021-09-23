@@ -1,5 +1,6 @@
 ---
 title: Content Views
+description: A content view is a notion to define all the elements needed to get a list of items and perform their rendering. See here to learn how to perform several actions.
 review:
     comment: ''
     date: '2019-10-21'
@@ -439,9 +440,7 @@ Content Views can be configured using Studio, check out the [Content Views]({{pa
 
 ## Definition
 
-{{! excerpt}}
 A content view is a notion to define all the elements needed to get a list of items and perform their rendering. The most obvious use case is the listing of a folderish document content, where we would like to be able to perform several actions.
-{{! /excerpt}}
 
 - Defining the NXQL query that will be used to retrieve the documents, filtering some of them (documents in the trash for instance).
 - Passing on contextual parameters to the query (the current container identifier).

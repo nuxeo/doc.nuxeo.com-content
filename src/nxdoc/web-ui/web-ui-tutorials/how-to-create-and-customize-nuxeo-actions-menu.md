@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Create an Actions Menu'
+description: In this tutorial, you will learn how to create and customize an actions menu on your code. The actions menu is a responsive menu that can hold actions.
 review:
     comment: ''
     date: '2020-03-25'
@@ -21,9 +22,7 @@ labels:
 tree_item_index: 500
 ---
 
-{{! excerpt}}
 In this tutorial, you will learn how to create and customize an actions menu on your code. The actions menu is a responsive menu that can hold actions (e.g. buttons), which hides behind a dropdown according to the available (or predefined) space.
-{{! /excerpt}}
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create a Nuxeo actions menu/nuxeo actions menu screenshot

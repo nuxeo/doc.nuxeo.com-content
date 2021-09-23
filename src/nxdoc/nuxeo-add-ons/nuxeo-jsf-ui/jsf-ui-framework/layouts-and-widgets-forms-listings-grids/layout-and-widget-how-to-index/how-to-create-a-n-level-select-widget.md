@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Create a N-Level Select Widget - JSF UI'
+description: In this page we provide samples to have a selection widget with 3 levels by contributing a "template widget" in Studio. See example codes.
 review:
     comment: ''
     date: '2019-10-21'
@@ -174,9 +175,7 @@ history:
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 In this page we provide samples to have a selection widget with 3 levels by contributing a "template widget" in Studio. Each sample code below is the sample for one widget that has a different behavior (described before the code).
-{{! /excerpt}}
 
 To create and use a new widget:
 

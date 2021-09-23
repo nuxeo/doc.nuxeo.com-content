@@ -1,5 +1,6 @@
 ---
 title: Publisher
+description: There are three ways to publish a document. See Nuxeo breakdown and use it to guide users as to where they should publish documents from a specific workspace.
 review:
     comment: ''
     date: '2017-12-15'
@@ -95,8 +96,8 @@ history:
         date: '2011-09-15 14:56'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 ## Functional Overview
@@ -104,8 +105,6 @@ history:
 {{{multiexcerpt 'functional-overview' space='nxdoc' page='publishing-content'}}}
 
 ## Technical Overview
-
-{{! excerpt}}
 
 There are three ways to publish a document:
 
@@ -122,8 +121,6 @@ The `PublisherService` deals with three interfaces:
 *   `PublishedDocument`: represents the published document. It can be created from a `DocumentModel`, a proxy or a file on the filesystem.
 *   `PublicationNode`: represents a Node where you can publish a `DocumentModel`. It can be another `DocumentModel` (mainly Folder / Section) or a directory on the filesystem.
 *   `PublicationTree`: the tree which is used to publish / unpublish documents, to approve / reject publication, list the already published documents in a `PublicationNode`, etc. See the [Javadoc of the PublicationTree](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/publisher/api/PublicationTree.html).
-
-{{! /excerpt}}
 
 The `PublisherService` mainly works with three concepts:
 

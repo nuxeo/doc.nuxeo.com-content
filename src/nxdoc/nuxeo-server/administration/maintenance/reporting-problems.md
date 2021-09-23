@@ -1,5 +1,6 @@
 ---
 title: Reporting Problems
+description: Here are listed some procedures to extract information of a running Nuxeo instance. Most of these scripts generate files in the /tmp/ directory.
 review:
     comment: ''
     date: '2020-06-25'
@@ -167,12 +168,10 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 Here are listed some procedures to extract information of a running Nuxeo instance.</br>
 Most of these scripts generate files in the `/tmp/` directory.</br>
 These information can be requested by the Support team.</br>
 Please always compress files before uploading them to your JIRA ticket.
-{{! /excerpt}}
 
 ## {{> anchor 'nuxeo-conf'}}Nuxeo Status and Configuration
 

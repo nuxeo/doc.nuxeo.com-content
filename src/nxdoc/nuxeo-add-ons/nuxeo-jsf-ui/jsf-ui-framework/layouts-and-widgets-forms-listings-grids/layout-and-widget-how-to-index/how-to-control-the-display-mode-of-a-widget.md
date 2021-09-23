@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Control the Display Mode of a Widget - JSF UI'
+description: Nuxeo Studio enables you to leverage the power of the Nuxeo Layout service and to implement your requirements using an expression when you configure your widget.
 review:
     comment: ''
     date: '2019-10-21'
@@ -181,9 +182,7 @@ history:
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 It is a very frequent requirement to be able to control the display mode of a widget depending on some conditions such as the lifecycle state of the document, or the groups a user belongs to. Nuxeo Studio enables you to leverage the power of the Nuxeo Layout service and to implement your requirements using an expression when you configure your widget.
-{{! /excerpt}}
 
 For instance, when you are editing a document layout, whether it is the creation, edition or view layout, if you edit the widgets you dropped on the layout, you will see the "Advanced mode configuration" section.
 

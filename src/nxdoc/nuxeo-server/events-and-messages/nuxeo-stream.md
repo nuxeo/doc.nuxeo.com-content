@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Stream
+description: Nuxeo Stream aims to provide asynchronous and distributed processing using different layers. See examples and allow us to walk you through the process.
 review:
     comment: ''
     date: '2020-07-16'
@@ -10,12 +11,10 @@ toc: true
 tree_item_index: 300
 ---
 
-{{! excerpt}}
 Nuxeo Stream aims to provide asynchronous and distributed processing, there are different layers:
 - A Log storage abstraction with a Chronicle Queue and Kafka implementations
 - A library to provide processing patterns without dependencies on Nuxeo  
 - Nuxeo services to configure Kafka, streams and processor using Nuxeo extension point.
-{{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>

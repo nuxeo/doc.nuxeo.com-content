@@ -1,5 +1,6 @@
 ---
 title: Custom Action Types
+description: Since 5.8, it is easy to add your own action type to handle its configuration and display, rather than defining an action of type "template".
 review:
     comment: ''
     date: '2019-10-21'
@@ -71,13 +72,11 @@ history:
         date: '2013-12-20 17:54'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 Since 5.8, it is easy to add your own action type to handle its configuration and display, rather than defining an action of type "template" and specifying the template each time it needs to be used.
-{{! /excerpt}}
 
 You can take example on the "link" [action type registration](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-actions-jsf/src/main/resources/OSGI-INF/action-widgettypes-contrib.xml) for this. It is actually relying on widget types definition, here is a minimal definition for a custom action type:
 

@@ -1,5 +1,6 @@
 ---
 title: Garbage-Collecting Orphaned Binaries
+description: The binary files attached to documents are not stored in the database but using a specialized binary store, and are not removed like documents.
 review:
     comment: ''
     date: '2020-06-25'
@@ -59,9 +60,7 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 The binary files attached to documents are not stored in the database but using a specialized binary store (typically filesystem-based or S3), and are not removed like documents (see [Trash Service]({{page page='trash-service'}})).
-{{! /excerpt}}
 
 Binary files are not immediately deleted when their containing document is deleted because the binary store uses a de-duplication strategy which means that the same binary file may be referenced by several documents. To avoid complex locking or reference counting strategies, they are simply garbage-collected when there remains no reference to them (they are orphaned).
 

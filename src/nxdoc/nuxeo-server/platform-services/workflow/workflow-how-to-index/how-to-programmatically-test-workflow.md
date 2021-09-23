@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Programmatically test a workflow'
+description: When you are implementing a multi-step workflow, debugging the last step actually requires that you've reached it, which takes more time as your workflow gets longer.
 review:
     comment: ''
     date: '2019-06-11'
@@ -19,9 +20,7 @@ toc: true
 tree_item_index: 710
 ---
 
-{{! excerpt}}
 When you are implementing a long multi-step workflow, debugging the last step actually requires that you've reached it, which takes more and more time as your workflow gets longer. Time is precious and this page will provide you with tips to save it!
-{{! /excerpt}}
 
 The Workflow engine of the Nuxeo Platform is a great tool to automate content processes. Complex routing logic can easily be configured, which can lead to a very high number of possible scenarios.
 Adding the Automation framework and notification templating to the mix and one will quickly end up in workflow configuration hell: an exponential number of things to test.

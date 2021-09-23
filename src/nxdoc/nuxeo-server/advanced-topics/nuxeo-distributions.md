@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Distributions
+description: If you need to assemble your own distribution, you will find in nuxeo-distribution some resources, templates and samples on which to base your packaging.
 review:
     comment: ''
     date: '2017-12-18'
@@ -125,9 +126,7 @@ history:
 The `nuxeo-distribution` module is used for the packaging and the high-level testing of the Nuxeo Platform: Nuxeo Server, Nuxeo Static WAR, Nuxeo Shell, Functional and Performance Tests...
 The key concepts are: [assembly]({{page space='corg' page='creating-your-own-distribution'}}), [ant-assembly-maven-plugin](https://github.com/nuxeo/ant-assembly-maven-plugin), [NXR]({{page space='glos' page='nxr'}}), [WAR]({{page space='glos' page='war'}}), [Nuxeo Package]({{page page='creating-nuxeo-packages'}}), [tools-nuxeo-ftest]({{page space='corg' page='functional-testing'}}), [WebDriver](http://www.seleniumhq.org/projects/webdriver/), [Gatling](http://gatling.io).
 
-{{! excerpt}}
 With `nuxeo-distribution`, you can [build from Nuxeo sources]({{page space='corg' page='compiling-nuxeo-from-sources'}}), run tests against existing distributions and much more: if you need to [assemble your own distribution]({{page space='corg' page='creating-your-own-distribution'}}), you will find in `nuxeo-distribution` some resources, templates and samples on which to base your packaging.
-{{! /excerpt}}
 
 You don't need to use the `nuxeo-distribution` module if:
 - You want a standard Nuxeo distribution: download it manually from [http://www.nuxeo.com/downloads/](http://www.nuxeo.com/downloads/) or with [Maven](http://maven.nuxeo.org/), manually via the online interface or automatically while building.

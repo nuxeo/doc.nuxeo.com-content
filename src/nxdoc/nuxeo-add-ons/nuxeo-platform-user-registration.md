@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Platform User Registration
+description: The Nuxeo Platform User Registration addon enables users to invite external users to access a specific space of the Platform or a limited set of spaces.
 review:
     comment: ''
     date: '2018-08-27'
@@ -119,9 +120,7 @@ history:
 ---
 {{{multiexcerpt 'JSF-UI-required' page='Generic Multi-Excerpts'}}}
 
-{{! excerpt}}
 The [Nuxeo Platform User Registration addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration) enables users to invite external users to access a specific space of the Platform or a limited set of spaces. The invitations must be approved by an administrator of the Platform.
-{{! /excerpt}}
 
 ## Installation
 

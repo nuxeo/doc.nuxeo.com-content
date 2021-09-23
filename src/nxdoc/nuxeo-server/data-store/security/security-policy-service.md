@@ -1,5 +1,6 @@
 ---
 title: Security Policy Service
+description: The Security Policy Service provides an extension point to plug custom security policies that do not rely on the standard ACLs for security. Learn more here.
 review:
     comment: ''
     date: '2018-10-10'
@@ -80,9 +81,7 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 The Security Policy Service provides an extension point to plug custom security policies that do not rely on the standard ACLs for security. For instance, it can be used to define permissions according to the document metadata, or information about the logged in user.
-{{! /excerpt}}
 
 {{#> callout type='info'}}
 Watch the related course on Nuxeo University:</br>

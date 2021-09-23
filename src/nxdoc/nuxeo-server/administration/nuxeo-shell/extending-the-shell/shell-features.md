@@ -99,7 +99,7 @@ history:
 ---
 
 {{! excerpt}}
-In order to install new commands to existing namespaces or to register new namespaces, completors, injector providers or other Shell objects you must create a new Shell Feature.
+To install new commands to existing namespaces or register new namespaces, completors, injector providers or other Shell objects you must create a new Shell Feature.
 {{! /excerpt}}
 
 If you need to modify or add some built-in commands (this is more for Nuxeo developers) - you can directly modify the Nuxeo Shell implementation - so you don't need to create new Shell Features.

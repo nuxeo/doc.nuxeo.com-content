@@ -1,5 +1,6 @@
 ---
 title: Set Up Email Notification
+description: The default Nuxeo Platform email configuration is filled in with neutral values that you need to edit to make the platform work with your mail server. See more.
 review:
     comment: ''
     date: '2020-02-14'
@@ -47,9 +48,7 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}
 The default Nuxeo Platform email configuration is filled in with neutral values that you need to edit to make the platform work with your mail server. Unless you do that, alerts emails won't be sent to users.
-{{! /excerpt}}
 
 {{#> callout type='info' }}
 **To enable notifications**, modify the values of the properties of your `nuxeo.conf` file.</br>

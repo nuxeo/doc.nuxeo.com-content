@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Edge Cache
+description: Nuxeo Edge Cache allows you to cache binaries from your Nuxeo server on an Edge Cache server closer to your clients. See how to improve the speed of your downloads.
 review:
     comment: ''
     date: '2017-12-14'
@@ -17,9 +18,7 @@ tree_item_index: 1650
 ---
 {{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 [Nuxeo Edge Cache](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-edge-cache) allows you to cache binaries from your Nuxeo server on an Edge Cache server closer to your clients. It can act like a Content Delivery Network, to improve the speed of your downloads.
-{{! /excerpt}}
 
 Nuxeo Edge Cache is composed by one Nuxeo addon to be installed on the Nuxeo server, and agents to be installed on a computer that will serve as the Edge Cache server. These agents are available with installers for Windows and OS X, or as a Docker image.
 

@@ -1,6 +1,6 @@
 ---
 title: Indexing and Query
-description: The Nuxeo Platform stores documents and their property values either in a database (VCS) or in a NoSQL database (DBS). This data is also at the same time indexed in an Elasticsearch index.
+description: The Nuxeo Platform stores documents and property values either in a database (VCS) or in a NoSQL database (DBS). This data is also indexed in an Elasticsearch index.
 review:
     comment: ''
     date: '2019-04-16'

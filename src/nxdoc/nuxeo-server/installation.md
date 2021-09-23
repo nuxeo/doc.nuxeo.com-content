@@ -1,5 +1,6 @@
 ---
 title: Installation
+description: Nuxeo Platform LTS 2021 can be deployed with the Nuxeo Docker image. It can be installed on all major operating system such as Windows, Linux distributions or macOS.
 review:
   comment: ''
   date: '2021-01-29'
@@ -29,9 +30,8 @@ version_override:
   '6.0': 60/admindoc/installation
   '5.8': 58/admindoc/installation
 ---
-{{! excerpt}}
+
 Nuxeo Platform LTS 2021 can be deployed with the **Nuxeo Docker image** (recommended) or using the **ZIP distribution**. It can be installed on all major operating system such as Windows (client or server), Linux distributions, macOS, etc.
-{{! /excerpt}}
 
 - [Install Nuxeo with the Docker Image]({{page version='' space='nxdoc' page='docker-image'}})
 - [Install Nuxeo with the ZIP distribution]({{page version='' space='nxdoc' page='tomcat-server-zip'}})

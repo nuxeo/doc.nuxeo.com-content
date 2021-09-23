@@ -1,5 +1,6 @@
 ---
 title: Bootstrap Your Document Management Project
+description: Due to the business flavor of most of the projects made with Nuxeo Platform it is not possible to draw a general approach that would be the good one in 100% cases.
 review:
     comment: ''
     date: '2020-08-31'
@@ -170,10 +171,8 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
 
 Due to the business flavor of most of the projects made with Nuxeo Platform it is not possible to draw a general approach that would be the good one in 100% cases. We try to give a few hints here.
-{{! /excerpt}}
 
 ## Get an Instance of Nuxeo Platform
 

@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Add Complex Fields on Your Document Type'
+description: Metadata can be simple text fields, dates, text areas, etc. Nuxeo Studio enables you to create your own document types, with their associated metadata.
 review:
     comment: ''
     date: '2015-12-01'
@@ -130,11 +131,8 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
 
 Nuxeo Studio enables you to create your own document types, with their associated metadata. Metadata can be simple text fields, dates, text areas, etc. They can also be more complex with several related informations. A typical example would be a "Sender" metadata, that would be composed of four pieces of information: The sender's last name, his/her first name, the company and the company's logo.
-
-{{! /excerpt}}
 
 Let's see how this metadata is defined.
 

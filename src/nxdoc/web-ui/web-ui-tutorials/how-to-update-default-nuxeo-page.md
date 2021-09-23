@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Customize the Default Document View'
+description: In this tutorial, you will learn how to edit the default Nuxeo Web UI document view page, and display the information you need.
 review:
     comment: ''
     date: '2020-11-09'
@@ -18,9 +19,7 @@ labels:
 tree_item_index: 1010
 ---
 
-{{! excerpt}}
 In this tutorial, you will learn how to edit the default Nuxeo Web UI document view page, and display the information you need (by adding new Nuxeo cards, removing useless property information, reorganizing the page layout etc.)
-{{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the [Nuxeo Web UI Development](https://university.nuxeo.com/learn/course/external/view/elearning/164/web-ui-development) course on Nuxeo University:</br>
