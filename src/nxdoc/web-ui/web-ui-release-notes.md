@@ -16,8 +16,6 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 {{/callout}}
 {{! /multiexcerpt}}
 
-## Recently Released Changes
-
 {{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-6'}}}
 
 ---

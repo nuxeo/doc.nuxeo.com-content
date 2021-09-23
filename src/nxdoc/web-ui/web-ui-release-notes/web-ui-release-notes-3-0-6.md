@@ -8,13 +8,13 @@ review:
 toc: true
 labels:
 tree_item_index: 998
+hidden: true
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
 
-## What's New in Web UI for LTS 2021 (version 3.0.6)
-
 {{! multiexcerpt name='web-ui-updates'}}
+## What's New in Web UI for LTS 2021 (version 3.0.6)
 
 ### Execute Actions in Bulk
 
