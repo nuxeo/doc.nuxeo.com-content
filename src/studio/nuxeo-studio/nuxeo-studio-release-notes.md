@@ -15,6 +15,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 {{{multiexcerpt 'studio-updates-2021-07' page='studio-updates-2021-09'}}}
 
+
 ## Learn More
 
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'4.5.0','4.5.1','4.5.2','4.5.3'%29) is available in our bug tracking tool.

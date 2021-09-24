@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Review Nuxeo Studio Configuration'
+description: This tutorial shows how branch management features in Nuxeo Studio can be used to review configuration made by other developers before it is pushed on a given branch.
 review:
   comment: ''
   date: ''

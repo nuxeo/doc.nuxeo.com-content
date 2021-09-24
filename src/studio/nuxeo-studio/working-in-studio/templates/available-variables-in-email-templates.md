@@ -121,13 +121,11 @@ history:
 
 ---
 {{#> callout type='info' }}
-
 For a broader look about variables available in different contexts, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
+{{/callout}}
 
-{{/callout}}{{! excerpt}}
-
-In your email templates, you have access to different variables depending if you are in an automation chain or in a workflow notification context. This page references them.
-
+{{! excerpt}}
+In your email templates, you have access to different variables depending if you are in an automation chain or in a workflow notification context.
 {{! /excerpt}}
 
 ## Automation Chain "Notification > Document.Mail" Operation Context

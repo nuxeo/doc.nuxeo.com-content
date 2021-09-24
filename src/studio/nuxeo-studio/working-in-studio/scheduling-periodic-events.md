@@ -1,5 +1,6 @@
 ---
 title: Scheduling Periodic Events
+description: The Scheduler Service is a Nuxeo Platform service to schedule events at periodic times. This is the best way in Nuxeo Platform to execute things at any time.
 review:
     comment: ''
     date: '2020-05-15'

@@ -1,5 +1,6 @@
 ---
 title: Releases & Tags
+description: The releases and tags tab allows to list every release and tag that were performed on the project. It also allows to download the Nuxeo Package associated to a release.
 review:
     comment: ''
     date: '2019-11-12'

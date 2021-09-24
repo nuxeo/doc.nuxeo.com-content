@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Reference an External Document Type'
+description: The list of available document types is made from some pre-declared built-in types and the ones created in Studio. Don't see a list? See here why.
 review:
     comment: ''
     date: ''
@@ -107,6 +108,7 @@ history:
         message: ''
         version: '1'
 ---
+
 Some of the features of Studio rely on displaying a list of existing document types. For instance, that is the case when:
 
 *   you configure a user action filter,
@@ -114,11 +116,9 @@ Some of the features of Studio rely on displaying a list of existing document ty
 *   you configure the containment rules in the types definition.
 
 {{! excerpt}}
-
 That list&nbsp;of available document types is made from some pre-declared built-in types (Workspace, Folder, File, ...) and the ones created in Studio.
 
 It happens that you don't find in that list the type you are looking for, mainly because:
-
 {{! /excerpt}}
 
 *   We forgot to add some built-in types (at the time this page is created it is the case of Forum, Website, MailFolder, ...);
