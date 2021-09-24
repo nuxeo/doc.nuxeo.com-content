@@ -29,15 +29,13 @@ history:
         date: '2016-01-29 17:57'
         message: ''
         version: '1'
-
 ---
-{{! excerpt}}
 
-As for the API, we have to conciliate stability and innovation. That means we want backward compliance, slow deprecation and transparent changes for a smooth user experience on upgrades.
+{{! excerpt}}
+As for the API, we have to conciliate stability and innovation. That means we want backward compliance and transparent changes for a smooth user experience on upgrades.
+{{! /excerpt}}
 
 Here's what can be done when some changes are required on data or configuration.
-
-{{! /excerpt}}
 
 ## Configuration
 

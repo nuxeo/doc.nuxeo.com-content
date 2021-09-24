@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Mobile
+description: The Nuxeo mobile application lets you access content stored in Nuxeo Platform servers on your phone to provide a seamless experience.
 review:
     comment: ''
     date: '2018-07-06'

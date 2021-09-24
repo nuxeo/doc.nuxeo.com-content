@@ -1,5 +1,6 @@
 ---
 title: Several Document Types vs One Document Type with a Nature Metadata
+description: In some cases, there is a need to manage different documents. There are not many solutions to choose from, but a few criteria might help to solve the dilemma. See here.
 review:
     comment: ''
     date: '2017-01-16'
@@ -22,49 +23,47 @@ confluence:
     source_link: /display/NXDOC/Several+Document+Types+vs+One+Document+Type+with+a+Nature+Metadata
 tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 16:46'
         message: O
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 11:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 17:20'
         message: ''
         version: '5'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-22 16:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-22 10:13'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-22 10:13'
         message: Added toc
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-02-21 18:44'
         message: ''
         version: '1'
-
 ---
-{{! excerpt}}
 
+{{! excerpt}}
 In some cases, there is a need to manage different documents (procedure, instruction, notice, invoices...) but with very similar properties and lifecycles.
 
 One solution is to create a new document type in Studio for each "nature" of document to manage, another solution is to create one document type and then distinguish them with a metadata nature (bound to a vocabulary) for instance. There is no magical solution to choose between them, but a few criteria might help to solve the dilemma.
-
 {{! /excerpt}}
 
 ## How to Choose?

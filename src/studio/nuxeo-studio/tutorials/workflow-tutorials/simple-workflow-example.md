@@ -1,5 +1,6 @@
 ---
 title: Simple Workflow Example
+description: Company C has decided to be more rigorous on proposals sent by the sales team. A workflow has to be set up so that each proposal is reviewed by head of operations.
 review:
     comment: ''
     date: '2017-12-14'
