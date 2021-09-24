@@ -13,7 +13,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2021-07' page='studio-updates-2021-07'}}}
+{{{multiexcerpt 'studio-updates-2021-07' page='studio-updates-2021-09'}}}
 
 ## Learn More
 
@@ -25,6 +25,8 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [September 2021]({{page page='studio-updates-2021-09'}})                    | Multi-Layer public release and Marketplace changes                             |
+| [August 2021]({{page page='studio-updates-2021-08'}})                    | Multi-Layer changes and Elasticsearch                             |
 | [July 2021]({{page page='studio-updates-2021-07'}})                    | Accessibility improvements for Studio Designer                             |
 | [June 2021]({{page page='studio-updates-2021-06'}})                    | CTRL + S Feature and Trial Registration Cache Resolution                   |
 | [May 2021]({{page page='studio-updates-2021-05'}})                     | Web UI by default in Studio and recursive registries resolution            |
