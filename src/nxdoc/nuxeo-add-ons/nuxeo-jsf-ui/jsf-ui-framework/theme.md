@@ -1,5 +1,6 @@
 ---
 title: Theme
+description: The theme is in charge of the global layout or structure of a page, as well as its branding or styling using resources like styling or JavaScript files.
 review:
     comment: ''
     date: '2019-10-21'
@@ -385,15 +386,9 @@ history:
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{! excerpt}}
 The theme is in charge of the global _layout_ or _structure_ of a page (composition of the header, footer, left menu, main area...), as well as its _branding_ or _styling_ using resources like styling or JavaScript files.
-{{! /excerpt}}
-
-&nbsp;
 
 ![]({{file name='nuxeo_theme_includes.png'}} ?w=500,align=center)
-
-&nbsp;
 
 If you already understand theme concepts, maybe you'd like to check [Theme and Style How-To Index]({{page page='theme-how-to-index'}}).
 

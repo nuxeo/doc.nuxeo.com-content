@@ -1,5 +1,6 @@
 ---
 title: Thumbnail
+description: A thumbnail is a reduced-size version of a picture used to help in recognizing and organizing documents. See more of Nuxeo explanation.
 review:
     comment: ''
     date: '2018-01-16'
@@ -201,13 +202,9 @@ history:
         date: '2013-06-18 10:24'
         message: ''
         version: '1'
-
 ---
-{{! excerpt}}
 
 Documents can have a thumbnail. A thumbnail is a reduced-size version of a picture used to help in recognizing and organizing documents. It will stand for any kind of document according to the type and/or facet.
-
-{{! /excerpt}}
 
 Custom thumbnail factories can be contributed to the thumbnail service, using its extension point. Thumbnails are then available through this service to define how they will be computed and fetched.
 

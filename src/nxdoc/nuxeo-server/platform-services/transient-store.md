@@ -1,5 +1,6 @@
 ---
 title: Transient Store
+description: A Transient Store allows you to store temporary blobs and associated parameters in a Nuxeo instance but outside of the document repository.
 review:
     comment: ''
     date: '2017-12-13'
@@ -80,11 +81,9 @@ history:
         date: '2015-12-09 10:43'
         message: ''
         version: '1'
-
 ---
-{{! excerpt}}
+
 A Transient Store allows you to store temporary blobs and associated parameters (file name, MIME type, etc.) in a Nuxeo instance but outside of the document repository, thus the "transient" aspect.
-{{! /excerpt}}
 
 It is typically used by:
 

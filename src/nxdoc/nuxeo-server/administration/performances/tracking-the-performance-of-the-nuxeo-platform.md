@@ -1,5 +1,6 @@
 ---
 title: Tracking the Performance of the Nuxeo Platform
+description: The Nuxeo Platform is designed to optimize performance. As a consequence, continuous performance testing is part of the Nuxeo quality assurance process.
 review:
     comment: ''
     date: '2017-12-14'
@@ -265,9 +266,7 @@ history:
 
 Managing sizing and performance of any ECM application is a tricky job, because each application is different and many factors must be taken into account.
 
-{{! excerpt}}
 The Nuxeo Platform is designed to optimize performance. As a consequence, continuous performance testing is part of the Nuxeo quality assurance process. Results are based on metrics that focus on user experience, such as application response time.
-{{! /excerpt}}
 
 The outcome of this continuous, measured improvement is that the Nuxeo Platform gives rapid response times even under heavy loads, with thousands of concurrent users accessing a repository that stores millions of documents.
 

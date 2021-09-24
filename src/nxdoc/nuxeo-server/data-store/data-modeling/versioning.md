@@ -1,6 +1,6 @@
 ---
 title: Versioning
-description: The Nuxeo Repository includes a versioning system. At any time, you can ask the repository to create and archive a version of a document. Versioning can be done automatically, according to some versioning policies, or on-demand, through the UI.
+description: The Nuxeo Repository includes a versioning system. At any time, you can ask the repository to create and archive a version of a document.
 review:
     comment: ''
     date: '2017-12-14'
@@ -111,8 +111,8 @@ history:
         date: '2010-11-29 11:32'
         message: ''
         version: '1'
-
 ---
+
 The Nuxeo Repository includes a versioning system. At any time, you can ask the repository to create and archive a version of a document. Versioning can be done automatically, according to some versioning policies, or on-demand, through the UI.
 
 Each version has:
