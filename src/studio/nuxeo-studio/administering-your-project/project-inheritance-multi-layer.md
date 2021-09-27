@@ -1,5 +1,5 @@
 ---
-title: Project Inheritance and Multi-layer
+title: Project Inheritance and Multi-Layer
 review:
     comment: ''
     date: ''
@@ -47,31 +47,39 @@ history:
 
 **Dependent Projects**
 
-In Studio, it is possible to add a project as a dependency of another in the Application Definiton section. 
+In Studio it is possible to add a project as a dependency of another. 
 
-When a dependent project exists, that child projet will inherit all range of aspects, including:
-Studio Modeller configuration
+When a dependency exists, the child projet will inherit most aspects of the dependent project, including:
 
-* Project configuration and any manually added registries  
-* Data and translations that are part of a Studio project 
+* Studio Modeller side configuration and any manually added registries  
+* Any data and translations that are part of a Studio project 
 * Studio Designer front-end and branding assets 
+
+As a result, Studio Modeller side configuration will be useable in the child project as if it was created in the child projet. Assets such as front-end assets and data, will be loaded onto the instance at runtime, and hence will be useable by your project.  
 
 
 **Multi-layer**
 
-We refer to using a structure of dependent projects as a Multi-layer project. The structure has only the following constrainsts: 
+We refer to a structure of dependent projects as a multi-layer project. The structure has only the following constrainsts: 
 
 * Up to six levels of dependency 
-* An unlimited amount of Studio project or other packages can be added at each level  
+* An unlimited amount of Studio projects or other packages can be added at each level  
 
-Dependencies, both Studio projects and other packages, will be displayed in Application Definition, with information about each items dependencies, and items of which it is a dependency. 
+Below is an example of a three layer project.  
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Project Inheritance and Multi-Layer/Multi1
+    name: Multi.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Multi1](nx_asset://5300111e-2953-4cf3-bc31-1975f6de754b)
 
 
-This structure is particularly relevant to Applications:
+This structure is particularly relevant to the following applications:
 
-* A organisation that creates several instances that share a similar base, or base components, which can be developed as independent Studio projects and added to other projects are dependencies  
+* An organisation that creates several instances that share a similar base. A base project can be developed as an independent Studio project and added as a dependency to the final Studio project, in doing so the base project is reused. This also allows the base project to be managed and changed independently of the child projects. A good example example would be an OEM workflow. 
 
-* Projects that work with modular components, these components that are scoped to a feature set can be developed separatly as Studio projects, and several components be brought together to form an Application  
+* Projects that include repeating modular components. Studio projects can be developed as components, scoped to a feature and feature set, and added to other projects via dependencies. In doing so the component is reuseable across different applications. This allows greater efficiency, as components do not need to be rebuilt for each project and can be managed centrally.   
 
 
 **Key Aspects**
@@ -87,11 +95,19 @@ You can add a dependent Studio Project via the Application Definition section of
 → 'Package Dependencies' will note the packages being added by that item to your project
 → 'Is a dependency of' will highlight if a package is a dependecy of another in your Application Definition 
 
-Note that both the above will only list first level dependencies, not those that may be encountered on other levels; and circualr dependencies are permitted. 
+Note that only list first level dependencies will eb displayed, not those that may be encountered at other levels. Circular dependencies are permitted, but not encouraged. 
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Project Inheritance and Multi-Layer/Multi2
+    name: Screenshot 2021-09-27 at 10.19.53.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Multi2](nx_asset://f6f47c2e-33a7-43de-b983-ae8ad901e9fe)
+
 
 **Recursive Resolution:**
 
-Dependencies are added recursively, from deepest to shallowest, and from left to right, in the order they are added. In practise, the resolution process starts with the first dependency, looks for its deepest layer, and resolves upwards. 
+Dependencies are added recursively, from the deepest level to the highest, and from left to right, in the order they are added. In practise, the resolution process starts with the first dependency, looks for its deepest layer, and resolves upwards. The dependency resolution order is deterministic for a given dependency tree. 
 
 If a feature has the same name at several layers, it will be overridden by the feature at the highest level of the dependency resolution order. 
 
@@ -100,84 +116,110 @@ As all features are brough in for use into your local project, it is fully possi
 
 **Dependencies Navigation**
 
-Once a Studio project is added as a dependency, you will see in the 'Configuration’ left hand menu a ‘Dependecies’ menu that will allow you to navigate among dependencies and visualise their features. You cannot save these features.
+Once a Studio project is added as a dependency, in Modeller you will see in the 'Configuration’ left hand menu a ‘Dependecies’ menu that will allow you to navigate among dependencies and visualise their features. Each layer of dependency will be presented as a panel, per the 'Configuration' menu. You cannot save these features.
+
+Morever, if a dependency itself has a dependency, these will be navigable. 
 
 
-Note, all dependency features that are visible will be added to you local project and you will be able to use them, as you would features cerated in your local project.
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Project Inheritance and Multi-Layer/Multi3
+    name: Screenshot 2021-09-27 at 10.37.07.png
+    studio_designer#screenshot#up_to_date
+--}}
+![Multi3](nx_asset://76b33dfd-7add-4071-a245-638f41c24aac)
 
 
 **Overriding a Feature from a dependent project**
 
-If you, as a user, wish to change a feature, you will need to override it. Studio provides this functionality. When navigating through the ‘Dependencies’ and visualising a feature, an ‘override’ button will appear in the top right.
+If you, as a user, wish to change a feature from a dependency, you will need to override it. Studio provides this functionality. When navigating through the ‘Dependencies’ panels and visualising a feature, an ‘override’ button will appear in the top right.
 
 On click, this will create a duplicate version of the feature from the dependency to your local project that will be editable and override the feature coming from the dependency. Messages will appear on both involved features to notify you that the override is occurring. 
 
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Project Inheritance and Multi-Layer/Multi4
+    name: Screenshot 2021-09-27 at 10.54.52.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Multi4](nx_asset://5c7d46fc-97a8-4682-9a06-022e84b79c08)
+
+
 **Release and Build** 
 
-Once the appropriate dependencies are added you will need to release your project. 
+Once the appropriate dependencies and packages are added, and the project configured, you will need to release a version of your project. This is done normally in 'Branch Management'. 
 
-Please note: Implicit version changes, at this stage, will flow through to your base project at build. Please be mindful before change upstream projects.  
-
-You then can install the base project on your instance, which will add all dependencies and related elements, including all Designer assets. 
+When you install your project on an instance, at runtime the installation command will add the relevant packages and projects with the status 'started'. The different contributions will be resolved and front-end or data assets will be added to your instance. 
 
 
 **Lock Dependencies** 
 
-Note, that dependent Studios are by default installed with open dependencies, this means that when the package is installed, the latest version is installed.  
+Dependent Studio project are by default installed with open dependencies, this means that when the package is installed, the latest version is taken into account.   
 
-If you wish to maintain a certain configuration over time, not impacted by changes in dependent Studio projects, you can lock dependencies. 
+If you wish to maintain a certain configuration over time, and it not be impacted by changes in dependent Studio projects, you can lock dependencies.  
 
-When a release is created from a branch, the release prompt will allow you to lock dependencies. If selected, all first level-dependent studio projects will remain at the version they were at the moment of release. This is a non-reversible lock, a new release needs to be made with unlocked dependencies to change the project’s behavior. 
+When a release is created from a branch, the release prompt will allow you to lock dependencies. If selected, all first-level dependent studio projects will remain at the version they were at the moment of release. To lock an entire multi-level dependency tree, the lock will need to be applied to each level. 
+
+This is a non-reversible lock, a new release needs to be made with unlocked dependencies to change the project’s behavior. 
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Project Inheritance and Multi-Layer/Multi5
+    name: Screenshot 2021-09-27 at 11.11.31.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Multi5](nx_asset://a778ef62-2053-4fff-b6f5-4edd2decf614)
 
 
 **In Designer** 
 
-DocType Layouts from dependencies should be listed under the menu 'Layouts from Dependencies' and should behave like the 'Built-in Layouts' menu below it 
+As mentioned, the front-end assets from dependent packages will be added to the instance at runtime, in the same deterministic order, and will be useable by the application, this will include:  
 
-→ These should include all layouts from dependencies with empty configurations 
+* Layouts type assets  
+* Layouts Blocks and Custom resources 
+* WebUI bundles and related configuration  
+* Themes and translations
 
-→ No notion of 'from which dependency' will be displayed 
 
-In  'Layouts from Dependencies' you should find these empty of configurations in your base project
+***Layouts***
+Layouts, including those associated with DocTypes, Workflows or PPs, from dependencies be listed under the menu 'Layouts from Dependencies'. It will not be possible to consult these layouts, the list is indicative of those being added to the instance. The list will not distinguish 'from which' dependency the layouts is brought in by.  
 
-Please note that configure these will override the Designer assets imported from your dependencies. 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Project Inheritance and Multi-Layer/Multi6
+    name: Screenshot 2021-09-27 at 11.28.23.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Multi6](nx_asset://24e8a7f6-76bb-4784-8f51-4f7e0745689a)
 
-Designer assets from dependencies are not displayed on the Studio Designer interface but will be added to your instance.  
+* Overriding Layouts
+When a layout from a dependency is selected, it will appear empty and configurable. If the layout is configured this will create a local copy which will override the layout from the dependency. 
+
+***Layout blocks***
+When using a Layout Blocks from a dependency, these will not be loaded in the Studio Designer palette, as per local Layout Blocks. 
+They will, however, be loaded onto the instance and will display in WebUI if used. As such, when you want to use a Layout block element in Studio Designer from a dependency, you will need to add a link to it in your relevant layout as per the following example:
+
+* If I create a new DocType layout and want to call the “product-edit.html” Layout Block within it, I would add the following link in the element : <link rel="import" href="../../forms/product-edit.html"> The link being location of the file on the instance. 
+
+The same logic applies to custom elements added to 'Resources' in WebUI or manually to the instance. 
+
+
+***WebUI bundles and related configuration***
+Configuration of the WebUI structure of a project is done via the project's bundle file, visible in resources. Changes to Tabs, Drawers and Buttons will be recorded in the bundle file.
+
+In a multi-layer context the bundle files are merged as per the deployment order, this includes the deletion of elements. The merged by then overrides the base WebUI configuration. 
+
+***Themes and translations***
+Themes and translations will be added to the instance and merged normally, the element highest in the deployment order being that used by the instance. 
 
 
 **Considerations**
 
-Developer Tooling
 
-Hot reload is not currently operational with multi-layer 
+* Hot reload is not currently operational with multi-layer. 
 
-There is a caching mechanism in mp-install, if you are using this command remember to do an mp-update to update the cache and download the latest defined versions of the packages 
+There is a caching mechanism in mp-install, if you are using this command remember to do an mp-update to update the cache and download the latest defined versions of the packages  
 
-Designer Custom Elements
+* Removing a dependent Studio Project
 
-When reusing a custom layout from a dependency, it is not loaded in the Studio Designer palette across dependencies, it is, however, loaded onto the instance and will display on WebUI. As such, when you want to use a custom HTML element or custom layout in Studio Designer from a dependency, you will need to add a link to it in your relevant element:
+Currently, removing a dependency in the Studio Application definition and reinstalling (mp-install) the project DOES NOT remove that dependency from an instance. In order to remove the package, you will need to use the mp-remove command for the relevant packages.
 
-For example, if I create a new custom layout and want to call the “product-edit.html” HTML element within it, I would add the following link in the element : <link rel="import" href="../../forms/product-edit.html">
+Note, this command will remove all contents except for Workflows will persist and be listed in the ‘Start Process’ list in WebUI. HTML assets will remain on the instance, however if they not called will not be displayed. 
 
-Removing a dependent Studio Project
-
-Currently, removing a dependency in the Studio Application definition and reinstalling (mp-install) the project DOES NOT remove that dependency from an instance.
-
-In order to remove the package, you will need to use the mp-remove command for the relevant packages
-
-Note, this command will remove all contents except for
-
-Workflows will persist in the ‘Start Process’ list in WebUI
-
-HTML assets will remain on the instance, but will not be called
-
-
-
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Automated Renaming/Rename Inconsistencies
-    name: STUDIO_rename_inconsistencies.png
-    studio_modeler#popup#up_to_date
---}}
-![Rename Inconsistencies](nx_asset://c33e2d17-87e7-4fcb-bac5-a20460b1f93d ?w=350,border=true)
