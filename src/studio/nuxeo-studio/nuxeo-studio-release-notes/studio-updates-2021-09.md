@@ -11,12 +11,13 @@ toc: true
 
 {{! multiexcerpt name='studio-updates-2021-09'}}
 
-**Multi-Layer Public Release** 
+**Project Inheritance and Multi-Layer Public Release** 
 
 Multi-layer is the ability to add a Studio project as a dependency of another and have the configuration of that project inherited.
 
-This release will render fully public and by default in all Studio projects the Multi-layer functionality. Please find more information in our documentation.
+This release will render fully public and by default in all Studio projects the Multi-layer functionality. 
 
+Please find more information in our [documentation.](https://doc.nuxeo.com/studio/project-inheritance-multi-layer/)
 
 **Warning for outdated dependencies** 
 
