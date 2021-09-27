@@ -1,5 +1,5 @@
 ---
-title: Hotfixes  Installation Notes for Nuxeo Platform LTS 2021
+title: Hotfixes Installation Notes
 review:
     comment: ''
     date: '2020-12-14'

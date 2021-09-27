@@ -1,5 +1,5 @@
 ---
-title: Drag and Drop Service for Content Capture (HTML5-Based)
+title: Drag and Drop Service for Content Capture
 description: You can use the native HTML5 Drag and Drop features on recent browsers. This new import model is pluggable so you can adapt the import behavior to your custom needs.
 review:
     comment: ''

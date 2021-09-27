@@ -1,5 +1,5 @@
 ---
-title: Document Templates and Automation Rendering Service
+title: Document Templates and Automation Rendering
 review:
     comment: ''
     date: '2020-07-15'

@@ -1,5 +1,5 @@
 ---
-title: Alternative Command Parameters for ProRes Codec Users
+title: Alternative Command Parameters
 review:
     comment: ''
     date: '2016-12-06'
@@ -42,12 +42,6 @@ history:
         message: ''
         version: '1'
 ---
-
-{{! excerpt}}
-
-{{! Put short text that explains the purpose of the page here. This excerpt can be displayed on parent pages in listings. }}
-
-{{! /excerpt}}
 
 The Nuxeo Platform automatically converts the new Video files ingested in the system to produce mp4 and webM videos. The mp4 file will be used to display the playback.
 
