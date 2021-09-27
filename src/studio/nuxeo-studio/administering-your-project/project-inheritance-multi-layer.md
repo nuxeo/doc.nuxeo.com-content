@@ -35,7 +35,7 @@ Below is an example of a three-layer project.
     name: Multi.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Multi1](nx_asset://5300111e-2953-4cf3-bc31-1975f6de754b)
+![Multi1](nx_asset://5300111e-2953-4cf3-bc31-1975f6de754b ?w=350)
 
 This structure is particularly relevant to the following applications:
 
