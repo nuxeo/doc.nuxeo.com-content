@@ -207,6 +207,18 @@ Location of the temporary files (absolute or relative to NUXEO_HOME).
 
 * * *
 
+#### `nuxeo.startup.clean.tmp.dir`
+
+**Since HF9**
+
+Clean up the temporary directory on Nuxeo startup.
+
+**Default Value**
+
+`false`
+
+* * *
+
 #### `nuxeo.mp.dir`
 
 Nuxeo Packages directory (absolute or relative to NUXEO_HOME).
