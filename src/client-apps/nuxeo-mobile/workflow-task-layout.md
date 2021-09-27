@@ -10,6 +10,10 @@ toc: true
 tree_item_index: 100
 ---
 
+{{#> callout type='warning' }}
+The Nuxeo Mobile application is deprecated.
+{{/callout}}
+
 ## Layout Format
 
 The format of the layout is simply a `JSON` object with the list of widgets for a given task.

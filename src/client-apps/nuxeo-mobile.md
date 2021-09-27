@@ -155,6 +155,10 @@ history:
         version: '1'
 ---
 
+{{#> callout type='warning' }}
+The Nuxeo Mobile application is deprecated.
+{{/callout}}
+
 {{! excerpt}}
 The [Nuxeo mobile](https://www.nuxeo.com/products/mobile/) application lets you access content stored in Nuxeo Platform servers on your phone. It provides a seamless experience on essential features such as searching, browsing and managing favorite documents. Available for iOS and Android.
 {{! /excerpt}}

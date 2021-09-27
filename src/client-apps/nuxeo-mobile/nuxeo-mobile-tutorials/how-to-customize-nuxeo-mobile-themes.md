@@ -18,6 +18,11 @@ labels:
 toc: true
 tree_item_index: 300
 ---
+
+{{#> callout type='warning' }}
+The Nuxeo Mobile application is deprecated.
+{{/callout}}
+
 {{! excerpt}}
 Since the version 1.9.0 on iOS and 1.6.0 on Android, the Nuxeo Mobile application comes with 4 predefined themes that can be overridden from the server itself.
 {{! /excerpt}}

@@ -15,6 +15,10 @@ labels:
 tree_item_index: 300
 ---
 
+{{#> callout type='warning' }}
+The Nuxeo Mobile application is deprecated.
+{{/callout}}
+
 Below is the list of evolutions and improvements planned for the Nuxeo Mobile applications.
 
 You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/eecfd20c-c892-11e7-8ae7-0288f735e5b9).

@@ -18,6 +18,11 @@ labels:
 toc: true
 tree_item_index: 200
 ---
+
+{{#> callout type='warning' }}
+The Nuxeo Mobile application is deprecated.
+{{/callout}}
+
 {{! excerpt}}
 Since the version 1.8.0 on iOS and 1.5.0 on Android, the Nuxeo Mobile application metadata layout can be customized from the server itself.
 {{! /excerpt}}

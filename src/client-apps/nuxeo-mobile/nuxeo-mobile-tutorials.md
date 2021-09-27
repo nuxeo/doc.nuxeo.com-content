@@ -9,6 +9,11 @@ labels:
     - nuxeo-mobile
     - tutorials
 ---
+
+{{#> callout type='warning' }}
+The Nuxeo Mobile application is deprecated.
+{{/callout}}
+
 Welcome on the tutorials section of Nuxeo Mobile.
 
 The goal of this section is to provide ready to use examples. They can be followed step by step to learn how to use Nuxeo Mobile on practical use cases.

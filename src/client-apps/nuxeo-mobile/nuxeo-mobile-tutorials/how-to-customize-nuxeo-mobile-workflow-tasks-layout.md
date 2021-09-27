@@ -17,6 +17,11 @@ labels:
 toc: true
 tree_item_index: 100
 ---
+
+{{#> callout type='warning' }}
+The Nuxeo Mobile application is deprecated.
+{{/callout}}
+
 {{! excerpt}}
 Since the version 1.13.0 on iOS and 1.11.0 on Android, workflows defined in Nuxeo Studio can be processed by users from the mobile application.
 {{! /excerpt}}
