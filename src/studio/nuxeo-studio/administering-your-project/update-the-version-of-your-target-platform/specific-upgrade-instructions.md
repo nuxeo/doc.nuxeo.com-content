@@ -1,5 +1,6 @@
 ---
 title: Specific Upgrade Instructions
+description: Studio will take care of generating the corresponding code for your target platform. Usually, no manual configuration changes are needed.
 review:
     comment: ''
     date: ''
@@ -105,7 +106,7 @@ Spreadsheet addon is now loaded by default but the button contribution is disabl
 --}}
 ![Spreadsheet package enable button in Designer](nx_asset://b8fd28dd-0272-43b1-a083-dfde295c312b ?w=650,border=true)
 
-### Nuxeo DAM 
+### Nuxeo DAM
 
 Nuxeo DAM no longer exists as an addon and its contributions are now default on Web UI. If you are using it in Nuxeo Studio, you will see the Nuxeo DAM in the removed addons list when upgrading your project through the application definition page.
 

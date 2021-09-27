@@ -1,5 +1,6 @@
 ---
 title: Sub Workflow Example
+description: The sub workflow functionality is the ability to call a workflow from another workflow, and to pass it variables along the way. See Nuxeo approach.
 review:
     comment: ''
     date: '2017-01-24'
@@ -112,14 +113,13 @@ history:
         version: '1'
 
 ---
+
 ## A Quick Note About The Subworkflow Concept
 
 {{! excerpt}}
-
 The subworkflow functionality is the ability to call a workflow from another workflow (creating inception-like workflows), and to pass it variables along the way. The main workflow is suspended while the subworkflow runs, and resumes when the subworkflow ends.
 
 This functionality is a great asset as it allows you to reuse your workflows and imagine powerful combinations. The best point is that you can dynamically choose the subworkflow that should be called using an [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}).
-
 {{! /excerpt}}
 
 ## Use Case

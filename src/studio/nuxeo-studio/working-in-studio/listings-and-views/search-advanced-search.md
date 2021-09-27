@@ -1,5 +1,6 @@
 ---
 title: Search / Advanced Search
+description: From Nuxeo Platform 6.0 the Search menu item enables you to set up a new Default Search form to replace the one available in the Nuxeo Platform Search tab.
 review:
   comment: ''
   date: ''

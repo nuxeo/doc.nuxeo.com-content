@@ -1,6 +1,6 @@
 ---
 title: Continuous Integration (CI) For a Nuxeo Project
-description: Setting up continuous integration on your project is a good practice to prevent regressions and potential bugs. The earlier you detect a problem, the easier it is to fix it.
+description: Setting up continuous integration on your project is a good practice to prevent regressions and potential bugs. The earlier you detect a problem, the easier to fix it.
 review:
     comment: ''
     date: '2018-08-03'

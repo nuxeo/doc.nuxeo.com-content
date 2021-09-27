@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Install the Studio JAR Manually'
+description: Your Nuxeo Platform may not have access to internet. To deploy your Studio configuration, download and install your Studio package manually and restart your server.
 review:
   comment: ''
   date: ''

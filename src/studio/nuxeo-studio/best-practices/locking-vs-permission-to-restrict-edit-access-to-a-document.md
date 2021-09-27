@@ -1,5 +1,6 @@
 ---
 title: Locking vs Permission to Restrict Edit Access to a Document
+description: During the life of a document, on state changes, or during a workflow for instance, the document sometimes has restricted permissions. See Nuxeo examples.
 review:
     comment: ''
     date: '2017-12-13'

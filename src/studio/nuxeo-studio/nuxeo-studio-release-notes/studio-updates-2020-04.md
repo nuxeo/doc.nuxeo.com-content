@@ -24,7 +24,7 @@ When using visual mode to configure document type or workflow tasks layouts, und
 - editing a property value inside a widget
 - deleting a widget
 
-Note that change history is lost when switching to code or switching to another screen. Detailed behavior is described in the [related ticket]((https://jira.nuxeo.com/browse/NXS-5771).
+Note that change history is lost when switching to code or switching to another screen. Detailed behavior is described in the [related ticket](https://jira.nuxeo.com/browse/NXS-5771).
 
 #### Copy / Delete Widgets
 

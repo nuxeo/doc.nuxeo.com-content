@@ -1,5 +1,6 @@
 ---
 title: External Templates
+description: Nuxeo Studio includes an Application Templates library composed of Studio projects you can use as a basis for your own project. Use our template to fit your project.
 review:
     comment: ''
     date: ''
@@ -80,6 +81,7 @@ history:
         message: ''
         version: '1'
 ---
+
 {{! excerpt}}
 Nuxeo Studio includes an Application Templates library composed of Studio projects or samples that you can use as a basis for your own project. Application templates enable to import new document types, lifecycles, workflows, features in a project as a template that can be edited to fit your project.
 {{! /excerpt}}

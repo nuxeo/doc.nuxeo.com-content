@@ -1,5 +1,6 @@
 ---
 title: Workflow Escalation Rules Example
+description: OhMyDoc has set up a validation workflow for its press releases, with due dates and automatic escalation to the next step of the workflow after a defined period.
 review:
     comment: ''
     date: '2019-07-02'

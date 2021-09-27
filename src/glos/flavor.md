@@ -55,10 +55,9 @@ history:
         version: '1'
 
 ---
+
 {{! excerpt}}
-
-A flavor is a set of variables which defines the branding of an application: the logo, the backgrounds and borders colors, and the font family and color. The Nuxeo Platform uses these variables in its default style set.
-
+A flavor is a set of variables which defines the branding of an application: the logo, the backgrounds and borders colors, and the font family and color.
 {{! /excerpt}}
 
 The flavors are used for the global application or in[ the Local Configuration of a space]({{page space='nxdoc' page='local-configuration'}}) (workspaces or sections) to customize its main colors.
