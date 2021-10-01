@@ -496,6 +496,21 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo Frame.io Connector<br/>
+`nuxeo-frameio`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-frameio'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-frameio)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo FS Exporter<br/>
 `fs-exporter`
 </td>
