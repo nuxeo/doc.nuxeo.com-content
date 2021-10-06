@@ -27,6 +27,40 @@ This upgrade notes assumes that Nuxeo Server is up to date in 10.10 before the u
 
 ### Recommended Changes
 
+#### Configure thumbnail computation maximum duration {{> tag 'Since LTS 2021.5/2021-HF05'}
+
+The maximum duration to produce a thumbnail is now limited by default to 5min. This limit is applied to the listener in charge of creating a new thumbnail and also to the recomputeTumbnail bulk action.
+
+The limit can be tuned with:
+```
+nuxeo.thumbnail.transaction.timeout.seconds=300
+```
+
+Note that the limit is set at the transaction level (and not at the command level) because thumbnail generation may involve multiple commands.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30438](https://jira.nuxeo.com/browse/NXP-30438)
+
+#### Enable log4j filter to conceal sensitive data {{> tag 'Since LTS 2021.2/2021-HF02'}
+
+In order to enable the policy to mask sensitive data, you must configure a Log4j2 RewriteAppender applying the policy in your log4j2.xml configuration file.
+
+See the example below:
+```
+    <RollingFile name="FILE-ORIGINAL" fileName="${sys:nuxeo.log.dir}/server.log"
+                 filePattern="${sys:nuxeo.log.dir}/server-%d{yyyy-MM-dd}.log.gz" append="true">
+      <PatternLayout pattern="%d{ISO8601} %-5p [%t] [%c] %m%n" />
+      <CronTriggeringPolicy schedule="0 0 0 * * ?" evaluateOnStartup="true" /> <!-- Rollover at midnight every day -->
+      <DefaultRolloverStrategy />
+    </RollingFile>
+
+    <Rewrite name="FILE">
+      <AppenderRef ref="FILE-ORIGINAL"/>
+      <MaskSensitiveData />
+    </Rewrite>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30079](https://jira.nuxeo.com/browse/NXP-30079)
+
 #### Disable Tomcat AJP Connector
 
 For security reasons (CVE-2020-1938), AJP is now disabled by default. To re-enabled it, the following properties must be defined:
@@ -75,6 +109,38 @@ Note that `repository.clustering.delay` still exists but is only meaningful for 
 
 ### Behavior Changes
 
+#### Better tracking of the Nuxeo health check failures {{> tag 'Since LTS 2021.2/2021-HF02'}
+
+The unhealthy status are now tracked into the logs at WARN level.
+
+In order to not pollute the log if failures happen for all /runningstatus check, you should put this logger in your log4j2 configuration:
+```
+    <Logger name="org.nuxeo.ecm.core.management.statuses.HealthCheckResult">
+      <!-- this filter allows to print 1 log (maxBurst) every minute (rate) -->
+      <BurstFilter level="warn" rate="0.0166" maxBurst="1"/>
+    </Logger>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30100](https://jira.nuxeo.com/browse/NXP-30100)
+
+#### `RemoteIpValve` added to the Tomcat configuration {{> tag 'Since LTS 2021.2/2021-HF02'}
+
+The RemoteIp Valve has been added by default to the Tomcat configuration.
+
+This valve replaces the apparent client remote IP address and hostname for the request with the IP address list presented by a proxy or a load balancer via a request header.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25667](https://jira.nuxeo.com/browse/NXP-25667)
+
+#### Configuration Generator refactoring (related to the nuxeo template append capability) {{> tag 'Since LTS 2021.2/2021-HF02'}
+
+There're breaking changes on ConfigurationGenerator, a lot of methods has been removed, constants have been removed or moved to ConfigurationConstants.
+
+The new class ConfigurationHolder is the new first citizen to get the Nuxeo Configuration in this layer. You can retrieve it with ConfigurationGenerator#getConfigurationHolder method.
+
+You now can use nuxeo.append.templates.SOMETHING=A_TEMPLATE parameter in nuxeo.conf to append templates to load by the configuration generator.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25667](https://jira.nuxeo.com/browse/NXP-25667)
+
 #### Strict Mode by Default for `nuxeoctl` Start
 
 `nuxeoctl` now starts a Nuxeo server in strict mode by default.
@@ -90,7 +156,24 @@ $ nuxeoctl start --lenient
 
 ## Core Storage
 
+### Recommended Changes
+
+#### Allow efficient search by blob key {{> tag 'Since LTS 2021.2/2021-HF02'}
+
+In order to improve the search by blob key in the existing databases, an index should be added on `ecm:blobKeys`:
+```
+db.default.createIndex({"ecm:blobKeys": 1})
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29516](https://jira.nuxeo.com/browse/NXP-29516)
+
 ### Behavior Changes
+
+#### Adjust the MongoDB query maxTime with transaction timeout {{> tag 'Since LTS 2021.2/2021-HF02'}
+
+The maximum query execution time on MongoDB side is now aligned with the Nuxeo transaction. The configurable maxTime introduced in [NXP-29112](https://jira.nuxeo.com/browse/NXP-29112) is only used when queries are performed outside of a transaction.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30045](https://jira.nuxeo.com/browse/NXP-30045)
 
 #### MongoDB Repository Configuration Descriptors
 
@@ -313,11 +396,59 @@ In the FileManager.Import operation, the misspelled param `overwite` has been re
 
 ### Behavior Changes
 
+#### cluster-wide lock for the Workflow model import {{> tag 'Since LTS 2021.2/2021-HF02'}
+
+Workflow model import now uses a cluster-wide lock.
+
+This improvement avoids the creation of several workflow definitions at the same time when starting several Nuxeo nodes simultaneously
+
+In cluster mode, the worfklows are initialized non-concurrently in a cluster-wide critical section.
+
+When a cluster node attempts to initialize its workflows and another node is already doing the same thing, it will wait for 1 min for the cluster-wide lock to be released and do its own initialization. If this timeout expires, then initialization fails with an exception.
+
+The following nuxeo.conf properties can be used to change this timeout:
+```
+org.nuxeo.workflow.cluster.start.duration=1m
+```
+
+In case where there's a startup crash while a lock is held, it may be necessary to manually cleanup the key/value store of its lock. The key corresponding to the lock is visible when using Redis with KEYS `nuxeo:cluster:*`, in this case `nuxeo:cluster:start-workflows-default` for the initialization of the workflows of the default repository. For a MongoDB key/value store, the keys are stored in the collection kv.cluster
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30135](https://jira.nuxeo.com/browse/NXP-30135)
+
 #### Workflow Page Providers Now Used the `ecm:isTrashed` Attribute
 
 Workflow page providers now used the `ecm:isTrashed` attribute.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29183](https://jira.nuxeo.com/browse/NXP-29183)
+
+## Rendition
+
+### Behavior Changes
+
+#### Process the picture views in a transaction with a dedicated timeout {{> tag 'Since LTS 2021.6/2021-HF06'}
+
+Picture views are now processed in a transaction with a dedicated timeout.
+
+The maximum duration to produce the picture views is now limited by default to 5min. This limit is applied to the (deprecated) picture views generation work and also to the recomputeViews bulk action.
+
+The limit can be tuned with:
+```
+nuxeo.picture.views.transaction.timeout.seconds=300
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30369](https://jira.nuxeo.com/browse/NXP-30369)
+
+#### Add explicit timeout on Video conversion {{> tag 'Since LTS 2021.6/2021-HF06'}
+
+The maximum duration to convert a video is now limited by default to 10min.
+
+The limit can be tuned with:
+```
+nuxeo.video.transaction.timeout.seconds=600
+```
+
+Note that the limit is set at the transaction level (and not at the command level) because video conversion may involve multiple commands.
+
 
 ## Elasticsearch
 
@@ -327,6 +458,14 @@ Once you have adapted your application to follow the behavior changes of Elastic
 you need to upgrade your existing Elasticsearch cluster to version 7.9 (7.7 or 7.8 are also supported).
 
 ### Behavior Changes
+
+#### Default Elasticsearch timeout increased for the write operation {{> tag 'Since LTS 2021.5/2021-HF05'}
+
+A longer Elastic timeout is used for write operation.
+
+By default, we have changed it from 60 sec to 120 sec.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30470](https://jira.nuxeo.com/browse/NXP-30470)
 
 #### Update Your Custom Elasticsearch Settings and Mapping
 
@@ -442,6 +581,28 @@ Nuxeo uses 3 indexes:
 
 Once the Elasticsearch cluster is upgraded, start Nuxeo LTS 2021 and proceed to a [repository re-index]({{page page='elasticsearch-setup'}}#reindex).
 
+## Bulk Service (Aka "Bulk Action Framework")
+
+### Recommended changes
+
+#### Provide options at `nuxeo.conf` level to tune Bulk Re-indexing {{> tag 'Since LTS 2021.8/2021-HF08'}
+
+New options have been added to `nuxeo.conf` to tune bulk Elasticsearch reindexing.
+
+You now have the following options in `nuxeo.conf`:
+```
+# Bulk Index action, fetching content (bulk/index computation)
+elasticsearch.bulk.index.fetch.concurrency=4
+elasticsearch.bulk.index.fetch.partitions=12
+# Bulk Index action, submitting requests to elastic (bulk/bulkIndex computation)
+elasticsearch.bulk.index.submit.concurrency=2
+elasticsearch.bulk.index.submit.partitions=8
+```
+Where concurrency is the number of threads per node and partitions value fixes the maximum concurrency at the cluster level.
+Note that partitions value is taken into account only when creating Kafka topic.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30536](https://jira.nuxeo.com/browse/NXP-30536)
+
 ## Import
 
 ### Behavior Changes
@@ -515,6 +676,23 @@ The option to configure the metrics poll interval for Datadog is now `metrics.da
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28760](https://jira.nuxeo.com/browse/NXP-28760)
 
+## Authentication, User Management and Permissions
+
+### Recommended changes
+
+#### Use a dedicated Work queue for ACL Propagation {{> tag 'Since LTS 2021.4/2021-HF04'}
+
+A dedicated Work queue is used for ACL Propagation.
+
+You now have options at nuxeo.conf level to use a dedicated queue for DBS read ACL update:
+```
+# Queue for DBS Read ACL Update
+nuxeo.work.queue.raclupdate.enabled=false
+nuxeo.work.queue.raclupdate.threads=4
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30541](https://jira.nuxeo.com/browse/NXP-30541)
+
 ## Nuxeo Streams
 
 ### Behavior Changes
@@ -549,6 +727,21 @@ IllegalArgumentException: Invalid name without namespace: 'foo.bar'
 ## WorkManager
 
 ### Behavior Changes
+
+#### Support filtering when reprocessing DLQ Work {{> tag 'Since LTS 2021.4/2021-HF04'}
+
+DLQ works can be reprocessed thanks to new filters.
+
+The `RunWorkInFailure` operation has been extended to support 2 more options:
+ - `dryRun`: when true displays statistics on Works to reprocess, note that nothing is processed or modified when this option is activated.
+ - `categoryFilter`: a list of Work categories (comma separated) to filter Works that will be reprocessed
+
+Example of invocation:
+```
+curl -X POST "http://localhost:8080/nuxeo/site/automation/WorkManager.RunWorkInFailure" -u Administrator:Administrator -H 'content-type: application/json' -d '{"params":{"dryRun": true, "categoryFilter": "elasticSearchIndexing"},"context":{}}'
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30450](https://jira.nuxeo.com/browse/NXP-30450)
 
 #### StreamWorkManager Workaround for Large Work
 
@@ -765,7 +958,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">ant-maven-assembly-plugin</td>
 <td colspan="1">2.1.2</td>
-<td colspan="1">2.1.3</td>
+<td colspan="1">2.1.3 since 2021.1/2021-HF01, 2.1.5 since 2021.8/2021-HF08</td>
 </tr>
 <tr>
 <td colspan="1">Apache HttpComponents</td>
