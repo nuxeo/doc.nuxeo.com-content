@@ -1,6 +1,6 @@
 ---
-title: Nuxeo Server LTS 2021 Release Notes
-description: Discover what's new in LTS 2021.8 / LTS 2021 HF08
+title: Nuxeo Server LTS 2021.8 / LTS 2021-HF08 Release Notes
+description: Discover what's new in LTS 2021.8 / LTS 2021-HF08
 review:
    comment: ''
    date: '2021-09-06'
@@ -12,7 +12,7 @@ tree_item_index: 10000
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2021'}}
-# What's New in LTS 2021.8 / LTS 2021 HF 08
+# What's New in LTS 2021.8 / LTS 2021-HF08
 
 ## Nuxeo Server
 
