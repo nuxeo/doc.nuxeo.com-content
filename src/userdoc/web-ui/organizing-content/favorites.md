@@ -18,7 +18,7 @@ The list of documents bookmarked as favorites is available:
 - On the dashboard in the **Favorite Item** widget
   ![]({{file name='dashboard-favorites-web-ui.png'}} ?w=450,border=true)
 - On the **Favorites** Tab in the side menu
-  ![]({{file name='favorites-tab-web-ui.png'}} ?w=300,border=true)
+  ![]({{file name='favorites-tab-web-ui.png'}} ?w=300,border=true)  
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='bookmarking-favorites-web-ui'}}
@@ -26,6 +26,15 @@ Bookmarking documents in your favorites can be done similarly to adding document
 
 Once the document is added to your favorites, it will be available in the dashboard and in the Favorites tab.
 {{! /multiexcerpt}}
+
+From search results or document list, you can add a new column named **Flags** to see if the document is a Favorite.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/Flags favorites
+    name: flags_fav.png
+    web_ui#screenshot#up_to_date
+--}}
+![Flags favorites](nx_asset://8badf40a-13e6-4a86-a3c4-0afa58103fcd ?w=650,border=true)
 
 {{! multiexcerpt name='remove-favorites-web-ui'}}
 **To remove a document from Favorites, you can:**
