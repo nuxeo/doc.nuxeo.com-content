@@ -80,7 +80,12 @@ Lists of documents, whether in grid view or thumbnail view, show some informatio
 To change the information displayed in content views, click on the icon&nbsp;![]({{file name='manage_collection_web-ui.png' page='icons-index'}} ?w=20).
 A pop-up is displayed, select the information that you want to be displayed among the list.
 
-![]({{file name='columns-settings-web-ui.png'}} ?w=250,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Columns Settings on Web UI
+    name: columns-settings-web-ui.png
+    1.1.3#popup#up_to_date
+--}}
+![Columns Settings on Web UI](nx_asset://2b0af330-d3f1-492f-96a2-0f31d582961e ?w=250,border=true)
 
 Once it's done click on **Close**.
 
@@ -107,6 +112,17 @@ It enables you to have a more focused view on the document preview.
     1.1.3#screenshot#to_be_updated
 --}}
 ![Document view collapsed sidebar](nx_asset://2df976a7-5f45-4899-86d1-a814b4d88ab9 ?w=600,border=true)
+
+#### Flags
+
+Adding the **Flags** column will display if the document is under [Retention, Legal Hold, Cold storage]({{page version='' space='nxdoc' page='nuxeo-retention-functional-overview'}}#visualising-retentionlegal-hold-status), or if it's a Favorite.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/Flags favorites
+    name: flags_fav.png
+    web_ui#screenshot#up_to_date
+--}}
+![Flags favorites](nx_asset://8badf40a-13e6-4a86-a3c4-0afa58103fcd ?w=650,border=true)
 
 ## Keyboard Shortcuts
 
