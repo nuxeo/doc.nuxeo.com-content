@@ -2,11 +2,11 @@
 title: Upgrade from LTS 2019 to LTS 2021
 description: Instructions to upgrade your Nuxeo Platform instance from LTS 2019 version to LTS 2021.
 review:
-    comment: ''
-    date: '2021-01-15'
-    status: ok
+  comment: ''
+  date: '2021-01-15'
+  status: ok
 labels:
-    - multiexcerpt
+  - multiexcerpt
 toc: true
 tree_item_index: 95
 ---
@@ -20,18 +20,20 @@ This chapter highlights some major information about upgrade from Nuxeo Platform
 ## Prerequisites
 
 This upgrade notes assumes that Nuxeo Server is up to date in 10.10 before the upgrade, which means:
- - Nuxeo Server is on 10.10 with the latest hotfixes
- - All the migrations have been successfully completed (comments and trash).
+
+- Nuxeo Server is on 10.10 with the latest hotfixes
+- All the migrations have been successfully completed (comments and trash).
 
 ## Installation and Configuration
 
 ### Recommended Changes
 
-#### Configure thumbnail computation maximum duration {{> tag 'Since LTS 2021.5/2021-HF05'}
+#### Configure thumbnail computation maximum duration {{> tag 'Since LTS 2021.5/2021-HF05'}}
 
 The maximum duration to produce a thumbnail is now limited by default to 5min. This limit is applied to the listener in charge of creating a new thumbnail and also to the recomputeTumbnail bulk action.
 
 The limit can be tuned with:
+
 ```
 nuxeo.thumbnail.transaction.timeout.seconds=300
 ```
@@ -40,11 +42,12 @@ Note that the limit is set at the transaction level (and not at the command leve
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30438](https://jira.nuxeo.com/browse/NXP-30438)
 
-#### Enable log4j filter to conceal sensitive data {{> tag 'Since LTS 2021.2/2021-HF02'}
+#### Enable log4j filter to conceal sensitive data {{> tag 'Since LTS 2021.2/2021-HF02'}}
 
 In order to enable the policy to mask sensitive data, you must configure a Log4j2 RewriteAppender applying the policy in your log4j2.xml configuration file.
 
 See the example below:
+
 ```
     <RollingFile name="FILE-ORIGINAL" fileName="${sys:nuxeo.log.dir}/server.log"
                  filePattern="${sys:nuxeo.log.dir}/server-%d{yyyy-MM-dd}.log.gz" append="true">
@@ -64,6 +67,7 @@ See the example below:
 #### Disable Tomcat AJP Connector
 
 For security reasons (CVE-2020-1938), AJP is now disabled by default. To re-enabled it, the following properties must be defined:
+
 - `nuxeo.server.ajp.enabled=true`
 - `nuxeo.server.ajp.secretRequired=true`
 - `nuxeo.server.ajp.secret=changeme`
@@ -71,6 +75,7 @@ For security reasons (CVE-2020-1938), AJP is now disabled by default. To re-enab
 The secret must also be mentioned in the `mod_proxy_ajp` configuration, see [Apache documentation](https://httpd.apache.org/docs/trunk/mod/mod_proxy_ajp.html) for more.
 
 If one is sure that the AJP port cannot be accessed by any untrusted hosts, then the following configuration is possible:
+
 - `nuxeo.server.ajp.enabled=true`
 - `nuxeo.server.ajp.secretRequired=false`
 
@@ -79,10 +84,13 @@ If one is sure that the AJP port cannot be accessed by any untrusted hosts, then
 #### Allow Some Runtime Configuration in Nuxeo Docker Images
 
 To control the JVM heap size with the new options (since Java 10): `InitialRAMPercentage` and `MaxRAMPercentage`, in `nuxeo.conf`, we've changed:
+
 ```
 JAVA_OPTS=-Xms512m -Xmx1024m
 ```
+
 to:
+
 ```
 JAVA_OPTS=-XX:InitialRAMPercentage=3 -XX:MaxRAMPercentage=25
 ```
@@ -94,6 +102,7 @@ See the best practices about the [Java Virtual Machine Settings]({{page version=
 #### Create ClusterService to Hold Cluster Node Info
 
 When configuring Nuxeo in cluster mode, the configuration is now done with:
+
 ```
 nuxeo.cluster.enabled=true
 nuxeo.cluster.nodeid=...
@@ -109,11 +118,12 @@ Note that `repository.clustering.delay` still exists but is only meaningful for 
 
 ### Behavior Changes
 
-#### Better tracking of the Nuxeo health check failures {{> tag 'Since LTS 2021.2/2021-HF02'}
+#### Better tracking of the Nuxeo health check failures {{> tag 'Since LTS 2021.2/2021-HF02'}}
 
 The unhealthy status are now tracked into the logs at WARN level.
 
 In order to not pollute the log if failures happen for all /runningstatus check, you should put this logger in your log4j2 configuration:
+
 ```
     <Logger name="org.nuxeo.ecm.core.management.statuses.HealthCheckResult">
       <!-- this filter allows to print 1 log (maxBurst) every minute (rate) -->
@@ -123,7 +133,7 @@ In order to not pollute the log if failures happen for all /runningstatus check,
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30100](https://jira.nuxeo.com/browse/NXP-30100)
 
-#### `RemoteIpValve` added to the Tomcat configuration {{> tag 'Since LTS 2021.2/2021-HF02'}
+#### `RemoteIpValve` added to the Tomcat configuration {{> tag 'Since LTS 2021.2/2021-HF02'}}
 
 The RemoteIp Valve has been added by default to the Tomcat configuration.
 
@@ -131,7 +141,7 @@ This valve replaces the apparent client remote IP address and hostname for the r
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25667](https://jira.nuxeo.com/browse/NXP-25667)
 
-#### Configuration Generator refactoring (related to the nuxeo template append capability) {{> tag 'Since LTS 2021.2/2021-HF02'}
+#### Configuration Generator refactoring (related to the nuxeo template append capability) {{> tag 'Since LTS 2021.2/2021-HF02'}}
 
 There're breaking changes on ConfigurationGenerator, a lot of methods has been removed, constants have been removed or moved to ConfigurationConstants.
 
@@ -158,9 +168,10 @@ $ nuxeoctl start --lenient
 
 ### Recommended Changes
 
-#### Allow efficient search by blob key {{> tag 'Since LTS 2021.2/2021-HF02'}
+#### Allow efficient search by blob key {{> tag 'Since LTS 2021.2/2021-HF02'}}
 
 In order to improve the search by blob key in the existing databases, an index should be added on `ecm:blobKeys`:
+
 ```
 db.default.createIndex({"ecm:blobKeys": 1})
 ```
@@ -169,7 +180,7 @@ db.default.createIndex({"ecm:blobKeys": 1})
 
 ### Behavior Changes
 
-#### Adjust the MongoDB query maxTime with transaction timeout {{> tag 'Since LTS 2021.2/2021-HF02'}
+#### Adjust the MongoDB query maxTime with transaction timeout {{> tag 'Since LTS 2021.2/2021-HF02'}}
 
 The maximum query execution time on MongoDB side is now aligned with the Nuxeo transaction. The configurable maxTime introduced in [NXP-29112](https://jira.nuxeo.com/browse/NXP-29112) is only used when queries are performed outside of a transaction.
 
@@ -184,13 +195,15 @@ Contributions including a MongoDB `nativeId`, `sequenceBlockSize` or `childNameU
 #### Document Creator And Contributors Injection/Impersonation
 
 The following `dublincore` properties are now secured from edition:
- - `dc:created`
- - `dc:modified`
- - `dc:creator`
- - `dc:lastContributor`
- - `dc:contributors`
+
+- `dc:created`
+- `dc:modified`
+- `dc:creator`
+- `dc:lastContributor`
+- `dc:contributors`
 
 This means you have to be administrator to edit these properties. In tests, you can do the following:
+
 ```
 Framework.doPrivileged(() -> doc.setPropertyValue("dc:creator", "john"));
 ```
@@ -206,6 +219,7 @@ CoreInstance.doPrivileged("default", session -> {
 ```
 
 In order to declare a property secured you can contribute the following:
+
 ```
 <component name="my.component.name">
   <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
@@ -228,88 +242,98 @@ You can also relax the constraint on a secured property, for example dc:creator 
 #### New Endpoint to Get All Comments for 50+ Annotations Documents
 
 - **REST API**:
-    The endpoint GET `/nuxeo/api/v1/id/DOC_ID/@annotation/comments` has been deprecated in favor of POST `/nuxeo/api/v1/id/DOC_ID/@annotation/comments`.
+  The endpoint GET `/nuxeo/api/v1/id/DOC_ID/@annotation/comments` has been deprecated in favor of POST `/nuxeo/api/v1/id/DOC_ID/@annotation/comments`.
 
-    The annotationIds are now given in the payload request as a simple json array.
+  The annotationIds are now given in the payload request as a simple json array.
 
-    For instance:
-    ```
-    curl -XPOST http://localhost:8080/nuxeo/api/v1/id/DOC_ID/@annotation/comments -d '[ "ANNOT_ID1", "ANNOT_ID2", ...  ]'
-    ```
+  For instance:
+
+  ```
+  curl -XPOST http://localhost:8080/nuxeo/api/v1/id/DOC_ID/@annotation/comments -d '[ "ANNOT_ID1", "ANNOT_ID2", ...  ]'
+  ```
 
 - **Java API**
-    Added:
-    ```
-    CommentManager#getComments(CoreSession session, Collection<String> documentIds)
-    AnnotationAdapter#getCommentsFromBody(String payload)
-    ```
+  Added:
 
-    Deprecated:
-    ```
-    AnnotationAdapter#getComments(@QueryParam("annotationIds") List<String> annotationIds)
-    ```
+  ```
+  CommentManager#getComments(CoreSession session, Collection<String> documentIds)
+  AnnotationAdapter#getCommentsFromBody(String payload)
+  ```
+
+  Deprecated:
+
+  ```
+  AnnotationAdapter#getComments(@QueryParam("annotationIds") List<String> annotationIds)
+  ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29610](https://jira.nuxeo.com/browse/NXP-29610)
 
 ### Remove "session id" Notion From CoreSession and DocumentModel
 
 New methods:
- - `DocumentModel.getPrincipal()`
- - `DocumentModel.attach(CoreSession)`
- - `DocumentModel.isAttached()`
- - `CoreInstance.getCoreSession()` various signatures, as replacements for deprecated `openCoreSession()`
- - `CoreInstance.getCoreSessionSystem()` various signatures, as replacements for deprecated `openCoreSessionSystem()`
+
+- `DocumentModel.getPrincipal()`
+- `DocumentModel.attach(CoreSession)`
+- `DocumentModel.isAttached()`
+- `CoreInstance.getCoreSession()` various signatures, as replacements for deprecated `openCoreSession()`
+- `CoreInstance.getCoreSessionSystem()` various signatures, as replacements for deprecated `openCoreSessionSystem()`
 
 Deprecated methods/fields/classes:
- - `DocumentModel.getSessionId()`
- - `DocumentModel()` constructors with `sid` parameter
- - `CoreInstance.openCoreSession()` various signatures (use `getCoreSession()` instead)
- - `CoreInstance.openCoreSessionSystem()` various signatures (use `getCoreSessionSystem()` instead)
- - `CoreInstance.closeCoreSession()` (does nothing)
- - `DocumentModelFactory.createDocumentModel(type, id)` (was unused)
- - `CoreEventConstants.SESSION_ID` (was unused for a long time)
- - `CoreSessionService.releaseCoreSession(CoreSession)` (does nothing)
- - `CloseableCoreSession` (use `CoreSession` instead)
+
+- `DocumentModel.getSessionId()`
+- `DocumentModel()` constructors with `sid` parameter
+- `CoreInstance.openCoreSession()` various signatures (use `getCoreSession()` instead)
+- `CoreInstance.openCoreSessionSystem()` various signatures (use `getCoreSessionSystem()` instead)
+- `CoreInstance.closeCoreSession()` (does nothing)
+- `DocumentModelFactory.createDocumentModel(type, id)` (was unused)
+- `CoreEventConstants.SESSION_ID` (was unused for a long time)
+- `CoreSessionService.releaseCoreSession(CoreSession)` (does nothing)
+- `CloseableCoreSession` (use `CoreSession` instead)
 
 New INTERNAL methods:
- - `DocumentModel()` constructor with `CoreSession`, `repositoryName`, `NuxeoPrincipal` parameters
- - `DocumentModelFactory.createDocumentModel()` signatures with CoreSession parameter
- - `BaseSession.createEntryModel(schema, id, values, readOnly)` and variations (directory class)
+
+- `DocumentModel()` constructor with `CoreSession`, `repositoryName`, `NuxeoPrincipal` parameters
+- `DocumentModelFactory.createDocumentModel()` signatures with CoreSession parameter
+- `BaseSession.createEntryModel(schema, id, values, readOnly)` and variations (directory class)
 
 Removed methods/fields/classes (these were INTERNAL implementation details):
- - `DocumentModel.attach(sid)`
- - `DocumentModelFactory.createDocumentModel()` signatures with `sid` parameter
- - `CoreSession.isLive(boolean)`
- - `CoreSession.getSessionId()`
- - `CoreInstance.getSession(sid)`
- - `CoreSessionService.getCoreSession(sid)`
- - `CoreSessionService.getCoreSessionRegistrationInfos()`
- - `BaseSession.createEntryModel()` signatures with `sid` parameter (directory class)
- - `LocalException` (`DocumentNotFoundException` is thrown instead)
- - `CoreSessionRegistrationInfo`
- - `SessionInfo`
- - `SIDGenerator`
+
+- `DocumentModel.attach(sid)`
+- `DocumentModelFactory.createDocumentModel()` signatures with `sid` parameter
+- `CoreSession.isLive(boolean)`
+- `CoreSession.getSessionId()`
+- `CoreInstance.getSession(sid)`
+- `CoreSessionService.getCoreSession(sid)`
+- `CoreSessionService.getCoreSessionRegistrationInfos()`
+- `BaseSession.createEntryModel()` signatures with `sid` parameter (directory class)
+- `LocalException` (`DocumentNotFoundException` is thrown instead)
+- `CoreSessionRegistrationInfo`
+- `SessionInfo`
+- `SIDGenerator`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28799](https://jira.nuxeo.com/browse/NXP-28799)
 
 ### ConfigurationService API
 
 APIs below were deprecated:
- - `String getProperty(String)` in favor of `Optional<String> getString(String)`
- - `String getProperty(String, String)` in favor of `String getString(String, String)`
- - boolean `isBooleanPropertyTrue(String)` in favor of boolean `isBooleanTrue(String)` (same behavior)
- - boolean `isBooleanPropertyFalse(String)` in favor of boolean `isBooleanFalse(String)` - new API returns true if and only if property value is false, it wasn't the case for `isBooleanPropertyFalse` which returns true if property value is not blank and is not `true`.
+
+- `String getProperty(String)` in favor of `Optional<String> getString(String)`
+- `String getProperty(String, String)` in favor of `String getString(String, String)`
+- boolean `isBooleanPropertyTrue(String)` in favor of boolean `isBooleanTrue(String)` (same behavior)
+- boolean `isBooleanPropertyFalse(String)` in favor of boolean `isBooleanFalse(String)` - new API returns true if and only if property value is false, it wasn't the case for `isBooleanPropertyFalse` which returns true if property value is not blank and is not `true`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26181](https://jira.nuxeo.com/browse/NXP-26181)
 
 ### Cannot use multi repository (XA mode) with PostgreSQL
 
 The following APIs are deprecated and will be removed in the future:
+
 - `TransactionHelper.suspendTransaction`
 - `TransactionHelper.resumeTransaction`
 - `TransactionHelper.requireNewTransaction`
 
 Instead, the following APIs should be used:
+
 - `TransactionHelper.runInNewTransaction`
 - `TransactionHelper.runWithoutTransaction`
 
@@ -335,6 +359,7 @@ Previously when the result of the operation had a URL we returned a redirect to 
 Operation chain contributions should now require contributions holding operations that they reference.
 
 The following issue will now prevent server from starting in strict mode:
+
 - invalid chain declaration, referencing an operation unknown to the service at registration time
 - invalid operation class declaration (class not found or not an operation)
 - invalid automation codec class declaration (class not found or not a codec)
@@ -344,21 +369,26 @@ The following issue will now prevent server from starting in strict mode:
 ### Fn.htmlEscape is Now Available in JS Automation
 
 The following methods become non-static to be available via JS automation:
+
 - `org.nuxeo.ecm.automation.features.PlatformFunctions#htmlEscape`
 - `org.nuxeo.ecm.automation.features.PlatformFunctions#nxqlEscape`
 
 You can use them directly through the `Fn` object:
+
 ```
 var escapedHtml = Fn.htmlEscape(html)
 var escapedNxql = Fn.nxqlEscape(nxql)
 ```
 
 When used in Java code, you must update your code from:
+
 ```
 String htmlEscaped = PlatformFunctions.htmlEscape(html);
 String nxqlEscaped = PlatformFunctions.nxqlEscape(nxql);
 ```
+
 to:
+
 ```
 PlatformFunctions pf = new PlatformFunctions();
 String nxqlEscaped = pf.nxqlEscape(nxql);
@@ -387,6 +417,7 @@ protected HttpAutomationSession clientSession;
 #### Rename the Parameter "overwite" of filemanager.import to "overwrite"
 
 In the FileManager.Import operation, the misspelled param `overwite` has been renamed to overwrite:
+
 - `overwite` is now deprecated, no more used and replaced by `overwrite`.
 - `overwite` is kept as an alias for backward compatibility.
 
@@ -396,7 +427,7 @@ In the FileManager.Import operation, the misspelled param `overwite` has been re
 
 ### Behavior Changes
 
-#### cluster-wide lock for the Workflow model import {{> tag 'Since LTS 2021.2/2021-HF02'}
+#### cluster-wide lock for the Workflow model import {{> tag 'Since LTS 2021.2/2021-HF02'}}
 
 Workflow model import now uses a cluster-wide lock.
 
@@ -407,6 +438,7 @@ In cluster mode, the worfklows are initialized non-concurrently in a cluster-wid
 When a cluster node attempts to initialize its workflows and another node is already doing the same thing, it will wait for 1 min for the cluster-wide lock to be released and do its own initialization. If this timeout expires, then initialization fails with an exception.
 
 The following nuxeo.conf properties can be used to change this timeout:
+
 ```
 org.nuxeo.workflow.cluster.start.duration=1m
 ```
@@ -425,30 +457,31 @@ Workflow page providers now used the `ecm:isTrashed` attribute.
 
 ### Behavior Changes
 
-#### Process the picture views in a transaction with a dedicated timeout {{> tag 'Since LTS 2021.6/2021-HF06'}
+#### Process the picture views in a transaction with a dedicated timeout {{> tag 'Since LTS 2021.6/2021-HF06'}}
 
 Picture views are now processed in a transaction with a dedicated timeout.
 
 The maximum duration to produce the picture views is now limited by default to 5min. This limit is applied to the (deprecated) picture views generation work and also to the recomputeViews bulk action.
 
 The limit can be tuned with:
+
 ```
 nuxeo.picture.views.transaction.timeout.seconds=300
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30369](https://jira.nuxeo.com/browse/NXP-30369)
 
-#### Add explicit timeout on Video conversion {{> tag 'Since LTS 2021.6/2021-HF06'}
+#### Add explicit timeout on Video conversion {{> tag 'Since LTS 2021.6/2021-HF06'}}
 
 The maximum duration to convert a video is now limited by default to 10min.
 
 The limit can be tuned with:
+
 ```
 nuxeo.video.transaction.timeout.seconds=600
 ```
 
 Note that the limit is set at the transaction level (and not at the command level) because video conversion may involve multiple commands.
-
 
 ## Elasticsearch
 
@@ -459,7 +492,7 @@ you need to upgrade your existing Elasticsearch cluster to version 7.9 (7.7 or 7
 
 ### Behavior Changes
 
-#### Default Elasticsearch timeout increased for the write operation {{> tag 'Since LTS 2021.5/2021-HF05'}
+#### Default Elasticsearch timeout increased for the write operation {{> tag 'Since LTS 2021.5/2021-HF05'}}
 
 A longer Elastic timeout is used for write operation.
 
@@ -482,7 +515,6 @@ Here are a few breaking changes to take into account when upgrading from Elastic
   ```
 
   The field needs to be of `text` type.
-
 
 If you have to adapt your setting or mapping, you will need to re-index the repository to apply the change.
 
@@ -528,9 +560,11 @@ for instance, this changes the URL pattern to access a Nuxeo document from `http
 Elasticsearch hints are now exposed as extension point. To contribute or override an existing Elasticsearch hint, you should provide a name for your Elasticsearch hint and an implementation of `org.nuxeo.elasticsearch.api. ESHintQueryBuilder`.
 
 The new way to expose the ES hints is by creating a contribution as below:
+
 - We add new Extension Point to our existing ESComponent: `org.nuxeo.elasticsearch.ElasticSearchComponent`
 - The name of XP is `elasticSearchHints`.
 - At the end our "fuzzy" switch case, will be done like below:
+
 ```
 <component name="org.nuxeo.elasticsearch.hint.contrib">
   <require>org.nuxeo.elasticsearch.ElasticSearchComponent</require>
@@ -573,7 +607,7 @@ Indexes created in Elasticsearch 5.x or before will need to be reindexed with El
 Nuxeo uses 3 indexes:
 
 1. The repository index, named `nuxeo` by default, doesn't need this migration because the repository
- will be re-indexed in the next step, so, once this index has been backed up, you can delete it.
+   will be re-indexed in the next step, so, once this index has been backed up, you can delete it.
 
 2. The sequence index named `nuxeo-uidgen` will be re-created at startup, so, once this index has been backed up, you can delete it.
 
@@ -585,11 +619,12 @@ Once the Elasticsearch cluster is upgraded, start Nuxeo LTS 2021 and proceed to 
 
 ### Recommended changes
 
-#### Provide options at `nuxeo.conf` level to tune Bulk Re-indexing {{> tag 'Since LTS 2021.8/2021-HF08'}
+#### Provide options at `nuxeo.conf` level to tune Bulk Re-indexing {{> tag 'Since LTS 2021.8/2021-HF08'}}
 
 New options have been added to `nuxeo.conf` to tune bulk Elasticsearch reindexing.
 
 You now have the following options in `nuxeo.conf`:
+
 ```
 # Bulk Index action, fetching content (bulk/index computation)
 elasticsearch.bulk.index.fetch.concurrency=4
@@ -598,6 +633,7 @@ elasticsearch.bulk.index.fetch.partitions=12
 elasticsearch.bulk.index.submit.concurrency=2
 elasticsearch.bulk.index.submit.partitions=8
 ```
+
 Where concurrency is the number of threads per node and partitions value fixes the maximum concurrency at the cluster level.
 Note that partitions value is taken into account only when creating Kafka topic.
 
@@ -611,7 +647,8 @@ Note that partitions value is taken into account only when creating Kafka topic.
 
 If the file name of the `FileImporterContext` is missing, then it will now be filled with the Blob's file name.
 
-This means that you no longer need to add control to avoid an empty filename outside of the `FileImporterContext` class, for example see the snippet code below  AudioImporter:
+This means that you no longer need to add control to avoid an empty filename outside of the `FileImporterContext` class, for example see the snippet code below AudioImporter:
+
 ```
 // code placeholder
 @@ -57,8 +56,7 @@ public class AudioImporter extends AbstractFileImporter {
@@ -642,6 +679,7 @@ Many metrics names have been renamed in order to support tagging which is necess
 Visit [the documentation]({{page space='nxdoc' page='nuxeo-datadog-reporter'}}) for more information.
 
 Metric names updated to use tag but that generates different metric names in Graphite:
+
 ```
 # global metrics for all cluster
 nuxeo.works.global.queue.scheduled{queue=$queue}
@@ -680,11 +718,12 @@ The option to configure the metrics poll interval for Datadog is now `metrics.da
 
 ### Recommended changes
 
-#### Use a dedicated Work queue for ACL Propagation {{> tag 'Since LTS 2021.4/2021-HF04'}
+#### Use a dedicated Work queue for ACL Propagation {{> tag 'Since LTS 2021.4/2021-HF04'}}
 
 A dedicated Work queue is used for ACL Propagation.
 
 You now have options at nuxeo.conf level to use a dedicated queue for DBS read ACL update:
+
 ```
 # Queue for DBS Read ACL Update
 nuxeo.work.queue.raclupdate.enabled=false
@@ -708,16 +747,20 @@ The best way to infer the need for an SSL keystore is to check if its path is se
 #### Namespaces for Stream and Consumer Group Names Stream and Consumer Group Names Have Changed
 
 To upgrade:
+
 1. Wait for any asynchronous processing to be done, there must be no activity and no error,
 2. Stop the Nuxeo cluster,
 3. Drop the entire Kafka topics or Chronicle Queue directory,
 4. Upgrade the Nuxeo cluster, streams will be created with new names.
 
 Note that custom code is backward compatible and will continue to work even with name without namespace, but names have been enforced and must match:
+
 ```
 [A-Za-z0-9][A-Za-z0-9_]*
 ```
+
 or you get:
+
 ```
 IllegalArgumentException: Invalid name without namespace: 'foo.bar'
 ```
@@ -728,15 +771,17 @@ IllegalArgumentException: Invalid name without namespace: 'foo.bar'
 
 ### Behavior Changes
 
-#### Support filtering when reprocessing DLQ Work {{> tag 'Since LTS 2021.4/2021-HF04'}
+#### Support filtering when reprocessing DLQ Work {{> tag 'Since LTS 2021.4/2021-HF04'}}
 
 DLQ works can be reprocessed thanks to new filters.
 
 The `RunWorkInFailure` operation has been extended to support 2 more options:
- - `dryRun`: when true displays statistics on Works to reprocess, note that nothing is processed or modified when this option is activated.
- - `categoryFilter`: a list of Work categories (comma separated) to filter Works that will be reprocessed
+
+- `dryRun`: when true displays statistics on Works to reprocess, note that nothing is processed or modified when this option is activated.
+- `categoryFilter`: a list of Work categories (comma separated) to filter Works that will be reprocessed
 
 Example of invocation:
+
 ```
 curl -X POST "http://localhost:8080/nuxeo/site/automation/WorkManager.RunWorkInFailure" -u Administrator:Administrator -H 'content-type: application/json' -d '{"params":{"dryRun": true, "categoryFilter": "elasticSearchIndexing"},"context":{}}'
 ```
@@ -756,12 +801,14 @@ The wrongly named class `LogConfigDescriptor.StreamDescriptor` has been renamed 
 Comments will only be available for document with the Commentable facet.
 
 Note that on 10.10, this check will only be done when setting the `org.nuxeo.web.ui.enforceCommentable` conf property to true:
+
 ```
 <require>org.nuxeo.web.ui.properties.contrib</require>
 <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
   <property name="org.nuxeo.web.ui.enforceCommentable">true</property>
 </extension>
 ```
+
 to avoid a breaking change.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27963](https://jira.nuxeo.com/browse/NXP-27963)
@@ -771,6 +818,7 @@ to avoid a breaking change.
 - Layout validate method can now return a Promise in which case it must resolve to true to validate the layout.
 - Server-side schema constraint violations are now reported at the top of the create and edit form layout.
 - Server-side, you can now trigger a global validation error by throwing the following exception:
+
 ```
 throw new DocumentValidationException("your.error.message");
 ```
@@ -783,9 +831,7 @@ in a synchronous listener on **aboutToCreate** or **beforeDocumentModification**
 
 Nuxeo Spreadsheet is no longer a marketplace package, it is bundled with Web UI behind a feature flag.
 To enable Nuxeo Spreadsheet the new configuration property `org.nuxeo.web.ui.spreadsheet.enabled` should be set to `true`:
-`<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
-    <property name="org.nuxeo.web.ui.spreadsheet.enabled">true</property>
-</extension>`
+`<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration"> <property name="org.nuxeo.web.ui.spreadsheet.enabled">true</property> </extension>`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27416](https://jira.nuxeo.com/browse/NXP-27416)
 
@@ -799,6 +845,7 @@ Content distributed to "selectionActions" slot in `<nuxeo-results>` is no longer
 
 This introduces a new Web UI configuration property `org.nuxeo.web.ui.pageprovider.method`
 which by default is `GET` but can be changed to `POST`, in which case search requests will leverage the Automation API.
+
 ```
 <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
   <property name="org.nuxeo.web.ui.pageprovider.method">POST</property>
@@ -851,6 +898,7 @@ Retrieving a User Workspace through UserWorkspaceService requires that the user 
 #### Don't Do Orphan Versions Cleanup by Default
 
 Orphan versions cleanup is now disabled by default, and can be re-enabled (if its performance is acceptable) by doing:
+
 ```
 <require>org.nuxeo.ecm.core.orphanVersionsCleanup</require>
   <extension point="listener" target="org.nuxeo.ecm.core.event.EventServiceComponent">
@@ -863,10 +911,11 @@ Orphan versions cleanup is now disabled by default, and can be re-enabled (if it
 #### Fix Some Nuxeo Maven Groups
 
 Old groupId:artifactId --> new groupId:artifactId for the following maven modules:
- - `org.nuxeo:nuxeo-dmk-adaptor` --> `org.nuxeo.ecm.platform:nuxeo-dmk-adaptor`
- - `org.nuxeo:nuxeo-platform-lang-ext` --> `org.nuxeo.ecm.platform:nuxeo-platform-lang-ext`
- - `org.nuxeo:nuxeo-platform-lang-ext-incomplete` --> `org.nuxeo.ecm.platform:nuxeo-platform-lang-ext-incomplete`
- - `org.nuxeo.binary.metadata:nuxeo-binary-metadata` --> `org.nuxeo.ecm.platform:nuxeo-binary-metadata`
+
+- `org.nuxeo:nuxeo-dmk-adaptor` --> `org.nuxeo.ecm.platform:nuxeo-dmk-adaptor`
+- `org.nuxeo:nuxeo-platform-lang-ext` --> `org.nuxeo.ecm.platform:nuxeo-platform-lang-ext`
+- `org.nuxeo:nuxeo-platform-lang-ext-incomplete` --> `org.nuxeo.ecm.platform:nuxeo-platform-lang-ext-incomplete`
+- `org.nuxeo.binary.metadata:nuxeo-binary-metadata` --> `org.nuxeo.ecm.platform:nuxeo-binary-metadata`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29046](https://jira.nuxeo.com/browse/NXP-29046)
 
@@ -1417,7 +1466,6 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 </tbody>
 </table>
 </div>
-
 
 ## Complementary Information
 
