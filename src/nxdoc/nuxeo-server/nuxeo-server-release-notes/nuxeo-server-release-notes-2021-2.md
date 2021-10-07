@@ -2,16 +2,17 @@
 title: Nuxeo Server LTS 2021.2 / LTS 2021-HF02 Release Notes
 description: Discover what's new in LTS 2021.2 / LTS 2021-HF02
 review:
-   comment: ''
-   date: '2021-06-16'
-   status: ok
+  comment: ''
+  date: '2021-06-16'
+  status: ok
 labels:
-    - release-notes
+  - release-notes
 toc: true
 tree_item_index: 10000
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2021'}}
+
 # What's New in LTS 2021.2 / LTS 2021-HF02
 
 ## Nuxeo Server
@@ -23,12 +24,14 @@ tree_item_index: 10000
 Some files are uploaded to Nuxeo using external components as "direct upload" and therefore their content is never seen by Nuxeo, which makes it impossible to synchronously compute their digest and use this digest as the blob key.
 
 Having the blob key be a digest is useful for:
- - deduplication,
- - compliance with customer rules that require keys to be digests.
+
+- deduplication,
+- compliance with customer rules that require keys to be digests.
 
 To fix this, we have introduced a process to asynchronously compute the digest of each new blob (after downloading it) and "renaming" the blob key. This renaming involves to mov the blob in the blob provider, and to find all documents that have this blob key (thanks to NXP-29516) to change them to use the new key.
 
 To enable this feature, we added a new property to compute the blob digest asynchronously when Nuxeo doesn't see the blob content at upload time:
+
 ```
 nuxeo.core.blobstore.digestAsync=true
 ```
@@ -48,6 +51,7 @@ Finally, we improved the performances of the search by blob key.
 Additional logs are now produced to specifically track S3 downloads.
 
 It can be enabled by adding to lib/log4j2.xml:
+
 ```
 <Logger name="S3_Download" level="debug" />
 ```
@@ -59,6 +63,7 @@ It can be enabled by adding to lib/log4j2.xml:
 #### New parameter to enable index aliases
 
 It is now possible to easily activate the Elasticsearch alias usage using a property:
+
 ```
 elasticsearch.manageAlias.enabled=true
 ```
@@ -91,6 +96,7 @@ You can now use `nuxeo.append.templates.*` properties in `nuxeo.conf`.
 All those properties will be sorted alphabetically (for determinism and reproducibility), and all the values will be added after the ones from the nuxeo.templates property when passing everything to the ConfigurationGenerator.
 
 For instance, we could have:
+
 ```
 nuxeo.templates=default
 ...
@@ -101,24 +107,27 @@ nuxeo.append.templates.cloud=cloud-cloudfront, cloud-directupload
 The effective list will be: default,cloud-cloudfront,cloud-directupload, mongodb,redis,kafka.
 
 This could then be used in our default Nuxeo Helm chart:
+
+{{! NOTE: Double opening curly-braces within the following codeblock have a zero width space (https://en.wikipedia.org/wiki/Zero-width_space) between them to avoid them being interpreted by Handlebars. }}
+
 ```
 ...
-{{- if or .Values.mongodb.deploy .Values.tags.mongodb }}
+{​{- if or .Values.mongodb.deploy .Values.tags.mongodb }}
     nuxeo.append.templates.mongo=mongodb
-    nuxeo.mongodb.server=mongodb://{{ .Release.Name }}-mongodb:27017
-    nuxeo.mongodb.dbname={{ .Values.nuxeo.mongodb.dbname }}
-{{- end }}
-{{- if or .Values.postgresql.deploy .Values.tags.postgresql }}
+    nuxeo.mongodb.server=mongodb://{​{ .Release.Name }}-mongodb:27017
+    nuxeo.mongodb.dbname={​{ .Values.nuxeo.mongodb.dbname }}
+{​{- end }}
+{​{- if or .Values.postgresql.deploy .Values.tags.postgresql }}
     nuxeo.append.templates.postgres=postgresql
-    nuxeo.db.name={{ .Values.nuxeo.postgresql.dbname }}
-    nuxeo.db.user={{ .Values.nuxeo.postgresql.username }}
-    nuxeo.db.password={{ .Values.nuxeo.postgresql.password }}
-    nuxeo.db.host={{ .Release.Name }}-postgresql
+    nuxeo.db.name={​{ .Values.nuxeo.postgresql.dbname }}
+    nuxeo.db.user={​{ .Values.nuxeo.postgresql.username }}
+    nuxeo.db.password={​{ .Values.nuxeo.postgresql.password }}
+    nuxeo.db.host={​{ .Release.Name }}-postgresql
     nuxeo.db.port=5432
-{{- end }}
-{{- if or .Values.redis.deploy .Values.tags.redis }}
+{​{- end }}
+{​{- if or .Values.redis.deploy .Values.tags.redis }}
     nuxeo.append.templates.redis=redis
-{{- end }}
+{​{- end }}
 ...
 ```
 
@@ -154,7 +163,7 @@ Enricher priority is now taken into account when overriding an enricher.
 
 ### Fix algorithm to unpublish a document
 
-Unpublishing a source document now loads only the published documents. This is improving the flow by avoiding to search all the published documents of the section and to load them into the memory.   
+Unpublishing a source document now loads only the published documents. This is improving the flow by avoiding to search all the published documents of the section and to load them into the memory.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30090](https://jira.nuxeo.com/browse/NXP-30090)
 
@@ -162,7 +171,7 @@ Unpublishing a source document now loads only the published documents. This is i
 
 Previously, File content was deleted in case of exiftool failure.
 
-File content is now unchanged after an exiftool failure.  
+File content is now unchanged after an exiftool failure.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30247](https://jira.nuxeo.com/browse/NXP-30247)
 
@@ -183,16 +192,19 @@ The local configuration for subtypes is now inherited to subfolders.
 We can now configure the digest algorithm used for the signature with SAML.
 
 To configure a signature algorithm for SAML, add a SignatureAlgorithm entry to the plugin <parameters>, for instance:
+
 ```
 <parameter name="SignatureAlgorithm">http://www.w3.org/2001/04/xmldsig-more#rsa-sha256</parameter>
 ```
 
 The signature algorithms are defined by the various SAML and XML specs, in particular [RFC 6931](https://tools.ietf.org/html/rfc6931). If an algorithm unknown to the current library has to be used, the following more verbose syntax that includes the explicit JCA/JCE key algorithm specifier (RSA in this example) may be used:
+
 ```
 <parameter name="SignatureAlgorithm.RSA">http://www.w3.org/2001/04/xmldsig-more#rsa-sha256</parameter>
 ```
 
 In the same way it's possible to define a digest algorithm with the DigestAlgorithm parameter:
+
 ```
 <parameter name="DigestAlgorithm">http://www.w3.org/2001/04/xmlenc#sha256</parameter>
 ```
