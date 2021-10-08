@@ -36,14 +36,14 @@ The default is one hour.
 #### More reliable bulk action to set blob length into S3 {{> tag 'dev'}} {{> tag 'admin'}}
 
 A new bulk action `s3SetBlobLength` is provided to asynchronously set the blob length into S3.
-This new bulk action supersedes the one previously introduced (`s3SetContentLength`).
+This new bulk action superseeds the one previously introduced (`s3SetContentLength`).
 
 The `s3SetBlobLength` bulk action is not activated by default this needs to be done explicitly from nuxeo.conf with:
 ```
 binarymanager.bulk.s3SetBlobLength.enabled=true
 ```
 
-The number of partitions (maximum concurrency at culster level) and the concurrency (per worker node) can be tuned with:
+The number of partitions (maximum concurrency at cluster level) and the concurrency (per worker node) can be tuned with:
 ```
 binarymanager.bulk.s3SetBlobLength.partitions=4
 binarymanager.bulk.s3SetBlobLength.concurrency=2
