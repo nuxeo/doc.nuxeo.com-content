@@ -22,7 +22,7 @@ tree_item_index: 10000
 
 `nuxeoctl` has now a quiet option to not print the launcher command to the logs.
 
-This can be useful in some cases where confidential datas are logged to ```nuxeoctl.log```, mainly when `nuxeoctl` is used to encrypt properties.
+This can be useful in some cases where confidential data are logged to `nuxeoctl.log`, mainly when `nuxeoctl` is used to encrypt properties.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30265](https://jira.nuxeo.com/browse/NXP-30265)
 
