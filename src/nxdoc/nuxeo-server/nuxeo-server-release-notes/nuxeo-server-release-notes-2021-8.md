@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Server LTS 2021.8 / LTS 2021-HF08 Release Notes
+title: LTS 2021.8 / LTS 2021-HF08
 description: Discover what's new in LTS 2021.8 / LTS 2021-HF08
 review:
    comment: ''
@@ -8,25 +8,25 @@ review:
 labels:
     - release-notes
 toc: true
-tree_item_index: 10000
+tree_item_index: 6500
 ---
 
-{{! multiexcerpt name='nuxeo-server-updates-2021'}}
+{{! multiexcerpt name='nuxeo-server-updates-2021-8'}}
 # What's New in LTS 2021.8 / LTS 2021-HF08
 
 ## Nuxeo Server
 
 ### Core Storage
 
-#### Prevent Garbage Collector from deleting extra blobs when several blob providers share storage
+#### Prevent Garbage Collector From Deleting Extra Blobs When Several Blob Providers Share Storage
 
 Garbage Collector can deal with extra blobs when several blob providers share storage.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30547](https://jira.nuxeo.com/browse/NXP-30547)
 
-#### S3 blob storage: adding depth-based prefixes to object names
+#### S3 Blob Storage: Adding Depth-Based Prefixes to Object Names
 
-It is now possible, using the `subDirsDepth` configuration property for the blob store, to store objects in S3 using nested subdirectories to avoid having all objects in a flat hierarchy. For instance with a depth of 2 the object d41d8cd98f00b204e9800998ecf8427e will be stored as d4/1d/d41d8cd98f00b204e9800998ecf8427e.
+It is now possible, using the `subDirsDepth` configuration property for the blob store, to store objects in S3 using nested subdirectories to avoid having all objects in a flat hierarchy. For instance with a depth of 2 the object `d41d8cd98f00b204e9800998ecf8427e` will be stored as `d4/1d/d41d8cd98f00b204e9800998ecf8427e`.
 
 Example XML configuration:
 ```
@@ -37,7 +37,7 @@ Example XML configuration:
     </blobprovider>
 ```
 
-If XML configuration is not used, and if all S3 blob providers can have the same value for this configuration property, a nuxeo.conf property may be used:
+If XML configuration is not used, and if all S3 blob providers can have the same value for this configuration property, a `nuxeo.conf` property may be used:
 ```
 nuxeo.s3storage.subDirsDepth=2
 ```
@@ -46,13 +46,13 @@ Using a depth of 0 gives the standard behavior of storing everything flat.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30366](https://jira.nuxeo.com/browse/NXP-30366)
 
-#### Allow configuration of repository/directory indexes to add, even after initial creation
+#### Allow Configuration of Repository/Directory Indexes to Add, Even After Initial Creation
 
 It is now possible to add MongoDB indexes using a contribution.
 
 You can contribute indexes to be created at Nuxeo startup. Nuxeo supports these types of index: `ascending`, `descending`, and `none` to disable the index.
 
-Contribute the xml below to make a property indexed:
+Contribute the XML below to make a property indexed:
 ```
 <component name="my.component.name">
   <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
@@ -74,7 +74,7 @@ The Nuxeo Platform now relies on Tomcat 9.0.52.
 
 ### Miscellaneous
 
-#### Log Nuxeo version and HF on startup {{> tag 'dev'}} {{> tag 'admin'}}
+#### Log Nuxeo Version and HF on Startup {{> tag 'dev'}} {{> tag 'admin'}}
 
 The Nuxeo distribution version and date are now displayed in the startup log:
 ```
@@ -95,9 +95,9 @@ The Nuxeo distribution version and date are now displayed in the startup log:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30521](https://jira.nuxeo.com/browse/NXP-30521)
 
-## Major bug fixes
+## Major Bug Fixes
 
-### Set filename on audio file thumbnail blob
+### Set Filename on Audio File Thumbnail Blob
 
 Previously, the audio file thumbnail blobs were set without a filename which could break the UI if the CloudFront integration is enabled.
 
@@ -105,31 +105,31 @@ As we now set a filename to the audio thumbnail blob, the CloudFront integration
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30557](https://jira.nuxeo.com/browse/NXP-30557)
 
-### Return JSON with error message instead of HTML response for Generic HTTP 500 error
+### Return JSON With Error Message Instead of HTML Response for Generic HTTP 500 Error
 
-The error message is returned as a JSON and not anymore as a HTML response.
+The error message is returned as a JSON and not anymore as an HTML response.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30513](https://jira.nuxeo.com/browse/NXP-30513)
 
-### Bulk command scroller should be aligned on the underlying page provider
+### Bulk Command Scroller Should Be Aligned on the Underlying Page Provider
 
 Bulk command scroller is aligned on the underlying page provider configuration, meaning that if the page provider relies on Elasticsearch, the bulk command will use an Elasticsearch scroller.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30570](https://jira.nuxeo.com/browse/NXP-30570)
 
-### Display an error when trying to create a user which already exists
+### Display an Error When Trying to Create a User Which Already Exists
 
-User creation returns a HTTP 409 when the user already exists.
+User creation returns an HTTP 409 when the user already exists.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29793](https://jira.nuxeo.com/browse/NXP-29793)
 
-### Nuxeo WOPI addon prevents Nuxeo Dev Tools to connect to Nuxeo server
+### Nuxeo WOPI Addon Prevents Nuxeo Dev Tools to Connect to Nuxeo Server
 
 Nuxeo Dev Tools works when the addon "Nuxeo WOPI" is installed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30460](https://jira.nuxeo.com/browse/NXP-30460)
 
-### Web Engine module 'EasyShare' should be overridable
+### Web Engine Module 'EasyShare' Should Be Overridable
 
 Previously, it was not possible to override resources of the Web Engine module EasyShare. So customizing the EasyShare download page was not possible.
 
@@ -137,7 +137,7 @@ The EasyShare web engine module now allows override.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27596](https://jira.nuxeo.com/browse/NXP-27596)
 
-# Learn more
+## Learn More
 
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=21470) is available in our bug tracking tool.
 

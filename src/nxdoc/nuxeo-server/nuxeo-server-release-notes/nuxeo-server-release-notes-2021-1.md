@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Server LTS 2021.1 / 2021-HF01 Release Notes
+title: LTS 2021.1 / LTS 2021-HF01
 description: Discover what's new in LTS 2021.1 / LTS 2021-HF01
 review:
    comment: ''
@@ -11,7 +11,7 @@ toc: true
 tree_item_index: 10000
 ---
 
-{{! multiexcerpt name='nuxeo-server-updates-2021'}}
+{{! multiexcerpt name='nuxeo-server-updates-2021-1'}}
 # What's New in LTS 2021.1 / LTS 2021-HF01
 
 ## Nuxeo Server
@@ -95,7 +95,7 @@ For 10.10, all repositories, except for the "default" one are headless unless ex
 
 #### Configure Transient Store Cache {{> tag 'dev'}}
 
-Four new configuration properties where introduced to control transient store first and second level cache:
+Four new configuration properties were introduced to control transient store first and second level cache:
 ```
 nuxeo.transientstore.ttl=120
 nuxeo.transientstore.ttl2=10
@@ -345,7 +345,7 @@ nuxeo.s3storage.transient.crypt.kms.key=<sse-kms-key-id>
 
 #### Allow Using Arbitrary File Keys in S3 {{> tag 'dev'}}
 
-Objects can now be stored in S3 with an arbitrary file key instead of MD5 digest.
+Objects can now be stored in S3 with an arbitrary file key instead of the MD5 digest.
 
 To be able to use arbitrary file keys generated either by the provider or by a trusted upload client, the new S3BlobProvider should be used and the key strategy should be set to `managed` (default key strategy is `digest`): 
 ```
@@ -509,7 +509,7 @@ Note that when fulltext blob storage is enabled, repository-based fulltext searc
 
 A new blob provider `org.nuxeo.ecm.core.blob.AESBlobProvider` is available.
 
-It has the same configuration properties as the old:
+It has the same configuration properties as the old one:
 ```
 org.nuxeo.ecm.core.blob.binary.AESBinaryManager
 ```
@@ -738,7 +738,7 @@ It is also available as a PUML representation:
 curl -u Administrator:Administrator http://nuxeo.docker.localhost/nuxeo/api/v1/management/stream/puml/ > /tmp/streams.puml
 ```
 
-A SVG chart can be generated using `plantuml.jar`:
+An SVG chart can be generated using `plantuml.jar`:
 ```
 java  -DPLANTUML_LIMIT_SIZE=16384  -jar ~/Downloads/plantuml.jar /tmp/streams.puml -tsvg
 ```
@@ -810,7 +810,7 @@ The following `nuxeo.conf` property can be used to change this timeout:
 org.nuxeo.scheduler.cluster.start.duration=1m
 ```
 
-In case where there's a startup crash while a lock is held, it may be necessary to manually cleanup the key/value store of its locks. The key corresponding to the lock is:
+In case where there's a startup crash while a lock is held, it may be necessary to manually clean up the key/value store of its locks. The key corresponding to the lock is:
 ```
 nuxeo:cluster:start-scheduler
 ```
@@ -856,7 +856,7 @@ On SQL Server it's now possible to configure VCS to use an increased size to sto
 nuxeo.vcs.optimizations.acl.maxsize=999999
 ```
 
-Any value > 4000 will make SQL Server use NVARCHAR(MAX) instead of NVARCHAR(4000) for its internal datastructures.
+Any value > 4000 will make SQL Server use NVARCHAR(MAX) instead of NVARCHAR(4000) for its internal data structures.
 
 On PostgreSQL this feature already existed (default to 4096) but was not easily configurable, the same configuration property can be used to increase the value. The specific value requested will be used (there is no notion of MAX).
 
@@ -1115,7 +1115,7 @@ Comments are now indexed on linked document full-text field.
 #### Automatically Send Notifications to the Users Who Participate in a Conversation {{> tag 'dev'}} {{> tag 'user'}}
 (also available in 10.10)
 
-Automatic notifications are sent to users who participate on Comment conversation.
+Automatic notifications are sent to users who participate in Comment conversation.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28254](https://jira.nuxeo.com/browse/NXP-28254)
 
@@ -1144,8 +1144,9 @@ The other `DownloadService.downloadBlob` methods with lots of arguments are now 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28005](https://jira.nuxeo.com/browse/NXP-28005)
 
 #### Make DocumentModelJsonWriter Expose Schemas {{> tag 'dev'}}
+(also available in 10.10)
 
-Documents exported through JSON now have an addition schemas field (similar to facets):
+Documents exported through JSON now have an additional schemas field (similar to facets):
 ```
 [ {"name": "SCHEMA1", "prefix": "PREFIX1"}, {"name": SCHEMA2", "prefix": "PREFIX2"}, ... ],
 ```
@@ -1315,7 +1316,7 @@ It also allows to have other document scrollers:
 (also available in 10.10)
 
 We can now disable an existing schema (make it so that it's ignored whenever a doctype references it, or when the list of all schemas is returned).
-For instance, some use cases require that no attachments are created in the platform. With this feature, this becomes possible by simply disabling the files schema.
+For instance, some use cases require that no attachments are created in the platform. With this feature, this becomes possible by simply disabling the file schema.
 
 To disable a schema, for instance files, use a contribution like:
 ```
@@ -1352,7 +1353,7 @@ It is now possible to contribute a complex structure as `templateParam`.
 #### Improve OpenID Provider Descriptor to Handle User Info Request Authentication per Bearer {{> tag 'dev'}}
 (also available in 10.10)
 
-We improved OpenID provider to be able to choose between authentication though query parameters or through Authentication header.
+We improved OpenID provider to be able to choose between authentication through query parameters or Authentication header.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27446](https://jira.nuxeo.com/browse/NXP-27446)
 
@@ -1407,7 +1408,7 @@ org.nuxeo.repository.cluster.start.duration=1m
 org.nuxeo.directory.cluster.start.duration=1m
 ```
 
-In case where there's a startup crash while a lock is held, it may be necessary to manually cleanup the key/value store of its locks. The keys corresponding to the locks are visible when using Redis with KEYS `nuxeo:cluster:*` for instance `nuxeo:cluster:start-repository-default` or `nuxeo:cluster:start-directories`.
+In case where there's a startup crash while a lock is held, it may be necessary to manually clean up the key/value store of its locks. The keys corresponding to the locks are visible when using Redis with KEYS `nuxeo:cluster:*` for instance `nuxeo:cluster:start-repository-default` or `nuxeo:cluster:start-directories`.
 
 For a MongoDB key/value store, the keys are stored in the collection `kv.cluster`
 
@@ -1452,7 +1453,7 @@ The login page UI has been redesigned with Inter font and updated styling.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29860](https://jira.nuxeo.com/browse/NXP-29860)
 
-#### Remove Post Commit Listeners {{> tag 'dev'}}
+#### Remove Post-commit Listeners {{> tag 'dev'}}
 
 Post-commit listeners have been converted to asynchronous listeners.
 
@@ -1460,16 +1461,9 @@ Post-commit listeners have been converted to asynchronous listeners.
 
 #### Allow Event.Fire to Use Properties {{> tag 'dev'}}
 
-It is now possible to use properties into the asynchronous events.
+It is now possible to use properties into asynchronous events.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26449](https://jira.nuxeo.com/browse/NXP-26449)
-
-#### `DocumentModelJsonWriter` Exposes Schemas {{> tag 'dev'}}
-(also available in 10.10)
-
-Documents exported through JSON now have an addition schemas field (similar to facets).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27995](https://jira.nuxeo.com/browse/NXP-27995)
 
 #### Clusterservice to Hold Cluster Node Info {{> tag 'dev'}}
 
@@ -1532,9 +1526,9 @@ The header Referrer-Policy and its possible values are described [here](https://
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29115](https://jira.nuxeo.com/browse/NXP-29115)
 
-#### Cleanup
+#### Clean up
 
-This release also comes with hundreds of bugs fixed and also code cleanups, making Nuxeo Server more solid than ever.
+This release also comes with hundreds of bugs fixed and also code clean up, making Nuxeo Server more solid than ever.
 
 ## Addons
 
@@ -1728,15 +1722,15 @@ Usage of NXCore is deprecated and its usage is removed from the platform.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22532](https://jira.nuxeo.com/browse/NXP-22532)
 
-### Post Commit Listeners {{> tag 'dev'}}
+### Post-commit Listeners {{> tag 'dev'}}
 
 Post-commit listeners have been converted to asynchronous listeners.
 
-The post commit event listeners can now be made either asynchronous or synchronous. We strongly recommend to do the same thing with any custom event listener.
+The post-commit event listeners can now be made either asynchronous or synchronous. We strongly recommend to do the same thing with any custom event listener.
 
-Later on, we will deprecate the post commit event listener execution mechanism relying on PostCommitEventExecutor, see [NXP-27986](https://jira.nuxeo.com/browse/NXP-27986).
+Later on, we will deprecate the post-commit event listener execution mechanism relying on PostCommitEventExecutor, see [NXP-27986](https://jira.nuxeo.com/browse/NXP-27986).
 
-For this purpose, a warning is logged when running a post commit event listener to inform that its execution will soon be deprecated and advising to update the listener contributions to make them asynchronous with `<listener async=\"true\"...>`.
+For this purpose, a warning is logged when running a post-commit event listener to inform that its execution will soon be deprecated and advising to update the listener contributions to make them asynchronous with `<listener async=\"true\"...>`.
 
 The warning can be disabled with the following logger in NUXEO_SERVER/lib/log4j2.xml:
 ```
@@ -1780,9 +1774,9 @@ You do not need to depend on `nuxeo-dam` package anymore on your Nuxeo package, 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28626](https://jira.nuxeo.com/browse/NXP-28626)
 
-### Marklogic Connector {{> tag 'dev'}} {{> tag 'admin'}}
+### MarkLogic Connector {{> tag 'dev'}} {{> tag 'admin'}}
 
-The Marklogic connector has been removed.
+The MarkLogic connector has been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26571](https://jira.nuxeo.com/browse/NXP-26571)
 
