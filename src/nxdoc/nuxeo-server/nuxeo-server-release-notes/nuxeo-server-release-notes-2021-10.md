@@ -19,7 +19,7 @@ hidden: true
 
 ### Core Storage
 
-#### Improve the authentication performances thanks to new Mongodb Indexes {{> tag 'admin'}} {{> tag 'dev'}}
+#### Improve the Authentication Performances With Mongodb Indexes {{> tag 'admin'}} {{> tag 'dev'}}
 
 We improved the authentication performances by adding by default new MongoDB indexes on the `oauth2Tokens` collection: `accessToken` and `serviceName` fields.
 
@@ -35,31 +35,31 @@ The Nuxeo Platform now relies on Tomcat 9.0.54.
 
 ## Major Bug Fixes
 
-### Fix CoreSession association error after executing multi-repo Page Provider
+### Fix CoreSession Association Error After Executing Multi-Repo Page Provider
 
 A search using a multi-repo page provider now returns all the documents from all repositories.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30615](https://jira.nuxeo.com/browse/NXP-30615)
 
-### Escape/sanitize the first malicious character of a cell in a CSV export to avoid CSV injection
+### Escape/Sanitize the First Malicious Character of a Cell in a CSV Export to Avoid CSV Injection
 
 Following the [Open Web Application Security Project® (OWASP) recommendation](https://owasp.org/www-community/attacks/CSV_Injection), the first malicious character of a cell in a CSV export is now sanitized to avoid CSV injection.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30590](https://jira.nuxeo.com/browse/NXP-30590)
 
-### Batch Upload fails when using gridfsbinaries template
+### Batch Upload Fails When Using `gridfsbinaries` Template
 
 Batch Upload now supports [GridFS binary manager](https://doc.nuxeo.com/nxdoc/mongodb/#gridfs).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30618](https://jira.nuxeo.com/browse/NXP-30618)
 
-### WOPI - Fix download with WOPI integration
+### WOPI - Fix Download With Wopi Integration
 
 Downloads in the WOPI iframe is now allowed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30229](https://jira.nuxeo.com/browse/NXP-30229)
 
-### JSF UI - Fix Document count
+### JSF UI - Fix Document Count
 
 When repository had more than 10,000 documents, the Admin panel of the JSF UI was only showing 10,000 as the number of documents.
 
