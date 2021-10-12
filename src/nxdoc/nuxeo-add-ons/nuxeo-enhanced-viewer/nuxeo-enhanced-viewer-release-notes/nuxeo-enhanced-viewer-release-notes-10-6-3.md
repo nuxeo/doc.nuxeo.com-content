@@ -37,10 +37,9 @@ toc: true
 </table>
 </div>
 
-
 ### Improvements
 
-#### Increase the number of Tomcat threads on Previewer
+#### Increase the Number of Tomcat Threads on Previewer
 
 In order to support more traffic and to serve more requests, we have increased the maximum number of Tomcat threads on the Previewer.
 

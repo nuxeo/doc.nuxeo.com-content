@@ -43,7 +43,7 @@ toc: true
 
 The Previewer component is now scalable to guarantee service continuity and also support more user traffic by having several previewers for one application.
 
-New properties have been introduced on ARender Previewer side in order to control the High-Availability deployment. A MongoDB backend is required to store sessions and OAuth2 data.
+New properties have been introduced on ARender Previewer side in order to control the High-Availability deployment. A MongoDB backend is required to store sessions and OAuth 2 data.
 
 You can find below the properties controlling this part:
 <div class="table-scroll">
@@ -71,9 +71,9 @@ See [NEV-427](https://jira.nuxeo.com/browse/NEV-427), [NEV-261](https://jira.nux
 
 ### Improvements
 
-#### Allow disabling content redaction and watermark to improve performances
+#### Allow Disabling Content Redaction and Watermark to Improve Performances
 
-The Content Redaction (not supported on NEV by default) and the watermark require time consuming operations that are not needed when not used. So, we added a configuration to disable those features and so increase overall performances, for customers not using both Content redaction and watermark features.
+The Content Redaction (not supported on NEV by default) and the watermark features require time consuming operations that are not needed when not used. So, we added a configuration to disable those features and so increase overall performances, for customers not using both Content redaction and watermark features.
 
 This can be done by adding the following environment variable:
 ```
@@ -82,7 +82,7 @@ ARENDERSRV_ARENDER_SERVER_DOCUMENT_RENDITIONS_ACTIVE=false
 
 See [NEV-461](https://jira.nuxeo.com/browse/NEV-461).
 
-#### Exclude static resources from authentication
+#### Exclude Static Resources From Authentication
 
 In order to save resources and so to improve performances, we excluded the static resources from the authentication path.
 
@@ -90,9 +90,8 @@ See [NEV-465](https://jira.nuxeo.com/browse/NEV-465).
 
 ### Major Fixes
 
-#### Unexpected rendered document eviction causes services outage
+#### Unexpected Rendered Document Eviction Causes Services Outage
 
 We fixed a specific behavior occurring an eviction of the renderer version of the document although it was still needed. This behavior involved slowness and service crash.
-
 
 {{! /multiexcerpt}}

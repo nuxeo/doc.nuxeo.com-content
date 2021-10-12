@@ -43,7 +43,7 @@ This new version is dedicated to bug fixing.
 
 #### ARender Broker and Renderer stability improvement
 
-ARender Broker and Renderer services were crashing and restart at the same time due to healcheck probes unstability.
+ARender Broker and Renderer services were crashing and restart at the same time due to healthcheck probes instability.
 
 See [NEV-381](https://jira.nuxeo.com/browse/NEV-381).
 

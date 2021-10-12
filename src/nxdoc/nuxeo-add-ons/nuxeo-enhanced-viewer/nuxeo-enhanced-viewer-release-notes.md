@@ -10,7 +10,7 @@ toc: true
 ---
 
 
-{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-10.6.7'}}}
+{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-10-6-7'}}}
 
 ---
 
