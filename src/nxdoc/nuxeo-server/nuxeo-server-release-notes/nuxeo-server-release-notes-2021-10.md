@@ -1,0 +1,74 @@
+---
+title: LTS 2021.10 / LTS 2021-HF10
+description: Discover what's new in LTS 2021.10 / LTS 2021-HF10
+review:
+   comment: ''
+   date: '2021-10-18'
+   status: ok
+labels:
+    - release-notes
+toc: true
+tree_item_index: 5500
+hidden: true
+---
+
+{{! multiexcerpt name='nuxeo-server-updates-2021-10'}}
+# What's New in LTS 2021.10 / LTS 2021-HF10
+
+## Nuxeo Server
+
+### Core Storage
+
+#### Improve the authentication performances thanks to new Mongodb Indexes {{> tag 'admin'}} {{> tag 'dev'}}
+
+We improved the authentication performances by adding by default new MongoDB indexes on the `oauth2Tokens` collection: `accessToken` and `serviceName` fields.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30610](https://jira.nuxeo.com/browse/NXP-30610)
+
+### Packaging / Distribution / Installation
+
+#### Tomcat 9.0.54 {{> tag 'dev'}} {{> tag 'admin'}}
+
+The Nuxeo Platform now relies on Tomcat 9.0.54.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30646](https://jira.nuxeo.com/browse/NXP-30646)
+
+## Major Bug Fixes
+
+### Fix CoreSession association error after executing multi-repo Page Provider
+
+A search using a multi-repo page provider now returns all the documents from all repositories.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30615](https://jira.nuxeo.com/browse/NXP-30615)
+
+### Escape/sanitize the first malicious character of a cell in a CSV export to avoid CSV injection
+
+Following the [Open Web Application Security Project® (OWASP) recommendation](https://owasp.org/www-community/attacks/CSV_Injection), the first malicious character of a cell in a CSV export is now sanitized to avoid CSV injection.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30590](https://jira.nuxeo.com/browse/NXP-30590)
+
+### Batch Upload fails when using gridfsbinaries template
+
+Batch Upload now supports [GridFS binary manager](https://doc.nuxeo.com/nxdoc/mongodb/#gridfs).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30618](https://jira.nuxeo.com/browse/NXP-30618)
+
+### WOPI - Fix download with WOPI integration
+
+Downloads in the WOPI iframe is now allowed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30229](https://jira.nuxeo.com/browse/NXP-30229)
+
+### JSF UI - Fix Document count
+
+When repository had more than 10,000 documents, the Admin panel of the JSF UI was only showing 10,000 as the number of documents.
+
+Elasticsearch document count is now accurate in JSF admin center.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30568](https://jira.nuxeo.com/browse/NXP-30568)
+
+# Learn More
+
+[More information about released changes and fixed bugs]() is available in our bug tracking tool.
+
+{{! /multiexcerpt}}

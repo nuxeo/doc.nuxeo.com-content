@@ -56,8 +56,5 @@ The thumbnails are now correctly computed after a direct upload to S3 buckets, e
 
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=21249) is available in our bug tracking tool.
 
-{{#> callout type='info' heading='Upgrade Notes'}}
-Refer to the [LTS 2021.1 upgrade notes]({{page page='upgrade-from-lts-2019-to-lts-2021'}}) to transition to this version.
-{{/callout}}
 
 {{! /multiexcerpt}}

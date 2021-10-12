@@ -1821,8 +1821,4 @@ More information about released changes and fixed bugs is available in our bug t
 - [2021.0 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20889)
 - [2021.1 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=20958)
 
-{{#> callout type='info' heading='Upgrade Notes'}}
-Refer to the [LTS 2021.1 upgrade notes]({{page page='upgrade-from-lts-2019-to-lts-2021'}}) to transition to this version.
-{{/callout}}
-
 {{! /multiexcerpt}}

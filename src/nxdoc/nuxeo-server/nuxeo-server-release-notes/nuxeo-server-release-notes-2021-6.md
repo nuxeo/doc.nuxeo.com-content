@@ -48,9 +48,5 @@ The known issue with Azure storage where concurrent upload requests could produc
 
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=21422) is available in our bug tracking tool.
 
-{{#> callout type='info' heading='Upgrade Notes'}}
-Refer to the [LTS 2021.1 upgrade notes]({{page page='upgrade-from-lts-2019-to-lts-2021'}}) to transition to this version.
-{{/callout}}
-
 
 {{! /multiexcerpt}}
