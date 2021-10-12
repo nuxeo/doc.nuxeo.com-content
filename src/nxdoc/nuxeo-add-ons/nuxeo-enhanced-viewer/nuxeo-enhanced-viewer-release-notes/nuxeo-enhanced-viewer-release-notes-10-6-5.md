@@ -39,13 +39,13 @@ toc: true
 
 ### Major Fixes
 
-#### Synchronization of the Logs into Elasticsearch highly degrades the application performances
+#### Synchronization of the Logs Into Elasticsearch Highly Degrades the Application Performances
 
 The optional push of the logs into Elasticsearch was highly degrading the application performances.
 
 We replaced the previous behavior by an asynchronous mechanism which remove this operation from the critical path.
 
-#### Delete authorized client based on a TTL
+#### Delete Authorized Client Based on a TTL
 
 In order to better manage the user session expiration, we added a TTL to handle the authorized client deletion.
 

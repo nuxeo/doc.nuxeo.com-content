@@ -41,13 +41,13 @@ This new version is dedicated to bug fixing.
 
 ### Major Fixes
 
-#### Thread deadlock on the Document File Storage service
+#### Thread Deadlock on the Document File Storage Service
 
 Additional Deadlocks have been fixed following the initial fix [NEV-399](https://jira.nuxeo.com/browse/NEV-399)
 
 See [NEV-418](https://jira.nuxeo.com/browse/NEV-418).
 
-#### Fix the DFS oldStyleJPG error
+#### Fix the DFS oldStyleJPG Error
 
 Clean logs by removing irrelevant exception error in the logs of the Document File Storage service.
 
@@ -55,7 +55,7 @@ See [NEV-404](https://jira.nuxeo.com/browse/NEV-404).
 
 #### Fix group permission on files copied to previewer image
 
-Since the NEV 10.3.x release, the files copied inside the docker image don't have the group write permissions which is an issue when mounting additional configuration inside /docker-entrypoint-init.d because the entrypoint can't append to destination file.
+Since the NEV 10.3.x release, the files copied inside the docker image don't have the group write permissions which is an issue when mounting additional configuration inside `/docker-entrypoint-init.d` because the entrypoint can't append to destination file.
 
 See [NEV-345](https://jira.nuxeo.com/browse/NEV-345).
 

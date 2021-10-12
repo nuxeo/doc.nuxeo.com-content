@@ -39,7 +39,7 @@ toc: true
 
 ### Improvements
 
-#### Introduce pool management for the HTTP connections
+#### Introduce Pool Management for the HTTP Connections
 
 In order to improve performances and support more simultaneous requests, we implemented a pool mechanism for the HTTP connections.
 
@@ -61,9 +61,9 @@ ARENDERSRV_ARENDER_REST_CONNECTION_POOL_MAX_PER_ROUTE=20
 
 ### Major Fixes
 
-#### Opening not supported and corrupted files should stop immediately
+#### Opening Not Supported and Corrupted Files Should Stop Immediately
 
-Previously, unsupported and corrupted files were included in the default worklow, meaning the application tried and retried to open the file until the timeout. This was occurring a poor user experience (failure after waiting until the timeout) and resources used for nothing.
+Previously, unsupported and corrupted files were included in the default workflow, meaning the application tried and retried to open the file until the timeout. This was occurring a poor user experience (failure after waiting until the timeout) and resources used for nothing.
 
 We now detect those cases and go directly to an error message.
 

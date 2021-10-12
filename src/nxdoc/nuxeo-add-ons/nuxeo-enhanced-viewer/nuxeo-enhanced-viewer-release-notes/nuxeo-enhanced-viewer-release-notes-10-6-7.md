@@ -40,7 +40,7 @@ toc: true
 
 ### Improvements
 
-#### Create a pool for the `image-servlet-pool` thread
+#### Create a Pool for The `image-servlet-pool` Thread
 
 We have added a threadpool for the `image-servlet-pool` thread created by the previewer.
 
@@ -63,7 +63,7 @@ ARENDERSRV_IMAGE_SERVLET_THREAD_POOL_KEEPALIVETIME=0
 
 See [NEV-476](https://jira.nuxeo.com/browse/NEV-476).
 
-#### Make tomcat access log filename configurable
+#### Make Tomcat Access Log Filename Configurable
 
 You can now configure the access log filename prefix with the environment variable below:
 ```
@@ -82,7 +82,7 @@ localhost_access_log
 
 See [NEV-479](https://jira.nuxeo.com/browse/NEV-479).
 
-#### Make tomcat http connector pool configurable
+#### Make Tomcat HTTP Connector Pool Configurable
 
 You can now configure the maxThreads number on the HTTP connector with the environment variable below:
 ```
@@ -93,9 +93,9 @@ Its default is 800.
 
 See [NEV-480](https://jira.nuxeo.com/browse/NEV-480).
 
-#### Add keep alive in connection pools on rendition side
+#### Add Keep Alive in Connection Pools on Rendition Side
 
-The idle connections lifespan is now configurable in each of the microservices on the rendition side.
+The idle connections lifespan is now configurable in each of the micro-services on the rendition side.
 
 Here is the property and its default value:
 ```
@@ -109,31 +109,31 @@ DSB_REST-TEMPLATE_MAX-KEEP-ALIVE=60000
 
 See [NEV-483](https://jira.nuxeo.com/browse/NEV-483).
 
-#### Improve upload mechanism
+#### Improve Upload Mechanism
 
 The upload mechanism has been optimized in this version to improve global performances.
 
 See [NEV-477](https://jira.nuxeo.com/browse/NEV-477).
 
-#### Improve image generations when document-renderer is overloaded
+#### Improve Image Generations When Document-Renderer Is Overloaded
 
 The document-renderer has been redesign to better manage memory and makes it more available to generate a larger number of images in parallel.
 
 See [NEV-485](https://jira.nuxeo.com/browse/NEV-485).
 
-#### Add the possibility to turn on Java Flight Record
+#### Add the Possibility to Turn on Java Flight Record
 
 The new version of ARender supports a Java JDF compliant with the Java Flight Record (JFR) tool.
 
 See [NEV-484](https://jira.nuxeo.com/browse/NEV-484).
 
-#### Add micrometer-metrics to improve metrics scope and visibility at Java level
+#### Add Micrometer-Metrics to Improve Metrics Scope and Visibility at Java Level
 
 We have added [Micrometer](https://micrometer.io/) and configure a JMX reporter for the OkHttp client and others.
 
 See [NEV-488](https://jira.nuxeo.com/browse/NEV-488).
 
-#### Make configurable the OkHttp Connection Pool
+#### Make Configurable the OkHttp Connection Pool
 
 We have added the capability to configure the connection pool by using the environment variables below:
 ```
@@ -145,19 +145,19 @@ See [NEV-489](https://jira.nuxeo.com/browse/NEV-489).
 
 ### Major Fixes
 
-#### ARender server application properties may conflict
+#### ARender Server Application Properties May Conflict
 
 We have fixed the ARender properties mechanism to avoid any conflict when overriding the standard properties.
 
 See [NEV-473](https://jira.nuxeo.com/browse/NEV-473).
 
-#### Videos and audio sporadically not displayed
+#### Videos and Audio Sporadically Not Displayed
 
 Video (non mp4) and audio files could be not correctly displayed on ARender and required a manual refresh to be viewed.
 
 See [NEV-473](https://jira.nuxeo.com/browse/NEV-487).
 
-#### Extension added when downloading the original file from ARender
+#### Extension Added When Downloading the Original File From ARender
 
 The expected behavior (adding an extension or not) is now configurable.
 
@@ -174,7 +174,7 @@ ARENDERSRV_ARENDER_SERVER_SERVLET_CONFIG_DOWNLOADSERVLET_ADDEXTENSION=true
 
 See [NEV-486](https://jira.nuxeo.com/browse/NEV-486).
 
-#### Signature is missing in some PDF documents
+#### Signature Is Missing in Some PDF Documents
 
 PDF documents with signature were previously displayed without the signature.
 
