@@ -3,7 +3,7 @@ title: LTS 2021.10 / LTS 2021-HF10
 description: Discover what's new in LTS 2021.10 / LTS 2021-HF10
 review:
    comment: ''
-   date: '2021-10-18'
+   date: '2021-10-14'
    status: ok
 labels:
     - release-notes
@@ -58,6 +58,14 @@ Batch Upload now supports [GridFS binary manager](https://doc.nuxeo.com/nxdoc/mo
 Downloads in the WOPI iframe is now allowed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30229](https://jira.nuxeo.com/browse/NXP-30229)
+
+### Retention - Only the creator can edit a record after legal hold removal or after retention period expired
+
+Previously, for instances with versioning turned on, only the creator can edit a record after legal hold removal or after retention period expired.
+
+Any granted user can do it now (as we disabled automatic versioning for all records documents).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30453](https://jira.nuxeo.com/browse/NXP-30453)
 
 ### JSF UI - Fix Document Count
 
