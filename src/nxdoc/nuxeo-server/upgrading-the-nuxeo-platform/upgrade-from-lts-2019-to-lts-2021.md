@@ -426,7 +426,7 @@ In the FileManager.Import operation, the misspelled param `overwite` has been re
 
 ### Behavior Changes
 
-### Nuxeo workflow now supports 2 parallel tasks completed at the same time by 2 different users {{> tag 'Since 2021.10'}}
+### Nuxeo Workflow Now Supports 2 Parallel Tasks Completed at the Same Time by 2 Different Users {{> tag 'Since 2021.10'}}
 
 A warning is logged when assigning an unauthorized workflow global variable instead of throwing an exception.
 
@@ -803,11 +803,11 @@ The wrongly named class `LogConfigDescriptor.StreamDescriptor` has been renamed 
 
 ## Addons
 
-### Web UI - `nuxeo-document-preview`  should not load `nuxeo-pdf-viewer` for unsupported mimetypes {{> tag 'Since 2021.10'}}
+### Web UI - `nuxeo-document-preview` Should Not Load `nuxeo-pdf-viewer` For Unsupported MIME Types {{> tag 'Since 2021.10'}}
 
-WebUI does not display anymore a preview for unsupported MIME types.
+Web UI does not display anymore a preview for unsupported MIME types.
 
-Pdf rendition is no longer listed in available renditions when no converter is found for a document's main blob given mime-type.
+PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
 

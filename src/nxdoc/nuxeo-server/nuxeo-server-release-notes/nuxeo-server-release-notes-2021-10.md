@@ -19,9 +19,9 @@ hidden: true
 
 ### Core Storage
 
-#### Improve the Authentication Performances With Mongodb Indexes {{> tag 'admin'}} {{> tag 'dev'}}
+#### Improve the Authentication Performances With MongoDB Indexes {{> tag 'admin'}} {{> tag 'dev'}}
 
-We improved the authentication performances by adding by default new MongoDB indexes on the `oauth2Tokens` collection: `accessToken` and `serviceName` fields.
+We improved the authentication performances by adding default new MongoDB indexes on the `oauth2Tokens` collection: `accessToken` and `serviceName` fields.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30610](https://jira.nuxeo.com/browse/NXP-30610)
 
@@ -49,17 +49,17 @@ Following the [Open Web Application Security Project® (OWASP) recommendation](h
 
 ### Batch Upload Fails When Using `gridfsbinaries` Template
 
-Batch Upload now supports [GridFS binary manager](https://doc.nuxeo.com/nxdoc/mongodb/#gridfs).
+Batch Upload now supports [GridFS binary manager]({{page page='mongodb'}}#gridfs).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30618](https://jira.nuxeo.com/browse/NXP-30618)
 
-### WOPI - Fix Download With Wopi Integration
+### WOPI - Fix Download With WOPI Integration
 
 Downloads in the WOPI iframe is now allowed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30229](https://jira.nuxeo.com/browse/NXP-30229)
 
-### Retention - Only the creator can edit a record after legal hold removal or after retention period expired
+### Retention - Only the Creator Can Edit a Record After Legal Hold Removal or After Retention Period Expired
 
 Previously, for instances with versioning turned on, only the creator can edit a record after legal hold removal or after retention period expired.
 
@@ -77,6 +77,6 @@ Elasticsearch document count is now accurate in JSF admin center.
 
 # Learn More
 
-[More information about released changes and fixed bugs]() is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=21506) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
