@@ -52,5 +52,5 @@ See the [Roadmap]({{page version='' space='nuxeo-insight' page='roadmap'}}) and 
 
 ## Releases
 
-Our latest is version 1.4 (aka **Human in the Loop - Milestone 2**) which was released on 15 Oct 2021.
-Be sure to check the [release notes]({{page version='' space='nuxeo-insight' page='release-notes'}})
+Our latest version is 1.4 (aka **Human in the Loop - Milestone 2**) which was released on Oct. 15th 2021.
+Be sure to check the [release notes]({{page version='' space='nuxeo-insight' page='release-notes'}}). 
