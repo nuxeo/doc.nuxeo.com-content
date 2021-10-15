@@ -16,7 +16,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 {{/callout}}
 {{! /multiexcerpt}}
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-6'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-7'}}}
 
 ---
 
@@ -24,4 +24,5 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [Web UI 3.0.6]({{page page='web-ui-release-notes-3-0-6'}})                    | New feature: select all documents and trigger bulk actions on them         |
 | [Web UI 3.0.0 to 3.0.5]({{page page='web-ui-release-notes-3-0-0-to-3-0-5'}})  | Upload experience for Large Files, audit entries improvements and more     |
