@@ -12,13 +12,13 @@ private: true
 This feature is available for Nuxeo users and target platforms Nuxeo Platform LTS 2019 and above.
 {{/callout}}
 
-Elasticsearch Mapping is a feature to help defining the improvement of the search experience, it provides the user a JSON configuration to be added to the Elasticsearch configuration.
+Elasticsearch Mapping is a feature that helps you configure the search experience, it provides the user a with JSON configuration file that can be added to the Elasticsearch configuration.
 
 ## Elasticsearch Mapping
 
-As described in the [configuring the Elasticsearch mapping documentation page]({{page space='nxdoc' page='configuring-the-elasticsearch-mapping'}}), it is possible to change the configuration to redefine the Elasticsearch mapping. The Elasticsearch Mapping feature allows the user to easily define a custom mapping for any simple and non-multivalued field and generate the appropriate JSON configuration. This JSON content can then be added to the Elasticsearch configuration as described [in the changing Elasticsearch mapping documentation page]({{page space='nxdoc' page='elasticsearch-setup'}}#changingelasticsearchmapping).
+As described in the [configuring the Elasticsearch mapping documentation page]({{page space='nxdoc' page='configuring-the-elasticsearch-mapping'}}), it is possible to change the Elasticsearch configuration to redefine the Elasticsearch mapping. The Elasticsearch Mapping feature allows the user to easily define a custom mapping for any simple and non-multivalued field and generate the appropriate JSON configuration file. This JSON content can then be added to the Elasticsearch configuration as described [in the changing Elasticsearch mapping documentation page]({{page space='nxdoc' page='elasticsearch-setup'}}#changingelasticsearchmapping).
 
-There are two kind of mapping available per field:
+There are two kinds of mapping available per field:
 - auto-mapping
 - manual entry
 
@@ -53,7 +53,7 @@ If there is not an existing mapping, a button to directly create a new configura
 --}}
 ![No Existing Mapping](nx_asset://384be8a6-cf91-4cd4-b941-b598da8d8514)
 
-A dialog opens to define the name of the mapping and selected field is display as a reminder.
+A dialog opens to define the name of the mapping and the selected field is displayed as a reminder.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Page Providers/Create New Mapping
@@ -75,7 +75,7 @@ A new Elasticsearch Mapping can be created directly from the page listing the ex
 
 ### Auto-mapping
 
-Based on the type of the selected field for the mapping, a list of available mapping type is displayed with their properties.
+Based on the type of the selected field for the mapping, a list of available mapping types is displayed with their properties.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Page Providers/Creating Automapping
