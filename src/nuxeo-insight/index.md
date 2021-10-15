@@ -49,3 +49,8 @@ The roadmap has three sections:
 
 See the [Roadmap]({{page version='' space='nuxeo-insight' page='roadmap'}}) and don't hesitate to
 [give us feedback]({{page version='' space='nuxeo-insight' page='give-feedback'}}).
+
+## Releases
+
+Our latest is version 1.4 (aka **Human in the Loop - Milestone 2**) which was released on 15 Oct 2021.
+Be sure to check the [release notes]({{page version='' space='nuxeo-insight' page='release-notes'}})
