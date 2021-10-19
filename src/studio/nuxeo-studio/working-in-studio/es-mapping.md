@@ -8,11 +8,12 @@ toc: true
 hidden: true
 private: true
 ---
+
 {{#> callout type='info' heading='Availability'}}
 This feature is available for Nuxeo users and target platforms Nuxeo Platform LTS 2019 and above.
 {{/callout}}
 
-Elasticsearch Mapping is a feature that helps you configure the search experience, it provides the user a with JSON configuration file that can be added to the Elasticsearch configuration.
+Elasticsearch Mapping is a feature that helps you configure the search experience, it provides the user a JSON configuration file that can be added to the Elasticsearch configuration.
 
 ## Elasticsearch Mapping
 
@@ -85,10 +86,10 @@ Based on the type of the selected field for the mapping, a list of available map
 ![Creating Automapping](nx_asset://08baf3b0-cbea-422c-a53a-a7ac75cb6713)
 
 Available properties:
-- **Fulltext**: include/exlude the field from the [Full-Text search]({{page space='nxdoc' page='configuring-the-elasticsearch-mapping'}}#includeexcluding-a-field-from-the-full-text-search). The property is only available for fields of type String.
+- **Fulltext**: include/exclude the field from the [Full-Text search]({{page space='nxdoc' page='configuring-the-elasticsearch-mapping'}}#includeexcluding-a-field-from-the-full-text-search). The property is only available for fields of type String.
 - **ILike**: make the [case insensitive search]({{page space='nxdoc' page='configuring-the-elasticsearch-mapping'}}#making-ilike-work-case-insensitive-search) using ILIKE operator works on the field. The property is only available for fields of type String.
 - **Like**: enable the use of the [LIKE operator]({{page space='nxdoc' page='configuring-the-elasticsearch-mapping'}}#making-like-work) on the field. The property is only available for fields of type String.
-    * **Fielddata**: when the **Like** property is selected, it is possible to enable the Fielddata property to make the field content available for aggregations.
+    - **Fielddata**: when the **Like** property is selected, it is possible to enable the Fielddata property to make the field content available for aggregations.
 - **Non Searchable**: select for disabling the searchability of the field. The property is available for any fields.
 
 ### Manual Entry
