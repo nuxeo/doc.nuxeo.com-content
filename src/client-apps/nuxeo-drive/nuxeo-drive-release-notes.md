@@ -20,7 +20,7 @@ Welcome to the Release Notes for **Nuxeo Drive 5.2.7**
 
 #### Better Handle Failed Migrations
 
-Thanks to this improvement, following a failed migration, the application will automatically downgraded to the previous working version and will not allow to upgrade to the problematic version anymore. But it will allow to upgrade to the next next version.
+Thanks to this improvement, following a failed migration, the application will be automatically downgraded to the previous working version and will not allow to upgrade to the problematic version anymore. But it will allow to upgrade to the next next version.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2534](https://jira.nuxeo.com/browse/NXDRIVE-2534).
 
@@ -37,7 +37,7 @@ To do so, select multiple documents, do a right click > **Upload content**. The 
 
 #### Rethink the New Remote Folder Capability
 
-This is a first task of a major improvement on Direct Transfer: the selection of the document type when launching a transfer of documents.</br>
+This is the first task of a major improvement on Direct Transfer: the selection of the document type when launching a transfer of documents.</br>
 With this first ticket, when selecting the path of the target remote folder, with a right-click on the tree, you have a user action **Add a new folder** that asks for the folder name and the folder type. For the moment, the folder type is set to **Automatic**, the selection will come in another iteration.
 
 The Epic is available [here](https://jira.nuxeo.com/browse/NXDRIVE-1999) for more information.
