@@ -121,7 +121,7 @@ history:
 
 ---
 {{#> callout type='info' }}
-For a broader look about variables available in different contexts, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
+For a broader look about variables available in different contexts, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page version='' space='nxdoc' page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
 {{/callout}}
 
 {{! excerpt}}
@@ -132,14 +132,14 @@ In your email templates, you have access to different variables depending if you
 
 Variables that can be used to set up an email in an automation chain.
 
-*   `${Document}` **-** The context document. This is the document on which some action was done and the [send mail operation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Document.Mail) was triggered. See [Use of MVEL in Automation chains (document wrapper)]({{page page='use-of-mvel-in-automation-chains'}}#-anchor-doc-wrapper-document-wrapper) for details.
+*   `${Document}` **-** The context document. This is the document on which some action was done and the [send mail operation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Document.Mail) was triggered. See [Use of MVEL in Automation chains (document wrapper)]({{page version='' space='nxdoc' page='use-of-mvel-in-automation-chains'}}#document-wrapper) for details.
 *   `${docUrl}` - The document URL.
 *   `${viewId}` **-** The view of the document which will be displayed by the document URL.
 *   `${subject}` - The mail subject.
 *   `${to}` - The mail recipients.
 *   `${from}` - The mail sender.
-*   `${CurrentDate}` - The current date. See [Use of MVEL in Automation chains (date wrapper)]({{page page='use-of-mvel-in-automation-chains'}}#-anchor-date-wrapper-date-wrapper) for details.
-*   `${Fn}`- A collection of useful functions. See [Use of MVEL in Automation chains (fn object)]({{page page='use-of-mvel-in-automation-chains'}}#-anchor-fn-object-functions) for details.
+*   `${CurrentDate}` - The current date. See [Use of MVEL in Automation chains (date wrapper)]({{page version='' space='nxdoc' page='use-of-mvel-in-automation-chains'}}#date-wrapper) for details.
+*   `${Fn}`- A collection of useful functions. See [Use of MVEL in Automation chains (fn object)]({{page version='' space='nxdoc' page='use-of-mvel-in-automation-chains'}}#functions) for details.
 *   `${Env}` - A hashmap containing Nuxeo environment variables. Example: `Env["org.nuxeo.ecm.product.name"]`.
 *   `${CurrentUser}` - The current user.
 
@@ -161,7 +161,7 @@ Variables that can be used to set up an email in an automation chain.
 Variables that can be used when a notification is set up from a workflow node's configuration.
 
 *   `${recipients}` - The email recipients. Provided as a usernames list. Example: `${recipients[0]}`.
-*   `${userUrl}` - The URL to access the profile of the user running the task. Note that this might not be the current user. See the [workflow engine FAQ]({{page page='workflow-engine-faq'}}) for details.
+*   `${userUrl}` - The URL to access the profile of the user running the task. Note that this might not be the current user. See the [workflow engine FAQ]({{page version='' space='nxdoc' page='workflow-engine-faq'}}) for details.
 *   `${docMainFileUrl}` - The URL of the document's main file (assuming the document contains one).
 *   `${docState}` - The document's current lifecycle state.
 *   `${documentLifeCycle}` - The document's current lifecycle state.
@@ -186,10 +186,10 @@ Variables that can be used when a notification is set up from a workflow node's 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
-- [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}})
-- [HOWTO: Customize Email Templates]({{page page='how-to-customize-email-templates'}})
-- [Alerts]({{page space='userdoc' page='collaborative-features'}}#alerts)
+- [Understand Expression and Scripting Languages Used in Nuxeo]({{page version='' space='nxdoc' page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
+- [Variables Available in the Automation Context]({{page version='' space='nxdoc' page='variables-available-in-the-automation-context'}})
+- [HOWTO: Customize Email Templates]({{page version='' space='nxdoc' page='how-to-customize-email-templates'}})
+- [Alerts]({{page version='' space='userdoc' page='alerts'}})
 
 {{/panel}}</div><div class="column medium-6">
 
