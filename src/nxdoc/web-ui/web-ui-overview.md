@@ -241,6 +241,6 @@ The main area is reserved for displaying the current page's content. Our router 
 
 Nuxeo is committed to making Web UI accessible and keeping a high level of quality on that front. Our target is the WCAG standard level AA. Our current level of support for accessibility is controlled regularly, and we publish the results using the standard section 508 Compliance (VPAT) document. Its latest iteration can be found below.
 
-- **Date**: February, 2020
+- **Date**: October, 2021
 - **Product**: Nuxeo Web UI
-- **Link**: [Voluntary Product Accessibility Template for Web UI]({{file name='Nuxeo Web UI-VPAT 2020.pdf'}}).
+- **Link**: [Voluntary Product Accessibility Template for Web UI]({{file name='2021-10-Nuxeo-Web-UI-LTS-2021-3-0-6-VPAT.pdf'}}).
