@@ -3,7 +3,7 @@ title: Web UI Functional Tests
 description: An overview of functional testing on Web UI and it's functional testing framework.
 toc: true
 review:
-  date: '2019-09-19'
+  date: '2019-10-29'
   status: ok
   comment: ''
 ---
@@ -18,7 +18,7 @@ The advantages of this approach are threefold:
 - it makes it easier to write tests based on requirements, specifications, and acceptance criteria.
 - it facilitates test writing by people other than developers.
 
-Cucumber is a crucial element of our testing stack, promoting Behavior-Driven Development (or **BDD** for short). Cucumber tests are written in [Gherkin](https://docs.cucumber.io/gherkin/reference/), which are then translated into JavaScript instructions that run commands using the WebDriver protocol. Tests are written in **feature** files (ending with the `.feature` extension), which are composed by a set of **Scenarios** with one or more **Steps**. Steps common to more than one scenario are usually placed in a **Background**, which is run before every scenario. Steps must begin with one of the following keywords: *Given*, *When*, *Then*, *And*, *But*. Which keyword is used only affects it's meaning to readers, although the *Given* keyword is commonly used for provisioning steps.
+Cucumber is a crucial element of our testing stack, promoting Behavior-Driven Development (or **BDD** for short). Cucumber tests are written in [Gherkin](https://docs.cucumber.io/gherkin/reference/), which are then translated into JavaScript instructions that run commands using the WebDriver protocol. Tests are written in **feature** files (ending with the `.feature` extension), which are composed of a set of **Scenarios** with one or more **Steps**. Steps common to more than one scenario are usually placed in a **Background**, which is run before every scenario. Steps must begin with one of the following keywords: *Given*, *When*, *Then*, *And*, *But*. Which keyword is used only affects its meaning to readers, although the *Given* keyword is commonly used for provisioning steps.
 
 {{#> panel type='code' heading='Sample feature file'}}
 
@@ -38,11 +38,13 @@ Feature: Login / Logout
 Please check the [Gherkin reference](https://docs.cucumber.io/gherkin/reference/) page for more details on how to write Cucumber tests.
 {{/callout}}
 
-Steps used in feature files are mapped into JavaScript instructions, which are read from **step definition** files. These are JavaScript files that map a given set of steps into JavaScript code. These definitions usually rely on page helpers to access interface elements and assert the conditions matching the test criteria. **Page helpers** are objects that encapsulate the logics required to access and manipulate high level interface elements, hiding most of the WebDriver-specific logics.
+Steps used in feature files are mapped into JavaScript instructions, which are read from **step definition** files. These are JavaScript files that map a given set of steps into JavaScript code. These definitions usually rely on page helpers to access interface elements and assert the conditions matching the test criteria. **Page helpers** are objects that encapsulate the required logics to access and manipulate high-level interface elements, hiding most of the WebDriver-specific logics.
 
 {{#> panel type='code' heading='Sample step definitions'}}
 
 ```JavaScript
+import { Then } from '@cucumber/cucumber';
+
 Then('I am logged in as {string}', function (username) {
   const currentUser = this.ui.drawer.open('profile').getText('.header').toLowerCase();
   currentUser.should.be.equal(username.toLowerCase());
@@ -61,7 +63,7 @@ You can check Web UI's plugin repository for more examples on Cucumber [feature]
 
 ## Functional Tests Framework
 
-The [functional tests framework for Web UI](https://github.com/nuxeo/nuxeo-web-ui/tree/master/packages/nuxeo-web-ui-ftest) exposes a large set of step definitions and page helpers, which is particularly useful for developing functional tests for projects contributing to Web UI. The provided steps were designed to cover most default functionality, but some of them are generic enough to be re-used on other contexts. However, you can create your own step definitions, while still being able to import and use the default page helpers provided by the framework. Should this not be enough, and you can do your own page helpers to wrap the logics of your custom elements.
+The [functional tests framework for Web UI](https://github.com/nuxeo/nuxeo-web-ui/tree/maintenance-3.0.x/packages/nuxeo-web-ui-ftest) exposes a large set of step definitions and page helpers, which is particularly useful for developing functional tests for projects contributing to Web UI. The provided steps were designed to cover most default functionality, but some of them are generic enough to be re-used in other contexts. However, you can create your own step definitions, while still being able to import and use the default page helpers provided by the framework. Should this not be enough, and you can do your own page helpers to wrap the logic of your custom elements.
 
 Shadow DOM is one of the biggest challenges when testing applications powered by custom elements. Only recently did WebDriverIO [introduce support for Shadow DOM](https://github.com/webdriverio/webdriverio/blob/master/CHANGELOG.md#550-2019-02-20), by adding a command that is able to pierce the shadow root of a given element. However, this is not enough most of the time, where several levels of shadow roots need to be pierced. To this end, Web UI's functional tests framework has a Shadow DOM plugin embedded, which allows WebDriverIO commands to work just like they would if no Shadow DOM was being used.
 
@@ -80,8 +82,8 @@ To use the framework on custom projects, you need to create an npm package with 
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@nuxeo/nuxeo-web-ui-ftest": "3.0.0-SNAPSHOT",
-    "cucumber": "^4.1.0"
+    "@nuxeo/nuxeo-web-ui-ftest": "~3.0.0",
+    "cucumber": "^7.0.0"
   }
 }
 ```
@@ -92,7 +94,7 @@ To ensure that you can access *SNAPSHOT* versions of the framework, you need to 
 {{#> panel type='code' heading='~/.npmrc'}}
 ```
 ...
-@nuxeo:registry=https://packages.nuxeo.com/repository/npm-public-archives/
+@nuxeo:registry=https://packages.nuxeo.com/repository/npm-public/
 ...
 ```
 {{/panel}}
@@ -115,7 +117,7 @@ It is also required to have on the root of the project a file named `.babelrc` w
 
 You can then install the project's dependencies, by running `npm install`. From there, you're all set to create your own tests.
 
-The first step is to create on the root of your project a *ftest* folder, containing a sub folder named *features* and optionally another one named *resources*, if you need to use resources in your tests such as images. If you are doing custom step definitions, you must place them inside `features/step_definitions`. The functional tests framework will load feature files, step definitions and resources by convention, so please make sure to respect this folder structure. It should look as follows:
+The first step is to create on the root of your project a *ftest* folder, containing a subfolder named *features* and optionally another one named *resources*, if you need to use resources in your tests such as images. If you are doing custom step definitions, you must place them inside `features/step_definitions`. The functional tests framework will load feature files, step definitions, and resources by convention, so please make sure to respect this folder structure. It should look as follows:
 
 ```
 .
@@ -136,7 +138,7 @@ The first step is to create on the root of your project a *ftest* folder, contai
 ```
 
 For an example on how to use the functional test framework, please check
-[Nuxeo DAM's functional tests for Web UI](https://github.com/nuxeo/nuxeo-web-ui/tree/master/addons/nuxeo-dam/ftest).
+[Nuxeo Retention's functional tests for Web UI](https://github.com/nuxeo/nuxeo-retention/tree/lts-2021/nuxeo-retention-web/ftest).
 
 
 ### Running Tests
@@ -145,9 +147,9 @@ Assuming a server is running with the contributions that need to be tested, you 
 ```
 npm run test
 ```
-But, oftentimes all we want is to run a particular subset of feature files, or even a subset of scenarios.
+But, oftentimes all we want is to run a particular subset of feature files or even a subset of scenarios.
 
-In such cases, it can be done by adding the `@watch` tag to the top of a feature file, or right before a given scenario, and then running:
+In such cases, it can be done by adding the `@watch` tag to the top of a feature file or right before a given scenario, and then running:
 ```
 npm run test:watch
 ```
@@ -164,4 +166,4 @@ npm run test -- --debug
 npm run test:watch -- --debug
 ```
 
-Once you run the tests in debug mode, you can use your favorite debugger to attach and debug the code. This is very easy to do with Google Chrome: a new entry will be available under `chrome://inspect/#devices`, and you just need to click "inspect" to attached the debugger. The execution will stop as soon at it hits a [`debugger`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement.
+Once you run the tests in debug mode, you can use your favorite debugger to attach and debug the code. This is very easy to do with Google Chrome: a new entry will be available under `chrome://inspect/#devices`, and you just need to click "inspect" to attach the debugger. The execution will stop as soon as it hits a [`debugger`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement.
