@@ -117,7 +117,7 @@ The URL should match the previously created OAuth 2 app redirect URL on the Fram
 ```
 1. Install the Nuxeo addon as usual:
 ```
-/opt/nuxeo/bin/nuxeoctl mp-install nuxeo-frame-io-marketplace-10.10-SNAPSHOT.zip
+/opt/nuxeo/bin/nuxeoctl mp-install nuxeo-frameio
 ```
 1. Start your nuxeo instance:
 ```
