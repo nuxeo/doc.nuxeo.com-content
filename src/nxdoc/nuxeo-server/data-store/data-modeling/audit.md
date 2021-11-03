@@ -133,7 +133,7 @@ The data record structure is defined in Java by the `LogEntry` and `ExtendedInfo
 
 Nuxeo documents and events can have a lot of custom properties, so if you want to log some specific events or document properties, the [Extended Info](#extendedinfo) allows for a Key/Value type storage that will be associated to the main `LogEntry` record. These informations are extracted from the event message using and EL (Expression Language) expression and stored into a map.
 
-By default, since Nuxeo LTS 2015, the data store relies on the [Elasticsearch Back-end](#elasticsearch-back-end). To disable Elasticsearh for Audit logs and use the [Legacy SQL Back-end](#legacy-sql-back-end) please refer to the [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-es-for-audit-logs) section.
+By default, since Nuxeo LTS 2015, the data store relies on the [Elasticsearch Back-end](#elasticsearch-back-end). To disable Elasticsearch for Audit logs and use the [Legacy SQL Back-end](#legacy-sql-back-end) please refer to the [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-es-for-audit-logs) section.
 
 ### Elasticsearch Back-end
 
