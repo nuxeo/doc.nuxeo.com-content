@@ -169,6 +169,12 @@ msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nux
 {{#> callout type='warning'}}
 Once the installation is done, make sure that the [Nuxeo IMAP connector]({{page version='' space='userdoc' page='nuxeo-imap-connector'}}) has been correctly installed on your instance, as the Nuxeo Outlook connector depends on it to work correctly.  
 {{/callout}}
+  
+#### Settings migration from previous versions
+
+When installing a newer version of the Outlook Connector, the settings file (NuxeoClientSettings-x.x.x.xml in the %USERPROFILE% folder) will be migrated to a newer version. If possible, settings will be used from the previous version. The setup will try to migrate the most recent version if there are multiple older settings files.
+
+An administrator can force overwrite parameters from a previous installation using the "FORCEOVERWRITE" parameter from the scripted installation.
 
 ## Configuration
 
@@ -496,16 +502,19 @@ You can access the context menu by a right click on any selected item. The conte
     Please refer to the Nuxeo documentation pages for further information:
     - [Nuxeo Drive]({{page version='' space='client-apps' page='nuxeo-drive'}})
     - [Office Online]({{page version='' space='nxdoc' page='nuxeo-office-online-integration'}})
+- **Add to favorites**: Adds the selected item to your list of favorites.
+- **Add attachment**: Opens an explorer window from where you can choose the document(s) you want to attach to the selected document.
+- **Show Metadata**: Opens an information window about the documents metadata.
+- **Edit Metadata**: Opens a dialog where you can modify the tile and description of the selected document - Hotkey: F2
+- **Replace file**: Opens an explorer window from where you can choose the document you want to replace the selected one with.
+- **Create new version**: Opens a dialog, where you can choose to create a minor or major new version of the selected document.
+- **Show version**: Gives you access to all versions of the selected document, where you can download older versions.
+- **Download files(s)**: Downloads the selected items to your desktop computer.
 - **Send as attachment**: Opens a new message window with the file attached.
 - **Send as link**: Opens a new message window with the link to the document in the email body.
-- **Show version**: Gives you access to all versions of the selected document, where you can download older versions.
-- **Add to favorites**: Adds the selected item to your list of favorites.
+- **Copy & Paste**: Adds documents to the clipboard to be copied later with the Paste option. This can also be done via drag & drop by holding the CTRL key while dragging one or multiple documents - Hotkey: CTRL + C, CTRL + V
+- **Cut & Paste**: Adds documents to the clipboard to be moved later with the Paste option. This can also be done via drag & drop by dragging one or multiple documents onto a valid target - Hotkey: CTRL + X, CTRL + V
 - **Delete**: Removes the selected item from the Nuxeo repository. Alternatively you can click on the delete button ![]({{file name='Delete.png'}} ?w=20) in the menu bar.
-- **Edit Document**: Opens a dialog where you can modify the tile and description of the selected document - Hotkey: F2.
-- **Download files(s)**: Downloads the selected items to your desktop computer.
-- **Replace file**: Opens an explorer window from where you can choose the document you want to replace the selected one with.
-- **Add attachment**: Opens an explorer window from where you can choose the document(s) you want to attach to the selected document.
-- **Create new version**: Opens a dialog, where you can choose to create a minor or major new version of the selected document.
 
 #### View Emails in Nuxeo Web UI
 
@@ -520,3 +529,185 @@ List view with email, marked with an envelope.
 Details view with extracted metadata
 
 ![]({{file name='DetailsView.png'}} ?w=450)
+
+#### Customize document type of uploaded emails
+
+With version 1.1 of the Outlook Connector, the document type of an uploaded email can be changed from "MailMessage" to a different type by using one of the following procedures. Make sure the new custom type extends "MailMessage" and also to create a new layout, otherwise there will be no preview, attachments or email metadata listed when opening the document in the browser. Please see
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/outlook-connector/DocumentType
+    name: DocumentType.png
+    addins#screenshot#up_to_date
+--}}
+![DocumentType](nx_asset://3957770e-0cb8-4dd1-8d67-a813f4446194 ?w=650,border=true)
+
+**Create an XML Extension in Nuxeo Studio**
+
+Go to your Nuxeo Studio project and find the "XML Extensions" menu. Create a new extension and set the <type> for your emails.
+
+Here is an example:
+
+
+<!-- Test to overwrite the standard MailMessage document type with type YourCustomDocType -->
+<require>com.itnovum.outlook-connector-core.mailmessage-documenttype-contrib</require>
+  <extension target="com.itnovum.outlookintegration.MailMessageDocumentTypeService" point="configuration">
+      <documentType>
+          <enabled>true</enabled>
+          <type>YourCustomDocType</type>
+      </documentType>
+  </extension>
+  
+  {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/outlook-connector/mailmessage
+    name: Studiocontrib.png
+    addins#screenshot#up_to_date
+--}}
+![mailmessage](nx_asset://40f27798-42a7-4aae-adb4-6ad4df7c0da2 ?border=true)
+  
+**Extend Nuxeo with an own component and overwrite the service that sets the email document type (requires coding)**
+  
+ First, deactivate that the document type is being loaded from the standard contribution. To do this, just add an XML extension similar to the one above but set the <enabled> tag to "false".
+
+<!-- Test to overwrite the standard MailMessage document type with type File --> 
+<require>com.itnovum.outlook-connector-core.mailmessage-documenttype-contrib</require>   
+<extension target="com.itnovum.outlookintegration.MailMessageDocumentTypeService" point="configuration">       
+	<documentType>           
+		<enabled>false</enabled>           
+		<type>MailMessage</type>       
+	</documentType>   
+</extension>
+After being disabled, the implementation will now use the service implementation. If no override is found, the standard implementation will be used and return "MailMessage".
+
+For a custom service implementation and how to override existing ones, please refer to the Nuxeo [documentation]({{page version='' space='nxdoc' page='how-to-create-a-service'}})
+  
+ #### Customize metadata display
+  
+ **Description**
+  
+  To show metadata in Outlook, the Nuxeo Outlook Connector uses template rendering on the backend side. The Outlook Connector client then receives an HTML representation of the metadata and displays it to the user.
+
+The templates depend on the document type. Currently there are two different templates in the Outlook Connector package, one default template which will be used if no special template is defined for requested document type and one template for type "MailMessage". The default template renders common properties which are provided by every document type. The "MailMessage" template provides special properties of the MailMessage document type.
+
+If you want to create an additional template you have to use following naming format:
+
+ "outlook-" + docType + "-metadata".ftl
+So for example the template name for MailMessage should be:
+
+outlook-MailMessage-metadata.ftl
+A new template can be added either through a Nuxeo package or Nuxeo Studio. In Nuxeo Studio you have to add it to Templates/Document Templates.
+
+Use this example to add the template through a Nuxeo package as extension:
+
+  <extension target="org.nuxeo.runtime.services.resource.ResourceService" point="resources">
+    <resource name="outlook-basic-metadata">OSGI-INF/outlook-DocType1-metadata.ftl</resource>
+    <resource name="outlook-MailMessage-metadata">OSGI-INF/outlook-DocType2-metadata.ftl</resource>
+    ...
+  </extension>
+  
+  **Template example**
+  
+  <#assign
+LANG = Context.OUTLOOKCONNECT_LANG
+
+_title = This['dc:title']
+_modified = This['dc:modified']
+_created = This['dc:created']
+_creator = This['dc:creator']
+_contributors = This['dc:contributors']
+_sender = This['mail:sender']
+_subject = This['dc:title']
+_sending_date = This['mail:sending_date']
+_recipients = This['mail:recipients']
+_importing_date = This['dc:created']
+_headerShowMetadata = Outlook.translate("outlook-connector/i18n/messages", "oi.template.header.title",LANG)
+_titleKeyTranslation = Outlook.translate("outlook-connector/i18n/messages", "oi.template.key.title",LANG)
+_modifiedKeyTranslation = Outlook.translate("outlook-connector/i18n/messages", "oi.template.key.modified",LANG)
+_createdKeyTranslation = Outlook.translate("outlook-connector/i18n/messages", "oi.template.key.created",LANG)
+_creatorKeyTranslation = Outlook.translate("outlook-connector/i18n/messages", "oi.template.key.creator",LANG)
+_contributorsKeyTranslation = Outlook.translate("outlook-connector/i18n/messages", "oi.template.key.contributors",LANG)
+_subjectKeyTranslation = Outlook.translate("outlook-connector/i18n/messages", "oi.template.key.subject",LANG)
+_senderKeyTranslation = Outlook.translate("outlook-connector/i18n/messages", "oi.template.key.sender",LANG)
+_sendingDateKeyTranslation = Outlook.translate("outlook-connector/i18n/messages", "oi.template.key.sendingdate",LANG)
+_importingDateKeyTranslation = Outlook.translate("outlook-connector/i18n/messages", "oi.template.key.importingdate",LANG)
+_recipientsKeyTranslation = Outlook.translate("outlook-connector/i18n/messages", "oi.template.key.recipients",LANG)
+>
+<#assign KEY_STYLE = "style='width:30%;font-weight:600;color: #444;'">
+<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>
+<table width='100%'>
+
+	<tr>
+		<td ${KEY_STYLE}>${_titleKeyTranslation}</td>
+		<td>
+			<#if _title?has_content>${_title}<#else>N/A</#if>
+		</td>
+	</tr>
+	<tr>
+		<td ${KEY_STYLE}>${_modifiedKeyTranslation}</td>
+		<td>
+			<#if _modified?has_content>${_modified}<#else>N/A</#if>
+		</td>
+	</tr>
+	<tr>
+		<td ${KEY_STYLE}>${_createdKeyTranslation}</td>
+		<td>
+			<#if _created?has_content>${_created}<#else>N/A</#if>
+		</td>
+	</tr>
+	<tr>
+		<td ${KEY_STYLE}>${_creatorKeyTranslation}</td>
+		<td>
+			<#if _creator?has_content>${_creator}<#else>N/A</#if>
+		</td>
+	</tr>
+	<tr>
+		<td ${KEY_STYLE}>${_contributorsKeyTranslation}</td>
+		<td>
+			<#if _contributors?has_content>${_contributors?join(", ")}<#else>N/A</#if>
+		</td>
+	</tr>
+	<br>
+	<tr>
+		<td ${KEY_STYLE}>${_subjectKeyTranslation}</td>
+		<td>
+			<#if _subject?has_content>${_subject}<#else>N/A</#if>
+		</td>
+	</tr>
+	<tr>
+		<td ${KEY_STYLE}>${_senderKeyTranslation}</td>
+		<td>
+			<#if _sender?has_content>${_sender}<#else>N/A</#if>
+		</td>
+	</tr>
+	<tr>
+		<td ${KEY_STYLE}>${_sendingDateKeyTranslation}</td>
+		<td>
+			<#if _sending_date?has_content>${_sending_date}<#else>N/A</#if>
+		</td>
+	</tr>
+	<tr>
+		<td ${KEY_STYLE}>${_importingDateKeyTranslation}</td>
+		<td>
+			<#if _importing_date?has_content>${_importing_date}<#else>N/A</#if>
+		</td>
+	</tr>
+	<tr>
+		<td ${KEY_STYLE}>${_recipientsKeyTranslation}</td>
+		<td>
+			<#if _recipients?has_content>${_recipients?join(", ")}<#else>N/A</#if>
+		</td>
+	</tr>
+
+</table>
+If you want to use translations, the message files have to be added to the Nuxeo server.
+  
+ **API**
+  
+  To retrieve the rendered template from the backend, use following API end point:
+
+api/v1/automation/OutlookConnect.RenderMetadata
+Additional parameters have to be passed with the request:
+
+{"params":{"DocType ":"DOC_TYPE","Lang":"LANGUAGE"},"input":"UID"}
+The default language is English.
+  
+ 
