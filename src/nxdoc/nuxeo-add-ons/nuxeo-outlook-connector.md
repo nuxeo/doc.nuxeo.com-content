@@ -70,12 +70,12 @@ You have two option regarding the application of the client license
 1. Once the license is validated, you will get your license detail displayed.
 1. If the license cannot be validated, an appropriate error message will be displayed instead.
 
-#### Setting up OAuth2
+#### Setting up OAuth 2
 
-To use OAuth2, your Nuxeo instance needs to be set up with a dedicated OAuth2 client ID for the Outlook Integration. This can be done via REST or cURL. The client ID is configurable on client side so the name can be customized.
+To use OAuth 2, your Nuxeo instance needs to be set up with a dedicated OAuth 2 client ID for the Outlook Integration. This can be done via REST or cURL. The client ID is configurable on client side so the name can be customized.
 
-Rest call:
-**OAuth2 add clientId to Nuxeo**
+REST call:
+**OAuth 2 add clientId to Nuxeo**
 ```
 POST http://localhost:8080/nuxeo/api/v1/directory/oauth2Clients
 
@@ -169,12 +169,12 @@ msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nux
 {{#> callout type='warning'}}
 Once the installation is done, make sure that the [Nuxeo IMAP connector]({{page version='' space='userdoc' page='nuxeo-imap-connector'}}) has been correctly installed on your instance, as the Nuxeo Outlook connector depends on it to work correctly.  
 {{/callout}}
-  
-#### Settings migration from previous versions
 
-When installing a newer version of the Outlook Connector, the settings file (NuxeoClientSettings-x.x.x.xml in the %USERPROFILE% folder) will be migrated to a newer version. If possible, settings will be used from the previous version. The setup will try to migrate the most recent version if there are multiple older settings files.
+#### Settings Migration From Previous Versions
 
-An administrator can force overwrite parameters from a previous installation using the "FORCEOVERWRITE" parameter from the scripted installation.
+When installing a newer version of the Outlook Connector, the settings file (`NuxeoClientSettings-x.x.x.xml` in the `%USERPROFILE%` folder) will be migrated to a newer version. If possible, settings will be used from the previous version. The setup will try to migrate the most recent version if there are multiple older settings files.
+
+An administrator can force to overwrite parameters from a previous installation using the `FORCEOVERWRITE` parameter from the scripted installation.
 
 ## Configuration
 
@@ -188,11 +188,11 @@ For configuring the Nuxeo Outlook Plugin open the settings dialog by clicking th
 
 ![]({{file name='outlook-settings-popup.png'}} ?w=350)
 
-**Language**: choose your preferred language (currently available languages are English, French and German)
+**Language**: choose your preferred language (currently available languages are English, French and German).
 
-**Show sidebar for new emails**: Check this option if you want to access the Nuxeo repository directly from within a new email
+**Show sidebar for new emails**: Check this option if you want to access the Nuxeo repository directly from within a new email.
 
-**Enable email attachments extraction**: Check this option if you want that attachments are extracted from the email and stored as separate content items within Nuxeo as attachment of the email content object
+**Enable email attachments extraction**: Check this option if you want that attachments are extracted from the email and stored as separate content items within Nuxeo as attachment of the email content object.
 
 **Online edit options**
 
@@ -283,13 +283,13 @@ You will see the following information after the license is successfully importe
 
 ## Functional Overview
 
-After installation and configuration of the Nuxeo Outlook Integration, you will see a new pane at the right hand side of your Outlook client.
+After installation and configuration of the Nuxeo Outlook Integration, you will see a new panel at the right hand side of your Outlook client.
 
 This panel gives you access to the Nuxeo repository. You can search for content, upload emails and other content to the repository and work with existing content.
 
 ![]({{file name='PaneCompleteRightDescription.png'}} ?w=350)
 
-Menu bar functions
+**Menu Bar Functions**
 
 <div class="table-scroll">
 <table class="hover">
@@ -382,7 +382,7 @@ In this case the path you are currently working in is too long to be displayed w
 
 If you want to access folders at a higher level, please click on the three dots, which appear once the list is getting truncated. This is opening the list of currently not displayed folders and you can now select from that list.
 
-### Search
+### Searching Content
 
 The Nuxeo Outlook Integration is providing you with access to the standard Nuxeo search capabilities.
 
@@ -530,9 +530,15 @@ Details view with extracted metadata
 
 ![]({{file name='DetailsView.png'}} ?w=450)
 
-#### Customize document type of uploaded emails
+## Customization
 
-With version 1.1 of the Outlook Connector, the document type of an uploaded email can be changed from "MailMessage" to a different type by using one of the following procedures. Make sure the new custom type extends "MailMessage" and also to create a new layout, otherwise there will be no preview, attachments or email metadata listed when opening the document in the browser. Please see
+Here are some templates available to customize your connector.
+
+### Customize Document Type of Uploaded Emails
+
+With version 1.1 of the Outlook Connector, the document type of an uploaded email can be changed from "MailMessage" to a different type by using one of the following procedures.
+
+Make sure the new custom type extends "MailMessage" and also to create a new layout, otherwise there will be no preview, attachments or email metadata listed when opening the document in the browser.</br> Please see:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/outlook-connector/DocumentType
@@ -543,11 +549,12 @@ With version 1.1 of the Outlook Connector, the document type of an uploaded emai
 
 **Create an XML Extension in Nuxeo Studio**
 
-Go to your Nuxeo Studio project and find the "XML Extensions" menu. Create a new extension and set the <type> for your emails.
+1. Go to your Nuxeo Studio project and go to the **XML Extensions** menu,
+1. Create a new extension and set the _<type\>_ for your emails.
 
 Here is an example:
 
-
+```
 <!-- Test to overwrite the standard MailMessage document type with type YourCustomDocType -->
 <require>com.itnovum.outlook-connector-core.mailmessage-documenttype-contrib</require>
   <extension target="com.itnovum.outlookintegration.MailMessageDocumentTypeService" point="configuration">
@@ -556,19 +563,21 @@ Here is an example:
           <type>YourCustomDocType</type>
       </documentType>
   </extension>
-  
-  {{!--     ### nx_asset ###
+```
+
+{{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/outlook-connector/mailmessage
     name: Studiocontrib.png
     addins#screenshot#up_to_date
 --}}
 ![mailmessage](nx_asset://40f27798-42a7-4aae-adb4-6ad4df7c0da2 ?border=true)
-  
-**Extend Nuxeo with an own component and overwrite the service that sets the email document type (requires coding)**
-  
- First, deactivate that the document type is being loaded from the standard contribution. To do this, just add an XML extension similar to the one above but set the <enabled> tag to "false".
 
-<!-- Test to overwrite the standard MailMessage document type with type File --> 
+**Extend Nuxeo with you own component and overwrite the service that sets the email document type (requires coding)**
+
+First, deactivate that the document type is being loaded from the standard contribution. To do this, just add an XML extension similar to the one above but set the _<enabled\>_ tag to `false`.
+
+```
+<!-- Test to overwrite the standard MailMessage document type with type File -->
 <require>com.itnovum.outlook-connector-core.mailmessage-documenttype-contrib</require>   
 <extension target="com.itnovum.outlookintegration.MailMessageDocumentTypeService" point="configuration">       
 	<documentType>           
@@ -576,37 +585,43 @@ Here is an example:
 		<type>MailMessage</type>       
 	</documentType>   
 </extension>
+```
+
 After being disabled, the implementation will now use the service implementation. If no override is found, the standard implementation will be used and return "MailMessage".
 
 For a custom service implementation and how to override existing ones, please refer to the Nuxeo [documentation]({{page version='' space='nxdoc' page='how-to-create-a-service'}})
-  
- #### Customize metadata display
-  
- **Description**
-  
-  To show metadata in Outlook, the Nuxeo Outlook Connector uses template rendering on the backend side. The Outlook Connector client then receives an HTML representation of the metadata and displays it to the user.
+
+### Customize Metadata Display
+
+**Description**
+
+To show metadata in Outlook, the Nuxeo Outlook Connector uses template rendering on the backend side. The Outlook Connector client then receives an HTML representation of the metadata and displays it to the user.
 
 The templates depend on the document type. Currently there are two different templates in the Outlook Connector package, one default template which will be used if no special template is defined for requested document type and one template for type "MailMessage". The default template renders common properties which are provided by every document type. The "MailMessage" template provides special properties of the MailMessage document type.
 
 If you want to create an additional template you have to use following naming format:
-
+```
  "outlook-" + docType + "-metadata".ftl
+```
 So for example the template name for MailMessage should be:
-
+```
 outlook-MailMessage-metadata.ftl
+```
+
 A new template can be added either through a Nuxeo package or Nuxeo Studio. In Nuxeo Studio you have to add it to Templates/Document Templates.
 
 Use this example to add the template through a Nuxeo package as extension:
-
+```
   <extension target="org.nuxeo.runtime.services.resource.ResourceService" point="resources">
     <resource name="outlook-basic-metadata">OSGI-INF/outlook-DocType1-metadata.ftl</resource>
     <resource name="outlook-MailMessage-metadata">OSGI-INF/outlook-DocType2-metadata.ftl</resource>
     ...
   </extension>
-  
-  **Template example**
-  
-  <#assign
+```
+
+**Template example**
+```
+<#assign
 LANG = Context.OUTLOOKCONNECT_LANG
 
 _title = This['dc:title']
@@ -698,16 +713,20 @@ _recipientsKeyTranslation = Outlook.translate("outlook-connector/i18n/messages",
 	</tr>
 
 </table>
+```
+
 If you want to use translations, the message files have to be added to the Nuxeo server.
-  
- **API**
-  
-  To retrieve the rendered template from the backend, use following API end point:
 
+**API**
+
+To retrieve the rendered template from the backend, use following API end point:
+```
 api/v1/automation/OutlookConnect.RenderMetadata
-Additional parameters have to be passed with the request:
+```
 
+Additional parameters have to be passed with the request:
+```
 {"params":{"DocType ":"DOC_TYPE","Lang":"LANGUAGE"},"input":"UID"}
+```
+
 The default language is English.
-  
- 
