@@ -131,9 +131,11 @@ In LTS 2019, this change is already [available as an option](https://jira.nuxeo.
 The new version of Web UI introduces an upgrade on Webdriver IO, to its latest version, v7. With this upgrade there are a few things to consider when migrating:
 
 #### Delete `babel-preset-env`
+
 Projects relying on `babel-preset-env`, usually via a local `.babelrc` file, can now be deleted.
 
-#### Cucumber v7 update
+#### Cucumber v7 Update
+
 With the latest Cucumber version, we need to make sure our imports are also updated from:
 ```
 import { Given, When, Then } from 'cucumber';
@@ -143,7 +145,8 @@ to:
 import { Given, When, Then } from '@cucumber/cucumber';
 ```
 
-#### The new `findElements`
+#### The New `findElements`
+
 Webdriver IO 7 is using `findElements` as the new `elements` selector. To search for multiple elements on the page, starting from the root we now need to change:
 
 ```
@@ -155,7 +158,8 @@ to:
 const res = elements(...);
 ```
 
-#### Node.js supported version range
+#### Node.js Supported Version Range
+
 Our Functional Test Framework is now compatible with Node.js versions higher than `10.23` and lower than `15.0`.
 
 ### Breaking Changes
