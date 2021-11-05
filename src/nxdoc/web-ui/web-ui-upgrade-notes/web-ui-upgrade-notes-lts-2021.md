@@ -126,6 +126,38 @@ Since [ELEMENTS-1124](https://jira.nuxeo.com/browse/ELEMENTS-1124) and [NXP-2869
 
 In LTS 2019, this change is already [available as an option](https://jira.nuxeo.com/browse/WEBUI-291). Feel free to activate it to test the editor and to allow your users to get accustomed to it before migrating.
 
+### Upgrade Webdriver IO
+
+The new version of Web UI introduces an upgrade on Webdriver IO, to its latest version, v7. With this upgrade there are a few things to consider when migrating:
+
+#### Delete `babel-preset-env`
+Projects relying on `babel-preset-env`, usually via a local `.babelrc` file, can now be deleted.
+
+#### Cucumber v7 update
+With the latest Cucumber version, we need to make sure our imports are also updated from:
+```
+import { Given, When, Then } from 'cucumber';
+```
+to:
+```
+import { Given, When, Then } from '@cucumber/cucumber';
+```
+
+#### The new `findElements`
+Webdriver IO 7 is using `findElements` as the new `elements` selector. To search for multiple elements on the page, starting from the root we now need to change:
+
+```
+const res = elements(...).value;
+```
+
+to:
+```
+const res = elements(...);
+```
+
+#### Node.js supported version range
+Our Functional Test Framework is now compatible with Node.js versions higher than `10.23` and lower than `15.0`.
+
 ### Breaking Changes
 
 #### Cropper.js No Longer Shipped by Default on Web UI
