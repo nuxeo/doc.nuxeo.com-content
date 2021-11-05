@@ -137,7 +137,7 @@ The first step is to create on the root of your project a *ftest* folder, contai
         └── ...
 ```
 
-For an example on how to use the functional test framework, please check
+For an example of how to use the functional test framework, please check
 [Nuxeo Retention's functional tests for Web UI](https://github.com/nuxeo/nuxeo-retention/tree/lts-2021/nuxeo-retention-web/ftest).
 
 
@@ -154,7 +154,7 @@ In such cases, it can be done by adding the `@watch` tag to the top of a feature
 npm run test:watch
 ```
 
-For an example of how to launch a nuxeo server and run the tests using maven, please check
+For an example of how to launch a Nuxeo server and run the tests using maven, please check
 [Nuxeo Web UI's functional tests](https://github.com/nuxeo/nuxeo-web-ui/tree/master/ftest) or [Nuxeo DAM's functional tests for Web UI on LTS 2019](https://github.com/nuxeo/marketplace-dam/tree/6.4_10.10/ftest/web-ui/webdriver).
 
 ### Debugging
