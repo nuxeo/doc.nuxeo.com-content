@@ -184,7 +184,7 @@ Several values can be specified by separating them with commas, for instance `0,
 
 Repetitions can be specified using a slash followed by an increment, for instance `0/15` means start at 0 and repeat every 15\. This example means the same as the one above.
 
-There's actually more but rarely used functionality; the Scheduler's full cron expression syntax is described in detail in the [Quartz CronExpression Javadoc](http://www.quartz-scheduler.org/api/2.2.1/org/quartz/CronExpression.html) and in [the CronTrigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.x/tutorials/crontrigger.html).
+There's actually more but rarely used functionality; the Scheduler's full cron expression syntax is described in detail in the [Quartz CronExpression Javadoc](http://www.quartz-scheduler.org/api/2.3.0/org/quartz/CronExpression.html) and in [the CronTrigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-06.html).
 
 {{#> callout type='info' }}
 Check the [Cron Expression Generator & Explainer](https://www.freeformatter.com/cron-expression-generator-quartz.html#cronexpressionexamples) to convert a cron expression into a readable text and visualize the next execution dates of your cron expression.
