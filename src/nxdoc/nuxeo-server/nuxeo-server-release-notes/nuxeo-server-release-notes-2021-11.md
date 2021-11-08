@@ -27,7 +27,8 @@ The facet `SystemDocument` has been added on core management documents.
 
 #### Bulk Action for Mongo Read ACL Propagation
 
-Mongo Read ACL propagation are now updated with a BAF action.
+Mongo Read ACL propagation are now updated with a BAF action.</br>
+There are several benefits to this change: improve the performances for larges repositories, preserve the platform availability during the ACL propagation, improve the monitoring and error management. 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30426](https://jira.nuxeo.com/browse/NXP-30426)
 
@@ -39,7 +40,21 @@ MongoDB query will now return with a total count of -2 when it cannot be compute
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30633](https://jira.nuxeo.com/browse/NXP-30633)
 
+### Redis
+
+#### Redis Availability Checking at Nuxeo Startup
+
+Redis availability is checked at startup just like a SQL DB or MongoDB Backing Service.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22842](https://jira.nuxeo.com/browse/NXP-22842)
+
 ### Major Bug Fixes
+
+#### Fix Operation `Repository.Query` When Parameter `searchTerm` is provided with an empty string
+
+The operation `Repository.Query` handles the parameter 'searchTerm' set to an empty string.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29097](https://jira.nuxeo.com/browse/NXP-29097)
 
 #### Retention Addon - Expire Stream Not Processing
 
