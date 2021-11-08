@@ -236,6 +236,28 @@ You can also relax the constraint on a secured property, for example dc:creator 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27137](https://jira.nuxeo.com/browse/NXP-27137)
 
+#### S3 Transfer Parameters Configurable {{> tag 'Since 2021.11'}}
+
+All the S3 multipart upload and copy parameters are configurable through nuxeo.conf.</br>
+
+The `nuxeo.s3.multipart.copy.part.size` ConfigurationService property, formerly contributed in `configuration-properties.xml`, is deprecated since **2021.11/10.10-HF54**.
+
+The new `nuxeo.s3storage.multipart.copy.part.size` `nuxeo.conf` property should be used instead, default value hasn't changed: 5242880 (5 MB).
+
+If you have contributed a custom `nuxeo.s3.multipart.copy.part.size` ConfigurationService property with an XML component such as:
+```
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="nuxeo.s3.multipart.copy.part.size">xxxx</property>
+  </extension>
+```  
+you need to remove it and replace it by `nuxeo.s3storage.multipart.copy.part.size=xxxx` in `nuxeo.conf`. Though, backward compatibility is kept.
+
+The following `nuxeo.conf` properties have been added:
+
+- `nuxeo.s3storage.multipart.copy.threshold`, default value: 5368709120 (5 GB)
+- `nuxeo.s3storage.multipart.upload.threshold`, default value: 16777216 (16 MB)
+- `nuxeo.s3storage.minimum.upload.part.size`, default value: 5242880 (5 MB)
+
 ## Nuxeo API Changes
 
 #### New Endpoint to Get All Comments for 50+ Annotations Documents
@@ -950,13 +972,13 @@ If `DocumentModel#getRef` was wrongly used to test if a document is saved or not
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26903](https://jira.nuxeo.com/browse/NXP-26903)
 
-#### Upgrade to Apache PDFBox 2.0.19
+#### Upgrade to Apache PDFBox 2.0.24 {{> tag 'Since 2021.11'}}
 
-The upgrade of Apache PDFBox from 1.8.16 to 2.0.19 introduces breaking changes to the library, code relying on it must be updated.
+The upgrade of Apache PDFBox from 1.8.16 to 2.0.24 introduces breaking changes to the library, code relying on it must be updated.
 
 See the [Migration to PDFBox 2.0.0](https://pdfbox.apache.org/2.0/migration.html) guide.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28825](https://jira.nuxeo.com/browse/NXP-28825)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-28825](https://jira.nuxeo.com/browse/NXP-28825) and [NXP-30662](https://jira.nuxeo.com/browse/NXP-30662)
 
 #### Upgrade to mockserver-netty 5.10.0
 
@@ -1067,7 +1089,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">BouncyCastle</td>
 <td colspan="1">1.60</td>
-<td colspan="1">1.66</td>
+<td colspan="1">1.69</td>
 </tr>
 <tr>
 <td colspan="1">bsh</td>
@@ -1376,7 +1398,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">PDFBox</td>
 <td colspan="1">1.8.16</td>
-<td colspan="1">2.0.21</td>
+<td colspan="1">2.0.24</td>
 </tr>
 <tr>
 <td colspan="1">pdf-html</td>
@@ -1456,7 +1478,7 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <tr>
 <td colspan="1">XStream</td>
 <td colspan="1">1.4.11</td>
-<td colspan="1">1.4.11.1</td>
+<td colspan="1">1.4.18 since 2021.11</td>
 </tr>
 <tr>
 <td colspan="1">webdav-jaxrs</td>
