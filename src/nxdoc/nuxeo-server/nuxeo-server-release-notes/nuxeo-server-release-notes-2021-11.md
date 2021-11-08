@@ -64,6 +64,6 @@ The operation `Repository.Query` handles the parameter 'searchTerm' set to an em
 
 # Learn More
 
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=21506) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=21515) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
