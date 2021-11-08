@@ -668,6 +668,16 @@ Note that partitions value is taken into account only when creating Kafka topic.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30536](https://jira.nuxeo.com/browse/NXP-30536)
 
+### Deletion BAF Action Now Runs With `SYSTEM_USERNAME`
+
+`org.nuxeo.ecm.core.storage.dbs.DBSSession#remove` launches the `DeletionAction` BAF action to perform the db deletion of descendants of a folderish document being removed.
+
+The problem is that we pass the current session's principal to run the action which will just skip the deletion of the document on which the current user does not have READ permission granted.
+
+To fix that, we now run the `DeletionAction` as `SYSTEM_USER`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30661](https://jira.nuxeo.com/browse/NXP-30661)
+
 ## Import
 
 ### Behavior Changes
@@ -1042,6 +1052,11 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <th colspan="1">Nuxeo Platform LTS 2021</th>
 </tr>
 <tr>
+<td colspan="1">ant</td>
+<td colspan="1">1.9.16</td>
+<td colspan="1">1.10.11 since 2021.11</td>
+</tr>
+<tr>
 <td colspan="1">ant-maven-assembly-plugin</td>
 <td colspan="1">2.1.2</td>
 <td colspan="1">2.1.3 since 2021.1, 2.1.5 since 2021.8</td>
@@ -1115,6 +1130,11 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <td colspan="1">Commons Collections</td>
 <td colspan="1">4.1</td>
 <td colspan="1">4.4</td>
+</tr>
+<tr>
+<td colspan="1">Commons Compress</td>
+<td colspan="1">1.20</td>
+<td colspan="1">1.21</td>
 </tr>
 <tr>
 <td colspan="1">Commons CSV</td>
@@ -1310,6 +1330,10 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <td colspan="1">1.1</td>
 <td colspan="1">1.1.1</td>
 </tr>
+<td colspan="1">json-smart</td>
+<td colspan="1">1.3.2</td>
+<td colspan="1">1.3.3</td>
+</tr>
 <tr>
 <td colspan="1">JSONAssert</td>
 <td colspan="1">1.2.3</td>
@@ -1469,6 +1493,11 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 <td colspan="1">Xmlbeans</td>
 <td colspan="1">3.0.1</td>
 <td colspan="1">3.1.0</td>
+</tr>
+<tr>
+<td colspan="1">xmlsec</td>
+<td colspan="1">2.1.7</td>
+<td colspan="1">2.2.3</td>
 </tr>
 <tr>
 <td colspan="1">XOM</td>
