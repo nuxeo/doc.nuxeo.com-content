@@ -536,7 +536,7 @@ Here are some templates available to customize your connector.
 
 ### Customize Document Type of Uploaded Emails
 
-With version 1.1 of the Outlook Connector, the document type of an uploaded email can be changed from "MailMessage" to a different type by using one of the following procedures.
+With version 1.1 of the Outlook Connector, the document type of an uploaded email can be changed from "MailMessage" to a different type by using one of the following procedures. For this to work you will need to be from the HF55 for LTS2019 or LTS 2021.12 / 2021-HF12.
 
 Make sure the new custom type extends "MailMessage" and also to create a new layout, otherwise there will be no preview, attachments or email metadata listed when opening the document in the browser.</br> Please see:
 
