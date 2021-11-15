@@ -304,7 +304,7 @@ For example, considering Amazon AWS as a possible Cloud infrastructure provider:
 <!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
 
 - The AWS ELB would be used for load balancing.
-- EC2 instances can be used for Elasticsearch cluster nodes too. The Amazon ElasticCache service does not provide the required APIs at this point to allow us to have a completely managed cluster.
+- Amazon OpenSearch Service (successor to Amazon Elasticsearch Service) or Elastic Cloud can be used as managed search service. Another option is to manually setup an Elasticsearch cluster using EC2 nodes.
 - Amazon ElasticCache can be used for a managed Redis cluster. Another option is to have a cluster hosted and managed by RedisLabs.
 - Amazon Managed Streaming for Kafka ([MSK](https://aws.amazon.com/msk/)) is an option for Kafka if it is available in your AWS region.
 - Database can be handled through Amazon RDS, this is a native plug as there is nothing specific to Amazon in this case. MongoDB Atlas is also an option for a hosted MongoDB cluster.
