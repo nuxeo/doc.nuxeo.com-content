@@ -4,13 +4,13 @@ description: Release notes for Nuxeo Enhanced Viewer.
 tree_item_index: 100
 review:
   comment: ''
-  date: '2021-10-08'
+  date: '2021-11-17'
   status: ok
 toc: true
 ---
 
 
-{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-10-6-7'}}}
+{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-10-6-10'}}}
 
 ---
 
@@ -18,7 +18,10 @@ toc: true
 
 | Version                                                                       | Release date                                                               |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [NEV 10.6.7]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-7'}})      | 2021-10-08 - Last release                                                  |
+| [NEV 10.6.10]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-10'}})    | 2021-11-17 - Last release                                                  |
+| [NEV 10.6.9]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-9'}})      | 2021-10-29                                                                 |
+| [NEV 10.6.8]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-8'}})      | 2021-10-23                                                                 |
+| [NEV 10.6.7]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-7'}})      | 2021-10-08                                                                 |
 | [NEV 10.6.6]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-6'}})      | 2021-09-22                                                                 |
 | [NEV 10.6.5]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-5'}})      | 2021-09-17                                                                 |
 | [NEV 10.6.4]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-4'}})      | 2021-09-09                                                                 |
