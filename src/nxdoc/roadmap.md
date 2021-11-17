@@ -47,15 +47,16 @@ You can also give us your feedback and suggestions through our [feedback portal]
 {{#> panel type='secondary' match_height='true'}}
 ### Integrations And Connectors
 
-- [Adobe CC Connector]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}}#roadmap)
+- [Nuxeo Enhanced Viewer]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}}#roadmap)
+
 {{/panel}}</div>
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Mobile and Desktop
+### Desktop
 
-- [Nuxeo Mobile]({{page space='client-apps' page='nuxeo-mobile-roadmap'}})
 - [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive-roadmap'}})
+- [Nuxeo for Adobe CC]({{page space='nxdoc' page='nuxeo-for-adobe-cc'}}#roadmap)
 {{/panel}}
 
 </div>
