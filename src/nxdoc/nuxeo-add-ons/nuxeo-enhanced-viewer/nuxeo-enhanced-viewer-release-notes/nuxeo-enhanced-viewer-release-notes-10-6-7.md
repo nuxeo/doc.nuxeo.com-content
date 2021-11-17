@@ -2,7 +2,6 @@
 title: NEV 10.6.7
 description: Release notes for Nuxeo Enhanced Viewer 10.6.7.
 tree_item_index: 950
-hidden: true
 review:
   comment: ''
   date: '2021-10-08'
@@ -44,7 +43,7 @@ toc: true
 
 We have added a threadpool for the `image-servlet-pool` thread created by the previewer.
 
-New properties in the rendition server side to configure the image servlet thread pool are :
+New properties in the rendition server side to configure the image servlet thread pool are:
 ```
 image.servlet.thread.pool.size=200
 image.servlet.thread.pool.isDaemon=false

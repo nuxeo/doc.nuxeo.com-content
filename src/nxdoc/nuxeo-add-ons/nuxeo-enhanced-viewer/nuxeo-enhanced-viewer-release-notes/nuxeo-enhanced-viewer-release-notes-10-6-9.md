@@ -2,7 +2,6 @@
 title: NEV 10.6.9
 description: Release notes for Nuxeo Enhanced Viewer 10.6.9.
 tree_item_index: 930
-hidden: true
 review:
   comment: ''
   date: '2021-10-30'
@@ -40,7 +39,7 @@ toc: true
 
 ### Improvements
 
-#### Make Tomcat keepAliveTimeout setting configurable
+#### Make Tomcat keepAliveTimeout Setting Configurable
 
 In order to avoid 504 gateway timeout exceptions, we changed the default keepAliveTimeout setting and allow to configure it.
 
@@ -52,7 +51,7 @@ TOMCAT_HTTP_CONNECTOR_KEEP_ALIVE_TIMEOUT=65000
 
 See [NEV-499](https://jira.nuxeo.com/browse/NEV-499).
 
-#### Make Tomcat Access Log customizable
+#### Make Tomcat Access Log Customizable
 
 In order to improve customization and also allow the Previewer Tomcat Access logs to be available on DataDog, we made some changes:
  - The Tomcat AccessLog pattern has changed to include the thread name.
