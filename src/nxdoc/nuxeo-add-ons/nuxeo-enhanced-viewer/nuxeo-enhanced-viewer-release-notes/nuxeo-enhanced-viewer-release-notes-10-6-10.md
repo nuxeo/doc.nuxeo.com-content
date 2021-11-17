@@ -38,18 +38,17 @@ toc: true
 </table>
 </div>
 
-
 ### Major Fixes
 
-#### Rendering quality for some TIFF files
+#### Rendering Quality for Some TIFF Files
 
 We have fixed the display quality which was blurry for some specific TIFF files (black and white with low resolution).
 
 See [NEV-481](https://jira.nuxeo.com/browse/NEV-481).
 
-#### Issues with Open Several Documents Functionality
+#### Issues With Open Several Documents Functionality
 
-We have fixed the Open several documents feature, as it was not working correctly on some cases (result list, inconsistent number of documents, authenthication error message). 
+We have fixed the Open several documents feature, as it was not working correctly on some cases (result list, inconsistent number of documents, authentication error message).
 
 See [NEV-495](https://jira.nuxeo.com/browse/NEV-495).
 

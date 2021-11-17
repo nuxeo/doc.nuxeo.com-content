@@ -18,7 +18,7 @@ toc: true
 
 | Version                                                                       | Release date                                                               |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [NEV 10.6.10]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-10'}})    | 2021-11-17 - Last release                                                  |
+| [NEV 10.6.10]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-10'}})    | 2021-11-17 - Latest release                                                  |
 | [NEV 10.6.9]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-9'}})      | 2021-10-29                                                                 |
 | [NEV 10.6.8]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-8'}})      | 2021-10-23                                                                 |
 | [NEV 10.6.7]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-7'}})      | 2021-10-08                                                                 |
