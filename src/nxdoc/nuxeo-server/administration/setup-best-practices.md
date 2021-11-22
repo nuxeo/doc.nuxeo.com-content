@@ -332,7 +332,7 @@ Setting the Nuxeo home directory as an environment variable is recommended in th
 - if you installed several Nuxeo applications on the same machine (for evaluation or production purpose),
 - if you want to use other scripts than the `$NUXEO_HOME/bin/nuxeoctl` script (such as a service in `/ect/init.d`).
 
-You must then set `NUXEO_HOME=/path/to/nuxeo/` in the system environment variables:
+You must then set `NUXEO_HOME=/path/to/nuxeo` in the system environment variables:
 
 - Windows users must write `"set NUXEO_HOME=..."` or use the control panel interface to define user environment parameters (like it's done for `%PATH%`).
 - Linux and macOS X users will write `"export NUXEO_HOME=...`." in `~/.bashrc` or `~/.profile`.
