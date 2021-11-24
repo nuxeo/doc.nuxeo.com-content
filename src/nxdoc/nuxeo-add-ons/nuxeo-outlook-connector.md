@@ -537,9 +537,9 @@ Here are some templates available to customize your connector.
 ### Customize Document Type of Uploaded Emails
 
 {{#> callout type='warning' }}
-This feature is compatible starting from:
-* Nuxeo Platform **LTS 2019-HF55**
-* Nuxeo Platform **LTS 2021-HF12**/**2021.12**.
+This feature is compatible starting from:</br>
+Nuxeo Platform **LTS 2019-HF55**</br>
+Nuxeo Platform **LTS 2021-HF12**/**2021.12**.
 {{/callout}}
 
 With version 1.1 of the Outlook Connector, the document type of an uploaded email can be changed from "MailMessage" to a different type by using one of the following procedures.
