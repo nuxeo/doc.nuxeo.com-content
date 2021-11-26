@@ -20,11 +20,16 @@ This is a bugfix release.
 
 ### Noteworthy Changes
 
-- Accessibility: links to download picture renditions are now mentioned when using a screen reader.<br/>[[WEBUI-353](https://jira.nuxeo.com/browse/WEBUI-353)]
+### Accessibility
+
+- Links to download picture renditions are now mentioned when using a screen reader.<br/>[[WEBUI-353](https://jira.nuxeo.com/browse/WEBUI-353)]
+- Links in the selection toolbar can be detected when using a screen reader.<br/>[[WEBUI-558](https://jira.nuxeo.com/browse/WEBUI-558)]
+
+### Other
+
 - Fixed a regression introduced in version `3.0.7` where selection in a `nuxeo-data-table` element would not work anymore.<br/>[[ELEMENTS-1423](https://jira.nuxeo.com/browse/ELEMENTS-1423)]
 - Column headers and the data below are correctly aligned.<br/>[[ELEMENTS-1430](https://jira.nuxeo.com/browse/ELEMENTS-1430)]
 - The Clear button in the search form triggers and updates the results.<br/>[[ELEMENTS-1416](https://jira.nuxeo.com/browse/ELEMENTS-1416)]
-- The username is aligned with the other text in the collections drawer.<br/>[[WEBUI-242](https://jira.nuxeo.com/browse/WEBUI-242)]
 
 ## Learn More
 
