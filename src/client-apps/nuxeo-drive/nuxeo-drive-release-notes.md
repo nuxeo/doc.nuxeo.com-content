@@ -9,43 +9,34 @@ review:
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.2.7**
+Welcome to the Release Notes for **Nuxeo Drive 5.2.8**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.7.md)
-
-## General
-
-### Improvements
-
-#### Better Handle Failed Migrations
-
-Thanks to this improvement, following a failed migration, the application will be automatically downgraded to the previous working version and will not allow to upgrade to the problematic version anymore. But it will allow to upgrade to the next next version.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2534](https://jira.nuxeo.com/browse/NXDRIVE-2534).
+**Status**: <font color="#ff0000">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.8.md)
 
 ## Direct Transfer
 
-### Improvements
+### Fix
 
-#### Bulk Add Documents From File Explorer
+#### Direct Transfer Popup Behavior
 
-You can now bulk add files and/or folders from your file explorer.
-To do so, select multiple documents, do a right click > **Upload content**. The Direct transfer popup will open with the list of your documents selected.
+On Direct Transfer screen, when the popup is in full-screen mode you can now minimize it by pressing the Esc button on your keyboard.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2157](https://jira.nuxeo.com/browse/NXDRIVE-2157).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2737](https://jira.nuxeo.com/browse/NXDRIVE-2737).
 
-#### Rethink the New Remote Folder Capability
+## Synchronization
 
-This is the first task of a major improvement on Direct Transfer: the selection of the document type when launching a transfer of documents.</br>
-With this first ticket, when selecting the path of the target remote folder, with a right-click on the tree, you have a user action **Add a new folder** that asks for the folder name and the folder type. For the moment, the folder type is set to **Automatic**, the selection will come in another iteration.
+### Fix
 
-The Epic is available [here](https://jira.nuxeo.com/browse/NXDRIVE-1999) for more information.
+#### Synchronize Folders with Special Characters
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2666](https://jira.nuxeo.com/browse/NXDRIVE-2666).
+A bug was found on Windows when synchronizing folder with dot at the end of the filename, it was considered as an incorrect file extension. Nuxeo Drive now sanitizes the value (name or title) used to create a folder during the synchronization.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2751](https://jira.nuxeo.com/browse/NXDRIVE-2751).
+
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.7-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.7.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.7.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.8-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.8.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.8.exe)
