@@ -15,14 +15,14 @@ Discover here new features, improvements and bug fixes for each of our products 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### [Server &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nxdoc/next/nuxeo-server-release-notes'}})
+### [Server &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-server-release-notes'}})
 
 {{/panel}}
 </div>
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### [Web UI &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nxdoc/next/web-ui-release-notes'}})
+### [Web UI &nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='web-ui-release-notes'}})
 
 {{/panel}}
 </div>
