@@ -431,7 +431,7 @@ history:
 
 This page describes a general upgrade procedure. You will find below the list of required manual steps per version. Follow them carefully from your current version to the new version.
 
-*   To upgrade from one LTS version to another, from 7.10 to 10.10 for instance, follow 7.10 -> 8.10 -> 10.10.
+*   To upgrade from one LTS version to another, from 7.10 to 10.10 for instance, follow 7.10 -> 8.10 -> 9.10 -> 10.10.
 *   To upgrade from an LTS version to the latest Fast Track version, from 6.0 to 8.3 for instance, follow 6.0 -> 7.10 -> 8.1 -> 8.2, etc.
 
 {{#> callout type='note' heading='Upgrade Notes'}}
