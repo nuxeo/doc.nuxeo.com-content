@@ -105,7 +105,7 @@ history:
 ---
 {{> wistia_video id='8qt7oqor9j'}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) on [Nuxeo University](https://university.nuxeo.com)
+Extract from the course [What's New in Nuxeo Platform 2015](https://university.hyland.com/courses/e4071) on [Nuxeo University](https://university.hyland.com)
 
 In addition to the permissions applying to a document, which restrict access to a document as a whole, it's possible to specify more fine-grained permissions to disallow the download of some file attachments.
 

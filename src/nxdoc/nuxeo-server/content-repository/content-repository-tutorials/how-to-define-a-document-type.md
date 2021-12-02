@@ -293,7 +293,7 @@ history:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [course](https://university.nuxeo.com/learn/public/course/view/elearning/80/document-and-workflow-task-layouts-with-nuxeo-studio-designer) and [exercises](https://university.nuxeo.com/learn/public/course/view/elearning/103/nuxeo-studio-exercises) on Nuxeo University.
+Follow the related [course](https://university.hyland.com/courses/e4127) on Nuxeo University.
 {{/callout}}
 
 ## Introduction

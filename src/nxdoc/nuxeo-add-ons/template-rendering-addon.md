@@ -177,7 +177,7 @@ history:
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
-[Expert Session on Template Rendering Addon](https://university.nuxeo.com/learn/course/external/view/elearning/188/ExpertSession-TemplateRendering)
+[Expert Session on Template Rendering Addon](https://university.hyland.com/courses/e4160)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Template Rendering/university-template-rendering.png
     name: university-template-rendering.png
