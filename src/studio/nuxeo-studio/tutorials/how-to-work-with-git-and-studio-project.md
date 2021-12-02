@@ -21,7 +21,7 @@ Using Git in a Nuxeo Studio project and synchronizing your sources with a local 
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the [Web UI Customization and Nuxeo Frontend Development](https://university.nuxeo.com/learn/course/external/view/elearning/164/webui-customization-and-nuxeo-frontend-development) University course.
+Watch the [Web UI Customization and Nuxeo Frontend Development](https://university.hyland.com/courses/e4174) University course.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/WEBUI_CUSTOMIZATION_FRONTEND_DEV
     name: Screenshot 2018-10-22 at 14.58.21.png

@@ -82,7 +82,7 @@ history:
 ---
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:<br>
-[Expert Session on External Templates](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils).
+[Expert Session on External Templates](https://university.hyland.com/courses/e4159).
 ![]({{file version='' space='nxdoc' page='university' name='university-external-template.png'}} ?w=450,border=true)
 {{/callout}}
 

@@ -18,8 +18,8 @@ Studio Designer application is integrated with Studio Modeler and brings with it
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
-- [Course on Searches](https://university.nuxeo.com/learn/public/course/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer)
+- [Course on Document type layouts](https://university.hyland.com/courses/e4040)
+- [Course on Searches](https://university.hyland.com/courses/e4141)
 ![]({{file version='' space='nxdoc' page='university' name='university-search.png'}} ?w=450,border=true)
 {{/callout}}
 

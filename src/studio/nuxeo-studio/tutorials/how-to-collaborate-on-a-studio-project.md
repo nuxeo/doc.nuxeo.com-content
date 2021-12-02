@@ -148,7 +148,7 @@ This tutorial explains how two users can work at the same time on a Studio Proje
 ![]({{file name='simple_save_mode.png'}} ?w=200,border=true,thumbnail=true)
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University<br>[Course on Branch Management](https://university.nuxeo.com/learn/public/course/view/elearning/62/understanding-nuxeo-studios-source-control-mechanism).<br>![]({{file version='' space='nxdoc' page='university' name='university-source-control.png'}} ?w=450,border=true)
+Watch the related courses on Nuxeo University<br>[Course on Branch Management](https://university.hyland.com/courses/e4012).<br>![]({{file version='' space='nxdoc' page='university' name='university-source-control.png'}} ?w=450,border=true)
 {{/callout}}
 
 {{#> callout type='tip'}}

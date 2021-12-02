@@ -162,7 +162,7 @@ Nuxeo Studio offers the Branch Management, a collaborative feature that is inspi
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
-[Course on Branch Management](https://university.nuxeo.com/learn/public/course/view/elearning/62/understanding-nuxeo-studios-source-control-mechanism).
+[Course on Branch Management](https://university.hyland.com/courses/e4012).
 ![]({{file version='' space='nxdoc' page='university' name='university-source-control.png'}} ?w=450,border=true)
 {{/callout}}
 
