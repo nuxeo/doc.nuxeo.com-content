@@ -71,8 +71,8 @@ Welcome on the Nuxeo Studio tutorials.
 The goal of this section is to provide ready to use examples. They can be followed step by step to learn how to use Studio on practical use cases. The section also aims at providing solutions to commonly encountered situations.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-[Nuxeo Studio Exercises](https://university.nuxeo.com/learn/course/external/view/elearning/103/nuxeo-studio-exercises) &
-[Nuxeo Studio Learning Plan](https://university.nuxeo.com/learn/public/learning_plan/view/5/nuxeo-studio-foundations)</br>
+[Nuxeo Studio Exercises](https://university.hyland.com/courses/e4127) &
+[Nuxeo Studio Learning Plan](https://university.hyland.com/learning-paths/l4181)</br>
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_studio_learning_plan.png
     name: Screenshot 2021-05-26 at 14.30.28.png

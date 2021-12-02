@@ -134,8 +134,8 @@ history:
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related content in Nuxeo University:</br>
-[Course on Content Model Design in Nuxeo Studio](https://university.nuxeo.com/learn/course/external/view/elearning/12/ContentModelDesigninNuxeoStudio)</br>
-[Expert Session on Content Modeling Options](https://university.nuxeo.com/learn/course/external/view/elearning/203/ExpertSession-ContentModelingOptions)
+[Course on Content Model Design in Nuxeo Studio](https://university.hyland.com/courses/e4024)</br>
+[Expert Session on Content Modeling Options](https://university.hyland.com/courses/e4025)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/doctypes_university.png
     name: doctypes_university.png

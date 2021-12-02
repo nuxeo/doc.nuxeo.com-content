@@ -104,7 +104,7 @@ history:
 ---
 
 {{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
-[Course on Branch Management](https://university.nuxeo.com/learn/public/course/view/elearning/62/understanding-nuxeo-studios-source-control-mechanism).
+[Course on Branch Management](https://university.hyland.com/courses/e4012).
 ![]({{file version='' space='nxdoc' page='university' name='university-source-control.png'}} ?w=450,border=true)
 {{/callout}}
 

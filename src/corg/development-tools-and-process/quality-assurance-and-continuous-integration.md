@@ -125,7 +125,7 @@ It's as important to follow quality processes on development as to maintain this
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
-- [Expert Session on the Nuxeo Software Factory](https://university.nuxeo.com/learn/public/course/view/elearning/136/expert-session-nuxeo-software-factory)
+- [Expert Session on the Nuxeo Software Factory](https://university.hyland.com/courses/e4156)
 ![]({{file name='software_factory.png'}} ?w=450,border=true)
 {{/callout}}
 

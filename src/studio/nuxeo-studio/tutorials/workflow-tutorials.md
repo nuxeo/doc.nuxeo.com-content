@@ -69,7 +69,7 @@ The company OhMyDoc has decided to set up a validation workflow for its press re
 
 {{#> callout type='info'  heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
-[Course on Nuxeo Workflow Configuration](https://university.nuxeo.com/learn/course/external/view/elearning/39/workflow-engine-2021)
+[Course on Nuxeo Workflow Configuration](https://university.hyland.com/courses/e4176)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-wf.png
     name: university-wf.png

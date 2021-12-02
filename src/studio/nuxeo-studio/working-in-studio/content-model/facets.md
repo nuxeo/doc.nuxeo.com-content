@@ -12,7 +12,7 @@ tree_item_index: 250
 ---
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the expert session on [Content Modeling Options](https://university.nuxeo.com/learn/course/external/view/elearning/203/content-modeling-options):</br>
+Watch the expert session on [Content Modeling Options](https://university.hyland.com/courses/e4025):</br>
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/content-modeling-options.png
     name: content-modeling-options.png

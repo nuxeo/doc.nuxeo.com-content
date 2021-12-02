@@ -14,7 +14,7 @@ tree_item_index: 500
 When configuring Web UI, Studio Designer allows to edit the generated files directly and add your custom HTML / JavaScript code. This allows developers to do advanced customization.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the [Nuxeo Studio Designer Git Access](https://university.nuxeo.com/nuxeo/learn/course/external/view/elearning/160/NuxeoFrontendDevelopment-Howtocreateacustomelement) University video
+Watch the [Nuxeo Studio Designer Git Access](https://university.hyland.com/courses/e4103) University video
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/GIT_ACCESS
     name: Screenshot 2018-10-22 at 15.42.28.png

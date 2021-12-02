@@ -112,8 +112,8 @@ All the elements of the main Vocabulary feature screen are reviewed on this page
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
-[Course on Content Model Design](https://university.nuxeo.com/learn/public/course/view/elearning/12/content-model-design-in-nuxeo-studio)</br>
-[Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
+[Course on Content Model Design](https://university.hyland.com/courses/e4024-design-in-nuxeo-studio)</br>
+[Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
 ![]({{file version='' space='nxdoc' page='university' name='university-content-model.png'}} ?w=450,border=true)
 {{/callout}}
 
