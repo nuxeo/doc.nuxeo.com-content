@@ -12,8 +12,8 @@ tree_item_index: 290
 The goal of this section is to explain the principles and components that can be included in a production-ready Nuxeo cluster architecture. It also gives insights on how to scale a Nuxeo cluster depending on your needs and set up a high availability architecture.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-[Nuxeo Architecture Principals](https://university.nuxeo.com/learn/public/course/view/elearning/137/expert-session-disaster-recovery) &
-[Nuxeo Reference Architecture](https://university.nuxeo.com/learn/course/external/view/elearning/201/NuxeoReferenceArchitecture)</br>
+[Nuxeo Architecture Principals](https://university.hyland.com/courses/e4038) &
+[Nuxeo Reference Architecture](https://university.hyland.com/courses/e4137)</br>
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_reference_architecture.png
     name: university_reference_architecture.png

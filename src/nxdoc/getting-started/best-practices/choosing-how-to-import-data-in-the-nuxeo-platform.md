@@ -119,7 +119,7 @@ history:
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
-- [Data Capture - Import Strategies](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
+- [Data Capture - Import Strategies](https://university.hyland.com/courses/e4058) on Nuxeo University.
 ![]({{file name='university-data-capture.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 

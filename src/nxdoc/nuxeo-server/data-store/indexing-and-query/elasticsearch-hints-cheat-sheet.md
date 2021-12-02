@@ -83,7 +83,7 @@ This page lists interesting use cases of Elasticsearch Hints.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the [related course](https://university.nuxeo.com/learn/course/internal/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer) on Nuxeo University.
+Watch the [related course](https://university.hyland.com/courses/e4141) on Nuxeo University.
 {{/callout}}
 
 ## More Like This

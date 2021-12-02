@@ -68,7 +68,7 @@ This page briefly presents what the Automation module is about. You can read the
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-[Implement Business Logic](https://university.nuxeo.com/learn/public/course/view/elearning/46/automation-chains-automation-scripting-and-events)
+[Implement Business Logic](https://university.hyland.com/courses/e4055)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/implement-business-logic.png
     name: implement-business-logic.png

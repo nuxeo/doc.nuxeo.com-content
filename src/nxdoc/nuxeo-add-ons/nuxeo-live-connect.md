@@ -253,7 +253,7 @@ Browsers that block pop-ups may affect the behavior of Nuxeo Live Connect. If yo
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
-[Live Connect](https://university.nuxeo.com/learn/public/course/view/elearning/56/understanding-live-connect)
+[Live Connect](https://university.hyland.com/courses/e4163)
   ![]({{file name='university-live-connect.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 

@@ -20,7 +20,7 @@ The Nuxeo Dev Tools browser extension puts some of the more commonly performed a
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
-- [Video on the Nuxeo Browser Extension](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools)
+- [Video on the Nuxeo Browser Extension](https://university.hyland.com/courses/e4037)
 {{/callout}}
 
 ## Installation

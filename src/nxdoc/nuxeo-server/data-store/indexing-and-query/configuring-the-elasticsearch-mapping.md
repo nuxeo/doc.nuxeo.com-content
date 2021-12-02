@@ -192,7 +192,7 @@ This documentation page talks about the many aspects you can tune for improving 
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Configuring Searches in Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer).
+- [Configuring Searches in Nuxeo Studio Modeler & Designer](https://university.hyland.com/courses/e4141).
 ![]({{file name='university-search.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 
