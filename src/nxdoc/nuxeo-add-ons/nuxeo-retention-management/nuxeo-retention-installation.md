@@ -20,7 +20,11 @@ This page gives all the necessary steps to install the Retention Management addo
 
 ## Prerequisites
 
-### With Compliance mode
+### Standard mode
+
+You can use all the [file storages]({{page page='https://doc.nuxeo.com/nxdoc/file-storage/') supported by Nuxeo Platform.
+
+### Compliance mode
 
 - The [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) addon needs to be configured on your instance
 
@@ -29,6 +33,21 @@ This page gives all the necessary steps to install the Retention Management addo
 {{{multiexcerpt 'MP-installation-easy' space='nxdoc' page='Generic Multi-Excerpts'}}}
 
 ## Configuration
+
+### Standard Mode
+
+#### {{> anchor 'standard-amazon-s3'}} Amazon S3
+
+The default configuration consists on using the same S3 bucket for records than for the standard documents.
+
+In case this case, you can use the Amazon S3 addon with the [default configuration]({{page page='https://doc.nuxeo.com/nxdoc/amazon-s3-online-storage/'}}) with the Retention addon.
+
+{{#> callout type='warning'}}
+This configuration is only compliant with the default binary manager:
+```
+nuxeo.core.binarymanager=org.nuxeo.ecm.core.storage.sql.S3BinaryManager
+```
+{{/callout}}
 
 ### Compliance Mode
 
@@ -42,7 +61,7 @@ This has to be done prior to any usage of the Nuxeo Instance to guarantee the da
 
 #### Amazon S3
 
-Nuxeo Platform with Nuxeo Retention Management addon requires the usage of 2 Amazon buckets:
+In compliance mode, Nuxeo Platform with Nuxeo Retention Management addon requires the usage of 2 Amazon buckets:
 
 - A standard S3 bucket as for any other standard Nuxeo instance: this bucket is used to store the standard documents. You can refer to [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) documentation to configure this bucket.
 
@@ -95,6 +114,14 @@ Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Onlin
     </blobdispatcher>
 </extension>
 ```
+
+{{#> callout type='warning'}}
+This configuration and this binary manager ```org.nuxeo.ecm.blob.s3.S3BlobProvider``` can only be used with the Retention addon as described in this section, meaning:
+ - use two S3 buckets
+ - use the object lock on the records buckets
+
+ If you want to configure your instance with only 1 bucket and NO object lock, please refer to the [standard installation]((#standard-amazon-s3)).
+{{/callout}}
 
 Complete XML extension file example:
 ```xml
