@@ -162,7 +162,7 @@ This tutorial takes a contract's start date and add three months to it, but you 
 <div class="column">
 {{#> panel type='primary'}}
 
-[New to Nuxeo? Start Learning Nuxeo Platform with Nuxeo University Program!](https://university.nuxeo.com)
+[New to Nuxeo? Start Learning Nuxeo Platform with Nuxeo University Program!](https://university.hyland.com)
 
 {{/panel}}
 </div>

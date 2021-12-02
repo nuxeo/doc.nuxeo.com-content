@@ -12,7 +12,7 @@ tree_item_index: 200
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools) on Nuxeo University.
+Follow the related [video course and exercises](https://university.hyland.com/courses/e4037) on Nuxeo University.
 {{/callout}}
 
 {{! excerpt}}
