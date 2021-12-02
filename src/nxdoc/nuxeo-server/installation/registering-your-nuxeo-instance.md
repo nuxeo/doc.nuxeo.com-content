@@ -157,7 +157,7 @@ The registration process only copies a file on your file system. This enables th
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 
-- [Video on Nuxeo Studio Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/142/nuxeo-platform-quickstart-nuxeo-studio-concepts)
+- [Video on Nuxeo Studio Concepts](https://university.hyland.com/courses/e4117)
   ![]({{file name='university-nuxeo-studio-concepts.png' page='nxdoc/university'}} ?w=450,border=true)
   {{/callout}}
 

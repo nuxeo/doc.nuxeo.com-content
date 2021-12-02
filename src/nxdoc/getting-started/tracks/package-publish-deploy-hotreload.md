@@ -19,7 +19,7 @@ tree_item_index: 300
 
 {{#> callout type='info'}}
 Watch the related course on Nuxeo University:
-- [Course on Nuxeo CLI](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools)
+- [Course on Nuxeo CLI](https://university.hyland.com/courses/e4037)
 {{/callout}}
 
 ## Bootstrap Your Nuxeo Package

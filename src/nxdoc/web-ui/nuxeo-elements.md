@@ -45,8 +45,8 @@ although it should integrate with most frameworks with little effort.
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
-- [Introduction to Nuxeo Elements](https://university.nuxeo.com/learn/public/course/view/elearning/79/introduction-to-nuxeo-elements)
-- [Expert Session on Nuxeo Elements Creation](https://university.nuxeo.com/learn/public/course/view/elearning/148/expert-session-creating-nuxeo-elements-with-studio-designer)
+- [Introduction to Nuxeo Elements](https://university.hyland.com/courses/e4065)
+- [Expert Session on Nuxeo Elements Creation](https://university.hyland.com/courses/e4026)
 ![]({{file name='university-nuxeo-elements.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 

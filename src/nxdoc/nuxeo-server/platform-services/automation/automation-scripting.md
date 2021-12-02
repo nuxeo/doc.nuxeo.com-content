@@ -222,7 +222,7 @@ This enables you to benefit from:
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:
-[Course on Automation chains, Automation scripting and Events](https://university.nuxeo.com/learn/public/course/view/elearning/46/automation-chains-automation-scripting-and-events)
+[Course on Automation chains, Automation scripting and Events](https://university.hyland.com/courses/e4055)
 ![]({{file name='university-automation.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 

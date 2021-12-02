@@ -119,7 +119,7 @@ In the Nuxeo Platform, a **directory** is used to provide an abstraction on all 
 
 {{#> callout type='info'  heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
-[Video on Directories from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+[Video on Directories from the Data Persistence course](https://university.hyland.com/courses/e4009)
 ![]({{file name='university_directories.png'}} ?w=450,border=true)
 {{/callout}}
 

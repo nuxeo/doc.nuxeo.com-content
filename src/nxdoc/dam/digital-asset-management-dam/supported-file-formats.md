@@ -147,7 +147,7 @@ In case there are format limitations:
 - Nuxeo can integrate [new converters]({{page version='' space='nxdoc' page='how-to-contribute-a-command-line-converter'}}) and generate a new format which can be correctly interpreted.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University: [DAM Concepts](https://university.nuxeo.com/learn/course/internal/view/elearning/97/NuxeoDigitalAssetManagementDAMConcepts)
+Watch the related courses on Nuxeo University: [DAM Concepts](https://university.hyland.com/courses/e4098)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_dam.png
     name: university_dam.png

@@ -164,7 +164,7 @@ Picture conversions are used to fill the picture views (stored in the `picture:v
 Picture conversions are simple XML contributions done on the [`pictureConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) extension point of the [`org.nuxeo.ecm.platform.picture.ImagingComponent`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.picture.ImagingComponent) component.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University: [DAM Concepts](https://university.nuxeo.com/learn/course/internal/view/elearning/97/NuxeoDigitalAssetManagementDAMConcepts)
+Watch the related courses on Nuxeo University: [DAM Concepts](https://university.hyland.com/courses/e4098)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_dam.png
     name: university_dam.png

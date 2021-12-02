@@ -67,7 +67,7 @@ section_parent: dam
   </div>
   <div class="column medium-4">{{#> panel heading='Nuxeo University'}}
 
-- [DAM Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/97/nuxeo-digital-asset-management-dam-concepts)
+- [DAM Concepts](https://university.hyland.com/courses/e4098)
 
   {{/panel}}
   </div>

@@ -17,7 +17,7 @@ tree_item_index: 275
 
 {{#> callout type='info'  heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
-[Nuxeo Platform Quickstart](https://university.nuxeo.com/learn/course/external/view/elearning/143/nuxeo-platform-quickstart)
+[Nuxeo Platform Quickstart](https://university.hyland.com/courses/e4113)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_quickstart.png
     name: university_quickstart.png
