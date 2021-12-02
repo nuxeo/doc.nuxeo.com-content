@@ -153,7 +153,7 @@ Elasticsearch indexing is "eventually consistent". This means that depending on 
 
 {{/callout}}{{> wistia_video id='c9lxp69a01'}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
+Extract from the course [What's New in Nuxeo Platform 2015](https://university.hyland.com/courses/e4071) on [Nuxeo University](https://university.hyland.com)
 
 &nbsp;
 

@@ -892,4 +892,4 @@ That's it! You are ready to develop on the Nuxeo Platform.
 
 ## What to do Next
 
-You should learn to [package and deploy your application](https://university.nuxeo.com/store/155918-nuxeo-platform-developer-basics) in a Nuxeo Platform instance.
+You should learn to [package and deploy your application](https://university.hyland.com/courses/e4112) in a Nuxeo Platform instance.

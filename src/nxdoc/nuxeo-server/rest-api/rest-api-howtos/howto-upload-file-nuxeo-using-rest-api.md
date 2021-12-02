@@ -320,7 +320,7 @@ GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:conte
 ```
 ## Learn More
 
-*   Follow the course [Importing Files with the REST API](https://university.nuxeo.com/learn/course/external/view/elearning/69/importing-files-with-the-rest-api) at [Nuxeo University](https://university.nuxeo.io).
+*   Follow the course [Importing Files with the REST API](https://university.hyland.com/courses/e4060) at [Nuxeo University](https://university.nuxeo.io).
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='REST API how-tos'}}
 

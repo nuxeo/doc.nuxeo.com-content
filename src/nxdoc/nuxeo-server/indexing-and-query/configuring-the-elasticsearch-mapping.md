@@ -368,7 +368,7 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_ana
 ## Index the Main Attachment Content for Use with the Common Operator
 
 {{! multiexcerpt name='common-operator-main-attachment'}}{{> wistia_video id='nvdt4nzdq9'}}
-Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.com)
+Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.hyland.com/courses/e4071) in [Nuxeo University](https://university.hyland.com)
 
 Suppose you want to be able to search using the [common operator](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/query-dsl-common-terms-query.html) on your documents' main attachment content. This Elasticsearch operator is interesting for two reasons:
 
