@@ -511,6 +511,20 @@ This column gives some extra details about the documents, such as if the documen
 --}}
 ![Flags setting](nx_asset://339079be-e6e9-4c19-9093-1dda4bf1b541)
 
+### {{> anchor 'delete-document-under-retention'}} Delete a document under retention
+
+#### Standard mode
+
+By default, apply a retention rule to a document is an irreversible action, meaning you can't delete a document under retention.
+
+That being said, you can override this default behavior by using a [specific role]({{page page='nuxeo-retention-management'}}#deletion-role).
+
+If the role **NuxeoRecordCleaners** has been created in the instance and assigned to a user with the **Remove** permission on a given document, the user will be able to delete the document under retention.
+
+#### Compliance mode
+
+There is no way to delete a document under retention in the compliance mode.
+
 ## As a User
 
 {{#> callout type='info' heading='Standard and Compliance mode' }}
@@ -653,7 +667,7 @@ The following tables describe the availability of document actions:
 <tr>
     <td colspan="1">Delete document</td>
     <td></td>
-    <td><center>&#10003;</center></td>
+    <td><center>&#10003;*</center></td>
     <td></td>
 </tr>
 <tr>
@@ -677,6 +691,10 @@ The following tables describe the availability of document actions:
 </tbody>
 </table>
 </div>
+
+{{#> callout type='note' }}
+*: Delete a document is disabled for record unless the [specific role](#delete-document-under-retention) has been activated and assigned to a user.
+{{/callout}}
 
 ### With Compliance Mode
 
