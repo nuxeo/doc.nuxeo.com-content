@@ -18,7 +18,7 @@ This documentation applies to the **version 17** of the Nuxeo Salesforce connect
 
 {{#> callout type='info' heading='University'}}
 Watch the related course on Nuxeo University:</br>
-[Nuxeo Salesforce Connector](https://university.nuxeo.com/learn/course/external/view/elearning/221/salesforce-connector)
+[Nuxeo Salesforce Connector](https://university.hyland.com/courses/e4140)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_salesforce.png
     name: university_salesforce.png

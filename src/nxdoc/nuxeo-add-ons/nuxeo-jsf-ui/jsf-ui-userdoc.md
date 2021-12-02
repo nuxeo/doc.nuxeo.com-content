@@ -76,7 +76,7 @@ You can download and install optional product plugins from the Nuxeo Marketplace
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Using Nuxeo Platform with JSF UI](https://university.nuxeo.com/learn/public/course/view/elearning/9/using-nuxeo-platform-with-jsf-ui)
-- [Exercises on JSF](https://university.nuxeo.com/learn/public/course/view/elearning/111/jsf-quiz)
+- [Using Nuxeo Platform with JSF UI](https://university.hyland.com/courses/e4070)
+- [Exercises on JSF](https://university.hyland.com/catalog)
 ![]({{file name='university-jsfui.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

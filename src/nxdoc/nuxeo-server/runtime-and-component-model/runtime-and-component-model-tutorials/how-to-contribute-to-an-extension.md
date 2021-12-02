@@ -138,7 +138,7 @@ history:
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University:
-[Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
+[Course on Handling Service Extension Points](https://university.hyland.com/courses/e4150)
 ![]({{file name='university-extension-points.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 

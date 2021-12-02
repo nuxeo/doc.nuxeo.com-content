@@ -77,7 +77,7 @@ Let's see how to contribute a new video conversion to convert a video to WebM fo
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration).
+- [DAM Configuration](https://university.hyland.com/courses/e4031).
 ![]({{file name='university-dam-configuration.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
