@@ -202,7 +202,7 @@ This endpoint allows to upload a batch of files to a Nuxeo server. The uploaded 
 {{! /excerpt}}
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Nuxeo REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/91/nuxeo-rest-api-import).
+- [Nuxeo REST API Import](https://university.hyland.com/courses/e4120).
 ![]({{file name='university-rest-api-importer.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 ## Batch Upload Endpoint
@@ -638,7 +638,7 @@ doc = doc.updateDocument();
 
 ## Learn More
 
-*   Follow the course [Importing Documents / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
+*   Follow the course [Importing Documents / REST API Import](https://university.hyland.com/courses/e4058) at [Nuxeo University](https://university.hyland.com).
 *   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 
 * * *

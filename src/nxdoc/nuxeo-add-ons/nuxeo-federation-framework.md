@@ -17,7 +17,7 @@ The Nuxeo Federation Framework allows users to search, find and view documents s
 
 {{#> callout type='info'}}
 Watch the related video on Nuxeo University:</br>
-[Product News - Nuxeo Federation Framework](https://university.nuxeo.com/learn/course/external/view/elearning/184/NuxeoFederationServices).
+[Product News - Nuxeo Federation Framework](https://university.hyland.com/courses/e4045).
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Content Federation with Simflofy/nuxeo-federation-university.png
     name: nuxeo-federation-university.png

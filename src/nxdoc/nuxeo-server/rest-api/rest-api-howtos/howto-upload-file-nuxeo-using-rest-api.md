@@ -134,7 +134,7 @@ The Nuxeo Platform allows you to [upload binaries under a given "batch ID"]({{pa
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Nuxeo REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/91/nuxeo-rest-api-import).
+- [Nuxeo REST API Import](https://university.hyland.com/courses/e4120).
 ![]({{file name='university-rest-api-importer.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
@@ -357,7 +357,7 @@ Documentation can be found [here](https://doc.nuxeo.com/nxdoc/batch-upload-endpo
 
 ## Learn More
 
-- Follow the courses [Importing Files with the REST API](https://university.nuxeo.com/learn/course/external/view/elearning/69/importing-files-with-the-rest-api) and [Importing Documents / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
+- Follow the courses [Importing Files with the REST API](https://university.hyland.com/courses/e4060) and [Importing Documents / REST API Import](https://university.hyland.com/courses/e4058) at [Nuxeo University](https://university.hyland.com).
 
 * * *
 

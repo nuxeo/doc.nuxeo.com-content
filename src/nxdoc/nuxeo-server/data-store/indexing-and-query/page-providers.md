@@ -179,7 +179,7 @@ For an introduction to content views, please refer to the [Content Views]({{page
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
-- [Configuring Searches with Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer).
+- [Configuring Searches with Nuxeo Studio Modeler & Designer](https://university.hyland.com/courses/e4141).
 ![]({{file name='page-providers-university.png'}} ?w=450,border=true)
 {{/callout}}
 

@@ -254,7 +254,7 @@ This page assumes you already are familiar with the different components of a Nu
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Expert Session on Disaster Recovery](https://university.nuxeo.com/learn/public/course/view/elearning/137/expert-session-disaster-recovery).
+- [Expert Session on Disaster Recovery](https://university.hyland.com/courses/e4038).
 ![]({{file name='university_disaster_recovery.png'}} ?w=450,border=true)
 {{/callout}}
 

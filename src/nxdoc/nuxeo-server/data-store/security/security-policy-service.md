@@ -86,7 +86,7 @@ The Security Policy Service provides an extension point to plug custom security 
 
 {{#> callout type='info'}}
 Watch the related course on Nuxeo University:</br>
-[Security Policies](https://university.nuxeo.com/learn/course/external/view/elearning/171/SecurityPolicies) on Nuxeo University.
+[Security Policies](https://university.hyland.com/courses/e4147) on Nuxeo University.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Security Policy Service/university_security_policies.png
     name: university_security_policies.png

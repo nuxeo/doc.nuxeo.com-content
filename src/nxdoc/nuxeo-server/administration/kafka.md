@@ -16,7 +16,7 @@ Kafka configuration and integration with Nuxeo.
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
-[Course on Nuxeo Stream](https://university.nuxeo.com/learn/course/external/view/elearning/207/NuxeoStream).
+[Course on Nuxeo Stream](https://university.hyland.com/courses/e4121).
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-stream.png
     name: university-stream.png

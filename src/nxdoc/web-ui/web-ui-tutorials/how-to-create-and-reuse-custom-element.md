@@ -25,7 +25,7 @@ In this tutorial, you will learn how to create and reuse custom elements in Stud
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the course on [Nuxeo Web UI Development](https://university.nuxeo.com/learn/course/external/view/elearning/164/web-ui-development)
+Watch the course on [Nuxeo Web UI Development](https://university.hyland.com/courses/e4174)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/UNIVERSITY_SLOTS
     name: Screenshot 2020-07-16 at 12.06.01.png

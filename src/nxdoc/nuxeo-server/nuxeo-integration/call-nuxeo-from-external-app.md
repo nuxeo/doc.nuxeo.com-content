@@ -271,7 +271,7 @@ Don't forget to take the developer learning plan, available in Nuxeo University 
 </tr>
 <tr>
   <td>Edit properties with a UI element.</td>
-  <td>Use the [edit layout element](https://university.nuxeo.com/learn/course/external/view/elearning/80/document-and-workflow-task-layouts-with-nuxeo-studio-designer) to edit visually the document metadata of your document type, defined in Nuxeo Studio.</td>
+  <td>Use the [edit layout element](https://university.hyland.com/courses/e4040) to edit visually the document metadata of your document type, defined in Nuxeo Studio.</td>
 </tr>
 </table>
 

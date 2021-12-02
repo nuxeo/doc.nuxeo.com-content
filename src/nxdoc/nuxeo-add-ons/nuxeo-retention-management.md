@@ -20,7 +20,7 @@ The Nuxeo Retention Management addon covers all the necessary aspects of retenti
 
 {{#> callout type='info' heading='University'}}
 Watch the related course on Nuxeo University:</br>
-[Nuxeo Retention Management - Product News](https://university.nuxeo.com/learn/course/external/view/elearning/214/retention-management)
+[Nuxeo Retention Management - Product News](https://university.hyland.com/courses/e4139)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-retention.png
     name: university-retention.png

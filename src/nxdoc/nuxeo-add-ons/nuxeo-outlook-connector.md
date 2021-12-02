@@ -14,7 +14,7 @@ tree_item_index: 2450
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
-[Nuxeo Outlook Connector](https://university.nuxeo.com/learn/course/external/view/elearning/222/outlook-connector)
+[Nuxeo Outlook Connector](https://university.hyland.com/courses/e4134)
 ![]({{file name='university-nuxeo-outlook.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 

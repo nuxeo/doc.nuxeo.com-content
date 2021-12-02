@@ -316,8 +316,8 @@ Installing the Nuxeo Platform requires a few steps:
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Video on the Installation Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/141/nuxeo-platform-quickstart-installation-concepts)
-- [Screenshare on the Installation Process](https://university.nuxeo.com/learn/public/course/view/elearning/139/nuxeo-platform-quickstart-installation-process).
+- [Video on the Installation Concepts](https://university.hyland.com/courses/e4115)
+- [Screenshare on the Installation Process](https://university.hyland.com/courses/e4116).
 ![]({{file name='university-installation.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 

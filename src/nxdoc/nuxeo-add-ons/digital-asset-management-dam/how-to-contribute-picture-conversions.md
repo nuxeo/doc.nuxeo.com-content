@@ -159,7 +159,7 @@ Picture conversions are simple XML contributions done on the&nbsp;[`pictureConve
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration).
+- [DAM Configuration](https://university.hyland.com/courses/e4031).
 ![]({{file name='university-dam-configuration.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
