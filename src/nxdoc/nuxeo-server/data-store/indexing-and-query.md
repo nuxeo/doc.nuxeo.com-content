@@ -323,7 +323,7 @@ history:
 
 {{#> callout type='info'  heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
-[Video on Indexes from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+[Video on Indexes from the Data Persistence course](https://university.hyland.com/courses/e4009)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Indexing and Query/university_indexes.png
     name: university_indexes.png

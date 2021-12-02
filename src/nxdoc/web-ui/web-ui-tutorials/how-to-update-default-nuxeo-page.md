@@ -22,7 +22,7 @@ tree_item_index: 1010
 In this tutorial, you will learn how to edit the default Nuxeo Web UI document view page, and display the information you need (by adding new Nuxeo cards, removing useless property information, reorganizing the page layout etc.)
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the [Nuxeo Web UI Development](https://university.nuxeo.com/learn/course/external/view/elearning/164/web-ui-development) course on Nuxeo University:</br>
+Watch the [Nuxeo Web UI Development](https://university.hyland.com/courses/e4174) course on Nuxeo University:</br>
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/UNIVERSITY_SLOTS
     name: Screenshot 2020-07-16 at 12.06.01.png

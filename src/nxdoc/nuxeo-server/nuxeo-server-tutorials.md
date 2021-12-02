@@ -13,7 +13,7 @@ Welcome on the Nuxeo Server tutorials.
 The goal of this section is to provide ready to use examples. They can be followed step by step to learn how to configure Nuxeo Server on practical use cases. The section also aims at providing solutions to commonly encountered situations.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-[Nuxeo Developer Learning Plan](https://university.nuxeo.com/learn/public/learning_plan/view/6/getting-started-with-nuxeo-development) & [Nuxeo Architecture & Administration Learning Plan](https://university.nuxeo.com/learn/public/learning_plan/view/9/architecture-administration)</br>
+[Nuxeo Developer Learning Plan](https://university.hyland.com/learning-paths/l4182) & [Nuxeo Architecture & Administration Learning Plan](https://university.hyland.com/learning-paths/l4180)</br>
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_admin_learning_plan.png
     name: university_admin_learning_plan.png

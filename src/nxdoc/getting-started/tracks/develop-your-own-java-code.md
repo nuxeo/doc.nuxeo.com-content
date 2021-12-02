@@ -411,9 +411,9 @@ Here we want to add some server side Java logic that will update the contract's 
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University:
-- [Course on Nuxeo CLI](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools)
-- [Course on Nuxeo Platform Developer Basics](https://university.nuxeo.com/learn/public/course/view/elearning/11/nuxeo-platform-developer-basics).
-- [Expert Session on Nuxeo Software Factory](https://university.nuxeo.com/learn/public/course/view/elearning/136/expert-session-nuxeo-software-factory)
+- [Course on Nuxeo CLI](https://university.hyland.com/courses/e4037)
+- [Course on Nuxeo Platform Developer Basics](https://university.hyland.com/courses/e4112).
+- [Expert Session on Nuxeo Software Factory](https://university.hyland.com/courses/e4156)
 ![]({{file name='university-nuxeo-cli.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 

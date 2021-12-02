@@ -18,7 +18,7 @@ Nuxeo Stream aims to provide asynchronous and distributed processing, there are 
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
-[Video on Streams from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture).
+[Video on Streams from the Data Persistence course](https://university.hyland.com/courses/e4009).
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Kafka/university_streams.png
     name: university_streams.png

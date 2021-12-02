@@ -112,7 +112,7 @@ The [Scan Documents Importer addon](https://connect.nuxeo.com/nuxeo/site/marketp
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Course on Document Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture).
+- [Course on Document Import](https://university.hyland.com/courses/e4058).
 ![]({{file name='university-import.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 

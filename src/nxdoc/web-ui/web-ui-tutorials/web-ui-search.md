@@ -33,8 +33,8 @@ Learn how to create a new search screen with an icon in the left menu. The searc
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University:</br>
-[Course on Searches with Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer)</br>
-[Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
+[Course on Searches with Nuxeo Studio Modeler & Designer](https://university.hyland.com/courses/e4141)</br>
+[Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
 ![]({{file name='web-ui-search-university.png'}} ?w=450,border=true)
 {{/callout}}
 
