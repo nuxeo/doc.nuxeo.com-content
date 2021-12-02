@@ -203,7 +203,7 @@ history:
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
-- [Nuxeo CSV Importer](https://university.nuxeo.com/learn/public/course/view/elearning/89/nuxeo-csv-importer) on Nuxeo University.
+- [Nuxeo CSV Importer](https://university.hyland.com/courses/e4097) on Nuxeo University.
 ![]({{file name='university-csv.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 

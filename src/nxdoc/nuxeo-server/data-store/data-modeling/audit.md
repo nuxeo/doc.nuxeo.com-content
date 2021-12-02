@@ -116,7 +116,7 @@ The Audit Service is used for logging and retrieving audit data into a data stor
 
 {{#> callout type='info'  heading='Nuxeo University'}}
 Watch the related course on Nuxeo University:</br>
-[Video on Audits from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+[Video on Audits from the Data Persistence course](https://university.hyland.com/courses/e4009)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Audit/university_audit.png
     name: university_audit.png

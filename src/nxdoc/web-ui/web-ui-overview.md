@@ -127,8 +127,8 @@ It leverages the web as a platform and allows enhanced productivity with direct 
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
-[Course on the Web UI Stack](https://university.nuxeo.com/learn/course/164/web-ui-development).</br>
-[Course to Start with Web UI](https://university.nuxeo.com/learn/course/156/IntroductiontoWebComponentsandPolymer).
+[Course on the Web UI Stack](https://university.hyland.com/courses/e4174).</br>
+[Course to Start with Web UI](https://university.hyland.com/catalog).
 ![]({{file name='university-webui.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 

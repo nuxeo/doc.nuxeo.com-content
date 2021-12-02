@@ -24,7 +24,7 @@ In this tutorial, you will learn how to execute UI functions after business logi
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-[Implement Business Logic](https://university.nuxeo.com/learn/public/course/view/elearning/46/automation-chains-automation-scripting-and-events)
+[Implement Business Logic](https://university.hyland.com/courses/e4055)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/implement-business-logic.png
     name: implement-business-logic.png

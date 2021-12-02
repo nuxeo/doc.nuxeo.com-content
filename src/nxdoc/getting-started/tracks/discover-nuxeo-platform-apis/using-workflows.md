@@ -160,8 +160,8 @@ Learn how to manage a contract validation workflow using the REST API. Log in as
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Course on the Nuxeo Workflow Engine](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine)
-- [Course on the REST API](https://university.nuxeo.com/learn/public/course/view/elearning/66/rest-api)
+- [Course on the Nuxeo Workflow Engine](https://university.hyland.com/courses/e4176)
+- [Course on the REST API](https://university.hyland.com/courses/e4138)
 ![]({{file name='university-restapi.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 
@@ -235,7 +235,7 @@ Start a workflow on a contract, leveraging the contract validation workflow prov
 {{#> callout type='info' heading='Learn more'}}
 
 *   [Workflow developer documentation]({{page page='workflow'}})
-*   [Workflow Engine course on Nuxeo University](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine)
+*   [Workflow Engine course on Nuxeo University](https://university.hyland.com/courses/e4176)
 
 {{/callout}}
 
@@ -330,7 +330,7 @@ When the workflow started, a verification was performed that determined no amoun
 {{#> callout type='info' heading='Learn more'}}
 
 *   [About Tasks]({{page page='about-tasks'}})
-*   [Assigning Workflow Tasks video from Nuxeo University](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine)
+*   [Assigning Workflow Tasks video from Nuxeo University](https://university.hyland.com/courses/e4176)
 
 {{/callout}}
 

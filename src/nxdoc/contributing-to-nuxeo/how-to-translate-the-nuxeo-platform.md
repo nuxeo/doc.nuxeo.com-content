@@ -305,7 +305,7 @@ Nuxeo supported modules handle English translations for each of their bundles. O
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
-[Expert Session on Translations](https://university.nuxeo.com/learn/public/course/view/elearning/140/expert-session-translations).
+[Expert Session on Translations](https://university.hyland.com/courses/e4161).
 ![]({{file name='university-translations.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 
