@@ -181,7 +181,7 @@ Automation chains allow you to optimize the number of calls needed to execute bu
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Applying Business Logic](https://university.nuxeo.com/store/161508-applying-business-logic) course on Nuxeo University
+*   [Applying Business Logic](https://university.hyland.com/courses/e4055) course on Nuxeo University
 *   [Content Automation Documentation]({{page page='automation'}})
 
 {{/callout}}

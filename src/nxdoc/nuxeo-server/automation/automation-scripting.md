@@ -199,7 +199,7 @@ history:
 ---
 {{> wistia_video id='nygm75sevd'}}
 
-Extract from the course "[Applying Business Logic](https://university.nuxeo.com/store/161508-applying-business-logic)" at [Nuxeo University](https://university.nuxeo.com)
+Extract from the course "[Applying Business Logic](https://university.hyland.com/courses/e4055)" at [Nuxeo University](https://university.hyland.com)
 
 {{! excerpt}}
 
