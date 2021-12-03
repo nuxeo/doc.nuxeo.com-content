@@ -163,8 +163,8 @@ Picture conversions are used to fill the picture views (stored in the `picture:v
 
 Picture conversions are simple XML contributions done on the [`pictureConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) extension point of the [`org.nuxeo.ecm.platform.picture.ImagingComponent`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.picture.ImagingComponent) component.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University: [DAM Concepts](https://university.hyland.com/courses/e4098)
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University: [DAM Concepts](https://university.hyland.com/courses/e4098)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_dam.png
     name: university_dam.png
@@ -237,7 +237,7 @@ You can put your own chain here to do whatever you want. Just note the following
 - The chain **must** take a `Blob` as input and return a `Blob` as output (this one will be saved as the generated picture view).
 - The chain takes a `parameters` parameter which is a map containing the expected values computed by the `ImagingService` (`width`, `height`, `depth` and `conversionFormat`).
 - The picture document, if any, on which the conversion is done is stored in the `Context` as the `pictureDocument` variable.
-- The chain is run outside any `Transaction` / `CoreSession` because a conversion could be long and should be done outside any `Transaction` to avoid timeouts. If you need to open a `CoreSession` yourself, you can use the `Context.RunFileOperation` operation with the parameter `newTx` set to `true` to start a new Transaction, and then the `Auth.LoginAs` operation to open a `CoreSession`.  
+- The chain is run outside any `Transaction` / `CoreSession` because a conversion could be long and should be done outside any `Transaction` to avoid timeouts. If you need to open a `CoreSession` yourself, you can use the `Context.RunFileOperation` operation with the parameter `newTx` set to `true` to start a new Transaction, and then the `Auth.LoginAs` operation to open a `CoreSession`.
 
 ### Add a New Picture Conversion
 

@@ -74,8 +74,8 @@ You can download and install optional product plugins from the Nuxeo Marketplace
 </div>
 </div>
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Using Nuxeo Platform with JSF UI](https://university.hyland.com/courses/e4070)
 - [Exercises on JSF](https://university.hyland.com/catalog)
 ![]({{file name='university-jsfui.png' page='nxdoc/university'}} ?w=450,border=true)

@@ -84,8 +84,8 @@ history:
 The Security Policy Service provides an extension point to plug custom security policies that do not rely on the standard ACLs for security. For instance, it can be used to define permissions according to the document metadata, or information about the logged in user.
 
 {{#> callout type='info'}}
-Watch the related course on Nuxeo University:</br>
-[Security Policies](https://university.hyland.com/courses/e4147) on Nuxeo University.
+Watch the related course on Hyland University:</br>
+[Security Policies](https://university.hyland.com/courses/e4147) on Hyland University.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Security Policy Service/university_security_policies.png
     name: university_security_policies.png

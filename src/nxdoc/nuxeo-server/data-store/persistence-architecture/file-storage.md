@@ -184,8 +184,8 @@ history:
         version: '1'
 ---
 
-{{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
+{{#> callout type='info'  heading='Hyland University'}}
+Watch the related courses on Hyland University:</br>
 [Video on Document Blobs from the Data Persistence course](https://university.hyland.com/courses/e4009)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/File Storage/university_file_storage.png

@@ -158,8 +158,8 @@ Learn how to manage a contract validation workflow using the REST API. Log in as
 {{! /excerpt}}
 
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Course on the Nuxeo Workflow Engine](https://university.hyland.com/courses/e4176)
 - [Course on the REST API](https://university.hyland.com/courses/e4138)
 ![]({{file name='university-restapi.png' page='nxdoc/university'}} ?w=450,border=true)
@@ -235,7 +235,7 @@ Start a workflow on a contract, leveraging the contract validation workflow prov
 {{#> callout type='info' heading='Learn more'}}
 
 *   [Workflow developer documentation]({{page page='workflow'}})
-*   [Workflow Engine course on Nuxeo University](https://university.hyland.com/courses/e4176)
+*   [Workflow Engine course on Hyland University](https://university.hyland.com/courses/e4176)
 
 {{/callout}}
 
@@ -330,7 +330,7 @@ When the workflow started, a verification was performed that determined no amoun
 {{#> callout type='info' heading='Learn more'}}
 
 *   [About Tasks]({{page page='about-tasks'}})
-*   [Assigning Workflow Tasks video from Nuxeo University](https://university.hyland.com/courses/e4176)
+*   [Assigning Workflow Tasks video from Hyland University](https://university.hyland.com/courses/e4176)
 
 {{/callout}}
 

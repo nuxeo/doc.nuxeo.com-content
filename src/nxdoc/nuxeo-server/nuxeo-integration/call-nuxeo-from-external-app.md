@@ -55,8 +55,8 @@ Here are the links of the most useful documentation pages:
 - [Nuxeo REST API Enrichers]({{page version='' space='nxdoc' page='content-enrichers'}})
 - [Nuxeo Extended Fields]({{page version='' space='nxdoc' page='document-json-extended-fields'}})
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Don't forget to take the developer learning plan, available in Nuxeo University (**Home** > **Getting Started** > **Learning Plans**)
+{{#> callout type='info' heading='Hyland University'}}
+Don't forget to take the developer learning plan, available in Hyland University (**Home** > **Getting Started** > **Learning Plans**)
 {{/callout}}
 
 ## Typical Features Set of an Integration

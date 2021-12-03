@@ -140,8 +140,8 @@ history:
 
 When [configuring a content view]({{page space='studio' page='content-view-query-and-form-tab'}}) in Nuxeo Studio, you can make it query Elasticsearch instead of the Core API. This may be interesting for performance/scalability reasons as well as for enabling aggregates support. This page lists the required steps:
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Configuring Searches in Nuxeo Studio Modeler & Designer](https://university.hyland.com/courses/e4141).
 ![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

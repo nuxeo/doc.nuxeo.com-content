@@ -15,8 +15,8 @@ tree_item_index: 250
 
 This page explains how to install the Nuxeo server with the base Nuxeo Docker image. Yet, to build an application from Nuxeo, most of the time, you will need to customize this image and build your own. For this purpose, we strongly recommend to use an immutable image by [building a custom Docker image]({{page page='build-a-custom-docker-image'}}) from the Nuxeo one.
 
-{{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info'  heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Nuxeo Platform Quickstart](https://university.hyland.com/courses/e4113)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_quickstart.png

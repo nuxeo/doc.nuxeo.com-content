@@ -146,8 +146,8 @@ In case there are format limitations:
 - It is always possible to manage the native files and supply Nuxeo a readable preview (e.g. export from native app before upload).
 - Nuxeo can integrate [new converters]({{page version='' space='nxdoc' page='how-to-contribute-a-command-line-converter'}}) and generate a new format which can be correctly interpreted.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University: [DAM Concepts](https://university.hyland.com/courses/e4098)
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University: [DAM Concepts](https://university.hyland.com/courses/e4098)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_dam.png
     name: university_dam.png

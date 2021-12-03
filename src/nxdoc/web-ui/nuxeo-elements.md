@@ -44,7 +44,7 @@ DOM to be the "framework" and HTML to define the syntax. Therefore, there's no n
 although it should integrate with most frameworks with little effort.
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Hyland University
 - [Introduction to Nuxeo Elements](https://university.hyland.com/courses/e4065)
 - [Expert Session on Nuxeo Elements Creation](https://university.hyland.com/courses/e4026)
 ![]({{file name='university-nuxeo-elements.png' page='nxdoc/university'}} ?w=450,border=true)
@@ -94,7 +94,7 @@ These are:
   ```
   $ npm i @nuxeo/nuxeo-dataviz-elements
   ```
-  
+
 When developing using Nuxeo Elements, make sure to set up your development environment according to the requirements described in the [Nuxeo Elements repository](https://github.com/nuxeo/nuxeo-elements/blob/master/README.md#dependencies).
 
 Nuxeo Elements' development is supported by several tools and strategies, to keep quality, performance and security in check.

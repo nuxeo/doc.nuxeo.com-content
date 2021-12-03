@@ -18,7 +18,7 @@ tree_item_index: 300
 ---
 
 {{#> callout type='info'}}
-Watch the related course on Nuxeo University:
+Watch the related course on Hyland University:
 - [Course on Nuxeo CLI](https://university.hyland.com/courses/e4037)
 {{/callout}}
 

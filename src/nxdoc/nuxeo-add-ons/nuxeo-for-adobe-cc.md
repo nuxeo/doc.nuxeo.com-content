@@ -28,8 +28,8 @@ tree_item_index: 850
 The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package) connector enables [Adobe Creative Cloud users](https://www.nuxeo.com/content-services-platform/integration/adobe-creative-suite/) to import assets into an InDesign document directly from the Nuxeo repository. Link to the repository is maintained to facilitate updates of the referenced assets. Additionally, creative users can access assets directly from Illustrator or Photoshop to make edits and trigger update warnings in InDesign.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University:</br>
 [Adobe CC Connector](https://university.hyland.com/courses/e4007)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo for Adobe CC/university-adobe.png
@@ -146,7 +146,7 @@ To create your server listing:
   ![Adobe Select Server name](nx_asset://93a5cd9d-53bf-44c3-978e-017e7e50760c ?w=200,border=true)
 
 To login:
-1. Select your server from the list and click **Connect**. This will launch the Nuxeo login via your default browser.  
+1. Select your server from the list and click **Connect**. This will launch the Nuxeo login via your default browser.
 1. Enter your username and password and click **Log In**. If you have an existing authentication token, you should not need to fill in the username and password.  Depending on your browser, once the token has been created/retrieved, you will be automatically redirected back to your Adobe application.  If not, simply return to your Adobe application.
 
 {{!--     ### NX_ASSET ###

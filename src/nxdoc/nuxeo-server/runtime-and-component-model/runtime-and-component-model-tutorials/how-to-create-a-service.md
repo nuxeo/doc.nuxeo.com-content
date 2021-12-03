@@ -16,7 +16,7 @@ tree_item_index: 600
 ---
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University:</br>
+Watch the related courses on Hyland University:</br>
 [Course on Handling Service Extension Points](https://university.hyland.com/courses/e4150)
 ![]({{file name='university-extension-points.png' page='university'}} ?w=450,border=true)
 {{/callout}}

@@ -15,7 +15,7 @@ tree_item_index: 2060
 ---
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University:
+Watch the related courses on Hyland University:
 - [DAM Architecture course](https://university.hyland.com/courses/e4033).
 - [LTS 2017 new feature with Nuxeo Stream and the Lambda integration](https://university.hyland.com/courses/e4073) *(min 3'00)*
 ![]({{file name='nx_lambda_university.png'}} ?w=600,border=true)
