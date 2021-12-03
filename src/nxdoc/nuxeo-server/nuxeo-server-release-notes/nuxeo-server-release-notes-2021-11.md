@@ -9,7 +9,6 @@ labels:
     - release-notes
 toc: true
 tree_item_index: 5300
-hidden: true
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2021-11'}}
@@ -61,21 +60,21 @@ Redis availability is checked at startup just like a SQL DB or MongoDB Backing S
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22842](https://jira.nuxeo.com/browse/NXP-22842)
 
-### Major Bug Fixes
+## Major Bug Fixes
 
-#### Fix Operation `Repository.Query` When Parameter `searchTerm` is provided with an empty string {{> tag 'dev'}}
+### Fix Operation `Repository.Query` When Parameter `searchTerm` is provided with an empty string {{> tag 'dev'}}
 
 The operation `Repository.Query` handles the parameter 'searchTerm' set to an empty string.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29097](https://jira.nuxeo.com/browse/NXP-29097)
 
-#### Retention Addon - Expire Stream Not Processing {{> tag 'dev'}} {{> tag 'admin'}}
+### Retention Addon - Expire Stream Not Processing {{> tag 'dev'}} {{> tag 'admin'}}
 
 `RetentionExpiredComputation` does not fail anymore on deleted or unknown documents.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30651](https://jira.nuxeo.com/browse/NXP-30651)
 
-# Learn More
+## Learn More
 
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=21515) is available in our bug tracking tool.
 
