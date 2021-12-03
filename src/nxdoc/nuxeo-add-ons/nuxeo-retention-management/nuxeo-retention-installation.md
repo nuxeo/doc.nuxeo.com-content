@@ -20,11 +20,11 @@ This page gives all the necessary steps to install the Retention Management addo
 
 ## Prerequisites
 
-### Standard mode
+### Standard Mode
 
-You can use all the [file storages]({{page page='https://doc.nuxeo.com/nxdoc/file-storage/') supported by Nuxeo Platform.
+You can use all the [file storages]({{page page='file-storage'}}) supported by Nuxeo Platform.
 
-### Compliance mode
+### Compliance Mode
 
 - The [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) addon needs to be configured on your instance
 
@@ -40,7 +40,7 @@ You can use all the [file storages]({{page page='https://doc.nuxeo.com/nxdoc/fil
 
 The default configuration consists on using the same S3 bucket for records than for the standard documents.
 
-In case this case, you can use the Amazon S3 addon with the [default configuration]({{page page='https://doc.nuxeo.com/nxdoc/amazon-s3-online-storage/'}}) with the Retention addon.
+In case this case, you can use the Amazon S3 addon with the [default configuration]({{page page='amazon-s3-online-storage'}}) with the Retention addon.
 
 {{#> callout type='warning'}}
 This configuration is only compliant with the default binary manager:
@@ -120,7 +120,7 @@ This configuration and this binary manager ```org.nuxeo.ecm.blob.s3.S3BlobProvid
  - use two S3 buckets
  - use the object lock on the records buckets
 
- If you want to configure your instance with only 1 bucket and NO object lock, please refer to the [standard installation]((#standard-amazon-s3)).
+ If you want to configure your instance with only 1 bucket and NO object lock, please refer to the [standard installation](#amazon-s3).
 {{/callout}}
 
 Complete XML extension file example:

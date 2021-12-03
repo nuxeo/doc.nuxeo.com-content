@@ -511,9 +511,9 @@ This column gives some extra details about the documents, such as if the documen
 --}}
 ![Flags setting](nx_asset://339079be-e6e9-4c19-9093-1dda4bf1b541)
 
-### {{> anchor 'delete-document-under-retention'}} Delete a document under retention
+### {{> anchor 'delete-document-under-retention'}} Delete a Document Under Retention
 
-#### Standard mode
+#### Standard Mode
 
 By default, apply a retention rule to a document is an irreversible action, meaning you can't delete a document under retention.
 
@@ -521,7 +521,7 @@ That being said, you can override this default behavior by using a [specific rol
 
 If the role **NuxeoRecordCleaners** has been created in the instance and assigned to a user with the **Remove** permission on a given document, the user will be able to delete the document under retention.
 
-#### Compliance mode
+#### Compliance Mode
 
 There is no way to delete a document under retention in the compliance mode.
 
