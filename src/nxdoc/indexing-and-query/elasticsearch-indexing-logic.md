@@ -187,7 +187,7 @@ history:
 ---
 {{> wistia_video id='d9zcz20s7i'}}
 
-Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.io/nuxeo/university/#%21/course/whats-new-in-nuxeo-platform-lts-2015) in [Hyland University](https://university.hyland.com)
+Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.hyland.com/courses/e4071) in [Hyland University](https://university.hyland.com)
 
 ## Indexing
 

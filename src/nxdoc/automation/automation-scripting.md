@@ -185,7 +185,7 @@ history:
 ---
 {{> wistia_video id='nygm75sevd'}}
 
-Extract from the course "[Applying Business Logic](https://university.nuxeo.io/nuxeo/university/#!/course/applying-business-logic)" at [Hyland University](https://university.hyland.com)
+Extract from the course "[Applying Business Logic](https://university.hyland.com/catalog?query=business%20logic)" at [Hyland University](https://university.hyland.com)
 
 {{! excerpt}}
 
