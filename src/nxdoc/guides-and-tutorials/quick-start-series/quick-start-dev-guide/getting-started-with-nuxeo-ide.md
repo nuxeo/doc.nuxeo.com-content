@@ -751,4 +751,4 @@ That's it! You are ready to develop on the Nuxeo Platform.
 
 ## What to do Next
 
-You should learn to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application) in a Nuxeo Platform instance.
+You should learn to [package and deploy your application](https://university.hyland.com/courses/e4135) in a Nuxeo Platform instance.

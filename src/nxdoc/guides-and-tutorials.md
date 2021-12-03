@@ -124,9 +124,9 @@ Welcome to the Nuxeo Developer Tutorials Section!
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
 ### Learn with Videos
-- [What is Nuxeo Studio](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio/what-is-nuxeo-studio)
-- [Create a Document Type ](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio/creating-a-document-type)
-- [Branding Your Application with Nuxeo Studio](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio/branding-your-application)
+- [What is Nuxeo Studio](https://university.hyland.com/catalog?query=nuxeo%20studio/what-is-nuxeo-studio)
+- [Create a Document Type ](https://university.hyland.com/catalog?query=nuxeo%20studio/creating-a-document-type)
+- [Branding Your Application with Nuxeo Studio](https://university.hyland.com/catalog?query=nuxeo%20studio/branding-your-application)
 {{/panel}}
 </div>
 </div>
