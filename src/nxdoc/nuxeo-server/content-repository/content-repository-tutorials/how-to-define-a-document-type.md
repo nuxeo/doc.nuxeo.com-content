@@ -293,7 +293,7 @@ history:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [course](https://university.hyland.com/courses/e4127) on Nuxeo University.
+Follow the related [course](https://university.hyland.com/courses/e4127) on Hyland University.
 {{/callout}}
 
 ## Introduction
@@ -423,7 +423,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
 
         {{/callout}}
 
-## Content Type Deployment        
+## Content Type Deployment
 
 1.  Click on **Save** to save your configuration.
 2.  After you deploy your customization on the your Nuxeo Platform instance, your new document type is displayed in the **Available document type** popup window.

@@ -117,7 +117,7 @@ history:
 ---
 
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.hyland.com/courses/e4058) on Nuxeo University.
+Follow the related [video course and exercises](https://university.hyland.com/courses/e4058) on Hyland University.
 {{/callout}}
 
 The Nuxeo Platform provides tools and APIs to import content:
@@ -146,7 +146,7 @@ There can be several strategies to create documents:
 
 **Use the Java API server-side**
 * **Pros**: Transactional, multi-theaded and highly performant. It provides the ability to disable events processing and to bundle event processing
-* **Cons**: A bit more complex to understand logics, requires to deploy a server-side plugin for any customization.  
+* **Cons**: A bit more complex to understand logics, requires to deploy a server-side plugin for any customization.
 
 **Fill in the database directly** (SQL Scripts, MongoDB collections, ...)
 * **Pros**: The most performant

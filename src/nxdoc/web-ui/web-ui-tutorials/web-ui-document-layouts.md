@@ -24,8 +24,8 @@ tree_item_index: 400
 ---
 
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.hyland.com/courses/e4040) on Nuxeo University.
-{{/callout}}  
+Follow the related [video course and exercises](https://university.hyland.com/courses/e4040) on Hyland University.
+{{/callout}}
 
 Layouts are used to display a document's metadata in different use cases. It's basically a group of widgets and specifies how these widgets are assembled and displayed.
 

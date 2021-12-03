@@ -247,7 +247,7 @@ history:
 ---
 
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.hyland.com/courses/e4071) on Nuxeo University.
+Follow the related [video course and exercises](https://university.hyland.com/courses/e4071) on Hyland University.
 {{/callout}}
 
 Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.

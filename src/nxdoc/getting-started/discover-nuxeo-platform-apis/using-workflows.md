@@ -21,127 +21,127 @@ confluence:
     source_link: /display/NXDOC/Using+Workflows
 tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 15:13'
         message: ''
         version: '25'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-10-05 13:07'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 11:58'
         message: ''
         version: '23'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-21 20:36'
         message: ''
         version: '22'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-21 20:35'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-21 12:36'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:30'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:03'
         message: fix handleManagerWorkflowTasks.js
         version: '18'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-20 15:01'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:00'
         message: Fix handleUserWorkflowTasks.js
         version: '16'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-07 09:47'
         message: ''
         version: '15'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-07 09:37'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 15:55'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 12:40'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 11:11'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 08:20'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 08:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 08:18'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-16 15:18'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-10 08:49'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-05 13:25'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-05 12:59'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-05 12:10'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-05 11:55'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-04 08:21'
         message: ''
@@ -151,7 +151,7 @@ next_link: nxdoc/using-automation
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.hyland.com/courses/e4176) on Nuxeo University.
+Follow the related [video course and exercises](https://university.hyland.com/courses/e4176) on Hyland University.
 {{/callout}}
 
 {{! excerpt}}
@@ -230,7 +230,7 @@ Start a workflow on a contract, leveraging the contract validation workflow prov
 {{#> callout type='info' heading='Learn more'}}
 
 *   [Workflow developer documentation]({{page page='workflow'}})
-*   [Workflow Engine course on Nuxeo University](https://university.hyland.com/courses/e4176)
+*   [Workflow Engine course on Hyland University](https://university.hyland.com/courses/e4176)
 
 {{/callout}}
 
@@ -325,7 +325,7 @@ When the workflow started, a verification was performed that determined no amoun
 {{#> callout type='info' heading='Learn more'}}
 
 *   [About Tasks]({{page page='about-tasks'}})
-*   [Assigning Workflow Tasks video from Nuxeo University](https://university.hyland.com/courses/e4176)
+*   [Assigning Workflow Tasks video from Hyland University](https://university.hyland.com/courses/e4176)
 
 {{/callout}}
 

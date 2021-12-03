@@ -100,7 +100,7 @@ version_override:
     LTS 2016: 810/nxdoc/web-ui
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://https://university.hyland.com/catalog?query=nuxeo%20ui) on Nuxeo University.
+Follow the related [video course and exercises](https://university.hyland.com/catalog?query=nuxeo%20ui) on Hyland University.
 {{/callout}}
 
 Nuxeo Web UI is a standard base web application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users. Customizable, scalable and built upon a framework of Web components, it allows Nuxeo Platform developers to build their own front-end application using these components. The [Nuxeo Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is available on [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/).
