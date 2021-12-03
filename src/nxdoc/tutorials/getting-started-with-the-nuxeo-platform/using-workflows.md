@@ -214,7 +214,7 @@ Start a workflow on a contract, leveraging the contract validation workflow prov
 {{#> callout type='info' heading='Learn more'}}
 
 *   [Workflow developer documentation]({{page page='workflow'}})
-*   [Workflow Engine course on Nuxeo University](https://university.hyland.com/courses/e4176)
+*   [Workflow Engine course on Hyland University](https://university.hyland.com/courses/e4176)
 
 {{/callout}}
 
@@ -309,7 +309,7 @@ When the workflow started, a verification was performed that determined no amoun
 {{#> callout type='info' heading='Learn more'}}
 
 *   [About Tasks]({{page page='about-tasks'}})
-*   [Assigning Workflow Tasks video from Nuxeo University](https://university.hyland.com/courses/e4176)
+*   [Assigning Workflow Tasks video from Hyland University](https://university.hyland.com/courses/e4176)
 
 {{/callout}}
 
@@ -402,6 +402,6 @@ This time a task has been assigned to the `managers` group (represented by Sarah
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Playing with Workflow Buttons and Transitions video from Nuxeo University](https://university.hyland.com/courses/e4176)
+*   [Playing with Workflow Buttons and Transitions video from Hyland University](https://university.hyland.com/courses/e4176)
 
 {{/callout}}

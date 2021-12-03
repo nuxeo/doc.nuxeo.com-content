@@ -285,7 +285,7 @@ There are two possible ways to deploy your application:
 
   ![Angular Embedded Application]({{file name='Nuxeo and AngularJS - Embedded Web Application - New Page.png'}})
 
-  This setup is particularly interesting when using a [Nuxeo Cloud](https://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent. We use this solution for projects like [Nuxeo University](https://university.nuxeo.io).
+  This setup is particularly interesting when using a [Nuxeo Cloud](https://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent. We use this solution for projects like [Hyland University](https://university.hyland.com).
 
   If you bootstrapped your project with the Nuxeo's `package`, simply go to the root of your project, then:
 

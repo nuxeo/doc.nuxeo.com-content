@@ -199,7 +199,7 @@ history:
 ---
 {{> wistia_video id='nygm75sevd'}}
 
-Extract from the course "[Applying Business Logic](https://university.hyland.com/courses/e4055)" at [Nuxeo University](https://university.hyland.com)
+Extract from the course "[Applying Business Logic](https://university.hyland.com/courses/e4055)" at [Hyland University](https://university.hyland.com)
 
 {{! excerpt}}
 
