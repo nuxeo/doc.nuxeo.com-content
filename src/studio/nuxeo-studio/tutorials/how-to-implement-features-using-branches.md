@@ -236,8 +236,8 @@ history:
 The principal goal is to create feature branches that will enable developers to work on the same branch without impacting the `master` branch. They can work together or on their respective sides and merge their work when the features are done.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Course on Branch Management](https://university.hyland.com/courses/e4012).
 ![]({{file version='' space='nxdoc' page='university 'name='university-source-control.png'}} ?w=450,border=true)
 {{/callout}}

@@ -117,7 +117,7 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+{{#> callout type='info' heading='Watch the related courses on Hyland University'}}
 [Implement Business Logic](https://university.hyland.com/courses/e4055)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/implement-business-logic.png

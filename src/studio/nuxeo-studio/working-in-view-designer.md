@@ -16,8 +16,8 @@ If you have chosen the Web UI as your default interface you will need to become 
 
 Studio Designer application is integrated with Studio Modeler and brings with it all the configuration elements needed to quickly and easily create a custom WebUI interface, using Nuxeo Elements and HTML syntax.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Course on Document type layouts](https://university.hyland.com/courses/e4040)
 - [Course on Searches](https://university.hyland.com/courses/e4141)
 ![]({{file version='' space='nxdoc' page='university' name='university-search.png'}} ?w=450,border=true)

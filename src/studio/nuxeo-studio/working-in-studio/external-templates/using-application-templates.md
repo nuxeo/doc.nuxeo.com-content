@@ -80,8 +80,8 @@ history:
         message: ''
         version: '1'
 ---
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:<br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University:<br>
 [Expert Session on External Templates](https://university.hyland.com/courses/e4159).
 ![]({{file version='' space='nxdoc' page='university' name='university-external-template.png'}} ?w=450,border=true)
 {{/callout}}

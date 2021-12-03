@@ -70,7 +70,7 @@ Welcome on the Nuxeo Studio tutorials.
 
 The goal of this section is to provide ready to use examples. They can be followed step by step to learn how to use Studio on practical use cases. The section also aims at providing solutions to commonly encountered situations.
 
-{{#> callout type='info' heading='Nuxeo University'}}
+{{#> callout type='info' heading='Hyland University'}}
 [Nuxeo Studio Exercises](https://university.hyland.com/courses/e4127) &
 [Nuxeo Studio Learning Plan](https://university.hyland.com/learning-paths/l4181)</br>
 {{!--     ### nx_asset ###

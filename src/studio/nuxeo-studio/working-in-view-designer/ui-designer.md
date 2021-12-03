@@ -8,8 +8,8 @@ description:
 toc: true
 tree_item_index: 100
 ---
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
 ![]({{file name='university-quickstart-studio-project.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

@@ -82,7 +82,7 @@ The goal of this section is to provide ready to use examples. They can be follow
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo University'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Hyland University'}}
 
 - [Learning Plan on Nuxeo Studio](https://university.hyland.com/learning-paths/l4181)
 

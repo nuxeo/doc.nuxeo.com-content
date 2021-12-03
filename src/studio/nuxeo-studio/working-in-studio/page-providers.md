@@ -11,7 +11,7 @@ toc: true
 This feature is available for target platforms Nuxeo Platform LTS 2016 and above.
 {{/callout}}
 
-{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+{{#> callout type='info' heading='Watch the related courses on Hyland University'}}
 [Course on Searches with Nuxeo Studio Modeler and Designer](https://university.hyland.com/courses/e4141)</br>
 [Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
 ![]({{file version='' space='nxdoc' page='university' name='university-search2018.png'}} ?w=450,border=true)
