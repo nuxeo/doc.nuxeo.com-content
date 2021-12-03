@@ -286,8 +286,8 @@ history:
 ---
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
-- [Nuxeo Bulk Importer](https://university.hyland.com/courses/e4093) on Nuxeo University.
+Watch the related courses on Hyland University
+- [Nuxeo Bulk Importer](https://university.hyland.com/courses/e4093) on Hyland University.
 ![]({{file name='university-bulk-umporter.png' page='university'}} ?w=450,border=true)
 {{/callout}}
 

@@ -91,8 +91,8 @@ history:
 **Document-Based Storage** (DBS) allows storage of Nuxeo documents inside a document-oriented store, like MongoDB or MarkLogic.
 {{! /excerpt}}
 
-{{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info'  heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Video on Document Metadata from the Data Persistence course](https://university.hyland.com/courses/e4009)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/VCS/university_document_metadata.png

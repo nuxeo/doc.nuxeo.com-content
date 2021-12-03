@@ -117,8 +117,8 @@ In the Nuxeo Platform, a **directory** is used to provide an abstraction on all 
 *   Roles,
 *   ...
 
-{{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info'  heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Video on Directories from the Data Persistence course](https://university.hyland.com/courses/e4009)
 ![]({{file name='university_directories.png'}} ?w=450,border=true)
 {{/callout}}

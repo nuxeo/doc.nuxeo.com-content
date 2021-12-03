@@ -10,7 +10,7 @@ labels:
     - dam
     - lmcintyre
     - lts2017-ok
-toc: true 
+toc: true
 confluence:
     ajs-parent-page-id: '3866704'
     ajs-parent-page-title: Digital Asset Management (DAM)
@@ -141,21 +141,21 @@ Nuxeo Platform supports a large number of file formats: Office documents, pictur
 
 ## Introduction
 
-The file support table is based on the standard set of engines typically deployed with Nuxeo Platform. We have noted where other engines could be used. The standard engines are ImageMagick, FFMPEG, OpenOffice and accessing various embedded previews (referenced in the [Installing and Setting Up Related Software]({{page version='' space='nxdoc' page='installing-and-setting-up-related-software'}}) page). 
+The file support table is based on the standard set of engines typically deployed with Nuxeo Platform. We have noted where other engines could be used. The standard engines are ImageMagick, FFMPEG, OpenOffice and accessing various embedded previews (referenced in the [Installing and Setting Up Related Software]({{page version='' space='nxdoc' page='installing-and-setting-up-related-software'}}) page).
 
-In case there are format limitations: 
-- It is always possible to manage the native files and supply Nuxeo a readable preview (e.g. export from native app before upload). 
+In case there are format limitations:
+- It is always possible to manage the native files and supply Nuxeo a readable preview (e.g. export from native app before upload).
 - Nuxeo can integrate [new converters]({{page version='' space='nxdoc' page='how-to-contribute-a-command-line-converter'}}) and generate a new format which can be correctly interpreted.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University: [DAM Concepts](https://university.hyland.com/courses/e4098)
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University: [DAM Concepts](https://university.hyland.com/courses/e4098)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_dam.png
     name: university_dam.png
     addins#screenshot#up_to_date
 --}}
 ![university_dam.png](nx_asset://ed2467b9-4529-4cca-9843-0b46f8cd3d62 ?w=650,border=true)
-{{/callout}} 
+{{/callout}}
 
 ## File Support Table
 
@@ -759,15 +759,15 @@ Most audio formats are supported via [FFMPEG](https://www.ffmpeg.org/general.htm
 
 ### Artworks files / 3D format
 
-The [Nuxeo 3D addon]({{page version='' space='nxdoc' page='nuxeo-3d'}}) uses Blender as the render engine and three.js for the embedded viewer in Nuxeo Web UI. All formats are rendered into GTLF for display in the viewer and can natively read any of the above-referenced, Blender-supported formats. Formats that Blender can’t natively render are just supplied along with preview file for the preview. 
+The [Nuxeo 3D addon]({{page version='' space='nxdoc' page='nuxeo-3d'}}) uses Blender as the render engine and three.js for the embedded viewer in Nuxeo Web UI. All formats are rendered into GTLF for display in the viewer and can natively read any of the above-referenced, Blender-supported formats. Formats that Blender can’t natively render are just supplied along with preview file for the preview.
 
 {{#> callout type='info' heading='Compound Asset Support'}}
-Compound Asset Support refers to supporting a set of files as a single asset object while preserving the subcomponents as individual assets and recording the relationships among them all. This is especially important most 3D formats require a set of files. 
-{{/callout}} 
+Compound Asset Support refers to supporting a set of files as a single asset object while preserving the subcomponents as individual assets and recording the relationships among them all. This is especially important most 3D formats require a set of files.
+{{/callout}}
 
 {{#> callout type='warning' heading='NEV Support'}}
 The NEV Support is not provided for 3D files for now.
-{{/callout}} 
+{{/callout}}
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 <th colspan="1">Metadata extraction</th>

@@ -175,8 +175,8 @@ history:
         version: '1'
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University:</br>
 [Expert Session on Template Rendering Addon](https://university.hyland.com/courses/e4160)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Template Rendering/university-template-rendering.png

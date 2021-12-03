@@ -404,13 +404,13 @@ history:
         author: Manon Lumeau
         date: '2014-11-06 12:25'
         message: ''
-        version: '1'  
+        version: '1'
 ---
 
 Here we want to add some server side Java logic that will update the contract's renegotiation date. In our example it will simply take the contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class, including a connection to an external webservice or an ERP.
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University:
+Watch the related courses on Hyland University:
 - [Course on Nuxeo CLI](https://university.hyland.com/courses/e4037)
 - [Course on Nuxeo Platform Developer Basics](https://university.hyland.com/courses/e4112).
 - [Expert Session on Nuxeo Software Factory](https://university.hyland.com/courses/e4156)
@@ -559,7 +559,7 @@ This configures your Maven client to use authentication when accessing the Studi
   ? Constant class name: StudioConstant
   ```
 
-Nuxeo CLI generates a new Java class with a list of constants containing everything defined in your Studio application.  
+Nuxeo CLI generates a new Java class with a list of constants containing everything defined in your Studio application.
 By default, the Java class is created to:
 ```
 contract-mgt-project/contract-mgt-project-core/src/main/java/com/nuxeo/studio/StudioConstant.java

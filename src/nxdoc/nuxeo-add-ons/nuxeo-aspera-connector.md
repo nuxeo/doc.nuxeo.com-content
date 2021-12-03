@@ -18,8 +18,8 @@ enables users to upload/download binaries with the Aspera Connect client. It is 
 Contact your IBM Aspera team for more information and assistance.
 {{! /excerpt}}
 
-{{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related video on Nuxeo University:</br>
+{{#> callout type='info'  heading='Hyland University'}}
+Watch the related video on Hyland University:</br>
 [Product News on Nuxeo Aspera Connector](https://university.hyland.com/courses/e4010)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_aspera.png
@@ -245,7 +245,7 @@ Once the metadata has been edited to fit the user's needs, the transfer can be *
 
 Transfers have 3 functional states:
 - `Started`: content is being "uploaded"
-- `Pending`: content is being "created"  
+- `Pending`: content is being "created"
 - `Completed`: transfer has been completed and the content has been created in the system
 
 #### Using Aspera with Nuxeo

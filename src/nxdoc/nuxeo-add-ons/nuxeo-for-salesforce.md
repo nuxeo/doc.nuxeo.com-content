@@ -214,7 +214,7 @@ history:
 ---
 
 {{#> callout type='info' heading='University'}}
-Watch the related course on Nuxeo University:</br>
+Watch the related course on Hyland University:</br>
 [Nuxeo Salesforce Connector](https://university.hyland.com/courses/e4140)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_salesforce.png
@@ -269,7 +269,7 @@ To install the version of the unlocked salesforce package, that has been validat
 sfdx force:package:install -p SFpackageID -k nxapp@sfdc
 ```
 
-`SFpackageID` is the salesforce package version ID. You can ask to Nuxeo Support for getting the version ID required with the version of the Salesforce package you are installing.  
+`SFpackageID` is the salesforce package version ID. You can ask to Nuxeo Support for getting the version ID required with the version of the Salesforce package you are installing.
 
 
 ### Post Installation Setup
@@ -309,7 +309,7 @@ The CSP policy is not always taken into account immediately. To avoid some cache
 
 #### Create a Nuxeo Connection
 
-As a `Nuxeo_admins` user open the **Nuxeo** tab (this tab is only visible for Nuxeo_Admins) and follow the connection setup wizard. Don't forget to set the right username/password for the cURL call.  
+As a `Nuxeo_admins` user open the **Nuxeo** tab (this tab is only visible for Nuxeo_Admins) and follow the connection setup wizard. Don't forget to set the right username/password for the cURL call.
 
 {{#> callout type='note' }}
 You will need Nuxeo instance admin credentials.
@@ -497,7 +497,7 @@ You may want to disable the **Edit** user action if your users do not use Nuxeo 
 You can control which document tab, data section, document action or navigation actions are visible. If not specified or empty all items are visible.
 
 To specify a custom display, add under the `<library>`, `<Listing>` or `<search>` configuration:
-``` 	
+```
 	<doc-tabs>preview,data,history</doc-tabs>
 	<data-sections>metadata,business-metadata,attachments,renditions,mlt</data-sections>
 	<doc-actions>edit,open,download,upload,lock</doc-actions>
@@ -525,7 +525,7 @@ To configure the preview, add under the `<library>`, `<Listing>` or `<search>`:
       		// the doc object is an instance of the FileDoc class from force-app/main/default/lwc/nuxeoClient/model.js
       		// the doc.doc object is the Nuxeo document defined in nuxeo javascript client.
       		// Refer to FileDoc for more on the API it expose.
-      		// You can return null (or falsy) to let the client use the default rendition detection.         		
+      		// You can return null (or falsy) to let the client use the default rendition detection.
       		return {
       			viewer: "video" | "audio" | "image" | "pdf" | "html" | "text" | "binary",
       			rendition: renditionId

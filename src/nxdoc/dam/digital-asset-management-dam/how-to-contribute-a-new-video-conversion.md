@@ -81,8 +81,8 @@ Video conversions are used to fill the video conversions (stored in the `vid:tra
 
 Video conversions are simple XML contributions done on the [`videoConversions`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) extension point of the [`org.nuxeo.ecm.platform.video.service.VideoService`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.video.service.VideoService) component. The default video conversions launched after the creation of a Video document are declared in the [`automaticVideoConversions`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--automaticVideoConversions) extension point.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University: [DAM Concepts](https://university.hyland.com/courses/e4098)
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University: [DAM Concepts](https://university.hyland.com/courses/e4098)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_dam.png
     name: university_dam.png
@@ -218,7 +218,7 @@ To run the "WebM 480p" video conversion automatically:
 
 You can filter the video conversion execution the same way [picture conversions are filtered]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}}#filter-picture-conversions).
 
-### Disable or update a default conversion 
+### Disable or update a default conversion
 
 If you need to disable a default conversion, just override the [`videoConversions`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) extension point, and add the `enabled=false` attribute:
 
@@ -241,11 +241,11 @@ The default document view layout of Nuxeo Web UI displays the main file preview 
 <nuxeo-document-viewer role="widget" document="[[document]]"></nuxeo-document-viewer>
 ```
 
-- Add the `nuxeo-document-preview` element to fetch a specific rendition. 
+- Add the `nuxeo-document-preview` element to fetch a specific rendition.
 
 ```html
 <nuxeo-card>
-  <nuxeo-document-preview document="[[document]]" 
+  <nuxeo-document-preview document="[[document]]"
   xpath="vid:transcodedVideos/1/content">
   </nuxeo-document-preview>
 </nuxeo-card>
@@ -253,7 +253,7 @@ The default document view layout of Nuxeo Web UI displays the main file preview 
 
 The `1` value in the `xpath` attribute corresponds to the order of the picture conversion in the list of video conversions.
 
-### Set security on a specific conversion  
+### Set security on a specific conversion
 
 Use the same procedure as for [picture conversions]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}}#set-security-on-a-specific-conversion).
 
