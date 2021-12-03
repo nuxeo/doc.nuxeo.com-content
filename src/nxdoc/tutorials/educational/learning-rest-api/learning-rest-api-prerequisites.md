@@ -91,13 +91,13 @@ next_link: nxdoc/rest-api-principles
       <tr>
         <td>**Nuxeo Platform**</td>
         <td>
-          Understanding the [Nuxeo Platform's document concept](https://university.nuxeo.io/nuxeo/university/#!/course/using-nuxeo-platform/understanding-document-concept) is essential. Getting a grasp of the [main Nuxeo Platform functionalities](https://university.nuxeo.io/nuxeo/university/#!/course/using-nuxeo-platform) is highly recommended.
+          Understanding the [Nuxeo Platform's document concept](https://university.hyland.com/catalog?query=nuxeo%20platform/understanding-document-concept) is essential. Getting a grasp of the [main Nuxeo Platform functionalities](https://university.hyland.com/catalog?query=nuxeo%20platform) is highly recommended.
         </td>
       </tr>
       <tr>
         <td>**Nuxeo Studio**</td>
         <td>
-          Familiarity with the [main Nuxeo Studio functionalities](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio) is necessary, because you will call custom features created in Studio during this course.
+          Familiarity with the [main Nuxeo Studio functionalities](https://university.hyland.com/catalog?query=nuxeo%20studio) is necessary, because you will call custom features created in Studio during this course.
         </td>
       </tr>
       <tr>
@@ -160,7 +160,7 @@ Information about Nuxeo REST API can be found in various places. Here are some o
       <tr>
         <td>**REST API Video Course**</td>
         <td>
-          Available at Hyland University [REST API course](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api). Sign up for a free account in order to access the videos. It can help get you started quickly with Nuxeo REST API's main concepts, and gives the relevant links to go further.
+          Available at Hyland University [REST API course](https://university.hyland.com/courses/e4138). Sign up for a free account in order to access the videos. It can help get you started quickly with Nuxeo REST API's main concepts, and gives the relevant links to go further.
         </td>
       </tr>
     </tbody>

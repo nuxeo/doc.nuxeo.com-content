@@ -101,4 +101,4 @@ Now you can declare yours!
 
 **Call the content enricher**
 
-Now that the enricher is created, you need to [package and deploy your application](https://university.nuxeo.io/nuxeo/university/#!/course/nuxeo-platform-developer-basics/package-deploy-application), then you can [call it](#enrichers)! Your enricher name is the one you put inside the `NAME` variable.
+Now that the enricher is created, you need to [package and deploy your application](https://university.hyland.com/courses/e4135), then you can [call it](#enrichers)! Your enricher name is the one you put inside the `NAME` variable.
