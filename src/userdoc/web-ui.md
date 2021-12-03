@@ -10,8 +10,8 @@ tree_item_index: 100
 labels:
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Getting Started with Nuxeo Web UI](https://university.hyland.com/courses/e4051).
 ![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

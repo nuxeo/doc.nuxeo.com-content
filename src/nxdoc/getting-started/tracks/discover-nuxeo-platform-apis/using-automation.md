@@ -123,8 +123,8 @@ Leverage Automation and trigger business logic to obtain the contract and all of
 
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Course on Automation chains, Automation scripting and Events](https://university.hyland.com/courses/e4055)
 ![]({{file name='university-automation.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

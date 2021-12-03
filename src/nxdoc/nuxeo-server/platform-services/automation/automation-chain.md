@@ -137,8 +137,8 @@ You can use [Nuxeo Studio]({{page space='studio' page='automation'}}) for contri
 This page explains all the details of the necessary Platform contribution (that Studio produces) for an in-depth comprehension of the framework. Reading it is not necessary if you start with Automation.
 {{/callout}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Course on Automation chains, Automation scripting and Events](https://university.hyland.com/courses/e4055)
 ![]({{file name='university-automation.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

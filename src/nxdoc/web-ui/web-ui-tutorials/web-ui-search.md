@@ -32,7 +32,7 @@ Learn how to create a new search screen with an icon in the left menu. The searc
 {{! /excerpt}}
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University:</br>
+Watch the related courses on Hyland University:</br>
 [Course on Searches with Nuxeo Studio Modeler & Designer](https://university.hyland.com/courses/e4141)</br>
 [Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
 ![]({{file name='web-ui-search-university.png'}} ?w=450,border=true)

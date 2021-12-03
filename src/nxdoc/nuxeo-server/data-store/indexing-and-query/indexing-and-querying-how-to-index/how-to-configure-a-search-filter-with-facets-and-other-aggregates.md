@@ -235,8 +235,8 @@ Aggregation is a function where the data are grouped together according to certa
 
 Before you start using aggregates you may want to take a look to the document about the [different type of aggregates supported]({{page page='aggregate-widget-types'}}) and the [Page Provider]({{page page='page-provider-aggregates'}}).
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Configuring Searches in Nuxeo Studio Modeler & Designer](https://university.hyland.com/courses/e4141).
 ![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

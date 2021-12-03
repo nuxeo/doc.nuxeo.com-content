@@ -15,8 +15,8 @@ tree_item_index: 275
 
 {{{multiexcerpt 'lts2021-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
-{{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info'  heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Nuxeo Platform Quickstart](https://university.hyland.com/courses/e4113)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_quickstart.png

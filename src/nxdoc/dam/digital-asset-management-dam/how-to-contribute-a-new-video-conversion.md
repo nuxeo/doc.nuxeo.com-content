@@ -81,8 +81,8 @@ Video conversions are used to fill the video conversions (stored in the `vid:tra
 
 Video conversions are simple XML contributions done on the [`videoConversions`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) extension point of the [`org.nuxeo.ecm.platform.video.service.VideoService`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.video.service.VideoService) component. The default video conversions launched after the creation of a Video document are declared in the [`automaticVideoConversions`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--automaticVideoConversions) extension point.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University: [DAM Concepts](https://university.hyland.com/courses/e4098)
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University: [DAM Concepts](https://university.hyland.com/courses/e4098)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_dam.png
     name: university_dam.png

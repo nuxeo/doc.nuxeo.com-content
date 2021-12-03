@@ -18,7 +18,7 @@ The Nuxeo Enhanced Viewer addon allows users to preview and annotate any documen
 {{! /excerpt}}
 
 {{#> callout type='info' heading='University'}}
-Watch the related course on Nuxeo University:</br>
+Watch the related course on Hyland University:</br>
 [Nuxeo Enhanced Viewer - Product News](https://university.hyland.com/courses/e4044)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-nev.png

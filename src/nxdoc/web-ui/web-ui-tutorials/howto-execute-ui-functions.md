@@ -22,8 +22,8 @@ tree_item_index: 1250
 
 In this tutorial, you will learn how to execute UI functions after business logic execution. For example, when you create a custom button which triggers an automation chain, it is helpful to add a notification displayed upon the  successful (or unsuccessful) call of the operation.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 [Implement Business Logic](https://university.hyland.com/courses/e4055)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/implement-business-logic.png
