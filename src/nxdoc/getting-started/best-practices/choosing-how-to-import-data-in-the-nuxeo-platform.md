@@ -118,8 +118,8 @@ history:
 ---
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
-- [Data Capture - Import Strategies](https://university.hyland.com/courses/e4058) on Nuxeo University.
+Watch the related courses on Hyland University
+- [Data Capture - Import Strategies](https://university.hyland.com/courses/e4058) on Hyland University.
 ![]({{file name='university-data-capture.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
@@ -149,7 +149,7 @@ There can be several strategies to create documents:
 
 **Use the Java API server-side**
 * **Pros**: Transactional, multi-threaded and highly performant. It provides the ability to disable events processing and to bundle event processing
-* **Cons**: A bit more complex to understand logics, requires to deploy a server-side plugin for any customization.  
+* **Cons**: A bit more complex to understand logics, requires to deploy a server-side plugin for any customization.
 
 **Fill in the database directly** (SQL Scripts, MongoDB collections, ...)
 * **Pros**: The most performant

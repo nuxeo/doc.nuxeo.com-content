@@ -45,8 +45,8 @@ history:
 ---
 Since 7.1, there is a new converter class&nbsp;`CommandLineConverter`&nbsp;that can be used to contribute new converters executing a command line. A specific Java class calling the command line is not required anymore.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [DAM Configuration](https://university.hyland.com/courses/e4031).
 ![]({{file name='university-dam-configuration.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

@@ -178,7 +178,7 @@ Page providers allow retrieving items with pagination facilities, they can be us
 For an introduction to content views, please refer to the [Content Views]({{page page='content-views'}}) page.
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Hyland University
 - [Configuring Searches with Nuxeo Studio Modeler & Designer](https://university.hyland.com/courses/e4141).
 ![]({{file name='page-providers-university.png'}} ?w=450,border=true)
 {{/callout}}
@@ -252,7 +252,7 @@ A typical usage of this page provider, referenced in a content view, would be:
       <property name="coreSession">#{documentManager}</property>
       <property name="checkQueryCache">true</property>
       <parameter>#{currentDocument.id}</parameter>
-    </pageProvider>      
+    </pageProvider>
 
   </contentView>
 

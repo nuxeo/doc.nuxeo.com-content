@@ -27,7 +27,7 @@ After having created your own [document type]({{page page='web-ui-document-layou
 We will learn how to create a new search screen with an icon in the left menu. The search will be compose of a full text search, a search by date range, a search by owners and finally by tags.
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Hyland University
 - [Course on Searches with Nuxeo Studio Modeler & Designer](https://university.hyland.com/courses/e4141)
 - [Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
 ![]({{file name='web-ui-search-university.png'}} ?w=450,border=true)

@@ -12,8 +12,8 @@ toc: true
 tree_item_index: 2450
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Nuxeo Outlook Connector](https://university.hyland.com/courses/e4134)
 ![]({{file name='university-nuxeo-outlook.png' page='university'}} ?w=450,border=true)
 {{/callout}}
@@ -167,7 +167,7 @@ msiexec /i NuxeoOutlookIntegration.msi HOSTNAME="https://mynuxeoinstance.com/nux
 ```
 
 {{#> callout type='warning'}}
-Once the installation is done, make sure that the [Nuxeo IMAP connector]({{page version='' space='userdoc' page='nuxeo-imap-connector'}}) has been correctly installed on your instance, as the Nuxeo Outlook connector depends on it to work correctly.  
+Once the installation is done, make sure that the [Nuxeo IMAP connector]({{page version='' space='userdoc' page='nuxeo-imap-connector'}}) has been correctly installed on your instance, as the Nuxeo Outlook connector depends on it to work correctly.
 {{/callout}}
 
 #### Settings Migration From Previous Versions
@@ -578,12 +578,12 @@ First, deactivate that the document type is being loaded from the standard contr
 
 ```
 <!-- Test to overwrite the standard MailMessage document type with type File -->
-<require>com.itnovum.outlook-connector-core.mailmessage-documenttype-contrib</require>   
-<extension target="com.itnovum.outlookintegration.MailMessageDocumentTypeService" point="configuration">       
-	<documentType>           
-		<enabled>false</enabled>           
-		<type>MailMessage</type>       
-	</documentType>   
+<require>com.itnovum.outlook-connector-core.mailmessage-documenttype-contrib</require>
+<extension target="com.itnovum.outlookintegration.MailMessageDocumentTypeService" point="configuration">
+	<documentType>
+		<enabled>false</enabled>
+		<type>MailMessage</type>
+	</documentType>
 </extension>
 ```
 

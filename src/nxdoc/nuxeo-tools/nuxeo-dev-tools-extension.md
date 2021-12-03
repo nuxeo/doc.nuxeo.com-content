@@ -7,7 +7,7 @@ review:
     comment: ''
 labels:
     - lts2016-ok
-    - lts2017-ok  
+    - lts2017-ok
     - university
 tree_item_index: 200
 toc: true
@@ -19,7 +19,7 @@ The Nuxeo Dev Tools browser extension places some of the more commonly performed
 ![Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension.png'}} ?w=600,border=true)
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Hyland University
 - [Video on the Nuxeo Browser Extension](https://university.hyland.com/courses/e4037)
 {{/callout}}
 

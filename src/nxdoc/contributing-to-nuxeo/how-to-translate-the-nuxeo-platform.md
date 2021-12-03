@@ -302,8 +302,8 @@ history:
 ---
 Nuxeo supported modules handle English translations for each of their bundles. Other translations are managed on [Crowdin](https://crowdin.net/projects/nuxeo) and synchronized automatically with the Nuxeo source code.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Expert Session on Translations](https://university.hyland.com/courses/e4161).
 ![]({{file name='university-translations.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

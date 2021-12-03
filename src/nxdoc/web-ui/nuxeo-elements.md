@@ -44,7 +44,7 @@ DOM to be the "framework" and HTML to define the syntax. Therefore, there's no n
 although it should integrate with most frameworks without major problems. Sure, not all browsers fully support the Web Components spec **yet**, but there are polyfills to help in the meantime.
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Hyland University
 - [Introduction to Nuxeo Elements](https://university.hyland.com/courses/e4065)
 - [Expert Session on Nuxeo Elements Creation](https://university.hyland.com/courses/e4026)
 ![]({{file name='university-nuxeo-elements.png' page='nxdoc/university'}} ?w=450,border=true)

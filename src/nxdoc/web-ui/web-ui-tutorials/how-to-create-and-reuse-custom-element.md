@@ -24,7 +24,7 @@ tree_item_index: 500
 In this tutorial, you will learn how to create and reuse custom elements in Studio Designer thanks to Layout Blocks.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
+{{#> callout type='info' heading='Hyland University'}}
 Watch the course on [Nuxeo Web UI Development](https://university.hyland.com/courses/e4174)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/UNIVERSITY_SLOTS

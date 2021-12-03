@@ -19,7 +19,7 @@ Nuxeo CLI aims at making the whole development process easier with bootstraps fo
 {{! /excerpt}}
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Hyland University
 - [Course on Nuxeo CLI](https://university.hyland.com/courses/e4094)
 - [Expert Session on Nuxeo Software Factory](https://university.hyland.com/courses/e4156)
 ![]({{file name='university-nuxeo-cli.png' page='nxdoc/university'}} ?w=450,border=true)

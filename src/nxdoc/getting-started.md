@@ -173,7 +173,7 @@ These pages follow a specific order, make sure to respect it as some exercises d
 <div class="column">
 {{#> panel type='primary'}}
 
-[New to Nuxeo? Start Learning Nuxeo Platform with Nuxeo University Program!](https://university.hyland.com)
+[New to Nuxeo? Start Learning Nuxeo Platform with Hyland University Program!](https://university.hyland.com)
 
 {{/panel}}
 </div>
