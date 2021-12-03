@@ -296,7 +296,7 @@ There are two possible ways to deploy your application.
 
 1.  **Embedded mode**: having your AngularJS application into your Nuxeo Platform instance.
     ![]({{file name='Nuxeo and AngularJS - Embedded Web Application - New Page.png'}} ?w=600,border=true)
-    This setup is particularly interesting when using a [Nuxeo Cloud](http://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent. This solution is used by us for projects such as [Nuxeo University](https://university.nuxeo.io).
+    This setup is particularly interesting when using a [Nuxeo Cloud](http://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent. This solution is used by us for projects such as [Hyland University](https://university.hyland.com).
     This deployment mode is the one used in third step of the example above.
 2.  **Isolated mode**: keep your AngularJS web application separated from your Nuxeo Platform instance.
     ![]({{file name='Nuxeo and AngularJS - External Application - New Page.png'}} ?w=600,border=true)

@@ -131,7 +131,7 @@ history:
 ---
 {{> wistia_video id='qokay4hw1i'}}
 
-Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" at [Nuxeo University](https://university.nuxeo.io)
+Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" at [Hyland University](https://university.hyland.com)
 
 {{! excerpt}}
 
@@ -313,10 +313,10 @@ You can create a document of type File and attach to it a file uploaded to a giv
 
 ```text
 POST /api/v1/path/default-domain/workspaces/myworkspace
-{  
+{
   "entity-type": "document",
   "name":"myNewDoc",
-  "type": "File",  
+  "type": "File",
   "properties" : {
     "dc:title":"My new doc",
     "file:content": {

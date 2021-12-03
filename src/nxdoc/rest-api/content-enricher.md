@@ -251,7 +251,7 @@ history:
 ---
 {{> wistia_video id='ykaualv73f'}}
 
-Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)
+Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Hyland University](https://university.hyland.com)
 
 ## Pluggable Context
 
