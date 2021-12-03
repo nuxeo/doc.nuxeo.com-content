@@ -160,7 +160,7 @@ Information about Nuxeo REST API can be found in various places. Here are some o
       <tr>
         <td>**REST API Video Course**</td>
         <td>
-          Available at Nuxeo University [REST API course](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api). Sign up for a free account in order to access the videos. It can help get you started quickly with Nuxeo REST API's main concepts, and gives the relevant links to go further.
+          Available at Hyland University [REST API course](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api). Sign up for a free account in order to access the videos. It can help get you started quickly with Nuxeo REST API's main concepts, and gives the relevant links to go further.
         </td>
       </tr>
     </tbody>
