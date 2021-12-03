@@ -725,11 +725,9 @@ When Elasticsearch is enabled and the `audit.elasticsearch.enabled` property is 
 This improves scalability, especially when using Nuxeo Drive with a large set of users.
 
 {{#> callout type='warning' }}
-
 When Elasticsearch is used as a backend for audit logs it becomes the reference (no more SQL backend as it was the case in Nuxeo versions lower than 7.3).
 
 For this purpose make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}) page.
-
 {{/callout}}
 
 If you want to disable Elasticsearch and use the SQL database as the default backend for audit logs you can simply update this property in `nuxeo.conf`:
@@ -825,9 +823,7 @@ curl -s -X GET "<SERVER_URL>/nuxeo/api/v1/bulk/21aeaea1-0ef0-4a89-a92d-fa8f67936
 Nuxeo comes with a default mapping that sets the locale for full-text and declares some fields as being date or numeric.
 
 {{#> callout type='note' }}
-
 For fields that are not explicitly defined in the mapping, Elasticsearch will try to guess the type the first time it indexes the field. If the field is empty it will be treated as a String field. This is why most of the time you need to explicitly set the mapping for your custom fields that are of type date, numeric or full-text. Also fields that are used to sort and that could be empty need to be defined to prevent an unmapped field error.
-
 {{/callout}}
 
 The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-config.xml.nxftl`.
