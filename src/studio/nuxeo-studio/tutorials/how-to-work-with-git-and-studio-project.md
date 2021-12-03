@@ -20,7 +20,7 @@ tree_item_index: 1000
 Using Git in a Nuxeo Studio project and synchronizing your sources with a local instance makes the development process of custom elements (pages, menus, buttons...) faster.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
+{{#> callout type='info' heading='Hyland University'}}
 Watch the [Web UI Customization and Nuxeo Frontend Development](https://university.hyland.com/courses/e4174) University course.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/WEBUI_CUSTOMIZATION_FRONTEND_DEV
@@ -84,7 +84,7 @@ You should see the synchronization process, with `MKDIR`, `COPY` or `DELETED` in
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/How to Work with Git and Your Nuxeo Studio Project/Nuxeo_sync_result.png
     name: Nuxeo_sync_result.png
-    studio_modeler#screenshot#up_to_date  
+    studio_modeler#screenshot#up_to_date
 --}}
 ![Nuxeo_sync_result.png](nx_asset://078d268f-8f85-42b5-86ca-f2f67cb03893 ?w=650,border=true)
 
@@ -105,7 +105,7 @@ git clone https://connect.nuxeo.com/nuxeo/git/my-studio-project.git
 git pull feature/new-doctype
 ```
 1. Create your custom code.
-  - Example: Rework the document type layouts and add some custom client side validations rules  
+  - Example: Rework the document type layouts and add some custom client side validations rules
 
 Once finished, push your contributions:
 ```

@@ -122,7 +122,7 @@ Evolve safely, configurations compatibility with future versions is guaranteed.
 <div class="column medium-6" align="center">
 {{#> panel type='secondary' match_height='true'}}
 ### [Nuxeo Studio Quickstart](https://university.hyland.com/courses/e4113)
-Our Nuxeo University video dedicated to the discovery of Nuxeo Studio.
+Our Hyland University video dedicated to the discovery of Nuxeo Studio.
 {{/panel}}
 </div>
 <div class="column medium-6" align="center">

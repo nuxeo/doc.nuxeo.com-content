@@ -132,8 +132,8 @@ history:
         version: '1'
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related content in Nuxeo University:</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related content in Hyland University:</br>
 [Course on Content Model Design in Nuxeo Studio](https://university.hyland.com/courses/e4024)</br>
 [Expert Session on Content Modeling Options](https://university.hyland.com/courses/e4025)
 {{!--     ### nx_asset ###
@@ -168,7 +168,7 @@ To create a schema, click on **New**.
 
 {{#> callout type='note' heading='Schema names and prefixes'}}
   You should carefully choose your schema names and prefixes. There will be many references to them in your project (layouts, automation, NXQL queries). Nuxeo Studio doesn't yet handle completely schema refactoring. Furthermore, once you deployed, if you change a schema name or prefix, you will have to operate a data migration.
-  We suggest you to use name like **my_schema_name** (lowercase, word separated by an underscore) for the feature id and something shorter for the prefix like **msn**. See the [Naming Conventions]({{page page='naming-conventions'}}) page for more tips on ids and names recommendation in Nuxeo Studio.  
+  We suggest you to use name like **my_schema_name** (lowercase, word separated by an underscore) for the feature id and something shorter for the prefix like **msn**. See the [Naming Conventions]({{page page='naming-conventions'}}) page for more tips on ids and names recommendation in Nuxeo Studio.
 {{/callout}}
 
 **Advanced configuration**

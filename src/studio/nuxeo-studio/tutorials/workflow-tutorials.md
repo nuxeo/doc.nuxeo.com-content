@@ -67,8 +67,8 @@ The company OhMyDoc has decided to set up a validation workflow for its press re
 </div>
 </div>
 
-{{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info'  heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Course on Nuxeo Workflow Configuration](https://university.hyland.com/courses/e4176)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-wf.png

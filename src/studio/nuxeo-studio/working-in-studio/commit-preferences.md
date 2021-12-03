@@ -103,7 +103,7 @@ history:
     version: '1'
 ---
 
-{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+{{#> callout type='info' heading='Watch the related courses on Hyland University'}}
 [Course on Branch Management](https://university.hyland.com/courses/e4012).
 ![]({{file version='' space='nxdoc' page='university' name='university-source-control.png'}} ?w=450,border=true)
 {{/callout}}

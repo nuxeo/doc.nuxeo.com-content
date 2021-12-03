@@ -87,7 +87,7 @@ Nuxeo Studio includes an Application Templates library composed of Studio projec
 {{! /excerpt}}
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University<br>[Expert Session on the Video Utils External Template](https://university.hyland.com/courses/e4159)<br>[Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
+Watch the related courses on Hyland University<br>[Expert Session on the Video Utils External Template](https://university.hyland.com/courses/e4159)<br>[Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/External Template/University Videoutils
     name: university_videoutils.png

@@ -119,7 +119,7 @@ history:
 The [Scheduler Service](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewService/org.nuxeo.ecm.core.scheduler.SchedulerService) is a Nuxeo Platform service to schedule events at periodic times. This is the best way in Nuxeo Platform to execute things every night, every hour, every five minutes, or at whatever granularity you require.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+{{#> callout type='info' heading='Watch the related courses on Hyland University'}}
 [Implement Business Logic](https://university.hyland.com/courses/e4055)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/implement-business-logic.png

@@ -132,8 +132,8 @@ history:
 
 {{/panel}}</div></div>
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Course on Nuxeo Developer Basics](https://university.hyland.com/courses/e4112).
 ![]({{file space='nxdoc' page='university' name='university-dev.png'}} ?w=450,border=true)
 {{/callout}}

@@ -131,8 +131,8 @@ history:
 
 After you have completed a first version of your project and it goes live, you can leverage the [advanced branch management features]({{page page='branch-management'}}) of Nuxeo Studio to separate maintenance developments from evolution development.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Course on Branch Management](https://university.hyland.com/courses/e4012).
 ![]({{file version='' space='nxdoc' page='university' name='university-source-control.png'}} ?w=450,border=true)
 {{/callout}}

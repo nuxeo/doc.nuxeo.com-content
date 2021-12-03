@@ -18,8 +18,8 @@ tree_item_index: 40
 Document facets can be attached dynamically to implement specific business logic.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related content in Nuxeo University:</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related content in Hyland University:</br>
 [Course on Content Model Design in Nuxeo Studio](https://university.hyland.com/courses/e4024)</br>
 [Expert Session on Content Modeling Options](https://university.hyland.com/courses/e4025)
 {{!--     ### nx_asset ###

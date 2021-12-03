@@ -124,7 +124,7 @@ See [http://en.wikipedia.org/wiki/Continuous_Integration](http://en.wikipedia.or
 It's as important to follow quality processes on development as to maintain this quality among time. Nuxeo is involved in such practices that will guarantee or reinforce its products quality.
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Hyland University
 - [Expert Session on the Nuxeo Software Factory](https://university.hyland.com/courses/e4156)
 ![]({{file name='software_factory.png'}} ?w=450,border=true)
 {{/callout}}

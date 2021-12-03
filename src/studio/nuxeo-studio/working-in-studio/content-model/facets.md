@@ -11,7 +11,7 @@ toc: true
 tree_item_index: 250
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
+{{#> callout type='info' heading='Hyland University'}}
 Watch the expert session on [Content Modeling Options](https://university.hyland.com/courses/e4025):</br>
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/content-modeling-options.png
