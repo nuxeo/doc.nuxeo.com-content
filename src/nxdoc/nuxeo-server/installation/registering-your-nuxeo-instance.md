@@ -183,8 +183,8 @@ Registering your Nuxeo application with [Nuxeo Online Services]({{page space='st
 
 The registration process only copies a file on your file system. This enables the Nuxeo Online Services portal to identify the instance among all the registered instances. You can register multiple instances.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Video on Nuxeo Studio Concepts](https://university.hyland.com/courses/e4117)
 ![]({{file name='university-nuxeo-studio-concepts.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

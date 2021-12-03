@@ -104,8 +104,8 @@ history:
 
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Video on Setting up a File Download Security Policy](https://university.hyland.com/courses/e4151).
 ![]({{file name='university-security-policy.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

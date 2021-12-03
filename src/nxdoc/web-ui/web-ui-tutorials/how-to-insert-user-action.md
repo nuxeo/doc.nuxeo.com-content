@@ -25,8 +25,8 @@ tree_item_index: 1300
 In this tutorial you will learn how to insert a user action on your instance using Studio Designer, to easily validate documents.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
 ![]({{file name='university-quickstart-studio-project.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
@@ -67,5 +67,5 @@ On Studio Designer, go on the **UI** tab:
 
 ![]({{file name='drop-down-menu-validate.png'}} ?w=200,border=true)
 
-On a Contract document type that you want to validate (change status from Project to Approved), click on your brand new **Validate** button in the action toolbar and refresh your page.  
+On a Contract document type that you want to validate (change status from Project to Approved), click on your brand new **Validate** button in the action toolbar and refresh your page.
 Your contract is approved! The button disappeared as the status has changed.

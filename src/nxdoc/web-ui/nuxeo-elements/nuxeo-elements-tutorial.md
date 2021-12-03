@@ -21,7 +21,7 @@ will be able to read documents from a Nuxeo instance.  You'll learn how to creat
 improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University:</br>
+Watch the related courses on Hyland University:</br>
 [Introduction to Nuxeo Elements](https://university.hyland.com/courses/e4065)
 ![]({{file name='university-nuxeo-elements.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

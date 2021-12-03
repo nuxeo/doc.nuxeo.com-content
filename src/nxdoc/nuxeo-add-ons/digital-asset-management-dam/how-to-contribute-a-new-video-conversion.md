@@ -75,8 +75,8 @@ history:
 Let's see how to contribute a new video conversion to convert a video to WebM format (assuming all the needed codecs are installed with FFmpeg).
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [DAM Configuration](https://university.hyland.com/courses/e4031).
 ![]({{file name='university-dam-configuration.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}

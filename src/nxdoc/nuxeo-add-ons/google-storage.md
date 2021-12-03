@@ -19,7 +19,7 @@ The [Google Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/go
 {{! /excerpt}}
 
 {{#> callout type='info' heading='University'}}
-Watch the related courses on Nuxeo University:</br>
+Watch the related courses on Hyland University:</br>
 [Nuxeo Google Storage - Product News](https://university.hyland.com/courses/e4052)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Google Storage/university-google-storage.png

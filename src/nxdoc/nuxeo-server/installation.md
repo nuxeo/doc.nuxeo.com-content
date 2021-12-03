@@ -314,8 +314,8 @@ Installing the Nuxeo Platform requires a few steps:
     - [Installing the Nuxeo Platform on Mac OS]({{page page='installing-the-nuxeo-platform-on-mac-os'}})
 4.  Run the [Configuration Wizard]({{page page='configuration-wizard'}}) (not in the case of a standard static WAR).
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Video on the Installation Concepts](https://university.hyland.com/courses/e4115)
 - [Screenshare on the Installation Process](https://university.hyland.com/courses/e4116).
 ![]({{file name='university-installation.png' page='nxdoc/university'}} ?w=450,border=true)

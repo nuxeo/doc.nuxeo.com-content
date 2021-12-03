@@ -252,8 +252,8 @@ This page details standard architecture options to deploy a Nuxeo cluster.
 This page assumes you already are familiar with the different components of a Nuxeo cluster. If not, you should have a look at our [Nuxeo architecture introduction]({{page page='nuxeo-cluster-architecture-introduction'}}) page first.
 {{/callout}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Expert Session on Disaster Recovery](https://university.hyland.com/courses/e4038).
 ![]({{file name='university_disaster_recovery.png'}} ?w=450,border=true)
 {{/callout}}

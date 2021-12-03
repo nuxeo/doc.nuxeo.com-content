@@ -296,8 +296,8 @@ history:
 
 ---
 
-{{#> callout type='info' heading='Nuxeo University' }}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University' }}
+Watch the related courses on Hyland University
 - [Course on Document Type Layouts with Studio Designer](https://university.hyland.com/courses/e4040)
 - [Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
 - [Exercises on Nuxeo Studio](https://university.hyland.com/courses/e4127)
@@ -435,7 +435,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
 
         {{/callout}}
 
-## Content Type Deployment        
+## Content Type Deployment
 
 1.  Click on **Save** to save your configuration.
 2.  After you deploy your customization on the your Nuxeo Platform instance, your new document type is displayed in the **Available document type** popup window.
