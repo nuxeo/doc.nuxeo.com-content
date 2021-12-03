@@ -550,7 +550,7 @@ The Nuxeo REST API offers several additional features compared to a standard RES
 ## Learn more
 
 *   Visit the [Nuxeo API playground](http://nuxeo.github.io/api-playground/) to experiment with different endpoints on your Nuxeo instance. You can read the [Nuxeo Platform API Playground documentation page ]({{page page='howto-nuxeo-api-playground'}}) for more information on how to use it.
-*   Follow our [Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api) course at [Hyland University](https://university.hyland.com).
+*   Follow our [Working with the REST API](https://university.hyland.com/courses/e4138) course at [Hyland University](https://university.hyland.com).
 *   Follow a cURL tutorial on how to [create a document in the repository and bind a binary to it]({{page page='howto-upload-file-nuxeo-using-rest-api'}})
 *   Check out some [consecutive cURL calls to get familiar with the resources/command variations of the API]({{page page='using-curl'}})
 *   Read a [blog post](http://blogs.nuxeo.com/development/2013/10/building-pluggable-rest-api/) that discusses advanced concepts of Nuxeo REST API with a few examples.
