@@ -333,7 +333,7 @@ GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:conte
 ```
 ## Learn More
 
-*   Follow the courses [Importing Files with the REST API](https://university.hyland.com/courses/e4060) and [Data Capture / REST API Import](https://university.hyland.com/courses/e4058) at [Nuxeo University](https://university.hyland.com).
+*   Follow the courses [Importing Files with the REST API](https://university.hyland.com/courses/e4060) and [Data Capture / REST API Import](https://university.hyland.com/courses/e4058) at [Hyland University](https://university.hyland.com).
 
 * * *
 

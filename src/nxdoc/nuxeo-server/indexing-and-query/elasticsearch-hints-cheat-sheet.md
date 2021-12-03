@@ -81,8 +81,8 @@ history:
 This page lists interesting use cases of Elasticsearch Hints.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the [related course](https://university.hyland.com/courses/e4141) on Nuxeo University.
+{{#> callout type='info' heading='Hyland University'}}
+Watch the [related course](https://university.hyland.com/courses/e4141) on Hyland University.
 {{/callout}}
 
 ## Fuzzy Search on Full Text Index

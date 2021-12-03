@@ -161,7 +161,7 @@ history:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.hyland.com/courses/e4150) on Nuxeo University.
+Follow the related [video course and exercises](https://university.hyland.com/courses/e4150) on Hyland University.
 {{/callout}}
 
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute

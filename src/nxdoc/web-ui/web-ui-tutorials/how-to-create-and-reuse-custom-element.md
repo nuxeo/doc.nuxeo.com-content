@@ -22,7 +22,7 @@ tree_item_index: 1200
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.hyland.com/courses/e4040) on Nuxeo University.
+Follow the related [video course and exercises](https://university.hyland.com/courses/e4040) on Hyland University.
 {{/callout}}
 
 {{! excerpt}}

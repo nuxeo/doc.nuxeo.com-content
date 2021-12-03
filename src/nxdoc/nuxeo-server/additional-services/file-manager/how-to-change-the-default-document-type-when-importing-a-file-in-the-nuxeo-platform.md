@@ -131,7 +131,7 @@ This mechanism is also valid with any document type inherited from File, as Pict
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [DAM Configuration](https://university.hyland.com/courses/e4031) video on Nuxeo University : Learn how to type a file as Picture according to its file extension.
+*   [DAM Configuration](https://university.hyland.com/courses/e4031) video on Hyland University : Learn how to type a file as Picture according to its file extension.
 
 {{/callout}}
 

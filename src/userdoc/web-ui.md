@@ -12,7 +12,7 @@ labels:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.hyland.com/courses/e4051) on Nuxeo University.
+Follow the related [video course and exercises](https://university.hyland.com/courses/e4051) on Hyland University.
 {{/callout}}
 
 {{{multiexcerpt 'webui-functional-overview' space='nxdoc' page='Web UI Overview'}}}

@@ -112,7 +112,7 @@ history:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.hyland.com/courses/e4058) on Nuxeo University.
+Follow the related [video course and exercises](https://university.hyland.com/courses/e4058) on Hyland University.
 {{/callout}}
 
 {{{excerpt 'NXDOC:Nuxeo CSV'}}}

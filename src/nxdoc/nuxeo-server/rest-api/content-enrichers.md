@@ -1252,7 +1252,7 @@ Don't forget to set the proper header to use this enricher:
 
 ## Learn More
 
-*   Watch the video [Using Content Enrichers](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/using-content-enrichers) as part of the [REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api) course at [Nuxeo University](https://university.nuxeo.io).
+*   Watch the video [Using Content Enrichers](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/using-content-enrichers) as part of the [REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api) course at [Hyland University](https://university.hyland.com).
 *   Use [Nuxeo CLI]({{page page='nuxeo-cli'}}) to bootstrap your Content Enricher.
 *   Test these content enrichers on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 *   Checkout the Nuxeo REST API explorer of your instance at `http://NUXEO_SERVER/nuxeo/api/v1/doc`.

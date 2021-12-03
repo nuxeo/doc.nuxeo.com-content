@@ -22,8 +22,8 @@ You can also find detailed JIRA release notes:
 
 We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-lts-2017'}}) to the latest release.
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [LTS2017 Introduction course](https://university.hyland.com/courses/e4072-introduction).
 ![]({{file name='university-lts2017.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
@@ -861,7 +861,7 @@ A new layout has been implemented for pictures so as to display all picture rela
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20282](https://jira.nuxeo.com/browse/NXP-20282).
 
-### Nuxeo Drive  
+### Nuxeo Drive
 
 #### Server-Side Configuration Of Drive Clients {{since '9.3'}}
 
@@ -1023,7 +1023,7 @@ A new search result view has been added on the main search. It displays items on
 
 #### Results Highlight in Suggestion Search {{since '9.2'}}
 
-When doing a quick search in the suggestion box, Web UI now displays the matched terms and metadata so as to understand why the result item is returned.  
+When doing a quick search in the suggestion box, Web UI now displays the matched terms and metadata so as to understand why the result item is returned.
 
 ![Web UI 9.2 suggestion search results hightlights]({{file name='9.2-suggestion-search-results-highlight.png'}} ?w=400,border=true)
 

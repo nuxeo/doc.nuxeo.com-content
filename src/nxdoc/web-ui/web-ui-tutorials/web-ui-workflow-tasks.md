@@ -23,7 +23,7 @@ tree_item_index: 600
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.hyland.com/courses/e4040) on Nuxeo University.
+Follow the related [video course and exercises](https://university.hyland.com/courses/e4040) on Hyland University.
 {{/callout}}
 
 In this tutorial you will learn how to create a custom workflow tasks layout in Studio Designer. We'll be using a custom validation workflow template linked to the Contract document type.
@@ -80,7 +80,7 @@ We can now customize our layout on Studio Designer.
     min-chars="0">
 </nuxeo-directory-suggestion>
 ```
-1. Save your changes.  
+1. Save your changes.
 
 You can now deploy your project on your instance and see what it looks like!
 ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='contract-validation-process-web-ui.png'}} ?w=350,border=true)
