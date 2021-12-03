@@ -13,12 +13,12 @@ tree_item_index: 300
 {{! excerpt}}
 Nuxeo Stream aims to provide asynchronous and distributed processing, there are different layers:
 - A Log storage abstraction with a Chronicle Queue and Kafka implementations
-- A library to provide processing patterns without dependencies on Nuxeo  
+- A library to provide processing patterns without dependencies on Nuxeo
 - Nuxeo services to configure Kafka, streams and processor using Nuxeo extension point.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Video on Streams from the Data Persistence course](https://university.hyland.com/courses/e4009).
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Kafka/university_streams.png

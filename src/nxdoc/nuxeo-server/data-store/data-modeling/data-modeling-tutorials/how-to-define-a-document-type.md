@@ -297,8 +297,8 @@ history:
 
 ---
 
-{{#> callout type='info' heading='Nuxeo University' }}
-Watch the related courses on Nuxeo University:
+{{#> callout type='info' heading='Hyland University' }}
+Watch the related courses on Hyland University:
 - [Course on Document Type Layouts with Studio Designer](https://university.hyland.com/courses/e4040)
 - [Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
 - [Exercises on Nuxeo Studio](https://university.hyland.com/courses/e4127)

@@ -254,8 +254,8 @@ The goals of **Visible Content Store** (VCS) are to:
 - Support full-text searches on databases having that capability.
 - Have some flexibility in the storage model to optimize certain cases at configuration time.
 
-{{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
+{{#> callout type='info'  heading='Hyland University'}}
+Watch the related courses on Hyland University:</br>
 [Video on Document Metadata from the Data Persistence course](https://university.hyland.com/courses/e4009)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/VCS/university_document_metadata.png

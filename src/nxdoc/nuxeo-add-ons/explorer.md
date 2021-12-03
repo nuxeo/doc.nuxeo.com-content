@@ -12,8 +12,8 @@ tree_item_index: 630
 
 [Explorer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer) is a Nuxeo addon that allows to introspect the [Nuxeo Runtime Configuration]({{page page='runtime-and-component-model'}}) of the live application, export it as a *distribution*, and import similar distributions for reference and documentation.
 
-{{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related expert session on Nuxeo University:</br>
+{{#> callout type='info'  heading='Hyland University'}}
+Watch the related expert session on Hyland University:</br>
 [Nuxeo Explorer Expert Session](https://university.hyland.com/courses/e4100)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-explorer-expert-session

@@ -15,8 +15,8 @@ tree_item_index: 100
 In order to help you find the documents that you need, the Nuxeo Platform features several options to access, create and edit documents.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University</br>
 [Getting started with Nuxeo Web UI](https://university.hyland.com/courses/e4051)</br>
 [Importing Documents in the Nuxeo Platform](https://university.hyland.com/courses/e4058)</br>
 ![]({{file name='university-webui.png' page='university'}} ?w=450,border=true)

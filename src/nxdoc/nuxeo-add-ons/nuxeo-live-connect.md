@@ -251,8 +251,8 @@ history:
 Browsers that block pop-ups may affect the behavior of Nuxeo Live Connect. If you face any difficulties, make sure to check your browser settings.
 {{/callout}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Live Connect](https://university.hyland.com/courses/e4163)
   ![]({{file name='university-live-connect.png' page='university'}} ?w=450,border=true)
 {{/callout}}

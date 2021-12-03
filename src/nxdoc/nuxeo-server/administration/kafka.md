@@ -15,8 +15,8 @@ tree_item_index: 1100
 Kafka configuration and integration with Nuxeo.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related course on Nuxeo University:</br>
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related course on Hyland University:</br>
 [Course on Nuxeo Stream](https://university.hyland.com/courses/e4121).
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-stream.png

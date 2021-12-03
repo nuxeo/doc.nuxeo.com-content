@@ -119,15 +119,15 @@ So, to create a document of your own type, you have to set the `docType` attribu
 <require>org.nuxeo.ecm.platform.picture.filemanager.contrib</require>
 
 <extension target="org.nuxeo.ecm.platform.filemanager.service.FileManagerService" point="plugins">
-  <plugin class="org.nuxeo.ecm.platform.filemanager.service.extension.DefaultFileImporter" name="ContractImporter" order="1" docType="Contract">       
-      <filter>application/msword</filter>   
-      <filter>application/vnd.openxmlformats-officedocument.wordprocessingml.document</filter>       
-      <filter>application/pdf</filter>           
+  <plugin class="org.nuxeo.ecm.platform.filemanager.service.extension.DefaultFileImporter" name="ContractImporter" order="1" docType="Contract">
+      <filter>application/msword</filter>
+      <filter>application/vnd.openxmlformats-officedocument.wordprocessingml.document</filter>
+      <filter>application/pdf</filter>
   </plugin>
 
   <plugin class="org.nuxeo.ecm.platform.filemanager.service.extension.DefaultFileImporter" name="DefaultFileImporter" order="100">
     <filter>.*</filter>
-  </plugin>   
+  </plugin>
 </extension>
 ```
 
@@ -149,7 +149,7 @@ It is necessary to pay attention to the following settings:
 This mechanism is also valid with any document type inherited from File, as Picture, Audio or Video.
 
 {{#> callout type='info' heading='Learn more'}}
-[DAM Configuration](https://university.hyland.com/courses/e4031) video on Nuxeo University: Learn how to type a file as Picture according to its file extension.
+[DAM Configuration](https://university.hyland.com/courses/e4031) video on Hyland University: Learn how to type a file as Picture according to its file extension.
 {{/callout}}
 
 * * *

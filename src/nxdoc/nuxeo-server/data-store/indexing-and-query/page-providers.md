@@ -175,7 +175,7 @@ Page providers allow retrieving items with pagination facilities, they can be us
 {{! /excerpt}}
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Hyland University
 - [Configuring Searches with Nuxeo Studio Modeler & Designer](https://university.hyland.com/courses/e4141).
 ![]({{file name='page-providers-university.png'}} ?w=450,border=true)
 {{/callout}}

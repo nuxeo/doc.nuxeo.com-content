@@ -130,8 +130,8 @@ history:
 The Nuxeo Platform allows you to [upload binaries under a given "batch ID"]({{page page='batch-upload-endpoint'}}) on the server and then reference the batch ID when posting a document resource, or for fetching it from a custom Automation chain. For instance if you need to create a file with some binary content, first you have to upload the file into the `BatchManager`. It's a place on the system where you can upload temporary files to bind them later.
 {{! /excerpt}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+{{#> callout type='info' heading='Hyland University'}}
+Watch the related courses on Hyland University
 - [Nuxeo REST API Import](https://university.hyland.com/courses/e4120).
 ![]({{file name='university-rest-api-importer.png' page='university'}} ?w=450,border=true)
 {{/callout}}
@@ -355,7 +355,7 @@ Documentation can be found [here](https://doc.nuxeo.com/nxdoc/batch-upload-endpo
 
 ## Learn More
 
-- Follow the courses [Importing Files with the REST API](https://university.hyland.com/courses/e4060) and [Importing Documents / REST API Import](https://university.hyland.com/courses/e4058) at [Nuxeo University](https://university.hyland.com).
+- Follow the courses [Importing Files with the REST API](https://university.hyland.com/courses/e4060) and [Importing Documents / REST API Import](https://university.hyland.com/courses/e4058) at [Hyland University](https://university.hyland.com).
 
 * * *
 
