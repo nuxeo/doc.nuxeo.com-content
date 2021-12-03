@@ -121,4 +121,4 @@ history:
         version: '1'
 
 ---
-You can go to [Nuxeo University](http://university.nuxeo.io) website to start a cursus and become a Nuxeo Platform expert!
+You can go to [Hyland University](http://university.nuxeo.io) website to start a cursus and become a Nuxeo Platform expert!

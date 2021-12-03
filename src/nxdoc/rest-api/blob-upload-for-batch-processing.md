@@ -149,7 +149,7 @@ history:
         date: '2013-07-03 15:19'
         message: >-
             Reported changes from 5.6 documentation on Content-Type and
-            Content-Length headers and fileIdx parameter.  
+            Content-Length headers and fileIdx parameter.
         version: '8'
     -
         author: Solen Guitter
@@ -190,7 +190,7 @@ history:
 ---
 {{> wistia_video id='qokay4hw1i'}}
 
-Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Nuxeo University](https://university.nuxeo.io)
+Extract from the course "[Working with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api)" on [Hyland University](https://university.hyland.com)
 
 ## Motivations
 
