@@ -710,7 +710,6 @@ Also, you have to manually delete old repository indexes when reindexing is comp
 {{/callout}}
 
 
-{{/callout}}
 ## Disabling Elasticsearch
 
 Elasticsearch is enabled by default, if you want to disable Elasticsearch indexing and search you can simply add the following option to the `nuxeo.conf`:
@@ -726,11 +725,9 @@ When Elasticsearch is enabled and the `audit.elasticsearch.enabled` property is 
 This improves scalability, especially when using Nuxeo Drive with a large set of users.
 
 {{#> callout type='warning' }}
-
 When Elasticsearch is used as a backend for audit logs it becomes the reference (no more SQL backend as it was the case in Nuxeo versions lower than 7.3).
 
 For this purpose make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}) page.
-
 {{/callout}}
 
 If you want to disable Elasticsearch and use the SQL database as the default backend for audit logs you can simply update this property in `nuxeo.conf`:
@@ -739,19 +736,45 @@ If you want to disable Elasticsearch and use the SQL database as the default bac
 audit.elasticsearch.enabled=false
 ```
 
-## Rebuilding the Repository Index
+## Rebuilding the Repository Index{{> anchor 'reindex'}}
 
-If you need to reindex the whole repository, you can do this from the **Admin** > **Elasticsearch** > **Admin** tab.
+If you need to reindex the whole repository, you have different possibilities:
 
-You can fine tune the indexing process using the following options:
+### Re-index the Repository Using the WorkManager (the legacy way)
 
-*   Sizing the indexing worker thread pool. The default size is 4, using more threads will crawl the repository faster:
+There are 3 ways to run it:
+
+1. From the [Nuxeo Dev Tool Browser Extension]({{page page='nuxeo-dev-tools-extension'}}#features).
+
+2. From JSF UI > Admin center > Elasticsearch > Admin
+
+3. Using `curl`
+
+```bash
+curl -X POST "<NUXEO_URL>/nuxeo/site/automation/Elasticsearch.Index" -u Administrator:<PASSWORD> -H 'content-type: application/json' -d '{"params":{},"context":{}}'
+```
+
+Look at the `server.log` you should have 3 WARNs in the logs:
+```
+# start of re-indexing
+WARN  [http-nio-0.0.0.0-8080-exec-31] [org.nuxeo.elasticsearch.web.admin.ElasticSearchManager] Re-indexing the entire repository: default
+...
+# all the repository have been scrolled we know how much document are going to be re-indexed
+WARN  [Nuxeo-Work-elasticSearchIndexing-1:785116626625974.1486048658] [org.nuxeo.elasticsearch.work.ScrollingIndexingWorker] Re-indexing job: /elasticSearchIndexing:785116626625974.1486048658 has submited 270197 documents in 541 bucket workers
+...
+# end of the re-indexing
+WARN  [Nuxeo-Work-elasticSearchIndexing-1:785120666169686.1890981267] [org.nuxeo.elasticsearch.work.BucketIndexingWorker] Re-indexing job: /elasticSearchIndexing:785116626625974.1486048658 completed.
+```
+
+You can fine tune the WorkManager indexing process using the following options:
+
+* Sizing the indexing worker thread pool. The default size is `4`, using more threads will crawl the repository faster:
 
     ```
     elasticsearch.indexing.maxThreads=4
     ```
 
-*   Tuning the number of documents per worker and the number of document submitted using the Elasticsearch bulk API:
+* Tuning the number of documents per worker and the number of document submitted using the Elasticsearch bulk API:
 
     ```
     # Reindexing option, number of documents to process per worker
@@ -760,9 +783,6 @@ You can fine tune the indexing process using the following options:
     elasticsearch.reindex.bucketWriteSize=50
     ```
 
-<<<<<<< HEAD
-## Changing the Mappings and Settings of Indexes
-=======
 ### Re-index Repository Using Bulk Service{{> anchor 'reindexing-bulk'}}
 
 Run a bulk command to re-index the repository, the command id is returned:
@@ -796,16 +816,14 @@ curl -s -X GET "<SERVER_URL>/nuxeo/api/v1/bulk/21aeaea1-0ef0-4a89-a92d-fa8f67936
 }
 ```
 
->>>>>>> e9727f534 (NXDOC-2399: reindexing without service interruption)
+## Changing the Mappings and Settings of Indexes
 
 ### Updating the Repository Index Configuration
 
 Nuxeo comes with a default mapping that sets the locale for full-text and declares some fields as being date or numeric.
 
 {{#> callout type='note' }}
-
 For fields that are not explicitly defined in the mapping, Elasticsearch will try to guess the type the first time it indexes the field. If the field is empty it will be treated as a String field. This is why most of the time you need to explicitly set the mapping for your custom fields that are of type date, numeric or full-text. Also fields that are used to sort and that could be empty need to be defined to prevent an unmapped field error.
-
 {{/callout}}
 
 The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-config.xml.nxftl`.
