@@ -679,22 +679,37 @@ Where
 You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/server/nuxeo-nxr-server/src/main/resources/templates/common-base/nuxeo.defaults).
 
 
-#### Index Aliases
+#### Index Aliases and Reindexing without Service Interruption
 
-Nuxeo supports repository index aliases.  This allows you to distinguish the read index from the write index. To enable this feature set `manageAlias` to `true` in the default template (`elasticsearch-config.xml.nxftl`).
-```xml
-<elasticSearchIndex name="${elasticsearch.indexName}" type="doc" repository="default" manageAlias="true">
-```
+Reindexing the repository can be a long operation depending on the size of the repository.
+This is an administrative procedure that is required in order to apply a new Elastic mapping or setting.
 
-When `manageAlias` is `true`, Nuxeo will manage 2 aliases: one for searching using the name of the contrib (default to `nuxeo`), one for writing with a "-write" suffix (`nuxeo-write`), both aliases will point to the same index (`nuxeo-0000`).  The index name ends with a number and is automatically incremented when a new index is created.
+By default, when Nuxeo performs a reindex of the repository, it deletes and re-create the Elastic index then it submits all the documents for indexation.
+During this operation only the indexed documents are searchable, this would impact strongly the users experience and, it requires a service interruption.
 
-When reindexing the repository, a new index is created (`nuxeo-0001`) and the write alias is updated to use it.  The search alias stays on the previous index (`nuxeo-0000`), it is read-only and can still be used by users.  Once indexing is terminated the search alias is updated to point to the new index (`nuxeo-0001`). An administrator can then backup and delete the old index.
+To avoid this Nuxeo can manage 2 indexes at the same time, the current one with continue to serve queries and index new document modifications,
+while the new one is going to reindex the entire repository (including the new updates). On completion Nuxeo will switch to the new index.
+
+Nuxeo leverages Elastic Aliases to do this, it manages 2 aliases: one for searching using the name of the contrib (default to `nuxeo`), one for writing with a `-write` suffix (default to `nuxeo-write`),
+both aliases will point to the same index (`nuxeo-0000` at the beginning). The index name ends with a number and is automatically incremented when reindexing.
+
+Here is how to proceed:
+
+1. Nuxeo must be configured to manage Elastic aliases, add the `elasticsearch.manageAlias.enabled=true` in your `nuxeo.conf`
+{{#> callout type='warning' }}
+   Note that if you are switching an existing instance to use manage aliases it will require a service interruption.
+   Stop Nuxeo and drop the existing `nuxeo` index, then activate the manage aliases option and, start Nuxeo, proceed to a repository reindexing while service is interrupted.
+   The next reindexing will not require service interruption.
+{{/callout}}
+2. Perform a full reindexing using the [Bulk Service](#reindexing-bulk) (the legacy reindexing will not work properly during reindexing).
+3. On completion, you have to delete the old unused index.
 
 {{#> callout type='warning' }}
-
-If you choose to enable Nuxeo management of index aliases then it is best to leave Nuxeo to manage them. Do not try to manage aliases externally in Elasticsearch at the same time.
-
+Note that using managed alias requires more disk space on Elastic nodes because you have multiple indexes of the repository.
+Also, you have to manually delete old repository indexes when reindexing is completed.
 {{/callout}}
+
+
 ## Disabling Elasticsearch
 
 Elasticsearch is enabled by default, if you want to disable Elasticsearch indexing and search you can simply add the following option to the `nuxeo.conf`:
@@ -723,19 +738,45 @@ If you want to disable Elasticsearch and use the SQL database as the default bac
 audit.elasticsearch.enabled=false
 ```
 
-## Rebuilding the Repository Index
+## Rebuilding the Repository Index{{> anchor 'reindex'}}
 
-If you need to reindex the whole repository, you can do this from the **Admin** > **Elasticsearch** > **Admin** tab.
+If you need to reindex the whole repository, you have different possibilities:
 
-You can fine tune the indexing process using the following options:
+### Re-index the Repository Using the WorkManager (the legacy way)
 
-*   Sizing the indexing worker thread pool. The default size is 4, using more threads will crawl the repository faster:
+There are 3 ways to run it:
+
+1. From the [Nuxeo Dev Tool Browser Extension]({{page page='nuxeo-dev-tools-extension'}}#features).
+
+2. From JSF UI > Admin center > Elasticsearch > Admin
+
+3. Using `curl`
+
+```bash
+curl -X POST "<NUXEO_URL>/nuxeo/site/automation/Elasticsearch.Index" -u Administrator:<PASSWORD> -H 'content-type: application/json' -d '{"params":{},"context":{}}'
+```
+
+Look at the `server.log` you should have 3 WARNs in the logs:
+```
+# start of re-indexing
+WARN  [http-nio-0.0.0.0-8080-exec-31] [org.nuxeo.elasticsearch.web.admin.ElasticSearchManager] Re-indexing the entire repository: default
+...
+# all the repository have been scrolled we know how much document are going to be re-indexed
+WARN  [Nuxeo-Work-elasticSearchIndexing-1:785116626625974.1486048658] [org.nuxeo.elasticsearch.work.ScrollingIndexingWorker] Re-indexing job: /elasticSearchIndexing:785116626625974.1486048658 has submited 270197 documents in 541 bucket workers
+...
+# end of the re-indexing
+WARN  [Nuxeo-Work-elasticSearchIndexing-1:785120666169686.1890981267] [org.nuxeo.elasticsearch.work.BucketIndexingWorker] Re-indexing job: /elasticSearchIndexing:785116626625974.1486048658 completed.
+```
+
+You can fine tune the WorkManager indexing process using the following options:
+
+* Sizing the indexing worker thread pool. The default size is `4`, using more threads will crawl the repository faster:
 
     ```
     elasticsearch.indexing.maxThreads=4
     ```
 
-*   Tuning the number of documents per worker and the number of document submitted using the Elasticsearch bulk API:
+* Tuning the number of documents per worker and the number of document submitted using the Elasticsearch bulk API:
 
     ```
     # Reindexing option, number of documents to process per worker
@@ -743,6 +784,39 @@ You can fine tune the indexing process using the following options:
     # Reindexing option, number of documents to submit to Elasticsearch per bulk command
     elasticsearch.reindex.bucketWriteSize=50
     ```
+
+### Re-index Repository Using Bulk Service{{> anchor 'reindexing-bulk'}}
+
+Run a bulk command to re-index the repository, the command id is returned:
+```bash
+curl -s -X POST "<SERVER_URL>/nuxeo/site/automation/Elasticsearch.BulkIndex" -u Administrator:<PASSWORD> -H 'content-type: application/json' -d '{"params":{},"context":{}}'
+
+{"commandId": "21aeaea1-0ef0-4a89-a92d-fa8f679361de"}
+```
+
+At any time, you can request the status of the re-indexing using the previous command id:
+```bash
+curl -s -X GET "<SERVER_URL>/nuxeo/api/v1/bulk/21aeaea1-0ef0-4a89-a92d-fa8f679361de" -u Administrator:<PASSWORD> -H 'content-type: application/json'
+
+{
+  "entity-type": "bulkStatus",
+  "commandId": "21aeaea1-0ef0-4a89-a92d-fa8f679361de",
+  "state": "RUNNING",
+  "processed": 200,
+  "error": false,
+  "errorCount": 0,
+  "total": 42932,
+  "action": "index",
+  "username": "Administrator",
+  "submitted": "2020-11-16T15:26:50.346Z",
+  "scrollStart": "2020-11-16T15:26:50.432Z",
+  "scrollEnd": "2020-11-16T15:26:50.446Z",
+  "processingStart": null,
+  "processingEnd": null,
+  "completed": null,
+  "processingMillis": 0
+}
+```
 
 ## Changing the Mappings and Settings of Indexes
 
