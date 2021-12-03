@@ -265,7 +265,7 @@ fs.stat(filePath, (err, stats) => {
 
 {{/panel}}
 
-Check out the [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) video at [Hyland University](https://university.hyland.com/) for more information.
+Check out the [Importing Files with the REST API](https://university.hyland.com/courses/e4138/importing-files-rest-api) video at [Hyland University](https://university.hyland.com/) for more information.
 
 **Practice - File Upload**
 
