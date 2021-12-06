@@ -88,7 +88,7 @@ Create a `manager_user_field.xsd` file with the following content from the defau
 1. Click on **Ok**.
 1. Go to **CONFIGURATION** > **Advanced Settings** > **XML Extensions** and create a new XML extension (called for example `USER_SCHEMA_EXTENSION`) with the following content:
 ```xml
-	<require>org.nuxeo.ecm.core.management.typesContrib</require>
+	<require>org.nuxeo.ecm.directory.types</require>
 	<extension point="schema" target="org.nuxeo.ecm.core.schema.TypeService">
 		<schema name="user" override="true" src="data/schemas/manager_user_field.xsd"/>
 	</extension>
