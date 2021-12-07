@@ -38,9 +38,9 @@ You can use all the [file storages]({{page page='file-storage'}}) supported by N
 
 #### {{> anchor 'standard-amazon-s3'}} Amazon S3
 
-The default configuration consists on using the same S3 bucket for records than for the standard documents.
+The basic configuration consists on using the same S3 bucket for records than for the standard documents.
 
-In case this case, you can use the Amazon S3 addon with the [default configuration]({{page page='amazon-s3-online-storage'}}) with the Retention addon.
+In this case, you can use the Amazon S3 addon with the [default configuration]({{page page='amazon-s3-online-storage'}}) with the Retention addon.
 
 {{#> callout type='warning'}}
 This configuration is only compliant with the default binary manager:
@@ -137,12 +137,12 @@ Complete XML extension file example:
       <property name="awsid">${nuxeo.s3storage.awsid}</property>
       <property name="awssecret">${nuxeo.s3storage.awssecret}</property>
       <property name="awstoken">${nuxeo.s3storage.awstoken}</property>
-      <property name="bucket">${nuxeo.s3storage.bucket}</property>
+      <property name="bucket">Your S3 bucket for records</property>
       <property name="region">${nuxeo.s3storage.region}</property>
       <property name="endpoint">${nuxeo.s3storage.endpoint}</property>
       <property name="pathstyleaccess">${nuxeo.s3storage.pathstyleaccess}</property>
       <property name="accelerateMode">${nuxeo.s3storage.accelerateMode}</property>
-      <property name="bucket_prefix">${nuxeo.s3storage.bucket_prefix}</property>
+      <property name="bucket_prefix">Prefix for your S3 bucket for records</property>
       <!-- min file age, in second, to be removed from cache if the size max size is reached, default is 3600 -->
       <property name="cacheminage">60</property>
       <property name="cachesize">100MB</property>
