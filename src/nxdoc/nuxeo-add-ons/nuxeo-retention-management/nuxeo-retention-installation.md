@@ -87,6 +87,8 @@ Specifically:
 
 ##### Configure the Records Bucket in [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
 
+###### Through XML configuration file
+
 Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage), you have to add an XML extension file to configure the bucket dedicated to the records and how to dispatch files in each bucket (documents vs records):
 - The file has to be added into `$NUXEO_HOME/nxserver/config`
 - The file name has to be ended with `-config.xml`
@@ -162,3 +164,29 @@ Complete XML extension file example:
   </extension>
 </component>
 ```
+
+###### Through nuxeo.conf properties
+
+Alternatively, you can add the `s3retention` template to the `nuxeo.templates` property in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
+```
+nuxeo.templates=default,s3binaries,retention,s3retention
+```
+This will enable the [s3-retention-config.xml](https://github.com/nuxeo/nuxeo-retention/blob/lts-2021/nuxeo-retention-package/src/main/resources/install/templates/s3retention/nxserver/config/s3-retention-config.xml.nxftl) which allows to define these properties in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
+  - `nuxeo.retention.s3storage.bucket` (required)
+  - `nuxeo.retention.s3storage.bucket_prefix` (optional)
+  - `nuxeo.retention.s3storage.awsid` (fallback on `nuxeo.s3storage.awsid`)
+  - `nuxeo.retention.s3storage.awssecret` (fallback on `nuxeo.s3storage.awssecret`)
+  - `nuxeo.retention.s3storage.awstoken` (fallback on `nuxeo.s3storage.awstoken`)
+  - `nuxeo.retention.s3storage.region` (fallback on `nuxeo.s3storage.region`)
+  - `nuxeo.retention.core.blobstore.digestAsync` (fallback on `nuxeo.core.blobstore.digestAsync`)
+  - `nuxeo.retention.s3storage.cacheminage` (fallback on `nuxeo.s3storage.cacheminage`)
+  - `nuxeo.retention.s3storage.cachesize` (fallback on `nuxeo.s3storage.cachesize`)
+  - `nuxeo.retention.s3storage.cachecount` (fallback on `nuxeo.s3storage.cachecount`)
+  - `nuxeo.retention.s3storage.connection.max` (fallback on `nuxeo.s3storage.connection.max`)
+  - `nuxeo.retention.s3storage.connection.retry` (fallback on `nuxeo.s3storage.connection.retry`)
+  - `nuxeo.retention.s3storage.connection.timeout` (fallback on `nuxeo.s3storage.connection.timeout`)
+  - `nuxeo.retention.s3storage.socket.timeout` (fallback on `nuxeo.s3storage.socket.timeout`)
+  - `nuxeo.retention.s3storage.endpoint` (fallback on `nuxeo.s3storage.endpoint`)
+  - `nuxeo.retention.s3storage.pathstyleaccess` (fallback on `nuxeo.s3storage.pathstyleaccess`)
+  - `nuxeo.retention.s3storage.accelerateMode` (fallback on `nuxeo.s3storage.accelerateMode`)
+in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file.
