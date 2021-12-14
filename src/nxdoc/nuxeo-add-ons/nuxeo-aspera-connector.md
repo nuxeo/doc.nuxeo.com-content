@@ -29,6 +29,240 @@ Watch the related video on Nuxeo University:</br>
 ![university_aspera.png](nx_asset://8f01d909-55e5-4fdd-99b7-a496ea20ddd2 ?w=450,border=true)
 {{/callout}}
 
+## Version 3.0.5
+### Requirements
+
+- Aspera Desktop Client - you will be prompted to install the necessary version when using the Connector.
+- Nuxeo Server LTS 2019 (**10.10, HF 31, at least**) with access to AWS S3 Storage along with the [Amazon S3 Online Storage plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=1.9.12)
+- IBM Aspera on Cloud Subscription (see the note above about Aspera self-hosted)
+
+
+
+**Versions 3.x.x** of the Nuxeo Aspera Connector are aligned with **IBM Aspera Connect 3.9.9 SDK** and, by default, points to the IBM Aspera Connect SDK 3.9.9 CDN URL. If you would like to host the SDK on your own servers or point to another version, please see our entry on [configuring the SDK url](#sdk-url). If you are using an Aspera Connect SDK version newer than this, functionality might be affected.
+
+### Installation
+
+Installation is comprised of two steps:
+
+1. Install the [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) available from the marketplace.
+1. Install the Aspera Connect desktop client (you will be prompted to install the necessary Aspera software when you try to use the Connector, if you do not already have it).
+
+### Configuration
+
+#### Aspera Configuration
+
+We need to configure 2 Aspera nodes; one for upload and one for download.
+
+Each node will be attached to one S3 bucket in Nuxeo:
+- The main Nuxeo S3 bucket in Nuxeo for download purpose
+- The S3 transient store bucket for upload purpose
+
+Follow this [Aspera documentation](https://aspera.ibmaspera.com/help/admin/nodes/adding_aws_s3_bucket) to attach S3 buckets to Aspera.
+
+Please note that, in the documentation above, for **Download** the IAM role used by Aspera only needs `READ` permissions on the bucket.
+
+{{#> callout type='note'}}
+With version 3.0.5, we now support the use of bucket prefixes on **both** s3 stores (main and/or transient).  **Please note** If using prefixes for either the s3 main or s3 transient stores within Nuxeo, the same prefixes must be used by the Aspera node/S3 stores and match what is given for the Nuxeo stores.  This is so download AND upload of files with Aspera work properly.
+
+{{/callout}}
+
+
+
+The policy attached to this role can be added as shown in this **sample**:
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetObject",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": [
+        "arn:aws:s3:::bucket-name",
+        "arn:aws:s3:::bucket-name/\*"
+      ]
+    }
+  ]
+}
+```
+
+The policy for **Upload** must be able to `put` and `get` objects from the S3 bucket, **for example**:
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+  {
+    "Sid": "VisualEditor0",
+    "Effect": "Allow",
+    "Action": [
+    "s3:PutObject",
+    "s3:GetObject",
+        "s3:AbortMultipartUpload",
+        "s3:DeleteObject",
+        "s3:ListMultipartUploadParts"
+      ],
+      "Resource": "arn:aws:s3:::bucket-name/*"
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucketMultipartUploads",
+        "s3:ListBucket",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": "arn:aws:s3:::bucket-name"
+    }
+  ]
+}
+```
+
+#### Nuxeo Configuration
+
+##### Transient Store on AWS
+
+To use S3 direct upload with Nuxeo, you will need to add another policy to a new role **for example**:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMyBuckets"
+            ],
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetBucketLocation",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts",
+                "s3:ListBucketMultipartUploads"
+            ],
+            "Resource": "arn:aws:s3:::yourbucketname"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts",
+                "s3:ListBucketMultipartUploads"
+            ],
+            "Resource": "arn:aws:s3:::yourbucketname/*"
+        }
+    ]
+}
+```
+
+Make sure that all configuration values are set in the `nuxeo.conf`:
+
+```
+nuxeo.s3storage.transient.bucket=
+nuxeo.aws.accessKeyId=
+nuxeo.aws.secretKey=
+nuxeo.aws.region=
+nuxeo.s3storage.bucket=
+```
+{{#> callout type='note'}}
+With version 3.0.5, we now support the use of bucket prefixes on **both** s3 stores (main and/or transient).  **Please note** If using prefixes for either the s3 main or s3 transient stores within Nuxeo, the same prefixes must be used by the Aspera nodes/S3 stores and match what is given for the Nuxeo stores.  This is so download AND upload of files with Aspera work properly.
+
+{{/callout}}
+
+{{#> callout type='note'}}
+With release 3.0.0 and newer, `nuxeo.s3storage.useDirectUpload=true` and `nuxeo.s3storage.transient.roleArn=` (documented as part of version 2.x.x configuration) are no longer necessary **for the Nuxeo Aspera Connector** and can be removed, **if you only use these values for the Nuxeo Aspera Connector, and not for any other reason**. See [upgrade notes]({{page page='nuxeo-aspera-upgrade-notes'}}).
+{{/callout}}
+
+#### Aspera Nuxeo Configuration
+
+New configuration points in version 3.0.5
+With this release, we offer new configuration points to control some of the functionality as well as some suggestions for adjusting out of the box Nuxeo configurations to help optimize the use of the Aspera Connector.
+
+`nuxeo.conf` suggestions for optimization:
+
+```
+nuxeo.s3storage.cachesize=
+###Our qa environment is set at 10GB.
+
+nuxeo.s3storage.cachecount=
+###Our qa environment is set at 10000
+
+nuxeo.s3storage.cacheminage=
+###Our qa environment is set at 14400
+
+nuxeo.s3storage.transient.targetMaxSizeMB=
+###Our qa environment is set at 100
+
+nuxeo.s3storage.transient.ttl=4320
+nuxeo.s3storage.transient.ttl2=10
+
+aspera.check.transfer.state.cronExpression=
+###Our qa environment is set at 0/5 * * ? * * * which runs every 5 seconds.  This can be too verbose for most instances.
+```
+
+`nuxeo.conf` options for new functionality:
+
+```
+empty folders aspera.upload.empty.folders.creation.enabled=
+###This is set to `true` by default
+
+aspera.work.manager.thread.max=
+###This setting will depend on your system capabilities and overall architecture
+```
+
+Required as part of previous connector versions:
+
+Add the Aspera access keys in `nuxeo.conf`:
+
+**Example**:
+
+```
+## is the same for the 2 nodes
+aspera.node.url=
+aspera.node.port=
+
+### ACCESS KEY ON UPLOAD NODE LINKED TO TS S3 BUCKET
+aspera.access.key.id=
+### SECRET KEY ON UPLOAD NODE LINKED TO TS S3 BUCKET
+aspera.access.key.secret=
+
+### ACCESS KEY ON DOWNLOAD NODE LINKED TO MAIN S3 BUCKET
+aspera.download.access.key.id=
+### SECRET KEY ON DOWNLOAD NODE LINKED TO MAIN S3 BUCKET
+aspera.download.access.key.secret=
+```
+
+
+#### SDK URL
+
+The Aspera Connect SDK version used with this version of the Nuxeo Aspera Connector defaults to Aspera Connect SDK 3.9.9. If you would like to use a different SDK, you can modify this in one of two ways:
+- In the `nuxeo.conf` file using `aspera.connect.baseUrl` (will default to 3.9.9)
+- As a contribution
+
+<!--
+(November 2020: We will update this documentation with samples)
+-->
+
+### Functional overview of new features since 3.0.0.
+
+With recent releases, we have added the ability to control behavior of empty folders as part of the uploading and downloading of files using the Aspera Connect Client with your Nuxeo instance. An `empty folder` is defined as part of a folder hierarchy that does NOT contain any content; neither files nor folders.  
+
+As part of new configuration options within nuxeo.conf, you, along with your System aAministrator, can define if you want these empty folders to be ignored, or included, as part of your Aspera Connect up/downloads.
+
+By default, your Nuxeo instance will create empty folders when using Aspera.  This maintains a "mirrored" copy of the folder structure, down to the very lowest folder.  If you choose to set `aspera.upload.empty.folders.creation.enabled` to `false`, then, if the most nested folder of a hierarchy contains no files, then that folder *will not* be created.  The folder hierarchy will only be built to the lowest folder containing files.
+
 ## Version 3.0.0
 
 ### Requirements
