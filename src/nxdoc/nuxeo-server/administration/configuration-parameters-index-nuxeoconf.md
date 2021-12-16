@@ -2328,6 +2328,18 @@ The limit is set at the transaction level (and not at the command level) because
 * * *
 
 
+#### `nuxeo.oauth2.token.expiration.duration`
+
+ Property to set the oauth2 token expiration duration. Default is 60 minutes.
+
+**Since 10.10-HF57**
+
+**Default Value**
+
+`60m`
+
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
