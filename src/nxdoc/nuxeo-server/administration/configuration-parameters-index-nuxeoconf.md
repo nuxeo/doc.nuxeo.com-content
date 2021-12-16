@@ -2265,6 +2265,18 @@ Enables users to select all documents from results listings in the UI and to exe
 
 * * *
 
+#### `nuxeo.oauth2.token.expiration.duration`
+
+ Property to set the oauth2 token expiration duration. Default is 60 minutes.
+
+**Since LTS 2021.14**
+
+**Default Value**
+
+`60m`
+
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
