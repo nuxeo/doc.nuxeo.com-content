@@ -42,7 +42,7 @@ This new version is dedicated to the Log4j vulnerabilities (CVE-2021-45046) reme
 
 ### Major Fixes
 
-#### Log4j vulnerabilities
+#### Log4j Vulnerabilities
 
 Following the [Log4j vulnerabilities (CVE-2021-45046)](https://logging.apache.org/log4j/2.x/security.html), we have removed unsafe log4j dependencies on the rendition services.
 
