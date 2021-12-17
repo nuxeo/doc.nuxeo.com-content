@@ -14,7 +14,6 @@ toc: true
 tree_item_index: 200
 ---
 
-
 ## {{> anchor 'dedicated-low-fields'}} Dedicated Low-Level Fields
 
 To provide the required data to Amazon S3 (expiration date and legal hold) and to ensure that records can’t be deleted when not eligible, some new low-level fields have been added at the storage level:
