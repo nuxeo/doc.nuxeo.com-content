@@ -35,10 +35,6 @@ The Nuxeo Retention Management addon allows 2 modes:
  - **Standard mode**: this is the default mode when installing the addon. It allows using all the retention features with all storage media supported by Nuxeo Platform. This mode is not compliant with [SEC Rule 17a-4](#sec-rule-17a4).
  - **Compliance mode**: this mode is required to be compliant with [SEC Rule 17a-4](#sec-rule-17a4). It offers the same features than the standard mode but it requires the usage of Amazon S3 [Compliance mode]({{page page='nuxeo-retention-installation'}}#s3-configuration-requirements). It also involves some functional [limitations](#limitations).
 
-{{#> callout type='warning' }}
-There is no out of the box configuration for the retention addon, you must apply a configuration in a custom contribution. See the section [Configure the records bucket in amazon s3 online storage]({{page page='nuxeo-retention-installation'}}#configure-the-records-bucket-in-amazon-s3-online-storage).
-{{/callout}}
-
 ## Main Principles
 
 ### Record
@@ -111,15 +107,21 @@ In standard mode, the users belonging to the **NuxeoRecordCleaners** group are a
 
 The **NuxeoRecordCleaners** group has been introduced in **LTS 2021-HF07**.
 
+### Storage
+
+In standard mode, you can use all the [file storages]({{page page='file-storage'}}) supported by Nuxeo Platform.
+
+As part of the supported storages, you can use Amazon S3, including with Object Lock in "Governance" mode (see [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)).
+
 ## Compliance Mode Specificities
 
 ### Secured Storage
 
 The SEC 17a-4 US regulation involves the usage of a secured storage media as part of the requirements to be compliant.
 
-The Nuxeo Retention Management addon is using Amazon S3 in "Compliance mode", to fit with this requirement.
+The Nuxeo Retention Management addon is using Amazon S3 Object Lock in "Compliance mode", to fit with this requirement.
 
-Amazon S3 compliance mode (see [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)) guarantees that no one can delete an object which is under retention or legal hold. Amazon S3 is provided with the retention period and/or legal hold information by Nuxeo, and ensures that no changes or deletions can occur during this period.
+Amazon S3 Object Lock compliance mode (see [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)) guarantees that no one can delete an object which is under retention or legal hold. Amazon S3 is provided with the retention period and/or legal hold information by Nuxeo, and ensures that no changes or deletions can occur during this period.
 
 ### {{> anchor 'limitations'}}Limitations
 
