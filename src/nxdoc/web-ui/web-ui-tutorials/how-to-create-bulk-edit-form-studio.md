@@ -26,34 +26,57 @@ In this tutorial you will learn how to create a form to edit metadata on a large
 This capability is available since LTS 2021 with Web UI 3.0.9.
 {{/callout}}
 
+- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler.
+- The Nuxeo [Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) installed on your instance.
+- In Studio Modeler > **Settings** > **Application Definition**, make sure that **Nuxeo Web UI** is in the **Packages to Install** list.
 - Activate the `Select All and Bulk Actions` feature by adding the `nuxeo.selection.selectAllEnabled=true` property in your [nuxeo.conf]({{page page="configuration-parameters-index-nuxeoconf"}}) file.
 {{{multiexcerpt 'requirements-bulk-action' page='how-to-insert-user-action'}}}
 
-## Create Your Form
+## Create the Structure
 
-{{{multiexcerpt 'quick-switcher' page='generic-multi-excerpts'}}}
+- In Studio Designer, click on the **RESOURCES** tab
+- Select the `UI` folder and click on the `create` button at the bottom of the screen
+- Create a new folder and name it `bulk`
 
-- Create folder and file name
-  - follow naming convention
-- Copy from edit layout
-- Change name
+## Create a Bulk Edit Layout
 
+To make things faster, we will reuse the same form as the one used for the edit layout of the Contract document type.
 
-## Bind the Form to a Button
+- From the **RESOURCES** tab, open the **document** > **contract** folder and open the **nuxeo-contract-edit-layout.html** file
+- Copy the content of the layout (Ctrl/Cmd + A then Ctrl/Cmd + C)
+- Select the `bulk` folder you created at the previous step and click on the `create` button at the bottom of the screen
+- Create a new `empty file` and name it `nuxeo-bulk-edit-contracts-layout`
+- Paste the content of the contract edit layout
+- In your bulk edit layout, replace the name of the layout you copied (`nuxeo-contract-edit-layout`) with the real one (`nuxeo-bulk-edit-contracts-layout`)
+- Save your configuration
 
-Now that your form is ready, you will need to bind it to a button.
+{{#> callout type='info'}}
+Your bulk edit layouts need to follow a naming convention that was introduced to prevent collision. Make sure they are always named `nuxeo-bulk-[your-layout-name]-layout`.
+{{/callout}}
 
-- Add contribution to the custom bundle
-  - layout name just the center
+## Bind the Bulk Edit Layout to a Button
+
+Now that your layout is ready, you will need to bind it to a button.
+
+- From the **RESOURCES** tab, open the **nuxeo-[studio-project-id]-custom-bundle.html** file
+
+{{#> callout type='info'}}
+If the file doesn't exist yet, open the **nuxeo-[studio-project-id]-bundle.html** file first and you will be prompted for the custom bundle file to be generated.
+{{/callout}}
+
+- Inside the file, add the following contribution to bind your layout to a button:
+
+```
+<!-- Contribution for bulk editing contracts in every context (no filtering) -->
+<nuxeo-slot-content name="bulkEditContractsButton" slot="RESULTS_SELECTION_ACTIONS" order="1">
+  <template>
+    <nuxeo-edit-documents-button icon="nuxeo:edit" label="Bulk Edit Contracts" documents="[[selection]]" layout="edit-contracts"></nuxeo-edit-documents-button>
+  </template>
+</nuxeo-slot-content>
+```
+
+- Save your configuration. Your bulk edit form is ready to be used.
 
 ## Testing the Result
 
-From any [Folderish]({{page page="available-facets"}}#folderish) document (e.g. a `Folder`, a `Workspace`) or in the results of a search, select one or several documents you want to validate. Click on your brand new button in the toolbar on top of the screen to execute the logic. When finished, the listing is updated to reflect the result.
-
-## Executing Multiple Bulk Actions
-
-In the example above, we used the [refresh event]({{page page="how-to-use-events"}}). Its particularity is that Web UI will request an update to the server once the logic is processed. As a result, the listing is updated and the current selection is lost.
-
-In some cases, you may want the selection to be kept so that a user can execute multiple actions on the same selection. To do that, replace the `refresh` event used above with the `refresh-display` event. This one will keep the selection after the logic is executed, but comes with the downside that the results listing will not be updated: as such it's best to use it with actions that won't have an impact with what is currently displayed on screen to the user.
-
-More information about Web UI events can be found in the [How to Use Web UI Internal Events]({{page page="how-to-use-events"}}) page.
+From any [Folderish]({{page page="available-facets"}}#folderish) document (e.g. a `Folder`, a `Workspace`) or in the results of a search, select one or several documents you want to validate. Click on your brand new button in the toolbar on top of the screen to open your bulk edit form. Select the properties to replace and the value to set, and click save to launch the action.
