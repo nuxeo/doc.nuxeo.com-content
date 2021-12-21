@@ -50,7 +50,7 @@ To make things faster, we will reuse the same form as the one used for the edit 
 - Save your configuration.
 
 {{#> callout type='info'}}
-Your bulk edit layouts need to follow a naming convention that was introduced to prevent collision. Make sure they are always named `nuxeo-bulk-[your-layout-name]-layout`.
+Your bulk edit layouts need to be placed in the dedicated `bulk` folder, and follow a naming convention introduced to prevent collision. Make sure they are always named `nuxeo-bulk-[your-layout-name]-layout`.
 {{/callout}}
 
 ## Bind the Bulk Edit Layout to a Button
@@ -73,6 +73,10 @@ If the file doesn't exist yet, open the `nuxeo-[studio-project-id]-bundle.html` 
   </template>
 </nuxeo-slot-content>
 ```
+
+{{#> callout type='tip'}}
+In this example, we are displaying our button in every situation. Feel free to [add filters to this contribution]({{page space='studio' page='javascript-expression-examples'}}) to refine when the button should be displayed.
+{{/callout}}
 
 - Save your configuration. Your bulk edit form is ready to be used.
 

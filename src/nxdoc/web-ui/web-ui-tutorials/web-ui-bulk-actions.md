@@ -2,7 +2,7 @@
 title: 'Bulk Actions in Web UI'
 review:
     comment: ''
-    date: '2021-09-07'
+    date: '2021-12-21'
     status: ok
 toc: true
 labels:
@@ -21,6 +21,8 @@ Bulk actions were introduced to LTS 2021 with Web UI 3.0.6. To prevent bringing 
 ```
 nuxeo.selection.selectAllEnabled=true
 ```
+
+Bulk edit was introduced to LTS 2021 with Web UI 3.0.9. No additional property is needed to enable it, as it relies on configuration done through Studio. See [how to create a bulk edit form]({{page page='how-to-create-bulk-edit-form-studio'}}) for additional information.
 
 ## Using Bulk Actions
 
@@ -60,6 +62,10 @@ The following default actions are **NOT** available as bulk actions:
 - Add to clipboard. This action is handled on the client side and does not make use of the [bulk action framework]({{page page='bulk-action-framework'}}). If you want to integrate an action that allows you to do this at scale, you can take inspiration from our [copy / move cookbook](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/copy-move) entry and adapt it, knowing that you can [create your custom bulk actions using Nuxeo Studio]({{page page='how-to-create-bulk-actions-studio'}}).
 - Move Document Up and Down (in the context of ordered folders). This would only cause useless processing since moving all documents up or down would yield the same result.
 
+You can create additional bulk actions using Nuxeo Studio as well:
+- [Creating Bulk Actions Using Nuxeo Studio]({{page page='how-to-create-bulk-actions-studio'}})
+- [Creating Bulk Edit Forms Using Nuxeo Studio]({{page page='how-to-create-bulk-edit-form-studio'}})
+
 ### Bulk Actions Notifications Management
 
 When launching a bulk action, a notification is updated regularly in Web UI, providing its current state and allowing the user to abort it.
@@ -95,4 +101,24 @@ To avoid cluttering the UI when executing many bulk actions in parallel, three (
 
 ## Configuring a Custom Bulk Action
 
-Custom bulk actions can be configured using Nuxeo Studio. For more information, please refer to our tutorial: [create your custom bulk actions using Nuxeo Studio]({{page page='how-to-create-bulk-actions-studio'}}).
+Custom bulk actions and bulk edit forms can be configured using Nuxeo Studio. For more information, please refer to our tutorials:
+- [create your custom bulk actions using Nuxeo Studio]({{page page='how-to-create-bulk-actions-studio'}}).
+- [create your custom bulk edit forms using Nuxeo Studio]({{page page='how-to-create-bulk-edit-form-studio'}}).
+
+## Questions and Answers
+
+### In Which Context Can Users Trigger Bulk Actions ?
+
+They can be launched from any results listing, e.g. when browsing a document or when doing a search.
+
+### Can I Have Multiple Bulk Edit Forms / Multiple Bulk Actions ?
+
+You can configure as many bulk actions and bulk edit forms as you desire.
+
+### On How Many Documents Can I Launch a Bulk Action?
+
+Bulk actions were tested on sets of 150 000 documents; however there is no limit implemented in the software currently. We recommend being thoughtful when designing your bulk actions (how many documents can be impacted, how many of them could run in parallel) and considering your architecture needs.
+
+### How do I Deal With Errors?
+
+When an error happens, the user receives a notification once the action completes. It is possible for them to copy the error message and the bulk command id in order to contact an administrator. An administrator can have a detailed look at the situation by looking at the information related to this bulk command id.
