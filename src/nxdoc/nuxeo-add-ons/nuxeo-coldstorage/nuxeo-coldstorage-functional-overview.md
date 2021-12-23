@@ -1,6 +1,6 @@
 ---
 title: Functional Overview
-description: Discover Nuxeo coldstorage capabilities.
+description: Discover Nuxeo Cold Storage capabilities.
 review:
     comment: ''
     date: ''
@@ -13,8 +13,12 @@ toc: true
 tree_item_index: 100
 ---
 
-## Coldstorage
-The Nuxeo Cold Storage (Glacier) connector is a long term storage solution that allows Nuxeo clients to take advantage of cost savings by using AWS's cold storage tier known as Glacier to store large files and/or less frequently accessed content. 
+## Cold Storage
+The Nuxeo Cold Storage (Glacier) connector is a long term storage solution that allows Nuxeo clients to take advantage of cost savings by using AWS's cold storage tier known as Glacier to store large files and/or less frequently accessed content.
+
+The addon is based on the usage of [Amazon S3 Glacier Flexible Retrieval (formerly Glacier)](https://aws.amazon.com/s3/storage-classes/glacier/) to store cold content.
+
+Although Amazon S3 Glacier involves a time period from 3 to 5 hours to access to the content, Nuxeo Cold Storage preserves the user experience and guarantee immediate access to the document, thanks to the Nuxeo rendition mechanism.
 
 ## Send to Cold Storage
 Once the nuxeo rendition of the document is available, the user can trigger the flow by clicking on "send to cold storage" button.
@@ -57,7 +61,7 @@ When the user wants to have temporary access to the full file for download, she 
 --}}
 ![Restore from coldstorage button](nx_asset://bd6ceed7-004f-4d78-a0e7-2740b4871ce0)
 
-The user can then trigger the flow by clicking on the restore button. As an asyncronous process, it is expected that it takes some time. An email is sent to the user when the retrieve process is done and also the document will display a banner stating that the retrieve is in process.
+The user can then trigger the flow by clicking on the restore button. As an asynchronous process, it is expected that it takes some time (between 3 and 5 hours). An email is sent to the user when the retrieve process is done and also the document will display a banner stating that the retrieve is in process.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Retrieve from Coldstorage
@@ -69,21 +73,21 @@ The user can then trigger the flow by clicking on the restore button. As an asyn
 Once the retrieve is completed, the banner will display information about the preview availability and the option to download the content.
 
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Retrieved from Coldstorage 
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Retrieved from Coldstorage
     name: RetrieveFromCS3.png
     addins#screenshot#up_to_date
 --}}
 ![Retrieved from Coldstorage ](nx_asset://514f7467-bce2-404c-9d76-0864c1869b57)
 
 
-By default, the file will be available for download for 24h. For now, that value can be changed for all files by adding a configuration to the `nuxeo.conf` file. So, for example, if we want the file available for 48hs, we can add:
+By default, the file will be available for download for 24h. For now, that value can be changed for all files by adding a configuration to the `nuxeo.conf` file. So, for example, if we want the file available for 48 hours, we can add:
 
 ```
 nuxeo.coldstorage.numberOfDaysOfAvailability.value.default= 2
 ```
 
 ## Restore from Cold Storage
-When the user no longer wants the file to be stored in Cold Storage, she can request a restore by clicking on the restore button. The operation is also asynchronous, and the user will be notified via email once it's completed and the banner will disappear. The send to Cold Storage button will be available again.
+When you no longer want the file to be stored in Cold Storage, you can request a restore by clicking on the restore button. The operation is also asynchronous, and the user will be notified via email once it's completed and the banner will disappear. The send to Cold Storage button will be available again.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Restore from Coldstorage button
@@ -92,5 +96,5 @@ When the user no longer wants the file to be stored in Cold Storage, she can req
 --}}
 ![Restore from Coldstorage button](nx_asset://d81515d8-b0b4-451f-be8b-62832f35862d)
 
-## Delete from Coldstorage
-For now, documents under Cold Storage cannot be modified or deleted. If you wish to delete a nuxeo document under Cold Storage, first, restore it, then you'll be able to delete it.
+## Delete from Cold Storage
+You can delete a document moved to Cold Storage as any other document.
