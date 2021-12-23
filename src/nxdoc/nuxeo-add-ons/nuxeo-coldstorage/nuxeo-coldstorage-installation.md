@@ -85,3 +85,9 @@ To do so, you can add an XML contribution to your Nuxeo Studio project and speci
   </extension>
 </component>
 ```
+
+{{#> callout type='warning'}}
+This contribution must include:
+ - a default rendition named "defaultRendition"
+ - the `require` element `<require>org.nuxeo.coldstorage.rendition.contrib</require>` 
+{{/callout}}
