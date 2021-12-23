@@ -38,7 +38,7 @@ nuxeo.aws.glacier.bucket_prefix=
 
 There are some other optional configurations:
 
-For customizing the frequency (in seconds) in which the scheduler job checks if the retrieve task is finished and that the preview is avaialble for the user to download, we use the expression below. For example, if we want to check the satus every hour at the 7th minute, we would add:
+For customizing the frequency (in seconds) in which the scheduler job checks if the retrieve task is finished and that the preview is available for the user to download, we use the expression below. For example, if we want to check the status every hour at the 7th minute, we would add:
 
 ```
 nuxeo.coldstorage.check.retrieve.state.cronExpression= 0 7 * ? * * *
@@ -50,10 +50,38 @@ To customize the scheduler job that checks if the storage class of the document 
 nuxeo.coldstorage.check.storage.state.cronExpression= 0 7 * ? * * *
 ```
 
-You can learn more about nuxeo schedulers in https://doc.nuxeo.com/studio/scheduling-periodic-events/
+You can learn more about Nuxeo schedulers in https://doc.nuxeo.com/studio/scheduling-periodic-events/
 
 We can also customize how long we want to have the preview available once we do a retrieve action. The default is one day, but that can also be modified. For example, if we want it for 2 days we can add:
 
 ```
 nuxeo.coldstorage.numberOfDaysOfAvailability.value.default= 2
+```
+
+### Preview file Configuration
+
+When a document is sent to cold storage, the main file is not available (it requires a retrieval operation, taking between 3 and 5 hours). In order to preserve the user experience, we display a rendition of the document (as renditions remain on S3 standard).
+
+By default, we are using the following renditions:
+
+| Document properties                                 |  Rendition                                                    |
+| --------------------------------------------------- | ------------------------------------------------------------- |
+| Documents of type Picture                           | Small                                                         |
+| Documents of type Video                             | MP4 480p                                                      |
+| Others documents                                    | Thumbnail                                                     |
+
+You can change the renditions to be used and add new configurations for specific document type(s) and/or facet(s).
+
+To do so, you can add an XML contribution to your Nuxeo Studio project and specify the renditions to use, as in the following example:
+```xml
+<?xml version="1.0"?>
+<component name="my.custom.coldstorage.rendition.contrib">
+  <require>org.nuxeo.coldstorage.rendition.contrib</require>
+  <extension target="org.nuxeo.coldstorage.service.ColdStorageService"  point="coldStorageRendition" >
+    <coldStorageRendition name="defaultRendition" renditionName="thumbnail" />
+    <coldStorageRendition name="pictureRendition" docType="Picture" facet="Picture" renditionName="Small" />
+    <coldStorageRendition name="videoRendition" docType="Video" facet="Video" renditionName="MP4 480p" />
+    <coldStorageRendition name="myCustomRendition" docType="myCustomDocumentType" facet="Picture" renditionName="OriginalJpeg" />  
+  </extension>
+</component>
 ```
