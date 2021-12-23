@@ -3,7 +3,7 @@ title: Nuxeo Enhanced Viewer
 description: 'Nuxeo Enhanced Viewer addon allows users to preview and annotate content stored in the Nuxeo repository: documents, PDF, images, and videos with the ARender previewer.'
 review:
     comment: ''
-    date: '2019-10-08'
+    date: '2021-12-23'
     status: ok
 labels:
     - arender-connector
@@ -71,12 +71,12 @@ You can access the different types of annotations available by default directly 
 <tbody>
 <tr>
 <td colspan="1">![annotations-draw-arrows.png](nx_asset://7749f97c-548e-446c-8542-97fd35bfb6ff ?w=40)</td>
-<td colspan="1"> Add an arrow.</br> Repeat mode available. </td>
+<td colspan="1"> Add an arrow.</br> Repeat mode enabled by default. </td>
 </tr>
 <tr>
 <td colspan="1">![annotations-add-freehand.png](nx_asset://275b858a-e1e6-4d6d-9d70-cc505bb120e9 ?w=40)</td>
 <td colspan="1"> Draw different shapes with the Freehand.</br>
-Repeat mode available. </td>
+Repeat mode enabled by default. </td>
 </tr>
 <tr>
 <td colspan="1">
@@ -91,12 +91,12 @@ Repeat mode available. </td>
 <tr>
 <td colspan="1">
 ![annotations-highlight-rectangle.png](nx_asset://eef983e3-10bd-4d9f-be66-982990bf7aa8 ?w=40)</td>
-<td colspan="1"> Add a highlighted rectangle.</br> Once your rectangle is created you can modify the color and opacity of the highlight.</br> Repeat mode available.</td>
+<td colspan="1"> Add a highlighted rectangle.</br> Once your rectangle is created you can modify the color and opacity of the highlight.</br> Repeat mode enabled by default.</td>
 </tr>
 <tr>
 <td colspan="1">
 ![annotations-draw-circle.png](nx_asset://a12f0162-1971-4a00-8f60-cf71df4c7199 ?w=40)</td>
-<td colspan="1"> Add a circle.</br> Repeat mode available.</td>
+<td colspan="1"> Add a circle.</br> Repeat mode enabled by default.</td>
 </tr>
 <tr>
 <td colspan="1">
@@ -108,21 +108,11 @@ Repeat mode available. </td>
 ![annotations-strikethrough-text.png](nx_asset://463ebd3a-e506-4f3b-b52a-7f122aa48456 ?w=40)</td>
 <td colspan="1"> Add strikethrough text. </td>
 </tr>
-<tr>
-<td colspan="1">
-![annotations-redact.png](nx_asset://421137dc-2c9f-4c01-88b3-690d12a9fff4 ?w=40)</td>
-<td colspan="1"> Annotate over text, hiding its contents.</br> This annotation is only available on text documents.</td>
-</tr>
 </tbody>
 </table>
 </div>
 
-**Repeat mode**: Once the annotation is selected, 2 blue arrows are displayed {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-repeat-mode.png
-    name: annotations-repeat-mode.png
-    addins#icon#up_to_date
---}}
-![annotations-repeat-mode.png](nx_asset://e1db7421-d37e-4e97-be25-cdfdc3483b66 ?w=20) meaning that you can add several annotations in a row. To disable the repeat mode, click on the annotation icon again.
+**Repeat mode**: For annotations with repeat mode enabled, once the annotation is selected, you can add several annotations in a row. To disable the repeat mode, click on the annotation icon again.
 
 Other buttons are available on the top bar to optimize the visualization of the document: zoom, rotation, full screen, pagination, height and width adjustment, etc.
 
@@ -325,6 +315,42 @@ A new window is opened with the two documents side-by-side, highlighting text wh
 ![compare_arender_2](nx_asset://7be7595f-3e11-468a-a004-1700e45e3ab3 ?w=650,border=true)
 
 You can see the annotations linked to each version on the same screen, and even annotate one file from this view.
+
+### Open several documents within the same viewer
+
+With the Nuxeo Enhanced Viewer, you can open several documents within the same viewer and so view all your documents at the same time. And you can scroll from one to the other and view/edit the annotations of each of them:
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/nev-open-several-view
+    name: nev-open-several-view.png
+    addins#screenshot#up_to_date
+--}}
+![nev-open-several-view](nx_asset://035e295f-88a1-4060-b764-ed315e340794 ?w=650,border=true)
+
+
+This feature is available in all results views of Nuxeo WebUI. Once you have selected at least 2 documents, the action is available into the action list:
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/nev-open-several-action
+    name: nev-open-several-action-2.png
+    addins#screenshot#up_to_date
+--}}
+![nev-open-several-action](nx_asset://849311f1-68fe-485e-946f-93d4295e199b ?w=650,border=true)
+
+### Dynamic selection of the layers
+
+With the Nuxeo Enhanced Viewer, you can select which layers to be displayed into the viewer and change it anytime.
+
+This is available into a dedicated menu of the left section which appears only for documents with layers:
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/nev-layers-menu
+    name: nev-layers-menu.png
+    addins#screenshot#up_to_date
+--}}
+![nev-layers-menu](nx_asset://bd328034-ffcc-4f77-8021-674f533c0058 ?w=650,border=true)
+
+This menu displays all the layers of the document and allow to select / unselect all of them, and update in real time the document view regarding the select layers.
 
 ## Installation / Configuration
 
