@@ -3,7 +3,7 @@ title: Upgrading Nuxeo Web UI from LTS 2019 to LTS 2021
 description: Upgrade notes from Nuxeo Web UI LTS 2019 (10.10) to LTS 2021
 review:
     comment: ''
-    date: '2021-09-02'
+    date: '2021-12-23'
     status: ok
 toc: true
 labels:
@@ -81,6 +81,28 @@ From now on, retrieving tasks needs to be made using a paginable approach. Some 
 ### Nuxeo Dropzone API Change
 
 As of [NXP-28263](https://jira.nuxeo.com/browse/NXP-28263), `nuxeo-dropzone` exposes a new API that allows the element to be bound to a document field through the *value property*, which is more consistent with the API exposed by the other widgets. The previous API is deprecated but still supported (see [NXP-29391](https://jira.nuxeo.com/browse/NXP-29391)).
+
+### Routing Behavior API Change
+
+In order to support navigation by document UID ([WEBUI-14](https://jira.nuxeo.com/browse/WEBUI-14)) and cross repository navigation ([ELEMENTS-1211](https://jira.nuxeo.com/browse/ELEMENTS-1211)), the API of the Web UI Routing Behavior was extended. Previously, methods like `urlFor()` and `navigateTo()` would make use of two arguments:
+```
+// generates the URL to browse to the doc document
+urlFor('browse', doc.path)
+
+// navigates the UI to the browse view of the doc document
+navigateTo('browse', doc.path)
+```
+Currently, the recommended way to use these methods is by passing the document object as the only argument:
+```
+// generates the URL to browse to the doc document
+urlFor(doc)
+
+// navigates the UI to the browse view of the doc document
+navigateTo(doc)
+```
+In this format, a router resolver defined at the application level is used to compute the URLs. Although still supported, the previous format should only be used if there's the explicit need to specify the route.
+
+For more information, please check the [Web UI Routing](https://doc.nuxeo.com/nxdoc/web-ui-routing/) page. 
 
 ### Use of Atomic Permissions
 
