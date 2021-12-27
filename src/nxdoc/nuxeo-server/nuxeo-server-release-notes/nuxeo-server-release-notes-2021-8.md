@@ -62,7 +62,7 @@ Contribute the XML below to make a property indexed:
 </component>
 ```
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30547](https://jira.nuxeo.com/browse/NXP-30547)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29261](https://jira.nuxeo.com/browse/NXP-29261)
 
 ### Packaging / Distribution / Installation
 
