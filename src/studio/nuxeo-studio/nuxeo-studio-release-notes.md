@@ -25,6 +25,8 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [December 2021]({{page page='studio-updates-2021-12'}})               | Increase in the Max Number of Users per Organisation and Removal of 11.x Platform in Studio    
+| [November 2021]({{page page='studio-updates-2021-11'}})               | Update All Button in Application Definition                                              |
 | [September 2021]({{page page='studio-updates-2021-09'}})               | Multi-Layer public release and Marketplace changes                                              |
 | [August 2021]({{page page='studio-updates-2021-08'}})                  | Multi-Layer and Elasticsearch                                              |
 | [July 2021]({{page page='studio-updates-2021-07'}})                    | Accessibility improvements for Studio Designer                             |
