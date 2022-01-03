@@ -24,6 +24,10 @@ nuxeo.selection.selectAllEnabled=true
 
 Bulk edit was introduced to LTS 2021 with Web UI 3.0.9. No additional property is needed to enable it, as it relies on configuration done through Studio. See [how to create a bulk edit form]({{page page='how-to-create-bulk-edit-form-studio'}}) for additional information.
 
+{{#> callout type='tip'}}
+Bulk edit can work without enabling the select all option if you intend to select documents to edit individually or using a range only.
+{{/callout}}
+
 ## Using Bulk Actions
 
 Once enabled, users can select all documents in a result listing and execute an action on them. A selection can be done while browsing content and in the context of search results. It is possible to select all documents after using filters as well to fine-tune the results first. Note that adding filters, changing the display or the sort order for the results causes the current selection to be lost: this results in sending a different query to the server and we cannot keep track of the difference between the two without hurting performance.
