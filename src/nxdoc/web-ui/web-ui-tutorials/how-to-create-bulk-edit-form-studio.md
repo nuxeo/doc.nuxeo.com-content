@@ -31,6 +31,10 @@ This capability is available since LTS 2021 with Web UI 3.0.9.
 - In Studio Modeler > **Settings** > **Application Definition**, make sure that **Nuxeo Web UI** is in the **Packages to Install** list.
 - Activate the `Select All and Bulk Actions` feature by adding the `nuxeo.selection.selectAllEnabled=true` property in your [nuxeo.conf]({{page page="configuration-parameters-index-nuxeoconf"}}) file.
 
+{{#> callout type='tip'}}
+Bulk edit can work without enabling the select all option if you intend to select documents to edit individually or using a range only.
+{{/callout}}
+
 ## Create the Structure
 
 - In Studio Designer, click on the **RESOURCES** tab.
@@ -44,7 +48,7 @@ To make things faster, we will reuse the same form as the one used for the edit 
 - From the **RESOURCES** tab, open the **document** > **contract** folder and open the `nuxeo-contract-edit-layout.html` file.
 - Copy the content of the layout (Ctrl/Cmd + A then Ctrl/Cmd + C).
 - Select the `bulk` folder you created previously and click on the `create` button at the bottom of the screen.
-- Create a new `empty file` and name it `nuxeo-bulk-edit-contracts-layout`.
+- Create a new `empty file` and name it `nuxeo-bulk-edit-contracts-layout.html`.
 - Inside, paste the content of the contract edit layout.
 - In your bulk edit layout, replace the name of the layout you copied (`nuxeo-contract-edit-layout`) with the current one (`nuxeo-bulk-edit-contracts-layout`).
 - Save your configuration.
