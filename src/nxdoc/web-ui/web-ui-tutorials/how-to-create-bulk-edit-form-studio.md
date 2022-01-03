@@ -26,10 +26,10 @@ In this tutorial you will learn how to create a form to edit metadata on a large
 This capability is available since LTS 2021 with Web UI 3.0.9.
 {{/callout}}
 
-- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler.
+- A [Contract document type]({{page page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler.
 - The Nuxeo [Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) installed on your instance.
 - In Studio Modeler > **Settings** > **Application Definition**, make sure that **Nuxeo Web UI** is in the **Packages to Install** list.
-- Activate the `Select All and Bulk Actions` feature by adding the `nuxeo.selection.selectAllEnabled=true` property in your [nuxeo.conf]({{page page="configuration-parameters-index-nuxeoconf"}}) file.
+- Activate the `Select All and Bulk Actions` feature by adding the `nuxeo.selection.selectAllEnabled=true` property in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file.
 
 {{#> callout type='tip'}}
 Bulk edit can work without enabling the select all option if you intend to select documents to edit individually or using a range only.

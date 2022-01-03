@@ -8,7 +8,6 @@ review:
 toc: true
 labels:
 tree_item_index: 996
-hidden: true
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
