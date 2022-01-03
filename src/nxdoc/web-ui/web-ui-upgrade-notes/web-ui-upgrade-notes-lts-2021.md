@@ -102,7 +102,7 @@ navigateTo(doc)
 ```
 In this format, a router resolver defined at the application level is used to compute the URLs. Although still supported, the previous format should only be used if there's the explicit need to specify the route.
 
-For more information, please check the [Web UI Routing](https://doc.nuxeo.com/nxdoc/web-ui-routing/) page. 
+For more information, please check the [Web UI Routing]({{page page='web-ui-routing'}}) page. 
 
 ### Use of Atomic Permissions
 
