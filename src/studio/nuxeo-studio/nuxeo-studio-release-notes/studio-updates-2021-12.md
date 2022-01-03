@@ -18,17 +18,17 @@ We’ve increased the max number of users allowed for an organisation to a hundr
 
 ## Removal of 11.x Platform in Studio
 
-We’ve removed the possibility of setting 11.x as the compatible platform in Application Definition in Studio as this version is no longer compatible. 
+We’ve removed the possibility of setting 11.x as the compatible platform in Application Definition in Studio as this version is no longer compatible.
 
-## Property to remove Mobile Banner
+## Property to Remove Mobile Banner
 
-We’ve added a property to remove the mobile banner 
+We’ve added a property to remove the mobile banner.
 
 ## Resources Identified in Studio Registries
 
-We’ve identified Resources in Studio registries as a way to a range of overriding issues stemming from a resource in a dependency not being accessible in the local project. 
+We’ve identified Resources in Studio registries as a way to a range of overriding issues stemming from a resource in a dependency not being accessible in the local project.
 
 ## Improvement to track Page Provider Usage
 
-We’ve evolved the Page Provider properties to make it easier to track usage, notably using the <trackUsage> property.
+We’ve evolved the Page Provider properties to make it easier to track usage, notably using the `<trackUsage>` property.
 {{! /multiexcerpt}}
