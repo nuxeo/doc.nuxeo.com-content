@@ -54,7 +54,7 @@ This new version includes architectural changes involving a renaming of the comp
 
 ### New Features
 
-#### Dynamic selection of layers to display
+#### Dynamic Selection of Layers to Display
 
 You can now select dynamically the layers to be displayed on the viewer. You can select and unselect each layer of a document, thanks to a new dedicated menu on the left section of the Annotation tab.
 
@@ -64,13 +64,13 @@ See [NEV-207](https://jira.nuxeo.com/browse/NEV-207).
 
 ### UI/UX
 
-#### New look and feel
+#### New Look and Feel
 
 This new version introduces a fresh new look for the Annotation tab header, all the icons inside, and also the left section (for annotations part). It improves the user experience in a general purpose and add consistency between Nuxeo UI and ARender viewer.
 
 ### Improvements
 
-#### Split NEV Nuxeo addon and ARender services
+#### Split Nev Nuxeo Addon and ARender Services
 
 In order to remove dependencies and guarantee the backward compatibility between the ARender services and the Nuxeo addon, we made architectural changes on the components.
 
@@ -111,7 +111,7 @@ See below the renaming of ARender artifacts:
 
 See [NEV-454](https://jira.nuxeo.com/browse/NEV-454).
 
-#### Display content of containers files (archives, emails) even when there is unsupported file(s) inside
+#### Display Content of Containers Files (Archives, Emails) Even When There Is Unsupported File(s) Inside
 
 Previously, archive files (ex: .zip) or emails with attachments (.eml, .msg) couldn't be displayed at all into the advanced viewer.
 
@@ -119,7 +119,7 @@ This new version allows to display all the supported files inside a container do
 
 See [NEV-377](https://jira.nuxeo.com/browse/NEV-377).
 
-#### Display XML files as plain text
+#### Display XML Files as Plain Text
 
 The XML files are now supported into the Nuxeo Enhanced Viewer. Those type of files are displayed in plain text.
 
@@ -133,35 +133,34 @@ Following the [Log4j vulnerabilities (CVE-2021-45046)](https://logging.apache.or
 
 See [NEV-514](https://jira.nuxeo.com/browse/NEV-514).
 
-#### Improve low quality TIFF files display
+#### Improve Low Quality TIFF Files Display
 
-Certain tiff (mostly black and white with low resolution) documents were poorly displayed into NEV.
+Certain TIFF (mostly black and white with low resolution) documents were poorly displayed into NEV.
 
 We have improved the conversion and display quality, including in case of zoom.
 
 See [NEV-456](https://jira.nuxeo.com/browse/NEV-456).
 
-#### Dedicated message for unsupported files
+#### Dedicated Message for Unsupported Files
 
 We have added a specific error message in case of a file fails to be displayed because it is not a supported format.
 
 See [NEV-507](https://jira.nuxeo.com/browse/NEV-507).
 
-#### Fix Download With Annotations for document with several layers
+#### Fix Download With Annotations for Document With Several Layers
 
 We have fixed the download with annotations feature which was failing in case of a document with layers.
 
 See [NEV-378](https://jira.nuxeo.com/browse/NEV-378).
 
-#### Reduce time to display for .msg files with embedded images
+#### Reduce Time to Display for .msg Files With Embedded Images
 
 We have fixed the slowness occurring when displaying an email (.msg) with embedded images.
 
 See [NEV-350](https://jira.nuxeo.com/browse/NEV-350).
 
-#### Improve concurrent access to a document
+#### Improve Concurrent Access to a Document
 
 The concurrent access in case of parallel requests to display the same document has been improved to not degrade the performances and to not request several conversions for the same document.
-
 
 {{! /multiexcerpt}}
