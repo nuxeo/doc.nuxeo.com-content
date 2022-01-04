@@ -185,11 +185,66 @@ nuxeo.ai.similar.content.listener.enable=true
 
 In order to be able to display all the similar documents each time an image is added/updated/removed, you have to add in the target document type form (create/edit/metadata) as follows:
 
+1) Example of widget usage in Create/Edit forms:
+
+```
+<nuxeo-dropzone role="widget"
+                    label="[[i18n('file.content')]]"
+                    name="content"
+                    document="{{document}}"></nuxeo-dropzone>
+
+<nuxeo-ai-dedup-grid property="file:content" doc=[[document]]/>
+```
+
+2) Example of widget usage in Metadata forms:
+
 ```
 <nuxeo-ai-dedup-grid property="file:content" doc=[[document]]/>
 ```
 
-Where the parameter `property` needs to be set to define which blob metadata you want to introspect.
+NB:
+- Don't forget the double binding on `{{document}}` on the nuxeo dropzone element, that the systems can get changes event for the Create/Edit forms.
+- The `property` parameter needs to be set to define which blob metadata you want to introspect.
+
+3) Example of widget with custom content:
+
+```
+<nuxeo-ai-dedup-grid property="file:content" doc=[[document]]>
+  <slot name="dedup-content">
+    <!-- custom template for each similar document accessible via [[item]] -->
+    <p>[[item.title]]</p>
+  </slot>
+</nuxeo-ai-dedup-grid>
+```
+
+Default Content is here:
+
+```
+<nuxeo-card heading="[[_getSimilarsLength(similars)]] [[i18n('ai.insight.dedup.label')]]" collapsible opened>
+  <template is="dom-repeat" items="[[similars]]">
+    <slot name="dedup-grid-content">
+      <div class="thumbnailContainer" on-tap="_navigate">
+        <img src="[[_thumbnail(item)]]" alt$="[[item.title]]"/>
+      </div>
+      <a class="title" href$="[[item.contextParameters.documentURL]]" on-tap="_navigate">
+        <div class="dataContainer">
+          <div class="title" id="title">[[item.title]]</div>
+          <nuxeo-tag>[[formatDocType(item.type)]]</nuxeo-tag>
+          <nuxeo-tooltip for="title">[[item.title]]</nuxeo-tooltip>
+        </div>
+      </a>
+      <div class="actions">
+        <div on-click="_delete" style="float:left">
+          <paper-icon-button icon="delete" noink=""></paper-icon-button>
+          <span class="label" hidden$="[[!showLabel]]">[[_label]]</span>
+        </div>
+        <nuxeo-favorites-toggle-button document="[[item]]"></nuxeo-favorites-toggle-button>
+        <nuxeo-download-button document="[[item]]"></nuxeo-download-button>
+      </div>
+    </slot>
+  </template>
+</nuxeo-card>
+```
 
 ### Misc
 
