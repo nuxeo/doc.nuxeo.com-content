@@ -103,6 +103,10 @@ curl -u Administrator:xxxx\   -H 'Content-Type: application/json' \   -X POST ht
 
 ### Client-side
 
+#### Requirements
+
+The Nuxeo Outlook Connector requires Windows 10 with a local installation of Office 2019 or Office 365.
+
 #### Manual Installation
 
 If you are distributing the Nuxeo Outlook Client across an organization, see [Scripted Installation](#scripted-installation) section.
