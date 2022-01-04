@@ -123,6 +123,221 @@ provides 4 default document streams that can be activated by the [configuration 
 
 These allow you to start your processing chain quickly.
 
+## Insight Deduplication
+
+_This feature requires an Insight subscription_
+
+The Deduplication feature presents images that are similar to other existing repository images. In a Nuxeo repository, such detection can be run each time a picture will be added to a document. On existing assets, a complete re-index can be operated through Nuxeo Insight.
+
+![]({{file name='deduplication.png'}} ?w=600,border=true)
+
+### Configuration
+
+In order to activate the deduplication feature, we need to activate it in the `nuxeo.conf` file:
+
+```
+nuxeo.insight.dedup.enabled=true
+```
+
+By default, each document of 'Picture' type will be analyzed to detect potential similar documents. Here is the exact query:
+
+```
+SELECT * FROM Document WHERE ecm:mixinType = 'Picture' AND ecm:tag NOT IN ('not_duplicate')
+```
+
+This query and the metadata to introspect can be customized through a Nuxeo extension point as follows:
+
+```
+<requires>org.nuxeo.ai.similar.content.default.config</require>
+<extension target="org.nuxeo.ai.similar.content.services.SimilarServiceComponent" point="configuration">
+    <deduplication name="specific-contribution"
+                   query="SELECT * FROM Document WHERE ecm:mixinType = 'Picture' AND ecm:tag NOT IN ('not_duplicate')">
+      <!-- Here is the blob metadata to introspect-->
+      <xpath>file:content</xpath>
+      <filter id="dedup-default-filter">
+        <rule grant="true">
+          <type>Picture</type>
+        </rule>
+      </filter>
+    </deduplication>
+  </extension>
+```
+
+Note the 'specific-contribution' name of the contribution that needs to be set in `nuxeo.conf` through the variable:
+
+```
+nuxeo.ai.similar.content.configuration.id=specific-contribution
+```
+
+There are two ways to detect the similar documents:
+
+- Via a complete re-index of the repository through Nuxeo Insight
+- Via an automatic listener that will display the similar documents in the Nuxeo UI each time an image has been added/updated/removed.
+
+This listener is disabled by default and can be activated through `nuxeo.conf` via:
+
+```
+# Deduplication Listener activation flag
+nuxeo.ai.similar.content.listener.enable=true
+```
+
+### Nuxeo Web UI Customization Forms
+
+In order to be able to display all the similar documents each time an image is added/updated/removed, you have to add in the target document type form (create/edit/metadata) as follows:
+
+1) Example of widget usage in Create/Edit forms:
+
+```
+<nuxeo-dropzone role="widget"
+                    label="[[i18n('file.content')]]"
+                    name="content"
+                    document="{{document}}"></nuxeo-dropzone>
+
+<nuxeo-ai-dedup-grid property="file:content" doc=[[document]]/>
+```
+
+2) Example of widget usage in Metadata forms:
+
+```
+<nuxeo-ai-dedup-grid property="file:content" doc=[[document]]/>
+```
+
+NB:
+- Don't forget the double binding on `{{document}}` on the nuxeo dropzone element, that the systems can get changes event for the Create/Edit forms.
+- The `property` parameter needs to be set to define which blob metadata you want to introspect.
+
+3) Example of widget with custom content:
+
+```
+<nuxeo-ai-dedup-grid property="file:content" doc=[[document]]>
+  <slot name="dedup-content">
+    <!-- custom template for each similar document accessible via [[item]] -->
+    <p>[[item.title]]</p>
+  </slot>
+</nuxeo-ai-dedup-grid>
+```
+
+Default Content is here:
+
+```
+<nuxeo-card heading="[[_getSimilarsLength(similars)]] [[i18n('ai.insight.dedup.label')]]" collapsible opened>
+  <template is="dom-repeat" items="[[similars]]">
+    <slot name="dedup-grid-content">
+      <div class="thumbnailContainer" on-tap="_navigate">
+        <img src="[[_thumbnail(item)]]" alt$="[[item.title]]"/>
+      </div>
+      <a class="title" href$="[[item.contextParameters.documentURL]]" on-tap="_navigate">
+        <div class="dataContainer">
+          <div class="title" id="title">[[item.title]]</div>
+          <nuxeo-tag>[[formatDocType(item.type)]]</nuxeo-tag>
+          <nuxeo-tooltip for="title">[[item.title]]</nuxeo-tooltip>
+        </div>
+      </a>
+      <div class="actions">
+        <div on-click="_delete" style="float:left">
+          <paper-icon-button icon="delete" noink=""></paper-icon-button>
+          <span class="label" hidden$="[[!showLabel]]">[[_label]]</span>
+        </div>
+        <nuxeo-favorites-toggle-button document="[[item]]"></nuxeo-favorites-toggle-button>
+        <nuxeo-download-button document="[[item]]"></nuxeo-download-button>
+      </div>
+    </slot>
+  </template>
+</nuxeo-card>
+```
+
+### Misc
+
+#### Hooks
+
+1) An event `similarDocumentsFound` is fired each time a similar document has been sent to the Insight deduplication index. By creating a listener triggered by this event, you can introspect all the similar documents (by their ids) and the source document as follow:
+
+```
+Example
+
+package .....
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
+import org.nuxeo.ecm.core.api.DocumentModel;
+import org.nuxeo.ecm.core.event.Event;
+import org.nuxeo.ecm.core.event.EventListener;
+import org.nuxeo.ecm.core.event.impl.DocumentEventContext;
+
+public class ResolveDuplicatesListener implements EventListener {
+
+    public static final AtomicReference<DocumentModel> docRef = new AtomicReference<>();
+
+    public static final List<String> similarIds = Collections.synchronizedList(new ArrayList<>());
+
+    @Override
+    public void handleEvent(Event event) {
+        DocumentEventContext ctx = (DocumentEventContext) event.getContext();
+        docRef.set(ctx.getSourceDocument());
+
+        @SuppressWarnings("unchecked")
+        List<String> ids = (List<String>) ctx.getProperty("similarIds");
+        similarIds.clear();
+        similarIds.addAll(ids);
+    }
+}
+```
+
+2) An Automation operation can be contributed as "deduplication operation" as follows:
+
+```
+<require>org.nuxeo.ai.similar.content.default.config</require>
+<extension target="org.nuxeo.ai.similar.content.services.SimilarServiceComponent" point="operation">
+   <deduplication-operation class="org.something.YourOperation"/>
+</extension>
+```
+
+This operation is triggered when a batch duplicate process is launched (`AI.ProcessDuplicates` operation execution) and can be used to introspect each document with its similars:
+
+```
+Example (default operation):
+
+@Operation(id = DefaultDeduplicationResolverOperation.ID, category = "AI", label = "Default Deduplication resolver")
+public class DefaultDeduplicationResolverOperation {
+
+    private static final Logger log = LogManager.getLogger(DefaultDeduplicationResolverOperation.class);
+
+    public static final String ID = "AI.DeduplicationResolverOperation";
+
+    @Param(name = "similar")
+    protected Set<Pair<String, String>> similar;
+
+    @Param(name = "xpath")
+    protected String xpath;
+
+    @OperationMethod
+    public void resolve(DocumentModel doc) {
+        log.warn("Received document {} with duplicates of size {}", doc.getId(), similar.size());
+    }
+}
+
+```
+
+#### Additional Configuration
+
+Other parameters of the deduplication stream can be updated:
+
+```
+# default value = 2
+nuxeo.insight.dedup.concurrency
+
+# default value = 2
+nuxeo.insight.dedup.partitions
+
+# default value = 1
+nuxeo.ai.dedup.scroller.concurrency
+
+# default value = 2
+nuxeo.ai.dedup.resolver.concurrency
+```
+
 ## Extensions
 
 Core AI is created with multiple extension points to the several processors.  
