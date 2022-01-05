@@ -29,7 +29,7 @@ This capability is available since LTS 2021 with Web UI 3.0.9.
 - A [Contract document type]({{page page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler.
 - The Nuxeo [Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) installed on your instance.
 - In Studio Modeler > **Settings** > **Application Definition**, make sure that **Nuxeo Web UI** is in the **Packages to Install** list.
-- Activate the `Select All and Bulk Actions` feature by adding the `nuxeo.selection.selectAllEnabled=true` property in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file.
+- Activate the **Select All and Bulk Actions** feature by adding the `nuxeo.selection.selectAllEnabled=true` property in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file.
 
 {{#> callout type='tip'}}
 Bulk edit can work without enabling the select all option if you intend to select documents to edit individually or using a range only.
@@ -37,21 +37,21 @@ Bulk edit can work without enabling the select all option if you intend to selec
 
 ## Create the Structure
 
-- In Studio Designer, click on the **RESOURCES** tab.
-- Select the `UI` folder and click on the `create` button at the bottom of the screen.
-- Create a new folder and name it `bulk`.
+1. In Studio Designer, click on the **RESOURCES** tab.
+1. Select the `UI` folder and click on the `create` button at the bottom of the screen.
+1. Create a new folder and name it `bulk`.
 
 ## Create a Bulk Edit Layout
 
 To make things faster, we will reuse the same form as the one used for the edit layout of the Contract document type.
 
-- From the **RESOURCES** tab, open the **document** > **contract** folder and open the `nuxeo-contract-edit-layout.html` file.
-- Copy the content of the layout (Ctrl/Cmd + A then Ctrl/Cmd + C).
-- Select the `bulk` folder you created previously and click on the `create` button at the bottom of the screen.
-- Create a new `empty file` and name it `nuxeo-bulk-edit-contracts-layout.html`.
-- Inside, paste the content of the contract edit layout.
-- In your bulk edit layout, replace the name of the layout you copied (`nuxeo-contract-edit-layout`) with the current one (`nuxeo-bulk-edit-contracts-layout`).
-- Save your configuration.
+1. From the **RESOURCES** tab, open the **document** > **contract** folder and open the `nuxeo-contract-edit-layout.html` file.
+1. Copy the content of the layout (Ctrl/Cmd + A then Ctrl/Cmd + C).
+1. Select the `bulk` folder you created previously and click on the `create` button at the bottom of the screen.
+1. Create a new `empty file` and name it `nuxeo-bulk-edit-contracts-layout.html`.
+1. Inside, paste the content of the contract edit layout.
+1. In your bulk edit layout, replace the name of the layout you copied (`nuxeo-contract-edit-layout`) with the current one (`nuxeo-bulk-edit-contracts-layout`).
+1. Save your configuration.
 
 {{#> callout type='info'}}
 Your bulk edit layouts need to be placed in the dedicated `bulk` folder, and follow a naming convention introduced to prevent collision. Make sure they are always named `nuxeo-bulk-[your-layout-name]-layout`.
@@ -61,28 +61,27 @@ Your bulk edit layouts need to be placed in the dedicated `bulk` folder, and fol
 
 Now that your layout is ready, you will need to bind it to a button.
 
-- From the **RESOURCES** tab, open the `nuxeo-[studio-project-id]-custom-bundle.html` file.
+1. From the **RESOURCES** tab, open the `nuxeo-[studio-project-id]-custom-bundle.html` file.
+  {{#> callout type='info'}}
+  If the file doesn't exist yet, open the `nuxeo-[studio-project-id]-bundle.html` file first and you will be prompted for the custom bundle file to be generated.
+  {{/callout}}
 
-{{#> callout type='info'}}
-If the file doesn't exist yet, open the `nuxeo-[studio-project-id]-bundle.html` file first and you will be prompted for the custom bundle file to be generated.
-{{/callout}}
+1. Inside the file, add the following contribution to bind your layout to a button:
 
-- Inside the file, add the following contribution to bind your layout to a button:
+  ```
+  <!-- Contribution for bulk editing contracts in every context (no filtering) -->
+  <nuxeo-slot-content name="bulkEditContractsButton" slot="RESULTS_SELECTION_ACTIONS" order="1">
+    <template>
+      <nuxeo-edit-documents-button icon="nuxeo:edit" label="Bulk Edit Contracts" documents="[[selection]]" layout="edit-contracts"></nuxeo-edit-documents-button>
+    </template>
+  </nuxeo-slot-content>
+  ```
 
-```
-<!-- Contribution for bulk editing contracts in every context (no filtering) -->
-<nuxeo-slot-content name="bulkEditContractsButton" slot="RESULTS_SELECTION_ACTIONS" order="1">
-  <template>
-    <nuxeo-edit-documents-button icon="nuxeo:edit" label="Bulk Edit Contracts" documents="[[selection]]" layout="edit-contracts"></nuxeo-edit-documents-button>
-  </template>
-</nuxeo-slot-content>
-```
+  {{#> callout type='tip'}}
+  In this example, we are displaying our button in every situation. Feel free to [add filters to this contribution]({{page space='studio' page='javascript-expression-examples'}}) to refine when the button should be displayed.
+  {{/callout}}
 
-{{#> callout type='tip'}}
-In this example, we are displaying our button in every situation. Feel free to [add filters to this contribution]({{page space='studio' page='javascript-expression-examples'}}) to refine when the button should be displayed.
-{{/callout}}
-
-- Save your configuration. Your bulk edit form is ready to be used.
+1. Save your configuration. Your bulk edit form is ready to be used.
 
 {{#> callout type='info'}}
 You only need to mention the unique part of the layout name in the `layout` property of the `nuxeo-edit-documents-button` element. It applies the naming convention automatically.
