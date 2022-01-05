@@ -69,8 +69,8 @@ The following default actions are **NOT** available as bulk actions:
 - Move Document Up and Down (in the context of ordered folders). This would only cause useless processing since moving all documents up or down would yield the same result.
 
 You can create additional bulk actions using Nuxeo Studio as well:
-- [Creating Bulk Actions Using Nuxeo Studio]({{page page='how-to-create-bulk-actions-studio'}})
-- [Creating Bulk Edit Forms Using Nuxeo Studio]({{page page='how-to-create-bulk-edit-form-studio'}})
+- [Create Bulk Actions Using Nuxeo Studio]({{page page='how-to-create-bulk-actions-studio'}})
+- [Create Bulk Edit Forms Using Nuxeo Studio]({{page page='how-to-create-bulk-edit-form-studio'}})
 
 ### Bulk Actions Notifications Management
 
@@ -108,16 +108,16 @@ To avoid cluttering the UI when executing many bulk actions in parallel, three (
 ## Configuring a Custom Bulk Action
 
 Custom bulk actions and bulk edit forms can be configured using Nuxeo Studio. For more information, please refer to our tutorials:
-- [create your custom bulk actions using Nuxeo Studio]({{page page='how-to-create-bulk-actions-studio'}}).
-- [create your custom bulk edit forms using Nuxeo Studio]({{page page='how-to-create-bulk-edit-form-studio'}}).
+- [Create Bulk Actions Using Nuxeo Studio]({{page page='how-to-create-bulk-actions-studio'}})
+- [Create Bulk Edit Forms Using Nuxeo Studio]({{page page='how-to-create-bulk-edit-form-studio'}})
 
 ## Questions and Answers
 
-### In Which Context Can Users Trigger Bulk Actions ?
+### In Which Context Can Users Trigger Bulk Actions?
 
 They can be launched from any results listing, e.g. when browsing a document or when doing a search.
 
-### Can I Have Multiple Bulk Edit Forms / Multiple Bulk Actions ?
+### Can I Have Multiple Bulk Edit Forms / Multiple Bulk Actions?
 
 You can configure as many bulk actions and bulk edit forms as you desire.
 
@@ -125,6 +125,6 @@ You can configure as many bulk actions and bulk edit forms as you desire.
 
 Bulk actions were tested on sets of 150 000 documents; however there is no limit implemented in the software currently. We recommend being thoughtful when designing your bulk actions (how many documents can be impacted, how many of them could run in parallel) and considering your architecture needs.
 
-### How do I Deal With Errors?
+### How Do I Deal With Errors?
 
 When an error happens, the user receives a notification once the action completes. It is possible for them to copy the error message and the bulk command id in order to contact an administrator. An administrator can have a detailed look at the situation by looking at the information related to this bulk command id.
