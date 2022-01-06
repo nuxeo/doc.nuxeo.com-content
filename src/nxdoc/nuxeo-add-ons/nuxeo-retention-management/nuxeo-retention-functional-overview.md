@@ -632,6 +632,12 @@ The following tables describe the availability of document actions:
     <td></td>
 </tr>
 <tr>
+    <td colspan="1">Edit metadata</td>
+    <td><center>&#10003;</center></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
     <td colspan="1">Publish document</td>
     <td></td>
     <td><center>&#10003;</center></td>
@@ -652,7 +658,7 @@ The following tables describe the availability of document actions:
 <tr>
     <td colspan="1">Delete document</td>
     <td></td>
-    <td><center>&#10003;</center></td>
+    <td><center>&#10003;\*</center></td>
     <td></td>
 </tr>
 <tr>
@@ -676,6 +682,10 @@ The following tables describe the availability of document actions:
 </tbody>
 </table>
 </div>
+
+{{#> callout type='note' }}
+\*: Delete a document is disabled for record unless the [specific role](#delete-document-under-retention) has been activated and assigned to a user.
+{{/callout}}
 
 ### With Compliance Mode
 
@@ -776,6 +786,12 @@ The following tables describe the availability of document actions:
 </tr>
 <tr>
     <td colspan="1">Lock</td>
+    <td><center>&#10003;</center></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Edit metadata</td>
     <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
