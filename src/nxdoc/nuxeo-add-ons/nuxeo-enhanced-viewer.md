@@ -398,7 +398,7 @@ In order to make the integration work on modern browsers, Nuxeo and NEV 10.3.x s
 
 ### ARender Configuration
 
-Nuxeo Enhanced Viewer involves installing the ARender services. You can install the ARender services using Kubernetes and Helm 3 by following the [ARender Documentation](https://arender.io/v4/documentation/install/kubernetes/).
+Nuxeo Enhanced Viewer involves installing the ARender services. You can install the ARender services using Kubernetes and Helm 3 by following the [ARender Documentation](https://arender.io/documentation/install/kubernetes/).
 
 {{#> callout type='warning' heading='Private services'}}
 You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these services.
@@ -551,7 +551,7 @@ The UI customization is done through two files to be put in the `/docker-entrypo
 - `arender.css` to customize the style
 - `arender.properties` to customize the behavior
 
-Please follow the [ARender configuration guide](https://arender.io/v4/documentation/configuration/) for more information about available properties and style.
+Please follow the [ARender configuration guide](https://arender.io/documentation/configuration/) for more information about available properties and style.
 
 {{#> callout type='info' heading='Properties as environment variables'}}
 UI properties can also be customized through environment variables. You need to capitalize all letters in the key, and to replace `.` by `_`, and prefix it with `ARENDER_`.</br>
