@@ -1021,6 +1021,43 @@ try (MockServerClient client = new MockServerClient("localhost", PORT)) {
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28818](https://jira.nuxeo.com/browse/NXP-28818)
 
+#### Remove the assignment to the ZIP extra field to produce correct ZIP
+
+You can now disable the extra field setting when doing Nuxeo IO export by contributing the following:
+```Java
+  <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
+    <property name=nuxeo.core.io.archive.extra.files.count>false</property>
+  </extension>
+```
+
+This could be interesting if you want to open the produced archive with external tools such as Archive Utility.app.
+
+This property has `true` as default as disabling this behavior may impact performance when re-importing to Nuxeo the archive.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30713](https://jira.nuxeo.com/browse/NXP-30713)
+
+
+#### Bulk SetPropertiesAction - VersioningOption parameter does not take effect when Versioning Service is extended via XML Extension
+
+As documented in the [automatic versioning system](https://doc.nuxeo.com/nxdoc/versioning/#source-based-versioning), the versioning policy order should be higher than `10`, order lower than 10 is reserved for internal purposes.
+This restriction is now enforced on LTS 2021, a server having a versioning policy contribution that doesn't respect this rule will **NOT** start.
+On LTS 2019, an ERROR message will be logged during Nuxeo startup.
+
+In addition to disable the automatic versioning system for `setProperties` action, we also have disabled the system for the following system related updates:
+- add/remove a document to/from a collection
+- recompute pictureViews
+- add/remove notifications subscriptions
+- add/remove tags
+- update quotas
+- recompute thumbnails
+- recompute transcodedVideos
+- recompute videoInfos
+
+In a more general way, the system has been disabled in the code paths where auto checkout was disabled.
+This can impact positively performance by avoiding version creation on the above low-level updates.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30700](https://jira.nuxeo.com/browse/NXP-30700)
+
 ## Farewell
 
 ### Remove Deprecated `org.nuxeo.ecm.core.model.LockManager`
@@ -1536,43 +1573,3 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 ## Complementary Information
 
 - [Release notes for Nuxeo Platform LTS 2021]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
-
-## TODO
-
-### Remove the assignment to the ZIP extra field to produce correct ZIP
-
-You can now disable the extra field setting when doing Nuxeo IO export by contributing the following:
-```Java
-  <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
-    <property name=nuxeo.core.io.archive.extra.files.count>false</property>
-  </extension>
-```
-
-This could be interesting if you want to open the produced archive with external tools such as Archive Utility.app.
-
-This property has `true` as default as disabling this behavior may impact performance when re-importing to Nuxeo the archive.
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30713](https://jira.nuxeo.com/browse/NXP-30713)
-
-### Bulk SetPropertiesAction - VersioningOption parameter does not take effect when Versioning Service is extended via XML Extension
-
-As documented in the [automatic versioning system](https://doc.nuxeo.com/nxdoc/versioning/#source-based-versioning), the versioning policy order should be higher than `10`, order lower than 10 is reserved for internal purposes.
-This restriction is now enforced on LTS 2021, a server having a versioning policy contribution that doesn't respect this rule will **NOT** start.
-On LTS 2019, an ERROR message will be logged during Nuxeo startup.
-
-In addition to disable the automatic versioning system for `setProperties` action, we also have disabled the system for the following system related updates:
-- add/remove a document to/from a collection
-- recompute pictureViews
-- add/remove notifications subscriptions
-- add/remove tags
-- update quotas
-- recompute thumbnails
-- recompute transcodedVideos
-- recompute videoInfos
-
-In a more general way, the system has been disabled in the code paths where auto checkout was disabled.
-This can impact positively performance by avoiding version creation on the above low-level updates.
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30700](https://jira.nuxeo.com/browse/NXP-30700)
-
-
