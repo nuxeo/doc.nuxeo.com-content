@@ -9,7 +9,6 @@ labels:
     - release-notes
 toc: true
 tree_item_index: 5300
-hidden: true
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2021-11'}}
