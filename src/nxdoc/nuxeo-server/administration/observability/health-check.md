@@ -92,11 +92,11 @@ Note that a probe is only run if the last execution time was more than 20s ago. 
 
 Here is a list of available probes:
 
-* `activeRepositorySession`: returns the number of active sessions per repository
-* `adminStatus`: checks local instance enable flag (checks `nuxeoInstance` administrative status)
+* `activeRepositorySessions`: check number of active sessions per repository
+* `administrativeStatus`: check local instance enable flag (checks `nuxeoInstance` administrative status)
 * `elasticSearchStatus`: check access to Elasticsearch
-* `ldapDirectory`: check LDAP connectivity
-* `remoteSQLStorageSession`: number of remove VCS client connected (only used in VCS client/server mode that is not enabled by default)
+* `ldapDirectories`: check LDAP connectivity
+* `remoteSQLStorageSessions`: check number of remote VCS clients connected (only used in VCS client/server mode that is not enabled by default)
 * `repositoryStatus`: check access to the repository
 * `runtimeStatus`: check state of the runtime
 * `s3BinaryManagerStatus`: check access to s3 buckets
