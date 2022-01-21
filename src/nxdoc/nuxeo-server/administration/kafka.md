@@ -255,6 +255,14 @@ nuxeo-work-pictureViewsGeneration
 nuxeo-work-renditionBuilder
 nuxeo-work-updateACEStatus
 nuxeo-work-videoConversion
+nuxeo-bulk-automationUi
+nuxeo-bulk-driveFireGroupUpdatedEvent
+nuxeo-bulk-recomputeTranscodedVideos
+nuxeo-bulk-recomputeVideoConversion
+nuxeo-bulk-updateReadAcls
+nuxeo-internal-metrics
+nuxeo-internal-processors
+
 
 # list of consumers
 /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
