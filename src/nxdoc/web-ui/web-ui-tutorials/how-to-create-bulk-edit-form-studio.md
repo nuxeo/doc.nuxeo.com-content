@@ -13,6 +13,8 @@ details:
         topics: 'Web UI, Studio Designer, UIElements, Bulk'
 labels:
     - tutorial
+    - bulk
+    - edit
 tree_item_index: 497
 ---
 
