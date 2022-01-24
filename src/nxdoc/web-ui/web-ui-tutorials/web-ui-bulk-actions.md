@@ -8,10 +8,11 @@ toc: true
 labels:
     - nuxeo-web-ui
     - bulk
+    - edit
 tree_item_index: 490
 ---
 
-Bulk actions allow you to execute custom logic on large sets of documents. They can be triggered from all sorts of context (while browsing, on search results, during a workflow) and are meant to be used on tens of thousands of documents at once or even more.
+Bulk actions allow you to execute custom logic on large sets of documents. They can be triggered from all sorts of context (while browsing, on search results, during a workflow) and are meant to be used on tens of thousands of documents at once or even more. This includes offering Bulk Editing of Documents as a Bulk action.
 
 ## Enabling Bulk Actions
 
