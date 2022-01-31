@@ -1573,3 +1573,38 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 ## Complementary Information
 
 - [Release notes for Nuxeo Platform LTS 2021]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+
+## TODO
+
+### setUserAgentPrefix in S3 config
+
+The following nuxeo.conf properties have been added:
+
+nuxeo.s3storage.user.agent.prefix, empty string by default
+nuxeo.s3storage.user.agent.suffix, empty string by default
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30797](https://jira.nuxeo.com/browse/NXP-30797)
+
+### Clean up json enrichers to do not produce warn logs
+
+Nuxeo default enrichers do not produce warns on empty document models.
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30742](https://jira.nuxeo.com/browse/NXP-30742)
+
+### Fix Task marshaller when workflow schema prefix is different from the name
+
+The workflow and node schemas can now have a prefix different from the shema name.
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30658](https://jira.nuxeo.com/browse/NXP-30658)
+
+### Use partialFilterExpression on parentId when creating the unique index to avoid duplicates
+
+Setup having the `childNameUniqueConstraintEnabled` enabled on MongoDB will need to drop the `ecm:parentId_1_ecm:name_1` before starting Nuxeo with the fix installed.
+ You should run the command below in a MongoDB Shell (assuming you're connected to the `nuxeo` database and your repository is `default`):
+```java
+db.default.dropIndex(ecm:parentId_1_ecm:name_1);
+```
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30638](https://jira.nuxeo.com/browse/NXP-30638)
+
+
