@@ -159,6 +159,21 @@ The columns displayed on the spreadsheet reflects the columns contributed as sea
 ```
 {{{multiexcerpt 'modify-undo-value-spreadsheet' page='nuxeo-spreadsheet'}}}
 
+### Enable Spreadsheet button contribution in Web UI
+
+Starting from LTS 2021, the Spreadsheet addon is integrated in Web UI, however, the button contribution is disabled by default.
+
+To display the button in Web UI, users should go to Studio Designer, select the `Buttons` entry in the left UI menu and enable the `spreadSheet` button in the RESULTS_ACTIONS slot.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Web UI 11.x upgrade notes/Spreadsheet package enable button in Designer
+    name: spreadsheet-package-enable-button-designer.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Spreadsheet package enable button in Designer](nx_asset://b8fd28dd-0272-43b1-a083-dfde295c312b ?w=650,border=true)
+
+Notice that in older versions, Nuxeo Spreadsheet is a separate addon and it is automatically enabled on package install.
+
 ## JSF UI
 
 To visualise in a spreadsheet the content of a folder or of the result of a search, click on ![]({{file name='spreadsheet.png'}}).
