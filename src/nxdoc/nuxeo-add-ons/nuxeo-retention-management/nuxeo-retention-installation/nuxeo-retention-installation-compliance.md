@@ -1,5 +1,5 @@
 ---
-title: Compliance mode
+title: Compliance Mode
 description: Learn how to install and configure the Nuxeo Retention addon in the Compliance mode.
 review:
     comment: ''

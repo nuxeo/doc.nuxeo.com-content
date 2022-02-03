@@ -1,5 +1,5 @@
 ---
-title: Standard mode
+title: Standard Mode
 description: Learn how to install and configure the Nuxeo Retention addon in the standard mode.
 review:
     comment: ''
