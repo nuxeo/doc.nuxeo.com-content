@@ -36,7 +36,7 @@ In Standard mode, there are 3 supported configurations with Amazon S3:
   [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More info](#s3-one-bucket-configuration)
 - Records are stored in a dedicated S3 bucket.</br>
   [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More info](#s3-2-buckets-configuration)
-- Records are stored in a dedicated S3 bucket, with [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) in Governance mode.</br>
+- Records are stored in a dedicated S3 bucket, with [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html).</br>
   [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More info](#s3-one-bucket-object-lock)
 
 #### {{> anchor 's3-one-bucket-configuration'}} Store the Records in the Same Bucket Than the Standard Documents
@@ -45,7 +45,7 @@ This configuration consists on using the same S3 bucket for records than for the
 
 In this case, you can use the Amazon S3 addon with the [default configuration]({{page page='amazon-s3-online-storage'}}) with the Retention addon.
 
-This configuration prevents to use the [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) feature.
+This configuration prevents from using the [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) feature.
 
 {{#> callout type='warning'}}
 This configuration is only compliant with the binary manager `org.nuxeo.ecm.core.storage.sql.S3BinaryManager`.
@@ -200,9 +200,9 @@ In addition, you have to configure the S3 bucket dedicated to the records as fol
 
 - The Amazon S3 Object Lock feature must be enabled in Governance Mode on the bucket intended to store objects that are marked as final records.
 
-- Amazon S3 Versioning must be enabled.
+- Amazon S3 Versioning must be enabled (automatically done when enabling Object lock).
 
-- The default retention value for Amazon S3 Compliance Buckets intended to retain compliant record objects must be set to zero (0).
+- The default retention value for Amazon S3 Compliance Buckets intended to retain compliant record objects must not be set (or at least set to zero).
 
 - No Min/Max range should be established for Amazon S3 Compliance Buckets intended to retain compliant record objects.
 
