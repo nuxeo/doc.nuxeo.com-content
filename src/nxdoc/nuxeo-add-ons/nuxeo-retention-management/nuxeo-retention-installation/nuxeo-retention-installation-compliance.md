@@ -52,9 +52,9 @@ Specifically:
 
 - The Amazon S3 Object Lock feature must be enabled in Compliance Mode on the bucket intended to store objects that are marked as final records.
 
-- Amazon S3 Versioning must be enabled.
+- Amazon S3 Versioning must be enabled (it is automatically enabled when enabling object lock).
 
-- The default retention value for Amazon S3 Compliance Buckets intended to retain compliant record objects must be set to zero (0).
+- The default retention value for Amazon S3 Compliance Buckets intended to retain compliant record objects must not be set (or at least set to zero).
 
 - No Min/Max range should be established for Amazon S3 Compliance Buckets intended to retain compliant record objects.
 
