@@ -287,7 +287,7 @@ INFO  [OSGiRuntimeService] Nuxeo Platform Started
 ======================================================================
 ```
 
-To control the order in which components are deployed, you can ass a `<require>` element at the start of a component definition: this component will be deployed after the required component has been deployed too.
+To control the order in which components are deployed, you can add a `<require>` element at the start of a component definition: this component will be deployed after the required component has been deployed too.
 This is useful to ensure proper override/merging behaviors on the final configuration held by the service.
 
 Here are a few notes about it:
