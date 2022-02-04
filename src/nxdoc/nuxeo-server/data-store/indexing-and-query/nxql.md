@@ -958,6 +958,7 @@ When an NXQL query is processed by an [Elasticsearch PageProvider]({{page page='
 Without a proper mapping the following NXQL operators will not work by default:
 
 *   Full-text search: `ecm:fulltext.my:field = 'foo'` works only if there is a multi field `my:field.fulltext` defined in the mapping.
+*   `LIKE`: `my:field LIKE 'Fo%'` works only if type `text` for the field is defined in the mapping.
 *   `ILIKE`: `my:field ILIKE 'Foo'` works only if there is a multi field `my:field.lowercase` defined in the mapping.
 *   `STARTSWITH`: `my:field STARTSWITH '/foo/bar'`: works only if there is a multi field `my:field.children` defined with proper analyzer. Note that `ecm:path.children` is already defined in the default mapping..
 
