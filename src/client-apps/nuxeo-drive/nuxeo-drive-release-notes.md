@@ -18,7 +18,7 @@ Welcome to the Release Notes for **Nuxeo Drive 5.2.9**
 
 ### Fix Drive Announcement on Boot
 
-We fixed a regression from Nuxeo Drive 5.2.8, displaying the update popup everytime Drive was open.
+We fixed a regression from Nuxeo Drive 5.2.8, displaying the update popup every time Drive was open.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2758](https://jira.nuxeo.com/browse/NXDRIVE-2758).
 
