@@ -16,6 +16,8 @@ The Nuxeo Development Sandbox is built on top of Docker containers and Kubernete
 
 The primary focus of the Development Sandbox is to provide our customers with a self-service environment that enables them to easily build and deploy applications during the development process.
 
+The Development Sandbox only provides support for MongoDB installations. PostgreSQL/RDS is not supported in these environments.  
+
 The Nuxeo Development Sandbox is meant purely for Development. It does not support large data storage or data backups and should never be used to store production data.
 
 ## Environments
