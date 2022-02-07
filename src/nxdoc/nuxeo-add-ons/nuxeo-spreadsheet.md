@@ -159,7 +159,7 @@ The columns displayed on the spreadsheet reflects the columns contributed as sea
 ```
 {{{multiexcerpt 'modify-undo-value-spreadsheet' page='nuxeo-spreadsheet'}}}
 
-### Enable Spreadsheet button contribution in Web UI
+### Enable Spreadsheet Button Contribution in Web UI
 
 Starting from LTS 2021, the Spreadsheet addon is integrated in Web UI, however, the button contribution is disabled by default.
 
