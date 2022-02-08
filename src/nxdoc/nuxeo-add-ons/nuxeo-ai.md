@@ -125,7 +125,7 @@ These allow you to start your processing chain quickly.
 
 ## Insight Deduplication
 
-_This feature requires an Insight subscription_
+_This feature requires an Insight subscription._
 
 The Deduplication feature presents images that are similar to other existing repository images. In a Nuxeo repository, such detection can be run each time a picture will be added to a document. On existing assets, a complete re-index can be operated through Nuxeo Insight.
 
@@ -139,7 +139,7 @@ In order to activate the deduplication feature, we need to activate it in the `n
 nuxeo.insight.dedup.enabled=true
 ```
 
-By default, each document of 'Picture' type will be analyzed to detect potential similar documents. Here is the exact query:
+By default, each document of **Picture** type will be analyzed to detect potential similar documents. Here is the exact query:
 
 ```
 SELECT * FROM Document WHERE ecm:mixinType = 'Picture' AND ecm:tag NOT IN ('not_duplicate')
@@ -163,18 +163,17 @@ This query and the metadata to introspect can be customized through a Nuxeo exte
   </extension>
 ```
 
-Note the 'specific-contribution' name of the contribution that needs to be set in `nuxeo.conf` through the variable:
+Note the `specific-contribution` name of the contribution that needs to be set in `nuxeo.conf` through the variable:
 
 ```
 nuxeo.ai.similar.content.configuration.id=specific-contribution
 ```
 
 There are two ways to detect the similar documents:
-
-- Via a complete re-index of the repository through Nuxeo Insight
+- Via a complete re-index of the repository through Nuxeo Insight.
 - Via an automatic listener that will display the similar documents in the Nuxeo UI each time an image has been added/updated/removed.
 
-This listener is disabled by default and can be activated through `nuxeo.conf` via:
+This listener is disabled by default and can be activated through `nuxeo.conf` using:
 
 ```
 # Deduplication Listener activation flag
@@ -185,37 +184,35 @@ nuxeo.ai.similar.content.listener.enable=true
 
 In order to be able to display all the similar documents each time an image is added/updated/removed, you have to add in the target document type form (create/edit/metadata) as follows:
 
-1) Example of widget usage in Create/Edit forms:
+1. Example of widget usage in Create/Edit forms:
+    ```
+    <nuxeo-dropzone role="widget"
+                        label="[[i18n('file.content')]]"
+                        name="content"
+                        document="{{document}}"></nuxeo-dropzone>
 
-```
-<nuxeo-dropzone role="widget"
-                    label="[[i18n('file.content')]]"
-                    name="content"
-                    document="{{document}}"></nuxeo-dropzone>
+    <nuxeo-ai-dedup-grid property="file:content" doc=[[document]]/>
+    ```
 
-<nuxeo-ai-dedup-grid property="file:content" doc=[[document]]/>
-```
+1. Example of widget usage in Metadata forms:
+    ```
+    <nuxeo-ai-dedup-grid property="file:content" doc=[[document]]/>
+    ```
+  {{#> callout type='note' }}
+  * Don't forget the double binding on `\{{document}}` on the nuxeo dropzone element, that the systems can get changes event for the Create/Edit forms.
+  * The `property` parameter needs to be set to define which blob metadata you want to introspect.
+  {{/callout}}
 
-2) Example of widget usage in Metadata forms:
+1. Example of widget with custom content:
 
-```
-<nuxeo-ai-dedup-grid property="file:content" doc=[[document]]/>
-```
-
-NB:
-- Don't forget the double binding on `{{document}}` on the nuxeo dropzone element, that the systems can get changes event for the Create/Edit forms.
-- The `property` parameter needs to be set to define which blob metadata you want to introspect.
-
-3) Example of widget with custom content:
-
-```
-<nuxeo-ai-dedup-grid property="file:content" doc=[[document]]>
-  <slot name="dedup-content">
-    <!-- custom template for each similar document accessible via [[item]] -->
-    <p>[[item.title]]</p>
-  </slot>
-</nuxeo-ai-dedup-grid>
-```
+  ```
+  <nuxeo-ai-dedup-grid property="file:content" doc=[[document]]>
+    <slot name="dedup-content">
+      <!-- custom template for each similar document accessible via [[item]] -->
+      <p>[[item.title]]</p>
+    </slot>
+  </nuxeo-ai-dedup-grid>
+  ```
 
 Default Content is here:
 
@@ -250,7 +247,7 @@ Default Content is here:
 
 #### Hooks
 
-1) An event `similarDocumentsFound` is fired each time a similar document has been sent to the Insight deduplication index. By creating a listener triggered by this event, you can introspect all the similar documents (by their ids) and the source document as follow:
+1. An event `similarDocumentsFound` is fired each time a similar document has been sent to the Insight deduplication index. By creating a listener triggered by this event, you can introspect all the similar documents (by their ids) and the source document as follow:
 
 ```
 Example
@@ -285,7 +282,7 @@ public class ResolveDuplicatesListener implements EventListener {
 }
 ```
 
-2) An Automation operation can be contributed as "deduplication operation" as follows:
+2. An Automation operation can be contributed as "deduplication operation" as follows:
 
 ```
 <require>org.nuxeo.ai.similar.content.default.config</require>
