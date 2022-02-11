@@ -230,12 +230,12 @@ More information can be found on the [Elasticsearch Setup]({{page page='elastics
         <th colspan="1">Kafka</th>
         <td colspan="1">
           Library: 2.6.0 scala 2.12<br/>
-          Cluster: 1.x, 2.x
+          Cluster: 1.x, 2.x, 3.x
         </td>
         <td colspan="1">
           Library: 2.1.1 scala 2.12 since HF15<br/>
           Library: 2.1.0 scala 2.12 from HF01 to HF14<br/>
-          Cluster: 1.x, 2.x
+          Cluster: 1.x, 2.x, 3.x
         </td>
         <td colspan="1">
           Library: 1.0.0 scala 2.11<br/>
