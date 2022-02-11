@@ -1,6 +1,6 @@
 ---
-title: Version 3.0.9
-description: Discover what's new in Web UI 3.0.9.
+title: Version 3.0.10
+description: Discover what's new in Web UI 3.0.10.
 review:
     comment: ''
     date: '2022-02-11'
