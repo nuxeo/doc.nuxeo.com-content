@@ -86,7 +86,7 @@ Auto subscription is turned on by default. It can be turned off by contributing 
 <component name="org.nuxeo.ecm.platform.comment.service.notification.custom">
   <require>org.nuxeo.ecm.platform.comment.service.notification</require>
   <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
-    <property name="org.nuxeo.ecm.platform.comment.service.notification.autosubscribe">false<property>
+    <property name="org.nuxeo.ecm.platform.comment.service.notification.autosubscribe">false</property>
   </extension>
 </component>
 ```
