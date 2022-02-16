@@ -34,6 +34,34 @@ Document facets are part of the document definition.
 
 The default document facets are listed in the [Available Facets]({{page version='' space='nxdoc' page='available-facets'}}) documentation page.
 
+## Creating a new Facet
+
+To create a facet, click on **New**.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Facets/New Facet
+    name: NewFacet.png
+    studio_modeler#popup#up_to_date
+--}}
+![New Facet](nx_asset://71e42fbf-61d1-4348-8dd6-859c3d875c24 ?w=350,border=true)
+
+* **Feature ID**: Technical ID of the feature
+* **Label**: The label that will be displayed when selecting facets of a Document Type. Choose a short explicit name and capitalize it if you want it to appear before the built-in facets.
+* **Description**: The description of the facet, its functional purpose and where/when to use it. This description is here for information purposes.
+
+## Editing a Facet
+
+Once created, your can attach schemas to your facet
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Facets/Edit Facet
+    name: EditFacet.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Edit Facet](nx_asset://093b433e-ac0c-4c91-9b9d-dfddf2123e27 ?w=650,border=true)
+
+* **Associated Schemas**: This is the list of schemas associated to your facet. You don't have to add anything here if you use the facet as a flag.
+
 ## Functional Use Cases
 
 - When a document is validated, we need to store the validation period.</br>
@@ -66,6 +94,6 @@ if(input.hasFacet("MyFacet")) {
 } else …
 ```
 
-## Facet Creation and Registration
+## Use an external Facet
 
 Please refer to the [HOWTO: Create and Use a Document Facet]({{page version='' space='studio' page='how-to-create-and-use-document-facets'}}) documentation page.
