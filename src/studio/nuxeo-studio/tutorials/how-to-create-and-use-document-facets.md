@@ -48,39 +48,14 @@ We will create a new facet, entitled `ValidityFacet`, which is applied to any **
 1. In Studio Modeler, create a new external schema in **Configuration** > **Content Model** > **Schemas**, called `validity`.
 1. Add two **Date** properties: `ValidityStartFrom` and `ValidityEndsIn`.
 
-### Create the Facet to the Studio Registry
+### Create the Validity Facet
 
-The next step is about registering the new built-in document facet.
-
-1. In Studio Modeler, navigate to **Settings** > **Registries** > **Document Facets**.
-1. Add the new facet using the example provided in the upper section:
-
-```
-{
-  "facets": [
-    {
-      "id": "ValidityFacet",
-      "description": "Facet applied to all new validated document"
-    }
-  ]
-}
-```
+1. In Studio Modeler, create a new facet in **Configuration** > **Content Model** > **Facets**, called `ValidityFacet`.
+1. Add the `validity` schema to the **Associated Schemas**.
 
 {{#> callout type='note'}}
-At this step, you should see the **ValidityFacet** checkbox in the **Definition** screen of your document type.
+At this step, you should see the **ValidityFacet** entry in the **Definition** screen of your document type.
 {{/callout}}
-
-### Link the Facet to the Schema
-
-In Studio Modeler, create an XML Extension in **Configuration** > **Advanced Settings** > **XML Extensions** to associate the facet with the schema previously created:
-
-```
-<extension point="doctype" target="org.nuxeo.ecm.core.schema.TypeService">
-  <facet name="ValidityFacet">
-    <schema name="validity" />
-  </facet>
-</extension>
-```
 
 ### Add Business Logic
 
