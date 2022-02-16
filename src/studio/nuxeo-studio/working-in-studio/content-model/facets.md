@@ -96,4 +96,4 @@ if(input.hasFacet("MyFacet")) {
 
 ## Use an external Facet
 
-Please refer to the [HOWTO: Create and Use a Document Facet]({{page version='' space='studio' page='how-to-create-and-use-document-facets'}}) documentation page.
+In order to reference an externally contributed Facet, you have to add it manually to the registries [using the custom facet registries]({{page page='registries'}}).
