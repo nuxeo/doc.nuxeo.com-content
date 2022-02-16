@@ -39,40 +39,38 @@ In Standard mode, there are 3 supported configurations with Amazon S3:
 - Records are stored in a dedicated S3 bucket, with [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html).</br>
   [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More info](#s3-one-bucket-object-lock)
 
-#### {{> anchor 's3-one-bucket-configuration'}} Store the Records in the Same Bucket Than the Standard Documents
+#### {{> anchor 's3-one-bucket-configuration'}} Store Records in the Same Bucket as Other Documents
 
-This configuration consists on using the same S3 bucket for records than for the standard documents.
+This configuration consists on using the same S3 bucket for records and other documents.
 
 In this case, you can use the Amazon S3 addon with the [default configuration]({{page page='amazon-s3-online-storage'}}) with the Retention addon.
 
-This configuration prevents from using the [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) feature.
+This configuration does not allow using the [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) feature.
 
 {{#> callout type='warning'}}
 This configuration is only compliant with the binary manager `org.nuxeo.ecm.core.storage.sql.S3BinaryManager`.
 
-So, you have to make sure to have the following property into your `nuxeo.conf` configuration file:
+The following property is required in the `nuxeo.conf` configuration file:
 ```
 nuxeo.core.binarymanager=org.nuxeo.ecm.core.storage.sql.S3BinaryManager
 ```
 {{/callout}}
 
-#### {{> anchor 's3-2-buckets-configuration'}} Store the Records in a Dedicated S3 Bucket
+#### {{> anchor 's3-2-buckets-configuration'}} Store Records in a Dedicated S3 Bucket
 
-In addition of the standard S3 bucket to be configured using the [Amazon S3 Online Storage documentation](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage), you have to configure an additional S3 bucket dedicated to the records.
+It is possible to configure an additional S3 bucket dedicated to storing records. This can be configured using an XML contribution, or via the `nuxeo.conf` configuration file.
 
-You can do this configuration by using an XML contribution or by using the `nuxeo.conf`configuration file.
+##### Configure via XML Contribution
 
-##### Through XML Configuration File
-
-Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage), you have to add an XML extension file to configure the bucket dedicated to the records and how to dispatch files in each bucket (documents vs records):
-- The file has to be added into `$NUXEO_HOME/nxserver/config`
+Configure the standard S3 bucket as described in [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage). Once complete, add an XML extension file to configure the bucket that will be used for records:
+- The file has to be added to `$NUXEO_HOME/nxserver/config`
 - The file name has to be ended with `-config.xml`
-- The file must contain a specific `component name`:
+- The file must contain the following `component name`:
 
 ```xml
 <component name="records-s3-compliance">
 ```
-- The file must contain a blob manager extension with the configuration of the S3 bucket dedicated to the records and the following parameters:
+- The file must contain a blob manager contribution with the following parameters:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
@@ -80,7 +78,7 @@ Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Onlin
       <class>org.nuxeo.ecm.blob.s3.S3BlobProvider</class>
       <property name="record">true</property>
 ```
-- The file must contain a blob dispatcher extension as described here:
+- The file must contain a blob dispatcher contribution as shown here:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.blob.DocumentBlobManager" point="configuration">
@@ -93,12 +91,12 @@ Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Onlin
 ```
 
 {{#> callout type='warning'}}
-This configuration and this binary manager ```org.nuxeo.ecm.blob.s3.S3BlobProvider``` can only be used with the Retention addon if you are using a dedicated S3 bucket for the records.
+This configuration is only applicable when using the Retention addon with a dedicated S3 bucket for the records.
 
-If you want to configure your instance with only 1 bucket and NO object lock, please refer to the [previous chapter](#s3-one-bucket-configuration).
+If you want to configure your instance with only 1 bucket, and NO object lock, please refer to the [previous chapter](#s3-one-bucket-configuration).
 {{/callout}}
 
-Complete XML extension file example:
+Here is the complete XML extension file example:
 ```xml
 <?xml version="1.0"?>
 <component name="records-s3-compliance">
@@ -138,72 +136,68 @@ Complete XML extension file example:
 </component>
 ```
 
-##### Through `nuxeo.conf` Properties
+##### Configure via `nuxeo.conf`
 
-Alternatively, you can add the `s3retention` template to the `nuxeo.templates` property in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
+Add the `s3retention` template to the `nuxeo.templates` property in the [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
 ```
 nuxeo.templates=default,s3binaries,retention,s3retention
 ```
 
-This will enable the [s3-retention-config.xml](https://github.com/nuxeo/nuxeo-retention/blob/lts-2021/nuxeo-retention-package/src/main/resources/install/templates/s3retention/nxserver/config/s3-retention-config.xml.nxftl) which allows to define these properties in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
+This will enable the [s3-retention-config.xml](https://github.com/nuxeo/nuxeo-retention/blob/lts-2021/nuxeo-retention-package/src/main/resources/install/templates/s3retention/nxserver/config/s3-retention-config.xml.nxftl) config, which enables the following properties for [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
   - `nuxeo.retention.s3storage.bucket`</br>
     (required)
   - `nuxeo.retention.s3storage.bucket_prefix`</br>
     (optional)
   - `nuxeo.retention.s3storage.awsid`</br>
-    (fallback on `nuxeo.s3storage.awsid`)
+    (fallback to `nuxeo.s3storage.awsid`)
   - `nuxeo.retention.s3storage.awssecret`</br>
-    (fallback on `nuxeo.s3storage.awssecret`)
+    (fallback to `nuxeo.s3storage.awssecret`)
   - `nuxeo.retention.s3storage.awstoken`</br>
-    (fallback on `nuxeo.s3storage.awstoken`)
+    (fallback to `nuxeo.s3storage.awstoken`)
   - `nuxeo.retention.s3storage.region`</br>
-    (fallback on `nuxeo.s3storage.region`)
+    (fallback to `nuxeo.s3storage.region`)
   - `nuxeo.retention.core.blobstore.digestAsync`</br>
-    (fallback on `nuxeo.core.blobstore.digestAsync`)
+    (fallback to `nuxeo.core.blobstore.digestAsync`)
   - `nuxeo.retention.s3storage.cacheminage`</br>
-    (fallback on `nuxeo.s3storage.cacheminage`)
+    (fallback to `nuxeo.s3storage.cacheminage`)
   - `nuxeo.retention.s3storage.cachesize`</br>
-    (fallback on `nuxeo.s3storage.cachesize`)
+    (fallback to `nuxeo.s3storage.cachesize`)
   - `nuxeo.retention.s3storage.cachecount`</br>
-    (fallback on `nuxeo.s3storage.cachecount`)
+    (fallback to `nuxeo.s3storage.cachecount`)
   - `nuxeo.retention.s3storage.connection.max`</br>
-    (fallback on `nuxeo.s3storage.connection.max`)
+    (fallback to `nuxeo.s3storage.connection.max`)
   - `nuxeo.retention.s3storage.connection.retry`</br>
-    (fallback on `nuxeo.s3storage.connection.retry`)
+    (fallback to `nuxeo.s3storage.connection.retry`)
   - `nuxeo.retention.s3storage.connection.timeout` </br>
-    (fallback on `nuxeo.s3storage.connection.timeout`)
+    (fallback to `nuxeo.s3storage.connection.timeout`)
   - `nuxeo.retention.s3storage.socket.timeout` </br>
-    (fallback on `nuxeo.s3storage.socket.timeout`)
+    (fallback to `nuxeo.s3storage.socket.timeout`)
   - `nuxeo.retention.s3storage.endpoint`</br>
-    (fallback on `nuxeo.s3storage.endpoint`)
+    (fallback to `nuxeo.s3storage.endpoint`)
   - `nuxeo.retention.s3storage.pathstyleaccess`</br>
-    (fallback on `nuxeo.s3storage.pathstyleaccess`)
+    (fallback to `nuxeo.s3storage.pathstyleaccess`)
   - `nuxeo.retention.s3storage.accelerateMode`</br>
-    (fallback on `nuxeo.s3storage.accelerateMode`)
+    (fallback to `nuxeo.s3storage.accelerateMode`)
 
 
-#### {{> anchor 's3-one-bucket-object-lock'}} Store the Records in a Dedicated S3 Bucket, With S3 Object Lock In Governance Mode
+#### {{> anchor 's3-one-bucket-object-lock'}} Store Records in a Dedicated S3 Bucket With S3 Object Lock In Governance Mode
 
-Using [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) allows to secure the content under retention by preventing to delete a blob into S3 until the retention period has expired.
-
-If you configure your S3 bucket with Amazon S3 Object Lock, Nuxeo will automatically provide the retention period (or the legal hold) to Amazon S3 to apply the retention at storage level.
+[Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) prevents the deletion of content under retention until the retention period has expired. Nuxeo Retention, when configured to use Amazon S3 Object Lock, automatically provides the retention period (or legal hold) to Amazon S3.
 
 {{#> callout type='warning'}}
-Due to the capability to [delete a document under retention]({{page page='nuxeo-retention-functional-overview'}}#delete-document-under-retention), the Retention addon in standard mode supports [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) only in Governance mode.
+Because Nuxeo Retention provides the ability to [delete a document under retention]({{page page='nuxeo-retention-functional-overview'}}#delete-document-under-retention), the addon in standard mode supports [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) only in Governance mode.
 {{/callout}}
 
-To configure the Retention addon with a dedicated S3 bucket with Object lock, you have to follow the exact same steps than described in the  [previous section](#s3-2-buckets-configuration).
+To configure the Retention addon with a dedicated S3 bucket with Object lock, first follow the steps described in the  [previous section](#s3-2-buckets-configuration). Next configure the record bucket as follows:
 
-In addition, you have to configure the S3 bucket dedicated to the records as follow:
+- Direct writes to the Amazon S3 storage system must be disabled; this is to ensure that all documents pass through Nuxeo Platform for compliant processing.
 
-- Direct writes to the Amazon S3 storage system must be disabled, to ensure all documents transit through Nuxeo Platform for compliant processing.
+- The Amazon S3 Object Lock feature must be enabled in Governance Mode on the record bucket.
 
-- The Amazon S3 Object Lock feature must be enabled in Governance Mode on the bucket intended to store objects that are marked as final records.
+- Amazon S3 Versioning must be enabled; this is automatically done when enabling Object lock.
 
-- Amazon S3 Versioning must be enabled (automatically done when enabling Object lock).
+- The default retention value for the record bucket must not be set (or, at least, set to zero).
 
-- The default retention value for Amazon S3 Compliance Buckets intended to retain compliant record objects must not be set (or at least set to zero).
-
-- No Min/Max range should be established for Amazon S3 Compliance Buckets intended to retain compliant record objects.
+- No Min/Max range should be established for record bucket.
 
 - Amazon S3 Lifecycle Policies must not be configured for use within the Nuxeo Platform storage subsystem.
