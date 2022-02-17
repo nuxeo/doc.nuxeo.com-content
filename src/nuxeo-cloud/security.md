@@ -73,5 +73,5 @@ We use AWS shield to protect our environments against DDoS attacks
 
 - PenTesting is done once per year
 - Disaster Recovery testing is done every 6 months
-- SOC2 & PCI Compliant as of Dec 2019
-- HITRUST targeting completion by beginning of Q2 2020
+- SOC2 & PCI Compliant as of 2019
+- HITRUST Compliant as of 2020
