@@ -34,7 +34,7 @@ Document facets are part of the document definition.
 
 The default document facets are listed in the [Available Facets]({{page version='' space='nxdoc' page='available-facets'}}) documentation page.
 
-## Creating a new Facet
+## Creating a New Facet
 
 To create a facet, click on **New**.
 
@@ -94,6 +94,6 @@ if(input.hasFacet("MyFacet")) {
 } else …
 ```
 
-## Use an external Facet
+## Use an External Facet
 
 In order to reference an externally contributed Facet, you have to add it manually to the registries [using the custom facet registries]({{page page='registries'}}).
