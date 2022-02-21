@@ -8,45 +8,50 @@ review:
 labels:
     - release-notes
 toc: true
-tree_item_index: 0
+tree_item_index: 4050
 hidden: true
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2021-16'}}
 # What's New in LTS 2021.16 / LTS 2021-HF16
 
-## Don't prevent Nuxeo from starting if MongoDB indexes are not correct
+## Nuxeo Server
 
-Nuxeo now warns if a MongoDB index is badly configured
+### Core Storage
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30865](https://jira.nuxeo.com/browse/NXP-30865)
+#### Don’t Prevent Nuxeo From Starting if Mongodb Indexes Are Not Correct
 
-## Improve indexing reliability when Elastic is overloaded
+Nuxeo now warns if a MongoDB index is badly configured.
 
-Nuxeo is now handling back pressure when Elastic is overloaded
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30865](https://jira.nuxeo.com/browse/NXP-30865)
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30841](https://jira.nuxeo.com/browse/NXP-30841)
+#### Improve Indexing Reliability When Elastic Is Overloaded
 
-## Enable trace and logs correlation with Datadog tracing
+Nuxeo is now handling back pressure when Elastic is overloaded.
 
-Datadog automatic tracing instrumentation supports log correlation
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30841](https://jira.nuxeo.com/browse/NXP-30841)
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30789](https://jira.nuxeo.com/browse/NXP-30789)
+#### Enable Trace and Logs Correlation With Datadog Tracing
 
-## Enable Log4j trace correlation with OpenCensus
+Datadog automatic tracing instrumentation supports log correlation.
 
-The log4j trace now contains reference to the tracing identifier enabling correlation
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30789](https://jira.nuxeo.com/browse/NXP-30789)
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30788](https://jira.nuxeo.com/browse/NXP-30788)
+#### Enable Log4j Trace Correlation With Opencensus
 
-## Mongo index creation should not be done for each new connection
+The log4j trace now contains reference to the tracing identifier enabling correlation.
 
-MongDB index are created at startup only
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30788](https://jira.nuxeo.com/browse/NXP-30788)
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30683](https://jira.nuxeo.com/browse/NXP-30683)
+## Major Bug Fixes
 
+### Mongo Index Creation Should Not Be Done for Each New Connection
 
-# Learn More
+MongoDB index are created at startup only.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30683](https://jira.nuxeo.com/browse/NXP-30683)
+
+## Learn More
 
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=21604) is available in our bug tracking tool.
 
