@@ -59,14 +59,14 @@ To do so, you can use the preconfigured CI/CD deployment pipeline. Basically, th
 
 For both Dev and Test environments, the pipeline is aligned with the master branch of the GitHub repository, so it's not possible to deploy a specific branch to the Dev environment and another branch to Test.
 
-### Process
+### Process {{> anchor 'process-build'}}
 
 To start the pipeline, go to **Builds** > **Pipelines**, choose the default one and click on **Start Pipeline**.
 
 It takes a few minutes to complete the deployment (depending on test coverage). At the end of the deployment, you can click on the yellow Input Required message asking if you want to deploy the application to the UAT environment too.
 
 - If you are asked to log in, please log in with Okta. Then select I’m a Nuxeo Customer.
-- Answering **Proceed** will deploy the application to the UAT environment. 
+- Answering **Proceed** will deploy the application to the UAT environment.
 - Answering **Abort**  will only deploy the application to the Dev environment.
 
 ## Release the Application
@@ -77,7 +77,7 @@ If you wish to save the current state of the application to make it available to
 
 To do this, customers will use the preconfigured release pipeline. It will first ask you to choose the release scope (patch, minor, major), then check out the master branch of the GitHub repository, uses the Nuxeo Devtools python release script to prepare and perform a release (automatically detecting the version to release depending on the release scope you select), and then deploys the release artifacts to a Nexus repository embedded in the OpenShift project.
 
-### Process
+### Process {{> anchor 'process-release'}}
 
 To start the pipeline, go to **​Builds** > **Pipelines** > **release-pipeline** and click on **Start Pipeline**. The pipeline takes around 30 minutes to complete.
 
