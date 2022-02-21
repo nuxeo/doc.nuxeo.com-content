@@ -18,16 +18,17 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-9'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-10'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.9]({{page page='web-ui-release-notes-3-0-9'}})               | Introduces the ability to bulk edit large sets of documents                     | -->
+<!-- | [Web UI 3.0.10]({{page page='web-ui-release-notes-3-0-9'}})               | Introduces the ability to search and browse documents across multiple repositories                     | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [Web UI 3.0.9]({{page page='web-ui-release-notes-3-0-9'}})                    | Introduces the ability to bulk edit large sets of documents                |
 | [Web UI 3.0.8]({{page page='web-ui-release-notes-3-0-8'}})                    | Bugfix release                                                             |
 | [Web UI 3.0.7]({{page page='web-ui-release-notes-3-0-7'}})                    | Improvements to the bulk actions                                           |
 | [Web UI 3.0.6]({{page page='web-ui-release-notes-3-0-6'}})                    | New feature: select all documents and trigger bulk actions on them         |
