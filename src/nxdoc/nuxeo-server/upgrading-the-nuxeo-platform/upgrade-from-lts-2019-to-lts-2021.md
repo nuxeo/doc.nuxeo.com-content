@@ -921,6 +921,14 @@ which by default is `GET` but can be changed to `POST`, in which case search req
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29126](https://jira.nuxeo.com/browse/NXP-29126)
 
+### Retention - Directories Shouldn’t Be Internationalized
+
+The vocabularies `RetentionEvent` and `RetentionEnd` are now normal vocabularies (not l10n one any more).
+
+The corresponding tables must be dropped and they will be recreated on next startup.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28809](https://jira.nuxeo.com/browse/NXP-28809)
+
 ## Miscellaneous
 
 ### Behavior Changes
