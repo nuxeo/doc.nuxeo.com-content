@@ -206,7 +206,7 @@ nuxeo.s3storage.pathstyleaccess=true
 If you installed the bundle JAR manually instead of using the Nuxeo Package you will also need:
 
 ```
-nuxeo.core.binarymanager=org.nuxeo.ecm.core.storage.sql.S3BinaryManager
+nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider
 ```
 
 The following are compatibility properties that can still be used but are deprecated (you should use global AWS configuration or IAM instance roles as described above):
