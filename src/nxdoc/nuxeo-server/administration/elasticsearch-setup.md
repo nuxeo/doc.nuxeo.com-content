@@ -861,11 +861,17 @@ Here the index is a primary storage and you cannot rebuild it. So we need a tool
 3.  Start the Nuxeo Platform.
     The new index is created with the new mapping.
 4.  Stop the Nuxeo Platform
-5.  Copy the audit logs entries in the new index using [stream2es](https://github.com/elasticsearch/stream2es/). Here we copy `nuxeo-audit` to `nuxeo-audit2`.
+5.  Copy the audit logs entries in the new index using the `_reindex` endpoint. Here we copy `nuxeo-audit` to `nuxeo-audit2`.
 
     ```bash
-    curl -O download.elasticsearch.org/stream2es/stream2es; chmod +x stream2es
-    ./stream2es es --source http://localhost:9200/nuxeo-audit --target http://localhost:9200/nuxeo-audit2 --replace
+    curl -X POST http://localhost:9200/_reindex -H 'Content-Type: application/json' -d '{
+    "source": {
+    "index": "nuxeo-audit"
+    },
+    "dest": {
+    "index": "nuxeo-audit2"
+    }
+    }'
     ```
 
 ## Configuration for Multi Repositories
