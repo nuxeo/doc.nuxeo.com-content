@@ -100,3 +100,128 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
+
+
+## Hotfix 15
+
+### Use partialFilterExpression on parentId When Creating the Unique Index to Avoid Duplicates
+
+You MUST run the command below in a MongoDB Shell (assuming you're connected to the nuxeo database and your repository is default):
+
+```
+db.default.dropIndex("ecm:parentId_1_ecm:name_1");
+```
+
+As a workaround, you can configure the `nuxeo.db.indexes.create` property to false in nuxeo.conf.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30638](https://jira.nuxeo.com/browse/NXP-30638)
+
+
+### setUserAgentPrefix in S3 Config
+
+The following `nuxeo.conf` properties have been added:
+
+- `nuxeo.s3storage.user.agent.prefix`, empty string by default
+- `nuxeo.s3storage.user.agent.suffix`, empty string by default
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30797](https://jira.nuxeo.com/browse/NXP-30797)
+
+
+## Hotfix 13
+
+### Remove the Assignment to the ZIP Extra Field to Produce Correct ZIP
+
+You can now disable the extra field setting when doing Nuxeo IO export by contributing the following:
+
+```Java
+  <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
+    <property name=nuxeo.core.io.archive.extra.files.count>false</property>
+  </extension>
+```
+
+This could be interesting if you want to open the produced archive with external tools such as Archive Utility.app.
+
+This property has `true` as default as disabling this behavior may impact performance when re-importing to Nuxeo the archive.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30713](https://jira.nuxeo.com/browse/NXP-30713)
+
+### Bulk SetPropertiesAction - VersioningOption Parameter Does Not Take Effect When Versioning Service Is Extended via XML Extension
+
+As documented in the [automatic versioning system]({{page space='nxdoc' page='versioning'}}#source-based-versioning), the versioning policy order should be higher than `10`, order lower than 10 is reserved for internal purposes.
+This restriction is now enforced on LTS 2021, a server having a versioning policy contribution that doesn't respect this rule will **NOT** start.
+On LTS 2019, an ERROR message will be logged during Nuxeo startup.
+
+In addition to disable the automatic versioning system for `setProperties` action, we also have disabled the system for the following system related updates:
+- add/remove a document to/from a collection
+- recompute pictureViews
+- add/remove notifications subscriptions
+- add/remove tags
+- update quotas
+- recompute thumbnails
+- recompute transcodedVideos
+- recompute videoInfos
+
+In a more general way, the system has been disabled in the code paths where auto checkout was disabled.
+This can impact positively performance by avoiding version creation on the above low-level updates.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30700](https://jira.nuxeo.com/browse/NXP-30700)
+
+## Hotfix 11
+
+### S3 Transfer Parameters Configurable
+
+All the S3 multipart upload and copy parameters are configurable through nuxeo.conf.</br>
+
+The `nuxeo.s3.multipart.copy.part.size` ConfigurationService property, formerly contributed in `configuration-properties.xml`, is deprecated since **2021.11/10.10-HF54**.
+
+The new `nuxeo.s3storage.multipart.copy.part.size` `nuxeo.conf` property should be used instead, default value hasn't changed: 5242880 (5 MB).
+
+If you have contributed a custom `nuxeo.s3.multipart.copy.part.size` ConfigurationService property with an XML component such as:
+```
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="nuxeo.s3.multipart.copy.part.size">xxxx</property>
+  </extension>
+```  
+you need to remove it and replace it by `nuxeo.s3storage.multipart.copy.part.size=xxxx` in `nuxeo.conf`. Though, backward compatibility is kept.
+
+The following `nuxeo.conf` properties have been added:
+
+- `nuxeo.s3storage.multipart.copy.threshold`, default value: 5368709120 (5 GB)
+- `nuxeo.s3storage.multipart.upload.threshold`, default value: 16777216 (16 MB)
+- `nuxeo.s3storage.minimum.upload.part.size`, default value: 5242880 (5 MB)
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30595](https://jira.nuxeo.com/browse/NXP-30595)
+
+### Deletion BAF Action Now Runs With `SYSTEM_USERNAME`
+
+`org.nuxeo.ecm.core.storage.dbs.DBSSession#remove` launches the `DeletionAction` BAF action to perform the db deletion of descendants of a folderish document being removed.
+
+The problem is that we pass the current session's principal to run the action which will just skip the deletion of the document on which the current user does not have READ permission granted.
+
+To fix that, we now run the `DeletionAction` as `SYSTEM_USER`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30661](https://jira.nuxeo.com/browse/NXP-30661)
+
+### Upgrade to Apache PDFBox 2.0.24
+
+The upgrade of Apache PDFBox from 1.8.16 to 2.0.24 introduces breaking changes to the library, code relying on it must be updated.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-28825](https://jira.nuxeo.com/browse/NXP-28825) and [NXP-30662](https://jira.nuxeo.com/browse/NXP-30662)
+
+## Hotfix 10
+
+### Nuxeo Workflow Now Supports 2 Parallel Tasks Completed at the Same Time by 2 Different Users
+
+A warning is logged when assigning an unauthorized workflow global variable instead of throwing an exception.
+
+Assigning an unauthorized workflow global variable won't throw an exception anymore but log a warning. The assignment is ignored.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30589](https://jira.nuxeo.com/browse/NXP-30589)
+
+### Web UI - `nuxeo-document-preview` Should Not Load `nuxeo-pdf-viewer` For Unsupported MIME Types {{> tag 'Since 2021.10'}}
+
+Web UI does not display anymore a preview for unsupported MIME types.
+
+PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
