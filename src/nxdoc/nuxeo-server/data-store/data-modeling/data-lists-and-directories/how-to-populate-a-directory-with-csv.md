@@ -33,7 +33,7 @@ This could be used to load directory entries while Nuxeo is running.
    2,B,0,2
    ```
 
-1. Now you can use cURL to post this file along with the automation parameters to `Document.LoadFromCSV`:
+1. Now you can use cURL to post this file along with the automation parameters to `Directory.LoadFromCSV`:
 
    ```bash
    curl -XPOST -u Administrator:Administrator -F request='{"params":{"directoryName":"DIRECTORY_NAME", "dataLoadingPolicy":"skip_duplicate"}, "context":{}}' -F 'input=@data.csv' http://NUXEO_SERVER/nuxeo/site/automation/Directory.LoadFromCSV
