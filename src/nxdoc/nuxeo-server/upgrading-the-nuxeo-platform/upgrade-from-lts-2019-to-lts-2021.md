@@ -1601,3 +1601,48 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 ## Complementary Information
 
 - [Release notes for Nuxeo Platform LTS 2021]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+
+## TODO
+
+### Optionaly restrict createProxy API to administrators
+
+A new configuration property allows to restrict proxy creation via the `CoreSession#createProxy` Java API to users with Write permission on the document targetted by the proxy:
+```
+  <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
+    <property name=org.nuxeo.proxy.creation.restricted>true</property>
+  </extension>
+```
+In LTS 2021, it is `true` by default.
+ In LTS 2019 (10.10) it is `false` by default, to keep the existing behavior.
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30914](https://jira.nuxeo.com/browse/NXP-30914)
+
+### Add property to set max_expansion on match_phrase_prefix operator
+
+Max expansions can be configured through the Configuration service with a contribution like
+```xml
+    <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
+        <property name=elasticsearch.max_expansions>200</property>
+    </extension>
+```
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30878](https://jira.nuxeo.com/browse/NXP-30878)
+
+### Improve KV TransientStore GC resiliency
+
+Transient GC was not working in environments with segregated front and worker nodes.
+As the result, transient stores in s3 might have accumulated lots of data and the current transient GC implementation might not be able to clean them efficiently.
+In this case, it is recommended to purge manually all objects older than 3 days on transient stores before applying this hotfix.
+This can be done using scripts or by creating an Object Lifecycle Management rule with a correct prefix `/transient_*/`.
+
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30851](https://jira.nuxeo.com/browse/NXP-30851)
+
+### Allow automation contributions to be disabled
+
+When replacing an Automation operation, chain or script, its old aliases are lost. 
+If you contribute to an operation and want to call it by an alias, you need to copy that alias on the new operation contribution or to use the ID of the operation rather than an alias.
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30761](https://jira.nuxeo.com/browse/NXP-30761)
+
+
