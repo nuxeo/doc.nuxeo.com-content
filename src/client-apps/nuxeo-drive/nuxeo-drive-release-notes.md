@@ -30,6 +30,6 @@ The **Auto-update** feature and the **Auto Install new updates** are now disable
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.9-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.9.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.9.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.9-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.9.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.9.exe)
