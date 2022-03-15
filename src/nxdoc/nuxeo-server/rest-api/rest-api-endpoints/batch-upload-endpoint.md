@@ -435,11 +435,7 @@ JSON response data:
 DELETE http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}
 ```
 
-Returns a 204 No Content status code with the following JSON data:
-
-```javascript
-{"batchId": batchId, "dropped": "true"}
-```
+Returns a 204 No Content status code and drops (deletes) the batch.
 
 By default, executing a batch will automatically remove it. You can prevent this behavior by executing it with the header `X-Batch-No-Drop` set to `true`. In such a case, you have to take care of dropping the batch manually after you're done with it.
 
@@ -449,7 +445,7 @@ By default, executing a batch will automatically remove it. You can prevent this
 DELETE http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileId}
 ```
 
-Returns a 204 No Content and removes the file from the batch.
+Returns a 204 No Content status code and removes the file from the batch.
 
 ## Uploading a File in Chunks {{> anchor 'uploading-a-file-in-chunks'}}
 
