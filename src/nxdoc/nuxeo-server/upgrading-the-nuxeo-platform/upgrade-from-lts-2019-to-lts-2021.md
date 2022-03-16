@@ -278,6 +278,16 @@ The following nuxeo.conf properties have been added:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30797](https://jira.nuxeo.com/browse/NXP-30797)
 
+#### Improve KV TransientStore GC Resiliency {{> tag 'Since 2021.17'}}
+
+Transient GC was not working in environments with segregated front and worker nodes.  
+As the result, transient stores in s3 might have accumulated lots of data and the current transient GC implementation might not be able to clean them efficiently.  
+In this case, it is recommended to purge manually all objects older than 3 days on transient stores before applying this hotfix.
+
+This can be done using scripts or by creating an Object Lifecycle Management rule with a correct prefix `/transient_*/`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30851](https://jira.nuxeo.com/browse/NXP-30851)
+
 ## Nuxeo API Changes
 
 #### New Endpoint to Get All Comments for 50+ Annotations Documents
@@ -395,7 +405,7 @@ Previously when the result of the operation had a URL we returned a redirect to 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26773](https://jira.nuxeo.com/browse/NXP-26773)
 
-#### Error Management on Invalid Operation/Chain/Codec Registration
+### Error Management on Invalid Operation/Chain/Codec Registration
 
 Operation chain contributions should now require contributions holding operations that they reference.
 
@@ -455,7 +465,7 @@ protected HttpAutomationSession clientSession;
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28581](https://jira.nuxeo.com/browse/NXP-28581)
 
-#### Rename the Parameter "overwite" of filemanager.import to "overwrite"
+### Rename the Parameter "overwite" of filemanager.import to "overwrite"
 
 In the FileManager.Import operation, the misspelled param `overwite` has been renamed to overwrite:
 
@@ -463,6 +473,35 @@ In the FileManager.Import operation, the misspelled param `overwite` has been re
 - `overwite` is kept as an alias for backward compatibility.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29286](https://jira.nuxeo.com/browse/NXP-29286)
+
+### Allow Automation Contributions to be Disabled {{> tag 'Since 2021.17'}}
+
+When replacing an Automation operation, chain or script, its old aliases are lost.
+If you contribute to an operation and want to call it by an alias, you need to copy that alias on the new operation contribution or to use the ID of the operation rather than an alias.
+
+**OperationType**
+(Please note you can't cross contribute to an OperationType implementation, a chain operation can't disable a scripted operation for example)
+
+`ChainOperationType`:
+```
+<component name="org.nuxeo.ecm.automation.test-chain-operation" version="1.0">
+  <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
+    <chain id="testScript" enabled="false" />
+  </extension>
+</component>
+```
+
+`ScriptingOperationType`:
+```
+<component name="org.nuxeo.ecm.automation.test-scripted-operation-disable" version="1.0">
+  <require>org.nuxeo.ecm.automation.test-scripted-operation</require>
+  <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="operation">
+    <scriptedOperation id="testScript" enabled="false"/>
+  </extension>
+</component>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30761](https://jira.nuxeo.com/browse/NXP-30761)
 
 ## Workflow
 
@@ -632,6 +671,18 @@ The new way to expose the ES hints is by creating a contribution as below:
 More details in the [Nuxeo How to documentation]({{page space='nxdoc' page='how-to-make-elasticsearch-hints-extension-point'}})
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21874](https://jira.nuxeo.com/browse/NXP-21874)
+
+
+#### Add property to set max_expansion on match_phrase_prefix operator {{> tag 'Since 2021.17'}}
+
+Max expansions can be configured through the Configuration service with a contribution like
+```xml
+    <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
+        <property name=elasticsearch.max_expansions>200</property>
+    </extension>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30878](https://jira.nuxeo.com/browse/NXP-30878)
 
 ### Upgrade Elasticsearch to 7.x
 
@@ -1601,48 +1652,3 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 ## Complementary Information
 
 - [Release notes for Nuxeo Platform LTS 2021]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
-
-## TODO
-
-### Optionaly restrict createProxy API to administrators
-
-A new configuration property allows to restrict proxy creation via the `CoreSession#createProxy` Java API to users with Write permission on the document targetted by the proxy:
-```
-  <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
-    <property name=org.nuxeo.proxy.creation.restricted>true</property>
-  </extension>
-```
-In LTS 2021, it is `true` by default.
- In LTS 2019 (10.10) it is `false` by default, to keep the existing behavior.
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30914](https://jira.nuxeo.com/browse/NXP-30914)
-
-### Add property to set max_expansion on match_phrase_prefix operator
-
-Max expansions can be configured through the Configuration service with a contribution like
-```xml
-    <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
-        <property name=elasticsearch.max_expansions>200</property>
-    </extension>
-```
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30878](https://jira.nuxeo.com/browse/NXP-30878)
-
-### Improve KV TransientStore GC resiliency
-
-Transient GC was not working in environments with segregated front and worker nodes.
-As the result, transient stores in s3 might have accumulated lots of data and the current transient GC implementation might not be able to clean them efficiently.
-In this case, it is recommended to purge manually all objects older than 3 days on transient stores before applying this hotfix.
-This can be done using scripts or by creating an Object Lifecycle Management rule with a correct prefix `/transient_*/`.
-
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30851](https://jira.nuxeo.com/browse/NXP-30851)
-
-### Allow automation contributions to be disabled
-
-When replacing an Automation operation, chain or script, its old aliases are lost. 
-If you contribute to an operation and want to call it by an alias, you need to copy that alias on the new operation contribution or to use the ID of the operation rather than an alias.
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30761](https://jira.nuxeo.com/browse/NXP-30761)
-
-
