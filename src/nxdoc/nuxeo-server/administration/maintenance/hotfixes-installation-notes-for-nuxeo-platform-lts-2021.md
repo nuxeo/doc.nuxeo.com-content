@@ -102,6 +102,58 @@ Registration tokens are valid until your current contract's expiration date. Whe
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
 
+## Hotfix 17
+
+### Add property to set max_expansion on match_phrase_prefix operator
+
+Max expansions can be configured through the Configuration service with a contribution like
+```xml
+    <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
+        <property name=elasticsearch.max_expansions>200</property>
+    </extension>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30878](https://jira.nuxeo.com/browse/NXP-30878)
+
+### Improve KV TransientStore GC Resiliency
+
+Transient GC was not working in environments with segregated front and worker nodes.  
+As the result, transient stores in s3 might have accumulated lots of data and the current transient GC implementation might not be able to clean them efficiently.  
+In this case, it is recommended to purge manually all objects older than 3 days on transient stores before applying this hotfix.
+
+This can be done using scripts or by creating an Object Lifecycle Management rule with a correct prefix `/transient_*/`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30851](https://jira.nuxeo.com/browse/NXP-30851)
+
+### Allow Automation Contributions to be Disabled
+
+When replacing an Automation operation, chain or script, its old aliases are lost.
+If you contribute to an operation and want to call it by an alias, you need to copy that alias on the new operation contribution or to use the ID of the operation rather than an alias.
+
+**OperationType** 
+(Please note you can't cross contribute to an OperationType implementation, a chain operation can't disable a scripted operation for example)
+
+`ChainOperationType`:
+```
+<component name="org.nuxeo.ecm.automation.test-chain-operation" version="1.0">
+  <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
+    <chain id="testScript" enabled="false" />
+  </extension>
+</component>
+```
+
+`ScriptingOperationType`:
+```
+<component name="org.nuxeo.ecm.automation.test-scripted-operation-disable" version="1.0">
+  <require>org.nuxeo.ecm.automation.test-scripted-operation</require>
+  <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="operation">
+    <scriptedOperation id="testScript" enabled="false"/>
+  </extension>
+</component>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30761](https://jira.nuxeo.com/browse/NXP-30761)
+
 ## Hotfix 15
 
 ### Use partialFilterExpression on parentId When Creating the Unique Index to Avoid Duplicates
