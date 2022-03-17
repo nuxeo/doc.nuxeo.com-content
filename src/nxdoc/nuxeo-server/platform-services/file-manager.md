@@ -140,7 +140,7 @@ public class SampleFilemanagerPlugin extends AbstractFileImporter {
 
     @Override
     public DocumentModel createOrUpdate(FileImporterContext context) throws NuxeoException {
-
+        CoreSession session = context.getSession();
         PathRef parentRef = new PathRef(context.getParentPath());
         DocumentModel parentDoc = session.getDocument(parentRef);
         DocumentModel doc = null;
@@ -161,6 +161,7 @@ public class SampleFilemanagerPlugin extends AbstractFileImporter {
     }
 
     protected DocumentModel createDocType(FileImporterContext context, String type) {
+        String path = context.getParentPath();
         Blob blob = context.getBlob();
         String fileName = context.getFileName();
         DocumentModel doc = session.createDocumentModel(path, fileName, type);
@@ -187,6 +188,7 @@ The `createdOrUpdate` method returns either a `DocumentModel` object or `null`. 
 
     That's it!
 
+See also the tutorial on [how to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}).
 See also the tutorial on [how to change the default document type used when importing files in the Nuxeo Platform]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}}).
 
 * * *
