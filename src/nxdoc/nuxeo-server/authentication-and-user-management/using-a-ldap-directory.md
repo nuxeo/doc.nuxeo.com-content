@@ -661,15 +661,10 @@ This method applies to multi-directories too.
 
 If you encounter some difficulties configuring LDAP, the first step is to get more details about what happens.
 
-In the [Log4J]({{page space='glos' page='log4j'}}) configuration, increase the log level for `org.nuxeo.ecm.directory` and `org.nuxeo.runtime.model.impl`:
+In the [Log4J]({{page space='glos' page='log4j'}}) configuration, increase the log level for `org.nuxeo.ecm.directory.ldap`:
 
 ```xml
-<category name="org.nuxeo.ecm.directory">
-  <priority value="DEBUG" />
-</category>
-<category name="org.nuxeo.runtime.model.impl">
-  <priority value="INFO" />
-</category>
+<Logger name="org.nuxeo.ecm.directory.ldap" level="debug" />
 
 ```
 
