@@ -546,6 +546,14 @@ The second use cases for proxies is multi-filling.
 
 If a proxy can not hold metadata, it can hold security descriptors (ACP/ACL). So a user may be able to see one proxy and not an other.
 
+{{#> callout type='warning' }}
+There are two restrictions on a live proxy creation:
+
+* The `Document.CreateLiveProxy` operation can only be called by administrators.
+* The `CoreSession#createProxy` Java API can only be called if the current user has Write permission on the document targetted by the proxy. This restriction can be relaxed by setting the `org.nuxeo.proxy.creation.restricted` configuration property to `false`.
+
+{{/callout}}
+
 ### Repository Storage: VCS and DBS
 
 The Nuxeo repository consists of several services.
