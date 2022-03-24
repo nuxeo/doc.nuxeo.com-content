@@ -53,8 +53,24 @@ Specific Maintenance Windows can be adjusted to accommodate customer usage patte
 Nuxeo Cloud applies Nuxeo LTS Hotfixes to all cloud environments the first and second week of each month during the maintenance window. Nuxeo Cloud customer contacts are emailed 1 week before the Hotfix deployment takes place.
 
 Our standard deployment is:
-- Pre-Prod: First Thursday of the Month
-- Prod: Second Thursday of the Month
+- Pre-Prod: Available to users the first Friday of the Month
+- Prod: Available to users the second Friday of the Month
+
+## LTS Upgrades
+
+Customers choosing to upgrade from one LTS version to another can do so using the following guidelines
+
+As a first step, customers may request an additional Development Sandbox be created with a pre-determined start and end date for the initial development upgrade effort. The second development sandbox will be available for testing of the upgrade without impacting the production development cycle. 
+
+After the upgrade process has been validated in the Development Sandbox, the process of upgrading the Pre-Production environment(s) can be started. This effort may require a data restoration from Production to Pre-production in order to better understand impacts and timings as the upgrade process moves towards production. This will also require coordination with the Nuxeo Cloud team as services (e.g. ElasticSearch) may also need to be upgraded with the application changes. 
+
+{{#> callout type='info'}}
+The upgrade process to Pre-Production and Production does not typically require 2 environments to be available at the same time. 
+{{/callout}}
+
+The Production update will be coordinated with the customer after the process has been validated in the Development Sandbox (if purchased) and Pre-Production environments. 
+
+Additional information on Nuxeo LTS upgrades can be found here
 
 ## Additional Updates / Security Patches
 
