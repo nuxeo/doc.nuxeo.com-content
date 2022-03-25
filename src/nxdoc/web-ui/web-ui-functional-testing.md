@@ -3,7 +3,7 @@ title: Web UI Functional Tests
 description: An overview of functional testing on Web UI and it's functional testing framework.
 toc: true
 review:
-  date: '2019-10-29'
+  date: '2022-03-25'
   status: ok
   comment: ''
 ---
@@ -145,13 +145,13 @@ For an example of how to use the functional test framework, please check
 
 Assuming a server is running with the contributions that need to be tested, you can run the test suite with:
 ```
-npm run test
+npm run ftest
 ```
 But, oftentimes all we want is to run a particular subset of feature files or even a subset of scenarios.
 
 In such cases, it can be done by adding the `@watch` tag to the top of a feature file or right before a given scenario, and then running:
 ```
-npm run test:watch
+npm run ftest:watch
 ```
 
 For an example of how to launch a Nuxeo server and run the tests using maven, please check
@@ -159,11 +159,9 @@ For an example of how to launch a Nuxeo server and run the tests using maven, pl
 
 ### Debugging
 
-You can run the previous commands in debug mode by passing the `--debug` parameter:
-
+After running:
 ```
-npm run test -- --debug
-npm run test:watch -- --debug
+npm run ftest:watch
 ```
 
-Once you run the tests in debug mode, you can use your favorite debugger to attach and debug the code. This is very easy to do with Google Chrome: a new entry will be available under `chrome://inspect/#devices`, and you just need to click "inspect" to attach the debugger. The execution will stop as soon as it hits a [`debugger`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement.
+You can use your favorite debugger to attach and debug your code. This is very easy to do with Google Chrome: a new entry will be available under `chrome://inspect/#devices`, and you just need to click "inspect" to attach the debugger. The execution will stop as soon as it hits a [`debugger`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement.
