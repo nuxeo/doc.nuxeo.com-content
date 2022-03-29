@@ -56,6 +56,7 @@ Once the selection is made, the following default actions are available as bulk 
 
 - Add to collection
 - Remove From Collection (when viewing a collection)
+- Bulk Edit (if enabled using Studio configuration, see below)
 - Publish
 - Delete (send to trash)
 - Untrash (in trash view)
@@ -104,6 +105,16 @@ Once the action is completed, the notification will remain until the user decide
 ![web-ui-bulk-action-completed](nx_asset://0464da0b-af30-4c3f-9de9-f59a017d2be1 ?border=true)
 
 To avoid cluttering the UI when executing many bulk actions in parallel, three (3) notifications maximum will be displayed at a time. Each bulk action counts for one notification. If more notifications have to appear in the UI, the oldest notification will be removed.
+
+## Enabling the Default Bulk Edit Form
+
+The default bulk edit form is disabled by default as most of our customers tend to prefer configuring custom forms instead. To enable it and its related button, you can enable the `bulkEditResultsAction` in the `Buttons` menu of Nuxeo Studio Designer.
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/web-ui-bulk-actions/default-bulk-edit-button.png
+    name: default-bulk-edit-button.png
+    studio_designer#screenshot#up_to_date
+--}}
+![default-bulk-edit-button.png](nx_asset://2f3308f8-ae05-4500-ad57-33e47f661454 ?w=650,border=true)
 
 ## Configuring a Custom Bulk Action
 
