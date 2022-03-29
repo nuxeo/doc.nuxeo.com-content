@@ -24,7 +24,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | Web UI 3.0.11 | Option to append values when bulk editing -->
+<!-- | [Web UI 3.0.11]({{page page='web-ui-release-notes-3-0-11'}})  | Option to append values when bulk editing -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
