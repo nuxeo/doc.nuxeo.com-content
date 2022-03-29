@@ -90,3 +90,9 @@ You only need to mention the unique part of the layout name in the `layout` prop
 ## Testing the Result
 
 From any [Folderish]({{page page="available-facets"}}#folderish) document (e.g. a `Folder`, a `Workspace`) or in the results of a search, select one or several documents you want to validate. Click on your brand new button in the toolbar on top of the screen to open your bulk edit form. Select the properties to replace and the value to set, and click save to launch the action.
+
+## Questions and Answers
+
+### How Does Bulk Edit Deal With Required Fields?
+
+When a field is marked as required, it won't be shown as required in your custom form because users can still choose to leave the existing value(s) as they are. However, the `empty value(s)` option will be grayed out to prevent any error.
