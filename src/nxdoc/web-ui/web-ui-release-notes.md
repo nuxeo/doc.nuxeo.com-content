@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
     comment: ''
-    date: '2021-11-19'
+    date: '2022-03-29'
     status: ok
 toc: true
 labels:
@@ -18,18 +18,19 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-10'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-11'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.10]({{page page='web-ui-release-notes-3-0-9'}})               | Introduces the ability to search and browse documents across multiple repositories                     | -->
+<!-- | Web UI 3.0.11 | Option to append values when bulk editing -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [Web UI 3.0.9]({{page page='web-ui-release-notes-3-0-9'}})                    | Introduces the ability to bulk edit large sets of documents                |
+| [Web UI 3.0.10]({{page page='web-ui-release-notes-3-0-10'}})                  | Search and browse documents across multiple repositories                   |
+| [Web UI 3.0.9]({{page page='web-ui-release-notes-3-0-9'}})                    | Bulk edit large sets of documents                                          |
 | [Web UI 3.0.8]({{page page='web-ui-release-notes-3-0-8'}})                    | Bugfix release                                                             |
 | [Web UI 3.0.7]({{page page='web-ui-release-notes-3-0-7'}})                    | Improvements to the bulk actions                                           |
-| [Web UI 3.0.6]({{page page='web-ui-release-notes-3-0-6'}})                    | New feature: select all documents and trigger bulk actions on them         |
+| [Web UI 3.0.6]({{page page='web-ui-release-notes-3-0-6'}})                    | Select all documents and trigger bulk actions on them                      |
 | [Web UI 3.0.0 to 3.0.5]({{page page='web-ui-release-notes-3-0-0-to-3-0-5'}})  | Upload experience for Large Files, audit entries improvements and more     |
