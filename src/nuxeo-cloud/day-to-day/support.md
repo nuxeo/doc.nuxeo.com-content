@@ -58,19 +58,19 @@ Our standard deployment is:
 
 ## LTS Upgrades
 
-Customers choosing to upgrade from one LTS version to another can do so using the following guidelines
+Customers choosing to upgrade from one LTS version to another can do so using the following guidelines.
 
-As a first step, customers may request an additional Development Sandbox be created with a pre-determined start and end date for the initial development upgrade effort. The second development sandbox will be available for testing of the upgrade without impacting the production development cycle. 
+As a first step, customers may request an additional Development Sandbox be created with a pre-determined start and end date for the initial development upgrade effort. The second development sandbox will be available for testing of the upgrade without impacting the production development cycle.
 
-After the upgrade process has been validated in the Development Sandbox, the process of upgrading the Pre-Production environment(s) can be started. This effort may require a data restoration from Production to Pre-production in order to better understand impacts and timings as the upgrade process moves towards production. This will also require coordination with the Nuxeo Cloud team as services (e.g. ElasticSearch) may also need to be upgraded with the application changes. 
+After the upgrade process has been validated in the Development Sandbox, the process of upgrading the Pre-Production environment(s) can be started. This effort may require a data restoration from Production to Pre-production in order to better understand impacts and timings as the upgrade process moves towards production. This will also require coordination with the Nuxeo Cloud team as services (e.g. ElasticSearch) may also need to be upgraded with the application changes.
 
 {{#> callout type='info'}}
-The upgrade process to Pre-Production and Production does not typically require 2 environments to be available at the same time. 
+The upgrade process to Pre-Production and Production does not typically require 2 environments to be available at the same time.
 {{/callout}}
 
-The Production update will be coordinated with the customer after the process has been validated in the Development Sandbox (if purchased) and Pre-Production environments. 
+The Production update will be coordinated with the customer after the process has been validated in the Development Sandbox (if purchased) and Pre-Production environments.
 
-Additional information on Nuxeo LTS upgrades can be found here
+Additional information on Nuxeo LTS upgrades can be [found here]({{page version='' space='nxdoc' page='upgrading-the-nuxeo-platform'}}).
 
 ## Additional Updates / Security Patches
 
