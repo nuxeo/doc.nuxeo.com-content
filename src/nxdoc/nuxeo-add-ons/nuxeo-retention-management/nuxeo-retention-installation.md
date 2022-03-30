@@ -29,7 +29,7 @@ The installation and configuration steps are quite different depending on the us
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;Compliance mode]({{page page='nuxeo-retention-installation-standard'}})
+### [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;Compliance mode]({{page page='nuxeo-retention-installation-compliance'}})
 {{/panel}}
 </div>
 </div>
