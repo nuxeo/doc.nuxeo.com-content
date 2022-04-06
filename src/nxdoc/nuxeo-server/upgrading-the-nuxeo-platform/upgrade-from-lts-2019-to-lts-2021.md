@@ -1139,6 +1139,50 @@ This can impact positively performance by avoiding version creation on the above
 
 ## Farewell
 
+### JAAS {{> tag 'Since 2021.1'}}
+
+JAAS has been removed (the use of LoginContext, security domains, LoginModules, etc.) and replaced per a direct call to `NuxeoAuthenticationPlugins`.
+
+New methods:
+ - `Framework.loginSystem()`
+ - `Framework.loginSystem(originatingUser)`
+ - `Framework.loginUser(username)`
+ - `NuxeoPrincipal.getCurrent()`
+ - `NuxeoPrincipal.isCurrentAdministrator()`
+
+The above `loginSystem` and `loginUser` methods now return a `NuxeoLoginContext` that is `AutoCloseable` and can therefore be used in a try-with-resources.
+
+Deprecated methods:
+- `Framework.login()`</br>
+    -> `Framework.loginSystem()`
+- `Framework.loginAs(originatingUser)`</br>
+    -> `Framework.loginSystem(originatingUser)`
+- `Framework.loginAsUser(username)`</br>
+    -> `Framework.loginUser(username)`
+- `Framework.login(username, password)`</br>
+    -> `Framework.loginUser(username)`
+- `ClientLoginModule.clearThreadLocalLogin()`</br>
+    -> `LoginComponent.clearPrincipalStack()` (INTERNAL)
+- `ClientLoginModule.getThreadLocalLogin()`</br>
+    -> `LoginComponent` (INTERNAL)
+- `ClientLoginModule.getCurrentLogin()`</br>
+    -> `LoginComponent.getCurrentPrincipal()`
+- `ClientLoginModule.getCurrentPrincipal()`</br>
+    -> `NuxeoPrincipal.getCurrent()`
+- `ClientLoginModule.isCurrentAdministrator()`</br>
+    -> `NuxeoPrincipal.isCurrentAdministrator()`
+- `LoginStack`
+
+These extension points or part of their contributions are removed:
+ - `<loginModulePlugin>` in the element `<authenticationPlugin>` of extension point `authenticators` of `org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService`
+ - the extension point domains of `org.nuxeo.runtime.LoginComponent` (which included registration of `LoginModule` classes)
+ - the extension point plugin of `org.nuxeo.ecm.platform.login.LoginPluginRegistry` (which included registration of `LoginPlugin` classes)
+
+Behavior change:
+ - `NuxeoAuthenticationPlugin.handleRetrieveIdentity` should now contain all the authentication code, and return a `UserIdentificationInfo with credentialsChecked = true` (using the 1-arg constructor) if the credentials have already been checked by the auth plugin itself. Otherwise the method may return a `UserIdentificationInfo` that includes a username and password, to let the generic filter check the password against the UserManager.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27942](https://jira.nuxeo.com/browse/NXP-27942)
+
 ### Remove Deprecated `org.nuxeo.ecm.core.model.LockManager`
 
 The internal interface `org.nuxeo.ecm.core.model.LockManager` has been removed, `org.nuxeo.ecm.core.api.lock.LockManager` should be used instead.
