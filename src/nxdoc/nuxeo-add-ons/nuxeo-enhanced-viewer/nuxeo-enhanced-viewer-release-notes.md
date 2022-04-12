@@ -4,13 +4,13 @@ description: Release notes for Nuxeo Enhanced Viewer.
 tree_item_index: 100
 review:
   comment: ''
-  date: '2021-12-23'
+  date: '2022-04-12'
   status: ok
 toc: true
 ---
 
 
-{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2-0-0'}}}
+{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2-1-0'}}}
 
 ---
 
@@ -18,7 +18,8 @@ toc: true
 
 | Version                                                                       | Release date                                                               |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [NEV 2.0.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-0-0'}})        | 2021-12-23 - Latest release                                                |
+| [NEV 2.1.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-1-0'}})        | 2022-03-25                                                                 |
+| [NEV 2.0.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-0-0'}})        | 2021-12-23                                                                 |
 | [NEV 10.6.11]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-11'}})    | 2021-12-17                                                                 |
 | [NEV 10.6.10]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-10'}})    | 2021-11-17                                                                 |
 | [NEV 10.6.9]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-9'}})      | 2021-10-29                                                                 |
