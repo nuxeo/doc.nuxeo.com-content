@@ -2,7 +2,6 @@
 title: NEV 10.6.11
 description: Release notes for Nuxeo Enhanced Viewer 10.6.11.
 tree_item_index: 910
-hidden: true
 review:
   comment: ''
   date: '2021-12-17'
