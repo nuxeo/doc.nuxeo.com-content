@@ -12,23 +12,22 @@ toc: true
 
 {{! multiexcerpt name='studio-updates-2022-02'}}
 
-## Increase in the Max Number of Users per Organisation
+## Facet Manager in Studio 
 
-We’ve increased the max number of users allowed for an organisation to a hundred thousand, as the current limit was impacting several larger users.  
+It will now be possible to create within Nuxeo Studio a facet inside the content model. This facet can also be associated with a schema, such as when that facet is added to a document it will add to that document the related schema when active. This a major new component for Studio. 
 
-## Removal of 11.x Platform in Studio
+The feature is retroactive and you should see a display change in the Doctype view.
 
-We’ve removed the possibility of setting 11.x as the compatible platform in Application Definition in Studio as this version is no longer compatible.
+## Fix override button displayed on read-only schemas
 
-## Property to Remove Mobile Banner
+When creating a schema feature using the advanced import option, the feature is displayed in readonly mode. Previously, an erroneous override button would appear. It has been removed.
 
-We’ve added a property to remove the mobile banner.
+## Fix event handler’s field ‘Current document properties have changed’ when using properties of ‘file’ schema
 
-## Resources Identified in Studio Registries
+When using any properties of schema file in field 'Current document properties have changed' in the definition of an event handler, the automation script or chain does not get triggered. This has been updated so subfields of 'file' are available.
 
-We’ve identified Resources in Studio registries as a way to a range of overriding issues stemming from a resource in a dependency not being accessible in the local project.
+## Trial Registration Issues
 
-## Improvement to track Page Provider Usage
+We’ve made a series of fixes to Tri.al Registration, resolving several bugging scenarios encountered
 
-We’ve evolved the Page Provider properties to make it easier to track usage, notably using the `<trackUsage>` property.
 {{! /multiexcerpt}}
