@@ -52,7 +52,7 @@ This release brings major observability improvements and bugfixes.
 
 Being able to preview your content is a mission critical capability. In order to better support our stack, we brought major improvements to the way we can monitor its performance.
 
-See [[NEV-492](https://jira.nuxeo.com/browse/NEV-492)] for details.
+See [NEV-492](https://jira.nuxeo.com/browse/NEV-492).
 
 ## Other Noteworthy Changes
 
