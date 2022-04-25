@@ -7,7 +7,6 @@ review:
   date: '2021-12-24'
   status: ok
 toc: true
-
 ---
 
 {{! multiexcerpt name='studio-updates-2021-12'}}
