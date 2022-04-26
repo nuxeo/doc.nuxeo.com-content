@@ -1696,3 +1696,16 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 ## Complementary Information
 
 - [Release notes for Nuxeo Platform LTS 2021]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+
+## TODO
+
+### Use elastic word_delimiter_graph instead of word_delimiter to avoid indexing error
+
+If you encounter indexing errors because of negative startOffset, your mapping needs to be updated.
+If you have overridden the Elastic mapping then follow the recommended changes in the ticket.
+Then you need to reindex the repository,  visit https://doc.nuxeo.com/nxdoc/elasticsearch-setup/#rebuilding-the-repository-index for more information.
+
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30785](https://jira.nuxeo.com/browse/NXP-30785)
+
+
