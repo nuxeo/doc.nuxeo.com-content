@@ -17,7 +17,7 @@ The Nuxeo Office Online Integration addon adds the ability to view/edit Microsof
 
 The Office Online integration is done thanks to the Web Application Open Platform Interface (WOPI) protocol provided by Microsoft. The WOPI protocol enables Office Online to access and change files that are stored in a Nuxeo server.
 
-You can find more information on the WOPI protocol for the Office Online integration [here](https://wopi.readthedocs.io/en/latest/index.html).
+You can find more information on the WOPI protocol for the Office Online integration [here](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/).
 
 <script src="https://fast.wistia.com/embed/medias/qvuc7teh6i.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_qvuc7teh6i popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:250px;position:relative;width:500px">&nbsp;</span>
 
@@ -108,13 +108,13 @@ Once in edition mode, every modification done on the Office document will be sav
 
 ### WOPI Domain Allow List
 
-Office Online only makes requests to trusted partner domains, so the domain of your Nuxeo server needs to be added to the [WOPI domain allow list](https://wopi.readthedocs.io/en/latest/build_test_ship/settings.html#allow-list).
+Office Online only makes requests to trusted partner domains, so the domain of your Nuxeo server needs to be added to the [WOPI domain allow list](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list).
 
 Nuxeo has currently registered `*.nuxeocloud.com` as an allowed domain.
 
 ### HTTPS
 
-As stated [here](https://wopi.readthedocs.io/en/latest/build_test_ship/environments.html#production-environment), the WOPI host, here the Nuxeo server, must use HTTPS.
+As stated [here](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/environments#production-environment), the WOPI host, here the Nuxeo server, must use HTTPS.
 
 ## Configuration
 
@@ -124,7 +124,7 @@ The Office Online integration relies on the JWT authentication. You need to enab
 
 ### Office Online Discovery
 
-To allow the integration between Nuxeo and Office Online, Nuxeo needs to discover the Office Online client. To do that, you need to set the `nuxeo.wopi.discoveryURL` parameter in your `nuxeo.conf` to the Office Online Production discovery URL `https://onenote.officeapps.live.com/hosting/discovery`. See [WOPI discovery URLs](https://wopi.readthedocs.io/en/latest/build_test_ship/environments.html#discovery-urls) for more information.
+To allow the integration between Nuxeo and Office Online, Nuxeo needs to discover the Office Online client. To do that, you need to set the `nuxeo.wopi.discoveryURL` parameter in your `nuxeo.conf` to the Office Online Production discovery URL `https://onenote.officeapps.live.com/hosting/discovery`. See [WOPI discovery URLs](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/environments#wopi-discovery-urls) for more information.
 
 If you target a WOPI client other than Office Online, just set its discovery URL instead of the Office Online one.
 
@@ -172,4 +172,4 @@ The rules are detailed between Word, Excel and PowerPoint:
 </tr>
 </table>
 
-Please refer to the [WOPI documentation](https://wopi.readthedocs.io/en/latest/scenarios/coauth.html) for more information.
+Please refer to the [WOPI documentation](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/coauth) for more information.
