@@ -15,54 +15,65 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-19'}}
 # What's New in LTS 2021.19 / LTS 2021-HF19
 
-## Elastic socket timeout should be aligned with request timeouts
+## Nuxeo Server
 
-Default Elastic socket timeout is now set to 2min
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30957](https://jira.nuxeo.com/browse/NXP-30957)
-
-## Upgrade MariaDB to 2.2.4 or later
+### Upgrade MariaDB to 2.2.4 or Later
 
 MariaDB driver is updated to version 2.2.4.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30937](https://jira.nuxeo.com/browse/NXP-30937)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30937](https://jira.nuxeo.com/browse/NXP-30937)
 
-## Fix full-text binary indexing of multi-valued blob property defined in Studio
+## Core Storage
 
-List of blob properties are now full text indexed
+### Elastic Socket Timeout Should Be Aligned With Request Timeouts
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30925](https://jira.nuxeo.com/browse/NXP-30925)
+Default Elastic socket timeout is now set to 2min.
 
-## Use elastic word_delimiter_graph instead of word_delimiter to avoid indexing error
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30957](https://jira.nuxeo.com/browse/NXP-30957)
 
-Elastic mapping has been updated to avoid indexing error because of a deprecated word delimiter.
+### Fix Full-Text Binary Indexing of Multi-Valued Blob Property Defined in Studio
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30785](https://jira.nuxeo.com/browse/NXP-30785)
+List of blob properties are now full text indexed.
 
-## Fix isNextPageAvailable in directory endpoint
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30925](https://jira.nuxeo.com/browse/NXP-30925)
 
-The directory endpoint now returns an accurate value for isNextPageAvailable.
+### Fix Error Message When Setting an Invalid Password
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30520](https://jira.nuxeo.com/browse/NXP-30520)
+Setting a password which doesn't respect the configured pattern results in a bad request error.
 
-## Fix error message when setting an invalid password
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30278](https://jira.nuxeo.com/browse/NXP-30278)
 
-Setting a password which doesn't respect the configured pattern results in a bad request error. 
+### Bulk Service Should Have a Transactional Behavior
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30278](https://jira.nuxeo.com/browse/NXP-30278)
+The Bulk service can now submit command with a transactional behavior.
 
-## Delay the start of Quartz scheduler to avoid database constraint violations
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-28296](https://jira.nuxeo.com/browse/NXP-28296)
+
+## Major Bug Fixes
+
+### Delay the Start of Quartz Scheduler to Avoid Database Constraint Violations
 
 Delay Quartz scheduler start for 5s by default.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30239](https://jira.nuxeo.com/browse/NXP-30239)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30239](https://jira.nuxeo.com/browse/NXP-30239)
 
-## Bulk Service should have a transactional behavior
+### Fix isNextPageAvailable in Directory Endpoint
 
-The Bulk service can now submit command with a transactional behavior
+The directory endpoint now returns an accurate value for isNextPageAvailable.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-28296](https://jira.nuxeo.com/browse/NXP-28296)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30520](https://jira.nuxeo.com/browse/NXP-30520)
 
+### Use Elastic `word_delimiter_graph` Instead of `word_delimiter` to Avoid Indexing Error
+
+Elastic mapping has been updated to avoid indexing error because of a deprecated word delimiter.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30785](https://jira.nuxeo.com/browse/NXP-30785)
+
+### Fix full-text Binary Indexing of multi-valued Blob Property Defined in Studio
+
+List of blob properties are now full text indexed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30925](https://jira.nuxeo.com/browse/NXP-30925)
 
 # Learn More
 
