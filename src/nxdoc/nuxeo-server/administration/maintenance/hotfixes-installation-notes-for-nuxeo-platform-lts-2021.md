@@ -101,6 +101,16 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 19
+
+### Use Elastic `word_delimiter_graph` instead of `word_delimiter` to Avoid Indexing Error
+
+If you encounter indexing errors because of negative startOffset, your mapping needs to be updated.
+
+If you have overridden the Elastic mapping then follow the recommended changes in the ticket.
+Then you need to reindex the repository,  visit the [related documentation]({{page page='elasticsearch-setup'}}#rebuilding-the-repository-index) for more information.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30785](https://jira.nuxeo.com/browse/NXP-30785)
 
 ## Hotfix 17
 
@@ -130,7 +140,7 @@ This can be done using scripts or by creating an Object Lifecycle Management rul
 When replacing an Automation operation, chain or script, its old aliases are lost.
 If you contribute to an operation and want to call it by an alias, you need to copy that alias on the new operation contribution or to use the ID of the operation rather than an alias.
 
-**OperationType** 
+**OperationType**
 (Please note you can't cross contribute to an OperationType implementation, a chain operation can't disable a scripted operation for example)
 
 `ChainOperationType`:

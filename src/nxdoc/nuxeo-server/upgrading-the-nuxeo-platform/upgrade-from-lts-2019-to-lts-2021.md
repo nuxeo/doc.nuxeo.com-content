@@ -580,6 +580,15 @@ you need to upgrade your existing Elasticsearch cluster to version 7.9 (7.7 or 7
 
 ### Behavior Changes
 
+#### Use Elastic `word_delimiter_graph` instead of `word_delimiter` to Avoid Indexing Error {{> tag 'Since 2021.19'}}
+
+If you encounter indexing errors because of negative startOffset, your mapping needs to be updated.
+
+If you have overridden the Elastic mapping then follow the recommended changes in the ticket.
+Then you need to reindex the repository, visit the [related documentation]({{page page='elasticsearch-setup'}}#rebuilding-the-repository-index) for more information.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30785](https://jira.nuxeo.com/browse/NXP-30785)
+
 #### Default Elasticsearch Timeout Increased for the Write Operation {{> tag 'Since 2021.5'}}
 
 A longer Elastic timeout is used for write operation.
@@ -1696,16 +1705,3 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 ## Complementary Information
 
 - [Release notes for Nuxeo Platform LTS 2021]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
-
-## TODO
-
-### Use elastic word_delimiter_graph instead of word_delimiter to avoid indexing error
-
-If you encounter indexing errors because of negative startOffset, your mapping needs to be updated.
-If you have overridden the Elastic mapping then follow the recommended changes in the ticket.
-Then you need to reindex the repository,  visit https://doc.nuxeo.com/nxdoc/elasticsearch-setup/#rebuilding-the-repository-index for more information.
-
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30785](https://jira.nuxeo.com/browse/NXP-30785)
-
-
