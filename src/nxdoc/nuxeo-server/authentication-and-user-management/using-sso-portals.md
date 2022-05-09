@@ -41,7 +41,7 @@ To install this authentication plugin:
             <\!-\- define here shared secret between the portal and Nuxeo server -->
             <parameter name="secret">nuxeo5secretkey</parameter>
             <parameter name="maxAge">3600</parameter>
-            <parameter name="digestAlgorithm">MD5<parameter>
+            <parameter name="digestAlgorithm">MD5</parameter>
           </parameters>
         </authenticationPlugin>
       </extension>
