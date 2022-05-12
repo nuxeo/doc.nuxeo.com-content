@@ -3,7 +3,7 @@ title: Functional Overview
 description: Discover how to use the Nuxeo Retention Management addon once installed.
 review:
     comment: ''
-    date: '2019-08-05'
+    date: '2022-05-12'
     status: 'ok'
 labels:
     - lts2019-wip
@@ -346,7 +346,7 @@ On the **View** tab of your document:
 
 ### Create a Retention Event
 
-To create a new [retention event]({{page page='nuxeo-retention-management'}}#retention-events):
+To create a new [retention event](#based-on-an-event):
 1. Go to the Retention menu.
 2. Click on **Retention events**.
 3. Fill the fields on the **Fire event** section:
@@ -396,7 +396,7 @@ On the **History** tab of your document, you can see all the events related to t
 
 #### General History
 
-On the **Administration** > **Audit** page, you can see all the events related to the retention, including the [retention events]({{page page='nuxeo-retention-management'}}#retention-events) that have been created on the platform.
+On the **Administration** > **Audit** page, you can see all the events related to the retention, including the [retention events](#based-on-an-event) that have been created on the platform.
 
 ### Put a Document Under Legal Hold
 
@@ -491,6 +491,39 @@ Confirm from the popup window.
 {{#> callout type='note' }}
 The legal hold will be removed for **all the documents displayed on the page**.
 {{/callout}}
+
+### Visualising Retention/Legal Hold Status
+
+To help to easily visualize if any documents are under retention or legal hold when browsing, we added a - hidden by default - column named "flags column". </br>
+This column gives some extra details about the documents, such as if the document is a favorite, is under cold storage or if it's under retention or legal hold.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/Flags Screenshot
+    name: flags.png
+    web_ui#screenshot#up_to_date
+--}}
+![Flags Screenshot](nx_asset://eb327f71-6b7c-4909-af33-4472e9dd97da)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/Flags setting
+    name: flagsSetting.png
+    web_ui#screenshot#up_to_date
+--}}
+![Flags setting](nx_asset://339079be-e6e9-4c19-9093-1dda4bf1b541)
+
+### {{> anchor 'delete-document-under-retention'}} Delete a Document Under Retention
+
+#### Standard Mode
+
+By default, apply a retention rule to a document is an irreversible action, meaning you can't delete a document under retention.
+
+That being said, you can override this default behavior by using a [specific role]({{page page='nuxeo-retention-management'}}#deletion-role).
+
+If the role **NuxeoRecordCleaners** has been created in the instance and assigned to a user with the **Remove** permission on a given document, the user will be able to delete the document under retention.
+
+#### Compliance Mode
+
+There is no way to delete a document under retention in the compliance mode.
 
 ## As a User
 
@@ -614,6 +647,12 @@ The following tables describe the availability of document actions:
     <td></td>
 </tr>
 <tr>
+    <td colspan="1">Edit metadata</td>
+    <td><center>&#10003;</center></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
     <td colspan="1">Publish document</td>
     <td></td>
     <td><center>&#10003;</center></td>
@@ -634,7 +673,7 @@ The following tables describe the availability of document actions:
 <tr>
     <td colspan="1">Delete document</td>
     <td></td>
-    <td><center>&#10003;</center></td>
+    <td><center>&#10003;\*</center></td>
     <td></td>
 </tr>
 <tr>
@@ -658,6 +697,10 @@ The following tables describe the availability of document actions:
 </tbody>
 </table>
 </div>
+
+{{#> callout type='note' }}
+\*: Delete a document is disabled for record unless the [specific role](#delete-document-under-retention) has been activated and assigned to a user.
+{{/callout}}
 
 ### With Compliance Mode
 
@@ -758,6 +801,12 @@ The following tables describe the availability of document actions:
 </tr>
 <tr>
     <td colspan="1">Lock</td>
+    <td><center>&#10003;</center></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Edit metadata</td>
     <td><center>&#10003;</center></td>
     <td></td>
     <td></td>

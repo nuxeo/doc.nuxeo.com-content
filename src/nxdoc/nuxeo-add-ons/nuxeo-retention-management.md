@@ -3,7 +3,7 @@ title: Nuxeo Retention Management
 description: The retention management module covers all the necessary aspects of retention management to fulfill legal requirements.
 review:
     comment: ''
-    date: '2019-08-05'
+    date: '2022-05-12'
     status: 'ok'
 labels:
     - lts2019-wip
@@ -17,17 +17,6 @@ tree_item_index: 2530
 {{! excerpt}}
 The Nuxeo Retention Management addon covers all the necessary aspects of retention management to fulfill legal requirements. It includes management of records, retention rules, deletion of the document at a specific date and legal case management features, such as putting documents under legal hold and/or retention depending on a specific event or metadata and searching for a retention rule.
 {{! /excerpt}}
-
-{{#> callout type='info' heading='University'}}
-Watch the related course on Hyland University:</br>
-[Nuxeo Retention Management - Product News](https://university.hyland.com/courses/e4139)
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-retention.png
-    name: university-retention.png
-    addins#screenshot#up_to_date
---}}
-![university-retention.png](nx_asset://b7b756ce-c2c1-47e3-8cdd-72468a72135f ?w=450,border=true)
-{{/callout}}
 
 ## Concept
 
@@ -45,10 +34,6 @@ The Nuxeo Retention Management addon has been designed to be fully compliant wit
 The Nuxeo Retention Management addon allows 2 modes:
  - **Standard mode**: this is the default mode when installing the addon. It allows using all the retention features with all storage media supported by Nuxeo Platform. This mode is not compliant with [SEC Rule 17a-4](#sec-rule-17a4).
  - **Compliance mode**: this mode is required to be compliant with [SEC Rule 17a-4](#sec-rule-17a4). It offers the same features than the standard mode but it requires the usage of Amazon S3 [Compliance mode]({{page page='nuxeo-retention-installation'}}#s3-configuration-requirements). It also involves some functional [limitations](#limitations).
-
-{{#> callout type='warning' }}
-There is no out of the box configuration for the retention addon, you must apply a configuration in a custom contribution. See the section [Configure the records bucket in amazon s3 online storage]({{page page='nuxeo-retention-installation'}}#configure-the-records-bucket-in-amazon-s3-online-storage).
-{{/callout}}
 
 ## Main Principles
 
@@ -116,11 +101,17 @@ Note that the record object must be immutable. Specific metadata, such as unique
 
 ## Standard Mode Specificities
 
-### Special Role for Deletion
+### {{> anchor 'deletion-role'}} Special Role for Deletion
 
 In standard mode, the users belonging to the **NuxeoRecordCleaners** group are allowed to delete documents under retention or legal hold. These users must still have the **Remove** permission granted on the documents to be deleted. The **NuxeoRecordCleaners** group does not exist by default, it must be created manually.
 
-The **NuxeoRecordCleaners** group has been introduced in LTS 2019-HF53.
+The **NuxeoRecordCleaners** group has been introduced in **LTS 2021-HF07**.
+
+### Storage
+
+In standard mode, you can use all the [file storages]({{page page='file-storage'}}) supported by Nuxeo Platform.
+
+As part of the supported storages, you can use Amazon S3, including with Object Lock in "Governance" mode (see [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)).
 
 ## Compliance Mode Specificities
 
@@ -128,15 +119,15 @@ The **NuxeoRecordCleaners** group has been introduced in LTS 2019-HF53.
 
 The SEC 17a-4 US regulation involves the usage of a secured storage media as part of the requirements to be compliant.
 
-The Nuxeo Retention Management addon is using Amazon S3 in "Compliance mode", to fit with this requirement.
+The Nuxeo Retention Management addon is using Amazon S3 Object Lock in "Compliance mode", to fit with this requirement.
 
-Amazon S3 compliance mode (see [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)) guarantees that no one can delete an object which is under retention or legal hold. Amazon S3 is provided with the retention period and/or legal hold information by Nuxeo, and ensures that no changes or deletions can occur during this period.
+Amazon S3 Object Lock compliance mode (see [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)) guarantees that no one can delete an object which is under retention or legal hold. Amazon S3 is provided with the retention period and/or legal hold information by Nuxeo, and ensures that no changes or deletions can occur during this period.
 
 ### {{> anchor 'limitations'}}Limitations
 
 In Compliance mode, the Nuxeo Retention Management addon does not support **attachments**, **versioning**, and **comments**.
 
-Those features **are automatically disabled** for the full instance when the Nuxeo Retention Management addon is added to Nuxeo Server (the related facets and the **files** schema, for additional attachements, are disabled). So, once the addon is installed, there is no way to add a comment, an attachment or to create a version to a document, whether they are standard documents or records.
+Those features **are automatically disabled** for the full instance when the Nuxeo Retention Management addon is added to Nuxeo Server (the related facets and the **file** schema are disabled). So, once the addon is installed, there is no way to add a comment, an attachment or to create a version to a document, whether they are standard documents or records.
 
 ## Warnings
 
@@ -165,28 +156,19 @@ Nuxeo can't guarantee the compliance to SEC 17a-4 in the event that:
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### [Functional Overview&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' page='nuxeo-retention-functional-overview'}})
-{{/panel}}
-</div>
-
-<div class="column medium-4">
-{{#> panel type='secondary' match_height='true'}}
-### [Technical Overview&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' page='nuxeo-retention-technical-overview'}})
-{{/panel}}
-</div>
-
-</div>
-
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-4">
-{{#> panel type='secondary' match_height='true'}}
 ### [Installation&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-retention-installation'}})
 {{/panel}}
 </div>
 
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### [Configuration&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-retention-configuration'}})
+### [Functional Overview&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-retention-functional-overview'}})
+{{/panel}}
+</div>
+
+<div class="column medium-4">
+{{#> panel type='secondary' match_height='true'}}
+### [Technical Overview&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='nuxeo-retention-technical-overview'}})
 {{/panel}}
 </div>
 

@@ -3,7 +3,7 @@ title: Technical Overview
 description: Discover technical implementation of the Nuxeo Retention Management addon.
 review:
     comment: ''
-    date: '2019-10-17'
+    date: '2022-05-12'
     status: 'ok'
 labels:
     - lts2019-wip
@@ -13,7 +13,6 @@ labels:
 toc: true
 tree_item_index: 200
 ---
-
 
 ## {{> anchor 'dedicated-low-fields'}} Dedicated Low-Level Fields
 
