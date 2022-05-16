@@ -15,24 +15,25 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-20'}}
 # What's New in LTS 2021.20 / LTS 2021-HF20
 
-## Change log level in KV store GC
+### Major Bug Fixes
+
+#### Change Log Level in KV Store GC
 
 A WARN message happening during the KV store GC is removed.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30983](https://jira.nuxeo.com/browse/NXP-30983)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30983](https://jira.nuxeo.com/browse/NXP-30983)
 
-## DBS ReadACL propagation might be corrupted when distributed
+#### DBS ReadACL Propagation Might Be Corrupted When Distributed
 
 DBS ReadACL propagation is more robust.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30928](https://jira.nuxeo.com/browse/NXP-30928)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30928](https://jira.nuxeo.com/browse/NXP-30928)
 
-## Fix SAML logout process
+#### Fix SAML Logout Process
 
 A NameId is set in the request of the logout process.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-25007](https://jira.nuxeo.com/browse/NXP-25007)
-
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25007](https://jira.nuxeo.com/browse/NXP-25007)
 
 # Learn More
 
