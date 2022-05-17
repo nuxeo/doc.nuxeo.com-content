@@ -98,3 +98,13 @@ From any [Folderish]({{page page="available-facets"}}#folderish) document (e.g. 
 ### How Does Bulk Edit Deal With Required Fields?
 
 When a field is marked as required, it won't be shown as required in your custom form because users can still choose to leave the existing value(s) as they are. However, the `empty value(s)` option will be grayed out to prevent any error.
+
+## Known Limitations
+
+{{{multiexcerpt 'bulk-actions-known-limitations' page='web-ui-bulk-actions'}}}
+
+### No Support for Layout Blocks / Limited Compatibility With Custom Elements
+
+When using bulk edit, Web UI tries to detect the input widget in order to show the bulk edit options dynamically.
+
+At this stage, we are not able to make this work when the input element is embedded into another element; be it a layout block or a custom element.
