@@ -139,3 +139,14 @@ Bulk actions were tested on sets of 150 000 documents; however there is no limit
 ### How Do I Deal With Errors?
 
 When an error happens, the user receives a notification once the action completes. It is possible for them to copy the error message and the bulk command id in order to contact an administrator. An administrator can have a detailed look at the situation by looking at the information related to this bulk command id.
+
+## Known Limitations
+
+{{! multiexcerpt name='bulk-actions-known-limitations'}}
+### Support for One Repository at a Time
+
+Bulk actions are compatible with documents located inside a single repository at a time at this stage.
+
+- Using the select all functionality and triggering a bulk action will result in this action being applied only on documents located in the current repository.
+- Manually selecting a range and triggering a bulk action will result in a visible error.
+{{! /multiexcerpt}}
