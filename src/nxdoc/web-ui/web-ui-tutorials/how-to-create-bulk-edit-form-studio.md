@@ -108,3 +108,7 @@ When a field is marked as required, it won't be shown as required in your custom
 When using bulk edit, Web UI tries to detect the input widget in order to show the bulk edit options dynamically.
 
 At this stage, we are not able to make this work when the input element is embedded into another element; be it a layout block or a custom element.
+
+### No Support for Bulk Editing Document Tags
+
+Document tags leverage an element that has a specific behavior. We cannot make it compatible with bulk editing at this stage.
