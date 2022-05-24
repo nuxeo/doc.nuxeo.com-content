@@ -19,11 +19,9 @@ tree_item_index: 300
 
 ## Amazon S3
 
-Nuxeo Platform with Nuxeo Cold Storage addon requires the usage of 2 Amazon buckets:
+Nuxeo Platform with Nuxeo Cold Storage addon requires a standard S3 bucket as for any other standard Nuxeo instance: this bucket is used to store the standard documents. You can refer to [Amazon S3 Online Storage]({{page space='nxdoc' page='amazon-s3-online-storage'}}) documentation to configure this bucket.
 
-A standard S3 bucket as for any other standard Nuxeo instance: this bucket is used to store the standard documents. You can refer to [Amazon S3 Online Storage]({{page space='nxdoc' page='amazon-s3-online-storage'}}) documentation to configure this bucket.
-
-A secondary standard S3 bucket: this bucket is used to store the documents with Glacier class. Compared to the standard bucket, a lifecycle must be defined to handle the document class change. You can refer to the [AWS documentation here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html) for reference.
+The `s3:RestoreObject` permission on this bucket is required to be able to restore document from Glacier storage class. See [AWS documentation here](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3.html#restoreObjectV2-com.amazonaws.services.s3.model.RestoreObjectRequest-).
 
 ## Configuration
 
@@ -35,24 +33,30 @@ nuxeo.aws.secretKey=
 nuxeo.aws.region=
 nuxeo.s3storage.bucket_prefix=
 nuxeo.s3storage.bucket=
-nuxeo.aws.glacier.bucket=
-nuxeo.aws.glacier.bucket_prefix=
 ```
+
+Optional but recommended: you can define the following property on the `default` blob provider of your deployment:
+```
+ <property name="coldStorage">true</property>
+```
+This property enforces a transactional behavior of the blob provider. It allows to rollback the change of the storage class in case an error occured during the transaction in which documents were sent to Cold Storage.
 
 There are some other optional configurations:
 
-To customize the frequency (in seconds) in which the scheduler job checks if the retrieve task is finished and that the preview is available for the user to download, we use the expression below.
+To be able to send a document to Cold Storage, the addon requires by default that a preview is available that it can be used as a placeholder when browsing the document. This requirement can be disabled with the following configuration:
+
+```
+nuxeo.coldstorage.thumbnailPreviewRequired=false
+```
+
+A default placeholder will be displayed instead.
+
+To customize the frequency in which the scheduler job checks if the retrieve task is finished and that the preview is available for the user to download, we use the expression below.
 
 For example, if we want to check the status every hour at the 7th minute, we would add:
 
 ```
 nuxeo.coldstorage.check.retrieve.state.cronExpression= 0 7 * ? * * *
-```
-
-To customize the scheduler job that checks if the storage class of the document was changed to Glacier by AWS we use the expression below.
-
-```
-nuxeo.coldstorage.check.storage.state.cronExpression= 0 7 * ? * * *
 ```
 
 You can learn more about Nuxeo schedulers in the [related documentation page]({{page version='' space='studio' page='scheduling-periodic-events'}}).

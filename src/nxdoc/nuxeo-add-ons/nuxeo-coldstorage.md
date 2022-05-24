@@ -33,16 +33,7 @@ Once the Nuxeo rendition of the document is available, the user can trigger the 
     addins#screenshot#up_to_date
 --}}
 
-This will trigger an AWS workflow that will change the class to Glacier class. You can check the details at the [AWS documentation here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html).
-
-A confirmation toast will be briefly displayed and a banner will be visible on the document stating that the document is processed by Nuxeo Cold Storage.
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Send to Coldstorage Confirmation
-    name: SendToCS2.png
-    addins#screenshot#up_to_date
---}}
-![Send to Coldstorage Confirmation](nx_asset://2970838e-c5d6-4438-a0cf-eb2fcf4671f9)
+This will immediately turn the storage class of the document's main blob into the Glacier class.
 
 ### Send Multiple Documents to Cold Storage
 
@@ -57,7 +48,7 @@ There's an option to send multiple documents to Cold Storage as long as all of t
 
 ### Retrieve from Cold Storage
 
-When the user wants to have temporary access to the full file for download, she can trigger the retrieve flow. It is required that the file is already fully stored in Nuxeo Cold Storage - in other words, the document AWS storage class transitioned to Glacier.
+When the user wants to have temporary access to the full file for download, he/she can trigger the retrieve flow.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Restore from coldstorage button
