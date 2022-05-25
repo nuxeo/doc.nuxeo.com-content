@@ -157,54 +157,70 @@ As any other configuration, the best way to create new settings or change/overri
 Overriding default settings must be done in a conscious way, as it will change the default/expected behavior of the platform or, at least, of some components, depending on which settings are changed.
 {{/callout}}
 
-## Usage Examples
+## Configuration registry
 
 When Web UI is built, these settings will be available to be used (details [here](https://github.com/nuxeo/nuxeo-web-ui/blob/maintenance-3.0.x/plugin/web-ui/addon/src/main/resources/web/nuxeo.war/ui/index.jsp#L113)).
 
-The recommended way to access and use these settings is through `Nuxeo.UI.config`, and several examples can be found in Web UI.
+The recommended way to access and use these settings is through the configuration registry helper `Nuxeo.UI.config.get(name, default)`, that gets the value for the property `name`, or returns `default` if undefined. 
+
+To keep compatibility with the previous mechanism to read properties directly from the `Nuxeo.UI.config` object, properties are still stored in `Nuxeo.UI.config`. Therefore, doing `Nuxeo.UI.config.get('prop1.prop2.prop3')` is exactly the same as `Nuxeo.UI.config.prop1.prop2.prop3`
+
+There's also available an additional helper `Nuxeo.UI.config.set(name, value)`, that sets the `value` for property `name`.
+
+## Usage Examples
+
+Several usage examples can be found in Nuxeo Web UI and Elements.
 
 ### Nuxeo App
 
 ```javascript
- _computeHeaders() {
-  const headers = {
-    'translate-directoryEntry': 'label',
-  };
+  import { config } from '@nuxeo/nuxeo-elements';
 
-  const fetch = (Nuxeo.UI && Nuxeo.UI.config && Nuxeo.UI.config.fetch) || {};
+  _computeHeaders() {
+    const headers = {
+      'translate-directoryEntry': 'label',
+    };
 
-  // add required fetchers
-  const required = { document: ['lock'], directoryEntry: ['parent'], task: ['actors'] };
+    const fetch = config.get('fetch', {});
 
-  Object.keys(required).forEach((k) => {
-    fetch[k] = fetch[k] || [];
-    required[k].forEach((v) => {
-      if (!fetch[k].includes(v)) {
-        fetch[k].push(v);
-      }
+    // add required fetchers
+    const required = { document: ['lock'], directoryEntry: ['parent'], task: ['actors'] };
+
+    Object.keys(required).forEach((k) => {
+      fetch[k] = fetch[k] || [];
+      required[k].forEach((v) => {
+        if (!fetch[k].includes(v)) {
+          fetch[k].push(v);
+        }
+      });
     });
-  });
 
-  // generate fetch headers
-  Object.keys(fetch).forEach((f) => {
-    headers[`fetch-${f}`] = fetch[f].join(',');
-  });
+    // generate fetch headers
+    Object.keys(fetch).forEach((f) => {
+      headers[`fetch-${f}`] = fetch[f].join(',');
+    });
 
-  return headers;
-},
+    return headers;
+  },
 ```
 
 ### Nuxeo Format Behavior
 
 ```javascript
- /**
-  * Formats a date time as a string. Default format is 'MMMM D, YYYY HH:mm'.
-  * Use format "relative" to show date relative to current time
-  *
-  * @param {string} date the date
-  * @param {string} format the format, falls back on Nuxeo.UI.config.dateFormat or 'MMMM D, YYYY HH:mm' if null.
-  */
-  formatDateTime(date, format) {
-    return this._formatDate(date, format || (Nuxeo.UI && Nuxeo.UI.config && Nuxeo.UI.config.dateTimeFormat) || 'LLL');
+  import { config } from '@nuxeo/nuxeo-elements';
+
+  /**
+   * Formats a date time as a string. Default format is 'MMMM D, YYYY HH:mm'.
+   * Use format "relative" to show date relative to current time
+   *
+   * @param {string} date the date
+   * @param {string} format the format, falls back on Nuxeo.UI.config.dateFormat or 'MMMM D, YYYY HH:mm' if null.
+   * @param {string} timezone the name of the timezone of the date, according to the IANA tz database.
+   *     Currently valid values are:
+   *     - empty: local time will be used, as read from the browser (this is the default)
+   *     - Etc/UTC: time specified by the user is assumed to be in UTC
+   */
+  formatDateTime(date, format, timezone) {
+    return this._formatDate(date, format || config.get('dateTimeFormat', 'LLL'), timezone || config.get('timezone'));
   },
 ```
