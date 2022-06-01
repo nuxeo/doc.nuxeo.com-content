@@ -157,11 +157,11 @@ As any other configuration, the best way to create new settings or change/overri
 Overriding default settings must be done in a conscious way, as it will change the default/expected behavior of the platform or, at least, of some components, depending on which settings are changed.
 {{/callout}}
 
-## Configuration registry
+## Configuration Registry
 
 When Web UI is built, these settings will be available to be used (details [here](https://github.com/nuxeo/nuxeo-web-ui/blob/master/plugin/web-ui/addon/src/main/resources/web/nuxeo.war/ui/index.jsp#L113)).
 
-The recommended way to access and use these settings is through the configuration registry helper `Nuxeo.UI.config.get(name, default)`, that gets the value for the property `name`, or returns `default` if undefined. 
+The recommended way to access and use these settings is through the configuration registry helper `Nuxeo.UI.config.get(name, default)`, that gets the value for the property `name`, or returns `default` if undefined.
 
 To keep compatibility with the previous mechanism to read properties directly from the `Nuxeo.UI.config` object, properties are still stored in `Nuxeo.UI.config`. Therefore, doing `Nuxeo.UI.config.get('prop1.prop2.prop3')` is exactly the same as `Nuxeo.UI.config.prop1.prop2.prop3`
 
