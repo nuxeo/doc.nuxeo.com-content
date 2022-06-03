@@ -169,8 +169,7 @@ $KAFKA_HOME/bin/kafka-configs.sh --zookeeper <zk_host> --alter --entity-type top
 ```
 ## {{> anchor 'no-redis'}}"No Redis" Nuxeo cluster
 
-Redis is used for different things in Nuxeo, among them as a default key value provider.
-For now there is only one alternative for this service and it requires to use MongoDB.
+Redis is used for different things in Nuxeo, among them as a key value provider.
 
 Here is a possible "No Redis" Nuxeo cluster configuration:
 ```properties
