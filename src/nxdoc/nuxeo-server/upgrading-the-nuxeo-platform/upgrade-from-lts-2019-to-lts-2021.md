@@ -1705,3 +1705,25 @@ The configuration property `repository.clustering.delay` is not used anymore, an
 ## Complementary Information
 
 - [Release notes for Nuxeo Platform LTS 2021]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+
+### Tune the CMIS query during login to get platform information
+
+The `latestChangeLogToken` returned by the CMIS endpoint is now searched on events of the past 2 weeks for performance reason.
+This limit can be tuned if needed using the following `nuxeo.conf` option:
+```Java
+# Improve performance on getLatestLogId limiting events to the past 2 weeks, using elastic date syntax
+audit.elasticsearch.latestLogId.afterDate=now-14d/d
+```
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31016](https://jira.nuxeo.com/browse/NXP-31016)
+
+### Have a way to trace fulltext search performed on repository
+
+It is now possible to detect if repository full-text search is used by configuring `log4j2` to activate the following logger:
+```Java
+  <Logger name=org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryQueryBuilder level=debug />
+```
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31003](https://jira.nuxeo.com/browse/NXP-31003)
+
+
