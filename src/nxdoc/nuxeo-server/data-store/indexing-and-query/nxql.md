@@ -1025,8 +1025,8 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext) OPERATOR(simple_que
 -- Use ES query_string on multiple fields using a fulltext analyzer
 SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext,dc:description.fulltext) ANALYZER(fulltext) OPERATOR(query_string) */ dc:title = 'this AND that OR thus'
 
--- Use ES for GeoQuery based on geo_bounding location in a bounding box; first param is top_left, followed by bottom_right point
-SELECT * FROM Document WHERE /*+ES: OPERATOR(geo_bounding_box) */ osm:location IN ('40.73, -74.1', '40.01, -71.12')
+-- Use ES for GeoQuery based on geo_bounding location in a bounding box; first param is left_bottom, followed by right_top point (left and right are on the abscissa axis, top and bottom are on the ordinate axis, and left < right, and bottom < top)
+SELECT * FROM Document WHERE /*+ES: OPERATOR(geo_bounding_box) */ osm:location IN ('40.01, -74.1', '40.73, -71.12')
 
 -- Use ES for GeoQuery based on geo_hash_cell location near a point using geohash; examples below use level 5 precision (approximately 5kmx5km)
 SELECT * FROM Document WHERE /*+ES: OPERATOR(geo_hash_cell) */ osm:location IN ('40.73, -74.1', '5')
