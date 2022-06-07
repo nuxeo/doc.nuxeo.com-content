@@ -1688,6 +1688,22 @@ Reindex the repository content on startup if the index is empty
 
 * * *
 
+
+#### `elasticsearch.index.recursive.bulkService`
+
+Use the Bulk Service instead of the WorkManager for recursive and potentially long indexing,
+this improves the UX because synchronous indexing is eagerly handled by the WorkManager.
+Note that when activating this option it is recommended to use Kafka to have a distributed Bulk Service.
+
+**Since LTS 2021.21, LTS 2019 HF62**
+
+**Default Value**
+
+`false`
+
+* * *
+
+
 #### `elasticsearch.restClient.connectionTimeoutMs`
 
 A timeout in milliseconds until a connection is established
