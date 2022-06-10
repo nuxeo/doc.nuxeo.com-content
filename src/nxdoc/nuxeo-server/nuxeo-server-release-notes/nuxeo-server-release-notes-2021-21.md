@@ -8,37 +8,38 @@ review:
 labels:
     - release-notes
 toc: true
-tree_item_index: 0
+tree_item_index: 3020
 hidden: true
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2021-21'}}
 # What's New in LTS 2021.21 / LTS 2021-HF21
 
-## Fix elasticsearch indexing of property 'ecm:proxyTargetId' for proxies
+## Major Bug Fixes
+
+### Fix Elasticsearch Indexing of Property 'ecm:proxyTargetId' for Proxies
 
 The property 'ecm:proxyTargetId' is indexed in Elasticsearch for proxies.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31005](https://jira.nuxeo.com/browse/NXP-31005)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31005](https://jira.nuxeo.com/browse/NXP-31005)
 
-## Expose nuxeo-core-binarymanager-s3 test jar from distribution
+### Expose `nuxeo-core-binarymanager-s3` Test Jar from Distribution
 
-S3BlobProviderFeature is now accessible from external bundle by importing nuxeo-core-binarymanager-s3 test jar
+`S3BlobProviderFeature` is now accessible from external bundle by importing `nuxeo-core-binarymanager-s3` test jar
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30993](https://jira.nuxeo.com/browse/NXP-30993)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30993](https://jira.nuxeo.com/browse/NXP-30993)
 
-## Unable to view documents after indexing with elasticsearch.manageAlias.enabled=true
+### Unable to View Documents after Indexing with `elasticsearch.manageAlias.enabled=true`
 
 The Elasticsearch alias is correctly propagated when doing a full reindex with manageAlias=true.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30944](https://jira.nuxeo.com/browse/NXP-30944)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30944](https://jira.nuxeo.com/browse/NXP-30944)
 
-## Fix parent workflow abandon process
+### Fix Parent Workflow Abandon Process
 
 A workflow can now be canceled after one of its subworkflow has been canceled
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30926](https://jira.nuxeo.com/browse/NXP-30926)
-
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30926](https://jira.nuxeo.com/browse/NXP-30926)
 
 # Learn More
 

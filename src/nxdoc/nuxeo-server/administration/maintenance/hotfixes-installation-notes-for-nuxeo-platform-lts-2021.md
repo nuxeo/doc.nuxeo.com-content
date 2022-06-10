@@ -23,13 +23,17 @@ The purpose of this page is to describe the additional actions that need to be d
 
 {{#> callout type='warning' }}
 While installing hotfixes, you will see the following message, but you can ignore it and continue.  
-
+```
+Use of the <copy /> command on JAR files is not recommended, prefer using <update /> command to ensure a safe rollback. (nuxeo-launcher-9.10-HF01-jar-with-dependencies.jar)
+```
 {{/callout}}
 
-Since LTS 2021, the addon Nuxeo JSF UI is handled outside the main Nuxeo repository on GitHub. As a consequence, the related fixes for JSF UI will not be embedded in a hotfix.</br>
-Therefore if the addon Nuxeo JSF UI is installed on your instance, you must upgrade this package after installing a hotfix by running the following command:
+Since LTS 2021, the addon "Nuxeo JSF UI" is handled outside the main Nuxeo repository on GitHub. As a consequence, the related fixes for JSF UI will not be embedded in a hotfix.</br>
+Therefore if the addon "Nuxeo JSF UI" is installed on your instance, you must upgrade this package after installing a hotfix by running the following command:
 
-
+```
+> nuxeoctl mp-upgrade
+```
 Note that this command will upgrade the versions of any package.
 
 ## Instance Registration
@@ -40,10 +44,20 @@ Hotfixes released for LTS 2021 can only be used on valid, registered Nuxeo insta
 If you are using an *unregistered LTS 2021 Nuxeo instance with hotfixes installed*, you may encounter the following behavior:
 - A warning will be displayed in the logs during startup,
 
+```
+ERROR [RuntimeService] NUXEO INSTANCE NOT REGISTERED
 
+***** This Nuxeo instance is not registered *****
+It can only be used for development and will be stopped if used in production
+```
 - Over a certain level of use the server will be stopped automatically. When this happens, a message is displayed in the logs to inform you as well.
 
+```
+ERROR [RuntimeService] NUXEO INSTANCE STOPPING
 
+***** This Nuxeo instance is not registered *****
+Stopping Nuxeo instance due to threshold exceeded (TOTAL_COMMITS > 100000) after failed registration checks
+```
 The current limits of use are:
 - 100,000 transaction commits
 - 10 concurrent sessions (a session correspond to an access to the core)
@@ -52,10 +66,20 @@ If the expiration date is close (less than 15 days), a warning will be displayed
 In the JSF UI, a message based on the Administrative message mechanism will be displayed: all users will be informed.
 
 After expiration date, the following message will be displayed in the logs at startup:
+```
+ERROR [RuntimeService] NUXEO INSTANCE REGISTRATION EXPIRED
 
+***** This Nuxeo instance registration is expired *****
+It can only be used for development and will be stopped if used in production
+```
 
 The following message will be displayed in the logs when Nuxeo will be stopped automatically according to the same conditions as described earlier:
+```
+ERROR [RuntimeService] NUXEO INSTANCE STOPPING
 
+***** This Nuxeo instance registration is expired *****
+Stopping Nuxeo instance due to threshold exceeded (TOTAL_COMMITS > 100000) after registration expiration
+```
 
 **How Can I Avoid This?** </br>
 
@@ -79,45 +103,49 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 21
 
-### Tune the CMIS query during login to get platform information
+### Tune the CMIS Query During Login to Get Platform Information
 
 The `latestChangeLogToken` returned by the CMIS endpoint is now searched on events of the past 2 weeks for performance reason.
 This limit can be tuned if needed using the following `nuxeo.conf` option:
-```Java
+```
 # Improve performance on getLatestLogId limiting events to the past 2 weeks, using elastic date syntax
 audit.elasticsearch.latestLogId.afterDate=now-14d/d
 ```
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31016](https://jira.nuxeo.com/browse/NXP-31016)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31016](https://jira.nuxeo.com/browse/NXP-31016)
 
-### Have a way to trace fulltext search performed on repository
+### Have a Way to Trace Full-text Search Performed on Repository
 
 It is now possible to detect if repository full-text search is used by configuring `log4j2` to activate the following logger:
-```Java
+```
   <Logger name=org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryQueryBuilder level=debug />
 ```
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31003](https://jira.nuxeo.com/browse/NXP-31003)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31003](https://jira.nuxeo.com/browse/NXP-31003)
 
-Hotfix 19
+## Hotfix 19
 
-### Use Elastic  instead of  to Avoid Indexing Error
+### Use Elastic `word_delimiter_graph` instead of `word_delimiter` to Avoid Indexing Error
 
 If you encounter indexing errors because of negative startOffset, your mapping needs to be updated.
 
 If you have overridden the Elastic mapping then follow the recommended changes in the ticket.
 Then you need to reindex the repository,  visit the [related documentation]({{page page='elasticsearch-setup'}}#rebuilding-the-repository-index) for more information.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30785](https://jira.nuxeo.com/browse/NXP-30785)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30785](https://jira.nuxeo.com/browse/NXP-30785)
 
 ## Hotfix 17
 
 ### Add property to set max_expansion on match_phrase_prefix operator
 
 Max expansions can be configured through the Configuration service with a contribution like
+```xml
+    <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
+        <property name=elasticsearch.max_expansions>200</property>
+    </extension>
+```
 
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30878](https://jira.nuxeo.com/browse/NXP-30878)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30878](https://jira.nuxeo.com/browse/NXP-30878)
 
 ### Improve KV TransientStore GC Resiliency
 
@@ -125,9 +153,9 @@ Transient GC was not working in environments with segregated front and worker no
 As the result, transient stores in s3 might have accumulated lots of data and the current transient GC implementation might not be able to clean them efficiently.  
 In this case, it is recommended to purge manually all objects older than 3 days on transient stores before applying this hotfix.
 
-This can be done using scripts or by creating an Object Lifecycle Management rule with a correct prefix .
+This can be done using scripts or by creating an Object Lifecycle Management rule with a correct prefix `/transient_*/`.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30851](https://jira.nuxeo.com/browse/NXP-30851)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30851](https://jira.nuxeo.com/browse/NXP-30851)
 
 ### Allow Automation Contributions to be Disabled
 
@@ -137,13 +165,26 @@ If you contribute to an operation and want to call it by an alias, you need to c
 **OperationType**
 (Please note you can't cross contribute to an OperationType implementation, a chain operation can't disable a scripted operation for example)
 
-:
+`ChainOperationType`:
+```
+<component name="org.nuxeo.ecm.automation.test-chain-operation" version="1.0">
+  <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
+    <chain id="testScript" enabled="false" />
+  </extension>
+</component>
+```
 
+`ScriptingOperationType`:
+```
+<component name="org.nuxeo.ecm.automation.test-scripted-operation-disable" version="1.0">
+  <require>org.nuxeo.ecm.automation.test-scripted-operation</require>
+  <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="operation">
+    <scriptedOperation id="testScript" enabled="false"/>
+  </extension>
+</component>
+```
 
-:
-
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30761](https://jira.nuxeo.com/browse/NXP-30761)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30761](https://jira.nuxeo.com/browse/NXP-30761)
 
 ## Hotfix 15
 
@@ -151,21 +192,23 @@ If you contribute to an operation and want to call it by an alias, you need to c
 
 You MUST run the command below in a MongoDB Shell (assuming you're connected to the nuxeo database and your repository is default):
 
+```
+db.default.dropIndex("ecm:parentId_1_ecm:name_1");
+```
 
+As a workaround, you can configure the `nuxeo.db.indexes.create` property to false in nuxeo.conf.
 
-As a workaround, you can configure the  property to false in nuxeo.conf.
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30638](https://jira.nuxeo.com/browse/NXP-30638)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30638](https://jira.nuxeo.com/browse/NXP-30638)
 
 
 ### setUserAgentPrefix in S3 Config
 
-The following  properties have been added:
+The following `nuxeo.conf` properties have been added:
 
-- , empty string by default
-- , empty string by default
+- `nuxeo.s3storage.user.agent.prefix`, empty string by default
+- `nuxeo.s3storage.user.agent.suffix`, empty string by default
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30797](https://jira.nuxeo.com/browse/NXP-30797)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30797](https://jira.nuxeo.com/browse/NXP-30797)
 
 
 ## Hotfix 13
@@ -174,21 +217,25 @@ The following  properties have been added:
 
 You can now disable the extra field setting when doing Nuxeo IO export by contributing the following:
 
-
+```Java
+  <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
+    <property name=nuxeo.core.io.archive.extra.files.count>false</property>
+  </extension>
+```
 
 This could be interesting if you want to open the produced archive with external tools such as Archive Utility.app.
 
-This property has  as default as disabling this behavior may impact performance when re-importing to Nuxeo the archive.
+This property has `true` as default as disabling this behavior may impact performance when re-importing to Nuxeo the archive.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30713](https://jira.nuxeo.com/browse/NXP-30713)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30713](https://jira.nuxeo.com/browse/NXP-30713)
 
 ### Bulk SetPropertiesAction - VersioningOption Parameter Does Not Take Effect When Versioning Service Is Extended via XML Extension
 
-As documented in the [automatic versioning system]({{page space='nxdoc' page='versioning'}}#source-based-versioning), the versioning policy order should be higher than , order lower than 10 is reserved for internal purposes.
+As documented in the [automatic versioning system]({{page space='nxdoc' page='versioning'}}#source-based-versioning), the versioning policy order should be higher than `10`, order lower than 10 is reserved for internal purposes.
 This restriction is now enforced on LTS 2021, a server having a versioning policy contribution that doesn't respect this rule will **NOT** start.
 On LTS 2019, an ERROR message will be logged during Nuxeo startup.
 
-In addition to disable the automatic versioning system for  action, we also have disabled the system for the following system related updates:
+In addition to disable the automatic versioning system for `setProperties` action, we also have disabled the system for the following system related updates:
 - add/remove a document to/from a collection
 - recompute pictureViews
 - add/remove notifications subscriptions
@@ -201,7 +248,7 @@ In addition to disable the automatic versioning system for  action, we also have
 In a more general way, the system has been disabled in the code paths where auto checkout was disabled.
 This can impact positively performance by avoiding version creation on the above low-level updates.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30700](https://jira.nuxeo.com/browse/NXP-30700)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30700](https://jira.nuxeo.com/browse/NXP-30700)
 
 ## Hotfix 11
 
@@ -209,37 +256,41 @@ This can impact positively performance by avoiding version creation on the above
 
 All the S3 multipart upload and copy parameters are configurable through nuxeo.conf.</br>
 
-The  ConfigurationService property, formerly contributed in , is deprecated since **2021.11/10.10-HF54**.
+The `nuxeo.s3.multipart.copy.part.size` ConfigurationService property, formerly contributed in `configuration-properties.xml`, is deprecated since **2021.11/10.10-HF54**.
 
-The new   property should be used instead, default value hasn't changed: 5242880 (5 MB).
+The new `nuxeo.s3storage.multipart.copy.part.size` `nuxeo.conf` property should be used instead, default value hasn't changed: 5242880 (5 MB).
 
-If you have contributed a custom  ConfigurationService property with an XML component such as:
-  
-you need to remove it and replace it by  in . Though, backward compatibility is kept.
+If you have contributed a custom `nuxeo.s3.multipart.copy.part.size` ConfigurationService property with an XML component such as:
+```
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="nuxeo.s3.multipart.copy.part.size">xxxx</property>
+  </extension>
+```  
+you need to remove it and replace it by `nuxeo.s3storage.multipart.copy.part.size=xxxx` in `nuxeo.conf`. Though, backward compatibility is kept.
 
-The following  properties have been added:
+The following `nuxeo.conf` properties have been added:
 
-- , default value: 5368709120 (5 GB)
-- , default value: 16777216 (16 MB)
-- , default value: 5242880 (5 MB)
+- `nuxeo.s3storage.multipart.copy.threshold`, default value: 5368709120 (5 GB)
+- `nuxeo.s3storage.multipart.upload.threshold`, default value: 16777216 (16 MB)
+- `nuxeo.s3storage.minimum.upload.part.size`, default value: 5242880 (5 MB)
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30595](https://jira.nuxeo.com/browse/NXP-30595)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30595](https://jira.nuxeo.com/browse/NXP-30595)
 
-### Deletion BAF Action Now Runs With 
+### Deletion BAF Action Now Runs With `SYSTEM_USERNAME`
 
- launches the  BAF action to perform the db deletion of descendants of a folderish document being removed.
+`org.nuxeo.ecm.core.storage.dbs.DBSSession#remove` launches the `DeletionAction` BAF action to perform the db deletion of descendants of a folderish document being removed.
 
 The problem is that we pass the current session's principal to run the action which will just skip the deletion of the document on which the current user does not have READ permission granted.
 
-To fix that, we now run the  as .
+To fix that, we now run the `DeletionAction` as `SYSTEM_USER`.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30661](https://jira.nuxeo.com/browse/NXP-30661)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30661](https://jira.nuxeo.com/browse/NXP-30661)
 
 ### Upgrade to Apache PDFBox 2.0.24
 
 The upgrade of Apache PDFBox from 1.8.16 to 2.0.24 introduces breaking changes to the library, code relying on it must be updated.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA tickets [NXP-28825](https://jira.nuxeo.com/browse/NXP-28825) and [NXP-30662](https://jira.nuxeo.com/browse/NXP-30662)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-28825](https://jira.nuxeo.com/browse/NXP-28825) and [NXP-30662](https://jira.nuxeo.com/browse/NXP-30662)
 
 ## Hotfix 10
 
@@ -249,13 +300,12 @@ A warning is logged when assigning an unauthorized workflow global variable inst
 
 Assigning an unauthorized workflow global variable won't throw an exception anymore but log a warning. The assignment is ignored.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30589](https://jira.nuxeo.com/browse/NXP-30589)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30589](https://jira.nuxeo.com/browse/NXP-30589)
 
-### Web UI -  Should Not Load  For Unsupported MIME Types {{> tag 'Since 2021.10'}}
+### Web UI - `nuxeo-document-preview` Should Not Load `nuxeo-pdf-viewer` For Unsupported MIME Types {{> tag 'Since 2021.10'}}
 
 Web UI does not display anymore a preview for unsupported MIME types.
 
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
-
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
