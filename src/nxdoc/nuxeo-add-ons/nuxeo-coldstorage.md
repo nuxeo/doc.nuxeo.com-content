@@ -15,11 +15,9 @@ toc: true
 tree_item_index: 1100
 ---
 
-The Nuxeo Cold Storage (Glacier) connector is a long term storage solution that allows Nuxeo clients to take advantage of cost savings by using AWS's cold storage tier known as Glacier to store large files and/or less frequently accessed content.
+The Nuxeo Cold Storage (Glacier) connector is a long term storage solution that allows Nuxeo clients to take advantage of cost savings by using AWS's cold storage tier known as Glacier to store large files and/or less frequently accessed content. See [frequently asked questions - cost]({{page page='nuxeo-coldstorage-faq'}}#cost) for additional information around cost savings.
 
 The addon is based on the usage of [Amazon S3 Glacier Flexible Retrieval (formerly Glacier)](https://aws.amazon.com/s3/storage-classes/glacier/) to store cold content.
-
-Although Amazon S3 Glacier involves a time period from 3 to 5 hours to access to the content, Nuxeo Cold Storage preserves the user experience and guarantee immediate access to the document, thanks to the Nuxeo rendition mechanism.
 
 ## Functional Overview
 
@@ -33,7 +31,11 @@ Once the Nuxeo rendition of the document is available, the user can trigger the 
     addins#screenshot#up_to_date
 --}}
 
-This will immediately turn the storage class of the document's main blob into the Glacier class.
+This will immediately turn the storage class of the document's main file into the Glacier class.
+
+While the file is under cold storage, a low-resolution preview is provided to the users instead of the original file so that users can keep accessing, viewing the content (or a sample of it by default for files with multiple pages) and working with the document. The document remains searchable as well.
+
+For additional details on the rendition used depending on the file type, refer to the [preview file configuration]({{page page='nuxeo-coldstorage-installation'}}#preview-file-configuration) section of the addon installation documentation.
 
 ### Send Multiple Documents to Cold Storage
 
@@ -45,6 +47,8 @@ There's an option to send multiple documents to Cold Storage as long as all of t
     addins#screenshot#up_to_date
 --}}
 ![Send Multiple To Coldstorage](nx_asset://d6f239bd-b830-4b3e-a041-bc23ec2d985c)
+
+For moving content in bulk, refer to [frequently asked questions - bulk actions]({{page page='nuxeo-coldstorage-faq'}}#bulk-actions).
 
 ### Retrieve from Cold Storage
 

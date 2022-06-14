@@ -15,6 +15,10 @@ tree_item_index: 300
 
 ## Pre-requisites
 
+{{#> callout type='info' heading='Cloud Platform Compatibility'}}
+The Nuxeo cold storage addon has been developed and tested specifically for AWS. Microsoft Azure or other cloud platforms are not compatible with the addon.
+{{/callout}}
+
 - The [Amazon S3 Online Storage]({{page space='nxdoc' page='amazon-s3-online-storage'}}) addon needs to be configured on your instance
 
 ## Amazon S3
