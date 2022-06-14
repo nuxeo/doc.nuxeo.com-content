@@ -18,16 +18,17 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-12'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-13'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.12]({{page page='web-ui-release-notes-3-0-12'}})  | Bugfix release | -->
+<!-- | [Web UI 3.0.12]({{page page='web-ui-release-notes-3-0-13'}})  | Accessibility improvements | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [Web UI 3.0.12]({{page page='web-ui-release-notes-3-0-12'}})                  | Bugfix release                                                             |
 | [Web UI 3.0.11]({{page page='web-ui-release-notes-3-0-11'}})                  | Option to append values when bulk editing                                  |
 | [Web UI 3.0.10]({{page page='web-ui-release-notes-3-0-10'}})                  | Search and browse documents across multiple repositories                   |
 | [Web UI 3.0.9]({{page page='web-ui-release-notes-3-0-9'}})                    | Bulk edit large sets of documents                                          |
