@@ -16,18 +16,11 @@ hidden: true
 {{! multiexcerpt name='web-ui-updates'}}
 ## What's New in Web UI for LTS 2021 (version 3.0.13)
 
-This release puts focus on accessibility improvements.
-
-### Accessibility Improvements
-
-The element serving as a basis for our `nuxeo-date-picker` (`vaadin-date-picker`) has been upgraded to the latest release in order to benefit from numerous accessibility improvements. This upgrade is transparent and we conducted an audit to ensure that it would come with no breaking change.<br/>[[ELEMENTS-1490](https://jira.nuxeo.com/browse/ELEMENTS-1490)]
-
-The browsing tree has better compatibility with screen readers.<br/>[[WEBUI-209](https://jira.nuxeo.com/browse/WEBUI-209)]
-
-Our [Voluntary Product Accessibility Template]({{page space='nxdoc' page='web-ui-overview'}}#accessibility) (VPAT) for Web UI is available to download anytime to check our conformance level.
+This is a bugfix release.
 
 ### Noteworthy Changes
 
+- The browsing tree has better compatibility with screen readers.<br/>[[WEBUI-209](https://jira.nuxeo.com/browse/WEBUI-209)]
 - Bulk edit forms keep good performance even when using many multivalued fields.<br/>[[WEBUI-739](https://jira.nuxeo.com/browse/WEBUI-739)]
 
 
