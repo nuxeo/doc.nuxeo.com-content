@@ -13,10 +13,16 @@ toc: true
 tree_item_index: 300
 ---
 
+{{#> callout type='tip'}}
+This page covers installation and general configuration options about the Nuxeo cold storage addon. For detailed questions on how to integrate it in your application, please refer to our [cold storage frequently asked questions]({{page page='nuxeo-coldstorage-faq'}}) documentation.
+{{/callout}}
+
 ## Pre-requisites
 
 {{#> callout type='info' heading='Cloud Platform Compatibility'}}
+{{! multiexcerpt name='cloud-platform-compatibility'}}
 The Nuxeo cold storage addon has been developed and tested specifically for AWS. Microsoft Azure or other cloud platforms are not compatible with the addon.
+{{! /multiexcerpt}}
 {{/callout}}
 
 - The [Amazon S3 Online Storage]({{page space='nxdoc' page='amazon-s3-online-storage'}}) addon needs to be configured on your instance
@@ -73,6 +79,7 @@ nuxeo.coldstorage.numberOfDaysOfAvailability.value.default= 2
 
 ### Preview file Configuration
 
+{{! multiexcerpt name='preview-file-configuration'}}
 When a document is sent to cold storage, the main file is not available (it requires a retrieval operation, taking between 3 and 5 hours). In order to preserve the user experience, we display a rendition of the document (as renditions remain on S3 standard).
 
 By default, we are using the following renditions:
@@ -104,3 +111,4 @@ This contribution must include:
  - a default rendition named "defaultRendition"
  - the `require` element `<require>org.nuxeo.coldstorage.rendition.contrib</require>`
 {{/callout}}
+{{! /multiexcerpt}}

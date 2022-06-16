@@ -25,6 +25,11 @@ The addon is based on the usage of [Amazon S3 Glacier Flexible Retrieval (former
 
 Once the Nuxeo rendition of the document is available, the user can trigger the flow by clicking on **Send to cold storage** button.
 
+{{#> callout type='note'}}
+Sending content to cold storage requires the dedicated `WriteColdStorage` permission. //TODO see https://doc.nuxeo.com/nxdoc/how-to-grant-the-edit-permission-without-the-remove-permission/
+//TODO add a permissions table in the FAQ
+{{/callout}}
+
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Send to Coldstorage button
     name: SendToCS1.png
@@ -132,3 +137,7 @@ You can delete a document moved to Cold Storage as any other document.
     addins#screenshot#up_to_date
 --}}
 ![restoreFromColdstorageFlowChart](nx_asset://654c9821-9d0a-4055-8d89-d56aacc50858)
+
+## Learn More
+
+For a deeper look into the specifics of the addon, feel free to take a look at our [frequently asked questions about the cold storage addon]({{page page='nuxeo-coldstorage-faq'}}).
