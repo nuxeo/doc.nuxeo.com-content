@@ -46,15 +46,13 @@ All the rest remains in regular storage, including:
 
 ### How can I Evaluate what Content I Should Move or not?
 
-The main reasons for sending content to cold storage are:
-- When you are storing large files (e.g. high resolution videos) and you do not need the original high resolution file to get the work done
-- Archiving content
+Overall, you should consider that content sent to cold storage is meant for archival, because retrieving the content is costly and takes time. It should be seen as an efficient way to save on storage costs for content you want to keep around but that you are unlikely to need anytime soon.
 
-You should consider a minimum file size for the main file to be moved as well:
-- For each file moved, Amazon charges 8kb of metadata at regular storage price (S3), and 32kb at glacier price
+Examples include:
+- Sending claims that are closed to cold storage, after a given period of time. This saves money while the claim needs to remain under retention. Deciding after how long content should be moved will depend on your own data and appreciation.
+- When working with very large files like videos, keeping a lower resolution preview to do common tasks and sending the original to cold storage, or sending the raw material to cold storage after the result has been produced. This assumes you won't need the original high resolution file.
 
-//TODO sample calculation? what's the minimum file size that makes it valid?
-
+You should also consider that Amazon will charge a minimum file size of 40kb, so you should not send files lower than that size to cold storage. The rule of thumb is that the larger the file is, the more you can save.
 
 
 ## Content Ingestion
@@ -73,13 +71,13 @@ Documents can be moved in bulk to cold storage once they are stored on the platf
 
 {{{multiexcerpt 'preview-file-configuration' page='nuxeo-coldstorage-installation'}}}
 
-## How Long does it Take to Retrieve Content from Cold Storage?
+### How Long does it Take to Retrieve Content from Cold Storage?
 
 Retrieval takes 3 to 5 hours. Time for restore should be consistent no matter the content type or file size as S3 Glacier is [designed for 35 random restore requests per pebibyte (PiB) stored per day](https://docs.aws.amazon.com/amazonglacier/latest/dev/downloading-an-archive-two-steps.html), which should prove quite sufficient.
 
 //TODO check if there is a retrieval policy in place https://docs.aws.amazon.com/amazonglacier/latest/dev/data-retrieval-policy.html
 
-## Can I Disable Email Notifications when Restoring Large Volumes of Content?
+### Can I Disable Email Notifications when Restoring Large Volumes of Content?
 
 The architecture of the cold storage addon relies on the standard Nuxeo Platform principles, which makes the cold storage service customizable using code. It is possible to disable email
 notifications when content is retrieved or to apply a different behavior by overriding the [cold storage service](https://github.com/nuxeo/nuxeo-coldstorage/blob/lts-2021/nuxeo-coldstorage/src/main/java/org/nuxeo/coldstorage/service/ColdStorageServiceImpl.java).
@@ -88,15 +86,19 @@ notifications when content is retrieved or to apply a different behavior by over
 If you are not familiar with Nuxeo services yet, see [how to create a service]({{page page='how-to-create-a-service'}}) documentation and the [getting started with Nuxeo development](https://university.hyland.com/learning-paths/l4182) learning path on Hyland University.
 {{/callout}}
 
-## Can I Prevent Back and Forth Between Cold Storage and Regular Storage?
+### Can I Prevent Back and Forth Between Cold Storage and Regular Storage?
 
 Yes, any kind of logic around the process and rules to archive or to restore your content can be achieved using configuration or customization. How to achieve it will derive from the business rules you want to define in your application.
 
-## Is there an Audit Trail for Cold Storage Related Actions?
+### Is there an Audit Trail for Cold Storage Related Actions?
 
 Yes, an audit trail is added by default for cold storage related actions.
 
 //TODO add content of https://jira.nuxeo.com/browse/NXP-30779 here as a nice table
+
+### Can Users Still Find Content in Cold Storage?
+
+Yes. When moving the file to cold storage, we keep the current Elasticsearch index, meaning that anyone can still find the document using a fulltext search for example. However, we do not have access to the file anymore. Reindexing the document after it is sent to cold storage would allow you to search for the document metadata, but you would lose the capacity to search for anything that is in the file itself unless you retrieve it first.
 
 ## Permissions
 
