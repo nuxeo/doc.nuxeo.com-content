@@ -13,6 +13,10 @@ toc: true
 tree_item_index: 350
 ---
 
+{{#> callout type='warning' heading='internal'}}
+This page is <u>work in progress</u> and needs to be <u>kept internal to Hyland</u> at this stage, as information may still be subject to change.
+{{/callout}}
+
 {{#> callout type='tip'}}
 This page covers detailed questions about how the cold storage addon works to help you integrating it in your application. It assumes you already read and understood its [installation and general configuration options](({{page page='nuxeo-coldstorage-installation'}}).
 {{/callout}}
@@ -48,10 +52,6 @@ All the rest remains in regular storage, including:
 
 Overall, you should consider that content sent to cold storage is meant for archival, because retrieving the content is costly and takes time. It should be seen as an efficient way to save on storage costs for content you want to keep around but that you are unlikely to need anytime soon.
 
-Examples include:
-- Sending claims that are closed to cold storage, after a given period of time. This saves money while the claim needs to remain under retention. Deciding after how long content should be moved will depend on your own data and appreciation.
-- When working with very large files like videos, keeping a lower resolution preview to do common tasks and sending the original to cold storage, or sending the raw material to cold storage after the result has been produced. This assumes you won't need the original high resolution file.
-
 You should also consider that Amazon will charge a minimum file size of 40kb, so you should not send files lower than that size to cold storage. The rule of thumb is that the larger the file is, the more you can save.
 
 
@@ -82,12 +82,13 @@ Multiple options are available and can be combined.
 
 ### Can I Configure the Blob Dispatcher to send Content into Cold Storage Directly?
 
-//TODO explain if it's possible to do. Can mention same reasons as above if not.
-=> Can't do.
+It is not possible to dispatch content into cold storage directly.
 
-### What happen if the Elasticsearch index is reindex ?
+Related question: <a href="#can-i-bulk-import-content-into-cold-storage-directly">Can I Bulk Import Content Into Cold Storage Directly?</a>
 
-=> Not useful from devs POV, it works as any other reindex.
+### What Happens if I Reindex Content Under Cold Storage?
+
+It is still possible to find the document using a fulltext search after the file has been sent to cold storage. We keep the result of the fulltext extraction in the database, meaning that even if we don't have immediate access to the file anymore, we can rebuild the Elasticsearch index anyway.
 
 ## User Experience
 
@@ -98,9 +99,6 @@ Multiple options are available and can be combined.
 ### How Long does it Take to Retrieve Content from Cold Storage?
 
 Retrieval takes 3 to 5 hours. Time for restore should be consistent no matter the content type or file size as S3 Glacier is [designed for 35 random restore requests per pebibyte (PiB) stored per day](https://docs.aws.amazon.com/amazonglacier/latest/dev/downloading-an-archive-two-steps.html), which should prove quite sufficient.
-
-//TODO check if there is a retrieval policy in place https://docs.aws.amazon.com/amazonglacier/latest/dev/data-retrieval-policy.html
-=> No retrieval policy
 
 ### Can I Disable Email Notifications when Restoring Large Volumes of Content?
 
@@ -123,7 +121,9 @@ Yes, an audit trail is added by default for cold storage related actions.
 
 ### Can Users Still Find Content in Cold Storage?
 
-Yes. When moving the file to cold storage, we keep the current Elasticsearch index, meaning that anyone can still find the document using a fulltext search for example. However, we do not have access to the file anymore. Reindexing the document after it is sent to cold storage would allow you to search for the document metadata, but you would lose the capacity to search for anything that is in the file itself unless you retrieve it first.
+Yes. When moving the file to cold storage, we keep the current Elasticsearch index, meaning that anyone can still find the document using a fulltext search for example.
+
+Related question: <a href="#what-happens-if-i-reindex-content-under-cold-storage">What Happens if I Reindex Content Under Cold Storage?</a>
 
 ## Permissions
 
@@ -187,20 +187,21 @@ Annotations made on the main file are kept while the content is under cold stora
 
 ### Nuxeo Retention
 
-#### Is it Possible to Move Content Under Retention to Cold Storage?
-
-NOT CORRECT
-<!--
-Yes, and any content you send to cold storage using automated actions applies to content under retention as well unless you specifically exclude it. From Web UI, the actions to move content to cold storage are disabled by default when content is under retention however; this can easily be changed using Nuxeo Studio.
-
-
-//TODO we should change that now that we are only changing the storage class and disable send to cold sto only if content is under legal hold: in that case you need the content at the ready. Restore should still be available in that case.
-
--->
+{{#> callout type='warning'}}
+Nuxeo Cold Storage and Nuxeo Retention currently have limited compatibility. If you intend to send content under retention to cold storage or to put content sent into cold storage under retention, it is recommended to start with the Nuxeo Retention addon and to wait for [NXP-31081](https://jira.nuxeo.com/browse/NXP-31081) in order to leverage cold storage.
+{{/callout}}
 
 #### Can I Send Content to Cold Storage after its Retention Period?
 
 Yes, if both addons are installed you can configure a post-retention action to send content automatically to cold storage after its retention period.
+
+#### Is it Possible to Move Content Under Retention to Cold Storage?
+
+Content can only be moved to cold storage after its retention period.
+
+#### Is it Possible to Put Under Retention Content Stored in Cold Storage?
+
+Content that is under cold storage can't be put under retention.
 
 ### Nuxeo Drive
 
