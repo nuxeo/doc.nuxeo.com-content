@@ -15,7 +15,7 @@ toc: true
 tree_item_index: 1100
 ---
 
-The Nuxeo Cold Storage (Glacier) connector is a long term storage solution that allows Nuxeo clients to take advantage of cost savings by using AWS's cold storage tier known as Glacier to store large files and/or less frequently accessed content. See [frequently asked questions - cost]({{page page='nuxeo-coldstorage-faq'}}#cost) for additional information around cost savings.
+The Nuxeo Cold Storage connector is a long term storage solution that allows Nuxeo clients to take advantage of cost savings by using AWS's cold storage tier known as Glacier to store large files and/or less frequently accessed content. See [frequently asked questions - cost]({{page page='nuxeo-coldstorage-faq'}}#cost) for additional information around cost savings.
 
 The addon is based on the usage of [Amazon S3 Glacier Flexible Retrieval (formerly Glacier)](https://aws.amazon.com/s3/storage-classes/glacier/) to store cold content.
 
@@ -26,8 +26,7 @@ The addon is based on the usage of [Amazon S3 Glacier Flexible Retrieval (former
 Once the Nuxeo rendition of the document is available, the user can trigger the flow by clicking on **Send to cold storage** button.
 
 {{#> callout type='note'}}
-Sending content to cold storage requires the dedicated `WriteColdStorage` permission. //TODO see https://doc.nuxeo.com/nxdoc/how-to-grant-the-edit-permission-without-the-remove-permission/
-//TODO add a permissions table in the FAQ
+Sending content to cold storage requires the dedicated `WriteColdStorage` [permission](https://doc.nuxeo.com/nxdoc/how-to-grant-the-edit-permission-without-the-remove-permission/).
 {{/callout}}
 
 {{!--     ### nx_asset ###
@@ -44,7 +43,11 @@ For additional details on the rendition used depending on the file type, refer t
 
 ### Send Multiple Documents to Cold Storage
 
-There's an option to send multiple documents to Cold Storage as long as all of them satisfy the requirements (they are not yet in Cold Storage) and if the user has the correct permission. Select the files that you want to upload and there will be an action button to move them to Cold Storage.
+There's an option to send multiple documents to Cold Storage as long as all of them satisfy the requirements:
+- They are not yet in Cold Storage
+- The user has the correct permission
+
+Select the files that you want to upload and there will be an action button to move them to Cold Storage.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Send Multiple To Coldstorage
@@ -83,7 +86,6 @@ Once the retrieve is completed, the banner will display information about the pr
     addins#screenshot#up_to_date
 --}}
 ![Retrieved from Coldstorage ](nx_asset://514f7467-bce2-404c-9d76-0864c1869b57)
-
 
 By default, the file will be available for download for 24h. For now, that value can be changed for all files by adding a configuration to the `nuxeo.conf` file. So, for example, if we want the file available for 48 hours, we can add:
 
