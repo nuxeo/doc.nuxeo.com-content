@@ -14,18 +14,18 @@ tree_item_index: 300
 ---
 
 {{#> callout type='tip'}}
-This page covers installation and general configuration options about the Nuxeo cold storage addon. For detailed questions on how to integrate it in your application, please refer to our [cold storage frequently asked questions]({{page page='nuxeo-coldstorage-faq'}}) documentation.
+This page covers installation and general configuration options about the Nuxeo Cold Storage addon. For detailed questions on how to integrate it in your application, please refer to our [Cold Storage FAQ]({{page page='nuxeo-coldstorage-faq'}}).
 {{/callout}}
 
 ## Pre-requisites
 
 {{#> callout type='info' heading='Cloud Platform Compatibility'}}
 {{! multiexcerpt name='cloud-platform-compatibility'}}
-The Nuxeo cold storage addon has been developed and tested specifically for AWS. Microsoft Azure or other cloud platforms are not compatible with the addon.
+The Nuxeo Cold Storage addon has been developed and tested specifically for AWS. Microsoft Azure or other Cloud platforms are not compatible with the addon.
 {{! /multiexcerpt}}
 {{/callout}}
 
-- The [Amazon S3 Online Storage]({{page space='nxdoc' page='amazon-s3-online-storage'}}) addon needs to be configured on your instance
+- The [Amazon S3 Online Storage]({{page space='nxdoc' page='amazon-s3-online-storage'}}) addon needs to be configured on your instance.
 
 ## Amazon S3
 
@@ -45,20 +45,19 @@ nuxeo.s3storage.bucket_prefix=
 nuxeo.s3storage.bucket=
 ```
 
-Optional but recommended: you can define the following property on the `default` blob provider of your deployment:
+**Optional but recommended**: you can define the following property on the `default` blob provider of your deployment:
 ```
  <property name="coldStorage">true</property>
 ```
-This property enforces a transactional behavior of the blob provider. It allows to rollback the change of the storage class in case an error occured during the transaction in which documents were sent to Cold Storage.
+This property enforces a transactional behavior of the blob provider. It allows to rollback the change of the storage class in case an error occurred during the transaction in which documents were sent to Cold Storage.
 
-There are some other optional configurations:
+**There are some other optional configurations:**
 
 To be able to send a document to Cold Storage, the addon requires by default that a preview is available that it can be used as a placeholder when browsing the document. This requirement can be disabled with the following configuration:
 
 ```
 nuxeo.coldstorage.thumbnailPreviewRequired=false
 ```
-
 A default placeholder will be displayed instead.
 
 To customize the frequency in which the scheduler job checks if the retrieve task is finished and that the preview is available for the user to download, we use the expression below.
