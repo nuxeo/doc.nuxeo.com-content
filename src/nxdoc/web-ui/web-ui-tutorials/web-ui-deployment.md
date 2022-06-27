@@ -91,54 +91,14 @@ About the Web UI structure:
 
 ## How to Deploy Additional Web UI Resources{{> anchor 'deploy_or_override'}}
 
-In order to extend the Web UI (outside Studio), you'll need to create your own marketplace which will deploy your own resources in `$NUXEO_SERVER/nxserver/nuxeo.war/ui`.
-
-Let's have a look at the [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}) addon. Nuxeo Drive defines among others a [nuxeo-drive-web-ui](https://github.com/nuxeo/nuxeo-drive-server/tree/9.10/nuxeo-drive-web-ui) bundle deployed in a server by its [marketplace](https://github.com/nuxeo/marketplace-drive/tree/1.7_9.10.
-
-First important point is the [nuxeodrive-webresources-contrib.xml](https://github.com/nuxeo/nuxeo-drive-server/blob/9.10/nuxeo-drive-web-ui/src/main/resources/OSGI-INF/nuxeodrive-webresources-contrib.xml) file which provides the following contribution:
+In order to extend the Web UI (outside Studio), you'll need to create your own marketplace which will deploy your own resources in `$NUXEO_SERVER/nxserver/nuxeo.war/ui`. In order to instruct these resources to override their original counterparts, we must add the following require to `deployment-fragment.xml` in `resources/OSGI-INF`:
 
 ```xml
-<component name="org.nuxeo.drive.web.ui.resources.contrib">
-
-  <require>org.nuxeo.web.ui.resources</require>
-
-  <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
-    <resource name="nuxeo-drive.html" type="import" shrinkable="false">
-      <uri>/ui/nuxeo-drive/nuxeo-drive.html</uri>
-    </resource>
-  </extension>
-
-  <extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
-    <bundle name="web-ui">
-      <resources append="true">
-        <resource>nuxeo-drive.html</resource>
-      </resources>
-    </bundle>
-  </extension>
-
-</component>
+<require>org.nuxeo.web.ui</require>
 ```
 
-This makes [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/9.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html) accessible in the [index.jsp](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/src/main/resources/web/nuxeo.war/ui/index.jsp) (deployed in `$NUXEO_SERVER/nxserver/nuxeo.war/ui/` and is the access point of the Web UI). Of course, this extension is declared in the [nuxeo-drive-web-ui's OSGI bundle MANIFEST](https://github.com/nuxeo/nuxeo-drive-server/blob/9.10/nuxeo-drive-web-ui/src/main/resources/META-INF/MANIFEST.MF#L7) like any other Nuxeo extension.
+For more information on the `deployment-fragment` structure, see the **Building and Deployment** section of [Web UI Customization Tutorial]({{page space='nxdoc' page='web-ui-customization-tutorial'}}) documentation.
 
-{{#> callout type='warning' }}
-
-The requirement on `org.nuxeo.web.ui.resources` is important as it ensures your extension is deployed after the [Web UI](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/src/main/resources/OSGI-INF/webresources-contrib.xml). This is how you'll be able to potentially override/redefine part of the default Web UI such as the [dashboard]({{page page='web-ui-dashboard'}}).
-
-{{/callout}}
-
-Note that [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/9.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html) defines mostly slot contents (see the [Web UI slot documentation]({{page page='web-ui-slots'}}) but it also includes [import of new elements](https://github.com/nuxeo/nuxeo-drive-server/blob/9.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L15) used in declared slot contents and brought by the addon itself:
-
-```
-<link rel="import" href="nuxeo-drive-edit-button.html">
-```
-
-For the rest, all [other Drive Web UI resources](https://github.com/nuxeo/nuxeo-drive-server/tree/9.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive) will be deployed in the `$NUXEO_SERVER/nxserver/nuxeo.war/` directory thanks to the [deployment fragment](https://github.com/nuxeo/nuxeo-drive-server/blob/9.10/nuxeo-drive-web-ui/src/main/resources/OSGI-INF/deployment-fragment.xml#L6).
-
-Finally, the [Nuxeo Drive Marketplace](https://github.com/nuxeo/marketplace-drive/tree/1.7_9.10) has the proper [assembly.xml](https://github.com/nuxeo/marketplace-drive/blob/1.7_9.10/marketplace/src/main/assemble/assembly.xml#L131) in order to deploy its Web UI resources.
-
-{{#> callout type='warning' }}
-
-This must be carefully setup in order to make sure that Nuxeo Drive contributions and extensions to Web UI are properly installed.
-
-{{/callout}}
+A proper `assembly.xml` is also needed in order to deploy its Web UI resources. Examples of both can be found in the [Nuxeo Cold Storage addon](https://github.com/nuxeo/nuxeo-coldstorage):
+- [resources/OSGI-INF/deployment-fragment.xml](https://github.com/nuxeo/nuxeo-coldstorage/blob/lts-2021/nuxeo-coldstorage-web/src/main/resources/OSGI-INF/deployment-fragment.xml)
+- [assemble/assembly.xml](https://github.com/nuxeo/nuxeo-coldstorage/blob/lts-2021/nuxeo-coldstorage-package/src/main/assemble/assembly.xml)
