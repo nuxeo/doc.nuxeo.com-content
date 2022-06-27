@@ -10,32 +10,16 @@ toc: true
 ---
 
 
-{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2-1-0'}}}
+{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2-1-2'}}}
 
 ---
 
+<!-- | [NEV 2.1.2]({{page page='nuxeo-enhanced-viewer-release-notes-2-1-2'}})        | Bugfix release                                                        | -->
+
 ## NEV Release Notes Summary
 
-| Version                                                                       | Release date                                                               |
+| Version                                                                       | Notes                                                                      |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [NEV 2.1.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-1-0'}})        | 2022-03-25                                                                 |
-| [NEV 2.0.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-0-0'}})        | 2021-12-23                                                                 |
-| [NEV 10.6.11]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-11'}})    | 2021-12-17                                                                 |
-| [NEV 10.6.10]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-10'}})    | 2021-11-17                                                                 |
-| [NEV 10.6.9]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-9'}})      | 2021-10-29                                                                 |
-| [NEV 10.6.8]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-8'}})      | 2021-10-23                                                                 |
-| [NEV 10.6.7]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-7'}})      | 2021-10-08                                                                 |
-| [NEV 10.6.6]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-6'}})      | 2021-09-22                                                                 |
-| [NEV 10.6.5]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-5'}})      | 2021-09-17                                                                 |
-| [NEV 10.6.4]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-4'}})      | 2021-09-09                                                                 |
-| [NEV 10.6.3]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-3'}})      | 2021-06-22                                                                 |
-| [NEV 10.6.2]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-2'}})      | 2021-06-18                                                                 |
-| [NEV 10.5.4]({{page page='nuxeo-enhanced-viewer-release-notes-10-5-4'}})      | 2021-06-10                                                                 |
-| [NEV 10.5.3]({{page page='nuxeo-enhanced-viewer-release-notes-10-5-3'}})      | 2021-05-21                                                                 |
-| [NEV 10.5.1]({{page page='nuxeo-enhanced-viewer-release-notes-10-5-1'}})      | 2021-05-04                                                                 |
-| [NEV 10.5]({{page page='nuxeo-enhanced-viewer-release-notes-10-5'}})          | 2021-04-20                                                                 |
-| [NEV 10.4.7]({{page page='nuxeo-enhanced-viewer-release-notes-10-4-7'}})      | 2021-06-22                                                                 |
-| [NEV 10.4.6]({{page page='nuxeo-enhanced-viewer-release-notes-10-4-6'}})      | 2021-04-02                                                                 |
-| [NEV 10.4.5]({{page page='nuxeo-enhanced-viewer-release-notes-10-4-5'}})      | 2021-03-19                                                                 |
-| [NEV 10.4.3]({{page page='nuxeo-enhanced-viewer-release-notes-10-4-3'}})      | 2021-02-11                                                                 |
-| [NEV 10.4.2]({{page page='nuxeo-enhanced-viewer-release-notes-10-4-2'}})      | 2021-01-29                                                                 |
+| [NEV 2.1.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-1-0'}})        | Major observability improvements and bugfixes.                             |
+| [NEV 2.0.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-0-0'}})        | Major version with new features, UI improvements, architectural changes, bug fixes, and improvements. |
+| [NEV 10.6.11]({{page page='nuxeo-enhanced-viewer-release-notes-10-6-11'}})    | Log4j vulnerabilities (CVE-2021-45046) remediation.                        |
