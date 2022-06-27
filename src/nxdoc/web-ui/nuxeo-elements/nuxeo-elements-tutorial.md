@@ -191,8 +191,8 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
     # Add nuxeo-elements as a bower dependency
     $ bower install --save nuxeo/nuxeo-elements
     ```
-
-    This adds `nuxeo-elements` as a dependency in `bower.json` and downloads the latest release from our GitHub [repository](https://github.com/nuxeo/nuxeo-elements) into `bower_components`.
+    
+    At the version selection prompt, choose `nuxeo-elements#2.4.x` (corresponding to Platform LTS 2019). This adds `nuxeo-elements` as a dependency in `bower.json` and downloads the selected release from our GitHub [repository](https://github.com/nuxeo/nuxeo-elements) into `bower_components`.
 
 2.  Import the Nuxeo elements we need, in this case [nuxeo-connection](https://www.webcomponents.org/element/nuxeo/nuxeo-elements/elements/nuxeo-connection)
     and [nuxeo-document](https://www.webcomponents.org/element/nuxeo/nuxeo-elements/elements/nuxeo-document), into `doc-reader`:
