@@ -372,7 +372,7 @@ In order to make the integration work on modern browsers, Nuxeo and NEV 10.3.x s
 
 ### ARender Configuration
 
-Nuxeo Enhanced Viewer involves installing the ARender services. You can install the ARender services using Kubernetes and Helm 3 by following the [ARender Documentation](https://arender.io/documentation/install/kubernetes/).
+Nuxeo Enhanced Viewer involves installing the ARender services. You can install the ARender services using Kubernetes and Helm 3 by following the [ARender Documentation](https://docs.arender.io/install/kubernetes/).
 
 {{#> callout type='warning' heading='Private services'}}
 You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these services.
