@@ -17,7 +17,7 @@ tree_item_index: 300
 This page covers installation and general configuration options about the Nuxeo Cold Storage addon. For detailed questions on how to integrate it in your application, please refer to our [Cold Storage FAQ]({{page page='nuxeo-coldstorage-faq'}}).
 {{/callout}}
 
-## Pre-requisites
+## Prerequisites
 
 {{#> callout type='info' heading='Cloud Platform Compatibility'}}
 {{! multiexcerpt name='cloud-platform-compatibility'}}
@@ -68,7 +68,7 @@ For example, if we want to check the status every hour at the 7th minute, we wou
 nuxeo.coldstorage.check.retrieve.state.cronExpression= 0 7 * ? * * *
 ```
 
-You can learn more about Nuxeo schedulers in the [related documentation page]({{page version='' space='studio' page='scheduling-periodic-events'}}).
+You can learn more about Nuxeo schedulers in the [related documentation page]({{page space='studio' page='scheduling-periodic-events'}}).
 
 We can also customize how long we want to have the preview available once we do a retrieve action. The default is one day, but that can also be modified. For example, if we want it for 2 days we can add:
 
@@ -76,10 +76,10 @@ We can also customize how long we want to have the preview available once we do 
 nuxeo.coldstorage.numberOfDaysOfAvailability.value.default= 2
 ```
 
-### Preview file Configuration
+### Preview File Configuration
 
 {{! multiexcerpt name='preview-file-configuration'}}
-When a document is sent to cold storage, the main file is not available (it requires a retrieval operation, taking between 3 and 5 hours). In order to preserve the user experience, we display a rendition of the document (as renditions remain on S3 standard).
+When a document is sent to Cold Storage, the main file is not available (it requires a retrieval operation, taking between 3 and 5 hours). In order to preserve the user experience, we display a rendition of the document (as renditions remain on S3 standard).
 
 By default, we are using the following renditions:
 

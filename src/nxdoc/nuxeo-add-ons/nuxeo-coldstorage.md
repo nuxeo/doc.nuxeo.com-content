@@ -15,7 +15,7 @@ toc: true
 tree_item_index: 1100
 ---
 
-The Nuxeo Cold Storage connector is a long term storage solution that allows Nuxeo clients to take advantage of cost savings by using AWS's cold storage tier known as Glacier to store large files and/or less frequently accessed content. See [frequently asked questions - cost]({{page page='nuxeo-coldstorage-faq'}}#cost) for additional information around cost savings.
+The Nuxeo Cold Storage connector is a long-term storage solution that allows Nuxeo clients to take advantage of cost savings by using AWS's cold storage tier known as Glacier to store large files and/or less frequently accessed content. See [frequently asked questions - cost]({{page page='nuxeo-coldstorage-faq'}}#cost) for additional information around cost savings.
 
 The addon is based on the usage of [Amazon S3 Glacier Flexible Retrieval (formerly Glacier)](https://aws.amazon.com/s3/storage-classes/glacier/) to store cold content.
 
@@ -69,7 +69,7 @@ When the user wants to have temporary access to the full file for download, he/s
 --}}
 ![Restore from coldstorage button](nx_asset://bd6ceed7-004f-4d78-a0e7-2740b4871ce0)
 
-The user can then trigger the flow by clicking on the restore button. As an asynchronous process, it is expected that it takes some time (between 3 and 5 hours). An email is sent to the user when the retrieve process is done and also the document will display a banner stating that the retrieve is in process.
+The user can then trigger the flow by clicking on the restore button. As an asynchronous process, it is expected that it takes some time (between 3 and 5 hours). An email is sent to the user when the retrieve process is done and a banner is displayed on the document stating that the retrieve is in process.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Retrieve from Coldstorage
