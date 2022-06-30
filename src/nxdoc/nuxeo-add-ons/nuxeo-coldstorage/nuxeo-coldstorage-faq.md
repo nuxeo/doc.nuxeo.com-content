@@ -13,10 +13,6 @@ toc: true
 tree_item_index: 350
 ---
 
-{{#> callout type='warning' heading='internal'}}
-This page is <u>work in progress</u> and needs to be <u>kept internal to Hyland</u> at this stage, as information may still be subject to change.
-{{/callout}}
-
 {{#> callout type='tip'}}
 This page covers detailed questions about how the cold storage addon works to help you integrating it in your application. It assumes you already read and understood its [installation and general configuration options](({{page page='nuxeo-coldstorage-installation'}}).
 {{/callout}}
