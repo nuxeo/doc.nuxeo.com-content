@@ -15,7 +15,7 @@ toc: true
 tree_item_index: 1100
 ---
 
-The Nuxeo Cold Storage addon allows you to optimize your costs by storing your archived content into a long-term storage solution that leverages AWS's Glacier service. See [frequently asked questions - cost]({{page page='nuxeo-coldstorage-faq'}}#cost) for additional information around cost principles. Content can be sent individually or in bulk and while under cold storage, content can still be previewed and searched for.
+The Nuxeo Cold Storage addon allows you to optimize your costs by storing your archived content into a long-term storage solution that leverages AWS's Glacier service. See [frequently asked questions - principles]({{page page='nuxeo-coldstorage-faq'}}#principles) for additional information around cost principles. Content can be sent individually or in bulk and while under cold storage, content can still be previewed and searched for.
 
 The addon is based on the usage of [Amazon S3 Glacier Flexible Retrieval (formerly Glacier)](https://aws.amazon.com/s3/storage-classes/glacier/) to store cold content.
 
