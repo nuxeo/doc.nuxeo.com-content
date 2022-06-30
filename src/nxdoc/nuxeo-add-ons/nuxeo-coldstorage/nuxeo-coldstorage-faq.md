@@ -13,8 +13,8 @@ toc: true
 tree_item_index: 350
 ---
 
-{{#> callout type='tip'}}
-This page covers detailed questions about how the cold storage addon works to help you integrating it in your application. It assumes you already read and understood its [installation and general configuration options](({{page page='nuxeo-coldstorage-installation'}}).
+{{#> callout type='info' heading='What to Expect'}}
+This page covers detailed questions about how the cold storage addon works to help you integrating it in your application. It assumes you already read and understood its [installation and general configuration options]({{page page='nuxeo-coldstorage-installation'}}) and its [usage]({{page page='nuxeo-coldstorage'}}).
 {{/callout}}
 
 ## Compatibility
@@ -29,18 +29,18 @@ This page covers detailed questions about how the cold storage addon works to he
 
 Nuxeo Cold Storage is based on [AWS S3 Glacier Flexible Retrieval with standard retrieval option](https://aws.amazon.com/s3/storage-classes/#Flexible_Retrieval).
 
-The general cost principles of Cold Storage are:
+The general cost principles of cold storage are:
 - Storage is cheap
 - Retrieval is expensive
 - Anything sent to cold storage will be charged a minimum of 90 days of storage
 
 ### What is Moved to Cold Storage and what Remains in Regular Storage when Moving Content?
 
-When moving content to Cold Storage, only the main file attached to the document is sent to Cold Storage.
+When moving content to cold storage, only the main file attached to the document is sent to cold storage.
 
 All the rest remains in regular storage, including:
 - Other attachments in the document (e.g. anything stored in `file:files`).
-- Renditions for the main file. A default rendition is necessary to provide a preview for the main file (see [preview file configuration]({{page page='nuxeo-coldstorage-installation'}}#preview-file-configuration)), other renditions can be removed using logic when you move the content to save on storage space if you want to.
+- Renditions for the main file. [Unless you disabled that option]({{page page='nuxeo-coldstorage-installation'}}#configuration), a default rendition is necessary to provide a preview for the main file (see [preview file configuration]({{page page='nuxeo-coldstorage-installation'}}#preview-file-configuration)), other renditions can be removed using logic when you move the content to save on storage space if you want to.
 - Elasticsearch index for the document (including fulltext index for the main file) so that you can keep finding the document in search results.
 - Annotations made on the main file if you are using Nuxeo Enhanced Viewer.
 
@@ -48,42 +48,71 @@ All the rest remains in regular storage, including:
 
 Overall, you should consider that content sent to Cold Storage is meant for archival, because retrieving the content is costly and takes time. It should be seen as an efficient way to save on storage costs for content you want to keep around but that you are unlikely to need anytime soon.
 
-You should also consider that Amazon will charge a minimum file size of 40kb, so you should not send files lower than that size to Cold Storage. The rule of thumb is that the larger the file is, the more you can save.
+You should also consider that Amazon will charge a minimum file size of 40kb, so you should not send files lower than that size to cold storage. The rule of thumb is that the larger the file is, the more you can save.
 
 ## Content Ingestion
 
 ### Can I Bulk Import Content Into Cold Storage Directly?
 
-Documents can be moved in bulk to Cold Storage once they are stored on the platform. It is not possible to import content directly into Cold Storage. Reason is once the file is moved to Cold Storage, we cannot access it anymore unless a retrieval is requested. Nuxeo needs to execute some actions first like generating the preview rendition and indexing the content of the main file to provide a good user experience while content is under Cold Storage before the content can be moved.
+Documents can be moved in bulk to cold storage once they are stored on the platform. It is not possible to import content directly into cold storage. Reason is once the file is moved to cold storage, we cannot access it anymore unless a retrieval is requested. Nuxeo needs to execute some actions first like generating the preview rendition and indexing the content of the main file to provide a good user experience while content is under cold storage before the content can be moved.
 
 ### How Can I Move Content in Bulk?
 
-Multiple options are available and can be combined.
+Multiple options are available and can be combined, depending on your situation.
 
-- Using a [bulk action through REST API](https://doc.nuxeo.com/nxdoc/bulk-action-framework/#bulk-rest-api)
+#### Launching a Bulk Action Through the REST API
 
-    Let's say we want to move documents that are >1MB and, obviously, not already under Cold Storage (i.e. `SELECT * FROM File WHERE ecm:mixinType <> 'ColdStorage' AND file:content/length > 1048576`):
+This option is the best solution if you have large volumes of existing content that need to be migrated to cold storage. It is easy to use at any time, versatile, provides interesting performance and is designed to handle large volumes of documents since it leverages the [bulk action framework]({{page page='bulk-action-framework'}}#bulk-rest-api).
+
+Let's say we want to move documents that are >1MB and, obviously, not already under cold storage (i.e. `SELECT * FROM File WHERE ecm:mixinType <> 'ColdStorage' AND file:content/length > 1048576`), you could use the query below after replacing credentials and the Nuxeo server URL with your own:
+
     ```
     curl -u Administrator:Administrator \
      -H 'Content-Type: application/json'
-     -X POST 'http://localhost:8080/nuxeo/api/v1/search/bulk/moveToColdStorage?query=SELECT%20*%20FROM%20File%20WHERE%20ecm%3AmixinType%20%3C%3E%20%27ColdStorage%27%20AND%20file%3Acontent%2Flength%20%3E%201048576'
+     -X POST 'http://localhost:8080/nuxeo/api/v1/search/bulk/moveToColdStorage?query=SELECT%20*%20FROM%20File%20WHERE%20ecm%3AmixinType%20%3C%3E%20%27ColdStorage%27%20AND%20file%3Acontent%2Flength%20%3E%201048576&queryLimit=10000'
     ```
-- Using a scheduler (e.g., every night, send all documents that have been modified more than 2 years ago and that are not under legal hold to Cold Storage).
-- Using an [event listener]({{page space='nxdoc' page='events-and-messages'}}).
 
-//TODO provide our recommendations, especially for bulk (need guidance from devs)
-=> Very Sensitive move, so to be done very carefully.
+Notice that we are using the `queryLimit` parameter in the example above to limit the number of documents impacted to 10k; it is a good practice to test your changes at a smaller scale first.
 
+#### Using a Scheduler
+
+Once your initial content has been moved to cold storage, you will likely have a need to move smaller batches of documents regularly, and you will want to have this process automated. A typical use case could be "every night, send all documents that are in an archived status, have been last modified more than 2 years ago and that are not under legal hold to cold storage".
+
+Using a scheduled task is a perfect fit for that need. You will first [contribute your event to be scheduled]({{page space='studio' page='scheduling-periodic-events'}}), then either:
+
+##### Use Nuxeo Studio and Automation Logic
+- Declare it in the [Nuxeo Studio registries]({{page space='studio' page='registries'}})
+- And bind that event to an [event handler]({{page space='studio' page='event-handlers'}})
+
+if you want to leverage automation.
+
+##### Use Java Code
+- Write an [event listener]({{page space='nxdoc' page='events-and-messages'}}) using Java code.
+
+Below are some code examples taken from the [Nuxeo Retention addon]({{page page='nuxeo-retention-management'}}) that apply a similar logic: checking regularly for documents that are not under retention anymore and executing a bulk action on them:
+
+- [Scheduled task](https://github.com/nuxeo/nuxeo/blob/10.10/addons/nuxeo-retention/nuxeo-retention-core/src/main/resources/OSGI-INF/retention-schedulers.xml)
+- [Listener](https://github.com/nuxeo/nuxeo/blob/10.10/nuxeo-core/nuxeo-core/src/main/java/org/nuxeo/ecm/core/security/RetentionExpiredFinderListener.java)
+
+You can take these examples as a basis to adapt to your own needs, knowing that the bulk action for sending content to cold storage is named `MoveToColdStorageContentAction.ACTION_NAME`.
+
+{{#> callout type='tip' heading='Java VS Automation'}}
+Our recommendation is to leverage a bulk action through Java code if you are looking for optimal performance and finer control. Automation provides an easier way to get started using low code tooling.
+{{/callout}}
+
+#### Using an Event Listener
+
+Content can also be moved to cold storage gradually on a per event basis, for example when a document reaches a particular state. In that case, you can simply configure an [event handler]({{page space='studio' page='event-handlers'}}) using Nuxeo Studio.
 
 ### Can I Configure the Blob Dispatcher to send Content into Cold Storage Directly?
 
-It is not possible to dispatch content into Cold Storage directly.
+It is not possible to dispatch content into cold storage directly.
 
 Related question: <a href="#can-i-bulk-import-content-into-cold-storage-directly">Can I Bulk Import Content Into Cold Storage Directly?</a>
 
 ### What Happens if I Reindex Content Under Cold Storage?
 
-It is still possible to find the document using a fulltext search after the file has been sent to Cold Storage. We keep the result of the fulltext extraction in the database, meaning that even if we don't have immediate access to the file anymore, we can rebuild the Elasticsearch index anyway.
+It is still possible to find the document using a fulltext search after the file has been sent to cold storage. We keep the result of the fulltext extraction in the database, meaning that even if we don't have immediate access to the file anymore, we can rebuild the Elasticsearch index anyway.
 
 ## User Experience
 
@@ -97,8 +126,8 @@ Retrieval takes 3 to 5 hours. Time for restore should be consistent no matter th
 
 ### Can I Disable Email Notifications when Restoring Large Volumes of Content?
 
-The architecture of the Cold Storage addon relies on the standard Nuxeo Platform principles, which makes the Cold Storage service customizable using code. It is possible to disable email
-notifications when content is retrieved or to apply a different behavior by overriding the [Cold Storage service](https://github.com/nuxeo/nuxeo-coldstorage/blob/lts-2021/nuxeo-coldstorage/src/main/java/org/nuxeo/coldstorage/service/ColdStorageServiceImpl.java).
+The architecture of the Nuxeo Cold Storage addon relies on the standard Nuxeo Platform principles, which makes the cold storage service customizable using code. It is possible to disable email
+notifications when content is retrieved or to apply a different behavior by overriding the [cold storage service](https://github.com/nuxeo/nuxeo-coldstorage/blob/lts-2021/nuxeo-coldstorage/src/main/java/org/nuxeo/coldstorage/service/ColdStorageServiceImpl.java).
 
 {{#> callout type='tip'}}
 If you are not familiar with Nuxeo services yet, see [how to create a service]({{page page='how-to-create-a-service'}}) documentation and the [getting started with Nuxeo development](https://university.hyland.com/learning-paths/l4182) learning path on Hyland University.
@@ -110,7 +139,7 @@ Yes, any kind of logic around the process and rules to archive or to restore you
 
 ### Can Users Still Find Content in Cold Storage?
 
-Yes. When moving the file to Cold Storage, we keep the current Elasticsearch index, meaning that anyone can still find the document using a fulltext search for example.
+Yes. When moving the file to cold storage, we keep the current Elasticsearch index, meaning that anyone can still find the document using a fulltext search for example.
 
 Related question: <a href="#what-happens-if-i-reindex-content-under-cold-storage">What Happens if I Reindex Content Under Cold Storage?</a>
 
