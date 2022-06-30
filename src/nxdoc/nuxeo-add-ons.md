@@ -315,21 +315,6 @@ Public
 </tr>
 <tr>
 <td colspan="1">
-Nuxeo Download/Upload with Aspera<br/>
-`nuxeo-aspera`
-</td>
-<td colspan="1">
-Registered access
-</td>
-<td colspan="1">
-[Documentation]({{page page='nuxeo-aspera-connector'}})
-</td>
-<td colspan="1">
-[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera)
-</td>
-</tr>
-<tr>
-<td colspan="1">
 Nuxeo CSV<br/>
 `nuxeo-csv`
 </td>
@@ -341,6 +326,21 @@ Public
 </td>
 <td colspan="1">
 [Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv)
+</td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Download/Upload with Aspera<br/>
+`nuxeo-aspera`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-aspera-connector'}})
+</td>
+<td colspan="1">
+[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera)
 </td>
 </tr>
 <!--
