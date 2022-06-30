@@ -15,7 +15,7 @@ toc: true
 tree_item_index: 1100
 ---
 
-The Nuxeo Cold Storage connector is a long-term storage solution that allows Nuxeo clients to take advantage of cost savings by using AWS's cold storage tier known as Glacier to store large files and/or less frequently accessed content. See [frequently asked questions - cost]({{page page='nuxeo-coldstorage-faq'}}#cost) for additional information around cost savings.
+The Nuxeo Cold Storage addon allows you to optimize your costs by storing your archived content into a long-term storage solution that leverages AWS's Glacier service. See [frequently asked questions - cost]({{page page='nuxeo-coldstorage-faq'}}#cost) for additional information around cost principles. Content can be sent individually or in bulk and while under cold storage, content can still be previewed and searched for.
 
 The addon is based on the usage of [Amazon S3 Glacier Flexible Retrieval (formerly Glacier)](https://aws.amazon.com/s3/storage-classes/glacier/) to store cold content.
 
@@ -26,7 +26,7 @@ The addon is based on the usage of [Amazon S3 Glacier Flexible Retrieval (former
 Once the Nuxeo rendition of the document is available, the user can trigger the flow by clicking on **Send to cold storage** button.
 
 {{#> callout type='note'}}
-Sending content to cold storage requires the dedicated `WriteColdStorage` [permission](https://doc.nuxeo.com/nxdoc/how-to-grant-the-edit-permission-without-the-remove-permission/).
+Sending content to cold storage requires the dedicated `WriteColdStorage` [permission]({{page page='nuxeo-coldstorage-faq'}}#permissions).
 {{/callout}}
 
 {{!--     ### nx_asset ###
@@ -43,11 +43,11 @@ For additional details on the rendition used depending on the file type, refer t
 
 ### Send Multiple Documents to Cold Storage
 
-There's an option to send multiple documents to Cold Storage as long as all of them satisfy the requirements:
-- They are not yet in Cold Storage
+There's an option to send multiple documents to cold storage as long as all of them satisfy the requirements:
+- They are not yet in cold storage
 - The user has the correct permission
 
-Select the files that you want to upload and there will be an action button to move them to Cold Storage.
+Select the files that you want to upload and there will be an action button to move them to cold storage.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Send Multiple To Coldstorage
@@ -95,7 +95,7 @@ nuxeo.coldstorage.numberOfDaysOfAvailability.value.default= 2
 
 ### Restore from Cold Storage
 
-When you no longer want the file to be stored in Cold Storage, you can request a restore by clicking on the restore button. The operation is also asynchronous, and the user will be notified via email once it's completed and the banner will disappear. The send to Cold Storage button will be available again.
+When you no longer want the file to be stored in cold storage, you can request a restore by clicking on the restore button. The operation is also asynchronous, and the user will be notified via email once it's completed and the banner will disappear. The send to cold storage button will be available again.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Restore from Coldstorage button
@@ -106,7 +106,7 @@ When you no longer want the file to be stored in Cold Storage, you can request a
 
 ### Delete from Cold Storage
 
-You can delete a document moved to Cold Storage as any other document.
+You can delete a document moved to cold storage as any other document.
 
 ## Technical Overview
 

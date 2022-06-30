@@ -315,6 +315,21 @@ Public
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo Cold Storage<br/>
+`nuxeo-coldstorage`
+</td>
+<td colspan="1">
+Public
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-coldstorage'}})
+</td>
+<td colspan="1">
+[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-coldstorage)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo CSV<br/>
 `nuxeo-csv`
 </td>
