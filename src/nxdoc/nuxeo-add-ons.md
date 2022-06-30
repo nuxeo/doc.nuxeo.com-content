@@ -319,7 +319,7 @@ Nuxeo Cold Storage<br/>
 `nuxeo-coldstorage`
 </td>
 <td colspan="1">
-Public
+Registered Access
 </td>
 <td colspan="1">
 [Documentation]({{page page='nuxeo-coldstorage'}})
