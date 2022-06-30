@@ -19,13 +19,13 @@ This page covers installation and general configuration options about the Nuxeo 
 
 ## Prerequisites
 
+The [Amazon S3 Online Storage]({{page space='nxdoc' page='amazon-s3-online-storage'}}) addon needs to be configured on your instance.
+
 {{#> callout type='info' heading='Cloud Platform Compatibility'}}
 {{! multiexcerpt name='cloud-platform-compatibility'}}
-The Nuxeo Cold Storage addon has been developed and tested specifically for AWS. Microsoft Azure or other Cloud platforms are not compatible with the addon.
+The Nuxeo Cold Storage addon has been developed and tested for AWS. Microsoft Azure or other cloud platforms are not compatible with the addon.
 {{! /multiexcerpt}}
 {{/callout}}
-
-- The [Amazon S3 Online Storage]({{page space='nxdoc' page='amazon-s3-online-storage'}}) addon needs to be configured on your instance.
 
 ## Amazon S3
 
@@ -49,11 +49,11 @@ nuxeo.s3storage.bucket=
 ```
  <property name="coldStorage">true</property>
 ```
-This property enforces a transactional behavior of the blob provider. It allows to rollback the change of the storage class in case an error occurred during the transaction in which documents were sent to Cold Storage.
+This property enforces a transactional behavior of the blob provider. It allows to rollback the change of the storage class in case an error occurred during the transaction in which documents were sent to cold storage.
 
-**There are some other optional configurations:**
+**There are some other optional configuration options:**
 
-To be able to send a document to Cold Storage, the addon requires by default that a preview is available that it can be used as a placeholder when browsing the document. This requirement can be disabled with the following configuration:
+To be able to send a document to cold storage, the addon requires by default that a preview is available that it can be used as a placeholder when browsing the document. This requirement can be disabled with the following configuration:
 
 ```
 nuxeo.coldstorage.thumbnailPreviewRequired=false
@@ -79,7 +79,7 @@ nuxeo.coldstorage.numberOfDaysOfAvailability.value.default= 2
 ### Preview File Configuration
 
 {{! multiexcerpt name='preview-file-configuration'}}
-When a document is sent to Cold Storage, the main file is not available (it requires a retrieval operation, taking between 3 and 5 hours). In order to preserve the user experience, we display a rendition of the document (as renditions remain on S3 standard).
+When a document is sent to cold storage, the main file is not available (it requires a retrieval operation, taking between 3 and 5 hours). In order to preserve the user experience, we display a rendition of the document (as renditions remain on S3 standard).
 
 By default, we are using the following renditions:
 
@@ -91,18 +91,15 @@ By default, we are using the following renditions:
 
 You can change the renditions to be used and add new configurations for specific document type(s) and/or facet(s).
 
-To do so, you can add an XML contribution to your Nuxeo Studio project and specify the renditions to use, as in the following example:
+To do so, you can [add an XML contribution to your Nuxeo Studio project]({{page space='nxdoc' page='how-to-contribute-to-an-extension'}}#contributing-using-nuxeo-studio) and specify the renditions to use, as in the following example:
 ```xml
-<?xml version="1.0"?>
-<component name="my.custom.coldstorage.rendition.contrib">
-  <require>org.nuxeo.coldstorage.rendition.contrib</require>
-  <extension target="org.nuxeo.coldstorage.service.ColdStorageService"  point="coldStorageRendition" >
-    <coldStorageRendition name="defaultRendition" renditionName="thumbnail" />
-    <coldStorageRendition name="pictureRendition" docType="Picture" facet="Picture" renditionName="Small" />
-    <coldStorageRendition name="videoRendition" docType="Video" facet="Video" renditionName="MP4 480p" />
-    <coldStorageRendition name="myCustomRendition" docType="myCustomDocumentType" facet="Picture" renditionName="OriginalJpeg" />  
-  </extension>
-</component>
+<require>org.nuxeo.coldstorage.rendition.contrib</require>
+<extension target="org.nuxeo.coldstorage.service.ColdStorageService"  point="coldStorageRendition" >
+  <coldStorageRendition name="defaultRendition" renditionName="thumbnail" />
+  <coldStorageRendition name="pictureRendition" docType="Picture" facet="Picture" renditionName="Small" />
+  <coldStorageRendition name="videoRendition" docType="Video" facet="Video" renditionName="MP4 480p" />
+  <coldStorageRendition name="myCustomRendition" docType="myCustomDocumentType" facet="Picture" renditionName="OriginalJpeg" />  
+</extension>
 ```
 
 {{#> callout type='warning'}}
