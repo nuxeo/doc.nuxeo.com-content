@@ -69,7 +69,7 @@ When the user wants to have temporary access to the full file for download, he/s
 --}}
 ![Restore from coldstorage button](nx_asset://bd6ceed7-004f-4d78-a0e7-2740b4871ce0)
 
-The user can then trigger the flow by clicking on the restore button. As an asynchronous process, it is expected that it takes some time (between 3 and 5 hours). An email is sent to the user when the retrieve process is done and a banner is displayed on the document stating that the retrieve is in process.
+The user can then trigger the flow by clicking on the restore button. This is an asynchronous process that takes 3 to 5 hours to complete. Therefore, a banner is displayed on the document stating that the retrieve is in process, and the Nuxeo Platform monitors regularly the status of the retrieval.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Retrieve from Coldstorage
@@ -78,7 +78,11 @@ The user can then trigger the flow by clicking on the restore button. As an asyn
 --}}
 ![Retrieve from Coldstorage](nx_asset://d606f54c-7113-4ce6-a319-be5486c40159)
 
-Once the retrieve is completed, the banner will display information about the preview availability and the option to download the content.
+{{#> callout type='tip'}}
+The frequency at which cold storage content retrieval is checked is configurable. See the [cold storage configuration]({{page page='nuxeo-coldstorage-installation'}}#configuration) page for how to change this value.
+{{/callout}}
+
+When the Nuxeo Platform detects that the retrieval is done, an email is sent to the user and the banner displays information about the preview availability and the option to download the content.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Retrieved from Coldstorage
@@ -87,7 +91,7 @@ Once the retrieve is completed, the banner will display information about the pr
 --}}
 ![Retrieved from Coldstorage ](nx_asset://514f7467-bce2-404c-9d76-0864c1869b57)
 
-By default, the file will be available for download for 24h. For now, that value can be changed for all files by adding a configuration to the `nuxeo.conf` file. So, for example, if we want the file available for 48 hours, we can add:
+By default, the file will be available for download for 24h. That value can be changed for all files by adding a configuration to the `nuxeo.conf` file. So, for example, if we want the file available for 48 hours, we can add:
 
 ```
 nuxeo.coldstorage.numberOfDaysOfAvailability.value.default= 2
