@@ -56,7 +56,7 @@ Select the files that you want to upload and there will be an action button to m
 --}}
 ![Send Multiple To Coldstorage](nx_asset://d6f239bd-b830-4b3e-a041-bc23ec2d985c)
 
-For moving content in bulk, refer to [frequently asked questions - bulk actions]({{page page='nuxeo-coldstorage-faq'}}#bulk-actions).
+For moving content in bulk, refer to [frequently asked questions - content ingestion]({{page page='nuxeo-coldstorage-faq'}}#content-ingestion).
 
 ### Retrieve from Cold Storage
 
