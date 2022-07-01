@@ -91,10 +91,17 @@ About the Web UI structure:
 
 ## How to Deploy Additional Web UI Resources{{> anchor 'deploy_or_override'}}
 
-In order to extend the Web UI (outside Studio), you'll need to create your own marketplace which will deploy your own resources in `$NUXEO_SERVER/nxserver/nuxeo.war/ui`. In order to instruct these resources to override their original counterparts, we must add the following require to `deployment-fragment.xml` in `resources/OSGI-INF`:
+In order to extend the Web UI (outside Studio), you'll need to create your own marketplace which will deploy your own resources in `$NUXEO_SERVER/nxserver/nuxeo.war/ui`. In order to instruct these resources to be copied over their original counterparts, we must include the following ``require`` and ``install`` instructions in `deployment-fragment.xml` at `resources/OSGI-INF`:
 
 ```xml
-<require>org.nuxeo.web.ui</require>
+<require>org.nuxeo.web.ui</require
+
+<install>
+  <unzip from="${bundle.fileName}" to="/" prefix="web">
+    <include>web/nuxeo.war/**</include>
+    <exclude>web/nuxeo.war/ui/i18n/**</exclude>
+  </unzip>
+</install>
 ```
 
 For more information on the `deployment-fragment` structure, see the **Building and Deployment** section of [Web UI Customization Tutorial]({{page space='nxdoc' page='web-ui-customization-tutorial'}}) documentation.
