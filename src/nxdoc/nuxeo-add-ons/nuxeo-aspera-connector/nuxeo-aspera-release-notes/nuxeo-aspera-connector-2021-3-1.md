@@ -9,9 +9,12 @@ review:
 toc: true
 ---
 
+## What's New in Aspera for LTS 2021 (version 2021.3.1)
+
+This is a bugfix release.
 
 ## Released Changes
 
-
-
-## Learn More
+- The author and Last Contributor name set as "System" in the Aspera folder upload has been changed to the actual user<br/>[[NXP-30867](https://jira.nuxeo.com/browse/NXP-30867)]
+- Aspera download from collection is now possible<br/>[[NXP-30862](https://jira.nuxeo.com/browse/NXP-30862)]
+- Manual retry mechanism implemented for failed Aspera upload complete transfers<br/>[[NXP-30965](https://jira.nuxeo.com/browse/NXP-30965)
