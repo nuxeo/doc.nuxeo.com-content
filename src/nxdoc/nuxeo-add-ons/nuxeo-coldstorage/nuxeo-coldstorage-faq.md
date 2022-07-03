@@ -108,7 +108,7 @@ Content can also be moved to cold storage gradually on a per event basis, for ex
 
 It is not possible to dispatch content into cold storage directly.
 
-Related question: <a href="#can-i-bulk-import-content-into-cold-storage-directly">Can I Bulk Import Content Into Cold Storage Directly?</a>
+Related question: [Can I Bulk Import Content Into Cold Storage Directly](#can-i-bulk-import-content-into-cold-storage-directly)?
 
 ### What Happens if I Reindex Content Under Cold Storage?
 
@@ -224,11 +224,12 @@ Content that is under cold storage can't be put under retention.
 
 ### Nuxeo Drive
 
-//TODO Manon? Help please!
+#### Synchronization
 
-What we want to know:
-- what happens when my content is in sync and it's moved to cold sto: should be replaced with the preview (should be standard behavior, just like if the file was replaced)
-- any other consequence you could think of that's worth mentioning
+- **Synchronize documents that are already under Cold Storage**: it will synchronize the "compressed" rendition of it. Restore and/or retrieve actions are available on sychronized document.
 
+- **Send to Cold Storage documents that are already synchronized**: the format and rendition of your document will be updated in your local Nuxeo Drive folder. And if you perform a restore of your document, format and size will go back to original in your local Nuxeo Drive folder.
 
-=> Check with https://jira.nuxeo.com/browse/QA-513
+#### Direct Transfer
+
+You will be able to upload documents to your instance using Direct transfer and then send them to Cold Storage.
