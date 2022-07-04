@@ -21,6 +21,7 @@ This is a bugfix release.
 
 - Text files containing special characters are correctly rendered.<br/>[[NEV-590](https://jira.nuxeo.com/browse/NEV-590)]
 - Edit box disappears upon clicking the "stop annotation edition" when working with circle annotations.<br/>[[NEV-464](https://jira.nuxeo.com/browse/NEV-464)]
+- Fixed a cache issue that prevented some files from loading correctly.<br/>[[NEV-596](https://jira.nuxeo.com/browse/NEV-596)]
 
 ## Learn More
 
