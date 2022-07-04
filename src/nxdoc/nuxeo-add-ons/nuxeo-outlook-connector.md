@@ -107,9 +107,9 @@ curl -u Administrator:xxxx\   -H 'Content-Type: application/json' \   -X POST ht
 
 The Nuxeo Outlook Connector requires Windows 10 with a local installation of Office 2019 or Office 365.
 
-#### Settings migration from previous versions
+#### Settings Migration From Previous Versions
 
-When installing a newer version of the Outlook Connector, the settings file (NuxeoClientSettings-x.x.x.xml in the %USERPROFILE% folder) will be migrated to a newer version. If possible, settings will be used from the previous version. The setup will try to migrate the most recent version if there are multiple older settings files.
+When installing a newer version of the Outlook Connector, the settings file (`NuxeoClientSettings-x.x.x.xml` in the `%USERPROFILE%` folder) will be migrated to a newer version. If possible, settings will be used from the previous version. The setup will try to migrate the most recent version if there are multiple older settings files.
 
 An administrator can force overwrite parameters from a previous installation using the "FORCEOVERWRITE" parameter from the scripted installation.
 
@@ -507,7 +507,7 @@ You can access the context menu by a right click on any selected item. The conte
 
 ![]({{file name='ContextMenuDocument.png'}} ?w=250)
 
-- **Open: Downloads the document and opens it with the standard application (same as double click).
+- **Open**: Downloads the document and opens it with the standard application (same as double click).
 - **Open in browser**: Opens the document within the web application. This is giving your access to the full set of capabilities of your business application.
 - **Edit in Nuxeo Drive / Edit Online**: Depending on your configuration the document will be opened in the associated application for editing the document directly.</br>
     Please refer to the Nuxeo documentation pages for further information:
@@ -527,19 +527,31 @@ You can access the context menu by a right click on any selected item. The conte
 - **Cut & Paste**: Adds documents to the clipboard to be moved later with the Paste option. This can also be done via drag & drop by dragging one or multiple documents onto a valid target - Hotkey: CTRL + X, CTRL + V
 - **Delete**: Removes the selected item from the Nuxeo repository. Alternatively you can click on the delete button ![]({{file name='Delete.png'}} ?w=20) in the menu bar.
 
-#### Thumbnail view
+#### Thumbnail View
 
-With version 1.2.0 and above you can enable thumbnails instead of fixed icons for your repository. To do this, go to Settings → View → Enable thumbnails. Thumbnails for pictures and videos are enabled by default but you can also choose to show thumbnails for different mime types if your server generates these.
+With version 1.2.0 and above you can enable thumbnails instead of fixed icons for your repository. To do this, go to **Settings** > **View** > **Enable thumbnails**.
+
+Thumbnails for pictures and videos are enabled by default but you can also choose to show thumbnails for different mime types if your server generates these.
 
 When hovering with your mouse over a thumbnail, a larger image will be displayed.
 
-![]({{file name='Thumbnail.png'}} ?w=250)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/outlook-connector/thumbnail
+    name: 455016568.png
+    addins#screenshot#up_to_date
+--}}
+![thumbnail](nx_asset://c7d4e7e1-1d54-42bd-9b73-957bfd937bee ?w=250,border=true)
 
-#### Dark mode
+#### Dark Mode
 
 Version 1.2.0 introduces a dark mode for the client which can be enabled in the settings (Settings → General → Choose Theme). After changing a new theme, Outlook has to be restarted.
 
-![]({{file name='DarkMode.png'}} ?w=250)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/outlook-connector/Dark mode
+    name: 455016570.png
+    addins#screenshot#up_to_date
+--}}
+![Dark mode](nx_asset://653f0b4b-7bec-412e-b2e6-b52480de3cae ?w=250,border=true)
 
 #### View Emails in Nuxeo Web UI
 
