@@ -300,13 +300,13 @@ Before uploading any file, you need to initialize a batch, even if there is only
 This handshake phase is mandatory to acquire a server-side generated batch ID to be used in subsequent requests as part of the REST resource path.
 
 ```
-POST http://NUXEO_SERVER/nuxeo/api/v1/upload/
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/new/default
 ```
 
-This request returns a 201 CREATED status code with the following JSON data:
+This request initializes a new batch associated with the `default` handler and returns a 201 CREATED status code with the following JSON data:
 
 ```javascript
-{"batchId": batchId}
+{"provider": providerId, "fileEntries": [], "batchId": batchId}
 ```
 
 The batch id can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#uploading-a-file-in-chunks).
@@ -327,7 +327,7 @@ Example for Amazon Web Services S3
 On batch initialization you call:
 
 ```
-POST http://NUXEO_SERVER/nuxeo/api/v1/upload/<provider>
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/new/<provider>
 ```
 
 This will associate all the upload mechanism to this specific provider. We recommend reading documentation regarding the specified provider. To upload several files using different providers, you need to use different batches with different providers.
