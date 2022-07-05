@@ -15,17 +15,17 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-22'}}
 # What's New in LTS 2021.22 / LTS 2021-HF22
 
-## Fix Rest API when setting multivalued Integer Property
+## Fix Rest API When Setting Multivalued Integer Property
 
 REST API updates correctly multivalued Integer properties.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31027](https://jira.nuxeo.com/browse/NXP-31027)
+<i class=“fa fa-long-arrow-right” aria-hidden=“true”></i>&nbsp;More on JIRA ticket [NXP-31027](https://jira.nuxeo.com/browse/NXP-31027)
 
-## Handle array/list of blobs when writing entries to Audit stream
+## Handle Array/List of Blobs When Writing Entries to Audit Stream
 
 Multivalued blob properties are ignored in the audit records.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30986](https://jira.nuxeo.com/browse/NXP-30986)
+<i class=“fa fa-long-arrow-right” aria-hidden=“true”></i>&nbsp;More on JIRA ticket [NXP-30986](https://jira.nuxeo.com/browse/NXP-30986)
 
 
 # Learn More
