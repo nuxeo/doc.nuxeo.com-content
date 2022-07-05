@@ -103,12 +103,12 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 22
 
-### Route long indexing command to the Bulk Service keeping WM indexing near realtime
+### Route Long Indexing Command to the Bulk Service Keeping WM Indexing Near Realtime
 
 Use `elasticsearch.index.recursive.bulkService=true` in `nuxeo.conf` to activate the routing of long indexing command to the bulk service.
 In cluster mode, It is recommended to use the option when the bulk service is distributed (i.e. Kafka is enabled).
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30805](https://jira.nuxeo.com/browse/NXP-30805)
+<i class=“fa fa-long-arrow-right” aria-hidden=“true”></i>&nbsp;More on JIRA ticket [NXP-30805](https://jira.nuxeo.com/browse/NXP-30805)
 
 ## Hotfix 21
 
@@ -318,4 +318,3 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
-
