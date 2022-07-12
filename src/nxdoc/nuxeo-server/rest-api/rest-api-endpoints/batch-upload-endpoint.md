@@ -306,7 +306,7 @@ POST http://NUXEO_SERVER/nuxeo/api/v1/upload/new/default
 This request initializes a new batch associated with the `default` handler and returns a 200 OK status code with the following JSON data:
 
 ```javascript
-{"provider": providerId, "fileEntries": [], "batchId": batchId}
+{"provider": "default", "fileEntries": [], "batchId": batchId}
 ```
 
 The batch id can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#uploading-a-file-in-chunks).
