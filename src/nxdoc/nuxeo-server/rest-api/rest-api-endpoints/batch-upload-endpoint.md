@@ -303,7 +303,7 @@ This handshake phase is mandatory to acquire a server-side generated batch ID to
 POST http://NUXEO_SERVER/nuxeo/api/v1/upload/new/default
 ```
 
-This request initializes a new batch associated with the `default` handler and returns a 201 CREATED status code with the following JSON data:
+This request initializes a new batch associated with the `default` handler and returns a 200 OK status code with the following JSON data:
 
 ```javascript
 {"provider": providerId, "fileEntries": [], "batchId": batchId}
