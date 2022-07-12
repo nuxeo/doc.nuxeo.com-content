@@ -112,7 +112,6 @@ When you no longer want the file to be stored in cold storage, you can request a
 
 You can delete a document moved to cold storage as any other document.
 
-<!--
 ## Technical Overview
 
 ### Flowchart
@@ -144,7 +143,7 @@ You can delete a document moved to cold storage as any other document.
     addins#screenshot#up_to_date
 --}}
 ![restoreFromColdstorageFlowChart](nx_asset://654c9821-9d0a-4055-8d89-d56aacc50858)
--->
+
 
 ## Learn More
 
