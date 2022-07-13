@@ -19,16 +19,16 @@ The Nuxeo Enhanced Viewer is provided by the integration of the ARender software
 You should contact your Nuxeo Administrator or Nuxeo sales representative to get access to these packages.
 {{/callout}}
 
-The ARender software is extended by Nuxeo to integrate the Nuxeo Connector and configurations/customizations.
-The Nuxeo Connector adds to the Previewer the capability to communicate with the Nuxeo REST API, and mostly leverages the [comment & annotation endpoints]({{page page='comments#rest-api'}}).
+The ARender software is extended by Nuxeo to integrate the addon and configurations/customizations.
+The addon adds to the Previewer the capability to communicate with the Nuxeo REST API, and mostly leverages the [comment & annotation endpoints]({{page page='comments'}}#rest-api).
 
-The ARender software is provided through 5 Docker images to pull from our Docker registry docker-arender.packages.nuxeo.com:
+The ARender software is provided through 5 Docker images to pull from our Docker registry `docker-arender.packages.nuxeo.com`:
 
-- nuxeo/arender-document-converter
-- nuxeo/arender-document-renderer
-- nuxeo/arender-document-service-broker
-- nuxeo/arender-document-text-handler
-- nuxeo/arender-ui
+- `nuxeo/arender-document-converter`
+- `nuxeo/arender-document-renderer`
+- `nuxeo/arender-document-service-broker`
+- `nuxeo/arender-document-text-handler`
+- `nuxeo/arender-ui`
 
 NEV Architecture and communication between services:
 
@@ -65,7 +65,7 @@ The preferred way to run NEV services is to use Kubernetes and Helm 3 as they pr
 
 ### Kubernetes
 
-The Helm Chart and installation instructions are available in the [ARender Documentation](https://docs.arender.io/fr/install/kubernetes/).
+The Helm Chart and installation instructions are available in the [ARender Documentation](https://docs.arender.io/install/kubernetes/).
 
 {{#> callout type='warning' heading='Private services'}}
 You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these services.
@@ -246,7 +246,7 @@ The UI customization is done through two files to put in the `/docker-entrypoint
 - `arender.css` to customize the style
 - `arender.properties` to customize the behavior
 
-Please follow the [ARender Configuration Guide](https://docs.arender.io/fr/configuration/web-ui/) for more information about available properties and style.
+Please follow the [ARender Configuration Guide](https://docs.arender.io/configuration/web-ui/) for more information about available properties and style.
 
 {{#> callout type='info' heading='Properties as environment variables'}}
 UI properties can also be customized through environment variables. You need to capitalize all letters in the key, and to replace `.` by `_`, and prefix it with `ARENDER_`.</br>
