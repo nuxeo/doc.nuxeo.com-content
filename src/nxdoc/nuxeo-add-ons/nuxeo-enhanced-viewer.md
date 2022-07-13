@@ -293,6 +293,10 @@ A new window is opened with the two documents side-by-side, highlighting text wh
 
 You can see the annotations linked to each version on the same screen, and even annotate one file from this view.
 
+### Content Redaction
+
+Nuxeo Enhanced Viewer can also be used to redact content, for example to remove personal identifying information (PII) from your documents. This use case is described in a dedicated [How to Use Content Redaction]({{page page='how-to-use-content-redaction'}}) page.
+
 ### Open Several Documents Within the Same Viewer
 
 With the Nuxeo Enhanced Viewer, you can open several documents within the same viewer and so view all your documents at the same time. And you can scroll from one to the other and view/edit the annotations of each of them:
@@ -303,7 +307,6 @@ With the Nuxeo Enhanced Viewer, you can open several documents within the same v
     addins#screenshot#up_to_date
 --}}
 ![nev-open-several-view](nx_asset://035e295f-88a1-4060-b764-ed315e340794 ?w=650,border=true)
-
 
 This feature is available in all results views of Nuxeo Web UI. Once you have selected at least 2 documents, the action is available into the action list:
 
