@@ -7,9 +7,11 @@ review:
   date: '2022-07-01'
   status: ok
 toc: true
+hidden: true
 ---
 
-## What's New in Aspera for LTS 2019 (version 3.0.7)
+{{! multiexcerpt name='nuxeo-aspera-connector'}}
+## What's New in Aspera 3.0.7 for LTS 2019
 
 This is a bugfix release.
 
@@ -18,4 +20,4 @@ This is a bugfix release.
 - The author and Last Contributor name set as "System" in the Aspera folder upload has been changed to the actual user<br/>[[NXP-30867](https://jira.nuxeo.com/browse/NXP-30867)]
 - Aspera download from collection is now possible<br/>[[NXP-30862](https://jira.nuxeo.com/browse/NXP-30862)]
 - Manual retry mechanism implemented for failed Aspera upload complete transfers<br/>[[NXP-30965](https://jira.nuxeo.com/browse/NXP-30965)
-
+{{! /multiexcerpt}}
