@@ -3,7 +3,7 @@ title: Nuxeo Aspera Connector
 description: 'Nuxeo Aspera Connector enables users to download/upload binaries with Aspera.'
 review:
     comment: ''
-    date: '2019-07-30'
+    date: '2022-07-18'
     status: ok
 labels:
     - lts2019-ok
