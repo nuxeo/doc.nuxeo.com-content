@@ -89,6 +89,8 @@ Repeat mode enabled by default. </td>
 </table>
 </div>
 
+//TODO add redaction related buttons
+
 **Repeat mode**: For annotations with repeat mode enabled, once the annotation is selected, you can add several annotations in a row. To disable the repeat mode, click on the annotation icon again.
 
 Other buttons are available on the top bar to optimize the visualization of the document: zoom, rotation, full screen, pagination, height and width adjustment, etc.
@@ -228,6 +230,8 @@ Different options are available: "Urgent", approved on the current date, "Insert
 
 ### Download
 
+//TODO update with NEV 2.2.0 download menu
+
 Hover over the download icon {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-download-button.png
     name: annotations-download-button.png
@@ -249,6 +253,8 @@ Hover over the download icon {{!--     ### nx_asset ###
 - Open an URL
 
 ### Print
+
+//TODO update with NEV 2.2.0 print menu
 
 1. Click on the Print button {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-print-button.png
