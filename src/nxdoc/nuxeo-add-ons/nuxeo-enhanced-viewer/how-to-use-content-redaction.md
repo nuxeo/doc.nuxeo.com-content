@@ -13,11 +13,14 @@ toc: true
 tree_item_index: 100
 ---
 
+{{! multiexcerpt name='redaction-introduction'}}
+
 {{#> callout type='info'}}
 The Content Redaction feature requires at minimum NEV `2.2.0` and Nuxeo ARender addon `2021.3.0`.
 {{/callout}}
 
 Protecting and removing personal identifying information (PII) from your documents can be a requirement in order to comply with regulations such as the General Data Privacy Regulation (GDPR) or the California Consumer Privacy Act (CCPA).
+{{! /multiexcerpt}}
 
 Nuxeo Enhanced Viewer helps you with this use case by allowing to apply temporary or permanent redactions to your content. This page explains what to expect from this feature, and how to leverage it in your Nuxeo instance.
 
@@ -119,13 +122,19 @@ While you need to create a chain in order to override the logic, remember that y
 
 ## Questions and Answers
 
-How does it behave with multi layer pdf files?
+### Does Redaction Work on PDF Files with Multiple Layers?
 
-How does it behave with multiple docs?
+Yes. Any redaction will be applied on top of the existing layers, and content in layers below will be removed when generating a permanently redacted file.
 
-Is there a way for me to make this work at scale?
-  AI + creating annotations programatically
+### Can I Redact Multiple Files in Bulk?
 
-Known limitations
+Redaction is only applied to individual files from the Nuxeo Enhanced Viewer interface.
 
-Update https://doc.nuxeo.com/nxdoc/nuxeo-data-privacy/ to mention redaction
+Automating the redaction would require additional integration. It is possible to envision integrating with a third-party service (e.g., [AWS Macie](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html)) and / or using regular expressions to detect specific patterns (e.g., social security numbers) and to create redactions in an automated way since [redactions are stored as documents]({{page space='nxdoc' page='how-to-import-documents-with-annotations'}}) with customization.
+
+## Known limitations
+
+### Limited Support for Redacting Videos
+Videos can be redacted using the NEV interface. However, it is not possible to generate a permanently redacted version of the video afterwards: the unredacted file will always be returned.
+
+Same goes with download and print: the unredacted file will always be returned.
