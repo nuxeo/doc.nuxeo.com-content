@@ -94,7 +94,7 @@ About the Web UI structure:
 In order to extend the Web UI (outside Studio), you'll need to create your own marketplace which will deploy your own resources in `$NUXEO_SERVER/nxserver/nuxeo.war/ui`. In order to instruct these resources to be copied over their original counterparts, we must include the following ``require`` and ``install`` instructions in `deployment-fragment.xml` at `resources/OSGI-INF`:
 
 ```xml
-<require>org.nuxeo.web.ui</require
+<require>org.nuxeo.web.ui</require>
 
 <install>
   <unzip from="${bundle.fileName}" to="/" prefix="web">
