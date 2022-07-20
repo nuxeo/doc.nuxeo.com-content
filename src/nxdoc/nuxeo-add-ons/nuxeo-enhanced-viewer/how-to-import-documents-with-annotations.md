@@ -536,3 +536,14 @@ Below is an example of ARender annotation format for each kind of annotation.
    </ns0:annots>
 </ns0:xfdf>
 ```
+
+### Redaction Sample
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:xfdf xmlns:ns0="http://ns.adobe.com/xfdf/">
+  <ns0:annots>
+    <ns0:square color="#000000" flags="obfuscate" name"cc69e194-a069-42bd-b884-d6925501c606" last-modifier="Administrator" page="0" rect="60.588005,209.8001,413.76715,331.5406" title="Administrator" creationdate="D:20220705101305+00'00'" opacity="1.0" fringe="0.0,0.0,0.0,0.0" interior-color="#000000" width="0.0" style="solid" intensity=""/>
+  </ns0:annots>
+</ns0:xfdf>
+```
