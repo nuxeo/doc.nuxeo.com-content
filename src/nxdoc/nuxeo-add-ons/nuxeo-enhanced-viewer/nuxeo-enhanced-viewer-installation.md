@@ -172,6 +172,94 @@ viewer:
 
 The values above have been written for the ARender Helm Chart `4.8.1` and NEV `2.1.2`.
 
+### Kubernetes-less
+
+It is possible to run the NEV services without Kubernetes, you will need to run the 5 Docker images and provide them configuration for the inter-services communication, and a shared volume.
+
+#### Rendition
+
+The shared volume has to be mounted inside each rendition containers (the `nuxeo/arender-document-converter`, `nuxeo/arender-document-renderer`, `nuxeo/arender-document-service-broker` and `nuxeo/arender-document-text-handler`) at the `/arender/tmp` location.
+
+##### Document Converter
+
+The document converter should be accessible on the port `19999`.
+
+The document converter needs to communicate with the document service broker.
+
+The environment variables below must be configured:
+
+```yaml
+DCV_APP_EUREKA_HOSTNAME: BROKER_HOSTNAME # to replace
+DCV_APP_EUREKA_SERVER_PORT: 8761
+DCV_EUREKA_INSTANCE_METADATA.MAP_HOST.NAME: CONVERTER_HOSTNAME # to replace
+JAVA_OPTS: -Dsun.net.inetaddr.ttl=0 -XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=50.0 -Djdk.tls.client.protocols=TLSv1.2
+```
+
+##### Document Renderer
+
+The document renderer should be accessible on the port `9091`.
+
+The document renderer needs to communicate with the document service broker.
+
+The environment variables below must be configured:
+
+```yaml
+DRN_APP_EUREKA_HOSTNAME: BROKER_HOSTNAME # to replace
+DRN_APP_EUREKA_SERVER_PORT: 8761
+DRN_EUREKA_INSTANCE_METADATA.MAP_HOST.NAME: RENDERER_HOSTNAME # to replace
+JAVA_OPTS: -Dsun.net.inetaddr.ttl=0 -XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=50.0 -Djdk.tls.client.protocols=TLSv1.2
+```
+
+##### Document Service Broker
+
+The document service broker should be accessible on the port `8761`.
+
+The document service broker needs to communicate with the document converter, the document renderer, and the document text handler.
+
+The environment variables below must be configured:
+
+```yaml
+DSB_KUBEPROVIDER_KUBE.HOSTS_${CONVERTER_HOSTNAME}: 19999 # the ${CONVERTER_HOSTNAME} is to replaced by the converter hostname
+DSB_KUBEPROVIDER_KUBE.HOSTS_${RENDERER_HOSTNAME}: 9091 # the ${RENDERER_HOSTNAME} is to replaced by the renderer hostname
+DSB_KUBEPROVIDER_KUBE.HOSTS_${TEXT_HANDLER_HOSTNAME}: 8899 # the ${TEXT_HANDLER_HOSTNAME} is to replaced by the text handler hostname
+JAVA_OPTS: -Dsun.net.inetaddr.ttl=0 -XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=70.0 -Djdk.tls.client.protocols=TLSv1.2
+```
+
+##### Document Text Handler
+
+The document text handler should be accessible on the port `8899`.
+
+The document text handler needs to communicate with the document service broker.
+
+The environment variables below must be configured:
+
+```yaml
+DTH_APP_EUREKA_HOSTNAME: BROKER_HOSTNAME # to replace
+DTH_APP_EUREKA_SERVER_PORT: 8761
+DTH_EUREKA_INSTANCE_METADATA.MAP_HOST.NAME: TEXT_HANDLER_HOSTNAME # to replace
+JAVA_OPTS: -Dsun.net.inetaddr.ttl=0 -XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=70.0 -Djdk.tls.client.protocols=TLSv1.2
+```
+
+#### Viewer
+
+The viewer is the only one which should be accessible publicly as the user will browse to it. The application is running on the port `8080`, a proxy with TLS configuration should be set up in front of it, the `Forwarded` or `X-Forwarded-*` headers must be configured on the proxy.
+
+The viewer needs to communicate with the document service broker and Nuxeo.
+
+The environment variables below must be configured:
+
+```yaml
+# required values
+ARENDERSRV_ARENDER_SERVER_RENDITION_HOSTS: http://BROKER_HOSTNAME:8761/ # to replace
+ARENDERSRV_NUXEO_SERVER_URL: https://nuxeo-url # to replace
+ARENDERSRV_NUXEO_SERVER_ARENDER_SECRET: OAUTH2_SECRET # Same than the one in nuxeo.conf
+# optional values
+ARENDERSRV_NUXEO_SERVER_CONTEXT_PATH: /nuxeo
+ARENDERSRV_NUXEO_CLIENT_TIMEOUT: "30" # seconds
+ARENDERSRV_NUXEO_CLIENT_POOL_MAX_IDLE_CONNECTIONS: "200"
+ARENDERSRV_NUXEO_CLIENT_POOL_KEEP_ALIVE_DURATION: "900" # seconds
+```
+
 ### Previewer High Availability
 
 The Previewer can be deployed in an High Availability way, to do so you can choose between [Hazelcast](https://hazelcast.com/) or [MongoDB](https://www.mongodb.com/) to share the HTTP sessions and OAuth2 tokens between previewer instances.
@@ -202,6 +290,8 @@ spec:
     release: nev # to replace by the release name when you have deployed the NEV stack
     component: viewer
 ```
+
+In a Kubernetes-less setup, you need to configure a DNS record resolving all your previewer hostnames.
 
 Then you need to configure on the Previewer the environment variables below:
 
