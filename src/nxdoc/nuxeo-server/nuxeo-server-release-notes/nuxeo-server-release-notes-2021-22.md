@@ -8,8 +8,7 @@ review:
 labels:
     - release-notes
 toc: true
-tree_item_index: 0
-hidden: true
+tree_item_index: 3010
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2021-22'}}
