@@ -15,54 +15,57 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-23'}}
 # What's New in LTS 2021.23 / LTS 2021-HF23
 
-## Write correctly the error when uncaught exceptions occur in OAuth2 servlet
+## Nuxeo Server
 
-OAuth2 servlet better handles unexpected error
+### Stream Management: Cat Endpoint to View Stream Content
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31104](https://jira.nuxeo.com/browse/NXP-31104)
+New management API to view stream records.
 
-## Stream Management: Cat endpoint to view stream content
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31085](https://jira.nuxeo.com/browse/NXP-31085)
 
-New management API to view stream records
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31085](https://jira.nuxeo.com/browse/NXP-31085)
-
-## Avoid Record overflow during bulk indexing of huge fulltext
-
-Record overflow is avoided during bulk indexing of huge fulltext
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31080](https://jira.nuxeo.com/browse/NXP-31080)
-
-## Change ElasticSearchComponent#isReady method visibility to public
+### Change ElasticSearchComponent#isReady Method Visibility to Public
 
 ElasticSearchComponent#isReady method visibility is now public.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31068](https://jira.nuxeo.com/browse/NXP-31068)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31068](https://jira.nuxeo.com/browse/NXP-31068)
 
-## Fix handling of & character in encrypted properties
+## Majors Bug Fixes
 
-Decrypted conf properties containing xml special characters are now allowed
+### Write Correctly the Error When Uncaught Exceptions Occur in OAUTH2 Servlet
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31055](https://jira.nuxeo.com/browse/NXP-31055)
+OAuth2 servlet better handles unexpected error.
 
-## Fix update of proxy's Picture metadata when a picture document is published before Picture properties are computed
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31104](https://jira.nuxeo.com/browse/NXP-31104)
+
+### Avoid Record Overflow During Bulk Indexing of Huge Fulltext
+
+Record overflow is avoided during bulk indexing of huge fulltext.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31080](https://jira.nuxeo.com/browse/NXP-31080)
+
+### Fix Handling of `&` Character in Encrypted Properties
+
+Decrypted conf properties containing xml special characters are now allowed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31055](https://jira.nuxeo.com/browse/NXP-31055)
+
+### Fix Update of Proxy’s Picture Metadata When a Picture Document Is Published Before Picture Properties Are Computed
 
 Proxy of version are now indexed when version received a system update
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31007](https://jira.nuxeo.com/browse/NXP-31007)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31007](https://jira.nuxeo.com/browse/NXP-31007)
 
-## ImagingComponent callPictureConversionChain should handle automation transaction
+### ImagingComponent callPictureConversionChain Should Handle Automation Transaction
 
 ImagingComponent no longer converts picture outside current transaction, caller must handle transaction management explicitly. An option is available to fill picture views outside current transaction in DefaultPictureAdapter.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31001](https://jira.nuxeo.com/browse/NXP-31001)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31001](https://jira.nuxeo.com/browse/NXP-31001)
 
-## Avoid transaction timeout when mongodb maxtime is reached
+### Avoid Transaction Timeout When MongoDB Maxtime Is Reached
 
-The transaction timeout is avoided when mongodb maxtime is reached.
+The transaction timeout is avoided when MongoDB maxtime is reached.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30992](https://jira.nuxeo.com/browse/NXP-30992)
-
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30992](https://jira.nuxeo.com/browse/NXP-30992)
 
 # Learn More
 
