@@ -27,25 +27,29 @@ toc: true
 </tr>
 <tr>
 <th colspan="1">Upgraded components</th>
-<td colspan="1">ARender software, Previewer (ARender connector), Nuxeo addon</td>
+<td colspan="1">ARender Rendition, ARender Previewer (Nuxeo ARender connector), Nuxeo ARender addon</td>
 </tr>
 <tr>
-<th colspan="1">ARender software version</th>
+<th colspan="1">ARender Rendition version</th>
 <td colspan="1">nuxeo-arender-document-service-broker 2.0.0, nuxeo-arender-document-renderer 2.0.0, nuxeo-arender-document-converter 2.0.0, nuxeo-arender-document-text-handler 2.0.0</td>
 </tr>
 <tr>
-<th colspan="1">Previewer (ARender connector) version</th>
+<th colspan="1">ARender Previewer (Nuxeo ARender connector) version</th>
 <td colspan="1">nuxeo-arender-ui 2.0.0</td>
 </tr>
 <tr>
-<th colspan="1">Nuxeo addon version</th>
-<td colspan="1">nuxeo-arender-2021.2.0, nuxeo-arender-10.7.0</td>
+<th colspan="1">Nuxeo ARender addon version</th>
+<td colspan="1">nuxeo-arender-2021.2.0</td>
 </tr>
 </tbody>
 </table>
 </div>
 
 This is a new major version with new features, UI improvements, architectural changes, bug fixes, and improvements.
+
+{{#> callout type='info'}}
+Starting from NEV `2.0.0` and for upcoming versions, the NEV stack is compatible with any Nuxeo ARender addon version greater than `10.7.0`.
+{{/callout}}
 
 {{#> callout type='warning'}}
 This new version includes architectural changes involving a renaming of the components and a new versioning as well. You will find more details below.
