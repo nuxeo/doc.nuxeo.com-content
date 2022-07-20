@@ -1,6 +1,6 @@
 ---
-title: NEV 10.4.5
-description: Release notes for Nuxeo Enhanced Viewer 10.4.5.
+title: NEV 2021.1.1
+description: Release notes for Nuxeo Enhanced Viewer 2021.1.1.
 tree_item_index: 8000
 review:
   comment: ''
@@ -10,7 +10,7 @@ toc: true
 ---
 
 {{! multiexcerpt name='nuxeo-enhanced-viewer-updates'}}
-## What's new in NEV 10.4.5
+## What's new in NEV 2021.1.1
 
 ### Summary
 
@@ -19,15 +19,15 @@ toc: true
 <tbody>
 <tr>
 <th colspan="1">NEV Version</th>
-<td colspan="1">10.4.5</td>
+<td colspan="1">2021.1.1</td>
 </tr>
 <tr>
 <th colspan="1">ARender version</th>
-<td colspan="1">4.2.0.NX1.6</td>
+<td colspan="1">4.2.0.NX1.4</td>
 </tr>
 <tr>
 <th colspan="1">Release date</th>
-<td colspan="1">March 19th 2021</td>
+<td colspan="1">February 25th 2021</td>
 </tr>
 <tr>
 <th colspan="1">Upgraded components</th>
@@ -37,9 +37,21 @@ toc: true
 </table>
 </div>
 
-This new version is dedicated to bug fixing.
+### Improvements
+
+#### Download with FDF Annotations
+
+The "Download with FDF annotations" action allows downloading a document as a PDF with annotations in the Forms Data Format (FDF). Then, you can for instance open the document in Adobe Reader and see the annotations as if you have created them into Adobe Reader.
+
+See [NEV-323](https://jira.nuxeo.com/browse/NEV-323).
 
 ### Major Fixes
+
+#### ARender Broker and Renderer stability improvement
+
+ARender Broker and Renderer services were crashing and restart at the same time due to healthcheck probes instability.
+
+See [NEV-381](https://jira.nuxeo.com/browse/NEV-381).
 
 #### Slowness and Preview Failures With High Volume of Users
 
