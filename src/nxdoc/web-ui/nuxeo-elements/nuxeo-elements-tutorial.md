@@ -189,7 +189,7 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
     # Install bower globally if it is not already done
     $ npm install -g bower
     # Add nuxeo-elements as a bower dependency
-    $ bower install --save nuxeo/nuxeo-elements
+    $ bower install --save nuxeo/nuxeo-elements#2.4.x
     ```
     
     At the version selection prompt, choose `nuxeo-elements#2.4.x` (corresponding to Platform LTS 2019). This adds `nuxeo-elements` as a dependency in `bower.json` and downloads the selected release from our GitHub [repository](https://github.com/nuxeo/nuxeo-elements) into `bower_components`.
