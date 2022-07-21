@@ -47,7 +47,7 @@ NEV `2.2.0` introduces new buttons. If you did override the list of buttons to d
 Using the `Redact` button allows a user to highlight any portion of text in a document and redact it. The action is in repeat mode by default; you can add several redactions in a row and click on the button again to stop adding more.
 
 {{! multiexcerpt name='who-can-see-through-redactions'}}
-{{#> callout type='note'}}
+{{#> callout type='info'}}
 Only users with the Redact permission can see through redactions when they are using Nuxeo Enhanced Viewer.
 {{/callout}}
 {{! /multiexcerpt}}
@@ -62,8 +62,8 @@ Using the `Redact Area` button allows a user to highlight any area (e.g., over i
 
 From the search panel, entering a keyword and using the `Search and Redact` button allows you to redact all occurrences of a particular keyword. The redactions are applied and saved immediately when pressing the button.
 
-{{#> callout type='note'}}
-Search to redact is only applied manually.
+{{#> callout type='info'}}
+Search to redact is applied manually. If the file is updated, NEV will not search automatically for new occurrences of previous search to redact results.
 {{/callout}}
 
 ### Adding a Reason for Redactions
@@ -84,7 +84,9 @@ You can edit or delete your own redactions if you are their author, or any of th
 
 Printing or Downloading options depend on your privileges.
 
+{{! multiexcerpt name='dl-fdf-annotations-warning'}}
 Users _without_ the `Redact` permission will always print or download a redacted copy of the document, except for the `Download with FDF annotations` option. This option does not allow redactions to be applied permanently, and therefore we recommend [hiding the download with FDF annotations option]({{page space='nxdoc' page='nuxeo-enhanced-viewer-release-notes-2-2-0'}}) for tighter security.
+{{! /multiexcerpt}}
 
 To download or print a redacted version of the document, they can use the standard `Print` and `Download` menu options.
 
@@ -134,7 +136,9 @@ Automating the redaction would require additional integration. It is possible to
 
 ## Known limitations
 
-### Limited Support for Redacting Videos
-Videos can be redacted using the NEV interface. However, it is not possible to generate a permanently redacted version of the video afterwards: the unredacted file will always be returned.
+### No Support for Redacting Videos
+Content redaction is disabled for videos because it is not possible to generate a permanently redacted version of the video at this stage.
 
-Same goes with download and print: the unredacted file will always be returned.
+### Download With FDF Annotations Lets Users See Through Redactions
+
+{{{multiexcerpt 'dl-fdf-annotations-warning' page='how-to-use-content-redaction'}}}
