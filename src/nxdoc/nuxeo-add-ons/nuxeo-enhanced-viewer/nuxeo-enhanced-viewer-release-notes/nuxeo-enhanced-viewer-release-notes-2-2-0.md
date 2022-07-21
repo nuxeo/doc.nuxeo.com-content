@@ -52,6 +52,13 @@ A couple of non-blocker known issues regarding this feature have been identified
 - Downloading / Printing the redacted version of a PNG file can fail:<br/>[[NEV-604](https://jira.nuxeo.com/browse/NEV-604)]
 - When generating a permanently redacted file, the corresponding notification disappears too quickly:<br/>[[NEV-599](https://jira.nuxeo.com/browse/NEV-599)]
 
+## Noteworthy Changes
+
+The following options have been removed by default from the download menu:
+
+- Open a local file
+- Open an URL
+
 ## Learn More
 
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project IN %28'NEV'%29 AND fixVersion IN %28'arender-2.2.0'%29 ORDER BY type DESC, priority DESC) is available in our bug tracking tool.

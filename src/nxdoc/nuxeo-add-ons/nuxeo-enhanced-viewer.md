@@ -86,11 +86,42 @@ Repeat mode enabled by default. </td>
 ![annotations-strikethrough-text.png](nx_asset://463ebd3a-e506-4f3b-b52a-7f122aa48456 ?w=40)</td>
 <td colspan="1"> Add strikethrough text. </td>
 </tr>
+<tr>
+  <td colspan="1">
+  {{!--     ### nx_asset ###
+  path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Enhanced Viewer/nuxeo-enhanced-viewer/redact-text.png
+  name: redact-text.png
+  addins#icon#up_to_date
+--}}
+![redact-text.png](nx_asset://171fa367-db1a-4376-aed8-d56d0acaacf2 ?border=true)
+  </td>
+<td colspan="1"> Redact text (since NEV 2.2.0, [requires the Redact permission]({{page page='how-to-use-content-redaction'}})). </br> Repeat mode enabled by default.</td>
+</tr>
+<tr>
+  <td colspan="1">
+  {{!--     ### nx_asset ###
+  path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Enhanced Viewer/nuxeo-enhanced-viewer/redact-area.png
+  name: redact-area.png
+  addins#icon#up_to_date
+--}}
+![redact-area.png](nx_asset://042a0a3a-e921-4eb5-919f-cdbbc8deaf60 ?border=true)
+  </td>
+<td colspan="1"> Redact a zone (since NEV 2.2.0, [requires the Redact permission]({{page page='how-to-use-content-redaction'}})). </br> Repeat mode enabled by default.</td>
+</tr>
+<tr>
+  <td colspan="1">
+  {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Enhanced Viewer/nuxeo-enhanced-viewer/generate-permanently-redacted-version.png
+    name: generate-permanently-redacted-version.png
+    addins#icon#up_to_date
+--}}
+![generate-permanently-redacted-version.png](nx_asset://efee161c-ab85-4f44-a90f-0527d37b0c2b ?border=true)
+  </td>
+<td colspan="1"> Generate a permanently redacted version (since NEV 2.2.0, [requires the Redact permission]({{page page='how-to-use-content-redaction'}})).</td>
+</tr>
 </tbody>
 </table>
 </div>
-
-//TODO add redaction related buttons
 
 **Repeat mode**: For annotations with repeat mode enabled, once the annotation is selected, you can add several annotations in a row. To disable the repeat mode, click on the annotation icon again.
 
@@ -231,40 +262,30 @@ Different options are available: "Urgent", approved on the current date, "Insert
 
 ### Download
 
-//TODO update with NEV 2.2.0 download menu
-
-Hover over the download icon {{!--     ### nx_asset ###
+Click on the download menu button {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-download-button.png
-    name: annotations-download-button.png
+    name: download-menu.png
     addins#icon#up_to_date
 --}}
-![annotations-download-button.png](nx_asset://f08c3d19-0da2-43b8-a023-622aa785f8db ?w=20) to display the file menu with several available actions:
+![annotations-download-button.png](nx_asset://f08c3d19-0da2-43b8-a023-622aa785f8db ?border=true) to display the download menu with several available actions:
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-submenu-download.png
-    name: annotations-submenu-download.png
-    addins#icon#up_to_date
---}}
-![annotations-submenu-download.png](nx_asset://51b7e81b-e7d6-4ea0-9322-d31c04f05faa ?w=150,border=true)
 - Download current file
 - Download current file as PDF
 - Download current file with annotations
+- Download with redactions (since NEV 2.2.0, [requires the Redact permission]({{page page='how-to-use-content-redaction'}}))
 - Download CSV annotations
-- Open a local file
-- Open an URL
+- Download current file with FDF annotations
 
 ### Print
 
-//TODO update with NEV 2.2.0 print menu
-
-1. Click on the Print button {{!--     ### nx_asset ###
+Click on the Print menu button {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-print-button.png
-    name: annotation-print-button.png
+    name: print-menu.png
     addins#icon#up_to_date
 --}}
-![annotation-print-button.png](nx_asset://3b7d1e22-e007-4b92-bac0-0be6ca81bc9b ?w=20) at the top right of the screen.
+![annotation-print-button.png](nx_asset://3b7d1e22-e007-4b92-bac0-0be6ca81bc9b ?border=true) to display the print menu with several available actions:
 
-1. A popup window appears with several print options:
+- Print with options will open a popup window with several print options:
     - Print the current document
     - Print all documents
     {{!--     ### nx_asset ###
@@ -277,6 +298,10 @@ Hover over the download icon {{!--     ### nx_asset ###
 You can select “Include annotations” to print all annotations on a document, or select "Include watermark" to display the selected watermark on all pages of the document.
 
 Once your choice is made, click on “Ok” button, and the page(s) will be printed.
+
+- Print with redactions (available since NEV 2.2.0) only appears if you have the [Redact permission]({{page page='how-to-use-content-redaction'}})). It allows you to print the document with the redactions (and only them, no other kind of annotations), as choosing a print option without the annotations would not include the redactions otherwise. If you do not have the Redact permission, printing will always include the redactions.
+
+- Print all pages.
 
 ### Document Comparison
 

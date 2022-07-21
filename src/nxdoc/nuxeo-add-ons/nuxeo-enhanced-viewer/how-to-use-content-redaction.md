@@ -3,7 +3,7 @@ title: 'HOWTO: Use Content Redaction'
 description: 'Guidance to leverage content redaction with Nuxeo Enhanced Viewer'
 review:
     comment: ''
-    date: '2022-07-13'
+    date: '2022-07-21'
     status: ok
 labels:
     - addon
@@ -46,6 +46,13 @@ NEV `2.2.0` introduces new buttons. If you did override the list of buttons to d
 
 Using the `Redact` button allows a user to highlight any portion of text in a document and redact it. The action is in repeat mode by default; you can add several redactions in a row and click on the button again to stop adding more.
 
+{{!--     ### nx_asset ###
+path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Enhanced Viewer/nuxeo-enhanced-viewer/redact-text.png
+name: redact-text.png
+addins#icon#up_to_date
+--}}
+![redact-text.png](nx_asset://171fa367-db1a-4376-aed8-d56d0acaacf2 ?border=true)
+
 {{! multiexcerpt name='who-can-see-through-redactions'}}
 {{#> callout type='info'}}
 Only users with the Redact permission can see through redactions when they are using Nuxeo Enhanced Viewer.
@@ -56,11 +63,25 @@ Only users with the Redact permission can see through redactions when they are u
 
 Using the `Redact Area` button allows a user to highlight any area (e.g., over images) in a document and redact it. The action is in repeat mode by default; you can add several redactions in a row and click on the button again to stop adding more.
 
+{{!--     ### nx_asset ###
+path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Enhanced Viewer/nuxeo-enhanced-viewer/redact-area.png
+name: redact-area.png
+addins#icon#up_to_date
+--}}
+![redact-area.png](nx_asset://042a0a3a-e921-4eb5-919f-cdbbc8deaf60 ?border=true)
+
 {{{multiexcerpt 'who-can-see-through-redactions' page='how-to-use-content-redaction'}}}
 
 ### Searching to Redact
 
 From the search panel, entering a keyword and using the `Search and Redact` button allows you to redact all occurrences of a particular keyword. The redactions are applied and saved immediately when pressing the button.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Enhanced Viewer/how-to-use-content-redaction/search-to-redact.png
+    name: search-to-redact.png
+    addins#screenshot#up_to_date
+--}}
+![search-to-redact.png](nx_asset://c16f7e13-3fa0-4faa-b11a-5de86f205a89 ?border=true)
 
 {{#> callout type='info'}}
 Search to redact is applied manually. If the file is updated, NEV will not search automatically for new occurrences of previous search to redact results.
@@ -99,7 +120,16 @@ Users who have the `Redact` permission have additional options at their disposal
 
 It is important to remember that redactions are NOT a secure option until a permanently redacted file is generated. They only apply in the context of Nuxeo Enhanced Viewer, and accessing the file through any other means would show it unredacted.
 
-Users with the `Redact` permission can generate a permanently redacted document at any time using the dedicated button. By default, pressing this button will:
+Users with the `Redact` permission can generate a permanently redacted document at any time using the dedicated button.
+
+{{!--     ### nx_asset ###
+  path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Enhanced Viewer/nuxeo-enhanced-viewer/generate-permanently-redacted-version.png
+  name: generate-permanently-redacted-version.png
+  addins#icon#up_to_date
+--}}
+![generate-permanently-redacted-version.png](nx_asset://efee161c-ab85-4f44-a90f-0527d37b0c2b ?border=true)
+
+By default, pressing this button will:
 - Create a copy of the document in the parent location named `[Document title] - Redacted`
 - Replace the main binary file with its permanently redacted version
 
