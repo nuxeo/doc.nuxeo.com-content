@@ -15,6 +15,33 @@ toc: true
 
 ### {{> anchor 'summary'}} Summary
 
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">NEV Version</th>
+<td colspan="1">2.2.0</td>
+</tr>
+<tr>
+<th colspan="1">Upgraded components</th>
+<td colspan="1">ARender Rendition, ARender Previewer (Nuxeo ARender connector), Nuxeo ARender addon</td>
+</tr>
+<tr>
+<th colspan="1">ARender Rendition version</th>
+<td colspan="1">nuxeo-arender-document-service-broker 2.2.0, nuxeo-arender-document-renderer 2.2.0, nuxeo-arender-document-converter 2.2.0, nuxeo-arender-document-text-handler 2.2.0</td>
+</tr>
+<tr>
+<th colspan="1">ARender Previewer (Nuxeo ARender connector) version</th>
+<td colspan="1">nuxeo-arender-ui 2.2.0</td>
+</tr>
+<tr>
+<th colspan="1">Nuxeo ARender addon version</th>
+<td colspan="1">nuxeo-arender-10.8.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+
 ## Content Redaction
 
 {{{multiexcerpt 'redaction-introduction' page='how-to-use-content-redaction'}}}
