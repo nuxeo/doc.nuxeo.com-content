@@ -63,7 +63,3 @@ See [NEV-492](https://jira.nuxeo.com/browse/NEV-492).
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project IN %28'NEV'%29 AND fixVersion IN %28'arender-2.1.0'%29 ORDER BY type DESC, priority DESC) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
-<<<<<<< HEAD
-=======
-
->>>>>>> 2dd408da5 (NXDOC-2473: Rework NEV release notes)
