@@ -133,19 +133,12 @@ Then using the `UserSession` object you can get either the current `Principal` o
 ```java
 UserSession userSession = WebEngine.getActiveContext().getUserSession();
 Principal principal = userSession.getPrincipal();
-CoreSession session1 = userSession.getCoreSession();
-CoreSession session2 = userSession.getCoreSession("myrepo");
-
+CoreSession session = WebEngine.getActiveContext.getCoreSession();
 ```
 
 When calling the `getCoreSession()` method and no managed `CoreSession` was yet created for the target repository then a new `CoreSession` is created and returned. If a `CoreSession` already exists then it is returned.
 
-You can see that there are two flavors of `getCoreSession()` method:
-
-*   `getCoreSession()`
-*   `getCoreSession(String repositoryName)`
-
-The first one is returning a session for the default repository. The second one will return a session for the given repository. By default the `getCoreSession()` method will use the default repository as configured in Nuxeo server, but you can change the repository that will be used on a request basis. See next section for how to change the default repository used by this method.
+By default the `getCoreSession()` method will use the default repository as configured in Nuxeo server, but you can change the repository that will be used on a request basis by passing the header `X-NXRepository`. See next section for how to change the default repository used by this method.
 
 {{#> callout type='note' }}
 
