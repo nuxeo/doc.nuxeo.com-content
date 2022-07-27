@@ -206,11 +206,24 @@ The emails imported in the email folder cannot be modified in the Nuxeo Platform
 
 **To create an email folder**
 
+Required below changes in Gmail account.
+
+1. Turn on [2-step verification](https://support.google.com/accounts/answer/185839?hl=en&co=GENIE.Platform%3DAndroid).
+2. Create an [app password](https://support.google.com/mail/answer/185833).
+3. Enable POP for [all mail](https://support.google.com/mail/answer/7104828).
+
 ### Web UI
 1. In a workspace click on the **Create** button
 1. Select the Email Folder document type.</br>
    The email folder creation form is displayed.
 1. Fill in the creation form (see parameters below) and click on the **CREATE** button.
+
+{{#> callout type='note' }}
+
+Enter the created app password in the password parameter.
+
+{{/callout}}
+
    ![]({{file name='emailFolder-created-web-ui.png'}} ?w=650,border=true)
    The **View** tab of the email folder is displayed.
    You can now fetch emails.
