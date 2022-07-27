@@ -132,7 +132,7 @@ Then using the `UserSession` object you can get either the current `Principal` o
 ```java
 UserSession userSession = WebEngine.getActiveContext().getUserSession();
 Principal principal = userSession.getPrincipal();
-CoreSession session = WebEngine.getActiveContext.getCoreSession();
+CoreSession session = WebEngine.getActiveContext().getCoreSession();
 ```
 
 When calling the `getCoreSession()` method and no managed `CoreSession` was yet created for the target repository then a new `CoreSession` is created and returned. If a `CoreSession` already exists then it is returned.
