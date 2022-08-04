@@ -208,7 +208,7 @@ The emails imported in the email folder cannot be modified in the Nuxeo Platform
 
 Required below changes in Gmail account.
 
-1. Turn on [2-step verification](https://support.google.com/accounts/answer/185839?hl=en&co=GENIE.Platform%3DAndroid).
+1. Turn on [2-step verification](https://support.google.com/accounts/answer/185839).
 2. Create an [app password](https://support.google.com/mail/answer/185833).
 3. Enable POP for [all mail](https://support.google.com/mail/answer/7104828).
 
