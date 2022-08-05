@@ -16,16 +16,18 @@ hidden: true
 {{! multiexcerpt name='web-ui-updates'}}
 ## What's New in Web UI for LTS 2021 (version 3.0.14)
 
-This release improves accessibility.
-
-## Accessibility: nuxeo-date-picker Element Upgrade
-
-The `nuxeo-date-picker` element is based on the [vaadin-date-picker](https://vaadin.com/docs/latest/components/date-picker). We upgraded the underlying element while making sure this remains a transparent upgrade with no impact on your existing application. As the element is widely used throughout Web UI, this reduces significantly accessibility violations.
+This is a bugfix release.
 
 ### Noteworthy Changes
 
 - Fixed a bug that prevented removing documents from easyshare folders.<br/>[[WEBUI-723](https://jira.nuxeo.com/browse/WEBUI-723)]
 - Filters are correctly reset when changing to Grid view.<br/>[[ELEMENTS-1495](https://jira.nuxeo.com/browse/ELEMENTS-1495)]
+- The User Creation form is cleared when adding a new user.<br/>[[ELEMENTS-1359](https://jira.nuxeo.com/browse/ELEMENTS-1359)]
+- The Close button is displayed in the Share Saved Search popup window.<br/>[[WEBUI-397](https://jira.nuxeo.com/browse/WEBUI-397)]
+- When viewing a note, no more empty space is left at the bottom of the screen to make it more consistent with other document types.<br/>[[WEBUI-782](https://jira.nuxeo.com/browse/WEBUI-782)]
+- Standard users won't see any HTTP 404 when calling Audit.QueryWithPageProvider on the first loading of WebUI.<br/>[[WEBUI-811](https://jira.nuxeo.com/browse/WEBUI-811)]
+- Title of the dialog when adding a new cloud service provider entry mentions adding instead of editing.<br/>[[WEBUI-457](https://jira.nuxeo.com/browse/WEBUI-457)]
+- Title of the popup when creating a new vocabulary entry mentions adding instead of editing.<br/>[[WEBUI-429](https://jira.nuxeo.com/browse/WEBUI-429)]
 
 ## Learn More
 
