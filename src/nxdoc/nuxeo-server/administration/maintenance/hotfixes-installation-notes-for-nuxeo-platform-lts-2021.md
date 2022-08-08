@@ -22,7 +22,7 @@ The purpose of this page is to describe the additional actions that need to be d
 {{{multiexcerpt 'intro_hotfix' page='ADMINDOC710:Hotfixes Installation Notes for Nuxeo Platform LTS 2015'}}}
 
 {{#> callout type='warning' }}
-While installing hotfixes, you will see the following message, but you can ignore it and continue.  
+While installing hotfixes, you will see the following message, but you can ignore it and continue.
 ```
 Use of the <copy /> command on JAR files is not recommended, prefer using <update /> command to ensure a safe rollback. (nuxeo-launcher-9.10-HF01-jar-with-dependencies.jar)
 ```
@@ -166,8 +166,8 @@ Max expansions can be configured through the Configuration service with a contri
 
 ### Improve KV TransientStore GC Resiliency
 
-Transient GC was not working in environments with segregated front and worker nodes.  
-As the result, transient stores in s3 might have accumulated lots of data and the current transient GC implementation might not be able to clean them efficiently.  
+Transient GC was not working in environments with segregated front and worker nodes.
+As the result, transient stores in s3 might have accumulated lots of data and the current transient GC implementation might not be able to clean them efficiently.
 In this case, it is recommended to purge manually all objects older than 3 days on transient stores before applying this hotfix.
 
 This can be done using scripts or by creating an Object Lifecycle Management rule with a correct prefix `/transient_*/`.
@@ -282,7 +282,7 @@ If you have contributed a custom `nuxeo.s3.multipart.copy.part.size` Configurati
   <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
     <property name="nuxeo.s3.multipart.copy.part.size">xxxx</property>
   </extension>
-```  
+```
 you need to remove it and replace it by `nuxeo.s3storage.multipart.copy.part.size=xxxx` in `nuxeo.conf`. Though, backward compatibility is kept.
 
 The following `nuxeo.conf` properties have been added:
@@ -326,3 +326,4 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
