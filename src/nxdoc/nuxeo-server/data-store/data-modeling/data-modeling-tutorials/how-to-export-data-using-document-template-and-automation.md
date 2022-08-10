@@ -185,7 +185,7 @@ In a few steps, we will show how to generate a CSV file that lists all the docum
 
 ## Step 1: Creating the Document Template
 
-You can choose between two languages to create a document template: [MVEL](http://mvel.codehaus.org/) and [FreeMarker](http://freemarker.sourceforge.net/). Here we will use FreeMarker. If you are not familiar with this language, you can check out [their documentation](http://freemarker.sourceforge.net/docs/index.html).
+You can choose between two languages to create a document template: [MVEL](http://mvel.documentnode.com/) and [FreeMarker](https://freemarker.apache.org/). Here we will use FreeMarker. If you are not familiar with this language, you can check out [their documentation](https://freemarker.apache.org/docs/index.html).
 
 In this example we want to create a CSV file that displays a list of documents with some metadata. CSV is a quite simple format that is often used to present tabular data.
 
