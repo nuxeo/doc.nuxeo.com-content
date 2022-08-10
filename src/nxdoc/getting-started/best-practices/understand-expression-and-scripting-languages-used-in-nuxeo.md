@@ -305,7 +305,7 @@ history:
     version: '1'
 ---
 
-The Nuxeo platform uses different expression languages and scripting languages (MVEL, EL, Freemarker). The following documentation will help you in understanding which of these languages are available and which variables may be used based on the Nuxeo context you are using.
+The Nuxeo platform uses different expression languages and scripting languages (MVEL, EL, FreeMarker). The following documentation will help you in understanding which of these languages are available and which variables may be used based on the Nuxeo context you are using.
 
 ## Concept
 
@@ -319,8 +319,8 @@ Numbers circled in orange specify available contexts. Have a look at the [availa
 
 - Operation chains use the [MVEL scripting language](https://github.com/mvel/mvel).
 - Widget fields, the Enablement tabs and the workflow's Availability tab (aka filters) use the EL expression language.
-- Email templates use the [Freemarker templating language](http://freemarker.org/).
-- Document templates can either use the Freemarker or MVEL scripting languages depending on the rendering engine chosen.
+- Email templates use the [FreeMarker Templating Language](https://freemarker.apache.org/) (FTL).
+- Document templates can either use the FreeMarker or MVEL scripting languages depending on the rendering engine chosen.
 
 ## What Variables Can I Use?
 
@@ -639,7 +639,8 @@ You may find more information in these related pages:
 
 - FreeMarker:
 
-  - [FreeMarker manual](http://freemarker.sourceforge.net/docs/)
+  - [FreeMarker manual](https://freemarker.apache.org/docs/index.html)
+  - [FreeMarker Java API documentation](https://freemarker.apache.org/docs/api/index.html)
 
 ---
 
