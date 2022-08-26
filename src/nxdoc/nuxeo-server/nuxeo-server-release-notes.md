@@ -28,6 +28,9 @@ Refer to the [LTS 2021 upgrade notes]({{page page='hotfixes-installation-notes-f
 
 | Version                                                                       | Release date                 |
 | ----------------------------------------------------------------------------- | ---------------------------- |
+| [LTS 2021.24 / 2021-HF24]({{page page='nuxeo-server-release-notes-2021-24'}}) | 2022-08-08 |
+| [LTS 2021.23 / 2021-HF23]({{page page='nuxeo-server-release-notes-2021-23'}}) | 2022-07-18 |
+| [LTS 2021.22 / 2021-HF22]({{page page='nuxeo-server-release-notes-2021-22'}}) | 2022-07-04 |
 | [LTS 2021.21 / 2021-HF21]({{page page='nuxeo-server-release-notes-2021-21'}}) | 2022-06-07 |
 | [LTS 2021.20 / 2021-HF20]({{page page='nuxeo-server-release-notes-2021-20'}}) | 2022-05-16 |
 | [LTS 2021.19 / 2021-HF19]({{page page='nuxeo-server-release-notes-2021-19'}}) | 2022-04-26 |

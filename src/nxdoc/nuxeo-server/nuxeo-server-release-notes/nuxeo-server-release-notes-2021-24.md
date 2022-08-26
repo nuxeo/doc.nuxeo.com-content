@@ -15,15 +15,15 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-24'}}
 # What's New in LTS 2021.24 / LTS 2021-HF24
 
-## Comment and annotation should not appeared as edited just after creation
+## Comment and Annotation Should Not Appeared as Edited Just After Creation
 
-Comment and annotation does not appear as edited just after creation
+Comment and annotation does not appear as edited just after creation.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31112](https://jira.nuxeo.com/browse/NXP-31112)
 
-## Workflow is blocked when two actors validate their task at the same time
+## Workflow Is Blocked When Two Actors Validate Their Task at the Same Time
 
-Task completions of a given workflow are now synchronized
+Task completions of a given workflow are now synchronized.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31004](https://jira.nuxeo.com/browse/NXP-31004)
 
