@@ -101,6 +101,24 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 25
+
+### Avoid transaction timeout during emails check
+
+To avoid transaction timeout there is a new limit in the number of mail that can be fetched per mailbox, the default limit is 2000 mails, this can be configured with `nuxeo.conf` option:
+```Java
+org.nuxeo.mail.message.limit=2000
+```
+Note that there is a warning in the log when the limit is reached.
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31163](https://jira.nuxeo.com/browse/NXP-31163)
+
+### Unable to detect mimetype when uploading multipart form data
+
+`multipart/form-data` upload is not supported and will be rejected. (400 Bad Request)
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31123](https://jira.nuxeo.com/browse/NXP-31123)
+
 ## Hotfix 23
 
 ### Upgrade Various Dependencies to Fix CVE
@@ -326,4 +344,5 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
