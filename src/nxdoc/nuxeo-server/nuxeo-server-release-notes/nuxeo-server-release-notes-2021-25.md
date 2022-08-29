@@ -15,42 +15,45 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-25'}}
 # What's New in LTS 2021.25 / LTS 2021-HF25
 
-## NXQL Complex Property Correlations not working with MongoDB
+## Nuxeo Server
 
-Query with complex correlation for schemas with no prefix now works on mongodb
+### Stream Management: Position Endpoint to Change Consumer Position
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31174](https://jira.nuxeo.com/browse/NXP-31174)
+It is now possible to change computation positions without downtime.
 
-## Fix download context for renditions
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31086](https://jira.nuxeo.com/browse/NXP-31086)
+
+## Majors Bug Fixes
+
+### NXQL Complex Property Correlations Not Working with MongoDB
+
+Query with complex correlation for schemas with no prefix now works on MongoDB.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31174](https://jira.nuxeo.com/browse/NXP-31174)
+
+### Fix Download Context for Renditions
 
 Added a new DownloadContextBlobHolder and its writer for download permissions checking.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31166](https://jira.nuxeo.com/browse/NXP-31166)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31166](https://jira.nuxeo.com/browse/NXP-31166)
 
-## Fix NPE in 'subtypes' enricher when appending a disabled document type to an existing folderish document type
+### Fix NPE in ‘Subtypes’ Enricher When Appending a Disabled Document Type to an Existing Folderish Document Type
 
-Disabled types are exluded from sub types listings. Type extending a disabled super type produces an ERROR log.
+Disabled types are excluded from sub types listings. Type extending a disabled super type produces an ERROR log.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31155](https://jira.nuxeo.com/browse/NXP-31155)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31155](https://jira.nuxeo.com/browse/NXP-31155)
 
-## Fix Cannot deep copy java.lang.Integer
+### Fix `Cannot Deep Copy java.lang.Integer`
 
-The error Cannot deep copy: java.lang.Integer is handled at Core level.
+The error `Cannot deep copy: java.lang.Integer` is handled at Core level.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31148](https://jira.nuxeo.com/browse/NXP-31148)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31148](https://jira.nuxeo.com/browse/NXP-31148)
 
-## Unable to detect mimetype when uploading multipart form data
+### Unable to Detect Mimetype When Uploading Multipart Form Data
 
-Send a clear message about multipart/form-data not being supported on nuxeo 2021
+Send a clear message about multipart/form-data not being supported on Nuxeo 2021.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31123](https://jira.nuxeo.com/browse/NXP-31123)
-
-## Stream Management: Position endpoint to change consumer position
-
-It is now possible to change computation positions without downtime
-
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31086](https://jira.nuxeo.com/browse/NXP-31086)
-
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31123](https://jira.nuxeo.com/browse/NXP-31123)
 
 # Learn More
 
