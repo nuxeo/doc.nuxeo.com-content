@@ -13,7 +13,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2022-03' page='studio-updates-2022-07'}}}
+{{{multiexcerpt 'studio-updates-2022-07' page='studio-updates-2022-07'}}}
 
 ## Learn More
 
@@ -29,7 +29,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 | [May 2022]({{page page='studio-updates-2022-05'}})               | ‘Manual Field’ in default sort |  
 | [March 2022]({{page page='studio-updates-2022-03'}})               | Technical Upgrade and New Version Numbering |  
 | [February 2022]({{page page='studio-updates-2022-02'}})               | Facet Manager in Studio|
-| [December 2021]({{page page='studio-updates-2021-12'}})               | Increase in the Max Number of Users per Organisation and Removal of 11.x Platform in Studio   | 
+| [December 2021]({{page page='studio-updates-2021-12'}})               | Increase in the Max Number of Users per Organisation and Removal of 11.x Platform in Studio   |
 | [November 2021]({{page page='studio-updates-2021-11'}})               | Update All Button in Application Definition                                              |
 | [September 2021]({{page page='studio-updates-2021-09'}})               | Multi-Layer public release and Marketplace changes                                              |
 | [August 2021]({{page page='studio-updates-2021-08'}})                  | Multi-Layer and Elasticsearch                                              |
