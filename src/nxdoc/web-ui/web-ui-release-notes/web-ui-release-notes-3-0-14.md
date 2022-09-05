@@ -1,14 +1,14 @@
 ---
-title: Version 3.0.13
+title: Version 3.0.14
 description: Discover what's new in Web UI 3.0.14.
 review:
     comment: ''
-    date: '2022-07-25'
+    date: '2022-09-05'
     status: ok
 toc: true
 labels:
 tree_item_index: 990
-hidden: true
+hidden: false
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
