@@ -107,7 +107,7 @@ It includes:
 
 #### Edit Layout
 
-1. In Designer, go to **Resources** and create a folder under **UI** called `custom-user-fields`. We will create all the next elements in this folder.
+1. In Designer, go to **Resources** and create a folder under **UI** called `nuxeo-user-group-management`. We will create all the next elements in this folder.
 1. Create a new element `nuxeo-edit-user`.
 1. Replace the existing content by the element `nuxeo-edit-user.html`
 1. Add:
@@ -127,15 +127,6 @@ It includes:
 <label>[[i18n('user.manager')]]</label>
 <nuxeo-user-tag user="[[user.properties.manager]]"></nuxeo-user-tag>
 </div>
-```
-
-#### Update your Custom Bundle File
-
-You need to reference these new elements in your `*-custom.bundle.html` file. To do so, add the following lines:
-
-```html
-<link rel="import" href="custom-user-fields/nuxeo-edit-user.html">
-<link rel="import" href="nuxeo-user-group-management/nuxeo-view-user.html">
 ```
 
 #### Translate the New Field
