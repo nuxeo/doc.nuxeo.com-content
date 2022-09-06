@@ -65,15 +65,15 @@ Once you become more familiar with Polymer we strongly recommend reading our [Po
 
 ## Polymer and the Future of Web UI
 
-Nuxeo Web UI will keep investing on the Web Components standard and our plan is to keep using Polymer in order to build them for the foreseeable future. There are multiple reasons to that choice.
+Nuxeo Web UI will keep investing in the Web Components standard. The Polymer library, used by the Nuxeo Web UI components, will remain for the foreseeable future. There are multiple reasons to that choice.
 
 ### Tried and Tested
 Tried and tested, we work in long investment cycles 5 years, solution that is established, we do not intend to reduce our investment on WebUI and accompany this tech over the long term, as per our commitment to our clients and community  
 
-### Actually Relies on Web Standards
-We use web standards, Polymer is a library, still widely used, we do not anticipate breaking issues and have not encountered any. WebUI remains a modern architecture. Gives us maximum flexibility, but of a tried and tested base with a strong ecosystem around it.
+### Web Standards Architecture 
+WebUI remains a modern architecture as it uses Web Components standards. As we look to the longer term, any replacement of Nuxeo Web UI will take on many of the current architectural features to facilitate migration and adoption.  
 
-### Still Being Used
+### Polymer Still Being Used
 Polymer is still used in the market. We have ready replacements, but still position that Polymer is the best solution to the problem of delivering a high-performance front end in content services.
 
-Polymer itself is still being maintained for the foreseeable future, and it is still used by big websites, such as YouTube. Its successor, the Lit Element library, can mostly be seen as a subset of Polymer because most of the features Polymer implements are now part of the Web standards.
+Polymer itself still has a very strong user base, including industry leading such as YouTube. Its successor, the Lit Element library, can mostly be seen as a subset of Polymer because most of the features Polymer implements are now part of the Web Components standards. We can readily shift components to Lit, if required by a technical issue, with little or no effort for our clients. 
