@@ -68,7 +68,7 @@ Once you become more familiar with Polymer we strongly recommend reading our [bl
 Nuxeo Web UI will keep investing in the Web Components standard. The Polymer library, used by the Nuxeo Web UI components, will remain for the foreseeable future. There are multiple reasons to that choice.
 
 ### Tried and Tested
-Tried and tested, we work in long investment cycles 5 years, solution that is established, we do not intend to reduce our investment on WebUI and accompany this tech over the long term, as per our commitment to our clients and community  
+We work in long investment cycles of 5 years and more. The Web UI solution is established and has been strongly adopted. We have continued upgrading and strenghtening the product since the initial release.  We will keep investing in Web UI  and accompany this product over the long term, as per our commitment to our clients and community  
 
 ### Web Standards Architecture 
 WebUI remains a modern architecture as it uses Web Components standards. As we look to the longer term, any replacement of Nuxeo Web UI will take on many of the current architectural features to facilitate migration and adoption.  
