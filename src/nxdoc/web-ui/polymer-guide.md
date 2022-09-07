@@ -71,7 +71,7 @@ Nuxeo Web UI will keep investing in the Web Components standard. The Polymer lib
 We work in long investment cycles of 5 years and more. The Web UI solution is established and has been strongly adopted. We have continued upgrading and strengthening the product since the initial release. We will keep investing in Web UI and accompany this product over the long term, as per our commitment to our clients and community.
 
 ### Web Standards Architecture
-WebUI remains a modern architecture as it uses Web Components standards. As we look to the longer term, any replacement of Nuxeo Web UI will take on many of the current architectural features to facilitate migration and adoption.
+Web UI remains a modern architecture as it uses Web Components standards. As we look to the longer term, any replacement of Nuxeo Web UI will take on many of the current architectural features to facilitate migration and adoption.
 
 ### Polymer Still Being Used
 Polymer itself still has a very strong user base, including industry leading such as YouTube. Its successor, the Lit Element library, can mostly be seen as a subset of Polymer because most of the features Polymer implements are now part of the Web Components standards. We can readily shift components to Lit, if required by a technical issue, with little or no effort for our clients.
