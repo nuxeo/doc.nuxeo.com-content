@@ -24,7 +24,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.15]({{page page='web-ui-release-notes-3-0-15'}})  | Accessibility improvements | -->
+<!-- | [Web UI 3.0.15]({{page page='web-ui-release-notes-3-0-15'}})  | Bulk actions - unselect some, accessibility improvements | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |

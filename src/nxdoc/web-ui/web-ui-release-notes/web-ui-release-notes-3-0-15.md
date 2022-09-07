@@ -16,7 +16,22 @@ hidden: true
 {{! multiexcerpt name='web-ui-updates'}}
 ## What's New in Web UI for LTS 2021 (version 3.0.15)
 
-This release puts focus on improving accessibility.
+This release improves the experience when dealing with bulk actions on smaller sets of documents and improves accessibility.
+
+### Bulk Actions - Unselect Some
+
+Our previous releases made it easy to execute [bulk actions]({{page space='nxdoc' page='web-ui-bulk-actions'}}) on large sets of documents, including [bulk editing]({{page version='' space='nxdoc' page='how-to-create-bulk-edit-form-studio'}}) them.
+
+This latest release puts focus on dealing with smaller sets of documents: it is now possible to unselect individual documents after having used the select all.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Web UI Release Notes/unselect-some
+    name: Screenshot from 2022-09-07 16-43-58.png
+    web_ui#screenshot#up_to_date
+--}}
+![unselect-some](nx_asset://0ad82bfb-6969-48a7-8c61-c0a2365f1e2a ?w=393,border=true)
+
+Bulk actions are still available as usual for the documents that remain selected.
 
 ### Accessibility Related Changes
 
