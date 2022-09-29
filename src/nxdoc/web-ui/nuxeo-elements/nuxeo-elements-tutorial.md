@@ -123,13 +123,14 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
       class MyDocReader extends PolymerElement {
         static get template() {
           return html`
-            <style>
+            <style include="shared-styles">
               :host {
                 display: block;
                 padding: 10px;
               }
             </style>
             <div class="card">
+            <div class="circle">4</div>
               <h1>Doc Reader</h1>
             </div>
           `;
