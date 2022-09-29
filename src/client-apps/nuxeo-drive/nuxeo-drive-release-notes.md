@@ -4,32 +4,40 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: 'release'
-  date: '2021-12-03'
+  date: '2022-09-29'
   status: ok
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.2.9**
+Welcome to the Release Notes for **Nuxeo Drive 5.2.10**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.9.md)
+**Status**: <font color="#ff0000">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.10.md)
 
 ## General
 
-### Fix Drive Announcement on Boot
+### Fix Synchronization of Files Whose Name Contains a Quote on MS Windows
 
-We fixed a regression from Nuxeo Drive 5.2.8, displaying the update popup every time Drive was open.
+An issue was preventing the correct synchronization of files containing special characters on Windows, it's now fixed. 
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2758](https://jira.nuxeo.com/browse/NXDRIVE-2758).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2782](https://jira.nuxeo.com/browse/NXDRIVE-2782).
 
-### Review Auto-update Mechanism
+### Review Upgrade and Downgrade Mechanism
 
-The **Auto-update** feature and the **Auto Install new updates** are now disabled by default when starting a Nuxeo Drive from Scratch and we've reviewed the labels to make it more clear.
+We have improved the behavior when deciding to upgrade or downgrade your Nuxeo Drive version. 
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2748](https://jira.nuxeo.com/browse/NXDRIVE-2748).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2765](https://jira.nuxeo.com/browse/NXDRIVE-2765).
+
+## UI 
+
+### Share Debug Info 
+
+At start up, a popup is asking if you want to share anonymous bug report and allow advanced analytics, which are 2 options that we **strongly recommend to enable**. They are now both disabled by default and it's up to you to enable them. 
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2735](https://jira.nuxeo.com/browse/NXDRIVE-2735).
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.9-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.9.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.9.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.10-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.10.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.2.10.exe)
