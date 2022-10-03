@@ -43,6 +43,6 @@ This is now fixed, and the trashed document is not downloaded.
 The retry option was still present when a retry process is going on. We removed the retry button when the process is going on.
 It is only available when there is any failure and retry can make that successful.
 
-[[NXP-31170](https://jira.nuxeo.com/browse/NXP-31170)]
+[[NXP-31105](https://jira.nuxeo.com/browse/NXP-31105)]
 
 {{! /multiexcerpt}}
