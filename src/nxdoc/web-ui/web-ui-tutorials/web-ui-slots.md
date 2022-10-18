@@ -97,6 +97,11 @@ Here are the `nuxeo-slots` available in the Nuxeo Web UI.
     <td colspan="1">Additional actions/views for results</td>
     <td colspan="1">![]({{file name='RESULTS_ACTIONS.png'}} ?w=100,border=true)</td>
   </tr>
+   <tr>
+    <td colspan="1">[TRASH_RESULTS_SELECTION_ACTIONS](#trash_result_selection_actions)</td>
+    <td colspan="1">Additional actions when trashed documents are selected</td>
+    <td colspan="1">![]({{file name='TRASH_RESULTS_SELECTION_ACTIONS.png'}} ?w=100,border=true)</td>
+  </tr>
   <tr>
     <td colspan="1">[ADMINISTRATION_MENU](#administration_menu) <br/> [ADMINISTRATION_PAGES](#administration_menu)</td>
     <td colspan="1">Additional Administration menu</td>
@@ -116,6 +121,11 @@ Here are the `nuxeo-slots` available in the Nuxeo Web UI.
     <td colspan="1">[DOCUMENT_CREATE_ACTIONS](#document_create_actions)</td>
     <td colspan="1">Additional document creation actions</td>
     <td colspan="1">![]({{file name='DOCUMENT_CREATE_ACTIONS.png'}} ?w=100,border=true)</td>
+  </tr>
+     <tr>
+    <td colspan="1">[PUBLISH_PAGES](#publish_pages)</td>
+    <td colspan="1">Dialog opened when using the document publishing action</td>
+    <td colspan="1">![]({{file name='PUBLISH_PAGES.png'}} ?w=100,border=true)</td>
   </tr>
   <tr>
     <td colspan="1">[CREATE_POPUP_ITEMS](#create_popup_items)<br/>
@@ -308,6 +318,25 @@ This slot allows to provide additional action buttons on folderish documents or 
 | `document`      | The current document.                                                                                                    |
 | `user`          | The current user.                                                                                                        |
 
+#### TRASH_RESULTS_SELECTION_ACTIONS {{> anchor 'trash_result_selection_actions'}}
+
+This slot allows to provide additional action buttons when selecting one or more trashed documents.
+
+![]({{file name='TRASH_RESULTS_SELECTION_ACTIONS.png'}} ?w=400,border=true)
+
+**Slot Model Properties**
+
+| Property        | Description                                  |
+| :-------------- | :------------------------------------------- |
+| `baseUrl`       | The base URL of the Nuxeo server             |
+| `nxProvider`    | The name of the page provider                |
+| `displayMode`   | The current display mode (e.g., grid, table) |
+| `selectedItems` | Array of selected documents.                 |
+| `items`         | Array of all loaded documents.               |
+| `columns`       | Array with the available table columns       |
+| `document`      | The current document                         |
+| `user`          | The current user.                            |
+
 ### Main Application Menu Slots
 
 The Web UI revolves around a left drawer menu allowing to navigate to documents, searches, application administration, collections, etc. The following slots show how to extend this menu.
@@ -392,6 +421,22 @@ The `DRAWER_PAGES` allows you to add new items to the main left drawer menu (see
 | `clipboard`         | The clipboard element.                                   |
 | `userWorkspace`     | The user workspace path.                                 |
 | `user`              | The current user.                                        |
+
+### Document Publishing
+
+#### PUBLISH_PAGES{{> anchor 'publish_pages'}}
+
+This slot displays actions when using the **Publish Document** action and can be used to override the dialog to publish documents.
+
+![]({{file name='PUBLISH_PAGES.png'}} ?w=400,border=true)
+
+**Slot Model Properties**
+
+| Property   | Description                                  |
+| :--------- | :------------------------------------------- |
+| `document` | The current document.                        |
+| `i18n`     | The i18n function helper to localize labels. |
+| `user`     | The current user.                            |
 
 ### Document Creation
 
