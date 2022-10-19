@@ -16,4 +16,4 @@ Nuxeo is committed to making Web UI accessible and keeping a high level of quali
 - **Product**: Nuxeo Web UI
 - **Link**: [Voluntary Product Accessibility Template for Web UI]({{file name='2022-09-nuxeo-web-ui-lts-2021-3-0-15-VPAT.pdf'}}).
 
-Updates regarding accessibility improvements in a particular release can be found in the [Web UI release notes]({{page space='nxdoc' page='web-ui-release-notes''}})
+Updates regarding accessibility improvements in a particular release can be found in the [Web UI release notes]({{page space='nxdoc' page='web-ui-release-notes'}})
