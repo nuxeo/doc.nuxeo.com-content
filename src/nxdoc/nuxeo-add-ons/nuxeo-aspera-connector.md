@@ -584,14 +584,14 @@ aspera.node.url=https://ats-aws-us-east-1.aspera.io
 aspera.node.port=443
 
 ### ACCESS KEY ON UPLOAD NODE LINKED TO TS S3 BUCKET
-aspera.acess.key.id=
+aspera.access.key.id=
 ### SECRET KEY ON UPLOAD NODE LINKED TO TS S3 BUCKET
-aspera.acess.key.secret=
+aspera.access.key.secret=
 
 ### ACCESS KEY ON DOWNLOAD NODE LINKED TO TMAIN S3 BUCKET
-aspera.download.acess.key.id=
+aspera.download.access.key.id=
 ### SECRET KEY ON DOWNLOAD NODE LINKED TO MAIN S3 BUCKET
-aspera.download.acess.key.secret=
+aspera.download.access.key.secret=
 ```
 
 ### Functional Overview
