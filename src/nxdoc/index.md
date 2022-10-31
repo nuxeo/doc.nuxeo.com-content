@@ -402,8 +402,9 @@ Here are some key pages to start customizing the UI of the Nuxeo Server:
 This section is intended to provide you with end-to-end recipes for achieving your customization goals of the Nuxeo Platform.
 
 - [Discover Nuxeo Platform APIs]({{page version='' space='nxdoc' page='discover-nuxeo-platform-apis'}})
-- [Configure Nuxeo Platform]({{page version='' space='nxdoc' page='configure-nuxeo-platform'}})
-- [Develop with Nuxeo Platform]({{page version='' space='nxdoc' page='develop-with-nuxeo-platform'}})
+- [Configure Nuxeo Platform]({{page version='' space='nxdoc' page='first-package-with-studio'}})
+- [Develop with Nuxeo Platform]({{page version='' space='nxdoc' page='develop-your-own-java-code'}})
+- [Deploy and Publish a Nuxeo Package]({{page version='' space='nxdoc' page='package-publish-deploy-hotreload'}})
 
 {{/panel}}</div></div>
 
