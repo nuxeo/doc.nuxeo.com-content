@@ -15,35 +15,35 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-26'}}
 # What's New in LTS 2021.26 / LTS 2021-HF26
 
-## Improve retry tuning when Elastic is overloaded
+## Improve Retry Tuning When Elastic Is Overloaded
 
 The retry delay has been increased to handle when elastic is overloaded.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31201](https://jira.nuxeo.com/browse/NXP-31201)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31201](https://jira.nuxeo.com/browse/NXP-31201)
 
-## Fix REST API when setting an Integer property with an empty String
+## Fix REST API When Setting an Integer Property With an Empty String
 
-Setting an empty string to other type than string in REST API will behave like null
+Setting an empty string to other type than string in REST API will behave like null.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31199](https://jira.nuxeo.com/browse/NXP-31199)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31199](https://jira.nuxeo.com/browse/NXP-31199)
 
-## Fix ACL setting in structure template when applied by non-admin users
+## Fix ACL Setting in Structure Template When Applied by Non-admin Users
 
-ACLs are set in an unrestricted fashion when applying structure templates
+ACLs are set in an unrestricted fashion when applying structure templates.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31167](https://jira.nuxeo.com/browse/NXP-31167)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31167](https://jira.nuxeo.com/browse/NXP-31167)
 
-## Avoid race condition during Elasticsearch index initialization
+## Avoid Race Condition During Elasticsearch Index Initialization
 
 Concurrent Elasticsearch index initialization is managed.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-30565](https://jira.nuxeo.com/browse/NXP-30565)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30565](https://jira.nuxeo.com/browse/NXP-30565)
 
-## Enable to configure Kafka in SASL without TLS
+## Enable to Configure Kafka in SASL Without TLS
 
 The template for Kafka in SASL works without TLS.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-27100](https://jira.nuxeo.com/browse/NXP-27100)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27100](https://jira.nuxeo.com/browse/NXP-27100)
 
 
 # Learn More

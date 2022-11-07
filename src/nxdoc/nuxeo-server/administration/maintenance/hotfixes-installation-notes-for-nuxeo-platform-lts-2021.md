@@ -101,7 +101,6 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
-## Hotfix 26
 
 ## Hotfix 25
 
