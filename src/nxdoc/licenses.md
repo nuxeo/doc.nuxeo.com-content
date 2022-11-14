@@ -224,12 +224,12 @@ The licenses used are:
 | asm-util-5.0.3.jar |   | 5.0.3 | BSD 3 |
 | auto-value-1.4.jar |   | 1.4 | AL 2.0 |
 | avro-1.9.2.jar |   | 1.9.2 | AL 2.0 |
-| aws-java-sdk-cloudfront-1.11.885.jar |   | 1.11.885 | AL 2.0 |
-| aws-java-sdk-core-1.11.885.jar |   | 1.11.885 | AL 2.0 |
-| aws-java-sdk-kms-1.11.885.jar |   | 1.11.885 | AL 2.0 |
-| aws-java-sdk-s3-1.11.885.jar |   | 1.11.885 | AL 2.0 |
-| aws-java-sdk-sts-1.11.885.jar |   | 1.11.885 | AL 2.0 |
-| azure-storage-3.1.0.jar |   | 3.1.0 | AL 2.0 |
+| aws-java-sdk-cloudfront-1.12.261.jar |   | 1.12.261 | AL 2.0 |
+| aws-java-sdk-core-1.12.261.jar |   | 1.12.261 | AL 2.0 |
+| aws-java-sdk-kms-1.12.261.jar |   | 1.12.261 | AL 2.0 |
+| aws-java-sdk-s3-1.12.261.jar |   | 1.12.261 | AL 2.0 |
+| aws-java-sdk-sts-1.12.261.jar |   | 1.12.261 | AL 2.0 |
+| azure-storage-8.6.6.jar |   | 8.6.6 | AL 2.0 |
 | batik-constants-1.13.jar |   | 1.13 | AL 2.0 |
 | batik-css-1.13.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.13 | AL 2.0 |
 | batik-i18n-1.13.jar |   | 1.13 | AL 2.0 |
@@ -299,7 +299,7 @@ The licenses used are:
 | elasticsearch-secure-sm-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | elasticsearch-ssl-config-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | elasticsearch-x-content-7.9.2.jar |   | 7.9.2 | AL 2.0 |
-| error_prone_annotations-2.3.4.jar |   | 2.3.4 | AL 2.0 |
+| error_prone_annotations-2.11.0.jar |   | 2.11.0 | AL 2.0 |
 | esapi-2.2.1.1.jar |   | 2.2.1.1 | BSD 3, CC BY-SA 3.0 |
 | expiringmap-0.5.9.jar |   | 0.5.9 | AL 2.0 |
 | externalsortinginjava-0.6.0.jar |   | 0.6.0 | PD |
@@ -322,8 +322,8 @@ The licenses used are:
 | gax-grpc-1.47.1.jar |   | 1.47.1 | BSD 3 |
 | gax-httpjson-0.61.0.jar |   | 0.61.0 | BSD 3 |
 | geronimo-transaction-3.1.4.jar | [Apache Geronimo](http://geronimo.apache.org) | 3.1.4 | AL 2.0 |
-| google-api-client-1.25.0.jar |   | 1.25.0 | AL 2.0 |
-| google-api-services-drive-v2-rev161-1.19.1.jar |   | v2-rev161-1.19.1 | AL 2.0 |
+| google-api-client-1.34.1.jar |   | 1.34.1 | AL 2.0 |
+| google-api-services-drive-v2-rev20201130-1.31.0.jar |   | v2-rev20201130-1.31.0 | AL 2.0 |
 | google-api-services-storage-v1-rev20190426-1.28.0.jar |   | v1-rev20190426-1.28.0 | AL 2.0 |
 | google-auth-library-credentials-0.20.0.jar |   | 0.20.0 | BSD 3 |
 | google-auth-library-oauth2-http-0.16.2.jar |   | 0.16.2 | BSD 3 |
@@ -333,22 +333,22 @@ The licenses used are:
 | google-cloud-monitoring-1.82.0.jar |   | 1.82.0 | AL 2.0 |
 | google-cloud-storage-1.76.0.jar |   | 1.76.0 | AL 2.0 |
 | google-cloud-trace-0.100.0-beta.jar |   | 0.100.0-beta | AL 2.0 |
-| google-http-client-1.19.0.jar |   | 1.19.0 | AL 2.0 |
+| google-http-client-1.38.0.jar |   | 1.38.0 | AL 2.0 |
 | google-http-client-appengine-1.29.1.jar |   | 1.29.1 | AL 2.0 |
-| google-http-client-jackson2-1.19.0.jar |   | 1.19.0 | AL 2.0 |
-| google-oauth-client-1.20.0.jar |   | 1.20.0 | AL 2.0 |
+| google-http-client-jackson2-1.38.0.jar |   | 1.38.0 | AL 2.0 |
+| google-oauth-client-1.34.1.jar |   | 1.34.1 | AL 2.0 |
 | groovy-all-2.4.12.jar | [Groovy](http://groovy.codehaus.org) | 2.4.12 | AL 2.0 |
 | grpc-alts-1.21.0.jar |   | 1.21.0 | AL 2.0 |
-| grpc-auth-1.27.2.jar |   | 1.27.2 | AL 2.0 |
+| grpc-auth-1.28.0.jar |   | 1.28.0 | AL 2.0 |
 | grpc-context-1.27.2.jar |   | 1.27.2 | AL 2.0 |
-| grpc-core-1.27.2.jar |   | 1.27.2 | AL 2.0 |
+| grpc-core-1.28.0.jar |   | 1.28.0 | AL 2.0 |
 | grpc-grpclb-1.21.0.jar |   | 1.21.0 | AL 2.0 |
-| grpc-netty-shaded-1.27.2.jar |   | 1.27.2 | AL 2.0 |
+| grpc-netty-shaded-1.28.0.jar |   | 1.28.0 | AL 2.0 |
 | grpc-protobuf-1.21.0.jar |   | 1.21.0 | AL 2.0 |
 | grpc-protobuf-lite-1.21.0.jar |   | 1.21.0 | AL 2.0 |
-| grpc-stub-1.27.2.jar |   | 1.27.2 | AL 2.0 |
-| gson-2.8.6.jar | [Google Gson](http://code.google.com/p/google-gson/) | 2.8.6 | AL 2.0 |
-| guava-30.0-jre.jar |   | 30.0-jre | AL 2.0 |
+| grpc-stub-1.28.0.jar |   | 1.28.0 | AL 2.0 |
+| gson-2.8.9.jar | [Google Gson](http://code.google.com/p/google-gson/) | 2.8.9 | AL 2.0 |
+| guava-31.1-jre.jar |   | 31.1-jre | AL 2.0 |
 | guice-3.0.jar | [Google Guice](http://code.google.com/p/google-guice/) | 3.0 | AL 2.0 |
 | h2-1.4.200.jar |   | 1.4.200 | EPL 1.0, MPL 2.0 |
 | hadoop-hdfs-client-3.2.1.jar |   | 3.2.1 | AL 2.0 |
@@ -368,20 +368,20 @@ The licenses used are:
 | iri-0.8.jar | [Apache Jena](http://jena.apache.org) | 0.8 | BSD 3 |
 | isoparser-1.9.41.jar |   | 1.9.41 | AL 2.0 |
 | j2objc-annotations-1.3.jar |   | 1.3 | AL 2.0 |
-| jackson-annotations-2.11.3.jar |   | 2.11.3 | AL 2.0 |
-| jackson-core-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-annotations-2.12.7.jar |   | 2.12.7 | AL 2.0 |
+| jackson-core-2.12.7.jar |   | 2.12.7 | AL 2.0 |
 | jackson-core-asl-1.8.1.jar | [Jackson](http://jackson.codehaus.org) | 1.8.1 | AL 2.0 |
-| jackson-databind-2.11.3.jar |   | 2.11.3 | AL 2.0 |
-| jackson-dataformat-cbor-2.11.3.jar |   | 2.11.3 | AL 2.0 |
-| jackson-dataformat-properties-2.11.3.jar |   | 2.11.3 | AL 2.0 |
-| jackson-dataformat-smile-2.11.3.jar |   | 2.11.3 | AL 2.0 |
-| jackson-dataformat-xml-2.11.3.jar |   | 2.11.3 | AL 2.0 |
-| jackson-dataformat-yaml-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-databind-2.12.7.jar |   | 2.12.7 | AL 2.0 |
+| jackson-dataformat-cbor-2.12.7.jar |   | 2.12.7 | AL 2.0 |
+| jackson-dataformat-properties-2.12.7.jar |   | 2.12.7 | AL 2.0 |
+| jackson-dataformat-smile-2.12.7.jar |   | 2.12.7 | AL 2.0 |
+| jackson-dataformat-xml-2.12.7.jar |   | 2.12.7 | AL 2.0 |
+| jackson-dataformat-yaml-2.12.7.jar |   | 2.12.7 | AL 2.0 |
 | jackson-jaxrs-1.9.2.jar |   | 1.9.2 | AL 2.0, LGPL 2.1 |
-| jackson-jaxrs-base-2.11.3.jar |   | 2.11.3 | AL 2.0 |
-| jackson-jaxrs-json-provider-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-jaxrs-base-2.12.7.jar |   | 2.12.7 | AL 2.0 |
+| jackson-jaxrs-json-provider-2.12.7.jar |   | 2.12.7 | AL 2.0 |
 | jackson-mapper-asl-1.8.1.jar | [Jackson](http://jackson.codehaus.org) | 1.8.1 | AL 2.0 |
-| jackson-module-jaxb-annotations-2.11.3.jar |   | 2.11.3 | AL 2.0 |
+| jackson-module-jaxb-annotations-2.12.7.jar |   | 2.12.7 | AL 2.0 |
 | jackson-xc-1.9.2.jar |   | 1.9.2 | AL 2.0, LGPL 2.1 |
 | jaeger-client-0.33.1.jar |   | 0.33.1 | AL 2.0 |
 | jaeger-core-0.33.1.jar |   | 0.33.1 | AL 2.0 |
@@ -429,7 +429,7 @@ The licenses used are:
 | jffi-1.2.15.jar |   | 1.2.15 | AL 2.0 |
 | jgrapht-core-1.0.1.jar |   | 1.0.1 | EPL 1.0, LGPL 2.1 |
 | jmd-0.8.1-tomasol-3e60e36137.jar | [JMD](https://github.com/tomasol/jmd) | 0.8.1-tomasol-3e60e36137 | MIT |
-| jmespath-java-1.11.885.jar |   | 1.11.885 | AL 2.0 |
+| jmespath-java-1.12.261.jar |   | 1.12.261 | AL 2.0 |
 | jmimemagic-0.1.2.jar | [jMimeMagic](http://jmimemagic.sourceforge.net/index.html) | 0.1.2 | AL 2.0 |
 | jnr-constants-0.9.8.jar |   | 0.9.8 | AL 2.0 |
 | jnr-enxio-0.16.jar |   | 0.16 | AL 2.0 |
@@ -510,37 +510,37 @@ The licenses used are:
 | mssql-jdbc-7.0.0.jre8.jar |   | 7.0.0.jre8 | MIT |
 | mvel2-2.4.10.Final.jar | [MVEL](http://mvel.codehaus.org) | 2.4.10.Final | AL 2.0 |
 | mysql-connector-java-8.0.22.jar |   | 8.0.22 | GPL 2 UFOSS |
-| netty-buffer-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
-| netty-codec-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
-| netty-codec-http-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
-| netty-common-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
-| netty-handler-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
-| netty-resolver-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
-| netty-transport-4.1.50.Final.jar |   | 4.1.50.Final | AL 2.0 |
+| netty-buffer-4.1.78.Final.jar |   | 4.1.78.Final | AL 2.0 |
+| netty-codec-4.1.78.Final.jar |   | 4.1.78.Final | AL 2.0 |
+| netty-codec-http-4.1.78.Final.jar |   | 4.1.78.Final | AL 2.0 |
+| netty-common-4.1.78.Final.jar |   | 4.1.78.Final | AL 2.0 |
+| netty-handler-4.1.78.Final.jar |   | 4.1.78.Final | AL 2.0 |
+| netty-resolver-4.1.78.Final.jar |   | 4.1.78.Final | AL 2.0 |
+| netty-transport-4.1.78.Final.jar |   | 4.1.78.Final | AL 2.0 |
 | not-yet-commons-ssl-0.3.9.jar |   | 0.3.9 | AL 2.0 |
 | oauth-20090531.jar | [OAuth](http://oauth.net/code/) | 20090531 | AL 2.0 |
 | oauth-provider-20090531.jar | [OAuth](http://oauth.net/code/) | 20090531 | AL 2.0 |
 | okhttp-2.7.5.jar |   | 2.7.5 | AL 2.0 |
-| okhttp-3.9.1.jar |   | 3.9.1 | AL 2.0 |
-| okio-1.6.0.jar |   | 1.6.0 | AL 2.0 |
-| opencensus-api-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-contrib-dropwizard5-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-contrib-exemplar-util-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-contrib-grpc-metrics-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-contrib-http-servlet-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-contrib-http-util-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-contrib-resource-util-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-contrib-zpages-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-exporter-metrics-util-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-exporter-stats-prometheus-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-exporter-stats-stackdriver-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-exporter-trace-datadog-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-exporter-trace-jaeger-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-exporter-trace-stackdriver-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-exporter-trace-util-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-exporter-trace-zipkin-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-impl-0.27.1.jar |   | 0.27.1 | AL 2.0 |
-| opencensus-impl-core-0.27.1.jar |   | 0.27.1 | AL 2.0 |
+| okhttp-4.10.0.jar |   | 4.10.0 | AL 2.0 |
+| okio-2.9.0.jar |   | 2.9.0 | AL 2.0 |
+| opencensus-api-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-contrib-dropwizard5-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-contrib-exemplar-util-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-contrib-grpc-metrics-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-contrib-http-servlet-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-contrib-http-util-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-contrib-resource-util-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-contrib-zpages-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-exporter-metrics-util-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-exporter-stats-prometheus-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-exporter-stats-stackdriver-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-exporter-trace-datadog-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-exporter-trace-jaeger-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-exporter-trace-stackdriver-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-exporter-trace-util-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-exporter-trace-zipkin-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-impl-0.31.1.jar |   | 0.31.1 | AL 2.0 |
+| opencensus-impl-core-0.31.1.jar |   | 0.31.1 | AL 2.0 |
 | openpdf-1.3.22.jar |   | 1.3.22 | LGPL 3, MPL 2.0 |
 | opensaml-2.6.4.jar |   | 2.6.4 | AL 2.0 |
 | opentracing-api-0.31.0.jar |   | 0.31.0 | AL 2.0 |
@@ -557,7 +557,7 @@ The licenses used are:
 | org.sat4j.core-2.3.1.jar | [Sat4j](http://www.sat4j.org) | 2.3.1 | EPL 1.0, LGPL 2.1 |
 | org.sat4j.pb-2.3.1.jar | [Sat4j](http://www.sat4j.org) | 2.3.1 | EPL 1.0, LGPL 2.1 |
 | oro-2.0.8.jar | [Apache Jakarta ORO](http://jakarta.apache.org/oro/) | 2.0.8 | AL 2.0 |
-| owasp-java-html-sanitizer-20190103.NX1.jar |   | 20190103.NX1 | AL 2.0 |
+| owasp-java-html-sanitizer-20211018.2.NX1.jar |   | 20211018.2.NX1 | AL 2.0 |
 | parent-join-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | pdfbox-2.0.21.jar | [Apache PDFBox](http://pdfbox.apache.org) | 2.0.21 | AL 2.0 |
 | pdfbox-debugger-2.0.21.jar |   | 2.0.21 | AL 2.0 |
@@ -576,7 +576,7 @@ The licenses used are:
 | proto-google-cloud-trace-v2-0.65.0.jar |   | 0.65.0 | AL 2.0 |
 | proto-google-common-protos-1.16.0.jar |   | 1.16.0 | AL 2.0 |
 | proto-google-iam-v1-0.12.0.jar |   | 0.12.0 | AL 2.0 |
-| protobuf-java-3.7.1.jar |   | 3.7.1 | BSD 3 |
+| protobuf-java-3.19.4.jar |   | 3.19.4 | BSD 3 |
 | protobuf-java-util-3.7.1.jar |   | 3.7.1 | BSD 3 |
 | quartz-2.3.2.jar |   | 2.3.2 | AL 2.0 |
 | quartz-mongodb-2.2.0-rc2.jar |   | 2.2.0-rc2 | AL 2.0 |
@@ -635,7 +635,7 @@ The licenses used are:
 | xom-1.3.5.jar |   | 1.3.5 | LGPL 2.1 |
 | xpp3-1.1.4c.jar |   | 1.1.4c | AL 1.1, BSD 4, PD |
 | xsom-20140925.jar | [XSOM](http://xsom.java.net) | 20140925 | CDDL 1.1, GPL 2 |
-| xstream-1.4.13.jar | [XStream](http://xstream.codehaus.org) | 1.4.13 | BSD 3 |
+| xstream-1.4.19.jar | [XStream](http://xstream.codehaus.org) | 1.4.19 | BSD 3 |
 | zipkin-2.12.0.jar |   | 2.12.0 | AL 2.0 |
 | zipkin-reporter-2.7.14.jar |   | 2.7.14 | AL 2.0 |
 | zipkin-sender-urlconnection-2.7.14.jar |   | 2.7.14 | AL 2.0 |
