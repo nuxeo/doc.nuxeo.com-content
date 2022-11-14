@@ -199,8 +199,8 @@ The licenses used are:
 | animal-sniffer-annotations-1.18.jar |   | 1.18 | MIT |
 | annotations-19.0.0.jar |   | 19.0.0 | AL 2.0 |
 | annotations-4.1.1.4.jar |   | 4.1.1.4 | AL 2.0 |
-| ant-1.10.9.jar | [Apache Ant](http://ant.apache.org) | 1.10.9 | AL 2.0 |
-| ant-launcher-1.10.9.jar | [Apache Ant](http://ant.apache.org) | 1.10.9 | AL 2.0 |
+| ant-1.10.11.jar | [Apache Ant](http://ant.apache.org) | 1.10.11 | AL 2.0 |
+| ant-launcher-1.10.11.jar | [Apache Ant](http://ant.apache.org) | 1.10.11 | AL 2.0 |
 | antlr-2.7.7.jar | [ANTLR v2](http://www.antlr2.org) | 2.7.7 | BSD 3 |
 | antlr-runtime-3.5.2.jar | [ANTLR v3](http://www.antlr.org) | 3.5.2 | BSD 3 |
 | aopalliance-1.0.jar | [AOP Alliance](http://aopalliance.sourceforge.net) | 1.0 | PD |
@@ -235,20 +235,20 @@ The licenses used are:
 | batik-i18n-1.13.jar |   | 1.13 | AL 2.0 |
 | batik-shared-resources-1.13.jar |   | 1.13 | AL 2.0 |
 | batik-util-1.13.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.13 | AL 2.0 |
-| bcpkix-jdk15on-1.66.jar |   | 1.66 | MIT |
-| bcprov-jdk15on-1.66.jar |   | 1.66 | MIT |
+| bcpkix-jdk15on-1.69.jar |   | 1.69 | MIT |
+| bcprov-jdk15on-1.69.jar |   | 1.69 | MIT |
 | box-java-sdk-1.1.0.jar |   | 1.1.0 | AL 2.0 |
 | bsh-2.0b6.jar |   | 2.0b6 | AL 2.0 |
 | bson-4.1.1.jar |   | 4.1.1 | AL 2.0 |
 | c3p0-0.9.5.4.jar |   | 0.9.5.4 | EPL 1.0, LGPL 2.1 |
 | checker-qual-3.5.0.jar |   | 3.5.0 | MIT |
-| chemistry-opencmis-client-api-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
-| chemistry-opencmis-client-bindings-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
-| chemistry-opencmis-client-impl-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
-| chemistry-opencmis-commons-api-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
-| chemistry-opencmis-commons-impl-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
-| chemistry-opencmis-server-bindings-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
-| chemistry-opencmis-server-support-1.1.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.0 | AL 2.0 |
+| chemistry-opencmis-client-api-1.1.1-NX01.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.1-NX01 | AL 2.0 |
+| chemistry-opencmis-client-bindings-1.1.1-NX01.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.1-NX01 | AL 2.0 |
+| chemistry-opencmis-client-impl-1.1.1-NX01.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.1-NX01 | AL 2.0 |
+| chemistry-opencmis-commons-api-1.1.1-NX01.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.1-NX01 | AL 2.0 |
+| chemistry-opencmis-commons-impl-1.1.1-NX01.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.1-NX01 | AL 2.0 |
+| chemistry-opencmis-server-bindings-1.1.1-NX01.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.1-NX01 | AL 2.0 |
+| chemistry-opencmis-server-support-1.1.1-NX01.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.1-NX01 | AL 2.0 |
 | chronicle-bytes-2.20.10.jar |   | 2.20.10 | AL 2.0 |
 | chronicle-core-2.20.21.jar |   | 2.20.21 | AL 2.0 |
 | chronicle-queue-5.20.20.jar |   | 5.20.20 | AL 2.0 |
@@ -261,7 +261,7 @@ The licenses used are:
 | commons-codec-1.15.jar | [Apache Commons Codec](http://commons.apache.org/codec/) | 1.15 | AL 2.0 |
 | commons-collections-3.2.2.jar | [Apache Commons Collections](http://commons.apache.org/collections/) | 3.2.2 | AL 2.0 |
 | commons-collections4-4.4.jar |   | 4.4 | AL 2.0 |
-| commons-compress-1.20.jar |   | 1.20 | AL 2.0 |
+| commons-compress-1.21.jar |   | 1.21 | AL 2.0 |
 | commons-csv-1.8.jar |   | 1.8 | AL 2.0 |
 | commons-dbcp2-2.8.0.jar |   | 2.8.0 | AL 2.0 |
 | commons-digester-2.1.jar | [Apache Commons Digester](http://commons.apache.org/digester/) | 2.1 | AL 2.0 |
@@ -278,7 +278,7 @@ The licenses used are:
 | commons-logging-1.2.jar |   | 1.2 | AL 2.0 |
 | commons-math3-3.6.1.jar |   | 3.6.1 | AL 2.0 |
 | commons-pool2-2.9.0.jar |   | 2.9.0 | AL 2.0 |
-| commons-text-1.9.jar |   | 1.9 | AL 2.0 |
+| commons-text-1.10.jar |   | 1.10 | AL 2.0 |
 | commons-validator-1.7.jar |   | 1.7 | AL 2.0 |
 | commons-vfs2-2.6.0.jar |   | 2.6.0 | AL 2.0 |
 | compiler-0.9.6.jar |   | 0.9.6 | AL 2.0 |
@@ -307,7 +307,7 @@ The licenses used are:
 | failureaccess-1.0.1.jar |   | 1.0.1 | AL 2.0 |
 | fluent-hc-4.5.13.jar |   | 4.5.13 | AL 2.0 |
 | flute-1.3.0.gg2.jar | [Flute](http://code.google.com/p/google-web-toolkit/source/browse/tools/lib/w3c/flute/) | 1.3.0.gg2 | W3C |
-| fontbox-2.0.21.jar | [Apache PDFBox](http://pdfbox.apache.org) | 2.0.21 | AL 2.0 |
+| fontbox-2.0.24.jar | [Apache PDFBox](http://pdfbox.apache.org) | 2.0.24 | AL 2.0 |
 | fr.opensagres.xdocreport.converter-1.0.5.jar |   | 1.0.5 | MIT |
 | fr.opensagres.xdocreport.core-1.0.5.jar |   | 1.0.5 | MIT |
 | fr.opensagres.xdocreport.document-1.0.5.jar |   | 1.0.5 | MIT |
@@ -443,7 +443,7 @@ The licenses used are:
 | json-1.0.0.jar |   | 1.0.0 | MIT |
 | json-20200518.jar | [JSON](http://www.json.org/java/index.html) | 20200518 | MIT |
 | json-lib-2.4.jar | [JSON-lib](http://json-lib.sourceforge.net) | 2.4 | AL 2.0 |
-| json-smart-1.1.1.jar |   | 1.1.1 | AL 2.0 |
+| json-smart-1.3.3.jar |   | 1.3.3 | AL 2.0 |
 | jsonevent-layout-1.7.jar |   | 1.7 | AL 2.0 |
 | jsp-api-2.2.jar |   | 2.2 | CDDL 1.0, GPL 2 CPE |
 | jsr250-api-1.0.jar | [Common Annotations for Java (JSR 250)](http://jcp.org/en/jsr/detail?id=250) | 1.0 | CDDL 1.0 |
@@ -460,21 +460,21 @@ The licenses used are:
 | kafka-clients-2.6.0.jar |   | 2.6.0 | AL 2.0 |
 | kafka-schema-registry-client-6.0.0.jar |   | 6.0.0 | AL 2.0 |
 | kafka-schema-serializer-6.0.0.jar |   | 6.0.0 | AL 2.0 |
-| keycloak-adapter-core-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
-| keycloak-adapter-spi-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
-| keycloak-authz-client-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
-| keycloak-common-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
-| keycloak-core-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
-| keycloak-tomcat-adapter-spi-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
-| keycloak-tomcat-core-adapter-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
-| keycloak-tomcat8-adapter-4.6.0.Final.jar |   | 4.6.0.Final | AL 2.0 |
+| keycloak-adapter-core-10.0.2.jar |   | 10.0.2 | AL 2.0 |
+| keycloak-adapter-spi-10.0.2.jar |   | 10.0.2 | AL 2.0 |
+| keycloak-authz-client-10.0.2.jar |   | 10.0.2 | AL 2.0 |
+| keycloak-common-10.0.2.jar |   | 10.0.2 | AL 2.0 |
+| keycloak-core-10.0.2.jar |   | 10.0.2 | AL 2.0 |
+| keycloak-tomcat-adapter-spi-10.0.2.jar |   | 10.0.2 | AL 2.0 |
+| keycloak-tomcat-core-adapter-10.0.2.jar |   | 10.0.2 | AL 2.0 |
+| keycloak-tomcat8-adapter-10.0.2.jar |   | 10.0.2 | AL 2.0 |
 | lang-mustache-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | libthrift-0.11.0.jar |   | 0.11.0 | AL 2.0 |
 | listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar |   | 9999.0-empty-to-avoid-conflict-with-guava | AL 2.0 |
-| log4j-api-2.13.3.jar |   | 2.13.3 | AL 2.0 |
-| log4j-core-2.13.3.jar |   | 2.13.3 | AL 2.0 |
-| log4j-jcl-2.13.3.jar |   | 2.13.3 | AL 2.0 |
-| log4j-slf4j-impl-2.13.3.jar |   | 2.13.3 | AL 2.0 |
+| log4j-api-2.17.1.jar |   | 2.17.1 | AL 2.0 |
+| log4j-core-2.17.1.jar |   | 2.17.1 | AL 2.0 |
+| log4j-jcl-2.17.1.jar |   | 2.17.1 | AL 2.0 |
+| log4j-slf4j-impl-2.17.1.jar |   | 2.17.1 | AL 2.0 |
 | logback-core-1.2.3.jar |   | 1.2.3 | EPL 1.0, LGPL 2.1 |
 | lucene-analyzers-common-8.6.2.jar |   | 8.6.2 | AL 2.0 |
 | lucene-backward-codecs-8.6.2.jar |   | 8.6.2 | AL 2.0 |
@@ -509,7 +509,7 @@ The licenses used are:
 | mongodb-driver-sync-4.1.1.jar |   | 4.1.1 | AL 2.0 |
 | mssql-jdbc-7.0.0.jre8.jar |   | 7.0.0.jre8 | MIT |
 | mvel2-2.4.10.Final.jar | [MVEL](http://mvel.codehaus.org) | 2.4.10.Final | AL 2.0 |
-| mysql-connector-java-8.0.22.jar |   | 8.0.22 | GPL 2 UFOSS |
+| mysql-connector-java-8.0.30.jar |   | 8.0.30 | GPL 2 UFOSS |
 | netty-buffer-4.1.78.Final.jar |   | 4.1.78.Final | AL 2.0 |
 | netty-codec-4.1.78.Final.jar |   | 4.1.78.Final | AL 2.0 |
 | netty-codec-http-4.1.78.Final.jar |   | 4.1.78.Final | AL 2.0 |
@@ -559,9 +559,9 @@ The licenses used are:
 | oro-2.0.8.jar | [Apache Jakarta ORO](http://jakarta.apache.org/oro/) | 2.0.8 | AL 2.0 |
 | owasp-java-html-sanitizer-20211018.2.NX1.jar |   | 20211018.2.NX1 | AL 2.0 |
 | parent-join-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
-| pdfbox-2.0.21.jar | [Apache PDFBox](http://pdfbox.apache.org) | 2.0.21 | AL 2.0 |
-| pdfbox-debugger-2.0.21.jar |   | 2.0.21 | AL 2.0 |
-| pdfbox-tools-2.0.21.jar |   | 2.0.21 | AL 2.0 |
+| pdfbox-2.0.24.jar | [Apache PDFBox](http://pdfbox.apache.org) | 2.0.24 | AL 2.0 |
+| pdfbox-debugger-2.0.24.jar |   | 2.0.24 | AL 2.0 |
+| pdfbox-tools-2.0.24.jar |   | 2.0.24 | AL 2.0 |
 | percolator-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | perfmark-api-0.19.0.jar |   | 0.19.0 | AL 2.0 |
 | persistence-api-1.0.2.jar | [Java Persistence API](http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html) | 1.0.2 | CDDL 1.0 |
@@ -601,20 +601,20 @@ The licenses used are:
 | t-digest-3.2.jar |   | 3.2 | AL 2.0 |
 | taglibs-standard-impl-1.2.5.jar |   | 1.2.5 | AL 2.0 |
 | threetenbp-1.3.3.jar |   | 1.3.3 | BSD 3 |
-| tomcat-api-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-catalina-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-coyote-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-dbcp-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-el-api-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-jasper-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-jasper-el-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-jaspic-api-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-jdbc-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-jni-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-jsp-api-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-juli-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-util-9.0.41.jar |   | 9.0.41 | AL 2.0 |
-| tomcat-util-scan-9.0.41.jar |   | 9.0.41 | AL 2.0 |
+| tomcat-api-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-catalina-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-coyote-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-dbcp-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-el-api-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-jasper-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-jasper-el-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-jaspic-api-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-jdbc-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-jni-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-jsp-api-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-juli-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-util-9.0.68.jar |   | 9.0.68 | AL 2.0 |
+| tomcat-util-scan-9.0.68.jar |   | 9.0.68 | AL 2.0 |
 | transport-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | transport-netty4-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | vaadin-sass-compiler-0.9.12-NX01.jar |   | 0.9.12-NX01 | AL 2.0 |
@@ -629,7 +629,7 @@ The licenses used are:
 | xercesImpl-2.12.0-nx1.jar | [Apache Xerces2](http://xerces.apache.org/xerces2-j/) | 2.12.0-nx1 | AL 2.0 |
 | xmlbeans-3.1.0.jar | [XMLBeans](http://xmlbeans.apache.org) | 3.1.0 | AL 2.0 |
 | xmlgraphics-commons-2.4.jar |   | 2.4 | AL 2.0 |
-| xmlsec-2.2.0.jar |   | 2.2.0 | AL 2.0 |
+| xmlsec-2.2.3.jar |   | 2.2.3 | AL 2.0 |
 | xmltooling-1.4.4.jar |   | 1.4.4 | AL 2.0 |
 | xom-1.2.10.jar |   | 1.2.10 | LGPL 2.1 |
 | xom-1.3.5.jar |   | 1.3.5 | LGPL 2.1 |
