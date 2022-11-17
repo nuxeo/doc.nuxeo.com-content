@@ -1,0 +1,61 @@
+---
+title: LTS 2021.29 / LTS 2021-HF29
+description: Discover what's new in LTS 2021.29 / LTS 2021-HF29
+review:
+   comment: ''
+   date: '2022-11-17'
+   status: ok
+labels:
+    - release-notes
+toc: true
+tree_item_index: 0
+hidden: true
+---
+
+{{! multiexcerpt name='nuxeo-server-updates-2021-29'}}
+# What's New in LTS 2021.29 / LTS 2021-HF29
+
+## Fix audit entries for rendition when audit is stored in MongoDB
+
+Rendition download events are correctly saved to MongoDB audit
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31383](https://jira.nuxeo.com/browse/NXP-31383)
+
+## Make the document creation take into account the segment limit
+
+Apply path segment max size at document creation
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31363](https://jira.nuxeo.com/browse/NXP-31363)
+
+## documentNotFoundException - enricher: runnableWorkflows exception when browsing with multirepo configuration
+
+Runnable Wokflow models can now be retrieved within a multi repository deployment
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31351](https://jira.nuxeo.com/browse/NXP-31351)
+
+## TransientStore GC throws Not Started Exception
+
+Transient Store GC are no longer started if already in progress
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31323](https://jira.nuxeo.com/browse/NXP-31323)
+
+## Provide a way to differentiate a view from a download in the audit trail
+
+You can now specify the download reason when download a blob.
+
+The download client reason can be specified within a REST call by providing a query parameter or a HTTP header when downloading a blob.
+
+The query parameter is , see below a cURL example:
+
+The HTTP header is , see below a cURL example:
+
+This information can then be retrieved in the extended object of audit entry under the name .
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31279](https://jira.nuxeo.com/browse/NXP-31279)
+
+
+# Learn More
+
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=21879) is available in our bug tracking tool.
+
+{{! /multiexcerpt}}
