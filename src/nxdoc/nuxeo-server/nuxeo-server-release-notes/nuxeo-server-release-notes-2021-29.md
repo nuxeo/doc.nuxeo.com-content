@@ -15,43 +15,43 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-29'}}
 # What's New in LTS 2021.29 / LTS 2021-HF29
 
-## Fix audit entries for rendition when audit is stored in MongoDB
+## Fix Audit Entries for Rendition When Audit Is Stored in MongoDB
 
-Rendition download events are correctly saved to MongoDB audit
+Rendition download events are correctly saved to MongoDB audit.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31383](https://jira.nuxeo.com/browse/NXP-31383)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31383](https://jira.nuxeo.com/browse/NXP-31383)
 
-## Make the document creation take into account the segment limit
+## Make the Document Creation Take Into Account the Segment Limit
 
-Apply path segment max size at document creation
+Apply path segment max size at document creation.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31363](https://jira.nuxeo.com/browse/NXP-31363)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31363](https://jira.nuxeo.com/browse/NXP-31363)
 
-## documentNotFoundException - enricher: runnableWorkflows exception when browsing with multirepo configuration
+## documentNotFoundException - enricher: runnableWorkflows Exception When Browsing with Multirepo Configuration
 
-Runnable Wokflow models can now be retrieved within a multi repository deployment
+Runnable Wokflow models can now be retrieved within a multi repository deployment.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31351](https://jira.nuxeo.com/browse/NXP-31351)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31351](https://jira.nuxeo.com/browse/NXP-31351)
 
 ## TransientStore GC throws Not Started Exception
 
-Transient Store GC are no longer started if already in progress
+Transient Store GC are no longer started if already in progress.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31323](https://jira.nuxeo.com/browse/NXP-31323)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31323](https://jira.nuxeo.com/browse/NXP-31323)
 
-## Provide a way to differentiate a view from a download in the audit trail
+## Provide a Way to Differentiate a View From a Download in the Audit Trail
 
 You can now specify the download reason when download a blob.
 
 The download client reason can be specified within a REST call by providing a query parameter or a HTTP header when downloading a blob.
 
-The query parameter is , see below a cURL example:
+The query parameter is `clientReason`, see below a cURL example:
 
-The HTTP header is , see below a cURL example:
+The HTTP header is `X-Client-Reason`, see below a cURL example:
 
-This information can then be retrieved in the extended object of audit entry under the name .
+This information can then be retrieved in the extended object of audit entry under the name `clientReason`.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31279](https://jira.nuxeo.com/browse/NXP-31279)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31279](https://jira.nuxeo.com/browse/NXP-31279)
 
 
 # Learn More
