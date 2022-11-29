@@ -288,7 +288,7 @@ The licenses used are:
 | curvesapi-1.06.jar |   | 1.06 | BSD 3 |
 | disruptor-3.4.2.jar |   | 3.4.2 | AL 2.0 |
 | dom4j-2.1.3.jar |   | 2.1.3 | BSD 3 |
-| ecj-3.23.0.jar |   | 3.23.0 | EPL 2.0 |
+| ecj-3.26.0.jar |   | 3.26.0 | EPL 2.0 |
 | ehcache-core-2.6.11.jar | [Ehcache](http://ehcache.org) | 2.6.11 | AL 2.0 |
 | elasticsearch-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | elasticsearch-cli-7.9.2.jar |   | 7.9.2 | AL 2.0 |
@@ -411,7 +411,7 @@ The licenses used are:
 | jaxws-api-2.3.1.jar |   | 2.3.1 | CDDL 1.0, GPL 2 CPE |
 | jbig2-imageio-2.99.0-NX1.jar |   | 2.99.0-NX1 | AL 2.0 |
 | jboss-el-1.0_02.CR6.jar | [Seam](http://www.seamframework.org) | 1.0_02.CR6 | LGPL 2.1 |
-| jboss-logging-3.3.2.Final.jar |   | 3.3.2.Final | AL 2.0 |
+| jboss-logging-3.4.1.Final.jar |   | 3.4.1.Final | AL 2.0 |
 | jcifs-1.2.19.jar |   | 1.2.19 | LGPL 2.1 |
 | jcip-annotations-1.0.jar | [Java Concurrency in Practice](http://jcip.net) | 1.0 | CC BY 2.5 |
 | jcl-over-slf4j-1.7.26.jar |   | 1.7.26 | MIT |
@@ -425,7 +425,7 @@ The licenses used are:
 | jersey-multipart-1.19.4.jar |   | 1.19.4 | CDDL 1.1, GPL 2 CPE |
 | jersey-server-1.19.4.jar | [Jersey](http://jersey.java.net) | 1.19.4 | CDDL 1.1, GPL 2 CPE |
 | jersey-servlet-1.19.4.jar | [Jersey](http://jersey.java.net) | 1.19.4 | CDDL 1.1, GPL 2 CPE |
-| jettison-1.4.1.jar |   | 1.4.1 | AL 2.0 |
+| jettison-1.5.1.jar |   | 1.5.1 | AL 2.0 |
 | jffi-1.2.15.jar |   | 1.2.15 | AL 2.0 |
 | jgrapht-core-1.0.1.jar |   | 1.0.1 | EPL 1.0, LGPL 2.1 |
 | jmd-0.8.1-tomasol-3e60e36137.jar | [JMD](https://github.com/tomasol/jmd) | 0.8.1-tomasol-3e60e36137 | MIT |
@@ -493,7 +493,7 @@ The licenses used are:
 | lz4-java-1.7.1.jar |   | 1.7.1 | AL 2.0 |
 | mail-1.4.7.jar |   | 1.4.7 | CDDL 1.0, GPL 2 CPE |
 | mapper-extras-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
-| mariadb-java-client-1.7.4.jar |   | 1.7.4 | LGPL 2.1 |
+| mariadb-java-client-2.2.4.jar |   | 2.2.4 | LGPL 2.1 |
 | mchange-commons-java-0.2.15.jar |   | 0.2.15 | EPL 1.0, LGPL 2.1 |
 | metrics-core-4.0.2.jar |   | 4.0.2 | AL 2.0 |
 | metrics-core-5.0.0-rc3.jar |   | 5.0.0-rc3 | AL 2.0 |
@@ -565,12 +565,12 @@ The licenses used are:
 | percolator-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | perfmark-api-0.19.0.jar |   | 0.19.0 | AL 2.0 |
 | persistence-api-1.0.2.jar | [Java Persistence API](http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html) | 1.0.2 | CDDL 1.0 |
-| plexus-utils-1.5.6.jar | [Plexus Common Utilities](http://plexus.codehaus.org/plexus-utils/) | 1.5.6 | AL 2.0 |
+| plexus-utils-3.4.1.jar | [Plexus Common Utilities](http://plexus.codehaus.org/plexus-utils/) | 3.4.1 | AL 2.0 |
 | poi-4.1.2.jar | [Apache POI](http://poi.apache.org) | 4.1.2 | AL 2.0 |
 | poi-ooxml-4.1.2.jar | [Apache POI](http://poi.apache.org) | 4.1.2 | AL 2.0 |
 | poi-ooxml-schemas-4.1.2.jar |   | 4.1.2 | AL 2.0 |
 | poi-scratchpad-4.1.2.jar | [Apache POI](http://poi.apache.org) | 4.1.2 | AL 2.0 |
-| postgresql-42.2.18.jar |   | 42.2.18 | BSD 2 |
+| postgresql-42.3.3.jar |   | 42.3.3 | BSD 2 |
 | proto-google-cloud-monitoring-v3-1.64.0.jar |   | 1.64.0 | AL 2.0 |
 | proto-google-cloud-trace-v1-0.65.0.jar |   | 0.65.0 | AL 2.0 |
 | proto-google-cloud-trace-v2-0.65.0.jar |   | 0.65.0 | AL 2.0 |
@@ -592,7 +592,7 @@ The licenses used are:
 | simpleclient-0.6.0.jar |   | 0.6.0 | AL 2.0 |
 | simpleclient_common-0.9.0.jar |   | 0.9.0 | AL 2.0 |
 | simpleclient_httpserver-0.9.0.jar |   | 0.9.0 | AL 2.0 |
-| slf4j-api-1.7.30.jar | [SLF4J](http://www.slf4j.org) | 1.7.30 | MIT |
+| slf4j-api-1.7.32.jar | [SLF4J](http://www.slf4j.org) | 1.7.32 | MIT |
 | snakeyaml-1.27.jar | [SnakeYAML](http://code.google.com/p/snakeyaml/) | 1.27 | AL 2.0 |
 | snappy-java-1.1.7.3.jar |   | 1.1.7.3 | AL 2.0 |
 | SparseBitSet-1.2.jar |   | 1.2 | AL 2.0 |
