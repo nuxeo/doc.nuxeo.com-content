@@ -49,7 +49,16 @@ Once enabled, users can select all documents in a result listing and execute an 
 --}}
 ![web-ui-default-bulk-actions-after-filtering](nx_asset://618329c7-2f7a-4eb8-a04d-da7112da1e13 ?w=650,border=true)
 
-Clicking on the checkbox of the header selects all documents at once, both the visible ones and the ones that are not currently displayed on screen. Clicking it again deselects all documents. Note that it is not possible to deselect documents individually at this stage.
+Clicking on the checkbox of the header selects all documents at once, both the visible ones and the ones that are not currently displayed on screen. Clicking it again deselects all documents.
+
+Starting from `Web UI 3.0.15`, it is possible to deselect documents individually. These documents won't be processed when executing the bulk action.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Web UI Release Notes/unselect-some
+    name: Screenshot from 2022-09-07 16-43-58.png
+    web_ui#screenshot#up_to_date
+--}}
+![unselect-some](nx_asset://0ad82bfb-6969-48a7-8c61-c0a2365f1e2a ?w=393,border=true)
 
 ### Available Default Bulk Actions
 
