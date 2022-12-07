@@ -103,6 +103,24 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 30
+
+### Make certificateKeyAlias value configurable from nuxeo.conf 
+
+A new nuxeo.conf property is available to configure the alias name for the certificate used in the HTTPS configuration: nuxeo.server.https.keyAlias
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31425](https://jira.nuxeo.com/browse/NXP-31425)
+
+### Create a MongoTransientStore that can handle large number params
+
+To use a MongoDB optimized implementation of the transientstore, (that is replacing the  KeyValueTransientStore implementation), the following property must be se on nuxeo.conf for 10.10 and LTS 2021:
+```Java
+nuxeo.transientstore.provider=mongodb
+```
+Note that on LTS 2023 this implementation is used by default.
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31311](https://jira.nuxeo.com/browse/NXP-31311)
+
 ## Hotfix 25
 
 ### Avoid Transaction Timeout During Emails Check
@@ -346,5 +364,6 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
