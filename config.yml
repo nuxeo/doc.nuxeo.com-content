@@ -11,11 +11,14 @@ default:
       - space_path: admindoc
         space_name: Nuxeo Installation and Administration
     branch: '710'
-    dev_browser_path: '710/nxdoc'
+    dev_browser_path: nxdoc/710
+    repo_id: platform
     versions:
+      - label: Cloud
+        url_path: 'cloud'
+      - label: LTS 2021
       - label: LTS 2019
-      - label: Next
-        url_path: 'next'
+        url_path: '1010'
       - label: LTS 2017
         url_path: '910'
       - label: LTS 2016
