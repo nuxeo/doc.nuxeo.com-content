@@ -7,7 +7,8 @@ default:
       - space_path: userdoc
         space_name: Nuxeo Platform User Documentation
     branch: '2021'
-    dev_browser_path: nxdoc
+    dev_browser_path: nxdoc/2021
+    repo_id: platform
     versions:
       - label: Cloud
         url_path: 'cloud'
