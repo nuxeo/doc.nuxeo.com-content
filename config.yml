@@ -8,7 +8,8 @@ default:
       - space_path: userdoc
         space_name: Nuxeo Platform User Documentation
     branch: '810'
-    dev_browser_path: '810/nxdoc'
+    dev_browser_path: nxdoc/810
+    repo_id: platform
     versions:
       - label: Cloud
         url_path: 'cloud'

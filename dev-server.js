@@ -39,11 +39,16 @@ info('target_repo_src: %s', target_repo_path);
 
 const instance_config = yaml_config.load(path.join(__dirname, 'config.yml'));
 const branch = instance_config && instance_config.site && instance_config.site.branch;
+const repo_id = instance_config && instance_config.site && instance_config.site.repo_id;
 const dev_browser_path = (instance_config && instance_config.site && instance_config.site.dev_browser_path) || '';
 info(`dev_browser_path: ${dev_browser_path}`);
 
 if (!branch) {
   throw new Error('Could not get current branch from `config.yml` site.branch');
+}
+
+if (!repo_id) {
+  throw new Error('Could not get Repo ID from `config.yml` site.repo_id');
 }
 
 // Get 404 info page
@@ -73,13 +78,17 @@ const build_docs = () => {
 
   co(function*() {
     // Pre-build
-    const pre_build = [pre_builder({ branch, repo_id: '', source_path: target_repo_path })];
+    const pre_build = [pre_builder({ branch, repo_id, source_path: target_repo_path })];
     const metadata = {};
     const pre_build_result = yield pre_build;
     pre_build_result.forEach(data => extend(metadata, data));
 
     // Build
-    yield builder(target_repo_path, metadata, target_repo_site, { branch, repo_id: '', repo_path: source_repo_path });
+    yield builder(target_repo_path, metadata, target_repo_site, {
+      branch,
+      repo_id,
+      repo_path: source_repo_path,
+    });
 
     yield exec('npm run copy_assets', { encoding: 'utf8', cwd: __dirname });
 
@@ -91,7 +100,7 @@ const build_docs = () => {
     return sync.sockets.emit('fullscreen:message', {
       title: 'Docs Build Error:',
       body: strip_ansi(`${err.message}\n\n${err.stack}`),
-      timeout: 100000
+      timeout: 100000,
     });
   });
 };
@@ -116,7 +125,7 @@ sync.init(
         match: [
           path.join(__dirname, 'src', '**', '*'),
           path.join(__dirname, 'assets', '**', '*'),
-          path.join(__dirname, 'config.yml')
+          path.join(__dirname, 'config.yml'),
         ],
         fn: (event, file) => {
           debug(`File changed: ${file}`);
@@ -125,9 +134,9 @@ sync.init(
 
             build_docs();
           }
-        }
-      }
-    ]
+        },
+      },
+    ],
   },
   (err, bs) => {
     if (err) {
