@@ -15,42 +15,42 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-30'}}
 # What's New in LTS 2021.30 / LTS 2021-HF30
 
-## Use jackson bom for jackson dependencies
+## Use Jackson BOM for Jackson Dependencies
 
 Jackson BOM is now imported in the Maven dependency graph.
 
-Addons declaring jackson artefacts in their dependencies managment section can remove them as the `jackson-bom` is now imported in the Maven dependency graph of Nuxeo Platform.
+Addons declaring jackson artefacts in their dependencies management section can remove them as the `jackson-bom` is now imported in the Maven dependency graph of Nuxeo Platform.
 This will ease the security upgrade of Jackson artefacts for all Nuxeo artefacts.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31455](https://jira.nuxeo.com/browse/NXP-31455)
 
-## Make certificateKeyAlias value configurable from nuxeo.conf 
+## Make certificateKeyAlias Value Configurable from nuxeo.conf 
 
 The certification key alias can be configured.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31425](https://jira.nuxeo.com/browse/NXP-31425)
 
-## Upgrade MongoDB Driver to version 4.7
+## Upgrade MongoDB Driver to Version 4.7
 
-The MongoDB driver has been bumped to version 4.7 to allow using MongoDB 6.x 
+The MongoDB driver has been bumped to version 4.7 to allow using MongoDB 6.x.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31398](https://jira.nuxeo.com/browse/NXP-31398)
 
-## Make the document creation take into account the segment limit in WebUI
+## Make the Document Creation Take Into Account the Segment Limit in Web UI
 
-Apply path segment max size at document creation
+Apply path segment max size at document creation.
 
-The segment limit can be adapted like in the sample contrib attached
+The segment limit can be adapted like in the sample contrib attached.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31363](https://jira.nuxeo.com/browse/NXP-31363)
 
-## Create a MongoTransientStore that can handle large number params
+## Create a MongoTransientStore That Can Handle Large Number Params
 
-There is a new optimized implementation of TransientStore for MongoDB
+There is a new optimized implementation of TransientStore for MongoDB.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31311](https://jira.nuxeo.com/browse/NXP-31311)
 
-## Fix race condition when reading Work state from KV store
+## Fix Race Condition When Reading Work State From KV Store
 
 Race condition is avoided when reading Work state from KV store.
 

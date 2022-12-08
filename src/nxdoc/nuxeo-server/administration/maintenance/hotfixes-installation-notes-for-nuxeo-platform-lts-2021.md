@@ -105,21 +105,21 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 30
 
-### Make certificateKeyAlias value configurable from nuxeo.conf 
+### Make certificateKeyAlias Value Configurable From nuxeo.conf 
 
-A new nuxeo.conf property is available to configure the alias name for the certificate used in the HTTPS configuration: nuxeo.server.https.keyAlias
+A new nuxeo.conf property is available to configure the alias name for the certificate used in the HTTPS configuration: `nuxeo.server.https.keyAlias`.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31425](https://jira.nuxeo.com/browse/NXP-31425)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31425](https://jira.nuxeo.com/browse/NXP-31425)
 
-### Create a MongoTransientStore that can handle large number params
+### Create a MongoTransientStore That Can Handle Large Number Params
 
-To use a MongoDB optimized implementation of the transientstore, (that is replacing the  KeyValueTransientStore implementation), the following property must be se on nuxeo.conf for 10.10 and LTS 2021:
+To use a MongoDB optimized implementation of the transientstore, (that is replacing the KeyValueTransientStore implementation), the following property must be seen on `nuxeo.conf` for 10.10 and LTS 2021:
 ```Java
 nuxeo.transientstore.provider=mongodb
 ```
 Note that on LTS 2023 this implementation is used by default.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31311](https://jira.nuxeo.com/browse/NXP-31311)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31311](https://jira.nuxeo.com/browse/NXP-31311)
 
 ## Hotfix 25
 
