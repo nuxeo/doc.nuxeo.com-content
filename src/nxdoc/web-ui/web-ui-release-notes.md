@@ -24,10 +24,11 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.16]({{page page='web-ui-release-notes-3-0-16'}})             | Accessibility improvements | -->
+<!-- | [Web UI 3.0.17]({{page page='web-ui-release-notes-3-0-17'}})             | Accessibility improvements around contrast and screen reader usage | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [Web UI 3.0.16]({{page page='web-ui-release-notes-3-0-16'}})                  | Accessibility improvements around name, role, value                        |
 | [Web UI 3.0.15]({{page page='web-ui-release-notes-3-0-15'}})                  | Bulk actions - unselect some, accessibility improvements                   |
 | [Web UI 3.0.14]({{page page='web-ui-release-notes-3-0-14'}})                  | Bugfix release                                                             |
 | [Web UI 3.0.13]({{page page='web-ui-release-notes-3-0-13'}})                  | Bugfix release                                                             |
