@@ -1,6 +1,6 @@
 ---
-title: NEV 2.1.3
-description: Release notes for Nuxeo Enhanced Viewer 2.1.1 and 2.1.2
+title: NEV 2.1.2
+description: Release notes for Nuxeo Enhanced Viewer 2.1.2
 tree_item_index: 898
 hidden: true
 review:
@@ -11,7 +11,7 @@ toc: true
 ---
 
 {{! multiexcerpt name='nuxeo-enhanced-viewer-updates'}}
-## What's new in NEV 2.1.1 and 2.1.2
+## What's new in NEV 2.1.2
 
 ### {{> anchor 'summary'}} Summary
 
