@@ -513,7 +513,7 @@ For example, all the videos could be stored somewhere, the attachments in a diff
     <class>org.nuxeo.ecm.core.blob.DefaultBlobDispatcher</class>
     <property name="dc:format=video">videos</property>
     <property name="blob:mime-type=video/mp4">videos</property>
-    <property name="blob:xpath=files/*/file">attachments</property>
+    <property name="blob:xpath~files/*/file">attachments</property>
     <property name="dc:source=secret">encrypted</property>
     <property name="default">default</property>
   </blobdispatcher>
