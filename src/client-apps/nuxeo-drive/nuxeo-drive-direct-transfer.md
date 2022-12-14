@@ -26,7 +26,12 @@ Nuxeo Drive upload capability provides a productive and network resilient way of
     The Direct Transfer popup opens.
     ![]({{file name='direct-transfer-popup.png'}})
 1. Click on **New transfer** at the top right of the popup.
-    ![]({{file name='direct-transfer-creation.png'}})
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Drive/Nuxeo Drive /direct-transfer-creation.png
+    name: direct-transfer-creation.png
+    drive#popup#up_to_date
+    --}}
+    ![direct-transfer-creation.png](nx_asset://b16b7fff-55c1-4925-823c-e2608745dd5c ?w=350)
 1. From this view, you can decide to **Add files** or **Add a folder**.</br>
     The files selection popup opens.
 1. Select the document(s) you want to transfer and click on **Open**.</br>
@@ -48,17 +53,45 @@ Available options are:
 #### New Remote Folder
 
 {{#> callout type='info' }}
-This option is only available on **Nuxeo Drive 4.5.1 Beta** version.
+This option is only available on **Nuxeo Drive 4.5.1** version.
 {{/callout}}
 
 This field lets you create your remote folder directly from the Direct Transfer popup. You don't have to go back to your instance to create it, you can handle everything at the same place.</br>
 To do so:
-1. Click on **Set**</br>
+1. Click on **New remote folder**</br>
     A popup opens.
-1. Type your new remote folder name and click **OK**.
-1. You can still update it, by clicking once again on **Set**.
-1. Once you've set your new remote folder click on **OK** to launch your transfer.
-![]({{file name='new-remote-folder.gif' page='nuxeo-drive-release-notes'}} ?w=450)
+1. Select the type of folder from the drop down list.
+2. Type your new remote folder name and click **OK**.
+4. Once you've set your new remote folder click on **OK** to launch your transfer.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Drive/Nuxeo Drive /New remote folder
+    name: dt-new-remote-folder.png
+    drive#popup#up_to_date
+--}}
+![New remote folder](nx_asset://067afdc7-3909-4a72-85ef-07382bd35238 ?w=350)
+
+#### Document Type 
+
+{{#> callout type='info' }}
+This option is only available on **Nuxeo Drive 5.3.0 Beta** version and needs to be enabled from the **Features** tab.
+{{/callout}}
+
+Once you've selected your files and/or folders, 2 drop down lists are available at the bottom of the direct transfer popup. 
+These drop-down lists work like when you create new documents on Web UI and therefore depend on your access rights and will be updated according to the file you want to transfer your documents to. 
+
+You will be able to select the folder and/or file types of the documents you are transferring, even custom ones.
+
+{{#> callout type='note' }}
+As long as you have not selected any file(s) and/or folder(s) the fields remain grayed out. 
+{{/callout}}
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Drive/Nuxeo Drive /dt-doc-type-selection.png
+    name: dt-doc-type-selection.png
+    drive#popup#up_to_date
+--}}
+![dt-doc-type-selection.png](nx_asset://3078b8d5-1240-46a2-a3f7-3486208fe798 ?w=250)
 
 ## Manage Sessions
 
