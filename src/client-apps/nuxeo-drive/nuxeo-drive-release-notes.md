@@ -9,35 +9,30 @@ review:
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.2.10**
+Welcome to the Release Notes for **Nuxeo Drive 5.3.0**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.2.10.md)
+**Status**: <font color="#ff0000">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.3.0.md)
 
 ## General
 
-### Fix Synchronization of Files Whose Name Contains a Quote on MS Windows
+### New feature: Document Type Selection
 
-An issue was preventing the correct synchronization of files containing special characters on Windows, it's now fixed. 
+A new feature **Document type selection** has been added to the **Features** tab that can be enabled or disabled. 
+This feature is adding 2 new fields on the direct transfer screen to let you choose the type of folder(s) and/or file(s) you are about to transfer as Web UI is doing. 
+These fields are updating depending on your access rights and the remote path you are navigating in. 
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2782](https://jira.nuxeo.com/browse/NXDRIVE-2782).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1999](https://jira.nuxeo.com/browse/NXDRIVE-1999).
 
-### Review Upgrade and Downgrade Mechanism
+### Support of Self-Signed Certificates
 
-We have improved the behavior when deciding to upgrade or downgrade your Nuxeo Drive version. 
+An issue was preventing the support of self-signed certificates when adding new account, it's now fixed. 
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2765](https://jira.nuxeo.com/browse/NXDRIVE-2765).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2779](https://jira.nuxeo.com/browse/NXDRIVE-2779).
 
-## UI 
-
-### Share Debug Info 
-
-At start up, a popup is asking if you want to share anonymous bug report and allow advanced analytics, which are 2 options that we **strongly recommend to enable**. They are now both disabled by default and it's up to you to enable them. 
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2735](https://jira.nuxeo.com/browse/NXDRIVE-2735).
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.10-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.10.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.2.10.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.3.0-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.3.0.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.3.0.exe)
