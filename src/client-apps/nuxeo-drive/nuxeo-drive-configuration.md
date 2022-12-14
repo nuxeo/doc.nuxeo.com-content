@@ -35,7 +35,12 @@ The Nuxeo Drive settings window shows four tabs that enable you to customize the
 
 - **Features**</br>
     This is where you can turn on/off the features available on your application.
-    ![]({{file name='drive-tab-features.png' page='nuxeo-drive'}})
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Drive/Nuxeo Drive /Drive Features tab
+    name: drive-features-tab.png
+    drive#screenshot#up_to_date
+    --}}
+    ![Drive Features tab](nx_asset://5544a67f-c18c-4f8f-b724-d95274350c6d ?w=350)
 
 - **Accounts**</br>
     Set up one or several Nuxeo Platform accounts to use with Nuxeo Drive.
