@@ -1,7 +1,6 @@
 ---
 title: Nuxeo Aspera 2021.3.3
 description: Release notes for Nuxeo Aspera Connector 2021.3.3
-tree_item_index: 100
 review:
   comment: ''
   date: '2022-09-05'
@@ -11,6 +10,7 @@ tree_item_index: 950
 ---
 
 {{! multiexcerpt name='nuxeo-aspera-connector-2021-3-3'}}
+
 ## What's New in Aspera for LTS 2021 (version 2021.3.3)
 
 This is a bugfix release.
@@ -26,7 +26,7 @@ The fix retrieve Aspera transfer entities of transferred files by id instead of 
 
 ### Allow Aspera Connector to Rely on Proxy
 
-The Aspera proxy settings is defaulted to false i.e. if proxy is enabled via nuxeo.http.proxy.host,  Aspera config will still be ignoring the proxy host and would connect to the Aspera instance configured.
+The Aspera proxy settings is defaulted to false i.e. if proxy is enabled via nuxeo.http.proxy.host, Aspera config will still be ignoring the proxy host and would connect to the Aspera instance configured.
 However, if you wishes to connect to Aspera via proxy, set the property nuxeo.aspera.enable.proxy to true. This would lead the Aspera config to connect through proxy.
 
 [[NXP-30775](https://jira.nuxeo.com/browse/NXP-30775)]
