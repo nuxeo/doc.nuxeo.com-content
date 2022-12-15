@@ -22,6 +22,10 @@ A new feature **Document type selection** has been added to the **Features** tab
 This feature is adding 2 new fields on the direct transfer screen to let you choose the type of folder(s) and/or file(s) you are about to transfer as Web UI is doing. 
 These fields are updating depending on your access rights and the remote path you are navigating in. 
 
+{{#> callout type='warning' }}
+Once this feature enabled, if you want to downgrade to a previous version of Nuxeo Drive, make sure to remove the feature `feature_document_type_selection` from your `config.ini` file. 
+{{/callout}}
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1999](https://jira.nuxeo.com/browse/NXDRIVE-1999).
 
 ### Support of Self-Signed Certificates
