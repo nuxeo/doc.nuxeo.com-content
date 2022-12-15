@@ -18,7 +18,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-16'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-17'}}}
 
 ---
 
