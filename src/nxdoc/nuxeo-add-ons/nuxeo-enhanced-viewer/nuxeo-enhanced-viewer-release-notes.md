@@ -10,11 +10,11 @@ toc: true
 ---
 
 
-{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2-2-0'}}}
+{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2-1-4'}}}
 
 ---
 
-<!-- | [NEV 2.2.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-2-0'}})        | Introduces the ability to redact content                                  | -->
+<!-- | [NEV 2.1.4]({{page page='nuxeo-enhanced-viewer-release-notes-2-1-4'}})   | Security update                                                        | -->
 
 ## NEV Release Notes Summary
 
