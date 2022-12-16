@@ -1,47 +1,54 @@
 ---
-title: Nuxeo Aspera 2021.3.4
-description: Release notes for Nuxeo Aspera Connector 2021.3.4
+title: Nuxeo Aspera 2021.3.6
+description: Release notes for Nuxeo Aspera Connector 2021.3.6
 tree_item_index: 100
 review:
   comment: ''
-  date: '2022-10-03'
+  date: '2022-12-03'
   status: ok
 toc: true
 hidden: true
 ---
 
-{{! multiexcerpt name='nuxeo-aspera-connector-2021-3-4'}}
-## What's New in Aspera for LTS 2021 (version 2021.3.4)
+{{! multiexcerpt name='nuxeo-aspera-connector-2021-3-6'}}
+## What's New in Aspera for LTS 2021 (version 2021.3.6)
 
 This is a bugfix release.
 
 ## Released Changes
 
-### Update Aspera Retry UI Button
+### Aspera iterator classes need to be able to use proxy
+Users were reporting that it is still not possible to use Aspera through their proxy implementation. Client indicates problem points in AsperaIterator and AsperaBrowseFilesIterator now fixed.
+<br/>[[NXP-31290](https://jira.nuxeo.com/browse/NXP-31290)]
 
-The mouse pointer style does not change from "arrow" to "hand" to show that the retry button is clickable when hovered over the retry button.
-This is now fixed and allow for better user experience.
 
-[[NXP-31239](https://jira.nuxeo.com/browse/NXP-31239)]
+### Folder retry
+A new retry button is added during the upload if one or many files inside the folder are failing.
+<br/>[[NXP-31113](https://jira.nuxeo.com/browse/NXP-31113)]
 
-### Aspera Download Complete Collection
+### Edit Metadata is not working as per expectation for Folder
+This is a fix. When creating one transfer, if we add a couple of folders and when editing the transfer and put some common metadata for both folders.
+Wait till they are uploaded in transient. Click on edit metadata. Change metadata for one folder. Complete transfer
+Wait for the transfer to be completed. After completion Check metadata for all the files under the folder whose metadata was changed.
+We were seeing the common old metadata. But now we can see the new metadata which was given.
+<br/>[[NXP-31178](https://jira.nuxeo.com/browse/NXP-31178)]
 
-Users have now the ability to download a complete collection (same behavior as if it were a folder).
+### Parse error in AsperaNodeServiceImpl
+As a part of NXP-31290 & NXP-31356, (to enable proxy support) all Jersey Client instance has been replaced with httpclient.
+Due to this change, the default encoding config seems to have started rejecting filenames with special character, leading to the parse issue at Aspera Side. Applied the fix on this a the error is fixed.
+<br/>[[NXP-31420](https://jira.nuxeo.com/browse/NXP-31420)]
 
-[[NXP-30871](https://jira.nuxeo.com/browse/NXP-30871)]
+### Skip all Aspera API invocations during retry
+During Retry, Invoking Aspera APIs might lead to failure as Aspera stores information related to a transfer only for a limited time. (24 hrs)
+Since the info needed from Aspera is already processed during complete transfer, We can extract and store that information inside Transfer and skip any future Aspera API calls for the same transfer during retry.
+<br/>[[NXP-31416](https://jira.nuxeo.com/browse/NXP-31416)]
 
-### Aspera Download Includes Trashed Docs
 
-Previously when we deleted a file (eg.: abc.jpg) from a folder (eg.: folder1), then go to the parent folder and select folder1 and click download with aspera, the resultant folder1 that is downloaded locally also consists of the deleted abc.jpg
-This is now fixed, and the trashed document is not downloaded.
 
-[[NXP-30909](https://jira.nuxeo.com/browse/NXP-30909)]
 
-### Retry Option Is Still There When a Retry Process Is Going On
 
-The retry option was still present when a retry process is going on. We removed the retry button when the process is going on.
-It is only available when there is any failure and retry can make that successful.
 
-[[NXP-31105](https://jira.nuxeo.com/browse/NXP-31105)]
+
+
 
 {{! /multiexcerpt}}
