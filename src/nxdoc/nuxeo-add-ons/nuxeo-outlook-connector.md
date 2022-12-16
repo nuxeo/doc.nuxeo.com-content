@@ -3,7 +3,7 @@ title: Nuxeo Outlook Connector
 description: 'Nuxeo Outlook Connector enables users to use Nuxeo Platform in Outlook.'
 review:
     comment: ''
-    date: '2020-12-16'
+    date: '2022-12-16'
     status: ok
 labels:
     - lts2019-ok
@@ -773,3 +773,43 @@ Additional parameters have to be passed with the request:
 ```
 
 The default language is English.
+
+### Translate column headers
+
+For Outlook Connector v1.3 and above it is possible to translate the column headers. This requires a Nuxeo Studio connection and and a minor amount of work for the administrator.
+
+First, go to the Nuxeo Studio instance connected to your server. Switch to the Designer mode and expand the "Translations". If no "messages" file is present, use the "+"-Button to create a file for your preferred language. Use the following naming pattern.
+
+Standard file: "messages"
+French: "messages-fr-FR"
+German: "messages-de-DE"
+Spanish: "messages-es-ES"
+Italian: "messages-it-IT"
+Dutch: "messages-nl-NL"
+Swedish: "messages-sv-SE"
+Japanes: "messages-ja-JP"
+Please add the following labels and their preferred translation. Example for French:
+
+{
+  "label.oi.title": "Titre",
+  "label.oi.modified": "Modification",
+  "label.oi.version": "Version",
+  "label.oi.lastcontributor": "Dernier contributeur",
+  "label.oi.created": "Création",
+  "label.oi.creator": "Contributeur",
+  "label.oi.coverage": "Couverture",
+  "label.oi.nature": "Nature",
+  "label.oi.subjects": "Sujets"
+}
+Save the file, update the project in your servers' update center. After the next restart, the translations will be available for the client to use.
+
+The Connector will always try to find the translation file for the language selected in the "General" settings:
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/outlook-connector/Language
+    name: 521044021.png
+    addins#screenshot#up_to_date
+--}}
+![Language](nx_asset://ed4c5fbe-aa12-44c6-9b0e-5d6aac8843c9 ?w=650,border=true)
+
+If no translation file is present it will fallback to the "messages" file. If this is also not present, it will fallback to the standard naming saved in the client itself.
