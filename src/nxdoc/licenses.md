@@ -229,6 +229,7 @@ The licenses used are:
 | aws-java-sdk-kms-1.12.261.jar |   | 1.12.261 | AL 2.0 |
 | aws-java-sdk-s3-1.12.261.jar |   | 1.12.261 | AL 2.0 |
 | aws-java-sdk-sts-1.12.261.jar |   | 1.12.261 | AL 2.0 |
+| azure-keyvault-core-1.2.4.jar | | 1.2.4 | MIT |
 | azure-storage-8.6.6.jar |   | 8.6.6 | AL 2.0 |
 | batik-constants-1.13.jar |   | 1.13 | AL 2.0 |
 | batik-css-1.13.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.13 | AL 2.0 |
@@ -237,6 +238,7 @@ The licenses used are:
 | batik-util-1.13.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.13 | AL 2.0 |
 | bcpkix-jdk15on-1.69.jar |   | 1.69 | MIT |
 | bcprov-jdk15on-1.69.jar |   | 1.69 | MIT |
+| bcutil-jdk15on-1.69.jar | | 1.69 | MIT |
 | box-java-sdk-1.1.0.jar |   | 1.1.0 | AL 2.0 |
 | bsh-2.0b6.jar |   | 2.0b6 | AL 2.0 |
 | bson-4.1.1.jar |   | 4.1.1 | AL 2.0 |
@@ -286,6 +288,7 @@ The licenses used are:
 | core-1.0-b02.jar |   | 1.0-b02 | CDDL 1.0, GPL 2 |
 | cors-filter-2.9.jar |   | 2.9 | AL 2.0 |
 | curvesapi-1.06.jar |   | 1.06 | BSD 3 |
+| dd-trace-api-0.93.0.jar |   | 0.93.0 | AL 2.0 |
 | disruptor-3.4.2.jar |   | 3.4.2 | AL 2.0 |
 | dom4j-2.1.3.jar |   | 2.1.3 | BSD 3 |
 | ecj-3.26.0.jar |   | 3.26.0 | EPL 2.0 |
@@ -334,7 +337,9 @@ The licenses used are:
 | google-cloud-storage-1.76.0.jar |   | 1.76.0 | AL 2.0 |
 | google-cloud-trace-0.100.0-beta.jar |   | 0.100.0-beta | AL 2.0 |
 | google-http-client-1.38.0.jar |   | 1.38.0 | AL 2.0 |
+| google-http-client-apache-v2-1.41.8.jar | | 1.41.8 | AL 2.0 |
 | google-http-client-appengine-1.29.1.jar |   | 1.29.1 | AL 2.0 |
+| google-http-client-gson-1.42.0.jar | | 1.42.0 | AL 2.0 |
 | google-http-client-jackson2-1.38.0.jar |   | 1.38.0 | AL 2.0 |
 | google-oauth-client-1.34.1.jar |   | 1.34.1 | AL 2.0 |
 | groovy-all-2.4.12.jar | [Groovy](http://groovy.codehaus.org) | 2.4.12 | AL 2.0 |
@@ -468,6 +473,10 @@ The licenses used are:
 | keycloak-tomcat-adapter-spi-10.0.2.jar |   | 10.0.2 | AL 2.0 |
 | keycloak-tomcat-core-adapter-10.0.2.jar |   | 10.0.2 | AL 2.0 |
 | keycloak-tomcat8-adapter-10.0.2.jar |   | 10.0.2 | AL 2.0 |
+| kotlin-stdlib-common-1.5.31.jar | | 1.5.31 | AL 2.0 |
+| kotlin-stdlib-jdk7-1.5.31.jar | | 1.5.31 | AL 2.0 |
+| kotlin-stdlib-jdk8-1.5.31.jar | | 1.5.31 | AL 2.0 |
+| kotlin-stdlib-1.6.20.jar | | 1.6.20 | AL 2.0 |
 | lang-mustache-client-7.9.2.jar |   | 7.9.2 | AL 2.0 |
 | libthrift-0.11.0.jar |   | 0.11.0 | AL 2.0 |
 | listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar |   | 9999.0-empty-to-avoid-conflict-with-guava | AL 2.0 |
@@ -523,6 +532,7 @@ The licenses used are:
 | okhttp-2.7.5.jar |   | 2.7.5 | AL 2.0 |
 | okhttp-4.10.0.jar |   | 4.10.0 | AL 2.0 |
 | okio-2.9.0.jar |   | 2.9.0 | AL 2.0 |
+| okio-jvm-3.0.0.jar | | 3.0.0 | AL 2.0 |
 | opencensus-api-0.31.1.jar |   | 0.31.1 | AL 2.0 |
 | opencensus-contrib-dropwizard5-0.31.1.jar |   | 0.31.1 | AL 2.0 |
 | opencensus-contrib-exemplar-util-0.31.1.jar |   | 0.31.1 | AL 2.0 |
