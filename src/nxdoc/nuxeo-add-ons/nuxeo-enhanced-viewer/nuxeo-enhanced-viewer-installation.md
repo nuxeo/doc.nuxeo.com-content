@@ -65,7 +65,7 @@ The preferred way to run NEV services is to use Kubernetes and Helm 3 as they pr
 
 ### Kubernetes
 
-The Helm Chart and installation instructions are available in the [ARender Documentation](https://docs.arender.io/install/kubernetes/).
+#### Deployment
 
 {{#> callout type='warning' heading='Private services'}}
 You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these services.
@@ -75,102 +75,146 @@ You should contact your Nuxeo Administrator or your Nuxeo sales representative t
 The NEV stack needs a ReadWriteMany PVC to share blobs.
 {{/callout}}
 
-After getting the ARender Helm Chart, you need to customize some parts in order to deploy the Nuxeo extended Docker images.
+Nuxeo provides the Nuxeo Enhanced Viewer Helm Chart to ease the deployment.
+The NEV Helm Chart leverages, as a dependency, the ARender Helm Chart whose documentation can be found [here](https://docs.arender.io/install/kubernetes/).
+
+You first need to add the Nuxeo ARender Helm Chart repository:
+
+```bash
+helm repo add nuxeo-arender https://packages.nuxeo.com/repository/helm-arender --username <PACKAGES_USERNAME> --password <PACKAGES_PASSWORD>
+helm repo update
+```
+
+You need to have several Kubernetes Secrets present in the namespace where the NEV stack will be deployed.
+You can find below the list of these required Kubernetes Secrets with a name example:
+- `docker-arender-packages-nuxeo-pull-secret`: a _kubernetes.io/dockerconfigjson_ secret holding the credentials 
+to pull NEV Docker images from packages.nuxeo.com
+- `kubernetes-cluster-tls`: a _kubernetes.io/tls_ secret holding the TLS private key and certificate to secure 
+NEV viewer public access
+- `nuxeo-enhanced-viewer-oauth2`: an _Opaque_ secret holding the OAuth2 secret configured on Nuxeo side to
+allow users to authenticate against NEV viewer
+
+You can create the `nuxeo-enhanced-viewer-oauth2` with the command below:
+
+```bash
+kubectl create secret generic nuxeo-enhanced-viewer-oauth2 \
+  --from-literal=ARENDERSRV_NUXEO_SERVER_ARENDER_SECRET=OAUTH2_SECRET
+```
+
+You can now prepare a `values.yaml` file containing the parameter to deploy the NEV stack, you can find an example below:
 
 ```yaml
 global:
-  arenderVersion: "2.1.2"
+  arenderVersion: "2.1.4"
   imagePullSecrets:
   - name: docker-arender-packages-nuxeo-pull-secret
 
-rendition:
-  broker:
-    image:
-      repository: docker-arender.packages.nuxeo.com/nuxeo/arender-document-service-broker
-    replicaCount: 1
-    autoscale:
-      enabled: false
-      maxReplicas: 3
-      cpuLimit: 80
-
-  converter:
-    image:
-      repository: docker-arender.packages.nuxeo.com/nuxeo/arender-document-converter
-    replicaCount: 1
-    autoscale:
-      enabled: false
-      maxReplicas: 3
-      cpuLimit: 80
-    deployment:
-      readinessProbe:
-        timeoutSeconds: 5
-
-  handler:
-    image:
-      repository: docker-arender.packages.nuxeo.com/nuxeo/arender-document-text-handler
-    replicaCount: 1
-    autoscale:
-      enabled: false
-      maxReplicas: 3
-      cpuLimit: 80
-
-  renderer:
-    image:
-      repository: docker-arender.packages.nuxeo.com/nuxeo/arender-document-renderer
-    replicaCount: 1
-    autoscale:
-      enabled: false
-      maxReplicas: 3
-      cpuLimit: 80
-
-viewer:
-  image:
-    repository: docker-arender.packages.nuxeo.com/nuxeo/arender-ui
-  # replicaCount & autoscale can be changed if high availability is configured, see next section
-  replicaCount: 1
-  autoscale:
-    enabled: false
-    maxReplicas: 3
-    cpuLimit: 80
-  deployment:
-    livenessProbe:
-      # override livenessProbe.probe because default one is behind the OAuth2 security scope
-      path: /arendergwt/gwt/standard/standard.css
-    readinessProbe:
-      # override readinessProbe.probe because default one is behind the OAuth2 security scope
-      path: /arendergwt/health/records
-  environment:
-    # required values
-    ARENDERSRV_NUXEO_SERVER_URL: https://nuxeo-url
-    ARENDERSRV_NUXEO_SERVER_ARENDER_SECRET: OAUTH2_SECRET # Same than the one in nuxeo.conf
-    # optional values
-    ARENDERSRV_NUXEO_SERVER_CONTEXT_PATH: /nuxeo
-    ARENDERSRV_NUXEO_CLIENT_TIMEOUT: "30" # seconds
-    ARENDERSRV_NUXEO_CLIENT_POOL_MAX_IDLE_CONNECTIONS: "200"
-    ARENDERSRV_NUXEO_CLIENT_POOL_KEEP_ALIVE_DURATION: "900" # seconds
-    # high availability settings, see next section for configuration
-    ARENDERSRV_NUXEO_OAUTH2_STORAGE_BACKEND: local
-    # high availability with Hazelcast
-    ARENDERSRV_NUXEO_OAUTH2_STORAGE_HAZELCAST_SERVICE_DNS: name-of-hazelcast-service-in-kubernetes
-    ARENDERSRV_NUXEO_OAUTH2_STORAGE_HAZELCAST_PORT: "5701"
-    ARENDERSRV_NUXEO_OAUTH2_STORAGE_HAZELCAST_CLUSTER_NAME: arender-previewer
-    # high availability with MongoDB
-    ARENDERSRV_NUXEO_OAUTH2_STORAGE_MONGODB_SERVER: mongodb://mongodb-host:27017
-    ARENDERSRV_NUXEO_OAUTH2_STORAGE_MONGODB_DBNAME: arender
-    ARENDERSRV_NUXEO_OAUTH2_STORAGE_MONGODB_SSL: false
-  # enable ingress, the UI must be accessible
-  ingress:
-    enabled: true
-    hosts:
-    - host: arender-previewer-url
-    tls:
-    - secretName: arender-previewer-tls-secret
+arender:
+  viewer:
+    nuxeo:
+      server:
+        url: https://nuxeo.somedomain.com
+      oauth2:
+        secretKey: nuxeo-enhanced-viewer-oauth2
+    ingress:
+      enabled: true
       hosts:
-      - arender-previewer-url
-
+      - host: nev.somedomain.com
+      tls:
+      - secretName: kubernetes-cluster-tls
+        hosts:
+        - nev.somedomain.com
 ```
 
-The values above have been written for the ARender Helm Chart `4.8.1` and NEV `2.1.2`.
+Finally, you can deploy the NEV stack:
+
+```bash
+helm install <RELEASE_NAME> nuxeo-arender/nuxeo-enhanced-viewer -f values.yaml
+```
+
+After a few minutes you should see running Pods in your namespace.
+
+#### High Availability & Autoscale
+
+The whole stack can be deployed in an High Availability way, the NEV software uses [Hazelcast](https://hazelcast.com/) to bring this feature.
+This allows to share states between services such as HTTP sessions, OAuth2 tokens, convertion statuses...
+
+The Helm Chart also allows to enable Autoscaling for each services.
+
+To enable these features you just need to add the parameters below to your `values.yaml`:
+
+```yaml
+arender:
+  rendition:
+    broker:
+      replicaCount: 2
+      autoscale:
+        enabled: true
+        maxReplicas: 5
+
+    converter:
+      replicaCount: 2
+      autoscale:
+        enabled: true
+        maxReplicas: 5
+
+    handler:
+      replicaCount: 2
+      autoscale:
+        enabled: true
+        maxReplicas: 5
+
+    renderer:
+      replicaCount: 2
+      autoscale:
+        enabled: true
+        maxReplicas: 5
+
+  viewer:
+    replicaCount: 2
+    autoscale:
+      enabled: true
+      maxReplicas: 5
+```
+
+#### Helm Chart Values
+
+The NEV Helm Chart supports the same values than the ARender Helm Chart, you just need to prefix them with `arender.`.
+
+The following table lists some of the configurable parameters for the NEV Helm Chart:
+
+| Key                                                 | Type                         | Default                          | Description                                                                                                                                                           |
+| --------------------------------------------------- | ---------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| global.arenderVersion                               | string                       | 2.1.3                            | The NEV version to deploy                                                                                                                                             |
+| global.imagePullSecrets                             | list of object with name key | []                               | The pull secrets used to pull NEV Docker images                                                                                                                       |
+| arender.rendition.sharedTmpFolder.storage.className | string                       | ""                               | The className to use for the shared PVC, it must supports RWX                                                                                                         |
+| arender.rendition.sharedTmpFolder.storage.size      | string                       | "50Gi"                           | The size of the shared PVC                                                                                                                                            |
+| arender.rendition.broker.replicaCount               | int                          | 1                                | Specify the number of broker replicas, if > 1 it allow the broker to work in HA mode.                                                                                 |
+| arender.rendition.broker.autoscale.enabled          | boolean                      | false                            | Enable the autoscale Kubernetes feature on the broker                                                                                                                 |
+| arender.rendition.broker.autoscale.maxReplicas      | int                          | 3                                | Specify the maximum number of broker replicas                                                                                                                         |
+| arender.rendition.broker.autoscale.cpuLimit         | int                          | 80                               | Specify the cpu limit which will trigger a replica deployment                                                                                                         |
+| arender.rendition.converter.replicaCount            | int                          | 1                                | Specify the number of converter replicas, if > 1 it allow the converter to work in HA mode.                                                                           |
+| arender.rendition.converter.autoscale.enabled       | boolean                      | false                            | Enable the autoscale Kubernetes feature on the converter                                                                                                              |
+| arender.rendition.converter.autoscale.maxReplicas   | int                          | 3                                | Specify the maximum number of converter replicas                                                                                                                      |
+| arender.rendition.converter.autoscale.cpuLimit      | int                          | 80                               | Specify the cpu limit which will trigger a replica deployment                                                                                                         |
+| arender.rendition.handler.replicaCount              | int                          | 1                                | Specify the number of handler replicas, if > 1 it allow the handler to work in HA mode.                                                                               |
+| arender.rendition.handler.autoscale.enabled         | boolean                      | false                            | Enable the autoscale Kubernetes feature on the handler                                                                                                                |
+| arender.rendition.handler.autoscale.maxReplicas     | int                          | 3                                | Specify the maximum number of handler replicas                                                                                                                        |
+| arender.rendition.handler.autoscale.cpuLimit        | int                          | 80                               | Specify the cpu limit which will trigger a replica deployment                                                                                                         |
+| arender.rendition.renderer.replicaCount             | int                          | 1                                | Specify the number of renderer replicas, if > 1 it allow the renderer to work in HA mode.                                                                             |
+| arender.rendition.renderer.autoscale.enabled        | boolean                      | false                            | Enable the autoscale Kubernetes feature on the renderer                                                                                                               |
+| arender.rendition.renderer.autoscale.maxReplicas    | int                          | 3                                | Specify the maximum number of renderer replicas                                                                                                                       |
+| arender.rendition.renderer.autoscale.cpuLimit       | int                          | 80                               | Specify the cpu limit which will trigger a replica deployment                                                                                                         |
+| arender.viewer.replicaCount                         | int                          | 1                                | Specify the number of viewer replicas, if > 1 it allow the viewer to work in HA mode.                                                                                 |
+| arender.viewer.autoscale.enabled                    | boolean                      | false                            | Enable the autoscale Kubernetes feature on the viewer                                                                                                                 |
+| arender.viewer.autoscale.maxReplicas                | int                          | 1                                | Specify the maximum number of viewer replicas                                                                                                                         |
+| arender.viewer.autoscale.cpuLimit                   | int                          | 100                              | Specify the cpu limit which will trigger a replica deployment                                                                                                         |
+| arender.viewer.nuxeo.server.url                     | string                       | ""                               | Specify the Nuxeo server URL                                                                                                                                          |
+| arender.viewer.nuxeo.oauth2.secretValue             | string                       | ""                               | Specify the Nuxeo OAuth2 secret value, this will create a Kubernetes Secret                                                                                           |
+| arender.viewer.nuxeo.oauth2.secretKey               | string                       | "<viewer.fullname>-nuxeo-oauth2" | Specify an existing Kubernetes secret containing the Nuxeo OAuth2 secret, the value should be set with the `ARENDERSRV_NUXEO_SERVER_ARENDER_SECRET` key in the secret |
+| arender.viewer.ingress.enabled                      | boolean                      | false                            | Enable Ingress on the viewer                                                                                                                                          |
+| arender.viewer.ingress.hosts                        | list                         | []                               | Specify the host to route trafic to viewer, the list should contain object with a `host` key and an optional `paths` key                                              |
+| arender.viewer.ingress.tls                          | list                         | []                               | Specify the Ingress tls configuration, the list should contain object with a `secretName` key and a `hosts` key                                                       |
 
 ### Kubernetes-less
 
@@ -260,58 +304,14 @@ ARENDERSRV_NUXEO_CLIENT_POOL_MAX_IDLE_CONNECTIONS: "200"
 ARENDERSRV_NUXEO_CLIENT_POOL_KEEP_ALIVE_DURATION: "900" # seconds
 ```
 
-### Previewer High Availability
+To setup High Availability on the previewer, you need to configure a DNS record resolving all your previewer hostnames.
 
-The Previewer can be deployed in an High Availability way, to do so you can choose between [Hazelcast](https://hazelcast.com/) or [MongoDB](https://www.mongodb.com/) to share the HTTP sessions and OAuth2 tokens between previewer instances.
-
-#### Hazelcast
-
-Hazelcast is the preferred way to bring High Availability to the Previewer as it doesn't require to deploy another software.
-
-To configure it in Kubernetes, you first need to deploy an [Headless Service](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services), like below:
-
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: nev-viewer-hazelcast-headless
-  labels:
-    app: viewer
-    release: nev # to replace by the release name when you have deployed the NEV stack
-    component: viewer
-spec:
-  type: ClusterIP
-  clusterIP: None
-  ports:
-    - name: tcp-hazelcast
-      port: 5701
-  selector:
-    app: viewer
-    release: nev # to replace by the release name when you have deployed the NEV stack
-    component: viewer
-```
-
-In a Kubernetes-less setup, you need to configure a DNS record resolving all your previewer hostnames.
-
-Then you need to configure on the Previewer the environment variables below:
+Then you need to configure the environment variables below:
 
 ```yaml:
 ARENDERSRV_NUXEO_OAUTH2_STORAGE_BACKEND: hazelcast
-ARENDERSRV_NUXEO_OAUTH2_STORAGE_HAZELCAST_SERVICE_DNS: nev-viewer-hazelcast-headless
+ARENDERSRV_NUXEO_OAUTH2_STORAGE_HAZELCAST_SERVICE_DNS: dns-resolving-previewers
 ```
-
-#### MongoDB
-
-To use MongoDB as High Availability backend, you need to configure on the Previewer the environment variables below:
-
-```yaml
-ARENDERSRV_NUXEO_OAUTH2_STORAGE_BACKEND: mongodb
-ARENDERSRV_NUXEO_OAUTH2_STORAGE_MONGODB_SERVER: mongodb://mongodb-host:27017
-```
-
-The MongoDB server setting supports the [connection string](https://docs.mongodb.com/manual/reference/connection-string/).
-
-The HTTP sessions and OAuth2 tokens will be stored in the `sessions` and `oauth2Authorized` collections of the `arender` database.
 
 ## ARender Customization
 
