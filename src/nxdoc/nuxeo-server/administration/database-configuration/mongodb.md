@@ -304,6 +304,16 @@ nuxeo.mongodb.keystore.type
 
 See the [Trust Store and Key Store Configuration]({{page page='trust-store-and-key-store-configuration'}}) page for more.
 
+## Hotfixes and indexes
+
+Since LTS 2021 ([NXP-29261](https://jira.nuxeo.com/browse/NXP-29261)) indexes are defined in document schemas and created during Nuxeo start. This is fine when starting from scratch, but it is not recommended on existing instance with large amount of documents, because creating an index is an heavy operation that can timeout or impact the MongoDB performance.
+
+Some hotfixes may add missing or needed indexes to improve the overall performances of the platform. By default, a nuxeo server restarting after having installed an Hotfix defining a new index will try to create these indexes if not existing.
+
+On instances with large repository:
+ - It is recommended to create the new indexes defined by an Hotfix prior to restarting the server. Each [Hotfixes Installation Notes
+]({{page page='hotfixes-installation-notes-for-nuxeo-platform-lts-2021'}}) provides the command in order to create manually any new indexes for this matter.
+ - The auto create index on start option could be disabled with the nuxeo conf property `nuxeo.db.indexes.create=false` as long as the [Hotfixes Installation Notes]({{page page='hotfixes-installation-notes-for-nuxeo-platform-lts-2021'}}) are carefully reviewed in order to manually create the needed indexes.
 
 ## GridFS
 
