@@ -80,7 +80,7 @@ For this you can:
    - **Name:** Nuxeo
    - **Redirect URL:** your instance:  https://nightly.nuxeo.com/nuxeo/site/oauth2/frameio/callback
    - **Uses PKCE:** false
-   - **Scopes:** `action.create,action.delete,account.read,comment.read,action.update,action.read,team.read,asset.read,offline`
+   - **Scopes:** `action.create,action.delete,account.read,comment.read,action.update,action.read,team.read,asset.read,asset.create,asset.update,project.read`
    {{!--     ### nx_asset ###
      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-edit-oauth-app.png
      name: Screenshot 2021-09-14 at 16.16.51.png
@@ -148,7 +148,7 @@ Fill the form:
   - **Authorization Server URL**: https://applications.frame.io/oauth2/auth
   - **Token Server URL**: https://applications.frame.io/oauth2/token
   - **User Authorization URL**: <empty>
-  - **Scopes**: `action.create,action.delete,account.read,comment.read,action.update,action.read,team.read,asset.read,offline`
+  - **Scopes**: `action.create,action.delete,account.read,comment.read,action.update,action.read,team.read,asset.read,asset.create,asset.update,project.read`
 
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-edit-provider-entry.png
@@ -257,3 +257,87 @@ This will have immediate effect and your Frame.io team members won’t be able t
 {{#> callout type='note'}}
 Everything that was previously pushed to your Nuxeo folder will stay in your folder.
 {{/callout}}
+
+
+## Version 1.3 Use Case: Push Assets from Nuxeo to Frame.io
+
+You will now be able to send assets stored in Nuxeo to Frame.io to start you approval workflow on the selected assets.
+The Bind flow remains the same as before and is defined in the V1 addon explained earlier.
+
+Into the Nuxeo folder, each compatible asset has now the “Push to Frame.io” action.
+You can send a single document or send them in bulk.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-single-push-action
+    name: frameio-single-push-action.png
+    addins#screenshot#up_to_date
+--}}
+![frameio-single-push-action](nx_asset://ca1f2554-ca3d-457d-a4c2-5307203e86b9 ?w=650,border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-bulk-push-action
+    name: frameio-bulk-push-action.png
+    addins#screenshot#up_to_date
+--}}
+![frameio-bulk-push-action](nx_asset://46ae891e-dba3-4aa6-805a-0938881ece57 ?w=650,border=true)
+
+If the folder is not bound: action fire an error bubble message that display “Folder not bound"
+
+When action is selected, a popup is displayed to:
+Choose the team if the folder is bound to several teams
+Choose the project
+Choose the destination folder in Frame.io
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-target-folder-popup
+    name: frameio-target-folder-popup.png
+    addins#screenshot#up_to_date
+--}}
+![frameio-target-folder-popup](nx_asset://41b2caee-5b8e-43be-a257-f8fb9bb905da ?w=650,border=true)
+
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frame.io-push-popup
+    name: frame.io-push-popup.png
+    addins#screenshot#up_to_date
+--}}
+![frame.io-push-popup](nx_asset://70776839-f49b-4547-af4c-9107aac9c177 ?w=650,border=true)
+
+You will also see a success popup message letting you know the document is being sent to frame.io.
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-push-success-message
+    name: frameio-push-success-message.png
+    addins#screenshot#up_to_date
+--}}
+![frameio-push-success-message](nx_asset://d4660e9c-1059-431e-b832-c699f723c0cb ?w=650,border=true)
+
+The Nuxeo document is now locked
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-lock
+    name: frameio-lock.png
+    addins#screenshot#up_to_date
+--}}
+![frameio-lock](nx_asset://cd6801df-c710-4bc8-a0a3-2a3460cb222f ?w=650,border=true)
+
+The binary file is asynchronously uploaded in Frame.io, then The Frame.io facet is attached to the document to store the asset ID. Once the asset arrives to Frame.io, the user making the action will receive an email confirmation when the document is uploaded.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/Frame.io-pushed-asset
+    name: Screenshot 2022-12-27 at 11.48.22.png
+    addins#screenshot#up_to_date
+--}}
+![Frame.io-pushed-asset](nx_asset://7f89640e-4abd-4585-97a9-0cb939b8adc6 ?w=650,border=true)
+
+The document remains locked until the assets is approved on the Frame.io side and sent back to Nuxeo. Once you push back the asset to Nuxeo, then a new version is created and the document is unlocked.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-version
+    name: frameio-version.png
+    addins#screenshot#up_to_date
+--}}
+![frameio-version](nx_asset://233538c5-d662-431b-9519-dbe053e8b3f5 ?w=650,border=true)
+
+
+
+
