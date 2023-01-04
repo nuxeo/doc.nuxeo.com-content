@@ -103,6 +103,33 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 31
+
+### Reduce retries on recompute bulk actions
+
+The maximum number of retries can now be configured for recompute bulk actions using nuxeo.conf options below, also, the new default is one retry (previously 3):
+```Java
+nuxeo.bulk.action.recomputeThumbnails.maxRetries=1
+nuxeo.bulk.action.recomputeViews.maxRetries=1
+nuxeo.bulk.action.recomputeVideoConversions.maxRetries=1
+```
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31550](https://jira.nuxeo.com/browse/NXP-31550)
+
+### Add MongoDB index on ecm:isVersion
+
+For MongoDB backend, create the index manually:
+```Java
+db.default.createIndex(
+   { ecm:isVersion: 1 }
+);
+```
+Otherwise, the nuxeo server will attempt to create this index if not present at start-up.  In the case of an existing instance with large amounts of documents, this process may time out and/or affect performance.
+
+
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31530](https://jira.nuxeo.com/browse/NXP-31530)
+
 ## Hotfix 30
 
 ### Make certificateKeyAlias Value Configurable From nuxeo.conf 
@@ -364,6 +391,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
