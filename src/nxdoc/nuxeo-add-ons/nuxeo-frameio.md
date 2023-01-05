@@ -261,7 +261,7 @@ Everything that was previously pushed to your Nuxeo folder will stay in your fol
 
 ## Version 1.3 Use Case: Push Assets from Nuxeo to Frame.io
 
-You will now be able to send assets stored in Nuxeo to Frame.io to start you approval workflow on the selected assets.
+You will now be able to send assets stored in Nuxeo to Frame.io to start your approval workflow on the selected assets.
 The Bind flow remains the same as before and is defined in the V1 addon explained earlier.
 
 Into the Nuxeo folder, each compatible asset has now the “Push to Frame.io” action.
@@ -284,9 +284,9 @@ You can send a single document or send them in bulk.
 If the folder is not bound: action fire an error bubble message that display “Folder not bound"
 
 When action is selected, a popup is displayed to:
-Choose the team if the folder is bound to several teams
-Choose the project
-Choose the destination folder in Frame.io
+- Choose the team if the folder is bound to several teams
+- Choose the project
+- Choose the destination folder in Frame.io
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-target-folder-popup
@@ -304,6 +304,7 @@ Choose the destination folder in Frame.io
 ![frame.io-push-popup](nx_asset://70776839-f49b-4547-af4c-9107aac9c177 ?w=650,border=true)
 
 You will also see a success popup message letting you know the document is being sent to frame.io.
+
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-push-success-message
     name: frameio-push-success-message.png
@@ -311,7 +312,7 @@ You will also see a success popup message letting you know the document is being
 --}}
 ![frameio-push-success-message](nx_asset://d4660e9c-1059-431e-b832-c699f723c0cb ?w=650,border=true)
 
-The Nuxeo document is now locked
+The Nuxeo document is now locked.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-lock
@@ -337,7 +338,3 @@ The document remains locked until the assets is approved on the Frame.io side an
     addins#screenshot#up_to_date
 --}}
 ![frameio-version](nx_asset://233538c5-d662-431b-9519-dbe053e8b3f5 ?w=650,border=true)
-
-
-
-
