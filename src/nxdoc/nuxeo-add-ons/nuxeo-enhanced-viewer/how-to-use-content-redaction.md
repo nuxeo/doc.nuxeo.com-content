@@ -139,8 +139,17 @@ You can change the logic that generates a permanently redacted document at any t
 
 Assuming you already know [how to create an automation chain]({{page space='nxdoc' page='how-to-create-an-automation-chain'}}), here is the information you need to know to override the existing chain:
 
-- The chain should be named `ARenderRedactCompletion`
-- You will receive as the input for the first operation the redacted file (`Blob` type)
+You must contribute to the ConfigurationService your chain name, for example:
+
+```xml
+<require>com.nuxeo.ecm.arender.content.redaction</require>
+
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.arender.override.redact.completion">CustomARenderRedactCompletion</property>
+</extension>
+```
+
+You will receive as the input for the first operation the redacted file (`Blob` type)
 
 You can declare the following parameters for your chain:
 - `originalDoc` (`string` type): document id for the unredacted document
