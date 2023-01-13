@@ -105,9 +105,9 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 31
 
-### Reduce retries on recompute bulk actions
+### Reduce Retries on Recompute Bulk Actions
 
-The maximum number of retries can now be configured for recompute bulk actions using nuxeo.conf options below, also, the new default is one retry (previously 3):
+The maximum number of retries can now be configured for recompute bulk actions using the nuxeo.conf options below. The new default option is one retry (previously 3):
 ```Java
 nuxeo.bulk.action.recomputeThumbnails.maxRetries=1
 nuxeo.bulk.action.recomputeViews.maxRetries=1
@@ -116,7 +116,7 @@ nuxeo.bulk.action.recomputeVideoConversions.maxRetries=1
 
 <i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31550](https://jira.nuxeo.com/browse/NXP-31550)
 
-### Add MongoDB index on ecm:isVersion
+### Add Mongodb Index on ecm:Isversion
 
 For MongoDB backend, create the index manually:
 ```Java

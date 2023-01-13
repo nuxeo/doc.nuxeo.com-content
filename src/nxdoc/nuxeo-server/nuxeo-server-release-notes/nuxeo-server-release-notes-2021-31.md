@@ -15,43 +15,43 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-31'}}
 # What's New in LTS 2021.31 / LTS 2021-HF31
 
-## Improve tracing related to WorkManager
+## Improve Tracing Related to Workmanager
 
 Improved tracing related to Work and ShellExecutor
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31537](https://jira.nuxeo.com/browse/NXP-31537)
 
-## Add MongoDB index on ecm:isVersion
+## Add MongoDB Index on ecm:Isversion
 
 New MongoDB index on ecm:isVersion
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31530](https://jira.nuxeo.com/browse/NXP-31530)
 
-## Fire an event before a document is being trashed or untrashed
+## Fire an Event Before a Document Is Being Trashed or Untrashed
 
 aboutToTrash and aboutToUntrash inline events are now fired before trashing or untrashing a document
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31514](https://jira.nuxeo.com/browse/NXP-31514)
 
-## Add isTrashed method on DocumentWrapper
+## Add isTrashed Method on DocumentWrapper
 
 DocumentWrapper now exposes an isTrashed() method
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31513](https://jira.nuxeo.com/browse/NXP-31513)
 
-## Fix index creation in MongoDB
+## Fix Index Creation in MongoDB
 
 MongoDB indexes creation takes correctly into account the schema prefix when not defined
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31422](https://jira.nuxeo.com/browse/NXP-31422)
 
-## Remove Kafka AdminClient warn when using SSL
+## Remove Kafka AdminClient Warn When Using SSL
 
 The Kafka clients have been bumped to version 2.8.0
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29597](https://jira.nuxeo.com/browse/NXP-29597)
 
-## Scalable orphan version cleanup
+## Scalable Orphan Version Cleanup
 
 A new bulk action is available to garbage collect orphaned versions
 
