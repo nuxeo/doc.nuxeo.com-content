@@ -114,7 +114,7 @@ nuxeo.bulk.action.recomputeViews.maxRetries=1
 nuxeo.bulk.action.recomputeVideoConversions.maxRetries=1
 ```
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31550](https://jira.nuxeo.com/browse/NXP-31550)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31550](https://jira.nuxeo.com/browse/NXP-31550)
 
 ### Add Mongodb Index on ecm:Isversion
 
@@ -124,11 +124,11 @@ db.default.createIndex(
    { ecm:isVersion: 1 }
 );
 ```
-Otherwise, the nuxeo server will attempt to create this index if not present at start-up.  In the case of an existing instance with large amounts of documents, this process may time out and/or affect performance.
+Otherwise, the nuxeo server will attempt to create this index if not present at start-up. In the case of an existing instance with large amounts of documents, this process may time out and/or affect performance.
 
 
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31530](https://jira.nuxeo.com/browse/NXP-31530)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31530](https://jira.nuxeo.com/browse/NXP-31530)
 
 ## Hotfix 30
 

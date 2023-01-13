@@ -17,49 +17,49 @@ hidden: true
 
 ## Improve Tracing Related to Workmanager
 
-Improved tracing related to Work and ShellExecutor
+Improved tracing related to Work and ShellExecutor.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31537](https://jira.nuxeo.com/browse/NXP-31537)
 
 ## Add MongoDB Index on ecm:Isversion
 
-New MongoDB index on ecm:isVersion
+New MongoDB index on `ecm:isVersion`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31530](https://jira.nuxeo.com/browse/NXP-31530)
 
 ## Fire an Event Before a Document Is Being Trashed or Untrashed
 
-aboutToTrash and aboutToUntrash inline events are now fired before trashing or untrashing a document
+`aboutToTrash` and `aboutToUntrash` inline events are now fired before trashing or untrashing a document.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31514](https://jira.nuxeo.com/browse/NXP-31514)
 
 ## Add isTrashed Method on DocumentWrapper
 
-DocumentWrapper now exposes an isTrashed() method
+DocumentWrapper now exposes an `isTrashed()` method.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31513](https://jira.nuxeo.com/browse/NXP-31513)
 
 ## Fix Index Creation in MongoDB
 
-MongoDB indexes creation takes correctly into account the schema prefix when not defined
+MongoDB indexes creation takes correctly into account the schema prefix when not defined.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31422](https://jira.nuxeo.com/browse/NXP-31422)
 
 ## Remove Kafka AdminClient Warn When Using SSL
 
-The Kafka clients have been bumped to version 2.8.0
+The Kafka clients have been bumped to version 2.8.0.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29597](https://jira.nuxeo.com/browse/NXP-29597)
 
 ## Scalable Orphan Version Cleanup
 
-A new bulk action is available to garbage collect orphaned versions
+A new bulk action is available to garbage collect orphaned versions.
 
 The former implementation to remove the orphaned versions did not scale for a large repository.
 
 The new BAF implementation will handle large repositories even though invoking such garbage collection involves a heavy long-running process that should be executed on-demand only.
 
-The garbage collection of orphaned versions  is exposed in the management API, see https://doc.nuxeo.com/rest-api/1/management-endpoint/
+The garbage collection of orphaned versions is exposed in the management API, see the [related documentation](https://doc.nuxeo.com/rest-api/1/management-endpoint/)
 
 A version stays referenced and therefore is not removed if:
  - any proxy points to a version in the version history of any live document
