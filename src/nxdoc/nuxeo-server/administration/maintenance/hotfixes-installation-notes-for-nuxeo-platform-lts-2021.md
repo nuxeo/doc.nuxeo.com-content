@@ -103,6 +103,22 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 32
+
+### Fix removal of 'aceinfo' directory entries when a document is deleted
+
+For existing instances on MongoDB, in order to improve performance on ace info removal the following index needs to be created manually:
+```java
+db.aceinfo.createIndex({aceinfo:docId: 1})  
+```
+Then enable ace info garbage collection by adding the following line to your nuxeo.conf:
+```java
+nuxeo.aceinfo.gc.enabled=true 
+```
+VCS users will need to make their own index.
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31459](https://jira.nuxeo.com/browse/NXP-31459)
+
 ## Hotfix 31
 
 ### Reduce Retries on Recompute Bulk Actions
@@ -391,6 +407,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
