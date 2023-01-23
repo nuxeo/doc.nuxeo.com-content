@@ -222,6 +222,9 @@ To install the CAS2 authentication plugin:
 5.  Adapt the content of the `loginModulePlugin` section.
 6.  Save.
 
+{{#> callout type='info' }}
+To enable passing the CAS host with the `CasServer` request header, set `nuxeo.cas2.server.header.enabled` to `true` in `nuxeo.conf`.
+{{/callout}}
 
 ## Overview
 
