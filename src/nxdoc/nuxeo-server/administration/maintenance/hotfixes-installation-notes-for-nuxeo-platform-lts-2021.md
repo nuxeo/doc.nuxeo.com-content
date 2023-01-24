@@ -117,7 +117,7 @@ nuxeo.aceinfo.gc.enabled=true
 ```
 VCS users will need to make their own index.
 
-<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31459](https://jira.nuxeo.com/browse/NXP-31459)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31459](https://jira.nuxeo.com/browse/NXP-31459)
 
 ## Hotfix 31
 
