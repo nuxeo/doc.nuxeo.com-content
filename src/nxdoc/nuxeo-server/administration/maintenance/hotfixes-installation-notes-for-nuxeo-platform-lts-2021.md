@@ -105,7 +105,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 32
 
-### Fix removal of 'aceinfo' directory entries when a document is deleted
+### Fix Removal of ‘aceinfo’ Directory Entries When a Document Is Deleted
 
 For existing instances on MongoDB, in order to improve performance on ace info removal the following index needs to be created manually:
 ```java
