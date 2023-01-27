@@ -24,7 +24,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.18]({{page page='web-ui-release-notes-3-0-18'}})             | Differentiate views from downloads in the activity and audit. | -->
+<!-- | [Web UI 3.0.18]({{page page='web-ui-release-notes-3-0-18'}})             | Differentiate views from downloads in the activity and audit (beta). | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
