@@ -180,4 +180,37 @@ A document has been published (event sent for the base document being published 
 
 A document has been published but is not approved yet (event sent for the base document being published and for the published document)
 
+## Retention Events 
+
+### beforeSetRetention
+
+A retention is about to be set on a document.
+
+### afterSetRetention
+
+A retention has been set on a document.
+
+### beforeSetLegalHold
+
+A legal hold is about to be set on a document. 
+
+### afterSetLegalHold 
+
+A legal hold has been set on a document. 
+
+### beforeRemoveLegalHold
+
+A legal hold is about to be removed on a document.
+
+### afterRemoveLegalHold
+
+A legal hold has been removed on a document.
+
+### beforeMakeRecord
+
+A document is about to be turned into a record.
+
+### afterMakeRecord
+
+A document has been turned into a record.
 &nbsp;
