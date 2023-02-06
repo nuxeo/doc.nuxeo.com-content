@@ -14,11 +14,11 @@ hidden: true
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
 
 {{! multiexcerpt name='web-ui-updates'}}
-## What's New in Web UI for LTS 2021 (version 3.0.18)
+What’s New in Web UI for LTS 2021 (Version 3.0.18)
 
 This release helps differentiating views from downloads in the activity and audit.
 
-### Differentiate Views from Downloads (beta)
+Differentiate Views from Downloads (Beta)
 
 The audit and activity better reflect actions done in Web UI.
 
@@ -29,7 +29,7 @@ When visiting a document, the activity tab shows this action as a view. Activiti
     name: view-vs-download-activity.png
     web_ui#screenshot#up_to_date
 --}}
-![view-vs-download-activity.png](nx_asset://ce1d325b-1e37-4351-ac5c-3f04990ee0ad ?border=true)
+![view-vs-download-activity.png](nx_asset://ce1d325b-1e37-4351-ac5c-3f04990ee0ad ?border='true')
 
 In the history tab and in the audit, views are distinguished by a specific comment. The action performed is still shown as a download because a download technically happens at the server level.
 
@@ -38,7 +38,7 @@ In the history tab and in the audit, views are distinguished by a specific comme
     name: view-vs-download-history.png
     web_ui#screenshot#up_to_date
 --}}
-![view-vs-download-history.png](nx_asset://2bfc18e1-8869-4ac3-b177-b681c280ac9b ?border=true)
+![view-vs-download-history.png](nx_asset://2bfc18e1-8869-4ac3-b177-b681c280ac9b ?border='true')
 
 {{#> callout type='info' heading='Beta feature'}}
 This feature is in beta state and works on a limited scope at this stage. Images and videos are supported (independently from the document type being used). Support for other file types will come in a future update.
