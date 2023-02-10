@@ -8,7 +8,7 @@ review:
 toc: true
 labels:
 tree_item_index: 986
-hidden: true
+hidden: false
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
@@ -22,6 +22,7 @@ This release helps differentiating views from downloads in the activity and audi
 
 The audit and activity better reflect actions done in Web UI.
 
+{{! multiexcerpt name='view-vs-download'}}
 When visiting a document, the activity tab shows this action as a view. Activities are registered as a download only when clicking on a download button.
 
 {{!--     ### nx_asset ###
@@ -43,6 +44,7 @@ In the history tab and in the audit, views are distinguished by a specific comme
 {{#> callout type='info' heading='Beta feature'}}
 This feature is in beta state and works on a limited scope at this stage. Images and videos are supported (independently from the document type being used). Support for other file types will come in a future update.
 {{/callout}}
+{{! /multiexcerpt}}
 
 
 ### Other Noteworthy Changes
