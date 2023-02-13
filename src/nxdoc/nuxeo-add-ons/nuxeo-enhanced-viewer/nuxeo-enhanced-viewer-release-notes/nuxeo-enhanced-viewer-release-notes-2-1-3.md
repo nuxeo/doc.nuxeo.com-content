@@ -2,9 +2,10 @@
 title: NEV 2.1.3
 description: Release notes for Nuxeo Enhanced Viewer 2.1.3
 tree_item_index: 897
+hidden: false
 review:
   comment: ''
-  date: '2022-12-09'
+  date: '2023-02-13'
   status: ok
 toc: true
 ---
@@ -19,7 +20,7 @@ This release brings the ability to authenticate to NEV from a third-party system
 ## Noteworthy Changes
 
 - Ability to redirect user against a 3rd party system for OAuth2 challenge.<br/>[[NEV-614](https://jira.nuxeo.com/browse/NEV-614)]
-- Defunct processess are cleaned up regularly to improve overall stability.<br/>[[NEV-610](https://jira.nuxeo.com/browse/NEV-610)]
+- Defunct processes are cleaned up regularly to improve overall stability.<br/>[[NEV-610](https://jira.nuxeo.com/browse/NEV-610)]
 
 ## Learn More
 
