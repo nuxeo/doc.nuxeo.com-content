@@ -2,10 +2,10 @@
 title: NEV 2.1.4
 description: Release notes for Nuxeo Enhanced Viewer 2.1.4
 tree_item_index: 896
-hidden: true
+hidden: false
 review:
   comment: ''
-  date: '2022-12-09'
+  date: '2023-02-13'
   status: ok
 toc: true
 ---
@@ -27,7 +27,7 @@ ARENDERSRV_ARENDER_SERVER_URL_PARSERS_BEANNAMES=blobNuxeoURLParser,DocumentIdURL
 
 Restart your Nuxeo Enhanced Viewer instance.
 
-This version fixes the issue, and upgrading to this version can be applied in lieu of performing the mitigation steps above.  
+This version fixes the issue, and upgrading to this version can be applied in lieu of performing the mitigation steps above (i.e., mitigation can be removed after the update is deployed).  
 
 ## Noteworthy Changes
 
