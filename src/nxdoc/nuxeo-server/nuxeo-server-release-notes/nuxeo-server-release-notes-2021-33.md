@@ -15,13 +15,13 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-33'}}
 # What's New in LTS 2021.33 / LTS 2021-HF33
 
-## Make Thumbnail URL in suggestion results take into account the repository
+## Make Thumbnail URL in Suggestion Results Take Into Account the Repository
 
 Thumbnails in quick search suggestions are correctly displayed in a multi-repo configuration.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31635](https://jira.nuxeo.com/browse/NXP-31635)
 
-## Fix TemplateProcessorComponent to register the invalidator after the cluster service has started
+## Fix TemplateProcessorComponent to Register the Invalidator After the Cluster Service Has Started
 
 Changes on Templates are distributed to all cluster nodes.
 
@@ -29,11 +29,11 @@ Changes on Templates are distributed to all cluster nodes.
 
 ## Issue when using Repository.PageProvider with IN clause
 
-NXQL page provider now works when org.nuxeo.web.ui.pageprovider.method is set to POST
+NXQL page provider now works when org.nuxeo.web.ui.pageprovider.method is set to POST.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31595](https://jira.nuxeo.com/browse/NXP-31595)
 
-## Add an event to the audit trail when a proxy is removed
+## Add an Event to the Audit Trail When a Proxy Is Removed
 
 A proxyRemoved event is fired on the working copy when a proxy is removed from Nuxeo.
 
@@ -45,9 +45,9 @@ Nuxeo Stream starts correctly woth GridFS.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31551](https://jira.nuxeo.com/browse/NXP-31551)
 
-## Create a Management API to extract binary fulltext
+## Create a Management API to Extract Binary Fulltext
 
-There is a new Management endpoint to run binary fulltext extraction
+There is a new Management endpoint to run binary fulltext extraction.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31276](https://jira.nuxeo.com/browse/NXP-31276)
 
