@@ -1,17 +1,21 @@
 ---
 title: NEV 2.2.0
 description: Release notes for Nuxeo Enhanced Viewer 2.2.0
-tree_item_index: 897
-hidden: true
+tree_item_index: 895
+hidden: false
 review:
   comment: ''
-  date: '2022-07-19'
+  date: '2023-02-13'
   status: ok
 toc: true
 ---
 
 {{! multiexcerpt name='nuxeo-enhanced-viewer-updates'}}
 ## What's new in NEV 2.2.0
+
+{{#> callout type='warning' heading='Recommended version'}}
+If you are upgrading your NEV version, we highly recommend switching to release version 2.2.1 at minimum instead of 2.2.0 due to the inclusion of security updates in the 2.2.1 release.
+{{/callout}}
 
 ### {{> anchor 'summary'}} Summary
 
