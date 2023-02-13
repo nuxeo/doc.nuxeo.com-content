@@ -39,12 +39,6 @@ A proxyRemoved event is fired on the working copy when a proxy is removed from N
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31575](https://jira.nuxeo.com/browse/NXP-31575)
 
-## Upgrade logback-core
-
-null
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31562](https://jira.nuxeo.com/browse/NXP-31562)
-
 ## Unable to start with GridFS
 
 Nuxeo Stream starts correctly woth GridFS.
