@@ -8,7 +8,7 @@ review:
 labels:
     - release-notes
 toc: true
-tree_item_index: 0
+tree_item_index: 2010
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2021-32'}}
@@ -55,7 +55,7 @@ Retained properties are stored under `ecm:retainedProperties` system properties 
 It is now possible to retain other properties than `file:content`.
 
 You can specify other properties to be retained with such contrib:
-```Java
+```
   <require>org.nuxeo.ecm.core.CoreExtensions</require>
 
   <extension target=org.nuxeo.ecm.core.schema.TypeService point=schema>
@@ -66,6 +66,13 @@ Note that file:content (aka main content) is always retained.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31396](https://jira.nuxeo.com/browse/NXP-31396)
 
+## Retention on Metadata
+
+### Dispatch Retainable Simple Blob List to the Record Blob Provider
+
+Retaining multivalued blob properties is not supported in this release. This feature is planned for HF34.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31665](https://jira.nuxeo.com/browse/NXP-31665)
 
 # Learn More
 
