@@ -152,6 +152,6 @@ Default templates for mail notifications can be updated. Just follow those steps
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-- [Available Variables in Email Templates]({{page page='available-variables-in-email-templates'}})
+- [Available Variables in Email Templates]({{page space='studio' page='available-variables-in-email-templates'}})
 
 {{/panel}}</div></div>
