@@ -1720,7 +1720,7 @@ A maximum period, in milliseconds, of inactivity between two consecutive data pa
 
 **Default Value**
 
-`20000`
+`121000`
 
 * * *
 
