@@ -103,6 +103,16 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 34
+
+### Make Kafka Replication Factor Param Optional
+
+
+Nuxeo is now relying on the default Kafka broker topic replication factor when creating a new topic. This is configured with `kafka.default.replication.factor=-1`. 
+Note that it works only with Kafka cluster >= 2.4, if you want to use an older Kafka cluster, you have to set explicitly the replication factor in Nuxeo to something > 0.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31621](https://jira.nuxeo.com/browse/NXP-31621)
+
 ## Hotfix 32
 
 ### Fix Removal of ‘aceinfo’ Directory Entries When a Document Is Deleted
@@ -407,6 +417,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
