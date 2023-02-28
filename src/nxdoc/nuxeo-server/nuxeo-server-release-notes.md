@@ -18,7 +18,7 @@ This page relates to the release notes of Nuxeo Server and related addons for LT
 This page mentions what's new. Refer to the [upgrade notes]({{page page='upgrade-from-lts-2019-to-lts-2021'}}) to transition to this version.
 {{/callout}}
 
-{{{multiexcerpt 'nuxeo-server-updates-2021-33' page='nuxeo-server-release-notes-2021-33'}}}
+{{{multiexcerpt 'nuxeo-server-updates-2021-34' page='nuxeo-server-release-notes-2021-34'}}}
 
 {{#> callout type='info' heading='Upgrade Notes'}}
 Refer to the [LTS 2021 upgrade notes]({{page page='hotfixes-installation-notes-for-nuxeo-platform-lts-2021'}}) to transition to this version.
