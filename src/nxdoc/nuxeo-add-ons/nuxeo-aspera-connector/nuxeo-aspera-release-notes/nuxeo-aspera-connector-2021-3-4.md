@@ -1,13 +1,12 @@
 ---
 title: Nuxeo Aspera 2021.3.4
 description: Release notes for Nuxeo Aspera Connector 2021.3.4
-tree_item_index: 100
+tree_item_index: 900
 review:
   comment: ''
   date: '2022-10-03'
   status: ok
 toc: true
-hidden: true
 ---
 
 {{! multiexcerpt name='nuxeo-aspera-connector-2021-3-4'}}
