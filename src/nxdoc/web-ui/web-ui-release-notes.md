@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
     comment: ''
-    date: '2023-02-10'
+    date: '2023-03-02'
     status: ok
 toc: true
 labels:
@@ -18,16 +18,17 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-19'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-20'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.19]({{page page='web-ui-release-notes-3-0-19'}})             | Differentiate views from downloads in the activity and audit (general availability). | -->
+<!-- | [Web UI 3.0.20]({{page page='web-ui-release-notes-3-0-20'}})             | Additional flexibility for data table configuration | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [Web UI 3.0.19]({{page page='web-ui-release-notes-3-0-19'}})                  | Differentiate views from downloads in the activity and audit (general availability). |
 | [Web UI 3.0.18]({{page page='web-ui-release-notes-3-0-18'}})                  | Differentiate views from downloads in the activity and audit (beta).       |
 | [Web UI 3.0.17]({{page page='web-ui-release-notes-3-0-17'}})                  | Accessibility improvements around contrast and screen reader usage         |
 | [Web UI 3.0.16]({{page page='web-ui-release-notes-3-0-16'}})                  | Accessibility improvements around name, role, value                        |
