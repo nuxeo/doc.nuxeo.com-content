@@ -67,7 +67,7 @@ This release brings improvements around screen reader support, keyboard usage, h
 <br/>[[WEBUI-510](https://jira.nuxeo.com/browse/WEBUI-510)]
 <br/>[[ELEMENTS-1577](https://jira.nuxeo.com/browse/ELEMENTS-1577)]
 
-An updated VPAT can be found in the page {{page space='nxdoc' page='web-ui-accessibility'}}.
+An updated VPAT can be found in [this page]({{page page='web-ui-accessibility'}}).
 
 ### Other Noteworthy Changes
 
