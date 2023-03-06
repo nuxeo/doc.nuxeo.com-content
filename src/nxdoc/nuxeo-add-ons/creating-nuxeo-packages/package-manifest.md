@@ -136,15 +136,15 @@ Let's look at a minimal example of package.xml file:
     <p>Put here an HTML description of your Nuxeo Package.</p>
   </description>
   <target-platform>
-    <name>server</name>
-    <version>[11.10,12)</version>
+     <name>lts</name>
+     <version>[2021.1,2023)</version>
   </target-platform>
 </package>
 
 ```
 
 This is a minimal package manifest. It is defining a package nuxeo-package at version 1.0.0 and of type addon.
-The package can be installed on platforms from server-11.10 (included) to server-12.0 (excluded).
+The package can be installed on platforms from LTS 2021 (included) to LTS 2023 (excluded).
 
 Also, the package title and description that should be used by the UI are specified by the `title` and `description` elements.
 
@@ -162,13 +162,9 @@ Let's look at the full version of the same package manifest:
   <license>Apache License, Version 2.0</license>
   <license-url>http://www.apache.org/licenses/LICENSE-2.0</license-url>
   <target-platform>
-    <name>server</name>
-    <version>[11.10,12)</version>
+     <name>lts</name>
+     <version>[2021.1,2023)</version>
   </target-platform>
-  <platforms>
-    <platform>server-11.10</platform>
-    <platform>server-11.10-HF*</platform>
-  </platforms>
   <dependencies>
     <package>another-package:1.0.0:1.1.0</package>
   </dependencies>
