@@ -99,9 +99,11 @@ More information can be found on the [Database Configuration]({{page version='' 
 Note that Nuxeo Server is shipped with an embedded H2 database, for quick evaluation purposes. One of the listed databases is required for a production set up or for a more thorough evaluation, like performance testing.
 {{! /multiexcerpt}}
 
+<!--
 {{#> callout type='warning' heading='MongoDB 4.4'}}
 Nuxeo Platform LTS 2019 (10.10) is not, and will never be, compatible with MongoDB 4.4 as it brings breaking changes and prevents the LTS 2019 version from working properly.
 {{/callout}}
+-->
 
 ## Application Servers
 
