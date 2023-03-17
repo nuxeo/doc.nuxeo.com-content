@@ -378,12 +378,12 @@ The `stream.sh` script can be used to display the lag and latency, the script is
 
 To get the lag, pos and end for all streams and computations:
 ```bash
-./bin/stream.sh -k lag
+./bin/stream.sh lag -k
 ```
 
 To get the latency in addition:
 ```bash
-./bin/stream.sh -k latency --codec avro
+./bin/stream.sh latency -k --codec avro
 ```
 
 Since Nuxeo 11.1, Nuxeo is reporting global lag and latency metrics, there is no more need to run additional `stream.sh` process.
