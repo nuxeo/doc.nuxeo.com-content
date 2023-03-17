@@ -289,6 +289,28 @@ This section describes the main metrics available by categories.
 
 You will find the metric name and its associates dimensions.
 
+### Nuxeo Scaling metrics
+
+Since Nuxeo 2021.35 there is a scaling metric that indicates if the current load requires scale up (add worker nodes) or scale down (remove worker nodes).
+
+The best number of worker nodes is determined to give the maximum concurrency on active computations, the concurrency being limited
+by the number of partitions in their input streams (Kafka topic).
+
+Note that we don't scale to 0 worker node, because there is always a worker node needed in order to process async tasks that are necessary to report metrics, log audit entries, process scheduled tasks ...
+
+- `nuxeo.streams.scale.metric`: It indicates the number of node to add (> 0) or to remove (<0), 0 should be the target for optimal processing.
+- `nuxeo.cluster.worker.count`: The current number of worker nodes
+
+The sum of the 2 above metrics is the optimal number of worker nodes to process the current load.
+
+You can use the Management API endpoint `/management/stream/scale` to get more information and understand the value of the metric.
+
+### Nuxeo Pubsub publish
+
+Since Nuxeo 2021.35 there is a counter per node that count the number of message published to the PubSub service.
+
+- `nuxeo.pubsub.publish`: Number of messages published from this node since the instance is started.
+
 ### Nuxeo Cache
 
 All the following metrics have a `cache` dimension with the name of the cache.
