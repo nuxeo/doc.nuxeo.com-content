@@ -515,6 +515,12 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 
 ## Detailed Upgrade by Version
 
+### To Nuxeo LTS 2023 from LTS 2021
+See [Upgrade from LTS 2021 to LTS 2023]({{page space='nxdoc' page='upgrade-from-lts-2021-to-lts-2023'}}) to upgrade to the LTS 2023 version of Nuxeo Platform.
+
+Release Notes:
+- [Nuxeo Platform LTS 2023 Release notes]({{page version='' space='' page='nuxeo-server-release-notes'}})
+
 ### To Nuxeo LTS 2021 from LTS 2019
 See [Upgrade from LTS 2019 to LTS 2021]({{page version='' space='nxdoc' page='upgrade-from-lts-2019-to-lts-2021'}}) to upgrade to the LTS 2021 version of Nuxeo Platform.
 
