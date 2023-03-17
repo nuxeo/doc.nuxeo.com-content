@@ -10,6 +10,7 @@ labels:
     - audit
     - ataillefer
     - lts2017-ok
+    - lts2021-ok
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -374,8 +375,7 @@ curl -XPUT "localhost:9200/nuxeo-audit-201809" -H 'Content-Type: application/jso
     }
   }
 },
-"mappings": {"entry" :
-{
+"mappings": {
   "dynamic_templates": [
     {
       "strings": {
@@ -428,7 +428,7 @@ curl -XPUT "localhost:9200/nuxeo-audit-201809" -H 'Content-Type: application/jso
     }
   }
 }
-}}'
+}'
 
 ```
 {{/panel}}
