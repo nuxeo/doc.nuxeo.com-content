@@ -36,10 +36,6 @@ This returns a JSON result with the total number of Works re-executed and the nu
 {"total":3,"success":3}
 ```
 
-{{#> callout type='warning' title='Constraints with Chronicle Queue'}}
-Without Kafka, the repair procedure needs to be executed on each node the DLQ being stored in a local Chronicle Queue storage.
-{{/callout}}
-
 {{#> callout type='info' title='Automation operation documentation'}}
 You can get more details about this operation by reading the [Nuxeo Explorer documentation page](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-2021/viewOperation/WorkManager.RunWorkInFailure)
 {{/callout}}

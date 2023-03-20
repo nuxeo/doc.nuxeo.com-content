@@ -260,8 +260,6 @@ the Nuxeo `bin/stream.sh` script.
 ```bash
 ## When using Kafka
 ./bin/stream.sh tail -k -l bulk-command --codec avro
-## When using Chronicle Queue
-# ./bin/stream.sh tail --chronicle ./nxserver/data/stream/bulk -l command --codec avro
 ```
 
 | offset             | watermark                 | flag      | key           | length | data                                                                                                                                                                                                                                                                         |

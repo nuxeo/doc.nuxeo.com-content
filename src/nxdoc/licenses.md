@@ -251,11 +251,6 @@ The licenses used are:
 | chemistry-opencmis-commons-impl-1.1.1-NX01.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.1-NX01 | AL 2.0 |
 | chemistry-opencmis-server-bindings-1.1.1-NX01.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.1-NX01 | AL 2.0 |
 | chemistry-opencmis-server-support-1.1.1-NX01.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.1.1-NX01 | AL 2.0 |
-| chronicle-bytes-2.20.10.jar |   | 2.20.10 | AL 2.0 |
-| chronicle-core-2.20.21.jar |   | 2.20.21 | AL 2.0 |
-| chronicle-queue-5.20.20.jar |   | 5.20.20 | AL 2.0 |
-| chronicle-threads-2.17.25.jar |   | 2.17.25 | AL 2.0 |
-| chronicle-wire-2.20.22.jar |   | 2.20.22 | AL 2.0 |
 | com-duosecurity-java-client-1.0.0.jar |   | 1.0.0 | BSD 3 |
 | common-utils-6.0.0.jar |   | 6.0.0 | AL 2.0 |
 | commons-beanutils-1.9.4.jar | [Apache Commons BeanUtils](http://commons.apache.org/beanutils/) | 1.9.4 | AL 2.0 |

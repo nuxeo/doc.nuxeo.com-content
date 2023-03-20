@@ -11,8 +11,6 @@ tree_item_index: 200
 
 ## Architecture Description
 
-Compared to the [Compact Architecture with Redis]({{page page='compact-architecture-with-redis'}}), this one works with Kafka. Consequently, Nuxeo Stream and the Bulk Service relies on Kafka, providing significant performance improvement compared to a Redis-based infrastructure. Redis and Chronicle Queue are no longer necessary by the Nuxeo architecture.
-
 This is a compact architecture because it includes a single node for Kafka, so you don't need to deploy Zookeeper to keep track of status of the Kafka cluster nodes, Kafka topics, partitions etc.
 
 In this architecture:

@@ -378,19 +378,6 @@ The `stream.sh` utility is located in the same `bin` directory as `nuxeoctl`.
 ./bin/stream.sh latency -k --codec avro >  /tmp/nuxeo-stream-lag-`date +%Y%m%d-%H%M%S`.md
 ```
 
-### {{> anchor 'stream-lag-cq'}}When Using Chronicle
-
-When not using Kafka, you need to get the consumer activity on each Nuxeo node:
-```bash
-# List streams and consumers position
-(NUXEO_DATA=/var/lib/nuxeo/data; ./bin/stream.sh lag --chronicle $NUXEO_DATA/stream/bulk; ./bin/stream.sh lag --chronicle $NUXEO_DATA/stream/audit; ./bin/stream.sh lag --chronicle $NUXEO_DATA/stream/default) >  /tmp/nuxeo-stream-lag-`date +%Y%m%d-%H%M%S`.md
-```
-
-If required you can also take a snapshot of the streams:
-```bash
-(NUXEO_DATA=/var/lib/nuxeo/data; tar czsf /tmp/nuxeo-cq-`date +%Y%m%d-%H%M%S`.tgz $NUXEO_DATA/stream/ $NUXEO_DATA/avro/)
-```
-
 ## {{> anchor 'security'}}Security
 
 If you think you've found a security issue, please report it privately to [security@nuxeo.com](mailto:security@nuxeo.com).
