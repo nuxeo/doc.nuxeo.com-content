@@ -198,9 +198,8 @@ These two points ensures that no data will be modified (or deleted) after dumpin
 
 **Some remarks about Nuxeo Stream**:
 
-Nuxeo 9.10 introduced [Nuxeo Stream]({{page page='nuxeo-stream'}}), it makes sense to backup streams so a restored instance can continue the stream processing.
+[Nuxeo Stream]({{page page='nuxeo-stream'}}) (introduced in Nuxeo 9.10) now requires Kafka in LTS 2023.
 
-When the underlying streams are stored using Chronicle Queues files, they are located inside `${nuxeo.data.dir}` and they are already taken in account by the procedure described above,
+Kafka is already a true storage with replication and HA. It does not need to be backed up.
 
-When the underlying streams are stored using Kafka the case is more complex because records older than backup date need to be discard.
-So restoring means replicate existing topics until the backup date and reconfigure Nuxeo kafka access to use the new topics.
+For on premise deployments, it is up to the project requirements to perform backups of existing topics with existings tools (such as Kafka Backup) for pontential restore needs.

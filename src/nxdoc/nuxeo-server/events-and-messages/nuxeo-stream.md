@@ -12,7 +12,7 @@ tree_item_index: 300
 ---
 
 Nuxeo Stream aims to provide asynchronous and distributed processing, there are different layers:
-- A Log storage abstraction with a Chronicle Queue and Kafka implementations
+- A Log storage abstraction with a Kafka implementation (an In-Memory implementation is also available for dev and test prupose only)
 - A library to provide processing patterns without dependencies on Nuxeo
 - Nuxeo services to configure Kafka, streams and processor using Nuxeo extension point.
 
@@ -59,13 +59,9 @@ The `nuxeo-stream` module provides a log-based broker message passing system wit
 
 This module has no dependency on Nuxeo framework to ease integration with external sources or sinks.
 
-The underlying Log solution relies on:
+The underlying Log solution relies on [Apache Kafka](https://kafka.apache.org/) which is a distributed streaming platform.
 
-- either on [Chronicle Queue](https://github.com/OpenHFT/Chronicle-Queue) which is a high-performance off-Heap queue library. There is no broker to install, it relies entirely on OS memory-mapped file (the storage is limited by disk capacity).
-- either on [Apache Kafka](https://kafka.apache.org/) which is a distributed streaming platform.
-
-The Chronicle Queue implementation can be used when producers and consumers are on the same node,
-**for distributed support and fault tolerance Kafka is required**.
+A default In-Memory implementation is available for dev and test purpose but **it should NOT be used for production** as it has no cluster capability and no persistence after restart.
 
 Please visit the [Kafka page]({{page page='kafka'}}) for more information.
 
@@ -172,7 +168,7 @@ Nuxeo defines the following namespaces:
 - `retention`: for the retention service
 - `pubsub`: for the PubSub service
 
-Because stream and computation names are used to define thread names, Kafka topics, Kafka consumer group, Chronicle files, and metrics,
+Because stream and computation names are used to define thread names, Kafka topics, Kafka consumer group and metrics,
 the URN notation `namespace/specific-name` is encoded as an identifier with the form `namespace-specific-name`.
 For this reason, a namespace should not contain the `-` (dash) character.
 
@@ -181,7 +177,7 @@ For backward compatibility it is still possible to not use namespace as long as 
 #### LogConfig
 
 `LogConfig` extension point enables to define:
-- An implementation (Chronicle Queue or Kafka) and its configuration
+- An implementation (In-Memory or Kafka) and its configuration
 - How to create new Logs if they don't exist
 - When to use the configuration, using a `startswith` match pattern on the Log/Stream or Consumer Group name.
 
@@ -189,15 +185,8 @@ For instance:
 
   ```xml
    <extension target="org.nuxeo.runtime.stream.service" point="logConfig">
-    <!-- Chronicle impl, define the storage directory with a week of retention -->
-    <logConfig name="myCQImport" type="chronicle">
-      <option name="basePath">/var/lib/nuxeo/my-import</option>
-      <option name="retention">7d</option>
-      <!-- Init a log with 12 partitions if it does not exists -->
-      <log name="myCQ/myLog" size="12" />
-      <!-- this config will be applied to all log or stream name from the myCQ namespace -->
-      <match name="myCQ/" />
-    </logConfig>
+    <!-- In-Memory impl, for de/test, no peristence-->
+    <logConfig name="test-mem" />
     <!-- Define a specific Kafka configuration for the audit namespace  -->
     <logConfig name="fastAuditConsumer" type="kafka">
       <!-- fastConsumer must be a valid kafkaConfig -->
@@ -218,8 +207,8 @@ It is possible to use the low low-level access to the Log using the [LogManager]
 ```
   StreamService service = Framework.getService(StreamService.class);
   LogManager logManager = service.getLogManager();
-  Name myStream = Name.ofUrn("myCQ/myLog");
-  Name myConsumer = Name.ofUrn("myCQ/consumer");
+  Name myStream = Name.ofUrn("myNamespace/myLog");
+  Name myConsumer = Name.ofUrn("myNamespace/consumer");
 
   // write
   LogAppender<MyRecord> appender = logManager.getAppender(myStream);

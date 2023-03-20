@@ -2100,26 +2100,6 @@ The store password for the key store file
 
 * * *
 
-#### `nuxeo.stream.chronicle.dir`
-
-The directory where Chronicle Queue files are stored.
-
-**Default Value**
-
-`${nuxeo.data.dir}/data/stream`
-
-* * *
-
-#### `nuxeo.stream.chronicle.retention.duration`
-
-Default retention for Chronicle Queue Log, default to 4 days.
-
-**Default Value**
-
-`4d`
-
-* * *
-
 #### `nuxeo.stream.audit.enabled`
 
 Enable the Nuxeo Stream Audit Writer implementation
