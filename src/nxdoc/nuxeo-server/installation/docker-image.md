@@ -36,7 +36,7 @@ The Nuxeo Docker image is described by this [Dockerfile](https://github.com/nuxe
 
 Based on Rocky Linux 9.1, it includes:
 
-- Azul's [Zulu OpenJDK 11](https://www.azul.com/downloads/zulu-community/?version=java-11-lts&package=jdk).
+- Azul's [Zulu OpenJDK 17](https://www.azul.com/downloads/?version=java-17-lts&package=jdk#zulu).
 - A bare Nuxeo server without any package installed.
 - A default embedded database, H2 (only valid for testing purposes).
 - An embedded Elasticsearch (only valid for testing purposes too).
