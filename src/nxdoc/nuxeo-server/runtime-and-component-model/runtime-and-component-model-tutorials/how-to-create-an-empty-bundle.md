@@ -386,7 +386,7 @@ This recipe is composed of the major steps below:
 
 | Tool                      | Version                                                                       |
 | ------------------------- | ----------------------------------------------------------------------------- |
-| Java                      | [JDK 11](https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/Title.htm)         |
+| Java                      | [JDK 17](https://docs.azul.com/core/)                                         |
 | Maven                     | [3.x](http://maven.apache.org/download.html)                                  |
 | NodeJS                    | [6.x](https://nodejs.org/en/)                                                 |
 | Nuxeo CLI                 | [latest](https://www.npmjs.com/package/nuxeo-cli)                             |

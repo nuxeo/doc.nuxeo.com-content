@@ -103,9 +103,9 @@ If you have requirements and/or constraints are not reflected below, **do not he
   If Java is correctly installed on your computer, the name and version of your Java virtual machine is displayed:
 
   ```shell
-  openjdk version "11.0.8" 2020-07-14 LTS
-  OpenJDK Runtime Environment Zulu11.41+23-CA (build 11.0.8+10-LTS)
-  OpenJDK 64-Bit Server VM Zulu11.41+23-CA (build 11.0.8+10-LTS, mixed mode)
+  openjdk version "17.0.4.1" 2022-08-12 LTS
+  OpenJDK Runtime Environment Zulu17.36+17-CA (build 17.0.4.1+1-LTS)
+  OpenJDK 64-Bit Server VM Zulu17.36+17-CA (build 17.0.4.1+1-LTS, mixed mode, sharing)
   ```
 
   Check in the output that the JDK version is 64 bits.
@@ -119,7 +119,7 @@ If you have requirements and/or constraints are not reflected below, **do not he
   If you installed a JDK, the javac version is displayed:
 
   ```shell
-  javac 11.0.8
+  javac 17.0.4.1
   ```
 
   If you installed a Java Runtime Environment instead of a Java Development Kit, it will fail to find javac and to display the javac version. In this case, install a Java Development Kit (see below).
