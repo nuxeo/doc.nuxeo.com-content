@@ -71,7 +71,7 @@ history:
 ---
 ## Java
 
-Supported Java version: {{! multiexcerpt name='java_requirement'}}**JDK 11** (Azul's Zulu OpenJDK or Oracle's JDK){{! /multiexcerpt}}.
+Supported Java version: {{! multiexcerpt name='java_requirement'}}**JDK 17** (Azul's Zulu OpenJDK or Oracle's JDK){{! /multiexcerpt}}.
 
 ## Databases
 

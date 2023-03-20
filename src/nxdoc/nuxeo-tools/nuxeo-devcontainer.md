@@ -76,7 +76,7 @@ The output of this execution, will be in your current working directory:
 - a script to help you start the containerized development environment as a shell: `start-shell.sh`.
 
 The containerized development environment is a Docker image that contains Nuxeo recommended tools:
-- Development tooling: Git, NodeJS, NPM, Maven, Docker CLI, Docker Compose, Zulu OpenJDK8, Zulu OpenJDK11 and Nuxeo CLI.
+- Development tooling: Git, NodeJS, NPM, Maven, Docker CLI, Docker Compose, Zulu OpenJDK11 and Nuxeo CLI.
 - Third party CLIs: Kafka CLI and Mongo Shell, GCloud SDK, Azure CLI and AWS CLI.
 
 It also adds into the image `tmux` and `ohmyzsh` that you will use for shell interactions.

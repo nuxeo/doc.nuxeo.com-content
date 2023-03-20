@@ -226,10 +226,6 @@ Watch the related course on Hyland University:
 ![]({{file name='university-automation.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
-## Requirements
-
-Automation Scripting is using Java 8 Nashorn engine. To leverage all the Automation Scripting feature, the Nuxeo server needs to run **JDK 11**.
-
 ## How It Works
 
 Nuxeo Automation Scripting allows you to write JavaScript code to use Automation operations and chains programmatically:

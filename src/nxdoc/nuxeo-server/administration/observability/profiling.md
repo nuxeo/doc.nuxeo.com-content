@@ -16,7 +16,7 @@ Like any other Java application, Nuxeo can be profiled, you will find a few usef
 
 ## Java Flight Recorder (JFR)
 
-Since OpenJDK version 11, it is easy to run Flight Recorder.
+With OpenJDK version 17, it is easy to run Flight Recorder.
 JFR is a profiling tool used to gather diagnostics and profiling data from a running Java application.
 
 To observe a particular load during one minute on a Nuxeo node just run:
