@@ -81,14 +81,14 @@ The Nuxeo Platform supports the following databases.
   <li>
     Recommended, validated by continuous integration:
     <ul>
-      <li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 4.4{{! /multiexcerpt}}</li>
+      <li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 6.0.2{{! /multiexcerpt}}</li>
       <li>{{! multiexcerpt name='PostgreSQL-supported'}}PostgreSQL 13{{! /multiexcerpt}}</li>
     </ul>
   </li>
   <li>
     Supported, not validated by continuous integration:
     <ul>
-      <li>MongoDB 4.0 and 4.2</li>
+      <li>MongoDB 4.0, 4.2 and 4.4</li>
       <li>PostgreSQL 11 and 12</li>
       <li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.3{{! /multiexcerpt}}</li>
       <li>{{! multiexcerpt name='MySQL-supported'}}MySQL 8.0{{! /multiexcerpt}}</li>
@@ -123,129 +123,19 @@ Nuxeo is shipped with an embedded Tomcat server.
 
 ## Redis
 
-{{! multiexcerpt name='redis_supported_versions'}}
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <th colspan="1">Nuxeo Platform Version:</th>
-        <th colspan="1">LTS 2021</th>
-        <th colspan="1">LTS 2019</th>
-        <th colspan="1">LTS 2017</th>
-        <th colspan="1">LTS 2016</th>
-      </tr>
-      <tr>
-        <th colspan="1">Redis</th>
-        <td colspan="1">2.8.x <br />
-          3.0.x <br />
-          3.2.x <br />
-          4.0.x <br />
-          5.0.x <br />
-          6.0.x
-        </td>
-        <td colspan="1">2.8.x <br />
-          3.0.x <br />
-          3.2.x <br />
-          4.0.x
-        </td>
-        <td colspan="1">2.8.x <br />
-          3.0.x <br />
-          3.2.x <br />
-          4.0.x
-        </td>
-        <td colspan="1">2.8.x <br />
-          3.0.x <br />
-          3.2.x <br />
-          4.0.x
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-{{! /multiexcerpt}}
+Nuxeo Platform is tested against Redis {{! multiexcerpt name='redis_supported_version'}}6.0.8{{! /multiexcerpt}}
 
 More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-redis'}}) and [Redis Configuration]({{page page='redis-configuration'}}) pages.
 
-## Elasticsearch
+## OpenSearch
 
-{{! multiexcerpt name='elasticsearch_supported_versions'}}
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <th colspan="1">Nuxeo Platform Version:</th>
-        <th colspan="1">LTS 2021</th>
-        <th colspan="1">LTS 2019</th>
-        <th colspan="1">LTS 2017</th>
-        <th colspan="1">LTS 2016</th>
-      </tr>
-      <tr>
-        <th colspan="1">Elasticsearch</th>
-        <td colspan="1">
-          Library: 7.9.2<br/>
-          Cluster: 7.x with x >= 7 RestClient protocol only (Elastic ensures forward compatibility on minor version, 7.7 has been validated).
-        </td>
-        <td colspan="1">
-          Library: 6.5.3<br/>
-          Cluster:
-          <ul>
-            <li>6.5.x to 6.8.x when using the RestClient protocol.</li>
-            <li>6.5.x when using the TransportClient.</li>
-          </ul>
-        </td>
-        <td colspan="1">
-          Library: 5.6.3<br/>
-          Cluster: 5.6.x
-        </td>
-        <td colspan="1">
-          **From 8.1 to 8.3:**<br/>
-          Library: 1.5.2<br/>
-          Cluster: 1.5.2 to 1.7.x<br/>
-          **From 8.10:**<br/>
-          Library: 2.3.5<br />
-          Cluster: 2.3.x to 2.4.x
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-{{! /multiexcerpt}}
+Nuxeo Platform is tested against an OpenSearch cluster {{! multiexcerpt name='opensearch_cluster_supported_version'}}1.3.6{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch_libraries_supported_version'}}1.3.8{{! /multiexcerpt}}.
 
 More information can be found on the [Elasticsearch Setup]({{page page='elasticsearch-setup'}}) page.
 
 ## Kafka
 
-{{! multiexcerpt name='kafka_supported_versions'}}
-
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <th colspan="1">Nuxeo Platform Version:</th>
-        <th colspan="1">LTS 2021</th>
-        <th colspan="1">LTS 2019</th>
-        <th colspan="1">LTS 2017</th>
-      </tr>
-      <tr>
-        <th colspan="1">Kafka</th>
-        <td colspan="1">
-          Library: 2.6.0 scala 2.12<br/>
-          Cluster: 1.x, 2.x, 3.x
-        </td>
-        <td colspan="1">
-          Library: 2.1.1 scala 2.12 since HF15<br/>
-          Library: 2.1.0 scala 2.12 from HF01 to HF14<br/>
-          Cluster: 1.x, 2.x, 3.x
-        </td>
-        <td colspan="1">
-          Library: 1.0.0 scala 2.11<br/>
-          Cluster: 1.x, 2.0.0
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-{{! /multiexcerpt}}
+Nuxeo Platform is tested against a Kafka cluster {{! multiexcerpt name='kafka_supported_version'}}3.3.1{{! /multiexcerpt}} using Kafka Java libraries {{! multiexcerpt name='kafka_libraries_supported_version'}}3.4{{! /multiexcerpt}}.
 
 Kafka supports backward and forward compatibility a cluster >= 1.0.0 works,
 we still advice to use the latest available stable version.
