@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
     comment: ''
-    date: '2023-03-21'
+    date: '2023-03-28'
     status: ok
 toc: true
 labels:
@@ -18,29 +18,13 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-21'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-0'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.21]({{page page='web-ui-release-notes-3-0-21'}})             | Bugfix and Accessibility improvements release | -->
+<!-- | [Web UI 3.0.1]({{page page='web-ui-release-notes-3-1-1'}})               | This is upgrade only from lts 2021 to lst 2023 | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [Web UI 3.0.20]({{page page='web-ui-release-notes-3-0-20'}})                  | Additional flexibility for data table configuration                        |
-| [Web UI 3.0.19]({{page page='web-ui-release-notes-3-0-19'}})                  | Differentiate views from downloads in the activity and audit (general availability). |
-| [Web UI 3.0.18]({{page page='web-ui-release-notes-3-0-18'}})                  | Differentiate views from downloads in the activity and audit (beta).       |
-| [Web UI 3.0.17]({{page page='web-ui-release-notes-3-0-17'}})                  | Accessibility improvements around contrast and screen reader usage         |
-| [Web UI 3.0.16]({{page page='web-ui-release-notes-3-0-16'}})                  | Accessibility improvements around name, role, value                        |
-| [Web UI 3.0.15]({{page page='web-ui-release-notes-3-0-15'}})                  | Bulk actions - unselect some, accessibility improvements                   |
-| [Web UI 3.0.14]({{page page='web-ui-release-notes-3-0-14'}})                  | Bugfix release                                                             |
-| [Web UI 3.0.13]({{page page='web-ui-release-notes-3-0-13'}})                  | Bugfix release                                                             |
-| [Web UI 3.0.12]({{page page='web-ui-release-notes-3-0-12'}})                  | Bugfix release                                                             |
-| [Web UI 3.0.11]({{page page='web-ui-release-notes-3-0-11'}})                  | Option to append values when bulk editing                                  |
-| [Web UI 3.0.10]({{page page='web-ui-release-notes-3-0-10'}})                  | Search and browse documents across multiple repositories                   |
-| [Web UI 3.0.9]({{page page='web-ui-release-notes-3-0-9'}})                    | Bulk edit large sets of documents                                          |
-| [Web UI 3.0.8]({{page page='web-ui-release-notes-3-0-8'}})                    | Bugfix release                                                             |
-| [Web UI 3.0.7]({{page page='web-ui-release-notes-3-0-7'}})                    | Improvements to the bulk actions                                           |
-| [Web UI 3.0.6]({{page page='web-ui-release-notes-3-0-6'}})                    | Select all documents and trigger bulk actions on them                      |
-| [Web UI 3.0.0 to 3.0.5]({{page page='web-ui-release-notes-3-0-0-to-3-0-5'}})  | Upload experience for Large Files, audit entries improvements and more     |
