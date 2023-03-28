@@ -10,8 +10,8 @@ labels:
 tree_item_index: 550
 ---
 
-{{{multiexcerpt 'upgrade-notes' page='web-ui-upgrade-notes-lts-2021'}}}
+{{{multiexcerpt 'upgrade-notes' page='web-ui-upgrade-notes-lts-2023'}}}
 
-## Upgrading to Web UI 3.0.20
+## Upgrading to Web UI 3.1.0
 
-{{{multiexcerpt 'upgrade-notes' page='web-ui-release-notes-3-0-20'}}}
+{{{multiexcerpt 'upgrade-notes' page='web-ui-release-notes-3-1-0'}}}
