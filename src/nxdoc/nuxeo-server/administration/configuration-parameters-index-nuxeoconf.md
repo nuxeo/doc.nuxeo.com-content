@@ -1533,6 +1533,16 @@ Example: https://my.nuxeo.com/
 
 * * *
 
+### `nuxeo.bulk.action.blobGC.enabled`
+
+Switch to enable/disable Immediate Document's blobs Garbage Collection (introduced by https://jira.nuxeo.com/browse/NXP-31594)
+
+**Since LTS 2021.36**
+
+**Default Value**
+
+`true`
+
 #### `elasticsearch.enabled`
 
 Switch to enable/disable Elasticsearch usage
