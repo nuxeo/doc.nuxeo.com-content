@@ -1,7 +1,7 @@
 ---
 title: Quickstart with Nuxeo Platform and Docker
 review:
-  date: '2021-01-28'
+  date: '2023-04-03'
   status: ok
 toc: true
 description: Useful commands in dev mode with Docker, and recommendations when going on production
@@ -16,9 +16,9 @@ This page details the fundamental commands you need to deploy your Nuxeo applica
 
 We recommend to use the [default Nuxeo Docker image]({{page page='docker-image'}}#nuxeo_dev) in **development mode** (`NUXEO_DEV=true`), allowing you to hot reload your instance, and stop the server without shutting down the container.
 
-### Get and Run the LTS 2021 Docker Image
+### Get and Run the LTS 2023 Docker Image
 
-{{{multiexcerpt 'lts2021-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2023-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 Execute the following command line:
 ```
@@ -27,7 +27,7 @@ $ docker run --name nuxeo \
    -p 8080:8080 \
    -e NUXEO_DEV=true \
    -e NUXEO_PACKAGES="nuxeo-web-ui" \
-   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
 ```
 
 Few notes:

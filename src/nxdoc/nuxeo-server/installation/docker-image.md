@@ -1,7 +1,7 @@
 ---
 title: Install Nuxeo with the Docker Image
 review:
-  date: '2021-01-29'
+  date: '2023-04-03'
   status: ok
 labels:
   - multiexcerpt
@@ -28,13 +28,13 @@ Watch the related course on Hyland University:</br>
 
 ## Requirements
 
-{{{multiexcerpt 'lts2021-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2023-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ## What's in the Nuxeo Image
 
 The Nuxeo Docker image is described by this [Dockerfile](https://github.com/nuxeo/nuxeo/blob/master/docker/Dockerfile).
 
-Based on CentOS 7, it includes:
+Based on Rocky Linux 9.1, it includes:
 
 - Azul's [Zulu OpenJDK 11](https://www.azul.com/downloads/zulu-community/?version=java-11-lts&package=jdk).
 - A bare Nuxeo server without any package installed.
@@ -64,17 +64,17 @@ docker login docker-private.packages.nuxeo.com -u <username> -p <token_pass_code
 To pull the latest tag of the `nuxeo/nuxeo` image from the Docker registry and run a container from it, run:
 
 ```shell
-docker run --name nuxeo -p 8080:8080 docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+docker run --name nuxeo -p 8080:8080 docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
 ```
 
-The `2021` tag points to the latest release, for instance [2021.0](https://github.com/nuxeo/nuxeo-lts/releases/tag/v2021.0).
+The `2023` tag points to the latest release, for instance [2023.0](https://github.com/nuxeo/nuxeo-lts/releases/tag/v2023.0).
 
-To get the latest build, versioned `2021.x.y`, you can use the `2021.x` tag.
+To get the latest build, versioned `2023.x.y`, you can use the `2023.x` tag.
 
 The default command executed when running a container is `nuxeoctl console`. It can be overridden by specifying an argument to `docker run`. For instance, to open a bash shell in the container and automatically remove the container when it exits, just run:
 
 ```shell
-docker run -it --rm docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021 bash
+docker run -it --rm docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023 bash
 ```
 
 For a production setup and general best practices, please read about [Mounting Data, Log and Temporary Directories as Volumes]({{page page='setup-best-practices'}}#mounting-data-log-and-temporary-directories-as-volumes).
@@ -108,7 +108,7 @@ For instance, to make the Nuxeo Launcher display the JVM settings in the console
 docker run --name nuxeo \
   -p 8080:8080 \
   -e JAVA_OPTS=-XshowSettings:vm \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
 ```
 
 #### NUXEO_CLID
@@ -121,7 +121,7 @@ For instance, to run a container with a registered Nuxeo instance:
 docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CLID=<NUXEO_CLID> \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
 ```
 
 #### NUXEO_CONNECT_URL
@@ -134,7 +134,7 @@ For instance, to run a container with another Connect URL than the default one:
 docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CONNECT_URL=<NUXEO_CONNECT_URL> \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
 ```
 
 #### NUXEO_PACKAGES
@@ -148,7 +148,7 @@ docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CLID=<NUXEO_CLID> \
   -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-drive" \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
 ```
 
 #### NUXEO_DEV
@@ -173,11 +173,11 @@ Setting `NUXEO_DEV=true` allows to run the Nuxeo image in development mode, mean
     docker run --name nuxeo \
       -p 8080:8080 \
       -e NUXEO_DEV=true \
-      docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+      docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
 
     docker ps
     CONTAINER ID   IMAGE
-    0eee2751d09d   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+    0eee2751d09d   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
 
     docker exec 0eee2751d09d nuxeoctl restart
     ```

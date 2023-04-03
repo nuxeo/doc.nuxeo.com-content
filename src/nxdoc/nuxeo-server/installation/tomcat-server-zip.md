@@ -13,7 +13,7 @@ tree_item_index: 275
 
 ## Requirements
 
-{{{multiexcerpt 'lts2021-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2023-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 {{#> callout type='info'  heading='Hyland University'}}
 Watch the related course on Hyland University:</br>

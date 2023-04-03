@@ -2,7 +2,7 @@
 title: Generic Multi-Excerpts
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2023-04-03'
     status: ok
 labels:
     - lts2016-ok
@@ -149,9 +149,9 @@ Please refer to the [Web UI documentation](https://doc.nuxeo.com/nxdoc/web-ui/).
 {{/callout}}
 {{! /multiexcerpt}}
 
-{{! multiexcerpt name='lts2021-general-prerequisites'}}
+{{! multiexcerpt name='lts2023-general-prerequisites'}}
 
-You need to check the following items in order to install Nuxeo Platform LTS 2021:
+You need to check the following items in order to install Nuxeo Platform LTS 2023:
 - Get a Nuxeo Online Services account. If not, please check the [Nuxeo Download page](https://www.nuxeo.com/downloads/) and create a trial account.
 - Make sure you have a valid Nuxeo Connect token to register your instance. Please check the [Token Management]({{page version='' space='studio' page='token-management'}}) documentation page.
 
@@ -161,7 +161,7 @@ These steps are not required if you **only** pull the default Nuxeo Docker image
 
 {{! /multiexcerpt}}
 
-{{! multiexcerpt name='lts2021-docker-prerequisites'}}
+{{! multiexcerpt name='lts2023-docker-prerequisites'}}
 
 In terms of software, the only requirement to run the Nuxeo Docker image is [Docker](https://docs.docker.com/get-docker/) itself: Java, as well as all the external software, are integrated in the Docker image.
 
