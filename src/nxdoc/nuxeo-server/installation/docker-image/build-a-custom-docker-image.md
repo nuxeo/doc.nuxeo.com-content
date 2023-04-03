@@ -1,7 +1,7 @@
 ---
 title: Build a Custom Docker Image
 review:
-  date: '2021-01-28'
+  date: '2023-04-03'
   status: ok
 labels:
   - multiexcerpt
@@ -19,23 +19,23 @@ You can simply write a [Dockerfile](https://docs.docker.com/develop/develop-imag
 A good practice is to use a [build argument](https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact) before the `FROM` instruction to easily set the version of the Nuxeo parent image, as in the example below. Here, the default value is the `2021` moving tag:
 
 ```Dockerfile
-ARG NUXEO_VERSION=2021
+ARG NUXEO_VERSION=2023
 
 FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:${NUXEO_VERSION}
 
 # Execute some commands to add layers on top of the parent image
 ```
 
-Then, the custom image can be built by running the following command in the directory of the `Dockerfile`. In this case, we choose to rely on the 2021.1 version of Nuxeo.
+Then, the custom image can be built by running the following command in the directory of the `Dockerfile`. In this case, we choose to rely on the 2023.0 version of Nuxeo.
 
 ```shell
-docker build -t mycompany/myapplication:mytag --build-arg NUXEO_VERSION=2021.1 .
+docker build -t mycompany/myapplication:mytag --build-arg NUXEO_VERSION=2023.0 .
 ```
 
-To upgrade the custom image to a newer version of Nuxeo, for instance from 2021.1 to 2021.2, you can just rebuild the custom image by updating the `NUXEO_VERSION` build argument:
+To upgrade the custom image to a newer version of Nuxeo, for instance from 2023.0 to 2023.1, you can just rebuild the custom image by updating the `NUXEO_VERSION` build argument:
 
 ```shell
-docker build -t mycompany/myapplication:mytag --build-arg NUXEO_VERSION=2021.2 .
+docker build -t mycompany/myapplication:mytag --build-arg NUXEO_VERSION=2023.1 .
 ```
 
 Below, you can find some examples of customization that can be done in such a custom Docker image.
@@ -47,7 +47,7 @@ We provide a utility script to install remote Nuxeo packages from [Nuxeo Connect
 For instance, you can use this script in the following `Dockerfile`:
 
 ```Dockerfile
-FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
 
 ARG CLID
 ARG CONNECT_URL
@@ -81,14 +81,16 @@ COPY /path/to/my-configuration.properties /etc/nuxeo/conf.d/my-configuration.pro
 As it contains some non-free codecs, FFmpeg isn't part of the Nuxeo image. However, you can build a custom Docker image, based on the Nuxeo one, including the `ffmpeg` package provided by [RPM Fusion](https://rpmfusion.org/), see the `Dockerfile` sample  below. The resulting `ffmpeg` binary embeds all the codecs required for Nuxeo video conversions.
 
 ```Dockerfile
-FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
 
 # we need to be root to run yum commands
 USER 0
-# install RPM Fusion free repository
-RUN yum -y localinstall --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
+# install EPEL, PowerTools and RPM Fusion free repositories
+RUN dnf -y install epel-release \
+  && dnf config-manager --set-enabled crb \
+  && dnf -y install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm
 # install ffmpeg package
-RUN yum -y install ffmpeg
+RUN dnf -y install ffmpeg
 # set back original user
 USER 900
 ```
