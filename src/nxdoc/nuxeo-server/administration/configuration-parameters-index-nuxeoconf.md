@@ -2293,6 +2293,139 @@ Enables users to select all documents from results listings in the UI and to exe
 
 * * *
 
+#### `nuxeo.s3storage.s3DirectUpload.bucket_prefix`
+
+Property to specify the bucket prefix of the blob provider backing the transient store used by the S3 batch handler. Default is `s3DirectUpload`.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`s3DirectUpload`
+
+* * *
+
+#### `nuxeo.server.https.keyAlias`
+
+Property to configure the alias name for the certificate used in the HTTPS configuration. Default is `tomcat`.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`tomcat`
+
+* * *
+
+#### `nuxeo.transientstore.provider`
+
+Property to use a MongoDB optimized implementation of the transient store, replacing the `KeyValueTransientStore` implementation. Default is `mongodb`.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`mongodb`
+
+* * *
+
+#### `nuxeo.bulk.action.recomputeThumbnails.maxRetries`
+
+Property to configure the maximum number of retries for recompute thumbnails bulk actions. Default is `1`.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`1`
+
+* * *
+
+#### `nuxeo.bulk.action.recomputeViews.maxRetries`
+
+Property to configure the maximum number of retries for recompute views bulk actions. Default is `1`.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`1`
+
+* * *
+
+#### `nuxeo.bulk.action.recomputeVideoConversions.maxRetries`
+
+Property to configure the maximum number of retries for recompute video conversions bulk actions. Default is `1`.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`1`
+
+* * *
+
+#### `nuxeo.aceinfo.gc.enabled`
+
+Property to enable `aceinfo` directory garbage collection when a document is deleted. Default is `false`.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`false`
+
+* * *
+
+#### `kafka.default.replication.factor`
+
+Property to allow relying on the default Kafka broker topic replication factor when creating a new topic. Default is `-1`.
+Note that it works only with a Kafka cluster >= 2.4. If you want to use an older Kafka cluster, you have to set explicitly the replication factor in Nuxeo to something > 0.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`-1`
+
+* * *
+
+#### `nuxeo.document.routing.escalation.legacy`
+
+Property to enable back the WorkManager implementation for workflow escalation rules, instead of the Bulk Action Framework. Default is `false`.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`false`
+
+* * *
+
+#### `nuxeo.routing.cleanup.workflow.instances.orphan`
+
+Property to make the `DocumentRoutingWorkflowInstancesCleanup` listener remove orphan workflows daily, along with workflows in state done or canceled. Default is `false`.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`false`
+
+* * *
+
+#### `nuxeo.bulk.action.blobGC.enabled`
+
+Property to enable immediate document's blobs garbage collection. Default is `true`.
+
+**Since LTS 2023**
+
+**Default Value**
+
+`true`
+
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
