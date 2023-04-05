@@ -10,17 +10,19 @@ toc: true
 ---
 
 
-{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2-3-0'}}}
+{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2-3-1'}}}
 
 ---
 
 ## NEV Release Notes Summary
 
-<!-- | [NEV 2.3.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-3-0'}})   | Improves compatibility when viewing microsoft office files            | -->
+<!-- | [NEV 2.3.1]({{page page='nuxeo-enhanced-viewer-release-notes-2-3-1'}})   | Additional compatibility improvements for complex microsoft office files            | -->
+
 
 | Version                                                                       | Notes                                                                      |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [NEV 2.2.1]({{page page='nuxeo-enhanced-viewer-release-notes-2-2-1'}})        | Security and bugfix release                                                             |
+| [NEV 2.3.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-3-0'}})        | Improves compatibility when viewing microsoft office files                 |
+| [NEV 2.2.1]({{page page='nuxeo-enhanced-viewer-release-notes-2-2-1'}})        | Security and bugfix release                                                |
 | [NEV 2.2.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-2-0'}})        | Introduces content redaction                                               |
 | [NEV 2.1.4]({{page page='nuxeo-enhanced-viewer-release-notes-2-1-4'}})        | Security update                                                            |
 | [NEV 2.1.3]({{page page='nuxeo-enhanced-viewer-release-notes-2-1-3'}})        | Authenticate to NEV only, from a third-party system                        |
