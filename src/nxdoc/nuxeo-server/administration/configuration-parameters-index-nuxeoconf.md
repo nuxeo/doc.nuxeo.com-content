@@ -1535,7 +1535,7 @@ Example: https://my.nuxeo.com/
 
 ### `nuxeo.bulk.action.blobGC.enabled`
 
-Switch to enable/disable Immediate Document's blobs Garbage Collection (introduced by https://jira.nuxeo.com/browse/NXP-31594)
+Switch to enable/disable Immediate Document's blobs Garbage Collection (See [NXP-31594](https://jira.nuxeo.com/browse/NXP-31594) for more details).
 
 **Since LTS 2021.36**
 
