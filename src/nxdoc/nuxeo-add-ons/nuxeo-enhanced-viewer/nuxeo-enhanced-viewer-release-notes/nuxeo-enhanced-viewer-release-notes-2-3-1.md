@@ -1,6 +1,6 @@
 ---
-title: NEV 2.3.0
-description: Release notes for Nuxeo Enhanced Viewer 2.3.0
+title: NEV 2.3.1
+description: Release notes for Nuxeo Enhanced Viewer 2.3.1
 tree_item_index: 892
 hidden: true
 review:
