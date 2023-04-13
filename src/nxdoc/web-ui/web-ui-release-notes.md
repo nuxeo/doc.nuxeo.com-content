@@ -18,13 +18,13 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-0'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-1'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.1]({{page page='web-ui-release-notes-3-1-1'}})               | This is upgrade only from lts 2021 to lst 2023 | -->
+<!-- | [Web UI 3.0.1]({{page page='web-ui-release-notes-3-1-1'}})               | Initial release for Web UI on LTS 2023 | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
