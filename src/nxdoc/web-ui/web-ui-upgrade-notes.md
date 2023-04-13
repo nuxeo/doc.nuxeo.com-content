@@ -12,6 +12,6 @@ tree_item_index: 550
 
 {{{multiexcerpt 'upgrade-notes' page='web-ui-upgrade-notes-lts-2023'}}}
 
-## Upgrading to Web UI 3.1.0
+## Upgrading to Web UI 3.1.1
 
-{{{multiexcerpt 'upgrade-notes' page='web-ui-release-notes-3-1-0'}}}
+{{{multiexcerpt 'upgrade-notes' page='web-ui-release-notes-3-1-1'}}}
