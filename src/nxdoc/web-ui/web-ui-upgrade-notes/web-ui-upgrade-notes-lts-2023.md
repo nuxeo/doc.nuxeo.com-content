@@ -8,7 +8,6 @@ review:
 toc: true
 labels:
 tree_item_index: 998
-hidden: true
 ---
 
 {{! multiexcerpt name='upgrade-notes'}}
