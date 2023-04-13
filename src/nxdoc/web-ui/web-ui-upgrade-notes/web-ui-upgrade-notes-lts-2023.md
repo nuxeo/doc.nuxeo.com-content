@@ -8,7 +8,6 @@ review:
 toc: true
 labels:
 tree_item_index: 998
-hidden: true
 ---
 
 {{! multiexcerpt name='upgrade-notes'}}
@@ -20,13 +19,11 @@ This page mentions how to do a technical upgrade. Have a look at the [release no
 {{! /multiexcerpt}}
 
 ## Upgrading Web UI from LTS 2021 to LTS 2023
-
+The initial release of Web UI on LTS 2023 is meant to be a transparent upgrade. It uses the same codebase as LTS 2021 and requires no specific upgrade process.
 #### Studio Projects
 
-Studio configuration is made to be compatible and does not need to be migrated. If you did add customization in your project, see below for further details. Otherwise you can consider your project safe to use.
+Studio configuration for Web UI is made to be compatible and does not need to be migrated. You simply need to update your dependencies in the [application definition](insert link here) screen to their LTS 2023 counterpart in order to generate a package that will be compatible with LTS 2023.
 
-#### HTML Imports
 
-Nuxeo added a compatibility layer to keep HTML imports working. There is no need to update HTML imports done in your code.
 
 {{! /multiexcerpt}}
