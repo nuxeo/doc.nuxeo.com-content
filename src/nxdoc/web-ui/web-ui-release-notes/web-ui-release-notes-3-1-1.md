@@ -20,7 +20,7 @@ This release is based upon Web UI 3.0.[insert release number here]. If you are u
 
 ### Other Noteworthy Changes
 
-Compared to Web UI 3.0.[insert release number here], this release provides the following additional bugfixes.
+Compared to Web UI 3.0.[insert release number here], this release provides the following additional bugfixes:
 
 ## Learn More
 
