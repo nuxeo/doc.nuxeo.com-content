@@ -7,7 +7,8 @@ review:
     status: ok
 toc: true
 labels:
-tree_item_index: 998
+tree_item_index: 999
+hidden: true
 ---
 
 {{! multiexcerpt name='upgrade-notes'}}
@@ -19,11 +20,11 @@ This page mentions how to do a technical upgrade. Have a look at the [release no
 {{! /multiexcerpt}}
 
 ## Upgrading Web UI from LTS 2021 to LTS 2023
+
 The initial release of Web UI on LTS 2023 is meant to be a transparent upgrade. It uses the same codebase as LTS 2021 and requires no specific upgrade process.
+
 #### Studio Projects
 
-Studio configuration for Web UI is made to be compatible and does not need to be migrated. You simply need to update your dependencies in the [application definition](insert link here) screen to their LTS 2023 counterpart in order to generate a package that will be compatible with LTS 2023.
-
-
+Studio configuration for Web UI is made to be compatible and does not need to be migrated. You simply need to update your dependencies in the [application definition]({{{page space='studio' page='application-definition'}}}) screen to their LTS 2023 counterpart in order to generate a package that will be compatible with LTS 2023.
 
 {{! /multiexcerpt}}
