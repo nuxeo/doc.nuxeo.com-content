@@ -103,6 +103,25 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 36
+
+### Add an nuxeo.conf Property to Disable Immediate Blob Garbage Collection
+
+
+To disable the Immediate Document's blobs Garbage Collection, set the following nuxeo.conf property to false:
+```Java
+nuxeo.bulk.action.blobGC.enabled=false
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31794](https://jira.nuxeo.com/browse/NXP-31794)
+
+### Prevent Base64-Encoded Images From Being Sent to Elasticsearch
+
+
+When using an HTML Note document, only the fulltext (extracted text) is submitted to elastic for indexation.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31698](https://jira.nuxeo.com/browse/NXP-31698)
+
 ## Hotfix 35
 
 ### PubSub Usage Must Be Monitored
@@ -426,6 +445,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
