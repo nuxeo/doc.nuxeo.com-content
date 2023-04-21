@@ -9,34 +9,46 @@ review:
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.3.0**
+Welcome to the Release Notes for **Nuxeo Drive 5.3.1**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.3.0.md)
+**Status**: <font color="#ff0000">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.3.1.md)
 
 ## General
 
-### New feature: Document Type Selection
+This is a bugfix release.
 
-A new feature **Document type selection** has been added to the **Features** tab that can be enabled or disabled. 
-This feature is adding 2 new fields on the direct transfer screen to let you choose the type of folder(s) and/or file(s) you are about to transfer as Web UI is doing. 
-These fields are updating depending on your access rights and the remote path you are navigating in. 
+### Prefix Synchronized Folder Name
 
-{{#> callout type='warning' }}
-Once this feature enabled, if you want to downgrade to a previous version of Nuxeo Drive, make sure to remove the feature `feature_document_type_selection` from your `config.ini` file. 
-{{/callout}}
+In this release we took the decision to always prefix the synchronized folder name, whether there's a duplicate or not, it will always be prefixed "Domain - Workspaces - My workspace". 
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1999](https://jira.nuxeo.com/browse/NXDRIVE-1999).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2800](https://jira.nuxeo.com/browse/NXDRIVE-2800) and [NXDRIVE-2830](https://jira.nuxeo.com/browse/NXDRIVE-2830).
 
-### Support of Self-Signed Certificates
+### Handling of Special and Non-english Characters in Document Names
 
-An issue was preventing the support of self-signed certificates when adding new account, it's now fixed. 
+Special characters are now correctly handled in Nuxeo Drive, whether it's in your local sync folder or Direct Transfer screen. 
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2779](https://jira.nuxeo.com/browse/NXDRIVE-2779).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2764](https://jira.nuxeo.com/browse/NXDRIVE-2764).
+
+## Direct Edit 
+
+### Review the Direct Edit Flow 
+
+This release brings a huge improvement on the Direct Edit flow, main issues fixed are about the lock behavior and the notifications.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2125](https://jira.nuxeo.com/browse/NXDRIVE-2125).
+
+## UI 
+
+### Synchronization Icons on Local Drive Folder 
+
+A bug was preventing the sync icons to be correctly displayed on your local sync folder, it's now fixed. 
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2772](https://jira.nuxeo.com/browse/NXDRIVE-2772).
 
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.3.0-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.3.0.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.3.0.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.3.1-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.3.1.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.3.1.exe)
