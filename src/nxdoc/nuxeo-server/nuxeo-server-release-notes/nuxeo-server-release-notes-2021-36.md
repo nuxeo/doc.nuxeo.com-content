@@ -50,9 +50,10 @@ Immediate Document's blobs Garbage Collection can be disabled with a nuxeo.conf 
 
 H2 is upgraded to latest 2.x version
 
-The H2 2.x upgrade comes with several breaking changes from H2 itself. Nothing has to be done on the Nuxeo side.
+The H2 2.x upgrade comes with several breaking changes from H2 itself.
 
-If you have H2 data persisted by a previous version of Nuxeo, you should delete the `nxserver/data/h2` folder before starting Nuxeo. YOU WILL LOSE DATA, but this should mainly impact development environment.
+In case of upgrade, you have to delete the `nxserver/data/h2` folder before starting Nuxeo.
+WARNING: In development environments you will lose data.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31785](https://jira.nuxeo.com/browse/NXP-31785)
 
