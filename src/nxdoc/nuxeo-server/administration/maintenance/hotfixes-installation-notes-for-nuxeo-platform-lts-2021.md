@@ -103,6 +103,26 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 37
+
+### Add an Option to Disable Hostname Verification During Elastic/Opensearch SSL Handshake
+
+
+You can now use `elasticsearch.restClient.ssl.certificate.verification=false` to disable hostname verification during SSL handshake for accessing a testing instance of OpenSearch or Elasticsearch running with a test certificate.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31837](https://jira.nuxeo.com/browse/NXP-31837)
+
+### GetAllDocumentBlobs (Document.GetBlobs) Returns Thumbnails
+
+
+A new **nuxeo.document.blob.extractor.legacy** nuxeo.conf boolean property has been introduced to switch back to the behavior before NXP-31539 which made sure both static (defined by the document type) and dynamic (added by dynamic facets) blob properties were listed.
+
+If **true**, only blob properties referenced by static schemas (attached to the doc type of a document) will be listed. The default value is **false**.
+
+This property is available for convenience for 10.10 and 2021 only. The fix done in NXP-31539 is the expected behavior and it will be up to external projects to implement their own operation listing static blob properties for 2023.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31834](https://jira.nuxeo.com/browse/NXP-31834)
+
 ## Hotfix 36
 
 ### Add an nuxeo.conf Property to Disable Immediate Blob Garbage Collection
@@ -445,6 +465,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
