@@ -25,14 +25,14 @@ A property is added to disable hostname verification during SSL handshake with E
 ## GetAllDocumentBlobs (Document.GetBlobs) Returns Thumbnails
 
 
-The "nuxeo.document.blob.extractor.legacy" nuxeo.conf property is available to return the blob properties of the doc type only
+The `nuxeo.document.blob.extractor.legacy` nuxeo.conf property is available to return the blob properties of the doc type only
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31834](https://jira.nuxeo.com/browse/NXP-31834)
 
 ## Prevent GC With a Cross Repository Shared Blob Provider Configuration
 
 
-Immediate GC in case of multi-repository deployment with a custom Blob Dispatcher configuration is not supported
+Immediate GC in case of multi-repository deployment with a custom Blob Dispatcher configuration is not supported.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31833](https://jira.nuxeo.com/browse/NXP-31833)
 
