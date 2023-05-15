@@ -427,6 +427,10 @@ curl -XPUT "localhost:9200/nuxeo-audit-201809" -H 'Content-Type: application/jso
       "properties": {
         "dueDate": {
           "type": "date"
+        },
+        "params": {
+          "type": "object",
+          "enabled", false
         }
       }
     },
