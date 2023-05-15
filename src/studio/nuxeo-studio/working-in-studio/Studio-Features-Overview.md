@@ -5,7 +5,6 @@ review:
   date: '2023-05-15'
   status: 
   comment: ''
-  
   labels:
     - studio-resources
 confluence:
@@ -13,12 +12,6 @@ confluence:
     ajs-parent-page-title: Working in Studio
     ajs-space-key: Studio
     ajs-space-name: Nuxeo Online Services
-    canonical: Resources
-    canonical_source: 'https://doc.nuxeo.com/display/Studio/Studio+Features+Overview'
-    page_id: ''
-    shortlink: 
-    shortlink_source: ''
-    source_link: /display/Studio/Studio+Features+Overview
 tree_item_index: 1600
   
 ---
