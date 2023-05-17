@@ -27,7 +27,7 @@ tree_item_index: 1600
 | Document Type    | TypeService#doctype/doctype                   | Merge (selectable in UI)         |
 | Facet        | TypeService#doctype/facet                    | Override                 |
 | Life Cycle     | LifeCycleService#lifecycle/lifecycle              | Override                 |
-| Structure Template | ContentTemplateService#factoryBinding/factoryBinding      | Override (should be selectable in UI)   |
+| Structure Template | ContentTemplateService#factoryBinding/factoryBinding      | Override (selectable in UI)   |
 | Workflow      | service#routeModelImporter                    | Override                 |
 | Page Provider    | PageProviderService#providers/genericPageProvider        | Override                 |
 | Elasticsearch Mapping| ElasticSearchComponent#elasticSearchIndex/elasticSearchIndex   | Merge |
