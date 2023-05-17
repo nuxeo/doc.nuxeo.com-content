@@ -30,7 +30,7 @@ tree_item_index: 1600
 | Structure Template | ContentTemplateService#factoryBinding/factoryBinding      | Override (should be selectable in UI)   |
 | Workflow      | service#routeModelImporter                    | Override                 |
 | Page Provider    | PageProviderService#providers/genericPageProvider        | Override                 |
-| Elasticsearch Mapping| ElasticSearchComponent#elasticSearchIndex/elasticSearchIndex   | Append (after NXS-6777 is deployed)    |
+| Elasticsearch Mapping| ElasticSearchComponent#elasticSearchIndex/elasticSearchIndex   | Merge |
 | Automation Chain  | OperationServiceComponent#chains/chain              | Not Allowed (will fail at deployment)   |
 | Automation Scripting | AutomationScriptingComponent#operation/scriptedOperation     | Override                 |
 | Event Handler    | OperationServiceComponent#event-handlers/handler        | Merge                   |
