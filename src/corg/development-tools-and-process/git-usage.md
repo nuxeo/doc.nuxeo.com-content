@@ -530,7 +530,7 @@ Prerequisites: having Git installed. For installation and configuration instruct
 
 ## Overview and Online Documentation
 
-[http://rogerdudler.github.com/git-guide/](http://rogerdudler.github.com/git-guide/): The simple guide
+[http://rogerdudler.github.io/git-guide/](http://rogerdudler.github.io/git-guide/): The simple guide
 
 [http://git-scm.com/documentation](http://git-scm.com/documentation): Very complete documentation (reference, cheat sheets, books).
 
@@ -680,7 +680,7 @@ git revert <commit>...
 
 Here are simple commands and correspondences between Mercurial (we were used to) and Git:
 
-See [Git Hg rosetta stone](https://github.com/sympy/sympy/wiki/Git-hg-rosetta-stone) and [Cheat sheets](http://cheat.errtheblog.com/s/git).
+See [Git Hg rosetta stone](https://github.com/sympy/sympy/wiki/Git-hg-rosetta-stone).
 
 {{#> panel type='code' heading='Show file content in a given revision <=> hg cat'}}
 
