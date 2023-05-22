@@ -53,7 +53,7 @@ For example, `exportButton.${name}` for the `pdfRendition` export would be:
 | Property                                | Description                            |
 |-----------------------------------------|----------------------------------------|
 | `app.title.search.${name}`              | Page title for search `name`.          |
-| `label.ui.quickFilter.${name}`         | Search quick filter `name`.            |
+| `ui.label.quickFilters.${name}`         | Search quick filter `name`.            |
 | `label.ui.aggregate.${key}`             | Search page provider aggregate `key`.  |
 | `searchResults.highlight.field.${name}` | Label for search results field `name`. |
 | `displayModeButton.display.${name}`     | The `name` of the search display mode. |
