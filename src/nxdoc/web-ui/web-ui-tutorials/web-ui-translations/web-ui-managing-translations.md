@@ -57,7 +57,7 @@ When saving configuration in the following screens, Nuxeo Studio will generate a
 | Schemas | Schema properties (complex) | `label.ui.schema.${schema_prefix}.${complex_property_name}.${sub_property_name}` | Property name in human readable format |
 | Page Providers | Predicates | `label.ui.predicate.${predicateKey}` | Predicate id in human readable format
 | Page Providers | Aggregates | `label.ui.aggregate.${key}` | Aggregate id in human readable format
-| Page Providers | Quick Filters | `label.ui.quickFilter.${key}` | Quick filter name in human readable format
+| Page Providers | Quick Filters | `ui.label.quickFilters.${key}` | Quick filter name in human readable format
 | Workflow | Workflow Variables | `label.ui.workflow.${schema_prefix}.${property_name}` | Property name in human readable format
 | Workflow | Node Variables | `label.ui.workflow.${schema_prefix}.${property_name}` | Property name in human readable format
 
