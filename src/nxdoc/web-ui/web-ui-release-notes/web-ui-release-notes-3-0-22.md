@@ -3,12 +3,12 @@ title: Version 3.0.22
 description: Discover what's new in Web UI 3.0.22.
 review:
     comment: ''
-    date: '2023-05-08'
+    date: '2023-05-23'
     status: ok
 toc: true
 labels:
 tree_item_index: 982
-hidden: true
+hidden: false
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
