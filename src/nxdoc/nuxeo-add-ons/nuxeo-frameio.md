@@ -338,3 +338,29 @@ The document remains locked until the assets is approved on the Frame.io side an
     addins#screenshot#up_to_date
 --}}
 ![frameio-version](nx_asset://233538c5-d662-431b-9519-dbe053e8b3f5 ?w=650,border=true)
+
+## Version 1.4 Use Case: Synchronize Frame.io Folders in Nuxeo
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/Sync folders
+    name: Screenshot 2023-04-12 at 17.06.06.png
+    addins#screenshot#up_to_date
+--}}
+![Sync folders](nx_asset://27075823-0d4d-46d9-a364-3b58a369bcdd ?w=650,border=true)
+
+Flow:
+For each Nuxeo folder that is not synchronized or linked to Frame.io, an option called "Sync to Frame.io folder" is available. Multi-folder level support is included.
+
+The authentication state is checked, and if not authenticated, the OAuth flow is initiated.
+
+A synchronization popup appears, allowing the user to select the following: the Frame.io team, the Frame.io project, the Frame.io project subfolder (using a browsing widget that displays the Frame.io folder tree), and the document type to be used on the Nuxeo side for storing assets.
+
+Upon submission, a "Frame.io sync" tab is added to the Nuxeo folder.
+
+Asynchronous synchronization begins, creating a document per asset in the Nuxeo selected folder.
+
+When the user clicks on the "refresh sync" button, the authentication state is checked, and if not authenticated, the OAuth flow is initiated.
+
+Synchronization starts using the parameters displayed in the tab.
+
+When the user clicks on the "remove sync" button, it becomes impossible to resync until a new synchronization is configured from the folder action.
