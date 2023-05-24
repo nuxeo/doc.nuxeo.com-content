@@ -22,30 +22,35 @@ We can define Compound Documents as files that only make sense as a group of int
 ## Installation
 
 We are bringing Compound Document for LTS 2021.</br> 
-The compound Document Feature and Facet are available as a separate addon [available on the marketplace](. 
+The compound Document Feature and Facet are available as a separate addon available on the marketplace.
 
 ## Using Compound Documents
 
-Compound documents are defined as folders objects representing the parent asset. Upon upload, children documents will be created for each included file, even if that same binary has been uploaded and used for another compound asset all already in the system somewhere (i.e., there may be multiple ‘duplicate’ child assets among compounds).  
+Compound documents are defined as folder objects representing the parent asset. Upon upload, children documents will be created for each included file, even if that same binary has been uploaded and used for another compound asset all already in the system somewhere (i.e., there may be multiple "duplicate" child assets among compounds).  
 
-To upload your compound document in Nuxeo, files are pre-formatted and made into a .zip which is loaded into the instance. A script in the instance recognises the file and creates the appropriate folder's structure. 
+To upload your compound document in Nuxeo, files are pre-formatted and made into a `.zip` which is loaded into the instance. A script in the instance recognises the file and creates the appropriate folder's structure. 
 
 You can use our compound document addon with any type of compound document that you would like, but here are a few use cases we identified that are commonly used: 
 
-  1.	**Material files:** xtex, u3m are the main material format to structure the compound. 
-  1.	**Complex Layouts:** Page Layouts: native layouts (.indd or .ai), pdf for preview (if needed), n-ancillary files (txt, pdf, json), subfolder with n-linked component files (images, illustrator, pdfs...) 
-  1.	**Product Designs:** main 3D design file (obj, clo, zproj. lxo, xtex etc.), glb for preview, image for thumb (jpg, png), n-ancillary files (any formats), subfolder with n-texture files (image formats) 
-  1.	**Complex Video:** Video Projects: native Premiere project (.proj) or Avid project (.avp, .avs), preview (mp4 or similar), n-ancillary files, subfolder with n-components (video, audio, images, or graphics formats). 
+  1.	**Material files:** `xtex`, `u3m` are the main material format to structure the compound. 
+  1.	**Complex Layouts:** Page Layouts: native layouts (`.indd` or `.ai`), pdf for preview (if needed), n-ancillary files (`.txt`, `.pdf`, `.json`), subfolder with n-linked component files (images, illustrator, pdfs,etc.).
+  1.	**Product Designs:** main 3D design file (`obj`, `clo`, `zproj, `lxo`, `xtex`, etc.), glb for preview, image for thumb (`jpg`, `png`), n-ancillary files (any formats), subfolder with n-texture files (image formats).
+  1.	**Complex Video:** Video Projects: native Premiere project (`.proj`) or Avid project (`.avp`, `.avs`), preview (`mp4` or similar), n-ancillary files, subfolder with n-components (video, audio, images, or graphics formats). 
 
 For compound document we have enabled a tree browsing for users to easily navigate files inside the compound documents and have access to their preview and make actions on them: 
 
-SCREENSHOT 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Compound Documents/Compound documents previ
+    name: compound-documents.png
+    addins#screenshot#up_to_date
+--}}
+![Compound documents preview ](nx_asset://d783b71b-afef-46b3-bfdd-a5a57b7d8c01 ?w=650,border=true)
 
 ## Extend Compound Documents
 
 ### Customization Doctype
 
-In this tutorial, we’ll learn how to customize the compound document type using Nuxeo Studio, so that depending on the format of files into the .zip file, a specific compound will be created. For this example, if the .zip contains a document “.u3m”, a material compound document will be created.
+In this tutorial, we’ll learn how to customize the compound document type using Nuxeo Studio, so that depending on the format of files into the `.zip` file, a specific compound will be created. For this example, if the `.zip` contains a document “.u3m”, a material compound document will be created.
 
 #### Requirements 
 
@@ -144,7 +149,7 @@ Once you have your facet, your 2 document types and your 2 scripts, you are read
 
 This release of Compound Documents is the first milestone on our scope. 
 Other milestones will come later during the year including: 
-•	The possibility to custom search compound documents (Q3)
-•	Version compound documents and apply validation workflows (Q4) 
-•	Make relations of parent compound documents/children with existing documents in your system to limit duplicates (Q4-Q1 2023)
+•	The possibility to custom search compound documents
+•	Version compound documents and apply validation workflows
+•	Make relations of parent compound documents/children with existing documents in your system to limit duplicates
 
