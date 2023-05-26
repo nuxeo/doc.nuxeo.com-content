@@ -186,7 +186,7 @@ The following control how data are initially loaded into the directory:
     *   `never`: if nuxeo must not create/update table structure.
     *   `on_missing_columns`: if there is a schema change to apply.
     *   `always`: if nuxeo should **drop** the table and re-create it.
-*   `dataLoadingPolicy`: Indicates how the `dataFile` will be used to populate the directory. Five valuse are allowed:
+*   `dataLoadingPolicy`: Indicates how the `dataFile` will be used to populate the directory. Five values are allowed:
     *   `legacy`: (the default).
     *   `never_load`: `dataFile` is never used.
     *   `skip_duplicate`: `dataFile` may contain existing entries that will be ignored.
