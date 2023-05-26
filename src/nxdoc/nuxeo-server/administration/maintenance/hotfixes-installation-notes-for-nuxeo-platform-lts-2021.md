@@ -125,6 +125,18 @@ This property is available for convenience for 10.10 and 2021 only. The fix done
 
 ## Hotfix 36
 
+### Backport H2 Version 2.x Upgrade to LTS 2021
+
+H2 is upgraded to latest 2.x version
+
+The H2 2.x upgrade comes with several breaking changes from H2 itself.
+
+In case of upgrade, you have to delete the `nxserver/data/h2` folder before starting Nuxeo.
+WARNING: In development environments you will lose data.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31785](https://jira.nuxeo.com/browse/NXP-31785)
+
+
 ### Add an nuxeo.conf Property to Disable Immediate Blob Garbage Collection
 
 
