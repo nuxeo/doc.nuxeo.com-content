@@ -18,7 +18,7 @@ hidden: true
 ## Fix Deletion of Sub-Documents Where Permissions Are Blocked
 
 
-Documents with sub-documents where permissions are blocked cannot be deleted
+Documents with sub-documents where permissions are blocked cannot be deleted.
 
 For a scalable document remove check, new indexes are required for MongoDB backend:
 ```Java
@@ -36,9 +36,9 @@ Otherwise, the nuxeo server will attempt to create these indexes if not present 
 ## Make Orphan Binaries GC Scalable
 
 
-A new Full Garbage Collector is available to clean up orphaned document blobs and is exposed in the management Rest API
+A new Full Garbage Collector is available to clean up orphaned document blobs and is exposed in the management Rest API.
 
-This Full GC implementation leverages the work done for NXP-31594 which contains detailed release notes about limitations.
+This Full GC implementation leverages the work done for [NXP-31594](https://jira.nuxeo.com/browse/NXP-31594) which contains detailed release notes about limitations.
 
 See [documentation](https://doc.nuxeo.com/rest-api/1/blobs-endpoint/) for more details
 
