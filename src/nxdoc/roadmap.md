@@ -10,6 +10,7 @@ labels:
     - content-review-lts2017
 is_overview: true
 tree_item_index: 790
+hidden: true
 ---
 The Global Nuxeo Roadmap focuses on:
 
