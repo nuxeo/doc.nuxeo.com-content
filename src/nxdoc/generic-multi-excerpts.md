@@ -116,10 +116,6 @@ Please refer to the [Web UI documentation](https://doc.nuxeo.com/nxdoc/web-ui/).
 This addon requires no specific installation steps. It can be installed like any other package with [nuxeoctl command line]({{page page='installing-a-new-package-on-your-instance'}}#installing-a-package-using-the-nuxeoctl-script) or [from the Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace).
 {{! /multiexcerpt}}
 
-{{! multiexcerpt name='ProdpadFeedback'}}
-You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/b1506780-8c96-11e7-b106-0abbec7104a5).
-{{! /multiexcerpt}}
-
 {{! multiexcerpt name='Designer-restricted-access-note'}}
 {{#> callout type='note' }}
 Studio Designer is available as a public Beta version.
