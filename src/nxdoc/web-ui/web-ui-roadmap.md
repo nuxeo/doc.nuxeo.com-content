@@ -11,6 +11,7 @@ labels:
     - bchauvin
     - lts2019-ok
 tree_item_index: 600
+hidden: true
 ---
 
 Below are the evolutions and improvements planned for Web UI.
