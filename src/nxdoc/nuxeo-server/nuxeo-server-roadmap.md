@@ -9,6 +9,7 @@ review:
 labels:
     - roadmap
     - lts2017-ok
+hidden: true
 ---
 
 Below are the evolutions and improvements planned for Nuxeo Server.</br>
