@@ -37,20 +37,7 @@ Also, as not all performance aspects are on the same level, we let you decide wh
 See all details on how to manage [active improvements]({{page version='' space='nuxeo-insight' page='active-improvement'}})
 -->
 
-## Roadmap
-
-**Nuxeo Insight** roadmap only takes into account strategic topics.</br>
-The roadmap has cards that map to a strategic topic. On each card, there's a title, details and ideas belonging to that topic. You can follow the status of each idea.
-
-The roadmap has three sections:
-- **Now**: being developed. We will normally focus on only one topic according to its priority.
-- **Next**: will be added to a new column. Their priority can still change.
-- **Later**: candidate topics currently in discovery mode. Over time, these will be promoted to the next section, but they can still be removed.
-
-See the [Roadmap]({{page version='' space='nuxeo-insight' page='roadmap'}}) and don't hesitate to
-[give us feedback]({{page version='' space='nuxeo-insight' page='give-feedback'}}).
-
 ## Releases
 
 Our latest version is 1.4 (aka **Human in the Loop - Milestone 2**) which was released on Oct. 15th 2021.
-Be sure to check the [release notes]({{page version='' space='nuxeo-insight' page='release-notes'}}). 
+Be sure to check the [release notes]({{page version='' space='nuxeo-insight' page='release-notes'}}).

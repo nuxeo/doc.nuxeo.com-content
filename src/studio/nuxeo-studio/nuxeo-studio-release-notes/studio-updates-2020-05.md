@@ -36,5 +36,3 @@ When configuring a [layout block]({{page page='ui-designer'}}#layout-blocks):
 - Various improvements around the drag and drop experience to make it rock solid ([NXS-5856](https://jira.nuxeo.com/browse/NXS-5856) [NXS-5858](https://jira.nuxeo.com/browse/NXS-5858) [NXS-5859](https://jira.nuxeo.com/browse/NXS-5859) [NXS-5860](https://jira.nuxeo.com/browse/NXS-5860) [NXS-5861](https://jira.nuxeo.com/browse/NXS-5861))
 
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

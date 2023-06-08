@@ -20,5 +20,3 @@ Since LTS 2021, Nuxeo Marketplace packages support target platform ranges, allow
 This avoids re-releasing a new marketplace package when there is no code change. The application definition section of Nuxeo Studio now supports packages defined with ranges. You can refer to the [package.xml documentation](https://doc.nuxeo.com/nxdoc/next/package-manifest/) for further information about the target platform ranges.
 
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

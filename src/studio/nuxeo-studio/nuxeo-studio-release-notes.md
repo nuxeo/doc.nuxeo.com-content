@@ -46,11 +46,3 @@ Discover upcoming and recent changes in Nuxeo Studio.
 | [February / March 2020]({{page page='studio-updates-2020-02-03'}})     | Custom icons support, security improvements                                |
 | [January 2020]({{page page='studio-updates-2020-01'}})                 | Automatically switch to a new branch                                       |
 | [December 2019]({{page page='studio-updates-2019-12'}})                | Layout Inheritance for faster layout configuration                         |
-
-{{! multiexcerpt name='studio-feedback'}}
-
-## We Want Your Feedback!
-
-Feel free to let us know how we could [make Studio better](https://portal.prodpad.com/eb062eda-6d54-11e7-8513-22000a2145da) for you!
-
-{{! /multiexcerpt}}

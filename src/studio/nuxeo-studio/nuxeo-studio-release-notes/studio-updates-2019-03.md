@@ -69,5 +69,3 @@ When configuring a UI element for a search or a listing, search parameters are v
 [More information about released changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.7.0','3.8.0'%29) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

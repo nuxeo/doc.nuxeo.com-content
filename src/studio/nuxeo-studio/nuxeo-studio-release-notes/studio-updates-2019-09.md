@@ -30,5 +30,3 @@ This release is the first in a series that will aim at making the development ex
 - When creating users and groups, the Administrator account has a random password for increased security ([NXS-5458](https://jira.nuxeo.com/browse/NXS-5458)).
 - When generating a multivalued complex field with blob metadata in view mode, the file input element is shown as read only ([NXS-5379](https://jira.nuxeo.com/browse/NXS-5379)).
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

@@ -35,5 +35,3 @@ Menus change as following:
 - Default layouts are not generated when missing ([NXS-5078](https://jira.nuxeo.com/browse/NXS-5078)).
 
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}
