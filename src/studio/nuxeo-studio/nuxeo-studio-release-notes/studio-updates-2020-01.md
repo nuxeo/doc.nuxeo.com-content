@@ -37,5 +37,3 @@ When creating a branch, a new option is offered to check it out right away for i
 - Release dates are shown in the Studio maven repository ([NXS-5464](https://jira.nuxeo.com/browse/NXS-5464))
 
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

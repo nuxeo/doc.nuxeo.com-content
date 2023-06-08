@@ -57,5 +57,3 @@ Your dashboard at [connect.nuxeo.com](https://connect.nuxeo.com) has a brand new
 {{! multiexcerpt name='studio-updates-2020-06-bugfix'}}
 - "System" schema is not added when configuring a UI element related to a page provider, to prevent errors ([NXS-5876](https://jira.nuxeo.com/browse/NXS-5876))
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

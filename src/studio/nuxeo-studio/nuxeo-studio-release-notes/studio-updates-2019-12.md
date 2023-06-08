@@ -30,5 +30,3 @@ Default document types are handled too: for instance when overriding a folderish
 - Workflow node variable constraints are correctly saved ([NXS-5583](https://jira.nuxeo.com/browse/NXS-5583)).
 
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

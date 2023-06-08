@@ -24,6 +24,3 @@ toc: true
 - `ecm:ancestorId` is exposed in both predicates and aggregates: can be used as an alternative to `ecm:path` when you know the document id instead.
 - `BETWEEN` operator is exposed in predicates for dates, float and integer numbers.
 {{! /multiexcerpt}}
-
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

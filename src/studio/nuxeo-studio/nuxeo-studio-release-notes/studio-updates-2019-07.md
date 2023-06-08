@@ -80,5 +80,3 @@ Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to 
 - Studio prevents you from using the same name for a content view and a page provider as it could lead to conflicts ([NXS-4590](https://jira.nuxeo.com/browse/NXS-4590)).
 - Page providers that are named similarly as a document type are correctly handled when generating a search form ([NXS-4736](https://jira.nuxeo.com/browse/NXS-4736)).
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

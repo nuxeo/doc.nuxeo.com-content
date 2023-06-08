@@ -67,5 +67,3 @@ Addons can be filtered per vendor, so you can filter solutions brought by a part
 - Miscellaneous fixes around contextual help ([NXS-5532](https://jira.nuxeo.com/browse/NXS-5532)).
 
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

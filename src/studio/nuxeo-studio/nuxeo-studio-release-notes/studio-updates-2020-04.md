@@ -56,5 +56,3 @@ A new filtering option is available in the event handlers screen. When using the
 - In workflows, the "follow only first true transition" option can be checked ([NXS-5806](https://jira.nuxeo.com/browse/NXS-5806))
 
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

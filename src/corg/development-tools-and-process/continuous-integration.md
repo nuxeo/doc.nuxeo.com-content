@@ -91,10 +91,6 @@ Yes you can:
 
 Studio configuration is exposed as a build resource (Maven artifact or Nuxeo Package).
 
-{{#> callout type='note' }}
-Nuxeo Studio does not provide a hook mechanism that would allow you to trigger CI chain upon a commit. If you like this idea, feel free to [vote for it](https://app.prodpad.com/ideas/aed8f0f0-9724-11e8-8079-af2a5cff5247/canvas)!
-{{/callout}}
-
 ### Can I Automate Studio Releases?
 
 Yes you can: once your tests pass, it is easy to automate the creation of a new Studio release thanks to [Studio's releases REST API]({{page space="studio" page="how-to-tag-or-release-your-nuxeo-studio-project"}}#with-the-rest-api).

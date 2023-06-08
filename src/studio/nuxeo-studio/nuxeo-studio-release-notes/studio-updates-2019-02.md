@@ -58,5 +58,3 @@ Content views containing parameters are supported, query parameters are mapped t
 [More information about bugs fixed since last release notes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.5.0','3.5.1','3.5.2','3.6.0'%29) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

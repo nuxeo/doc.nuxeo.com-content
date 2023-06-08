@@ -70,5 +70,3 @@ Conflict management screen is updated to provide a better experience:
 
 
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}

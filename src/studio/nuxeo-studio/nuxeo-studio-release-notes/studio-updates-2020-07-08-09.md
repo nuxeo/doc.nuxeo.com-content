@@ -37,5 +37,3 @@ Translation keys are generated automatically following a convention with a defau
 - Nuxeo Studio Designer does not generate the coverage, nature, subjects, expiration fields anymore ([NXS-5897](https://jira.nuxeo.com/browse/NXS-5897))
 - Designer live preview works again in our Firefox [dev tools extension]({{page space='nxdoc' page='nuxeo-dev-tools-extension'}}) ([NXS-6069](https://jira.nuxeo.com/browse/NXS-6069))
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'studio-feedback' page='nuxeo-studio-release-notes'}}}
