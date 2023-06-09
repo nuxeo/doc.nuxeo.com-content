@@ -1,5 +1,5 @@
 ---
-title: Garbage-Collecting Orphaned Binaries
+title: Garbage-Collecting Orphaned Binaries (deprecated)
 description: The binary files attached to documents are not stored in the database but using a specialized binary store, and are not removed like documents.
 review:
     comment: ''
@@ -59,6 +59,11 @@ history:
         message: ''
         version: '1'
 ---
+
+{{#> callout type='warning' heading='Deprecated Garbage Collection'}}
+This page refers to an old Garbage Collection implementation known to not scale on big repositories. Above a certain number of documents/binaries, this implementation fails in timeout or OutOfMemory errors.
+Please refer to the [new implementation]({{page page='garbage-collecting-orphaned-blobs'}}).
+{{/callout}}
 
 The binary files attached to documents are not stored in the database but using a specialized binary store (typically filesystem-based or S3), and are not removed like documents (see [Trash Service]({{page page='trash-service'}})).
 
