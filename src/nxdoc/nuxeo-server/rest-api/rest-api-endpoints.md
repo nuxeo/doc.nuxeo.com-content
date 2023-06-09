@@ -133,6 +133,51 @@ The [Command Resource Endpoint]({{page page='command-endpoint'}}) calls a "comma
 
 The framework makes it easy to [add new custom Java operations]({{page page='contributing-an-operation'}}) to complete the API if you're missing a web-service. You can also [chain operations server-side using Nuxeo Studio]({{page page='how-to-create-an-automation-chain'}}), in order to expose a coarse-grained API that fits your business logic, without any development.
 
+## Capability Endpoint
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <td class="small-3">**Capability Endpoint**</td>
+        <td class="small-3">
+          `/nuxeo/api/v1/capabilities`
+        </td>
+        <td  class="small-6">
+          Get the server capabilities.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+This endpoints returns the server capabilities.
+
+```curl
+curl -u Administrator:Administrator \
+http://localhost:8080/nuxeo/api/v1/capabilities
+```
+
+```json
+{
+  "entity-type" : "capabilities",
+  "cluster" : {
+    "enabled" : false,
+    "nodeId" : "347729645706513753"
+  },
+  "repository" : {
+    "default" : {
+        "queryBlobKeys" : false
+    }
+  },
+  "server" : {
+    "distributionName" : "lts",
+    "distributionServer" : "tomcat",
+    "distributionVersion" : "2021.39.3"
+  }
+}
+```
+
 ## Customizing Nuxeo REST API
 
 Not completely satisfied with what's on offer? See how to [contribute a REST API endpoint]({{page page='howto-contribute-to-the-rest-api'}}#contributing-a-rest-api-endpoint)!
