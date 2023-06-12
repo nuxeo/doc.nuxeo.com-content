@@ -40,6 +40,12 @@ The recommended installation is to use the [NPM](https://www.npmjs.com/) registr
 $ npm install -g nuxeo-cli
 ```
 
+To update Nuxeo CLI when a new version is released, use the regular npm command:
+
+```bash
+$ npm update -g nuxeo-cli
+```
+
 ### Install from Source Repository
 
 If you are a very high skilled developer, and living in the edge, you can install it from the source repository:
