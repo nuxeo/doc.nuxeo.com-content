@@ -14,6 +14,27 @@ tree_item_index: 1980
 {{! multiexcerpt name='nuxeo-server-updates-2021-35'}}
 # What's New in LTS 2021.35 / LTS 2021-HF35
 
+## Clean Up Orphan Binaries After Document Removal, Blob Property Edition and Dispatch
+
+Whenever a:
+- document is removed
+- document blob property is edited
+- document blob property is dispatched to another blob provider
+</br>
+a domain event referencing the related blob(s) is fired and a record is written to the "source/blob" stream for each blob candidate for deletion.
+
+This stream is consumed asynchronously and the blob is eventually deleted if it is not referenced by any other documents.
+
+Note that, this process is only available on instances working with:
+- repositories having the "ecm:blobKeys" capability (introduced by [NXP-29516](https://jira.nuxeo.com/browse/NXP-29516) (i.e. MongoDB)
+- blob providers extending `BlobStoreBlobProvider` such as `S3BlobProvider` and `LocalBlobProvider`
+
+{{#> callout type='warning'}}
+In case of multi-repository deployment with a custom [Blob Dispatcher](https://doc.nuxeo.com/nxdoc/file-storage-configuration/#blob-dispatcher) configuration, the Nuxeo platform cannot ascertain that each repository has its own different binary store path and binaries referenced in another repository may be deleted (see [documentation](https://doc.nuxeo.com/nxdoc/multiple-repositories-configuration/#binary-store-configuration). In that case, it is recommended to disable this feature with [NXP-31794](https://jira.nuxeo.com/browse/NXP-31794).
+{{/callout}}
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31594](https://jira.nuxeo.com/browse/NXP-31594)
+
 ## Ensure File Existence When Using Batch Upload in Cluster Mode and Cloud Storage
 
 
