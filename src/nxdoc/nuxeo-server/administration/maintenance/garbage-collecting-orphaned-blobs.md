@@ -163,12 +163,12 @@ nuxeo.bulk.action.garbageCollectOrphanBlobs.defaultConcurrency=2
 nuxeo.bulk.action.garbageCollectOrphanBlobs.defaultPartitions=4
 ```
 
-Please see the dedicated [Blobs Management Rest endpoint]({{page space='rest-api' page='blobs-endpoint'}}#garbage-collect-documentand39s-blobs) to invoke and monitor a Blob Full GC.
+Please see the dedicated [Blobs Management Rest endpoint](https://doc.nuxeo.com/rest-api/1/blobs-endpoint/#garbage-collect-documentand39s-blobs) to invoke and monitor a Blob Full GC.
 
 {{#> callout type='info' }}
 Despite this implementation being designed to scale on big volumes of data, it will necessarily take some time to fully garbage collect a repository referencing a certain amount of blobs.
 {{/callout}}
 
 {{#> callout type='tip' }}
-It is recommended first to run an orphaned version GC in order to remove references to blobs. It would allow the orphaned blob Full GC to free more space. See [Versions Management Rest endpoint]({{page space='rest-api' page='versions-endpoint'}}#garbage-collect-orphaned-versions) to do so.
+It is recommended first to run an orphaned version GC in order to remove references to blobs. It would allow the orphaned blob Full GC to free more space. See [Versions Management Rest endpoint](https://doc.nuxeo.com/rest-api/1/versions-endpoint/#garbage-collect-orphaned-versions) to do so.
 {{/callout}}
