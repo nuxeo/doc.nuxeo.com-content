@@ -32,7 +32,7 @@ Since LTS 2021-HF02 and [NXP-29516](https://jira.nuxeo.com/browse/NXP-29516), th
 
 If **ALL** documents of a repository have this field computed, then the repository has the `queryBlobKeys` capability. In other words, a repository with documents created by a nuxeo server with a version prior to LTS 2021.2 / LTS 2021-HF02 **does NOT** have this capability.
 
-You can query the [capability endpoint]({{page page='rest-api-endpoints#capability-endpoint'}}) to check whether a repository has the `queryBlobKeys` capability.
+You can query the [capability endpoint]({{page page='rest-api-endpoints'}}#capability-endpoint) to check whether a repository has the `queryBlobKeys` capability.
 
 In case of multi-repository configuration, all the repositories must have this capability.
 
@@ -163,12 +163,12 @@ nuxeo.bulk.action.garbageCollectOrphanBlobs.defaultConcurrency=2
 nuxeo.bulk.action.garbageCollectOrphanBlobs.defaultPartitions=4
 ```
 
-Please see the dedicated [Blobs Management Rest endpoint]({{page space='rest-api' page='blobs-endpoint#garbage-collect-documentand39s-blobs'}}) to invoke and monitor a Blob Full GC.
+Please see the dedicated [Blobs Management Rest endpoint]({{page space='rest-api' page='blobs-endpoint'}}#garbage-collect-documentand39s-blobs) to invoke and monitor a Blob Full GC.
 
 {{#> callout type='info' }}
 Despite this implementation being designed to scale on big volumes of data, it will necessarily take some time to fully garbage collect a repository referencing a certain amount of blobs.
 {{/callout}}
 
 {{#> callout type='tip' }}
-It is recommended first to run an orphaned version GC in order to remove references to blobs. It would allow the orphaned blob Full GC to free more space. See [Versions Management Rest endpoint]({{page space='rest-api' page='versions-endpoint#garbage-collect-orphaned-versions'}}) to do so.
+It is recommended first to run an orphaned version GC in order to remove references to blobs. It would allow the orphaned blob Full GC to free more space. See [Versions Management Rest endpoint]({{page space='rest-api' page='versions-endpoint'}}#garbage-collect-orphaned-versions) to do so.
 {{/callout}}
