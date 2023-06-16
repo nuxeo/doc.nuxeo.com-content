@@ -29,6 +29,13 @@ After logging into the Cloud Console, users will land on the Overview page which
 1.	Add, Remove, Edit and View Customer Contact Information
 2.	Link to Nuxeo Cloud documentation
 3.	List of Production and Pre-Production Environments
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Cloud Console Homepage
+    name: cloud-console-homepage.png
+    server#screenshot#up_to_date
+--}}
+![Cloud Console Homepage](nx_asset://675c9b0d-c30b-4ba9-869b-410d9375128e ?w=650,border=true)
  
 Environment details can be accessed by clicking on the “eye” icon shown next to available environments listed on the Overview Page. At this time customers can only view and schedule deployments to Pre-Production environments within the Cloud Console. Production deployment requests must be made by submitting a JIRA SUPNXP ticket. 
 
@@ -40,10 +47,24 @@ Please note that versions are dynamically retrieved from the login page. If a cu
 ## Environment Details & Deployments
 
 Environment details for the selected environment are shown on this page. Customers are able to view environment details, recent Image Builds and Logs, recent Deploys, as well as initiate new Image Builds or Deploys. 
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Cloud Console Env page
+    name: cloud-console-env-page.png
+    server#screenshot#up_to_date
+--}}
+![Cloud Console Env page](nx_asset://18fff4ed-6794-4dc5-adff-fdd1a4454b17 ?w=650,border=true)
  
 ### Image Builds
 
 The Customer Cloud Console gives users the ability to create a new Image Build that can be deployed to Pre-Production environments. 
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Cloud Console New build
+    name: cloud-console-new-build.png
+    server#screenshot#up_to_date
+--}}
+![Cloud Console New build](nx_asset://4c996bc2-d2e3-46b9-9e74-a7f688ca34ec ?w=350,border=true)
  
 When creating a new Build customers are asked to provide the following: 
 -	**Package Name** The name of the Nuxeo Marketplace Package to be used
@@ -57,6 +78,13 @@ When creating a new Build customers are asked to provide the following:
 ### Pre-Production Deployments
 
 The Cloud Console provides customers with the ability to deploy an Image Build to **Pre-Production Environments only**. 
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Cloud Console New Deploy
+    name: cloud-console-new-deployment.png
+    server#screenshot#up_to_date
+--}}
+![Cloud Console New Deployment](nx_asset://5e773085-31d6-4956-b27a-4d3e2640450e ?w=350,border=true)
  
 When creating a new Deployment, the customer is asked to identify the following: 
 -	**Image Build #** The image build number created as a result of the image build process.
