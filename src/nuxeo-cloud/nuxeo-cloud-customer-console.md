@@ -13,7 +13,7 @@ toc: true
 
 The Nuxeo Cloud Customer Console provides our customers with increased self service capabilities. Among other useful features, the Cloud Customer Console primarily gives users the ability to build Dedicated Customer Images and deploy them to Customer Pre-Production Environments. Our long term goal is to enable more self service capabilities allowing customer increased visibility to hosted Nuxeo Cloud environments and related information.
 
-## Dedicated Image Build & Deployment Pipelines
+## Dedicated Image Build and Deployment Pipelines
 
 The Nuxeo Cloud Customer Console introduces the ability to build and deploy a dedicated Nuxeo Docker Image to your Pre-Production Cloud Environment.
 -	**Image Build Pipeline** - The Image Build Pipeline starts with an LTS 2021 + HotFixes Docker image. Then combines it with your application Marketplace package and dependent add-ons to produce a Dedicated Customer Image. This Image Build is defined and managed as part of a Customer Project profile. This Dedicated Docker Image artifact can then be deployed to your Pre-Production & Production environments.
@@ -39,12 +39,12 @@ After logging into the Cloud Console, users will land on the Overview page which
  
 Environment details can be accessed by clicking on the “eye” icon shown next to available environments listed on the Overview Page. At this time customers can only view and schedule deployments to Pre-Production environments within the Cloud Console. Production deployment requests must be made by submitting a JIRA SUPNXP ticket. 
 
-### Product Version & Product Revision
+### Product Version and Product Revision
 
 For each environment, we display the Product Version and the Nuxeo Product Revision. These provide information on the latest HotFix deployed to each environment. 
 Please note that versions are dynamically retrieved from the login page. If a customer uses a custom login page instead of the default Nuxeo login page, we will not be able to retrieve the version and will display _Not Available_.
 
-## Environment Details & Deployments
+## Environment Details and Deployments
 
 Environment details for the selected environment are shown on this page. Customers are able to view environment details, recent Image Builds and Logs, recent Deploys, as well as initiate new Image Builds or Deploys. 
 
