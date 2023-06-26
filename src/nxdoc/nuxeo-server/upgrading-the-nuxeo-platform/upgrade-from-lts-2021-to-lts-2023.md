@@ -1620,3 +1620,1074 @@ The following Maven dependencies, unused, were removed from the root POM:
 ## Complementary Information
 
 - [Release notes for Nuxeo Platform LTS 2023]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+
+#### Add an Option to Disable Hostname Verification During Elastic/Opensearch SSL Handshake
+
+
+You can now use `elasticsearch.restClient.ssl.certificate.verification=false` to disable hostname verification during SSL handshake for accessing a testing instance of OpenSearch or Elasticsearch running with a test certificate.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31837](https://jira.nuxeo.com/browse/NXP-31837)
+
+#### Upgrade H2 to Version 2.x
+
+
+The H2 2.x upgrade comes with several breaking changes from H2 itself. Nothing has to be done on the Nuxeo side.
+
+If you have H2 data persisted by a previous version of Nuxeo, you should delete the `nxserver/data/h2` folder before starting Nuxeo. YOU WILL LOSE DATA, but this should mainly impact development environment.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31810](https://jira.nuxeo.com/browse/NXP-31810)
+
+#### Add an nuxeo.conf Property to Disable Immediate Blob Garbage Collection
+
+
+To disable the Immediate Document's blobs Garbage Collection, set the following nuxeo.conf property to false:
+```Java
+nuxeo.bulk.action.blobGC.enabled=false
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31794](https://jira.nuxeo.com/browse/NXP-31794)
+
+#### Upgrade to Hibernate 5
+
+
+### Maven dependencies
+
+**Upgrade:**
+- org.hibernate:hibernate-core from 3.3.2.GA to 5.6.15.Final
+- javax.persistence:persistence-api:1.0.2 to javax.persistence:javax.persistence-api:2.2
+
+**Remove:**
+- org.hibernate:hibernate-annotations
+- org.hibernate:hibernate-entitymanager
+- org.hibernate:hibernate-commons-annotations
+- org.hibernate:hibernate-validator
+- org.javassist:javassist, only used for Hibernate < 5.6, moved to [JSF UI](https://github.com/nuxeo/nuxeo-jsf-ui-lts/commit/899dd35aaa344b34cdef45e81fb754c45170fb9a#diff-4baf235dd7b00fb14ae4473942622ceed409dbed554d3f043baaaf9ba4c2f5a2R98) as needed by JBoss Seam
+
+### Java code
+
+**Remove:**
+- `HibernateConfiguration#annotedClasses`
+- `HibernateConfiguration#addAnnotedClass(Class<?> annotedClass)`
+- `HibernateConfiguration#removeAnnotedClass(Class<?> annotedClass)`
+- `HibernateConfiguration#cfg`
+- `HibernateConfiguration#setupConfiguration()`
+- `HibernateConfiguration#createEntityManagerFactory(final Map<String, String> properties)`
+- `HibernateConfiguration#NuxeoTransactionManagerLookup`
+- `NuxeoConnectionProvider#getConnection()`
+- `NuxeoConnectionProvider#closeConnection(Connection connection)`
+- `NuxeoConnectionProvider#close()`
+- `PersistenceComponent#registerOracle12DialectResolver()`
+
+**Add:**
+- `HibernateConfiguration#NuxeoJtaPlatform`
+
+**Update:**
+- `HibernateConfiguration#hibernateProperties` from `Properties` to `HashMap`
+- `NuxeoConnectionProvider` from `implements ConnectionProvider` to `extends DatasourceConnectionProviderImpl`
+- `NuxeoConnectionProvider#configure` from `(Properties props)` to `(Map props)`
+- `PersistenceComponent#doPatchForTests` from `(Properties hibernateProperties)` to `(Map<String, String> hibernateProperties)`
+
+### Extension Point
+
+The `classes/class` list has been removed from the hibernateConfiguration contribution to the following extension point:
+```java
+<extension target=org.nuxeo.ecm.core.persistence.PersistenceComponent
+  point=hibernate>
+  <hibernateConfiguration name=...>
+    ...
+  </hibernateConfiguration>
+</extension>
+```
+### Hibernate Release Notes
+
+**4.0.0.Final**
+
+<https://in.relation.to/2011/12/15/hibernate-core-40-is-final/>
+ <https://github.com/hibernate/hibernate-orm/blob/4.3/changelog.txt>
+
+**5.6.15**
+
+<https://in.relation.to/2023/02/06/hibernate-orm-5615-final/>
+ <https://in.relation.to/2015/08/20/hibernate-orm-500-final-release/> (5.0.0.Final)
+ <https://github.com/hibernate/hibernate-orm/blob/5.6/changelog.txt>
+ <https://hibernate.org/orm/releases/5.6/>
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31791](https://jira.nuxeo.com/browse/NXP-31791)
+
+#### Upgrade Poi to 5.2.1
+
+
+Upgraded the following Maven dependencies from 4.1.2 to 5.2.3:
+```
+org.apache.poi:poi
+org.apache.poi:poi-scratchpad
+org.apache.poi:poi-ooxml
+org.apache.poi:poi-ooxml-schemas
+```
+This required an upgrade from 3.1.0 to 5.1.1 of:
+```
+org.apache.xmlbeans:xmlbean
+```
+See the Apache POI [History of changes](https://poi.apache.org/changes.html).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31787](https://jira.nuxeo.com/browse/NXP-31787)
+
+#### Upgrade Mina-Core to 2.1.5
+
+
+The following dependency has been removed:
+```Java
+org.apache.directory.server:apacheds-kerberos-shared:1.5.1
+```
+Thus, also removing its transitive dependency:
+```Java
+org.apache.mina:mina-core:1.1.2
+```
+Note that `apacheds-kerberos-shared` was previously made available as a transitive dependency of:
+```Java
+org.apache.directory.server:apacheds-core:1.5.1
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31786](https://jira.nuxeo.com/browse/NXP-31786)
+
+#### Prevent Base64-Encoded Images From Being Sent to Elasticsearch
+
+
+When using an HTML Note document, only the fulltext (extracted text) is submitted to elastic for indexation.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31698](https://jira.nuxeo.com/browse/NXP-31698)
+
+#### Remove Deprecated Code Since 6.0
+
+
+# Deprecated 6.0 code removal
+
+## Operations
+
+`Context.RunDocumentOperationInNewTx` was replaced by `Context.RunDocumentOperation`
+`Context.RunOperationOnListInNewTx` was replaced by `Context.RunOperationOnList`
+
+## Contributions
+
+### Extension point
+
+`whereClause@docType` attribute in objects of `org.nuxeo.ecm.platform.query.api.PageProviderService#providers` was replaced by `searchDocumentType` element
+
+## Constants
+
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.TASK_VARIABLES_WHERE_CLAUSE` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.TASK_ACTORS_WHERE_CLAUSE` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.GET_TASKS_QUERY` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.GET_TASKS_FOR_ACTORS_QUERY` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.GET_TASKS_FOR_TARGET_DOCUMENT_QUERY` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.GET_TASKS_FOR_TARGET_DOCUMENTS_QUERY` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.GET_TASKS_FOR_TARGET_DOCUMENT_AND_ACTORS_QUERY` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS_QUERY` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.GET_TASKS_FOR_PROCESS_ID_QUERY` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.GET_TASKS_FOR_PROCESS_ID_AND_ACTORS_QUERY` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.GET_TASKS_FOR_PROCESS_ID_AND_NODE_ID_QUERY` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant.GET_TASKS_FOR_TARGET_DOCUMENT_AND_ACTORS_QUERY_OR_DELEGATED_ACTORS_QUERY` was replaced by Page Provider
+
+
+## Fields
+
+`org.nuxeo.ecm.automation.core.operations.services.AuditPageProviderOperation.page` was replaced by `org.nuxeo.ecm.automation.core.operations.services.AuditPageProviderOperation.currentPageIndex`, the operation parameter was `page` and it is now `currentPageIndex`
+`org.nuxeo.ecm.automation.core.operations.services.AuditPageProviderOperation.sortInfoAsStringList` was replaced by `org.nuxeo.ecm.automation.core.operations.services.AuditPageProviderOperation.sortBy` & `org.nuxeo.ecm.automation.core.operations.services.AuditPageProviderOperation.sortOrder`, the operation parameter was `sortInfo` and it is now `sortBy` & `sortOrder`
+`org.nuxeo.ecm.automation.core.operations.services.AuditPageProviderOperation.maxResults` was not used, no replacement
+`org.nuxeo.ecm.platform.query.core.WhereClauseDescriptor.docType` was replaced by `org.nuxeo.ecm.platform.query.core.BasePageProviderDescriptor.searchDocumentType`
+
+## Methods
+
+`org.nuxeo.elasticsearch.api.ElasticSearchService#query(CoreSession, String, int, int, SortInfo...)` was replaced by `org.nuxeo.elasticsearch.api.ElasticSearchService#query(NxQueryBuilder)`
+`org.nuxeo.elasticsearch.api.ElasticSearchService#query(CoreSession, QueryBuilder, int, int, SortInfo...)` was replaced by `org.nuxeo.elasticsearch.api.ElasticSearchService#query(NxQueryBuilder)`
+`org.nuxeo.ecm.platform.importer.random.HunspellDictionaryHolder#loadDic(String)` was not used, no replacement
+`org.nuxeo.ecm.directory.Session#getEntries()` was replaced by query methods
+`org.nuxeo.ecm.platform.query.core.WhereClauseDescriptor#getDocType()` was replaced by `org.nuxeo.ecm.platform.query.core.BasePageProviderDescriptor#getSearchDocumentType()`
+`org.nuxeo.ecm.platform.task.TaskQueryConstant#getVariableWhereClause(String, String)` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant#getActorsWhereClause(List)` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.TaskQueryConstant#formatStringList(List)` was replaced by Page Provider
+`org.nuxeo.ecm.platform.task.core.service.DocumentTaskProvider#wrapDocModelInTask(DocumentModelList)` was replaced by `org.nuxeo.ecm.platform.task.core.service.DocumentTaskProvider#wrapDocModelInTask(List)`
+`org.nuxeo.ecm.platform.task.core.service.DocumentTaskProvider#wrapDocModelInTask(DocumentModelList, boolean)` was replaced by `org.nuxeo.ecm.platform.task.core.service.DocumentTaskProvider#wrapDocModelInTask(List)`
+
+## Classes
+
+`org.nuxeo.ecm.automation.core.operations.execution.RunInNewTransaction` was replaced by `org.nuxeo.ecm.automation.core.operations.execution.RunDocumentChain`, the operation id was `Context.RunDocumentOperationInNewTx`, the new one is `Context.RunDocumentOperation`
+`org.nuxeo.ecm.automation.core.operations.execution.RunOperationOnListInNewTransaction` was replaced by `org.nuxeo.ecm.automation.core.operations.execution.RunOperationOnList`
+`org.nuxeo.ecm.platform.suggestbox.service.SearchDocumentsSuggestion` was not used, no replacement
+`org.nuxeo.ecm.platform.suggestbox.service.suggesters.DocumentSearchByDateSuggester` was not used, no replacement
+`org.nuxeo.ecm.platform.suggestbox.service.suggesters.DocumentSearchByPropertySuggester` was not used, no replacement
+
+
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31640](https://jira.nuxeo.com/browse/NXP-31640)
+
+#### Make Kafka Replication Factor Param Optional
+
+
+Nuxeo is now relying on the default Kafka broker topic replication factor when creating a new topic. This is configured with `kafka.default.replication.factor=-1`. 
+Note that it works only with Kafka cluster >= 2.4, if you want to use an older Kafka cluster, you have to set explicitly the replication factor in Nuxeo to something > 0.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31621](https://jira.nuxeo.com/browse/NXP-31621)
+
+#### Reduce Retries on Recompute Bulk Actions
+
+
+The maximum number of retries can now be configured for recompute bulk actions using nuxeo.conf options below, also, the new default is one retry (previously 3):
+```Java
+nuxeo.bulk.action.recomputeThumbnails.maxRetries=1
+nuxeo.bulk.action.recomputeViews.maxRetries=1
+nuxeo.bulk.action.recomputeVideoConversions.maxRetries=1
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31550](https://jira.nuxeo.com/browse/NXP-31550)
+
+#### Remove Deprecated Code Since 9.10
+
+
+# Deprecated 9.10 code removal
+
+## Configuration Properties
+
+### Nuxeo.conf
+
+`nuxeo.hotreload.compat.mechanism` was removed, no replacement
+`org.nuxeo.runtime.reload_strategy` doesn't allow `unstash` anymore
+
+### Configuration Service
+
+`nuxeo.drive.force.versioning`, its default value was `true`
+
+## Contributions
+
+### Extension point
+
+`org.nuxeo.ecm.core.versioning.VersioningService#versioningRules` has been removed as it is replaced by Automatic Versioning
+`org.nuxeo.ecm.platform.filemanager.service.FileManagerService#versioning` has been removed as it is replaced by Automatic Versioning
+
+### Component
+
+`org.nuxeo.ecm.core.versioning.VersioningService` component has been replaced by `org.nuxeo.ecm.core.api.versioning.VersioningService`
+
+## Constants
+
+`org.nuxeo.drive.adapter.impl.FileSystemItemHelper.NUXEO_DRIVE_FORCE_VERSIONING_PROPERTY` was referencing `nuxeo.drive.force.versioning` configuration service property
+`org.nuxeo.ecm.core.versioning.StandardVersioningService.DEFAULT_FORMER_RULE_ORDER` was used for compatibility, replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.StandardVersioningService.COMPAT_ID_PREFIX` was used for compatibility, replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.StandardVersioningService.COMPAT_DEFAULT_ID` was used for compatibility, replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.VersioningComponent.VERSIONING_RULE_XP` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.StandardVersioningService.FILE_TYPE` was not used, no replacement
+`org.nuxeo.ecm.core.versioning.StandardVersioningService.NOTE_TYPE` was not used, no replacement
+`org.nuxeo.ecm.core.versioning.StandardVersioningService.PROJECT_STATE` was not used, no replacement
+`org.nuxeo.ecm.core.versioning.StandardVersioningService.AUTO_CHECKED_OUT` was not used, no replacement
+`org.nuxeo.ecm.core.io.download.DownloadService.NXBIGZIPFILE` was replaced by `org.nuxeo.ecm.core.io.download.DownloadService.NXBIGBLOB`
+`org.nuxeo.ecm.core.storage.mongodb.GridFSBinaryManager.SERVER_PROPERTY` was replaced by `MongoDBConnectionService` contributions
+`org.nuxeo.ecm.core.storage.mongodb.GridFSBinaryManager.DBNAME_PROPERTY` was replaced by `MongoDBConnectionService` contributions
+`org.nuxeo.drive.service.impl.DefaultFileSystemItemFactory.VERSIONING_DELAY_PARAM` was replaced by Automatic Versioning
+`org.nuxeo.drive.service.impl.DefaultFileSystemItemFactory.VERSIONING_OPTION_PARAM` was replaced by Automatic Versioning
+`org.nuxeo.functionaltests.pages.tabs.CollectionContentTabSubPage.DELETE` was not used, no replacement
+`org.nuxeo.ecm.platform.tag.TagConstants.MIGRATION_ID` not used anymore since `org.nuxeo.ecm.platform.tag.RelationTagService` has been removed
+`org.nuxeo.ecm.platform.tag.TagConstants.MIGRATION_STATE_RELATIONS` not used anymore since `org.nuxeo.ecm.platform.tag.RelationTagService` has been removed
+`org.nuxeo.ecm.platform.tag.TagConstants.MIGRATION_STATE_FACETS` not used anymore since `org.nuxeo.ecm.platform.tag.RelationTagService` has been removed
+`org.nuxeo.ecm.platform.tag.TagConstants.MIGRATION_STEP_RELATIONS_TO_FACETS` not used anymore since `org.nuxeo.ecm.platform.tag.RelationTagService` has been removed
+`org.nuxeo.ecm.platform.tag.TagConstants.TAGS_BELONG_TO_DOCUMENT` not used anymore since `org.nuxeo.ecm.platform.tag.RelationTagService` has been removed
+`org.nuxeo.ecm.platform.ui.web.auth.NXAuthConstants.LANGUAGE_PARAMETER` was not used, no replacement
+`org.nuxeo.runtime.reload.ReloadComponent.RELOAD_STRATEGY_VALUE_UNSTASH` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.reload.ReloadService.USE_COMPAT_HOT_RELOAD` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.DevFrameworkBootstrap.USE_COMPAT_HOT_RELOAD` was used by former Hot Reload mechanism, no replacement, was referencing `nuxeo.hotreload.compat.mechanism` nuxeo.conf property
+`org.nuxeo.ecm.user.center.profile.UserProfileConstants.USER_PROFILE_TIMEZONE` no timezone field in schema, no replacement
+`org.nuxeo.runtime.api.Framework.NUXEO_STRICT_RUNTIME_SYSTEM_PROP` was not used, no replacement, was referencing `org.nuxeo.runtime.strict`
+
+## Fields
+
+`org.nuxeo.ecm.core.versioning.VersioningComponent.versioningRulesRegistry` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.VersioningComponent.defaultVersioningRuleList` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryDescriptor.server` was replaced by `MongoDBConnectionService` contributions
+`org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryDescriptor.dbname` was replaced by `MongoDBConnectionService` contributions
+`org.nuxeo.ecm.csv.core.CSVImportStatus.positionInQueue` was not used, not replacement
+`org.nuxeo.ecm.csv.core.CSVImportStatus.queueSize` was not used, not replacement
+`org.nuxeo.drive.service.impl.DefaultFileSystemItemFactory.versioningDelay` was replaced by Automatic Versioning
+`org.nuxeo.drive.service.impl.DefaultFileSystemItemFactory.versioningOption` was replaced by Automatic Versioning
+`org.nuxeo.drive.operations.NuxeoDriveAttachBlob.applyVersioningPolicy` was replaced by Automatic Versioning
+`org.nuxeo.drive.operations.NuxeoDriveAttachBlob.factoryName` was replaced by Automatic Versioning
+`org.nuxeo.functionaltests.pages.tabs.AbstractContentTabSubPage.filterInput` was replaced by filter methods from `org.nuxeo.functionaltests.contentView.ContentViewElement`
+`org.nuxeo.functionaltests.pages.tabs.AbstractContentTabSubPage.filterButton` was replaced by filter methods from `org.nuxeo.functionaltests.contentView.ContentViewElement`
+`org.nuxeo.functionaltests.pages.tabs.AbstractContentTabSubPage.clearFilterButton` was replaced by filter methods from `org.nuxeo.functionaltests.contentView.ContentViewElement`
+`org.nuxeo.functionaltests.pages.tabs.CollectionContentTabSubPage.documentContentForm` was not used, no replacement
+`org.nuxeo.functionaltests.pages.tabs.CollectionContentTabSubPage.childDocumentRows` was not used, no replacement
+`org.nuxeo.functionaltests.pages.tabs.SectionContentTabSubPage.contentForm` was not used, no replacement
+`org.nuxeo.runtime.model.impl.ComponentRegistry.deployedFiles` was removed, no real usage
+`org.nuxeo.runtime.test.runner.RuntimeDeployment.contexts` was removed, no real usage
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker.flushSeam` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker.reloadSeam` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker.installWebResources` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker.runDeploymentPreprocessor` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker.deployBundles` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker.undeployBundles` was used by former Hot Reload mechanism, no replacement
+
+
+## Methods
+
+`org.nuxeo.connect.client.status.ConnectStatusHolder#isRegistred()` was replaced by `org.nuxeo.connect.client.status.ConnectStatusHolder#isRegistered()`
+`org.nuxeo.ecm.automation.core.impl.adapters.StringToDocRef#createRef(String)` was replaced by `org.nuxeo.ecm.automation.core.impl.adapters.helper.TypeAdapterHelper#createDocumentRef(String-`
+`org.nuxeo.connect.update.live.UpdateServiceImpl#restart()` was replaced by `org.nuxeo.ecm.admin.NuxeoCtlManager#restart()`
+`org.nuxeo.connect.update.task.live.LiveInstallTask#reloadComponent(String)` was removed since former Hot Reload mechanism was removed
+`org.nuxeo.connect.update.task.live.LiveInstallTask#reloadComponents(LocalPackage)` was removed since former Hot Reload mechanism was removed
+`org.nuxeo.connect.update.task.live.commands.Deploy#deployFile(File, ReloadService)` behavior has changed since former Hot Reload mechanism was removed
+`org.nuxeo.connect.update.task.live.commands.Deploy#deployDirectory(File, ReloadService)` behavior has changed since former Hot Reload mechanism was removed
+`org.nuxeo.connect.update.task.live.commands.Deploy#doCompatRun(Task)` was removed since former Hot Reload mechanism was removed
+`org.nuxeo.connect.update.task.live.commands.Undeploy#undeployFile(File, ReloadService)` behavior has changed since former Hot Reload mechanism was removed
+`org.nuxeo.connect.update.task.live.commands.Undeploy#undeployDirectory(File, ReloadService)` behavior has changed since former Hot Reload mechanism was removed
+`org.nuxeo.connect.update.task.live.commands.Undeploy#doCompatRun(Task)` was removed since former Hot Reload mechanism was removed
+`org.nuxeo.ecm.core.blob.BlobDispatcher#getBlobProvider(Document, Blob)` was replaced by `org.nuxeo.ecm.core.blob.BlobDispatcher#getBlobProvider(Document, Blob, String)` + in the implementations
+`org.nuxeo.ecm.core.uidgen.UIDSequencer#initSequence(String, int)` was replaced by `org.nuxeo.ecm.core.uidgen.UIDSequencer#initSequence(String, long)`
+`org.nuxeo.ecm.core.uidgen.UIDSequencer#getNext(String)` was replaced by `org.nuxeo.ecm.core.uidgen.UIDSequencer#getNextLong(String)`
+`org.nuxeo.ecm.core.versioning.ExtendableVersioningService#getVersioningRules()` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.ExtendableVersioningService#setVersioningRules(Map)` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.ExtendableVersioningService#setDefaultVersioningRule(DefaultVersioningRuleDescriptor)` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.VersioningComponent#registerVersioningRule(VersioningRuleDescriptor)` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.VersioningComponent#unregisterVersioningRule(VersioningRuleDescriptor)` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.VersioningComponent#registerDefaultVersioningRule(DefaultVersioningRuleDescriptor)` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.VersioningComponent#getVersioningRules()` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.VersioningComponent#getDefaultVersioningRule()` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.api.ScrollResult#getResultIds()` was replaced by `org.nuxeo.ecm.core.api.ScrollResult#getResults()`
+`org.nuxeo.ecm.core.api.model.Property#getPath()` was replaced by `org.nuxeo.ecm.core.api.model.Property#getXPath()`
+`org.nuxeo.ecm.core.cache.CacheService#registerCache(String, int, int)` was replaced by `org.nuxeo.ecm.core.cache.CacheService#registerCache(String)`
+`org.nuxeo.ecm.core.transientstore.api.TransientStoreProvider#getStorageSizeMB()` was replaced by `org.nuxeo.ecm.core.transientstore.api.TransientStoreProvider#getStorageSize()`
+`org.nuxeo.ecm.core.convert.api.ConversionService#convertBlobToPDF(Blob)` was replaced by `org.nuxeo.ecm.core.convert.api.ConversionService#convertToMimeType(String, BlobHolder, Map)`
+`org.nuxeo.ecm.core.query.sql.model.FromList#get(int)` was not used, no replacement
+`org.nuxeo.ecm.core.query.sql.model.SelectList#get(int)` was not used, no replacement
+`org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryService#handleConnectionContribution(MongoDBRepositoryDescriptor, BiConsumer)` was replaced by `MongoDBConnectionService` contributions
+`org.nuxeo.ecm.csv.core.CSVImporter#launchImport(CoreSession, String, File, String, CSVImporterOptions)` was replaced by `org.nuxeo.ecm.csv.core.CSVImporter#launchImport(CoreSession, String, Blob, CSVImporterOptions)`
+`org.nuxeo.ecm.csv.core.CSVImportStatus#<init>(State, int, int)` was not used, not replacement
+`org.nuxeo.ecm.csv.core.CSVImportStatus#getPositionInQueue()` was not used, not replacement
+`org.nuxeo.ecm.csv.core.CSVImportStatus#getQueueSize()` was not used, not replacement
+`org.nuxeo.drive.adapter.FolderItem#createFile(Blob)` was replaced by `org.nuxeo.drive.adapter.FolderItem#createFile(Blob, boolean)`
+`org.nuxeo.drive.adapter.FolderItem#createFolder(String)` was replaced by `org.nuxeo.drive.adapter.FolderItem#createFolder(String, boolean)`
+`org.nuxeo.drive.adapter.impl.DocumentBackedFileItem#<init>(VersioningFileSystemItemFactory, DocumentModel)` was replaced by Automatic Versioning
+`org.nuxeo.drive.adapter.impl.DocumentBackedFileItem#<init>(VersioningFileSystemItemFactory, DocumentModel, boolean)` was replaced by Automatic Versioning
+`org.nuxeo.drive.adapter.impl.DocumentBackedFileItem#<init>(VersioningFileSystemItemFactory, DocumentModel, boolean, boolean)` was replaced by Automatic Versioning
+`org.nuxeo.drive.adapter.impl.DocumentBackedFileItem#<init>(VersioningFileSystemItemFactory, FolderItem, DocumentModel)` was replaced by Automatic Versioning
+`org.nuxeo.drive.adapter.impl.DocumentBackedFileItem#<init>(VersioningFileSystemItemFactory, FolderItem, DocumentModel, boolean)` was replaced by Automatic Versioning
+`org.nuxeo.drive.adapter.impl.DocumentBackedFileItem#<init>(VersioningFileSystemItemFactory, FolderItem, DocumentModel, boolean, boolean)` was replaced by Automatic Versioning
+`org.nuxeo.drive.adapter.impl.DocumentBackedFileItem#initialize(VersioningFileSystemItemFactory, FolderItem, DocumentModel)` was replaced by Automatic Versioning
+`org.nuxeo.drive.adapter.impl.FileSystemItemHelper#versionIfNeeded(VersioningFileSystemItemFactory, DocumentModel, CoreSession)` was replaced by Automatic Versioning
+`org.nuxeo.drive.service.FileSystemItemManager#createFolder(String, String, NuxeoPrincipal)` was replaced by `org.nuxeo.drive.service.FileSystemItemManager#createFolder(String, String, NuxeoPrincipal, boolean)`
+`org.nuxeo.drive.service.FileSystemItemManager#createFile(String, Blob, NuxeoPrincipal)` was replaced by `org.nuxeo.drive.service.FileSystemItemManager#createFile(String, Blob, NuxeoPrincipal, boolean)`
+`org.nuxeo.functionaltests.contentView.ContentViewElement#checkByTitle(String...)` was replaced by `org.nuxeo.functionaltests.contentView.ContentViewElement#selectByTitle(String...)`
+`org.nuxeo.functionaltests.contentView.ContentViewElement#checkByIndex(int...)` was replaced by `org.nuxeo.functionaltests.contentView.ContentViewElement#selectByIndex(int...)` or `org.nuxeo.functionaltests.contentView.ContentViewElement#unselectByIndex(int...)`
+`org.nuxeo.functionaltests.contentView.ContentViewElement#checkAllItems()` was replaced by `org.nuxeo.functionaltests.contentView.ContentViewElement#selectAll()` or `org.nuxeo.functionaltests.contentView.ContentViewElement#unselectAll()`
+`org.nuxeo.functionaltests.contentView.ContentViewElement#getSelectionActionByTitle(String)` was not used
+`org.nuxeo.functionaltests.pages.DocumentBasePage#getAddAllToCollectionPopup()` was replaced by actions from `org.nuxeo.functionaltests.pages.tabs.ContentTabSubPage`
+`org.nuxeo.functionaltests.pages.LoginPage#login(String, String, String)` was replaced by `org.nuxeo.functionaltests.pages.LoginPage#(String, String)`
+`org.nuxeo.functionaltests.pages.tabs.CollectionContentTabSubPage#deleteSelectedDocuments()` was replaced by actions `org.nuxeo.functionaltests.pages.contentview.ContentViewElement`
+`org.nuxeo.functionaltests.pages.tabs.CollectionContentTabSubPage#filterDocument(String, int, int)` was replaced by `org.nuxeo.functionaltests.pages.tabs.ContentTabSubPage#filterDocument(String)`
+`org.nuxeo.functionaltests.pages.tabs.CollectionContentTabSubPage#clearFilter(int, int)` was not used, no replacement
+`org.nuxeo.launcher.NuxeoLauncher#registerTrial()` was removed
+`org.nuxeo.ecm.platform.audit.api.AuditReader#getLogEntriesFor(String, Map, boolean)` was replaced by `org.nuxeo.ecm.platform.audit.api.AuditReader#queryLogs(QueryBuilder)`
+`org.nuxeo.ecm.platform.audit.service.AuditBackend#onShutdown()` was replaced by `org.nuxeo.ecm.platform.audit.service.AuditBackend#onApplicationStopped()`
+`org.nuxeo.ecm.platform.audit.service.AuditBulker#onShutdown()` was replaced by `org.nuxeo.ecm.platform.audit.service.AuditBulker#onApplicationStopped()`
+`org.nuxeo.ecm.platform.audit.service.BaseLogEntryProvider#getLogEntriesFor(String, String)` was replaced by `org.nuxeo.ecm.platform.audit.api.AuditReader#getLogEntriesFor(String, String)`
+`org.nuxeo.ecm.directory.Session#deleteEntry(String, Map)` was replaced by `org.nuxeo.ecm.directory.Session#deleteEntry(String)`
+`org.nuxeo.ecm.platform.filemanager.api.FileManager#createFolder(CoreSession, String, String)` was replaced by `org.nuxeo.ecm.platform.filemanager.api.FileManager#createFolder(CoreSession, String, String, boolean)`
+`org.nuxeo.ecm.platform.filemanager.api.FileManager#getVersioningOption()` was replaced by Automatic Versioning
+`org.nuxeo.ecm.platform.filemanager.api.FileManagerService#registerVersioning()` was replaced by Automatic Versioning
+`org.nuxeo.ecm.platform.filemanager.api.FileManagerService#defaultCreateFolder(CoreSession, String, String)` was replaced by Automatic Versioning `org.nuxeo.ecm.platform.filemanager.api.FileManagerService#defaultCreateFolder(CoreSession, String, String, boolean)`
+`org.nuxeo.ecm.platform.filemanager.api.FileManagerService#defaultCreateFolder(CoreSession, String, String, String, boolean)` was replaced by Automatic Versioning `org.nuxeo.ecm.platform.filemanager.api.FileManagerService#defaultCreateFolder(CoreSession, String, String, String, boolean, boolean)`
+`org.nuxeo.ecm.platform.filemanager.service.extension.AbstractFileImporter#skipCheckInForBlob(Blob)` was replaced by Automatic Versioning
+`org.nuxeo.ecm.platform.filemanager.service.extension.AbstractFileImporter#checkIn(DocumentModel)` was replaced by Automatic Versioning
+`org.nuxeo.ecm.platform.filemanager.service.extension.AbstractFileImporter#checkInAfterAdd(DocumentModel)` was replaced by Automatic Versioning
+`org.nuxeo.ecm.platform.notification.api.NotificationManager#getSubscribedDocuments(String)` was replaced by `org.nuxeo.ecm.platform.notification.api.NotificationManager#getSubscribedDocuments(String, String)`
+`org.nuxeo.ecm.platform.tag.TagService#tag(CoreSession, String, String, String)` was replaced by `org.nuxeo.ecm.platform.tag.TagService#tag(CoreSession, String, String)`
+`org.nuxeo.ecm.platform.tag.TagService#untag(CoreSession, String, String, String)` was replaced by `org.nuxeo.ecm.platform.tag.TagService#untag(CoreSession, String, String)`
+`org.nuxeo.ecm.platform.tag.TagService#getDocumentTags(CoreSession, String, String)` was replaced by `org.nuxeo.ecm.platform.tag.TagService#getTags(CoreSession, String)`
+`org.nuxeo.ecm.platform.tag.TagService#getDocumentTags(CoreSession, String, String, boolean)` was replaced by `org.nuxeo.ecm.platform.tag.TagService#getTags(CoreSession, String)`
+`org.nuxeo.ecm.platform.tag.TagService#getTagDocumentIds(CoreSession, String, String)` was replaced by `org.nuxeo.ecm.platform.tag.TagService#getTagDocumentIds(CoreSession, String)`
+`org.nuxeo.ecm.platform.tag.TagService#getTagCloud(CoreSession, String, String, boolean)` was not used, no replacement
+`org.nuxeo.ecm.platform.tag.TagService#getSuggestions(CoreSession, String, String)` was replaced by `org.nuxeo.ecm.platform.tag.TagService#getSuggestions(CoreSession, String)`
+`org.nuxeo.ecm.platform.tag.TagService#hasFeature(Feature)` not used anymore since `org.nuxeo.ecm.platform.tag.RelationTagService` has been removed
+`org.nuxeo.ecm.platform.computedgroups.NuxeoComputedGroup#<init>(String)` was replaced by `org.nuxeo.ecm.platform.computedgroups.NuxeoComputedGroup#<init>(String, GroupConfig)`
+`org.nuxeo.ecm.platform.computedgroups.NuxeoComputedGroup#<init>(String, String)` was replaced by `org.nuxeo.ecm.platform.computedgroups.NuxeoComputedGroup#<init>(String, String, GroupConfig)`
+`org.nuxeo.ecm.platform.userworkspace.api.UserWorkspaceService#getCurrentUserPersonalWorkspace(CoreSession, DocumentModel)` was replaced by `org.nuxeo.ecm.platform.userworkspace.api.UserWorkspaceService#getCurrentUserPersonalWorkspace(CoreSession)`
+`org.nuxeo.ecm.platform.ui.web.DownloadServlet#handleDownloadTemporaryZip(HttpServletRequest, HttpServletResponse, String)` was not used, no replacement
+`org.nuxeo.runtime.api.Framework#getLocalService(Class)` was replaced by `org.nuxeo.runtime.api.Framework#getService(Class)`
+`org.nuxeo.runtime.model.Component#applicationStarted(ComponentContext)` was replaced by `org.nuxeo.runtime.model.Component#start(ComponentContext)`
+`org.nuxeo.runtime.model.ComponentInstance#reload()` was removed since former Hot Reload mechanism was removed
+`org.nuxeo.runtime.model.ComponentManager#unregisterByLocation(String)` was removed, no real usage
+`org.nuxeo.runtime.model.ComponentManager#hasComponentFromLocation(String)` was removed, no real usage
+`org.nuxeo.runtime.model.impl.RegistrationInfoImpl#reload()` was removed since former Hot Reload mechanism was removed
+`org.nuxeo.runtime.model.impl.RegistrationInfoImpl#restart()` was not used, no replacement
+`org.nuxeo.runtime.reload.ReloadService#deployBundle(File)` was replaced by `org.nuxeo.runtime.reload.ReloadService#reloadBundles(ReloadContext)`
+`org.nuxeo.runtime.reload.ReloadService#deployBundle(File, boolean)` was replaced by `org.nuxeo.runtime.reload.ReloadService#reloadBundles(ReloadContext)`
+`org.nuxeo.runtime.reload.ReloadService#deployBundles(List)` was replaced by `org.nuxeo.runtime.reload.ReloadService#reloadBundles(ReloadContext)`
+`org.nuxeo.runtime.reload.ReloadService#deployBundles(List, boolean)` was replaced by `org.nuxeo.runtime.reload.ReloadService#reloadBundles(ReloadContext)`
+`org.nuxeo.runtime.reload.ReloadService#undeployBundle(File)` was replaced by `org.nuxeo.runtime.reload.ReloadService#reloadBundles(ReloadContext)`
+`org.nuxeo.runtime.reload.ReloadService#undeployBundle(File, boolean)` was replaced by `org.nuxeo.runtime.reload.ReloadService#reloadBundles(ReloadContext)`
+`org.nuxeo.runtime.reload.ReloadService#undeployBundles(List)` was replaced by `org.nuxeo.runtime.reload.ReloadService#reloadBundles(ReloadContext)`
+`org.nuxeo.runtime.reload.ReloadService#undeployBundles(List, boolean)` was replaced by `org.nuxeo.runtime.reload.ReloadService#reloadBundles(ReloadContext)`
+`org.nuxeo.runtime.reload.ReloadService#installWebResources(File)` was not used, no replacement
+`org.nuxeo.runtime.reload.ReloadComponent#refreshComponents()` was used former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.DevFrameworkBootstrap#preloadDevBundles()` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.DevFrameworkBootstrap#postloadDevBundles()` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.DevFrameworkBootstrap#zipDirectory(Path, Path, CopyOption...)` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.DevFrameworkBootstrap#clearClassLoader()` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.DevFrameworkBootstrap#installNewClassLoader()` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.DevFrameworkBootstrap#installSeamClasses(File[])` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.DevFrameworkBootstrap#installResourceBundleFragments(List)` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.DevFrameworkBootstrap#resourceBundleName(File)` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker#hotDeployBundles(DevBundle[])` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker#hotUndeployBundles(DevBundle[])` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker#deployBundles(List)` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker#undeployBundles(List)` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker#installWebResources(File)` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker#flushSeam()` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker#reloadSeam()` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.runtime.tomcat.dev.ReloadServiceInvoker#runDeploymentPreprocessor()` was used by former Hot Reload mechanism, no replacement
+`org.nuxeo.ecm.webengine.app.JsonWebengineWriter#writeException(OutputStream, WebException, MediaType)` not needed anymore as `org.nuxeo.ecm.webengine.WebException` was removed
+`org.nuxeo.ecm.webengine.app.JsonWebengineWriter#writeException(JsonGenerator, WebException, MediaType)` not needed anymore as `org.nuxeo.ecm.webengine.WebException` was removed
+
+## Classes
+
+`org.nuxeo.ecm.automation.OperationCompoundExceptionBuilder` was not used, no replacement
+`org.nuxeo.ecm.automation.jaxrs.io.operations.MultiPartRequestReader` was replaced by `org.nuxeo.ecm.automation.jaxrs.io.operations.MultiPartFormRequestReader`
+`org.nuxeo.ecm.core.versioning.CompatVersioningService` was not used, no replacement
+`org.nuxeo.ecm.core.versioning.DefaultVersioningRuleDescriptor` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.VersioningComponent` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.OptionDescriptor` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.SaveOptionsDescriptor` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.VersioningRuleDescriptor` was replaced by Automatic Versioning
+`org.nuxeo.ecm.core.versioning.VersioningService` was replaced by `org.nuxeo.ecm.core.api.versioning.VersioningService`
+`org.nuxeo.drive.service.VersioningFileSystemItemFactory` was replaced by Automatic Versioning
+`org.nuxeo.drive.operations.test.NuxeoDriveSetVersioningOptions` was replaced by Automatic Versioning
+`org.nuxeo.ecm.platform.filemanager.service.extension.VersioningDescriptor` was replaced by Automatic Versioning
+`org.nuxeo.ecm.platform.tag.RelationTagService` was replaced by `org.nuxeo.ecm.platform.tag.FacetedTagService`
+`org.nuxeo.ecm.platform.tag.BridgeTagService` not used anymore since `org.nuxeo.ecm.platform.tag.RelationTagService` has been removed
+`org.nuxeo.ecm.platform.tag.TagsMigrator` not used anymore since `org.nuxeo.ecm.platform.tag.RelationTagService` has been removed
+`org.nuxeo.ecm.platform.tag.Tag` not used anymore since `org.nuxeo.ecm.platform.tag.RelationTagService` has been removed
+`org.nuxeo.ecm.platform.tag.CheckedInDocumentListener` not used anymore since `org.nuxeo.ecm.platform.tag.RelationTagService` has been removed
+`org.nuxeo.ecm.platform.computedgroups.ComputedGroupsService` was not used, no replacement
+`org.nuxeo.runtime.RuntimeExtension` was not used, no replacement
+`org.nuxeo.runtime.model.impl.ShutdownTask` was removed since Nuxeo Runtime now handles start / stop
+`org.nuxeo.runtime.reload.NuxeoRestart` was replaced by `org.nuxeo.ecm.admin.NuxeoCtlManager`
+`org.nuxeo.runtime.reload.ReloadEventNames` was replaced by `org.nuxeo.runtime.reload.ReloadService`
+`org.nuxeo.ecm.webengine.WebException` was replaced by `org.nuxeo.ecm.core.api.NuxeoException`
+`org.nuxeo.ecm.webengine.app.JsonExceptionWriter` not needed anymore as `org.nuxeo.ecm.webengine.WebException` was removed
+`org.nuxeo.ecm.webengine.model.AdapterNotFoundException` was replaced by `org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException`
+`org.nuxeo.ecm.webengine.model.TemplateNotFoundException` was replaced by `org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException`
+`org.nuxeo.ecm.webengine.model.TypeException` was replaced by `org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException`
+`org.nuxeo.ecm.webengine.model.TypeNotFoundException` was replaced by `org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException`
+`org.nuxeo.ecm.webengine.jaxrs.session.CoreExceptionMapper` was not used, no replacement
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31536](https://jira.nuxeo.com/browse/NXP-31536)
+
+#### Remove Deprecated Code Since 8.10
+
+
+# Deprecated 8.10 code removal
+
+## Constants
+
+`org.nuxeo.ecm.platform.importer.source.FileWithIndividualMetadasSourceNode.PROPERTY_FILE_SUFIX` was replaced by `PROPERTY_FILE_SUFFIX`
+`org.nuxeo.ecm.platform.ui.web.auth.NuxeoAuthenticationFilter.DEFAULT_START_PAGE` was replaced by `LoginScreenHelper#getStartupPagePath()`
+
+## Methods
+
+`org.nuxeo.ecm.core.api.CoreSession#isStateSharedByAllThreadSessions()` was removed as it always returns true by design
+`org.nuxeo.ecm.core.api.CoreSession#copy(DocumentRef, DocumentRef, String, boolean)` was replaced by `#copy(DocumentRef, DocumentRef, String, CopyOption...)`
+`org.nuxeo.ecm.core.api.CoreSession#copy(List<DocumentRef>, DocumentRef, boolean)` was replaced by `#copy(List, DocumentRef, CopyOption...)`
+`org.nuxeo.ecm.core.api.CoreSession#copyProxyAsDocument(DocumentRef, DocumentRef, String, boolean)` was replaced by `#copyProxyAsDocument(DocumentRef, DocumentRef, String, CopyOption...)`
+`org.nuxeo.ecm.core.api.CoreSession#copyProxyAsDocument(List<DocumentRef>, DocumentRef, boolean)` was replaced by `#copyProxyAsDocument(List, DocumentRef, CopyOption...)`
+`org.nuxeo.ecm.core.api.DocumentModel#setPropertyObject(Property)` was added to allow removal of `org.nuxeo.ecm.core.api.DocumentModel#getParts()`
+`org.nuxeo.ecm.core.api.DocumentModel#getParts()` was removed
+`org.nuxeo.ecm.core.api.DocumentModel.getParts()` is internal. Use direct `org.nuxeo.ecm.core.api.model.Property` getters instead
+`org.nuxeo.ecm.core.api.IterableQueryResult#isLife()` was replaced by `#mustBeClosed()`
+`org.nuxeo.ecm.core.api.impl.DocumentModelImpl#setPropertyObject(Property)` was added to allow removal of `org.nuxeo.ecm.core.api.DocumentModel#getParts()`
+`org.nuxeo.ecm.core.api.impl.SimpleDocumentModel#setPropertyObject(Property)` was added to allow removal of `org.nuxeo.ecm.core.api.DocumentModel#getParts()`
+`org.nuxeo.ecm.core.api.impl.SimpleDocumentModel#getParts()` was removed
+`org.nuxeo.ecm.core.api.model.DeltaLong#DeltaLong(long, long)` was replaced by `#DeltaLong(Long, long)`
+`org.nuxeo.ecm.core.api.model.DeltaLong#deltaOrLong(Number, long)` was replaced by `#valueOf(Number, long)`
+`org.nuxeo.ecm.core.event.impl.ShallowDocumentModel#getPart(String)` was removed
+`org.nuxeo.ecm.core.event.impl.ShallowDocumentModel#getParts()` was removed
+`org.nuxeo.ecm.core.event.impl.ShallowDocumentModel#setPropertyObject(Property)` was added to allow removal of `org.nuxeo.ecm.core.api.DocumentModel#getParts()` but is unsupported
+`org.nuxeo.ecm.core.work.AbstractWork#initSession()` was replaced by `#openSystemSession()`
+`org.nuxeo.ecm.core.work.AbstractWork#initSession(String)` was replaced by `#openSystemSession()` to open a session on the configured repository name, otherwise use `CoreInstance#getCoreSessionSystem(String)`
+`org.nuxeo.ecm.core.storage.dbs.DBSSession.DBSQueryResult#isLife()` was replaced by `#mustBeClosed()`
+`org.nuxeo.ecm.core.storage.sql.jdbc.ResultSetQueryResult#isLife()` was replaced by `#mustBeClosed()`
+`org.nuxeo.ecm.core.api.AbstractSession#copy(DocumentRef, DocumentRef, String, boolean)` was replaced by `#copy(DocumentRef, DocumentRef, String, CopyOption...)`
+`org.nuxeo.ecm.core.api.AbstractSession#copy(List<DocumentRef>, DocumentRef, boolean)` was replaced by `#copy(List, DocumentRef, CopyOption...)`
+`org.nuxeo.ecm.core.api.AbstractSession#copyProxyAsDocument(DocumentRef, DocumentRef, String, boolean)` was replaced by `#copyProxyAsDocument(DocumentRef, DocumentRef, String, CopyOption...)`
+`org.nuxeo.ecm.core.api.AbstractSession#copyProxyAsDocument(List<DocumentRef>, DocumentRef, boolean)` was replaced by `#copyProxyAsDocument(List, DocumentRef, CopyOption...)`
+`org.nuxeo.ecm.core.api.local.LocalSession#isStateSharedByAllThreadSessions()` was removed as it always returns true by design
+`org.nuxeo.ecm.core.opencmis.impl.server.CMISQLtoNXQL.NXQLtoCMISIterableQueryResult#isLife()` was replaced by `#mustBeClosed()`
+`org.nuxeo.ecm.csv.core.CSVImporterDocumentFactory#exists(CoreSession, String, String, String, Map<String, Serializable>)` was replaced by `#exists(CoreSession, String, String, Map<String, Serializable>)`
+`org.nuxeo.ecm.csv.core.DefaultCSVImporterDocumentFactory#exists(CoreSession, String, String, String, Map<String, Serializable>)` was replaced by `#exists(CoreSession, String, String, Map<String, Serializable>)`
+`org.nuxeo.elasticsearch.api.EsIterableQueryResultImpl#isLife()` was replaced by `#mustBeClosed()`
+`org.nuxeo.elasticsearch.core.EsResultSetImpl#isLife()` was replaced by `#mustBeClosed()`
+`org.nuxeo.ecm.permissions.PermissionListener#handleReplaceACE(DocumentEventContext, String, ACE, ACE)` was removed
+`org.nuxeo.ecm.platform.audit.api.AuditReader#getLogEntriesFor(String)` was replaced by `#getLogEntriesFor(String, String)`
+`org.nuxeo.ecm.platform.audit.service.BaseLogEntryProvider#getLogEntriesFor(String)` was replaced by `#getLogEntriesFor(String, String)`
+`org.nuxeo.ecm.platform.audit.service.BaseLogEntryProvider#getLogEntriesFor(String, Map<String, FilterMapEntry>, boolean)` was removed. If you use the `org.nuxeo.ecm.platform.audit.service.LogEntryProvider` implementation, you can use `org.nuxeo.ecm.platform.audit.service.LogEntryProvider#queryLogs(QueryBuilder)`
+`org.nuxeo.ecm.platform.audit.service.DefaultAuditBackend#getLogEntriesFor(String)` was replaced by `#getLogEntriesFor(String, String)`
+`org.nuxeo.ecm.platform.audit.service.LogEntryProvider#getLogEntriesFor(String)` was replaced by `#queryLogs(QueryBuilder)`
+`org.nuxeo.ecm.platform.audit.service.LogEntryProvider#getLogEntriesFor(String, Map<String, FilterMapEntry>, boolean)` was replaced by `#queryLogs(QueryBuilder)`
+`org.nuxeo.ecm.platform.importer.source.FileWithIndividualMetadasSourceNode#isPropertyFile(File)` was removed
+`org.nuxeo.ecm.platform.rendition.service.RenditionServiceImpl#storeRendition(DocumentModel, Rendition, String)` was removed
+
+## Classes
+`org.nuxeo.ecm.core.api.DataModelMap` was removed. Use `Map<String, DataModel>`
+`org.nuxeo.ecm.core.api.impl.DataModelMapImpl` was removed. Use `Map<String, DataModel>`
+`org.nuxeo.ecm.platform.routing.core.io.JsonEncodeDecodeUtils` was replaced by `org.nuxeo.ecm.core.io.registry.Writer#write(Object, Class, java.lang.reflect.Type, javax.ws.rs.core.MediaType, java.io.OutputStream)` See how `org.nuxeo.ecm.platform.routing.core.io.DocumentRouteWriter#writeVariables(org.nuxeo.ecm.platform.routing.api.DocumentRoute, JsonGenerator, org.nuxeo.ecm.core.io.registry.MarshallerRegistry, org.nuxeo.ecm.core.io.registry.context.RenderingContext, SchemaManager)` uses it
+`org.nuxeo.ecm.platform.routing.core.io.TaskCompletionRequestLegacyJsonReader` was replaced by `TaskCompletionRequestJsonReader`
+`org.nuxeo.ecm.platform.routing.core.io.WorkflowRequestLegacyJsonReader` was replaced by `WorkflowRequestJsonReader`
+
+
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31535](https://jira.nuxeo.com/browse/NXP-31535)
+
+#### Remove Deprecated Code Since 7.10
+
+
+# Deprecated 7.10 code removal
+
+## Contributions
+
+### Extension point
+
+`org.nuxeo.theme.styling.service.ThemeStylingService#pages` does not take `org.nuxeo.theme.styling.service.descriptors.ThemePage` objects anymore. It now only takes `org.nuxeo.theme.styling.service.descriptors.PageDescriptor`
+`org.nuxeo.theme.styling.service.ThemeStylingService#styles` was removed as it is replaced by `org.nuxeo.ecm.platform.WebResources#resources`
+`org.nuxeo.theme.styling.service.ThemeStylingService#resources` was removed as it is replaced by `org.nuxeo.ecm.platform.WebResources#resources`
+
+### Facets
+
+`org.nuxeo.ecm.platform.picture.coreTypes#MultiviewPicture` was removed, no replacement
+
+## Constants
+
+`org.nuxeo.ecm.core.api.event.CoreEventConstants.DOCUMENT_MODEL_ID` was used for compatibility, replaced by `DESTINATION_NAME`
+`org.nuxeo.ecm.core.api.pathsegment.PathSegmentServiceDefault.NUXEO_MAX_SEGMENT_SIZE_PROPERTY` was used for compatibility, replaced by `PathSegmentService#NUXEO_MAX_SEGMENT_SIZE_PROPERTY`
+`org.nuxeo.ecm.core.opencmis.impl.server.NuxeoRepository.NUXEO_VERSION_PROP` was used for compatibility, replaced by `org.nuxeo.common.Environment#DISTRIBUTION_VERSION`
+`PicturePreviewAdapterFactory.ORIGINAL_VIEW_NAME` was removed, the Original view does not exist anymore. See NXP-16070
+`org.nuxeo.ecm.core.io.download.DownloadService.NXBIGFILE` was used for compatibility, replaced by `#NXFILE`
+
+## Fields
+
+`org.nuxeo.ecm.user.invite.UserRegistrationInfo.password` The password should not be stored
+`org.nuxeo.theme.styling.service.descriptors.PageDescriptor.appendStyles` was removed, use resources instead
+`org.nuxeo.theme.styling.service.descriptors.PageDescriptor.styles` was removed, use resources instead
+
+## Methods
+
+`org.nuxeo.ecm.core.api.impl.blob.URLBlob.#URLBlob(URL, String, String, String)` was removed. Use a separate `#setFilename` call instead
+`org.nuxeo.ecm.core.api.security.ACP#addACL(String, ACL)` was replaced by `#addACL(ACL)` to have correctly ordered acls. To force by-passing the order, use `#addACL(int, ACL)`
+`org.nuxeo.ecm.core.api.security.impl.ACPImpl#addACL(String, ACL)` was replaced by `#addACL(ACL)` to have correctly ordered acls. To force by-passing the order, use `#addACL(int, ACL)`
+`org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter#getCommandLineService()` was removed
+`org.nuxeo.connect.client.vindoz.InstallAfterRestart#isVindozBox()` was removed. Use `org.apache.commons.lang3.SystemUtils#IS_OS_WINDOWS` instead
+`org.nuxeo.ecm.admin.NuxeoCtlManager#isWindows()` was removed. Use `org.apache.commons.lang3.SystemUtils#IS_OS_WINDOWS` instead
+`org.nuxeo.ecm.automation.server.jaxrs.batch.BatchManager#initBatch(String, String)` was replaced by `#initBatch()`
+`org.nuxeo.ecm.automation.server.jaxrs.batch.BatchManagerComponent#initBatch(String, String)` was replaced by `#initBatch()`
+`org.nuxeo.ecm.core.opencmis.impl.server.NuxeoCmisService#getIconRenditionStream(String)` was removed. The thumbnail is now a default rendition, see NXP-16662
+`org.nuxeo.ecm.core.opencmis.impl.server.NuxeoObjectData#getIconRendition(DocumentModel, CallContext)` was removed. The thumbnail is now a default rendition, see NXP-16662
+`org.nuxeo.ecm.core.opencmis.impl.server.NuxeoObjectData#getIconStream(String, CallContext)` was removed. The thumbnail is now a default rendition, see NXP-16662
+`org.nuxeo.ecm.user.invite.UserRegistrationConfiguration#getUserInfoPasswordField()` was removed
+`org.nuxeo.ecm.user.invite.UserRegistrationInfo#getPassword()` was removed
+`org.nuxeo.ecm.user.invite.UserRegistrationInfo#setPassword(String)` was removed
+`org.nuxeo.ecm.directory.Directory#getReference(String)` was replaced by `#getReferences(String)`
+`org.nuxeo.ecm.directory.AbstractDirectory#getReference(String)` was replaced by `#getReferences(String)`
+`org.nuxeo.ecm.platform.filemanager.utils.FileManagerUtils#getBytesFromFile(File)` was removed. Use `org.apache.commons.io.IOUtils#toByteArray` instead
+`org.nuxeo.ecm.platform.picture.ImagingComponent#getImageMetadata(Blob)` was removed. `Use org.nuxeo.binary.metadata.api.BinaryMetadataService#readMetadata(Blob, boolean)` instead
+`org.nuxeo.ecm.platform.picture.api.ImagingService#getImageMetadata(Blob)` was removed. `Use org.nuxeo.binary.metadata.api.BinaryMetadataService#readMetadata(Blob, boolean)` instead
+`org.nuxeo.ecm.platform.picture.api.PictureConversion#getTitle()` was replaced by `#getId()`
+`org.nuxeo.ecm.platform.picture.api.PictureView#getContent()` was replaced by `#getBlob`
+`org.nuxeo.ecm.platform.picture.api.PictureViewImpl#getContent()` was replaced by `#getBlob`
+`org.nuxeo.ecm.platform.picture.api.adapters#AbstractPictureAdapter.setMetadata()` was removed
+`org.nuxeo.ecm.platform.rendition.service.RenditionService#getDeclaredRenditionDefinitionsForProviderType(String)` was removed
+`org.nuxeo.ecm.platform.rendition.service.RenditionCreator#getDetachedDendition()` was replaced by `#getDetachedRendition`
+`org.nuxeo.ecm.platform.rendition.service.RenditionServiceImpl#getDeclaredRenditionDefinitionsForProviderType(String)` was removed
+`org.nuxeo.ecm.platform.task.TaskService#createTask(CoreSession, NuxeoPrincipal, List<DocumentModel>, String, String, String, String, List<String>, boolean, String, String, Date, Map<String, String>, String, Map<String, Serializable>)` was replaced by `#createTaskForProcess(CoreSession, NuxeoPrincipal, List, String, String, String, String, String, List, boolean, String, String, Date, Map, String, Map)`
+`org.nuxeo.ecm.platform.task.core.service.TaskServiceImpl#createTask(CoreSession, NuxeoPrincipal, List<DocumentModel>, String, String, String, String, List<String>, boolean, String, String, Date, Map<String, String>, String, Map<String, Serializable>)` was replaced by `#createTaskForProcess(CoreSession, NuxeoPrincipal, List, String, String, String, String, String, List, boolean, String, String, Date, Map, String, Map)`
+`org.nuxeo.theme.styling.service.ThemeStylingServiceImpl#getResourceFromStyle(String)` was removed
+`org.nuxeo.theme.styling.service.descriptors.PageDescriptor#getAppendStyles()` was removed. Use resources instead
+`org.nuxeo.theme.styling.service.descriptors.PageDescriptor#getStyles()` was removed. Use resources instead
+`org.nuxeo.theme.styling.service.descriptors.PageDescriptor#setStyles(List<String>)` was removed. Use resources instead
+`org.nuxeo.theme.styling.service.descriptors.PageDescriptor#setAppendStyles(boolean)` was removed. Use resources instead
+`org.nuxeo.theme.styling.service.registries.PageRegistry#getThemePage(String)` was replaced by `#getPage(String)`
+`org.nuxeo.theme.styling.service.registries.PageRegistry#getThemePages()` was replaced `#getPages(String)`
+`org.nuxeo.theme.styling.service.registries.PageRegistry#getConfigurationApplyingToAllThemes()` Use `#getConfigurationApplyingToAll()` instead
+`org.nuxeo.ecm.restapi.server.jaxrs.blob.BlobObject#buildResponseFromBlob(Request, HttpServletRequest, Blob, String)` was removed
+`org.nuxeo.connect.update.task.guards.PlatformHelper#isWindows()` was removed. Use `org.apache.commons.lang3.SystemUtils#IS_OS_WINDOWS` instead
+`org.nuxeo.connect.update.task.guards.PlatformHelper#isNotWindows()` was removed. Use `org.apache.commons.lang3.SystemUtils#IS_OS_WINDOWS` instead
+
+## Classes
+
+`org.nuxeo.ecm.core.api.DocumentException` was removed
+`org.nuxeo.ecm.automation.core.operations.document.DocumentPermissionHelper` was removed. Methods to managing permissions are now on ACP / ACL
+`org.nuxeo.ecm.automation.jaxrs.io.audit.LogEntryListWriter` was removed. This marshaller was migrated to `org.nuxeo.ecm.platform.audit.io.LogEntryListJsonWriter`. To use it in JAX-RS, register the `org.nuxeo.ecm.webengine.jaxrs.coreiodelegate.CoreIODelegate` to forward the JAX-RS marshalling to nuxeo-core-io
+`org.nuxeo.ecm.automation.jaxrs.io.audit.LogEntryWriter` was removed. This marshaller was migrated to `org.nuxeo.ecm.platform.audit.io.LogEntryJsonWriter`. To use it in JAX-RS, register the `org.nuxeo.ecm.webengine.jaxrs.coreiodelegate.CoreIODelegate` to forward the JAX-RS marshalling to nuxeo-core-io
+`org.nuxeo.ecm.automation.jaxrs.io.documents.JSONDocumentModelReader` was removed. The Nuxeo JSON marshalling was migrated to nuxeo-core-io. This class is replaced by `DocumentModelJsonReader` which is registered by default and available to marshal `DocumentModel` from the Nuxeo Rest API thanks to the JAX-RS marshaller `org.nuxeo.ecm.webengine.jaxrs.coreiodelegate.CoreIODelegate`.
+`org.nuxeo.ecm.platform.picture.api.BlobHelper` was removed. Use `org.nuxeo.ecm.core.api.Blob#getFile` directly
+`org.nuxeo.ecm.platform.picture.api.PictureTemplate` was replaced by `org.nuxeo.ecm.platform.picture.api.PictureConversion`
+`org.nuxeo.ecm.platform.picture.magick.MagickExecutor` was removed
+`org.nuxeo.ecm.platform.web.common.UserAgentMatcher` was replaced by `org.nuxeo.common.utils.UserAgentMatcher`
+`org.nuxeo.ecm.platform.web.common.resources.AggregatedJSProvider` was removed. Use webresources extension points instead
+`org.nuxeo.theme.styling.service.descriptors.SimpleStyle` was removed. Use the `org.nuxeo.ecm.web.resources.core.ResourceDescriptor` with flavor endpoint instead
+`org.nuxeo.theme.styling.service.descriptors.ThemePage` was removed
+`org.nuxeo.ecm.webengine.jaxrs.coreiodelegate.DocumentModelJsonReaderLegacy` was removed as it used `org.nuxeo.ecm.automation.jaxrs.io.documents.JSONDocumentModelReader`
+
+
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31534](https://jira.nuxeo.com/browse/NXP-31534)
+
+#### Add MongoDB Index on Ecm:isVersion
+
+
+For MongoDB backend, create the index manually:
+```Java
+db.default.createIndex(
+   { ecm:isVersion: 1 }
+);
+```
+Otherwise, the nuxeo server will attempt to create this index if not present at start-up.  In the case of an existing instance with large amounts of documents, this process may time out and/or affect performance.
+
+
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31530](https://jira.nuxeo.com/browse/NXP-31530)
+
+#### Clean Up Unused Dependencies From Root POM
+
+
+The following Maven dependencies were removed from the root POM, as unused:
+```
+<dependencies>
+  <dependency>
+    <groupId>com.github.olivergondza</groupId>
+    <artifactId>maven-jdk-tools-wrapper</artifactId>
+    <type>pom</type>
+  </dependency>
+  <dependency>
+    <groupId>org.jvnet.staxex</groupId>
+    <artifactId>stax-ex</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>commons-betwixt</groupId>
+    <artifactId>commons-betwixt</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient-cache</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>fluent-hc</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.directory.server</groupId>
+    <artifactId>apacheds-core-shared</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.tukaani</groupId>
+    <artifactId>xz</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.jboss</groupId>
+    <artifactId>jboss-vfs</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.jboss.microcontainer</groupId>
+    <artifactId>jboss-dependency</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.jboss.microcontainer</groupId>
+    <artifactId>jboss-kernel</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.jboss.remoting</groupId>
+    <artifactId>jboss-remoting</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>jboss</groupId>
+    <artifactId>jboss-serialization</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.jboss.security</groupId>
+    <artifactId>jbosssx</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.jboss.naming</groupId>
+    <artifactId>jnp-client</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.jboss.logging</groupId>
+    <artifactId>jboss-logging-spi</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.jboss</groupId>
+    <artifactId>jboss-common-core</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>backport-util-concurrent</groupId>
+    <artifactId>backport-util-concurrent</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.fusesource.jansi</groupId>
+    <artifactId>jansi</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest-all</artifactId>
+    <scope>test</scope>
+  </dependency>
+  <dependency>
+    <groupId>oro</groupId>
+    <artifactId>oro</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>bsh</groupId>
+    <artifactId>bsh</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>net.sourceforge.jtds</groupId>
+    <artifactId>jtds</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>javax.script</groupId>
+    <artifactId>jexl-engine</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>javax.script</groupId>
+    <artifactId>js-engine</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>javax.script</groupId>
+    <artifactId>bsh-engine</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>imagej</groupId>
+    <artifactId>imagej</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.google.inject.extensions</groupId>
+    <artifactId>guice-servlet</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.google.inject.extensions</groupId>
+    <artifactId>guice-assistedinject</artifactId>
+    <scope>compile</scope>
+  </dependency>
+  <dependency>
+    <groupId>jline</groupId>
+    <artifactId>jline</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>rome</groupId>
+    <artifactId>rome</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>jdom</groupId>
+    <artifactId>jdom</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>jotm</groupId>
+    <artifactId>jotm</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>net.sourceforge.nekohtml</groupId>
+    <artifactId>nekohtml</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.jsecurity</groupId>
+    <artifactId>jsecurity</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.shindig</groupId>
+    <artifactId>shindig-gadgets</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.google.code.guice</groupId>
+    <artifactId>guice-internal</artifactId>
+    <scope>runtime</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.shindig</groupId>
+    <artifactId>shindig-common</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.shindig</groupId>
+    <artifactId>shindig-social-api</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.shindig</groupId>
+    <artifactId>shindig-features</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.google.inject.extensions</groupId>
+    <artifactId>guice-jmx</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>caja</groupId>
+    <artifactId>caja</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>de.odysseus.juel</groupId>
+    <artifactId>juel-impl</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>aopalliance</groupId>
+    <artifactId>aopalliance</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.dts</groupId>
+    <artifactId>jmyspell-core</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.opensaml</groupId>
+    <artifactId>openws</artifactId>
+    <version>1.5.6</version>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.shindig</groupId>
+    <artifactId>shindig-gadgets</artifactId>
+    <classifier>tests</classifier>
+    <scope>test</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.easymock</groupId>
+    <artifactId>easymockclassextension</artifactId>
+    <scope>test</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.objectweb.howl</groupId>
+    <artifactId>howl</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.ws.commons.axiom</groupId>
+    <artifactId>axiom-api</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.ws.commons.axiom</groupId>
+    <artifactId>axiom-impl</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.xmlgraphics</groupId>
+    <artifactId>batik-css</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.xmlgraphics</groupId>
+    <artifactId>batik-util</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>net.sf.jtidy</groupId>
+    <artifactId>jtidy</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>net.oauth.core</groupId>
+    <artifactId>oauth-consumer</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>net.oauth.core</groupId>
+    <artifactId>oauth-httpclient3</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.ericdaugherty.mail</groupId>
+    <artifactId>jes</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>dnsjava</groupId>
+    <artifactId>dnsjava</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.glassfish.embedded</groupId>
+    <artifactId>glassfish-embedded-all</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.knallgrau.utils</groupId>
+    <artifactId>textcat</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>de.schlichtherle.io</groupId>
+    <artifactId>truezip</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.framework</artifactId>
+    <scope>test</scope>
+  </dependency>
+  <dependency>
+    <groupId>com.octo.captcha</groupId>
+    <artifactId>jcaptcha</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.github.segmentio</groupId>
+    <artifactId>analytics</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>ro.isdc.wro4j</groupId>
+    <artifactId>wro4j-extensions</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.jolokia</groupId>
+    <artifactId>jolokia-core</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.kafka</groupId>
+    <artifactId>kafka_2.12</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.kafka</groupId>
+    <artifactId>kafka_2.12</artifactId>
+    <classifier>test</classifier>
+    <scope>test</scope>
+  </dependency>
+</dependencies>
+
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>jboss-packaging-maven-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-ejb-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-rar-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.jvnet.maven-antrun-extended-plugin</groupId>
+      <artifactId>maven-antrun-extended-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-pmd-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-checkstyle-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>xml-maven-plugin</artifactId>
+      <version>1.0.2</version>
+    </plugin>
+    <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>cobertura-maven-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.eclipse.m2e</groupId>
+      <artifactId>lifecycle-mapping</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.sonarsource.scanner.maven</groupId>
+      <artifactId>sonar-maven-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.codehaus.sonar-plugins</groupId>
+      <artifactId>maven-report</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>io.repaint.maven</groupId>
+      <artifactId>tiles-maven-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-release-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>com.versioneye</groupId>
+      <artifactId>versioneye-maven-plugin</artifactId>
+    </plugin>
+    <plugin>
+      <groupId>com.github.eirslett</groupId>
+      <artifactId>frontend-maven-plugin</artifactId>
+    </plugin>
+  </plugins>
+</build>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31492](https://jira.nuxeo.com/browse/NXP-31492)
+
+#### Fix Removal of 'Aceinfo' Directory Entries When a Document Is Deleted
+
+
+For existing instances on MongoDB, in order to improve performance on ace info removal the following index needs to be created manually:
+```java
+db.aceinfo.createIndex({aceinfo:docId: 1})  
+```
+Then enable ace info garbage collection by adding the following line to your nuxeo.conf:
+```java
+nuxeo.aceinfo.gc.enabled=true 
+```
+VCS users will need to make their own index.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31459](https://jira.nuxeo.com/browse/NXP-31459)
+
+#### Update Nuxeo Docker Image to Use Rocky Linux Instead of CentOS
+
+
+The `docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023` Docker image is built from `rockylinux:9.1`.
+
+DNF, the enhanced package manager, is installed and recommended instead of YUM.
+
+The following OS packages were upgraded:
+- **ExifTool**: from 12.42-1.el7 to 12.42-1.el9, to comply with the newer version of Perl.
+- **ImageMagick**: from 6.9.10.68-6.el7_9 to the latest version available in <https://rpms.remirepo.net/enterprise/remi-release-9.1.rpm>.
+
+The following OS packages were removed:
+- **ufraw**: unavailable since not maintained. Yet, ImageMagick is able to identify/convert raw image formats such as .cr2 and .dng, though ufraw-batch is not installed.
+- **Python 2**: deprecated since January 1, 2020, only Python 3 is available.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31458](https://jira.nuxeo.com/browse/NXP-31458)
+
+#### Make certificateKeyAlias Value Configurable From nuxeo.conf 
+
+
+A new nuxeo.conf property is available to configure the alias name for the certificate used in the HTTPS configuration: nuxeo.server.https.keyAlias
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31425](https://jira.nuxeo.com/browse/NXP-31425)
+
+#### Create a MongoTransientStore That Can Handle Large Number Params
+
+
+To use a MongoDB optimized implementation of the transientstore, (that is replacing the  KeyValueTransientStore implementation), the following property must be se on nuxeo.conf for 10.10 and LTS 2021:
+```Java
+nuxeo.transientstore.provider=mongodb
+```
+Note that on LTS 2023 this implementation is used by default.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31311](https://jira.nuxeo.com/browse/NXP-31311)
+
+#### Deprecate Document.FetchByProperty Operation
+
+
+The Document.FetchByProperty operation is deprecated. From now, use Repository.query to fetch documents by a property.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31259](https://jira.nuxeo.com/browse/NXP-31259)
+
+#### Make Nuxeo Code Build With Java 17
+
+
+Java 17 is now required to build Nuxeo and its packages.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31182](https://jira.nuxeo.com/browse/NXP-31182)
+
+#### PubSub Usage Must Be Monitored
+
+
+There is now a metric to count the number of messages published using the PubSub service.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-29386](https://jira.nuxeo.com/browse/NXP-29386)
+
+
