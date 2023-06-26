@@ -3,7 +3,7 @@ title: Upgrade from LTS 2021 to LTS 2023
 description: Instructions to upgrade your Nuxeo Platform instance from LTS 2021 version to LTS 2023.
 review:
   comment: ''
-  date: '2023-03-27'
+  date: '2023-06-26'
   status: ok
 labels:
   - multiexcerpt
@@ -33,7 +33,7 @@ Java 17 is now required to build Nuxeo and its packages.
 
 #### Update Nuxeo Docker Image to Use Rocky Linux Instead of CentOS
 
-The `docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023` Docker image is built from `rockylinux:9.1`.
+The `docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023` Docker image is built from `rockylinux:9.2`.
 
 DNF, the enhanced package manager, is installed and recommended instead of YUM.
 
@@ -66,6 +66,72 @@ If you have H2 data persisted by a previous version of Nuxeo, you should delete 
 Otherwise, you can also follow the [migration steps](https://www.h2database.com/html/migration-to-v2.html) detailed by the maintainer of the H2 library.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31810](https://jira.nuxeo.com/browse/NXP-31810)
+
+#### Upgrade to Hibernate 5
+
+##### Maven dependencies
+
+**Upgrade:**
+- org.hibernate:hibernate-core from 3.3.2.GA to 5.6.15.Final
+- javax.persistence:persistence-api:1.0.2 to javax.persistence:javax.persistence-api:2.2
+
+**Remove:**
+- org.hibernate:hibernate-annotations
+- org.hibernate:hibernate-entitymanager
+- org.hibernate:hibernate-commons-annotations
+- org.hibernate:hibernate-validator
+- org.javassist:javassist, only used for Hibernate < 5.6, moved to [JSF UI](https://github.com/nuxeo/nuxeo-jsf-ui-lts/commit/899dd35aaa344b34cdef45e81fb754c45170fb9a#diff-4baf235dd7b00fb14ae4473942622ceed409dbed554d3f043baaaf9ba4c2f5a2R98) as needed by JBoss Seam
+
+##### Java Code
+
+**Remove:**
+- `HibernateConfiguration#annotedClasses`
+- `HibernateConfiguration#addAnnotedClass(Class<?> annotedClass)`
+- `HibernateConfiguration#removeAnnotedClass(Class<?> annotedClass)`
+- `HibernateConfiguration#cfg`
+- `HibernateConfiguration#setupConfiguration()`
+- `HibernateConfiguration#createEntityManagerFactory(final Map<String, String> properties)`
+- `HibernateConfiguration#NuxeoTransactionManagerLookup`
+- `NuxeoConnectionProvider#getConnection()`
+- `NuxeoConnectionProvider#closeConnection(Connection connection)`
+- `NuxeoConnectionProvider#close()`
+- `PersistenceComponent#registerOracle12DialectResolver()`
+
+**Add:**
+- `HibernateConfiguration#NuxeoJtaPlatform`
+
+**Update:**
+- `HibernateConfiguration#hibernateProperties` from `Properties` to `HashMap`
+- `NuxeoConnectionProvider` from `implements ConnectionProvider` to `extends DatasourceConnectionProviderImpl`
+- `NuxeoConnectionProvider#configure` from `(Properties props)` to `(Map props)`
+- `PersistenceComponent#doPatchForTests` from `(Properties hibernateProperties)` to `(Map<String, String> hibernateProperties)`
+
+##### Extension Point
+
+The `classes/class` list has been removed from the hibernateConfiguration contribution to the following extension point:
+```java
+<extension target=org.nuxeo.ecm.core.persistence.PersistenceComponent
+  point=hibernate>
+  <hibernateConfiguration name=...>
+    ...
+  </hibernateConfiguration>
+</extension>
+```
+##### Hibernate Release Notes
+
+**4.0.0.Final**
+
+<https://in.relation.to/2011/12/15/hibernate-core-40-is-final/>
+ <https://github.com/hibernate/hibernate-orm/blob/4.3/changelog.txt>
+
+**5.6.15**
+
+<https://in.relation.to/2023/02/06/hibernate-orm-5615-final/>
+ <https://in.relation.to/2015/08/20/hibernate-orm-500-final-release/> (5.0.0.Final)
+ <https://github.com/hibernate/hibernate-orm/blob/5.6/changelog.txt>
+ <https://hibernate.org/orm/releases/5.6/>
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31791](https://jira.nuxeo.com/browse/NXP-31791)
 
 ### Recommended Changes
 
@@ -114,6 +180,12 @@ Note that on LTS 2023 this implementation is used by default.
 When using an HTML Note document, only the fulltext (extracted text) is submitted to elastic for indexation.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31698](https://jira.nuxeo.com/browse/NXP-31698)
+
+#### Add an Option to Disable Hostname Verification During Elastic/Opensearch SSL Handshake
+
+You can now use `elasticsearch.restClient.ssl.certificate.verification=false` to disable hostname verification during SSL handshake for accessing a testing instance of OpenSearch or Elasticsearch running with a test certificate.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31837](https://jira.nuxeo.com/browse/NXP-31837)
 
 ## Bulk Service (Aka "Bulk Action Framework")
 
@@ -622,6 +694,42 @@ The `Document.FetchByProperty` operation is deprecated. From now, use `Repositor
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31536](https://jira.nuxeo.com/browse/NXP-31536)
 
 ## Dependencies Upgrade Versions
+
+#### Upgrade Aapache POI to 5.2.1
+
+Upgraded the following Maven dependencies from 4.1.2 to 5.2.3:
+```
+org.apache.poi:poi
+org.apache.poi:poi-scratchpad
+org.apache.poi:poi-ooxml
+org.apache.poi:poi-ooxml-schemas
+```
+This required an upgrade from 3.1.0 to 5.1.1 of:
+```
+org.apache.xmlbeans:xmlbean
+```
+See the Apache POI [History of changes](https://poi.apache.org/changes.html).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31787](https://jira.nuxeo.com/browse/NXP-31787)
+
+#### Upgrade Apache mina-core to 2.1.5
+
+The following dependency has been removed:
+```Java
+org.apache.directory.server:apacheds-kerberos-shared:1.5.1
+```
+Thus, also removing its transitive dependency:
+```Java
+org.apache.mina:mina-core:1.1.2
+```
+Note that `apacheds-kerberos-shared` was previously made available as a transitive dependency of:
+```Java
+org.apache.directory.server:apacheds-core:1.5.1
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31786](https://jira.nuxeo.com/browse/NXP-31786)
+
+### Other Depenedency Version Upgrades
 
 <div class="table-scroll">
 <table class="hover">
@@ -1620,115 +1728,3 @@ The following Maven dependencies, unused, were removed from the root POM:
 ## Complementary Information
 
 - [Release notes for Nuxeo Platform LTS 2023]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
-
-#### Add an Option to Disable Hostname Verification During Elastic/Opensearch SSL Handshake
-
-
-You can now use `elasticsearch.restClient.ssl.certificate.verification=false` to disable hostname verification during SSL handshake for accessing a testing instance of OpenSearch or Elasticsearch running with a test certificate.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31837](https://jira.nuxeo.com/browse/NXP-31837)
-
-#### Upgrade to Hibernate 5
-
-
-### Maven dependencies
-
-**Upgrade:**
-- org.hibernate:hibernate-core from 3.3.2.GA to 5.6.15.Final
-- javax.persistence:persistence-api:1.0.2 to javax.persistence:javax.persistence-api:2.2
-
-**Remove:**
-- org.hibernate:hibernate-annotations
-- org.hibernate:hibernate-entitymanager
-- org.hibernate:hibernate-commons-annotations
-- org.hibernate:hibernate-validator
-- org.javassist:javassist, only used for Hibernate < 5.6, moved to [JSF UI](https://github.com/nuxeo/nuxeo-jsf-ui-lts/commit/899dd35aaa344b34cdef45e81fb754c45170fb9a#diff-4baf235dd7b00fb14ae4473942622ceed409dbed554d3f043baaaf9ba4c2f5a2R98) as needed by JBoss Seam
-
-### Java code
-
-**Remove:**
-- `HibernateConfiguration#annotedClasses`
-- `HibernateConfiguration#addAnnotedClass(Class<?> annotedClass)`
-- `HibernateConfiguration#removeAnnotedClass(Class<?> annotedClass)`
-- `HibernateConfiguration#cfg`
-- `HibernateConfiguration#setupConfiguration()`
-- `HibernateConfiguration#createEntityManagerFactory(final Map<String, String> properties)`
-- `HibernateConfiguration#NuxeoTransactionManagerLookup`
-- `NuxeoConnectionProvider#getConnection()`
-- `NuxeoConnectionProvider#closeConnection(Connection connection)`
-- `NuxeoConnectionProvider#close()`
-- `PersistenceComponent#registerOracle12DialectResolver()`
-
-**Add:**
-- `HibernateConfiguration#NuxeoJtaPlatform`
-
-**Update:**
-- `HibernateConfiguration#hibernateProperties` from `Properties` to `HashMap`
-- `NuxeoConnectionProvider` from `implements ConnectionProvider` to `extends DatasourceConnectionProviderImpl`
-- `NuxeoConnectionProvider#configure` from `(Properties props)` to `(Map props)`
-- `PersistenceComponent#doPatchForTests` from `(Properties hibernateProperties)` to `(Map<String, String> hibernateProperties)`
-
-### Extension Point
-
-The `classes/class` list has been removed from the hibernateConfiguration contribution to the following extension point:
-```java
-<extension target=org.nuxeo.ecm.core.persistence.PersistenceComponent
-  point=hibernate>
-  <hibernateConfiguration name=...>
-    ...
-  </hibernateConfiguration>
-</extension>
-```
-### Hibernate Release Notes
-
-**4.0.0.Final**
-
-<https://in.relation.to/2011/12/15/hibernate-core-40-is-final/>
- <https://github.com/hibernate/hibernate-orm/blob/4.3/changelog.txt>
-
-**5.6.15**
-
-<https://in.relation.to/2023/02/06/hibernate-orm-5615-final/>
- <https://in.relation.to/2015/08/20/hibernate-orm-500-final-release/> (5.0.0.Final)
- <https://github.com/hibernate/hibernate-orm/blob/5.6/changelog.txt>
- <https://hibernate.org/orm/releases/5.6/>
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31791](https://jira.nuxeo.com/browse/NXP-31791)
-
-#### Upgrade Poi to 5.2.1
-
-
-Upgraded the following Maven dependencies from 4.1.2 to 5.2.3:
-```
-org.apache.poi:poi
-org.apache.poi:poi-scratchpad
-org.apache.poi:poi-ooxml
-org.apache.poi:poi-ooxml-schemas
-```
-This required an upgrade from 3.1.0 to 5.1.1 of:
-```
-org.apache.xmlbeans:xmlbean
-```
-See the Apache POI [History of changes](https://poi.apache.org/changes.html).
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31787](https://jira.nuxeo.com/browse/NXP-31787)
-
-#### Upgrade Mina-Core to 2.1.5
-
-
-The following dependency has been removed:
-```Java
-org.apache.directory.server:apacheds-kerberos-shared:1.5.1
-```
-Thus, also removing its transitive dependency:
-```Java
-org.apache.mina:mina-core:1.1.2
-```
-Note that `apacheds-kerberos-shared` was previously made available as a transitive dependency of:
-```Java
-org.apache.directory.server:apacheds-core:1.5.1
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31786](https://jira.nuxeo.com/browse/NXP-31786)
-
-
