@@ -26,7 +26,7 @@ Nuxeo metrics can be reported to various Monitoring systems.
 
 {{#> callout type='note' }}
 
-To have a complete monitoring you should also monitor the operating system where Nuxeo is running as well as other services: databases, Elasticsearch, Redis or Kafka.
+To have a complete monitoring you should also monitor the operating system where Nuxeo is running as well as other services: databases, Elasticsearch, Kafka.
 
 {{/callout}}
 

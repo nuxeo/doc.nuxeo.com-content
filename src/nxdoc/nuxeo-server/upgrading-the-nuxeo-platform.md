@@ -457,12 +457,6 @@ Upgrading is usually a simple and painless process. Using the template system al
 
 You should have [configured Nuxeo with a specific configuration]({{page page='setup-best-practices'}}) (and optionally with custom templates) setting a database (for production) and a data directory. In that case, follow the steps below to upgrade your Nuxeo Platform.
 
-{{#> callout type='note' heading='Note about Redis jobs '}}
-
-Make sure no jobs are still queued or running before starting the upgrade procedure.
-
-{{/callout}}
-
 1.  Do a [backup.]({{page page='backup-and-restore'}})
 2.  Stop the old Nuxeo Platform.
 3.  Deploy the new Nuxeo Platform version (see the [Installation]({{page page='installation'}}) pages).

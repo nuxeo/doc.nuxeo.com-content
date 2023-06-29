@@ -424,10 +424,9 @@ nuxeo.stream.audit.log.codec=legacy
 
 ### Stream WorkManager
 
-This implementation is not activated by default.
+This implementation is activated by default if [Kafka]({{page page='kafka'}}) is enabled.
 
-Instead of queueing work into memory or into Redis (which is also in memory),
-work can be queued into a Log without worries about the memory limits.
+Instead of queueing work into memory, works can be queued into a Log without worries about the memory limits.
 
 Kafka is required to enable distributed work in a cluster mode.
 

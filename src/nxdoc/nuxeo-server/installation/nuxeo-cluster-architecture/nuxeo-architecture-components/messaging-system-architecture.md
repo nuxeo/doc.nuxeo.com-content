@@ -32,6 +32,5 @@ You can consider [Amazon MSK](https://aws.amazon.com/msk/) or [Confluent Cloud f
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Going further'}}
 - [Kafka configuration]({{page version='' space='nxdoc' page='kafka'}}#configuration)
-- [Redis configuration]({{page version='' space='nxdoc' page='redis-configuration'}})
 {{/panel}}</div><div class="column medium-6">
 </div></div>

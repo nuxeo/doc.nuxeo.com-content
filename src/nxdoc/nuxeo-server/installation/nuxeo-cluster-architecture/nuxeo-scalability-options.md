@@ -44,7 +44,7 @@ Applications requiring heavy processing like picture or video conversions can ta
 --}}
 ![worker-nodes-intro.png](nx_asset://8a582734-8832-48dc-a700-090c6ed6bae3 ?w=650,border=true)
 
-The async tasks can be managed in a distributed way using the [WorkManager]({{page page='work-and-workmanager'}}) with Kafka (or Redis).
+The async tasks can be managed in a distributed way using the [WorkManager]({{page page='work-and-workmanager'}}) with Kafka (`StreamWorkManager`).
 
 <!-- Source: https://lucid.app/lucidchart/8db3f1df-ea81-4796-ae42-d7f77ab3a9fd/edit?beaconFlowId=CD3C7B1BC539200B&page=~qwjwKgIGl8j# -->
 

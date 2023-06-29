@@ -23,7 +23,7 @@ This framework introduces several notions:
 - **bucket**: a portion of a document set that fits into a stream record.
 - **batch**: a smaller (or equals) portion of a bucket where the action is applied within a transaction.
   {{#> callout type='note' heading='Requirements'}}
-  To work properly, the Bulk Service needs a true KeyValue storage to store the command and its status, there are 2 possibles choices: - Use `RedisKeyValueStore` if you have `nuxeo.redis.enabled=true` in your `nuxeo.conf`. - Use `MongoDBKeyValueStore` if you are using the MongoDB template.
+  To work properly, the Bulk Service needs a true KeyValue storage to store the command and its status: the `MongoDBKeyValueStore` if you are using the MongoDB template or the `SQLKeyValueStore` otherwise.
   You should not rely on the default `MemKeyValueStore` implementation that flushes the data on restart.
   {{/callout}}
 
