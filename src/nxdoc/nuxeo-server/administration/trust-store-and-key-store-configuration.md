@@ -55,7 +55,6 @@ In Nuxeo, the kinds of communications that can be secured in this manner depend 
 - remote HTTPS servers with which Nuxeo needs to communicate (for example Nuxeo Online Services)
 - connection to Elasticsearch
 - connection to MongoDB
-- connection to Redis
 - etc.
 
 Each time a connection is made to a remote server using SSL, the remote server's certificate is checked against the **Trust Store** of the client. The Trust Store contains a list of known certificates for various certification authorities. During authentication, the remote server presents a certificate signed by a certification authority (or a self-signed certificate) known by the Trust Store.
@@ -144,20 +143,6 @@ Use the following `nuxeo.conf` properties:
 - `nuxeo.mongodb.keystore.type`
 
 See the [MongoDB Configuration]({{page page='mongodb'}}) page for more.
-
-### Redis
-
-Use the following `nuxeo.conf` properties:
-
-- `nuxeo.redis.ssl=true`
-- `nuxeo.redis.truststore.path`
-- `nuxeo.redis.truststore.password`
-- `nuxeo.redis.truststore.type`
-- `nuxeo.redis.keystore.path`
-- `nuxeo.redis.keystore.password`
-- `nuxeo.redis.keystore.type`
-
-See the [Redis Configuration]({{page page='redis-configuration'}}) page for more.
 
 ## Troubleshooting
 

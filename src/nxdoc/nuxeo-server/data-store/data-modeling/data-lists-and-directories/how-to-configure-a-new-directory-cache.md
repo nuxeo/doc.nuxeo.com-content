@@ -62,42 +62,23 @@ history:
 ---
 To set up a new cache for your directory, wether for your vocabularies, users or groups:
 
-1.  [Contribute a new XML extension]({{page page='how-to-contribute-to-an-extension'}}) that defines your cache:
-    *   For a Java memory cache:
+1.  [Contribute a new XML extension]({{page page='how-to-contribute-to-an-extension'}}) that defines your Java memory cache:
 
-        ```xml
-        <extension target="org.nuxeo.ecm.core.cache.CacheService"
-           point="caches">
-           <cache name="MYDIRECTORY-ENTRY-CACHE" class="org.nuxeo.ecm.core.cache.InMemoryCacheImpl">
-             <ttl>20</ttl><!-- minutes -->
-             <option name="maxSize">100</option>
-             <option name="concurrencyLevel">500</option>
-           </cache>
-           <cache name="MYDIRECTORY-ENTRY-CACHE-WITHOUT-REFERENCES" class="org.nuxeo.ecm.core.cache.InMemoryCacheImpl">
-             <option name="maxSize">100</option>
-             <ttl>20</ttl><!-- minutes -->
-             <option name="concurrencyLevel">500</option>
-           </cache>
-        </extension>
-        ```
-
-    *   For a Redis cache:
-
-        ```xml
-        <extension target="org.nuxeo.ecm.core.cache.CacheService"
-           point="caches">
-           <cache name="MYDIRECTORY-ENTRY-CACHE" class="org.nuxeo.ecm.core.redis.contribs.RedisCache">
-             <ttl>20</ttl><!-- minutes -->
-             <option name="maxSize">100</option>
-             <option name="concurrencyLevel">500</option>
-           </cache>
-           <cache name="MYDIRECTORY-ENTRY-CACHE-WITHOUT-REFERENCES" class="org.nuxeo.ecm.core.redis.contribs.RedisCache">
-             <option name="maxSize">100</option>
-             <ttl>20</ttl><!-- minutes -->
-             <option name="concurrencyLevel">500</option>
-           </cache>
-        </extension>
-        ```
+    ```xml
+    <extension target="org.nuxeo.ecm.core.cache.CacheService"
+        point="caches">
+        <cache name="MYDIRECTORY-ENTRY-CACHE" class="org.nuxeo.ecm.core.cache.InMemoryCacheImpl">
+            <ttl>20</ttl><!-- minutes -->
+            <option name="maxSize">100</option>
+            <option name="concurrencyLevel">500</option>
+        </cache>
+        <cache name="MYDIRECTORY-ENTRY-CACHE-WITHOUT-REFERENCES" class="org.nuxeo.ecm.core.cache.InMemoryCacheImpl">
+            <option name="maxSize">100</option>
+            <ttl>20</ttl><!-- minutes -->
+            <option name="concurrencyLevel">500</option>
+        </cache>
+    </extension>
+    ```
 
 2.  Adapt the cache parameters if needed:
 

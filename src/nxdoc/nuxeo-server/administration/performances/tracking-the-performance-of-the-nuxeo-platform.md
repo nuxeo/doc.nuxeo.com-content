@@ -574,7 +574,7 @@ Also, we use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https:/
 
 ### Monitoring Tools
 
-[A Graphite server]({{page page='metrics'}}) can monitor Nuxeo, the back ends (PostgreSQL/MongoDB, Redis, Elasticsearch) and the system.
+[A Graphite server]({{page page='metrics'}}) can monitor Nuxeo, the back ends (PostgreSQL/MongoDB, Elasticsearch) and the system.
 
 You can also use other tools to get more information:
 

@@ -984,7 +984,7 @@ When clustering is activated, defines the delay during which invalidations don't
 
 #### `repository.clustering.invalidation`
 
-Allows the configuration of VCS cluster invalidations. The value `default` uses VCS. Since Nuxeo 8.1 you can use `redis` to specify Redis-based invalidations.
+Allows the configuration of VCS cluster invalidations. The value `default` uses VCS.
 
 **Default Value**
 
@@ -1410,82 +1410,6 @@ To send the CMISQL queries to Elasticsearch, set to true.
 **Default Value**
 
 `false`
-
-* * *
-
-#### `nuxeo.redis.enabled`
-
-Set to true to activate Redis.
-
-**Default Value**
-
-`false`
-
-* * *
-
-#### `nuxeo.redis.host`
-
-**Default Value**
-
-`redishost`
-
-* * *
-
-#### `nuxeo.redis.port`
-
-**Default Value**
-
-`6379`
-
-* * *
-
-#### `nuxeo.redis.password`
-
-* * *
-
-#### `nuxeo.redis.database`
-
-**Default Value**
-
-`0`
-
-* * *
-
-#### `nuxeo.redis.timeout`
-
-**Default Value**
-
-`2000`
-
-* * *
-
-#### `nuxeo.redis.maxTotal`
-
-The maximum size of the Redis connections pool.
-
-**Default Value**
-
-`16`
-
-* * *
-
-#### `nuxeo.redis.maxIdle`
-
-The maximum number of Redis idle connections in the pool.
-
-**Default Value**
-
-`8`
-
-* * *
-
-#### `nuxeo.redis.prefix`
-
-This allows you to use a single Redis server between several Nuxeo cluster installations by having a different prefix for each cluster. See the page [Redis Configuration]({{page page='redis-configuration'}}) for more details.
-
-**Default Value**
-
-`nuxeo:`
 
 * * *
 

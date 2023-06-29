@@ -121,12 +121,6 @@ Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). The supporte
 Nuxeo is shipped with an embedded Tomcat server.
 {{! /multiexcerpt}}
 
-## Redis
-
-Nuxeo Platform is tested against Redis {{! multiexcerpt name='redis_supported_version'}}6.0.8{{! /multiexcerpt}}
-
-More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-redis'}}) and [Redis Configuration]({{page page='redis-configuration'}}) pages.
-
 ## OpenSearch
 
 Nuxeo Platform is tested against an OpenSearch cluster {{! multiexcerpt name='opensearch_cluster_supported_version'}}1.3.6{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch_libraries_supported_version'}}1.3.8{{! /multiexcerpt}}.

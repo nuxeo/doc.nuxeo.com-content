@@ -167,7 +167,7 @@ To retrieve a given transient store, just call `TransientStoreService#getStore(S
 
 ### Implementation
 
-Other implementations than `KeyValueBlobTransientStore` can be used, but this is the recommended one. If you use the `redis` template and want to use the old `RedisTransientStore`, you must set `nuxeo.transientstore.provider=redis`.
+Other implementations than `KeyValueBlobTransientStore` can be used, such as `MongoDBTransientStore`, optimized for MongoDB and using a blob provider for binaries.
 
 ## Blob Storage
 

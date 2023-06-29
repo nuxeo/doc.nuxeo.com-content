@@ -158,8 +158,8 @@ All server parts of Nuxeo, including plugins, are written in Java, with a mechan
 
 ### Deployment
 
-Nuxeo Server comes bundled with a Tomcat server. It requires for production to set up  several other components: a data storage (relational or NoSQL), a search engine (Elasticsearch), a message system (Redis or Kafka)... Deployment options support HA, failover and can be on-premise, or in the cloud, on bare machines, virtual machines or Docker containers. For more details about the Nuxeo deployment system, please refer to the [Nuxeo Reference Architectures]({{page page='nuxeo-reference-architectures'}}).
-Nuxeo bundles can even be started on a JVM directly (i.e without an application sever). This is the deployment mode in all unit tests.
+Nuxeo Server comes bundled with a Tomcat server. It requires for production to set up several other components: a data storage (relational or NoSQL), a search engine (Elasticsearch), a message system (Kafka)... Deployment options support HA, failover and can be on-premise, or in the cloud, on bare machines, virtual machines or Docker containers. For more details about the Nuxeo deployment system, please refer to the [Nuxeo Reference Architectures]({{page page='nuxeo-reference-architectures'}}).
+Nuxeo bundles can even be started on a JVM directly (i.e without an application server). This is the deployment mode in all unit tests.
 
 <!--
 
