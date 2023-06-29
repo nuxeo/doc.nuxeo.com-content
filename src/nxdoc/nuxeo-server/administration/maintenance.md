@@ -184,11 +184,11 @@ Depending on usage, the audit storage can grow very quickly, discover how to pur
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Garbage-Collecting Orphaned Binaries
+### Cleaning Up Orphaned Content
 
-Binaries attached to documents are stored using a specialized binary store, learn how to handle them.
+Nuxeo Server offers multiple options to clean up orphaned content to facilitate work at scale and optimize costs.
 
-[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='garbage-collecting-orphaned-binaries'}})
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='how-to-clean-up-content'}})
 {{/panel}}
 </div>
 
