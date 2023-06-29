@@ -83,6 +83,11 @@ The [WorkManager](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewS
 
 {{! /excerpt}}
 
+## Implementations
+
+There are two implementations of the WorkManager: the in-memory `WorkManagerImpl` and the [StreamWorkManager]({{page page='nuxeo-stream'}}#stream-workmanager).
+The only implementation that persists the works and is cluster-aware is the `StreamWorkManager`. It has been introduced in Nuxeo 9.3 and is based on Nuxeo Stream. The in-memory implementation should not be used in production.
+
 ## Work Instance
 
 The code to be executed asynchronously must be implemented in an [`AbstractWork`](http://community.nuxeo.com/api/nuxeo/release-8.2/javadoc/org/nuxeo/ecm/core/work/AbstractWork.html) subclass. In theory you could just implement [`Work`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/work/api/Work.html) yourself but this is strongly discouraged, for forward-compatibility reasons.
@@ -97,7 +102,7 @@ At construction time, the Work instance should also have its `setDocument()` met
 
 ### Work Implementation
 
-A Work instance must be `Serializable` in order for it to be persisted between server restarts. All fields that are used only during work execution but don't hold any configuration state must be marked `transient`. Persistence is done through a Redis server, please check [Redis Configuration]({{page page='redis-configuration'}}) for more.
+A Work instance must be `Serializable` in order for it to be persisted between server restarts. All fields that are used only during work execution but don't hold any configuration state must be marked `transient`.
 
 A Work instance must implement the following methods:
 
@@ -157,9 +162,7 @@ The details of the configuration can be seen in the [extension point documentati
 
 If a Work instance has a category that isn't registered with any queue, then it will be sent to the `default` queue.
 
-### Persistent Work Queues
-
-When using persistent queues (using Redis, see [Redis Configuration]({{page page='redis-configuration'}})), then any Nuxeo instances where the queue is configured will pick Work instances from the persistent queue according to the availability of a thread in its thread pool.
+### Disabling Queues
 
 If you want a given Nuxeo instance to stop processing a given queue, you can specify in this instance's configuration to disable the queue:
 
@@ -193,9 +196,7 @@ There may be several motivations for that:
 
 ### Configuring Dedicated Nodes in a Nuxeo Cluster
 
-The Nuxeo Platform allows to achieve this for asynchronous processing using the WorkManager.
-
-![](https://www.lucidchart.com/publicSegments/view/5492ed54-35ac-4c35-b312-45780a008e1c/image.png ?w=500,h=377,border=true)
+The Nuxeo Platform allows to achieve this for asynchronous processing using the `StreamWorkManager`.
 
 The idea is that all the Nuxeo nodes can remain exactly identical to each other, at least in terms of Nuxeo bundles deployment (it is usually easier to keep all nodes aligned on the same packages).
 
@@ -204,11 +205,7 @@ Dedicating nodes to a given task is handled by two aspects:
 *   The load balancer: typically interactive processing nodes are used by the load balancer to handle end users requests.
 *   The WorkManager queues: some queues will be assigned to some background processing nodes so that only these dedicated nodes will consume the jobs in these queues.
 
-In a cluster environment, the Workmanager queues are handled by Redis so that the queues can effectively be shared across the cluster. This way, an interactive node (i.e. feed by the load balancer) can schedule an asynchronous job like a video conversion. This job will be assigned to a queue, waiting for one of the Nuxeo nodes to execute it.
-
-This is where the queue configuration comes into play.
-
-Let's say you define a queue for managing Video conversions:
+This is where the queue configuration comes into play. Let's say you define a queue for managing Video conversions:
 
 ```xml
 <extension point="queues" target="org.nuxeo.ecm.core.work.service">
@@ -237,12 +234,6 @@ Then the "background processing nodes" are on the contrary, configured to consum
 </extension>
 ```
 
-## Stream WorkManager
-
-An alternative WorkManager has been introduced in Nuxeo 9.3 based on Nuxeo Stream.
-
-Visit the [Nuxeo Stream]({{page page='nuxeo-stream'}}) for more information.
-
 ## WorkManager API Evolution
 
 Since Nuxeo 10.2 we have deprecated some of WorkManager original API that cannot scale or are not reliable in distributed environments.
@@ -262,3 +253,15 @@ These optimization flags are taken into account with the `StreamWorkManager` imp
 In addition we have added a way to trigger an action after a group of Works is completed. This is called a `GroupJoin` Work, the work has to set the `isGroupJoin` flag and
 implement a `onGroupJoinCompletion` method, Works will be part of the same group based on the `getPartitionKey`.
 The `GroupJoin` Work is supported by both `WorkManager` implementations (default and `StreamWorkManager`).
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
+
+- [Nuxeo Stream]({{page page='nuxeo-stream'}})
+
+{{/panel}}
+</div>
+</div>

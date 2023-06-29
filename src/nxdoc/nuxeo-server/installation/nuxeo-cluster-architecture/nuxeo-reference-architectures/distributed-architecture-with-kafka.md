@@ -11,7 +11,7 @@ tree_item_index: 300
 
 ## Architecture Description
 
-Compared to the [Compact Architecture with Kafka]({{page page='compact-architecture-with-redis'}}), this architecture includes a Kafka cluster and a Zookeeper cluster so that SPOF (single point of failure) no longer exists, and consequently provides a full high availability and fault tolerant Nuxeo architecture.
+Compared to the [Compact Architecture with Kafka]({{page page='compact-architecture-with-kafka'}}), this architecture includes a Kafka cluster and a Zookeeper cluster so that SPOF (single point of failure) no longer exists, and consequently provides a full high availability and fault tolerant Nuxeo architecture.
 
 In this architecture:
 - A load balancer with sticky sessions is used.

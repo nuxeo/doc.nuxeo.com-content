@@ -82,7 +82,6 @@ history:
 
 - [Database Configuration]({{page version='' space='nxdoc' page='database-configuration'}})
 - [Elasticsearch Configuration]({{page version='' space='nxdoc' page='elasticsearch-setup'}})
-- [Redis Configuration]({{page version='' space='nxdoc' page='redis-configuration'}})
   {{/panel}}
   </div>
 

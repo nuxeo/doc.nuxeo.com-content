@@ -20,5 +20,4 @@ There is no specific recommendation for the PubSub service.
 ## Configuration
 
 Please read the following documentation pages:
-- [Redis configuration]({{page version='' space='nxdoc' page='redis-configuration'}}#clustering)
 - [PubSub Service with Kafka]({{page version='' space='nxdoc' page='kafka'}}#the-pubsub-topic)

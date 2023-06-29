@@ -334,18 +334,6 @@ And report the output of the following commands, assuming that Elasticsearch is 
 
 In addition if the problem is related to unexpected search results or errors, follow this procedure: [Reporting Settings and Mapping]({{page page='elasticsearch-setup'}}#reporting-settings-and-mapping)
 
-## {{> anchor 'redis'}}Redis
-
-How much memory is used:
-```bash
-redis-cli info memory > /tmp/nuxeo-redis-mem-`date +%Y%m%d-%H%M%S`.txt
-```
-
-Capture activity, hit `Ctrl-C` to stop:
-```bash
-redis-cli monitor > /tmp/nuxeo-redis-monitor-`date +%Y%m%d-%H%M%S`.txt
-```
-
 ## {{> anchor 'kafka'}}Kafka
 
 You can get low level information using directly Kafka scripts, for instance:

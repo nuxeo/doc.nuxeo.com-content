@@ -257,12 +257,6 @@ The Nuxeo reference architectures are a starting point to setup your production 
 
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Compact Architecture With Redis]({{page version='' space='nxdoc' page='compact-architecture-with-redis'}})<br/><br/>★</h3>
-{{/panel}}
-</div>
-
-<div class="column medium-4">
-{{#> panel type='secondary' match_height='true'}}
 <h3>[Compact Architecture With Kafka]({{page version='' space='nxdoc' page='compact-architecture-with-kafka'}})<br/><br/>★★</h3>
 {{/panel}}
 </div>
@@ -288,7 +282,6 @@ Let's see how applications can be merged.
 - **Elasticsearch nodes** have to be installed on dedicated machines for performance reasons. Elasticsearch uses half of the machine's memory for its heap and half for the system, and is not designed to share memory with another application using the JVM.
 - **Kafka cluster** is better on dedicated machines for isolation purpose.
 - A **Zookeeper node** is a lightweight, component and can be installed on the Nuxeo nodes.
-- **Redis**, if used, can be installed on the same machine as Nuxeo server: our Redis usage is usually low enough for that.
 
 ### Deploying in Cloud or Container Based Deployment
 
@@ -305,7 +298,6 @@ For example, considering Amazon AWS as a possible Cloud infrastructure provider:
 
 - The AWS ELB would be used for load balancing.
 - Amazon OpenSearch Service (successor to Amazon Elasticsearch Service) or Elastic Cloud can be used as managed search service. Another option is to manually setup an Elasticsearch cluster using EC2 nodes.
-- Amazon ElasticCache can be used for a managed Redis cluster. Another option is to have a cluster hosted and managed by RedisLabs.
 - Amazon Managed Streaming for Kafka ([MSK](https://aws.amazon.com/msk/)) is an option for Kafka if it is available in your AWS region.
 - Database can be handled through Amazon RDS, this is a native plug as there is nothing specific to Amazon in this case. MongoDB Atlas is also an option for a hosted MongoDB cluster.
 - An Amazon S3 bucket can be used for replicated file storage. Our BinaryManager is pluggable and we use it to leverage the S3 Storage capabilities.
@@ -331,7 +323,6 @@ The same idea is true for all the Cloud specific services like provisioning and 
 
 - [Nuxeo Architecture Components - Configuration]({{page page='nuxeo-architecture-components'}})
 - [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
-- [Redis Configuration]({{page page='redis-configuration'}})
 - [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
 
 {{/panel}}</div></div>
