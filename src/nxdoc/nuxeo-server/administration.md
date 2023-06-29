@@ -58,6 +58,7 @@ history:
 
 - [Setup Best Practices]({{page version='' space='nxdoc' page='setup-best-practices'}})
 - [How to Change Context Path]({{page version='' space='nxdoc' page='how-to-change-context-path'}})
+- [How to Clean Up Content]({{page version='' space='nxdoc' page='how-to-clean-up-content'}})
   {{/panel}}
   </div>
 
