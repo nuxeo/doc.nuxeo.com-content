@@ -489,6 +489,23 @@ Setting this property to "true" will display a quite visible warning message in 
 
 * * *
 
+#### {{! multiexcerpt name='org.nuxeo.rest.exception.message.enabled'}}`org.nuxeo.rest.exception.message.enabled`
+
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='org.nuxeo.rest.exception.message.enabled-description'}}
+Are the exception messages shown in the Rest API responses. If not enabled, "An error occured" message is returned instead.
+
+{{! /multiexcerpt}}
+
+**Default Value**
+
+{{! multiexcerpt name='org.nuxeo.rest.exception.message.enabled-default'}}
+`true`
+{{! /multiexcerpt}}
+
+* * *
+
 #### {{! multiexcerpt name='org.nuxeo.rest.stack.enable'}}`org.nuxeo.rest.stack.enable`
 
 {{! /multiexcerpt}}
