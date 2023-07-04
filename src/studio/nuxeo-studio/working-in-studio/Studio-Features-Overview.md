@@ -13,7 +13,7 @@ confluence:
     ajs-space-key: Studio
     ajs-space-name: Nuxeo Online Services
 tree_item_index: 1600
-  
+is_overview: true  
 ---
 
 
