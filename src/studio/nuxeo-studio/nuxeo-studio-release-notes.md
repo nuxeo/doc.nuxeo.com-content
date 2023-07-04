@@ -13,7 +13,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Recently Released Changes
 
-{{{! multiexcerpt name='studio-updates-2023-04'}}}
+{{{multiexcerpt 'studio-updates-2023-02' page='studio-updates-2023-02'}}}
 
 ## Learn More
 
@@ -25,8 +25,8 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-|[April 2023]({{page page='studio-updates-2023-04'}})               |ElasticSearch Mapping |
-|[February 2023]({{page page='studio-updates-2023-02'}})            |Studio Modeler |
+| [April 2023]({{page page='studio-updates-2023-04'}})               | ElasticSearch Mapping |
+| [February 2023]({{page page='studio-updates-2023-02'}})            | Studio Modeler |
 | [July 2022]({{page page='studio-updates-2022-07'}})               | Disable/Re-enable features coming from dependencies |  
 | [May 2022]({{page page='studio-updates-2022-05'}})               | ‘Manual Field’ in default sort |  
 | [March 2022]({{page page='studio-updates-2022-03'}})               | Technical Upgrade and New Version Numbering |  
