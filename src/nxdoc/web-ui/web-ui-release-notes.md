@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
     comment: ''
-    date: '2023-06-13'
+    date: '2023-07-05'
     status: ok
 toc: true
 labels:
@@ -18,16 +18,17 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-24'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-25'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.24]({{page page='web-ui-release-notes-3-0-24'}})             | Bugfix release                                                             | -->
+<!-- | [Web UI 3.0.25]({{page page='web-ui-release-notes-3-0-25'}})             | Bugfix release                                                             | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [Web UI 3.0.24]({{page page='web-ui-release-notes-3-0-24'}})                  | Bugfix release                                                             |
 | [Web UI 3.0.23]({{page page='web-ui-release-notes-3-0-23'}})                  | Bugfix release                                                             |
 | [Web UI 3.0.22]({{page page='web-ui-release-notes-3-0-22'}})                  | Bugfix and Accessibility improvements release                              |
 | [Web UI 3.0.21]({{page page='web-ui-release-notes-3-0-21'}})                  | Bugfix and Accessibility improvements release                              |
