@@ -21,7 +21,7 @@ This page mentions how to do a technical upgrade. Have a look at the [release no
 
 ## Upgrading Web UI from LTS 2021 to LTS 2023
 
-The initial release of Web UI on LTS 2023 is meant to be a transparent upgrade. It uses the same codebase as LTS 2021 and requires no specific upgrade process.
+Upgrading Web UI from LTS 2021 to LTS 2023 is a transparent process. It uses the same codebase as its LTS 2021 counterpart and requires no specific upgrade process.
 
 #### Studio Projects
 
