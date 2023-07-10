@@ -672,8 +672,8 @@ You can find all the available options in the [nuxeo.defaults](https://github.co
 Reindexing the repository can be a long operation depending on the size of the repository.
 This is an administrative procedure that is required in order to apply a new Elastic mapping or setting.
 
-By default, when Nuxeo performs a reindex of the repository, it deletes and re-create the Elastic index then it submits all the documents for indexation.
-During this operation only the indexed documents are searchable, this would impact strongly the users experience and, it requires a service interruption.
+By default, when Nuxeo performs a reindex of the repository, it deletes and re-creates the Elastic index then it submits all the documents for indexation.
+During this operation only the indexed documents are searchable, this would impact strongly the user experience and, it requires a service interruption.
 
 To avoid this Nuxeo can manage 2 indexes at the same time, the current one with continue to serve queries and index new document modifications,
 while the new one is going to reindex the entire repository (including the new updates). On completion Nuxeo will switch to the new index.
@@ -685,7 +685,7 @@ Here is how to proceed:
 
 1. Nuxeo must be configured to manage Elastic aliases, add the `elasticsearch.manageAlias.enabled=true` in your `nuxeo.conf`
 {{#> callout type='warning' }}
-   Note that if you are switching an existing instance to use manage aliases it will require a service interruption.
+   Note that if you are switching an existing instance to use managed aliases it will require a service interruption.
    Stop Nuxeo and drop the existing `nuxeo` index, then activate the manage aliases option and, start Nuxeo, proceed to a repository reindexing while service is interrupted.
    The next reindexing will not require service interruption.
 {{/callout}}
@@ -693,7 +693,7 @@ Here is how to proceed:
 3. On completion, you have to delete the old unused index.
 
 {{#> callout type='warning' }}
-Note that using managed alias requires more disk space on Elastic nodes because you have multiple indexes of the repository.
+Note that using managed aliases requires more disk space on Elastic nodes because you have multiple indexes of the repository.
 Also, you have to manually delete old repository indexes when reindexing is completed.
 {{/callout}}
 
