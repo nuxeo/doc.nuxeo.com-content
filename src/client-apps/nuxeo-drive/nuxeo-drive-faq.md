@@ -120,20 +120,15 @@ This page non exhaustively lists frequently asked questions about Nuxeo Drive
 
 In order to be fully compatible with Nuxeo Drive, the minimum required version of the `nuxeo-drive` server addon is:
 
-- **Cloud**: 11.1.47
 - **LTS 2021**: 2021.0.17
 - **10.10**: 1.8.1
-- **9.10**: 1.7.3
-- **8.10**: 1.6.6
-- **7.10**: 1.5.7
 
 And the minimum required installed Hotfix (HF) is:
 
-Client | Cloud | LTS 2021 | 10.10 | 9.10 | 8.10 | 7.10
---- | --- | --- | --- | --- | --- | ---
-5.x | n/a | n/a | HF11 | HF22 | HF39 | HF47
-4.x | n/a | n/a | HF11 | HF22 | HF39 | HF47
-3.x | n/a | n/a | HF11 | HF12 | HF33 | HF43
+Client | LTS 2021 | 10.10 
+--- | --- | --- 
+5.x | HF17 | HF11 
+4.x | HF17 | HF11 
 
 ## What are the supported OS?
 
