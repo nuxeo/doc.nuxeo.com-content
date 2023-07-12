@@ -1,5 +1,5 @@
 ---
-title: 'February 2022'
+title: 'February 2023'
 description: Release notes for Nuxeo Studio released in february 2023.
 tree_item_index: 943
 review:
