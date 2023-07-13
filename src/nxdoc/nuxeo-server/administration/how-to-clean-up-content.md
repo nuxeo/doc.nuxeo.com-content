@@ -21,7 +21,7 @@ This documentation explains what options are available to clean up your orphaned
 
 ## How Nuxeo Cleans Up Content
 
-Nuxeo Server is designed to give your complete control over your content and how you dispose of it. 
+Nuxeo Server is designed to give you complete control over your content and how you dispose of it. 
 
 For example, you may need to keep logs to prove compliance even if the document was deleted, or you may want to keep completed workflows around in order to build analytics and gather insights. To cover for such use cases, Nuxeo Server offers specific ways to dispose of orphaned content, and you need to leverage them explicitly.
 
