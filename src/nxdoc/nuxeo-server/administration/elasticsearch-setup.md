@@ -469,137 +469,47 @@ history:
 This page provides several configuration use cases for [Elasticsearch](https://www.nuxeo.com/partners/technology/elasticsearch/).
 {{! /excerpt}}
 
-## Setting up an Elasticsearch Cluster
+## Setting up an Elasticsearch or OpenSearch Cluster
 
-### Elasticsearch Supported Versions
+Nuxeo supports Elasticsearch and OpenSearch clusters.
 
-The Nuxeo Platform communicates with Elasticsearch using the [HTTP or HTTPS Rest protocol](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.17/java-rest-high.html)
-  (port 9200 by default).
+OpenSearch 1 is a fork of Elasticsearch 7, except some advanced features (not used by Nuxeo) they are fully compatible.
 
-Elasticsearch compatibility details can be found on the [Compatibility Matrix]({{page   page='compatibility-matrix#elasticsearch'}}) page.
+Nuxeo 2023 is defining index settings, mappings and uses the Rest API according to Elasticsearch 7 version (equivalent to OpenSearch 1 version). 
+Nuxeo is relying on OpenSearch client library to access the search cluster.
 
-### OpenSearch Supported Version
+Note that for historical reasons, Nuxeo 2023 continues to name "Elasticsearch" its search service and configuration options.
+Elasticsearch and OpenSearch could be used interchangeably in the documentation.
 
-The Nuxeo Platform communicates with OpenSearch using the [HTTPS Rest protocol](https://opensearch.org/docs/1.3/clients/java-rest-high-level/) (port 9200 by default).
+In addition to OpenSearch 1 and Elasticsearch 7, Nuxeo also supports Elasticsearch 8 cluster,
+Elasticsearch 8 being backward compatible and able to honor Elasticsearch 7 API.
 
-OpenSearch {{multiexcerpt 'opensearch_cluster_supported_version'}} is compatible with Elasticsearch 7, so Elasticsearch and OpenSearch can be used interchangeably in the documentations as Elasticsearch is the historical solution.
-
-OpenSearch compatibility details can be found on the [Compatibility Matrix]({{page page='compatibility-matrix#opensearch'}}) page.
+Please refer to [Compatibility Matrix]({{page   page='compatibility-matrix#elasticsearch'}}) page for more information on the exact supported versions.
 
 ### Embedded mode
 
-The default configuration uses an embedded Elasticsearch instance that runs in the same JVM as the Nuxeo Platform's.
+The default configuration uses an embedded OpenSearch instance that runs in the same JVM as the Nuxeo Platform's.
 
 {{#> callout type='warning' }}
-This embedded mode **is only for testing purpose** and should not be used in production, neither Elasticsearch nor Nuxeo can support an embedded installation.
+This embedded mode **is only for testing purpose** and should not be used in production, neither OpenSearch nor Nuxeo can support an embedded installation.
 {{/callout}}
 
-For production you need to setup an Elasticsearch cluster.
+For production you need to setup an Search cluster.
 
 ### Installing an Elasticsearch Cluster
 
 Refer to the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) to install and secure your cluster. Basically:
 
-- Don&rsquo;t run Elasticsearch open to the public.
-- Don&rsquo;t run Elasticsearch as root.
+- Don't run Elasticsearch open to the public.
+- Don't run Elasticsearch as root.
+- Secure the connection between Nuxeo and Elasticsearch:
+  - Elasticsearch 7 requires [the X-Pack extension](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/setup-xpack.html) to enable secured communication between Nuxeo and Elasticsearch.
+    Please follow this guide to [Securing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-settings.html).
+  - Elasticsearch 8 security is enabled by default. Follow this guide for [further security configuration](https://www.elastic.co/guide/en/elasticsearch/reference/8.7/security-settings.html).
+- Follow the [Elasticsearch REST Security APIs documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-api.html) for configuring a [user](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-api-put-user.html) and [role](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-api-put-role.html).
 
 {{#> callout type='tip' }}
-Use an explicit cluster name by setting the `cluster.name` in the `/etc/elasticsearch/elasticsearch.yml` file, this will avoid conflicts with other environments.
-{{/callout}}
-
-#### Recommended Tuning
-
-If you have a large number of documents or if you use Nuxeo in cluster you may reach the default configuration limitation, here are some recommended tuning:
-
-Consider disabling the OS swapping or using other [Elasticsearch option](https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#_swapping_is_the_death_of_performance) to prevent the heap to be swapped.
-
-In `/etc/default/elasticsearch` file you can increase the JVM heap to half of the available OS memory:
-
-```
-# For a dedicated node with 12g of RAM for Elasticsearch < 6
-# ES_HEAP_SIZE=6g
-# For a dedicated node with 12g of RAM for Elasticsearch >= 6
-ES_JAVA_OPTS="-Xms6g -Xmx6g"
-```
-
-### Installing an OpenSearch cluster
-
-Refer to the [OpenSearch documentation](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/) to install OpenSearch. Basically:
-
-- [Don&rsquo;t use network file system for node storage.](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/#file-system-recommendations)
-- [Make sure the right ports are open.](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/#network-requirements)
-
-#### Recommended Tuning
-
-If you have a large number of documents or if you use Nuxeo in cluster you may reach the default configuration limitation, here are some [recommended tuning OpenSearch options](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/#important-settings)
-
-This page shows you how to prevent the heap to be swapped. Swapping can dramatically decrease performance and stability, so you should ensure it is disabled on production clusters.
-
-It also gives guidance regarding the JVM configuration values like below, and how to avoid duplication and unexpected behaviors:
-```
-OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
-```
-
-### Translog tuning
-
-To reduce disk IO you should consider changing the default [translog](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/index-modules-translog.html)
-durability from `request` to `async`.
-This can be done from `nuxeo.conf`:
-```
-elasticsearch.index.translog.durability=async
-```
-
-If your indexes are already created you need some manual operation to change the translog:
-```bash
-curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo-uidgen/_settings" -d '{
-  "index.translog.durability" : "async"
-}'
-
-curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo-audit/_settings" -d '{
-  "index.translog.durability" : "async"
-}'
-
-curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo/_settings" -d '{
-  "index.translog.durability" : "async"
-}'
-
-```
-
-## Configuring Nuxeo to Access the Elasticsearch Cluster
-
-Nuxeo supports the Elasticsearch Rest client protocol.
-This protocol is enabled by configuring the following properties:
-```
-elasticsearch.client=RestClient
-elasticsearch.addressList=http://somenode:9200,https://anothernode:443
-```
-Where:
-- `elasticsearch.client` choose the RestClient protocol
-- `elasticsearch.addressList` is a comma separated list of URL.
-
-#### Advanced REST Client configuration
-
-##### Elasticsearch 7
-
-Elasticsearch requires [the X-Pack extension](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/setup-xpack.html) to enable secured communication between Nuxeo and Elasticsearch using the Rest Client.
-
-Please follow this guide to [Securing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-settings.html).
-
-##### Elasticsearch 8
-
-Security is enabled by default. [Further security configuration can be found here](https://www.elastic.co/guide/en/elasticsearch/reference/8.7/security-settings.html)
-
-##### Basic Authentication with Elasticsearch
-If you have chosen to configure Basic Authentication (enabled by default, see the [native Realm](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/native-realm.html) for more info) then you can setup Nuxeo using `nuxeo.conf` with the follow properties:
-
-```
-elasticsearch.restClient.username=your_username
-elasticsearch.restClient.password=your_password
-```
-{{#> callout type='tip' }}
-Please follow the [Elasticsearch REST Security APIs documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-api.html) for configuring a [user](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-api-put-user.html) and [role](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-api-put-role.html).
-
-An example role could be:
+An example on how to create a role:
 ```bash
 curl -XPOST -u elastic 'localhost:9200/_security/role/nuxeo_role' -H "Content-Type: application/json" -d '{
   "cluster" : [
@@ -613,7 +523,7 @@ curl -XPOST -u elastic 'localhost:9200/_security/role/nuxeo_role' -H "Content-Ty
  ]
 }'
 ```
-Configuring a user for that role could look something like this:
+An example on how to create a user for that role:
 ```bash
 curl -XPOST -u elastic 'localhost:9200/_security/user/nuxeo_user' -H "Content-Type: application/json" -d '{
   "password" : "nuxeo_secret_password",
@@ -623,19 +533,31 @@ curl -XPOST -u elastic 'localhost:9200/_security/user/nuxeo_user' -H "Content-Ty
 ```
 {{/callout}}
 
-##### OpenSearch
 
-The OpenSearch security plugin is enabled by default with demo values which need to be replaced. See [OpenSearch Security Configuration](https://opensearch.org/docs/latest/security/configuration/index/) for guidance.
+#### Recommended Tuning
 
-##### Basic Authentication with OpenSearch
-If you have chosen to configure [Internal Users](https://opensearch.org/docs/1.3/security/access-control/users-roles) then you can setup Nuxeo using `nuxeo.conf` with the following properties:
+If you have a large number of documents or if you use Nuxeo in cluster you may reach the default configuration limitation, here are some recommended tuning:
+
+Consider disabling the OS swapping or using other [Elasticsearch option](https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#_swapping_is_the_death_of_performance) to prevent the heap to be swapped.
+
+In `/etc/default/elasticsearch` file you can increase the JVM heap to half of the available OS memory:
 
 ```
-elasticsearch.restClient.username=your_username
-elasticsearch.restClient.password=your_password
+# For a dedicated node with 12g of RAM
+ES_JAVA_OPTS="-Xms6g -Xmx6g"
 ```
+
+### Installing an OpenSearch cluster
+
+Refer to the [OpenSearch documentation](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/) to install OpenSearch. Basically:
+
+- Don't run OpenSearch open to the public.
+- Don't run OpenSearch as root.
+- Secure the connection between Nuxeo and OpenSearch, the security plugin is enabled by default with demo values which need to be replaced. See [OpenSearch Security Configuration](https://opensearch.org/docs/latest/security/configuration/index/) for guidance.
+- Follow the OpenSearch [Access Control API documentation](https://opensearch.org/docs/1.3/security/access-control/api) for configuring a [user](https://opensearch.org/docs/1.3/security/access-control/api/#create-user) and [role](https://opensearch.org/docs/1.3/security/access-control/api/#create-role).
+
 {{#> callout type='tip' }}
-Please follow the OpenSearch [Access Control API documentation](https://opensearch.org/docs/1.3/security/access-control/api) for configuring a [user](https://opensearch.org/docs/1.3/security/access-control/api/#create-user) and [role](https://opensearch.org/docs/1.3/security/access-control/api/#create-role), an example could be:
+An example on how to create a role:
 ```bash
 curl -XPUT -u admin http://localhost:9200/_plugins/_security/api/roles/nuxeo_role -H "Content-Type: application/json" -d '{
   "cluster_permissions" : [
@@ -649,7 +571,7 @@ curl -XPUT -u admin http://localhost:9200/_plugins/_security/api/roles/nuxeo_rol
  ]
 }'
 ```
-Configuring a user for that role could look something like this:
+An example on how to create a user for that role:
 ```bash
 curl -XPUT -u admin http://localhost:9200/_plugins/_security/api/internalusers/nuxeo_user -H "Content-Type: application/json" -d '{
   "password" : "nuxeo_secret_password",
@@ -659,7 +581,36 @@ curl -XPUT -u admin http://localhost:9200/_plugins/_security/api/internalusers/n
 ```
 {{/callout}}
 
-##### TLS/SSL Configuration
+
+#### Recommended Tuning
+
+If you have a large number of documents or if you use Nuxeo in cluster you may reach the default configuration limitation, here are some [recommended tuning OpenSearch options](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/#important-settings)
+
+
+You can increase the JVM heap to half of the available OS memory:
+```
+# For a dedicated node with 12g of RAM
+OPENSEARCH_JAVA_OPTS=-Xms6g -Xmx6g
+```
+
+
+## Configuring Nuxeo to Access the Search Cluster
+
+Nuxeo uses the Rest client protocol, you have to configure the access:
+```
+elasticsearch.addressList=http://somenode:9200,https://anothernode:443
+```
+Where:
+- `elasticsearch.addressList` is a comma separated list of URL.
+
+### Basic Authentication
+If you have chosen to configure Basic Authentication then you can setup Nuxeo using `nuxeo.conf` with the follow properties:
+
+```
+elasticsearch.restClient.username=your_username
+elasticsearch.restClient.password=your_password
+```
+### TLS/SSL Configuration
 
 If you have chosen to configure [Elasticsearch TLS/SSL](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-basic-setup.html#security-basic-setup) or [OpenSearch TLS/SSL](https://opensearch.org/docs/1.3/security/configuration/tls/) then you can set up Nuxeo using `nuxeo.conf` with the following properties:
 
@@ -677,7 +628,6 @@ If you are using TLS/SSL then the `elasticsearch.addressList` will need to be up
 {{/callout}}
 
 See the [Trust Store and Key Store Configuration]({{page page='trust-store-and-key-store-configuration'}}) page for more.
-
 
 ### Index names
 
@@ -736,6 +686,30 @@ Note that using managed aliases requires more disk space on Elastic nodes becaus
 Also, you have to manually delete old repository indexes when reindexing is completed.
 {{/callout}}
 
+### Translog tuning
+
+To reduce disk IO you should consider changing the default [translog](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/index-modules-translog.html)
+durability from `request` to `async`.
+This can be done from `nuxeo.conf`:
+```
+elasticsearch.index.translog.durability=async
+```
+
+If your indexes are already created you need some manual operation to change the translog:
+```bash
+curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo-uidgen/_settings" -d '{
+  "index.translog.durability" : "async"
+}'
+
+curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo-audit/_settings" -d '{
+  "index.translog.durability" : "async"
+}'
+
+curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo/_settings" -d '{
+  "index.translog.durability" : "async"
+}'
+
+```
 
 ## Disabling Elasticsearch
 
@@ -858,7 +832,7 @@ The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxser
 
 **To override and tune the default mapping:**
 
-Since Nuxeo 9.3, instead of overriding the extension point you can simply override the default mapping or settings JSON files:
+Instead of overriding the extension point you can simply override the default mapping or settings JSON files:
 
 1. [Create a custom template]({{page page='configuration-templates'}}) like `myapp` with a `nuxeo.defaults` file that contains:
 
