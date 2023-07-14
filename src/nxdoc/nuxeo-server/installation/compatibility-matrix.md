@@ -125,7 +125,7 @@ Nuxeo is shipped with an embedded Tomcat server.
 
 Nuxeo Platform is tested against an OpenSearch cluster {{! multiexcerpt name='opensearch_cluster_supported_version'}}1.3.6{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch_libraries_supported_version'}}1.3.11{{! /multiexcerpt}}.
 
-More information can be found on the [OpenSearch Setup]({{page page='opensearch-setup'}}) page.
+More information can be found on the [OpenSearch Setup]({{page page='elasticsearch-setup'}}) page.
 
 ## Elasticsearch
 
