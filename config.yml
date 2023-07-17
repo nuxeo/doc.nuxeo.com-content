@@ -14,9 +14,9 @@ default:
     dev_browser_path: nxdoc/710
     repo_id: platform
     versions:
-      - label: Cloud
-        url_path: 'cloud'
+      - label: LTS 2023
       - label: LTS 2021
+        url_path: '2021'
       - label: LTS 2019
         url_path: '1010'
       - label: LTS 2017
@@ -24,10 +24,8 @@ default:
       - label: LTS 2016
         url_path: '810'
       - label: LTS 2015
-        url_path: '710'
         is_current_version: true
-      - label: '6.0'
-        url_path: '60'
+        url_path: '710'
 
 development:
   isDev: true
