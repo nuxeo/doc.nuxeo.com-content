@@ -7,7 +7,7 @@ See [the main project requirements](https://github.com/nuxeo/doc.nuxeo.com/blob/
 ## Installation
 Clone the repository to your local machine (and remember where it's saved :)), using your favorite git client or the command line:
 ```bash
-git lfs clone https://github.com/nuxeo/doc.nuxeo.com-content
+git lfs clone https://github.com/nuxeo/doc.nuxeo.com-content.git
 cd doc.nuxeo.com-content
 git lfs install
 git reset --hard
@@ -18,10 +18,10 @@ git reset --hard
 npm run dev
 ```
 
-Refer to [the authoring instrutions](https://github.com/nuxeo/doc.nuxeo.com/blob/master/docs/writing-documentation.md#installation) for further details. Hint: append `/nxdoc` or `/userdoc` to the URL.
+Refer to [the authoring instructions](https://github.com/nuxeo/doc.nuxeo.com/blob/master/docs/writing-documentation.md#installation) for further details. Hint: append `/nxdoc` or `/userdoc` to the URL.
 
 ### Change browser
-To [change the from the default browser](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md#change-browser).
+Refer to [change the default browser](https://github.com/nuxeo/doc.nuxeo.com/blob/master/README.md#change-browser).
 
 ## Project Structure
 ### `./assets/...`
