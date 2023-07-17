@@ -81,7 +81,7 @@ history:
 ### Data Configuration
 
 - [Database Configuration]({{page version='' space='nxdoc' page='database-configuration'}})
-- [Elasticsearch Configuration]({{page version='' space='nxdoc' page='elasticsearch-setup'}})
+- [Search Configuration]({{page version='' space='nxdoc' page='search-setup'}})
   {{/panel}}
   </div>
 
