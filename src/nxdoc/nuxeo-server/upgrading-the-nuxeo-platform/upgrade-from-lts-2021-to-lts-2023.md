@@ -155,7 +155,7 @@ db.aceinfo.createIndex({aceinfo:docId: 1})
 ```
 Then enable ace info garbage collection by adding the following line to your nuxeo.conf:
 ```
-nuxeo.aceinfo.gc.enabled=true 
+nuxeo.aceinfo.gc.enabled=true
 ```
 VCS users will need to make their own index.
 
@@ -227,7 +227,7 @@ There is now a metric to count the number of messages published using the PubSub
 
 #### Make Kafka Replication Factor Param Optional
 
-Nuxeo is now relying on the default Kafka broker topic replication factor when creating a new topic. This is configured with `kafka.default.replication.factor=-1`. 
+Nuxeo is now relying on the default Kafka broker topic replication factor when creating a new topic. This is configured with `kafka.default.replication.factor=-1`.
 Note that it works only with Kafka cluster >= 2.4, if you want to use an older Kafka cluster, you have to set explicitly the replication factor in Nuxeo to something > 0.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31621](https://jira.nuxeo.com/browse/NXP-31621)
@@ -252,6 +252,20 @@ The `Document.FetchByProperty` operation is deprecated. From now, use `Repositor
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31259](https://jira.nuxeo.com/browse/NXP-31259)
 
 ## Farewell
+
+### Redis
+
+Redis support in Nuxeo has been removed as it isn't an interesting configuration because it doesn't provide a stream implementation, and the only production configuration that provide the stream implementation is Kafka that supplants Redis.
+
+The StreamWorkManager is now the default implementation of the platform.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31901](https://jira.nuxeo.com/browse/NXP-31901)
+
+### Chronicle Queue
+
+Chronicle Queue is no longer available as log implementation. It is replaced by an In-Memory one for test and dev purpose (no cluster capability, no persistence after restart) . Use Kafka for production environment.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31296](https://jira.nuxeo.com/browse/NXP-31296)
 
 ### Remove Deprecated Code Since 6.0
 

@@ -295,7 +295,6 @@ Founded on the principles of open-source, Nuxeo is passionate about community: t
 
 Nuxeo development is fully transparent:
 
-- Our public roadmap can be followed through the [Nuxeo Roadmap Documentation Page]({{page page='roadmap'}}). Comments are more than welcome!
 - Any commit in the code can be followed on [Nuxeo GitHub repositories](http://nuxeo.github.io/) and on [ecm-checkins@lists.nuxeo.com](mailto:ecm-checkins@lists.nuxeo.com).
 - Any evolution and bug fixing is tracked on [JIRA](https://jira.nuxeo.com/).
 

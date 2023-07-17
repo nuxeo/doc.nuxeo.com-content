@@ -172,7 +172,7 @@ Registered access
 [Documentation]({{page page='amazon-s3-direct-upload'}})
 </td>
 <td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-direct-upload)
+[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-direct-upload)
 </td>
 </tr>
 <tr>
@@ -660,7 +660,7 @@ Public
 [Documentation]({{page page='nuxeo-spreadsheet'}})
 </td>
 <td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
+[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
 </td>
 </tr>
 <tr>

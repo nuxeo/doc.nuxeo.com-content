@@ -102,7 +102,3 @@ Preview your Web UI customizations without having to wait for a hot reload.
 - [**CORS config**]({{page version='' space='nxdoc' page='cross-origin-resource-sharing-cors'}}) must be activated in your Nuxeo server to connect to your repository on API Playground.
 - Some features may not behave correctly in **Incognito/Private** mode.
 - Designer Live Preview with HTML imports is [currently unavailable](https://bugs.chromium.org/p/chromium/issues/detail?id=803115) in Chrome.
-
-## Feedback
-
-Please feel free give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/40c295d6-739d-11e7-9e52-06df22ffaf6f).
