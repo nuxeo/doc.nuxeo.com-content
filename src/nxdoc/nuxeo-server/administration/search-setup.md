@@ -1,6 +1,6 @@
 ---
-title: Elasticsearch Setup
-description: This page provides several configuration use cases for Elasticsearch.
+title: Search Setup
+description: This page provides several configuration use cases for Elasticsearch and Opensearch.
 review:
     comment: ''
     date: '2020-11-03'
@@ -466,7 +466,7 @@ history:
 ---
 
 {{! excerpt}}
-This page provides several configuration use cases for [Elasticsearch](https://www.nuxeo.com/partners/technology/elasticsearch/).
+This page provides several configuration use cases for [Elasticsearch](https://www.nuxeo.com/partners/technology/elasticsearch/) and [Opensearch](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/).
 {{! /excerpt}}
 
 ## Setting up an Elasticsearch or OpenSearch Cluster
@@ -484,9 +484,9 @@ Elasticsearch and OpenSearch could be used interchangeably in the documentation.
 In addition to OpenSearch 1 and Elasticsearch 7, Nuxeo also supports Elasticsearch 8 cluster,
 Elasticsearch 8 being backward compatible and able to honor Elasticsearch 7 API.
 
-Please refer to [Compatibility Matrix]({{page   page='compatibility-matrix#elasticsearch'}}) page for more information on the exact supported versions.
+Please refer to [Compatibility Matrix]({{page   page='compatibility-matrix'}}#elasticsearch) page for more information on the exact supported versions.
 
-### Embedded mode
+### Embedded Mode
 
 The default configuration uses an embedded OpenSearch instance that runs in the same JVM as the Nuxeo Platform's.
 
@@ -494,7 +494,7 @@ The default configuration uses an embedded OpenSearch instance that runs in the 
 This embedded mode **is only for testing purpose** and should not be used in production, neither OpenSearch nor Nuxeo can support an embedded installation.
 {{/callout}}
 
-For production you need to setup an Search cluster.
+For production you need to setup a Search cluster.
 
 ### Installing an Elasticsearch Cluster
 
@@ -547,7 +547,7 @@ In `/etc/default/elasticsearch` file you can increase the JVM heap to half of th
 ES_JAVA_OPTS="-Xms6g -Xmx6g"
 ```
 
-### Installing an OpenSearch cluster
+### Installing an OpenSearch Cluster
 
 Refer to the [OpenSearch documentation](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/) to install OpenSearch. Basically:
 
@@ -581,18 +581,15 @@ curl -XPUT -u admin http://localhost:9200/_plugins/_security/api/internalusers/n
 ```
 {{/callout}}
 
-
 #### Recommended Tuning
 
 If you have a large number of documents or if you use Nuxeo in cluster you may reach the default configuration limitation, here are some [recommended tuning OpenSearch options](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/#important-settings)
-
 
 You can increase the JVM heap to half of the available OS memory:
 ```
 # For a dedicated node with 12g of RAM
 OPENSEARCH_JAVA_OPTS=-Xms6g -Xmx6g
 ```
-
 
 ## Configuring Nuxeo to Access the Search Cluster
 
@@ -604,6 +601,7 @@ Where:
 - `elasticsearch.addressList` is a comma separated list of URL.
 
 ### Basic Authentication
+
 If you have chosen to configure Basic Authentication then you can setup Nuxeo using `nuxeo.conf` with the follow properties:
 
 ```
@@ -629,7 +627,7 @@ If you are using TLS/SSL then the `elasticsearch.addressList` will need to be up
 
 See the [Trust Store and Key Store Configuration]({{page page='trust-store-and-key-store-configuration'}}) page for more.
 
-### Index names
+### Index Names
 
 Nuxeo manages 3 Elasticsearch indexes:
 
@@ -654,7 +652,6 @@ Where
 - `seqgen.elasticsearch.indexName` is the name of the Elasticsearch index for the uid sequencer, extensively used for audit logs.
 
 You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/server/nuxeo-nxr-server/src/main/resources/templates/common-base/nuxeo.defaults).
-
 
 #### Index Aliases and Reindexing without Service Interruption
 
@@ -686,7 +683,7 @@ Note that using managed aliases requires more disk space on Elastic nodes becaus
 Also, you have to manually delete old repository indexes when reindexing is completed.
 {{/callout}}
 
-### Translog tuning
+### Translog Tuning
 
 To reduce disk IO you should consider changing the default [translog](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/index-modules-translog.html)
 durability from `request` to `async`.
