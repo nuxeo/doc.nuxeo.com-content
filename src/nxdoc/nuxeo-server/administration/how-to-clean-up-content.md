@@ -31,7 +31,12 @@ Read on to discover what options are available to you, when, how and why you sho
 
 ### Cleaning Up Orphaned Versions for Deleted Documents
 
-When [deleting permanently]({{page page='content-delete' space='userdoc'}}) a document, only the latest copy of the document gets deleted. Previous versions that were created for it are kept in the system, as you may still reference them in other documents, for example in a custom property of a separate document.
+When [deleting permanently]({{page page='content-delete' space='userdoc'}}) a document, all its versions are deleted automatically. There are some scenarios where a version will remain however.
+
+A version stays referenced and therefore is not removed if:
+- Any proxy points to a version in the version history of any live document
+- In the case of a tree snapshot if there is a snapshot containing a version in the version history of any live document.
+- In some specific scenarios when deleting documents recursively (e.g., some versions of a child document may remain if you delete a parent document)
 
 If you are confident that older versions of deleted documents are not in use anymore, Nuxeo Server offers a [dedicated REST API endpoint](https://doc.nuxeo.com/rest-api/1/versions-endpoint/#garbage-collect-orphaned-versions) to remove them. 
 
