@@ -481,10 +481,10 @@ Nuxeo is relying on OpenSearch client library to access the search cluster.
 Note that for historical reasons, Nuxeo 2023 continues to name "Elasticsearch" its search service and configuration options.
 Elasticsearch and OpenSearch could be used interchangeably in the documentation.
 
-In addition to OpenSearch 1 and Elasticsearch 7, Nuxeo also supports Elasticsearch 8 cluster,
-Elasticsearch 8 being backward compatible and able to honor Elasticsearch 7 API.
+In addition to OpenSearch 1 and Elasticsearch 7, Nuxeo also works with Elasticsearch 8 cluster,
+as Elasticsearch 8 being backward compatible and able to honor Elasticsearch 7 API.
 
-Please refer to [Compatibility Matrix]({{page   page='compatibility-matrix'}}#elasticsearch) page for more information on the exact supported versions.
+Please refer to [Compatibility Matrix]({{page page='compatibility-matrix'}}#elasticsearch) page for more information on the exact supported versions.
 
 ### Embedded Mode
 
