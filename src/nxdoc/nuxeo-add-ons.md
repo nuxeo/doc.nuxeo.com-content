@@ -295,7 +295,7 @@ Registered Access
 [Documentation]({{page page='nuxeo-ai'}})
 </td>
 <td colspan="1">
-[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-core)
+[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-core)
 </td>
 </tr>
 <tr>
