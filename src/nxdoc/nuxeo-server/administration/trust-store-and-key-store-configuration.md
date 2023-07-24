@@ -49,7 +49,7 @@ history:
 ---
 ## Introduction
 
-Communications between a client and a server can be secured using TLS/SSL (TLS is the new version of the standard that was previously called SSL, but the term SSL is still wildly used). This security includes encryption, authentication of the server by the client, and optionally authentication of the client by the server.
+Communications between a client and a server can be secured using TLS/SSL (TLS is the new version of the standard that was previously called SSL, but the term SSL is still widely used). This security includes encryption, authentication of the server by the client, and optionally authentication of the client by the server.
 
 In Nuxeo, the kinds of communications that can be secured in this manner depend on the services used. Among them one can find:
 - remote HTTPS servers with which Nuxeo needs to communicate (for example Nuxeo Online Services)
