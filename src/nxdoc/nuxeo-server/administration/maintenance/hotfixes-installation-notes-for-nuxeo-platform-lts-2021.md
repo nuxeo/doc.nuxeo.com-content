@@ -103,6 +103,28 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 41
+
+### Add Flexible Record Core API
+
+
+When using the Retention package with a MongoDB backend, it is recommended to create new indexes manually, otherwise, the Nuxeo server will attempt to create them at start-up. In the case of an existing instance with large amounts of documents, this process may time out and/or affect performance.
+
+```Java
+db.default.createIndex({ ecm:isRecord: 1}, {sparse: true});
+db.default.createIndex({ ecm:isFlexibleRecord: 1}, {sparse: true});
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31968](https://jira.nuxeo.com/browse/NXP-31968)
+
+### Rename Compliance Mode as Strict Mode
+
+
+The `nuxeo.conf` property `nuxeo.retention.compliance.enabled` has been deprecated in favor of `nuxeo.retention.strictmode.enabled`.
+When both properties are configured, `nuxeo.retention.strictmode.enabled` takes precedence.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31878](https://jira.nuxeo.com/browse/NXP-31878)
+
 ## Hotfix 37
 
 ### Add an Option to Disable Hostname Verification During Elastic/Opensearch SSL Handshake
@@ -477,6 +499,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
