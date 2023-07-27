@@ -125,7 +125,7 @@ Nuxeo is shipped with an embedded Tomcat server.
 
 Nuxeo Platform is tested against an OpenSearch cluster {{! multiexcerpt name='opensearch_cluster_supported_version'}}1.3.6{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch_libraries_supported_version'}}1.3.11{{! /multiexcerpt}}.
 
-More information can be found on the [OpenSearch Setup]({{page page='elasticsearch-setup'}}) page.
+More information can be found on the [OpenSearch Setup]({{page page='search-setup'}}) page.
 
 ## Elasticsearch
 
@@ -133,7 +133,7 @@ Nuxeo Platform is tested against 2 Elasticsearch clusters using OpenSearch Java 
 - an {{! multiexcerpt name='elasticsearch_7_cluster_supported_version'}}7.17.9{{! /multiexcerpt}} Elasticsearch cluster
 - an {{! multiexcerpt name='elasticsearch_8_cluster_supported_version'}}8.7.0{{! /multiexcerpt}} Elasticsearch cluster
 
-More information can be found on the [Elasticsearch Setup]({{page page='elasticsearch-setup'}}) page.
+More information can be found on the [Elasticsearch Setup]({{page page='search-setup'}}) page.
 
 ## Kafka
 
