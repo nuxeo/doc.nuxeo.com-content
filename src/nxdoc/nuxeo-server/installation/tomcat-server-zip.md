@@ -35,9 +35,9 @@ Installing the Nuxeo Platform requires a few steps:
 2. [Install and Set up the related software]({{page page='installing-and-setting-up-related-software'}}).
    Install and start the Nuxeo Platform server.
    To understand how to start a Nuxeo Platform server on different environments, you can read and follow one of our recipes:
-   - [Installing the Nuxeo Platform on Linux]({{page page='installing-the-nuxeo-platform-on-linux'}})
-   - [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
-   - [Installing the Nuxeo Platform on macOS]({{page page='installing-the-nuxeo-platform-on-mac-os'}})
+   - [Installing the Nuxeo Platform on Linux]({{page page='installing-and-setting-up-related-software'}}#installing-on-linux)
+   - [Installing the Nuxeo Platform on Windows]({{page page='installing-and-setting-up-related-software'}}#installing-on-windows)
+   - [Installing the Nuxeo Platform on macOS]({{page page='installing-and-setting-up-related-software'}}#installing-on-macos-and-os-x)
 
 ## Software Requirements
 
