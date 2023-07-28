@@ -898,8 +898,8 @@ org.apache.directory.server:apacheds-core:1.5.1
 <tbody>
 <tr>
 <th colspan="1">Component</th>
-<th colspan="1">Nuxeo Platform LTS 2019</th>
 <th colspan="1">Nuxeo Platform LTS 2021</th>
+<th colspan="1">Nuxeo Platform LTS 2023</th>
 </tr>
 <tr>
 <td colspan="1">ANTLR</td>
