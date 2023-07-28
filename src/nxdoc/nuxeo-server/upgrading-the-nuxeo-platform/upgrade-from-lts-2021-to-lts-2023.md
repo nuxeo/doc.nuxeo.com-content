@@ -857,7 +857,7 @@ Chronicle Queue is no longer available as log implementation. It is replaced by 
 
 ## Dependencies Upgrade Versions
 
-#### Upgrade Aapache POI to 5.2.1
+#### Upgrade Apache POI to 5.2.1
 
 Upgraded the following Maven dependencies from 4.1.2 to 5.2.3:
 ```
@@ -891,7 +891,7 @@ org.apache.directory.server:apacheds-core:1.5.1
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31786](https://jira.nuxeo.com/browse/NXP-31786)
 
-### Other Depenedency Version Upgrades
+### Other Dependency Version Upgrades
 
 <div class="table-scroll">
 <table class="hover">
