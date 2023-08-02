@@ -1,13 +1,13 @@
 ---
-title: 'HOWTO: Add New Fields to the User Profile or Group Profile'
-description: This page provides a turnkey solution to add new fields to the user profile or group.
+title: 'HOWTO: Add New Fields to the User or Group Schema'
+description: This page provides a turnkey solution to add new fields to the user or group schema.
 review:
     comment: ''
     date: '2021-06-09'
     status: ok
 details:
     howto:
-        excerpt: This page provides a turnkey solution to add new fields to the user profile or group.
+        excerpt: This page provides a turnkey solution to add new fields to the user or group schema.
         level: Intermediate
         tool: XML configuration
         topics: 'UsersAndGroups, Doctype'
@@ -79,7 +79,7 @@ Create a `manager_user_field.xsd` file with the following content from the defau
 1. Go to **CONFIGURATION** > **Content Model** > **Schemas** and click on **New**. </br>
     Fill in the popup window like this:
     {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to Add New Fields to the User Profile or Group Profile/schema_user.png
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to Add New Fields to the User or Group Schema/schema_user.png
       name: schema_user.png
       studio_modeler#screenshot#up_to_date
     --}}
@@ -146,7 +146,7 @@ Add a new entry in your translation file (`messages.json` by default) with:
 - User Creation and Edition Layout
 
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to Add New Fields to the User Profile or Group Profile/user-edit.png
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to Add New Fields to the User or Group Schema/user-edit.png
     name: user-edit.png
     server#screenshot#up_to_date
 --}}
@@ -155,7 +155,7 @@ Add a new entry in your translation file (`messages.json` by default) with:
 - User View Layout
 
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to Add New Fields to the User Profile or Group Profile/user-view.png
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to Add New Fields to the User or Group Schema/user-view.png
     name: user-view.png
     server#screenshot#up_to_date
 --}}
