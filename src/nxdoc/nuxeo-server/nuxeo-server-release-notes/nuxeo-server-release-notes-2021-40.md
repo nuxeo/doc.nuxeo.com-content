@@ -14,6 +14,19 @@ tree_item_index: 1930
 {{! multiexcerpt name='nuxeo-server-updates-2021-40'}}
 # What's New in LTS 2021.40 / LTS 2021-HF40
 
+## Add a nuxeo.conf property to expose the final Blob URL
+
+
+When activating direct download, the final blob URL can be exposed with a nuxeo.conf property.
+
+To expose the final Blob URL, use the following nuxeo.conf rpoperty:
+
+```
+org.nuxeo.download.url.follow.redirect=true
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31987](https://jira.nuxeo.com/browse/NXP-31987)
+
 ## Fix ORA-03146  When Setting a CLOB in a Prepared Statement
 
 
