@@ -891,6 +891,28 @@ org.apache.directory.server:apacheds-core:1.5.1
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31786](https://jira.nuxeo.com/browse/NXP-31786)
 
+#### Upgrade OpenSAML to 4.3.0
+
+The OpenSAML library has been upgraded from `2.6.x` to `4.3.0` to benefit from recent fixes and features.
+
+This library upgrade is not backward compatible, so you need to upgrade the code referencing the library. This could be the case if you have a custom `UserMapper`.
+
+Among changes, there are packages moves, for example in `2.x` version you could have:
+
+```Java
+import org.opensaml.saml2.core.Attribute;
+import org.opensaml.xml.schema.impl.XSAnyImpl;
+```
+
+Which become in {{4.x}} version:
+
+```Java
+import org.opensaml.saml.saml2.core.Attribute;
+import org.opensaml.core.xml.schema.impl.XSAnyImpl;
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31847](https://jira.nuxeo.com/browse/NXP-31847)
+
 ### Other Dependency Version Upgrades
 
 <div class="table-scroll">
