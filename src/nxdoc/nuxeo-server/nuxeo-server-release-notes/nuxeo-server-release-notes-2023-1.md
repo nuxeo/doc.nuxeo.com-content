@@ -1,6 +1,6 @@
 ---
-title: LTS 2023.1 / LTS 2023-HF1
-description: Discover what's new in LTS 2023.1 / LTS 2023-HF1
+title: LTS 2023.1 / LTS 2023-HF01
+description: Discover what's new in LTS 2023.1 / LTS 2023-HF01
 review:
    comment: ''
    date: '2023-08-09'
@@ -13,7 +13,7 @@ hidden: true
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2023-1'}}
-# What's New in LTS 2023.1 / LTS 2023-HF1
+# What's New in LTS 2023.1 / LTS 2023-HF01
 
 ## Remove Elasticsearch Dependency Exclusions From Nuxeo Drive Server
 
