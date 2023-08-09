@@ -15,6 +15,13 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2023-1'}}
 # What's New in LTS 2023.1 / LTS 2023-HF01
 
+## Fix inconsistency with the dates used by the date-based ACEs
+
+
+Take into account the server timezone when updating ACEs.
+
+<i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-32013](https://jira.nuxeo.com/browse/NXP-32013)
+
 ## Remove Elasticsearch Dependency Exclusions From Nuxeo Drive Server
 
 
