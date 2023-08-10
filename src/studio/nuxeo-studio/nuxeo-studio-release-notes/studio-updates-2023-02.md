@@ -31,4 +31,7 @@ toc: true
 
 ## Page Provider
 
-- Users can now use clean up available operators in the Predicated editor.
+- We have streamlined the operators, making it more intuitive to determine which operators are applicable to specific fields.
+  For instance, when dealing with a string field, you'll now only use operators that are specifically designed to work with strings. Previously, there was a larger pool 
+  of operators, some of which might not have been suitable for certain field types. This refinement ensures that you're presented with relevant and compatible operators 
+  tailored to each field's data type
