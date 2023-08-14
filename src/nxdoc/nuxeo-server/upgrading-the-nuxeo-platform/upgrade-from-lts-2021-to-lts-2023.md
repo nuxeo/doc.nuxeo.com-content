@@ -271,143 +271,143 @@ Chronicle Queue is no longer available as log implementation. It is replaced by 
 
 #### Data Model
 
-`RouteStep` facet was replaced by the Graph API, no replacement
-`StepFolder` facet was replaced by the Graph API, no replacement
-`StepFolder` document type was replaced by the Graph API, no replacement
-`step_folder` schema was replaced by the Graph API, no replacement
-`ConditionalStepFolder` facet was replaced by the Graph API, no replacement
-`ConditionalStepFolder` document type was replaced by the Graph API, no replacement
-`conditional*step*folder` schema was replaced by the Graph API, no replacement
-`DocumentRouteStep` document type was replaced by the Graph API, no replacement
-`task_step` schema was replaced by the Graph API, no replacement
-`conditional*task*step` schema was replaced by the Graph API, no replacement
-`TaskStep` facet was replaced by the Graph API, no replacement
-`SimpleTask` document type was replaced by the Graph API, no replacement
-`FollowLifeCycleTransitionTask` document type was replaced by the Graph API, no replacement
-`PublishTask` document type was replaced by the Graph API, no replacement
-`ConditionalTask` document type was replaced by the Graph API, no replacement
+- `RouteStep` facet was replaced by the Graph API, no replacement
+- `StepFolder` facet was replaced by the Graph API, no replacement
+- `StepFolder` document type was replaced by the Graph API, no replacement
+- `step_folder` schema was replaced by the Graph API, no replacement
+- `ConditionalStepFolder` facet was replaced by the Graph API, no replacement
+- `ConditionalStepFolder` document type was replaced by the Graph API, no replacement
+- `conditional*step*folder` schema was replaced by the Graph API, no replacement
+- `DocumentRouteStep` document type was replaced by the Graph API, no replacement
+- `task_step` schema was replaced by the Graph API, no replacement
+- `conditional*task*step` schema was replaced by the Graph API, no replacement
+- `TaskStep` facet was replaced by the Graph API, no replacement
+- `SimpleTask` document type was replaced by the Graph API, no replacement
+- `FollowLifeCycleTransitionTask` document type was replaced by the Graph API, no replacement
+- `PublishTask` document type was replaced by the Graph API, no replacement
+- `ConditionalTask` document type was replaced by the Graph API, no replacement
 
 #### Operations
 
-`Document.Routing.Resume.Step` was replaced by the Graph API, no replacement
-`Update.NextStep.ConditionalFolder` was replaced by the Graph API, no replacement
-`Document.Routing.BackToReady` was replaced by the Graph API, no replacement
-`Document.Routing.Step.Done` was replaced by the Graph API, no replacement
-`setDone` was replaced by the Graph API, no replacement
-`simpleValidate` was replaced by the Graph API, no replacement
-`simpleRefuse` was replaced by the Graph API, no replacement
-`simpleUndo` was replaced by the Graph API, no replacement
-`setNextStep` was replaced by the Graph API, no replacement
-`decideNextStepAndSimpleValidate` was replaced by the Graph API, no replacement
-`simpleChooseNextOption1AndDone` was replaced by the Graph API, no replacement
-`simpleChooseNextOption2AndDone` was replaced by the Graph API, no replacement
+- `Document.Routing.Resume.Step` was replaced by the Graph API, no replacement
+- `Update.NextStep.ConditionalFolder` was replaced by the Graph API, no replacement
+- `Document.Routing.BackToReady` was replaced by the Graph API, no replacement
+- `Document.Routing.Step.Done` was replaced by the Graph API, no replacement
+- `setDone` was replaced by the Graph API, no replacement
+- `simpleValidate` was replaced by the Graph API, no replacement
+- `simpleRefuse` was replaced by the Graph API, no replacement
+- `simpleUndo` was replaced by the Graph API, no replacement
+- `setNextStep` was replaced by the Graph API, no replacement
+- `decideNextStepAndSimpleValidate` was replaced by the Graph API, no replacement
+- `simpleChooseNextOption1AndDone` was replaced by the Graph API, no replacement
+- `simpleChooseNextOption2AndDone` was replaced by the Graph API, no replacement
 
 #### Contributions
 
 ##### Extension point
 
-`handlingLabels` was replaced by `handleLabels` control on the `widget` object descriptor
-`org.nuxeo.ecm.platform.routing.service#chainsToType` was replaced by the Graph API, no replacement
+- `handlingLabels` was replaced by `handleLabels` control on the `widget` object descriptor
+- `org.nuxeo.ecm.platform.routing.service#chainsToType` was replaced by the Graph API, no replacement
 
 #### Constants
 
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.ROUTE*STEP*FACET` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.STEP*FOLDER*FACET` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.EXECUTION*TYPE_PROPERTY*NAME` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.STEP*DOCUMENT*TYPE` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.CONDITIONAL*STEP*FACET` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.CONDITIONAL*STEP_DOCUMENT*TYPE` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.STEP*TO_BE_EXECUTED_NEXT_PROPERTY*NAME` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.STEP*DOCUMENT*TYPE` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingServiceImpl.CHAINS*TO_TYPE*XP` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.ROUTE*STEP*FACET` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.STEP*FOLDER*FACET` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.EXECUTION*TYPE_PROPERTY*NAME` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.STEP*DOCUMENT*TYPE` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.CONDITIONAL*STEP*FACET` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.CONDITIONAL*STEP_DOCUMENT*TYPE` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.STEP*TO_BE_EXECUTED_NEXT_PROPERTY*NAME` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants.STEP*DOCUMENT*TYPE` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingServiceImpl.CHAINS*TO_TYPE*XP` was replaced by the Graph API, no replacement
 
 #### Fields
 
-`org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingServiceImpl.typeToChain` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingServiceImpl.undoChainIdFromRunning` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingServiceImpl.undoChainIdFromDone` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingServiceImpl.typeToChain` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingServiceImpl.undoChainIdFromRunning` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingServiceImpl.undoChainIdFromDone` was replaced by the Graph API, no replacement
 
 #### Methods
 
-`org.nuxeo.ecm.automation.AutomationService#putOperationChain(OperationChain)` was replaced by `org.nuxeo.ecm.automation.AutomationService#putOperation(OperationType)`
-`org.nuxeo.ecm.automation.AutomationService#putOperationChain(OperationChain, boolean)` was replaced by `org.nuxeo.ecm.automation.AutomationService#putOperation(OperationType, boolean)`
-`org.nuxeo.ecm.automation.AutomationService#removeOperationChain(String)` was replaced by `org.nuxeo.ecm.automation.AutomationService#removeOperation(OperationType)`
-`org.nuxeo.ecm.automation.AutomationService#getOperationChain(String)` was replaced by `org.nuxeo.ecm.automation.AutomationService#getOperation(String)`
-`org.nuxeo.ecm.automation.AutomationService#getOperationChains()` was replaced by `org.nuxeo.ecm.automation.AutomationService#getOperations()`
-`org.nuxeo.connect.update.standalone.LocalPackageImpl#<init>(File, int, PackageUpdateService)` was replaced by `org.nuxeo.connect.update.standalone.LocalPackageImpl#<init>(File, PackageState, PackageUpdateService)`
-`org.nuxeo.connect.update.standalone.LocalPackageImpl#<init>(ClassLoader, File, int, PackageUpdateService)` was replaced by `org.nuxeo.connect.update.standalone.LocalPackageImpl#<init>(ClassLoader, File, PackageState, PackageUpdateService)`
-`org.nuxeo.connect.update.standalone.PackagePersistence#updateState(String, int)` was replaced by `org.nuxeo.connect.update.standalone.PackagePersistence#updateState(String, PackageState)`
-`org.nuxeo.connect.update.task.standalone.commands.Copy#getContentToCopy(Map)` was replaced  by `org.nuxeo.connect.update.task.standalone.commands.Copy#getContentToCopy(File, Map)`
-`org.nuxeo.ecm.core.api.security.ACP#listUsernamesForAnyPermission(Set)` was replaced by `org.nuxeo.ecm.platform.usermanager.UserManager#getUsersForPermission(String, ACP)`
-`org.nuxeo.ecm.core.api.security.UserEntry#addPrivilege(String, boolean, boolean)` was superseded by `org.nuxeo.ecm.core.api.security.UserEntry#addPrivilege(String, boolean)` as readOnly flag is not used
-`org.nuxeo.ecm.platform.forms.layout.api.WidgetDefinition#isHandlingLabels()` was replaced by `org.nuxeo.ecm.platform.forms.layout.api.WidgetDefinition#getControls()` with `handleLabels` control
-`org.nuxeo.ecm.platform.forms.layout.api.WidgetDefinition#setHandlingLabels(boolean)` was replaced by `org.nuxeo.ecm.platform.forms.layout.api.WidgetDefinition#setControls(Map)` with `handleLabels` control
-`org.nuxeo.ecm.platform.routing.api.DocumentRouteStep#undo(CoreSession)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, String, CoreSession, boolean)` was replaced by `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, List, CoreSession, boolean)`
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, List, CoreSession)` was replaced by `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, List, CoreSession, boolean)`
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, String, CoreSession)` was replaced by `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, List, CoreSession, boolean)`
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#getOperationChainId(String)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#getUndoFromRunningOperationChainId(String)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#getUndoFromDoneOperationChainId(String)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#canUserValidateRoute(NuxeoPrincipal)` was replaced by `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#canUserValidateRoute(DocumentModel, CoreSession)`
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#addRouteElementToRoute(DocumentRef, int, DocumentRouteElement, CoreSession)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#addRouteElementToRoute(DocumentRef, String, DocumentRouteElement, CoreSession)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#removeRouteElement(DocumentRouteElement, CoreSession)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#getOrderedRouteElement(String, CoreSession)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#getRouteElements(DocumentRoute, CoreSession)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#finishTask(CoreSession, DocumentRoute, Task, boolean)` was replaced by `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#completeTask(String, String, Map, String, CoreSession)`
-`org.nuxeo.ecm.platform.routing.core.impl.ElementRunner#undo(CoreSession, DocumentRouteElement)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#computeRouteElements()` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#computeRelatedRouteElements()` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#getElements(DocumentRoute)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#getTypeDescription(DocumentRouteTableElement)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#isStep(DocumentModel)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#removeStep()` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#createRouteElement(String)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#moveRouteElement(String)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#saveRouteElement()` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#getOrderedChildren(String, String)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#getChildWithPosition(DocumentModel, String)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#getPositionForChild(DocumentModel, DocumentModel)` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.web.RouteSecurityChecker#canValidateRoute()` was replaced by `org.nuxeo.ecm.platform.routing.web.RouteSecurityChecker#canValidateRoute(DocumentModel)`
+- `org.nuxeo.ecm.automation.AutomationService#putOperationChain(OperationChain)` was replaced by `org.nuxeo.ecm.automation.AutomationService#putOperation(OperationType)`
+- `org.nuxeo.ecm.automation.AutomationService#putOperationChain(OperationChain, boolean)` was replaced by `org.nuxeo.ecm.automation.AutomationService#putOperation(OperationType, boolean)`
+- `org.nuxeo.ecm.automation.AutomationService#removeOperationChain(String)` was replaced by `org.nuxeo.ecm.automation.AutomationService#removeOperation(OperationType)`
+- `org.nuxeo.ecm.automation.AutomationService#getOperationChain(String)` was replaced by `org.nuxeo.ecm.automation.AutomationService#getOperation(String)`
+- `org.nuxeo.ecm.automation.AutomationService#getOperationChains()` was replaced by `org.nuxeo.ecm.automation.AutomationService#getOperations()`
+- `org.nuxeo.connect.update.standalone.LocalPackageImpl#<init>(File, int, PackageUpdateService)` was replaced by `org.nuxeo.connect.update.standalone.LocalPackageImpl#<init>(File, PackageState, PackageUpdateService)`
+- `org.nuxeo.connect.update.standalone.LocalPackageImpl#<init>(ClassLoader, File, int, PackageUpdateService)` was replaced by `org.nuxeo.connect.update.standalone.LocalPackageImpl#<init>(ClassLoader, File, PackageState, PackageUpdateService)`
+- `org.nuxeo.connect.update.standalone.PackagePersistence#updateState(String, int)` was replaced by `org.nuxeo.connect.update.standalone.PackagePersistence#updateState(String, PackageState)`
+- `org.nuxeo.connect.update.task.standalone.commands.Copy#getContentToCopy(Map)` was replaced  by `org.nuxeo.connect.update.task.standalone.commands.Copy#getContentToCopy(File, Map)`
+- `org.nuxeo.ecm.core.api.security.ACP#listUsernamesForAnyPermission(Set)` was replaced by `org.nuxeo.ecm.platform.usermanager.UserManager#getUsersForPermission(String, ACP)`
+- `org.nuxeo.ecm.core.api.security.UserEntry#addPrivilege(String, boolean, boolean)` was superseded by `org.nuxeo.ecm.core.api.security.UserEntry#addPrivilege(String, boolean)` as readOnly flag is not used
+- `org.nuxeo.ecm.platform.forms.layout.api.WidgetDefinition#isHandlingLabels()` was replaced by `org.nuxeo.ecm.platform.forms.layout.api.WidgetDefinition#getControls()` with `handleLabels` control
+- `org.nuxeo.ecm.platform.forms.layout.api.WidgetDefinition#setHandlingLabels(boolean)` was replaced by `org.nuxeo.ecm.platform.forms.layout.api.WidgetDefinition#setControls(Map)` with `handleLabels` control
+- `org.nuxeo.ecm.platform.routing.api.DocumentRouteStep#undo(CoreSession)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, String, CoreSession, boolean)` was replaced by `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, List, CoreSession, boolean)`
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, List, CoreSession)` was replaced by `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, List, CoreSession, boolean)`
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, String, CoreSession)` was replaced by `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#createNewInstance(DocumentRoute, List, CoreSession, boolean)`
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#getOperationChainId(String)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#getUndoFromRunningOperationChainId(String)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#getUndoFromDoneOperationChainId(String)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#canUserValidateRoute(NuxeoPrincipal)` was replaced by `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#canUserValidateRoute(DocumentModel, CoreSession)`
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#addRouteElementToRoute(DocumentRef, int, DocumentRouteElement, CoreSession)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#addRouteElementToRoute(DocumentRef, String, DocumentRouteElement, CoreSession)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#removeRouteElement(DocumentRouteElement, CoreSession)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#getOrderedRouteElement(String, CoreSession)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#getRouteElements(DocumentRoute, CoreSession)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#finishTask(CoreSession, DocumentRoute, Task, boolean)` was replaced by `org.nuxeo.ecm.platform.routing.api.DocumentRoutingService#completeTask(String, String, Map, String, CoreSession)`
+- `org.nuxeo.ecm.platform.routing.core.impl.ElementRunner#undo(CoreSession, DocumentRouteElement)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#computeRouteElements()` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#computeRelatedRouteElements()` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#getElements(DocumentRoute)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#getTypeDescription(DocumentRouteTableElement)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#isStep(DocumentModel)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#removeStep()` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#createRouteElement(String)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#moveRouteElement(String)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#saveRouteElement()` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#getOrderedChildren(String, String)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#getChildWithPosition(DocumentModel, String)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.DocumentRoutingActionsBean#getPositionForChild(DocumentModel, DocumentModel)` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.web.RouteSecurityChecker#canValidateRoute()` was replaced by `org.nuxeo.ecm.platform.routing.web.RouteSecurityChecker#canValidateRoute(DocumentModel)`
 
 #### Classes
 
-`org.nuxeo.ecm.platform.actions.AbstractActionFilter` was not used, no replacement
-`org.nuxeo.ecm.platform.video.convert.MP4Converter` was replaced by `org.nuxeo.ecm.platform.video.convert.VideoConversionConverter`
-`org.nuxeo.ecm.platform.video.convert.OggConverter` was replaced by `org.nuxeo.ecm.platform.video.convert.VideoConversionConverter`
-`org.nuxeo.ecm.platform.video.convert.WebMConverter` was replaced by `org.nuxeo.ecm.platform.video.convert.VideoConversionConverter`
-`org.nuxeo.ecm.platform.routing.api.ActionableObject` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRouteTableElement` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.RouteFolderElement` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.RouteTable` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.RoutingTaskService` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.helper.ActionableValidator` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.helper.ConditionalFolderUpdateRunner` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.helper.StepResumeRunner` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.operation.ResumeStepOperation` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.operation.SetNextStepOnConditionalFolderOperation` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.operation.StepBackToReadyOperation` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.operation.StepDoneOperation` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.core.impl.ChainToTypeMappingDescriptor` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.core.impl.ConditionalRunner` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.core.impl.ParallelRunner` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.core.impl.RoutingTaskServiceImpl` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.core.impl.SerialRunner` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.core.impl.StepElementRunner` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants$ExecutionTypeValues` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.dm.adapter.RoutingTask` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.dm.adapter.RoutingTaskAdapterFactory` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.dm.adapter.RoutingTaskImpl` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.dm.adapter.TaskStep` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.dm.adapter.TaskStepAdapterFactory` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.dm.adapter.TaskStepImpl` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.dm.api.RoutingTaskConstants` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.dm.operation.AbstractTaskStepOperation` was replaced by the Graph API, no replacement
-`org.nuxeo.ecm.platform.routing.dm.operation.CreateRoutingTask` was replaced by the Graph API, no replacement, the operation id was `Workflow.CreateRoutingTask`
-`org.nuxeo.ecm.platform.routing.dm.operation.EvaluateCondition` was replaced by the Graph API, no replacement, the operation id was `Document.Routing.EvaluateCondition`
-`org.nuxeo.ecm.platform.routing.dm.operation.RemoveRoutingTask` was replaced by the Graph API, no replacement, the operation id was `Workflow.RemoveRoutingTask`
-`org.nuxeo.ecm.platform.routing.dm.operation.SetCurrentRunningStepFromTask` was replaced by the Graph API, no replacement, the operation id was `Document.Routing.SetRunningStepFromTask`
+- `org.nuxeo.ecm.platform.actions.AbstractActionFilter` was not used, no replacement
+- `org.nuxeo.ecm.platform.video.convert.MP4Converter` was replaced by `org.nuxeo.ecm.platform.video.convert.VideoConversionConverter`
+- `org.nuxeo.ecm.platform.video.convert.OggConverter` was replaced by `org.nuxeo.ecm.platform.video.convert.VideoConversionConverter`
+- `org.nuxeo.ecm.platform.video.convert.WebMConverter` was replaced by `org.nuxeo.ecm.platform.video.convert.VideoConversionConverter`
+- `org.nuxeo.ecm.platform.routing.api.ActionableObject` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRouteTableElement` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.RouteFolderElement` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.RouteTable` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.RoutingTaskService` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.helper.ActionableValidator` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.helper.ConditionalFolderUpdateRunner` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.helper.StepResumeRunner` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.operation.ResumeStepOperation` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.operation.SetNextStepOnConditionalFolderOperation` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.operation.StepBackToReadyOperation` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.operation.StepDoneOperation` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.core.impl.ChainToTypeMappingDescriptor` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.core.impl.ConditionalRunner` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.core.impl.ParallelRunner` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.core.impl.RoutingTaskServiceImpl` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.core.impl.SerialRunner` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.core.impl.StepElementRunner` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.api.DocumentRoutingConstants$ExecutionTypeValues` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.dm.adapter.RoutingTask` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.dm.adapter.RoutingTaskAdapterFactory` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.dm.adapter.RoutingTaskImpl` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.dm.adapter.TaskStep` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.dm.adapter.TaskStepAdapterFactory` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.dm.adapter.TaskStepImpl` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.dm.api.RoutingTaskConstants` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.dm.operation.AbstractTaskStepOperation` was replaced by the Graph API, no replacement
+- `org.nuxeo.ecm.platform.routing.dm.operation.CreateRoutingTask` was replaced by the Graph API, no replacement, the operation id was `Workflow.CreateRoutingTask`
+- `org.nuxeo.ecm.platform.routing.dm.operation.EvaluateCondition` was replaced by the Graph API, no replacement, the operation id was `Document.Routing.EvaluateCondition`
+- `org.nuxeo.ecm.platform.routing.dm.operation.RemoveRoutingTask` was replaced by the Graph API, no replacement, the operation id was `Workflow.RemoveRoutingTask`
+- `org.nuxeo.ecm.platform.routing.dm.operation.SetCurrentRunningStepFromTask` was replaced by the Graph API, no replacement, the operation id was `Document.Routing.SetRunningStepFromTask`
 
 #### Maven Modules
 
