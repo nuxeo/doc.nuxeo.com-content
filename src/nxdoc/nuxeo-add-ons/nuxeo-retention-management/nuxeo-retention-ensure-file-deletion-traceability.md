@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Ensure File Deletion Traceability'
+title: 'HOWTO: Ensure File Deletion Audit'
 description: Keeping Track of File Deletions to Ensure Compliance
 review:
     comment: ''
