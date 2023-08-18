@@ -35,24 +35,24 @@ To do so, you need to [add an XML extension]({{page page='how-to-contribute-to-a
       Document and file related information is available in this context
     -->
     <event name="blobCandidateForDeletion">
- 		<extendedInfos>
-          	<extendedInfo expression="${message.blob.digest}" key="fileDigest" />
-          	<extendedInfo expression="${message.blob.key}" key="fileKey" />
-          	<extendedInfo expression="${message.docId}" key="docID" />
-			<extendedInfo expression="${message.xpath}" key="docProperty" />
-		</extendedInfos>
-	</event>
+        <extendedInfos>
+            <extendedInfo expression="${message.blob.digest}" key="fileDigest" />
+            <extendedInfo expression="${message.blob.key}" key="fileKey" />
+            <extendedInfo expression="${message.docId}" key="docID" />
+            <extendedInfo expression="${message.xpath}" key="docProperty" />
+        </extendedInfos>
+    </event>
 
     <!-- Keep track of actually deleted files 
       Document information is NOT available in this context, 
       the file digest is used to do the mapping with the previous event.
       We recommend keeping keys consistent to facilitate future searches
     -->
-	<event name="blobDeleted">
-  		<extendedInfos>
-          	<extendedInfo expression="${message.blob.digest}" key="fileDigest" />
-		</extendedInfos>
-	</event>
+    <event name="blobDeleted">
+        <extendedInfos>
+            <extendedInfo expression="${message.blob.digest}" key="fileDigest" />
+        </extendedInfos>
+    </event>
 </extension>
 ```
 
