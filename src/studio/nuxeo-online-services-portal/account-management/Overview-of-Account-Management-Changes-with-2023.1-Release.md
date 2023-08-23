@@ -8,9 +8,6 @@ review:
 toc: true
 tree_item_index: 100
 ---
-
-## Overview of Account Management Change with 2023.1 Release
-
 ### What Happened?
 
 The 2023.1 release of Nuxeo Online Services brings changes to the functionality of the Connect User Management feature area.
