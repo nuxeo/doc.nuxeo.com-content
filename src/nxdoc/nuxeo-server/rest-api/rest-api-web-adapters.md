@@ -165,13 +165,13 @@ Default adapters provided by default.
 <table class="hover">
   <tr>
     <td class="small-2">**@annotation**</td>
-    <td>Returns annotations corresponding to the target Document and file:content blob</td>
+    <td>Returns annotations corresponding to the target Document and specific blob property</td>
   </tr>
   <tr>
     <td></td>
     <td>
       ```
-      /api/v1/id/{docId}/@annotation
+      /api/v1/id/{docId}/@annotation?xpath=file:content
       ```
     </td>
   </tr>
