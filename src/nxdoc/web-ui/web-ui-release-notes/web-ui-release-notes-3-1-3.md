@@ -14,7 +14,7 @@ hidden: true
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
 
 {{! multiexcerpt name='web-ui-updates'}}
-## What’s New in Web UI for LTS 2021 (Version 3.1.3)
+## What’s New in Web UI for LTS 2023 (Version 3.1.3)
 
 Our suite of elements managing files hides or shows actions based on whether the property they are tied to is under retention or not.
 
