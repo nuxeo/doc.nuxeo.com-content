@@ -100,6 +100,8 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
+## Hotfix 2
+
 ## Hotfix 1
 
 ### Add Flexible Record Core API
@@ -121,5 +123,6 @@ The `nuxeo.conf` property `nuxeo.retention.compliance.enabled` has been deprecat
 When both properties are configured, `nuxeo.retention.strictmode.enabled` takes precedence.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31878](https://jira.nuxeo.com/browse/NXP-31878)
+
 
 
