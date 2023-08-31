@@ -17,13 +17,11 @@ hidden: true
 
 ## Fix DocumentSecurityException When Turning a Retained Flexible Record to Enforced Record
 
-
 Retained flexible records documents can be turned into enforced records
 
 <i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-32040](https://jira.nuxeo.com/browse/NXP-32040)
 
 ## Prevent Flexible Record Creation if Server Is Running in Strict (Aka Old Compliance Mode)
-
 
 Flexible Records are not possible when running retention in strict mode
 
@@ -31,21 +29,39 @@ Flexible Records are not possible when running retention in strict mode
 
 ## Escape Dash in the Automation Operation Category
 
-
 Dashes in Automation operation categories are now escaped.
 
 <i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-32011](https://jira.nuxeo.com/browse/NXP-32011)
 
 ## Produce addNotNullViolation for '[Null]' for Multivalued String Properties
 
-
 You can now make the elements of a multi-valued property non nullable by putting {{nxsv:nillable=false}} onto the {{xs:list}} xml element. 
 
 To configure the elements of a multi-valued scalar property non nullable you can do:
 
+```Java
+<?xml version=1.0?>
+<xs:schema xmlns:xs=http://www.w3.org/2001/XMLSchema
+           targetNamespace=http://nuxeo.com/schemas/validationSample
+           xmlns:nxv=http://nuxeo.com/schemas/validationSample
+           xmlns:nxsv=http://www.nuxeo.org/ecm/schemas/core/validation/>
+
+  <xs:element name=arrayOfStrings>
+    <xs:simpleType>
+      <xs:list nxsv:nillable=false>
+        <xs:simpleType>
+          <xs:restriction base=xs:string>
+            <xs:pattern value=[a-zA-Z0-9]*></xs:pattern>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:list>
+    </xs:simpleType>
+  </xs:element>
+
+</xs:schema>
+```
 
 <i class=fa fa-long-arrow-right aria-hidden=true></i>&nbsp;More on JIRA ticket [NXP-31918](https://jira.nuxeo.com/browse/NXP-31918)
-
 
 # Learn More
 
