@@ -100,7 +100,6 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
-## Hotfix 2
 
 ## Hotfix 1
 
