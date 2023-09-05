@@ -19,7 +19,7 @@ tree_item_index: 1930
 
 When activating direct download, the final blob URL can be exposed with a nuxeo.conf property.
 
-To expose the final Blob URL, use the following nuxeo.conf rpoperty:
+To expose the final Blob URL, use the following nuxeo.conf property:
 
 ```
 org.nuxeo.download.url.follow.redirect=true
