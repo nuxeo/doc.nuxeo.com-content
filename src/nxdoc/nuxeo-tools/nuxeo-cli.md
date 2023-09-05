@@ -259,7 +259,7 @@ $ nuxeo bootstrap seam-action
 For compatibility, creates a new controller bean to lets you create or change behaviors in JSF UI.
 
 ```bash
-$ nuxeo bootstrap seam-action
+$ nuxeo bootstrap seam-controller
 ```
 
 #### Empty Polymer Application
