@@ -72,16 +72,9 @@ Nuxeo defines three distinct phases of the LTS lifecycle:
 
 - **End of Life** (end of maintenance end): once the maintenance phase ends, the LTS version will no longer receive updates.
 
-LTS versions take the number of the year during which they are released. For example, our latest LTS release, which was launched earlier this year, is LTS 2023. Below is an example of a projection for currently maintained and upcoming LTS releases. Note that defined release dates in this diagram for LTS are subject to change. LTS releases are driven by the release’s scope, which explains the variation of the period between two LTS releases.
+LTS versions take the number of the year during which they are released. For example, our latest LTS release, which was launched this year, is LTS 2023. LTS releases are driven by the release’s scope, which explains the variation of the period between two LTS releases.
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Release Cycle/release-cycle-diagram
-    name: release-cycle-diagram.png
-    server#screenshot#up_to_date
---}}
-![release-cycle-diagram](nx_asset://06844453-da73-4c66-9fd3-e420214f1bc7 ?w=650)
-
-As you can see, the major releases trend provides our customers more time to migrate while still benefiting from the most recent product evolutions.
+The major releases trend provides our customers more time to migrate while still benefiting from the most recent product evolutions.
 
 **Supported Versions:** 
 
