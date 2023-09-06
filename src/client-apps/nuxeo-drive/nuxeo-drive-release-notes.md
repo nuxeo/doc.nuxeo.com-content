@@ -41,6 +41,6 @@ When transferring documents from an external hardware to your local sync folder,
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.3.2-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.3.2.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.3.2.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.3.2-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.3.2.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.3.2.exe)
