@@ -18,13 +18,13 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-26'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-27'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.26]({{page page='web-ui-release-notes-3-0-26'}})             | UI elements keep track of protected properties when a document goes under retention                                                            | -->
+<!-- | [Web UI 3.0.27]({{page page='web-ui-release-notes-3-0-27'}})             | UI elements keep track of protected properties when a document goes under retention                                                            | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
