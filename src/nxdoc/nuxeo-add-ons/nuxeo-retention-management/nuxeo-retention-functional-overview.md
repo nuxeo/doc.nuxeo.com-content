@@ -14,10 +14,30 @@ toc: true
 tree_item_index: 100
 ---
 
+//TODO put the irreversibility where relevant
+
+<!-- 
+### Irreversibility of Some Actions
+
+To allow compliance with the SEC 17a-4 regulation requirements regarding records preservation, most of the actions related to the retention are **not reversible** when using enforced retention:
+
+- There is no way to roll back the application of a retention rule to a document, even as an administrator (in standard mode, records can be undeclared in specific conditions).
+- There is no way to shorten a retention duration, even as an administrator.
+- There is no way to delete a document under retention or legal hold, even as an administrator and even with a direct access to the storage when using Amazon S3 object lock in compliance mode.
+- There is no way to replace a document under retention or legal hold, even as an administrator and even with a direct access to the storage when using Amazon S3 object lock in compliance mode.
+</br>
+//-->
+
+
 ## Principles
 
-//TODO
-create rule, apply it to start retention
+From a high level persective, the Retention addon requires two steps to manage records:
+1. Defining retention rules that will be applicable to your content.
+1. Applying these rules to the relevant content. A document is considered a final record as soon as a rule is applied to it.
+
+Nuxeo Web UI provides out of the box features to apply a rule to a document individually. In order to automate your governance, you can fully leverage the [automation]({{page page='automation'}}) capabilities of Nuxeo Server and apply retention rules as part of your business logic.
+
+//TODO link to a dedicated page about implementing retention, more targeted at devs
 
 ## As a Record Manager
 
@@ -68,7 +88,7 @@ New actions are displayed on documents and result list:
 
 ### Retention Rule Document Type
 
-A **retention rule** document type is available, it can only be created under the retention rules menu.
+A **retention rule** document type is available, that can only be created under the retention rules menu.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-rules-menu
@@ -79,11 +99,12 @@ A **retention rule** document type is available, it can only be created under th
 
 ### Permissions
 
-Regarding access rights, this addon includes:
+This addon brings additional groups and permissions:
 
-- A **`RecordManager`** group.
-- A new **`Manage Record`** permission that allows users to create/edit retention rules, apply a retention rule to a document or a list of documents and override the retention of a document already under retention.
-- A new **`Manage legal hold`** permission that allows granted users to apply/remove a legal hold to a document or a list of documents.
+- A **`RecordManager`** group. //TODO what does it do by default?
+- A **`Manage Record`** permission that allows users to create/edit retention rules, apply a retention rule to a document or a list of documents and extend the duration of the retention for a document already under retention.
+- A **`Manage legal hold`** permission that allows granted users to apply/remove a legal hold to a document or a list of documents.
+- An **`Unset Retention`** permission that allows granted users to undeclare a record, in specific conditions.
 
 ### {{> anchor 'create-retention-rule'}} Create a Retention Rule
 
@@ -265,6 +286,8 @@ On the **View** tab of the retention rule:
 2. Click **Confirm** to delete the retention rule.
 
 ### Put a Document Under Retention
+
+//TODO review here considering flexible retention
 
 To put a document under retention, you have to link the document to a retention rule.</br>
 By doing so:

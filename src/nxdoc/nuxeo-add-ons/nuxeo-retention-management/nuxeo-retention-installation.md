@@ -34,14 +34,16 @@ The Nuxeo Retention Management addon offers 2 modes:
 
 Standard mode is designed for companies that want to manage retention, records and legal hold as a part of their use cases. It is meant to adapt smoothly to your needs, with an emphasis on flexibility to adapt to an always evolving regulatory landscape.
 
+Compliance with SEC-17A4 requires that you leverage a specific set of features.
+
 ### Storage
 
-In standard mode, you can use all the [file storages]({{page page='file-storage'}}) supported by Nuxeo Platform. As part of the supported storages, you can use Amazon S3, including with Object Lock:
+In standard mode, you can use all the [file storages]({{page page='file-storage'}}) supported by Nuxeo Platform. As part of the supported storages, you can use Amazon S3, including with the object lock option:
 
 - in "Governance" mode
-- in "Compliance" mode for WORM storage support
+- in "Compliance" mode for compliance with the SEC-17A4 regulation
 
-{{#> callout type='info' heading=' '}}
+{{#> callout type='info'}}
 Compliance with SEC-17A4 requires usage of Amazon S3 Object Lock in compliance mode.
 {{/callout}}
 
@@ -51,9 +53,9 @@ Please refer to the [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/Amaz
 
 In standard mode, it is possible to undeclare records that do not require full compliance with regulations like SEC-17A4.
 
-A record manager can allow undeclaring a record as an option in a retention rule. Provided that the retention rule allows for it and that a user has the **UnsetRetention** permission on the record, then this user can undeclare the record.
+A record manager can allow undeclaring a record as an option in a retention rule. Provided that the retention rule allows for it and that a user has the **UnsetRetention** permission on the record on top of the **Write** permission, then this user can undeclare the record.
 
-Undeclaring a record is traced in the audit for compliance purpose. 
+Undeclaring a record is traced in the audit for compliance purpose, and triggers an event that can be leveraged to execute custom business logic.
 
 ### {{> anchor 'deletion-role'}} Special Role for Deleting a Record
 
@@ -61,10 +63,14 @@ In standard mode, the users belonging to the **NuxeoRecordCleaners** group are a
 
 The **NuxeoRecordCleaners** group has been introduced in **LTS 2021-HF07**.
 
+{{#> callout type='info'}}
+Compliance with SEC-17A4 requires that you do NOT leverage this feature, even if the files will be stored in WORM storage and cannot be deleted during their retention period.
+{{/callout}}
+
 
 ## Strict (formerly known as compliance) Mode Specificities
 
-Strict mode is designed to be used when your Nuxeo instance will be mostly holding records, and when all these records must be compliant with the SEC-17A4 regulation. An instance in strict mode used as is comes certified with SEC-17A4, at the cost of some functional limitations.
+Strict mode is designed to be used when your Nuxeo instance will be mostly holding records, and when all these records must be compliant with the SEC-17A4 regulation. An instance in strict mode used as is comes certified as compliant with SEC-17A4, at the cost of some functional limitations.
 
 ### Secured Storage
 
@@ -79,19 +85,6 @@ Amazon S3 Object Lock compliance mode (see [**Amazon S3 Object Lock**](https://d
 In strict mode, the Nuxeo Retention Management addon does not support **attachments**, **versioning**, and **comments**.
 
 Those features **are automatically disabled** for the full instance when the Nuxeo Retention Management addon is added to Nuxeo Server (the related facets and the **file** schema are disabled). So, once the addon is installed, there is no way to add a comment, an attachment or to create a version to a document, whether they are standard documents or records.
-
-
-//TODO move below to functional side for each mode
-
-### Irreversibility of Some Actions
-
-To allow compliance with the SEC 17a-4 regulation requirements regarding records preservation, most of the actions related to the retention are **not reversible** when using enforced retention:
-
-- There is no way to roll back the application of a retention rule to a document, even as an administrator (in standard mode, records can be undeclared in specific conditions).
-- There is no way to shorten a retention duration, even as an administrator.
-- There is no way to delete a document under retention or legal hold, even as an administrator and even with a direct access to the storage when using Amazon S3 object lock in compliance mode.
-- There is no way to replace a document under retention or legal hold, even as an administrator and even with a direct access to the storage when using Amazon S3 object lock in compliance mode.
-</br>
 
 ### Compliance to SEC 17a-4
 
