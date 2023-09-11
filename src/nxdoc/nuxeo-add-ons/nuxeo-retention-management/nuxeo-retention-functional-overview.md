@@ -7,12 +7,17 @@ review:
     status: 'ok'
 labels:
     - lts2019-wip
-    - jaubenque
+    - bchauvin
     - mlumeau
     - retention-management
 toc: true
 tree_item_index: 100
 ---
+
+## Principles
+
+//TODO
+create rule, apply it to start retention
 
 ## As a Record Manager
 
@@ -28,7 +33,7 @@ A new retention menu {{!--     ### nx_asset ###
     name: Retention_ICON_RetentionMenu.png
     server#icon#to_be_updated
 --}}
-![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) is available on the left side menu, including the following sub-menus:
+![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397?w=20) is available on the left side menu, including the following sub-menus:
 
 - A **retention search** that lets you [search through all the documents](#retention-search) under retention and/or legal hold.
 

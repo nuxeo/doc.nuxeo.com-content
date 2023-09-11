@@ -28,7 +28,7 @@ Picking a mode and an architecture is an impactful decision. Please consider it 
 The Nuxeo Retention Management addon offers 2 modes:
  - **Standard mode**: This mode is made for maximum flexibility, and will be our usual recommendation. It offers multiple architecture choices depending on your compliance needs and allows using all the retention features with all the storage options supported by Nuxeo Platform. Compliance with SEC Rule 17a-4 is supported: WORM storage is an option.
 
- - **Strict mode (formerly known as compliance mode)**: this mode is designed for companies who want to use their whole Nuxeo instance as a records management solution holding SEC-17A4 compliant records first and foremost, planning limited use beyond this use case. Using it as is provides the benefit of being certified with SEC Rule 17A-4 compliance out of the box, at the cost of some functional [limitations](#limitations). This mode requires the usage of Amazon S3 [Compliance mode]({{page page='nuxeo-retention-installation'}}#s3-configuration-requirements) for WORM storage support.
+ - **Strict mode (formerly known as compliance mode)**: this mode is designed for companies who want to use their whole Nuxeo instance as a records management solution holding SEC-17A4 compliant records first and foremost, planning limited use beyond this use case. Using it as is provides the benefit of being certified with SEC Rule 17A-4 compliance out of the box, at the cost of some functional [limitations](#limitations). This mode requires the usage of Amazon S3 object lock in [compliance mode]({{page page='nuxeo-retention-installation'}}#s3-configuration-requirements) for WORM storage support.
 
 ## Standard Mode Specificities
 
@@ -80,14 +80,12 @@ In strict mode, the Nuxeo Retention Management addon does not support **attachme
 
 Those features **are automatically disabled** for the full instance when the Nuxeo Retention Management addon is added to Nuxeo Server (the related facets and the **file** schema are disabled). So, once the addon is installed, there is no way to add a comment, an attachment or to create a version to a document, whether they are standard documents or records.
 
-## Warnings
+
+//TODO move below to functional side for each mode
 
 ### Irreversibility of Some Actions
 
-//TODO better used as a table? 
-//TODO not clear and depends on retention mode, needs to be detailed
-
-Due to the SEC 17a-4 regulation requirements regarding records preservation, most of the actions related to the retention are **not reversible**:
+To allow compliance with the SEC 17a-4 regulation requirements regarding records preservation, most of the actions related to the retention are **not reversible** when using enforced retention:
 
 - There is no way to roll back the application of a retention rule to a document, even as an administrator (in standard mode, records can be undeclared in specific conditions).
 - There is no way to shorten a retention duration, even as an administrator.

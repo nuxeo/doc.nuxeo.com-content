@@ -1,26 +1,25 @@
 ---
 title: Standard Mode
-description: Learn how to install and configure the Nuxeo Retention addon in the standard mode.
+description: Learn how to install and configure the Nuxeo Retention addon in standard mode.
 review:
     comment: ''
-    date: '2019-08-05'
+    date: '2023-09-05'
     status: 'ok'
 labels:
-    - lts2019-wip
     - grenard
-    - jaubenque
+    - bchauvin
     - retention-management
 toc: true
-tree_item_index: 1000
+tree_item_index: 950
 ---
 
 ## Before You Start
 
-This page gives all the necessary steps to install the Retention Management addon with the [Standard mode]({{page page='nuxeo-retention-management'}}#configuration-modes).
+This page gives all the necessary steps to install the Retention Management addon in [standard mode]({{page page='nuxeo-retention-management'}}#configuration-modes).
 
 ## Prerequisites
 
-You can use all the [file storages]({{page page='file-storage'}}) supported by Nuxeo Platform.
+You can use any of the [file storage options]({{page page='file-storage'}}) supported by Nuxeo Platform.
 
 ## Installation
 
@@ -30,14 +29,23 @@ You can use all the [file storages]({{page page='file-storage'}}) supported by N
 
 ### {{> anchor 'standard-amazon-s3'}} Amazon S3
 
-In Standard mode, there are 3 supported configurations with Amazon S3:
+In Standard mode, there are 3 supported configurations with Amazon S3.
 
-- Records are stored in the same S3 bucket than the standard documents.</br>
-  [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More info](#s3-one-bucket-configuration)
-- Records are stored in a dedicated S3 bucket.</br>
+## Recommended Architecture
+
+Our recommendation is to have a dedicated bucket for records. This option provides greater flexibility in the long run, and facilitates demonstrating compliance. Depending on your compliance needs, the dedicated bucket can leverage Amazon S3 object lock in compliance mode to provide compliance with the SEC-17A4 regulation as an option.
+
+{{#> callout type='info'}}
+Activating object lock must be done during the creation of the bucket. Please consider your needs and the regulations you will be subject to before installing and configuring the addon.
+{{/callout}}
+
+- Storing records in a dedicated S3 bucket.</br>
   [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More info](#s3-2-buckets-configuration)
 - Records are stored in a dedicated S3 bucket, with [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html).</br>
   [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More info](#s3-one-bucket-object-lock)
+
+- Records are stored in the same S3 bucket than the standard documents.</br>
+  [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More info](#s3-one-bucket-configuration)
 
 #### {{> anchor 's3-one-bucket-configuration'}} Store Records in the Same Bucket as Other Documents
 

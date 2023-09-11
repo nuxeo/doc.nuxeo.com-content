@@ -1,20 +1,19 @@
 ---
-title: Compliance Mode
-description: Learn how to install and configure the Nuxeo Retention addon in the Compliance mode.
+title: Strict Mode
+description: Learn how to install and configure the Nuxeo Retention addon in strict mode (formerly known as compliance mode).
 review:
     comment: ''
-    date: '2019-08-05'
+    date: '2023-09-05'
     status: 'ok'
 labels:
-    - lts2019-wip
     - grenard
-    - jaubenque
+    - bchauvin
     - retention-management
 toc: true
-tree_item_index: 950
+tree_item_index: 1000
 ---
 
-This page gives all the necessary steps to install the Retention Management addon with the [Compliance mode]({{page page='nuxeo-retention-management'}}#configuration-modes).
+This page gives all the necessary steps to install the Retention Management addon in [strict mode]({{page page='nuxeo-retention-management'}}#configuration-modes).
 
 ## Prerequisites
 

@@ -85,7 +85,7 @@ An audit trail (or audit log) provides the full history of a document from its c
 - Initial capture and storage of the record object and metadata
 - Changes to the index and metadata
 
-{{#> callout type='info' heading=' '}}
+{{#> callout type='info'}}
 Note that the record object must be immutable. Specific metadata, such as unique object identifier and creation/storage date and time must also be immutable.
 {{/callout}}
 
