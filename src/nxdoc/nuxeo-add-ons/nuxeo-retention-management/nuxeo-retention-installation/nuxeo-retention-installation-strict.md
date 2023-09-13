@@ -17,7 +17,7 @@ This page gives all the necessary steps to install the Retention Management addo
 
 ## Prerequisites
 
-The [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) addon needs to be configured on your instance
+{{{multiexcerpt 'storage-support' page='nuxeo-retention-installation'}}}
 
 ## Installation
 
@@ -35,11 +35,11 @@ This must be done **prior to any usage of the Nuxeo instance** to guarantee the 
 
 ### Amazon S3
 
-In compliance mode, Nuxeo Platform with Nuxeo Retention Management addon requires the usage of 2 AWS S3 buckets:
+In strict mode, Nuxeo Platform with Nuxeo Retention Management addon requires the usage of 2 Amazon S3 buckets:
 
 - A standard S3 bucket as for any other standard Nuxeo instance: this bucket is used to store the standard documents. You can refer to [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) documentation to configure this bucket.
 
-- A S3 bucket dedicated to the records that is configured with Object Lock in [Compliance mode](#s3-configuration-requirements): this bucket is used to store the records only. Compared to the standard bucket, the Garbage Collector must be disabled as there is a [specific deletion process]({{page page='nuxeo-retention-technical-overview'}}#record-deletion-flow) when using strict mode.
+- A S3 bucket dedicated to the records that is configured with Object Lock in [Compliance mode](#s3-configuration-requirements): this bucket is used to store the records only. 
 
 #### {{> anchor 's3-configuration-requirements'}} Amazon S3 Configuration Requirements
 
@@ -51,7 +51,7 @@ Specifically:
 
 - The Amazon S3 Object Lock feature must be enabled in Compliance Mode on the bucket intended to store objects that are marked as final records.
 
-- Amazon S3 Versioning must be enabled (it is automatically enabled when enabling object Lock).
+- Amazon S3 Versioning must be enabled (it is automatically enabled when enabling Object Lock).
 
 - The default retention value for Amazon S3 Compliance Buckets intended to retain compliant record objects must not be set (or at least set to zero).
 
@@ -92,11 +92,7 @@ Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Onlin
 ```
 
 {{#> callout type='warning'}}
-This configuration and this binary manager ```org.nuxeo.ecm.blob.s3.S3BlobProvider``` can only be used with the Retention addon as described in this section, meaning:
- - use two S3 buckets
- - use object lock in compliance mode on the records bucket
-
- If you want to configure your instance with a single bucket and NO support for object lock now or in the future, please refer to the [single bucket architecture in standard mode]({{page page='nuxeo-retention-installation-standard'}}).
+The configuration provided here is applicable for use with the Nuxeo Retention addon in strict mode. Please refer to the appropriate examples if you picked the standard mode.
 {{/callout}}
 
 Complete XML extension file example:

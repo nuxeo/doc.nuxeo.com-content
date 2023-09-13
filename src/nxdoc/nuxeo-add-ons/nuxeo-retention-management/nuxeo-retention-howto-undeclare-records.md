@@ -1,5 +1,5 @@
 ---
-title: Functional Overview
+title: TODO - How To Undeclare Records
 description: Discover how to use the Nuxeo Retention Management addon once installed.
 review:
     comment: ''
@@ -11,7 +11,7 @@ labels:
     - mlumeau
     - retention-management
 toc: true
-tree_item_index: 200
+tree_item_index: 400
 ---
 
 This page details the options available from Nuxeo Web UI once the Nuxeo Retention addon is installed.
@@ -43,12 +43,12 @@ In standard mode, you can differentiate records that require stricter compliance
 General restrictions will still apply:
 - There is no way to roll back the application of a retention rule to a document, even as an administrator.  A record an be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
 - There is no way to shorten a retention duration, even as an administrator. A record an be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
-- There is no way to replace a document under retention or legal hold, even as an administrator and even with a direct access to the storage if you are using AWS S3 with Object Lock in Compliance mode.
+- There is no way to replace a document under retention or legal hold, even as an administrator and even with a direct access to the storage if you are using AWS S3 with object lock in compliance mode.
 
 
-## As a Records Manager
+## As a Record Manager
 
-As a records manager, you are responsible for the proper organization and management of the documents on the platform.
+As a record manager, you are responsible for the proper organization and management of the documents on the platform.
 You have to make sure that the [retention rules]({{page page='nuxeo-retention-management'}}#retention-rules) are properly written, implemented and used.
 
 Once the module is installed, different menus, sub-menus and actions are available throughout Nuxeo.
@@ -111,7 +111,7 @@ This addon brings additional groups and permissions:
 - A **`RecordManager`** group. //TODO what does it do by default?
 - A **`Manage Record`** permission that allows users to create/edit retention rules, apply a retention rule to a document or a list of documents and extend the duration of the retention for a document already under retention.
 - A **`Manage legal hold`** permission that allows granted users to apply/remove a legal hold to a document or a list of documents.
-- An **`Unset Retention`** permission that allows granted users to undeclare a record, in specific conditions (only applicable in standard mode).
+- An **`Unset Retention`** permission that allows granted users to undeclare a record, in specific conditions.
 
 ### Managing Retention Rules
 
@@ -556,14 +556,14 @@ That being said, you can override this default behavior by using a [specific rol
 
 If the role **NuxeoRecordCleaners** has been created in the instance and assigned to a user with the **Remove** permission on a given document, the user will be able to delete the document under retention.
 
-#### Strict Mode
+#### Compliance Mode
 
-There is no way to delete a document under retention when using the addon in strict mode.
+There is no way to delete a document under retention in the compliance mode.
 
 ## As a User
 
-{{#> callout type='info' heading='Standard and Strict mode' }}
-This page describes the user experience depending on the Retention Management addon mode among [Standard or Strict]({{page page='nuxeo-retention-management'}}#configuration-modes).
+{{#> callout type='info' heading='Standard and Compliance mode' }}
+This page describes the user experience depending on the Retention Management addon mode among [Standard or Compliance]({{page page='nuxeo-retention-management'}}#configuration-modes).
 {{/callout}}
 
 As a user, you will see some differences on the **View** tab of your documents:
@@ -577,318 +577,4 @@ The following tables describe the availability of document actions:
 - The action is **disabled for records**, meaning the action is disabled only when the document is under retention or legal hold,
 - The action is **disabled on instance**, meaning it's disabled for all documents on the Nuxeo instance, due to some limitations coming from the Nuxeo Management addon.
 
-### In Standard Mode
-
-
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-    <th rowspan="2">Feature</th>
-</tr>
-<tr>
-    <th>Available</th>
-    <th>Disabled for records</th>
-    <th>Disabled on instance</th>
-</tr>
-<tr>
-    <td colspan="1">Preview</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Download</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Export</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Add to collection</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Add to favorites</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Add to clipboard</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Notify me</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Share</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">View permissions</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Change permissions</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">View history</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">View publishing</td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Add tags</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Start process</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Lock</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Edit metadata</td>
-    <td><center>&#10003;(1)</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Publish document</td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Replace main file</td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Delete main file</td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Delete document</td>
-    <td></td>
-    <td><center>&#10003;(2)</center></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Comments</td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Versioning</td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Add attachment</td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-</tr>
-</tbody>
-</table>
-</div>
-
-{{#> callout type='note' }}
-(1): Depending on your configuration, [specific metadata properties can be retained]({{page page='nuxeo-server-release-notes-2021-32'}}#evolve-retention-core-api-to-specify-a-list-of-blob-property-to-be-retained).
-(2): Deleting a document is disabled on a record unless the [specific role](#delete-document-under-retention) has been activated and assigned to a user.
-{{/callout}}
-
-### In Strict Mode
-
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-    <th rowspan="2">Feature</th>
-</tr>
-<tr>
-    <th>Available</th>
-    <th>Disabled for records</th>
-    <th>Disabled on instance</th>
-</tr>
-<tr>
-    <td colspan="1">Preview</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Download</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Export</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Add to collection</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Add to favorites</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Add to clipboard</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Notify me</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Share</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">View permissions</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Change permissions</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">View history</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">View publishing</td>
-    <td></td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-</tr>
-<tr>
-    <td colspan="1">Add tags</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Start process</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Lock</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Edit metadata</td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Publish document</td>
-    <td></td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-</tr>
-<tr>
-    <td colspan="1">Replace main file</td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Delete main file</td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Delete document</td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-    <td></td>
-</tr>
-<tr>
-    <td colspan="1">Comments</td>
-    <td></td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-</tr>
-<tr>
-    <td colspan="1">Versioning</td>
-    <td></td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-</tr>
-<tr>
-    <td colspan="1">Add attachment</td>
-    <td></td>
-    <td></td>
-    <td><center>&#10003;</center></td>
-</tr>
-</tbody>
-</table>
-</div>
+### With Standard Mode

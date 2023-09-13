@@ -53,14 +53,14 @@ With the Nuxeo Retention Management addon, a document is automatically declared 
 
 A retention rule is a set of parameters which defines the retention policy to be applied to the documents.
 
-A rule includes three parameters:
+A rule includes three main parameters:
   - **Retention period**: how long the record must be immutable
   - **Retention type**: how the retention end date is calculated. It can be an immediate, event-based or metadata-based retention rule
   - **Post-retention actions**: action(s) to be performed automatically once the retention period has expired
 
 A retention rule can be applied to one document or a list of documents.
 
-Once a retention rule is applied to a document, it can still be downloaded and exported but it **can't be edited, replaced, or deleted** until the retention has expired.
+Once a retention rule is applied to a document, it is considered a record. As such, it can still be downloaded and exported but it **can't be edited, replaced, or deleted** until the retention has expired.
 
 ### {{> anchor 'legal-hold'}}Legal Hold
 
@@ -80,7 +80,7 @@ Here are the main differences between **retention** and **legal hold**:
 
 ### {{> anchor 'audit-trail'}}Audit Trail
 
-An audit trail (or audit log) provides the full history of a document from its creation until its disposal. The Nuxeo Retention Management addon provides an audit system for both the original record and associated metadata file to account for:
+An audit trail provides the full history of a document from its creation until its disposal. The Nuxeo Retention Management addon provides an audit system for both the original record and associated metadata file to account for:
 
 - Initial capture and storage of the record object and metadata
 - Changes to the index and metadata
