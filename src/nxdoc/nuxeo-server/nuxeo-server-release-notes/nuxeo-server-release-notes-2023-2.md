@@ -2,17 +2,18 @@
 title: LTS 2023.2 / LTS 2023-HF02
 description: Discover what's new in LTS 2023.2 / LTS 2023-HF02
 review:
-   comment: ''
-   date: '2023-08-30'
-   status: ok
+  comment: ''
+  date: '2023-08-30'
+  status: ok
 labels:
-    - release-notes
+  - release-notes
 toc: true
 tree_item_index: 0
 hidden: true
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2023-2'}}
+
 # What's New in LTS 2023.2 / LTS 2023-HF02
 
 ## Fix DocumentSecurityException When Turning a Retained Flexible Record to Enforced Record
@@ -35,7 +36,7 @@ Dashes in Automation operation categories are now escaped.
 
 ## Produce addNotNullViolation for '[Null]' for Multivalued String Properties
 
-You can now make the elements of a multi-valued property non nullable by putting {{nxsv:nillable=false}} onto the {{xs:list}} xml element. 
+You can now make the elements of a multi-valued property non nullable by putting `\{{nxsv:nillable=false}}` onto the `\{{xs:list}}` xml element.
 
 To configure the elements of a multi-valued scalar property non nullable you can do:
 
