@@ -66,6 +66,8 @@ then this user can undeclare the record.
 
 Undeclaring a record is traced in the audit for compliance purpose, and triggers an event that can be leveraged to execute custom business logic. You can learn more about this option in our [how to undeclare a record]({{page page='nuxeo-retention-howto-undeclare-record'}}) documentation.
 
+This feature requires **LTS 2021-HF43** or above and the Nuxeo Retention Management addon in version **2021.4.5** or above.
+
 ### {{> anchor 'deletion-role'}} Special Role for Deleting a Record
 
 In standard mode, the users belonging to the **NuxeoRecordCleaners** group are allowed to delete documents under retention or legal hold. These users must still have the **Remove** permission granted on the documents to be deleted. The **NuxeoRecordCleaners** group does not exist by default, it must be created manually.
