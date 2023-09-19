@@ -13,7 +13,7 @@ toc: true
 tree_item_index: 1000
 ---
 
-This page gives all the necessary steps to install the Retention Management addon in [strict mode]({{page page='nuxeo-retention-management'}}#configuration-modes).
+This page gives all the necessary steps to install the Retention Management addon in [strict mode]({{page page='nuxeo-retention-installation'}}#strict-formerly-known-as-compliance-mode-specificities).
 
 ## Prerequisites
 
