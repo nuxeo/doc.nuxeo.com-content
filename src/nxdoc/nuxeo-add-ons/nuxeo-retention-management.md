@@ -26,19 +26,19 @@ This page intends to make you familiar with the underlying concepts used by the 
 
 As a large company, you want to centralize content coming from different business entities and compliance is a requirement. Your content will have varying requirements when it comes to managing its retention and its lifecycle. Different regulations may apply to it. These regulations will evolve over time, and new ones will appear regularly.
 
-The Nuxeo retention addon is designed to provide maximum flexibility to adapt to an always evolving legal landscape. Combined with the flexibility of Nuxeo Server, it makes it easy to automate your records management needs, facilitates proving that you are compliant and remaining compliant.
+The Nuxeo Retention Management addon is designed to provide maximum flexibility to adapt to an always evolving legal landscape. Combined with the flexibility of Nuxeo Server, it makes it easy to automate your records management needs, facilitates proving that you are compliant and remaining compliant.
 
 The Nuxeo Retention Management addon has been designed for maximum security as well, allowing full compliance with the SEC-17A4 regulation.
 
 ## Main Principles
 
-Using the retention management addon requires to become familiar with the following concepts.
+Using the Nuxeo Retention Management addon requires to become familiar with the following concepts.
 
 ### {{> anchor 'sec-rule-17a4'}} SEC Rule 17a-4 Compliance
 
 **SEC Rule 17a-4** is a regulation issued by the U.S. Securities and Exchange Commission which is an independent agency of the United States federal government. This regulation contains requirements mainly for retention, legal hold, and accessibility of the records for organizations dealing in the trade or brokering of financial securities such as stocks, bonds, and futures.
 
-The Nuxeo retention management addon is designed to be compliant with this regulation.
+The Nuxeo Retention Management addon is designed to be compliant with this regulation.
 
 ### Record
 
@@ -60,15 +60,15 @@ A rule includes three main parameters:
 
 A retention rule can be applied to one document or a list of documents.
 
-Once a retention rule is applied to a document, it is considered a record. As such, it can still be downloaded and exported but it **can't be edited, replaced, or deleted** until the retention has expired.
+Once a retention rule is applied to a document, it is considered a record. As such, its main file can still be downloaded and exported but it **can't be edited, replaced, or deleted** until the retention has expired. Additional document properties can also be put under retention to follow the same principles, and the document itself cannot be deleted.
 
 ### {{> anchor 'legal-hold'}}Legal Hold
 
 In the event of litigation, audit or investigation, an organization may have to preserve certain information for an indeterminate period in order to prevent any spoliation of evidence by changing or updating content.
 
-The legal hold acts as a lock action once activated; the main document **can't be deleted**, even at API or storage level.
+The legal hold acts as a lock action once activated; the main file **can't be deleted**, even at API or storage level if you configured the addon to use WORM storage.
 
-The document can still be downloaded and exported but it **can't be edited, replaced, or deleted**.
+When a document is under legal hold, the main file of the document can still be downloaded and exported but it **can't be edited, replaced, or deleted**. Additional document properties can also follow the same principles, and the document itself cannot be deleted.
 
 Here are the main differences between **retention** and **legal hold**:
 
@@ -95,7 +95,7 @@ Note that the record object must be immutable. Specific metadata, such as unique
     - Application of a retention rule to a given document.
     - Application of a legal hold to a given document.</br>
 </br>
-- Deletion of record object, metadata and audit trail data.
+- Deletion of record object and metadata.
 
 
 * * *
