@@ -22,7 +22,7 @@ From a high level persective, the Retention addon requires two steps to manage r
 1. Defining retention rules that will be applicable to your content.
 1. Applying these rules to the relevant content. A document is considered a final record as soon as a rule is applied to it.
 
-Nuxeo Web UI provides out of the box features to apply a rule to a document individually. In order to automate your governance, you can fully leverage the [automation]({{page page='automation'}}) capabilities of Nuxeo Server and apply retention rules as part of your business logic.
+Nuxeo Web UI provides out of the box features to apply a rule to a document individually or to a list of documents. In order to automate your governance, you can also fully leverage the [automation]({{page page='automation'}}) capabilities of Nuxeo Server and apply retention rules as part of your business logic.
 
 ### Irreversibility of Some Actions
 
@@ -32,17 +32,20 @@ If you are using the addon in strict mode, to allow compliance with the SEC 17a-
 
 - There is no way to roll back the application of a retention rule to a document, even as an administrator.
 - There is no way to shorten a retention duration, even as an administrator.
-- There is no way to replace a document under retention or legal hold, even as an administrator and even with a direct access to the storage.
-- There is no way to delete a document under retention or legal hold, even as an administrator and even with a direct access to the storage.
+- There is no way to undeclare a record.
+- There is no way to replace the main file of a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are configured to be retained as well.
+- There is no way to delete the main file of a document a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are configured to be retained as well.
 
 #### In Standard Mode
 
 In standard mode, you can differentiate records that require stricter compliance and operational records that do not require the same level of security (e.g., records for which WORM storage is not a requirement and the record can be undeclared with the appropriate permission).
 
 General restrictions will still apply:
-- There is no way to roll back the application of a retention rule to a document, even as an administrator.  A record an be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
-- There is no way to shorten a retention duration, even as an administrator. A record an be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
-- There is no way to replace a document under retention or legal hold, even as an administrator and even with a direct access to the storage if you are using AWS S3 with Object Lock in Compliance mode.
+- There is no way to roll back the application of a retention rule to a document, even as an administrator.  A record can be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
+- There is no way to shorten a retention duration, even as an administrator. A record can be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
+- If you configured the addon to use a dedicated bucket for records that leverages Object Lock in Compliance mode:
+    - There is no way to replace the main file of a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are configured to be retained as well.
+    - There is no way to delete the main file of a document a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are configured to be retained as well.
 
 
 ## As a Records Manager
@@ -103,14 +106,14 @@ A **retention rule** document type is available, that can only be created under 
 --}}
 ![retention-screen-rules-menu](nx_asset://235e0b69-9c05-4a35-8f62-7532008d7f35 ?w=650,border=true)
 
-### Permissions
+### Groups and Permissions
 
 This addon brings additional groups and permissions:
 
 - A **`RecordManager`** group. Members of this group can create/edit retention rules and access the retention menu in Nuxeo Web UI for further options.
 - A **`Manage Record`** permission. Users with this permission can apply a retention rule to a document or a list of documents and extend the duration of the retention for a document already under retention.
 - A **`Manage Legal Hold`** permission. Users with this permission can apply/remove a legal hold to a document or a list of documents.
-- An **`Unset Retention`** permission. Users with this permission can undeclare a record, in specific conditions. This permission is only applicable when using the addon in standard mode.
+- An **`Unset Retention`** permission. Users with this permission can [undeclare a record]({{page page='nuxeo-retention-howto-undeclare-records'}}), in specific conditions. This permission is only applicable when using the addon in standard mode.
 
 ### Managing Retention Rules
 
@@ -165,12 +168,12 @@ To create a new [retention rule]({{page page='nuxeo-retention-management'}}#rete
   <tr>
     <td>Immediate</td>
     <td>The retention period will start once you apply the retention rule to the document.</br>
-    More details on the [Focus on the retention types section](#retention-types).
+    More details on the [Focus on the retention types section](#focus-on-the-retention-types).
   </tr>
   <tr>
     <td>Based on an event</td>
     <td>The retention period will start once the defined event occurs (after the retention rule has been applied to the document).</br>
-    More details on the [Focus on the retention types section](#retention-types).</td>
+    More details on the [Focus on the retention types section](#focus-on-the-retention-types).</td>
   </tr>
   <tr>
     <td>Event type</td>
@@ -186,7 +189,7 @@ To create a new [retention rule]({{page page='nuxeo-retention-management'}}#rete
   <tr>
     <td>Based on a metadata</td>
     <td>The retention period will start based on a defined metadata, once you apply the retention rule to the document.</br>
-    More details on the [Focus on the retention types section](#retention-types).
+    More details on the [Focus on the retention types section](#focus-on-the-retention-types).
     </td>
   </tr>
   <tr>
@@ -218,7 +221,7 @@ To create a new [retention rule]({{page page='nuxeo-retention-management'}}#rete
 
 ##### Immediate
 
-The retention period will start once you apply the retention rule to the document.
+The retention period starts immediately when you apply the retention rule on the document.
 
 **Example:** If I apply a retention rule to a document on January 1st, 2020 with a period of 2 years, then the retention will expire on January 1st, 2022.</td>
 
@@ -232,9 +235,9 @@ The retention period will start once you apply the retention rule to the documen
 
 ##### Based on a Metadata
 
-The retention period will start based on a defined metadata, once you apply the retention rule to the document.
+The starting date of the retention period is based on the value of a specific document property when you apply the retention rule to the document.
 
-This retention type is useful when the retention period depends on a past and external event. It can also be used for migration purpose (moving from a legacy records management system to Nuxeo).
+This retention type is useful when the retention period depends on a past and external event. It can typically be used when migration documents from a legacy records management system to Nuxeo.
 
 **Example:** If I apply a retention rule to a document on March 15th, 2020 with the metadata "publication date", a retention period of 2 years, and the "publication date" is September 15th, 2019, then the retention will expire on September 15th, 2021.
 
@@ -246,16 +249,16 @@ This retention type is useful when the retention period depends on a past and ex
 ![retention-schema-metadata](nx_asset://b906f7be-83db-4f29-a3db-1b2ce1876742 ?w=600,border=true)
 
 {{#> callout type='warning'}}
-Metadata-based retention rule are designed for **past dates**, not future dates.
+Metadata-based retention rules are designed for **past dates**, not future dates.
 {{/callout}}
 
 ##### Based on an Event
 
-The retention period will start once the defined event occurs (after the retention rule has been applied to the document).
+When using this retention type, the file(s) to retain are protected immediately and for an undefined period of time. The end of retention is determined when the event occurs and not when the retention rule has been applied to the document.
 
 This retention type is useful for all cases where a document needs to be preserved from any deletion or change but the retention starting point is unknown at the beginning.
 
-**Examples:** Contract terminated, Employee left the company, loan repayment, etc.
+**Examples:** If I need to retain a contract with an employee for 7 years after they leave the company, I can use an event-based retention rule with a duration of 7 years to protect the contract immediately, and trigger the event when they leave. The contract will be retained for 7 more years after the event is triggered.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-schema-event
@@ -297,7 +300,7 @@ On the **View** tab of the retention rule:
 
 To put a document under retention, you have to attach a retention rule to the document.</br>
 By doing so:
-- The document will be automatically tagged as a **record**
+- The document will be automatically declared as a **record**
 - The retention rule's settings will be applied to the document
 
 {{#> callout type='warning' }}
