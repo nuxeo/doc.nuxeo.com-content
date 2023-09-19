@@ -15,7 +15,7 @@ tree_item_index: 950
 
 ## Before You Start
 
-This page gives all the necessary steps to install the Retention Management addon in [standard mode]({{page page='nuxeo-retention-management'}}#configuration-modes).
+This page gives all the necessary steps to install the Retention Management addon in [standard mode]({{page page='nuxeo-retention-installation'}}#standard-mode-specificities).
 
 ## Prerequisites
 
