@@ -3,20 +3,51 @@ title: Functional Overview
 description: Discover how to use the Nuxeo Retention Management addon once installed.
 review:
     comment: ''
-    date: '2019-08-05'
+    date: '2023-09-14'
     status: 'ok'
 labels:
-    - lts2019-wip
-    - jaubenque
+    - bchauvin
     - mlumeau
     - retention-management
 toc: true
-tree_item_index: 100
+tree_item_index: 200
 ---
 
-## As a Record Manager
+This page details the options available from Nuxeo Web UI once the Nuxeo Retention addon is installed.
 
-As a record manager, you are responsible for the proper organization and management of the documents on the platform.
+
+## Principles
+
+From a high level persective, the Retention addon requires two steps to manage records:
+1. Defining retention rules that will be applicable to your content.
+1. Applying these rules to the relevant content. A document is considered a final record as soon as a rule is applied to it.
+
+Nuxeo Web UI provides out of the box features to apply a rule to a document individually. In order to automate your governance, you can fully leverage the [automation]({{page page='automation'}}) capabilities of Nuxeo Server and apply retention rules as part of your business logic.
+
+### Irreversibility of Some Actions
+
+#### In Strict Mode
+
+If you are using the addon in strict mode, to allow compliance with the SEC 17a-4 regulation requirements regarding records preservation, most of the actions related to the retention are **not reversible**:
+
+- There is no way to roll back the application of a retention rule to a document, even as an administrator.
+- There is no way to shorten a retention duration, even as an administrator.
+- There is no way to replace a document under retention or legal hold, even as an administrator and even with a direct access to the storage.
+- There is no way to delete a document under retention or legal hold, even as an administrator and even with a direct access to the storage.
+
+#### In Standard Mode
+
+In standard mode, you can differentiate records that require stricter compliance and operational records that do not require the same level of security (e.g., records for which WORM storage is not a requirement and the record can be undeclared with the appropriate permission).
+
+General restrictions will still apply:
+- There is no way to roll back the application of a retention rule to a document, even as an administrator.  A record an be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
+- There is no way to shorten a retention duration, even as an administrator. A record an be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
+- There is no way to replace a document under retention or legal hold, even as an administrator and even with a direct access to the storage if you are using AWS S3 with Object Lock in Compliance mode.
+
+
+## As a Records Manager
+
+As a records manager, you are responsible for the proper organization and management of the documents on the platform.
 You have to make sure that the [retention rules]({{page page='nuxeo-retention-management'}}#retention-rules) are properly written, implemented and used.
 
 Once the module is installed, different menus, sub-menus and actions are available throughout Nuxeo.
@@ -28,7 +59,7 @@ A new retention menu {{!--     ### nx_asset ###
     name: Retention_ICON_RetentionMenu.png
     server#icon#to_be_updated
 --}}
-![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) is available on the left side menu, including the following sub-menus:
+![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397?w=20) is available on the left side menu, including the following sub-menus:
 
 - A **retention search** that lets you [search through all the documents](#retention-search) under retention and/or legal hold.
 
@@ -63,7 +94,7 @@ New actions are displayed on documents and result list:
 
 ### Retention Rule Document Type
 
-A **retention rule** document type is available, it can only be created under the retention rules menu.
+A **retention rule** document type is available, that can only be created under the retention rules menu.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-rules-menu
@@ -74,13 +105,16 @@ A **retention rule** document type is available, it can only be created under th
 
 ### Permissions
 
-Regarding access rights, this addon includes:
+This addon brings additional groups and permissions:
 
-- A **`RecordManager`** group.
-- A new **`Manage Record`** permission that allows users to create/edit retention rules, apply a retention rule to a document or a list of documents and override the retention of a document already under retention.
-- A new **`Manage legal hold`** permission that allows granted users to apply/remove a legal hold to a document or a list of documents.
+- A **`RecordManager`** group. Members of this group can create/edit retention rules and access the retention menu in Nuxeo Web UI for further options.
+- A **`Manage Record`** permission. Users with this permission can apply a retention rule to a document or a list of documents and extend the duration of the retention for a document already under retention.
+- A **`Manage Legal Hold`** permission. Users with this permission can apply/remove a legal hold to a document or a list of documents.
+- An **`Unset Retention`** permission. Users with this permission can undeclare a record, in specific conditions. This permission is only applicable when using the addon in standard mode.
 
-### {{> anchor 'create-retention-rule'}} Create a Retention Rule
+### Managing Retention Rules
+
+#### {{> anchor 'create-retention-rule'}} Create a Retention Rule
 
 To create a new [retention rule]({{page page='nuxeo-retention-management'}}#retention-rules):
 1. Go to the Retention menu.
@@ -122,7 +156,7 @@ To create a new [retention rule]({{page page='nuxeo-retention-management'}}#rete
   </tr>
   <tr>
     <td>Document types</td>
-    <td>Filter for which document types the retention rule is applicable. If left empty, the retention rule will be available for **all document types**.</td>
+    <td>Filter for which document types the retention rule is displayed when attaching it from Web UI. If left empty, the retention rule will be displayed for **all document types**.</td>
   </tr>
   <tr>
     <th>Period Starting Point</th>
@@ -261,18 +295,18 @@ On the **View** tab of the retention rule:
 
 ### Put a Document Under Retention
 
-To put a document under retention, you have to link the document to a retention rule.</br>
+To put a document under retention, you have to attach a retention rule to the document.</br>
 By doing so:
 - The document will be automatically tagged as a **record**
 - The retention rule's settings will be applied to the document
 
 {{#> callout type='warning' }}
-This is an **irreversible action**, even as an administrator, meaning you can't unlink a retention rule to the document and you can't shorten the retention period.
+This is an **irreversible action**, even as an administrator, meaning you can't remove the retention rule from the document and you can't shorten the retention period. [Records can be undeclared]({{page page='nuxeo-retention-howto-undeclare-record'}}) in specific conditions when using the addon in standard mode however.
 {{/callout}}
 
-After having linked a retention rule, the only available action is to [extend the retention](#extend-the-retention-of-a-document).
+After having attached a retention rule, the only available action is to [extend the retention](#extend-the-retention-of-a-document).
 
-There are different ways to put a document under retention. You can attach a retention rule to a single document or to several documents in a row.
+There are different ways to put a document under retention. You can attach a retention rule to a single document or to several documents at once.
 
 #### From a Document View
 
@@ -322,7 +356,7 @@ The retention rule will be applied on **all the documents displayed on the page*
 When a document is under retention, you can lengthen the retention of the document.
 
 {{#> callout type='warning' }}
-This is an **irreversible action**: there is no way to shorten a retention period, even as an administrator.
+This is an **irreversible action**: there is no way to shorten a retention period, even as an administrator. If you made a mistake and wish to adapt the retention period, note that [records can be undeclared]({{page page='nuxeo-retention-howto-undeclare-record'}}) in specific conditions when using the addon in standard mode however.
 {{/callout}}
 
 On the **View** tab of your document:
@@ -386,7 +420,7 @@ This search contains filters on:
 
 #### History on a Document
 
-On the **History** tab of your document, you can see all the events related to the retention including:
+On the **History** tab of your document, you can see all the events related to the retention, including:
 
 - Application of a retention rule to the document.
 - Beginning of the retention period.
@@ -400,7 +434,7 @@ On the **Administration** > **Audit** page, you can see all the events related t
 
 ### Put a Document Under Legal Hold
 
-There are different ways to put a document under a [legal hold]({{page page='nuxeo-retention-management'}}#legal-hold). You can apply a legal hold to a single document or to several documents in a row.
+There are different ways to put a document under a [legal hold]({{page page='nuxeo-retention-management'}}#legal-hold). You can apply a legal hold to a single document or to several documents at once.
 
 #### From a Document View
 
@@ -492,7 +526,7 @@ Confirm from the popup window.
 The legal hold will be removed for **all the documents displayed on the page**.
 {{/callout}}
 
-### Visualising Retention/Legal Hold Status
+### Visualizing Retention/Legal Hold Status
 
 To help to easily visualize if any documents are under retention or legal hold when browsing, we added a - hidden by default - column named "flags column". </br>
 This column gives some extra details about the documents, such as if the document is a favorite, is under cold storage or if it's under retention or legal hold.
@@ -515,20 +549,24 @@ This column gives some extra details about the documents, such as if the documen
 
 #### Standard Mode
 
-By default, apply a retention rule to a document is an irreversible action, meaning you can't delete a document under retention.
+By default, attaching a retention rule to a document is an irreversible action, meaning you can't delete a document under retention or stop retention.
 
-That being said, you can override this default behavior by using a [specific role]({{page page='nuxeo-retention-management'}}#deletion-role).
+That being said, you can override this default behavior when using the addon in standard mode by using a [specific role]({{page page='nuxeo-retention-management'}}#deletion-role).
 
 If the role **NuxeoRecordCleaners** has been created in the instance and assigned to a user with the **Remove** permission on a given document, the user will be able to delete the document under retention.
 
-#### Compliance Mode
+{{#> callout type='tip'}}
+Rather than deleting the document, you may want to [undeclare the record]({{page page='nuxeo-retention-howto-undeclare-record'}}).
+{{/callout}}
 
-There is no way to delete a document under retention in the compliance mode.
+#### Strict Mode
+
+There is no way to delete a document under retention when using the addon in strict mode.
 
 ## As a User
 
-{{#> callout type='info' heading='Standard and Compliance mode' }}
-This page describes the user experience depending on the Retention Management addon mode among [Standard or Compliance]({{page page='nuxeo-retention-management'}}#configuration-modes).
+{{#> callout type='info' heading='Standard and Strict mode' }}
+This page describes the user experience depending on the Retention Management addon mode among [standard or strict]({{page page='nuxeo-retention-management'}}#configuration-modes).
 {{/callout}}
 
 As a user, you will see some differences on the **View** tab of your documents:
@@ -540,9 +578,9 @@ The following tables describe the availability of document actions:
 
 - The action is **available** (depending on the user permissions) as for a standard Nuxeo instance,
 - The action is **disabled for records**, meaning the action is disabled only when the document is under retention or legal hold,
-- The action is **disabled on instance**, meaning it's disabled for all documents on the Nuxeo instance, due to some limitations coming from the Nuxeo Management addon.
+- The action is **disabled on instance**, meaning it's disabled for all documents on the Nuxeo instance, due to some limitations coming from the Nuxeo Retention Management addon to ensure compliance.
 
-### With Standard Mode
+### In Standard Mode
 
 
 <div class="table-scroll">
@@ -648,7 +686,7 @@ The following tables describe the availability of document actions:
 </tr>
 <tr>
     <td colspan="1">Edit metadata</td>
-    <td><center>&#10003;</center></td>
+    <td><center>&#10003;(1)</center></td>
     <td></td>
     <td></td>
 </tr>
@@ -673,7 +711,7 @@ The following tables describe the availability of document actions:
 <tr>
     <td colspan="1">Delete document</td>
     <td></td>
-    <td><center>&#10003;\*</center></td>
+    <td><center>&#10003;(2)</center></td>
     <td></td>
 </tr>
 <tr>
@@ -698,11 +736,13 @@ The following tables describe the availability of document actions:
 </table>
 </div>
 
-{{#> callout type='note' }}
-\*: Delete a document is disabled for record unless the [specific role](#delete-document-under-retention) has been activated and assigned to a user.
+{{#> callout type='note' heading='standard mode'}}
+(1): [Specific metadata properties can be retained using configuration]({{page page='nuxeo-server-release-notes-2021-32'}}#evolve-retention-core-api-to-specify-a-list-of-blob-property-to-be-retained).
+
+(2): Deleting a document is disabled on a record unless the [specific role](#delete-document-under-retention) has been activated and assigned to a user.
 {{/callout}}
 
-### With Compliance Mode
+### In Strict Mode
 
 <div class="table-scroll">
 <table class="hover">
