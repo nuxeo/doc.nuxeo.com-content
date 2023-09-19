@@ -3,7 +3,7 @@ title: How To Undeclare Records
 description: Discover how flexible retention rules can be leveraged to undeclare records.
 review:
     comment: ''
-    date: '2023-09-15'
+    date: '2023-09-19'
     status: 'ok'
 labels:
     - bchauvin
@@ -13,12 +13,13 @@ toc: true
 tree_item_index: 400
 ---
 
-This page teaches how flexible retention can be leveraged to undeclare records, and goes through the principles and implementation used in this example.
+This page teaches how flexible retention can be leveraged to undeclare records, and goes through the principles used in this example.
 
 ## Prerequisites
 
-//TODO HF version
-//TODO Addon version
+This feature is available starting from:
+- Nuxeo Server `2021.43`
+- Nuxeo Retention `2021.4.5`
 
 This how-to requires:
 - Being familiar with the base concepts of Nuxeo
@@ -26,13 +27,13 @@ This how-to requires:
 - Knowing how to launch [REST API]({{page page='rest-api'}}) calls, as this feature is not yet exposed in Nuxeo Web UI.
 
 
-The Nuxeo Retention Management addon must be installed on your instance: 
+The Nuxeo Retention addon must be installed on your instance: 
 - In standard mode. This feature is not available in strict mode.
 - Using our [recommended architecture]({{page page='nuxeo-retention-installation'}}) that uses a dedicated bucket for records. 
 
 ## Practice - High-Level Overview
 
-In this how-to, we will first create a retention rule using flexible retention. We will then apply it on a document to turn the document into an operational record, and undeclare the record. We will then provide some additional examples you could use to go further and go through the principles used in this example. Practice first, theory second.
+We will first create a retention rule using flexible retention. We will then apply it on a document to turn the document into an operational record, and undeclare the record. We will then provide some additional examples you could use to go further and go through the principles used in this example. Practice first, theory second.
 
 
 ### Creating a Retention Rule
@@ -173,6 +174,42 @@ You will notice that two audit entries will be added: one coming by default, and
 
 ## Principles of Flexible Retention
 
+### High-Level Overview
+As a records manager, you will likely end up managing content that comes from various sources and that has varying requirements when it comes to retention. Some of this content may require strict compliance with regulations like SEC-17A4, but not all of it.
+
+Flexible retention provides an additional option to let you pick in which way you desire the content to be stored and managed. Here is a breakdown of what each option means:
+
+| Capability                                    | Flexible Retention | Enforced Retention |
+| --------------------------------------------- | ------------------ | ------------------ |
+| **Intended usage**                            | **Operational records** | **Regulatory compliant records** |
+| Prevent deletion of documents (1)             | YES | YES |
+| Auditable events                              | YES | YES |
+| Support for legal hold                        | YES | YES |
+| Comment / annotate before retention start     | YES | YES |
+| Comment / annotate after retention start      | NO  | NO  |
+| Create versions before retention start        | YES | YES |
+| Create versions after retention start         | NO  | NO  |
+| Shorten duration of the retention period      | NO  | NO  |
+| **Undeclare record (i.e., stop retention)**   | **YES: requires the `UnsetRetention` and `Write` permissions, action is audited and triggers a dedicated event** | **NO** |
+| Protection of main binary                     | YES | YES |
+| Configure additional properties to protect    | YES | YES |
+| **Storage used for protected files**          | **Regular S3 storage** | **Dedicated bucket for records that can be configured to use WORM storage (i.e., S3 object lock).** |
+| **Protection level**                          | **Software** | **Software + S3 object lock if configured** |
+| Attach a new rule after record is undeclared or retention period ends | YES | YES |
+
+(1) When [installing the Nuxeo Retention addon in standard mode]({{page page='nuxeo-retention-installation'}}), [members of the NuxeoRecordCleaner group can delete records]({{page page='nuxeo-retention-functional-overview'}}#delete-a-document-under-retention) from Nuxeo Server (file(s) will still be stored in S3 if you configured object lock and use enforced retention). It is your responsibility to ensure that you do not leverage this feature if you intend to remain compliant with regulations like SEC-17A4.
+
+
+In order to leverage flexible retention, the Nuxeo Retention addon must be installed on your instance: 
+- In standard mode. This feature is not available in strict mode.
+- Using our [recommended architecture]({{page page='nuxeo-retention-installation'}}) that uses a dedicated bucket for records. 
+
+Then: 
+1. The flexible retention option should be set when [creating or updating a retention rule]({{page page='nuxeo-retention-functional-overview'}}#create-a-retention-rule) by setting the property `retention_rule:flexibleRecords` to `true`.
+1. You need to declare documents as records by attaching this rule to them
+1. You can undeclare records by using the `Document.UnattachRetentionRule` automation operation. Using this operation requires having the `UnsetRetention` and `Write` permissions on the document.
+1. You need to consider the constraints mentioned below
+
 ### Constraints
 
 Note that for a record to be undeclared, some conditions must be met and some security-related constraints apply.
@@ -189,16 +226,3 @@ This means that if you intend to leverage flexible retention, you need to make s
 Putting a document under legal hold means that you intend to secure it and its content for an undefined period of time, likely due to a legal requirement. 
 
 As soon as legal hold is applied, retention is enforced as well: the file(s) that are retained will automatically be moved into the dedicated bucket for records (meaning that if you use object lock, they will be stored in WORM storage). The document cannot go back to flexible retention to be undeclared anymore, even if you remove the legal hold later. 
-
-### High Level Principles
-
-The Nuxeo Retention Management addon must be installed on your instance: 
-- In standard mode. This feature is not available in strict mode.
-- Using our [recommended architecture]({{page page='nuxeo-retention-installation'}}) that uses a dedicated bucket for records. 
-
-//TODO make the above an excerpt from higher in the page
-
-Only in standard mode
-Two options for retention rules
-Breakdown of retention options
-Sends to storage bucket depending on rule
