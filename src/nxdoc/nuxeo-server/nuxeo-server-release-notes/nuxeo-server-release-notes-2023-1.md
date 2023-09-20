@@ -8,7 +8,7 @@ review:
 labels:
     - release-notes
 toc: true
-tree_item_index: 100
+tree_item_index: 1000
 hidden: true
 ---
 
