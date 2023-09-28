@@ -7,7 +7,7 @@ default:
       - space_path: userdoc
         space_name: Nuxeo Platform User Documentation
     branch: '2023'
-    dev_browser_path: nxdoc/2023
+    dev_browser_path: nxdoc
     repo_id: platform
     versions:
       - label: LTS 2023
@@ -22,11 +22,3 @@ default:
         url_path: '810'
 development:
   isDev: true
-  repositories:
-    platform:
-      url: git@github.com:nuxeo/doc.nuxeo.com-content.git
-      branches:
-        '2023':
-          label: 'LTS 2023'
-          noindex: true
-          url_path: '2023'
