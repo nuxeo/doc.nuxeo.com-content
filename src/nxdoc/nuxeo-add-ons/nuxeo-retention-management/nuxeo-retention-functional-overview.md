@@ -746,8 +746,7 @@ The following tables describe the availability of document actions:
 </div>
 
 {{#> callout type='note' heading='standard mode'}}
-(1): [Specific metadata properties can be retained using configuration]({{page page='nuxeo-server-release-notes-2021-32'}}#evolve-retention-core-api-to-specify-a-list-of-blob-property-to-be-retained).
-
+(1): [Specific metadata properties can be retained using configuration]({{page page='nuxeo-server-release-notes-2021-32'}}#evolve-retention-core-api-to-specify-a-list-of-blob-property-to-be-retained).<br>
 (2): Deleting a document is disabled on a record unless the [specific role](#delete-document-under-retention) has been activated and assigned to a user.
 {{/callout}}
 
