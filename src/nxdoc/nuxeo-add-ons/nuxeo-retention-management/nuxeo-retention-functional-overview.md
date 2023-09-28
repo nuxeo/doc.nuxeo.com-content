@@ -2,23 +2,23 @@
 title: Functional Overview
 description: Discover how to use the Nuxeo Retention Management addon once installed.
 review:
-    comment: ''
-    date: '2023-09-14'
-    status: 'ok'
+  comment: ''
+  date: '2023-09-14'
+  status: 'ok'
 labels:
-    - bchauvin
-    - mlumeau
-    - retention-management
+  - bchauvin
+  - mlumeau
+  - retention-management
 toc: true
 tree_item_index: 200
 ---
 
 This page details the options available from Nuxeo Web UI once the Nuxeo Retention addon is installed.
 
-
 ## Principles
 
 From a high level persective, the Retention addon requires two steps to manage records:
+
 1. Defining retention rules that will be applicable to your content.
 1. Applying these rules to the relevant content. A document is considered a final record as soon as a rule is applied to it.
 
@@ -41,12 +41,12 @@ If you are using the addon in strict mode, to allow compliance with the SEC 17a-
 In standard mode, you can differentiate records that require stricter compliance and operational records that do not require the same level of security (e.g., records for which WORM storage is not a requirement and the record can be undeclared with the appropriate permission).
 
 General restrictions will still apply:
-- There is no way to roll back the application of a retention rule to a document, even as an administrator.  A record can be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
+
+- There is no way to roll back the application of a retention rule to a document, even as an administrator. A record can be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
 - There is no way to shorten a retention duration, even as an administrator. A record can be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
 - If you configured the addon to use a dedicated bucket for records that leverages Object Lock in Compliance mode:
-    - There is no way to replace the main file of a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are configured to be retained as well.
-    - There is no way to delete the main file of a document a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are configured to be retained as well.
-
+  - There is no way to replace the main file of a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are configured to be retained as well.
+  - There is no way to delete the main file of a document a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are configured to be retained as well.
 
 ## As a Records Manager
 
@@ -62,7 +62,7 @@ A new retention menu {{!--     ### nx_asset ###
     name: Retention_ICON_RetentionMenu.png
     server#icon#to_be_updated
 --}}
-![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397?w=20) is available on the left side menu, including the following sub-menus:
+![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) is available on the left side menu, including the following sub-menus:
 
 - A **retention search** that lets you [search through all the documents](#retention-search) under retention and/or legal hold.
 
@@ -75,25 +75,25 @@ A new retention menu {{!--     ### nx_asset ###
 New actions are displayed on documents and result list:
 
 - {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-main
-    name: Retention_ICON_RetentionMenu.png
-    server#icon#to_be_updated
---}}
-![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) apply a retention rule to the document.
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-main
+      name: Retention_ICON_RetentionMenu.png
+      server#icon#to_be_updated
+  --}}
+  ![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) apply a retention rule to the document.
 
 - {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-legal-hold
-    name: Retention_ICON_LegalHold.png
-    server#icon#to_be_updated
---}}
-![retention-icon-legal-hold](nx_asset://e73f883d-072a-459b-97f6-81ac7a5946f9 ?w=20) apply/remove a legal hold to the document.
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-legal-hold
+      name: Retention_ICON_LegalHold.png
+      server#icon#to_be_updated
+  --}}
+  ![retention-icon-legal-hold](nx_asset://e73f883d-072a-459b-97f6-81ac7a5946f9 ?w=20) apply/remove a legal hold to the document.
 
 - {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-main
-    name: Retention_ICON_RetentionMenu.png
-    server#icon#to_be_updated
---}}
-![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) override the retention of a document already under retention.
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-main
+      name: Retention_ICON_RetentionMenu.png
+      server#icon#to_be_updated
+  --}}
+  ![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) override the retention of a document already under retention.
 
 ### Retention Rule Document Type
 
@@ -120,21 +120,22 @@ This addon brings additional groups and permissions:
 #### {{> anchor 'create-retention-rule'}} Create a Retention Rule
 
 To create a new [retention rule]({{page page='nuxeo-retention-management'}}#retention-rules):
+
 1. Go to the Retention menu.
 2. Click on **Retention rules**.
 3. Click on the **Create** button {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Create Button
-    name: create_button.png
-    1.1.3#screenshot#up_to_date
---}}
-![Create Button](nx_asset://2b093e23-6ed6-4228-943b-9b4655df9273 ?w=20). </br>
-  The following creation popup is displayed.</br>
-  {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-rule-creation
-    name: Retention_SCREEN_RuleCreation.png
-    server#screenshot#to_be_updated
-  --}}
-  ![retention-screen-rule-creation](nx_asset://53780f1a-ab77-45c1-8ddd-0438763d75be ?w=350,border=true)
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Create Button
+       name: create_button.png
+       1.1.3#screenshot#up_to_date
+   --}}
+   ![Create Button](nx_asset://2b093e23-6ed6-4228-943b-9b4655df9273 ?w=20). </br>
+   The following creation popup is displayed.</br>
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-rule-creation
+       name: Retention_SCREEN_RuleCreation.png
+       server#screenshot#to_be_updated
+     --}}
+   ![retention-screen-rule-creation](nx_asset://53780f1a-ab77-45c1-8ddd-0438763d75be ?w=350,border=true)
 
 <table>
   <tr>
@@ -232,7 +233,6 @@ The retention period starts immediately when you apply the retention rule on the
 --}}
 ![retention-schema-immediate](nx_asset://333ea217-fe1f-4a57-afc0-65c695daaaa6 ?w=600,border=true)
 
-
 ##### Based on a Metadata
 
 The starting date of the retention period is based on the value of a specific document property when you apply the retention rule to the document.
@@ -277,8 +277,9 @@ The changes made on a retention rule are not retroactive. It will only affect th
 {{/callout}}
 
 Once on the **View** tab of the retention rule:
+
 1. Click on the ![]({{file name='edit-icon_web-ui.png' space='userdoc' page='icons-index'}} ?w=14) **Edit** button.</br>
-    A popup window is displayed.
+   A popup window is displayed.
 2. Update the rule.
 3. Click on **Save** button.
 
@@ -292,14 +293,16 @@ Those documents will keep their retention settings, including retention period a
 {{/callout}}
 
 On the **View** tab of the retention rule:
+
 1. Click on the ![]({{file name='delete_web-ui.png' space='userdoc' page='icons-index'}} ?w=14) **Delete** button.</br>
-    A popup window is displayed.
+   A popup window is displayed.
 2. Click **Confirm** to delete the retention rule.
 
 ### Put a Document Under Retention
 
 To put a document under retention, you have to attach a retention rule to the document.</br>
 By doing so:
+
 - The document will be automatically declared as a **record**
 - The retention rule's settings will be applied to the document
 
@@ -314,23 +317,24 @@ There are different ways to put a document under retention. You can attach a ret
 #### From a Document View
 
 On the **View** tab of your document:
+
 1. Click on the **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) button and select **Attach retention rule**.</br>
-  A popup window is displayed.</br>
-  {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-popup
-      name: Retention_SCREEN_ApplyRetentionPopup.png
-      server#popup#up_to_date
-  --}}
-  ![retention-screen-retention-popup](nx_asset://88548927-6e5e-4fd6-87a1-aefd4a5ae998 ?w=350,border=true)
+   A popup window is displayed.</br>
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-popup
+       name: Retention_SCREEN_ApplyRetentionPopup.png
+       server#popup#up_to_date
+   --}}
+   ![retention-screen-retention-popup](nx_asset://88548927-6e5e-4fd6-87a1-aefd4a5ae998 ?w=350,border=true)
 
 2. Select the retention rule needed from the drop-down list and click on **Attach retention rule**.</br>
-    A top bar is displayed at the top of your document to notify users that the document is, or will be, under retention.</br>
-    {{!--     ### nx_asset ###
-        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
-        name: Retention_SCREEN_document-retention.png
-        server#screenshot#up_to_date
-    --}}
-    ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=600,border=true)
+   A top bar is displayed at the top of your document to notify users that the document is, or will be, under retention.</br>
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
+       name: Retention_SCREEN_document-retention.png
+       server#screenshot#up_to_date
+   --}}
+   ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=600,border=true)
 
 #### From a Result List
 
@@ -363,38 +367,39 @@ This is an **irreversible action**: there is no way to shorten a retention perio
 {{/callout}}
 
 On the **View** tab of your document:
+
 1. Click on the **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) button and select **Extend retention**.</br>
-    A popup window is displayed.</br>
-  {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-extend
-    name: Retention_SCREEN_ExtendRetentionPopup.png
-    server#popup#to_be_updated
-  --}}
-  ![retention-screen-retention-extend](nx_asset://0ad5587e-095f-4ba5-b795-d1c1de23c829 ?w=350,border=true)
+   A popup window is displayed.</br>
+   {{!--     ### nx_asset ###
+     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-extend
+     name: Retention_SCREEN_ExtendRetentionPopup.png
+     server#popup#to_be_updated
+   --}}
+   ![retention-screen-retention-extend](nx_asset://0ad5587e-095f-4ba5-b795-d1c1de23c829 ?w=350,border=true)
 
 2. Select the new expiration date (end of retention period) and confirm.</br>
-  A top bar is displayed at the top of your document to notify users of the new expiration date.</br>
-  {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
-      name: Retention_SCREEN_document-retention.png
-      server#screenshot#up_to_date
-  --}}
-  ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=600,border=true)
+   A top bar is displayed at the top of your document to notify users of the new expiration date.</br>
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
+       name: Retention_SCREEN_document-retention.png
+       server#screenshot#up_to_date
+   --}}
+   ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=600,border=true)
 
 ### Create a Retention Event
 
 To create a new [retention event](#based-on-an-event):
+
 1. Go to the Retention menu.
 2. Click on **Retention events**.
 3. Fill the fields on the **Fire event** section:
 
-  {{!--     ### nx_asset ###
+{{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-eventmenu
       name: Retention_SCREEN_RetentionEvent.png
       addins#screenshot#up_to_date
   --}}
-  ![retention-screen-eventmenu](nx_asset://6f012bec-ec76-4b58-9efb-a4aa06b8513b ?w=600,border=true)
-
+![retention-screen-eventmenu](nx_asset://6f012bec-ec76-4b58-9efb-a4aa06b8513b ?w=600,border=true)
 
 4. Click on **Fire event**.
 
@@ -442,23 +447,24 @@ There are different ways to put a document under a [legal hold]({{page page='nux
 #### From a Document View
 
 Once on the **View** tab of your document:
+
 1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) and select **Apply legal hold**.</br>
-  A popup window is displayed.</br>
-  {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-popup
-    name: Retention_SCREEN_ApplyLegalHoldPopup.png
-    server#popup#to_be_updated
-    --}}
-  ![retention-screen-legalhold-popup](nx_asset://e9bba24c-6edc-44e9-81a4-a46fac55e135 ?w=350,border=true)
+   A popup window is displayed.</br>
+   {{!--     ### nx_asset ###
+     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-popup
+     name: Retention_SCREEN_ApplyLegalHoldPopup.png
+     server#popup#to_be_updated
+     --}}
+   ![retention-screen-legalhold-popup](nx_asset://e9bba24c-6edc-44e9-81a4-a46fac55e135 ?w=350,border=true)
 
 2. Fill in the description and click on **Apply legal hold**.</br>
-    A bar is displayed at the top of your document to notify users that the document is under a legal hold.</br>
-  {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-document
-    name: Retention_SCREEN_document-legalhold.png
-    server#screenshot#to_be_updated
-  --}}
-  ![retention-screen-legalhold-document](nx_asset://84e7a358-cff2-4a99-97b9-59eeac58b37d ?w=600,border=true)
+   A bar is displayed at the top of your document to notify users that the document is under a legal hold.</br>
+   {{!--     ### nx_asset ###
+     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-document
+     name: Retention_SCREEN_document-legalhold.png
+     server#screenshot#to_be_updated
+   --}}
+   ![retention-screen-legalhold-document](nx_asset://84e7a358-cff2-4a99-97b9-59eeac58b37d ?w=600,border=true)
 
 #### From a Result List
 
@@ -489,23 +495,24 @@ There are different ways to remove a legal hold. You can remove a legal hold for
 #### From a Document View
 
 Once on the **View** tab of your document:
+
 1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) and select **Remove legal hold**.</br>
-  A popup window is displayed.</br>
-  {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-remove-popup
-      name: Retention_SCREEN_RemoveLegalHoldPopup-2.png
-      server#popup#to_be_updated
-  --}}
-  ![retention-screen-legalhold-remove-popup](nx_asset://ea2ffc42-009a-4903-bd06-3d0a3645a29b ?w=350,border=true)
+   A popup window is displayed.</br>
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-remove-popup
+       name: Retention_SCREEN_RemoveLegalHoldPopup-2.png
+       server#popup#to_be_updated
+   --}}
+   ![retention-screen-legalhold-remove-popup](nx_asset://ea2ffc42-009a-4903-bd06-3d0a3645a29b ?w=350,border=true)
 
 2. Click on **Remove legal hold**.</br>
-  The top bar displayed on top of your document doesn't display the legal hold anymore.</br>
-  {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
-      name: Retention_SCREEN_document-retention.png
-      server#screenshot#up_to_date
-  --}}
-  ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=600,border=true)
+   The top bar displayed on top of your document doesn't display the legal hold anymore.</br>
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
+       name: Retention_SCREEN_document-retention.png
+       server#screenshot#up_to_date
+   --}}
+   ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=600,border=true)
 
 #### From a Result List
 
@@ -584,7 +591,6 @@ The following tables describe the availability of document actions:
 - The action is **disabled on instance**, meaning it's disabled for all documents on the Nuxeo instance, due to some limitations coming from the Nuxeo Retention Management addon to ensure compliance.
 
 ### In Standard Mode
-
 
 <div class="table-scroll">
 <table class="hover">
