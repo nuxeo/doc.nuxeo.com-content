@@ -101,6 +101,15 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 3
+
+### Orphan Version Full GC Is Not Working With orphanVersionRemovalFilter Contributions
+
+
+On 2023 the contribution `org.nuxeo.ecm.core.event.orphanVersionRemoval.listener` has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32073](https://jira.nuxeo.com/browse/NXP-32073)
+
 ## Hotfix 1
 
 ### Add Flexible Record Core API
@@ -122,6 +131,7 @@ The `nuxeo.conf` property `nuxeo.retention.compliance.enabled` has been deprecat
 When both properties are configured, `nuxeo.retention.strictmode.enabled` takes precedence.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31878](https://jira.nuxeo.com/browse/NXP-31878)
+
 
 
 
