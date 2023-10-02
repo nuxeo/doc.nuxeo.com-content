@@ -32,19 +32,21 @@ Read on to discover what options are available to you, when, how and why you sho
 
 ### Cleaning Up Orphaned Versions for Deleted Documents
 
-When [deleting permanently]({{page page='content-delete' space='userdoc'}}) a document, all its versions are deleted automatically. There are some scenarios where a version will remain however.
+When [deleting permanently]({{page page='content-delete' space='userdoc'}}) a document, all its versions are deleted automatically.
 
 A version stays referenced and therefore is not removed if:
 - Any proxy points to a version in the version history of any live document
 - In the case of a tree snapshot if there is a snapshot containing a version in the version history of any live document.
-- In some specific scenarios when deleting documents recursively (e.g., some versions of a child document may remain if you delete a parent document)
 
-If you are confident that older versions of deleted documents are not in use anymore, Nuxeo Server offers a [dedicated REST API endpoint](https://doc.nuxeo.com/rest-api/1/versions-endpoint/#garbage-collect-orphaned-versions) to remove them. 
+However when deleting documents recursively on large folder it may result in versions not being cleanup, leaving orphaned versions.
+Since LTS 2021 HF45 this case is properly handled when using a MongoDB backend, still you might have legacy orphaned versions remaining.
+
+In order to clean up orphaned versions, Nuxeo Server offers a [dedicated REST API endpoint](https://doc.nuxeo.com/rest-api/1/versions-endpoint/#garbage-collect-orphaned-versions) to perform a Full Garbage Collection.
 
 This endpoint leverages a [bulk action]({{page page='bulk-action-framework'}}), meaning that it is scalable for any repository size and can be easily monitored, even in a context where it could end up being a long-running action.
 
 {{#> callout type='tip'}}
-To get the maximum benefit from your cleanup, it is recommended to leverage this option before cleaning up orphaned binaries, as it may produce new orphaned files.
+To get the maximum benefit from your cleanup, it is recommended to leverage this option before cleaning up orphaned binaries, as removing versions may produce new orphaned binaries.
 {{/callout}}
 
 ### Cleaning Up Orphaned Binaries

@@ -1560,6 +1560,20 @@ Switch to enable/disable Immediate Document's blobs Garbage Collection (See [NXP
 
 `true`
 
+* * *
+
+### `nuxeo.bulk.action.documentGC.enabled`
+
+Switch to enable/disable Immediate Document's orphan version Garbage Collection (See [NXP-31964](https://jira.nuxeo.com/browse/NXP-31964) for more details).
+
+**Since LTS 2021.45**
+
+**Default Value**
+
+`true`
+
+* * *
+
 #### `elasticsearch.enabled`
 
 Switch to enable/disable Elasticsearch usage
