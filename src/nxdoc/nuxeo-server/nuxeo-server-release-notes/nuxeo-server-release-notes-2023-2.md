@@ -9,7 +9,6 @@ labels:
   - release-notes
 toc: true
 tree_item_index: 950
-hidden: true
 ---
 
 {{! multiexcerpt name='nuxeo-server-updates-2023-2'}}
