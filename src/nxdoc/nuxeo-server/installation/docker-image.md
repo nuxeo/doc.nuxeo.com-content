@@ -30,11 +30,30 @@ Watch the related course on Hyland University:</br>
 
 {{{multiexcerpt 'lts2023-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
+## Architectures
+
+The Nuxeo 2023 Docker image, `docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023`, supports multiple platforms: it contains variants for the `amd64` (`x86`) and `arm64v8` architectures.
+
+When pulling this image, Docker automatically selects the variant that matches your OS and architecture. For instance, if you're running on:
+
+- Linux (AMD64), you'll get the `amd64` variant.
+- Apple Silicon M1 (ARM64), you'll get the `arm64` variant.
+
+**The `arm64` variant doesn't include the LibreOffice converter**. Unfortunately, there is currently no LibreOffice RPM package available in a recent version for Rocky Linux (the base OS) in the `arm64` architecture. Consequently:
+
+{{#> callout type='warning' }}
+The `arm64` variant of the Nuxeo 2023 Docker image is not production-ready. It is for development purpose only. When running `docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023` or `docker run docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023`, if you're running on an ARM64 architecture (typically Apple Silicon M1), the pulled Docker image doesn't include LibreOffice. Thus, the conversion features relying on LibreOffice won't be available, typically converting Office documents to PDF.
+{{/callout}}
+
+{{#> callout type='info' }}
+You can force the target platform when pulling or running the Docker image with the `--platform` option, for instance to pull the `amd64` variant: `docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023 --platform=linux/amd64`
+{{/callout}}
+
 ## What's in the Nuxeo Image
 
 The Nuxeo Docker image is described by this [Dockerfile](https://github.com/nuxeo/nuxeo/blob/master/docker/Dockerfile).
 
-Based on Rocky Linux 9.1, it includes:
+Based on Rocky Linux 9.2, it includes:
 
 - Azul's [Zulu OpenJDK 17](https://www.azul.com/downloads/?version=java-17-lts&package=jdk#zulu).
 - A bare Nuxeo server without any package installed.
