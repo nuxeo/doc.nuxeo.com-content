@@ -13,6 +13,7 @@ details:
 labels:
     - howto
 tree_item_index: 2250
+toc: true
 ---
 
 {{! excerpt}}
