@@ -27,6 +27,16 @@ This page gives all the necessary steps to install the Retention Management addo
 
 ## Configuration
 
+### Setting the Addon in Standard Mode
+Setting the addon in standard mode is done through the following [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) property:
+```
+nuxeo.retention.strictmode.enabled=false
+```
+
+{{#> callout type='info'}}
+Since LTS 2021 HF41, this property replaces and supersedes the property `nuxeo.retention.compliance.enabled`: if both are set, the value of nuxeo.retention.strictmode.enabled will be used.
+{{/callout}}
+
 ### {{> anchor 'standard-amazon-s3'}} Amazon S3 Architecture Options
 
 In Standard mode, there are 3 supported configurations using Amazon S3:
