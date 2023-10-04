@@ -33,6 +33,10 @@ This is done adding the parameter `nuxeo.retention.strictmode.enabled=true` in t
 
 This must be done **prior to any usage of the Nuxeo instance** to guarantee the data consistency.
 
+{{#> callout type='info'}}
+Since LTS 2021 HF41, this property replaces and supersedes the property `nuxeo.retention.compliance.enabled`: if both are set, the value of nuxeo.retention.strictmode.enabled will be used.
+{{/callout}}
+
 ### Amazon S3
 
 In strict mode, Nuxeo Platform with Nuxeo Retention Management addon requires the usage of 2 Amazon S3 buckets:
