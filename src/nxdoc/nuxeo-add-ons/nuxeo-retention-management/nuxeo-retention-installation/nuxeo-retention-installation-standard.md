@@ -34,7 +34,7 @@ nuxeo.retention.strictmode.enabled=false
 ```
 
 {{#> callout type='info'}}
-Since LTS 2021 HF41, this property replaces and supersedes the property `nuxeo.retention.compliance.enabled`: if both are set, the value of nuxeo.retention.strictmode.enabled will be used.
+Since LTS 2021 HF41, this property replaces and supersedes the property `nuxeo.retention.compliance.enabled`: if both are set, the value of `nuxeo.retention.strictmode.enabled` will be used.
 {{/callout}}
 
 ### {{> anchor 'standard-amazon-s3'}} Amazon S3 Architecture Options
