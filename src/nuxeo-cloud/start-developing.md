@@ -103,7 +103,7 @@ At the end of the build, a new tag with the release version is automatically cre
 
 If you want to make changes to the application configuration from the ​`nuxeo.conf` file, for instance to set `org.nuxeo.dev` property to `true`.
 
-- Go on **Resources** > **Config Map** > **(projectname)-\<\environment\>\-custom-bindings** > **Actions** > **Edit** > Add the lines on the `nuxeo.conf` file.
+- Go on **Resources** > **Config Map** > **(projectname)-(environment)-custom-bindings** > **Actions** > **Edit** > Add the lines on the `nuxeo.conf` file.
 - Never update directly on the Nuxeo server the `nuxeo.conf` file because it will be lost if a new image is deployed.
 
 {{#> callout type='info'}}
