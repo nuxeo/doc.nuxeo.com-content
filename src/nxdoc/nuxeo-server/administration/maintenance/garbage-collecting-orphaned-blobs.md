@@ -38,7 +38,7 @@ In case of multi-repository configuration, all the repositories must have this c
 
 ##### Acquire the `queryBlobKeys` capability
 
-In the case of missing `queryBlobKeys` capability in your repository, the `blob-keys-migration` migration is available to acquire it since LTS 2021-HF39. This migration process goes through all the documents of the repository with a `NULL` `ecm:blobKeys` field to populate it. Depending on the volume of your data, this may be a long-running process.
+In the case of missing `queryBlobKeys` capability in your repository, the `blob-keys-migration` migration is available to acquire it since LTS 2021-HF44. This migration process goes through all the documents of the repository with a `NULL` `ecm:blobKeys` field to populate it. Depending on the volume of your data, this may be a long-running process.
 
 ###### Check repository does not have the capability
 
