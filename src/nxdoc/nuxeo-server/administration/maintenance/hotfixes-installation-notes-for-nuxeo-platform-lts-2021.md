@@ -103,6 +103,15 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 45
+
+### Orphan Version Full GC Is Not Working With orphanVersionRemovalFilter Contributions
+
+
+On 2023 the contribution `org.nuxeo.ecm.core.event.orphanVersionRemoval.listener` has been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32073](https://jira.nuxeo.com/browse/NXP-32073)
+
 ## Hotfix 41
 
 ### Add Flexible Record Core API
@@ -499,6 +508,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
