@@ -36,11 +36,11 @@ You can query the [capability endpoint]({{page page='rest-api-endpoints#capabili
 
 In case of multi-repository configuration, all the repositories must have this capability.
 
-##### Acquire the `queryBlobKeys` capability
+##### Acquire the `queryBlobKeys` Capability
 
 In the case of missing `queryBlobKeys` capability in your repository, the `blob-keys-migration` migration is available to acquire it since LTS 2023-HF03. This migration process goes through all the documents of the repository with a `NULL` `ecm:blobKeys` field to populate it. Depending on the volume of your data, this may be a long-running process.
 
-###### Check repository does not have the capability
+###### Check Repository Does Not Have the Capability
 
 ```curl
 curl -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/capabilities
@@ -67,14 +67,14 @@ curl -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/capabilit
 ```
 Observe `repository.default.queryBlobKeys` equals **false**.
 
-###### Run the `blob-keys-migration` migration
+###### Run the `blob-keys-migration` Migration
 
 ```curl
 curl -X POST -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/management/migration/blob-keys-migration/run
 ```
 No output expected.
 
-###### Wait for the migration
+###### Wait for the Migration
 
 Await the migration is over (`running` is **false**) and its `state` is `populated`:
 
@@ -102,7 +102,7 @@ curl -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/managemen
 }
 ```
 
-###### Check repository now has the capability
+###### Check Repository Now Has the Capability
 
 ```curl
 curl -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/capabilities
