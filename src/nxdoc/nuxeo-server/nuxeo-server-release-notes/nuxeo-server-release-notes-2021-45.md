@@ -46,7 +46,7 @@ There is a new flag for Bulk Action so that only one of such command can be sche
 ## Prevent Concurrent Requests When Reassigning/Delegating a Task
 
 
-Tasks are now reassigned/delegated atomically
+Tasks are now reassigned/delegated automatically
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32083](https://jira.nuxeo.com/browse/NXP-32083)
 
