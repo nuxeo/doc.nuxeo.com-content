@@ -101,6 +101,54 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 4
+
+### Factorize Email Sending Code
+
+
+## Compatibility with custom jndi sessions
+
+Compatibility has been ensured for users that contributed a custom jndi session name via a general settings contribution. 
+ A JndiSMTPMailSender is contributed on the fly at server start and a warning will be given so users can be aware they need to contribute their own MailSender.
+
+A JndiSMTPMailSender can also be contributed by the users like below but bear in mind this is only a compatibility implementation and we encourage you to leverage another implementation of MailSender instead:
+```xml
+<?xml version=1.0?>
+<component name=org.nuxeo.mail.my.sender.contrib>
+  <extension target=org.nuxeo.mail.MailServiceComponent point=senders>
+
+    <sender name=mySender class=org.nuxeo.mail.JndiSMTPMailSender>
+      <property name=jndiSessionName>mySessionName</property>
+    </sender>
+
+  </extension>
+</component>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32029](https://jira.nuxeo.com/browse/NXP-32029)
+
+### Install ARM Compatible Tools in Nuxeo Docker Image
+
+
+The Nuxeo 2023 Docker image (`docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023`) supports multiple platforms: it contains variants for the `amd64` (`x86`) and `arm64v8` architectures.
+
+When pulling this image, Docker automatically selects the variant that matches your OS and architecture. For instance, if you're running on:
+- Linux (AMD64), you'll get the `amd64` variant.
+- Apple Silicon M1 (ARM64), you'll get the `arm64` variant.
+
+The `arm64` variant doesn't include the LibreOffice converter. Unfortunately, there is currently no LibreOffice RPM package available in a recent version for Rocky Linux (the base OS) in the `arm64` architecture.
+
+Consequently, **the `arm64` variant of the Nuxeo 2023 Docker image is not production-ready. It is for development purpose only**.
+
+Note that you can force the target platform when pulling or running the Docker image with the `--platform` option, for instance to pull the `amd64` variant:
+```
+docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023 --platform=linux/amd64
+```
+
+The Nuxeo 2021 Docker image isn't impacted by this change, it only supports the `amd64` architecture.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31815](https://jira.nuxeo.com/browse/NXP-31815)
+
 ## Hotfix 3
 
 ### Orphan Version Full GC Is Not Working With orphanVersionRemovalFilter Contributions
@@ -131,6 +179,7 @@ The `nuxeo.conf` property `nuxeo.retention.compliance.enabled` has been deprecat
 When both properties are configured, `nuxeo.retention.strictmode.enabled` takes precedence.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31878](https://jira.nuxeo.com/browse/NXP-31878)
+
 
 
 
