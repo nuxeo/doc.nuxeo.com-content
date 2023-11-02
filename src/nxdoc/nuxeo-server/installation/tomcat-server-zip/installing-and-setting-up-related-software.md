@@ -33,6 +33,11 @@ version_override:
     '5.8': 58/admindoc/installing-and-setting-up-related-software
 history:
     -
+        author: Amin BENKHALED
+        date: '2023-11-02 14:29'
+        message: Fixed the link to the Windows poppler binary
+        version: '102'
+    -
         author: Dave Hintemeyer
         date: '2016-09-21 16:16'
         message: dded Tip about OSx OpenOffic
@@ -784,7 +789,7 @@ If you'll be working with non-latin languages:
 
 #### pdftohtml
 
-1. Install the poppler binary (available from [this blogpost](http://blog.alivate.com.au/poppler-windows/)).
+1. Install the poppler binary (available from [this blogpost](https://web.archive.org/web/20221116114911/http://blog.alivate.com.au/poppler-windows/)).
     {{#> callout type='info' }} Old pdftohtml binaries are available from [http://sourceforge.net/projects/pdftohtml/files/](http://sourceforge.net/projects/pdftohtml/files/%7Chttp://sourceforge.net/projects/pdftohtml/files/), but they are obsolete. It is recommended to use poppler. {{/callout}}
 2. Copy the path to the `bin` folder inside Poppler's installation directory (e.g. `C:\Program Files (x86)\Poppler\bin`) and add it to the `PATH` system variable.
 {{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
