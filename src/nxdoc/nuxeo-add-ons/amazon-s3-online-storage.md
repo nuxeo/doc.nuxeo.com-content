@@ -347,7 +347,7 @@ INFO  [CachingBinaryManager] Registering binary manager 'default' using S3Binary
 
 ```
 
-Don't forget to enable the `INFO` level for the group `org.nuxeo` in `$NUXEO_HOME/lib/log4j.xml` to see INFO level messages from Nuxeo classes.
+Don't forget to enable the `INFO` level for the group `org.nuxeo` in `$NUXEO_HOME/lib/log4j2.xml` to see INFO level messages from Nuxeo classes.
 
 If your configuration is incorrect, this line will be followed by some error messages describing the problems encountered.
 

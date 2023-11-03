@@ -415,7 +415,7 @@ To create your project structure, follow the steps below.
    create src/main/resources/META-INF/MANIFEST.MF
    create src/main/java/org/nuxeo/cookbook/package-info.java
    create src/test/resources/jndi.properties
-   create src/test/resources/log4j.xml
+   create src/test/resources/log4j2.xml
      info You can start editing code or you can continue with calling another generator (nuxeo bootstrap <generator>..)
     ```
 
@@ -595,9 +595,9 @@ The trickiest and most important part of a `MANIFEST.MF` file is its formatting.
 
 ### Files for the Tests
 
-#### The `log4j.xml` File
+#### The `log4j2.xml` File
 
-As the tests will run in a sandbox, it could be useful to define a file named `log4j.xml` file. It must be placed in the `/src/test/resources` folder.
+As the tests will run in a sandbox, it could be useful to define a file named `log4j2.xml` file. It must be placed in the `/src/test/resources` folder.
 
 Here is a sample of such a file:
 

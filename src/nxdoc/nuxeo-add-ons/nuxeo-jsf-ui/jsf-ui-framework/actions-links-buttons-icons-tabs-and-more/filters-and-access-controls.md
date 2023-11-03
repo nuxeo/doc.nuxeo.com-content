@@ -225,7 +225,7 @@ This also can be looked up in XHTML templates, calling Seam component [webAction
 
 ## Debugging Filters
 
-It can be useful to activate server logs to help debugging filters resolution. Logs are verbose, here is the configuration to setup to see these logs on the sever&nbsp;`lib/log4j.xml` configuration file:
+It can be useful to activate server logs to help debugging filters resolution. Logs are verbose, here is the configuration to setup to see these logs on the sever&nbsp;`lib/log4j2.xml` configuration file:
 
 ```
   <category name="org.nuxeo.ecm.platform.actions.ActionService">
