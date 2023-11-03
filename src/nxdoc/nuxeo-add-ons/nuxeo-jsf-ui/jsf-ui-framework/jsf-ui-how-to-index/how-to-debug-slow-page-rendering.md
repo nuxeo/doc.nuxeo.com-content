@@ -67,7 +67,7 @@ This listener is not thread-safe: timing will be meaningful only in a controlled
 
 {{/callout}}
 
-To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` configuration:
+To activate it, add the following configuration to the `$SERVER/lib/log4j2.xml` configuration:
 
 ```xml
 <category name="org.nuxeo.ecm.platform.ui.web.rest.JSFDebugPhaseListener">
@@ -92,7 +92,7 @@ Tags are included inside each other: a given tag timing will show this tag proce
 
 {{/callout}}
 
-To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` configuration:
+To activate it, add the following configuration to the `$SERVER/lib/log4j2.xml` configuration:
 
 ```xml
 <category name="org.nuxeo.ecm.platform.ui.web.util.FaceletDebugTracer">
@@ -135,7 +135,7 @@ Note that the timer is displayed after the rendering: included tags timings are 
 
 Slow page rendering can be linked to heavy filtering processing on actions and/or linked filters.
 
-To activate it, add the following configuration to the `$SERVER/lib/log4j.xml` configuration:
+To activate it, add the following configuration to the `$SERVER/lib/log4j2.xml` configuration:
 
 ```xml
 <category name="org.nuxeo.ecm.platform.actions.ActionService">
