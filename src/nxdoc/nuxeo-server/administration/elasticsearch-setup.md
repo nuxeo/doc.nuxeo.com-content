@@ -882,7 +882,7 @@ You need to define an index for each repository. This is done by adding an `elas
 
 To understand why a document is not present in search results or not indexed, you can activate a debug trace.
 
-Open at the `lib/log4j.xml` file and uncomment the `ELASTIC` section:
+Open at the `lib/log4j2.xml` file and uncomment the `ELASTIC` section:
 
 ```xml
 <!-- Elasticsearch logging -->
