@@ -640,7 +640,6 @@ This returns the documents with an attached text file of length 0:
 
 ```sql
 SELECT * FROM Document WHERE files/*1/file/name LIKE '%.txt' AND files/*1/file/length = 0
-
 ```
 
 This returns the documents with an attached text file and an attached file of length 0:
@@ -713,6 +712,31 @@ Using it in the `<order-by-clause>` carries a large performance penalty when usi
 
 **ecm:acl**: a pseudo-list giving access to ACLs, which needs to be used with a suffix specifying which part of the ACL is accessed. Available are **ecm:acl/*/principal** (ACL principal), **ecm:acl/*/permission** (ACL permission), **ecm:acl/*/grant** (ACL grant/deny, a boolean), **ecm:acl/*/name** (ACL name), **ecm:acl/*/pos** (ACL position). If you want to refer several times to the same ACL but still have flexibility, use correlated wildcards like for lists: **ecm:acl/*1/principal**, **ecm:acl/*2/permission**, etc. See the examples below for more. Note that this is a query on the ACLs that were set on a specific folder or document, _NOT_ on the resolved permissions according to the inheritance rules. (Since Nuxeo 6.0-HF06 or Nuxeo 7.2)
 
+## {{> anchor 'date-queries'}} Date Properties
+
+{{#> callout type='warning' }}
+Date values are assumed to be UTC.
+{{/callout}}
+
+### Regular UTC search
+
+If you search for a document with a date property on a certain day, like `2023-07-14` it will be searched at `2023-07-14T00:00:00Z`.
+
+### Time zone offset
+
+When using Web-UI, if your browser is located in another time zone (`UTC+2` for example) and you set a date property at `2023-07-14` to a document, it will be saved as `2023-07-13T22:00:00Z`.
+To find the document, you can pass an explicit date (or even a timestamp) with a time zone offset to have an exact match (more examples are available in the Examples section below):
+```sql
+SELECT * FROM Document WHERE dc:expired = DATE '2023-07-13T22:00:00Z'
+```
+Please note the following also works:
+```sql
+-- if you have a positive offset compared to your server (UTC+2 client, UTC server)
+SELECT * FROM Document WHERE DATE(dc:expired) = DATE '2023-07-13'
+-- if you have a negative offset compared to your server
+SELECT * FROM Document WHERE DATE(dc:expired) = DATE '2023-07-14'
+```
+
 ## {{> anchor 'nxql-examples'}} Examples
 
 ```sql
@@ -754,6 +778,9 @@ SELECT * FROM Document WHERE dc:subjects STARTSWITH 'gee/moo'
 SELECT * FROM Document WHERE dc:created >= DATE '2007-01-01'
 SELECT * FROM Document WHERE dc:created >= TIMESTAMP '2007-03-15 00:00:00'
 SELECT * FROM Document WHERE dc:created >= DATE '2007-02-15' AND dc:created <= DATE '2007-03-15'
+SELECT * FROM Document WHERE dc:expired = DATE '2023-07-13T22:00:00Z'
+SELECT * FROM Document WHERE dc:expired = DATE '2023-07-14T00:00:00+02:00'
+SELECT * FROM Document WHERE dc:expired = TIMESTAMP '2023-07-14T00:00:00+02:00'
 SELECT * FROM Document WHERE my:boolean = 1
 SELECT * FROM Document WHERE ecm:isProxy = 1
 SELECT * FROM Document WHERE ecm:isVersion = 1
@@ -928,6 +955,8 @@ The following limitations apply:
     *   `... WHERE tst:value = 1000*1000` (not allowed, right-hand side must be a literal, not an expression)
 *   Aggregates (`COUNT`, `AVERAGE`, `MAX`, `MIN`) are not supported.
 *   `DISTINCT` is supported only for `ecm:uuid`.
+*   DATE cast will fail. This means the following predicate is **not** supported in a NXQL query on a MongoDB repository:
+    *   `... WHERE DATE(dc:expired) = DATE '2023-07-14'` (not supported, Date cast on the left-hand side)
 
 ## {{> anchor 'elasticsearchlimitations'}} Notes about Elasticsearch
 
