@@ -193,7 +193,7 @@ In the above repository configuration, we defined `<property name="path">binarie
 
 ## Elasticsearch Configuration
 
-There must be an Elasticsearch index associated for each repository. See the [Elasticsearch multi repository configuration documentation]({{page page='elasticsearch-setup'}}#configuration-for-multi-repositories) for more information.
+There must be an Elasticsearch index associated for each repository. See the [Elasticsearch multi repository configuration documentation]({{page page='search-setup'}}#configuration-for-multi-repositories) for more information.
 
 &nbsp;
 
@@ -203,7 +203,7 @@ There must be an Elasticsearch index associated for each repository. See the [El
 
 - [JDBC Datasource]({{page page='jdbc-datasource'}})
 - [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})
-- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Search Setup]({{page page='search-setup'}})
 - [File Storage]({{page page='file-storage'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>
