@@ -88,6 +88,11 @@ If you have requirements and/or constraints are not reflected below, **do not he
   </table>
 </div>
 
+{{#> callout type='warning' }}
+Please make sure your system time zone is UTC.
+[More...](../nxql#date-queries)
+{{/callout}}
+
 ## Checking Your Java Version {{> anchor 'java-check'}}
 
 {{! multiexcerpt name='check-java-version'}}
