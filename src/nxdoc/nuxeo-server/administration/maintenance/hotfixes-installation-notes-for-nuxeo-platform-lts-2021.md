@@ -103,6 +103,22 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 46
+
+### Upgrade Quartz to 2.4.0-rc2
+
+
+The org.quartz-scheduler:quartz library was upgraded to 2.4.0-rc2.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32138](https://jira.nuxeo.com/browse/NXP-32138)
+
+### Upgrade LibreOffice in Docker Image
+
+
+LibreOffice was upgraded to 7.5.8 in the Docker image
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32137](https://jira.nuxeo.com/browse/NXP-32137)
+
 ## Hotfix 45
 
 ### Orphan Version Full GC Is Not Working With orphanVersionRemovalFilter Contributions
@@ -508,6 +524,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
