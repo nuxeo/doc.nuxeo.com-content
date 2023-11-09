@@ -260,7 +260,7 @@ file, that you should copy to `NUXEO_HOME/nxserver/config/cors-config.xml`:
 ```xml
 <component name="org.nuxeo.corsi.demo">
   <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
-    <corsConfig name="foobar" supportedMethods="GET,POST,HEAD,OPTIONS,DELETE,PUT"exposedHeaders="Accept-Ranges,Content-Range,Content-Encoding,Content-Length,Content-Disposition">
+    <corsConfig name="foobar" supportedMethods="GET,POST,HEAD,OPTIONS,DELETE,PUT" exposedHeaders="Accept-Ranges,Content-Range,Content-Encoding,Content-Length,Content-Disposition">
       <pattern>/nuxeo/.*</pattern>
     </corsConfig>
   </extension>
