@@ -467,6 +467,7 @@ Public
 [Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector)
 </td>
 </tr>
+<tr>
 <td colspan="1">
 Nuxeo Live Connect<br/>
 `nuxeo-liveconnect`
@@ -480,6 +481,22 @@ Public
 <td colspan="1">
 [Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
 </td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Mail Amazon SES Addon<br/>
+`nuxeo-mail-amazon-ses`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-mail-amazon-ses'}})
+</td>
+<td colspan="1">
+[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mail-amazon-ses)
+</td>
+</tr>
 <tr>
 <td colspan="1">
 Nuxeo Multi-tenant<br/>

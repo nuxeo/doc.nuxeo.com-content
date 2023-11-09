@@ -143,12 +143,13 @@ For the case of a single repository, you can do the configuration using the `nux
 
 In `nuxeo.conf`, add the following lines:
 
+{{! multiexcerpt name='aws-config-credentials'}}
 ```
 nuxeo.aws.accessKeyId=your_AWS_ACCESS_KEY_ID
 nuxeo.aws.secretKey=your_AWS_SECRET_ACCESS_KEY
 nuxeo.aws.region=your_AWS_REGION
-
 ```
+{{! /multiexcerpt}}
 
 {{#> callout type='info' }}
 If your Nuxeo instance runs on Amazon EC2 or Amazon ECS, you can also transparently use IAM instance roles, in which case you do not need to specify the AWS ID and secret (the credentials will be fetched automatically from the instance metadata). The same applies to the region.
