@@ -17,7 +17,7 @@ This page details the options available from Nuxeo Web UI once the Nuxeo Retenti
 
 ## Principles
 
-From a high level persective, the Retention addon requires two steps to manage records:
+From a high-level perspective, the Retention addon requires two steps to manage records:
 
 1. Defining retention rules that will be applicable to your content.
 1. Applying these rules to the relevant content. A document is considered a final record as soon as a rule is applied to it.
