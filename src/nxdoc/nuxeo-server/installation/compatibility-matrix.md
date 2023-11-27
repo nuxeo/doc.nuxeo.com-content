@@ -137,10 +137,9 @@ More information can be found on the [Elasticsearch Setup]({{page page='search-s
 
 ## Kafka
 
-Nuxeo Platform is tested against a Kafka cluster {{! multiexcerpt name='kafka_supported_version'}}3.3.1{{! /multiexcerpt}} using Kafka Java libraries {{! multiexcerpt name='kafka_libraries_supported_version'}}3.4{{! /multiexcerpt}}.
+Nuxeo Platform is tested against a Kafka cluster {{! multiexcerpt name='kafka_supported_version'}}3.6.0{{! /multiexcerpt}} using Kafka Java libraries {{! multiexcerpt name='kafka_libraries_supported_version'}}3.6.0{{! /multiexcerpt}}.
 
-Kafka supports backward and forward compatibility a cluster >= 1.0.0 works,
-we still advice to use the latest available stable version.
+Kafka supports backward and forward compatibility, though we advise to use the latest available stable version.
 
 ## Browsers
 
