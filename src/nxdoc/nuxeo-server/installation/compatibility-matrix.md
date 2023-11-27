@@ -229,7 +229,7 @@ More information can be found on the [Elasticsearch Setup]({{page page='elastics
       <tr>
         <th colspan="1">Kafka</th>
         <td colspan="1">
-          Library: 2.6.0 scala 2.12<br/>
+          Library: 2.8.1 scala 2.12.3<br/>
           Cluster: 1.x, 2.x, 3.x
         </td>
         <td colspan="1">
@@ -247,8 +247,7 @@ More information can be found on the [Elasticsearch Setup]({{page page='elastics
 </div>
 {{! /multiexcerpt}}
 
-Kafka supports backward and forward compatibility a cluster >= 1.0.0 works,
-we still advice to use the latest available stable version.
+Kafka supports backward and forward compatibility, though we advise to use the latest available stable version.
 
 ## Browsers
 
