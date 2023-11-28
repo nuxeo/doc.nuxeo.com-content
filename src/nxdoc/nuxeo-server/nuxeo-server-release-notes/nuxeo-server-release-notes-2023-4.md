@@ -18,49 +18,47 @@ hidden: true
 ## Deactivate Optimistic Types to Speedup Nashorn Script Compilation
 
 
-Nashorn javascript compilation has been tuned
+Nashorn javascript compilation has been tuned.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32134](https://jira.nuxeo.com/browse/NXP-32134)
 
 ## Management API Running Administration Bulk Action Should Be Marked as Exclusive
 
 
-Management endpoints for long administratives tasks are now exclusive
+Management endpoints for long administratives tasks are now exclusive.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32126](https://jira.nuxeo.com/browse/NXP-32126)
 
 ## Add Ecm:isVersion Missing Aggregate Fields
 
 
-Elasticsearch aggregates on ecm:isVerison are now returned by the Rest API
+Elasticsearch aggregates on ecm:isVerison are now returned by the Rest API.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32121](https://jira.nuxeo.com/browse/NXP-32121)
 
 ## Fix BulkStatus Result Map Merge Overflow on Numbers
 
 
-The deletedSize and totalSize of the bulk status result returned by Blob GC are now correct
+The `deletedSize` and `totalSize` of the bulk status result returned by Blob GC are now correct.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32112](https://jira.nuxeo.com/browse/NXP-32112)
 
 ## Add a Bulk Action Option for Exclusive Action
 
 
-There is a new flag for Bulk Action so that only one of such command can be scheduled and run at a time
+There is a new flag for Bulk Action so that only one of such command can be scheduled and run at a time.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32091](https://jira.nuxeo.com/browse/NXP-32091)
 
 ## Prevent Concurrent Requests When Reassigning/Delegating a Task
 
 
-Tasks are now reassigned/delegated automatically
+Tasks are now reassigned/delegated automatically.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32083](https://jira.nuxeo.com/browse/NXP-32083)
 
 ## Amazon SES Mail Sender Implementation
 
-
-Nuxeo can now send mails through Amazon SES.
 
 Nuxeo can now send mails through Amazon SES.
 To do so, users need to install the `nuxeo-mail-amazon-ses-package` which will activate the `aws-ses` template and override their default `MailSender`.
@@ -87,7 +85,7 @@ The asynchronous blob digest computation keeps handling the old blob deletion la
 ## Factorize Email Sending Code
 
 
-Introducing a new MailService leveraging contributable MailSenders to send MailMessages
+Introducing a new MailService leveraging contributable MailSenders to send MailMessages.
 
 # Introducing a new MailService leveraging contributable MailSenders to send MailMessages
 ## Configuration
@@ -136,7 +134,7 @@ The Nuxeo 2023 Docker image is available for ARM architectures, without LibreOff
 ## Add a Bulk Action Option for Sequential Processing
 
 
-There is a new flag for Bulk Action to avoid concurrency within a bulk command processing
+There is a new flag for Bulk Action to avoid concurrency within a bulk command processing.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30985](https://jira.nuxeo.com/browse/NXP-30985)
 
