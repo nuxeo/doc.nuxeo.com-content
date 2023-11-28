@@ -32,7 +32,7 @@ You can configure the package using the `nuxeo.conf` properties described below.
 
 #### Default AWS Credentials and Region
 
-By default, Nuxeo will get your `"default"` [configuration](../amazon-s3-online-storage/#nuxeo-configuration) by leveraging the following properties in `nuxeo.conf`:
+By default, Nuxeo will get your `"default"` [configuration]({{page page='amazon-s3-online-storage'}}#nuxeo-configuration) by leveraging the following properties in `nuxeo.conf`:
 
 {{{multiexcerpt 'aws-config-credentials' page='amazon-s3-online-storage'}}}
 
