@@ -106,7 +106,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 ### Factorize Email Sending Code
 
 
-## Compatibility with custom jndi sessions
+## Compatibility with Custom jndi Sessions
 
 Compatibility has been ensured for users that contributed a custom jndi session name via a general settings contribution. 
  A JndiSMTPMailSender is contributed on the fly at server start and a warning will be given so users can be aware they need to contribute their own MailSender.
