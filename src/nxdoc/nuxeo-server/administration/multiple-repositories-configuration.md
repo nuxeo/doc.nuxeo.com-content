@@ -97,7 +97,7 @@ When multiple repositories are used, we want to use different configuration para
 
 In addition, when more than one repository is configured, certain optimizations that are valid when only one database is accessed cannot be used anymore.
 
-## Datasources Configuration
+## Datasources Configuration (for SQL backend only)
 
 1.  Deactivate the default single-datasource mode in `nuxeo.conf`:
 
