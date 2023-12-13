@@ -4,14 +4,14 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: 'release'
-  date: '2023-11-28'
+  date: '2023-12-13'
   status: ok
 toc: true
 ---
 
 Welcome to the Release Notes for **Nuxeo Drive 5.4.0**
 
-**Status**: <font color="##ff0000">**beta**</font> </br>
+**Status**: <font color="#0066ff">**Release**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.4.0.md)
 
 ## Direct Transfer
