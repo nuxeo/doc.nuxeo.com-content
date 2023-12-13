@@ -2,7 +2,7 @@
 title: Nuxeo Drive
 review:
     comment: ''
-    date: '2019-10-25'
+    date: '2023-12-13'
     status: ok
 labels:
     - lts2017-ok
@@ -22,9 +22,9 @@ Nuxeo Drive proposes 3 main features:
 
 | Channel | Version                                                                    |
 | ------- | -------------------------------------------------------------------------- |
-| Release | [5.3.2](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
-| Beta    | [5.4.0](https://community.nuxeo.com/static/drive-updates/beta/?C=M;O=D) |
-| Alpha   | [5.3.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D) |
+| Release | [5.4.0](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
+| Beta    | n/a |
+| Alpha   | [5.4.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D) |
 
 Find more information about our release cycle on [this page]({{page version='' space='client-apps' page='nuxeo-drive-release-cycle'}}).
 
