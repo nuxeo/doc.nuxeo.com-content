@@ -301,15 +301,23 @@ Before Nuxeo 7.10 the configuration was done using property `nuxeo.s3storage.dow
 ##### CORS Configuration
 
 Web UI triggers some blob downloads from XHR (e.g. Bulk Download, CSV Export, etc.) and will require the following CORS configuration on your S3 bucket:
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-  <CORSRule>
-    <AllowedOrigin>http://localhost:8080</AllowedOrigin>
-    <AllowedMethod>GET</AllowedMethod>
-    <ExposeHeader>Content-Disposition</ExposeHeader>
-  </CORSRule>
-</CORSConfiguration>
+```json
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "http://localhost:8080"
+        ],
+        "ExposeHeaders": [
+            "Content-Disposition"
+        ]
+    }
+]
 ```
 {{#> callout type='note' }}
 Make sure to replace `http://localhost:8080` by the address where your Nuxeo instance is deployed.
