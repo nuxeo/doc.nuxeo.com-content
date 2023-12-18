@@ -103,6 +103,120 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 47
+
+### Upgrade or Remove Htmlunit From Nuxeo-Runtime-Test to Avoid Vulnerability
+
+
+Removed the following Maven dependencies from `nuxeo-runtime-test`:
+```
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-api</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-support</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-firefox-driver</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-ie-driver</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-chrome-driver</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>htmlunit-driver</artifactId>
+</dependency>
+```
+Added the following Maven dependencies to `nuxeo-features-test`:
+```
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-firefox-driver</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-ie-driver</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-chrome-driver</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>htmlunit-driver</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.assertj</groupId>
+  <artifactId>assertj-core</artifactId>
+  <scope>compile</scope>
+</dependency>
+```
+Moved the following classes from `nuxeo-runtime-test` to `nuxeo-features-test`:
+```
+Attachment.java
+Browser.java
+BrowserFamily.java
+ConcordionFixture.java
+Configuration.java
+DriverFactory.java
+HomePage.java
+SkipBrowser.java
+TakesAttachment.java
+WebDriverFeature.java
+WebPage.java
+ExpectedCondition.java
+TimeoutException.java
+Wait.java
+WebDriverWait.java
+MyHomePage.java
+SearchResultPage.java
+WebTest.java
+```
+The related package names haven't changed:
+```
+org.nuxeo.runtime.test.runner.web
+org.openqa.selenium.support.ui
+```
+If you are explicitly depending on one of these classes, you need to replace the Maven dependency:
+```
+<dependency>
+  <groupId>org.nuxeo.runtime</groupId>
+  <artifactId>nuxeo-runtime-test</artifactId>
+  <scope>test</scope>
+</dependency>
+```
+by:
+```
+<dependency>
+  <groupId>org.nuxeo.ecm.platform</groupId>
+  <artifactId>nuxeo-features-test</artifactId>
+  <scope>test</scope>
+</dependency>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32144](https://jira.nuxeo.com/browse/NXP-32144)
+
+### Fix Results Selection Actions Made From Multi-Repository Search Results
+
+
+Added:
+- `nuxeo.bulk.download.multi.repositories` Framework property
+- `AbsoluteDocumentRef`
+- `TypeAdapterHelper#createDocumentModel(AbsoluteDocumentRef docRef)`
+- `DocumentInputResolver#BULK_DOWNLOAD_MULTI_REPOSITORIES`
+- `TestDocumentInputResolvers`
+- `MultiRepositoryDummyOperation`
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31487](https://jira.nuxeo.com/browse/NXP-31487)
+
 ## Hotfix 46
 
 ### Upgrade Quartz to 2.4.0-rc2
@@ -524,6 +638,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
