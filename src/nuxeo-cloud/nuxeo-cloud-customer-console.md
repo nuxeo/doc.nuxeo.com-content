@@ -63,6 +63,13 @@ For pre-production environments customers are able to view environment details, 
 
 For development sandbox environments customers are able to view environment details, recent Image Builds and Logs and Tasks, as well as initiate new Image Builds or Deployments. There are also sub-pages for sandbox and collecting data on the development sandbox environment.
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/dev-sandbox.png
+    name: dev-sandbox.png
+    addins#screenshot#up_to_date
+--}}
+![dev-sandbox.png](nx_asset://4812ab94-baa8-4cd3-9328-ede4391fe52e ?w=650,border=true)
+
 ### Image Builds
 
 The Customer Cloud Console gives users the ability to create a new Docker Image Build that can be deployed to development sandbox or pre-production environments.
@@ -92,13 +99,18 @@ Located on the right side of the **development sandbox** overview page, there is
 
 #### Task Types
 
-SCREENSHOT
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/task types
+    name: tasks-types.png
+    server#popup#up_to_date
+--}}
+![task types](nx_asset://dae3a6df-422f-4151-a4ab-68f963a31d92 ?w=350,border=true)
 
 The task table can be filtered by the different task types that are listed there. By selecting this dropdown and selecting or deselecting the task type options, you can view the corresponding tasks.
 
 ### Deployment 
 
-The Cloud Console provides customers with the ability to deploy an Image to development sandbox environments and pre-production ONLY.
+The Cloud Console provides customers with the ability to deploy an Image to development sandbox environments and pre-production **ONLY**.
 
 #### Deployment Types 
 
@@ -114,7 +126,12 @@ During this deployment, the stack is updated, and the nodes are redeployed using
 
 **Development Sandbox Environments** 
 
-SCREENSHOT
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Cloud Console New Deploy
+    name: cloud-console-new-deployment.png
+    server#screenshot#up_to_date
+--}}
+![Cloud Console New Deployment](nx_asset://5e773085-31d6-4956-b27a-4d3e2640450e ?w=350,border=true)
 
 When creating a new development sandbox deployment, the customer is asked to identify the following: 
 * Image Build: The image build number created as a result of the image build process.
@@ -122,13 +139,22 @@ When creating a new development sandbox deployment, the customer is asked to ide
 
 **Pre-Production Environments** 
 
-SCREENSHOT 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/pre-prod-env.png
+    name: pre-prod-env.png
+    server#popup#up_to_date
+--}}
+![pre-prod-env.png](nx_asset://a62ebb3f-76ce-4836-a38c-db009ab0aca8 ?w=350,border=true)
 
 When creating a new pre-production deployment, the customer is asked to identify the following: 
 * Image Build: The image build number created as a result of the image build process.
 * Deploy Now: Will start the deployment right after you hit the deploy button.
-
-  SCREENSHOT 
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/deploy-now-error.png
+    name: deploy-now-error.png
+    server#screenshot#up_to_date
+    --}}
+    ![deploy-now-error.png](nx_asset://ac8b4bf0-d32d-428c-8116-4654a6133247 ?w=650,border=true)
 * Custom Deployment Time: Allows you to schedule a time for deployment. This is a good option and allows you to control the time of deployment.
 * Deploy on next maintenance window: This option will deploy during the next predefined Maintenance window. The Deployment Time will show as a read only and display the maintenance window start time. 
 
@@ -161,13 +187,23 @@ When **pre-production deployments** are scheduled using a custom deploy time out
 
 Packages can be initiated in the Sandbox sub-page by selecting either “Build Only” or “Build & Deploy” from the drop down on the Package Builds table.  
 
-SCREENSHOT 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/package-build.png
+    name: package-build.png
+    server#screenshot#up_to_date
+--}}
+![package-build.png](nx_asset://5ad454a0-2630-4c76-8acf-c473284af967 ?w=650,border=true)
 
 #### Tasks and Package Build/Deploy Pipeline Status
 
 Additional details are provided for development sandbox tasks, package builds, and package deployments. The details of a task, package build, or package deployment can be viewed by selecting the status listed for the respective item.
 
-SCREENSHOT 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/build-pipeline.png
+    name: build-pipeline.png
+    server#screenshot#up_to_date
+--}}
+![build-pipeline.png](nx_asset://6ba7004b-ccbc-4f0f-9005-b903306c2d4d ?w=650,border=true)
 
 #### Environment Configuration
 
@@ -175,15 +211,30 @@ SCREENSHOT
 
 Environment nodes can be re-deployed by selecting the “Action” dropdown and “Redeploy Nodes”.
 
-SCREENSHOT 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/redeploy-nodes.png
+    name: redeploy-nodes.png
+    server#screenshot#up_to_date
+--}}
+![redeploy-nodes.png](nx_asset://1325abeb-090b-40fb-9c58-a2520d2e152b ?w=650,border=true)
 
 Once selected, a confirmation message will appear. After the user confirms and selects “Redeploy Nodes” on this message, the existing nodes are terminated, and new nodes are created. 
 
-SCREENSHOT 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/redeploy-nodes-confirmat
+    name: redeploy-nodes-confirmation.png
+    server#screenshot#up_to_date
+--}}
+![redeploy-nodes-confirmation.png](nx_asset://038c798f-80a1-4a77-9c51-03f169c63fa0 ?w=650,border=true)
 
 The status of the redeploy nodes action can be monitored on the Overview page in the Tasks table. Details can be viewed by selecting the current status shown next to the redeploy nodes task.
 
-SCREENSHOT
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/redeploy-nodes-monitorin
+    name: redeploy-nodes-monitoring.png
+    server#screenshot#up_to_date
+--}}
+![redeploy-nodes-monitoring.png](nx_asset://42321ed9-63c8-48e9-b2fe-02816ef198cd ?w=650,border=true)
 
 ##### Log Override
 
@@ -202,7 +253,12 @@ Below are log4j2.xml files that must be updated and included in the development 
 
 If you have secrets, you can enter those in this window. Then if customers would like to have the secrets added to the “Cloud Stack Secrets Manager”, you can communicate that to the Nuxeo Cloud Operations team to update this for you. 
 
-SCREENSHOT 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Secrets
+    name: secrets.png
+    server#screenshot#up_to_date
+--}}
+![Secrets ](nx_asset://bcbed6d8-bd6c-4a0a-8189-e42593a446e1 ?w=350,border=true)
 
 ##### Configuration Override
 
@@ -214,19 +270,34 @@ Once the changes have been entered into the text field and the “Save” button
 
 Additional details and examples of nuxeo.conf files that can be used for this feature can be found on the [related documentation page]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}). 
 
-SCREENSHOT
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/conf-override.png
+    name: conf-override.png
+    server#screenshot#up_to_date
+--}}
+![conf-override.png](nx_asset://f1eb92d5-8998-4cf8-8799-c05be8cc500c ?w=350,border=true)
 
 #### Package Configurations
 
 Edit Packages, Edit Projects, and Set/Reset SSH Key Pair can be accessed from the dropdown button located in the upper right-hand corner of the Package Build table on the sandbox page. 
 
-SCREENSHOT 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/package conf
+    name: package-conf.png
+    server#screenshot#up_to_date
+--}}
+![package conf](nx_asset://68efe849-03a5-4638-844e-1e24ead8cda5 ?w=350,border=true)
 
 ##### Edit Packages
 
 Once a package has been created by the NCO team, a package can be edited by selecting “Edit Packages” from the dropdown shown in the above screenshot.
 
-SCREENSHOT 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/edit packages
+    name: edit-packages.png
+    server#popup#up_to_date
+--}}
+![edit packages](nx_asset://1403cdf8-d585-492c-b6cc-6eb9dd78832d ?w=350,border=true)
 
 * Package Project: Package project to be edited. 
 * Package project title: The package project title can be edited to any customizable name. 
@@ -236,7 +307,12 @@ SCREENSHOT
 
 ##### Edit Projects 
 
-SCREENSHOT 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Edit projects
+    name: edit-projects.png
+    server#popup#up_to_date
+--}}
+![Edit projects](nx_asset://e421219b-f61a-4001-9c87-c2604394614b ?w=350,border=true)
 
 * Project: Project to be edited. 
 * Project title: The package project title can be edited to any customizable name. 
