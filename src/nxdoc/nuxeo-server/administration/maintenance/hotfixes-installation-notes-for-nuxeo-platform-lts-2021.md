@@ -103,6 +103,21 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 48
+
+### Set Snappy-Java Version to 1.1.10.5
+
+
+The following dependency has been upgraded from 1.1.8.1 to 1.1.10.5:
+```
+<dependency>
+  <groupId>org.xerial.snappy</groupId>
+  <artifactId>snappy-java</artifactId>
+</dependency>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32196](https://jira.nuxeo.com/browse/NXP-32196)
+
 ## Hotfix 47
 
 ### Upgrade or Remove Htmlunit From Nuxeo-Runtime-Test to Avoid Vulnerability
@@ -638,6 +653,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
