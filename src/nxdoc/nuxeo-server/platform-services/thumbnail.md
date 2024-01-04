@@ -263,6 +263,14 @@ The above thumbnail factories will be used to compute and fetch specific thumbna
 * `facet`: string identifying the related document facet.
 * `factoryClass`: string representing the class name of the factory to use.
 
+Notice how the `ThumbnailService` filters the properties:
+
+* If the document matches `docType`, the factory is used (ignoring `facet`)
+* Then, if the document has the `facet`, the factory is used.
+* If the document does not match the `docType` and does not have the `facet`, the default factory is used.
+
+The default factory is the factory that defines no `docType` and no `facet`.
+
 Each factory should implement the interface [`ThumbnailFactory`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/thumbnail/class-use/ThumbnailFactory.html) . This interface contract contains two methods to implement:
 
 * `Blob getThumbnail(DocumentModel doc, CoreSession session)`: gets the document thumbnail (related to the doc type/facet).
