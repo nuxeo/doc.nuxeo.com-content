@@ -15,7 +15,7 @@ The Nuxeo Cloud Customer Console provides our customers with increased self serv
 
 ## Dedicated Image Build and Deployment Pipelines
 
-TThe Nuxeo Cloud Customer Console introduces the ability to build and deploy a dedicated Nuxeo Docker Image to your Pre-Production Cloud Environment. The same Docker image can then be promoted to production at your request by the Hyland Cloud team.
+The Nuxeo Cloud Customer Console introduces the ability to build and deploy a dedicated Nuxeo Docker Image to your Pre-Production Cloud Environment. The same Docker image can then be promoted to production at your request by the Hyland Cloud team.
 -	**Image Build Pipeline** - The Image Build Pipeline is defined in a Project that is preconfigured by the Cloud Service Team. It uses a Nuxeo+HF Base Docker image and combines it with your application Marketplace package and dependent add-ons to produce your Dedicated Customer Docker Image. The Image is managed in a Project that you have access to.  This Dedicated Docker Image artifact can then be deployed to your Pre-Production & Production environments.
 -	**Image Deployment Pipeline** - The Deployment pipeline is used to deploy the Dedicated Customer Docker Image to a Development Sandbox, Pre-Production, or Production environment. The same Image Build and Deployment pipelines are used by the Nuxeo Cloud team. At this time, only the Nuxeo Cloud Team can deploy the Dedicate Customer image to your Production environment. The Nuxeo Customer Docker Image is an artifact that has a unique build number. The Nuxeo Cloud Customer Console references the build number to select and deploy to the Environment.
 
@@ -173,7 +173,7 @@ The standard maintenance window for each region is as follows:
 
 Maintenance Windows are defined in your Cloud Service Agreement.  If you have questions, please contact your Customer Service representative.
 
-### Deployment Status & Details
+### Deployment Status and Details
 
 Additional deployment information regarding the success or failure of the deployment can be found in the deployments table. More information will be provided on commonly found errors in the future. Deployment errors can be resolved by creating a Jira SUPNXP ticket to notify the Nuxeo Cloud team of the error.
 
