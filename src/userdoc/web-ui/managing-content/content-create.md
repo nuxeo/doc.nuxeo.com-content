@@ -52,6 +52,10 @@ To import content into Nuxeo, drag an item from your computer and drop it into a
 - You can also drag and drop one or more files of any type from the **Import** tab of the creation popup. On this popup you can also edit the **Location** of your import.
   ![]({{file name='import-popup-web-ui.png'}} ?w=450,border=true)
 
+{{#> callout type='tip' }}
+You can import documents from a **custom encoded** Zip. For the preview to work correctly, you can follow the following instructions: [ZipFile Handling Details]({{page space='nxdoc' page='preview'}}#zipfile-handling-details)
+{{/ callout}}
+
 ### Import with Properties
 
 {{#> callout type='tip' }}
