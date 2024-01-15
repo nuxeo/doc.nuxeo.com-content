@@ -190,6 +190,29 @@ if (mtPreviewer != null) {
 }
 ```
 
+### ZipFile Handling Details
+
+When previewing a zip, the files it contains are listed. The displayed filenames are decoded as `UTF-8`. The following exception can be raised at `ZipFile`s instanciation if the underlying zip was encoded in a charset different from `UTF-8` containing non-ASCII characters:
+
+```java
+ZipException: invalid CEN header (bad entry name)
+```
+> Character set detection is at best an imprecise operation.
+> <cite>Apache Tika</cite>
+
+Decoding such files can't be done by looping over a list of available charsets as some may work but give partial results (missing characters for example). To work around this, a fallback charset mechanism is provided to decode zips which cause issues while keeping the whole platform working in `UTF-8`.
+This allows you to provide a single, specific charset which should be the right one to read the zip.
+This charset can be configured via the `ConfigurationService`:
+
+```xml
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.zip.file.reader.fallback.config">
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="org.nuxeo.ecm.zip.file.reader.charset.fallback">cp850</property>
+  </extension>
+</component>
+```
+
 {{> end_of_tabs }}
 
 * * *
