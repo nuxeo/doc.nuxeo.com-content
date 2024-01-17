@@ -20,7 +20,6 @@ hidden: true
 
 GoogleStorageBlobProvider supports byte-range 
 
-See NXP-28919
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32197](https://jira.nuxeo.com/browse/NXP-32197)
 
