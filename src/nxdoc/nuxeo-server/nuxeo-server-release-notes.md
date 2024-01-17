@@ -28,7 +28,7 @@ Refer to the [LTS 2023 upgrade notes]({{page page='hotfixes-installation-notes-f
 
 | Version                                                                       | Release date                 |
 | ----------------------------------------------------------------------------- | ---------------------------- |
-| [LTS 2023.6 / 2023-HF06]({{page page='nuxeo-server-release-notes-2023-6'}}) | 2024-01-08 |
+| [LTS 2023.6 / 2023-HF06]({{page page='nuxeo-server-release-notes-2023-6'}}) | 2024-01-17 |
 | [LTS 2023.5 / 2023-HF05]({{page page='nuxeo-server-release-notes-2023-5'}}) | 2023-12-18 |
 | [LTS 2023.4 / 2023-HF04]({{page page='nuxeo-server-release-notes-2023-4'}}) | 2023-11-06 |
 | [LTS 2023.3 / 2023-HF03]({{page page='nuxeo-server-release-notes-2023-3'}}) | 2023-09-25 |
