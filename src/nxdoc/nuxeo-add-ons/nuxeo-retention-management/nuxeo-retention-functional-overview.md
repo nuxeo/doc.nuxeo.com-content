@@ -310,6 +310,10 @@ By doing so:
 This is an **irreversible action**, even as an administrator, meaning you can't remove the retention rule from the document and you can't shorten the retention period. [Records can be undeclared]({{page page='nuxeo-retention-howto-undeclare-record'}}) in specific conditions when using the addon in standard mode however.
 {{/callout}}
 
+{{#> callout type='info' }}
+By default, only the main file of the document will be protected and other properties will remain editable. Should you wish to protect additional properties, please refer to our documentation on [how to retain multiple files or properties]({{page page='nuxeo-retention-howto-retain-multiple-blobs'}}).
+{{/callout}}
+
 After having attached a retention rule, the only available action is to [extend the retention](#extend-the-retention-of-a-document).
 
 There are different ways to put a document under retention. You can attach a retention rule to a single document or to several documents at once.
