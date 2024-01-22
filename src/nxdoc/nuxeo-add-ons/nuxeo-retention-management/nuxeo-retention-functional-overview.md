@@ -3,7 +3,7 @@ title: Functional Overview
 description: Discover how to use the Nuxeo Retention Management addon once installed.
 review:
   comment: ''
-  date: '2023-09-14'
+  date: '2024-01-22'
   status: 'ok'
 labels:
   - bchauvin
