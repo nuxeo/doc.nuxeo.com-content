@@ -42,11 +42,11 @@ In standard mode, you can differentiate records that require stricter compliance
 
 General restrictions will still apply:
 
-- There is no way to roll back the application of a retention rule to a document, even as an administrator. A record can be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
+- There is no way to roll back the application of a retention rule to a document, even as an administrator. [A record can be undeclared in specific conditions]({{page page='nuxeo-retention-howto-undeclare-records'}}) however, allowing to attach a different rule with a different retention period.
 - There is no way to shorten a retention duration, even as an administrator. A record can be undeclared in specific conditions however, allowing to attach a different rule with a different retention period.
 - If you configured the addon to use a dedicated bucket for records that leverages Object Lock in Compliance mode:
-  - There is no way to replace the main file of a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are configured to be retained as well.
-  - There is no way to delete the main file of a document a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are configured to be retained as well.
+  - There is no way to replace the main file of a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are [configured to be retained]({{page page='nuxeo-retention-howto-retain-multiple-blobs'}}) as well.
+  - There is no way to delete the main file of a document a document under retention or legal hold, even as an administrator and even with a direct access to the storage. This can also apply to additional document properties if they are [configured to be retained]({{page page='nuxeo-retention-howto-retain-multiple-blobs'}}) as well.
 
 ## As a Records Manager
 
@@ -72,7 +72,7 @@ A new retention menu {{!--     ### nx_asset ###
 
 ### Retention Actions
 
-New actions are displayed on documents and result list:
+New actions are displayed on documents and / or results lists:
 
 - {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-main
@@ -94,6 +94,9 @@ New actions are displayed on documents and result list:
       server#icon#to_be_updated
   --}}
   ![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) override the retention of a document already under retention.
+
+<!-- Icon pending (waiting for access to the intranet to upload it) -->
+- Undeclare a record (visible on a document only)
 
 ### Retention Rule Document Type
 
@@ -153,6 +156,10 @@ To create a new [retention rule]({{page page='nuxeo-retention-management'}}#rete
   <tr>
     <td>Status</td>
     <td>Select if the rule can be applied to the documents ("active") or not ("inactive").</td>
+  </tr>
+    <tr>
+    <td>Allow undeclaring the record</td>
+    <td>Select if the rule should [allow the record to be undeclared]({{page page='nuxeo-retention-howto-undeclare-records'}}).</td>
   </tr>
   <tr>
     <th>Rule Application</th>
@@ -466,6 +473,12 @@ Once on the **View** tab of your document:
    --}}
    ![retention-screen-legalhold-document](nx_asset://84e7a358-cff2-4a99-97b9-59eeac58b37d ?w=600,border=true)
 
+{{! multiexcerpt name='legal-hold-enforces-retention'}}
+{{#> callout type='warning' }}
+Applying legal hold on a document automatically enforces its retention as a record necessary for compliance, meaning that it cannot be [undeclared]({{page page='nuxeo-retention-howto-undeclare-records'}}) anymore. If WORM storage is configured, it will be stored in this way for the remaining duration of its retention, even after you remove the legal hold.
+{{/callout}}
+{{! /multiexcerpt}}
+
 #### From a Result List
 
 After having performed a search from the [retention search menu](#retention-search), a list of documents is displayed. Then, if you click on the **Not Under legal hold** quick filter, you can click on **Apply legal hold** icon {{!--     ### nx_asset ###
@@ -487,6 +500,8 @@ Fill in the description field from the popup window and confirm.
 {{#> callout type='note' }}
 The legal hold will be applied on **all the documents displayed on the page**.
 {{/callout}}
+
+{{{multiexcerpt 'legal-hold-enforces-retention' page='nuxeo-retention-functional-overview'}}}
 
 ### Remove a Legal Hold
 
