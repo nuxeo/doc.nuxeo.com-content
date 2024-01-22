@@ -1,9 +1,9 @@
 ---
-title: How To Undeclare Records
+title: 'HOWTO: Undeclare Records'
 description: Discover how flexible retention rules can be leveraged to undeclare records.
 review:
     comment: ''
-    date: '2023-09-19'
+    date: '2024-01-22'
     status: 'ok'
 labels:
     - bchauvin
