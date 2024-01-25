@@ -14,7 +14,7 @@ hidden: true
 {{! multiexcerpt name='upgrade-notes'}}
 
 {{! multiexcerpt name='matching-notes'}}
-{{#> callout type='info' heading='Release Notes'}}
+{{#> callout type='info' heading='Upgrade Notes'}}
 This page mentions how to do a technical upgrade. Have a look at the [release notes]({{page page='web-ui-release-notes'}}) to see what's new.
 {{/callout}}
 {{! /multiexcerpt}}

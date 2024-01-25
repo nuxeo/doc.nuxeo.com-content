@@ -3,7 +3,7 @@ title: Web UI Upgrade Notes
 description: Detailed upgrade notes to transition to the latest Web UI version.
 review:
     comment: ''
-    date: '2023-03-02'
+    date: '2024-01-25'
     status: ok
 toc: true
 labels:
@@ -56,8 +56,6 @@ Nuxeo Server can still be updated independently with newer versions to benefit f
 
 ### Can I Upgrade to LTS 2021 Without Doing This First?
 
-This change is completely separate from a technical upgrade to LTS 2021.
+This change can be done separately from a technical upgrade to LTS 2021 and will most likely not impact you at all. You should first check if there is a code change for you to do with our [guidelines](#what-are-the-impacts-does-it-impact-my-projects) above.
 
-If you are in the process of upgrading from LTS 2021, check your current Nuxeo Web UI version:
-- If the version is `3.0.29` or lower, it means that it uses NodeJS 14 for its functional tests. You should check if there is a code change for you to do with our [guidelines](#what-are-the-impacts-does-it-impact-my-projects) above.
-- If the version is `3.0.30` or higher, it is already using NodeJS 18 for its functional tests and there is nothing for you to do.
+If a code change is required and you are in the process of upgrading from LTS 2019, you can first upgrade Nuxeo Web UI to version `3.0.29`. Any UI functional test that you wrote will remain compatible: LTS 2021 uses NodeJS 14 for its functional tests but provides a compatibility layer for tests written with previous NodeJS versions all the way to NodeJS v10. Once that your UI functional tests are compatible with NodeJS 18, you can then switch to the latest Nuxeo Web UI version.
