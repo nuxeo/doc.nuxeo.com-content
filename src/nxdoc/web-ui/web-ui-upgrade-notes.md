@@ -16,6 +16,8 @@ This page mentions how to do a technical upgrade. Have a look at the [release no
 {{/callout}}
 {{! /multiexcerpt}}
 
+{{{multiexcerpt 'upgrade-notes' page='web-ui-upgrade-notes-lts-2023'}}}
+
 ## Upgrading to NodeJS 18
 
 Starting from Web UI version `3.1.5` (release on March 18, 2024), Nuxeo Web UI will upgrade its requirements for its functional tests stacks and accessibility tests stack. Any UI functional tests written in your project using NodeJS 14 or lower will need to be migrated to NodeJS 18.
@@ -62,4 +64,3 @@ If you are in the process of upgrading from LTS 2021, check your current Nuxeo W
 - If the version is `3.0.29` or lower, it means that it uses NodeJS 14 for its functional tests. You should check if there is a code change for you to do with our [guidelines](#what-are-the-impacts-does-it-impact-my-projects) above.
 - If the version is `3.0.30` or higher, it is already using NodeJS 18 for its functional tests and there is nothing for you to do.
 
-{{{multiexcerpt 'upgrade-notes' page='web-ui-upgrade-notes-lts-2023'}}}
