@@ -13,12 +13,6 @@ hidden: true
 
 {{! multiexcerpt name='upgrade-notes'}}
 
-{{! multiexcerpt name='matching-notes'}}
-{{#> callout type='info' heading='Release Notes'}}
-This page mentions how to do a technical upgrade. Have a look at the [release notes]({{page page='web-ui-release-notes'}}) to see what's new.
-{{/callout}}
-{{! /multiexcerpt}}
-
 ## Upgrading Web UI from LTS 2021 to LTS 2023
 
 Upgrading Web UI from LTS 2021 to LTS 2023 is a transparent process. It uses the same codebase as its LTS 2021 counterpart and requires no specific upgrade process.
