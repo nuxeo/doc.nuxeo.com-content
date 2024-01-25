@@ -11,13 +11,13 @@ tree_item_index: 500
 ---
 
 {{! multiexcerpt name='matching-notes'}}
-{{#> callout type='info' heading='Upgrade Notes'}}
+{{#> callout type='info' heading='Release Notes'}}
 This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-upgrade-notes'}}) to transition to this version.
 {{/callout}}
 {{! /multiexcerpt}}
 
 {{#> callout type='warning' heading='NodeJS 18 Upgrade'}}
-Starting from the Web UI release happening in March 2024, functional tests written on top of Web UI for your projects will require to use NodeJS 18. Please refer to the [upgrade notes]({{page page='web-ui-upgrade-notes'}}) for detailed information.
+Starting from Web UI version `3.1.5` released in March 2024, functional tests written on top of Web UI for your projects will require to use NodeJS 18. Please refer to the [upgrade notes]({{page page='web-ui-upgrade-notes'}}) for detailed information.
 {{/callout}}
 
 ## Recently Released Changes
