@@ -200,7 +200,7 @@ ZipException: invalid CEN header (bad entry name)
 > Character set detection is at best an imprecise operation.
 > <cite>Apache Tika</cite>
 
-Decoding such files can't be done by looping over a list of available charsets as some may work but give partial results (missing characters for example). To work around this, a fallback charset mechanism is provided to decode zips which cause issues while keeping the whole platform working in `UTF-8`.
+Decoding files can't be done by looping over a list of available charsets as some may work but give partial results (missing characters for example). To work around this, a fallback charset mechanism is provided to decode zips which cause issues while keeping the whole platform working in `UTF-8`.
 This allows you to provide a single, specific charset which should be the right one to read the zip.
 This charset can be configured via the `ConfigurationService`:
 
