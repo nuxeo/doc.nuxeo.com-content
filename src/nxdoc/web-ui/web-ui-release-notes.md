@@ -11,7 +11,7 @@ tree_item_index: 500
 ---
 
 {{! multiexcerpt name='matching-notes'}}
-{{#> callout type='info' heading='Upgrade Notes'}}
+{{#> callout type='info' heading='Release Notes'}}
 This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-upgrade-notes'}}) to transition to this version.
 {{/callout}}
 {{! /multiexcerpt}}
