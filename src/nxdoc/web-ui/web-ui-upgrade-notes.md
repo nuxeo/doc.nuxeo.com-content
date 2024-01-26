@@ -22,11 +22,11 @@ This page mentions how to do a technical upgrade. Have a look at the [release no
 
 Starting from Web UI version `3.1.5` (release on March 18, 2024), Nuxeo Web UI will upgrade its requirements for its functional tests stacks and accessibility tests stack. Any UI functional tests written in your project using NodeJS 14 or lower will need to be migrated to NodeJS 18.
 
-### Why are you Doing This?
+### Why Are You Doing This?
 
 This change is necessary to keep our stack up to date and secure.
 
-### What Are the Impacts? Does it Impact My Projects?
+### What Is the Impact? Does It Impact My Projects?
 
 This is a transparent technical change in one of our dependencies that serves us to automatically test the addon before we deliver it. It does NOT have any impact on your end except a potential code change if you specifically built custom functional tests for your UI on top of our own tooling.
 
@@ -37,7 +37,7 @@ The code of your functional tests will require an update only if ALL of these co
 
 Otherwise, you can safely ignore this notice.
 
-### How can I Test and Get Ready?
+### How Can I Test and Get Ready?
 
 First, you will need to get the appropriate version and source code to test this out.
 
