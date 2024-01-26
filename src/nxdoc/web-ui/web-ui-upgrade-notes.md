@@ -20,7 +20,7 @@ tree_item_index: 550
 
 Starting from Web UI version `3.0.30` (release on March 18, 2024), Nuxeo Web UI will upgrade its requirements for its functional tests stacks and accessibility tests stack. Any UI functional tests written in your project using NodeJS 14 or lower will need to be migrated to NodeJS 18.
 
-### Why are you Doing This?
+### Why Are You Doing This?
 
 This change is necessary to keep our stack up to date and secure.
 
