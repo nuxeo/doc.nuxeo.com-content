@@ -24,7 +24,7 @@ Starting from Web UI version `3.0.30` (release on March 18, 2024), Nuxeo Web UI 
 
 This change is necessary to keep our stack up to date and secure.
 
-### What Are the Impacts? Does it Impact My Projects?
+### What Is the Impact? Does It Impact My Projects?
 
 This is a transparent technical change in one of our dependencies that serves us to automatically test the addon before we deliver it. It does NOT have any impact on your end except a potential code change if you specifically built custom functional tests for your UI on top of our own tooling.
 
