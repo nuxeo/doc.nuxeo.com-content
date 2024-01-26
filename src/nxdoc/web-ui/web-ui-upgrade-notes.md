@@ -35,7 +35,7 @@ The code of your functional tests will require an update only if ALL of these co
 
 Otherwise, you can safely ignore this notice.
 
-### How can I Test and Get Ready?
+### How Can I Test and Get Ready?
 
 First, you will need to get the appropriate version and source code to test this out.
 
