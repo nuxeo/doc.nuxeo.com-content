@@ -103,6 +103,25 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 49
+
+### Add Support for ZIP Generated With 7-Zip and Including Files Whose Name Contains Special Characters
+
+
+A fallback charset can be configured. This is being documented in nxdoc/preview.
+But here is the TL;DR:
+```xml
+<?xml version=1.0?>
+<component name=org.nuxeo.ecm.zip.file.reader.fallback.config>
+  <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
+    <property name=org.nuxeo.ecm.zip.file.reader.charset.fallback>cp850</property>
+  </extension>
+</component>
+```
+
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32042](https://jira.nuxeo.com/browse/NXP-32042)
+
 ## Hotfix 48
 
 ### Set Snappy-Java Version to 1.1.10.5
@@ -653,6 +672,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
