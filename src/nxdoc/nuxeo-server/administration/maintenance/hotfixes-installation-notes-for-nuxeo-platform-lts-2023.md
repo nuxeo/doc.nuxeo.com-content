@@ -101,6 +101,25 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 7
+
+### Add Support for ZIP Generated With 7-Zip and Including Files Whose Name Contains Special Characters
+
+
+A fallback charset can be configured. This is being documented in nxdoc/preview.
+But here is the TL;DR:
+```xml
+<?xml version=1.0?>
+<component name=org.nuxeo.ecm.zip.file.reader.fallback.config>
+  <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
+    <property name=org.nuxeo.ecm.zip.file.reader.charset.fallback>cp850</property>
+  </extension>
+</component>
+```
+
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32042](https://jira.nuxeo.com/browse/NXP-32042)
+
 ## Hotfix 5
 
 ### Upgrade or Remove Htmlunit From Nuxeo-Runtime-Test to Avoid Vulnerability
@@ -293,6 +312,7 @@ The `nuxeo.conf` property `nuxeo.retention.compliance.enabled` has been deprecat
 When both properties are configured, `nuxeo.retention.strictmode.enabled` takes precedence.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31878](https://jira.nuxeo.com/browse/NXP-31878)
+
 
 
 
