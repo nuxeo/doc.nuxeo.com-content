@@ -22,7 +22,7 @@ In this tutorial, you will learn how to leverage this configuration to retain mu
 ## Prerequisites
 
 This feature is available starting from:
-- Nuxeo Server `LTS 2021 HF33`
+- Nuxeo Server `LTS 2021 HF32`
 - Nuxeo Retention `2021.4.5`
 
 This how-to requires:
