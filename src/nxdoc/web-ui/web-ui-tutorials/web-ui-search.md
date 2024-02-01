@@ -57,7 +57,7 @@ In **Configuration**, go to **Page Providers**, click on **New** and name it `Se
     name: full-text-vd.png
     1.1.3#screenshot#up_to_date
 --}}
-![full-text-vd.png](nx_asset://6d9c814a-febc-41e9-82b2-7ab55a78ea1c ?w=250,border=true)
+![full-text-vd.png](/nx_assets/6d9c814a-febc-41e9-82b2-7ab55a78ea1c.png ?w=250,border=true)
 
 1. Next to **Predicates** click on **Add**.</br>
    A popup window appears.
@@ -70,7 +70,7 @@ In **Configuration**, go to **Page Providers**, click on **New** and name it `Se
     name: creation-date-range-vd.png
     1.1.3#screenshot#up_to_date
 --}}
-![creation-date-range-vd.png](nx_asset://4ce1b16a-6422-4f43-87f2-e6e1f2bea0d0 ?w=250,border=true)
+![creation-date-range-vd.png](/nx_assets/4ce1b16a-6422-4f43-87f2-e6e1f2bea0d0.png ?w=250,border=true)
 
 1. Next to **Aggregates** click on **Add**.</br>
    A popup window appears.
@@ -106,7 +106,7 @@ In **Configuration**, go to **Page Providers**, click on **New** and name it `Se
     name: tags-search-vd.png
     1.1.3#screenshot#up_to_date
 --}}
-![tags-search-vd.png](nx_asset://6325dccd-6998-4daa-85e5-b2537e74bc75 ?w=250,border=true)
+![tags-search-vd.png](/nx_assets/6325dccd-6998-4daa-85e5-b2537e74bc75.png ?w=250,border=true)
 
 1. Add another new Predicates.
 1. Click on **Edit binding** and select `schema:system`&nbsp;> `tag[]`.

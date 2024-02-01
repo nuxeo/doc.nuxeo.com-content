@@ -64,20 +64,20 @@ Copying and moving documents requires to have at least **Read** permission on th
     name: moving-documents-clipboard-button-2.png
     1.1.3#icon#up_to_date
 --}}
-![Moving Documents - Clipboard Button 2](nx_asset://50110a52-8b6e-4cef-bbe4-929f8f49d450 ?w=25) button displayed in the top bar. </br>
+![Moving Documents - Clipboard Button 2](/nx_assets/50110a52-8b6e-4cef-bbe4-929f8f49d450.png ?w=25) button displayed in the top bar. </br>
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Editing Content/Moving Documents - Clipboard button
     name: moving-documents-clipboard-button.png
     1.1.3#screenshot#up_to_date
 --}}
-![Moving Documents - Clipboard button](nx_asset://1bf6a419-74e9-4916-aaeb-2164850d18a8 ?w=650,border=true)
+![Moving Documents - Clipboard button](/nx_assets/1bf6a419-74e9-4916-aaeb-2164850d18a8.png ?w=650,border=true)
 
   The selected content is added to the clipboard and the icon displays a notification icon {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Editing Content/Moving Documents - Clipboard Notification
     name: moving-documents-clipboard-notification.png
     1.1.3#icon#up_to_date
 --}}
-![Moving Documents - Clipboard Notification](nx_asset://1e43e78d-4fa1-4d8e-8be9-ffb2f333785a ?w=25) showing how much documents are in the clipboard.
+![Moving Documents - Clipboard Notification](/nx_assets/1e43e78d-4fa1-4d8e-8be9-ffb2f333785a.png ?w=25) showing how much documents are in the clipboard.
 
   {{#> callout type='info'}}
   In the clipboard, the list of documents persists even when you log out and log back in.
@@ -95,7 +95,7 @@ Copying and moving documents requires to have at least **Read** permission on th
     name: moving-documents-clipboard-actions.png
     1.1.3#screenshot#up_to_date
   --}}
-  ![Moving Documents - Clipboard Actions](nx_asset://26dc8718-0ed0-4f82-8d33-a0a961b438ff ?w=650,border=true)
+  ![Moving Documents - Clipboard Actions](/nx_assets/26dc8718-0ed0-4f82-8d33-a0a961b438ff.png ?w=650,border=true)
 1. Click on the:
   - **Copy** button to copy documents to the target location. </br>
   Documents are copied and are present in both source and target locations.

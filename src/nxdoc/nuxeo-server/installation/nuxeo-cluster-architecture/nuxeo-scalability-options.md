@@ -42,7 +42,7 @@ Applications requiring heavy processing like picture or video conversions can ta
     name: worker-nodes-intro.png
     server#schema#up_to_date
 --}}
-![worker-nodes-intro.png](nx_asset://8a582734-8832-48dc-a700-090c6ed6bae3 ?w=650,border=true)
+![worker-nodes-intro.png](/nx_assets/8a582734-8832-48dc-a700-090c6ed6bae3.png ?w=650,border=true)
 
 The async tasks can be managed in a distributed way using the [WorkManager]({{page page='work-and-workmanager'}}) with Kafka (or Redis).
 
@@ -53,7 +53,7 @@ The async tasks can be managed in a distributed way using the [WorkManager]({{pa
     name: worker-nodes.png
     server#schema#up_to_date
 --}}
-![worker-nodes.png](nx_asset://1afeca9e-063d-4bd9-9961-19fdbe1d9b59 ?w=650,border=true)
+![worker-nodes.png](/nx_assets/1afeca9e-063d-4bd9-9961-19fdbe1d9b59.png ?w=650,border=true)
 
 ### WorkManager and Kafka
 
@@ -94,7 +94,7 @@ This approach allows you to leverage Elasticsearch capabilities to its fullest:
     name: query-scale-out.png
     server#schema#up_to_date
 --}}
-![query-scale-out.png](nx_asset://ea94a8dd-f3fb-4158-b0ca-d13b2d6dc8f2 ?w=650,border=true)
+![query-scale-out.png](/nx_assets/ea94a8dd-f3fb-4158-b0ca-d13b2d6dc8f2.png ?w=650,border=true)
 
 ## Storage
 
@@ -173,7 +173,7 @@ This data partitioning is visible to end-users, but thanks to Elasticsearch we c
     name: unified-index.png
     server#schema#up_to_date
 --}}
-![unified-index.png](nx_asset://cfbad3a1-3584-4a38-88b1-feca6ce92847 ?w=650,border=true)
+![unified-index.png](/nx_assets/cfbad3a1-3584-4a38-88b1-feca6ce92847.png ?w=650,border=true)
 
 This type of sharding has been tested during the [11B benchmark](https://benchmarks.nuxeo.com/11-billion-benchmark-story/), leveraging the MongoDB Sharding to maximize write-throughput to speed-up the import of archives, and allowing us to reach 25,000 documents/s.
 

@@ -367,7 +367,7 @@ In Nuxeo, everything can be configured:
     name: EP-stack.png
     server#diagram#up_to_date
 --}}
-![EP Stack](nx_asset://d950d323-6b62-416c-be68-ca4e2714a680)
+![EP Stack](/nx_assets/d950d323-6b62-416c-be68-ca4e2714a680.png)
 
 ## Bundles, Components, Services and Extension Points
 
@@ -453,7 +453,7 @@ Here is a schema of all the possibilities:
     name: bundles.png
     server#schema#up_to_date
 --}}
-![Bundles](nx_asset://c308d841-2950-4d13-a320-67bde1efeec8)
+![Bundles](/nx_assets/c308d841-2950-4d13-a320-67bde1efeec8.png)
 
 
 Some components are indeed holding all these different types of declarations, but we usually see the following pattern for "framework" components, defining a service and extension points:
@@ -462,7 +462,7 @@ Some components are indeed holding all these different types of declarations, bu
     name: bundle-framework.png
     server#schema#up_to_date
 --}}
-![Framework Bundle](nx_asset://cb23a2eb-649d-4693-b423-dcfc6f8ca4ad)
+![Framework Bundle](/nx_assets/cb23a2eb-649d-4693-b423-dcfc6f8ca4ad.png)
 
 We usually see the following pattern for "contribution" components, defining contributions to other extension points:
 {{!--     ### nx_asset ###
@@ -470,7 +470,7 @@ We usually see the following pattern for "contribution" components, defining con
     name: bundle-configuration.png
     server#schema#up_to_date
 --}}
-![Configuration Bundle](nx_asset://2115c276-c3f5-4d1a-a0a6-cb923c323274)
+![Configuration Bundle](/nx_assets/2115c276-c3f5-4d1a-a0a6-cb923c323274.png)
 
 ### {{> anchor 'services'}}Nuxeo Services
 
@@ -529,7 +529,7 @@ So, most Nuxeo services are configurable and pluggable via the underlying compon
     name: Extension Points.png
     server#diagram#up_to_date
 --}}
-![Extension Points](nx_asset://20532d90-c6f8-42e0-8df5-68da4a918b21)
+![Extension Points](/nx_assets/20532d90-c6f8-42e0-8df5-68da4a918b21.png)
 
 #### Declaring an Extension Point
 

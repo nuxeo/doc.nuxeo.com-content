@@ -106,7 +106,7 @@ The Nuxeo Platform is a perfect choice for implementing a [case management proje
     name: claim4.png
     addins#screenshot#up_to_date
 --}}
-![claim4.png](nx_asset://c369fec6-12b9-45bf-9207-51486cf38a8f ?w=650,border=true)
+![claim4.png](/nx_assets/c369fec6-12b9-45bf-9207-51486cf38a8f.png ?w=650,border=true)
 
 Let's go through the important steps when implementing a case management project.
 
@@ -129,7 +129,7 @@ path: /default-domain/workspaces/Product Management/Documentation/Documentation 
 name: claim2.png
 addins#screenshot#up_to_date
 --}}
-![claim2.png](nx_asset://6a560c72-de63-47cc-827e-40c4449072c8 ?w=400,border=true)
+![claim2.png](/nx_assets/6a560c72-de63-47cc-827e-40c4449072c8.png ?w=400,border=true)
     *   or, in a more adaptive style, launching small workflows depending on some pre-defined event-based conditions (click on a given button, change of state of the case, change of the value of a metadata). You may also want to integrate Nuxeo with an external rules engine that would provide even more induction capabilities.
 
 ## Refining Your Users Views
@@ -141,7 +141,7 @@ Now that you start having a pretty good idea of which user should fill which inf
     name: claim3.png
     addins#screenshot#up_to_date
 --}}
-![claim3.png](nx_asset://dc33a301-7db4-4960-b582-08394fa39945 ?w=650,border=true)
+![claim3.png](/nx_assets/dc33a301-7db4-4960-b582-08394fa39945.png ?w=650,border=true)
 
 *   By spreading all your business data among different tabs for making them simpler, and by organizing the main case view in a nice way. You can use for this the forms and content views features, as well as the tab designer feature, in Studio.
 {{!--     ### nx_asset ###
@@ -149,7 +149,7 @@ path: /default-domain/workspaces/Product Management/Documentation/Documentation 
 name: claim1.png
 addins#screenshot#up_to_date
 --}}
-![claim1.png](nx_asset://6926c0c8-3005-454d-9729-5bb7d5361c57 ?w=450,border=true)
+![claim1.png](/nx_assets/6926c0c8-3005-454d-9729-5bb7d5361c57.png ?w=450,border=true)
 *   By providing working queues, that help organize the case worker job. A working queue is a mechanism for displaying cases depending on some of their criteria (nature, lifecycle, customer id, ...)
 
 ## Adding Automation on Content Processing

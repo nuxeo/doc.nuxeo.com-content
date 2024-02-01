@@ -262,7 +262,7 @@ After that, bundles are processed for components, following the Runtime Framewor
     name: Runtime Flow.png
     server#diagram#up_to_date
 --}}
-![Runtime Flow](nx_asset://731b5efa-6e69-4998-b3d1-89be397e6e79)
+![Runtime Flow](/nx_assets/731b5efa-6e69-4998-b3d1-89be397e6e79.png)
 
 In case of problems during the runtime deployment, the application startup might be aborted
 (see [`--lenient` option]({{page page ='nuxeoctl-and-control-panel-usage'}}#lenient) to control

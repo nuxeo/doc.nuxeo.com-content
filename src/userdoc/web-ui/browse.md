@@ -37,7 +37,7 @@ The side menu displays all the domain structure from the root. It enables you to
     name: DASHBOARD.png
     1.1.3#screenshot#up_to_date
 --}}
-![Dashboard](nx_asset://64d7b9de-9c34-4c31-bbf3-05722d387372 ?w=650,border=true)
+![Dashboard](/nx_assets/64d7b9de-9c34-4c31-bbf3-05722d387372.png ?w=650,border=true)
 
 To access your dashboard, click on the icon on the top left hand corner of your platform.
 
@@ -47,14 +47,14 @@ To access your dashboard, click on the icon on the top left hand corner of your 
     name: preview-action-icon.png
     1.1.3#screenshot#up_to_date
 --}}
-![Preview action ](nx_asset://c6960afb-7b44-4999-ae65-90c7f8908e18 ?w=300,border=true)
+![Preview action ](/nx_assets/c6960afb-7b44-4999-ae65-90c7f8908e18.png ?w=300,border=true)
 
 To preview documents, click on the **Preview** icon {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Preview action icon
     name: preview-docactions.png
     1.1.3#icon#up_to_date
 --}}
-![Preview action icon](nx_asset://c79aa9cd-3426-47ca-b751-b0e2e1aceb4b ?w=32).
+![Preview action icon](/nx_assets/c79aa9cd-3426-47ca-b751-b0e2e1aceb4b.png ?w=32).
 
 A pop-up window will display a preview of your document.
 {{!--     ### nx_asset ###
@@ -62,7 +62,7 @@ A pop-up window will display a preview of your document.
     name: preview-pop-up.png
     1.1.3#popup#up_to_date
 --}}
-![Preview pop up ](nx_asset://c21209c4-60ff-4204-b3d1-fb57e242dbf6 ?w=300,border=true)
+![Preview pop up ](/nx_assets/c21209c4-60ff-4204-b3d1-fb57e242dbf6.png ?w=300,border=true)
 
 All type of documents can be previewed: Audio, PDF, Office, Video, 3D, etc.
 
@@ -102,7 +102,7 @@ Once in the view of a document, the side details bar can be collapsed by clickin
     name: view-sidebar.png
     1.1.3#screenshot#to_be_updated
 --}}
-![Document View with sidebar](nx_asset://5284dbcb-db38-4466-accc-ddaa05c3e29a ?w=600,border=true)
+![Document View with sidebar](/nx_assets/5284dbcb-db38-4466-accc-ddaa05c3e29a.png ?w=600,border=true)
 
 It enables you to have a more focused view on the document preview.
 
@@ -111,7 +111,7 @@ It enables you to have a more focused view on the document preview.
     name: without-sidebar.png
     1.1.3#screenshot#to_be_updated
 --}}
-![Document view collapsed sidebar](nx_asset://2df976a7-5f45-4899-86d1-a814b4d88ab9 ?w=600,border=true)
+![Document view collapsed sidebar](/nx_assets/2df976a7-5f45-4899-86d1-a814b4d88ab9.png ?w=600,border=true)
 
 ## Keyboard Shortcuts
 

@@ -95,7 +95,7 @@ There are different ways to register a client:
     name: OAuth2-Consumer.png
     1.1.3#screenshot#up_to_date
 --}}
-![OAuth2 Consumer](nx_asset://383d8afb-7570-4a3d-b6fd-db0bd9479412 ?w=500,border=true)
+![OAuth2 Consumer](/nx_assets/383d8afb-7570-4a3d-b6fd-db0bd9479412.png ?w=500,border=true)
 
 ### Using JSF UI
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}

@@ -122,7 +122,7 @@ External users can also access the **Search** menu, which can be useful when nav
     name: managing-permissions-permissions-tab.png
     1.1.3#screenshot#up_to_date
 --}}
-![Managing Permissions - Permissions tab.png](nx_asset://dacb5f5f-de69-406e-a93a-073f7a10c193 ?w=650,border=true)
+![Managing Permissions - Permissions tab.png](/nx_assets/dacb5f5f-de69-406e-a93a-073f7a10c193.png ?w=650,border=true)
 1. From the **Permissions assigned to external users** section, click on the **New** button. 
   {{#> callout type='info' }}
   Permissions already set to external users display in this area.
@@ -153,7 +153,7 @@ At this stage, you can click on the: 
     name: managing-permissions-actions.png
     1.1.3#screenshot#up_to_date
 --}}
-![Managing Permissions - Actions.png](nx_asset://f95b8d04-3786-46fe-90b5-17a82aea105b ?w=650,border=true)
+![Managing Permissions - Actions.png](/nx_assets/f95b8d04-3786-46fe-90b5-17a82aea105b.png ?w=650,border=true)
 
 **To access the Nuxeo Platform as an external user:**
 

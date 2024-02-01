@@ -22,7 +22,7 @@ Creating a document using the button ![]({{file name='create_button.png' space='
     name: creation-popup-web-ui.png
     1.1.3#screenshot#up_to_date
 --}}
-![creation-popup-web-ui.png](nx_asset://aa45f688-decc-43aa-88ec-2211b982b6ad ?w=450,border=true)
+![creation-popup-web-ui.png](/nx_assets/aa45f688-decc-43aa-88ec-2211b982b6ad.png ?w=450,border=true)
 
 To create a document using the **Create** button:
 1. Click on the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30).
@@ -55,7 +55,7 @@ To import content into Nuxeo, drag an item from your computer and drop it into a
     name: import-popup-web-ui.png
     1.1.3#popup#up_to_date
   --}}
-  ![Import popup on Web UI](nx_asset://1ab73cdc-61c5-4dec-b0d1-990cd15c78fe ?w=450,border=true)
+  ![Import popup on Web UI](/nx_assets/1ab73cdc-61c5-4dec-b0d1-990cd15c78fe.png ?w=450,border=true)
 
 ### Import with Properties
 

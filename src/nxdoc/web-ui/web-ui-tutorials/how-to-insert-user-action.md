@@ -52,7 +52,7 @@ On Studio Modeler:
     name: NXS-automation-create.png
     studio_modeler#popup#up_to_date
   --}}
-  ![NXS-automation-create.png](nx_asset://3dd4b28e-363b-4d23-b2aa-e5b5387f22e6 ?w=350,border=true)
+  ![NXS-automation-create.png](/nx_assets/3dd4b28e-363b-4d23-b2aa-e5b5387f22e6.png ?w=350,border=true)
   The automation chain editor is displayed. The **Fetch** > **Context Document(s)** is automatically added as the first operation of the chain.
 1. Drag and drop the operation **Document** > **Follow Life Cycle Transition** and set the transition as `approve`.
 1. Click on **Save**.
@@ -63,7 +63,7 @@ On Studio Modeler:
     name: validateDocument-chain-studio.png
     studio_modeler#screenshot#up_to_date
   --}}
-  ![validateDocument-chain-studio.png](nx_asset://e6da24c4-83da-4127-a93e-a93016bf89c9 ?w=650,border=true)
+  ![validateDocument-chain-studio.png](/nx_assets/e6da24c4-83da-4127-a93e-a93016bf89c9.png ?w=650,border=true)
 
 ## Bind the Action to an Element
 
@@ -77,21 +77,21 @@ Now that your automation chain is ready, you will need to bind it to an action.
       name: validate-action-button-VD-identity.png
       studio_designer#screenshot#up_to_date
     --}}
-    ![validate-action-button-VD-identity.png](nx_asset://cc7f7edd-02cb-44b0-9985-823ee0259a54 ?w=500,border=true)
+    ![validate-action-button-VD-identity.png](/nx_assets/cc7f7edd-02cb-44b0-9985-823ee0259a54.png ?w=500,border=true)
 
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Insert a User Action /validate-action-button-VD.png
       name: validate-action-button-VD.png
       studio_designer#screenshot#up_to_date
     --}}
-    ![validate-action-button-VD.png](nx_asset://3abb7e91-80ed-46e6-8f1a-c8184cc808ba ?w=500,border=true)
+    ![validate-action-button-VD.png](/nx_assets/3abb7e91-80ed-46e6-8f1a-c8184cc808ba.png ?w=500,border=true)
 1. Fill in the **Filters** section as shown below:
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Insert a User Action /filters-action-VD.png
     name: filters-action-VD.png
     studio_designer#screenshot#up_to_date
   --}}
-  ![filters-action-VD.png](nx_asset://f86b019d-a9dc-4715-86cd-71059b78079e ?w=500,border=true)
+  ![filters-action-VD.png](/nx_assets/f86b019d-a9dc-4715-86cd-71059b78079e.png ?w=500,border=true)
   Only the users who have Manage Everything permission will see the button.
 1. Save your changes and deploy your project.
 

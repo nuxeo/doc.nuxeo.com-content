@@ -29,7 +29,7 @@ Watch the [Nuxeo Web UI Development](https://university.hyland.com/courses/e4174
     name: Screenshot 2020-07-16 at 12.06.01.png
     1.1.3#screenshot#up_to_date
 --}}
-![WEBUI_CUSTOMIZATION_FRONTEND_DEV](nx_asset://1840dd84-67fa-48ae-b849-7296ca1386ae ?w=450,border=true)
+![WEBUI_CUSTOMIZATION_FRONTEND_DEV](/nx_assets/1840dd84-67fa-48ae-b849-7296ca1386ae.png ?w=450,border=true)
 {{/callout}}
 
 ## Use Case
@@ -124,7 +124,7 @@ To create it, just click on the default studio bundle file listing below the `UI
     name: step2.png
     studio_designer#screenshot#up_to_date
 --}}
-![step2.png](nx_asset://796fd130-f49b-4d72-ad42-f4fe1d38121c ?w=650,border=true)
+![step2.png](/nx_assets/796fd130-f49b-4d72-ad42-f4fe1d38121c.png ?w=650,border=true)
 
 Then, simply import the new element with:
 
@@ -166,4 +166,4 @@ Hot reload your Nuxeo instance: a new document actions should be available, and 
     name: step3.png
     1.1.3#screenshot#up_to_date
 --}}
-![step3.png](nx_asset://49cdda43-bb18-4d4e-beab-6bef4fb1bdb5 ?w=650,border=true)
+![step3.png](/nx_assets/49cdda43-bb18-4d4e-beab-6bef4fb1bdb5.png ?w=650,border=true)

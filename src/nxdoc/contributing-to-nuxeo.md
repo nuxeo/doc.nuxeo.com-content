@@ -409,7 +409,7 @@ As an external contributor, not member of the [Nuxeo](https://github.com/nuxeo/)
         name: pr.png
         server#screenshot#up_to_date
     --}}
-    ![pr.png](nx_asset://a9b4d416-2b4e-4705-b1a5-23c2845094b9 ?w=650,border=true)
+    ![pr.png](/nx_assets/a9b4d416-2b4e-4705-b1a5-23c2845094b9.png ?w=650,border=true)
 
     By default, the name of the PR is either the commit message in the case of a single commit or the branch name with spaces instead of hyphens. You can leave it as is or set a custom name, maybe more explanatory.
 
@@ -423,7 +423,7 @@ As an external contributor, not member of the [Nuxeo](https://github.com/nuxeo/)
           name: reviewers.png
           server#screenshot#up_to_date
       --}}
-      ![reviewers.png](nx_asset://3286e61e-86c7-4806-a953-e8172f161023 ?w=300,border=true)
+      ![reviewers.png](/nx_assets/3286e61e-86c7-4806-a953-e8172f161023.png ?w=300,border=true)
 
   Your contribution is then going to be reviewed by the Dev team, or more specifically the requested reviewers.
 
@@ -534,7 +534,7 @@ As an external contributor, not member of the [Nuxeo](https://github.com/nuxeo/)
       name: rebase-and-merge.png
       server#screenshot#up_to_date
   --}}
-  ![rebase-and-merge.png](nx_asset://1d9ecd82-65a3-4d90-8af6-70e299e9408a ?w=650,border=true)
+  ![rebase-and-merge.png](/nx_assets/1d9ecd82-65a3-4d90-8af6-70e299e9408a.png ?w=650,border=true)
 
 ### Using the GitHub UI
 
@@ -547,7 +547,7 @@ If you need to edit a single file, you can use the default GitHub UI feature to 
         name: github-ui-edit.png
         server#screenshot#up_to_date
     --}}
-    ![github-ui-edit.png](nx_asset://f65ba7e6-794a-4881-826a-9e1e9046509a ?w=650,border=true)
+    ![github-ui-edit.png](/nx_assets/f65ba7e6-794a-4881-826a-9e1e9046509a.png ?w=650,border=true)
 
 1. Make your changes.
 
@@ -558,7 +558,7 @@ If you need to edit a single file, you can use the default GitHub UI feature to 
         name: github-ui-commit.png
         server#screenshot#up_to_date
     --}}
-    ![github-ui-commit.png](nx_asset://8022c60b-5621-4dda-b9f7-55e609dfc2c2 ?w=650,border=true)
+    ![github-ui-commit.png](/nx_assets/8022c60b-5621-4dda-b9f7-55e609dfc2c2.png ?w=650,border=true)
 
 ### Not Using GitHub
 
