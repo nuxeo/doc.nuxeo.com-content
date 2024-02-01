@@ -56,14 +56,14 @@ Here we want to create a custom document type named "Contract" that will hold sp
     name: definition_contract.png
     studio_modeler#screenshot#up_to_date
   --}}
-  ![definition_contract.png](nx_asset://7c4bf823-6a9a-4d53-bc7e-49e9fe175770 ?w=600,border=true)
+  ![definition_contract.png](/nx_assets/7c4bf823-6a9a-4d53-bc7e-49e9fe175770.png ?w=600,border=true)
 4.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Document Layouts/schema_contract.png
     name: schema_contract.png
     studio_modeler#screenshot#up_to_date
   --}}
-  ![schema_contract.png](nx_asset://1ef30ee8-2913-4632-b0a4-f4b3f7d99d9a ?w=600,border=true)
+  ![schema_contract.png](/nx_assets/1ef30ee8-2913-4632-b0a4-f4b3f7d99d9a.png ?w=600,border=true)
 
 Once you are all set, you can navigate to the Studio Designer to customize your layouts, click on **Configure layouts in Designer** button at the top of the page.
 
@@ -97,7 +97,7 @@ Once you are all set, you can navigate to the Studio Designer to customize your 
       name: main-view-contract-vd.png
       studio_designer#screenshot#up_to_date
   --}}
-  ![main-view-contract-vd.png](nx_asset://85c40a74-ebcf-4e93-8dd8-c6b75aef4031 ?w=350,border=true)
+  ![main-view-contract-vd.png](/nx_assets/85c40a74-ebcf-4e93-8dd8-c6b75aef4031.png ?w=350,border=true)
 
 ### Configure Labels
 When configuring a document type, a label is required. If you do not create a translation file, Studio uses this label as a fallback option to show your users something clearer.
