@@ -20,7 +20,7 @@ Watch the related expert session on Hyland University:</br>
     name: university-explorer-expert-session.png
     addins#screenshot#up_to_date
 --}}
-![university-explorer-expert-session](nx_asset://a45659b9-47a3-4dea-a71e-3e8a1ec6d250 ?w=450,border=true)
+![university-explorer-expert-session](/nx_assets/a45659b9-47a3-4dea-a71e-3e8a1ec6d250.png ?w=450,border=true)
 {{/callout}}
 
 The Nuxeo Explorer reference instance is available at [explorer.nuxeo.com](http://explorer.nuxeo.com). It displays reference distributions for all major Nuxeo releases and is referenced in this documentation page. The live Runtime introspection has been disabled on this server.
@@ -77,7 +77,7 @@ Here is a sample home page, taken on the [Explorer public instance](http://explo
     name: Screenshot from 2020-10-08 17-49-07.png
     addins#screenshot#up_to_date
 --}}
-![Explorer Preview](nx_asset://328a2635-e806-4def-a307-2ee070adf654)
+![Explorer Preview](/nx_assets/328a2635-e806-4def-a307-2ee070adf654.png)
 
 Newest available distributions are presented, as well as legacy LTS (Long Time Support) releases, and serve as documentation for main releases of the Nuxeo Platform.
 
@@ -104,7 +104,7 @@ Explorer distributions present the following items from a live [Runtime]({{page 
     name: Screenshot from 2020-10-27 18-30-32.png
     addins#screenshot#up_to_date
 --}}
-![Explorer Distribution Home Page](nx_asset://0fe5cf54-961f-4784-ba92-0a7f59e8d498 ?w=350)
+![Explorer Distribution Home Page](/nx_assets/0fe5cf54-961f-4784-ba92-0a7f59e8d498.png ?w=350)
 
 On each distribution, tab-like navigation offers listings of all of these items, with filtering features:
 
@@ -113,7 +113,7 @@ On each distribution, tab-like navigation offers listings of all of these items,
     name: Explorer Extension Points.png
     addins#screenshot#up_to_date
 --}}
-![Explorer Extension Points](nx_asset://6b3e369d-9cbf-4f55-be1b-d2169a3e2c03)
+![Explorer Extension Points](/nx_assets/6b3e369d-9cbf-4f55-be1b-d2169a3e2c03.png)
 
 Here are screenshot details of some sample pages, presenting:
 -   Documentation on an extension point, also listing its contributions:
@@ -122,7 +122,7 @@ Here are screenshot details of some sample pages, presenting:
         name: Screenshot from 2020-10-28 09-36-11.png
         addins#screenshot#up_to_date
     --}}
-    ![Explorer Extension Point Sample](nx_asset://b24d5681-bc2e-4ce1-8e9d-dd0a974b027e)
+    ![Explorer Extension Point Sample](/nx_assets/b24d5681-bc2e-4ce1-8e9d-dd0a974b027e.png)
 
 -   Documentation on a component, linking to its required component and to its contribution:
     {{!--     ### nx_asset ###
@@ -130,7 +130,7 @@ Here are screenshot details of some sample pages, presenting:
         name: Screenshot from 2020-10-28 09-37-55.png
         addins#screenshot#up_to_date
     --}}
-    ![Explorer Component Sample](nx_asset://66cc252c-ce72-4230-b83b-d56a688298ba)
+    ![Explorer Component Sample](/nx_assets/66cc252c-ce72-4230-b83b-d56a688298ba.png)
 
 -   Documentation on an operation:
     {{!--     ### nx_asset ###
@@ -138,7 +138,7 @@ Here are screenshot details of some sample pages, presenting:
         name: Screenshot from 2020-10-28 09-37-03.png
         addins#screenshot#up_to_date
     --}}
-    ![Explorer Operation Sample](nx_asset://921396c3-314f-4e17-9070-8605d5512a68)
+    ![Explorer Operation Sample](/nx_assets/921396c3-314f-4e17-9070-8605d5512a68.png)
 
 -   A summary of all bundles, components, services, extension points and contributions held by a given package:
     {{!--     ### nx_asset ###
@@ -146,7 +146,7 @@ Here are screenshot details of some sample pages, presenting:
         name: Screenshot from 2020-10-28 09-37-03.png
         addins#screenshot#up_to_date
     --}}
-    ![Explorer Package Sample](nx_asset://81f38f99-e42e-4adb-9394-4073c8970975)
+    ![Explorer Package Sample](/nx_assets/81f38f99-e42e-4adb-9394-4073c8970975.png)
 
 These pages come with additional references to the online, to the Nuxeo Marketplace, as well
 as helpers to generate the code needed to [override a contribution]({{page page='how-to-contribute-to-an-extension'}}), or to declare specific operation available inside [Nuxeo Studio Registries]({{page space='studio' page='registries'}}).
@@ -175,7 +175,7 @@ Administrator users can access the management page by clicking on the **Manage D
     name: Screenshot_2020-10-27 Nuxeo Platform Explorer.png
     addins#screenshot#up_to_date
 --}}
-![Explorer Manage View](nx_asset://114502b5-e044-4bf0-bc40-057265284bbb)
+![Explorer Manage View](/nx_assets/114502b5-e044-4bf0-bc40-057265284bbb.png)
 
 ### Saving a Distribution
 
@@ -187,7 +187,7 @@ Complete distributions can be saved, but filtering can also be applied:
     name: Screenshot_2020-10-28 Nuxeo Platform Explorer.png
     addins#screenshot#up_to_date
 --}}
-![Explorer Save Live Distribution](nx_asset://7eb8b862-2025-48b4-9ec8-f68a52481f9b)
+![Explorer Save Live Distribution](/nx_assets/7eb8b862-2025-48b4-9ec8-f68a52481f9b.png)
 
 Filtering is available on:
 - bundles by filling a bundle name (multiple lines can be used for multiple bundle),
@@ -216,7 +216,7 @@ When saving or uploading a distribution, some metadata can be updated on the dis
     name: Screenshot from 2020-10-27 18-28-35.png
     addins#screenshot#up_to_date
 --}}
-![Explorer Distribution Update](nx_asset://34886cbe-a821-4384-8db8-612c04a19c0a ?w=350)
+![Explorer Distribution Update](/nx_assets/34886cbe-a821-4384-8db8-612c04a19c0a.png ?w=350)
 
 When set as *hidden*, the distribution can still be accessed with a direct link, but is not listed anymore on the home page.
 

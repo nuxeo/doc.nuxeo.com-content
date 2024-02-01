@@ -92,7 +92,7 @@ Watch the related expert session on Hyland University:</br>
     name: Screenshot 2020-12-02 at 10.17.38.png
     server#screenshot#up_to_date
 --}}
-![university-file-manager-expert-session](nx_asset://63299896-c493-4ad3-9e78-d7ffdd32c0ff ?w=450,border=true)
+![university-file-manager-expert-session](/nx_assets/63299896-c493-4ad3-9e78-d7ffdd32c0ff.png ?w=450,border=true)
 {{/callout}}
 
 The File Manager service is a traditional Nuxeo Platform service that offers some methods that help standardize what happens when a file is captured in the Platform, in regard to:

@@ -170,7 +170,7 @@ Watch the related courses on Hyland University: [DAM Concepts](https://universit
     name: university_dam.png
     addins#screenshot#up_to_date
 --}}
-![university_dam.png](nx_asset://ed2467b9-4529-4cca-9843-0b46f8cd3d62 ?w=650,border=true)
+![university_dam.png](/nx_assets/ed2467b9-4529-4cca-9843-0b46f8cd3d62.png ?w=650,border=true)
 {{/callout}}
 
 Picture conversions are working only on documents having the `Picture` facet.
@@ -263,7 +263,7 @@ You should end up with something like this on your instance:
     name: new_converter.png
     1.1.3#screenshot#up_to_date
 --}}
-![new_converter.png](nx_asset://206da018-ef53-410f-bc0b-0ee928668602 ?w=450,border=true)
+![new_converter.png](/nx_assets/206da018-ef53-410f-bc0b-0ee928668602.png ?w=450,border=true)
 
 You can now click on the Watermark line to download the watermarked picture:
 
@@ -272,7 +272,7 @@ You can now click on the Watermark line to download the watermarked picture:
     name: watermarked_pic.png
     6.3.2#screenshot#up_to_date
 --}}
-![watermarked_pic.png](nx_asset://5c01789c-2b9e-491e-af58-6e7c472b1cb4 ?w=650,border=true)
+![watermarked_pic.png](/nx_assets/5c01789c-2b9e-491e-af58-6e7c472b1cb4.png ?w=650,border=true)
 
 ### Run a converter in a new CoreSession
 
@@ -389,7 +389,7 @@ This is what should be expected:
     name: preview_conversion.png
     addins#screenshot#up_to_date
 --}}
-![preview_conversion.png](nx_asset://9f01b7a1-e6b3-4372-ab1e-2a5fd00e7b63 ?w=650,border=true)
+![preview_conversion.png](/nx_assets/9f01b7a1-e6b3-4372-ab1e-2a5fd00e7b63.png ?w=650,border=true)
 
 ### Set security on a specific conversion
 

@@ -329,7 +329,7 @@ Watch the related course on Hyland University:</br>
     name: university_indexes.png
     server#screenshot#up_to_date
 --}}
-![university_indexes.png](nx_asset://65ddd156-e915-4cb9-9cd0-89a4bb5e70d0 ?w=450,border=true)
+![university_indexes.png](/nx_assets/65ddd156-e915-4cb9-9cd0-89a4bb5e70d0.png ?w=450,border=true)
 {{/callout}}
 
 ## Architecture
@@ -474,7 +474,7 @@ See the [How-to about aggregates widgets]({{page page='how-to-configure-a-search
     name: terms-vocabulary.png
     1.1.3#screenshot#up_to_date
 --}}
-![terms-vocabulary.png](nx_asset://7c14a436-787d-4028-9471-516f779a283f ?w=250,border=true)
+![terms-vocabulary.png](/nx_assets/7c14a436-787d-4028-9471-516f779a283f.png ?w=250,border=true)
 
 - Date Histograms and Date Ranges:
 {{!--     ### nx_asset ###
@@ -482,7 +482,7 @@ See the [How-to about aggregates widgets]({{page page='how-to-configure-a-search
     name: date-histogram.png
     1.1.3#screenshot#up_to_date
 --}}
-![date-histogram.png](nx_asset://9b7cef4b-a133-4d74-99e8-a24968662acd ?w=250,border=true)
+![date-histogram.png](/nx_assets/9b7cef4b-a133-4d74-99e8-a24968662acd.png ?w=250,border=true)
 
 - Terms with User & Groups with the `nuxeo-dropdown-aggregation` element:
 {{!--     ### nx_asset ###
@@ -490,7 +490,7 @@ See the [How-to about aggregates widgets]({{page page='how-to-configure-a-search
     name: authors-suggestion.png
     1.1.3#screenshot#up_to_date
 --}}
-![authors-suggestion.png](nx_asset://3feb3d0e-5d6c-45d3-b18b-2d67b3acc4b7 ?w=250,border=true)
+![authors-suggestion.png](/nx_assets/3feb3d0e-5d6c-45d3-b18b-2d67b3acc4b7.png ?w=250,border=true)
 
 - Range:
 {{!--     ### nx_asset ###
@@ -498,7 +498,7 @@ See the [How-to about aggregates widgets]({{page page='how-to-configure-a-search
     name: range.png
     1.1.3#screenshot#up_to_date
 --}}
-![range.png](nx_asset://2e336306-0841-44b3-8fd5-6c41b9d2f425 ?w=250,border=true)
+![range.png](/nx_assets/2e336306-0841-44b3-8fd5-6c41b9d2f425.png ?w=250,border=true)
 
 ## Configuring Search Interfaces in the Nuxeo Platform
 
@@ -511,7 +511,7 @@ These elements are [fully configurable via Nuxeo Studio]({{page page='web-ui-sea
     name: search-exemple.png
     1.1.3#screenshot#up_to_date
 --}}
-![search-exemple.png](nx_asset://4599c0ae-78c3-4c22-95dd-532b43cf8f77 ?w=600,border=true)
+![search-exemple.png](/nx_assets/4599c0ae-78c3-4c22-95dd-532b43cf8f77.png ?w=600,border=true)
 
 ## Indexing Logic
 

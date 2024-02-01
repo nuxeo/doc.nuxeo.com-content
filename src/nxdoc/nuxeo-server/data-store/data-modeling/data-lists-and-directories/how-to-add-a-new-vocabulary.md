@@ -272,14 +272,14 @@ There are 3 types of vocabularies:
       name: STUDIO-vocabulary-type-selection.png
       studio_modeler#popup#up_to_date
     --}}
-    ![STUDIO-vocabulary-type-selection.png](nx_asset://01c478ae-9681-40cd-9b77-73c770da62cf ?w=350,border=true)
+    ![STUDIO-vocabulary-type-selection.png](/nx_assets/01c478ae-9681-40cd-9b77-73c770da62cf.png ?w=350,border=true)
 4.  Fill in the values as desired.
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Add a New Vocabulary/STUDIO-vocabulary-form.png
       name: STUDIO-vocabulary-form.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![STUDIO-vocabulary-form.png](nx_asset://c7589acf-230c-42c8-9e13-82eb1f349dd7 ?w=450,border=true)
+    ![STUDIO-vocabulary-form.png](/nx_assets/c7589acf-230c-42c8-9e13-82eb1f349dd7.png ?w=450,border=true)
 
     {{#> callout type='tip' }}
     Click on **Import CSV** to import content from a .csv file instead of typing each entry manually. See example files:[ simple-vocabulary.csv]({{file name='simple-vocabulary.csv' space='studio' version='' page='vocabularies'}}) and [hierarchical-vocabulary.csv]({{file name='hierarchical-vocabulary.csv' space='studio' version='' page='vocabularies'}}).

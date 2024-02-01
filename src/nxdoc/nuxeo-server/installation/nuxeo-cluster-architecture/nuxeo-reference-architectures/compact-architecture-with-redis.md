@@ -26,7 +26,7 @@ In this architecture:
     name: 1-basic-architecture.png
     server#schema#up_to_date
 --}}
-![1-basic-architecture.png](nx_asset://e8b0853a-283e-44bd-97f8-27fd16fe98b9 ?w=650,border=true)
+![1-basic-architecture.png](/nx_assets/e8b0853a-283e-44bd-97f8-27fd16fe98b9.png ?w=650,border=true)
 
 This architecture can be improved by externalizing the Redis node inside a specific cluster:  
 
@@ -35,7 +35,7 @@ This architecture can be improved by externalizing the Redis node inside a speci
     name: 1-basic-architecture-v2.png
     server#schema#up_to_date
 --}}
-![1-basic-architecture-v2.png](nx_asset://a48c5a80-712c-4b08-a4c2-7cbe46f48c98 ?w=650,border=true)
+![1-basic-architecture-v2.png](/nx_assets/a48c5a80-712c-4b08-a4c2-7cbe46f48c98.png ?w=650,border=true)
 
 ## Limitations
 

@@ -26,7 +26,7 @@ Watch the related video on Hyland University:</br>
     name: Screenshot 2021-01-20 at 09.39.38.png
     addins#screenshot#up_to_date
 --}}
-![university_aspera.png](nx_asset://8f01d909-55e5-4fdd-99b7-a496ea20ddd2 ?w=450,border=true)
+![university_aspera.png](/nx_assets/8f01d909-55e5-4fdd-99b7-a496ea20ddd2.png ?w=450,border=true)
 {{/callout}}
 
 ## Version 3.0.0
@@ -259,7 +259,7 @@ Once in your instance, Nuxeo Aspera Upload can be accessed two different ways:
     name: aspera-image3.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image3](nx_asset://2a6ee847-e886-4047-8e82-f4cafda627eb ?w=250, border=true)
+![aspera-image3](/nx_assets/2a6ee847-e886-4047-8e82-f4cafda627eb.png ?w=250, border=true)
 
 - By clicking on the Aspera upload button displayed on every folderish document (workspace, folder, etc.)
 
@@ -268,7 +268,7 @@ Once in your instance, Nuxeo Aspera Upload can be accessed two different ways:
     name: aspera-image19.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image19](nx_asset://da4443e9-0ddb-4908-9ce8-5fcce2e108ce ?border=true)
+![aspera-image19](/nx_assets/da4443e9-0ddb-4908-9ce8-5fcce2e108ce.png ?border=true)
 
 > The content uploaded by Aspera will be accessible in this folderish document. If the transfer is "started" from the Aspera Dashboard or from the Transfer View using the "+ New Upload" button, the target location is the user's personal workspace.
 
@@ -279,7 +279,7 @@ Once on the Transfer View (as you begin to add content), you will be able to dow
     name: aspera-image14.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image14](nx_asset://304c7c51-ec27-4a37-9b02-439879412d6a)
+![aspera-image14](/nx_assets/304c7c51-ec27-4a37-9b02-439879412d6a.png)
 
 Once on the Aspera menu, there are 2 main views available:
 
@@ -304,7 +304,7 @@ All of these actions are available via the “transfer” view, as well. You can
     name: aspera-image20.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image20](nx_asset://0a9c8974-1796-47c6-99b9-68aff556583e ?border=true)
+![aspera-image20](/nx_assets/0a9c8974-1796-47c6-99b9-68aff556583e.png ?border=true)
 
 {{#> callout type='note'}}
 “Delete” does remove the content from the Aspera Node in most cases, however, we have seen some inconsistencies. It is advised that you **regularly clean** your Aspera Transfer Node. Deleting the transfer does not remove the content from the repository if the transfer has already been completed. This ONLY deletes the transfer “bucket” or “wrapper”)
@@ -323,7 +323,7 @@ On this screen, different actions are available:
     name: aspera-image1.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image1](nx_asset://43f35a20-386f-4600-a94f-aa7749e1df2a ?border=true)
+![aspera-image1](/nx_assets/43f35a20-386f-4600-a94f-aa7749e1df2a.png ?border=true)
 
 - Define/Edit the common metadata, including the “target document” or the destination of the current transfer (set of uploaded files) by clicking on the **Edit** button.
 
@@ -336,14 +336,14 @@ By default, when clicking **+ New Upload** from the Aspera Dashboard or the tran
     name: aspera-image7.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image7](nx_asset://6f83fbc6-7402-4552-9bd7-54919ff9db0b ?border=true)
+![aspera-image7](/nx_assets/6f83fbc6-7402-4552-9bd7-54919ff9db0b.png ?border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image15
     name: aspera-image15.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image15](nx_asset://97069cfe-16c9-4d54-bd8f-a578d88aa6aa ?w=350, border=true)
+![aspera-image15](/nx_assets/97069cfe-16c9-4d54-bd8f-a578d88aa6aa.png ?w=350, border=true)
 
 - Modify the permissions to share the transfer with other user(s) (e.g. another user is responsible for modifying the metadata).
 
@@ -352,14 +352,14 @@ By default, when clicking **+ New Upload** from the Aspera Dashboard or the tran
     name: aspera-image4.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image4](nx_asset://c593d1b6-c8d5-4438-a18e-efaa0b7a75ba ?border=true)
+![aspera-image4](/nx_assets/c593d1b6-c8d5-4438-a18e-efaa0b7a75ba.png ?border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/aspera-image6
     name: aspera-image6.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image6](nx_asset://7d40c3b2-afa4-4c10-a424-18c1e4f9cfb6 ?w=350, border=true)
+![aspera-image6](/nx_assets/7d40c3b2-afa4-4c10-a424-18c1e4f9cfb6.png ?w=350, border=true)
 
 - Edit/Delete individual files.
 
@@ -368,7 +368,7 @@ By default, when clicking **+ New Upload** from the Aspera Dashboard or the tran
     name: aspera-image24.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image24](nx_asset://23bc5d1a-0037-450c-ba58-b724bd07caa7 ?border=true)
+![aspera-image24](/nx_assets/23bc5d1a-0037-450c-ba58-b724bd07caa7.png ?border=true)
 
 - Bulk edit selected files metadata.
 
@@ -377,14 +377,14 @@ By default, when clicking **+ New Upload** from the Aspera Dashboard or the tran
     name: aspera-image25.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image25](nx_asset://01f331b0-fce4-4dac-a645-f8bfae0e214a ?border=true)
+![aspera-image25](/nx_assets/01f331b0-fce4-4dac-a645-f8bfae0e214a.png ?border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/10-aspera.png
     name: 10-aspera.png
     addins#screenshot#up_to_date
 --}}
-![10-aspera.png](nx_asset://462aa78e-525d-4b97-a8b2-27791a999a60 ?w=350, border=true)
+![10-aspera.png](/nx_assets/462aa78e-525d-4b97-a8b2-27791a999a60.png ?w=350, border=true)
 
 
 - **Complete transfer** means to create the related documents in the Nuxeo application (once all content has been uploaded).</br>
@@ -399,7 +399,7 @@ The Nuxeo Aspera Download action is accessible via a button displayed when selec
     name: 3-aspera.png
     addins#screenshot#up_to_date
 --}}
-![3-aspera.png](nx_asset://7fb3e281-3edc-46f9-bb4d-f13615876a1a ?border=true)
+![3-aspera.png](/nx_assets/7fb3e281-3edc-46f9-bb4d-f13615876a1a.png ?border=true)
 
 {{#> callout type='note'}}
 While we distinguish between transfers used for “upload” purposes from “download” purposes, we currently only show the “upload” transfers on the transfer dashboard. We have improvements planned for displaying both.
@@ -422,7 +422,7 @@ If your content model needs are more advanced, you may also contribute a custom 
     name: aspera-image27.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image27](nx_asset://246e2c62-44ca-490c-ae96-783d3510c828 ?border=true)
+![aspera-image27](/nx_assets/246e2c62-44ca-490c-ae96-783d3510c828.png ?border=true)
 
 #### Aspera Download
 
@@ -431,7 +431,7 @@ If your content model needs are more advanced, you may also contribute a custom 
     name: aspera-image26.png
     addins#screenshot#up_to_date
 --}}
-![aspera-image26](nx_asset://55784608-f624-48aa-a670-b4aca341d828 ?border=true)
+![aspera-image26](/nx_assets/55784608-f624-48aa-a670-b4aca341d828.png ?border=true)
 
 ## Version 2.0.8
 
@@ -620,7 +620,7 @@ Once in your instance, Nuxeo Aspera Upload can be accessed from two different wa
     name: 1-aspera.png
     addons#screenshot#up_to_date
 --}}
-![1-aspera.png](nx_asset://9a876bf6-3d88-4877-8205-9359d95e1cc4 ?w=250, border=true)
+![1-aspera.png](/nx_assets/9a876bf6-3d88-4877-8205-9359d95e1cc4.png ?w=250, border=true)
 
 - By clicking on the Aspera upload button displayed on every folderish document (workspace, folder, etc.)
 
@@ -629,7 +629,7 @@ Once in your instance, Nuxeo Aspera Upload can be accessed from two different wa
     name: 2-aspera.png
     addons#screenshot#up_to_date
 --}}
-![2-aspera.png](nx_asset://baeef2eb-ddbc-41e1-b036-46ee567027bf ?border=true)
+![2-aspera.png](/nx_assets/baeef2eb-ddbc-41e1-b036-46ee567027bf.png ?border=true)
 
 > The content uploaded by Aspera will be accessible in this folderish document (by default the target location is the user personal workspace)
 
@@ -640,7 +640,7 @@ Once on the Aspera Upload screen, you will be able to download the Aspera Deskto
     name: setup.png
     addons#screenshot#up_to_date
 --}}
-![aspera-setup.png](nx_asset://f72d1a6e-546b-4333-8898-33a6c4d2275e ?border=true)
+![aspera-setup.png](/nx_assets/f72d1a6e-546b-4333-8898-33a6c4d2275e.png ?border=true)
 
 Once on the Aspera menu, 2 tabs are available:
 - [Transfers](#transfers)
@@ -661,7 +661,7 @@ You can:
     name: 4-aspera.png
     addons#screenshot#up_to_date
 --}}
-![4-aspera.png](nx_asset://d6df353e-f79a-4041-bf26-23b66ab6253b ?w=450,border=true)
+![4-aspera.png](/nx_assets/d6df353e-f79a-4041-bf26-23b66ab6253b.png ?w=450,border=true)
 
 ##### Upload To Nuxeo
 
@@ -674,7 +674,7 @@ On this screen, different actions are available; you can:
     name: 0-aspera.png
     addons#screenshot#up_to_date
 --}}
-![0-aspera.png](nx_asset://be725a89-3066-425a-8a66-e5cb41b3a440 ?w=450,border=true)
+![0-aspera.png](/nx_assets/be725a89-3066-425a-8a66-e5cb41b3a440.png ?w=450,border=true)
 
 - Define/Edit the common metadata of the current transfer (set of uploaded content) by clicking on the **Edit** button.
 
@@ -683,14 +683,14 @@ On this screen, different actions are available; you can:
     name: 5-aspera.png
     addons#screenshot#up_to_date
 --}}
-![5-aspera.png](nx_asset://fe42d949-072f-4420-8ff7-4682aa516a96 ?w=450,border=true)
+![5-aspera.png](/nx_assets/fe42d949-072f-4420-8ff7-4682aa516a96.png ?w=450,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/6-aspera.png
     name: 6-aspera.png
     addons#screenshot#up_to_date
 --}}
-![6-aspera.png](nx_asset://dc156eb6-dfa7-4ebe-980a-aff7a5a076bd ?w=450,border=true)
+![6-aspera.png](/nx_assets/dc156eb6-dfa7-4ebe-980a-aff7a5a076bd.png ?w=450,border=true)
 
 - Modify the permissions to share the transfer with other user(s) (i.e. another user is responsible for modifying the metadata).
 
@@ -699,7 +699,7 @@ On this screen, different actions are available; you can:
     name: 7-aspera.png
     addons#screenshot#up_to_date
 --}}
-![7-aspera.png](nx_asset://899fe8a4-5e13-4e32-a722-fa0bdc57b73e ?w=450,border=true)
+![7-aspera.png](/nx_assets/899fe8a4-5e13-4e32-a722-fa0bdc57b73e.png ?w=450,border=true)
 
 - Edit/Delete each file.
 
@@ -708,7 +708,7 @@ On this screen, different actions are available; you can:
     name: 8-aspera.png
     addons#screenshot#up_to_date
 --}}
-![8-aspera.png](nx_asset://4924c339-5ec4-44cb-9298-c911b0c3a567 ?w=450,border=true)
+![8-aspera.png](/nx_assets/4924c339-5ec4-44cb-9298-c911b0c3a567.png ?w=450,border=true)
 
 - Bulk edit selected files.
 
@@ -717,14 +717,14 @@ On this screen, different actions are available; you can:
     name: 9-aspera.png
     addons#screenshot#up_to_date
 --}}
-![9-aspera.png](nx_asset://c96521a7-a32d-4c28-ae5e-cf623cdd2905 ?w=450,border=true)
+![9-aspera.png](/nx_assets/c96521a7-a32d-4c28-ae5e-cf623cdd2905.png ?w=450,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/10-aspera.png
     name: 10-aspera.png
     addons#screenshot#up_to_date
 --}}
-![10-aspera.png](nx_asset://462aa78e-525d-4b97-a8b2-27791a999a60 ?w=450,border=true)
+![10-aspera.png](/nx_assets/462aa78e-525d-4b97-a8b2-27791a999a60.png ?w=450,border=true)
 
 - **Complete transfer** means to create the related documents in the Nuxeo application (once all files have been uploaded).
 
@@ -741,7 +741,7 @@ The Nuxeo Aspera Download action is accessible via a button displayed when selec
     name: 3-aspera.png
     addons#screenshot#up_to_date
 --}}
-![3-aspera.png](nx_asset://7fb3e281-3edc-46f9-bb4d-f13615876a1a ?w=450,border=true)
+![3-aspera.png](/nx_assets/7fb3e281-3edc-46f9-bb4d-f13615876a1a.png ?w=450,border=true)
 
 #### How It Works
 
@@ -752,7 +752,7 @@ The Nuxeo Aspera Download action is accessible via a button displayed when selec
     name: upload.png
     addons#schema#up_to_date
 --}}
-![aspera-upload.png](nx_asset://2b3d8f3e-2d6c-4357-8599-b6325158c578 ?w=450,border=true)
+![aspera-upload.png](/nx_assets/2b3d8f3e-2d6c-4357-8599-b6325158c578.png ?w=450,border=true)
 
 **Aspera download**
 
@@ -761,7 +761,7 @@ The Nuxeo Aspera Download action is accessible via a button displayed when selec
     name: download.png
     addons#schema#up_to_date
 --}}
-![aspera-download.png](nx_asset://0127fdfb-455f-4f79-aaa5-df414f77cc07 ?w=450,border=true)
+![aspera-download.png](/nx_assets/0127fdfb-455f-4f79-aaa5-df414f77cc07.png ?w=450,border=true)
 
 ### Customization
 
@@ -788,7 +788,7 @@ After having overridden the `Transfer` document type, you can now override the d
     name: 12-aspera.png
     addons#screenshot#up_to_date
   --}}
-  ![12-aspera.png](nx_asset://e6eebaab-e3d8-4b58-b385-53e14bdd1d82 ?w=450,border=true)
+  ![12-aspera.png](/nx_assets/e6eebaab-e3d8-4b58-b385-53e14bdd1d82.png ?w=450,border=true)
 
 - The edit layout `nuxeo-transfer-edit-layout.html`
 
@@ -797,7 +797,7 @@ After having overridden the `Transfer` document type, you can now override the d
     name: 6-aspera.png
     addons#screenshot#up_to_date
   --}}
-  ![6-aspera.png](nx_asset://dc156eb6-dfa7-4ebe-980a-aff7a5a076bd ?w=450,border=true)
+  ![6-aspera.png](/nx_assets/dc156eb6-dfa7-4ebe-980a-aff7a5a076bd.png ?w=450,border=true)
 
 - The import layout (for single/bulk metadata edition) `nuxeo-transfer-import-layout.html`
 
@@ -806,7 +806,7 @@ After having overridden the `Transfer` document type, you can now override the d
     name: 10-aspera.png
     addons#screenshot#up_to_date
   --}}
-  ![10-aspera.png](nx_asset://462aa78e-525d-4b97-a8b2-27791a999a60 ?w=450,border=true)
+  ![10-aspera.png](/nx_assets/462aa78e-525d-4b97-a8b2-27791a999a60.png ?w=450,border=true)
 
 - The view layout `nuxeo-transfer-view-layout.html`
 
@@ -815,7 +815,7 @@ After having overridden the `Transfer` document type, you can now override the d
     name: 13-aspera.png
     addons#screenshot#up_to_date
   --}}
-  ![13-aspera.png](nx_asset://cda4f360-497c-4dfe-b0f6-e4a446d56c26 ?w=450,border=true)
+  ![13-aspera.png](/nx_assets/cda4f360-497c-4dfe-b0f6-e4a446d56c26.png ?w=450,border=true)
 
 All those layouts can be found [on GitHub](https://github.com/nuxeo/nuxeo-aspera-connector/tree/master/nuxeo-aspera-web/src/main/resources/web/nuxeo.war/ui/document/transfer).
 

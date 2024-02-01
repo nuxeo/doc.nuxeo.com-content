@@ -60,7 +60,7 @@ Create a custom document type named "Contract" that will hold specific metadata 
       name: definition_contract.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![definition_contract.png](nx_asset://7c4bf823-6a9a-4d53-bc7e-49e9fe175770 ?w=600,border=true)
+    ![definition_contract.png](/nx_assets/7c4bf823-6a9a-4d53-bc7e-49e9fe175770.png ?w=600,border=true)
 1. Select an icon for your contract document type:
     - A .png icon for the **Icon** and **Large Icon** fields
     - A .svg Icon for the **SVG Icon** field.</br>
@@ -77,7 +77,7 @@ Create a custom document type named "Contract" that will hold specific metadata 
       name: schema_contract.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![schema_contract.png](nx_asset://1ef30ee8-2913-4632-b0a4-f4b3f7d99d9a ?w=600,border=true)
+    ![schema_contract.png](/nx_assets/1ef30ee8-2913-4632-b0a4-f4b3f7d99d9a.png ?w=600,border=true)
 
 Once you are all set, click on **Configure Layouts** at the top-right of the screen to go the Designer side.
 
@@ -96,7 +96,7 @@ You should end up with something like this:
     name: main-view-contract-vd.png
     studio_designer#screenshot#up_to_date
 --}}
-![main-view-contract-vd.png](nx_asset://85c40a74-ebcf-4e93-8dd8-c6b75aef4031 ?w=450,border=true)
+![main-view-contract-vd.png](/nx_assets/85c40a74-ebcf-4e93-8dd8-c6b75aef4031.png ?w=450,border=true)
 
 <!--
 ### Configure Labels

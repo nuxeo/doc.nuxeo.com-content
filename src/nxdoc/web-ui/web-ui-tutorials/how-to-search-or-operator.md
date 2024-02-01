@@ -35,7 +35,7 @@ You need a document type with at least two properties where you need to check if
       name: predicate_editor.png
       studio_modeler#screenshot#up_to_date
   --}}
-  ![predicate_editor.png](nx_asset://64e2a367-ee96-4ae2-9f52-be4dc0f3c5b3 ?w=450,border=true)
+  ![predicate_editor.png](/nx_assets/64e2a367-ee96-4ae2-9f52-be4dc0f3c5b3.png ?w=450,border=true)
 
 ## Create a Search Form and Result Layout
 
@@ -48,7 +48,7 @@ You need a document type with at least two properties where you need to check if
     name: studio_config.png
     studio_designer#screenshot#up_to_date
 --}}
-![studio_config.png](nx_asset://a2c42e88-cc9c-48f1-bc19-655391ccbc93 ?w=650,border=true)
+![studio_config.png](/nx_assets/a2c42e88-cc9c-48f1-bc19-655391ccbc93.png ?w=650,border=true)
 
 ## Hot Reload and Results
 
@@ -59,7 +59,7 @@ Here are the documents created by `User1`:
     name: doc_user1.png
     1.1.3#screenshot#up_to_date
 --}}
-![doc_user1.png](nx_asset://0a8558fb-792f-4ffd-b825-cdc270c261d1 ?w=650,border=true)
+![doc_user1.png](/nx_assets/0a8558fb-792f-4ffd-b825-cdc270c261d1.png ?w=650,border=true)
 
 Here are the documents created by `User2`. You can note that some of them have `User1` as last contributor:
 
@@ -68,7 +68,7 @@ Here are the documents created by `User2`. You can note that some of them have `
     name: doc_user2.png
     1.1.3#screenshot#up_to_date
 --}}
-![doc_user2.png](nx_asset://22bf036b-d656-4c41-9242-8f409fc1003e ?w=650,border=true)
+![doc_user2.png](/nx_assets/22bf036b-d656-4c41-9242-8f409fc1003e.png ?w=650,border=true)
 
 If you execute the search with `User1`, you find all the documents from the first screenshot, and the 2 documents edited in the second screenshot:
 
@@ -77,4 +77,4 @@ If you execute the search with `User1`, you find all the documents from the firs
     name: search_user1.png
     1.1.3#screenshot#up_to_date
 --}}
-![search_user1.png](nx_asset://87689532-69bb-425d-b11f-141c6ed6ec16 ?w=650,border=true)
+![search_user1.png](/nx_assets/87689532-69bb-425d-b11f-141c6ed6ec16.png ?w=650,border=true)

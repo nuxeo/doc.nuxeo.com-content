@@ -221,7 +221,7 @@ Watch the related course on Hyland University:</br>
     name: university_salesforce.png
     addins#screenshot#up_to_date
 --}}
-![university_salesforce.png](nx_asset://1c31f400-41c3-408e-8ad2-a60786038dd6 ?w=450,border=true)
+![university_salesforce.png](/nx_assets/1c31f400-41c3-408e-8ad2-a60786038dd6.png ?w=450,border=true)
 {{/callout}}
 
 The [Nuxeo Salesforce connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce) covers several use cases of integration between the Nuxeo Repository and Salesforce:

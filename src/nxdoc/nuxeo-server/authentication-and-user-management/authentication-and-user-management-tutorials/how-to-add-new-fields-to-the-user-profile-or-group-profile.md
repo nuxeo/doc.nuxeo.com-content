@@ -83,7 +83,7 @@ Create a `manager_user_field.xsd` file with the following content from the defau
       name: schema_user.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![schema_user.png](nx_asset://5b06a0c7-1b0c-4afe-b3cb-74f50dbcb62c ?w=350,border=true)
+    ![schema_user.png](/nx_assets/5b06a0c7-1b0c-4afe-b3cb-74f50dbcb62c.png ?w=350,border=true)
 
 1. Click on **Ok**.
 1. Go to **CONFIGURATION** > **Advanced Settings** > **XML Extensions** and create a new XML extension (called for example `USER_SCHEMA_EXTENSION`) with the following content:
@@ -159,7 +159,7 @@ Add a new entry in your translation file (`messages.json` by default) with:
     name: user-edit.png
     server#screenshot#up_to_date
 --}}
-![user-edit.png](nx_asset://3b4d2aaa-785c-4675-add9-ed8e2cca0e61 ?w=350,border=true)
+![user-edit.png](/nx_assets/3b4d2aaa-785c-4675-add9-ed8e2cca0e61.png ?w=350,border=true)
 
 - User View Layout
 
@@ -168,7 +168,7 @@ Add a new entry in your translation file (`messages.json` by default) with:
     name: user-view.png
     server#screenshot#up_to_date
 --}}
-![user-view.png](nx_asset://cd390952-de66-44d1-a0dc-7759e54aef6d ?w=650,border=true)
+![user-view.png](/nx_assets/cd390952-de66-44d1-a0dc-7759e54aef6d.png ?w=650,border=true)
 
 ## User and Group References
 

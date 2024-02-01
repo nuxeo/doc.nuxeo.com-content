@@ -25,7 +25,7 @@ Watch the related course on Hyland University:</br>
     name: Screenshot 2020-01-30 at 16.41.13.png
     addins#screenshot#up_to_date
 --}}
-![university-nev.png](nx_asset://1f9785fd-83b6-4a98-9579-0871b3c15f04 ?w=450,border=true)
+![university-nev.png](/nx_assets/1f9785fd-83b6-4a98-9579-0871b3c15f04.png ?w=450,border=true)
 {{/callout}}
 
 ARender software comprises two parts:
@@ -48,7 +48,7 @@ Here's a chart illustrating the ARender micro-services:
     name: ARender-Architecture-2.png
     addins#schema#up_to_date
 --}}
-![arender-architecture](nx_asset://afc51692-c4eb-4e3d-a644-2a60795d9521 ?border=true)
+![arender-architecture](/nx_assets/afc51692-c4eb-4e3d-a644-2a60795d9521.png ?border=true)
 
 
 ## Functional Overview
@@ -60,7 +60,7 @@ Once the Nuxeo Enhanced Viewer is properly [installed and configured](#installat
     name: annotation-tab.png
     addins#screenshot#up_to_date
 --}}
-![annotation-tab.png](nx_asset://17173c2a-48b6-47d0-8b16-f47b0b76c220 ?w=350,border=true)
+![annotation-tab.png](/nx_assets/17173c2a-48b6-47d0-8b16-f47b0b76c220.png ?w=350,border=true)
 
 ### Annotations
 
@@ -70,47 +70,47 @@ You can access the different types of annotations available by default directly 
 <table class="hover">
 <tbody>
 <tr>
-<td colspan="1">![annotations-draw-arrows.png](nx_asset://7749f97c-548e-446c-8542-97fd35bfb6ff ?w=40)</td>
+<td colspan="1">![annotations-draw-arrows.png](/nx_assets/7749f97c-548e-446c-8542-97fd35bfb6ff.png ?w=40)</td>
 <td colspan="1"> Add an arrow.</br> Repeat mode available. </td>
 </tr>
 <tr>
-<td colspan="1">![annotations-add-freehand.png](nx_asset://275b858a-e1e6-4d6d-9d70-cc505bb120e9 ?w=40)</td>
+<td colspan="1">![annotations-add-freehand.png](/nx_assets/275b858a-e1e6-4d6d-9d70-cc505bb120e9.png ?w=40)</td>
 <td colspan="1"> Draw different shapes with the Freehand.</br>
 Repeat mode available. </td>
 </tr>
 <tr>
 <td colspan="1">
-![annotations-sticky-note.png](nx_asset://63ec2953-c04a-4eb3-87fe-b2bbfac763ef ?w=40)</td>
+![annotations-sticky-note.png](/nx_assets/63ec2953-c04a-4eb3-87fe-b2bbfac763ef.png ?w=40)</td>
 <td colspan="1"> Add a sticky note. </td>
 </tr>
 <tr>
 <td colspan="1">
-![annotations-free-text-box.png](nx_asset://2a874c02-8282-459f-a511-80d524f05ad5 ?w=40)</td>
+![annotations-free-text-box.png](/nx_assets/2a874c02-8282-459f-a511-80d524f05ad5.png ?w=40)</td>
 <td colspan="1"> Add a text box. </td>
 </tr>
 <tr>
 <td colspan="1">
-![annotations-highlight-rectangle.png](nx_asset://eef983e3-10bd-4d9f-be66-982990bf7aa8 ?w=40)</td>
+![annotations-highlight-rectangle.png](/nx_assets/eef983e3-10bd-4d9f-be66-982990bf7aa8.png ?w=40)</td>
 <td colspan="1"> Add a highlighted rectangle.</br> Once your rectangle is created you can modify the color and opacity of the highlight.</br> Repeat mode available.</td>
 </tr>
 <tr>
 <td colspan="1">
-![annotations-draw-circle.png](nx_asset://a12f0162-1971-4a00-8f60-cf71df4c7199 ?w=40)</td>
+![annotations-draw-circle.png](/nx_assets/a12f0162-1971-4a00-8f60-cf71df4c7199.png ?w=40)</td>
 <td colspan="1"> Add a circle.</br> Repeat mode available.</td>
 </tr>
 <tr>
 <td colspan="1">
-![annotations-highlight-text.png](nx_asset://bad65cf1-4779-459c-9bd6-74283ef88cbd ?w=40)</td>
+![annotations-highlight-text.png](/nx_assets/bad65cf1-4779-459c-9bd6-74283ef88cbd.png ?w=40)</td>
 <td colspan="1"> Highlight text.</br> Once your text is selected you can modify the color and opacity of the highlight.</td>
 </tr>
 <tr>
 <td colspan="1">
-![annotations-strikethrough-text.png](nx_asset://463ebd3a-e506-4f3b-b52a-7f122aa48456 ?w=40)</td>
+![annotations-strikethrough-text.png](/nx_assets/463ebd3a-e506-4f3b-b52a-7f122aa48456.png ?w=40)</td>
 <td colspan="1"> Add strikethrough text. </td>
 </tr>
 <tr>
 <td colspan="1">
-![annotations-redact.png](nx_asset://421137dc-2c9f-4c01-88b3-690d12a9fff4 ?w=40)</td>
+![annotations-redact.png](/nx_assets/421137dc-2c9f-4c01-88b3-690d12a9fff4.png ?w=40)</td>
 <td colspan="1"> Annotate over text, hiding its contents.</br> This annotation is only available on text documents.</td>
 </tr>
 </tbody>
@@ -122,7 +122,7 @@ Repeat mode available. </td>
     name: annotations-repeat-mode.png
     addins#icon#up_to_date
 --}}
-![annotations-repeat-mode.png](nx_asset://e1db7421-d37e-4e97-be25-cdfdc3483b66 ?w=20) meaning that you can add several annotations in a row. To disable the repeat mode, click on the annotation icon again.
+![annotations-repeat-mode.png](/nx_assets/e1db7421-d37e-4e97-be25-cdfdc3483b66.png ?w=20) meaning that you can add several annotations in a row. To disable the repeat mode, click on the annotation icon again.
 
 Other buttons are available on the top bar to optimize the visualization of the document: zoom, rotation, full screen, pagination, height and width adjustment, etc.
 
@@ -135,7 +135,7 @@ Other buttons are available on the top bar to optimize the visualization of the 
     name: annotation-sticky-note-empty.png
     addins#screenshot#up_to_date
     --}}
-    ![annotation-sticky-note-empty.png](nx_asset://f5c28202-b89c-424a-af48-503602b2a8a4 ?w=150,border=true)
+    ![annotation-sticky-note-empty.png](/nx_assets/f5c28202-b89c-424a-af48-503602b2a8a4.png ?w=150,border=true)
 1. Write your annotation and press **Enter**</br>
     Your annotation is directly displayed, the autosave is enabled by default.
     {{!--     ### nx_asset ###
@@ -143,7 +143,7 @@ Other buttons are available on the top bar to optimize the visualization of the 
         name: annotation-sticky-note-displayed.png
         addins#screenshot#up_to_date
     --}}
-    ![annotation-sticky-note-displayed](nx_asset://9800ba81-ea6f-469d-8861-48ec1a216e2b ?w=450,border=true)
+    ![annotation-sticky-note-displayed](/nx_assets/9800ba81-ea6f-469d-8861-48ec1a216e2b.png ?w=450,border=true)
 
 **To access annotations:**
 
@@ -153,28 +153,28 @@ Three views are available on the left panel:
     name: annotation-views.png
     addins#screenshot#up_to_date
 --}}
-![annotation-views.png](nx_asset://ecddf886-5f7d-4a24-8fa1-66a1e1819d58 ?w=150,border=true)
+![annotation-views.png](/nx_assets/ecddf886-5f7d-4a24-8fa1-66a1e1819d58.png ?w=150,border=true)
 - {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-document-pages-thumbs.png
     name: annotation-document-pages-thumbs.png
     addins#screenshot#up_to_date
 --}}
-![annotation-document-pages-thumbs.png](nx_asset://b397f86b-bae4-4d55-bb49-2b7ea8893a3b ?w=20): Document page thumbnails, opened by default
+![annotation-document-pages-thumbs.png](/nx_assets/b397f86b-bae4-4d55-bb49-2b7ea8893a3b.png ?w=20): Document page thumbnails, opened by default
 - {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-browser-navigation.png.1561393988095
     name: annotation-browser-navigation.png
     addins#icon#up_to_date
 --}}
-![annotation-browser-navigation.png](nx_asset://e819376d-cc8d-490b-b10b-b12e58b8ca00 ?w=20): Annotations Browser
+![annotation-browser-navigation.png](/nx_assets/e819376d-cc8d-490b-b10b-b12e58b8ca00.png ?w=20): Annotations Browser
 - {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-browser-navigation.png
     name: annotation-browser-navigation.png
     addins#icon#up_to_date
 --}}
-![annotation-browser-navigation.png](nx_asset://d1f71ecc-0afb-4bbf-92d7-e721518e66c3 ?w=20): Advanced Search
+![annotation-browser-navigation.png](/nx_assets/d1f71ecc-0afb-4bbf-92d7-e721518e66c3.png ?w=20): Advanced Search
 
 From the annotations browser, you can see the list of all the annotations made on the document you are viewing, grouped by document pages.</br>
-From this view, you can **delete annotations** by clicking on the delete icon ![delete-icon-arender.png](nx_asset://927311de-2cdc-497c-9efc-5beb09750968 ?w=15) next to it.
+From this view, you can **delete annotations** by clicking on the delete icon ![delete-icon-arender.png](/nx_assets/927311de-2cdc-497c-9efc-5beb09750968.png ?w=15) next to it.
 
 Still from the annotations browser view, 2 icons are available on each annotation:
 - {{!--     ### nx_asset ###
@@ -182,13 +182,13 @@ Still from the annotations browser view, 2 icons are available on each annotatio
     name: annotations-target-annotation.png
     addins#icon#up_to_date
 --}}
-![annotations-target-annotation.png](nx_asset://56a7f5df-93f1-4423-b12f-4e5a0cc06178 ?w=20): This action will localize the annotation, for example, if you have a PDF of several pages, it will directly lead you to the annotation but won't hide the other annotations.
+![annotations-target-annotation.png](/nx_assets/56a7f5df-93f1-4423-b12f-4e5a0cc06178.png ?w=20): This action will localize the annotation, for example, if you have a PDF of several pages, it will directly lead you to the annotation but won't hide the other annotations.
 - {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-show-one-annotation.png
     name: annotations-show-one-annotation.png
     addins#icon#up_to_date
 --}}
-![annotations-show-one-annotation.png](nx_asset://4271cd6f-9b4f-4082-94fb-046c879348c6 ?w=20): This action will only display the annotation concerned and hide the others.
+![annotations-show-one-annotation.png](/nx_assets/4271cd6f-9b4f-4082-94fb-046c879348c6.png ?w=20): This action will only display the annotation concerned and hide the others.
 
 Different filters are available, you can search for and **filter any annotation by metadata** (status, document, annotation type, etc.), and also **filter annotation by the current user**, that means that only the annotations that the current user created will be displayed on the left panel.
 
@@ -197,7 +197,7 @@ Different filters are available, you can search for and **filter any annotation 
     name: annotation-search.png
     addins#popup#up_to_date
 --}}
-![annotation-search.png](nx_asset://24fd947d-4c73-47fa-b13b-e714c8466f33 ?w=350,border=true)
+![annotation-search.png](/nx_assets/24fd947d-4c73-47fa-b13b-e714c8466f33.png ?w=350,border=true)
 
 You can also **manage annotations** by:
 - Adding a comment
@@ -209,7 +209,7 @@ You can also **manage annotations** by:
     name: annotation-comment-replied.png
     addins#screenshot#up_to_date
 --}}
-![annotation-comment-replied.png](nx_asset://13a08f40-f5c6-4bba-afbf-2c377c0839ab ?w=350,border=true)
+![annotation-comment-replied.png](/nx_assets/13a08f40-f5c6-4bba-afbf-2c377c0839ab.png ?w=350,border=true)
 
 Once added, these comments are available from the view tab of your document.
 
@@ -220,7 +220,7 @@ Once added, these comments are available from the view tab of your document.
     name: annotations-draw-arrows.png
     addins#icon#up_to_date
 --}}
-![annotations-draw-arrows.png](nx_asset://7749f97c-548e-446c-8542-97fd35bfb6ff ?w=20) then click and drag to draw an arrow.
+![annotations-draw-arrows.png](/nx_assets/7749f97c-548e-446c-8542-97fd35bfb6ff.png ?w=20) then click and drag to draw an arrow.
 1. Once your arrow is drawn, you can customize its direction, color, opacity, style, etc.
 
     {{!--     ### nx_asset ###
@@ -228,7 +228,7 @@ Once added, these comments are available from the view tab of your document.
       name: annotations-arrow-options.png
       addins#icon#up_to_date
     --}}
-    ![annotations-arrow-options.png](nx_asset://0facae06-cc18-44ad-b7d6-e1686e87c112 ?w=650, border=true)
+    ![annotations-arrow-options.png](/nx_assets/0facae06-cc18-44ad-b7d6-e1686e87c112.png ?w=650, border=true)
 
 Arrows can also be used to take measurements on a document. To do so, once an arrow is drawn, click on **Show measurement** on the customization top bar and the measurement will be displayed in your preferred unit (inches, centimeters or pixels).
 
@@ -237,7 +237,7 @@ Arrows can also be used to take measurements on a document. To do so, once an ar
     name: annotations-jacket-CD-measure.png
     addins#screenshot#up_to_date
 --}}
-![annotations-jacket-measure.png](nx_asset://2a574eee-9949-4050-a8b6-651257e41aa8 ?w=650,border=true)
+![annotations-jacket-measure.png](/nx_assets/2a574eee-9949-4050-a8b6-651257e41aa8.png ?w=650,border=true)
 
 ### Watermark
 
@@ -248,14 +248,14 @@ To **add a stamp annotation**, click on the stamp button {{!--     ### nx_asset 
     name: annotations-stamps.png
     addins#icon#up_to_date
 --}}
-![annotations-stamps.png](nx_asset://409a9ec4-2d9c-401b-bb3a-3be8036ad6ae ?w=20).</br>
+![annotations-stamps.png](/nx_assets/409a9ec4-2d9c-401b-bb3a-3be8036ad6ae.png ?w=20).</br>
     A popup window is displayed:
     {{!--     ### nx_asset ###
         path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-popup-stamps.png
         name: annotations-popup-stamps.png
         addins#screenshot#up_to_date
     --}}
-    ![annotations-popup-stamps.png](nx_asset://d62c56eb-5f8b-4980-93d9-45c5c2364a90 ?w=450,border=true)
+    ![annotations-popup-stamps.png](/nx_assets/d62c56eb-5f8b-4980-93d9-45c5c2364a90.png ?w=450,border=true)
 
 Different options are available: "Urgent", approved on the current date, "Insert signature here:", "draft", or a signature.
 
@@ -266,14 +266,14 @@ Hover over the download icon {{!--     ### nx_asset ###
     name: annotations-download-button.png
     addins#icon#up_to_date
 --}}
-![annotations-download-button.png](nx_asset://f08c3d19-0da2-43b8-a023-622aa785f8db ?w=20) to display the file menu with several available actions:
+![annotations-download-button.png](/nx_assets/f08c3d19-0da2-43b8-a023-622aa785f8db.png ?w=20) to display the file menu with several available actions:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-submenu-download.png
     name: annotations-submenu-download.png
     addins#icon#up_to_date
 --}}
-![annotations-submenu-download.png](nx_asset://51b7e81b-e7d6-4ea0-9322-d31c04f05faa ?w=150,border=true)
+![annotations-submenu-download.png](/nx_assets/51b7e81b-e7d6-4ea0-9322-d31c04f05faa.png ?w=150,border=true)
 - Download current file
 - Download current file as PDF
 - Download current file with annotations
@@ -288,7 +288,7 @@ Hover over the download icon {{!--     ### nx_asset ###
     name: annotation-print-button.png
     addins#icon#up_to_date
 --}}
-![annotation-print-button.png](nx_asset://3b7d1e22-e007-4b92-bac0-0be6ca81bc9b ?w=20) at the top right of the screen.
+![annotation-print-button.png](/nx_assets/3b7d1e22-e007-4b92-bac0-0be6ca81bc9b.png ?w=20) at the top right of the screen.
 
 1. A popup window appears with several print options:
     - Print the current document
@@ -298,7 +298,7 @@ Hover over the download icon {{!--     ### nx_asset ###
       name: annotation-popup-print.png
       addons#icon#up_to_date
     --}}
-    ![annotation-popup-print.png](nx_asset://e8393e2c-ba21-4c98-a8ce-c0ec40f7a5c2 ?w=350,border=true)
+    ![annotation-popup-print.png](/nx_assets/e8393e2c-ba21-4c98-a8ce-c0ec40f7a5c2.png ?w=350,border=true)
 
 You can select “Include annotations” to print all annotations on a document, or select "Include watermark" to display the selected watermark on all pages of the document.
 
@@ -313,7 +313,7 @@ With the Nuxeo Enhanced Viewer, you can compare the text of two different versio
     name: compare_arender.png
     addins#screenshot#up_to_date
 --}}
-![compare-arender](nx_asset://fb24e3d8-b22d-45ca-820e-f8b1bb8b17a4 ?w=650,border=true)
+![compare-arender](/nx_assets/fb24e3d8-b22d-45ca-820e-f8b1bb8b17a4.png ?w=650,border=true)
 
 A new window is opened with the two documents side-by-side, highlighting text which has been deleted, modified or added.
 
@@ -322,7 +322,7 @@ A new window is opened with the two documents side-by-side, highlighting text wh
     name: compare_arender_2.png
     addins#screenshot#up_to_date
 --}}
-![compare_arender_2](nx_asset://7be7595f-3e11-468a-a004-1700e45e3ab3 ?w=650,border=true)
+![compare_arender_2](/nx_assets/7be7595f-3e11-468a-a004-1700e45e3ab3.png ?w=650,border=true)
 
 You can see the annotations linked to each version on the same screen, and even annotate one file from this view.
 
@@ -518,7 +518,7 @@ Examples of possible configurations:
     name: arender-customized.png
     addins#screenshot#up_to_date
 --}}
-![arender-customized.png](nx_asset://a26f7eaf-e268-443f-be33-2c88542e2a13 ?w=600,border=true)
+![arender-customized.png](/nx_assets/a26f7eaf-e268-443f-be33-2c88542e2a13.png ?w=600,border=true)
 
 The UI customization is done through two files to be put in the `/docker-entrypoint-init.d` directory inside the Previewer container.
 

@@ -113,7 +113,7 @@ Be careful to select the **Override** deployment mode from the **Advanced Config
     name: STUDIO-override-mode.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Override Mode in Studio](nx_asset://af70e650-bad0-4fbc-a718-aab947d1d67d ?w=250,border=true)
+![Override Mode in Studio](/nx_assets/af70e650-bad0-4fbc-a718-aab947d1d67d.png ?w=250,border=true)
 {{/callout}}
 
 Below are the document types provided by the default Nuxeo Platform, the Document Management and Digital Asset Management modules.
