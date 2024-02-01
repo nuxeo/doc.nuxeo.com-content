@@ -24,7 +24,7 @@ Watch the related course on Hyland University:</br>
     name: university_streams.png
     server#screenshot#up_to_date
 --}}
-![university_streams.png](nx_asset://6ea2d254-104f-4747-bf74-3f5aad34cc51 ?w=450,border=true)
+![university_streams.png](/nx_assets/6ea2d254-104f-4747-bf74-3f5aad34cc51.png ?w=450,border=true)
 {{/callout}}
 
 ## Log and Stream Processing

@@ -54,7 +54,7 @@ Now we will add aggregates to customize the search.
     name: contract-owner-vd.png
     1.1.3#screenshot#up_to_date
 --}}
-![contract-owner-vd.png](nx_asset://b3dac2ef-6a71-49a6-9136-708e52f07b39 ?w=250,border=true)
+![contract-owner-vd.png](/nx_assets/b3dac2ef-6a71-49a6-9136-708e52f07b39.png ?w=250,border=true)
 
 1. Add another new Predicates.
 1. Click on **Edit binding** and select `schema:contract` > `owner`.
@@ -65,7 +65,7 @@ Now we will add aggregates to customize the search.
     name: creation-date-range-vd.png
     1.1.3#screenshot#up_to_date
 --}}
-![creation-date-range-vd.png](nx_asset://263526ac-16b3-41e3-b45c-5a23c98405b0 ?w=250,border=true)
+![creation-date-range-vd.png](/nx_assets/263526ac-16b3-41e3-b45c-5a23c98405b0.png ?w=250,border=true)
 
 1. Next to **Aggregates** click on **Add**.</br>
    A popup window appears.
@@ -132,14 +132,14 @@ From the Page Provider screen for **otherContracts**:
       name: other-contract.png
       studio_designer#screenshot#up_to_date
     --}}
-    ![other-contract.png](nx_asset://3d8705d7-1e9a-4752-84b7-cdbad6942986 ?w=450,border=true)
+    ![other-contract.png](/nx_assets/3d8705d7-1e9a-4752-84b7-cdbad6942986.png ?w=450,border=true)
 1. Fill in the **Element & Attributes** section like this:
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Insert a New Tab/other-contract-elements-attributes.png
       name: other-contract-elements-attributes.png
       studio_designer#screenshot#up_to_date
     --}}
-    ![other-contract-elements-attributes.png](nx_asset://209e3f72-ef8e-4fe9-847c-2b9e07a8c0b0 ?w=450,border=true)
+    ![other-contract-elements-attributes.png](/nx_assets/209e3f72-ef8e-4fe9-847c-2b9e07a8c0b0.png ?w=450,border=true)
 1. Fill in the Filters section like this:
   - **Document has one of the types**: `Contract`
   - **User has at least one of the permissions**: `ReadWrite`
@@ -151,4 +151,4 @@ You can now deploy your project on your instance and see what it looks like!
     name: other-contract-result.png
     1.1.3#screenshot#up_to_date
 --}}
-![other-contract-result.png](nx_asset://2409057b-9813-479c-83f5-8d753ad6a8be ?w=500,border=true)
+![other-contract-result.png](/nx_assets/2409057b-9813-479c-83f5-8d753ad6a8be.png ?w=500,border=true)

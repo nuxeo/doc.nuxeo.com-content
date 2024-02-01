@@ -19,7 +19,7 @@ Unlike subjects in the metadata of the document, you don't have to choose tags i
     name: web-ui-view-tags.png
     1.1.3#screenshot#up_to_date
 --}}
-![Web UI view tags](nx_asset://ac43c336-4077-43d3-8406-ba8e57a23246 ?w=650)
+![Web UI view tags](/nx_assets/ac43c336-4077-43d3-8406-ba8e57a23246.png ?w=650)
 
 Users can add a tag on a document as soon as they can access the document, i.e. as soon as they have reading permissions.
 
@@ -33,7 +33,7 @@ The tag is immediately added on the document and available in the Search tab to 
     name: web-ui-tags.png
     1.1.3#screenshot#up_to_date
 --}}
-![Web UI add Tags](nx_asset://f5138fe2-0de5-4dcc-9836-2820724b871f ?w=350)
+![Web UI add Tags](/nx_assets/f5138fe2-0de5-4dcc-9836-2820724b871f.png ?w=350)
 
 **To remove a tag**, you need to be the user who added the tag on the document or have at least Edit permission on the document. Click on the icon ![]({{file space='userdoc' name='delete.png' page='icons-index'}}), the tag is immediately removed.
 

@@ -19,7 +19,7 @@ The goal of this section is to explain the principles and components that can be
     name: university_reference_architecture.png
     server#screenshot#up_to_date
 --}}
-![university_reference_architecture.png](nx_asset://2a075e0b-c150-4eeb-b248-b92650771b5a ?w=450,border=true)
+![university_reference_architecture.png](/nx_assets/2a075e0b-c150-4eeb-b248-b92650771b5a.png ?w=450,border=true)
 {{/callout}}
 
 ## Cluster Basics

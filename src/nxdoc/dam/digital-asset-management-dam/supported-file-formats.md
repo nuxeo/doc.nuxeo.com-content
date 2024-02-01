@@ -153,7 +153,7 @@ Watch the related courses on Hyland University: [DAM Concepts](https://universit
     name: university_dam.png
     addins#screenshot#up_to_date
 --}}
-![university_dam.png](nx_asset://ed2467b9-4529-4cca-9843-0b46f8cd3d62 ?w=650,border=true)
+![university_dam.png](/nx_assets/ed2467b9-4529-4cca-9843-0b46f8cd3d62.png ?w=650,border=true)
 {{/callout}}
 
 ## File Support Table

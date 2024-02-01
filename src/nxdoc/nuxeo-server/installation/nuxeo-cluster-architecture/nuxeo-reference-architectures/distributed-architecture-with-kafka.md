@@ -26,7 +26,7 @@ In this architecture:
     name: Screenshot 2021-03-11 at 11.25.12.png
     server#diagram#up_to_date
 --}}
-![2-simple-architecture-with-kafka.png](nx_asset://db5d61db-04c5-4fb0-be9b-ab4b3252905a ?w=650,border=true)
+![2-simple-architecture-with-kafka.png](/nx_assets/db5d61db-04c5-4fb0-be9b-ab4b3252905a.png ?w=650,border=true)
 
 ## Limitations
 

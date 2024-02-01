@@ -20,7 +20,7 @@ The [Nuxeo Showcase Content](https://connect.nuxeo.com/nuxeo/site/marketplace/pa
     name: nuxeo-showcase-content-example.png
     addins#screenshot#up_to_date
 --}}
-![Showcase Content Example](nx_asset://a63473cb-85ed-4222-8b95-cc0651584611 ?w=600,border=true)
+![Showcase Content Example](/nx_assets/a63473cb-85ed-4222-8b95-cc0651584611.png ?w=600,border=true)
 
 ## Prerequisite
 
@@ -43,4 +43,4 @@ Once installed, 3 new folders are available on your instance:
     addins#screenshot#up_to_date
 --}}
 
-![Showcase Content](nx_asset://cd6c3300-45bc-4640-a744-a85ecf0979c7 ?w=600,border=true)
+![Showcase Content](/nx_assets/cd6c3300-45bc-4640-a744-a85ecf0979c7.png ?w=600,border=true)

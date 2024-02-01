@@ -49,7 +49,7 @@ First, we need to create a new workflow template in Studio Modeler. This workflo
       name: create-wf-studio.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![create-wf-studio.png](nx_asset://4d5272f1-a220-4af3-ae76-7bd3d916f446 ?w=450,border=true)
+    ![create-wf-studio.png](/nx_assets/4d5272f1-a220-4af3-ae76-7bd3d916f446.png ?w=450,border=true)
 1. On the **Activation** tab, next to the field **Current document has one of the types**, select the Contract local type and move it from left to right.</br>
 Now we will add a custom workflow variable called **Type** to specify which type of contract you are validating.
 1. On the **Variables** tab, add a field `type` as a string.
@@ -61,7 +61,7 @@ Now we will add a custom workflow variable called **Type** to specify which type
       name: general-tab-custom-wf.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![general-tab-custom-wf.png](nx_asset://905350af-8553-4096-9661-e282f87ece4d ?w=450,border=true)
+    ![general-tab-custom-wf.png](/nx_assets/905350af-8553-4096-9661-e282f87ece4d.png ?w=450,border=true)
 1. On the **Variables** tab, activate the `type` custom variable by moving it to the right box.
 1. Save your changes.
   You should end up with a graph like this:
@@ -70,7 +70,7 @@ Now we will add a custom workflow variable called **Type** to specify which type
     name: graph-custom-wf.png
     studio_modeler#screenshot#up_to_date
   --}}
-  ![graph-custom-wf.png](nx_asset://dff4bfee-121d-46c1-a4ea-ed2bed5e7f75 ?w=450,border=true)
+  ![graph-custom-wf.png](/nx_assets/dff4bfee-121d-46c1-a4ea-ed2bed5e7f75.png ?w=450,border=true)
 
 We will finish our Studio Modeler configuration by creating a vocabulary for the `type` variable, to be able to select the type from a drop down list during the workflow process. The vocabulary will be composed of three different types of employment contract.
 
@@ -80,14 +80,14 @@ We will finish our Studio Modeler configuration by creating a vocabulary for the
     name: create-voc-studio.png
     studio_modeler#screenshot#up_to_date
   --}}
-  ![create-voc-studio.png](nx_asset://24a390bd-bcaf-4556-b604-3f8229281d05 ?w=450,border=true)
+  ![create-voc-studio.png](/nx_assets/24a390bd-bcaf-4556-b604-3f8229281d05.png ?w=450,border=true)
 2. Fill in the rows like this:
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/voc-created-studio.png
       name: voc-created-studio.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![voc-created-studio.png](nx_asset://a60d0e4e-58d7-44ed-8101-2cf5ca40b4df ?w=450,border=true)
+    ![voc-created-studio.png](/nx_assets/a60d0e4e-58d7-44ed-8101-2cf5ca40b4df.png ?w=450,border=true)
 3. Save your modifications.
 
 ## Create a Task layout
@@ -101,7 +101,7 @@ We can now configure our layout on Studio Designer.
     name: workflow-process-VD.png
     studio_designer#screenshot#up_to_date
   --}}
-  ![workflow-process-VD.png](nx_asset://b24e91cb-f932-4164-89c1-8d42334d42b5 ?w=350,border=true)
+  ![workflow-process-VD.png](/nx_assets/b24e91cb-f932-4164-89c1-8d42334d42b5.png ?w=350,border=true)
 1. Switch to editor from visual to code and change the line corresponding to the type field to turn it into a `nuxeo-directory-suggestion` to link the type property to the associated directory:
 ```
 <nuxeo-directory-suggestion role="widget" label="Type"
@@ -119,21 +119,21 @@ You can now [deploy your project]({{page space='studio' page='deploying-your-pro
     name: contract-validation-process-web-ui.png
     studio_modeler#screenshot#up_to_date
 --}}
-![contract-validation-process-web-ui.png](nx_asset://e3f3a367-21f8-4b70-b306-552ae590220f ?w=350)
+![contract-validation-process-web-ui.png](/nx_assets/e3f3a367-21f8-4b70-b306-552ae590220f.png ?w=350)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/validation-task-process.png
     name: validation-task-process.png
     1.1.3#screenshot#up_to_date
 --}}
-![validation-task-process.png](nx_asset://3b855158-01e3-499c-b8b6-f3f4b27a4410 ?w=350,border=true)
+![validation-task-process.png](/nx_assets/3b855158-01e3-499c-b8b6-f3f4b27a4410.png ?w=350,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/type-field-web-ui.png
     name: type-field-web-ui.png
     1.1.3#screenshot#up_to_date
 --}}
-![type-field-web-ui.png](nx_asset://66f1206c-8515-4487-89a1-da37c1dcfd4f ?w=350,border=true)
+![type-field-web-ui.png](/nx_assets/66f1206c-8515-4487-89a1-da37c1dcfd4f.png ?w=350,border=true)
 
 For more information about tasks on Web UI, read the [related documentation]({{page version='' space='userdoc' page='task'}}).
 

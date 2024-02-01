@@ -31,34 +31,34 @@ To deploy the Nuxeo for Sitecore Connector package, have your Sitecore Administr
     name: 9-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![9-sitecore](nx_asset://9695948f-15df-4a05-a0b7-cfe83b5a4fab ?border=true,w=200,h=300)
+![9-sitecore](/nx_assets/9695948f-15df-4a05-a0b7-cfe83b5a4fab.png ?border=true,w=200,h=300)
 1. Within the Administration section, click **Install a Package**
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/5-sitecore
     name: 5-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![5-sitecore](nx_asset://f9ed8668-c3be-415b-a830-a3f3560decc7 ?border=true,w=400,h=150)
+![5-sitecore](/nx_assets/f9ed8668-c3be-415b-a830-a3f3560decc7.png ?border=true,w=400,h=150)
 1. **ALTERNATIVELY** - You can go through the Desktop Application > Development Tools > Installation Wizard
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/9-sitecore
     name: 9-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![9-sitecore](nx_asset://9695948f-15df-4a05-a0b7-cfe83b5a4fab ?border=true,w=200,h=300)
+![9-sitecore](/nx_assets/9695948f-15df-4a05-a0b7-cfe83b5a4fab.png ?border=true,w=200,h=300)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/3-sitecore
     name: 3-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![3-sitecore](nx_asset://42d1fa7c-26f2-461f-956b-ea5b63a39635 ?border=true,w=400)
+![3-sitecore](/nx_assets/42d1fa7c-26f2-461f-956b-ea5b63a39635.png ?border=true,w=400)
 1. On the **Install a Package** dialog, choose **Upload Package**
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/11-sitecore
     name: 11-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![11-sitecore](nx_asset://ac99400e-9eb3-4f5f-82fa-84ec5ed23a9e ?border=true,w=300)
+![11-sitecore](/nx_assets/ac99400e-9eb3-4f5f-82fa-84ec5ed23a9e.png ?border=true,w=300)
   This brings up the **Upload files** dialog which you will use to browse to the package you want to install.
 1. Navigate to the Package and select it, then click **Next**
 1. You’ll be asked to **Overwrite existing files?** - this is in case anything in the system is named the same - it’s probably safe to select this regardless, but if you don’t, it will append a string of numbers to the filename before uploading. Choose **Next**.
@@ -67,19 +67,19 @@ To deploy the Nuxeo for Sitecore Connector package, have your Sitecore Administr
     name: 1-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![1-sitecore](nx_asset://ee71be2d-45a5-4193-963a-d3704e39921f ?border=true,w=300)
+![1-sitecore](/nx_assets/ee71be2d-45a5-4193-963a-d3704e39921f.png ?border=true,w=300)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/6-sitecore
     name: 6-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![6-sitecore](nx_asset://7871695d-9a01-4c43-b8a6-4c92566ed1c5 ?border=true,w=300)
+![6-sitecore](/nx_assets/7871695d-9a01-4c43-b8a6-4c92566ed1c5.png ?border=true,w=300)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Sitecore Connector/1-sitecore
     name: 1-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![1-sitecore](nx_asset://ee71be2d-45a5-4193-963a-d3704e39921f ?border=true,w=300)
+![1-sitecore](/nx_assets/ee71be2d-45a5-4193-963a-d3704e39921f.png ?border=true,w=300)
 1. You’re now ready to install, so click the **Install** button.
 
 The next confirmation/warning box is going to ask what you want to do with items that already exist in the Sitecore Master and CORS databases.  
@@ -94,7 +94,7 @@ We add a base template to this template to extend the media type with EXIF field
     name: 2-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![2-sitecore](nx_asset://4a37aab4-6cdf-4333-bef4-b6fecebc9ac2 ?border=true,w=300)
+![2-sitecore](/nx_assets/4a37aab4-6cdf-4333-bef4-b6fecebc9ac2.png ?border=true,w=300)
 
 Merging options can be confusing, especially given the out of the box explanations.
 
@@ -115,7 +115,7 @@ Upon successful installation, you’ll see the next dialog box, where you can si
     name: 4-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![4-sitecore](nx_asset://2529f64f-d4e1-4e3a-8990-992625f5526c ?border=true,w=300)
+![4-sitecore](/nx_assets/2529f64f-d4e1-4e3a-8990-992625f5526c.png ?border=true,w=300)
 
 {{#> callout type='warning' }}
 If you are using **Sitecore version 9.3** or newer, you will need to update the security policy in your `web.config` file in your sitecore instance. This is new in 9.3 and should not be necessary for older versions. </br>
@@ -139,7 +139,7 @@ In the Modules/Settings menu, you must add information related to your Nuxeo ser
     name: 7-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![7-sitecore](nx_asset://b0e83efb-1533-4f7d-b670-8a45737c464e ?border=true,w=650)
+![7-sitecore](/nx_assets/b0e83efb-1533-4f7d-b670-8a45737c464e.png ?border=true,w=650)
 
 - **ServerUrl:** the URL for your Nuxeo application. Be sure to include `/nuxeo` at the end of your URL. This should match what was added to your Content-Security-Policy in your `web.config`.
 
@@ -184,7 +184,7 @@ From any Sitecore page, click on the **Show Editor** link.
     name: 12-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![12-sitecore](nx_asset://0fa7f4e9-795f-4abc-a02e-bb607dcb10b8 ?border=true)
+![12-sitecore](/nx_assets/0fa7f4e9-795f-4abc-a02e-bb607dcb10b8.png ?border=true)
 
 Click on the **Nuxeo** logo in the menu bar:
 
@@ -193,7 +193,7 @@ Click on the **Nuxeo** logo in the menu bar:
     name: 8-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![8-sitecore](nx_asset://32c83050-c0e1-491d-84dc-e30ed34ca6ed ?border=true)
+![8-sitecore](/nx_assets/32c83050-c0e1-491d-84dc-e30ed34ca6ed.png ?border=true)
 
 **Log into Nuxeo** with your Nuxeo credentials, if you haven’t already. (SSO will be enabled in upcoming releases).
 
@@ -204,7 +204,7 @@ Click on the **Nuxeo** logo in the menu bar:
     name: 14-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![14-sitecore](nx_asset://b671d0b7-b710-483a-8dfc-b202b0f43843 ?border=true)
+![14-sitecore](/nx_assets/b671d0b7-b710-483a-8dfc-b202b0f43843.png ?border=true)
 
 Click **Select**.
 
@@ -216,7 +216,7 @@ To search, type in the term(s) and click **Search**. To browse, click on the **B
     name: 15-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![15-sitecore](nx_asset://a6ca396d-c701-45ca-b562-9d528c6486b4 ?border=true)
+![15-sitecore](/nx_assets/a6ca396d-c701-45ca-b562-9d528c6486b4.png ?border=true)
 
 Once you start browsing, you will see a clickable breadcrumb:
 
@@ -225,7 +225,7 @@ Once you start browsing, you will see a clickable breadcrumb:
     name: 10-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![10-sitecore](nx_asset://bc21ddeb-540f-42ed-9604-faaa8005f902 ?border=true,w=300)
+![10-sitecore](/nx_assets/bc21ddeb-540f-42ed-9604-faaa8005f902.png ?border=true,w=300)
 
 **Select the rendition(s)** you’d like for import into Sitecore.
 
@@ -234,7 +234,7 @@ Once you start browsing, you will see a clickable breadcrumb:
     name: 13-sitecore.png
     addins#screenshot#up_to_date
 --}}
-![13-sitecore](nx_asset://8a6d7b33-cf99-4849-8554-cb9496362699 ?border=true)
+![13-sitecore](/nx_assets/8a6d7b33-cf99-4849-8554-cb9496362699.png ?border=true)
 
 
 Click **import renditions** at the top of the page or below the item renditions list.
