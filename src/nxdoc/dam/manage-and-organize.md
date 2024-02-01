@@ -62,7 +62,7 @@ Workflow integration is a key element of any DAM project. Nuxeo Platform allows 
 
 Let's take a fictive creative review and approval process:
 
-![Rainier creative review approval](nx_asset://20b0dc36-d5d0-4cb3-8ad8-75292af0162a ?border=true)
+![Rainier creative review approval](/nx_assets/20b0dc36-d5d0-4cb3-8ad8-75292af0162a.png ?border=true)
 
 1. Josh is a photographer, and is an external user engaged for a photoshoot to get images for the campaign. He uploads his pictures into Dropbox. Then, Nuxeo Platform automatically indexes them – without moving the images themselves – and adds tags automatically using [Nuxeo Vision]({{page version='' space='nxdoc' page='nuxeo-vision'}}).
 

@@ -199,7 +199,7 @@ By clicking on the link to the EasyShare Folder, you access a particular EasySha
     name: easyshare-shared-folder.png
     addins#screenshot#up_to_date
 --}}
-![Easyshare shared folder](nx_asset://4d496c06-a31b-4f65-b93b-0798fe968727 ?w=650,border=true)
+![Easyshare shared folder](/nx_assets/4d496c06-a31b-4f65-b93b-0798fe968727.png ?w=650,border=true)
 
 ## Future Improvements
 

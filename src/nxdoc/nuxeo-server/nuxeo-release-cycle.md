@@ -79,6 +79,6 @@ LTS versions take the number of the year during which they are released. For exa
     name: release-cycle-diagram.png
     server#screenshot#up_to_date
 --}}
-![release-cycle-diagram](nx_asset://06844453-da73-4c66-9fd3-e420214f1bc7 ?w=650)
+![release-cycle-diagram](/nx_assets/06844453-da73-4c66-9fd3-e420214f1bc7.png ?w=650)
 
 As you can see, the major releases trend provides our customers more time to migrate while still benefiting from the most recent product evolutions.

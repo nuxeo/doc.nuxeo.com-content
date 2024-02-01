@@ -44,7 +44,7 @@ For compound document we have enabled a tree browsing for users to easily naviga
     name: compound-documents.png
     addins#screenshot#up_to_date
 --}}
-![Compound documents preview ](nx_asset://d783b71b-afef-46b3-bfdd-a5a57b7d8c01 ?w=650,border=true)
+![Compound documents preview ](/nx_assets/d783b71b-afef-46b3-bfdd-a5a57b7d8c01.png ?w=650,border=true)
 
 ## Extend Compound Documents
 

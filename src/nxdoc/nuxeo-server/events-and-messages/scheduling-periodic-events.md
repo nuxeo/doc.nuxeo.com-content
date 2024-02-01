@@ -235,7 +235,7 @@ In the **Event Handler Activation**, update the **Current document is** filter v
     name: event-handler-any-documents.png
     server#screenshot#up_to_date
 --}}
-![Event Handler Any Documents](nx_asset://8992dd6e-2bfc-47d0-95cb-be683c8953e3 ?w=550,border=true)
+![Event Handler Any Documents](/nx_assets/8992dd6e-2bfc-47d0-95cb-be683c8953e3.png ?w=550,border=true)
 {{/callout}}
 
 ## Automation

@@ -28,7 +28,7 @@ This latest release puts focus on dealing with smaller sets of documents: it is 
     name: Screenshot from 2022-09-07 16-43-58.png
     web_ui#screenshot#up_to_date
 --}}
-![unselect-some](nx_asset://0ad82bfb-6969-48a7-8c61-c0a2365f1e2a ?w=393,border=true)
+![unselect-some](/nx_assets/0ad82bfb-6969-48a7-8c61-c0a2365f1e2a.png ?w=393,border=true)
 
 Bulk actions are still available as usual for the documents that remain selected.
 

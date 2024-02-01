@@ -29,14 +29,14 @@ When configuring a page provider for LTS 2021 in Nuxeo Studio, you can activate 
     name: multi-repo-page-provider.png
     studio_modeler#screenshot#up_to_date
 --}}
-![multi-repo-page-provider.png](nx_asset://d84cb333-d2d4-4500-b8fd-f6e14f34bec7 ?w=650,border=true)
+![multi-repo-page-provider.png](/nx_assets/d84cb333-d2d4-4500-b8fd-f6e14f34bec7.png ?w=650,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Web UI Release Notes/multi-repo-search-results.png
     name: multi-repo-search-results.png
     web_ui#screenshot#up_to_date
 --}}
-![multi-repo-search-results.png](nx_asset://bacbb4c8-e9b9-41d3-b37f-ad8045decca9 ?border=true)
+![multi-repo-search-results.png](/nx_assets/bacbb4c8-e9b9-41d3-b37f-ad8045decca9.png ?border=true)
 
 If your search layout and result layout were already configured in LTS 2019, make sure to follow the [routing API upgrade notes]({{page space='nxdoc' page='web-ui-upgrade-notes-lts-2021'}}#routing-behavior-api-change) in order to get them working as expected.
 

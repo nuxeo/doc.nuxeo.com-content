@@ -122,7 +122,7 @@ Watch the related course on Hyland University:</br>
     name: university_audit.png
     server#screenshot#up_to_date
 --}}
-![university_audit.png](nx_asset://fa59bf2b-6f7c-4cfa-a8ad-c0bb7e1775ae ?w=450,border=true)
+![university_audit.png](/nx_assets/fa59bf2b-6f7c-4cfa-a8ad-c0bb7e1775ae.png ?w=450,border=true)
 {{/callout}}
 
 ## Architecture

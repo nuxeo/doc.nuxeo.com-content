@@ -91,7 +91,7 @@ Watch the related course on Hyland University:</br>
     name: university_security_policies.png
     server#screenshot#up_to_date
 --}}
-![university_security_policies.png](nx_asset://02a2134a-3291-4520-a477-f6a674344622 ?w=450,border=true)
+![university_security_policies.png](/nx_assets/02a2134a-3291-4520-a477-f6a674344622.png ?w=450,border=true)
 {{/callout}}
 
 ## Security Policy Architecture

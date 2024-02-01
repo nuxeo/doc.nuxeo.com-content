@@ -34,7 +34,7 @@ From search results or document list, you can add a new column named **Flags** t
     name: flags_fav.png
     web_ui#screenshot#up_to_date
 --}}
-![Flags favorites](nx_asset://8badf40a-13e6-4a86-a3c4-0afa58103fcd ?w=650,border=true)
+![Flags favorites](/nx_assets/8badf40a-13e6-4a86-a3c4-0afa58103fcd.png ?w=650,border=true)
 
 {{! multiexcerpt name='remove-favorites-web-ui'}}
 **To remove a document from Favorites, you can:**

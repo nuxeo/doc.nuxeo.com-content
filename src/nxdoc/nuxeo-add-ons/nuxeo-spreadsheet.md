@@ -170,7 +170,7 @@ To display the button in Web UI, users should go to Studio Designer, select the 
     name: spreadsheet-package-enable-button-designer.png
     1.1.3#screenshot#up_to_date
 --}}
-![Spreadsheet package enable button in Designer](nx_asset://b8fd28dd-0272-43b1-a083-dfde295c312b ?w=650,border=true)
+![Spreadsheet package enable button in Designer](/nx_assets/b8fd28dd-0272-43b1-a083-dfde295c312b.png ?w=650,border=true)
 
 Notice that in older versions, Nuxeo Spreadsheet is a separate addon and it is automatically enabled on package install.
 

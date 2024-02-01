@@ -97,7 +97,7 @@ Check the [Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/10
     name: readwriteandremove-permission-ui.png
     1.1.3#screenshot#up_to_date
 --}}
-![readwriteandremove-permission-ui.png](nx_asset://5648e7f2-0ccf-4680-af6b-f4ba352ec9e3 ?w=350,border=true)
+![readwriteandremove-permission-ui.png](/nx_assets/5648e7f2-0ccf-4680-af6b-f4ba352ec9e3.png ?w=350,border=true)
 
 &nbsp;
 

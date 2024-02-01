@@ -54,7 +54,7 @@ Select the files that you want to upload and there will be an action button to m
     name: SendMultipleToCS1.png
     addins#screenshot#up_to_date
 --}}
-![Send Multiple To Coldstorage](nx_asset://d6f239bd-b830-4b3e-a041-bc23ec2d985c)
+![Send Multiple To Coldstorage](/nx_assets/d6f239bd-b830-4b3e-a041-bc23ec2d985c.png)
 
 For moving content in bulk, refer to [frequently asked questions - content ingestion]({{page page='nuxeo-coldstorage-faq'}}#content-ingestion).
 
@@ -67,7 +67,7 @@ When the user wants to have temporary access to the full file for download, he/s
     name: RestoreFromCS1.png
     addins#screenshot#up_to_date
 --}}
-![Restore from coldstorage button](nx_asset://bd6ceed7-004f-4d78-a0e7-2740b4871ce0)
+![Restore from coldstorage button](/nx_assets/bd6ceed7-004f-4d78-a0e7-2740b4871ce0.png)
 
 The user can then trigger the flow by clicking on the restore button. This is an asynchronous process that takes 3 to 5 hours to complete. Therefore, a banner is displayed on the document stating that the retrieve is in process, and the Nuxeo Platform monitors regularly the status of the retrieval.
 
@@ -76,7 +76,7 @@ The user can then trigger the flow by clicking on the restore button. This is an
     name: RetrieveFromCS2.png
     addins#screenshot#up_to_date
 --}}
-![Retrieve from Coldstorage](nx_asset://d606f54c-7113-4ce6-a319-be5486c40159)
+![Retrieve from Coldstorage](/nx_assets/d606f54c-7113-4ce6-a319-be5486c40159.png)
 
 {{#> callout type='tip'}}
 The frequency at which cold storage content retrieval is checked is configurable. See the [cold storage configuration]({{page page='nuxeo-coldstorage-installation'}}#configuration) page for how to change this value.
@@ -89,7 +89,7 @@ When the Nuxeo Platform detects that the retrieval is done, an email is sent to 
     name: RetrieveFromCS3.png
     addins#screenshot#up_to_date
 --}}
-![Retrieved from Coldstorage ](nx_asset://514f7467-bce2-404c-9d76-0864c1869b57)
+![Retrieved from Coldstorage ](/nx_assets/514f7467-bce2-404c-9d76-0864c1869b57.png)
 
 By default, the file will be available for download for 24h. That value can be changed for all files by adding a configuration to the `nuxeo.conf` file. So, for example, if we want the file available for 48 hours, we can add:
 
@@ -106,7 +106,7 @@ When you no longer want the file to be stored in cold storage, you can request a
     name: RestoreFromCS1.png
     addins#screenshot#up_to_date
 --}}
-![Restore from Coldstorage button](nx_asset://d81515d8-b0b4-451f-be8b-62832f35862d)
+![Restore from Coldstorage button](/nx_assets/d81515d8-b0b4-451f-be8b-62832f35862d.png)
 
 ### Delete from Cold Storage
 
@@ -123,7 +123,7 @@ You can delete a document moved to cold storage as any other document.
     name: moveToColdstorageFlowChart.jpeg
     addins#screenshot#up_to_date
 --}}
-![moveToColdstorageFlowChart](nx_asset://4156ced3-b091-4abc-879f-256b4d13825c)
+![moveToColdstorageFlowChart](/nx_assets/4156ced3-b091-4abc-879f-256b4d13825c.svg)
 
 
 **Retrieve from Nuxeo Cold Storage**
@@ -133,7 +133,7 @@ You can delete a document moved to cold storage as any other document.
     name: retrieveFromColdstorageFlowChart.jpeg
     addins#screenshot#up_to_date
 --}}
-![retrieveFromColdstorageFlowChart](nx_asset://c46c67b6-8cff-4bd6-8c82-0a20a37cc136)
+![retrieveFromColdstorageFlowChart](/nx_assets/c46c67b6-8cff-4bd6-8c82-0a20a37cc136.svg)
 
 **Restore from Nuxeo Cold Storage**
 
@@ -142,7 +142,7 @@ You can delete a document moved to cold storage as any other document.
     name: restoreFromColdstorageFlowChart.jpeg
     addins#screenshot#up_to_date
 --}}
-![restoreFromColdstorageFlowChart](nx_asset://654c9821-9d0a-4055-8d89-d56aacc50858)
+![restoreFromColdstorageFlowChart](/nx_assets/654c9821-9d0a-4055-8d89-d56aacc50858.svg)
 
 
 ## Learn More
