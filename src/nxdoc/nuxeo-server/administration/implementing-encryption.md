@@ -90,9 +90,9 @@ It's possible to use a Blob Provider that encrypts files using AES. Two modes ar
 *   A fixed AES key retrieved from a Java KeyStore
 *   An AES key derived from a human-readable password using the industry-standard PBKDF2 mechanism (in which case each encrypted file contains a different salt for security reasons).
 
-You choose the mode and the parameters by providing the `key=` configuration options in the&nbsp;`<binaryManager class="" key="...">`&nbsp;of the repository configuration.
+You choose the mode and the parameters by providing the `key=` configuration options in the `<binaryManager class="" key="...">` of the repository configuration.
 
-The configuration has the form&nbsp;`key1=value1,key2=value2,...`&nbsp;where the possible keys are, for Java KeyStore use:
+The configuration has the form `key1=value1,key2=value2,...` where the possible keys are, for Java KeyStore use:
 
 *   **keyStoreType**: the keystore type, for instance `JCEKS`
 *   **keyStoreFile**: the path to the keystore, if applicable
@@ -107,10 +107,28 @@ And for PBKDF2 use:
 The Blob Provider and its options can be set through [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}):
 
 ```
-nuxeo.core.binarymanager=org.nuxeo.ecm.core.blob.binary.AESBinaryManager
+nuxeo.core.binarymanager=org.nuxeo.ecm.core.blob.AESBlobProvider
 nuxeo.core.binarymanager_key=keyStoreType=JCEKS,keyStoreFile=/etc/keystore.jceks,keyStorePassword=changeit,keyAlias=mykey,keyPassword=changeittoo
 #or
 nuxeo.core.binarymanager_key=password=mypassword
+```
+
+Alternatively, you can override the default blob provider definition with the following XML contribution:
+
+```xml
+<component name="org.nuxeo.ecm.core.blob.aes.digest" version="1.0.0">
+  <require>default-repository-config</require>
+  <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+    <blobprovider name="default">
+      <class>org.nuxeo.ecm.core.blob.AESBlobProvider</class>
+      <property name="path">encrypted_data</property>
+      <property name="keyStoreType">JCEKS</property>
+      <property name="keyStoreFile">${test.keystore.file}</property>
+      <property name="keyStorePassword">keystoresecret</property>
+      <property name="keyAlias">myaeskey</property>
+      <property name="keyPassword">keysecret</property>
+    </blobprovider>
+  </extension>
 ```
 
 {{#> callout type='note' heading='Encryption Algorithm'}}
@@ -132,4 +150,4 @@ If you do not do this, you will get an exception `java.security.InvalidKeyExcept
 
 ## S3 Encryption
 
-The configuration is described in&nbsp;[Amazon S3 Online Storage]({{page page='amazon-s3-online-storage'}}).
+The configuration is described in [Amazon S3 Online Storage]({{page page='amazon-s3-online-storage'}}).
