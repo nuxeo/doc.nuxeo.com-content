@@ -24,7 +24,7 @@ Nuxeo Web UI is a responsive application with three main layout regions:
     name: web_ui.png
     1.1.3#screenshot#up_to_date
 --}}
-![Web UI ](nx_asset://a47c7600-d8cf-490f-9348-674718f4609a ?w=650,border=true)
+![Web UI ](/nx_assets/a47c7600-d8cf-490f-9348-674718f4609a.png ?w=650,border=true)
 
 1. [The header toolbar](#header-toolbar-functional-overview)
 2. [The side menu](#side-menu-functional-overview)
@@ -36,7 +36,7 @@ Nuxeo Web UI is a responsive application with three main layout regions:
     name: header_toolbar.png
     1.1.3#screenshot#up_to_date
 --}}
-![Header toolbar ](nx_asset://e0b4a47a-e790-4eb0-995c-f07db666e536 ?w=650,border=true)
+![Header toolbar ](/nx_assets/e0b4a47a-e790-4eb0-995c-f07db666e536.png ?w=650,border=true)
 
 1.  **Domain**: The title of the selected page / document.
 2.  **Sub-Views**: The sub-views available.
@@ -51,7 +51,7 @@ The menu displays different tabs. Clicking on one of them will open a side panel
     name: web_ui_with_side_panel.png
     1.1.3#screenshot#up_to_date
 --}}
-![Side Menu ](nx_asset://93dad9e8-e4da-487d-aae7-addad5d3dc7d ?w=650,border=true)
+![Side Menu ](/nx_assets/93dad9e8-e4da-487d-aae7-addad5d3dc7d.png ?w=650,border=true)
 
 This new pattern allows to start browsing without changing the context of work.
 
@@ -60,7 +60,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: dashboard_home.png
     1.1.3#screenshot#up_to_date
 --}}
-![Dashboard Home](nx_asset://6945051c-0de3-4235-8af9-792f84a10a03)</td><td colspan="1">
+![Dashboard Home](/nx_assets/6945051c-0de3-4235-8af9-792f84a10a03.png)</td><td colspan="1">
 
 **Dashboard:** Displays the dashboard
 
@@ -69,7 +69,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: browse.png
     1.1.3#screenshot#up_to_date
 --}}
-![Browse Side Menu](nx_asset://d2ffbd05-411b-43d8-8ca5-a1304c985319)</td><td colspan="1">
+![Browse Side Menu](/nx_assets/d2ffbd05-411b-43d8-8ca5-a1304c985319.png)</td><td colspan="1">
 
 **Browse:** Shows the navigation tree to let you browse your content
 
@@ -78,7 +78,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: recently_viewed.png
     1.1.3#screenshot#up_to_date
 --}}
-![Recently Viewed Side Menu ](nx_asset://4e851002-00cf-4cea-bfde-f1ca1a44025f)</td><td colspan="1">
+![Recently Viewed Side Menu ](/nx_assets/4e851002-00cf-4cea-bfde-f1ca1a44025f.png)</td><td colspan="1">
 
 **Recently Viewed:** Shows the 10 last documents viewed
 
@@ -87,7 +87,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: searches.png
     1.1.3#screenshot#up_to_date
 --}}
-![Searches Side Menu ](nx_asset://017b892a-12b9-4ab3-98eb-7b4da8db8d47)</td><td colspan="1">
+![Searches Side Menu ](/nx_assets/017b892a-12b9-4ab3-98eb-7b4da8db8d47.png)</td><td colspan="1">
 
 **Search Filters:** Search content using full text and metadata
 
@@ -96,7 +96,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: expired.png
     1.1.3#screenshot#up_to_date
 --}}
-![Expired Side Menu](nx_asset://ff15f0b2-5dc1-443c-8129-c698092fe987)</td><td colspan="1">
+![Expired Side Menu](/nx_assets/ff15f0b2-5dc1-443c-8129-c698092fe987.png)</td><td colspan="1">
 
 **Expired Queue:** Queue displaying expired documents
 
@@ -105,7 +105,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: assets.png
     1.1.3#screenshot#up_to_date
 --}}
-![Assets Side Menu](nx_asset://af27a311-732a-43fc-8acc-255cb3122e08)</td><td colspan="1">
+![Assets Side Menu](/nx_assets/af27a311-732a-43fc-8acc-255cb3122e08.png)</td><td colspan="1">
 
 **Assets:**  Search multimedia files (pictures, audio and video). Requires DAM add-on installation.
 
@@ -114,7 +114,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: tasks.png
     1.1.3#screenshot#up_to_date
 --}}
-![Tasks Searches Side Menu ](nx_asset://72e22374-dcd7-4fef-9587-69d331fe0515)</td><td colspan="1">
+![Tasks Searches Side Menu ](/nx_assets/72e22374-dcd7-4fef-9587-69d331fe0515.png)</td><td colspan="1">
 
 **Tasks:** Shows the list of pending workflow tasks
 
@@ -123,7 +123,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: favorites.png
     1.1.3#screenshot#up_to_date
 --}}
-![Favorites Side Menu ](nx_asset://dae49b7f-0415-4517-8193-20c24bbc2494)</td><td colspan="1">
+![Favorites Side Menu ](/nx_assets/dae49b7f-0415-4517-8193-20c24bbc2494.png)</td><td colspan="1">
 
 **Favorites:** The list of documents added to Favorites
 
@@ -132,7 +132,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: collections.png
     1.1.3#screenshot#up_to_date
 --}}
-![Collections Side Menu](nx_asset://2170d4f0-fea2-4891-b15e-94ae22df2773)</td><td colspan="1">
+![Collections Side Menu](/nx_assets/2170d4f0-fea2-4891-b15e-94ae22df2773.png)</td><td colspan="1">
 
 **Collections:** The list of collections you can access
 
@@ -141,7 +141,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: personal_space.png
     1.1.3#screenshot#up_to_date
 --}}
-![Personal Space Side Menu ](nx_asset://b8e216fa-da23-4c6c-bb91-2277eb2dd4cd)</td><td colspan="1">
+![Personal Space Side Menu ](/nx_assets/b8e216fa-da23-4c6c-bb91-2277eb2dd4cd.png)</td><td colspan="1">
 
 **Personal Space:** Access to your personal workspace, which is the default location for your Favorites and Collections folders
 
@@ -150,7 +150,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: clipboard.png
     1.1.3#screenshot#up_to_date
 --}}
-![Clipboard Side Menu](nx_asset://c2cd829c-35e8-4391-aae2-9f47bcc2a41d)</td><td colspan="1">
+![Clipboard Side Menu](/nx_assets/c2cd829c-35e8-4391-aae2-9f47bcc2a41d.png)</td><td colspan="1">
 
 **Clipboard:** Clipboard to copy and move documents
 
@@ -161,7 +161,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: trash-side-menu.png
     1.1.3#screenshot#up_to_date
 --}}
-![Trash Search Side Menu ](nx_asset://a43671a8-e0ab-45da-be51-a914359ae971)</td><td colspan="1">
+![Trash Search Side Menu ](/nx_assets/a43671a8-e0ab-45da-be51-a914359ae971.png)</td><td colspan="1">
 
 **Trash:** Search deleted documents using full text and metadata
 
@@ -172,7 +172,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: administration.png
     1.1.3#screenshot#up_to_date
 --}}
-![Administration Side Menu](nx_asset://00a08f4c-f5d5-4244-acfb-827b621fb539)</td><td colspan="1">
+![Administration Side Menu](/nx_assets/00a08f4c-f5d5-4244-acfb-827b621fb539.png)</td><td colspan="1">
 
 **Administration:** Displays the **Administration** tab when the user is an administrator
 
@@ -182,7 +182,7 @@ This new pattern allows to start browsing without changing the context of work.
     name: user_menu.png
     1.1.3#screenshot#up_to_date
 --}}
-![User Settings Side Menu ](nx_asset://d5ccc84d-6e91-4b42-9c97-62abc4f3d961)</td>
+![User Settings Side Menu ](/nx_assets/d5ccc84d-6e91-4b42-9c97-62abc4f3d961.png)</td>
 <td colspan="1">
 
 **User Settings:** Displays a **Themes** tab to manage branding and possibly other tabs depending on Nuxeo addons installed. For instance when Nuxeo Drive is installed a **Drive** tab is available to manage the user's synchronization roots.
@@ -203,7 +203,7 @@ At the top of the main view toolbars are displayed according to the content bein
     name: document-action-toolbar.png
     1.1.3#screenshot#up_to_date
 --}}
-![Document Action Toolbar](nx_asset://3f4d1465-5072-448b-b3b5-08f982925354 ?w=650,border=true)
+![Document Action Toolbar](/nx_assets/3f4d1465-5072-448b-b3b5-08f982925354.png ?w=650,border=true)
 
 **Results Actions**: Displays actions available for the current result listing
 
@@ -212,12 +212,12 @@ At the top of the main view toolbars are displayed according to the content bein
     name: results_toolbar.png
     1.1.3#screenshot#up_to_date
 --}}
-![Results toolbar](nx_asset://02e544ea-2d35-4f42-ac74-1bdbb3ad616e ?w=77,border=true)
+![Results toolbar](/nx_assets/02e544ea-2d35-4f42-ac74-1bdbb3ad616e.png ?w=77,border=true)
 
 A create button {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Create Button
     name: create_button.png
     1.1.3#screenshot#up_to_date
 --}}
-![Create Button](nx_asset://2b093e23-6ed6-4228-943b-9b4655df9273 ?w=20) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents from anywhere in the application.
+![Create Button](/nx_assets/2b093e23-6ed6-4228-943b-9b4655df9273.png ?w=20) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents from anywhere in the application.
 {{! /multiexcerpt}}

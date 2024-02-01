@@ -101,7 +101,7 @@ A service wrapper allows you to:
     name: service-wrapper.png
     server#diagram#up_to_date
 --}}
-![service-wrapper](nx_asset://7947ecbc-36cf-40f3-b9f1-2f56336aac60 ?w=650,border=true)
+![service-wrapper](/nx_assets/7947ecbc-36cf-40f3-b9f1-2f56336aac60.png ?w=650,border=true)
 
 Associated gains:
 - Easier to use from the pure Java code (Listener, Enricher, etc.)
@@ -121,7 +121,7 @@ Two options are possible:
       name: automation-rest-api.png
       server#diagram#up_to_date
   --}}
-  ![automation-rest-api.png](nx_asset://14d6b4e4-638d-4e27-ba88-f168eef01c72 ?w=650,border=true)
+  ![automation-rest-api.png](/nx_assets/14d6b4e4-638d-4e27-ba88-f168eef01c72.png ?w=650,border=true)
 
 
 ## Event Driven approach
@@ -133,7 +133,7 @@ The idea is to trigger the call to the external service via an event
     name: streams-intro.png
     server#screenshot#up_to_date
 --}}
-![streams-intro](nx_asset://46fa57db-00c2-4930-8f8a-eddde23e23a3 ?w=650,border=true)
+![streams-intro](/nx_assets/46fa57db-00c2-4930-8f8a-eddde23e23a3.png ?w=650,border=true)
 
 
 ### Possible Implementation

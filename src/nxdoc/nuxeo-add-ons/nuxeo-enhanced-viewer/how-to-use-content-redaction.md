@@ -51,7 +51,7 @@ path: /default-domain/workspaces/Product Management/Documentation/Documentation 
 name: redact-text.png
 addins#icon#up_to_date
 --}}
-![redact-text.png](nx_asset://171fa367-db1a-4376-aed8-d56d0acaacf2 ?border=true)
+![redact-text.png](/nx_assets/171fa367-db1a-4376-aed8-d56d0acaacf2.png ?border=true)
 
 {{! multiexcerpt name='who-can-see-through-redactions'}}
 {{#> callout type='info'}}
@@ -68,7 +68,7 @@ path: /default-domain/workspaces/Product Management/Documentation/Documentation 
 name: redact-area.png
 addins#icon#up_to_date
 --}}
-![redact-area.png](nx_asset://042a0a3a-e921-4eb5-919f-cdbbc8deaf60 ?border=true)
+![redact-area.png](/nx_assets/042a0a3a-e921-4eb5-919f-cdbbc8deaf60.png ?border=true)
 
 {{{multiexcerpt 'who-can-see-through-redactions' page='how-to-use-content-redaction'}}}
 
@@ -81,7 +81,7 @@ From the search panel, entering a keyword and using the `Search and Redact` butt
     name: search-to-redact.png
     addins#screenshot#up_to_date
 --}}
-![search-to-redact.png](nx_asset://c16f7e13-3fa0-4faa-b11a-5de86f205a89 ?border=true)
+![search-to-redact.png](/nx_assets/c16f7e13-3fa0-4faa-b11a-5de86f205a89.png ?border=true)
 
 {{#> callout type='info'}}
 Search to redact is applied manually. If the file is updated, NEV will not search automatically for new occurrences of previous search to redact results.
@@ -127,7 +127,7 @@ Users with the `Redact` permission can generate a permanently redacted document 
   name: generate-permanently-redacted-version.png
   addins#icon#up_to_date
 --}}
-![generate-permanently-redacted-version.png](nx_asset://efee161c-ab85-4f44-a90f-0527d37b0c2b ?border=true)
+![generate-permanently-redacted-version.png](/nx_assets/efee161c-ab85-4f44-a90f-0527d37b0c2b.png ?border=true)
 
 By default, pressing this button will:
 - Create a copy of the document in the parent location named `[Document title] - Redacted`

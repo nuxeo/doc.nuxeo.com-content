@@ -23,7 +23,7 @@ The [Nuxeo Zapier Integration](https://connect.nuxeo.com/nuxeo/site/marketplace/
     name: dashboard.png
     addins#screenshot#up_to_date
 --}}
-![dashboard.png](nx_asset://6c99d9d0-e67f-44a6-beed-72331d90a688 ?w=450,border=true)
+![dashboard.png](/nx_assets/6c99d9d0-e67f-44a6-beed-72331d90a688.png ?w=450,border=true)
 
 The Nuxeo Zapier integration allows end-user to:
 
@@ -92,7 +92,7 @@ This will let you post data and/or execute processes on Nuxeo Platform after a t
     name: steps.png
     addins#screenshot#up_to_date
 --}}
-![steps.png](nx_asset://e1d9ed3d-e4d3-4aae-94cf-8c3833dceba4 ?w=250,border=true)
+![steps.png](/nx_assets/e1d9ed3d-e4d3-4aae-94cf-8c3833dceba4.png ?w=250,border=true)
 
 ### Authentication
 
@@ -105,7 +105,7 @@ On this screen, set the URL of your Nuxeo instance with the secret you set (as m
     name: auth.png
     addins#screenshot#up_to_date
 --}}
-![auth.png](nx_asset://3ed8222f-f466-4549-bbf9-3939d084cac5 ?w=450,border=true)
+![auth.png](/nx_assets/3ed8222f-f466-4549-bbf9-3939d084cac5.png ?w=450,border=true)
 
 ### Triggers
 
@@ -119,21 +119,21 @@ Two Nuxeo triggers are available on the Zapier platform:
     name: triggers.png
     addins#screenshot#up_to_date
 --}}
-![triggers.png](nx_asset://28b16bc4-9634-4c6c-902a-49bcd4b76c06 ?w=450,border=true)
+![triggers.png](/nx_assets/28b16bc4-9634-4c6c-902a-49bcd4b76c06.png ?w=450,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Zapier/genericnotif.png
     name: genericnotif.png
     addins#screenshot#up_to_date
 --}}
-![genericnotif.png](nx_asset://db624111-6258-4598-9ef7-57b99702eef9 ?w=450,border=true)
+![genericnotif.png](/nx_assets/db624111-6258-4598-9ef7-57b99702eef9.png ?w=450,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Zapier/specificnotif.png
     name: specificnotif.png
     addins#screenshot#up_to_date
 --}}
-![specificnotif.png](nx_asset://aa6a5786-772d-4a6c-8d9d-36290ffac84b ?w=450,border=true)
+![specificnotif.png](/nx_assets/aa6a5786-772d-4a6c-8d9d-36290ffac84b.png ?w=450,border=true)
 
 ### Specific Actions
 
@@ -150,14 +150,14 @@ Five Nuxeo specific Actions are available on the Zapier platform:
     name: actions.png
     addins#screenshot#up_to_date
 --}}
-![actions.png](nx_asset://31d38177-d6a7-4331-95cd-dadd35b5e920 ?w=450,border=true)
+![actions.png](/nx_assets/31d38177-d6a7-4331-95cd-dadd35b5e920.png ?w=450,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Zapier/wf.png
     name: wf.png
     addins#screenshot#up_to_date
 --}}
-![wf.png](nx_asset://8c089b3a-3e20-40db-abea-49314f502c28 ?w=450,border=true)
+![wf.png](/nx_assets/8c089b3a-3e20-40db-abea-49314f502c28.png ?w=450,border=true)
 
 ### Generic Automation Action
 
@@ -172,7 +172,7 @@ There is also one generic action to use any Nuxeo Automation operations:
     name: genericoperation.png
     addins#screenshot#up_to_date
 --}}
-![genericoperation.png](nx_asset://89568537-faa0-43e0-9a81-85bf0057b6a4 ?w=450,border=true)
+![genericoperation.png](/nx_assets/89568537-faa0-43e0-9a81-85bf0057b6a4.png ?w=450,border=true)
 
 Regarding the metadata properties if suggested by the form, you can use the following format:
 
@@ -189,7 +189,7 @@ Jump lines to set another metadata (and don't forget you can use the dropdown to
     name: operation.png
     addins#screenshot#up_to_date
 --}}
-![operation.png](nx_asset://87d8afa6-8554-4791-95b0-ab768c640884 ?w=450,border=true)
+![operation.png](/nx_assets/87d8afa6-8554-4791-95b0-ab768c640884.png ?w=450,border=true)
 
 <div style="text-align: right">
 [**For more information, check the README**&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>](https://raw.githubusercontent.com/nuxeo-sandbox/nuxeo-zapier/master/README.md)

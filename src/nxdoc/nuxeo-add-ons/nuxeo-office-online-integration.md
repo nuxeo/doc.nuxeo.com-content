@@ -30,7 +30,7 @@ When an office document (Excel, Word or PowerPoint files) is stored in Nuxeo Pla
     name: office-online-checkin.png
     addins#screenshot#up_to_date
 --}}
-![office-online-checkin.png](nx_asset://589b97ec-7f95-495b-a6dc-5c0d57b17f78 ?w=650)
+![office-online-checkin.png](/nx_assets/589b97ec-7f95-495b-a6dc-5c0d57b17f78.png ?w=650)
 
 ### Office Online Authentication
 
@@ -42,7 +42,7 @@ A work or school account is required:
     name: office-online-authentication.png
     addins#screenshot#up_to_date
 --}}
-![office-online-authentication.png](nx_asset://4e7749bf-1c78-4a0d-a5e4-71b9463527a2 ?w=450)
+![office-online-authentication.png](/nx_assets/4e7749bf-1c78-4a0d-a5e4-71b9463527a2.png ?w=450)
 
 Once authenticated, the user can choose to keep authenticated to his Microsoft account for future usage.
 
@@ -51,7 +51,7 @@ Once authenticated, the user can choose to keep authenticated to his Microsoft a
     name: office-online-sign-in.png
     addins#screenshot#up_to_date
 --}}
-![office-online-sign-in.png](nx_asset://8bcabfa6-c6ca-47de-b275-e465de680c93 ?w=250)
+![office-online-sign-in.png](/nx_assets/8bcabfa6-c6ca-47de-b275-e465de680c93.png ?w=250)
 
 ### Office Online Documents Preview
 
@@ -67,7 +67,7 @@ Once in edition mode, every modification done on the Office document will be sav
       name: office-online-initial-state.png
       addins#screenshot#up_to_date
     --}}
-    ![office-online-initial-state.png](nx_asset://c65cd4ef-351d-4b43-b775-332fa2f2dfbd ?w=650)
+    ![office-online-initial-state.png](/nx_assets/c65cd4ef-351d-4b43-b775-332fa2f2dfbd.png ?w=650)
 1. Edition (Office 365 Application Check-in):
 
     {{!--     ### nx_asset ###
@@ -75,7 +75,7 @@ Once in edition mode, every modification done on the Office document will be sav
       name: office-online-edition-mode.png
       addins#screenshot#up_to_date
     --}}
-    ![office-online-edition-mode.png](nx_asset://38bfb820-74c5-46f8-b36f-25b5a73fb0f2 ?w=650)
+    ![office-online-edition-mode.png](/nx_assets/38bfb820-74c5-46f8-b36f-25b5a73fb0f2.png ?w=650)
 
     {{#> callout type='note' }}
     The mention “Saved to Nuxeo” is automatic (auto-saving feature of Office Online), however modifications are propagated in the server with a delay, see the “Office online limitations” section.
@@ -88,7 +88,7 @@ Once in edition mode, every modification done on the Office document will be sav
       name: office-online-preview-updated.png
       addins#screenshot#up_to_date
     --}}
-    ![office-online-preview-updated.png](nx_asset://811c7981-5178-4d9a-89f1-6355a7d2cd39 ?w=650)
+    ![office-online-preview-updated.png](/nx_assets/811c7981-5178-4d9a-89f1-6355a7d2cd39.png ?w=650)
 
 <!-- TODO
 ### Office Online Documents Versions Increment
@@ -97,7 +97,7 @@ Once in edition mode, every modification done on the Office document will be sav
     name: office-online-tracked-version.png
     addins#screenshot#up_to_date
 --}}
-![office-online-tracked-version.png](nx_asset://a4572e58-6fa2-4a5e-9cd6-235250303a31 ?w=650)
+![office-online-tracked-version.png](/nx_assets/a4572e58-6fa2-4a5e-9cd6-235250303a31.png ?w=650)
 
 ### Co-Authoring
 -->
