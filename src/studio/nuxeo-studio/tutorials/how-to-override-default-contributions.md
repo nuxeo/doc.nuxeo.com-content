@@ -29,7 +29,7 @@ Learn how to customize the User Settings Menu by:
     name: user-settings-menu.png
     studio_designer#screenshot#up_to_date
 --}}
-![User settings menu](nx_asset://f2b96a32-5333-4a95-a656-cce6b7cca97d ?w=250,border=true)
+![User settings menu](/nx_assets/f2b96a32-5333-4a95-a656-cce6b7cca97d.png ?w=250,border=true)
 
 ## Restricting Access to a Specific Group
 
@@ -40,7 +40,7 @@ In this section, we will restrict access to the authorized apps menu only to Adm
     name: edit-contribution.png
     studio_designer#screenshot#up_to_date
 --}}
-![Edit contribution ](nx_asset://0b23b253-2c55-4ce2-9c29-53d709743864 ?w=600,border=true)
+![Edit contribution ](/nx_assets/0b23b253-2c55-4ce2-9c29-53d709743864.png ?w=600,border=true)
 
 1. In **Studio Designer**, go to **Drawer** > **Main Menu Pages**.
 1. Hover over **authorizedAppsUserPage** and click **Edit**.
@@ -57,7 +57,7 @@ In this section, we want to give access to a contribution that is by default ava
     name: analytics-contribution-copy.png
     studio_designer#screenshot#up_to_date
 --}}
-![Copy contribution analytics](nx_asset://2dd8c1ad-aa51-4319-a6b7-8853c4ac1db9 ?w=600,border=true)
+![Copy contribution analytics](/nx_assets/2dd8c1ad-aa51-4319-a6b7-8853c4ac1db9.png ?w=600,border=true)
 
 1. In **Studio Designer**, go to **Drawer** > **Main Menu Pages**.
 1. Hover over **adminAnalyticsPage** and click **Copy**.
@@ -72,7 +72,7 @@ In this section, we want to give access to a contribution that is by default ava
     name: userAnalyticsPage.png
     studio_designer#screenshot#up_to_date
 --}}
-![Configuration userAnalyticsPage](nx_asset://ed9ce51f-c702-44ca-9178-46ad4878df3c ?w=600,border=true)
+![Configuration userAnalyticsPage](/nx_assets/ed9ce51f-c702-44ca-9178-46ad4878df3c.png ?w=600,border=true)
 
 ## Disabling a Contribution
 
@@ -83,7 +83,7 @@ In this section, we will disable the Theme page so that the user cannot select a
     name: themes-contribution-disable.png
     studio_designer#screenshot#up_to_date
 --}}
-![Disable contribution themes](nx_asset://57bb0b91-c249-4562-bb4b-0aa4073cb834 ?w=600,border=true)
+![Disable contribution themes](/nx_assets/57bb0b91-c249-4562-bb4b-0aa4073cb834.png ?w=600,border=true)
 
 1. In **Studio Designer**, go to **Drawer** > **Main Menu Pages**.
 1. Hover over **themesUserMenuItem** and click on the toggle button.
@@ -105,4 +105,4 @@ You should have this result.
 
 | For administrator users                                                                 | For non-admistrator users                                                                      |
 | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| ![Customized menu ](nx_asset://f73344cd-a726-4378-9832-bebbd5cba976 ?w=300,border=true) | ![Customized menu members](nx_asset://500b4e0c-bdea-4bfb-bb9b-fc15c0a6d2a9 ?w=300,border=true) |
+| ![Customized menu ](/nx_assets/f73344cd-a726-4378-9832-bebbd5cba976.png ?w=300,border=true) | ![Customized menu members](/nx_assets/500b4e0c-bdea-4bfb-bb9b-fc15c0a6d2a9.png ?w=300,border=true) |

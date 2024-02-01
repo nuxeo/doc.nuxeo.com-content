@@ -22,7 +22,7 @@ When configuring layouts visually, a quick search lets you filter through the op
     name: properties-filtering.png
     studio_designer#screenshot#up_to_date
 --}}
-![properties filtering](nx_asset://d41913bb-0ac4-4a27-9af0-a5616901c00b ?border=true)
+![properties filtering](/nx_assets/d41913bb-0ac4-4a27-9af0-a5616901c00b.png ?border=true)
 
 ### Layout Blocks Drag and Drop
 
@@ -33,7 +33,7 @@ When configuring document layouts, your layout blocks are available from the too
     name: layout-blocks-catalog.png
     studio_designer#screenshot#up_to_date
 --}}
-![layout blocks catalog](nx_asset://cc26ea79-2604-4821-a06c-394a7fe225c6 ?border=true)
+![layout blocks catalog](/nx_assets/cc26ea79-2604-4821-a06c-394a7fe225c6.png ?border=true)
 
 ### Layout Blocks Configuration Experience
 
@@ -48,7 +48,7 @@ Your dashboard at [connect.nuxeo.com](https://connect.nuxeo.com) has a brand new
     name: connect-dashboard-look-update.png
     studio_modeler#screenshot#up_to_date
 --}}
-![connect dashboard look update](nx_asset://9896aca5-a2ca-48ad-be96-76fc7ce0c90c ?w=650,border=true)
+![connect dashboard look update](/nx_assets/9896aca5-a2ca-48ad-be96-76fc7ce0c90c.png ?w=650,border=true)
 
 {{! /multiexcerpt}}
 

@@ -78,7 +78,7 @@ The goal of this section is to provide ready to use examples. They can be follow
     name: Screenshot 2021-05-26 at 14.30.28.png
     addins#screenshot#up_to_date
 --}}
-![university_studio_learning_plan.png](nx_asset://4dce810e-9f1b-4e34-9a5f-4275e3ea45ba ?w=450,border=true)
+![university_studio_learning_plan.png](/nx_assets/4dce810e-9f1b-4e34-9a5f-4275e3ea45ba.png ?w=450,border=true)
 {{/callout}}
 
 {{#> callout type='note' heading='DEV MODE'}}

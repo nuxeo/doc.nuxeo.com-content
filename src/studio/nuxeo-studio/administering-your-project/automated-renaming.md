@@ -51,7 +51,7 @@ As you work on your Studio project, you may need to rename elements, that may be
     name: STUDIO_rename.png
     studio_modeler#popup#up_to_date
 --}}
-![Rename Modeler](nx_asset://7f3c3d69-1c84-4dcb-91a1-62da87fd888f ?w=650,border=true)
+![Rename Modeler](/nx_assets/7f3c3d69-1c84-4dcb-91a1-62da87fd888f.png ?w=650,border=true)
 
 In order to prevent inconsistencies and broken features, Nuxeo Studio automatically checks your project to find all the references to the element and change the reference with the new name. A confirmation window indicates the result of the renaming on the whole project.
 
@@ -60,7 +60,7 @@ In order to prevent inconsistencies and broken features, Nuxeo Studio automatica
     name: STUDIO_rename_confirmation.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Rename Confirmation Modeler](nx_asset://753ef0cc-1ec6-452f-816c-382fb03acd7e ?w=350,border=true)
+![Rename Confirmation Modeler](/nx_assets/753ef0cc-1ec6-452f-816c-382fb03acd7e.png ?w=350,border=true)
 
 For instance, in the case of a renamed automation chain, Nuxeo Studio will automatically update the chain name in the "Select an existing operation" drop down list of the User action that uses the chain.
 
@@ -71,4 +71,4 @@ However there are some cases where the renaming is not done by the system, for i
     name: STUDIO_rename_inconsistencies.png
     studio_modeler#popup#up_to_date
 --}}
-![Rename Inconsistencies](nx_asset://c33e2d17-87e7-4fcb-bac5-a20460b1f93d ?w=350,border=true)
+![Rename Inconsistencies](/nx_assets/c33e2d17-87e7-4fcb-bac5-a20460b1f93d.png ?w=350,border=true)

@@ -316,7 +316,7 @@ Available since Nuxeo Platform 5.9.2.
     name: actions-breadcrumbs.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Breadcrumb](nx_asset://57aaf465-550a-4877-946d-9032f97d1513 ?w=650,border=true)
+![Actions Breadcrumb](/nx_assets/57aaf465-550a-4877-946d-9032f97d1513.png ?w=650,border=true)
 
 <a name="CLIPBOARD_LIST"></a>
 
@@ -329,7 +329,7 @@ Technical name: `CLIPBOARD_LIST`
     name: actions_clipboard.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Clipboard](nx_asset://384a3acb-c383-4b79-a365-67f91b6d9c91 ?w=650,border=true)
+![Actions Clipboard](/nx_assets/384a3acb-c383-4b79-a365-67f91b6d9c91.png ?w=650,border=true)
 
 <a name="DOCUMENT_UPPER_ACTION"></a>
 
@@ -342,14 +342,14 @@ Unless you specify an icon, the following icon will be used: {{!--     ### nx_as
     name: user-action-default-icon.png
     studio_modeler#screenshot#up_to_date
 --}}
-![User Action Default Icon](nx_asset://88af3da7-d280-4405-a4c2-e8c0449850b7 ?w=20,border=true)
+![User Action Default Icon](/nx_assets/88af3da7-d280-4405-a4c2-e8c0449850b7.png ?w=20,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/User Actions Categories/Actions Contextual Tools
     name: actions_contextual_tools.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Contextual Tools](nx_asset://f3df8c09-cfb0-4147-8f23-0ec06a9cb934 ?w=650,border=true)
+![Actions Contextual Tools](/nx_assets/f3df8c09-cfb0-4147-8f23-0ec06a9cb934.png ?w=650,border=true)
 
 <a name="CREATE_DOCUMENT_FORM"></a>
 
@@ -364,7 +364,7 @@ Available since Nuxeo Platform 5.4.2.
     name: actions_create_form.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Create Form](nx_asset://71564880-a175-4485-b067-90c5efc83029 ?w=650,border=true)
+![Actions Create Form](/nx_assets/71564880-a175-4485-b067-90c5efc83029.png ?w=650,border=true)
 
 {{! /multiexcerpt}}{{! multiexcerpt name='CAP-actions-categories-2'}}<a name="EDIT_DOCUMENT_FORM"></a>
 
@@ -379,7 +379,7 @@ Available since Nuxeo Platform 5.4.2.
     name: actions_edit_form.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Edit Form](nx_asset://09097620-85d1-4385-942d-55c67bb04243 ?w=550,border=true)
+![Actions Edit Form](/nx_assets/09097620-85d1-4385-942d-55c67bb04243.png ?w=550,border=true)
 
 <a name="DOCUMENT_HEADER_ACTIONS_LIST"></a>
 
@@ -394,7 +394,7 @@ Available since Nuxeo Platform 5.4.2\. This action category requires to use an i
     name: actions-document-header.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Document Header](nx_asset://2c5bd27d-13ad-4108-a3ef-2c125affbdb7 ?w=650,border=true)
+![Actions Document Header](/nx_assets/2c5bd27d-13ad-4108-a3ef-2c125affbdb7.png ?w=650,border=true)
 
 <a name="CURRENT_SELECTION_LIST"></a>
 
@@ -407,7 +407,7 @@ Technical name: `CURRENT_SELECTION_LIST`
     name: actions_document_list_toolbar.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Document List Toolbar](nx_asset://ac2f3378-e36c-4bee-b838-7d9c379084fb ?w=650,border=true)
+![Actions Document List Toolbar](/nx_assets/ac2f3378-e36c-4bee-b838-7d9c379084fb.png ?w=650,border=true)
 
 <a name="DOCUMENT_SUMMARY_CUSTOM_ACTIONS"></a>
 
@@ -422,7 +422,7 @@ Available since Nuxeo Platform 5.4.2.
     name: actions_summary.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Summary](nx_asset://cf9a64e4-3171-4133-915d-821bbf5d75e0 ?w=650,border=true)
+![Actions Summary](/nx_assets/cf9a64e4-3171-4133-915d-821bbf5d75e0.png ?w=650,border=true)
 
 <a name="SUBVIEW_UPPER_LIST"></a>
 
@@ -435,7 +435,7 @@ Technical name: `SUBVIEW_UPPER_LIST`
     name: actions_folder_toolbar.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Folder Toolbar](nx_asset://140e494c-8109-47aa-91a5-a4e487a9610d ?w=650,border=true)
+![Actions Folder Toolbar](/nx_assets/140e494c-8109-47aa-91a5-a4e487a9610d.png ?w=650,border=true)
 
 &nbsp;
 
@@ -450,7 +450,7 @@ Technical name:&nbsp;`USER_SERVICES`
     name: actions_header_links.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Header Links](nx_asset://22fa78f3-9805-473e-ad7c-dc100313ceeb ?w=650,border=true)
+![Actions Header Links](/nx_assets/22fa78f3-9805-473e-ad7c-dc100313ceeb.png ?w=650,border=true)
 
 <a name="MAIN_TABS"></a>
 
@@ -465,7 +465,7 @@ Available since Nuxeo Platform 5.8.
     name: actions-main-tabs.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Main Tabs](nx_asset://4e2cba96-06d8-4549-b53f-730af4331693 ?w=650,border=true)
+![Actions Main Tabs](/nx_assets/4e2cba96-06d8-4549-b53f-730af4331693.png ?w=650,border=true)
 
 <a name="SEARCH_ACTIONS"></a>
 
@@ -480,7 +480,7 @@ Available since Nuxeo Platform 5.8.
     name: actions-search.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Search](nx_asset://e204622d-4741-4fe5-a2e2-3021c1576040 ?w=650,border=true)
+![Actions Search](/nx_assets/e204622d-4741-4fe5-a2e2-3021c1576040.png ?w=650,border=true)
 
 <a name="FOOTER"></a>
 
@@ -495,7 +495,7 @@ Available since Nuxeo Platform 5.8.
     name: actions-footer.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Footer](nx_asset://34f1e531-267c-493b-a9c6-e493757100b0 ?w=650,border=true)
+![Actions Footer](/nx_assets/34f1e531-267c-493b-a9c6-e493757100b0.png ?w=650,border=true)
 
 <a name="USER_MENU_ACTIONS"></a>
 
@@ -510,7 +510,7 @@ Available since Nuxeo Platform 5.4.2.
     name: actions_user_menu.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions User Menu](nx_asset://61ec8f1a-de51-4375-9432-2531c5b3ba7f ?w=650,border=true)
+![Actions User Menu](/nx_assets/61ec8f1a-de51-4375-9432-2531c5b3ba7f.png ?w=650,border=true)
 
 <a name="DEFAULT_LIST"></a>
 
@@ -523,7 +523,7 @@ Technical name:&nbsp;`DEFAULT_LIST`
     name: actions_worklist.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Worklist](nx_asset://3db4d874-dc92-4f97-bd52-67cea0169b26 ?w=650,border=true)
+![Actions Worklist](/nx_assets/3db4d874-dc92-4f97-bd52-67cea0169b26.png ?w=650,border=true)
 
 {{! /multiexcerpt}}
 
@@ -548,7 +548,7 @@ This user action category is not yet fully implemented in Studio (available sinc
     name: actions-summary-top.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Summary Top](nx_asset://067980ae-c06f-4f7d-b021-7910d36c8c3c ?w=650,border=true)
+![Actions Summary Top](/nx_assets/067980ae-c06f-4f7d-b021-7910d36c8c3c.png ?w=650,border=true)
 
 <a name="SUMMARY_PANEL_LEFT"></a>
 
@@ -563,7 +563,7 @@ This user action category is not yet fully implemented in Studio (available sinc
     name: actions-summary-left.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Summary Left](nx_asset://4856b309-6ea8-4355-9396-d5349bab82cf ?w=650,border=true)
+![Actions Summary Left](/nx_assets/4856b309-6ea8-4355-9396-d5349bab82cf.png ?w=650,border=true)
 
 <a name="SUMMARY_PANEL_RIGHT"></a>
 
@@ -578,7 +578,7 @@ This user action category is not yet fully implemented in Studio (available sinc
     name: actions-summary-right.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Summary Right](nx_asset://4ac1c893-fc1d-44dd-a9ae-025194546d19 ?w=650,border=true)
+![Actions Summary Right](/nx_assets/4ac1c893-fc1d-44dd-a9ae-025194546d19.png ?w=650,border=true)
 
 <a name="SUMMARY_PANEL_BOTTOM"></a>
 
@@ -593,7 +593,7 @@ This user action category is not yet fully implemented in Studio (available sinc
     name: actions-summary-bottom.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions Summary Buttons](nx_asset://1570292a-c330-438d-8548-eeeed90d5bce ?w=650,border=true)
+![Actions Summary Buttons](/nx_assets/1570292a-c330-438d-8548-eeeed90d5bce.png ?w=650,border=true)
 
 &nbsp;
 
@@ -620,14 +620,14 @@ Unless you specify an icon, the following icon will be used: {{!--     ### nx_as
     name: user-action-default-icon.png
     studio_modeler#screenshot#up_to_date
 --}}
-![User Action Default Icon](nx_asset://88af3da7-d280-4405-a4c2-e8c0449850b7 ?w=20,border=true)
+![User Action Default Icon](/nx_assets/88af3da7-d280-4405-a4c2-e8c0449850b7.png ?w=20,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/User Actions Categories/Actions DAM Compat Asset view
     name: DAM-compat-asset-view-actions.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions DAM Compat Asset view ](nx_asset://c346d31e-d1fe-433a-b582-e887ea1d9eca ?w=650,border=true)
+![Actions DAM Compat Asset view ](/nx_assets/c346d31e-d1fe-433a-b582-e887ea1d9eca.png ?w=650,border=true)
 
 <a name="DAM_SEARCH_RESULTS_ACTIONS"></a>
 
@@ -642,7 +642,7 @@ Available since Nuxeo Platform 5.7.1.
     name: DAM-compat-search-results-actions.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions DAM Compat  Search Results](nx_asset://3ed3b1ea-e134-40d8-b7c1-a68c749fbb18 ?w=650,border=true)
+![Actions DAM Compat  Search Results](/nx_assets/3ed3b1ea-e134-40d8-b7c1-a68c749fbb18.png ?w=650,border=true)
 
 <a name="DAM_CURRENT_SELECTION_LIST"></a>
 
@@ -657,6 +657,6 @@ Available since Nuxeo Platform 5.7.1.
     name: DAM-compat-current-selection-lists.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Actions DAM Compat Current Selection Lists](nx_asset://8a139c7e-8b47-4e81-827f-58419b120e98 ?w=650,border=true)
+![Actions DAM Compat Current Selection Lists](/nx_assets/8a139c7e-8b47-4e81-827f-58419b120e98.png ?w=650,border=true)
 
 {{! /multiexcerpt}}

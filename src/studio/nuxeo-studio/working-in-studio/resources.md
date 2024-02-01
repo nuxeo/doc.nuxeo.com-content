@@ -68,7 +68,7 @@ Resources is a section in Studio where you can upload various files that will be
     name: Resources.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Resources Modeler](nx_asset://7687aacf-732f-4b84-9435-0603621a805b ?w=650,border=true)
+![Resources Modeler](/nx_assets/7687aacf-732f-4b84-9435-0603621a805b.png ?w=650,border=true)
 
 **To upload a new resource,** select the **Browse** button, choose your file then click on **Upload**.
 

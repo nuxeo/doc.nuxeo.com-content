@@ -61,7 +61,7 @@ The Application Definition page enables you to manage the requirements of your N
     name: application-definition.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Application Definition Screen](nx_asset://8a378d74-f04d-4196-8779-5562fd79e9b3 ?w=350,border=true)
+![Application Definition Screen](/nx_assets/8a378d74-f04d-4196-8779-5562fd79e9b3.png ?w=350,border=true)
 
 {{#> callout type='info' heading='Watch the related courses on Hyland University'}}
 [Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
@@ -79,7 +79,7 @@ Any Nuxeo public or [private]({{page page='delivering-a-customization-package-th
     name: addons-list.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Addons List](nx_asset://0c684cef-bae9-4a60-8f5f-3752bfe3f079 ?w=350,border=true)
+![Addons List](/nx_assets/0c684cef-bae9-4a60-8f5f-3752bfe3f079.png ?w=350,border=true)
 
 Some addons bring additional options into Studio such as new screens or options, making their configuration easier. Once you select addons impacting Studio, their specific features are instantly available.
 
@@ -91,7 +91,7 @@ No change is kept until you manually press the save button. Pending changes are 
     name: pending-modifications.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Pending Modifications](nx_asset://32b3fdd2-8395-4550-96b3-141d199a0ed0 ?w=350,border=true)
+![Pending Modifications](/nx_assets/32b3fdd2-8395-4550-96b3-141d199a0ed0.png ?w=350,border=true)
 
 ## Upgrading to a Newer Nuxeo Server version
 
@@ -103,7 +103,7 @@ When a previously selected package is not available for your newer Nuxeo Server 
     name: removal-notice.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Removal Notice](nx_asset://e7f5c288-33db-4cca-af83-fd15876acb93 ?w=350,border=true)
+![Removal Notice](/nx_assets/e7f5c288-33db-4cca-af83-fd15876acb93.png ?w=350,border=true)
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

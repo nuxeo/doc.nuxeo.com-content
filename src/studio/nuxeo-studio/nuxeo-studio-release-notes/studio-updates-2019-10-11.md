@@ -23,28 +23,28 @@ The Studio header bar is updated, here's what changes:
     name: modeler-designer.png
     studio_modeler#screenshot#up_to_date
 --}}
-![modeler-designer](nx_asset://cf076a93-fbb8-4ae4-bab4-cad0da17fe85 ?w=250)
+![modeler-designer](/nx_assets/cf076a93-fbb8-4ae4-bab4-cad0da17fe85.png ?w=250)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/help-button
     name: help-button.png
     studio_modeler#screenshot#up_to_date
 --}}
-![help-button](nx_asset://7473bacf-99cf-4e49-9339-7b54f9638a44 ?w=250)
+![help-button](/nx_assets/7473bacf-99cf-4e49-9339-7b54f9638a44.png ?w=250)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/app-launcher
     name: app-launcher.png
     studio_designer#screenshot#up_to_date
 --}}
-![app-launcher](nx_asset://10a33333-2ee6-4e70-b147-9823a718a38f ?w=250)
+![app-launcher](/nx_assets/10a33333-2ee6-4e70-b147-9823a718a38f.png ?w=250)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/user-account
     name: user-account.png
     studio_modeler#screenshot#up_to_date
 --}}
-![user-account](nx_asset://1dba790e-d966-4c93-9e99-08774bcc6ae5 ?w=250)
+![user-account](/nx_assets/1dba790e-d966-4c93-9e99-08774bcc6ae5.png ?w=250)
 
 ### Scripts Creation from Studio Modeler Business Logic Screens
 

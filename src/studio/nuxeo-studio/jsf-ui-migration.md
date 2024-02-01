@@ -44,7 +44,7 @@ Before digging into the different configuration elements:
     name: migration-jsf-branding.png
     studio_modeler#screenshot#up_to_date
 --}}
-![migration-jsf-branding.png](nx_asset://82bad3c2-0c33-4bb1-b974-00b4e599cd37 ?w=450,border=true)
+![migration-jsf-branding.png](/nx_assets/82bad3c2-0c33-4bb1-b974-00b4e599cd37.png ?w=450,border=true)
 </td>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
@@ -52,7 +52,7 @@ Before digging into the different configuration elements:
     name: migration-webui-branding.png
     studio_designer#screenshot#up_to_date
 --}}
-![migration-webui-branding.png](nx_asset://853d4c1e-7a48-4188-bc8e-1d35189b7ea4 ?w=450,border=true)
+![migration-webui-branding.png](/nx_assets/853d4c1e-7a48-4188-bc8e-1d35189b7ea4.png ?w=450,border=true)
 </td>
 <tr>
 <td colspan="2" style="background-color:white">
@@ -88,7 +88,7 @@ Before digging into the different configuration elements:
     name: migration-jsf-doctypes.png
     studio_modeler#screenshot#up_to_date
 --}}
-![migration-jsf-doctypes.png](nx_asset://bb78688a-5569-47f4-a542-43aa71824c6c ?w=400,border=true)
+![migration-jsf-doctypes.png](/nx_assets/bb78688a-5569-47f4-a542-43aa71824c6c.png ?w=400,border=true)
 </td>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
@@ -96,7 +96,7 @@ Before digging into the different configuration elements:
     name: migration-webui-doctypes.png
     studio_designer#screenshot#up_to_date
 --}}
-![migration-webui-doctypes.png](nx_asset://27358708-6873-4e9b-84bb-4ac0f5bc69ee ?w=400,border=true)
+![migration-webui-doctypes.png](/nx_assets/27358708-6873-4e9b-84bb-4ac0f5bc69ee.png ?w=400,border=true)
 </td>
 <tr>
 <td colspan="2" style="background-color:white">
@@ -129,7 +129,7 @@ The task form menu displayed from the Workflow template configuration screen in 
     name: migration-jsf-wf.png
     studio_modeler#screenshot#up_to_date
 --}}
-![migration-jsf-wf.png](nx_asset://cbb07904-1bc1-4fdd-97ba-9b5cbe9fa068 ?w=400,border=true)
+![migration-jsf-wf.png](/nx_assets/cbb07904-1bc1-4fdd-97ba-9b5cbe9fa068.png ?w=400,border=true)
 </td>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
@@ -137,7 +137,7 @@ The task form menu displayed from the Workflow template configuration screen in 
     name: migration-webui-wf.png
     studio_designer#screenshot#up_to_date
 --}}
-![migration-webui-wf.png](nx_asset://20996a50-59af-4669-a6f5-8edcda8920e2 ?w=400,border=true)
+![migration-webui-wf.png](/nx_assets/20996a50-59af-4669-a6f5-8edcda8920e2.png ?w=400,border=true)
 </td>
 <tr>
 <td colspan="2" style="background-color:white">
@@ -172,7 +172,7 @@ The **Listing & Views** menu (and therefore the **Content Views** and **Search**
     name: migration-jsf-search.png
     studio_modeler#screenshot#up_to_date
 --}}
-![migration-jsf-search.png](nx_asset://effe08d3-c45f-48ad-8e6e-bdbf829d7940 ?w=400,border=true)
+![migration-jsf-search.png](/nx_assets/effe08d3-c45f-48ad-8e6e-bdbf829d7940.png ?w=400,border=true)
 </td>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
@@ -180,7 +180,7 @@ The **Listing & Views** menu (and therefore the **Content Views** and **Search**
     name: migration-webui-search.png
     studio_designer#screenshot#up_to_date
 --}}
-![migration-webui-search.png](nx_asset://d60bb870-e8ca-4b01-aed8-fb098e12b7af ?w=400,border=true)
+![migration-webui-search.png](/nx_assets/d60bb870-e8ca-4b01-aed8-fb098e12b7af.png ?w=400,border=true)
 </td>
 <tr>
 <td colspan="2" style="background-color:white">
@@ -215,7 +215,7 @@ These actions can either be linked to an automation chain (or an automation scri
     name: migration-jsf-useraction.png
     studio_modeler#screenshot#up_to_date
 --}}
-![migration-jsf-useraction.png](nx_asset://31097120-29a7-44df-9daf-0bb105504099 ?w=400,border=true)
+![migration-jsf-useraction.png](/nx_assets/31097120-29a7-44df-9daf-0bb105504099.png ?w=400,border=true)
 </td>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
@@ -223,7 +223,7 @@ These actions can either be linked to an automation chain (or an automation scri
     name: migration-webui-useraction.png
     studio_designer#screenshot#up_to_date
 --}}
-![migration-webui-useraction.png](nx_asset://2a7dd331-425e-4b22-8cb5-99cf30f1b23c ?w=400,border=true)
+![migration-webui-useraction.png](/nx_assets/2a7dd331-425e-4b22-8cb5-99cf30f1b23c.png ?w=400,border=true)
 </td>
 <tr>
 <td colspan="2" style="background-color:white">
@@ -262,7 +262,7 @@ For these operations, specific properties are available from the Action elements
     name: migration-jsf-automation.png
     studio_modeler#screenshot#up_to_date
 --}}
-![migration-jsf-automation.png](nx_asset://fc6363a4-cd55-4fc0-aa00-3056d36fee79 ?w=400,border=true)
+![migration-jsf-automation.png](/nx_assets/fc6363a4-cd55-4fc0-aa00-3056d36fee79.png ?w=400,border=true)
 </td>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
@@ -270,7 +270,7 @@ For these operations, specific properties are available from the Action elements
     name: migration-webui-automation.png
     studio_designer#screenshot#up_to_date
 --}}
-![migration-webui-automation.png](nx_asset://6ac5fe3b-a07b-4c4a-93ba-8b416cdecb3c ?w=400,border=true)
+![migration-webui-automation.png](/nx_assets/6ac5fe3b-a07b-4c4a-93ba-8b416cdecb3c.png ?w=400,border=true)
 </td>
 <tr>
 <td colspan="2" style="background-color:white">
@@ -305,7 +305,7 @@ Document properties labels should be created in a translation file.
     name: migration-jsf-translation.png
     studio_modeler#screenshot#up_to_date
 --}}
-![migration-jsf-translation.png](nx_asset://ec5a844e-0dee-4ba6-8a3b-406afdb8f3f9 ?w=400,border=true)
+![migration-jsf-translation.png](/nx_assets/ec5a844e-0dee-4ba6-8a3b-406afdb8f3f9.png ?w=400,border=true)
 </td>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
@@ -313,7 +313,7 @@ Document properties labels should be created in a translation file.
     name: migration-webui-translation.png
     studio_designer#screenshot#up_to_date
 --}}
-![migration-webui-translation.png](nx_asset://611b80ec-4eb6-4342-92d7-ee808c5da3b8 ?w=400,border=true)
+![migration-webui-translation.png](/nx_assets/611b80ec-4eb6-4342-92d7-ee808c5da3b8.png ?w=400,border=true)
 </td>
 </tr>
 <tr>

@@ -35,7 +35,7 @@ Below is an example of a three-layer project.
     name: Multi.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Multi1](nx_asset://5300111e-2953-4cf3-bc31-1975f6de754b ?w=350)
+![Multi1](/nx_assets/5300111e-2953-4cf3-bc31-1975f6de754b.png ?w=350)
 
 This structure is particularly relevant to the following applications:
 
@@ -62,7 +62,7 @@ Note that only list first level dependencies will be displayed, not those that m
     name: Screenshot 2021-09-27 at 10.19.53.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Multi2](nx_asset://f6f47c2e-33a7-43de-b983-ae8ad901e9fe)
+![Multi2](/nx_assets/f6f47c2e-33a7-43de-b983-ae8ad901e9fe.png)
 
 
 ## Recursive Resolution
@@ -84,7 +84,7 @@ Moreover, if a dependency itself has a dependency, these will be navigable.
     name: Screenshot 2021-09-27 at 10.37.07.png
     studio_designer#screenshot#up_to_date
 --}}
-![Multi3](nx_asset://76b33dfd-7add-4071-a245-638f41c24aac)
+![Multi3](/nx_assets/76b33dfd-7add-4071-a245-638f41c24aac.png)
 
 ## Overriding a Feature from a Dependent Project
 
@@ -98,7 +98,7 @@ On click, this will create a duplicate version of the feature from the dependenc
     name: Screenshot 2021-09-27 at 10.54.52.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Multi4](nx_asset://5c7d46fc-97a8-4682-9a06-022e84b79c08)
+![Multi4](/nx_assets/5c7d46fc-97a8-4682-9a06-022e84b79c08.png)
 
 
 ## Release and Build
@@ -123,7 +123,7 @@ This is a non-reversible lock, a new release needs to be made with unlocked depe
     name: Screenshot 2021-09-27 at 11.11.31.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Multi5](nx_asset://a778ef62-2053-4fff-b6f5-4edd2decf614)
+![Multi5](/nx_assets/a778ef62-2053-4fff-b6f5-4edd2decf614.png)
 
 
 ## In Designer
@@ -144,7 +144,7 @@ Layouts, including those associated with DocTypes, Workflows or Page Providers, 
     name: Screenshot 2021-09-27 at 11.28.23.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Multi6](nx_asset://24e8a7f6-76bb-4784-8f51-4f7e0745689a)
+![Multi6](/nx_assets/24e8a7f6-76bb-4784-8f51-4f7e0745689a.png)
 
 - Overriding Layouts
 When a layout from a dependency is selected, it will appear empty and configurable. If the layout is configured this will create a local copy which will override the layout from the dependency.

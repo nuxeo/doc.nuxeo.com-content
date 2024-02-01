@@ -25,7 +25,7 @@ Icons reflect the options more clearly.
     name: button-creation-plus-button.png
     studio_designer#screenshot#up_to_date
 --}}
-![button-creation-plus-button](nx_asset://62c8b710-4e68-4849-aa41-3ff0cfab5d82 ?w=152,border=true)
+![button-creation-plus-button](/nx_assets/62c8b710-4e68-4849-aa41-3ff0cfab5d82.png ?w=152,border=true)
 
 The `+` button in Designer is refreshed to be more explicit:
 - Tooltips are shown on the option you choose,
@@ -54,7 +54,7 @@ It is possible to define aggregates on the sub-fields for a blob property. It ca
     name: aggregates-blob-sub-properties.png
     studio_modeler#screenshot#up_to_date
 --}}
-![aggregates-blob-sub-properties](nx_asset://1f8f789f-809b-43d8-8c22-c2d74c0d6b1c ?w=450,border=true)
+![aggregates-blob-sub-properties](/nx_assets/1f8f789f-809b-43d8-8c22-c2d74c0d6b1c.png ?w=450,border=true)
 
 Use the `histogram` or `range` aggregate types in combination with the `length` property for the file size, the `terms` aggregate with the `mime-type` property for the file type.
 
@@ -65,7 +65,7 @@ These options work with any blob property, multivalued ones as well.
     name: Screenshot from 2019-07-08 16-38-53.png
     1.1.3#screenshot#up_to_date
 --}}
-![aggregates-blob-sub-properties-search-form](nx_asset://ba6d5300-6056-40bc-9d59-4d326befd8b6 ?w=250)
+![aggregates-blob-sub-properties-search-form](/nx_assets/ba6d5300-6056-40bc-9d59-4d326befd8b6.png ?w=250)
 
 ### Polymer 3 Migration
 

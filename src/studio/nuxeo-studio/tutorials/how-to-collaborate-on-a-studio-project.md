@@ -183,7 +183,7 @@ Two users may modify the same file, which generates a conflict. When it happens,
     name: mergePopup.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Merge Popup](nx_asset://6eb82721-c84a-49cb-9f91-a110f48743e6 ?w=650,border=true)
+![Merge Popup](/nx_assets/6eb82721-c84a-49cb-9f91-a110f48743e6.png ?w=650,border=true)
 
 ## Discover More
 

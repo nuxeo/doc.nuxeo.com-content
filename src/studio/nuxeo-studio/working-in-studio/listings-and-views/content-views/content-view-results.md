@@ -77,7 +77,7 @@ The first section of the Results tab enables you to define some general configur
     name: Studio-content-view-results-grid.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Results Grid](nx_asset://63d46dc0-e96e-4dd6-acec-7ae11aed3ab0 ?w=600,border=true)
+![Results Grid](/nx_assets/63d46dc0-e96e-4dd6-acec-7ae11aed3ab0.png ?w=600,border=true)
 
 To define the results layout:
 

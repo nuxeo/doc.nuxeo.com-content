@@ -63,7 +63,7 @@ If you try to use Nuxeo Drive and haven't installed the Nuxeo Drive client yet o
     name: download-document-web-ui.png
     1.1.3#screenshot#up_to_date
 --}}
-![download-document-web-ui.png](nx_asset://55bbb17d-d2e5-40ba-a3d8-86d06be630b9)</br>
+![download-document-web-ui.png](/nx_assets/55bbb17d-d2e5-40ba-a3d8-86d06be630b9.png)</br>
 [macOS](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.dmg)
 </b>
 </br>
@@ -76,7 +76,7 @@ If you try to use Nuxeo Drive and haven't installed the Nuxeo Drive client yet o
     name: download-document-web-ui.png
     1.1.3#screenshot#up_to_date
 --}}
-![download-document-web-ui.png](nx_asset://55bbb17d-d2e5-40ba-a3d8-86d06be630b9)</br>
+![download-document-web-ui.png](/nx_assets/55bbb17d-d2e5-40ba-a3d8-86d06be630b9.png)</br>
 [Linux](https://community.nuxeo.com/static/drive-updates/nuxeo-drive-x86_64.AppImage)
 </b>
 </br>
@@ -89,7 +89,7 @@ If you try to use Nuxeo Drive and haven't installed the Nuxeo Drive client yet o
     name: download-document-web-ui.png
     1.1.3#screenshot#up_to_date
 --}}
-![download-document-web-ui.png](nx_asset://55bbb17d-d2e5-40ba-a3d8-86d06be630b9)</br>
+![download-document-web-ui.png](/nx_assets/55bbb17d-d2e5-40ba-a3d8-86d06be630b9.png)</br>
 [Windows](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.exe)
 </b>
 </br>

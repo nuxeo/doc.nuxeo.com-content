@@ -65,7 +65,7 @@ In order to make it easy to know which tickets the customer must address, Nuxeo 
     name: connect_dashboard.png
     studio_modeler#screenshot#up_to_date
     --}}
-    ![Connect Dashboard](nx_asset://98eaf1bf-3afd-4c2f-9a8c-d9fae3e07a96 ?w=650,border=true)
+    ![Connect Dashboard](/nx_assets/98eaf1bf-3afd-4c2f-9a8c-d9fae3e07a96.png ?w=650,border=true)
 
     This widget is only displayed if the customer has pending tickets.
 
@@ -82,7 +82,7 @@ In order to make it easy to know which tickets the customer must address, Nuxeo 
     name: jira_dashboard.png
     studio_modeler#screenshot#up_to_date
     --}}
-    ![JIRA Dashboard](nx_asset://e707b480-baee-4460-a120-dac079179df5 ?w=650,border=true)
+    ![JIRA Dashboard](/nx_assets/e707b480-baee-4460-a120-dac079179df5.png ?w=650,border=true)
     Ideally, the "My Support Tasks" gadget must be empty.
 
 

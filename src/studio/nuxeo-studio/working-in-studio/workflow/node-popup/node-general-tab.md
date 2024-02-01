@@ -149,7 +149,7 @@ history:
     name: node-general-tab.png
     studio_modeler#popup#up_to_date
 --}}
-![Node General Tab](nx_asset://df0247a3-137e-4945-95c2-884ec1c003ff ?w=500,border=true)
+![Node General Tab](/nx_assets/df0247a3-137e-4945-95c2-884ec1c003ff.png ?w=500,border=true)
 
 - **Title**: The title of the task, displayed in tasks lists in the user interface as well as directly on top of the task form, where user processes the task. Supports i18n.
 - **NodeId**: The node id is useful when you want to configure queues of tasks. This is currently limited to advanced users.

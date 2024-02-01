@@ -141,7 +141,7 @@ Watch the related content in Hyland University:</br>
     name: doctypes_university.png
     studio_modeler#screenshot#up_to_date
 --}}
-![doctypes_university.png](nx_asset://27d822b7-7815-48e0-95ad-0ff102a284d2 ?w=450,border=true)
+![doctypes_university.png](/nx_assets/27d822b7-7815-48e0-95ad-0ff102a284d2.png ?w=450,border=true)
 {{/callout}}
 
 ## Concept
@@ -161,7 +161,7 @@ To create a schema, click on **New**.
     name: create_doc_schema.png
     studio_modeler#popup#up_to_date
 --}}
-![Create schema](nx_asset://3224beb7-68b7-4428-8c1c-ae8abea90b04 ?w=350,border=true)
+![Create schema](/nx_assets/3224beb7-68b7-4428-8c1c-ae8abea90b04.png ?w=350,border=true)
 
 - **Feature ID**: The id of the schema. Will be used as the technical id of the schema. It should not contain spaces or special characters.
 - **Schema Prefix**: Prefix of the schema. Prefix is used when referencing a document property (ex: `dc:title` for the Title property in the Dublin Core schema), for instance in an [NXQL]({{page space='nxdoc' page='nxql'}}) query.
@@ -190,7 +190,7 @@ To create a schema, click on **New**.
     name: custom_doc_schema.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Custom Doc Schema](nx_asset://5a6b549f-f0ce-40f5-8793-ee7337c0f38a ?w=650,border=true)
+![Custom Doc Schema](/nx_assets/5a6b549f-f0ce-40f5-8793-ee7337c0f38a.png ?w=650,border=true)
 
 1.  Click on the **Add field** button.
 2.  Fill in the field properties:
@@ -231,7 +231,7 @@ To create a schema, click on **New**.
     name: custom_doc_schema_6.0.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Custom Doc Schema 6.0 ](nx_asset://f222e360-bb5b-4c36-9b40-8216857fa723 ?w=650,border=true)
+![Custom Doc Schema 6.0 ](/nx_assets/f222e360-bb5b-4c36-9b40-8216857fa723.png ?w=650,border=true)
 
 1.  Click on the **Add field** button.
 2.  Fill in the field properties:

@@ -52,4 +52,4 @@ To change the target platform, for instance to Nuxeo Platform LTS 2017, just fol
     name: nuxeo_studio_application_definition.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Application Definition Modeler detailed](nx_asset://bd6bea5d-9271-43b4-8023-85bbb002fb8a ?w=650,border=true)
+![Application Definition Modeler detailed](/nx_assets/bd6bea5d-9271-43b4-8023-85bbb002fb8a.png ?w=650,border=true)

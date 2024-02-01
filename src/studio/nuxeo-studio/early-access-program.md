@@ -25,7 +25,7 @@ When some features are stable but partially complete, we offer them through the 
     name: early-access-feature.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Early Access Feature Tag](nx_asset://37c5c725-f2a4-4f38-8a59-bdce6ddeb73c ?w=250,border=true)
+![Early Access Feature Tag](/nx_assets/37c5c725-f2a4-4f38-8a59-bdce6ddeb73c.png ?w=250,border=true)
 
 Our goal is to deliver features and get your feedback quickly, so that we can adjust our priorities to better fit your needs.
 
@@ -45,7 +45,7 @@ The Early access program is opt-in. To activate it on a Studio project, you need
     name: early-access-connect.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Early Access Connect](nx_asset://9e10ae09-b9f4-4215-9a21-a7d8ade6ece2 ?w=650,border=true)
+![Early Access Connect](/nx_assets/9e10ae09-b9f4-4215-9a21-a7d8ade6ece2.png ?w=650,border=true)
 
 Once you have the project owner role, to enable or disable Early Access:
 

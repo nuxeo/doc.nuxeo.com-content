@@ -86,7 +86,7 @@ To create a new permission in Nuxeo:
         name: create-new-permission.png
         studio_modeler#screenshot#up_to_date
     --}}
-    ![Create New Permission](nx_asset://f7373240-d011-4520-a52b-231d56f4ae3b ?w=650,border=true)
+    ![Create New Permission](/nx_assets/f7373240-d011-4520-a52b-231d56f4ae3b.png ?w=650,border=true)
 5.  When you have chosen all the places where the permission should be displayed, click **Save** to save your modifications.
 6. Don't forget to translate the permission label [using an I18N translation file]({{page space='nxdoc' page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}) if needed.
 

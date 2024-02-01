@@ -261,7 +261,7 @@ After resolving all the conflicts, a push on the common branch might be necessar
     name: mergePopup.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Merge Popup](nx_asset://6eb82721-c84a-49cb-9f91-a110f48743e6 ?w=650,border=true)
+![Merge Popup](/nx_assets/6eb82721-c84a-49cb-9f91-a110f48743e6.png ?w=650,border=true)
 
 ## {{> anchor 'review-branch-commit'}}Reviewing Branch Commits History
 

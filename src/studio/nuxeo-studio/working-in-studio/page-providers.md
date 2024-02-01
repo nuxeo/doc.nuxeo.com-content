@@ -31,7 +31,7 @@ A page provider corresponds to the query part of a [content view]({{page page='c
     name: webui-default-search.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Web UI Default Search](nx_asset://32d1148d-9c54-4236-b744-3e88d2e68114 ?w=650,border=true)
+![Web UI Default Search](/nx_assets/32d1148d-9c54-4236-b744-3e88d2e68114.png ?w=650,border=true)
 
 1. [Query filter](#query-filter)
 2. [Predicates](#predicates)
@@ -46,7 +46,7 @@ Click on **New** to create a page provider.
     name: create-pp.png
     studio_modeler#popup#up_to_date
 --}}
-![Create Page Providers](nx_asset://4af56307-dda8-4b1c-b654-64631b92dcc4 ?w=350,border=true)
+![Create Page Providers](/nx_assets/4af56307-dda8-4b1c-b654-64631b92dcc4.png ?w=350,border=true)
 
 A page provider can be created from an existing content view. When selecting this option:
 - The relevant configuration parameters are copied from the selected content view

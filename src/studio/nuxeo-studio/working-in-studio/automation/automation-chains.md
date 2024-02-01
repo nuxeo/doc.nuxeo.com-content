@@ -124,7 +124,7 @@ history:
     name: implement-business-logic.png
     studio_modeler#schema#up_to_date
 --}}
-![implement-business-logic.png](nx_asset://7c0aebe9-3299-4784-becf-72725a332e68 ?w=450,border=true)
+![implement-business-logic.png](/nx_assets/7c0aebe9-3299-4784-becf-72725a332e68.png ?w=450,border=true)
 {{/callout}}
 
 ## Concept
@@ -142,7 +142,7 @@ The Studio Automation Chain editor allows you to build the chains of operations 
     name: AutomationChainEdition.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Automation Chain Edition](nx_asset://7cee0f71-60f7-424b-8a41-40037bf9e6b0 ?w=650,border=true)
+![Automation Chain Edition](/nx_assets/7cee0f71-60f7-424b-8a41-40037bf9e6b0.png ?w=650,border=true)
 
 ### Principle
 
@@ -176,7 +176,7 @@ On this screen you can add new parameters. This can be useful when you want to [
     name: NuxeoStudioChainParameters.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Automation Chains Parameters](nx_asset://f22b5236-4fc0-45bd-adb8-1f2c71610bb0 ?w=650,border=true)
+![Automation Chains Parameters](/nx_assets/f22b5236-4fc0-45bd-adb8-1f2c71610bb0.png ?w=650,border=true)
 
 The Studio Automation Chain integrates a new editor called YAML editor which enables you to edit your chain in plain text. You can click on the button **Switch editor** to activate this feature. You can switch back to the visual editor whenever you want.
 

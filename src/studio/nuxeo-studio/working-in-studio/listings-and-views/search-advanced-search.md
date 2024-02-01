@@ -59,7 +59,7 @@ Please report to the [Content Views]({{page page='content-views'}}) documentatio
     name: Studio_search_menu.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Search Menu](nx_asset://c2187eef-5ab4-4eeb-9d1f-f833ed322189 ?w=600,border=true)
+![Search Menu](/nx_assets/c2187eef-5ab4-4eeb-9d1f-f833ed322189.png ?w=600,border=true)
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 

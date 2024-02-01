@@ -11,7 +11,7 @@ labels:
 tree_item_index: 200
 ---
 
-![Content Bots](nx_asset://14cee421-aa88-4c25-abe3-3f10d9b23727 ?w=100%,border=false)
+![Content Bots](/nx_assets/14cee421-aa88-4c25-abe3-3f10d9b23727.png ?w=100%,border=false)
 
 Nuxeo Insight does not only allow your Nuxeo Applications to be AI-ready but also Enterprise ready.
 It can add Machine Learning to resolve your use cases while applying it directly with your enterprise production content.
