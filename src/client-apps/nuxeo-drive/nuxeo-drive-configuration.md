@@ -40,7 +40,7 @@ The Nuxeo Drive settings window shows four tabs that enable you to customize the
     name: drive-features-tab.png
     drive#screenshot#up_to_date
     --}}
-    ![Drive Features tab](nx_asset://5544a67f-c18c-4f8f-b724-d95274350c6d ?w=350)
+    ![Drive Features tab](/nx_assets/5544a67f-c18c-4f8f-b724-d95274350c6d.png ?w=350)
 
 - **Accounts**</br>
     Set up one or several Nuxeo Platform accounts to use with Nuxeo Drive.

@@ -55,6 +55,6 @@ If you selected the Search content view flag on the [Query & form tab of the con
     name: Studio-content-view-enablement-tab.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Content View Enablement tab](nx_asset://c8086bf2-b6f9-4181-a241-364918188226 ?w=600,border=true)
+![Content View Enablement tab](/nx_assets/c8086bf2-b6f9-4181-a241-364918188226.png ?w=600,border=true)
 
 You can report to the page [Filtering Options Reference Page]({{page page='filtering-options-reference-page'}}) for more information about each of these options.

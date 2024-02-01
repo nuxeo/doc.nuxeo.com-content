@@ -100,7 +100,7 @@ Watch the related courses on Hyland University:<br>
     name: STUDIO_application_template_details.png
     studio_modeler#popup#up_to_date
     --}}
-    ![Application Template details ](nx_asset://a9c5181c-0426-47be-924a-d60a21595afb ?w=350,border=true)
+    ![Application Template details ](/nx_assets/a9c5181c-0426-47be-924a-d60a21595afb.png ?w=350,border=true)
 3.  Click on **Import this package**.
 4.  On the confirmation window, click on **OK**.<br>
     A pop-up appears, indicating that the import was successful.
@@ -109,7 +109,7 @@ Watch the related courses on Hyland University:<br>
     name: STUDIO_application_template_imported.png
     studio_modeler#screenshot#up_to_date
     --}}
-    ![Application Template Imported](nx_asset://f6b1df76-9744-4bf7-b67c-14da77c957b7 ?w=350,border=true)
+    ![Application Template Imported](/nx_assets/f6b1df76-9744-4bf7-b67c-14da77c957b7.png ?w=350,border=true)
 5.  Click on **OK**.<br>
     The icon ![]({{file name='STUDIO_tick_icon.png'}} ?w=18,h=16) is displayed next to the imported template, indicating that this template has been imported.
     Your project is reloaded with all the template's features.You can now browse your project with the new imported features and edit them.<br>
@@ -122,5 +122,5 @@ Some templates declare the same object. For instance two templates can declare t
     name: STUDIO_application_template_import_result.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Application Template Import Result](nx_asset://698b4766-899d-4876-a33c-e9a191bb297d ?w=350,border=true)
+![Application Template Import Result](/nx_assets/698b4766-899d-4876-a33c-e9a191bb297d.png ?w=350,border=true)
 {{/callout}}

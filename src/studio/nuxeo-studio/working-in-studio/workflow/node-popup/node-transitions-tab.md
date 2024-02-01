@@ -76,7 +76,7 @@ history:
     name: Node Transition Tab.png
     studio_modeler#popup#up_to_date
 --}}
-![Node Transition Tab](nx_asset://4f937076-ee59-4ca1-94f1-59e9d576a634 ?w=500,border=true)
+![Node Transition Tab](/nx_assets/4f937076-ee59-4ca1-94f1-59e9d576a634.png ?w=500,border=true)
 
 When designing the graph, you cannot pull freely arrows from the output of a node to the next one. You first need to declare the transition in this tab. Once you did it, you will see an endpoint on the graph with the name of the transition, from which you will be able to pull the arrow.
 

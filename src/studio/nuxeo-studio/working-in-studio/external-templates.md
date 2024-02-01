@@ -92,7 +92,7 @@ Watch the related courses on Hyland University<br>[Expert Session on the Video U
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/External Template/University Videoutils
     name: university_videoutils.png
     studio_modeler#screenshot#up_to_date
---}}![University Videoutils](nx_asset://0c9da5ef-bbe6-4bcb-a243-340f048a0aa1 ?w=450,border=true)
+--}}![University Videoutils](/nx_assets/0c9da5ef-bbe6-4bcb-a243-340f048a0aa1.png ?w=450,border=true)
 {{/callout}}
 
 To make Nuxeo Studio discovery easier, we automatically import the [Default configuration template]({{page space='Studio' page='Default configuration+templates'}}) that fits your target application when a Studio project is created. You can then see how the configuration is done and start your project from it.
@@ -111,7 +111,7 @@ For each application template a set of information is displayed:
     name: application_templates.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Application Templates](nx_asset://5901fa85-4b6e-4030-8123-ce20c9441fd5 ?w=650,border=true)
+![Application Templates](/nx_assets/5901fa85-4b6e-4030-8123-ce20c9441fd5.png ?w=650,border=true)
 
 For more information about application templates you can see the page [Using Application Templates]({{page page='using-application-templates'}}) and [Default Configuration Templates]({{page page='default-configuration-templates'}}).
 

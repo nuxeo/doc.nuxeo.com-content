@@ -55,7 +55,7 @@ Watch the related content in Hyland University:</br>
     name: doctypes_university.png
     studio_modeler#screenshot#up_to_date
 --}}
-![doctypes_university.png](nx_asset://27d822b7-7815-48e0-95ad-0ff102a284d2 ?w=450,border=true)
+![doctypes_university.png](/nx_assets/27d822b7-7815-48e0-95ad-0ff102a284d2.png ?w=450,border=true)
 {{/callout}}
 
 ## Concept
@@ -69,7 +69,7 @@ A lifecycle is a set of **states** and transitions that apply to a document. One
     name: Lifecycle.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Lifecycle](nx_asset://006c0623-cfc0-4b2b-95b2-7d7f75343593 ?w=600,border=true)
+![Lifecycle](/nx_assets/006c0623-cfc0-4b2b-95b2-7d7f75343593.png ?w=600,border=true)
 
 * You need to drop one and only one **initial state.**
 * You can drop as many states as you want.

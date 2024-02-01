@@ -25,7 +25,7 @@ Watch the related courses on Hyland University:</br>
     name: ci-university.png
     server#screenshot#up_to_date
 --}}
-![ci-university.png](nx_asset://94087de0-3b91-4ca3-8afe-02c8a2a2bf85 ?w=450,border=true)
+![ci-university.png](/nx_assets/94087de0-3b91-4ca3-8afe-02c8a2a2bf85.png ?w=450,border=true)
 {{/callout}}
 
 ## Define Expectations

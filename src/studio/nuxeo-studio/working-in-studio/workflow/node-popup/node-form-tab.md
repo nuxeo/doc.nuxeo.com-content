@@ -74,7 +74,7 @@ history:
     name: node-form-tab.png
     studio_modeler#popup#up_to_date
 --}}
-![Node Form Tab](nx_asset://471ae4b3-dc0a-4081-a8dd-6a4ccd29a674 ?w=500,border=true)
+![Node Form Tab](/nx_assets/471ae4b3-dc0a-4081-a8dd-6a4ccd29a674.png ?w=500,border=true)
 
 Here you can configure a form that will be displayed to the user for task processing. You can specify which fields have to filled: captured data will be stored in workflow variables and node variables.
 

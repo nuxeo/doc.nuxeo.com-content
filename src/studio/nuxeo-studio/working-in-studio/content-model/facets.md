@@ -18,7 +18,7 @@ Watch the expert session on [Content Modeling Options](https://university.hyland
     name: content-modeling-options.png
     studio_modeler#diagram#up_to_date
 --}}
-![content-modeling-options.png](nx_asset://3911d973-4b4e-44ae-906f-c6a2c7321352 ?w=450,border=true)
+![content-modeling-options.png](/nx_assets/3911d973-4b4e-44ae-906f-c6a2c7321352.png ?w=450,border=true)
 {{/callout}}
 
 ## Concept
@@ -43,7 +43,7 @@ To create a facet, click on **New**.
     name: NewFacet.png
     studio_modeler#popup#up_to_date
 --}}
-![New Facet](nx_asset://71e42fbf-61d1-4348-8dd6-859c3d875c24 ?w=350,border=true)
+![New Facet](/nx_assets/71e42fbf-61d1-4348-8dd6-859c3d875c24.png ?w=350,border=true)
 
 * **Feature ID**: Technical ID of the feature
 * **Label**: The label that will be displayed when selecting facets of a Document Type. Choose a short explicit name and capitalize it if you want it to appear before the built-in facets.
@@ -58,7 +58,7 @@ Once created, your can attach schemas to your facet
     name: EditFacet.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Edit Facet](nx_asset://093b433e-ac0c-4c91-9b9d-dfddf2123e27 ?w=650,border=true)
+![Edit Facet](/nx_assets/093b433e-ac0c-4c91-9b9d-dfddf2123e27.png ?w=650,border=true)
 
 * **Associated Schemas**: This is the list of schemas associated to your facet. You don't have to add anything here if you use the facet as a flag.
 

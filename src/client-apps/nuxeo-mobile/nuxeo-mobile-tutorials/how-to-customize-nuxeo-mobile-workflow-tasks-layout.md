@@ -37,7 +37,7 @@ Before you start, please follow this [how-to]({{page version='' space='nxdoc' pa
     name: mobile_WF_webui_layout.png
     1.13#screenshot#up_to_date
 --}}
-![mobile_workflows_WebUI_start](nx_asset://bf4f6004-b61e-4e48-9042-21451f163579 ?w=400)
+![mobile_workflows_WebUI_start](/nx_assets/bf4f6004-b61e-4e48-9042-21451f163579.png ?w=400)
 
 ## Define the Task Layout
 
@@ -55,7 +55,7 @@ On the Studio Designer side:
     name: HOW_TO_workflows_studio_create_json.png
     1.13#screenshot#up_to_date
 --}}
-![HOW_TO_workflows_studio_create_json](nx_asset://ae86da20-cd15-4327-b2b6-a89b4c081f48 ?w=400)
+![HOW_TO_workflows_studio_create_json](/nx_assets/ae86da20-cd15-4327-b2b6-a89b4c081f48.png ?w=400)
 
 
 {{#> callout type='note' }}
@@ -116,7 +116,7 @@ A task is assigned to the Administrator. When opening this task, it should look 
     name: HOW_TO_workflows_task_result.png
     1.13#screenshot#up_to_date
 --}}
-![HOW_TO_workflows_task_result](nx_asset://5c41d39e-45bd-4272-aa46-58113d4dd1f6 ?w=500)
+![HOW_TO_workflows_task_result](/nx_assets/5c41d39e-45bd-4272-aa46-58113d4dd1f6.png ?w=500)
 
 ## Task Layout Example
 

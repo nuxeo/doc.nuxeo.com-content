@@ -33,7 +33,7 @@ In Studio Designer, a new option lets you upload a custom SVG icon for your butt
     name: custom-icon-import.png
     studio_designer#screenshot#up_to_date
 --}}
-![custom icon import](nx_asset://4ed9c1fb-23d5-491c-9ed3-7e8498eb21d9 ?border=true)
+![custom icon import](/nx_assets/4ed9c1fb-23d5-491c-9ed3-7e8498eb21d9.png ?border=true)
 
 ### Conflict Management
 
@@ -47,7 +47,7 @@ Conflict management screen is updated to provide a better experience:
     name: conflict-summary.png
     studio_designer#screenshot#up_to_date
 --}}
-![conflict view summary](nx_asset://1798fa46-b2cb-4ed9-ade3-271c06b74d3f ?w=650,border=true)
+![conflict view summary](/nx_assets/1798fa46-b2cb-4ed9-ade3-271c06b74d3f.png ?w=650,border=true)
 
 **Detailed view**:
 {{!--     ### nx_asset ###
@@ -55,7 +55,7 @@ Conflict management screen is updated to provide a better experience:
     name: conflict-detailed-view.png
     studio_designer#screenshot#up_to_date
 --}}
-![conflict view detailed](nx_asset://58b0c81b-ad1c-45f7-8346-ac7c59010216 ?w=650,border=true)
+![conflict view detailed](/nx_assets/58b0c81b-ad1c-45f7-8346-ac7c59010216.png ?w=650,border=true)
 
 {{! /multiexcerpt}}
 

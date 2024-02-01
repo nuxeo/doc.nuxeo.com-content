@@ -77,7 +77,7 @@ Automation Scripting is a Nuxeo module which provides ability to create and cont
     name: implement-business-logic.png
     studio_modeler#schema#up_to_date
 --}}
-![implement-business-logic.png](nx_asset://7c0aebe9-3299-4784-becf-72725a332e68 ?w=450,border=true)
+![implement-business-logic.png](/nx_assets/7c0aebe9-3299-4784-becf-72725a332e68.png ?w=450,border=true)
 {{/callout}}
 
 {{#> callout type='note' }}

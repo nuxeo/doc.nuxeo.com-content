@@ -113,7 +113,7 @@ history:
     name: implement-business-logic.png
     studio_modeler#schema#up_to_date
 --}}
-![implement-business-logic.png](nx_asset://7c0aebe9-3299-4784-becf-72725a332e68 ?w=450,border=true)
+![implement-business-logic.png](/nx_assets/7c0aebe9-3299-4784-becf-72725a332e68.png ?w=450,border=true)
 {{/callout}}
 
 ## Concept
@@ -136,7 +136,7 @@ You'll read more about event handlers in the [developer documentation]({{page sp
     name: EventHandlerCreation.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Event Handler Creation](nx_asset://a585c4fa-d4b7-4221-8418-45b1ed378eb8 ?w=500,border=true)
+![Event Handler Creation](/nx_assets/a585c4fa-d4b7-4221-8418-45b1ed378eb8.png ?w=500,border=true)
 
 </div>
 
@@ -149,7 +149,7 @@ You'll read more about event handlers in the [developer documentation]({{page sp
     name: EventHandlerEdition.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Event Handler Edition](nx_asset://982a88a2-314d-4729-b8fa-1714eb3bb0c7 ?w=400,border=true)
+![Event Handler Edition](/nx_assets/982a88a2-314d-4729-b8fa-1714eb3bb0c7.png ?w=400,border=true)
 
 ### Event Handler Definition
 

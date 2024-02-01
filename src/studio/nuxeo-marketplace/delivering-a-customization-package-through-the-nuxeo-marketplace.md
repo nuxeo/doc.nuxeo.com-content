@@ -152,7 +152,7 @@ When accessing a Studio project, the organization id is displayed in bold in the
     name: organization-id.png
     studio_modeler#screenshot#up_to_date
 --}}
-![organization-id](nx_asset://9ff76771-7882-4a64-8925-bc199924fa4f ?border=true)
+![organization-id](/nx_assets/9ff76771-7882-4a64-8925-bc199924fa4f.png ?border=true)
 {{/callout}}
 {{! /multiexcerpt}}
 

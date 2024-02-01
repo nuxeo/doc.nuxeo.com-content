@@ -44,3 +44,5 @@ redirects.txt
 
 # Dot Env file
 .env
+
+/nx-assets.*
