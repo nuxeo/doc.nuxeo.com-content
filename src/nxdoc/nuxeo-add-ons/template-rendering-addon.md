@@ -35,7 +35,7 @@ Watch the related courses on Hyland University:</br>
     name: university-template-rendering.png
     addins#screenshot#up_to_date
 --}}
-![university-template-rendering.png](nx_asset://7cb24a5f-56aa-441c-ab4c-079d984485dc ?w=450,border=true)
+![university-template-rendering.png](/nx_assets/7cb24a5f-56aa-441c-ab4c-079d984485dc.png ?w=450,border=true)
 {{/callout}}
 
 {{#> callout type='info' heading='Template Rendering with Nuxeo JSF UI and Nuxeo Web UI'}}
@@ -76,14 +76,14 @@ This addon depends on Nuxeo Template Rendering. It includes:
     name: template-rendering-webui.png
     addins#screenshot#up_to_date
   --}}
-  ![template-rendering-webui.png](nx_asset://02223567-64f5-4944-9d34-557799915a3c ?w=650,border=true)
+  ![template-rendering-webui.png](/nx_assets/02223567-64f5-4944-9d34-557799915a3c.png ?w=650,border=true)
 - Documents based on these templates, showing the result of the different template rendering options, in the "Discover Customization Examples" container:
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Template Rendering/template-rendering-webui2.png
     name: template-rendering-webui2.png
     addins#screenshot#up_to_date
   --}}
-  ![template-rendering-webui2.png](nx_asset://fc91d5dd-6bff-43bf-9a1f-71809946cb13 ?w=650,border=true)
+  ![template-rendering-webui2.png](/nx_assets/fc91d5dd-6bff-43bf-9a1f-71809946cb13.png ?w=650,border=true)
 
 ### How Template Rendering Works
 
@@ -124,7 +124,7 @@ The template file is the file that will be used to generate the rendering of the
     name: template-rendering-template-file.png
     addins#screenshot#up_to_date
   --}}
-  ![template-rendering-template-file.png](nx_asset://0df401bd-a061-42e7-95c6-28577d65803d ?w=650,border=true)
+  ![template-rendering-template-file.png](/nx_assets/0df401bd-a061-42e7-95c6-28577d65803d.png ?w=650,border=true)
 
 **To render a picture**:
 
