@@ -37,7 +37,7 @@ NEV Architecture and communication between services:
     name: NEV - Architecture 2.x.png
     addins#diagram#up_to_date
 --}}
-![NEV - Architecture 2.x](nx_asset://2370d315-4a7d-4e06-a25b-1f30085f55fd)
+![NEV - Architecture 2.x](/nx_assets/2370d315-4a7d-4e06-a25b-1f30085f55fd.png)
 
 The user is authenticated in ARender with an [OAuth2 Authorization Grant Flow]({{page page='using-oauth2#oauth-2-authorization-grant-flow'}}) against Nuxeo.
 
@@ -329,7 +329,7 @@ Examples of possible configurations:
     name: arender-customized.png
     addins#screenshot#up_to_date
 --}}
-![arender-customized.png](nx_asset://a26f7eaf-e268-443f-be33-2c88542e2a13 ?w=600,border=true)
+![arender-customized.png](/nx_assets/a26f7eaf-e268-443f-be33-2c88542e2a13.png ?w=600,border=true)
 
 The UI customization is done through two files to put in the `/docker-entrypoint-init.d` directory inside the Previewer container.
 

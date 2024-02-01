@@ -47,7 +47,7 @@ This how-to requires Nuxeo LTS 2021 or newer.
     name: rte-view.png
     1.1.3#screenshot#up_to_date
 --}}
-![rte-view.png](nx_asset://f2526b56-ac17-48d3-86fe-a4029a9520b6 ?border=true)
+![rte-view.png](/nx_assets/f2526b56-ac17-48d3-86fe-a4029a9520b6.png ?border=true)
 
 **To reference one or several pictures stored in Nuxeo:**
 
@@ -56,7 +56,7 @@ This how-to requires Nuxeo LTS 2021 or newer.
     name: reference-images-icon.png
     1.1.3#screenshot#up_to_date
 --}}
-![reference-images-icon.png](nx_asset://59866bc2-01d7-4f98-ab38-124344076582 ?w=16) toolbar icon.
+![reference-images-icon.png](/nx_assets/59866bc2-01d7-4f98-ab38-124344076582.png ?w=16) toolbar icon.
 1. Search for your content using the quick filter (fulltext search) option, select as many images as you want and press the **Select** button.
 
 {{!--     ### nx_asset ###
@@ -64,7 +64,7 @@ This how-to requires Nuxeo LTS 2021 or newer.
     name: rte-image-referencing-search.png
     1.1.3#screenshot#up_to_date
 --}}
-![rte-image-referencing-search.png](nx_asset://10e93a3b-87e2-400b-8a9b-7b3ac85697a7 ?border=true)
+![rte-image-referencing-search.png](/nx_assets/10e93a3b-87e2-400b-8a9b-7b3ac85697a7.png ?border=true)
 
 The search form, the query used to filter pictures and the results presentation are all configurable using Nuxeo Studio.
 
@@ -115,7 +115,7 @@ Let's add an additional search criteria to find images related to a particular a
       name: coverage-aggregate-modeler-configuration.png
       1.1.3#screenshot#up_to_date
     --}}
-    ![coverage-aggregate-modeler-configuration.png](nx_asset://e3acb068-96bd-48ca-a566-e11eee9845bb ?border=true)
+    ![coverage-aggregate-modeler-configuration.png](/nx_assets/e3acb068-96bd-48ca-a566-e11eee9845bb.png ?border=true)
 3. Save your configuration.
 4. Click on the **Configure Layouts in Designer** button in the top right corner of the screen. You will be taken to the layout configuration for the **document_picker** page provider in Studio Designer.
 
@@ -129,14 +129,14 @@ Now we will configure the layout to take advantage of it.
     name: coverage-aggregate-designer-catalog.png
     1.1.3#screenshot#up_to_date
 --}}
-![coverage-aggregate-designer-catalog.png](nx_asset://9fe81437-386b-4386-bf11-c9f04bd53e82 ?border=true)
+![coverage-aggregate-designer-catalog.png](/nx_assets/9fe81437-386b-4386-bf11-c9f04bd53e82.png ?border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/how-to-use-rte-article-publishing/coverage-aggregate-designer-generation.png
     name: coverage-aggregate-designer-generation.png
     1.1.3#screenshot#up_to_date
 --}}
-![coverage-aggregate-designer-generation.png](nx_asset://afdecac0-95c2-4308-a712-6a6020373894 ?border=true)
+![coverage-aggregate-designer-generation.png](/nx_assets/afdecac0-95c2-4308-a712-6a6020373894.png ?border=true)
 
 Save and [deploy your configuration]({{page page='nuxeo-dev-tools-extension'}}#hot-reload) to see the result. This time you should edit your picture to add a coverage to it, then create a version to see it appear in the list when picking it from the rich text editor.
 
@@ -145,7 +145,7 @@ Save and [deploy your configuration]({{page page='nuxeo-dev-tools-extension'}}#h
     name: rte-results-with-search-filter-configured.png
     1.1.3#screenshot#up_to_date
 --}}
-![rte-results-with-search-filter-configured.png](nx_asset://777f47d0-2740-4e73-90a0-64ef3f57d24d ?border=true)
+![rte-results-with-search-filter-configured.png](/nx_assets/777f47d0-2740-4e73-90a0-64ef3f57d24d.png ?border=true)
 
 To configure the search results listing, [configure the **Results** option]({{page page="ui-designer" space="studio"}}) in Nuxeo Studio Designer for your `document_picker` page provider instead.
 

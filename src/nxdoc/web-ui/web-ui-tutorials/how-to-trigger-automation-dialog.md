@@ -78,14 +78,14 @@ Here is what you should see:
     name: automation_scripting1.png
     studio_modeler#screenshot#up_to_date
 --}}
-![automation_scripting1.png](nx_asset://c659f9eb-89b7-45cf-9436-756c13f4ebe4 ?w=650,border=true)
+![automation_scripting1.png](/nx_assets/c659f9eb-89b7-45cf-9436-756c13f4ebe4.png ?w=650,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Trigger an automation from a dialog/automation_scripting2.png
     name: automation_scripting2.png
     studio_modeler#screenshot#up_to_date
 --}}
-![automation_scripting2.png](nx_asset://976071e7-bb8c-47f2-a891-df457c4b6862 ?w=650,border=true)
+![automation_scripting2.png](/nx_assets/976071e7-bb8c-47f2-a891-df457c4b6862.png ?w=650,border=true)
 
 ### Prepare Searches
 
@@ -114,7 +114,7 @@ For better code readability, it's better to isolate your custom elements in a sp
     name: create.png
     studio_designer#screenshot#up_to_date
 --}}
-![create.png](nx_asset://f150411d-3a0f-471e-80ce-f9595858279d ?w=650,border=true)
+![create.png](/nx_assets/f150411d-3a0f-471e-80ce-f9595858279d.png ?w=650,border=true)
 
 We need now to create the dialog: Nuxeo Studio offers the ability to generate elements from templates, including dialogs. So click on the new folder, and create the dialog element:
 
@@ -127,7 +127,7 @@ We need now to create the dialog: Nuxeo Studio offers the ability to generate el
     name: dialog-wizard.png
     studio_designer#screenshot#up_to_date
 --}}
-![dialog-wizard.png](nx_asset://a0895b99-72b4-4e73-9663-020266f527cb ?w=650,border=true)
+![dialog-wizard.png](/nx_assets/a0895b99-72b4-4e73-9663-020266f527cb.png ?w=650,border=true)
 
 The new element will automatically be declared in your bundle file so you're sure the element will be loaded on the next deployment:
 
@@ -240,7 +240,7 @@ You should end up with the following contribution:
     name: button.png
     studio_designer#screenshot#up_to_date
 --}}
-![button.png](nx_asset://36485e6c-5fe1-4d90-ba81-1c44ad0c9565 ?w=650,border=true)
+![button.png](/nx_assets/36485e6c-5fe1-4d90-ba81-1c44ad0c9565.png ?w=650,border=true)
 
 ### Check Result
 

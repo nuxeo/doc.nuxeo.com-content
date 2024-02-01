@@ -165,7 +165,7 @@ See the result:
     name: Screenshot 2019-12-20 at 11.58.24.png
     1.1.3#screenshot#up_to_date
 --}}
-![directory-suggestion1.png](nx_asset://f213719f-1aad-400f-963c-5c10afe9536d ?w=650,border=true)
+![directory-suggestion1.png](/nx_assets/f213719f-1aad-400f-963c-5c10afe9536d.png ?w=650,border=true)
 
 ## Using the Operation Parameter and the Directory.SuggestEntries Operation
 
@@ -194,7 +194,7 @@ See the result:
     name: directory-suggestion2.png
     1.1.3#screenshot#up_to_date
 --}}
-![directory-suggestion2.png](nx_asset://4a8dae89-b6a7-4b22-8f03-6ec728493ba2 ?w=650,border=true)
+![directory-suggestion2.png](/nx_assets/4a8dae89-b6a7-4b22-8f03-6ec728493ba2.png ?w=650,border=true)
 
 ## Going Further
 
@@ -251,7 +251,7 @@ See the result:
     name: directory-suggestion3.png
     1.1.3#screenshot#up_to_date
 --}}
-![directory-suggestion3.png](nx_asset://06487d1f-f83e-43b0-bb6d-84fdcd44f8e7 ?w=650,border=true)
+![directory-suggestion3.png](/nx_assets/06487d1f-f83e-43b0-bb6d-84fdcd44f8e7.png ?w=650,border=true)
 
 * * *
 

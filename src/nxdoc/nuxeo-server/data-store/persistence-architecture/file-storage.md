@@ -192,7 +192,7 @@ Watch the related courses on Hyland University:</br>
     name: university_file_storage.png
     server#screenshot#up_to_date
 --}}
-![university_file_storage.png](nx_asset://c40a0162-48c8-4723-b280-aeb6ce516577 ?w=450,border=true)
+![university_file_storage.png](/nx_assets/c40a0162-48c8-4723-b280-aeb6ce516577.png ?w=450,border=true)
 {{/callout}}
 
 ## Files and Blobs

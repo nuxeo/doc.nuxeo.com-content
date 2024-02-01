@@ -34,7 +34,7 @@ Start by [creating a group]({{page space='userdoc' page='administration'}}#creat
       name: reviewComment-required.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![reviewComment-required.png](nx_asset://7c25a698-a9c1-4649-99f5-dffb7e5be429 ?w=350,border=true)
+    ![reviewComment-required.png](/nx_assets/7c25a698-a9c1-4649-99f5-dffb7e5be429.png ?w=350,border=true)
 1. On the Graph tab, select an Accept/Reject user task and drag and drop it on the graph.
 1. Click on the **Edit** button next to the task. Fill in the General tab as shown below:
     {{!--     ### nx_asset ###
@@ -42,14 +42,14 @@ Start by [creating a group]({{page space='userdoc' page='administration'}}#creat
       name: general-tab-node.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![general-tab-node.png](nx_asset://36f77e9a-97cf-44c1-aac3-ad4a17338280 ?w=350,border=true)
+    ![general-tab-node.png](/nx_assets/36f77e9a-97cf-44c1-aac3-ad4a17338280.png ?w=350,border=true)
 1. On the Variables tab, activate the `reviewComment` variable by moving it to the right box.
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Add a "Save Work in Progress" option on a task/variables-tab-node.png
       name: variables-tab-node.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![variables-tab-node.png](nx_asset://33abe3dc-dd24-4236-b405-4830b0287137 ?w=350,border=true)
+    ![variables-tab-node.png](/nx_assets/33abe3dc-dd24-4236-b405-4830b0287137.png ?w=350,border=true)
 1. On the Task Buttons tab, add a task button:
       - id: `saveprogress`</br>
       - Label: save progress</br>
@@ -59,7 +59,7 @@ Start by [creating a group]({{page space='userdoc' page='administration'}}#creat
     name: validate-form-node.png
     studio_modeler#screenshot#up_to_date
    --}}
-   ![validate-form-node.png](nx_asset://9fa0bc42-94fe-45c0-b32a-78a49b773be3 ?w=350,border=true)
+   ![validate-form-node.png](/nx_assets/9fa0bc42-94fe-45c0-b32a-78a49b773be3.png ?w=350,border=true)
 1. Go to Transitions tab, to make sure that the 3 transitions are automatically created.
 1. Click on **Save** on the popup.
 1. On the graph, link the `saveProgress` transition back to the beginning of the Document Review task as you want to go back to it when you click on the Save Work in Progress button.
@@ -69,7 +69,7 @@ Start by [creating a group]({{page space='userdoc' page='administration'}}#creat
       name: graph-document-review-done.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![graph-document-review-done.png](nx_asset://916681fc-7e17-44c6-9302-908d57514bc9 ?w=350,border=true)
+    ![graph-document-review-done.png](/nx_assets/916681fc-7e17-44c6-9302-908d57514bc9.png ?w=350,border=true)
 
 You can now click on **Configure layouts in Designer** at the top-right of your screen to go directly to the Designer side.
 
@@ -81,7 +81,7 @@ You can now click on **Configure layouts in Designer** at the top-right of your 
       name: document-review-layout-config.png
       studio_designer#screenshot#up_to_date
   --}}
-  ![document-review-layout-config.png](nx_asset://0eae005e-b513-467e-8318-24926377cc45 ?w=350,border=true)
+  ![document-review-layout-config.png](/nx_assets/0eae005e-b513-467e-8318-24926377cc45.png ?w=350,border=true)
 
 1. Users may want to replace the text input (1 line max) with a textarea, made for larger text. It's just about changing the `<nuxeo-input>` element to `<nuxeo-textarea>` in the layout configuration after clicking on  **switch to code** at the bottom of the editor screen. </br>
     It should look like this:
@@ -90,7 +90,7 @@ You can now click on **Configure layouts in Designer** at the top-right of your 
       name: textarea-reviewComment-designer.png
       studio_designer#screenshot#up_to_date
    --}}
-   ![textarea-reviewComment-designer.png](nx_asset://1b647c3c-74ae-4246-8cc0-95ff877168f7 ?w=350,border=true)
+   ![textarea-reviewComment-designer.png](/nx_assets/1b647c3c-74ae-4246-8cc0-95ff877168f7.png ?w=350,border=true)
 
 1. That's it! Save your changes and deploy your configuration.
 
@@ -99,7 +99,7 @@ You can now click on **Configure layouts in Designer** at the top-right of your 
     name: task-save-progess-done.png
     1.1.3#screenshot#up_to_date
 --}}
-![task-save-progess-done.png](nx_asset://f5682958-8429-4530-950f-6228db7525ed ?w=350,border=true)
+![task-save-progess-done.png](/nx_assets/f5682958-8429-4530-950f-6228db7525ed.png ?w=350,border=true)
 
 {{#> callout type='info' }}
 When saving work in progress, it triggers again the output chain, input chain and the task assigned email.

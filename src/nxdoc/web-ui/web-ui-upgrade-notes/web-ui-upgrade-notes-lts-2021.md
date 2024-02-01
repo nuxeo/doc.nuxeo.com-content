@@ -126,7 +126,7 @@ Nuxeo DAM no longer exists as an addon and its contributions are now default on 
     name: app-def-package-removal.png
     1.1.3#screenshot#up_to_date
 --}}
-![Package removal in Studio's Application Definition](nx_asset://b47d5c8b-c1ba-4d2a-ab0b-8b8378d73c8d ?w=650,border=true)
+![Package removal in Studio's Application Definition](/nx_assets/b47d5c8b-c1ba-4d2a-ab0b-8b8378d73c8d.png ?w=650,border=true)
 {{! /multiexcerpt}}
 
 #### Spreadsheet Addon Integrated in Nuxeo Server
@@ -139,7 +139,7 @@ Spreadsheet addon is now loaded by default but the button contribution is disabl
     name: spreadsheet-package-enable-button-designer.png
     1.1.3#screenshot#up_to_date
 --}}
-![Spreadsheet package enable button in Designer](nx_asset://b8fd28dd-0272-43b1-a083-dfde295c312b ?w=650,border=true)
+![Spreadsheet package enable button in Designer](/nx_assets/b8fd28dd-0272-43b1-a083-dfde295c312b.png ?w=650,border=true)
 {{! /multiexcerpt}}
 
 ### Rich Text Editor Uses QuillJS by Default

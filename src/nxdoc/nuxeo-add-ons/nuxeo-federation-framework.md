@@ -23,7 +23,7 @@ Watch the related video on Hyland University:</br>
     name: nuxeo-federation-university.png
     addins#screenshot#up_to_date
 --}}
-![nuxeo-federation-university.png](nx_asset://70e0644b-87e4-4bf3-94bc-be3f82b9f35e ?w=450,border=true)
+![nuxeo-federation-university.png](/nx_assets/70e0644b-87e4-4bf3-94bc-be3f82b9f35e.png ?w=450,border=true)
 {{/callout}}
 [Simflofy](https://www.simflofy.com/) is a Federation and Integration platform for content management. It provides ways to search or migrate data across multiple content repositories.
 
@@ -83,7 +83,7 @@ First, create an **authentication entry** for all the systems you need to federa
     name: simflofy-authentication1.png
     addins#screenshot#up_to_date
 --}}
-![simflofy-authentication1.png](nx_asset://cabdf5a4-0165-480d-91a0-4ba69422fece ?w=650,border=true)
+![simflofy-authentication1.png](/nx_assets/cabdf5a4-0165-480d-91a0-4ba69422fece.png ?w=650,border=true)
 
 Each system has a specific authentication screen. Enter your credentials and any additional information needed for the authentication.
 
@@ -92,7 +92,7 @@ Each system has a specific authentication screen. Enter your credentials and any
     name: simflofy-authentication2.png
     addins#screenshot#up_to_date
 --}}
-![simflofy-authentication2.png](nx_asset://f6707431-df76-45a0-8ac6-4d1482a1fb81 ?w=650,border=true)
+![simflofy-authentication2.png](/nx_assets/f6707431-df76-45a0-8ac6-4d1482a1fb81.png ?w=650,border=true)
 
 #### Repository Connection
 
@@ -103,7 +103,7 @@ Once the authentication configuration is set, create a **repository connection**
     name: repository-connection1.png
     addins#screenshot#up_to_date
 --}}
-![repository-connection1.png](nx_asset://b61e7360-f640-402b-8b5b-d99f2e874f50 ?w=650,border=true)
+![repository-connection1.png](/nx_assets/b61e7360-f640-402b-8b5b-d99f2e874f50.png ?w=650,border=true)
 
 Validate your configuration by clicking on the **Test** button.
 
@@ -112,7 +112,7 @@ Validate your configuration by clicking on the **Test** button.
     name: repository-connection4.png
     addins#screenshot#up_to_date
 --}}
-![repository-connection4.png](nx_asset://a7981ae0-2455-4cdd-9f6f-89a6caebb164 ?w=650,border=true)
+![repository-connection4.png](/nx_assets/a7981ae0-2455-4cdd-9f6f-89a6caebb164.png ?w=650,border=true)
 
 #### Content Service Connection
 
@@ -127,7 +127,7 @@ The **content service connection** allows you to use the addon for "in-place" fe
     name: content-service-connection.png
     addins#screenshot#up_to_date
 --}}
-![content-service-connection.png](nx_asset://66c41e9c-77f4-40fd-a2e4-40c0a9ef38fe ?w=650,border=true)
+![content-service-connection.png](/nx_assets/66c41e9c-77f4-40fd-a2e4-40c0a9ef38fe.png ?w=650,border=true)
 
 #### Output Connection
 
@@ -138,7 +138,7 @@ An **output connection** is necessary to indicate the target folder of the Nuxeo
     name: nuxeo-output-connector.png
     addins#screenshot#up_to_date
 --}}
-![nuxeo-output-connector.png](nx_asset://4eb716c3-7b8e-4a9d-ac65-8ceb6d4eeaa8 ?w=650,border=true)
+![nuxeo-output-connector.png](/nx_assets/4eb716c3-7b8e-4a9d-ac65-8ceb6d4eeaa8.png ?w=650,border=true)
 
 The **Nuxeo Config** tab indicates the folder where federated documents will be found.
 
@@ -147,7 +147,7 @@ The **Nuxeo Config** tab indicates the folder where federated documents will be 
     name: nuxeo-output-connector2.png
     addins#screenshot#up_to_date
 --}}
-![nuxeo-output-connector2.png](nx_asset://69e9e084-d2fb-4da0-acc9-554713b665c3 ?w=650,border=true)
+![nuxeo-output-connector2.png](/nx_assets/69e9e084-d2fb-4da0-acc9-554713b665c3.png ?w=650,border=true)
 
 #### Discovery
 
@@ -162,7 +162,7 @@ Once created, you can run a **report** to view the discovery results.
     name: nuxeo-discovery.png
     addins#screenshot#up_to_date
 --}}
-![nuxeo-discovery.png](nx_asset://ed2cd7b3-5711-450c-919a-62121728e172 ?w=350,border=true)
+![nuxeo-discovery.png](/nx_assets/ed2cd7b3-5711-450c-919a-62121728e172.png ?w=350,border=true)
 
 
 #### Federation Job
@@ -178,7 +178,7 @@ At the time of writing, in the case of **bidirectional synchronization**, you ne
     name: nuxeo-job-main.png
     addins#screenshot#up_to_date
 --}}
-![nuxeo-job-main.png](nx_asset://cfa2a93f-ff9c-4a40-be55-41ca1e0f3297 ?w=650,border=true)
+![nuxeo-job-main.png](/nx_assets/cfa2a93f-ff9c-4a40-be55-41ca1e0f3297.png ?w=650,border=true)
 
 Click on **Add a New Job** button to create a new job and fill in the information in the different tabs.
 
@@ -198,7 +198,7 @@ In the **Advanced Options**, uncheck the **Include Binary** checkbox if you're f
     name: job-details.png
     addins#screenshot#up_to_date
 --}}
-![job-details.png](nx_asset://a228e980-d9de-4e4d-93fe-a2c29b463bf6 ?w=650,border=true)
+![job-details.png](/nx_assets/a228e980-d9de-4e4d-93fe-a2c29b463bf6.png ?w=650,border=true)
 
 ##### Tasks
 
@@ -213,7 +213,7 @@ For example:
     name: job-tasks.png
     addins#screenshot#up_to_date
 --}}
-![job-tasks.png](nx_asset://bbe8ca67-6322-4299-8e9a-18246280f3bb ?w=650,border=true)
+![job-tasks.png](/nx_assets/bbe8ca67-6322-4299-8e9a-18246280f3bb.png ?w=650,border=true)
 
 ##### Mappings
 
@@ -233,7 +233,7 @@ You can use **Calculated Field** if you need to set the same value to a specific
     name: nuxeo-mapping.png
     addins#screenshot#up_to_date
 --}}
-![nuxeo-mapping.png](nx_asset://4949a935-f1dd-41d7-9100-7d2e5a0c3069 ?w=650,border=true)
+![nuxeo-mapping.png](/nx_assets/4949a935-f1dd-41d7-9100-7d2e5a0c3069.png ?w=650,border=true)
 
 ##### Additional Information
 
@@ -244,7 +244,7 @@ Depending on the system you're federating, some extra tabs will appear. For exam
     name: cmis-query.png
     addins#screenshot#up_to_date
 --}}
-![cmis-query.png](nx_asset://380342db-ad2b-4315-bf86-2a1e0ebe09c2 ?w=650,border=true)
+![cmis-query.png](/nx_assets/380342db-ad2b-4315-bf86-2a1e0ebe09c2.png ?w=650,border=true)
 
 #### Job Execution
 
@@ -261,7 +261,7 @@ You can view among other metrics:
     name: job-report.png
     addins#screenshot#up_to_date
 --}}
-![job-report.png](nx_asset://77135068-16b9-4c19-ab80-4c36356d52b0 ?w=650,border=true)
+![job-report.png](/nx_assets/77135068-16b9-4c19-ab80-4c36356d52b0.png ?w=650,border=true)
 
 {{#> callout type='info'}}
 If you need to execute the federation job automatically, then you'll have to set up a **job runner**. This process runs a specific federation job periodically.
@@ -275,7 +275,7 @@ You can view the job report by clicking on the numbers displayed in each column 
     name: job-report2.png
     addins#screenshot#up_to_date
 --}}
-![job-report2.png](nx_asset://0ad3664c-e7ee-4268-971c-f114009bec31 ?w=650,border=true)
+![job-report2.png](/nx_assets/0ad3664c-e7ee-4268-971c-f114009bec31.png ?w=650,border=true)
 
 ## Functional Overview
 

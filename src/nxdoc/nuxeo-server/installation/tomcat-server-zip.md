@@ -23,7 +23,7 @@ Watch the related course on Hyland University:</br>
     name: university_quickstart.png
     server#screenshot#up_to_date
 --}}
-![university_quickstart.png](nx_asset://2e9054c7-c6f3-4d2b-ae10-6221e17b3be8 ?w=450,border=true)
+![university_quickstart.png](/nx_assets/2e9054c7-c6f3-4d2b-ae10-6221e17b3be8.png ?w=450,border=true)
 {{/callout}}
 
 
@@ -155,7 +155,7 @@ Download the ZIP archive from the [Nuxeo distribution download site](https://con
     name: connect_distribution.png
     studio_modeler#screenshot#up_to_date
 --}}
-![connect_distribution.png](nx_asset://d0115b27-1597-44d0-86f1-3fc036cce797 ?w=650,border=true)
+![connect_distribution.png](/nx_assets/d0115b27-1597-44d0-86f1-3fc036cce797.png ?w=650,border=true)
 
 Then:
 1. Unzip the file,

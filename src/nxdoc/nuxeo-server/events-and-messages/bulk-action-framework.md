@@ -49,7 +49,7 @@ The following is an example of bulk service usage:
     name: bulk-execution-flow.png
     server#diagram#up_to_date
 --}}
-![Java Client Request flow](nx_asset://07c0feb4-cba8-45bd-917f-53e2cc090f15 ?border=true)
+![Java Client Request flow](/nx_assets/07c0feb4-cba8-45bd-917f-53e2cc090f15.png ?border=true)
 
 #### BulkService
 

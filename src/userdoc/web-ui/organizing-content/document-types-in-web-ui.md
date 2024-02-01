@@ -132,7 +132,7 @@ Pictures are specific files. To take into account the specificities of pictures,
     name: view-sidebar.png
     1.1.3#screenshot#to_be_updated
 --}}
-![Document View with sidebar](nx_asset://5284dbcb-db38-4466-accc-ddaa05c3e29a ?w=600,border=true)
+![Document View with sidebar](/nx_assets/5284dbcb-db38-4466-accc-ddaa05c3e29a.png ?w=600,border=true)
 
 For more information about picture document, take a look to the [Digital Asset Management page]({{page version='' space='nxdoc' page='digital-asset-management-dam'}}).
 
@@ -142,7 +142,7 @@ For more information about picture document, take a look to the [Digital Asset M
 Video is a document type dedicated to the management of videos files. It provides the following specific features:
 - A player to view the video from the application
 - A storyboard to navigate in the video and alternative video formats.
-![video_document_type-webui.png](nx_asset://6727e42c-dd47-4863-98c1-57e9e3a35ad7 ?w=600,border=true)
+![video_document_type-webui.png](/nx_assets/6727e42c-dd47-4863-98c1-57e9e3a35ad7.png ?w=600,border=true)
 For more information about video document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).
 {{! /multiexcerpt}}
 

@@ -81,7 +81,7 @@ If you are working on JSF UI (DEPRECATED), make sure to install the JSF UI versi
     name: easyshare-form.png
     addins#screenshot#up_to_date
 --}}
-![Easyshare New folder form](nx_asset://be5153d8-a69c-4380-81a7-11bc59ee57f7 ?w=600,border=true)
+![Easyshare New folder form](/nx_assets/be5153d8-a69c-4380-81a7-11bc59ee57f7.png ?w=600,border=true)
 
 {{#> callout type='info' }}
 For more information about the EasyShare package usage, read the [functional documentation]({{page version='' space='userdoc' page='easyshare'}}).

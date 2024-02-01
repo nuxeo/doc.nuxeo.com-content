@@ -26,7 +26,7 @@ Watch the related courses on Hyland University:</br>
     name: university-google-storage.png
     addins#screenshot#up_to_date
 --}}
-![university-google-storage.png](nx_asset://e57ee96f-c11e-4a5a-abda-3532ed36bded ?w=450,border=true)
+![university-google-storage.png](/nx_assets/e57ee96f-c11e-4a5a-abda-3532ed36bded.png ?w=450,border=true)
 {{/callout}}
 
 ## Before You Start

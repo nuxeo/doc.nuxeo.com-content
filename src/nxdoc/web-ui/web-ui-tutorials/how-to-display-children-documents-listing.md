@@ -58,7 +58,7 @@ Optional: **You can configure the table layout of your folderish document:**
        name: Screen Shot 2019-02-18 at 10.00.43.png
        studio_designer#icon#up_to_date
    --}}
-   ![Edit icon folderish configuration](nx_asset://c3c451b4-5953-4659-a98c-86e6d6affe16 ?w=20).</br>
+   ![Edit icon folderish configuration](/nx_assets/c3c451b4-5953-4659-a98c-86e6d6affe16.png ?w=20).</br>
    You are now in the Results Editor, where you can configure the table and the grid layouts for your document.
 1. In **table**, click **Edit**.
 1. At the bottom-right of your screen, click **Switch to table editor**.
@@ -70,7 +70,7 @@ Optional: **You can configure the table layout of your folderish document:**
     name: table-layout-editor.png
     studio_designer#screenshot#up_to_date
 --}}
-![Table layout editor](nx_asset://37d8c54d-cf66-431c-8464-cd0794a930da ?w=600,border=true)
+![Table layout editor](/nx_assets/37d8c54d-cf66-431c-8464-cd0794a930da.png ?w=600,border=true)
 
 ## Create a Page Provider
 
@@ -127,7 +127,7 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
       name: portfolioContentListing-web-ui-designer.png
       studio_designer#screenshot#up_to_date
     --}}
-    ![Mapped parameters portfolioContentListing](nx_asset://80c2f9b2-87f2-40e9-bd6f-274b8f4158fc ?w=650,border=true)
+    ![Mapped parameters portfolioContentListing](/nx_assets/80c2f9b2-87f2-40e9-bd6f-274b8f4158fc.png ?w=650,border=true)
   {{#> callout type='info' heading='Some explanations for params' }}
   Elements are configured using JavaScript (JS). We are putting a JS object here (`{"key": "value", "anotherKey": "anotherValue"}`) that will be inserted in the element.</br>
   `system_parentId` is the name of the predicate we defined in Modeler. We are saying here that we want to assign a value to it.</br>
