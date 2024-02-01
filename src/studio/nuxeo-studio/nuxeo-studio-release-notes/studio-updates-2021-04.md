@@ -30,7 +30,7 @@ This is available in **CONFIGURATION** > **Branding** > **Login Box**
     name: studio-release-2021-04-B.png
     studio_designer#screenshot#up_to_date
 --}}
-![studio-release-2021-04-A-LoginBox](nx_asset://0dae0dc1-fcd8-4b75-8e28-046ba0e261b7)
+![studio-release-2021-04-A-LoginBox](/nx_assets/0dae0dc1-fcd8-4b75-8e28-046ba0e261b7.png)
 
 ### Project Installation Instructions
 
@@ -41,7 +41,7 @@ In the **Release and Tags** entry in Studio, we have added specific instructions
     name: studio-release-2021-04-A.png
     studio_modeler#screenshot#up_to_date
 --}}
-![studio-release-2021-04-A-InstallRelease](nx_asset://e98aa8a5-6555-4edf-b692-f93ba79e8929)
+![studio-release-2021-04-A-InstallRelease](/nx_assets/e98aa8a5-6555-4edf-b692-f93ba79e8929.png)
 
 ### `getUserApplications` Call in Connect
 

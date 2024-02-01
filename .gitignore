@@ -50,3 +50,6 @@ redirects.txt
 
 # NYC report
 .nyc_output
+
+/nx-assets.*
+

@@ -30,7 +30,7 @@ This will enhance the effectiveness of this Event Handler for complex modificati
     name: Allof-oneof.png
     studio_modeler#screenshot#up_to_date
 --}}
-![All of, One of feature ](nx_asset://3c7590ad-0bf6-431c-96a9-9610ce8caf74 ?w=650,border=true)
+![All of, One of feature ](/nx_assets/3c7590ad-0bf6-431c-96a9-9610ce8caf74.png ?w=650,border=true)
 
 ### Removed "Save" Popup When Not Necessary
 

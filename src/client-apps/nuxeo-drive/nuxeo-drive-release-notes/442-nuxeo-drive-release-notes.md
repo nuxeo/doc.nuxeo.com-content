@@ -146,7 +146,7 @@ We have improved the systray menu with new icons and tooltips when hovering over
     name: icons-systray-menu.png
     addins#icon#up_to_date
 --}}
-![Icons Systray Menu](nx_asset://b2fdfa22-0ae6-429a-b8fa-9ef54238f90d ?w=100)
+![Icons Systray Menu](/nx_assets/b2fdfa22-0ae6-429a-b8fa-9ef54238f90d.png ?w=100)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1255](https://jira.nuxeo.com/browse/NXDRIVE-1255)
 
@@ -158,7 +158,7 @@ There's now a free disk space bar displayed at different places.
     name: free-disk-space.png
     addins#screenshot#up_to_date
 --}}
-![Free Disk Space](nx_asset://354a68c8-43ed-4dfc-86bb-3181b3613ddb ?w=300,border=true)
+![Free Disk Space](/nx_assets/354a68c8-43ed-4dfc-86bb-3181b3613ddb.png ?w=300,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2042](https://jira.nuxeo.com/browse/NXDRIVE-2042)
 

@@ -27,7 +27,7 @@ Watch the [Web UI Customization and Nuxeo Frontend Development](https://universi
     name: Screenshot 2018-10-22 at 14.58.21.png
     1.1.3#screenshot#up_to_date
 --}}
-![WEBUI_CUSTOMIZATION_FRONTEND_DEV](nx_asset://233ef043-0939-4ff6-88a6-13dcb92660b0 ?w=450,border=true)
+![WEBUI_CUSTOMIZATION_FRONTEND_DEV](/nx_assets/233ef043-0939-4ff6-88a6-13dcb92660b0.png ?w=450,border=true)
 {{/callout}}
 
 ## Concept
@@ -62,7 +62,7 @@ You must hot-reload your Nuxeo Studio Project once in your local server to allow
     name: Studio_Git_URL.png
     studio_designer#screenshot#up_to_date
 --}}
-![Studio_Git_URL.png](nx_asset://967edd4f-47c6-4635-a206-f0e8b811f34f ?w=650,border=true)
+![Studio_Git_URL.png](/nx_assets/967edd4f-47c6-4635-a206-f0e8b811f34f.png ?w=650,border=true)
 1. Create a new directory in your local workspace:
   ```
   mkdir my-custom-project
@@ -86,7 +86,7 @@ You should see the synchronization process, with `MKDIR`, `COPY` or `DELETED` in
     name: Nuxeo_sync_result.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Nuxeo_sync_result.png](nx_asset://078d268f-8f85-42b5-86ca-f2f67cb03893 ?w=650,border=true)
+![Nuxeo_sync_result.png](/nx_assets/078d268f-8f85-42b5-86ca-f2f67cb03893.png ?w=650,border=true)
 
 All the actions executed on your local Git project (creation, edition, deletion) are instantly replicated to your local Nuxeo server. To visualize your modifications, you have to refresh your web browser.
 

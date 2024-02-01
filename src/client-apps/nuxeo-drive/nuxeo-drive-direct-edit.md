@@ -22,7 +22,7 @@ In Web UI 10.10, Direct Edit has a new icon:
     name: directEdit.jpg
     1.7.2#icon#up_to_date
 --}}
-![Direct Edit](nx_asset://3179306b-0a11-48a6-afbf-f695f9ae3645 ?w=20)
+![Direct Edit](/nx_assets/3179306b-0a11-48a6-afbf-f695f9ae3645.jpg ?w=20)
 {{/callout}}
 
 **To edit a document locally from the web interface:**

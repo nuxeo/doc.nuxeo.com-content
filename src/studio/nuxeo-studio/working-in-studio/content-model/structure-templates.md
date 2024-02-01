@@ -117,7 +117,7 @@ Watch the related content in Hyland University:</br>
     name: doctypes_university.png
     studio_modeler#screenshot#up_to_date
 --}}
-![doctypes_university.png](nx_asset://27d822b7-7815-48e0-95ad-0ff102a284d2 ?w=450,border=true)
+![doctypes_university.png](/nx_assets/27d822b7-7815-48e0-95ad-0ff102a284d2.png ?w=450,border=true)
 {{/callout}}
 
 ## Concept
@@ -139,7 +139,7 @@ To create a structure template, click on **New**.
     name: NewStructureTemplate.png
     studio_modeler#popup#up_to_date
 --}}
-![New Structure Template](nx_asset://e196a381-b06c-40de-a554-a7dc479531ca ?w=350,border=true)
+![New Structure Template](/nx_assets/e196a381-b06c-40de-a554-a7dc479531ca.png ?w=350,border=true)
 
 * **Feature ID**: Technical ID of the feature
 * **Target document type**: This drop down list identifies all the document types of the platform and the one(s) you have created (see [how to override an existing document type]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})).
@@ -153,7 +153,7 @@ Once you have selected the target document type and clicked on **Next**, you wil
     name: StructureTemplate-Domain.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Structure Template Domain](nx_asset://e26ccb42-7726-4d69-b498-8057bf109416 ?w=650,border=true)
+![Structure Template Domain](/nx_assets/e26ccb42-7726-4d69-b498-8057bf109416.png ?w=650,border=true)
 
 - **Add**: Add another document type to the structure template.
 - **ACL**:
@@ -169,7 +169,7 @@ On every document type that you want to add to your structure, you will have to 
     name: StructureTemplate-Workspace.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Structure Template Workspace](nx_asset://f3ee6e60-c1da-40e8-b067-5928ae04f3db ?w=650,border=true)
+![Structure Template Workspace](/nx_assets/f3ee6e60-c1da-40e8-b067-5928ae04f3db.png ?w=650,border=true)
 
 - **Node Type**: The ID node.
 - **Node Name**: The name displayed in Studio.

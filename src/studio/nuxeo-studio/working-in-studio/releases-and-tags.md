@@ -64,7 +64,7 @@ This screen will be populated if you have made a tag or release of your Nuxeo St
     name: releases-tab.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Release Tab](nx_asset://e189beb3-48b9-41e5-a4d7-bfdf6c425d70 ?w=650,border=true)
+![Release Tab](/nx_assets/e189beb3-48b9-41e5-a4d7-bfdf6c425d70.png ?w=650,border=true)
 
 **Delete**: Deletes the release. This operation cannot be reverted.
 
@@ -82,7 +82,7 @@ See the page [Installing a New Package on Your Instance]({{page version='' space
     name: tags-tab.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Tags Tab](nx_asset://c02c1808-8630-4498-894c-47c829c512cd ?w=650,border=true)
+![Tags Tab](/nx_assets/c02c1808-8630-4498-894c-47c829c512cd.png ?w=650,border=true)
 
 **Delete:** Delete the specific tag
 

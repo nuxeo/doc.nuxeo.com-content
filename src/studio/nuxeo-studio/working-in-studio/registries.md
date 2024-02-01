@@ -71,7 +71,7 @@ Nuxeo Studio provides a list of registries that you can complete with JSON instr
     name: studio-registries.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Studio Registries](nx_asset://d48e4a41-8dd8-4962-9ace-0edb1ad8f79b ?w=200,border=true)
+![Studio Registries](/nx_assets/d48e4a41-8dd8-4962-9ace-0edb1ad8f79b.png ?w=200,border=true)
 
 The goal of this section of Studio is to be able to complete Nuxeo Studio drop down lists and elements of the interface with additional elements that come from another Studio project or an Eclipse-based customization. For example, you can declare a document type in the registries. You can then declare new document types from that type, use it in Structure Templates, etc. You can also use registries to [declare new operations]({{page space='Studio' page='Referencing an+Externally+Defined+Operation'}}) so that they appear in the Operations browser.
 

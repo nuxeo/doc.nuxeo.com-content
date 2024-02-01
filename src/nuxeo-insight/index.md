@@ -10,7 +10,7 @@ labels:
     - user-documentation
 ---
 
-![Nuxeo Insight logo screen](nx_asset://708ce468-8b2f-47c1-9d96-133d2f0767ed ?w=100%,border=false)
+![Nuxeo Insight logo screen](/nx_assets/708ce468-8b2f-47c1-9d96-133d2f0767ed.png ?w=100%,border=false)
 
 **Nuxeo Insight** applies **Machine Learning** to your content, uses your content as a dataset and predicts your taxonomies and ontologies. It **understands your content** and **generates your business-specific metadata** providing critical data to your **searches**, your **processes** and your **use cases**.
 

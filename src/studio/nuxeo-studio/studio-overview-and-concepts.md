@@ -93,7 +93,7 @@ Solution designers are able to create a consistent configuration thanks to real-
     name: nuxeo-studio-overview.png
     studio_modeler#screenshot#up_to_date
 --}}
-![nuxeo-studio-overview.png](nx_asset://be6530f5-6a98-460a-99f8-637eaa546a3b ?w=650,border=true)
+![nuxeo-studio-overview.png](/nx_assets/be6530f5-6a98-460a-99f8-637eaa546a3b.png ?w=650,border=true)
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-4" align="center">

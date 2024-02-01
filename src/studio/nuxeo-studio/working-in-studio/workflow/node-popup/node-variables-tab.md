@@ -54,7 +54,7 @@ history:
     name: node-variables-tab.png
     studio_modeler#popup#up_to_date
 --}}
-![Node Variables Tab](nx_asset://689f5fc8-e2c3-4226-b34e-47c8e19849fc ?w=500,border=true)
+![Node Variables Tab](/nx_assets/689f5fc8-e2c3-4226-b34e-47c8e19849fc.png ?w=500,border=true)
 
 **Workflow variables**: you can select the workflow variables that you will need on this node.
 

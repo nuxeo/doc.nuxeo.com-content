@@ -22,7 +22,7 @@ When creating a branch, a new option is offered to check it out right away for i
     name: create-branch.png
     studio_modeler#screenshot#up_to_date
 --}}
-![create-branch](nx_asset://46553e58-b56d-4527-a113-4309eb0b1eda ?w=415,h=180,border=true)
+![create-branch](/nx_assets/46553e58-b56d-4527-a113-4309eb0b1eda.png ?w=415,h=180,border=true)
 
 {{! /multiexcerpt}}
 

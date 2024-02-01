@@ -26,14 +26,14 @@ Don't forget to save your modifications, by clicking on the Save button {{!--   
     name: save-action-vd.png
     studio_designer#screenshot#up_to_date
 --}}
-![Save Action Designer](nx_asset://4c9b9f92-aca9-4e64-b796-620e6d498d22 ?w=20,border=true) at the top right hand corner of your application.
+![Save Action Designer](/nx_assets/4c9b9f92-aca9-4e64-b796-620e6d498d22.png ?w=20,border=true) at the top right hand corner of your application.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Main View/Code Editor Designer
     name: code-editor-vd.png
     studio_designer#screenshot#up_to_date
 --}}
-![Code Editor Designer](nx_asset://60bc8ed2-0997-4e0c-8f07-df5c33da4045 ?w=650,border=true)
+![Code Editor Designer](/nx_assets/60bc8ed2-0997-4e0c-8f07-df5c33da4045.png ?w=650,border=true)
 
 ## Visual Editor
 
@@ -48,14 +48,14 @@ Don't forget to save your modifications, by clicking on the Save button {{!--   
     name: save-action-vd.png
     studio_designer#screenshot#up_to_date
 --}}
-![Save Action Designer](nx_asset://4c9b9f92-aca9-4e64-b796-620e6d498d22 ?w=20,border=true) at the top right-hand corner of your application.
+![Save Action Designer](/nx_assets/4c9b9f92-aca9-4e64-b796-620e6d498d22.png ?w=20,border=true) at the top right-hand corner of your application.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Main View/Visual Editor Designer
     name: visual-editor-vd.png
     studio_designer#screenshot#up_to_date
 --}}
-![Visual Editor Designer](nx_asset://94adbf4b-a062-4efe-8aa1-3624e8f4e0fb ?w=650,border=true)
+![Visual Editor Designer](/nx_assets/94adbf4b-a062-4efe-8aa1-3624e8f4e0fb.png ?w=650,border=true)
 
 ## Revert to Default View
 
@@ -66,6 +66,6 @@ To do so, click on the discard changes button at the top right hand-corner of th
     name: revert-action-vd.png
     studio_designer#screenshot#up_to_date
 --}}
-![Discard Changes Designer](nx_asset://607d8356-f3c9-4ef8-a19e-b9ad5a466137 ?w=20,border=true) A pop-up window appears. Click yes to confirm your choice.
+![Discard Changes Designer](/nx_assets/607d8356-f3c9-4ef8-a19e-b9ad5a466137.png ?w=20,border=true) A pop-up window appears. Click yes to confirm your choice.
 
 Your layout is back as its initial state, before you click on the **CONFIGURE** button.

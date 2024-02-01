@@ -21,7 +21,7 @@ The UI tab gives you access to several elements to customize the UI section that
     name: ui-designer.png
     studio_designer#screenshot#up_to_date
 --}}
-![ui-designer.png](nx_asset://228e28f3-8498-4f5d-b08b-3ea44dc68b8c ?w=300,border=true)
+![ui-designer.png](/nx_assets/228e28f3-8498-4f5d-b08b-3ea44dc68b8c.png ?w=300,border=true)
 
 ## Layouts
 
@@ -42,7 +42,7 @@ When drag and dropping a multivalued field or a complex multivalued field into a
     name: nuxeo-data-table-element.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Data Table Element](nx_asset://3b5cf8b2-5463-4a0c-9df7-c988a7c8cbbd ?w=340,border=true)
+![Data Table Element](/nx_assets/3b5cf8b2-5463-4a0c-9df7-c988a7c8cbbd.png ?w=340,border=true)
 
 
 From there, the field (or each sub field in the case of a complex multivalued field) is shown as a table with a column containing the element. Clicking on an element will display its properties on the right side of the screen so that you can configure it.
@@ -53,7 +53,7 @@ From there, the field (or each sub field in the case of a complex multivalued fi
     name: table-editor-element-properties.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Table Editor Element Properties](nx_asset://babb1664-1dbc-40fd-bd32-984d41f1e583 ?w=350,border=true)
+![Table Editor Element Properties](/nx_assets/babb1664-1dbc-40fd-bd32-984d41f1e583.png ?w=350,border=true)
 
 
 You may edit the field's label directly in the column title. Labels can be translated by entering the `[[i18n('your.translation.key')]]` pattern.
@@ -63,7 +63,7 @@ You may edit the field's label directly in the column title. Labels can be trans
     name: table-editor-layout-complex-multivalued.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Table Editor Layout Complex Multivalued](nx_asset://bc936282-416d-40fb-986b-9f978f067a70 ?w=480,border=true)
+![Table Editor Layout Complex Multivalued](/nx_assets/bc936282-416d-40fb-986b-9f978f067a70.png ?w=480,border=true)
 
 
 {{#> callout type='warning' heading="Don't Add More Fields"}}
@@ -79,7 +79,7 @@ Finally, when dealing with complex multivalued fields:
     name: table-editor-delete.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Table Editor Delete](nx_asset://fec4fb39-8053-48e6-8f25-6c135b40948e ?w=380,border=true)
+![Table Editor Delete](/nx_assets/fec4fb39-8053-48e6-8f25-6c135b40948e.png ?w=380,border=true)
 
 {{#> callout type='warning' heading='Only Use the Trash Icon'}}
 When hovering on an element in a document or workflow task layout, only the trash icon should be used at the moment. Using the sortable toggle (arrows icon) or the visibility toggle (eye icon) may prevent your layout from working properly.

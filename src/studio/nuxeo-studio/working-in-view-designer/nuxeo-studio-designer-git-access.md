@@ -20,7 +20,7 @@ Watch the [Nuxeo Studio Designer Git Access](https://university.hyland.com/cours
     name: Screenshot 2018-10-22 at 15.42.28.png
     studio_designer#screenshot#up_to_date
 --}}
-![GIT_ACCESS](nx_asset://198d7099-b926-4cb9-ae1e-e12459b39b35 ?w=450,border=true)
+![GIT_ACCESS](/nx_assets/198d7099-b926-4cb9-ae1e-e12459b39b35.png ?w=450,border=true)
 {{/callout}}
 
 While this is great, the browser editor is not the right place to do anything beyond simple tweaks, and as a developer, we understand that you want to use the tools you are familiar with. Nuxeo Studio Designer Git access aims at solving this problem: you can clone your project, edit it locally with your favorite tools and benefit from advanced Git features, then push your changes back in Nuxeo Studio.

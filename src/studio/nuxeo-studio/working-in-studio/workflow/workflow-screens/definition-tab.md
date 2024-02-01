@@ -64,7 +64,7 @@ history:
     name: workflow-definition-tab.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Workflow Definition Tab](nx_asset://76d7df12-3adb-491d-b2dc-5796cb881c94 ?w=500,border=true)
+![Workflow Definition Tab](/nx_assets/76d7df12-3adb-491d-b2dc-5796cb881c94.png ?w=500,border=true)
 
 - **Label**: The label that is displayed in Nuxeo in the drop down list that launches a workflow. Supports [i18n]({{page space='nxdoc' page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}).
 - **Icon**: Currently not used.

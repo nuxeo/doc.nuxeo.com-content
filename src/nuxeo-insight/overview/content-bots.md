@@ -11,7 +11,7 @@ labels:
 tree_item_index: 100
 ---
 
-![Content Bots](nx_asset://836e5573-ad9e-4cb0-b1e8-067266ba1fe5 ?w=100%,border=false)
+![Content Bots](/nx_assets/836e5573-ad9e-4cb0-b1e8-067266ba1fe5.png ?w=100%,border=false)
 
 Content bots are the main entities to provide intelligence. They study your content to learn a specific use case. When they feel confident, they will start to make suggestions and work on content creation.
 

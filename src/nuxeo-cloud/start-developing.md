@@ -176,7 +176,7 @@ The steps to build an image with a specific hotfix version are below:
       name: build-image-target-hf.png
       server#screenshot#up_to_date
     --}}
-    ![build-image-target-hf](nx_asset://27b3dd5e-88cc-4047-8aaf-b39fe5195334 ?w=650,border=true)
+    ![build-image-target-hf](/nx_assets/27b3dd5e-88cc-4047-8aaf-b39fe5195334.png ?w=650,border=true)
 1. Hit **Save** then Start Build - this will create the new base image in the project which the customer can then use to run the pipeline.
 
 Note: The Deployment Environment Variable “Nuxeo_Install_Hotfix” should be set to `False`.
@@ -186,7 +186,7 @@ Note: The Deployment Environment Variable “Nuxeo_Install_Hotfix” should be s
     name: Nuxeo_Install_Hotfix.png
     server#screenshot#up_to_date
 --}}
-![Nuxeo_Install_Hotfix](nx_asset://c6e1f317-032b-4d64-8819-dddd5258c370 ?w=650,border=true)
+![Nuxeo_Install_Hotfix](/nx_assets/c6e1f317-032b-4d64-8819-dddd5258c370.png ?w=650,border=true)
 
 *LTS 2021 Builds*
 
@@ -197,7 +197,7 @@ LTS 2021 customers will follow the same steps as a 10.10 except for the image ta
     name: image-configuration.png
     server#screenshot#up_to_date
 --}}
-![image-configuration](nx_asset://302ef462-1bad-4ac0-9e57-a20d8c7fcdeb ?w=650,border=true)
+![image-configuration](/nx_assets/302ef462-1bad-4ac0-9e57-a20d8c7fcdeb.png ?w=650,border=true)
 
 Some additional items that should be considered when building an LTS 2021 image are below:
 - no package variable is required
@@ -272,7 +272,7 @@ There are scenarios where increased logging is required to help debug an issue. 
     name: debug-logging.png
     server#screenshot#up_to_date
 --}}
-![debug-logging](nx_asset://e52b3879-ec81-4cac-b8f3-56351cb44c17 ?w=650,border=true)
+![debug-logging](/nx_assets/e52b3879-ec81-4cac-b8f3-56351cb44c17.png ?w=650,border=true)
 
 Replace the `init.sh` key with either `log4j2.xml` or `log4j.xml`.
 

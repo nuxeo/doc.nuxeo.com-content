@@ -75,5 +75,5 @@ Watch the related course on Hyland University:</br>
     name: university-wf.png
     studio_modeler#screenshot#up_to_date
 --}}
-![university-wf.png](nx_asset://76c9aa68-cc25-4ad5-b007-827c0eb0c188 ?w=450,border=true)
+![university-wf.png](/nx_assets/76c9aa68-cc25-4ad5-b007-827c0eb0c188.png ?w=450,border=true)
 {{/callout}}

@@ -26,7 +26,7 @@ Nuxeo Studio Designer enables you to create a new theme featuring your logo, bac
        name: create-button.png
        studio_designer#icon#up_to_date
    --}}
-   ![Create button ](nx_asset://89bd65c2-a6ca-482f-8e35-abd94c098fee ?w=30) and enter a name for the new theme.
+   ![Create button ](/nx_assets/89bd65c2-a6ca-482f-8e35-abd94c098fee.png ?w=30) and enter a name for the new theme.
 1. In **Start from**, select one of the four default themes of Web UI (default, dark, light or kawaii). The selected theme will be the base for the new theme.
 1. Click **CREATE**.
 
@@ -37,7 +37,7 @@ You are now in the Theme Editor, where you can customize the new theme to fit yo
     name: theme-editor.png
     studio_designer#screenshot#up_to_date
 --}}
-![Theme editor without resources ](nx_asset://db4e33e2-8a6c-4097-8db4-e8402c33f875 ?w=600,border=true)
+![Theme editor without resources ](/nx_assets/db4e33e2-8a6c-4097-8db4-e8402c33f875.png ?w=600,border=true)
 
 ### Selecting Resources
 
@@ -46,7 +46,7 @@ On the right of the theme Editor, select resources that can be displayed in your
     name: upload-resources.png
     studio_designer#icon#up_to_date
 --}}
-![Upload Resources ](nx_asset://593bc8b8-2f0c-41c2-abc8-9b3084b5710a ?w=30) for each element.
+![Upload Resources ](/nx_assets/593bc8b8-2f0c-41c2-abc8-9b3084b5710a.png ?w=30) for each element.
 
 | Type       | &nbsp;                                                                                        | Format |
 | ---------- | --------------------------------------------------------------------------------------------- | ------ |
@@ -60,7 +60,7 @@ On the right of the theme Editor, select resources that can be displayed in your
     name: theme-editor-resources.png
     studio_designer#screenshot#up_to_date
 --}}
-![Theme editor with resources](nx_asset://fc88a27a-da92-49b9-b41f-bad19f86f0d0 ?w=600)
+![Theme editor with resources](/nx_assets/fc88a27a-da92-49b9-b41f-bad19f86f0d0.png ?w=600)
 
 Save your changes and go back to **UI** > **Themes**. The themes you created are noticeable by the badge **CUSTOM**. You can filter the themes you created by clicking **Only Custom** at the top-right of the screen.
 {{!--     ### nx_asset ###
@@ -68,7 +68,7 @@ Save your changes and go back to **UI** > **Themes**. The themes you created are
     name: Custom-badge.png
     studio_designer#screenshot#up_to_date
 --}}
-![Custom Badge](nx_asset://f0769792-ea5a-4f70-ab23-4b8d30f6efc5 ?w=600)
+![Custom Badge](/nx_assets/f0769792-ea5a-4f70-ab23-4b8d30f6efc5.png ?w=600)
 
 ### Setting a Theme as Default
 
@@ -85,7 +85,7 @@ You can set a theme you created as the default theme of your application. It wil
     name: theme-editor-set-as-default.png
     studio_designer#screenshot#up_to_date
 --}}
-![Set as default in Theme Editor](nx_asset://e3a6e577-ce03-4477-8c00-2300128e5ae8 ?w=600)
+![Set as default in Theme Editor](/nx_assets/e3a6e577-ce03-4477-8c00-2300128e5ae8.png ?w=600)
 
 **From Themes:**
 
@@ -97,7 +97,7 @@ You can set a theme you created as the default theme of your application. It wil
     name: theme-set-as-default.png
     studio_designer#screenshot#up_to_date
 --}}
-![Set as default theme list](nx_asset://945cc098-b43a-44b3-b83b-861dc8b8b291 ?w=600)
+![Set as default theme list](/nx_assets/945cc098-b43a-44b3-b83b-861dc8b8b291.png ?w=600)
 
 The Theme you set as Default is noticeable by the badge **DEFAULT**.
 
