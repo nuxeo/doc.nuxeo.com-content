@@ -19,7 +19,7 @@ The goal of this section is to provide ready to use examples. They can be follow
     name: university_admin_learning_plan.png
     server#screenshot#up_to_date
 --}}
-![university_admin_learning_plan.png](nx_asset://631f7404-a5f0-431f-ba97-b29ebc2fda5d ?w=450,border=true)
+![university_admin_learning_plan.png](/nx_assets/631f7404-a5f0-431f-ba97-b29ebc2fda5d.png ?w=450,border=true)
 {{/callout}}
 
 ## Development

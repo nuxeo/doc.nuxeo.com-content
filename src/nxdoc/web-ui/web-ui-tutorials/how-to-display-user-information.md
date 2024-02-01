@@ -201,4 +201,4 @@ The final result should look like this:
     name: user-info-element.png
     1.1.3#screenshot#up_to_date
 --}}
-![user-info-element.png](nx_asset://d97ab836-7703-4f5f-a5c4-611253ec99f2 ?w=650,border=true)
+![user-info-element.png](/nx_assets/d97ab836-7703-4f5f-a5c4-611253ec99f2.png ?w=650,border=true)

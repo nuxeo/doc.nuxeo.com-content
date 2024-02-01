@@ -486,7 +486,7 @@ Client <-- Nuxeo: Response OK
     name: new-upload.png
     server#diagram#up_to_date
 --}}
-![new-upload.png](nx_asset://635e27b4-f190-4390-a076-3e01a0fe8281 ?w=650)
+![new-upload.png](/nx_assets/635e27b4-f190-4390-a076-3e01a0fe8281.png ?w=650)
 
 And this is the sequence diagram of the complete process of uploading a file in chunks using a different upload provider (here Amazon S3):
 
@@ -525,7 +525,7 @@ Client <-- Nuxeo: Response OK
     name: new-upload-s3.png
     server#diagram#up_to_date
 --}}
-![new-upload-s3.png](nx_asset://74358530-4199-4278-9b14-ef2d94b8d5bc ?w=650)
+![new-upload-s3.png](/nx_assets/74358530-4199-4278-9b14-ef2d94b8d5bc.png ?w=650)
 
 #### Resume Upload
 
@@ -555,7 +555,7 @@ Client <-- Nuxeo: Response OK
     name: resume-upload.png
     server#diagram#up_to_date
 --}}
-![resume-upload.png](nx_asset://1538bb15-9095-4d85-83e5-b0fc4fea002a ?w=650)
+![resume-upload.png](/nx_assets/1538bb15-9095-4d85-83e5-b0fc4fea002a.png ?w=650)
 
 And this is the sequence diagram of the complete process when resuming a chunked upload using a different upload provider (here Amazon S3):
 
@@ -592,7 +592,7 @@ Client <-- Nuxeo: Response OK
     name: resume-upload-s3.png
     server#diagram#up_to_date
 --}}
-![resume-upload-s3.png](nx_asset://691283b9-0528-4074-a769-eaaba295c545 ?w=650)
+![resume-upload-s3.png](/nx_assets/691283b9-0528-4074-a769-eaaba295c545.png ?w=650)
 
 ### Uploading a Chunk {{> anchor 'uploading-a-chunk'}}
 

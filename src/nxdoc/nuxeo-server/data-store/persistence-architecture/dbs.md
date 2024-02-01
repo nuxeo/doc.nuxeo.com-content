@@ -99,7 +99,7 @@ Watch the related course on Hyland University:</br>
     name: university_document_metadata.png
     server#screenshot#up_to_date
 --}}
-![university_document_metadata.png](nx_asset://d626cbea-734b-4870-adff-bb648bece80a ?w=450,border=true)
+![university_document_metadata.png](/nx_assets/d626cbea-734b-4870-adff-bb648bece80a.png ?w=450,border=true)
 {{/callout}}
 
 ## Basic Storage

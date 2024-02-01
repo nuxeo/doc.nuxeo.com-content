@@ -23,7 +23,7 @@ Watch the related course on Hyland University:</br>
     name: university-stream.png
     server#diagram#up_to_date
 --}}
-![university-stream.png](nx_asset://1e585980-9b10-4f53-a36e-a5978958ee6f ?w=450,border=true)
+![university-stream.png](/nx_assets/1e585980-9b10-4f53-a36e-a5978958ee6f.png ?w=450,border=true)
 {{/callout}}
 
 ## When to Use Kafka?

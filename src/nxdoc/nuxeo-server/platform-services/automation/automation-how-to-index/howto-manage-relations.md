@@ -26,7 +26,7 @@ On this page, we are going to create an element to retrieve relations on a docum
     name: relations-final-result.png
     1.1.3#screenshot#up_to_date
 --}}
-![relations-final-result.png](nx_asset://cbda708f-2056-4045-a46d-e5174675470c ?w=650,border=true)
+![relations-final-result.png](/nx_assets/cbda708f-2056-4045-a46d-e5174675470c.png ?w=650,border=true)
 
 ## Create an Automation Scripting
 
@@ -150,14 +150,14 @@ The result is a list with the related documents, which include the direction of 
     name: relations-final-result.png
     1.1.3#screenshot#up_to_date
 --}}
-![relations-final-result.png](nx_asset://cbda708f-2056-4045-a46d-e5174675470c ?w=650,border=true)
+![relations-final-result.png](/nx_assets/cbda708f-2056-4045-a46d-e5174675470c.png ?w=650,border=true)
 
-**To add a new relation**, click on the ![relations-add-relation-icon.png](nx_asset://d623074e-6f67-4ff7-833c-d9b216764c26 ?w=20) icon, a popup window appears to let you define your relation:
+**To add a new relation**, click on the ![relations-add-relation-icon.png](/nx_assets/d623074e-6f67-4ff7-833c-d9b216764c26.png ?w=20) icon, a popup window appears to let you define your relation:
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Manage Relations on a Document/relations-add-relation.png
     name: relations-add-relation.png
     1.1.3#popup#up_to_date
 --}}
-![relations-add-relation.png](nx_asset://51dcb178-f2dc-42d2-b475-b84134e4f39d ?w=350,border=true)
+![relations-add-relation.png](/nx_assets/51dcb178-f2dc-42d2-b475-b84134e4f39d.png ?w=350,border=true)
 
-**To remove a relation**, click on the ![relations-remove-relation-icon.png](nx_asset://ad56dacb-2748-487e-bc0b-7eb3da3920f3 ?w=20) icon on the relation that you want to delete.
+**To remove a relation**, click on the ![relations-remove-relation-icon.png](/nx_assets/ad56dacb-2748-487e-bc0b-7eb3da3920f3.png ?w=20) icon on the relation that you want to delete.

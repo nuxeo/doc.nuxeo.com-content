@@ -540,7 +540,7 @@ When hovering with your mouse over a thumbnail, a larger image will be displayed
     name: 455016568.png
     addins#screenshot#up_to_date
 --}}
-![thumbnail](nx_asset://c7d4e7e1-1d54-42bd-9b73-957bfd937bee ?w=250,border=true)
+![thumbnail](/nx_assets/c7d4e7e1-1d54-42bd-9b73-957bfd937bee.png ?w=250,border=true)
 
 #### Dark Mode
 
@@ -551,7 +551,7 @@ Version 1.2.0 introduces a dark mode for the client which can be enabled in the 
     name: 455016570.png
     addins#screenshot#up_to_date
 --}}
-![Dark mode](nx_asset://653f0b4b-7bec-412e-b2e6-b52480de3cae ?w=250,border=true)
+![Dark mode](/nx_assets/653f0b4b-7bec-412e-b2e6-b52480de3cae.png ?w=250,border=true)
 
 #### View Emails in Nuxeo Web UI
 
@@ -588,7 +588,7 @@ Make sure the new custom type extends "MailMessage" and also to create a new lay
     name: DocumentType.png
     addins#screenshot#up_to_date
 --}}
-![DocumentType](nx_asset://3957770e-0cb8-4dd1-8d67-a813f4446194 ?w=650,border=true)
+![DocumentType](/nx_assets/3957770e-0cb8-4dd1-8d67-a813f4446194.png ?w=650,border=true)
 
 **Create an XML Extension in Nuxeo Studio**
 
@@ -613,7 +613,7 @@ Here is an example:
     name: Studiocontrib.png
     addins#screenshot#up_to_date
 --}}
-![mailmessage](nx_asset://40f27798-42a7-4aae-adb4-6ad4df7c0da2 ?border=true)
+![mailmessage](/nx_assets/40f27798-42a7-4aae-adb4-6ad4df7c0da2.png ?border=true)
 
 **Extend Nuxeo with you own component and overwrite the service that sets the email document type (requires coding)**
 
@@ -810,6 +810,6 @@ The Connector will always try to find the translation file for the language sele
     name: 521044021.png
     addins#screenshot#up_to_date
 --}}
-![Language](nx_asset://ed4c5fbe-aa12-44c6-9b0e-5d6aac8843c9 ?w=650,border=true)
+![Language](/nx_assets/ed4c5fbe-aa12-44c6-9b0e-5d6aac8843c9.png ?w=650,border=true)
 
 If no translation file is present it will fallback to the "messages" file. If this is also not present, it will fallback to the standard naming saved in the client itself.

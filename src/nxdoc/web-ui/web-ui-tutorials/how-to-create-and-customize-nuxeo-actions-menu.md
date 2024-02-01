@@ -29,7 +29,7 @@ In this tutorial, you will learn how to create and customize an actions menu on 
     name: nuxeo-action-menu.png
     1.1.3#screenshot#up_to_date
 --}}
-![nuxeo actions menu screenshot](nx_asset://9c147cdc-311a-4190-b7d1-7d2a255216f2 ?w=300,border=true)
+![nuxeo actions menu screenshot](/nx_assets/9c147cdc-311a-4190-b7d1-7d2a255216f2.png ?w=300,border=true)
 
 ## Create an Actions Menu
 

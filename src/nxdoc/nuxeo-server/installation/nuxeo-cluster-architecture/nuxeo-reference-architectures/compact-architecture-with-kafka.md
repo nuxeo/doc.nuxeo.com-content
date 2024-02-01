@@ -25,7 +25,7 @@ In this architecture:
     name: compact-with-kafka-1.png
     server#schema#up_to_date
 --}}
-![compact-with-kafka-1.png](nx_asset://06f4904f-2717-48eb-a48c-16a6b9906da4 ?w=650,border=true)
+![compact-with-kafka-1.png](/nx_assets/06f4904f-2717-48eb-a48c-16a6b9906da4.png ?w=650,border=true)
 
 ## Limitations
 
