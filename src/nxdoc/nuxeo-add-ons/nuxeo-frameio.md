@@ -38,7 +38,7 @@ This page will help you to:
     name: Screenshot 2021-09-13 at 17.06.47.png
     addins#screenshot#up_to_date
 --}}
-![frameio-create-project.png](nx_asset://6f0d7adb-cd5e-48c9-a8fd-4443e09f1ba5 ?w=650,border=true)
+![frameio-create-project.png](/nx_assets/6f0d7adb-cd5e-48c9-a8fd-4443e09f1ba5.png ?w=650,border=true)
 
 #### Define an OAuth2 Application
 
@@ -50,7 +50,7 @@ For this you can:
     name: Screenshot 2021-09-13 at 17.07.03.png
     addins#screenshot#up_to_date
   --}}
-  ![frameio-apps-and-integrations.png](nx_asset://a5c66480-9be6-4563-a100-aabeae1a1ce9 ?w=650,border=true)
+  ![frameio-apps-and-integrations.png](/nx_assets/a5c66480-9be6-4563-a100-aabeae1a1ce9.png ?w=650,border=true)
 1. From the left menu, select the **Apps** link in the **Developer** category.
 
   {{!--     ### nx_asset ###
@@ -58,7 +58,7 @@ For this you can:
       name: Screenshot 2021-09-13 at 17.07.25.png
       addins#screenshot#up_to_date
   --}}
-  ![frameio-apps-developer.png](nx_asset://d601cc95-ff6d-4ee4-b8d7-12d19683fcba ?border=true)
+  ![frameio-apps-developer.png](/nx_assets/d601cc95-ff6d-4ee4-b8d7-12d19683fcba.png ?border=true)
 
 **In case of blank page:**
 1. Log to https://developer.frame.io
@@ -68,13 +68,13 @@ For this you can:
       name: Screenshot 2021-09-14 at 16.16.28.png
       addins#screenshot#up_to_date
     --}}
-    ![frameio-developer.png](nx_asset://7df055c8-5051-4ffe-8c70-9774086b368f ?w=650,border=true)
+    ![frameio-developer.png](/nx_assets/7df055c8-5051-4ffe-8c70-9774086b368f.png ?w=650,border=true)
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-create-oauth-app.png
       name: Screenshot 2021-09-14 at 16.16.04.png
       addins#screenshot#up_to_date
     --}}
-    ![frameio-create-oauth-app.png](nx_asset://60ee2451-ce78-4fd7-a605-eab4b435f42d ?w=350,border=true)
+    ![frameio-create-oauth-app.png](/nx_assets/60ee2451-ce78-4fd7-a605-eab4b435f42d.png ?w=350,border=true)
 1. Click the **Create an OAuth app** button.
 1. Fill in the form:
    - **Name:** Nuxeo
@@ -86,7 +86,7 @@ For this you can:
      name: Screenshot 2021-09-14 at 16.16.51.png
      addins#screenshot#up_to_date
     --}}
-    ![frameio-edit-oauth-app.png](nx_asset://8082e52a-7730-415c-9767-4ebdeb81297f ?w=350,border=true)
+    ![frameio-edit-oauth-app.png](/nx_assets/8082e52a-7730-415c-9767-4ebdeb81297f.png ?w=350,border=true)
 
 It should look like this in the end:
 {{!--     ### nx_asset ###
@@ -94,7 +94,7 @@ It should look like this in the end:
     name: Screenshot 2021-09-13 at 17.10.55.png
     addins#screenshot#up_to_date
 --}}
-![frameio-oauth-app-endresult.png](nx_asset://01843d62-630e-477d-b385-2b16179b3a6d ?w=350,border=true)
+![frameio-oauth-app-endresult.png](/nx_assets/01843d62-630e-477d-b385-2b16179b3a6d.png ?w=350,border=true)
 
 {{#> callout type='warning'}}
 You need to Copy the client id and secret because we will need them at a later stage.
@@ -135,7 +135,7 @@ Only an administrator user is able to register the Frame.io provider. You only n
       name: Screenshot 2021-09-16 at 11.57.52.png
       addins#screenshot#up_to_date
     --}}
-    ![frameio-cloud-services.png](nx_asset://e82a1a6a-13f5-4712-9e89-8a2f096d8ded ?w=650,border=true)
+    ![frameio-cloud-services.png](/nx_assets/e82a1a6a-13f5-4712-9e89-8a2f096d8ded.png ?w=650,border=true)
 1. Add a new provider.
 
 The following form will be prefilled for you, you only need to add the Client ID and Client Secret, enable the provider and enable the service.
@@ -155,7 +155,7 @@ Fill the form:
     name: Screenshot 2021-09-14 at 16.17.22.png
     addins#screenshot#up_to_date
   --}}
-  ![frameio-edit-provider-entry.png](nx_asset://cb9cf58b-8e04-4e49-9cc2-cb80acb0b833 ?w=450,border=true)
+  ![frameio-edit-provider-entry.png](/nx_assets/cb9cf58b-8e04-4e49-9cc2-cb80acb0b833.png ?w=450,border=true)
 
 Your team will now be ready to bind folders with their Frame.io projects.
 
@@ -178,7 +178,7 @@ The user must have:
       name: Screenshot 2021-09-13 at 17.12.44.png
       addins#screenshot#up_to_date
     --}}
-    ![frameio-bind-to-frameio.png](nx_asset://0e55f3a5-38c9-4623-92fc-446c4853ce24 ?w=650,border=true)
+    ![frameio-bind-to-frameio.png](/nx_assets/0e55f3a5-38c9-4623-92fc-446c4853ce24.png ?w=650,border=true)
 1. A popup is displayed.</br>
   You can name the custom action that will appear on the frame.io side to push assets to your Nuxeo repository. You can name it **Publish to Nuxeo** as an example.
   {{#> callout type='warning'}}
@@ -190,7 +190,7 @@ The user must have:
       name: Screenshot 2021-09-13 at 17.13.21.png
       addins#screenshot#up_to_date
     --}}
-    ![frameio-popup-bind-folder.png](nx_asset://e993a397-45e3-40f1-b638-babf49729f06 ?w=350,border=true)
+    ![frameio-popup-bind-folder.png](/nx_assets/e993a397-45e3-40f1-b638-babf49729f06.png ?w=350,border=true)
 1. Take a look at the new tab named **Frame IO**.</br>
     You can now see that your folder is bound with the Frame.io team we selected earlier.
     {{!--     ### nx_asset ###
@@ -198,7 +198,7 @@ The user must have:
         name: Screenshot 2021-09-13 at 17.13.45.png
         addins#screenshot#up_to_date
     --}}
-    ![frameio-tab-webui.png](nx_asset://9d97b65d-fd4e-4827-9d53-211e915692d4 ?w=650,border=true)
+    ![frameio-tab-webui.png](/nx_assets/9d97b65d-fd4e-4827-9d53-211e915692d4.png ?w=650,border=true)
 
 ### Step 2: Push an asset from Frame IO to Nuxeo
 
@@ -210,7 +210,7 @@ The user must have:
       name: Screenshot 2021-09-13 at 17.14.41.png
       addins#screenshot#up_to_date
     --}}
-    ![frameio-publish-to-nuxeo.png](nx_asset://b5a369af-151f-4ef3-a2ec-0da5231ca753 ?w=650,border=true)
+    ![frameio-publish-to-nuxeo.png](/nx_assets/b5a369af-151f-4ef3-a2ec-0da5231ca753.png ?w=650,border=true)
 1. After a few seconds, the popup displays "Asset pushed to Nuxeo”.</br>
 It means that the video is being sent to Nuxeo and is currently being uploaded into your Nuxeo folder. You will receive an email notification when your video is available in your Nuxeo folder.
 {{!--     ### nx_asset ###
@@ -218,7 +218,7 @@ It means that the video is being sent to Nuxeo and is currently being uploaded i
     name: Screenshot 2021-09-13 at 17.15.51.png
     addins#screenshot#up_to_date
 --}}
-![frameio-popup-success.png](nx_asset://a37a3023-b68c-46c6-b239-d394b9d9207b ?w=350,border=true)
+![frameio-popup-success.png](/nx_assets/a37a3023-b68c-46c6-b239-d394b9d9207b.png ?w=350,border=true)
 
 ### Step 3: Check the new created document into Nuxeo
 
@@ -229,7 +229,7 @@ From the summary view of the bound folder, check the new created document.
     name: Screenshot 2021-09-13 at 17.16.12.png
     addins#screenshot#up_to_date
 --}}
-![frameio-summary-view-bound-folder.png](nx_asset://1862837c-a505-44fd-b7fc-100dbe1eaac4 ?w=650,border=true)
+![frameio-summary-view-bound-folder.png](/nx_assets/1862837c-a505-44fd-b7fc-100dbe1eaac4.png ?w=650,border=true)
 
 You are now able to retrieve your video and read the metadata imported from Frame.io in the frame.io document tab.
 
@@ -240,7 +240,7 @@ Note that, if you are sending a new version of the video from Frame.io, we will 
     name: Screenshot 2021-09-13 at 17.16.34.png
     addins#screenshot#up_to_date
 --}}
-![frameio-tab-new-version.png](nx_asset://c87fb71e-aedb-400f-8fa5-496f9d7d9715 ?w=650,border=true)
+![frameio-tab-new-version.png](/nx_assets/c87fb71e-aedb-400f-8fa5-496f9d7d9715.png ?w=650,border=true)
 
 ### Optional: UnBind a Nuxeo Folder with a Frame IO project.
 
@@ -249,7 +249,7 @@ Note that, if you are sending a new version of the video from Frame.io, we will 
     name: Screenshot 2021-09-13 at 17.25.10.png
     addins#screenshot#up_to_date
 --}}
-![frameio-unbind-nuxeo-folder.png](nx_asset://5f5bfc7a-f94d-45e5-ae22-7864bd40b4b0 ?w=650,border=true)
+![frameio-unbind-nuxeo-folder.png](/nx_assets/5f5bfc7a-f94d-45e5-ae22-7864bd40b4b0.png ?w=650,border=true)
 
 At any given moment, you are able to unbid your folder with your frame.io project.</br>
 This will have immediate effect and your frame.io team members won’t be able to send new content to your Nuxeo folder.

@@ -23,7 +23,7 @@ Watch the related course on Hyland University:</br>
     name: university_quickstart.png
     server#screenshot#up_to_date
 --}}
-![university_quickstart.png](nx_asset://2e9054c7-c6f3-4d2b-ae10-6221e17b3be8 ?w=450,border=true)
+![university_quickstart.png](/nx_assets/2e9054c7-c6f3-4d2b-ae10-6221e17b3be8.png ?w=450,border=true)
 {{/callout}}
 
 ## Configuring the Image at Runtime

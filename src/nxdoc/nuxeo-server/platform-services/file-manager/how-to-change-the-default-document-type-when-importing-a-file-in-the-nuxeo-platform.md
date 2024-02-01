@@ -142,7 +142,7 @@ It is necessary to pay attention to the following settings:
     name: contract.png
     1.1.3#screenshot#up_to_date
 --}}
-![contract.png](nx_asset://644d8570-48ee-4200-b452-ca24a5e604f1 ?w=650,border=true)
+![contract.png](/nx_assets/644d8570-48ee-4200-b452-ca24a5e604f1.png ?w=650,border=true)
 
 ## Going Further
 

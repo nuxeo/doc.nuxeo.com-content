@@ -67,7 +67,7 @@ From the main InDesign, Photoshop or Illustrator menu, choose **Window** > **Ext
     name: image10.png
     addins#popup#up_to_date
 -->
-![Adobe Extension Connector](nx_asset://1e5e80d2-537d-4f49-8fc5-046623d3b567 ?w=350,border=true)
+![Adobe Extension Connector](/nx_assets/1e5e80d2-537d-4f49-8fc5-046623d3b567.png ?w=350,border=true)
 
 This will launch Connector and the Server Setup panel.
 
@@ -76,7 +76,7 @@ This will launch Connector and the Server Setup panel.
     name: image7.png
     addins#popup#up_to_date
 -->
-![Adobe Connector Setup tab](nx_asset://d7a36c14-7a39-47c8-a8ba-d0a199ee44f5 ?w=150,border=true)
+![Adobe Connector Setup tab](/nx_assets/d7a36c14-7a39-47c8-a8ba-d0a199ee44f5.png ?w=150,border=true)
 
 Initially, you will need to create a server listing for your Nuxeo Instance. Once the listing is created, you can simply select it to log in.</br>
 To create your server listing:
@@ -87,14 +87,14 @@ To create your server listing:
       name: image16.png
       addins#popup#up_to_date
   -->
-  ![Adobe Add server to list](nx_asset://daff5596-bd62-41af-93e7-14753d921e31 ?w=200,border=true)
+  ![Adobe Add server to list](/nx_assets/daff5596-bd62-41af-93e7-14753d921e31.png ?w=200,border=true)
 1. Click **Add Server to List** button. You should now see this value in your “Server List”
   <!--     ### NX_ASSET ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Select Server name
       name: image4.png
       addins#popup#up_to_date
   -->
-  ![Adobe Select Server name](nx_asset://93a5cd9d-53bf-44c3-978e-017e7e50760c ?w=200,border=true)
+  ![Adobe Select Server name](/nx_assets/93a5cd9d-53bf-44c3-978e-017e7e50760c.png ?w=200,border=true)
 
 To login:
 1. Select your server from the list and click **Connect**. This will launch the Nuxeo login panel.
@@ -105,7 +105,7 @@ To login:
     name: image11.png
     addins#popup#up_to_date
 -->
-![Adobe login connector](nx_asset://60bb96ca-75a3-4dc4-92d4-0e1a5cdf90bf ?w=350,border=true)
+![Adobe login connector](/nx_assets/60bb96ca-75a3-4dc4-92d4-0e1a5cdf90bf.png ?w=350,border=true)
 
 You should now see the connector populated with images that reside in your Nuxeo Instance.
 
@@ -116,7 +116,7 @@ To logout, simply select **Log Out** from the Nuxeo Connector fly out menu.
     name: adobe-connector-populated.png
     addins#popup#up_to_date
 -->
-![Adobe Connector Populated](nx_asset://c6d1d869-c0c1-41f9-9d69-82779c45aa7c ?w=350,border=true)
+![Adobe Connector Populated](/nx_assets/c6d1d869-c0c1-41f9-9d69-82779c45aa7c.png ?w=350,border=true)
 
 {{#> callout type='info'}}
 You can always access the fly out menu by clicking on the burger menu in the upper right corner of the connector.
@@ -131,7 +131,7 @@ The connector has a number of customizable preferences to enhance your workflow.
     name: image6.png
     addins#popup#up_to_date
 -->
-![Adobe Preferences](nx_asset://68f83321-f2ef-45fe-9158-9c074c7427ea ?w=350,border=true)
+![Adobe Preferences](/nx_assets/68f83321-f2ef-45fe-9158-9c074c7427ea.png ?w=350,border=true)
 
 **Place Options (InDesign)**
 - Replace Selected on place
@@ -166,7 +166,7 @@ The search tab allows you to search through all the repository at one time. The 
     name: image14.png
     addins#popup#up_to_date
 -->
-![Adobe Browse tab](nx_asset://56631c62-1a5a-4e54-a683-00658ebf0b31 ?w=350,border=true)
+![Adobe Browse tab](/nx_assets/56631c62-1a5a-4e54-a683-00658ebf0b31.png ?w=350,border=true)
 
 #### Search Tab
 
@@ -178,7 +178,7 @@ The search bar supports wildcard operations, as in the example, and search the f
     name: image8.png
     addins#popup#up_to_date
 -->
-![Adobe Search Tab](nx_asset://f0901da6-6aca-488f-b243-2a4fb3dcfc4d ?w=250,border=true)
+![Adobe Search Tab](/nx_assets/f0901da6-6aca-488f-b243-2a4fb3dcfc4d.png ?w=250,border=true)
 
 Once you’ve entered your search terms in the Search field, clicking on the search icon lists the results below.
 
@@ -196,7 +196,7 @@ Each object comes with a detail view containing:
     name: adobe-ryan-walton.png
     addins#screenshot#up_to_date
 --}}
-![Adobe Ryan Walton Copyright](nx_asset://b9a94926-47fc-49cb-ac23-f98e0906a734 ?w=250,border=true)
+![Adobe Ryan Walton Copyright](/nx_assets/b9a94926-47fc-49cb-ac23-f98e0906a734.png ?w=250,border=true)
 
 To download a copy of an asset from Nuxeo CC Connector, click the blue download arrow to the right of the thumbnail to begin the download process. For more information, see Download Options in [Preferences section](#preferences).
 
@@ -215,7 +215,7 @@ Nuxeo CC Connector Menu Listings (accessed via the burger menu)
     name: adobe-connector-populated.png
     addins#popup#up_to_date
 -->
-![](nx_asset://c6d1d869-c0c1-41f9-9d69-82779c45aa7c ?w=350,border=true)
+![](/nx_assets/c6d1d869-c0c1-41f9-9d69-82779c45aa7c.png ?w=350,border=true)
 
 The Nuxeo CC Connector fly out menu has several options to assist the user:
 - **About** takes you to our [website](https://www.nuxeo.com/)
@@ -256,7 +256,7 @@ You will be asked if you want to **Upload new file** or **Replace**. As a new fi
     name: adobe-upload-new-file.png
     addins#popup#up_to_date
 -->
-![](nx_asset://aea67a98-f744-4e9f-87cd-3efba00d1d22 ?w=350,border=true)
+![](/nx_assets/aea67a98-f744-4e9f-87cd-3efba00d1d22.png ?w=350,border=true)
 
 
 {{#> callout type='warning' }}
@@ -279,7 +279,7 @@ Using the Nuxeo CC Connector includes features within the traditional InDesign L
     name: image13.png
     addins#screenshot#up_to_date
 -->
-![](nx_asset://8b19591e-f3a8-43fb-9fa6-04c3116200e2 ?w=350,border=true)
+![](/nx_assets/8b19591e-f3a8-43fb-9fa6-04c3116200e2.png ?w=350,border=true)
 
 Choose to work with the high resolution (HQ) or low resolution (LQ) rendition of the file by double clicking the entry in the Nuxeo column in the panel (you might need to expose the column in the “Panel Options” seen in the panel fly out).
 Be notified when updates have been made to the placed repository items, so that you can update the items in the InDesign document (note - you also see this on the placed image within the document)
@@ -301,7 +301,7 @@ If you want to edit an existing file from your Nuxeo account:
         name: adobe-upload-new-file.png
         addins#popup#up_to_date
     -->
-    ![](nx_asset://d435ccfb-4624-4e6f-8ca9-91c440b856b9 ?w=350,border=true)
+    ![](/nx_assets/d435ccfb-4624-4e6f-8ca9-91c440b856b9.png ?w=350,border=true)
 
 
 When edits are made to repository content using the Connector, users in InDesign who have placed the content will be notified that updates are available.

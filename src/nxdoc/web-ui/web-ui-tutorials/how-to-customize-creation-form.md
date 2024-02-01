@@ -37,7 +37,7 @@ In this tutorial you will learn how to configure the creation form in Web UI so 
       name: new-default-theme.png
       studio_designer#screenshot#up_to_date
     --}}
-    ![new-default-theme.png](nx_asset://05392556-54e9-4eab-acf9-04fe919b36d1 ?w=350,border=true)
+    ![new-default-theme.png](/nx_assets/05392556-54e9-4eab-acf9-04fe919b36d1.png ?w=350,border=true)
 1. Add a new section called `/* Document Creation Window */`.</br>
     It should look like this:
     ```

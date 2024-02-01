@@ -31,7 +31,7 @@ Watch the course on [Nuxeo Web UI Development](https://university.hyland.com/cou
     name: Screenshot 2020-07-16 at 12.06.01.png
     1.1.3#screenshot#up_to_date
 --}}
-![WEBUI_CUSTOMIZATION_FRONTEND_DEV](nx_asset://1840dd84-67fa-48ae-b849-7296ca1386ae ?w=450,border=true)
+![WEBUI_CUSTOMIZATION_FRONTEND_DEV](/nx_assets/1840dd84-67fa-48ae-b849-7296ca1386ae.png ?w=450,border=true)
 {{/callout}}
 
 ## Use Case
@@ -47,7 +47,7 @@ Create a custom **document type** in Nuxeo Studio Modeler with different propert
     name: layout_block_1.png
     studio_modeler#screenshot#up_to_date
 --}}
-![layout_block_1.png](nx_asset://cf43c150-0703-4b67-8210-de8284b43926 ?w=650,border=true)
+![layout_block_1.png](/nx_assets/cf43c150-0703-4b67-8210-de8284b43926.png ?w=650,border=true)
 
 ## Instructions
 
@@ -60,7 +60,7 @@ Create a custom **document type** in Nuxeo Studio Modeler with different propert
       name: layout_block_2.png
       studio_designer#screenshot#up_to_date
     --}}
-    ![layout_block_2.png](nx_asset://8f7525f7-b7e2-457e-8393-ad41cfc6c857 ?w=650,border=true)
+    ![layout_block_2.png](/nx_assets/8f7525f7-b7e2-457e-8393-ad41cfc6c857.png ?w=650,border=true)
 
 1. Drag and drop the complete schema from the catalog panel.
 
@@ -69,7 +69,7 @@ Create a custom **document type** in Nuxeo Studio Modeler with different propert
       name: layout_block_3.png
       studio_designer#screenshot#up_to_date
     --}}
-    ![layout_block_3.png](nx_asset://e93db667-72f9-4b34-bdc9-bd4e990f4561 ?w=650,border=true)
+    ![layout_block_3.png](/nx_assets/e93db667-72f9-4b34-bdc9-bd4e990f4561.png ?w=650,border=true)
 
 1. Select **Edit** mode, and choose the suitable elements to be displayed in the document layout.
 
@@ -78,7 +78,7 @@ Create a custom **document type** in Nuxeo Studio Modeler with different propert
       name: layout_block_4.png
       studio_designer#screenshot#up_to_date
     --}}
-    ![layout_block_4.png](nx_asset://709d1df2-db47-4d0f-87f8-f9d12652a0c1 ?w=650,border=true)
+    ![layout_block_4.png](/nx_assets/709d1df2-db47-4d0f-87f8-f9d12652a0c1.png ?w=650,border=true)
 
 1. Remove the Description property from the layout.
 
@@ -88,7 +88,7 @@ The final result should be something similar:
     name: Screenshot 2020-07-29 at 17.14.14.png
     studio_designer#screenshot#up_to_date
 --}}
-![layout_block_5.png](nx_asset://6070025d-2655-4ef3-9671-bce1a8adaa80 ?w=650,border=true)
+![layout_block_5.png](/nx_assets/6070025d-2655-4ef3-9671-bce1a8adaa80.png ?w=650,border=true)
 
 ### Reuse a Layout Block
 
@@ -102,13 +102,13 @@ The final result should be something similar:
       name: layout_block_6.png
     studio_designer#screenshot#up_to_date
     --}}
-    ![layout_block_6.png](nx_asset://88b23f8b-f166-446c-b1d5-c8491fe17367 ?w=650,border=true)
+    ![layout_block_6.png](/nx_assets/88b23f8b-f166-446c-b1d5-c8491fe17367.png ?w=650,border=true)
 
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create elements with Block Layouts/layout_block_7.png
       name: layout_block_7.png
       studio_designer#screenshot#up_to_date
     --}}
-    ![layout_block_7.png](nx_asset://1ff5c7ea-a364-4f05-b412-8c679974ffc0 ?w=650,border=true)
+    ![layout_block_7.png](/nx_assets/1ff5c7ea-a364-4f05-b412-8c679974ffc0.png ?w=650,border=true)
 
 1. Do the same with the `Edit` and `Import`.

@@ -30,7 +30,7 @@ Watch the related courses on Hyland University
     name: implement-business-logic.png
     studio_modeler#schema#up_to_date
 --}}
-![implement-business-logic.png](nx_asset://7c0aebe9-3299-4784-becf-72725a332e68 ?w=450,border=true)
+![implement-business-logic.png](/nx_assets/7c0aebe9-3299-4784-becf-72725a332e68.png ?w=450,border=true)
 {{/callout}}
 
 Let's say we want to copy a document to another folder and to navigate to this new document, integrating notifications automatically.
@@ -147,7 +147,7 @@ Save your changes and [hot reload your project]({{page version='' space='nxdoc' 
     name: button-ui-function.png
     1.1.3#screenshot#up_to_date
 --}}
-![button-ui-function.png](nx_asset://781b6c19-79ed-430c-a1d8-efd7722543ec ?w=300)
+![button-ui-function.png](/nx_assets/781b6c19-79ed-430c-a1d8-efd7722543ec.png ?w=300)
 
 ## Going Further
 
@@ -205,4 +205,4 @@ doChange: function () {
     name: ui-function-target-folder.png
     1.1.3#screenshot#up_to_date
 --}}
-![ui-function-target-folder.png](nx_asset://8a956829-e4d1-494c-b3be-e661087e14b2 ?w=350,border=true)
+![ui-function-target-folder.png](/nx_assets/8a956829-e4d1-494c-b3be-e661087e14b2.png ?w=350,border=true)
