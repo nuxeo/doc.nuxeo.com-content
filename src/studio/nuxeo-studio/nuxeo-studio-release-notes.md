@@ -13,7 +13,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2023-07' page='studio-updates-2023-07'}}}
+{{{multiexcerpt 'studio-updates-2024-01' page='studio-updates-2024-01'}}}
 
 ## Learn More
 
@@ -25,6 +25,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [January 2024]({{page page='studio-updates-2024-01'}})               | Connect/Account Managment |
 | [July 2023]({{page page='studio-updates-2023-07'}})               | Structure templates |
 | [April 2023]({{page page='studio-updates-2023-04'}})               | ElasticSearch Mapping |
 | [February 2023]({{page page='studio-updates-2023-02'}})            | Studio Modeler |
