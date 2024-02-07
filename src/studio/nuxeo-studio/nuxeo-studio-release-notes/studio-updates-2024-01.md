@@ -14,7 +14,7 @@ toc: true
 ## Connect / Account Management
 - Fixed assignment of a user to a service when an obsolete service reached the limit.
 - Fixed Jira assignment when a user is added to Support service.
-- Search box in "Account Management Services" now provides the full list of services even if they don't match the query.
+- Search box in "Account Management Services" now provides only the list of services matching the query.
 - Power Users and OrgAdmin now have more access rights.
 - Nuxeo Users are replaced by Nuxeo Internal User.
 - Implemented new roles: SuperOrgAdmin and OrgOutOfQuota.
