@@ -23,5 +23,5 @@ toc: true
 - Fixed quota checking when updating Custom Group.
 
 ## Studio Modeler
-- Studio should now be able to apply this new attribute when the user chooses to make their elements non-nullable/required.
+- Allow usage of the new "List elements required" constraint on mutlivalued schema fields.
 - Fixed sync studio project dependencies resources.
