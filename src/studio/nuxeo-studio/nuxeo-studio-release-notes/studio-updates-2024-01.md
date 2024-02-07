@@ -16,7 +16,7 @@ toc: true
 - Fixed Jira assignment when a user is added to Support service.
 - Search box in "Account Management Services" now provides only the list of services matching the query.
 - Power Users and OrgAdmin now have more access rights.
-- Nuxeo Users are replaced by Nuxeo Internal User.
+- Nuxeo Users are replaced by Internal User and cannot access all projects and JSF backoffice.
 - Implemented new roles: SuperOrgAdmin and OrgOutOfQuota.
 - Fixed Services tab accessibility issue.
 - SuperOrgAdmin, Administrator, and Power Users can now create/edit/delete ConnectProject in the AccountManagement page.
