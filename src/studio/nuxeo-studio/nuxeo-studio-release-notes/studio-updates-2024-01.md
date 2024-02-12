@@ -12,6 +12,24 @@ toc: true
 {{! multiexcerpt name='studio-updates-2024-01'}}
 
 ## Connect / Account Management
+
+Roles in Connect have evolved. With this release there will be three internal and three external roles.
+
+**External Roles**
+
+**Basic User**
+This is the default type for external users  (clients, partners etc.) and gives access to that organisation’s packages 
+Basic users can be added to services by Admins, giving them access to Studio projects and other features
+
+**OrgAdmin**
+This is role that allows a user to administer an organisation’s user via the Account Management feature
+
+**SuperOrgAdmin (ex ProjectAdmin)**
+This is a superior admin role that gives access Account Management and Project Admin features, as well a the ability to create OrgAdmins
+For further information please contact support.
+
+Specific changes:
+
 - Fixed assignment of a user to a service when an obsolete service reached the limit.
 - Fixed Jira assignment when a user is added to Support service.
 - Search box in "Account Management Services" now provides only the list of services matching the query.
