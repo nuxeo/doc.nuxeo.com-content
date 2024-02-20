@@ -67,7 +67,7 @@ In Nuxeo Studio Modeler:
 - Paste the following code
 
 ```
-<require>org.nuxeo.ecm.core.CoreExtensions</require> 
+  <require>org.nuxeo.ecm.core.CoreExtensions</require>
   <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema"> 
     <!-- Setting properties like text, date, numbers as retainable will protect them from being edited once the document goes under retention. -->
     <property schema="myclaim" name="amountRefunded" retainable="true" /> 
