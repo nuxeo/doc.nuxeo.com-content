@@ -103,6 +103,30 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 
 
+## Hotfix 50
+
+### Throw an Error if a String Is Used to Query a Long/Integer Field
+
+
+Added the `nuxeo.primitive.type.strict.validation` Framework property.
+
+
+ By default it is set to `false`, keeping the previous behavior: at low level, when trying to decode a string input as a number, fall back on 0 if the string cannot be decoded as a number, e.g. foo.
+
+If set to `true`, in such case, a `NumberFormatException` is thrown.
+
+Consequently, when executing a REST API search request on a PageProvider and passing foo as a query parameter for a predicate on an integer field, the server will respond with a 400 Bad Request status code, e.g.:
+```
+curl -u ******:******r -X GET http://localhost:8080/nuxeo/api/v1/search/pp/test_primitive_type_predicates/execute?integerField=foo | jq
+{
+  entity-type: exception,
+  status: 400,
+  message: java.lang.NumberFormatException: For input string: "foo"
+}
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32214](https://jira.nuxeo.com/browse/NXP-32214)
+
 ## Hotfix 49
 
 ### Add Support for ZIP Generated With 7-Zip and Including Files Whose Name Contains Special Characters
@@ -672,6 +696,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
