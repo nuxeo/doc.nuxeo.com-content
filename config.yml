@@ -1,26 +1,26 @@
 default:
   site:
     spaces:
-      - space_path: client-apps
-        space_name: Nuxeo Desktop and Mobile Documentation
+      # - space_path: client-apps
+      #   space_name: Nuxeo Desktop and Mobile Documentation
       - space_path: connect
         space_name: Nuxeo Online Services Documentation
-      - space_path: corg
-        space_name: Nuxeo Core Developer Guide
-      - space_path: glos
-        space_name: Nuxeo Glossary of Terms
+      # - space_path: corg
+      #   space_name: Nuxeo Core Developer Guide
+      # - space_path: glos
+      #   space_name: Nuxeo Glossary of Terms
       - space_path: studio
         space_name: Nuxeo Online Services
-      - space_path: security
-        space_name: Nuxeo Security Documentation
-      - space_path: retention-management
-        space_name: Nuxeo Retention Management Documentation
-      - space_path: nuxeo-cloud
-        space_name: Nuxeo Cloud Documentation
-      - space_path: javadoc
-        space_name: Nuxeo Javadoc
-      - space_path: nuxeo-insight
-        space_name: Nuxeo Insight Documentation
+      # - space_path: security
+      #   space_name: Nuxeo Security Documentation
+      # - space_path: retention-management
+      #   space_name: Nuxeo Retention Management Documentation
+      # - space_path: nuxeo-cloud
+      #   space_name: Nuxeo Cloud Documentation
+      # - space_path: javadoc
+      #   space_name: Nuxeo Javadoc
+      # - space_path: nuxeo-insight
+      #   space_name: Nuxeo Insight Documentation
     branch: 'static'
 
 development:
