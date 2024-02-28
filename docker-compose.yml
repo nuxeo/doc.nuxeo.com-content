@@ -2,7 +2,6 @@ version: "3.10"
 services:
   nuxeodoc:
     image: "node:14"
-    user: "node"
     working_dir: /home/node/app
     environment:
       - NX_ASSETS_USER='[intranet_username]'
@@ -12,4 +11,13 @@ services:
     ports:
       - "3000:3000"
       - "3001:3001"
-    command: "npm run dev"
+    command:  
+      - /bin/sh
+      - -c
+      - |
+        curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+        apt-get install git-lfs
+        git lfs install
+        git reset --hard
+        npm start
+        npm run dev
