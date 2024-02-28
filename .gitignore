@@ -44,3 +44,9 @@ redirects.txt
 
 # Dot Env file
 .env
+
+# VS code workspaces
+*.code-workspace
+
+# NYC report
+.nyc_output

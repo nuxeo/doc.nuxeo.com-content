@@ -1,0 +1,15 @@
+version: "3.10"
+services:
+  nuxeodoc:
+    image: "node:14"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NX_ASSETS_USER='[intranet_username]'
+      - NX_ASSETS_PWD='[intranet_password]'
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    command: "npm run dev"
