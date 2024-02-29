@@ -92,7 +92,7 @@ Document Blob Garbage Collection always check for prefixed and unprefixed defaul
 ## Update Aws Java SDK to 1.12.650
 
 
-AWS  java sdk upgraded to v1.12.650, ion-java-1.0.2.jar is no longer installed by amazon-s3-online-storage marketplace
+AWS java sdk upgraded to v1.12.650, ion-java-1.0.2.jar is no longer installed by amazon-s3-online-storage marketplace
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32306](https://jira.nuxeo.com/browse/NXP-32306)
 
@@ -106,7 +106,7 @@ Tmp files are now deleted when appropriate. Tmp containers will remain empty.
 ## Provide Different Levels of Metrics Exposition
 
 
-You can select a minmal filter to reduce the number of metrics
+You can select a minimal filter to reduce the number of metrics
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32297](https://jira.nuxeo.com/browse/NXP-32297)
 
