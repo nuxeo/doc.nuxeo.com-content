@@ -111,7 +111,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 Added the `nuxeo.primitive.type.strict.validation` Framework property.
 
 
- By default it is set to `false`, keeping the previous behavior: at low level, when trying to decode a string input as a number, fall back on 0 if the string cannot be decoded as a number, e.g. foo.
+By default it is set to `false`, keeping the previous behavior: at low level, when trying to decode a string input as a number, fall back on 0 if the string cannot be decoded as a number, e.g. foo.
 
 If set to `true`, in such case, a `NumberFormatException` is thrown.
 
