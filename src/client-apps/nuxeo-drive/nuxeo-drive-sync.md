@@ -232,7 +232,7 @@ When you [delete documents from the Platform]({{page space='userdoc' page='conte
 
 When you delete a document from your local Drive folder, the document is deleted on the Platform and moved into the folder's trash. In the document's history, the deletion is tagged with the Nuxeo Drive category.
 
-Starting with Drive 4.1.0, a local deletion will by default unsynchronize the document, and not remove it from the Platform. Clicking on **Change deletion behavior settings** in the **General** tab of the client will allow the user to set it back to a real remote deletion. The user will also be prompted to confirm or rollback each deletion, unless he checks the **Don't ask me again** checkbox of the dialog window.
+Starting with Drive 4.1.0, a local deletion will by default unsynchronize the document, and not remove it from the Platform. Clicking on **Unsynchronize** in the **Sync** tab of the client will allow the user to set it back to a real remote deletion. The user will also be prompted to confirm or rollback each deletion, unless he checks the **Don't ask me again** checkbox of the dialog window.
 
 ## Unauthorizing a Drive Client to Access the Nuxeo Platform
 
