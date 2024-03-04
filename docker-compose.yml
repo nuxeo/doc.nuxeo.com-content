@@ -1,23 +1,28 @@
 version: "3.10"
 services:
   nuxeodoc:
-    image: "node:14"
-    working_dir: /home/node/app
+    image: "ubuntu:latest"
+    # working_dir: /home/node/app
     environment:
       - NX_ASSETS_USER='[intranet_username]'
       - NX_ASSETS_PWD='[intranet_password]'
     volumes:
-      - ./:/home/node/app
+      - ./:/opt/nxdoc
     ports:
       - "3000:3000"
       - "3001:3001"
-    command:  
-      - /bin/sh
-      - -c
-      - |
-        curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
-        apt-get install git-lfs
-        git lfs install
-        git reset --hard
-        npm start
-        npm run dev
+    command: "bash"
+    # command:  
+    #   - /bin/sh
+    #   - -c
+    #   - |
+    #     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+    #     apt-get install software-properties-common
+    #     add-apt-repository ppa:git-core/ppa
+    #     apt-get install git-lfs
+
+
+    #     git lfs install
+    #     git reset --hard
+    #     npm start
+    #     npm run dev
