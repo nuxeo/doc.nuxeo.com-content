@@ -10,6 +10,10 @@ tree_item_index: 400
 toc: true
 ---
 
+{{#> callout type='info'}}
+The below documentation provides details for the OpenShift-supported version of the Development Sandbox and is outdated. Documentation for the Nuxeo Cloud Customer Console Development Sandbox can be found [here]({{page page='nuxeo-cloud-customer-console'}}#development-sandbox-features).
+{{/callout}}
+
 ## Overview
 
 The Nuxeo Development Sandbox is built on top of Docker containers and Kubernetes pods. Today, we use Openshift to support our Development Sandbox environments.
