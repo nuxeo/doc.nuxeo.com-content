@@ -33,7 +33,7 @@ exec("git branch | grep ^\\* | grep -oE '[a-zA-Z0-9_-]+$'", { encoding: 'utf8', 
 
     co(function*() {
       // Pre-build
-      const pre_build = [pre_builder(target_repo_path)];
+      const pre_build = [pre_builder({ branch, repo_id: '', source_path: target_repo_path })];
       const metadata = {};
       const pre_build_result = yield pre_build;
       pre_build_result.forEach(data => {
