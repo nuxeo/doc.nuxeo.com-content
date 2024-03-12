@@ -101,6 +101,14 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 9
+
+### Update H2database Dep to 2.2.220
+
+
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32341](https://jira.nuxeo.com/browse/NXP-32341)
+
 ## Hotfix 8
 
 ### Throw an Error if a String Is Used to Query a Long/Integer Field
@@ -336,6 +344,7 @@ The `nuxeo.conf` property `nuxeo.retention.compliance.enabled` has been deprecat
 When both properties are configured, `nuxeo.retention.strictmode.enabled` takes precedence.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31878](https://jira.nuxeo.com/browse/NXP-31878)
+
 
 
 
