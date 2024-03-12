@@ -30,6 +30,10 @@ Watch the related course on Hyland University:</br>
 
 {{{multiexcerpt 'lts2021-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
+## Architecture
+
+The Nuxeo 2021 Docker image, `docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021`, only supports the `amd64` (`x86`) architecture.
+
 ## What's in the Nuxeo Image
 
 The Nuxeo Docker image is described by this [Dockerfile](https://github.com/nuxeo/nuxeo/blob/master/docker/Dockerfile).
