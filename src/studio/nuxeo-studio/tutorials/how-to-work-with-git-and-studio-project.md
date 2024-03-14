@@ -127,7 +127,7 @@ git push
 <div class="column medium-6">
 
 {{#> panel heading='Related Documentation'}}
-- [Studio Designer Git Access]({{page page='nuxeo-studio-designer-git-access'}})
+- [Studio Direct Git Access]({{page page='direct-git-access'}})
 {{/panel}}
 
 </div>
