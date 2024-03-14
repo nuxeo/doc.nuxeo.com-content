@@ -80,7 +80,7 @@ For this you can:
    - **Name:** Nuxeo
    - **Redirect URL:** your instance:  https://nightly.nuxeo.com/nuxeo/site/oauth2/frameio/callback
    - **Uses PKCE:** false
-   - **Scopes:** `action.create,action.delete,account.read,comment.read,action.update,action.read,team.read,asset.read,asset.create,asset.update,project.read`
+   - **Scopes:** `action.create,action.delete,account.read,comment.read,action.update,action.read,team.read,asset.read,asset.create,asset.update,project.read,offline`
    {{!--     ### nx_asset ###
      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Frame.io/frameio-edit-oauth-app.png
      name: Screenshot 2021-09-14 at 16.16.51.png
