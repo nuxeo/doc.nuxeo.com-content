@@ -105,7 +105,69 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### Update H2database Dep to 2.2.220
 
+The following dependency was upgraded from 2.1.214 to 2.2.224:
+```
+<dependency>
+  <groupId>com.h2database</groupId>
+  <artifactId>h2</artifactId>
+</dependency>
+```
 
+If on start you encounter the following exception, you have to delete the `${nuxeo.data.dir}/h2` directory.
+Yet, you will LOSE DATA if you use the default H2 backend.
+This should mainly impact development environments, as H2 must never be used in production.
+
+```
+2024-03-06T12:53:46,788 WARN  [JdbcEnvironmentInitiator] HHH000342: Could not obtain connection to query metadata
+java.sql.SQLException: Cannot create PoolableConnectionFactory (Unsupported database file version or invalid file header in file "/var/lib/nuxeo/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db"
+Unsupported database file version or invalid file header in file "/var/lib/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db" [90048-224])
+	at org.apache.commons.dbcp2.managed.BasicManagedDataSource.createPoolableConnectionFactory(BasicManagedDataSource.java:155) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:535) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:711) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	...
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "/var/lib/nuxeo/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db"
+Unsupported database file version or invalid file header in file "/var/lib/nuxeo/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db" [90048-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:212) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:158) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.db.Store.<init>(Store.java:142) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.Database.<init>(Database.java:326) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.Engine.openSession(Engine.java:92) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.Engine.openSession(Engine.java:222) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.Engine.createSession(Engine.java:201) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.Driver.connect(Driver.java:59) ~[h2-2.2.224.jar:2.2.224]
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	at org.apache.commons.dbcp2.managed.LocalXAConnectionFactory.createConnection(LocalXAConnectionFactory.java:359) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	at org.apache.commons.dbcp2.managed.PoolableManagedConnectionFactory.makeObject(PoolableManagedConnectionFactory.java:77) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:113) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	at org.apache.commons.dbcp2.managed.BasicManagedDataSource.createPoolableConnectionFactory(BasicManagedDataSource.java:151) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	... 76 more
+Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than the supported format 3 [2.2.224/5]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.FileStore.getUnsupportedWriteFormatException(FileStore.java:943) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.FileStore.processCommonHeaderAttributes(FileStore.java:547) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.RandomAccessStore.readStoreHeader(RandomAccessStore.java:227) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.FileStore.start(FileStore.java:916) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:289) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.db.Store.<init>(Store.java:133) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.Database.<init>(Database.java:326) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.Engine.openSession(Engine.java:92) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.Engine.openSession(Engine.java:222) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.Engine.createSession(Engine.java:201) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.Driver.connect(Driver.java:59) ~[h2-2.2.224.jar:2.2.224]
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	at org.apache.commons.dbcp2.managed.LocalXAConnectionFactory.createConnection(LocalXAConnectionFactory.java:359) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	at org.apache.commons.dbcp2.managed.PoolableManagedConnectionFactory.makeObject(PoolableManagedConnectionFactory.java:77) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:113) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	at org.apache.commons.dbcp2.managed.BasicManagedDataSource.createPoolableConnectionFactory(BasicManagedDataSource.java:151) ~[commons-dbcp2-2.11.0.jar:2.11.0]
+	... 76 more
+ ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32341](https://jira.nuxeo.com/browse/NXP-32341)
 
