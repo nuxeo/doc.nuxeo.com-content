@@ -314,7 +314,7 @@ The **Default Sort** field lets you express the default sorting applied to the r
     name: Default Sorting configuration.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Default Sorting Configuration](nx_asset://b1bd3693-691e-45d7-a228-3853df41e2ff ?w=500,border=true)
+![Default Sorting Configuration](/nx_assets/b1bd3693-691e-45d7-a228-3853df41e2ff.png ?w=500,border=true)
 
 You can sort through:
 
@@ -355,7 +355,7 @@ This section explains the flags section and what the different flags enable.
     name: Flag zone.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Flag Zone](nx_asset://b7b6982c-3c98-4e6f-a6b7-7916b98f1386 ?w=350,border=true)
+![Flag Zone](/nx_assets/b7b6982c-3c98-4e6f-a6b7-7916b98f1386.png ?w=350,border=true)
 
 {{#> callout type='info' }}
 Check out the page [Specific Upgrade Instructions]({{page page='specific-upgrade-instructions'}}) migrate your content views to Nuxeo Platform 6.0.
@@ -370,6 +370,6 @@ This section is focused on the search layout definition:
     name: Search Layout Fragment.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Search Layout Fragment](nx_asset://1d078664-1126-4d0f-b1b9-f5f70132b6cf ?w=600,border=true)
+![Search Layout Fragment](/nx_assets/1d078664-1126-4d0f-b1b9-f5f70132b6cf.png ?w=600,border=true)
 
 This is where you define the form, by drag and dropping widgets from the right panel into the form.

@@ -156,7 +156,7 @@ Watch the related content in Hyland University:</br>
     name: doctypes_university.png
     studio_modeler#screenshot#up_to_date
 --}}
-![doctypes_university.png](nx_asset://27d822b7-7815-48e0-95ad-0ff102a284d2 ?w=450,border=true)
+![doctypes_university.png](/nx_assets/27d822b7-7815-48e0-95ad-0ff102a284d2.png ?w=450,border=true)
 {{/callout}}
 
 ## Concept

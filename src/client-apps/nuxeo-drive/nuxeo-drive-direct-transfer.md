@@ -31,7 +31,7 @@ Nuxeo Drive upload capability provides a productive and network resilient way of
     name: direct-transfer-creation.png
     drive#popup#up_to_date
     --}}
-    ![direct-transfer-creation.png](nx_asset://b16b7fff-55c1-4925-823c-e2608745dd5c ?w=350)
+    ![direct-transfer-creation.png](/nx_assets/b16b7fff-55c1-4925-823c-e2608745dd5c.png ?w=350)
 1. From this view, you can decide to **Add files** or **Add a folder**.</br>
     The files selection popup opens.
 1. Select the document(s) you want to transfer and click on **Open**.</br>
@@ -69,7 +69,7 @@ To do so:
     name: dt-new-remote-folder.png
     drive#popup#up_to_date
 --}}
-![New remote folder](nx_asset://067afdc7-3909-4a72-85ef-07382bd35238 ?w=350)
+![New remote folder](/nx_assets/067afdc7-3909-4a72-85ef-07382bd35238.png ?w=350)
 
 #### Document Type 
 
@@ -91,7 +91,7 @@ As long as you have not selected any file(s) and/or folder(s) the fields remain 
     name: dt-doc-type-selection.png
     drive#popup#up_to_date
 --}}
-![dt-doc-type-selection.png](nx_asset://3078b8d5-1240-46a2-a3f7-3486208fe798 ?w=250)
+![dt-doc-type-selection.png](/nx_assets/3078b8d5-1240-46a2-a3f7-3486208fe798.png ?w=250)
 
 ## Manage Sessions
 

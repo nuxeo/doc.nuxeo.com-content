@@ -34,7 +34,7 @@ It is possible to define the Elasticsearch mapping for a field either from the p
     name: Create From PP.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Create From PP](nx_asset://5aef8639-628d-4b3a-931c-9d81139a9ec8)
+![Create From PP](/nx_assets/5aef8639-628d-4b3a-931c-9d81139a9ec8.png)
 
 If there is already an existing mapping for the selected field as a predicate, a link is displayed to access the existing definition in the **Elasticsearch Mapping** editor.
 
@@ -43,7 +43,7 @@ If there is already an existing mapping for the selected field as a predicate, a
     name: ExistingMapping.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Existing Mapping](nx_asset://2d52c010-8866-4a3f-934c-ed3b2f38a1b6)
+![Existing Mapping](/nx_assets/2d52c010-8866-4a3f-934c-ed3b2f38a1b6.png)
 
 If there is not an existing mapping, a button to directly create a new configuration is displayed next to the predicate.
 
@@ -52,7 +52,7 @@ If there is not an existing mapping, a button to directly create a new configura
     name: No Existing Mapping.png
     studio_modeler#screenshot#up_to_date
 --}}
-![No Existing Mapping](nx_asset://384be8a6-cf91-4cd4-b941-b598da8d8514)
+![No Existing Mapping](/nx_assets/384be8a6-cf91-4cd4-b941-b598da8d8514.png)
 
 A dialog opens to define the name of the mapping and the selected field is displayed as a reminder.
 
@@ -61,7 +61,7 @@ A dialog opens to define the name of the mapping and the selected field is displ
     name: Create New Mapping.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Create New Mapping](nx_asset://c7ff38e3-be04-43a8-9c16-24dc79945b42)
+![Create New Mapping](/nx_assets/c7ff38e3-be04-43a8-9c16-24dc79945b42.png)
 
 #### Create a New Mapping
 
@@ -72,7 +72,7 @@ A new Elasticsearch Mapping can be created directly from the page listing the ex
     name: Create Search New Mapping.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Create Search Mapping](nx_asset://3dd3a5d4-225b-4ded-9b9c-4bdd9b8c3051)
+![Create Search Mapping](/nx_assets/3dd3a5d4-225b-4ded-9b9c-4bdd9b8c3051.png)
 
 ### Auto-mapping
 
@@ -83,7 +83,7 @@ Based on the type of the selected field for the mapping, a list of available map
     name: Create Automapping.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Creating Automapping](nx_asset://08baf3b0-cbea-422c-a53a-a7ac75cb6713)
+![Creating Automapping](/nx_assets/08baf3b0-cbea-422c-a53a-a7ac75cb6713.png)
 
 Available properties:
 - **Fulltext**: include/exclude the field from the [Full-Text search]({{page space='nxdoc' page='configuring-the-elasticsearch-mapping'}}#includeexcluding-a-field-from-the-full-text-search). The property is only available for fields of type String.
@@ -101,4 +101,4 @@ It is also possible to define manually the configuration of the mapping of a fie
     name: CreateManualMapping.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Create Manual Mapping](nx_asset://bd635670-d8d8-48c1-89fc-2e57410a4b4c)
+![Create Manual Mapping](/nx_assets/bd635670-d8d8-48c1-89fc-2e57410a4b4c.png)

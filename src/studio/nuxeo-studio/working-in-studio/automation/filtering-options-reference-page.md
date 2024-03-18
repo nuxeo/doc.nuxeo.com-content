@@ -158,7 +158,7 @@ Below is a sample of such a screen. In this section, we review the list of all p
     name: Sample filtering screen.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Sample Filtering Screen](nx_asset://beb8fb8b-11c2-4ae1-a000-b61183b3775b ?w=400,border=true)
+![Sample Filtering Screen](/nx_assets/beb8fb8b-11c2-4ae1-a000-b61183b3775b.png ?w=400,border=true)
 
 - **Current user has one of the permissions**: The logged in user has one of the selected permissions on the document.
 - **Current document has one of the types:** The document must implement one of the selected types for the filter to be evaluated to true.

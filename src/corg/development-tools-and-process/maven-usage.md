@@ -541,7 +541,7 @@ You should then connect to packages using the “single sign-on” feature and t
     name: user-token-maven.png
     server#screenshot#up_to_date
 --}}
-![user-token-maven.png](nx_asset://6a6b4fa0-efb6-468a-8a16-7f038bcc42f8 ?w=450,border=true)
+![user-token-maven.png](/nx_assets/6a6b4fa0-efb6-468a-8a16-7f038bcc42f8.png ?w=450,border=true)
 
 You'll be able to get your credentials for the XML file:
 

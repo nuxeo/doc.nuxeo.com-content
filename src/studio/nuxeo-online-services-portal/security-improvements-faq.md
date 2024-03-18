@@ -22,7 +22,7 @@ Nuxeo Online Services is being improved to enhance security. This page details w
     name: login-customer.png
     studio_modeler#screenshot#up_to_date
 --}}
-![login-as-customer](nx_asset://0cf607da-99c1-469e-a8c4-4524a1437b38 ?w=650,border=true)
+![login-as-customer](/nx_assets/0cf607da-99c1-469e-a8c4-4524a1437b38.png ?w=650,border=true)
 
 - URL for the login page is changed to https://auth.nuxeo.com (instead of https://sso.nuxeo.com). If you cannot access it, check with your system administrator that the URL is whitelisted.
 
@@ -31,7 +31,7 @@ Nuxeo Online Services is being improved to enhance security. This page details w
     name: auth-nuxeo-com.png
     studio_modeler#screenshot#up_to_date
 --}}
-![auth-nuxeo-com](nx_asset://885d8e2c-1831-4d9d-ac50-6835a7598799 ?border=true)
+![auth-nuxeo-com](/nx_assets/885d8e2c-1831-4d9d-ac50-6835a7598799.png ?border=true)
 
 - Multi factor authentication is enforced. The [multi-factor authentication](#mfa) section in this page provides further details.
 
@@ -67,7 +67,7 @@ These factors can be one of the following:
     name: mfa-setup.png
     studio_modeler#screenshot#up_to_date
 --}}
-![mfa-setup](nx_asset://64c95f94-e3ac-40b1-a03e-16ce33989d83 ?w=415,border=true)
+![mfa-setup](/nx_assets/64c95f94-e3ac-40b1-a03e-16ce33989d83.png ?w=415,border=true)
 
 {{#> callout type='info' heading='Info'}}
 MFA is used only in the browser. It is not needed when using command line tools to automate tasks.

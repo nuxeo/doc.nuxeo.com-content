@@ -71,7 +71,7 @@ history:
     name: workflow-graph-tab.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Workflow Graph Tab](nx_asset://722153f8-ec36-4e2d-9a47-2c7f57317c56 ?w=500,border=true)
+![Workflow Graph Tab](/nx_assets/722153f8-ec36-4e2d-9a47-2c7f57317c56.png ?w=500,border=true)
 
 The Graph tab is where you define how steps of your workflow are ordered, by dropping nodes and pulling transitions between them.
  If you hover over a node, an **Edit** button will be displayed. It allows you to edit the properties of the node, in a [multi-tab pop-up]({{page page='node-popup'}}).

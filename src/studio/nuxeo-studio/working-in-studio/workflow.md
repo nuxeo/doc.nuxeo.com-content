@@ -97,7 +97,7 @@ Watch the related course on Hyland University:</br>
     name: university-wf.png
     studio_modeler#screenshot#up_to_date
 --}}
-![university-wf.png](nx_asset://76c9aa68-cc25-4ad5-b007-827c0eb0c188 ?w=450,border=true)
+![university-wf.png](/nx_assets/76c9aa68-cc25-4ad5-b007-827c0eb0c188.png ?w=450,border=true)
 {{/callout}}
 
 The Nuxeo Enterprise Platform workflow engine, a.k.a. Content Routing, aims at providing a framework and tools for automatizing some content-based organizational processes in a maintainable way. It can be used as soon as you have a multi-steps process that involves various human actors and automated steps. It will accelerate the roll-out of your realization and make it easily understandable for future evolutions. Such multi-steps process can be complex documents authoring and validation (purchase order validation, product sheet, &hellip;), form flow (such as vacation request, training requests, expenses, travel authorization), and, of course, usual office document validation process.

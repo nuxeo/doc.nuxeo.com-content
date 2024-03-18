@@ -11,7 +11,7 @@ labels:
 tree_item_index: 100
 ---
 
-![Content Bots](nx_asset://b020ee48-25e2-4b3a-88e3-25f2661eb77c ?w=100%,border=false)
+![Content Bots](/nx_assets/b020ee48-25e2-4b3a-88e3-25f2661eb77c.png ?w=100%,border=false)
 
 We've identified two different areas of Artificial Intelligence, generic AI and business focus AI.
 

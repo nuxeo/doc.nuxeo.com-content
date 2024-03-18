@@ -207,13 +207,13 @@ Here is how these notions are visible in the Nuxeo Platform interface:
     name: Content View - Content.png
     addins#screenshot#up_to_date
 --}}
-![Content View - Content](nx_asset://ed6cdfad-d59e-4ff2-b0fe-c66438841bb6 ?w=300,border=true)</td>
+![Content View - Content](/nx_assets/ed6cdfad-d59e-4ff2-b0fe-c66438841bb6.png ?w=300,border=true)</td>
 <td colspan="1">{{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Content Views.1532009021075/Content View - Search tab
     name: Content View - Search tab.png
     addins#screenshot#up_to_date
 --}}
-![Content View - Search tab](nx_asset://6f67d05d-ebd6-47fe-b38c-3745d52c6ad0 ?w=300,border=true)</td>
+![Content View - Search tab](/nx_assets/6f67d05d-ebd6-47fe-b38c-3745d52c6ad0.png ?w=300,border=true)</td>
 </tr>
 </tbody>
 </table>
@@ -229,21 +229,21 @@ Each part of the content view definition in Studio is dedicated to configure eac
       name: Studio-content-view-query-definition.png
       addins#screenshot#up_to_date
   --}}
-  ![Content View - Query Definition](nx_asset://ea36f0ce-04d4-4ef0-af9f-c9a5860aa6fe ?w=600,border=true)
+  ![Content View - Query Definition](/nx_assets/ea36f0ce-04d4-4ef0-af9f-c9a5860aa6fe.png ?w=600,border=true)
 - Form definition:
   {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Content Views.1532009021075/Content View - Form Definition
       name: Studio-content-view-form-definition.png
       addins#screenshot#up_to_date
   --}}
-  ![Content View - Form Definition](nx_asset://9f935e93-32c1-4592-9caf-ac0fd698cdbc ?w=600,border=true)
+  ![Content View - Form Definition](/nx_assets/9f935e93-32c1-4592-9caf-ac0fd698cdbc.png ?w=600,border=true)
 - Result Display definition:
   {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Content Views.1532009021075/Content View - Results Form
       name: Studio-content-view-results-definition.png
       addins#screenshot#up_to_date
   --}}
-  ![Content View - Results Form](nx_asset://0a8d3dd3-268e-41de-8dc6-9e26efecffea ?w=600,border=true)
+  ![Content View - Results Form](/nx_assets/0a8d3dd3-268e-41de-8dc6-9e26efecffea.png ?w=600,border=true)
 
 Once you defined your content view, you can use it for these following cases:
 

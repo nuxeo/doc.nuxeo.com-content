@@ -201,7 +201,7 @@ In our case, we want the workflow to be available only for File documents on whi
       name: graph-first-two-nodes.png
       server#screenshot#up_to_date
     --}}
-    ![graph-first-two-nodes.png](nx_asset://543a3fa9-cb21-472c-81b9-97c49dd907aa ?w=400,border=true)
+    ![graph-first-two-nodes.png](/nx_assets/543a3fa9-cb21-472c-81b9-97c49dd907aa.png ?w=400,border=true)
 
 ## Marketing Manager Validation Node
 
@@ -222,7 +222,7 @@ Edit the **Accept/Reject** node by hovering over it and click on the edit icon !
       name: marketing-validation-node-general-tab.png
       server#screenshot#up_to_date
     --}}
-    ![marketing-validation-node-general-tab.png](nx_asset://3c773640-4c19-4f8a-8fdb-d660caff6890 ?w=400,border=true)
+    ![marketing-validation-node-general-tab.png](/nx_assets/3c773640-4c19-4f8a-8fdb-d660caff6890.png ?w=400,border=true)
 
 ### Transitions Tab
 
@@ -237,7 +237,7 @@ In this tab, we will create the automation chains corresponding to the button th
       name: validatepressrelease-transitions.png
       server#screenshot#up_to_date
     --}}
-    ![validatepressrelease-transitions.png](nx_asset://bbe5837a-65d5-4e1c-b66a-a6d172a58479 ?w=400,border=true)
+    ![validatepressrelease-transitions.png](/nx_assets/bbe5837a-65d5-4e1c-b66a-a6d172a58479.png ?w=400,border=true)
 4.  Save your automation chain.
 
 ### Updating the Graph
@@ -254,7 +254,7 @@ In this tab, we will create the automation chains corresponding to the button th
       name: graph-before-first-escalation-rule.png
       server#screenshot#up_to_date
     --}}
-    ![graph-before-first-escalation-rule.png](nx_asset://ec7216bd-596e-483b-a6d7-004c3e16b197 ?w=400,border=true)
+    ![graph-before-first-escalation-rule.png](/nx_assets/ec7216bd-596e-483b-a6d7-004c3e16b197.png ?w=400,border=true)
 
 You may have realized that for now, we do not have any possibility to link the marketing manager's validation node to the general manager's one, or to have Jane be reminded to review the document. To handle this, we will need to add several elements:
 
@@ -426,7 +426,7 @@ First things first: we haven't linked the nodes together. We will then take time
       name: graph-almost-finalised.png
       server#screenshot#up_to_date
     --}}
-    ![graph-almost-finalised.png](nx_asset://b4104a48-7543-45e1-92f0-0692c0eb7fa9 ?w=400,border=true)
+    ![graph-almost-finalised.png](/nx_assets/b4104a48-7543-45e1-92f0-0692c0eb7fa9.png ?w=400,border=true)
 4.  Save the graph.
 
 Good! On to the node edition.
@@ -445,7 +445,7 @@ Hover your mouse over the Accept/Reject node and click on the edit icon ![]({{fi
       name: general-manager-node-general-tab.png
       server#screenshot#up_to_date
     --}}
-    ![general-manager-node-general-tab.png](nx_asset://9cf437e8-9ef4-4132-acff-602d26a750f6 ?w=400,border=true)
+    ![general-manager-node-general-tab.png](/nx_assets/9cf437e8-9ef4-4132-acff-602d26a750f6.png ?w=400,border=true)
 
 ### Transitions Tab
 
@@ -480,7 +480,7 @@ Now that you are back on your graph, link the general manager's node `endWorkflo
     name: graph-final.png
     server#screenshot#up_to_date
 --}}
-![graph-final.png](nx_asset://18d09633-b7bb-488d-8db6-20e8f176a046 ?w=400,border=true)
+![graph-final.png](/nx_assets/18d09633-b7bb-488d-8db6-20e8f176a046.png ?w=400,border=true)
 
 ## Configuring Workflow Layouts
 
