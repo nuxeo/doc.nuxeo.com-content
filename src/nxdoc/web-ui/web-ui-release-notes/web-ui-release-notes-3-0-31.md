@@ -18,11 +18,11 @@ hidden: true
 
 This release includes the upgrade of WebUI internal functional tests to NodeJS version 18. This means that functional tests written using the technological stack provided by Web UI for your projects will require to use NodeJS 18 to keep passing. Please refer to the [upgrade notes]({{page page='web-ui-upgrade-notes'}}) for detailed information. This release also includes fixes for accessibility issues related to keyboard usage and visible focus.
 
-#### Keyboard Usage - WCAG 2.1 level A criteria 2.1.1
+#### Keyboard Usage - WCAG 2.1 Level A Criteria 2.1.1
 
 - Make document actions kebab menu usable with keyboard only.<br/>[[ELEMENTS-1714](https://jira.nuxeo.com/browse/ELEMENTS-1714)]
 
-#### Focus visible - WCAG 2.1 level A criteria 2.4.7
+#### Focus visible - WCAG 2.1 Level A Criteria 2.4.7
 
 - Fix reflow issue of typeselection in nuxeo-document-create popup.<br/>[[WEBUI-1290](https://jira.nuxeo.com/browse/WEBUI-1290)]
 - Fix UI issues in nuxeo-document-import when zoom in.<br/>[[WEBUI-1289](https://jira.nuxeo.com/browse/WEBUI-1289)]
