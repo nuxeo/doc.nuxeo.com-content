@@ -101,7 +101,17 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 51 
 
+### Provide an Example of Bulk Action With Dedicated Background Processing
+
+To create a background stream and processing for the recomputeViews bulk action, just activate:
+```
+nuxeo.bulk.action.recomputeViewsBackground.enabled=true
+```
+
+All recompute views submitted by the management API or automation operation will be done on the background processor (`recomputeViewsBackground`).
+All recompute views triggered by document update (user activity) will be done on the main processor (`recomputeViews`).
 
 ## Hotfix 50
 
