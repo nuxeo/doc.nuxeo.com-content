@@ -15,6 +15,11 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-51'}}
 # What's New in LTS 2021.51 / LTS 2021-HF51
 
+## Provide an Example of Bulk Action With Dedicated Background Processing
+
+recomputeViews processing can be split in two streams: user ongoing and background activities.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32318](https://jira.nuxeo.com/browse/NXP-32318)
 
 # Learn More
 
