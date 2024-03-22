@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
     comment: ''
-    date: '2024-03-13'
+    date: '2024-03-22'
     status: ok
 toc: true
 labels:
@@ -23,16 +23,17 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-6'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-7'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.6]({{page page='web-ui-release-notes-3-1-6'}})                  | NodeJS18 upgrade, accessibility improvements and bugfix release     | -->
+<!-- | [Web UI 3.1.7]({{page page='web-ui-release-notes-3-1-7'}})                  | Bugfix release     | -->
 
 | Version                                                                       | Summary                                                                    |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [Web UI 3.1.6]({{page page='web-ui-release-notes-3-1-6'}})                  | NodeJS18 upgrade, accessibility improvements and bugfix release     |
 | [Web UI 3.1.5]({{page page='web-ui-release-notes-3-1-5'}})                    | Polymer version upgrade, accessibility improvements and bugfix release     |
 | [Web UI 3.1.4]({{page page='web-ui-release-notes-3-1-4'}})                    | Bugfix and accessibility improvements release                              |
 | [Web UI 3.1.3]({{page page='web-ui-release-notes-3-1-3'}})                    | UI elements keep track of protected properties when a document goes under retention |
