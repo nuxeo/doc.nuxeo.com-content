@@ -43,3 +43,4 @@ Specific changes:
 ## Studio Modeler
 - Allow usage of the new "List elements required" constraint on mutlivalued schema fields.
 - Fixed sync studio project dependencies resources.
+{{! /multiexcerpt}}
