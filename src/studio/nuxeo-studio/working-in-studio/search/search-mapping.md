@@ -1,17 +1,12 @@
 ---
-title: Elasticsearch Mapping
+title: Search Mapping
 review:
-    comment: 'Page creation describing the Elasticsearch Mapping feature in Studio. Only available for Nuxeo users.'
+    comment: 'Page creation describing the Search Mapping feature in Studio.'
     date: '2021-10-15'
     status: ok
 toc: true
-hidden: true
-private: true
+tree_item_index: 460
 ---
-
-{{#> callout type='info' heading='Availability'}}
-This feature is available for Nuxeo users and target platforms Nuxeo Platform LTS 2019 and above.
-{{/callout}}
 
 Elasticsearch Mapping is a feature that helps you configure the search experience, it provides the user a JSON configuration file that can be added to the Elasticsearch configuration.
 
