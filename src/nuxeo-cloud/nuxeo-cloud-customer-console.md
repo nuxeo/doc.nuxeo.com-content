@@ -41,8 +41,43 @@ Environment details can be accessed by clicking on the “eye” icon shown next
 
 ### Product Version and Product Revision
 
-For each environment, we display the Product Version and the Nuxeo Product Revision. These provide information on the latest HotFix deployed to each environment.
-Please note that versions are dynamically retrieved from the login page. If a customer uses a custom login page instead of the default Nuxeo login page, we will not be able to retrieve the version and will display _Not Available_.
+For each environment, we display the Product Version and the Nuxeo Product Revision. These provide information on the latest HotFix deployed to each environment. Please note that versions are dynamically retrieved from the login page. If a customer uses a custom login page instead of the default Nuxeo login page, we will not be able to retrieve the version and will display _Not Available_.
+
+### Nuxeo HotFixes
+
+Nuxeo Cloud applies Nuxeo LTS Hotfixes to all cloud environments the first and second week of each month during the maintenance window. Nuxeo Cloud customer contacts are notified via email at least 1 week prior to the Hotfix deployment.
+
+Our standard deployment is:
+- Pre-Prod: Available to users the first Friday of the Month
+- Prod: Available to users the second Friday of the Month
+
+Current LTS Hotfixes are displayed for each environment in the Nuxeo Customer Cloud Console. Pre-production environments can be placed “On Hold” for scheduled monthly Hotfix updates via the Customer Cloud Console.
+
+1. Log onto [Nuxeo Cloud Console](https://console.nuxeocloud.com/)
+1. Select Pre-Production Environment by selecting the “eye” icon
+1. Under “Config” dropdown in the top left corner of the page, select “Edit HotFix Hold”
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Nuxeo Cloud Edit Hotfix
+        name: cloud-edit-hotfix.png
+        server#screenshot#up_to_date
+    --}}
+    ![Nuxeo Cloud Edit Hotfix](nx_asset://1ff48544-fc6e-4f03-8313-6cb6e1176ea0 ?w=650,border=true)
+
+1. Select “Yes” to add or select “No” to remove a hold to the selected Pre-Production environment, and then select “Save”.
+
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Nuxeo Cloud Hotfix Hold
+        name: nuxeo-hotfix-hold.png
+        server#screenshot#up_to_date
+    --}}
+    ![Nuxeo Cloud Hotfix Hold](nx_asset://857ada67-68c2-43fa-8cb5-a5db11b601a3 ?w=350,border=true)
+
+If a hold is removed, the environment will be included in the next HF deployment and be updated to the HF’s outlined in that release.  
+
+Customers may also request to update environments outside of the HotFix window via separate SUPNXP tickets without delaying or placing an environment “on hold”. These should be communicated to the Nuxeo Cloud team via SUPNXP Jira tickets.  
+
+
+
 
 ## Environment Details and Deployments
 
