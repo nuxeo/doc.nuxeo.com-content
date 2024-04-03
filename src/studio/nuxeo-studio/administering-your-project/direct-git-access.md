@@ -20,9 +20,9 @@ While this is great, the browser is not the right place to do anything beyond si
 Studio Direct Git Access is available to any customer benefiting from the branch management feature.
 To activate it, request it through a support ticket by indicating:
 
-- Who should be given access: username ?
-- Which access these people should obtain : read, write, force push, only designer files ?
-- On which project(s) ?
+- Who should be given access: username?
+- Which access these people should obtain : read, write, force push, only designer files?
+- On which project(s)?
 
 ## Feature Scope and Restrictions
 
