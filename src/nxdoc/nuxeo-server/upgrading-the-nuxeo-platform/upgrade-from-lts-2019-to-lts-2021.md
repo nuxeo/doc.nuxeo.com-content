@@ -115,7 +115,41 @@ Note that `repository.clustering.delay` still exists but is only meaningful for 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25499](https://jira.nuxeo.com/browse/NXP-25499)
 
-### Behavior Changes
+### Behavior Changes 
+
+#### Upgrade from CentOS 7 to Oracle Linux 7 {{> tag 'Since 2021.54'}}
+
+As part of our ongoing commitment to delivering secure, high-performance solutions, we will be transitioning the Docker Operating System (DockerOS) of our LTS 2021 Nuxeo Server distributed image from CentOS 7 to Oracle Linux 7.
+
+This upgrade applies exclusively to clients using our LTS 2021 Nuxeo Server Docker image distributed through Nexus. If you are utilising other forms of distribution or have already upgraded to LTS 2023, you are not concerned by these changes.
+
+This DockerOS change is not breaking for a standard Nuxeo LTS 2021 server image, and the upgrade will proceed without disruption. Limited instances of heavy customisation may require some additional configuration.
+
+##### Actions and Next Steps
+
+**Nuxeo Cloud Customers:**
+Our Cloud team will handle all necessary configuration changes. Your service will continue seamlessly until the end of life (EOL) of LTS 2021. We are dedicated to ensuring a smooth transition and continuous service without interruption.
+
+**Self-Managed Customers:**
+- LTS 2023: The Nuxeo Server LTS 2023 version is not concerned by these changes, and a upgrade to LTS 2023 is the seen as the best course of action. The upgrade process from LTS 2021 to LTS 2023 has been largely streamlined versus previous versions.
+
+- Review and upgrade: For those Customers wishing to continue on LTS 2021 Docker image distribution, particularly if you have significantly customised the standard Docker image, we recommend you review the upcoming changes. A test image is now available for you to ensure compatibility and to facilitate a smooth transition. The image can be accessed using the command:
+  ```
+  docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021.51.2-oraclelinux7-slim
+  ```
+
+##### Oracle Linux 7 Maintenance and Extended Maintenance Purchase
+
+Oracle will continue to provide maintenance for Oracle Linux 7 until December 1, 2024. Self-managed customers not transitioning to LTS 2023 are advised to secure extended maintenance from Oracle. This ensures full support between the official end of maintenance for Oracle Linux 7 and the end of LTS 2021's maintenance period.
+
+##### CentOS End of Life 
+
+Please note that CentOS will be officially out fo maintenance on the 30th of June 2024. It is strongly recommended that clients move away from CentOS to ensure the continued security of their instance.
+
+**We Are Here to Help**
+Our team is dedicated to supporting you through this update. If you have questions or need assistance, please reach out to your Customer Success Manager or our support team.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXBT-3794](https://jira.nuxeo.com/browse/NXBT-3794)
 
 #### Better Tracking of the Nuxeo Health Check Failures {{> tag 'Since 2021.2'}}
 
