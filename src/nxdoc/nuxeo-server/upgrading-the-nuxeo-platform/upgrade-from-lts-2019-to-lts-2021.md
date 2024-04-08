@@ -119,11 +119,11 @@ Note that `repository.clustering.delay` still exists but is only meaningful for 
 
 #### Upgrade from CentOS 7 to Oracle Linux 7 {{> tag 'Since 2021.54'}}
 
-As part of our ongoing commitment to delivering secure, high-performance solutions, we will be transitioning the Docker Operating System (DockerOS) of our LTS 2021 Nuxeo Server distributed image from CentOS 7 to Oracle Linux 7.
+As part of our ongoing commitment to delivering secure, high-performance solutions, we will be transitioning the Operating System (OS) of our LTS 2021 Nuxeo Server distributed Docker image from CentOS 7 to Oracle Linux 7.
 
 This upgrade applies exclusively to clients using our LTS 2021 Nuxeo Server Docker image distributed through Nexus. If you are utilising other forms of distribution or have already upgraded to LTS 2023, you are not concerned by these changes.
 
-This DockerOS change is not breaking for a standard Nuxeo LTS 2021 server image, and the upgrade will proceed without disruption. Limited instances of heavy customisation may require some additional configuration.
+This OS change is not breaking for a standard Nuxeo LTS 2021 server Docker image, and the upgrade will proceed without disruption. Limited instances of heavy customisation may require some additional configuration.
 
 ##### Actions and Next Steps
 
@@ -140,11 +140,11 @@ Our Cloud team will handle all necessary configuration changes. Your service wil
 
 ##### Oracle Linux 7 Maintenance and Extended Maintenance Purchase
 
-Oracle will continue to provide maintenance for Oracle Linux 7 until December 1, 2024. Self-managed customers not transitioning to LTS 2023 are advised to secure extended maintenance from Oracle. This ensures full support between the official end of maintenance for Oracle Linux 7 and the end of LTS 2021's maintenance period.
+Oracle will continue to provide maintenance for Oracle Linux 7 until December 1, 2024. Self-managed customers not transitioning to LTS 2023 and rebuilding their own Docker image from the Nuxeo base image are advised to secure extended maintenance from Oracle. This will allow them to benefit from the (security) fixes in the oraclelinux base image and full support between the official end of maintenance for Oracle Linux 7 and the end of LTS 2021's maintenance period.
 
 ##### CentOS End of Life 
 
-Please note that CentOS will be officially out fo maintenance on the 30th of June 2024. It is strongly recommended that clients move away from CentOS to ensure the continued security of their instance.
+Please note that CentOS will be officially out of maintenance on the 30th of June 2024. It is strongly recommended that clients move away from CentOS to ensure the continued security of their instance.
 
 **We Are Here to Help**
 Our team is dedicated to supporting you through this update. If you have questions or need assistance, please reach out to your Customer Success Manager or our support team.
