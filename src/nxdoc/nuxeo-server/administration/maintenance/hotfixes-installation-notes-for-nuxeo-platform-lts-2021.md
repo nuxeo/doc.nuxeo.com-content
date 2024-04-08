@@ -19,7 +19,7 @@ version_override:
 
 The purpose of this page is to describe the additional actions that need to be done when installing the hotfixes on Nuxeo Platform and that cannot be done automatically. The page provides an exhaustive list of manipulations for the installation of Nuxeo Platform LTS 2021 hotfixes, but you need only to apply those relevant for your own instance.
 
-{{#> callout type='warning' heading='Oracle Linux 7 Upgrade'}} Starting from LTS 2021.54 / LTS 2021-HF54 released in May 2024, we will be transitioning our LTS 2021 Nuxeo Server distributed Docker image from CentOS 7 to Oracle Linux 7. Please refer to the [upgrade notes]({{page page='upgrade-from-lts-2019-to-lts-2021'}}) for detailed information. {{/callout}}
+{{#> callout type='warning' heading='Oracle Linux 7 Upgrade'}} Starting from LTS 2021.54 released in May 2024, we will be transitioning our LTS 2021 Nuxeo Server distributed Docker image from CentOS 7 to Oracle Linux 7. Please refer to the [upgrade notes]({{page page='upgrade-from-lts-2019-to-lts-2021'}}) for detailed information. {{/callout}}
 
 {{{multiexcerpt 'intro_hotfix' page='ADMINDOC710:Hotfixes Installation Notes for Nuxeo Platform LTS 2015'}}}
 
