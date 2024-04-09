@@ -23,17 +23,17 @@ The purpose of this page is to describe the additional actions that need to be d
 
 {{#> callout type='warning' }}
 While installing hotfixes, you will see the following message, but you can ignore it and continue.
-```
+\`\`\`
 Use of the <copy /> command on JAR files is not recommended, prefer using <update /> command to ensure a safe rollback. (nuxeo-launcher-9.10-HF01-jar-with-dependencies.jar)
-```
+\`\`\`
 {{/callout}}
 
-Since LTS 2021, the addon "Nuxeo JSF UI" is handled outside the main Nuxeo repository on GitHub. As a consequence, the related fixes for JSF UI will not be embedded in a hotfix.</br>
-Therefore if the addon "Nuxeo JSF UI" is installed on your instance, you must upgrade this package after installing a hotfix by running the following command:
+Since LTS 2021, the addon \"Nuxeo JSF UI\" is handled outside the main Nuxeo repository on GitHub. As a consequence, the related fixes for JSF UI will not be embedded in a hotfix.</br>
+Therefore if the addon \"Nuxeo JSF UI\" is installed on your instance, you must upgrade this package after installing a hotfix by running the following command:
 
-```
+\`\`\`
 > nuxeoctl mp-upgrade
-```
+\`\`\`
 Note that this command will upgrade the versions of any package.
 
 ## Instance Registration
@@ -44,20 +44,20 @@ Hotfixes released for LTS 2023 can only be used on valid, registered Nuxeo insta
 If you are using an *unregistered LTS 2023 Nuxeo instance with hotfixes installed*, you may encounter the following behavior:
 - A warning will be displayed in the logs during startup,
 
-```
+\`\`\`
 ERROR [RuntimeService] NUXEO INSTANCE NOT REGISTERED
 
 ***** This Nuxeo instance is not registered *****
 It can only be used for development and will be stopped if used in production
-```
+\`\`\`
 - Over a certain level of use the server will be stopped automatically. When this happens, a message is displayed in the logs to inform you as well.
 
-```
+\`\`\`
 ERROR [RuntimeService] NUXEO INSTANCE STOPPING
 
 ***** This Nuxeo instance is not registered *****
 Stopping Nuxeo instance due to threshold exceeded (TOTAL_COMMITS > 100000) after failed registration checks
-```
+\`\`\`
 The current limits of use are:
 - 100,000 transaction commits
 - 10 concurrent sessions (a session correspond to an access to the core)
@@ -66,20 +66,20 @@ If the expiration date is close (less than 15 days), a warning will be displayed
 In the JSF UI, a message based on the Administrative message mechanism will be displayed: all users will be informed.
 
 After expiration date, the following message will be displayed in the logs at startup:
-```
+\`\`\`
 ERROR [RuntimeService] NUXEO INSTANCE REGISTRATION EXPIRED
 
 ***** This Nuxeo instance registration is expired *****
 It can only be used for development and will be stopped if used in production
-```
+\`\`\`
 
 The following message will be displayed in the logs when Nuxeo will be stopped automatically according to the same conditions as described earlier:
-```
+\`\`\`
 ERROR [RuntimeService] NUXEO INSTANCE STOPPING
 
 ***** This Nuxeo instance registration is expired *****
 Stopping Nuxeo instance due to threshold exceeded (TOTAL_COMMITS > 100000) after registration expiration
-```
+\`\`\`
 
 **How Can I Avoid This?** </br>
 
@@ -101,32 +101,53 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 10
+
+### Handle Openpdf Upgrade Dependabot Pull Request
+
+
+The \`com.github.librepdf:openpdf\` dependency has been upgraded from 1.3.40 to 1.4.1.
+Thus, the \`AcroFields#getSignatureNames()\` method isn't available anymore, it is replaced by \`AcroFields#getSignedFieldNames()\`.
+
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-32386](https://jira.nuxeo.com/browse/NXP-32386)
+
+###  Provide Option to Enable Nashorn Optimistic Typing
+
+
+A new framework property allows to toggle this behavior by adding the following to your nuxeo.conf:
+\`\`\`java
+nuxeo.automation.scripting.optimistic.types.enabled=true
+\`\`\`
+ 
+
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-32342](https://jira.nuxeo.com/browse/NXP-32342)
+
 ## Hotfix 9
 
 ### Update H2database Dep to 2.2.220
 
 The following dependency was upgraded from 2.1.214 to 2.2.224:
-```
+\`\`\`
 <dependency>
   <groupId>com.h2database</groupId>
   <artifactId>h2</artifactId>
 </dependency>
-```
+\`\`\`
 
-If on start you encounter the following exception, you have to delete the `${nuxeo.data.dir}/h2` directory.
+If on start you encounter the following exception, you have to delete the \`${nuxeo.data.dir}/h2\` directory.
 Yet, you will LOSE DATA if you use the default H2 backend.
 This should mainly impact development environments, as H2 must never be used in production.
 
-```
+\`\`\`
 2024-03-06T12:53:46,788 WARN  [JdbcEnvironmentInitiator] HHH000342: Could not obtain connection to query metadata
-java.sql.SQLException: Cannot create PoolableConnectionFactory (Unsupported database file version or invalid file header in file "/var/lib/nuxeo/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db"
-Unsupported database file version or invalid file header in file "/var/lib/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db" [90048-224])
+java.sql.SQLException: Cannot create PoolableConnectionFactory (Unsupported database file version or invalid file header in file \"/var/lib/nuxeo/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db\"
+Unsupported database file version or invalid file header in file \"/var/lib/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db\" [90048-224])
 	at org.apache.commons.dbcp2.managed.BasicManagedDataSource.createPoolableConnectionFactory(BasicManagedDataSource.java:155) ~[commons-dbcp2-2.11.0.jar:2.11.0]
 	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:535) ~[commons-dbcp2-2.11.0.jar:2.11.0]
 	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:711) ~[commons-dbcp2-2.11.0.jar:2.11.0]
 	...
-Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file "/var/lib/nuxeo/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db"
-Unsupported database file version or invalid file header in file "/var/lib/nuxeo/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db" [90048-224]
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Unsupported database file version or invalid file header in file \"/var/lib/nuxeo/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db\"
+Unsupported database file version or invalid file header in file \"/var/lib/nuxeo/nuxeo-server-tomcat-2023.7-SNAPSHOT/nxserver/data/h2/nuxeo.mv.db\" [90048-224]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690) ~[h2-2.2.224.jar:2.2.224]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.2.224.jar:2.2.224]
 	at org.h2.message.DbException.get(DbException.java:212) ~[h2-2.2.224.jar:2.2.224]
@@ -167,33 +188,33 @@ Caused by: org.h2.mvstore.MVStoreException: The write format 2 is smaller than t
 	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:113) ~[commons-dbcp2-2.11.0.jar:2.11.0]
 	at org.apache.commons.dbcp2.managed.BasicManagedDataSource.createPoolableConnectionFactory(BasicManagedDataSource.java:151) ~[commons-dbcp2-2.11.0.jar:2.11.0]
 	... 76 more
- ```
+ \`\`\`
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32341](https://jira.nuxeo.com/browse/NXP-32341)
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-32341](https://jira.nuxeo.com/browse/NXP-32341)
 
 ## Hotfix 8
 
 ### Throw an Error if a String Is Used to Query a Long/Integer Field
 
 
-Added the `nuxeo.primitive.type.strict.validation` Framework property.
+Added the \`nuxeo.primitive.type.strict.validation\` Framework property.
 
 
- By default it is set to `false`, keeping the previous behavior: at low level, when trying to decode a string input as a number, fall back on 0 if the string cannot be decoded as a number, e.g. foo.
+ By default it is set to \`false\`, keeping the previous behavior: at low level, when trying to decode a string input as a number, fall back on 0 if the string cannot be decoded as a number, e.g. foo.
 
-If set to `true`, in such case, a `NumberFormatException` is thrown.
+If set to \`true\`, in such case, a \`NumberFormatException\` is thrown.
 
 Consequently, when executing a REST API search request on a PageProvider and passing foo as a query parameter for a predicate on an integer field, the server will respond with a 400 Bad Request status code, e.g.:
-```
+\`\`\`
 curl -u ******:******r -X GET http://localhost:8080/nuxeo/api/v1/search/pp/test_primitive_type_predicates/execute?integerField=foo | jq
 {
   entity-type: exception,
   status: 400,
-  message: java.lang.NumberFormatException: For input string: "foo"
+  message: java.lang.NumberFormatException: For input string: \"foo\"
 }
-```
+\`\`\`
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32214](https://jira.nuxeo.com/browse/NXP-32214)
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-32214](https://jira.nuxeo.com/browse/NXP-32214)
 
 ## Hotfix 7
 
@@ -202,25 +223,25 @@ curl -u ******:******r -X GET http://localhost:8080/nuxeo/api/v1/search/pp/test_
 
 A fallback charset can be configured. This is being documented in nxdoc/preview.
 But here is the TL;DR:
-```xml
+\`\`\`xml
 <?xml version=1.0?>
 <component name=org.nuxeo.ecm.zip.file.reader.fallback.config>
   <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
     <property name=org.nuxeo.ecm.zip.file.reader.charset.fallback>cp850</property>
   </extension>
 </component>
-```
+\`\`\`
 
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32042](https://jira.nuxeo.com/browse/NXP-32042)
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-32042](https://jira.nuxeo.com/browse/NXP-32042)
 
 ## Hotfix 5
 
 ### Upgrade or Remove Htmlunit From Nuxeo-Runtime-Test to Avoid Vulnerability
 
 
-Removed the following Maven dependencies from `nuxeo-runtime-test`:
-```
+Removed the following Maven dependencies from \`nuxeo-runtime-test\`:
+\`\`\`
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-api</artifactId>
@@ -245,9 +266,9 @@ Removed the following Maven dependencies from `nuxeo-runtime-test`:
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>htmlunit-driver</artifactId>
 </dependency>
-```
-Added the following Maven dependencies to `nuxeo-features-test`:
-```
+\`\`\`
+Added the following Maven dependencies to \`nuxeo-features-test\`:
+\`\`\`
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-firefox-driver</artifactId>
@@ -269,9 +290,9 @@ Added the following Maven dependencies to `nuxeo-features-test`:
   <artifactId>assertj-core</artifactId>
   <scope>compile</scope>
 </dependency>
-```
-Moved the following classes from `nuxeo-runtime-test` to `nuxeo-features-test`:
-```
+\`\`\`
+Moved the following classes from \`nuxeo-runtime-test\` to \`nuxeo-features-test\`:
+\`\`\`
 Attachment.java
 Browser.java
 BrowserFamily.java
@@ -290,43 +311,43 @@ WebDriverWait.java
 MyHomePage.java
 SearchResultPage.java
 WebTest.java
-```
+\`\`\`
 The related package names haven't changed:
-```
+\`\`\`
 org.nuxeo.runtime.test.runner.web
 org.openqa.selenium.support.ui
-```
+\`\`\`
 If you are explicitly depending on one of these classes, you need to replace the Maven dependency:
-```
+\`\`\`
 <dependency>
   <groupId>org.nuxeo.runtime</groupId>
   <artifactId>nuxeo-runtime-test</artifactId>
   <scope>test</scope>
 </dependency>
-```
+\`\`\`
 by:
-```
+\`\`\`
 <dependency>
   <groupId>org.nuxeo.ecm.platform</groupId>
   <artifactId>nuxeo-features-test</artifactId>
   <scope>test</scope>
 </dependency>
-```
+\`\`\`
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32144](https://jira.nuxeo.com/browse/NXP-32144)
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-32144](https://jira.nuxeo.com/browse/NXP-32144)
 
 ### Fix Results Selection Actions Made From Multi-Repository Search Results
 
 
 Added:
-- `nuxeo.bulk.download.multi.repositories` Framework property
-- `AbsoluteDocumentRef`
-- `TypeAdapterHelper#createDocumentModel(AbsoluteDocumentRef docRef)`
-- `DocumentInputResolver#BULK_DOWNLOAD_MULTI_REPOSITORIES`
-- `TestDocumentInputResolvers`
-- `MultiRepositoryDummyOperation`
+- \`nuxeo.bulk.download.multi.repositories\` Framework property
+- \`AbsoluteDocumentRef\`
+- \`TypeAdapterHelper#createDocumentModel(AbsoluteDocumentRef docRef)\`
+- \`DocumentInputResolver#BULK_DOWNLOAD_MULTI_REPOSITORIES\`
+- \`TestDocumentInputResolvers\`
+- \`MultiRepositoryDummyOperation\`
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31487](https://jira.nuxeo.com/browse/NXP-31487)
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-31487](https://jira.nuxeo.com/browse/NXP-31487)
 
 ## Hotfix 4
 
@@ -339,7 +360,7 @@ Compatibility has been ensured for users that contributed a custom jndi session 
  A JndiSMTPMailSender is contributed on the fly at server start and a warning will be given so users can be aware they need to contribute their own MailSender.
 
 A JndiSMTPMailSender can also be contributed by the users like below but bear in mind this is only a compatibility implementation and we encourage you to leverage another implementation of MailSender instead:
-```xml
+\`\`\`xml
 <?xml version=1.0?>
 <component name=org.nuxeo.mail.my.sender.contrib>
   <extension target=org.nuxeo.mail.MailServiceComponent point=senders>
@@ -350,40 +371,40 @@ A JndiSMTPMailSender can also be contributed by the users like below but bear in
 
   </extension>
 </component>
-```
+\`\`\`
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32029](https://jira.nuxeo.com/browse/NXP-32029)
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-32029](https://jira.nuxeo.com/browse/NXP-32029)
 
 ### Install ARM Compatible Tools in Nuxeo Docker Image
 
 
-The Nuxeo 2023 Docker image (`docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023`) supports multiple platforms: it contains variants for the `amd64` (`x86`) and `arm64v8` architectures.
+The Nuxeo 2023 Docker image (\`docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023\`) supports multiple platforms: it contains variants for the \`amd64\` (\`x86\`) and \`arm64v8\` architectures.
 
 When pulling this image, Docker automatically selects the variant that matches your OS and architecture. For instance, if you're running on:
-- Linux (AMD64), you'll get the `amd64` variant.
-- Apple Silicon M1 (ARM64), you'll get the `arm64` variant.
+- Linux (AMD64), you'll get the \`amd64\` variant.
+- Apple Silicon M1 (ARM64), you'll get the \`arm64\` variant.
 
-The `arm64` variant doesn't include the LibreOffice converter. Unfortunately, there is currently no LibreOffice RPM package available in a recent version for Rocky Linux (the base OS) in the `arm64` architecture.
+The \`arm64\` variant doesn't include the LibreOffice converter. Unfortunately, there is currently no LibreOffice RPM package available in a recent version for Rocky Linux (the base OS) in the \`arm64\` architecture.
 
-Consequently, **the `arm64` variant of the Nuxeo 2023 Docker image is not production-ready. It is for development purpose only**.
+Consequently, **the \`arm64\` variant of the Nuxeo 2023 Docker image is not production-ready. It is for development purpose only**.
 
-Note that you can force the target platform when pulling or running the Docker image with the `--platform` option, for instance to pull the `amd64` variant:
-```
+Note that you can force the target platform when pulling or running the Docker image with the \`--platform\` option, for instance to pull the \`amd64\` variant:
+\`\`\`
 docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023 --platform=linux/amd64
-```
+\`\`\`
 
-The Nuxeo 2021 Docker image isn't impacted by this change, it only supports the `amd64` architecture.
+The Nuxeo 2021 Docker image isn't impacted by this change, it only supports the \`amd64\` architecture.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31815](https://jira.nuxeo.com/browse/NXP-31815)
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-31815](https://jira.nuxeo.com/browse/NXP-31815)
 
 ## Hotfix 3
 
 ### Orphan Version Full GC Is Not Working With orphanVersionRemovalFilter Contributions
 
 
-On 2023 the contribution `org.nuxeo.ecm.core.event.orphanVersionRemoval.listener` has been removed.
+On 2023 the contribution \`org.nuxeo.ecm.core.event.orphanVersionRemoval.listener\` has been removed.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32073](https://jira.nuxeo.com/browse/NXP-32073)
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-32073](https://jira.nuxeo.com/browse/NXP-32073)
 
 ## Hotfix 1
 
@@ -392,20 +413,20 @@ On 2023 the contribution `org.nuxeo.ecm.core.event.orphanVersionRemoval.listener
 
 When using the Retention package with a MongoDB backend, it is recommended to create new indexes manually, otherwise, the Nuxeo server will attempt to create them at start-up. In the case of an existing instance with large amounts of documents, this process may time out and/or affect performance.
 
-```Java
+\`\`\`Java
 db.default.createIndex({ ecm:isRecord: 1}, {sparse: true});
 db.default.createIndex({ ecm:isFlexibleRecord: 1}, {sparse: true});
-```
+\`\`\`
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31968](https://jira.nuxeo.com/browse/NXP-31968)
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-31968](https://jira.nuxeo.com/browse/NXP-31968)
 
 ### Rename Compliance Mode as Strict Mode
 
 
-The `nuxeo.conf` property `nuxeo.retention.compliance.enabled` has been deprecated in favor of `nuxeo.retention.strictmode.enabled`.
-When both properties are configured, `nuxeo.retention.strictmode.enabled` takes precedence.
+The \`nuxeo.conf\` property \`nuxeo.retention.compliance.enabled\` has been deprecated in favor of \`nuxeo.retention.strictmode.enabled\`.
+When both properties are configured, \`nuxeo.retention.strictmode.enabled\` takes precedence.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-31878](https://jira.nuxeo.com/browse/NXP-31878)
+<i class=\"fa fa-long-arrow-right\" aria-hidden=\"true\"></i>&nbsp;More on JIRA ticket [NXP-31878](https://jira.nuxeo.com/browse/NXP-31878)
 
 
 
