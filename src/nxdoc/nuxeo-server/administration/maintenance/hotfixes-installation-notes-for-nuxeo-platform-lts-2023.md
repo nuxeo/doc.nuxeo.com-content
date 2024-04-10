@@ -105,7 +105,6 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### Handle Openpdf Upgrade Dependabot Pull Request
 
-
 The `com.github.librepdf:openpdf` dependency has been upgraded from 1.3.40 to 1.4.1.
 Thus, the `AcroFields#getSignatureNames()` method isn't available anymore, it is replaced by `AcroFields#getSignedFieldNames()`.
 
@@ -113,14 +112,46 @@ Thus, the `AcroFields#getSignatureNames()` method isn't available anymore, it is
 
 ###  Provide Option to Enable Nashorn Optimistic Typing
 
-
 A new framework property allows to toggle this behavior by adding the following to your nuxeo.conf:
 ```java
 nuxeo.automation.scripting.optimistic.types.enabled=true
 ```
- 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32342](https://jira.nuxeo.com/browse/NXP-32342)
+
+### Add Support of Keycloak 24.0.x
+
+The following dependency (Keycloak BOM) has been removed:
+
+```xml
+<dependency>
+  <groupId>org.keycloak</groupId>
+  <artifactId>keycloak-tomcat-adapter-dist</artifactId>
+</dependency>
+```
+
+in favor of:
+
+```xml
+<dependency>
+  <groupId>org.keycloak</groupId>
+  <artifactId>keycloak-tomcat-adapter</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.keycloak</groupId>
+  <artifactId>keycloak-common</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.keycloak</groupId>
+  <artifactId>keycloak-crypto-default</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.keycloak</groupId>
+  <artifactId>keycloak-policy-enforcer</artifactId>
+</dependency>
+```
+
+The version of these artifacts has been upgraded from 19.0.3 to 24.0.2.
 
 ## Hotfix 9
 
