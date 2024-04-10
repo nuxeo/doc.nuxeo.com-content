@@ -153,6 +153,8 @@ in favor of:
 
 The version of these artifacts has been upgraded from 19.0.3 to 24.0.2.
 
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32352](https://jira.nuxeo.com/browse/NXP-32352)
+
 ## Hotfix 9
 
 ### Update H2database Dep to 2.2.220
