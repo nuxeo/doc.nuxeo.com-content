@@ -13,7 +13,7 @@ tree_item_index: 10000
 
 This page relates to the release notes of Nuxeo Server and related addons for LTS 2021 cycle. It will list the improvements and features that are successively shipped with the 2021.x releases.
 
-{{#> callout type='warning' heading='Oracle Linux 7 Upgrade'}} Starting from LTS 2021.54 released in May 2024, we will be transitioning our LTS 2021 Nuxeo Server distributed Docker image from CentOS 7 to Oracle Linux 7. Please refer to the [upgrade notes]({{page page='upgrade-from-lts-2019-to-lts-2021'}}##upgrade-from-centos-7-to-oracle-linux-7) for detailed information. {{/callout}}
+{{#> callout type='warning' heading='Oracle Linux 7 Upgrade'}} Starting from LTS 2021.54 released in May 2024, we will be transitioning our LTS 2021 Nuxeo Server distributed Docker image from CentOS 7 to Oracle Linux 7. Please refer to the [upgrade notes]({{page page='upgrade-from-lts-2019-to-lts-2021'}}#upgrade-from-centos-7-to-oracle-linux-7) for detailed information. {{/callout}}
 
 {{#> callout type='info' heading='Upgrade Notes'}}
 This page mentions what's new. Refer to the [upgrade notes]({{page page='upgrade-from-lts-2019-to-lts-2021'}}) to transition to this version.
