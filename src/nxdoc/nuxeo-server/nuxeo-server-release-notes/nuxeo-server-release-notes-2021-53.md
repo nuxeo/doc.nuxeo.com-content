@@ -18,7 +18,7 @@ hidden: true
 ## Documents Get Created With "Undefined" Lifecycle State
 
 
-Lifecylce registry inititialization fixed
+Lifecycle registry initialization fixed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32483](https://jira.nuxeo.com/browse/NXP-32483)
 
