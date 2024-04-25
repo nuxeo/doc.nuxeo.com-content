@@ -17,7 +17,7 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2021 (Version 3.1.8)
 
-This release includes the upgrade of WebUI internal functional tests to NodeJS version 18. This means that functional tests written using the technological stack provided by Web UI for your projects will require to use NodeJS 18 to keep passing. Please refer to the [upgrade notes]({{page page='web-ui-upgrade-notes'}}) for detailed information. This release also includes fixes for accessibility issues related to keyboard usage and visible focus.
+This release includes the upgrade of Web UI internal functional tests to NodeJS version 18. This means that functional tests written using the technological stack provided by Web UI for your projects will require to use NodeJS 18 to keep passing. Please refer to the [upgrade notes]({{page page='web-ui-upgrade-notes'}}) for detailed information. This release also includes fixes for accessibility issues related to keyboard usage and visible focus.
 
 #### Visible Focus A11Y Improvements - WCAG Level AA Criteria 2.4.7: focus visible
 
