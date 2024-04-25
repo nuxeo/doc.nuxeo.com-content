@@ -4,42 +4,34 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: 'release'
-  date: '2023-12-13'
+  date: '2024-04-25'
   status: ok
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.4.0**
+Welcome to the Release Notes for **Nuxeo Drive 5.4.1**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.4.0.md)
-
-## Direct Transfer
-
-### Large File Upload
-
-When transferring large file, it may take update to few days or the transfer may get blocked, you now have info on the popup to let you know if the transfer is still happening or if an error occurred. If an error occurred, the transfer would resume by itself.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2711](https://jira.nuxeo.com/browse/NXDRIVE-2711).
-
+**Status**: <font color="##ff0000">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.4.1.md)
 
 ## Core 
 
-### Log Sanitization
+### Fix `dump.sql` Creation Behavior
 
-All sensitive information that weren’t necessary for Drive usage or debug were removed from logs. 
+The 'dump.sql' should be created in the same directory as the database file being recovered (instead of in the directory where 'ndrive.exe' is).
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2828](https://jira.nuxeo.com/browse/NXDRIVE-2828).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2882](https://jira.nuxeo.com/browse/NXDRIVE-2882).
 
-### Account URL Format
+## GUI 
 
-When adding new account, some URLs weren’t correctly formatted, we added more checks and a popup will be displayed if the format isn’t correct. 
+### License
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2861](https://jira.nuxeo.com/browse/NXDRIVE-2861).
+We've updated Licence information throughout Nuxeo Drive. 
 
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2900](https://jira.nuxeo.com/browse/NXDRIVE-2900).
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.4.0-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.4.0.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.4.0.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.4.1-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.4.1.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.4.1.exe)
