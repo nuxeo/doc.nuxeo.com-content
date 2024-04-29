@@ -16,7 +16,7 @@ tree_item_index: 100
 {{! multiexcerpt name='redaction-introduction'}}
 
 {{#> callout type='info'}}
-The Content Redaction feature requires at minimum NEV `2.2.0` and Nuxeo ARender addon `2021.3.0`.
+The Content Redaction feature requires at minimum NEV `2.3.0` and Nuxeo ARender addon `4.8.8-1`.
 {{/callout}}
 
 Protecting and removing personal identifying information (PII) from your documents can be a requirement in order to comply with regulations such as the General Data Privacy Regulation (GDPR) or the California Consumer Privacy Act (CCPA).
@@ -26,7 +26,7 @@ Nuxeo Enhanced Viewer helps you with this use case by allowing to apply temporar
 
 ## Enabling the Redact Permission
 
-Since Nuxeo ARender addon `2021.3.0`, a new permission called `Redact` is available. This permission allows a user to get access to the redaction actions described below.
+Since Nuxeo ARender addon `4.8.8-1`, a new permission called `Redact` is available. This permission allows a user to get access to the redaction actions described below.
 
 By default, the permission is not displayed in Web UI in order to prevent changes. To make use of it from Web UI, you can take our existing how-to as a basis and tweak it to [make the Redact permission visible or include it in an existing or a custom permission]({{page page='how-to-grant-the-edit-permission-without-the-remove-permission'}}).
 
@@ -39,7 +39,7 @@ Redaction actions mentioned below act as a cover up and will not be sufficient t
 {{/callout}}
 
 {{#> callout type='tip'}}
-NEV `2.2.0` introduces new buttons. If you did override the list of buttons to display, head to the [release notes for NEV 2.2.0]({{page space='nxdoc' page='nuxeo-enhanced-viewer-release-notes-2-2-0'}}) to see what was added.
+NEV `2.3.0` introduces new buttons. If you did override the list of buttons to display, head to the [release notes for NEV 2.3.0]({{page space='nxdoc' page='nuxeo-enhanced-viewer-release-notes-2-3-0'}}) to see what was added.
 {{/callout}}
 
 ### Redacting Text
