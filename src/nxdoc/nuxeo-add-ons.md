@@ -468,6 +468,20 @@ Public
 </td>
 </tr>
 <td colspan="1">
+Nuxeo Keycloak<br/>
+`nuxeo-keycloak`
+</td>
+<td colspan="1">
+Public
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-keycloak'}})
+</td>
+<td colspan="1">
+[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-keycloak)
+</td>
+</tr>
+<td colspan="1">
 Nuxeo Live Connect<br/>
 `nuxeo-liveconnect`
 </td>
