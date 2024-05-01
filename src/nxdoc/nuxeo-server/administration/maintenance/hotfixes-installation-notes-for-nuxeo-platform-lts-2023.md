@@ -101,6 +101,15 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 11
+
+### Upgrade Commons-Cli From 1.6.0 to 1.7.0
+
+
+commons-cli:commons:cli was upgraded from 1.6.0 to 1.7.0.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32498](https://jira.nuxeo.com/browse/NXP-32498)
+
 ## Hotfix 10
 
 ### Handle Openpdf Upgrade Dependabot Pull Request
