@@ -38,7 +38,7 @@ The Nuxeo 2021 Docker image, `docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 
 The Nuxeo Docker image is described by this [Dockerfile](https://github.com/nuxeo/nuxeo/blob/master/docker/Dockerfile).
 
-Based on CentOS 7, it includes:
+Based on Oracle Linux 7, it includes:
 
 - Azul's [Zulu OpenJDK 11](https://www.azul.com/downloads/zulu-community/?version=java-11-lts&package=jdk).
 - A bare Nuxeo server without any package installed.
