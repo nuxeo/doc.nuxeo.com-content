@@ -4,7 +4,7 @@ description: Nuxeo Keycloak allows you to integrate Keycloak, an Open Source Ide
 ---
 
 {{#> callout type='info'}}
-See the [Nuxeo Keycloak Package README.md](https://github.com/nuxeo/nuxeo-lts/blob/2021/packages/nuxeo-keycloak-package/README.md) for a complete list of required and optional configs directly contributable via nuxeo.conf
+See the [Nuxeo Keycloak Package README.md](https://github.com/nuxeo/nuxeo-lts/blob/2021/packages/nuxeo-keycloak-package/README.md) for a complete list of required and optional configs directly contributable via `nuxeo.conf`.
 {{/callout}}
 
 ## Nuxeo/Keycloak automation and rest api status code specs
