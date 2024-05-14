@@ -21,7 +21,7 @@ This plugin provides a way to handle identity propagation between an external ap
 
 To install this authentication plugin:
 
-1.  Download the [nuxeo-platform-login-portal-sso plugin](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;quick~nuxeo-platform-login-portal-sso).
+1.  Download the [nuxeo-platform-login-portal-sso plugin](https://packages.nuxeo.com/#browse/search/maven=attributes.maven2.artifactId%3Dnuxeo-platform-login-portal-sso%20AND%20version%3D2023.0.159:NX.coreui.model.Component-1:3ea063d9cb447dd4143f2dfc0e373ed2). You must be already authenticated on https://packages.nuxeo.com/ ("Sign In with SSO" button) to see this resource.
 2.  Put it in `$TOMCAT_HOME/nxserver/bundles` or `$JBOSS_HOME/server/default/deploy/nuxeo.ear/bundles` and restart the server.
 3.  Put the plugin into the authentication chain.{{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}}
     Use `PORTAL_AUTH`.
