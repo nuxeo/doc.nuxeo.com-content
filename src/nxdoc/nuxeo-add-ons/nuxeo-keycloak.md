@@ -8,7 +8,7 @@ The [Nuxeo Keycloak package](https://connect.nuxeo.com/nuxeo/site/marketplace/pa
 {{! /excerpt}}
 
 {{#> callout type='info'}}
-See the [Nuxeo Keycloak Package README.md](https://github.com/nuxeo/nuxeo-lts/blob/2021/packages/nuxeo-keycloak-package/README.md) for a complete list of required and optional configuration parameters directly contributable via nuxeo.conf
+See the [Nuxeo Keycloak Package README.md](https://github.com/nuxeo/nuxeo-lts/blob/2021/packages/nuxeo-keycloak-package/README.md) for a complete list of required and optional configuration parameters directly contributable via `nuxeo.conf`.
 {{/callout}}
 
 ## Nuxeo/Keycloak Automation and REST API Status Code Specifications
