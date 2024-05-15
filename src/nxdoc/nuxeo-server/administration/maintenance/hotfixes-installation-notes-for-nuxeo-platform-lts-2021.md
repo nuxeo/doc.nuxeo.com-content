@@ -103,6 +103,34 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 54
+
+### Use Keycloak Auth After Automation Basic Auth in Specific Auth Chains
+
+
+Now when doing automation or rest calls, Automation basic auth precedes Keycloak auth. This brings change to the response status codes to expect.
+
+These have been documented in [the Nuxeo Keycloak documentation](https://doc.nuxeo.com/nxdoc/nuxeo-keycloak/#nuxeokeycloak-automation-and-rest-api-status-code-specifications) alongside with a [sample xml contrib to reverse back the auth plugins order to the older state\|nxdoc/nuxeo-keycloak/#sample-contribution-to-change-the-authentication-pluginsand39-order-overriding-the-keycloak-packages-contribution].
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32514](https://jira.nuxeo.com/browse/NXP-32514)
+
+### Use Oracle Linux 7 Instead of CentOS 7 as Base Image for LTS 2021 Docker Image
+
+
+The `docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021` Docker image is built from `oraclelinux:7-slim`.
+
+Python 2.7.5 is installed with the default system package.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32505](https://jira.nuxeo.com/browse/NXP-32505)
+
+### Upgrade Avro From 1.9.2 to 1.11.3
+
+
+Avro library has been upgraded for security reason. The new version changes the Avro Schema definition and its fingerprints. Nuxeo is taking care of contributing old and new schemas to be backward compatible. 
+If you are defining custom Avro Schemas, they must be registered to ensure the backward compatibility.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32441](https://jira.nuxeo.com/browse/NXP-32441)
+
 ## Hotfix 52
 
 ### Upgrade Auto-Value From 1.4 to 1.10.4
@@ -756,6 +784,7 @@ Web UI does not display anymore a preview for unsupported MIME types.
 PDF rendition is no longer listed in available renditions when no converter is found for a document's main blob given MIME type.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30643](https://jira.nuxeo.com/browse/NXP-30643)
+
 
 
 
