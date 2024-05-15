@@ -101,6 +101,17 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 12
+
+### Use Keycloak Auth After Automation Basic Auth in Specific Auth Chains
+
+
+Now when doing automation or rest calls, Automation basic auth precedes Keycloak auth. This brings change to the response status codes to expect.
+
+These have been documented in [the Nuxeo Keycloak documentation](https://doc.nuxeo.com/nxdoc/nuxeo-keycloak/#nuxeokeycloak-automation-and-rest-api-status-code-specifications) alongside with a [sample xml contrib to reverse back the auth plugins order to the older state\|nxdoc/nuxeo-keycloak/#sample-contribution-to-change-the-authentication-pluginsand39-order-overriding-the-keycloak-packages-contribution].
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32514](https://jira.nuxeo.com/browse/NXP-32514)
+
 ## Hotfix 11
 
 ### Upgrade Commons-Cli From 1.6.0 to 1.7.0
