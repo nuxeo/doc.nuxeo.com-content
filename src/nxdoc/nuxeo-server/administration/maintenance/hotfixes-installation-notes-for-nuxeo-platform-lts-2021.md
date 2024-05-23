@@ -110,7 +110,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 Now when doing automation or rest calls, Automation basic auth precedes Keycloak auth. This brings change to the response status codes to expect.
 
-These have been documented in [the Nuxeo Keycloak documentation](https://doc.nuxeo.com/nxdoc/nuxeo-keycloak/#nuxeokeycloak-automation-and-rest-api-status-code-specifications) alongside with a [sample xml contrib to reverse back the auth plugins order to the older state\|nxdoc/nuxeo-keycloak/#sample-contribution-to-change-the-authentication-pluginsand39-order-overriding-the-keycloak-packages-contribution].
+These have been documented in [the Nuxeo Keycloak documentation]({{page page='nuxeo-keycloak'}}#nuxeokeycloak-automation-and-rest-api-status-code-specifications) alongside with a [sample xml contrib]({{page page='nuxeo-keycloak'}}#sample-contribution-to-change-the-authentication-pluginsand39-order-overriding-the-keycloak-packages-contribution) to reverse back the auth plugins order to the older state.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32514](https://jira.nuxeo.com/browse/NXP-32514)
 
