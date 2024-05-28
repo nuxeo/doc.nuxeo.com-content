@@ -24,3 +24,7 @@ When you follow a document or a space activity, you get an email when the events
 {{#> callout type='info' }}
 The publish event is available in sections only. The other events are available in workspaces only.
 {{/callout}}
+
+{{#> callout type='info' }}
+The `notification.check.read.permission` property can be set to `true` in the [nuxeo.conf file]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}) to not send alerts to users without `read` permission on a targetted document.
+{{/callout}}
