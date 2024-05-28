@@ -654,6 +654,16 @@ The Nuxeo team
 
 * * *
 
+#### `notification.check.read.permission`
+
+Do not send notification to users without read permission on targetted documents.
+
+**Default Value**
+
+false
+
+* * *
+
 #### `mail.transport.host`
 
 SMTP gateway server.
