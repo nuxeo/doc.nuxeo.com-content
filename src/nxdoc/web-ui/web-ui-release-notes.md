@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2024-04-24'
+  date: '2024-06-05'
   status: ok
 toc: true
 labels:
@@ -22,16 +22,17 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-8'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-9'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.8]({{page page='web-ui-release-notes-3-1-8'}})                  | Accessibility improvements and bugfix release     | -->
+<!-- | [Web UI 3.1.9]({{page page='web-ui-release-notes-3-1-9'}})                  | Veracode issue fix and bugfix release     | -->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [Web UI 3.1.8]({{page page='web-ui-release-notes-3-1-8'}}) | Accessibility improvements and bugfix release     |
 | [Web UI 3.1.7]({{page page='web-ui-release-notes-3-1-7'}}) | Bugfix release                                                                      |
 | [Web UI 3.1.6]({{page page='web-ui-release-notes-3-1-6'}}) | NodeJS18 upgrade, accessibility improvements and bugfix release                     |
 | [Web UI 3.1.5]({{page page='web-ui-release-notes-3-1-5'}}) | Polymer version upgrade, accessibility improvements and bugfix release              |
