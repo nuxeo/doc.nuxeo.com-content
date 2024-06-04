@@ -525,9 +525,9 @@ Maven plugins are considered as special artifacts: their repositories must also 
 
 The [maven-eclipse-plugin](http://maven.apache.org/plugins/maven-eclipse-plugin/usage.html) provides a goal (`eclipse:configure-workspace`) for automatically configuring Eclipse with Maven but it's easy to manually configure: in Eclipse, go to `Preferences/Java/Build Path/Classpath Variables`, click `New`, name `M2_REPO` and browse to your local Maven repository (usually `~/.m2/repository`).
 
-## Maven usage for LTS 2021
+## Maven usage for LTS 2023
 
-Nuxeo Platform LTS2021 artifacts are **private**. Consequently, you'll need to create a support ticket to request access to the Nuxeo Central Repository, https://packages.nuxeo.com/.
+Nuxeo Platform LTS 2023 artifacts are **private**. Consequently, you'll need to create a support ticket to request access to the Nuxeo Central Repository, https://packages.nuxeo.com/.
 
 Once your Okta account is assigned the “**Sonatype Nexus**“ application, go to  https://auth.nuxeo.com and click on the application.
 
