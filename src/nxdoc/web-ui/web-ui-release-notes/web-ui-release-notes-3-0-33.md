@@ -23,6 +23,11 @@ This release includes the upgrade of Web UI internal functional tests to NodeJS 
 
 - XSS security issue listed in Veracode report for May will be resolved .<br/>[[WEBUI-1510](https://jira.nuxeo.com/browse/WEBUI-1510)]
 
+#### Fallback Translations for Two-letter Locales
+
+- Added fallback to two-letter locale for Swedish.<br/>[[WEBUI-1494](https://jira.nuxeo.com/browse/WEBUI-1494)]
+- Added fallback to French (fr) from fr-CA locale.<br/>[[WEBUI-697](https://jira.nuxeo.com/browse/WEBUI-697)]
+
 ### Other Noteworthy Changes
 
 - Office files will now be previewed in attachments using pdf.js.<br/>[[ELEMENTS-1722](https://jira.nuxeo.com/browse/ELEMENTS-1722)]
