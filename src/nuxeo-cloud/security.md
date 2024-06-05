@@ -64,8 +64,7 @@ We use AWS shield to protect our environments against DDoS attacks
 
 **At Rest**: Data is resting while in storage (DB, File System, Object storage etc)
 - S3 - Binary storage.
-  - Server side encryption - we use the AWS Master Key set to AES-256 server side encryption. In the future we plan to migrate this to an AWS KMS solution.
-  - Client side encryption - Nuxeo encrypts the content before it is stored in the S3 bucket
+  - Server side encryption - Nuxeo relies on AWS Key management service to manage the encryption key and the standard S3 server-side encryption configuration. Refer to the "Protecting data with server-side encryption" page in the AWS online documentation for additional information.
 - MongoDB Backups
   - Storage is encrypted using AWS KMS
 
