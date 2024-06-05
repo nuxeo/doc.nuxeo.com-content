@@ -19,7 +19,7 @@ hidden: true
 
 This release includes the upgrade of Web UI internal functional tests to NodeJS version 18. This means that functional tests written using the technological stack provided by Web UI for your projects will require to use NodeJS 18 to keep passing. Please refer to the [upgrade notes]({{page page='web-ui-upgrade-notes'}}) for detailed information. This release also includes fixes for accessibility issues related to keyboard usage and visible focus.
 
-#### [May 2024] Security fixes for Web UI code as per Veracode scan results
+#### [May 2024] Security Fixes for Web UI Code as per Veracode Scan Results
 
 - XSS security issue listed in Veracode report for May will be resolved .<br/>[[WEBUI-1510](https://jira.nuxeo.com/browse/WEBUI-1510)]
 
