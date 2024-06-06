@@ -26,5 +26,5 @@ The publish event is available in sections only. The other events are available 
 {{/callout}}
 
 {{#> callout type='info' }}
-The `notification.check.read.permission` property can be set to `true` in the [nuxeo.conf file]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}) to not send alerts to users without `read` permission on a targetted document.
+The `notification.check.read.permission` property can be set to `true` in the [nuxeo.conf file]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}) to not send alerts to users without `read` permission on a targeted document.
 {{/callout}}
