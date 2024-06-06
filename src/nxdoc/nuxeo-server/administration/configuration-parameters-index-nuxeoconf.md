@@ -656,7 +656,7 @@ The Nuxeo team
 
 #### `notification.check.read.permission`
 
-Do not send notification to users without read permission on targetted documents.
+Do not send notification to users without read permission on targeted documents.
 
 **Default Value**
 
