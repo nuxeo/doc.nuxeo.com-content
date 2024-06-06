@@ -28,7 +28,7 @@ Starting from Web UI version `3.0.31` released in March 2024, functional tests w
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.33]({{page page='web-ui-release-notes-3-0-33'}})                  | Veracode issue fix and bugfix release             | -->
+<!-- | [Web UI 3.0.33]({{page page='web-ui-release-notes-3-0-33'}})                  | Security and bugfix release             | -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
