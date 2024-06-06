@@ -117,4 +117,125 @@ history:
 This addon is maintained by the community, **it is not covered by the Nuxeo subscription**, pull requests are welcomed!
 {{/callout}}
 
-{{{md (file_content url='https://github.com/nuxeo/nuxeo-php-client/blob/main/README.md')}}}
+The [Nuxeo Automation PHP Client](https://github.com/nuxeo/nuxeo-automation-php-client) is a PHP client library for Nuxeo Automation API.
+
+It is compatible with Nuxeo Platform LTS 2015, LTS 2016 and latest Fast Tracks.
+
+## Path to the PHP Client (v1.5)
+
+Version 1.5.0 introduces a new fluent API. The old API is still available. Thus you can upgrade the library to the 1.5 version and access the new API and features without breaking your application.
+
+{{#> panel type='code' heading='version < 1.5.0'}}
+```
+$client = new \Nuxeo\Automation\Client\NuxeoPhpAutomationClient('http://localhost:8080/nuxeo/site/automation');
+$session = $client->getSession('Administrator', 'Administrator');
+$answer = $session->newRequest("Document.Query")->set('params', 'query', "SELECT * FROM Document)->setSchema($propertiesSchema)->sendRequest();
+$documentsArray = $answer->getDocumentList();
+```
+{{/panel}}
+
+{{#> panel type='code' heading='version >= 1.5.0'}}
+```php
+$client = new \Nuxeo\Client\Api\NuxeoClient('http://localhost:8080/nuxeo', 'Administrator', 'Administrator');
+$documents = $client->schemas("*")->automation('Document.Query')->param('query', 'SELECT * FROM Document')->execute(Documents::className);
+```
+{{/panel}}
+
+## Getting Started
+
+### Library import
+
+Download the latest stable release [Nuxeo Automation PHP Client 1.5.0](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.5.0.tar.gz).
+
+Composer:
+
+```
+  "require": {
+    "nuxeo/nuxeo-automation-php-client": "~1.5.0"
+  }
+```
+
+### Usage
+
+#### Creating a Client
+
+The following documentation and samples applies for the 1.5 and newer versions. Calls to the Automation API for previous versions of the client will require adjustments.
+
+For a given `url`:
+
+```php
+$url = 'http://localhost:8080/nuxeo';
+```
+
+And given credentials:
+
+```php
+use Nuxeo\Client\Api\NuxeoClient;
+
+$client = new NuxeoClient($url, 'Administrator', 'Administrator');
+```
+
+Options:
+
+```php
+// For defining all schemas
+$client = $client->schemas("*");
+```
+
+```php
+// For changing authentication method
+
+use Nuxeo\Client\Api\Auth\PortalSSOAuthentication;
+use Nuxeo\Client\Api\Auth\TokenAuthentication;
+
+// PortalSSOAuthentication with nuxeo-platform-login-portal-sso
+$client = $client->setAuthenticationMethod(new PortalSSOAuthentication($secret, $username));
+
+// TokenAuthentication
+$client = $client->setAuthenticationMethod(new TokenAuthentication($token));
+```
+
+#### APIs
+
+##### Automation API
+
+To use the Automation API, `Nuxeo\Client\Api\NuxeoClient#automation()` is the entry point for all calls:
+
+```php
+use Nuxeo\Client\Api\Objects\Document;
+
+// Fetch the root document
+$result = $client->automation('Repository.GetDocument')->param("value", "/")->execute(Document::className);
+```
+
+```php
+use Nuxeo\Client\Api\Objects\Documents;
+
+// Execute query
+$operation = $client->automation('Repository.Query')->param('query', 'SELECT * FROM Document');
+$result = $operation->execute(Documents::className);
+```
+
+```php
+use Nuxeo\Client\Api\Objects\Blob\Blob;
+use Nuxeo\Client\Api\Objects\Blob\Blobs;
+
+// To upload|download blob(s)
+
+$fileBlob = Blob::fromFile('/local/file.txt', 'text/plain');
+$blob = $client->automation('Blob.AttachOnDocument')->param('document', '/folder/file')->input($fileBlob)->execute(Blob::className);
+
+$inputBlobs = new Blobs();
+$inputBlobs->add('/local/file1.txt', 'text/plain');
+$inputBlobs->add('/local/file2.txt', 'text/plain');
+$blobs = $client->automation('Blob.AttachOnDocument')->param('xpath', 'files:files')->param('document', '/folder/file')->input($inputBlobs)->execute(Blobs::className);
+
+$resultBlob = $client->automation('Document.GetBlob')->input('folder/file')->execute(Blob::className);
+```
+
+#### Errors/Exceptions
+
+The main exception type is `Nuxeo\Client\Internals\Spi\NuxeoClientException` and contains:
+
+- The HTTP error status code (666 for internal errors)
+- An info message
