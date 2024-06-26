@@ -34,7 +34,7 @@ The UI of NEV 2023.2.1 looks like:
 Annotations and Redactions: These features are now consolidated into dedicated panels for better accessibility and organization.
 
 ### Annotation Toolbar:
-Annotations are no longer available as individual actions in the top panel. Instead, they are accessed through a new Annotation Menu button ![]({{file name='annotationbutton.png'}})
+Annotations are no longer available as individual actions in the top panel. Instead, they are accessed through a new Annotation Menu button ![]({{file name='annotationbutton.png'}} ?w=16)
 
 Upon selection, the annotation bar displays as shown below, containing all configured annotations.
 Desired annotations can be selected from this bar and applied to the documents.
@@ -50,29 +50,30 @@ Refer to the migration guide bellow for more information.
 
 Redaction controls provided by Arender are now part of a dedicated side panel in the new UI.  Activate this panel by selecting the following button
 
-![]({{file name='redactionpanel.png'}} ?w=600,border=true)
+![]({{file name='redactionpanel.png'}} ?w=350,border=true)
 
-The following side panel button:![]({{file name='redactbutton.png'}})
+The following side panel button:![]({{file name='redactbutton.png'}} ?w=16)
 must be selected to activate this and then the redact actions can be applied.  
 Older top panel actions like Redact Zone and Redact Text are now available as "On Text" and "Rectangle" options in the new redaction panel. Additionally, new redaction options include:
-•	All text on Page: Redacts all text on the current page.
-•	Whole Page: Redacts the complete current page.
-•	Manual Input: Allows for searching and redacting specific text in the current document.
+* All text on Page: Redacts all text on the current page.
+* Whole Page: Redacts the complete current page.
+* Manual Input: Allows for searching and redacting specific text in the current document.
 
-![]({{file name='manualinput.png'}} ?w=600,border=true)
+![]({{file name='manualinput.png'}} ?w=350,border=true)
 
 Configuration properties for the redaction feature:
-•	redactexplorer.enabled: Enable/Disable the entire redaction panel.
-•	redactexplorer.redact: Enable/Disable the redact text action.
-•	redactexplorer.redactZone: Enable/Disable the redact zone action.
-•	redactexplorer.manualInput: Enable/Disable the manual input redact action.
-•	redactexplorer.redactPageContent: Enable/Disable redact page action.
-•	redactexplorer.redactFullPage: Enable/Disable the full page redaction action.
+* redactexplorer.enabled: Enable/Disable the entire redaction panel.
+* redactexplorer.redact: Enable/Disable the redact text action.
+* redactexplorer.redactZone: Enable/Disable the redact zone action.
+* redactexplorer.manualInput: Enable/Disable the manual input redact action.
+* redactexplorer.redactPageContent: Enable/Disable redact page action.
+* redactexplorer.redactFullPage: Enable/Disable the full page redaction action.
 Note: The features of "Redact with reasons" and "Redact with rules" are not supported in this initial version of NEV 2023.2.1.
 
 ### Audio Annotations:
-NEV 2023.2.1 now supports audio annotations. To enable this feature, set the following property to true: toppanel.annotationmenu.sound. This configuration can also be enabled via its environment variable equivalent using the ARENDER convention: ARENDER_TOPPANEL_ANNOTATIONMENU_SOUND.
-Once enabled, audio annotations can be added by selecting the record action displayed in the annotation toolbar :![]({{file name='audiobutton.png'}})
+NEV 2023.2.1 now supports audio annotations. To enable this feature, set the following property to true: `toppanel.annotationmenu.sound`. This configuration can also be enabled via its environment variable equivalent using the ARENDER convention: `ARENDER_TOPPANEL_ANNOTATIONMENU_SOUND.`
+
+Once enabled, audio annotations can be added by selecting the record action displayed in the annotation toolbar :![]({{file name='audiobutton.png'}} ?w=16)
 
 ![]({{file name='audioannotation.png'}} ?w=600,border=true)
 
@@ -83,14 +84,23 @@ Limitation: The recording time for audio annotations is currently limited to 10 
 ### Configuring the Top Panel Widgets:
 
 The configuration of widgets in the top panel has been updated. Instead of a single property, three different properties now control the placement of widgets:
-o	topPanel.section.left.buttons.beanNames
-o	topPanel.section.middle.buttons.beanNames
-o	topPanel.section.right.buttons.beanNames
+*	topPanel.section.left.buttons.beanNames
+*	topPanel.section.middle.buttons.beanNames
+*	topPanel.section.right.buttons.beanNames
 
 Default values for these properties in NEV are as follows:
-•	topPanel.section.left.buttons.beanNames=fullscreenButton, showAllAnnotationsButton, refreshAnnotation, showAllAnnotationsAndRotationsButton, addStickyNoteAnnotationButton,annotationCreationOpenCreation, documentBuilderButton, redactCompletionButton
-•	topPanel.section.middle.buttons.beanNames=firstPageButton,previousPageButton,pageNavigation,nextPageButton,lastPageButton,zoomBox,zoomSelectableDropdown,rotateSelectableDropdown,cropBoxButton,selectAllTextDocument,multiViewTools
-•	topPanel.section.right.buttons.beanNames=searchBox,printMenu,downloadMenu,imageProcessingMenu,saveDirtyAnnotations
+
+```
+topPanel.section.left.buttons.beanNames=fullscreenButton, showAllAnnotationsButton, refreshAnnotation, showAllAnnotationsAndRotationsButton, addStickyNoteAnnotationButton,annotationCreationOpenCreation, documentBuilderButton, redactCompletionButton
+```
+
+```
+topPanel.section.middle.buttons.beanNames=firstPageButton,previousPageButton,pageNavigation,nextPageButton,lastPageButton,zoomBox,zoomSelectableDropdown,rotateSelectableDropdown,cropBoxButton,selectAllTextDocument,multiViewTools
+```
+
+```
+topPanel.section.right.buttons.beanNames=searchBox,printMenu,downloadMenu,imageProcessingMenu,saveDirtyAnnotations
+```
 
 Make the desired changes to specific deployment instances accordingly.
 
@@ -98,7 +108,9 @@ Make the desired changes to specific deployment instances accordingly.
 
 The list of beans in the annotation bar can be configured using the property: toolbar.annotation.buttons.beanNames.
 By default, NEV includes all possible beans in this property:
+```
 toolbar.annotation.buttons.beanNames=addStrikethroughTextAnnotationButton,addUnderlineTextAnnotationButton,addFreeTextAnnotationButton,addHighlightTextAnnotationButton,addHighlightRectangleAnnotationButton,addHighlightCircleAnnotationButton,addPolygonAnnotationButton,addPolylineAnnotationButton,addFreehandAnnotationButton,addArrowAnnotationButton,addArrowDistanceAnnotationButton,addStampAnnotationButton,addSoundAnnotationButton
+```
 
 It is recommended to use the documentation of the Annotation Menu and Annotations to enable and customize specific annotations.
 
