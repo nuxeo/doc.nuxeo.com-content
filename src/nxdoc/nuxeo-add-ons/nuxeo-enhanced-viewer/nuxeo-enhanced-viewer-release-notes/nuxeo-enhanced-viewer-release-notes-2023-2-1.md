@@ -15,7 +15,7 @@ toc: true
 
 ### {{> anchor 'summary'}} Summary
 
-Arender has released the new version of their enhanced viewer, NEV 2023.2.1.
+Arender has released the new version of their enhanced viewer, Arender 2023.2.0.
 Below are the details of the offered enhancements and important points to consider when migrating from NEV 2.3.x to 2023.2.1.
 The NEV 2023.2.1 release introduces enhanced UI with consolidated annotation and redaction panels, along with support for audio annotations.
 Migration requires reconfiguring top panel widgets and annotation settings, with special steps for HA mode deployments.
@@ -79,6 +79,10 @@ Once enabled, audio annotations can be added by selecting the record action disp
 
 Limitation: The recording time for audio annotations is currently limited to 10 seconds.
 
+To be able to use the audio annotation, make sure that the below nuxeo-arender connector versions installed in nuxeo instance:
+For LTS-2023 >= 2023.2.1
+For LTS-2021 >= 2021.5.1
+
 ## Migration Guide
 
 ### Configuring the Top Panel Widgets:
@@ -112,9 +116,9 @@ By default, NEV includes all possible beans in this property:
 toolbar.annotation.buttons.beanNames=addStrikethroughTextAnnotationButton,addUnderlineTextAnnotationButton,addFreeTextAnnotationButton,addHighlightTextAnnotationButton,addHighlightRectangleAnnotationButton,addHighlightCircleAnnotationButton,addPolygonAnnotationButton,addPolylineAnnotationButton,addFreehandAnnotationButton,addArrowAnnotationButton,addArrowDistanceAnnotationButton,addStampAnnotationButton,addSoundAnnotationButton
 ```
 
-It is recommended to use the documentation of the Annotation Menu and Annotations to enable and customize specific annotations.
+It is recommended to use the documentation of the [Annotation Menu](https://docs.arender.io/guides/configurations/web-ui/properties/toppanel/) and [Annotations](https://docs.arender.io/guides/configurations/web-ui/properties/annotation/) to enable and customize specific annotations.
 
-Refer to the following migration guides for UI  and rendition  changes provided by Arender.
+Refer to the following migration guides for [UI](https://docs.arender.io/guides/upgrade/4.8_to_2023.0/web-ui/)  and [rendition](https://docs.arender.io/guides/upgrade/4.8_to_2023.0/rendition/)  changes provided by Arender.
 This provides changes in the list of properties for their versions of 4.x to 2023.x
 Ensure the applicable property updates are performed in specific deployment instances respectively.
 
