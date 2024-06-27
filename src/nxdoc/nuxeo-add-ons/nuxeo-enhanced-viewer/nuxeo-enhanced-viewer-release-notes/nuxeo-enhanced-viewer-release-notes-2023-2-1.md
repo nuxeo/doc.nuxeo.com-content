@@ -80,8 +80,8 @@ Once enabled, audio annotations can be added by selecting the record action disp
 Limitation: The recording time for audio annotations is currently limited to 10 seconds.
 
 To be able to use the audio annotation, make sure that the below nuxeo-arender connector versions installed in nuxeo instance:
-For LTS-2023 >= 2023.2.1
-For LTS-2021 >= 2021.5.1
+* For LTS-2023 >= 2023.2.1
+* For LTS-2021 >= 2021.5.1
 
 ## Migration Guide
 
@@ -118,7 +118,7 @@ toolbar.annotation.buttons.beanNames=addStrikethroughTextAnnotationButton,addUnd
 
 It is recommended to use the documentation of the [Annotation Menu](https://docs.arender.io/guides/configurations/web-ui/properties/toppanel/) and [Annotations](https://docs.arender.io/guides/configurations/web-ui/properties/annotation/) to enable and customize specific annotations.
 
-Refer to the following migration guides for [UI](https://docs.arender.io/guides/upgrade/4.8_to_2023.0/web-ui/)  and [rendition](https://docs.arender.io/guides/upgrade/4.8_to_2023.0/rendition/)  changes provided by Arender.
+Refer to the following migration guides for [UI](https://docs.arender.io/guides/upgrade/4.8_to_2023.0/web-ui/) and [rendition](https://docs.arender.io/guides/upgrade/4.8_to_2023.0/rendition/) changes provided by Arender.
 This provides changes in the list of properties for their versions of 4.x to 2023.x
 Ensure the applicable property updates are performed in specific deployment instances respectively.
 
