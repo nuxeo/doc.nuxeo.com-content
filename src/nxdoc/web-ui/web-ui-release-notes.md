@@ -22,7 +22,7 @@ Starting from Web UI version `3.0.31` released in March 2024, functional tests w
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-33'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-34'}}}
 
 ---
 
