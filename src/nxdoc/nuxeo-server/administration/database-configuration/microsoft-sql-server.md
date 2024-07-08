@@ -483,6 +483,7 @@ Here are some limitations in the context of the Nuxeo Platform:
 - Only one full-text index is allowed per table ([MS187317](http://technet.microsoft.com/en-us/library/ms187317%28v=sql.100%29.aspx)).
 - Full-text indexing cannot be configured to be done synchronously with transaction commits.
 - It does not support circular ON CASCADE DELETE constraints ([KB321843](http://support.microsoft.com/kb/321843)).
+- Synchronous listeners/event handlers updating ACLs are not supported. If needed, make them asynchronous.
 
 * * *
 
