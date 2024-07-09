@@ -28,7 +28,7 @@ Starting from Web UI version `3.0.31` released in March 2024, functional tests w
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.34]({{page page='web-ui-release-notes-3-0-34'}})                  |  Saved searches can be restored and executed when using vocabularies with multiple levels and ellipsis and tooltips prevent long labels from being cut off in selection        | -->
+<!-- | [Web UI 3.1.10]({{page page='web-ui-release-notes-3-0-34'}})                  |  Saved searches can be restored and executed when using vocabularies with multiple levels, ellipsis and tooltips prevent long labels from being cut off in selection        | -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
