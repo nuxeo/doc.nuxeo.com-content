@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2024-06-05'
+  date: '2024-07-09'
   status: ok
 toc: true
 labels:
@@ -22,17 +22,18 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-9'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-10'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.9]({{page page='web-ui-release-notes-3-1-9'}})                  | Security and bugfix release     | -->
+<!-- | [Web UI 3.1.10]({{page page='web-ui-release-notes-3-0-34'}})                  |  Saved searches can be restored and executed when using vocabularies with multiple levels and ellipsis and tooltips prevent long labels from being cut off in selection        | -->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Web UI 3.1.8]({{page page='web-ui-release-notes-3-1-8'}}) | Accessibility improvements and bugfix release     |
+| [Web UI 3.1.9]({{page page='web-ui-release-notes-3-1-9'}}) | Security and bugfix release                                                         |
+| [Web UI 3.1.8]({{page page='web-ui-release-notes-3-1-8'}}) | Accessibility improvements and bugfix release                                       |
 | [Web UI 3.1.7]({{page page='web-ui-release-notes-3-1-7'}}) | Bugfix release                                                                      |
 | [Web UI 3.1.6]({{page page='web-ui-release-notes-3-1-6'}}) | NodeJS18 upgrade, accessibility improvements and bugfix release                     |
 | [Web UI 3.1.5]({{page page='web-ui-release-notes-3-1-5'}}) | Polymer version upgrade, accessibility improvements and bugfix release              |
