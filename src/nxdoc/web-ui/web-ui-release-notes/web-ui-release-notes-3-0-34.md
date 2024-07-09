@@ -19,6 +19,10 @@ hidden: true
 
 - Saved search restoration/execution with hierarchical vocabularies works with any number of levels.<br/>[[WEBUI-1502](https://jira.nuxeo.com/browse/WEBUI-1502)]
 
+### Other Noteworthy Changes
+
+- To prevent a long label selected from being cut off, an ellipsis will now be shown and tooltips will be enabled to display the full label.<br/>[[ELEMENTS-1672](https://jira.nuxeo.com/browse/ELEMENTS-1672)]
+
 ## Learn More
 
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project IN %28%27WEBUI%27%2C %27ELEMENTS%27%29 AND fixVersion IN %28%273.0.34%27%29 ORDER BY 'Epic Link' ASC%2C type DESC%2C 'Backlog priority' DESC%2C component DESC%2C priority DESC) is available in our bug tracking tool.

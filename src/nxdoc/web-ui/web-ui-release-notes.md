@@ -28,12 +28,12 @@ Starting from Web UI version `3.0.31` released in March 2024, functional tests w
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.34]({{page page='web-ui-release-notes-3-0-34'}})                  |  Saved searches can be restored and executed when using vocabularies with multiple levels           | -->
+<!-- | [Web UI 3.0.34]({{page page='web-ui-release-notes-3-0-34'}})                  |  Saved searches can be restored and executed when using vocabularies with multiple levels and ellipsis and tooltips prevent long labels from being cut off in selection        | -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| [Web UI 3.0.33]({{page page='web-ui-release-notes-3-0-33'}})                  | Security and bugfix release             |
-| [Web UI 3.0.32]({{page page='web-ui-release-notes-3-0-32'}})                  | Accessibility improvements and bugfix release             |
+| [Web UI 3.0.33]({{page page='web-ui-release-notes-3-0-33'}})                 | Security and bugfix release                                                          |
+| [Web UI 3.0.32]({{page page='web-ui-release-notes-3-0-32'}})                 | Accessibility improvements and bugfix release                                        |
 | [Web UI 3.0.31]({{page page='web-ui-release-notes-3-0-31'}})                 | NodeJS18 upgrade, accessibility improvements and bugfix release                      |
 | [Web UI 3.0.30]({{page page='web-ui-release-notes-3-0-30'}})                 | Polymer version upgrade, accessibility improvements and bugfix release               |
 | [Web UI 3.0.29]({{page page='web-ui-release-notes-3-0-29'}})                 | Bugfix and accessibility improvements release                                        |
