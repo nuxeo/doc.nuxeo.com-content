@@ -66,11 +66,11 @@ Discover Nuxeo Web UI through the functional documentation.
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Roadmap
+### Release Notes
 
-Discover the evolutions and improvements planned for Web UI.
+Discover what's new on Web UI.
 
-[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='web-ui-roadmap'}})
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='web-ui-release-notes'}})
 {{/panel}}
 </div>
 
