@@ -44,7 +44,7 @@ history:
 
 Get an overview of what can be done with Nuxeo Studio and how you can create your own Nuxeo Studio projects step by step.
 
-- [Configure Nuxeo Platform]({{page version='' space='nxdoc' page='configure-nuxeo-platform'}})
+- [Configure Nuxeo Platform]({{page version='' space='nxdoc' page='first-package-with-studio'}})
 - [Studio Overview and Concepts]({{page page='studio-overview-and-concepts'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
