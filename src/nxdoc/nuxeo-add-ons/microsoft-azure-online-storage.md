@@ -51,7 +51,7 @@ history:
 ---
 
 {{! excerpt}}
-The&nbsp;[Microsoft Azure Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage) addon is a Nuxeo Binary Manager that stores binaries in an Azure Storage container.
+The [Microsoft Azure Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage) addon is a Nuxeo Binary Manager that stores binaries in an Azure Storage container.
 {{! /excerpt}}
 
 ## Prerequisites
@@ -66,19 +66,19 @@ Be sure to protect your access keys using the [Configuration Data Encryption]({{
 
 Configuration properties you have to set in your [`nuxeo.conf` file]({{page page='configuration-parameters-index-nuxeoconf'}}).
 
-## Enabling Azure Binary Manager
+## Enabling Azure Blob Provider
 
 Set up the default BinaryManager that stores all your blobs in Azure:
 
-`nuxeo.core.binarymanager=org.nuxeo.ecm.blob.azure.AzureBinaryManager`
+`nuxeo.core.binarymanager=org.nuxeo.ecm.blob.azure.AzureBlobProvider`
 
-### Enabling CDN Azure Binary Manager
+### Enabling CDN Azure Blob Provider
 
 If you want to use Azure CDN as a front instead of Azure Storage:
 
-1.  Read the&nbsp;[Microsoft Azure documentation](https://azure.microsoft.com/en-us/documentation/articles/cdn-overview/)&nbsp;page and create a CDN bound to your container.
-2.  Set the corresponding BinaryManager:
-    `nuxeo.core.binarymanager=org.nuxeo.ecm.blob.azure.AzureCDNBinaryManager`
+1.  Read the [Microsoft Azure documentation](https://azure.microsoft.com/en-us/documentation/articles/cdn-overview/) page and create a CDN bound to your container.
+2.  Define the Azure CDN URL with the following `nuxeo.conf` property:
+    `nuxeo.storage.azure.cdn.host=azure_cdn_url`
 
 ### Mandatory Parameters
 
@@ -92,17 +92,17 @@ If you want to use Azure CDN as a front instead of Azure Storage:
 </tr>
 <tr>
 <td colspan="1">`nuxeo.storage.azure.container`</td>
-<td colspan="1">&nbsp;</td>
+<td colspan="1"></td>
 <td colspan="1">The name of the Azure container</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.storage.azure.account.name`</td>
-<td colspan="1">&nbsp;</td>
+<td colspan="1"></td>
 <td colspan="1">Your Azure storage account name</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.storage.azure.account.key`</td>
-<td colspan="1">&nbsp;</td>
+<td colspan="1"></td>
 <td colspan="1">Your Azure storage access key.
 Do not forget to use [data encryption]({{page page='sensitive-configuration-data-encryption'}})</td>
 </tr>
@@ -137,7 +137,7 @@ Do not forget to use [data encryption]({{page page='sensitive-configuration-data
 </tr>
 <tr>
 <td colspan="1">`nuxeo.storage.azure.cdn.host`</td>
-<td colspan="1">&nbsp;</td>
+<td colspan="1"></td>
 <td colspan="1">Your Azure CDN host where your blobs are available.</br>
 **Note:** Only if you enable direct download and use the Azure CDN.</td>
 </tr>
@@ -162,7 +162,5 @@ Do not forget to use [data encryption]({{page page='sensitive-configuration-data
 - [Amazon S3 Online Storage]({{page page='amazon-s3-online-storage'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>
