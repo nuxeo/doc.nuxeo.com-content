@@ -229,13 +229,13 @@ Don't forget to specify the key algorithm if you create your keypair with the `k
 keytool -genkeypair -keystore </path/to/keystore/file> -alias <key alias> -storepass <keystore password> -keypass <key password> -dname <key distinguished name> -keyalg RSA
 ```
 
-If you get&nbsp;`keytool error: java.io.IOException: Incorrect AVA format`, then ensure that the distinguished name parameter has a form such as:&nbsp;`-dname "CN=AWS S3 Key, O=example, DC=com".`
+If you get `keytool error: java.io.IOException: Incorrect AVA format`, then ensure that the distinguished name parameter has a form such as: `-dname "CN=AWS S3 Key, O=example, DC=com".`
 
 {{#> callout type='warning' }}
 Don't forget to **make backups of the `/path/to/keystore/file` file** along with the **store password, key alias and key password**. If you lose them (for instance if the EC2 machine hosting the Nuxeo instance with the original keystore is lost) you will lose the ability to recover any encrypted blob from the S3 bucket.
 {{/callout}}
 
-With all that above in mind, here are the crypto options that you can add to `nuxeo.conf` (they are all&nbsp;mandatory once you specify a keystore):
+With all that above in mind, here are the crypto options that you can add to `nuxeo.conf` (they are all mandatory once you specify a keystore):
 
 ```
 nuxeo.s3storage.crypt.keystore.file=/absolute/path/to/the/keystore/file
@@ -265,7 +265,7 @@ nuxeo.s3storage.crypt.kms.key = your-key-id
 
 #### Cache Options
 
-Files retrieved from S3 are cached locally for speed. You can configure the maximum cache size (in bytes or with the standard KB, MB, GB or TB&nbsp;suffixes), the maximum number of files in the cache, and the minimum age (in seconds) a file should have before being eligible for purge (the age is the time since last file access).
+Files retrieved from S3 are cached locally for speed. You can configure the maximum cache size (in bytes or with the standard KB, MB, GB or TB suffixes), the maximum number of files in the cache, and the minimum age (in seconds) a file should have before being eligible for purge (the age is the time since last file access).
 
 ```
 nuxeo.s3storage.cachesize=100MB
@@ -345,7 +345,7 @@ nuxeo.s3storage.socket.timeout=50000
 
 The timeouts are expressed in milliseconds.
 
-You can read more about these parameters on the AWS&nbsp;[ClientConfiguration](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html)&nbsp;documentation page.
+You can read more about these parameters on the AWS [ClientConfiguration](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html) documentation page.
 
 ### Checking Your Configuration
 
@@ -362,11 +362,13 @@ If your configuration is incorrect, this line will be followed by some error mes
 
 ## AWS Configuration
 
+### AWS S3 Permissions
+
 You must have appropriate permissions set on your bucket. In particular, note that the less commonly-used permissions `s3:AbortMultipartUpload` and `s3:ListMultipartUploadParts` are needed on the bucket objects, and `s3:ListBucketMultipartUploads` and `s3:GetBucketVersioning` are needed on the bucket itself.
 
 If you plan on using [Retention]({{page page='nuxeo-retention-management'}}), you'll also need `s3:PutObjectRetention` and `s3:PutObjectLegalHold` on the bucket objects, and `s3:GetBucketObjectLockConfiguration` on the bucket itself. When testing Retention in Governance mode, you'll need a user with `s3:BypassGovernanceRetention` in order for blob garbage collection to work correctly.
 
-Here is a sample AWS S3 Policy that you can use; make sure that you replace&nbsp;`yourbucketname` with your own bucket name.
+Here is a sample AWS S3 Policy that you can use; make sure that you replace `yourbucketname` with your own bucket name.
 
 ```
 {
@@ -406,6 +408,12 @@ Here is a sample AWS S3 Policy that you can use; make sure that you replace&nbsp
     ]
 }
 ```
+
+### AWS S3 Cleanup Lifecycle Rule
+
+{{#> callout type='warning' }} 
+If versioning is enabled on your s3 bucket, you should define a [Cleanup Lifecycle rule](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-configuration-examples.html#lifecycle-config-conceptual-ex7) to remove expired object delete markers. As a matter of fact, in the case of s3 versioning enabled, the [Orphaned Blobs GC]({{page page='garbage-collecting-orphaned-blobs'}}) will only add a delete marker on the garbage-collected object. This object will be permanently deleted only if such a lifecycle rule is defined.
+{{/callout}}
 
 ## Nuxeo Configuration Through Extension Point
 
