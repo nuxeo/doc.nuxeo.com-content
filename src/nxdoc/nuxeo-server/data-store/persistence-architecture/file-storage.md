@@ -408,19 +408,30 @@ This assumes that you have four blob providers configured, the default one and t
 ```xml
 <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
   <blobprovider name="videos">
-    <class>org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager</class>
+    <class>org.nuxeo.ecm.core.blob.LocalBlobProvider</class>
     <property name="path">binaries-videos</property>
   </blobprovider>
   <blobprovider name="attachments">
-    <class>org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager</class>
+    <class>org.nuxeo.ecm.core.blob.LocalBlobProvider</class>
     <property name="path">binaries-attachments</property>
   </blobprovider>
   <blobprovider name="encrypted">
-    <class>org.nuxeo.ecm.core.blob.binary.AESBinaryManager</class>
+    <class>org.nuxeo.ecm.core.blob.AESBlobProvider</class>
     <property name="key">password=secret</property>
   </blobprovider>
 </extension>
 ```
+
+{{#> callout type='warning' heading='Separating Binaries'}}
+It is CRITICAL to keep the binaries separated between each provider. Otherwise, this will result in a shared storage configuration that will prevent the [Orphaned Blobs GC]({{page page='garbage-collecting-orphaned-blobs'}}) from running efficiently.
+
+Always define different `path` when using local blob providers. When using [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) (or any other cloud provider), always define different `bucket_prefix` (or container prefix) if using the same bucket (or container).
+
+Such WARN message is displayed at server start up otherwise:
+```
+Shared storages detected: [path] this must be avoided, review your blob providers configuration.
+```
+{{/callout}}
 
 {{/panel}}
 The default `DefaultBlobDispatcher` class can be replaced by your own implementation.
