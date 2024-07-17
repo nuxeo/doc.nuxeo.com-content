@@ -118,6 +118,7 @@ Here is the complete XML extension file example:
       <property name="endpoint">${nuxeo.s3storage.endpoint}</property>
       <property name="pathstyleaccess">${nuxeo.s3storage.pathstyleaccess}</property>
       <property name="accelerateMode">${nuxeo.s3storage.accelerateMode}</property>
+      <!-- always define a prefix different than the default blob provider one in the case you use the same bucket -->
       <property name="bucket_prefix">Prefix for your S3 bucket for records</property>
       <!-- min file age, in second, to be removed from cache if the size max size is reached, default is 3600 -->
       <property name="cacheminage">60</property>
@@ -150,7 +151,7 @@ This will enable the [s3-retention-config.xml](https://github.com/nuxeo/nuxeo-re
   - `nuxeo.retention.s3storage.bucket`</br>
     (required)
   - `nuxeo.retention.s3storage.bucket_prefix`</br>
-    (optional)
+    (required, always define a prefix different than the default blob provider one in the case you use the same bucket)
   - `nuxeo.retention.s3storage.awsid`</br>
     (fallback to `nuxeo.s3storage.awsid`)
   - `nuxeo.retention.s3storage.awssecret`</br>
@@ -203,27 +204,13 @@ To configure the Retention addon with a dedicated S3 bucket with Object Lock, fi
 
 - Amazon S3 Lifecycle Policies must not be configured for use within the Nuxeo Platform storage subsystem.
 
-
-### Alternative Option
+{{> anchor 's3-one-bucket-configuration'}}
+#### Storing Records in the Same Bucket as Other Documents (Alternative Option)
 
 Records can also be stored in the same bucket as the rest of the content. This provides a simpler architecture, but restricts the possibility to adapt to more complex scenarios in the long run.
-
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More info](#s3-one-bucket-configuration)
-
-{{> anchor 's3-one-bucket-configuration'}}
-#### Storing Records in the Same Bucket as Other Documents
-
-This configuration consists on using the same S3 bucket for records and other documents.
-
-In this case, you can use the Amazon S3 addon with the [default configuration]({{page page='amazon-s3-online-storage'}}) with the Retention addon.
 
 This configuration does NOT allow using the [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) feature (no WORM storage option).
 
 {{#> callout type='warning'}}
-This configuration is only compliant with the binary manager `org.nuxeo.ecm.core.storage.sql.S3BinaryManager`.
-
-The following property is required in the `nuxeo.conf` configuration file:
-```
-nuxeo.core.binarymanager=org.nuxeo.ecm.core.storage.sql.S3BinaryManager
-```
+Always store both regular and record blobs in different locations by using distinct prefix in your S3 bucket. Otherwise, this will result in a shared storage configuration that will prevent the [Orphaned Blobs GC]({{page page='garbage-collecting-orphaned-blobs'}}) from running efficiently.
 {{/callout}}
