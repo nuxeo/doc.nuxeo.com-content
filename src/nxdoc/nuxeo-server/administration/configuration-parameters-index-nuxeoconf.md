@@ -2357,6 +2357,14 @@ Property to enable immediate document's blobs garbage collection. Default is `tr
 
 * * *
 
+#### `nuxeo.content.security.policy`
+
+Property to override the default Content Security Policy.
+
+**Since LTS 2023.16**
+
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
