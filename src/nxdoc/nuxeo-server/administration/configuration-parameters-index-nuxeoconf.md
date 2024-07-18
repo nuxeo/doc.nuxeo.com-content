@@ -2344,6 +2344,15 @@ Enables users to select all documents from results listings in the UI and to exe
 
 * * *
 
+#### `nuxeo.content.security.policy`
+
+Property to override the default Content Security Policy.
+
+**Since LTS 2021.58**
+
+
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
