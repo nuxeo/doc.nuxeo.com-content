@@ -108,10 +108,10 @@ It is also possible to define manually the configuration of the mapping of a fie
 
      {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Page Providers/Generate Json Button
-    name: Search-Mapping.PNG
+    name: Search-Mapping-JSON-Button.PNG
     studio_modeler#screenshot#up_to_date
 --}}
-  ![Generate Json Button](/nx_assets/Search-Mapping.PNG)
+  ![Generate Json Button](/nx_assets/Search-Mapping-JSON-Button.PNG)
 
 #### For Target Platform LTS 2021 and Later
 
