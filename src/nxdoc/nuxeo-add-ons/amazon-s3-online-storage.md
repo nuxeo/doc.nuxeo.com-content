@@ -403,7 +403,7 @@ Here is a sample AWS S3 Policy that you can use; make sure that you replace `you
 ### AWS S3 Cleanup Lifecycle Rule
 
 {{#> callout type='warning' }} 
-If versioning is enabled on your s3 bucket, you should define a [Cleanup Lifecycle rule](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-configuration-examples.html#lifecycle-config-conceptual-ex7) to remove expired object delete markers. As a matter of fact, in the case of s3 versioning enabled, the [Orphaned Blobs GC]({{page page='garbage-collecting-orphaned-blobs'}}) will only add a delete marker on the garbage-collected object. This object will be permanently deleted only if such a lifecycle rule is defined.
+If versioning is enabled on your s3 bucket, you should define a [Cleanup Lifecycle rule](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-configuration-examples.html#lifecycle-config-conceptual-ex7) to remove expired object delete markers. As a matter of fact, in the case of S3 versioning enabled, the [Orphaned Blobs GC]({{page page='garbage-collecting-orphaned-blobs'}}) will only add a delete marker on the garbage-collected object. This object will be permanently deleted only if such a lifecycle rule is defined.
 {{/callout}}
 
 ## Nuxeo Configuration Through Extension Point
