@@ -32,6 +32,13 @@ labels:
 </div>
 
 <div class="callout secondary flex-box">
+<a href="{{page page='nuxeo-cloud-customer-console'}}">
+![]({{file name='cloud-edit.png'}})
+<h3>Discover the Nuxeo Cloud Customer Console</h3>
+</a>
+</div>
+
+<div class="callout secondary flex-box">
 <a href="{{page page='nuxeo-cloud-addons'}}">
 ![]({{file name='content-box.png'}})
 <h3>Nuxeo Cloud Addons</h3>
