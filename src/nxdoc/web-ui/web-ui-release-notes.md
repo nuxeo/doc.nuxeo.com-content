@@ -28,7 +28,7 @@ Starting from Web UI version `3.0.31` released in March 2024, functional tests w
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.35]({{page page='web-ui-release-notes-3-0-35'}})                  | WEB UI Improvement and bugfix release     | -->
+<!-- | [Web UI 3.0.35]({{page page='web-ui-release-notes-3-0-35'}})                  | Display the document creation button on all mobile devices     | -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |

@@ -17,11 +17,11 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2021 (Version 3.0.35)
 
-- The + button for document creation will be displayed when using mobile browsers.<br/>[[WEBUI-1489](https://jira.nuxeo.com/browse/WEBUI-1489)]
+- The document creation button is always displayed when using mobile browsers.<br/>[[WEBUI-1489](https://jira.nuxeo.com/browse/WEBUI-1489)]
 
 ### Other Noteworthy Changes
 
-- Fulltext input will be applied and search will be returning corresponding results on clicking search button after disabling auto search on nuxeo-default-search-form.<br/>[[WEBUI-1490](https://jira.nuxeo.com/browse/WEBUI-1490)]
+- Search is launched with the current fulltext input after disabling auto search on the default search form.<br/>[[WEBUI-1490](https://jira.nuxeo.com/browse/WEBUI-1490)]
 
 ## Learn More
 
