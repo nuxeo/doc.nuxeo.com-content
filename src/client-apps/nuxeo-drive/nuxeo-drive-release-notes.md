@@ -22,7 +22,7 @@ Once a task is assigned to you, you will receive a notification in your notifica
 
 A new button is available from the systray menu to access a popup listing the tasks created by you and the ones you are assigned to. You will be able to have a clear view of your remaining tasks, with the due dates, the document to review and the type of tasks. 
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2873](https://jira.nuxeo.com/browse/NXDRIVE-2873)).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2873](https://jira.nuxeo.com/browse/NXDRIVE-2873).
 
 ## Download Links
 
