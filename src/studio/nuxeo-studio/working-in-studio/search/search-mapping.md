@@ -103,18 +103,11 @@ It is also possible to define manually the configuration of the mapping of a fie
 
 #### For Target Platform Before LTS 2021
 
- **Generate JSON File:**
-   - Click on the "Generate JSON File" button in your Studio project and follow the offcial documentation to add the contribution.
-
-     {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Page Providers/Generate Json Button
-    name: Search-Mapping-JSON-Button.PNG
-    studio_modeler#screenshot#up_to_date
---}}
-  ![Generate Json Button](/nx_assets/Search-Mapping-JSON-Button.PNG)
+**Generate JSON File:**
+Click on the "Generate JSON File" button in your Studio project and follow the official documentation to add the contribution.
+![]({{file name='Search-Mapping-JSON-Button.png'}} ?w=600,border=true)
 
 #### For Target Platform LTS 2021 and Later
 
 - The JSON file and associated contribution are automatically included in your Studio project package.
 - There is no additional action required beyond ensuring your project is compatible with the LTS 2021+ target platform.
-
