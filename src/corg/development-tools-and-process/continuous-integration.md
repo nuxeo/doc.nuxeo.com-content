@@ -2,12 +2,13 @@
 title: Continuous Integration (CI) For a Nuxeo Project
 description: Setting up continuous integration on your project is a good practice to prevent regressions and potential bugs. The earlier you detect a problem, the easier to fix it.
 review:
-    comment: ''
-    date: '2018-08-03'
-    status: ok
+  comment: ''
+  date: '2018-08-03'
+  status: ok
 toc: true
 tree_item_index: 50
 ---
+
 {{! excerpt}}
 Setting up continuous integration on your project is a good practice to prevent regressions and potential bugs. The earlier you detect a problem, the easier it is to fix it.
 {{! /excerpt}}
@@ -31,6 +32,7 @@ Watch the related courses on Hyland University:</br>
 ## Define Expectations
 
 The architecture to set up depends on:
+
 - what you want to automate (build, test, verify)
 - when (on commit, by night, on demand, on release)
 - how
@@ -42,6 +44,7 @@ Matters the size of the code base, the number of developers, the build frequency
 Once you know your expectations, you can get a better idea of the tooling it will require.
 
 Doing CI consists of automating manual tasks, and implicitly involves leveraging the ability to add more and more automated tasks such as
+
 - Quality Assurance tooling
 - Continuous Delivery (e.g. deploying artifacts to a Nexus / artifactory)
 
@@ -69,12 +72,14 @@ Additional tools can possibly be added for code coverage, code quality testing, 
 ## Infrastructure Sizing
 
 To get a size estimation, we suggest to build a first job and measure impacts/footprint on:
+
 - Network bandwidth
 - Disk usage: space, IO, speed
 - Memory
 - Build duration
 
 From there, ask yourself the following questions:
+
 - How many branches do you want to put CI under?
 - How many commits happen per day?
 - How many developers will you have?
@@ -86,7 +91,8 @@ With these numbers, you can get a rough estimate of your needs/ costs induced an
 ### Can I Put Studio Configuration Under CI?
 
 Yes you can:
-- [Nuxeo CLI helps testing Studio code]({{page page="nuxeo-cli"}}#studio)
+
+- [Nuxeo CLI helps testing Studio code]({{page space="nxdoc" page="nuxeo-cli"}}#studio)
 - [Nuxeo Studio integrates with Maven]({{page space="studio" page="maven-integration"}}).
 
 Studio configuration is exposed as a build resource (Maven artifact or Nuxeo Package).
