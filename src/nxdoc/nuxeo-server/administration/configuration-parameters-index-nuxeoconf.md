@@ -2365,6 +2365,21 @@ Property to override the default Content Security Policy.
 
 * * *
 
+#### `org.nuxeo.web.ui.pagination.nuxeoSelectOptions.listingMaxItems`
+
+Allow user to set the max number of label options in nuxeo select for pagination.
+
+**Since LTS 2023.12**
+
+**Requires the Web UI package in version 3.1.13 or above**
+
+**Default Value**
+
+`1000`
+
+
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
