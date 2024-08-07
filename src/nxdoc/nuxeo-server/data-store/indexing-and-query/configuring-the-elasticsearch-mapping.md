@@ -208,7 +208,7 @@ Nuxeo comes with a default mapping that can work with custom fields of your sche
 *   use a specific NXQL operators on a custom field: `LIKE`, `ILIKE`, `ecm:fulltext.custom`, `STARTSWITH`
 *   exclude field from the full-text search
 
-To do this you need to create your own [custom template that redefines the Elasticsearch mapping]({{page page='elasticsearch-setup'}}#changingelasticsearchmapping).
+To do this you need to create your own [custom template that redefines the Elasticsearch mapping]({{page page='search-setup'}}#changing-mappings-and-settings-of-indexes).
 This way the mapping reference stay on the Nuxeo configuration side and you should not update the mapping directly on the Elasticsearch side.
 
 Nuxeo updates the mapping and setting on Elasticsearch only when:
