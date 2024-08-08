@@ -22,7 +22,7 @@ Since [LTS 2021-HF35]({{page page='nuxeo-server-release-notes-2021-35'}}) (see [
 
 Only deployments using the **MongoDB** backend can benefit from this feature. The following conditions must also be met:
  - repositories must have the `queryBlobKeys` capability
- - repositories must use `LocalBlobProvider` or `S3BlobProvider`
+ - repositories must use a blob provider extending `BlobStoreBlobProvider`, such as `S3BlobProvider`, `LocalBlobProvider`, `AzureBlobProvider`, `GoogleStorageBlobProvider`, `GridFSBlobProvider` or `InMemoryBlobProvider` (for tests purpose)
 
 #### Repository with `queryBlobKeys` capability
 
