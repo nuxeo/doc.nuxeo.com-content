@@ -1,5 +1,5 @@
 ---
-title: Admin Tab Overview
+title: JSF UI Admin Tab Overview
 description: The Admin tab is a space within the Nuxeo Platform that provides administrative services, such as server and application usage summary information, and upgrades.
 review:
   comment: ''
