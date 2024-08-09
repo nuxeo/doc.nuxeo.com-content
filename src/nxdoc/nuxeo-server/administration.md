@@ -54,11 +54,11 @@ history:
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Best Practices and Tutorials
+### Nuxeo Server Setup
 
-- [Setup Best Practices]({{page version='' space='nxdoc' page='setup-best-practices'}})
-- [How to Change Context Path]({{page version='' space='nxdoc' page='how-to-change-context-path'}})
-- [How to Clean Up Content]({{page version='' space='nxdoc' page='how-to-clean-up-content'}})
+- [Database Configuration]({{page space='nxdoc' page='database-configuration'}})
+- [Search Configuration]({{page space='nxdoc' page='search-setup'}})
+- [Setup Best Practices]({{page space='nxdoc' page='setup-best-practices'}})
   {{/panel}}
   </div>
 
@@ -66,9 +66,9 @@ history:
 {{#> panel type='secondary' match_height='true'}}
 ### Nuxeo Server Configuration
 
-- [Configuration Parameter Index]({{page version='' space='nxdoc' page='configuration-parameters-index-nuxeoconf'}})
-- [Configuration Templates]({{page version='' space='nxdoc' page='configuration-templates'}})
-- [Repository Configuration]({{page version='' space='nxdoc' page='repository-configuration'}})
+- [Configuration Parameter Index]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}})
+- [Configuration Templates]({{page space='nxdoc' page='configuration-templates'}})
+- [Repository Configuration]({{page space='nxdoc' page='repository-configuration'}})
   {{/panel}}
 
 </div>
@@ -79,10 +79,11 @@ history:
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Data Configuration
+### Maintaining Nuxeo Server
+- [Backing up and Restoring Data]({{page space='nxdoc' page='backup-and-restore'}})
+- [Nuxeo Admin Console]({{page space='nxdoc' page='nuxeo-admin-console'}})
+- [How to Clean Up Content]({{page space='nxdoc' page='how-to-clean-up-content'}})
 
-- [Database Configuration]({{page version='' space='nxdoc' page='database-configuration'}})
-- [Search Configuration]({{page version='' space='nxdoc' page='search-setup'}})
   {{/panel}}
   </div>
 
@@ -90,10 +91,25 @@ history:
 {{#> panel type='secondary' match_height='true'}}
 ### Security
 
-- [Security Recommendations]({{page version='' space='nxdoc' page='security-recommendations'}})
-- [Data Encryption]({{page version='' space='nxdoc' page='sensitive-configuration-data-encryption'}})
-- [Implement Encryption]({{page version='' space='nxdoc' page='implementing-encryption'}})
+- [Security Recommendations]({{page space='nxdoc' page='security-recommendations'}})
+- [Data Encryption]({{page space='nxdoc' page='sensitive-configuration-data-encryption'}})
+- [Implement Encryption]({{page space='nxdoc' page='implementing-encryption'}})
   {{/panel}}
   </div>
+
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Observability and Performance
+- [Monitoring and Observability]({{page space='nxdoc' page='observability'}})
+- [Understanding Performance]({{page space='nxdoc' page='performances'}})
+
+  {{/panel}}
+  </div>
+
+
 
 </div>

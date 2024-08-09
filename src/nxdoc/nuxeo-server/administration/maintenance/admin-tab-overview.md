@@ -182,6 +182,10 @@ history:
 
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
+{{#> callout type='tip' }}
+System administration tasks provided by this UI are now available through the [management REST API endpoint]({{page space='rest-api' version='1' page='management-endpoint'}}) and the [Nuxeo admin console]({{page page='nuxeo-admin-console'}}).
+{{/callout}}
+
 The Admin tab, also called Admin Center, is a space within the Nuxeo Platform that provides administrative services, such as server and application usage summary information, as well as access to upgrades, patches, the Nuxeo Marketplace, and Nuxeo Studio projects. It is available to administrators and power users. Power users have access to a limited set of admin features.
 
 The Admin tab offers access to different kinds of information about your Nuxeo instance. Depending the addons you have installed on the Platform, you may have more or less information, i.e. more or less tabs.
