@@ -2365,7 +2365,7 @@ Property to override the default Content Security Policy.
 
 * * *
 
-#### `org.nuxeo.web.ui.pagination.nuxeoSelectOptions.listingMaxItems`
+#### `org.nuxeo.pagination.nuxeoSelectOptions.maxAllowedItems`
 
 Allow user to set the max number of label options in nuxeo select for pagination. If the page size exceeds the set number in the property then nuxeo select options dropdown will not be visible.
 
