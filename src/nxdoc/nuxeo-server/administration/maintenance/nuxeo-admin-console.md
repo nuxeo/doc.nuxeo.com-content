@@ -34,12 +34,12 @@ As a Nuxeo system administrator, the admin console is your go-to application to 
 - A developer focused application. Applications like our [browser extension for developers]({{page page='nuxeo-dev-tools-extension'}}) and [Nuxeo CLI]({{page page='nuxeo-cli'}}) help with that.
 
 - A way to get the logs of your instance. Reasons for that:
-  - Since we run nuxeo apps as a cluster, we need to aggregate all the logs from all the machines in a single place, including logs from services like [Nuxeo Enhanced Viewer]({{page page='nuxeo-enhanced-viewer'}}). A single Nuxeo instance cannot get this information, so the admin console cannot handle that. Their display is managed in the [cloud console]({{page space='nuxeo-cloud' page='nuxeo-cloud-customer-console'}}) for our cloud customers, self-managed customers can leverage their observability tool of choice.
-  - Logs configuration will usually vary depending on the type of environment. The [cloud console]({{page space='nuxeo-cloud' page='nuxeo-cloud-customer-console'}}) offers this option.
+  - Since we run Nuxeo apps as a cluster, we need to aggregate all the logs from all the systems in a single place, including logs from services like [Nuxeo Enhanced Viewer]({{page page='nuxeo-enhanced-viewer'}}). A single Nuxeo instance cannot get this information, so the admin console cannot handle that. Their display is managed in the [cloud console]({{page space='nuxeo-cloud' page='nuxeo-cloud-customer-console'}}) for our cloud customers. Self-managed customers can leverage their observability tool of choice.
+  - Logs configuration usually varies depending on the type of environment. The [cloud console]({{page space='nuxeo-cloud' page='nuxeo-cloud-customer-console'}}) offers this option.
 
 ## Functional Overview
 
-Once installed, the Nuxeo admin console can be accessed through a dedicated URL: `[YOUR-NUXEO-SERVER-URL/nuxeo]/nuxeoadmin`. Only `administrators` can access this interface, using an account without adminstrator level will be met with an error message.
+Once installed, the Nuxeo admin console can be accessed through a dedicated URL: `[YOUR-NUXEO-SERVER-URL/nuxeo]/nuxeoadmin`. Only `administrators` can access this interface. Using an account without adminstrator level displays an error message.
 
 ![]({{file name='admin-console-access-refused.png'}} ?border=true)
 
@@ -55,16 +55,16 @@ The homepage provides a quick view into the essential information of your Nuxeo 
 
 The `Elasticsearch Reindex` menu lets you reindex documents with Elasticsearch or OpenSearch. You can reindex documents:
 - Individually
-- From a folder: all documents in that folder and below will be reindexed
+- From a folder: all documents in that folder and below are reindexed
 - From a [NXQL query]({{page page='NXQL'}})
 
-When using the `Folder` and `NXQL Query` options, the admin console will warn you about the consequences and the expected duration of this action.
+When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
 
 ![]({{file name='admin-console-reindex.png'}} ?border=true)
 
 ### Monitoring an Action
 
-Any action triggered through the admin console uses the [bulk action framework]({{page page='bulk-action-framework'}}), making them highly scalable. Once an action is triggered, a confirmation will be provided with a bulk action command id.
+Any action triggered through the admin console uses the [bulk action framework]({{page page='bulk-action-framework'}}), making them highly scalable. Once an action is triggered, a confirmation is provided with a bulk action command id.
 
 ![]({{file name='admin-console-action-launched.png'}} ?border=true)
 
@@ -72,4 +72,4 @@ This command id can be copied and the action can be monitored using the REST API
 
 ## Going Further
 
-Additional management options are not yet exposed into the admin console and are only available at this stage using the [management REST API endpoint]({{page space='rest-api' version='1' page='management-endpoint'}}). Please refer to its documentation for an exhaustive list.
+Additional management options are not yet exposed into the admin console and are only available at this stage using the [management REST API endpoint]({{page space='rest-api' version='1' page='management-endpoint'}}). Please refer to the documentation for an exhaustive list.
