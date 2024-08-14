@@ -16,17 +16,17 @@ The DocumentDB  [elastic cluster](https://docs.aws.amazon.com/documentdb/latest/
 
 ## Limitations
 
-- fulltext search at repository level using `DocumentDB` is not supported due to `DocumentDB` limitations. You need to rely on `Elasticsearch` or `OpenSearch`. This requires to disable repository fulltext search. See the [configuration]({{page space='nxdoc' page='documentdb#configuration'}}) section.
-- retryable writes are not supported. You need to disable this. See the [configuration]({{page space='nxdoc' page='documentdb#configuration'}}) section.
-- the `DocumentDB` instance type chosen affects the number of open cursor at any given time.
+- Fulltext search at repository level is not supported due to `DocumentDB` limitations. Use `Elasticsearch` or `OpenSearch` for fulltext search. This requires you to disable repository fulltext search. For additional information, see the [configuration]({{page space='nxdoc' page='documentdb#configuration'}}) section.
+- Retryable writes are not supported. You must disable this. For additional information, see the [configuration]({{page space='nxdoc' page='documentdb#configuration'}}) section.
+- The chosen `DocumentDB` instance type affects the number of open cursor at any given time.
 
-Note there are also other differences that should not affect Nuxeo. Please refer to `DocumentDB`:
+Note: There are also other differences that should not affect Nuxeo. Please refer to `DocumentDB`:
 - [Differences With MongoDB](https://docs.aws.amazon.com/documentdb/latest/developerguide/text-search.html#text-index-mongo-diff)
 - [Functional Differences](https://docs.aws.amazon.com/documentdb/latest/developerguide/functional-differences.html#functional-differences.with-mongodb)
 
 ## Configuration
 
-To use `DocumentDB` you need the following options:
+To use `DocumentDB`, you need the following options:
 
 ```properties
 nuxeo.templates=<MY_TEMPLATES>,mongodb
