@@ -221,6 +221,12 @@ nuxeo.s3storage.region=your_AWS_REGION
 
 With S3 you have the option of storing your data encrypted using [S3 Client-Side Encryption](http://docs.amazonwebservices.com/AmazonS3/latest/dev/UsingClientSideEncryption.html). Note that the local cache will _not_ be encrypted.
 
+{{#> callout type='info' }}
+Once data is stored in your s3 bucket with an initial client-side encryption configuration, it is impossible to edit and change this configuration, otherwise the Nuxeo server won't be able to decrypt data encrypted with the older configuration.
+{{/callout}}
+
+##### With a Local Keystore
+
 The S3 Binary Manager can use a keystore containing a keypair, but there are a few caveats to be aware of:
 
 Don't forget to specify the key algorithm if you create your keypair with the `keytool` command, as this won't work with the default (DSA). The S3 Binary Manager has been tested with a keystore generated with this command:
@@ -242,22 +248,31 @@ nuxeo.s3storage.crypt.keystore.file=/absolute/path/to/the/keystore/file
 nuxeo.s3storage.crypt.keystore.password=the_keystore_password
 nuxeo.s3storage.crypt.key.alias=the_key_alias
 nuxeo.s3storage.crypt.key.password=the_key_password
+```
 
+##### With a KMS Managed Key
+
+Since `2023.17` ([NXP-32760](https://jira.nuxeo.com/browse/NXP-32760)), you can enable [client-side encryption with AWS KMS](https://docs.aws.amazon.com/kms/latest/cryptographic-details/client-side-encryption.html) by defining the KMS key ID in the `nuxeo.conf`:
+
+```text
+nuxeo.s3storage.crypt.kms.clientside.key=your-kms-key-id
+```
+
+Optionally, specify the region of the KMS key if it is different than the one from your environment or the bucket configuration:
+
+```text
+nuxeo.s3storage.crypt.kms.clientside.region=your-kms-key-region
 ```
 
 #### Server-Side Crypto Options
 
-Alternatively, you can use [S3 Server-Side Encryption](http://docs.amazonwebservices.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) with the following option:
-
-```text
-nuxeo.s3storage.crypt.serverside=true
-```
+Independently of client-side encryption, Amazon S3 [automatically applies server-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/userguide/serv-side-encryption.html) with Amazon S3 managed keys (SSE-S3) as the base level of encryption for every bucket in Amazon S3 since January 5, 2023.
 
 {{#> callout type='info' }}
 Client-Side Encryption is safer than Server-Side Encryption. With Client-Side Encryption an attacker needs both access to the _AWS credentials and the key_ to be able to access the unencrypted data while Server-Side Encryption will only require the potential attacker to provide the _AWS credentials_.
 {{/callout}}
 
-If you want to use [Server-Side Encryption with AWS KMS–Managed Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html), specify your key with:
+If you want to change the default AWS server-side encryption configuration to use [Server-Side Encryption with AWS KMS–Managed Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html), specify your key with:
 
 ```text
 nuxeo.s3storage.crypt.kms.key = your-key-id
