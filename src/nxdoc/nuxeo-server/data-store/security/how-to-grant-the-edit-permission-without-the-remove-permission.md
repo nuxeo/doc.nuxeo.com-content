@@ -36,7 +36,7 @@ tree_item_index: 400
 As described on the page [Managing Permissions]({{page space='userdoc' page='permissions'}}), the **Edit** permission, visible in the UI, contains the permission to remove content (`Remove`).</br>
 It means that you cannot grant the **Edit** permission (`Write`) without the `Remove` permission at the same time.
 
-So if you want to be able to grand the **Edit** permission without the `Remove` one, you need to override the [default `ReadWrite` permission](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions).
+So if you want to be able to grant the **Edit** permission without the `Remove` one, you need to override the [default `ReadWrite` permission](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions).
 
 We will do that in two steps:
 - First, override the default **Edit** permission to remove the `Remove` permission.
