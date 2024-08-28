@@ -2364,6 +2364,20 @@ Set the maximum number of pages in the Nuxeo select element for pagination. If t
 
 * * *
 
+#### `org.nuxeo.web.ui.trustedDomains`
+
+Allow cross repo navigation to specified urls . If left blank or no property defined in conf file it will allow to redirect to all urls
+
+**Since LTS 2021.36**
+
+**Requires the Web UI package in version 3.0.37 or above**
+
+**Default Value**
+
+`''`
+
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
