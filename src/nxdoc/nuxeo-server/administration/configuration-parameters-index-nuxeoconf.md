@@ -2366,7 +2366,7 @@ Set the maximum number of pages in the Nuxeo select element for pagination. If t
 
 #### `org.nuxeo.web.ui.trustedDomains`
 
-Allow cross repository navigation to specified URLs. If left blank or no property defined in configuration file it will allow to redirect all urls.
+Allow cross repository navigation to specified URLs. If left blank or no property defined in configuration file it will allow to redirect all URLs.
 
 **Requires the Web UI package version 3.0.36 or above**
 
