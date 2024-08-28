@@ -2368,9 +2368,7 @@ Set the maximum number of pages in the Nuxeo select element for pagination. If t
 
 Allow cross repo navigation to specified urls . If left blank or no property defined in conf file it will allow to redirect to all urls
 
-**Since LTS 2021.36**
-
-**Requires the Web UI package in version 3.0.37 or above**
+**Requires the Web UI package version 3.0.36 or above**
 
 **Default Value**
 
