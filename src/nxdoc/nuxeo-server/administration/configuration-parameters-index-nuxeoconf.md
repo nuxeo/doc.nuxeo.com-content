@@ -2377,6 +2377,20 @@ Set the maximum number of pages in the Nuxeo select element for pagination. If t
 
 * * *
 
+#### `org.nuxeo.web.ui.trustedDomains`
+
+Allows to specify a list of domains to which navigation is allowed when using a multi repository configuration. Takes a list of domains separated by a comma (e.g., hyland.com,hyland.net). Allows a redirect to any domain when left empty. Meant as a potential security enforcement option.
+
+**Since LTS 2021.36**
+
+**Requires the Web UI package in version 3.0.37 or above**
+
+**Default Value**
+
+`''`
+
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
