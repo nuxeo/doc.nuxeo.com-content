@@ -2367,7 +2367,7 @@ Property to override the default Content Security Policy.
 
 #### `org.nuxeo.pagination.nuxeoSelectOptions.maxAllowedItems`
 
-Set the max number of pages in a nuxeo select element for pagination. If the page count exceeds this number the dropdown to select the page number will be hidden. Meant to prevent browser performance issues with large numbers of pages.
+Set the maximum number of pages in the Nuxeo select element for pagination. If the page count exceeds this number, the drop-down to select the page number is hidden. This is intended to prevent browser performance issues with large numbers of pages.
 
 **Requires the Web UI package version 3.1.12 or above**
 
