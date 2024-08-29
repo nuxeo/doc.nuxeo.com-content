@@ -18,7 +18,7 @@ hidden: true
 ## Add a Way to Add Appenders to Loggers Configured With @LoggerLevel
 
 
-You can now configure additional appenders to loggers configure with @LoggerLevel in tests
+You can now configure additional appenders to loggers configure with @LoggerLevel in tests.
 
 Loggers configured with help of `@LoggerLevel` in tests can now receive additional appenders. The resulting logger has `additivity` enabled and so the configured appenders are added to the existing one (the file appender that logs DEBUG logs and higher to `target/trace.log` and the console appender that logs WARN logs and higher to the console).
 
@@ -33,7 +33,7 @@ Thus, you will have slow DBS queries printed to the console.
 ## Add Amazon S3 Client-Side Encryption With AWS KMS Managed Keys
 
 
-AWS S3 Client-side encryption with KMS is now possible
+AWS S3 Client-side encryption with KMS is now possible.
 
 AWS KMS client-side encryption can be enabled by defining a KMS key ID with the following property:
 ```Java
@@ -56,7 +56,7 @@ The PATCH method is available for the /scim/v2/Groups/{id} endpoint.
 ## Fix Inline Parameter Not Working When Direct Download Enabled
 
 
-Blobs are now displayed in the browser with inline parameter and S3 direct download
+Blobs are now displayed in the browser with inline parameter and S3 direct download.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32451](https://jira.nuxeo.com/browse/NXP-32451)
 
