@@ -266,7 +266,7 @@ nuxeo.s3storage.crypt.kms.clientside.region=your-kms-key-region
 
 #### Server-Side Crypto Options
 
-Independently of client-side encryption, Amazon S3 [automatically applies server-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/userguide/serv-side-encryption.html) with Amazon S3 managed keys (SSE-S3) as the base level of encryption for every bucket in Amazon S3 since January 5, 2023.
+Independent of client-side encryption, Amazon S3 [automatically applies server-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/userguide/serv-side-encryption.html) with Amazon S3 managed keys (SSE-S3) as the base level of encryption for every bucket in Amazon S3 since January 5, 2023.
 
 {{#> callout type='info' }}
 Client-Side Encryption is safer than Server-Side Encryption. With Client-Side Encryption an attacker needs both access to the _AWS credentials and the key_ to be able to access the unencrypted data while Server-Side Encryption will only require the potential attacker to provide the _AWS credentials_.
