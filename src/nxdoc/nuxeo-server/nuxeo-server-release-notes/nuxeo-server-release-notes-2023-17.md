@@ -39,7 +39,7 @@ AWS KMS client-side encryption can be enabled by defining a KMS key ID with the 
 ```Java
 nuxeo.s3storage.crypt.kms.clientside.key=your-kms-key-id
 ```
-Optionally, specify the region of the KMS key if it differs from the environment or bucket:
+Optionally, specify the region of the KMS key if it differs from the one in the environment or bucket:
 ```Java
 nuxeo.s3storage.crypt.kms.clientside.region=your-kms-key-region
 ```
