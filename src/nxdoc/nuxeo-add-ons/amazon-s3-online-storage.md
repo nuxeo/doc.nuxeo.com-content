@@ -222,7 +222,7 @@ nuxeo.s3storage.region=your_AWS_REGION
 With S3 you have the option of storing your data encrypted using [S3 Client-Side Encryption](http://docs.amazonwebservices.com/AmazonS3/latest/dev/UsingClientSideEncryption.html). Note that the local cache will _not_ be encrypted.
 
 {{#> callout type='info' }}
-Once data is stored in your s3 bucket with an initial client-side encryption configuration, it is impossible to edit and change this configuration, otherwise the Nuxeo server won't be able to decrypt data encrypted with the older configuration.
+Once data is stored in your S3 bucket with an initial client-side encryption configuration, it is impossible to edit and change this configuration, otherwise the Nuxeo server won't be able to decrypt data encrypted with the older configuration.
 {{/callout}}
 
 ##### With a Local Keystore
