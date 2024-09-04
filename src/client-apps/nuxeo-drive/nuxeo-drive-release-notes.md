@@ -11,7 +11,7 @@ toc: true
 
 Welcome to the Release Notes for **Nuxeo Drive 5.5.0**
 
-**Status**: <font color="##ff0000">**Beta**</font> </br>
+**Status**: <font color="#0066ff">**Release**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.5.0.md)
 
 ## Task Management 
@@ -26,6 +26,6 @@ A new button is available from the systray menu to access a popup listing the ta
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.5.0-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.5.0.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.5.0.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.5.0-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.5.0.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.5.0.exe)
