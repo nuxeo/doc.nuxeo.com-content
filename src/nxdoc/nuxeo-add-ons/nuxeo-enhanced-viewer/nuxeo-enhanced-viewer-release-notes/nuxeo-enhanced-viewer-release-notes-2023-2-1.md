@@ -15,9 +15,9 @@ toc: true
 
 ### {{> anchor 'summary'}} Summary
 
-Arender has released the new version of their enhanced viewer, Arender 2023.2.0.
-Below are the details of the offered enhancements and important points to consider when migrating from NEV 2.3.x to 2023.2.1.
-The NEV 2023.2.1 release introduces enhanced UI with consolidated annotation and redaction panels, along with support for audio annotations.
+Arender has released the new version of their enhanced viewer.
+Below are the details of the offered enhancements and important points to consider when migrating from NEV 2.3.x to 2021.5.1
+The NEV 2021.5.1 release introduces enhanced UI with consolidated annotation and redaction panels, along with support for audio annotations.
 Migration requires reconfiguring top panel widgets and annotation settings, with special steps for HA mode deployments.
 
 ## UI Overview
@@ -25,7 +25,7 @@ Migration requires reconfiguring top panel widgets and annotation settings, with
 The user interface of NEV 2023.2.1 features significant upgrades, particularly in the areas of annotations and redactions.
 These controls are now organized into their own grouped views for enhanced usability.
 
-The UI of NEV 2023.2.1 looks like:
+The UI of NEV 2021.5.1 looks like:
 
 ![]({{file name='NewUI.png'}} ?w=600,border=true)
 
