@@ -17,7 +17,9 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2021 (Version 3.0.36)
 
-- Added trusted domain property in config file, to make redirection only on trusted url.<br/>[[WEBUI-1511](https://jira.nuxeo.com/browse/WEBUI-1511)]
+- [May 2024] Security fixes for Web UI code as reported by Veracode scan<br/>[[WEBUI-1509](https://jira.nuxeo.com/browse/WEBUI-1509)]
+
+- Added trusted domain property in nuxeo.conf file which will allow to specify a list of domains to which navigation is allowed when using a multi repository configuration. Takes a list of domains separated by a comma (e.g., hyland.com, hyland.net).<br/>[[WEBUI-1511](https://jira.nuxeo.com/browse/WEBUI-1511)]
 
 - Moment package updated to latest version(2.30.1) resolving veracode issues due to this library.<br/>[[WEBUI-1521](https://jira.nuxeo.com/browse/WEBUI-1521)]<br/>[[ELEMENTS-1752](https://jira.nuxeo.com/browse/ELEMENTS-1752)]
 
