@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2024-07-25'
+  date: '2024-09-06'
   status: ok
 toc: true
 labels:
@@ -22,16 +22,17 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-11'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-12'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.11]({{page page='web-ui-release-notes-3-1-11'}})                  | WEB UI Improvement and bugfix release     | -->
+<!-- | [Web UI 3.1.12]({{page page='web-ui-release-notes-3-1-12'}})                  | WEB UI Security and bugfix release     | -->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [Web UI 3.1.11]({{page page='web-ui-release-notes-3-1-11'}})                  | WEB UI Improvement and bugfix release     | 
 | [Web UI 3.1.10]({{page page='web-ui-release-notes-3-1-10'}}) | Saved searches can be restored and executed when using vocabularies with multiple levels, ellipsis and tooltips prevent long labels from being cut off in selection        | 
 | [Web UI 3.1.9]({{page page='web-ui-release-notes-3-1-9'}}) | Security and bugfix release                                                         |
 | [Web UI 3.1.8]({{page page='web-ui-release-notes-3-1-8'}}) | Accessibility improvements and bugfix release                                       |
