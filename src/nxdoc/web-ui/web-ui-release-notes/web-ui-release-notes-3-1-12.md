@@ -25,7 +25,6 @@ hidden: true
 
 - Permissions table will be displayed quickly even with 50000+ pages without any crash or alert in browser.<br/>[[ELEMENTS-1747](https://jira.nuxeo.com/browse/ELEMENTS-1747)]
 
-- Permissions table will be displayed quickly even with 50000+ pages without any crash or alert in browser.<br/>[[ELEMENTS-1747](https://jira.nuxeo.com/browse/ELEMENTS-1747)]
 
 ### Other Noteworthy Changes
 
