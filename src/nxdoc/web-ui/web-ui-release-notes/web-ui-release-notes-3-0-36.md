@@ -3,7 +3,7 @@ title: Version 3.0.36
 description: Discover what's new in Web UI 3.0.36.
 review:
   comment: ''
-  date: '2024-07-25'
+  date: '2024-09-06'
   status: ok
 toc: true
 labels:
