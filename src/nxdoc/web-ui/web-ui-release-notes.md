@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2024-07-25'
+  date: '2024-09-06'
   status: ok
 toc: true
 labels:
@@ -22,16 +22,17 @@ Starting from Web UI version `3.0.31` released in March 2024, functional tests w
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-35'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-36'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.35]({{page page='web-ui-release-notes-3-0-35'}})                  | Display the document creation button on all mobile devices     | -->
+<!-- | [Web UI 3.0.36]({{page page='web-ui-release-notes-3-0-36'}})                  | WEB UI Security and bugfix release     | -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Web UI 3.0.35]({{page page='web-ui-release-notes-3-0-35'}})                  | Display the document creation button on all mobile devices     |
 | [Web UI 3.0.34]({{page page='web-ui-release-notes-3-0-34'}})                  |  Saved searches can be restored and executed when using vocabularies with multiple levels, ellipsis and tooltips prevent long labels from being cut off in selection        | 
 | [Web UI 3.0.33]({{page page='web-ui-release-notes-3-0-33'}})                 | Security and bugfix release                                                          |
 | [Web UI 3.0.32]({{page page='web-ui-release-notes-3-0-32'}})                 | Accessibility improvements and bugfix release                                        |
