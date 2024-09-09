@@ -101,6 +101,26 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 18
+
+### Allow to Use S3 StrictAuthenticatedEncryption With a Local Keystore
+
+
+You must set the **nuxeo.s3storage.crypt.keystore.legacymode** configuration property to **true** when upgrading from **lts-2023** to **lts-2025** if you have objects encrypted client-side with a local keystore in v1 AWS encryption API.
+
+If you want to start a fresh production environment in **lts-2023** with a higher level of security, you should set the **nuxeo.s3storage.crypt.keystore.legacymode** configuration property to **true**.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32842](https://jira.nuxeo.com/browse/NXP-32842)
+
+### Move Swagger Rest API Doc to an Optional Marketplace
+
+
+If you need the old swagger documentation, please install the **nuxeo-rest-api-documentation** marketplace from connect.
+
+Doc source is now located at https://github.com/nuxeo/nuxeo-rest-api-swagger-doc.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32841](https://jira.nuxeo.com/browse/NXP-32841)
+
 ## Hotfix 12
 
 ### Use Keycloak Auth After Automation Basic Auth in Specific Auth Chains
