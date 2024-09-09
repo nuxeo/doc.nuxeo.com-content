@@ -19,7 +19,7 @@ hidden: true
 
 ### Security Updates
 
-- Added a trusted domain property in the nuxeo.conf file. Allows you to specify a list of domains to which navigation is allowed when using a multi repository configuration. Takes a list of domains separated by a comma (e.g., hyland.com, hyland.net).<br/>[[WEBUI-1511](https://jira.nuxeo.com/browse/WEBUI-1511)]
+- Added a trusted domain property in the nuxeo.conf file. Allows you to specify a list of domains to which navigation is allowed when using a multi repository configuration. Takes a list of domains separated by a comma (for example, hyland.com, hyland.net).<br/>[[WEBUI-1511](https://jira.nuxeo.com/browse/WEBUI-1511)]
 
 
 - Third-party library updated to benefit from security fixes:
