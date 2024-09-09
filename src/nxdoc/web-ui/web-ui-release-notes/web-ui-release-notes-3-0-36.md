@@ -23,7 +23,6 @@ hidden: true
 
 - Third-party library updated to benefit from security fixes:
 - Moment<br/>[[WEBUI-1521](https://jira.nuxeo.com/browse/WEBUI-1521)]<br/>[[ELEMENTS-1752](https://jira.nuxeo.com/browse/ELEMENTS-1752)]
-
 - webpack-dev-server and webpack-cli.<br/>[[WEBUI-1522](https://jira.nuxeo.com/browse/WEBUI-1522)]
 
 
