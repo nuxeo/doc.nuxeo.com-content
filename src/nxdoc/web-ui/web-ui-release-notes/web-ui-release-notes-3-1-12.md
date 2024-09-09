@@ -17,21 +17,22 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2023 (Version 3.1.12)
 
-- [May 2024] Security fixes for Web UI code as reported by Veracode scan<br/>[[WEBUI-1509](https://jira.nuxeo.com/browse/WEBUI-1509)]
+### Security Updates
 
-- Added trusted domain property in nuxeo.conf file, which allows you to specify a list of domains to which navigation is allowed when using a multi repository configuration. Takes a list of domains separated by a comma (e.g., hyland.com, hyland.net).<br/>[[WEBUI-1511](https://jira.nuxeo.com/browse/WEBUI-1511)]
+- Added a trusted domain property in the nuxeo.conf file. Allows you to specify a list of domains to which navigation is allowed when using a multi repository configuration. Takes a list of domains separated by a comma (e.g., hyland.com, hyland.net).<br/>[[WEBUI-1511](https://jira.nuxeo.com/browse/WEBUI-1511)]
 
 
-- Moment package updated to latest version(2.30.1) resolving veracode issues due to this library.<br/>[[WEBUI-1521](https://jira.nuxeo.com/browse/WEBUI-1521)]<br/>[[ELEMENTS-1752](https://jira.nuxeo.com/browse/ELEMENTS-1752)]
+- Third-party library updated to benefit from security fixes:
+- Moment<br/>[[WEBUI-1521](https://jira.nuxeo.com/browse/WEBUI-1521)]<br/>[[ELEMENTS-1752](https://jira.nuxeo.com/browse/ELEMENTS-1752)]
 
-- Upgraded webpack-dev-server and webpack-cli version.<br/>[[WEBUI-1522](https://jira.nuxeo.com/browse/WEBUI-1522)]
-
-- Permissions table is displayed quickly even with 50000+ pages without any crash or alert in browser.<br/>[[ELEMENTS-1747](https://jira.nuxeo.com/browse/ELEMENTS-1747)]
+- webpack-dev-server and webpack-cli.<br/>[[WEBUI-1522](https://jira.nuxeo.com/browse/WEBUI-1522)]
 
 
 ### Other Noteworthy Changes
 
 - New property can be configured in nuxeo.conf file to limit the page size for pagination.<br/>[[WEBUI-1567](https://jira.nuxeo.com/browse/WEBUI-1567)]
+
+- Permissions table is displayed quickly even with 50000+ pages without any crash or alert in browser.<br/>[[ELEMENTS-1747](https://jira.nuxeo.com/browse/ELEMENTS-1747)]
 
 ## Learn More
 
