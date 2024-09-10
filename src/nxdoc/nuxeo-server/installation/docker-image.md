@@ -53,7 +53,7 @@ You can force the target platform when pulling or running the Docker image with 
 
 The Nuxeo Docker image is described by this [Dockerfile](https://github.com/nuxeo/nuxeo/blob/master/docker/Dockerfile).
 
-Based on Rocky Linux 9.2, it includes:
+Based on Rocky Linux 9.4, it includes:
 
 - Azul's [Zulu OpenJDK 17](https://www.azul.com/downloads/?version=java-17-lts&package=jdk#zulu).
 - A bare Nuxeo server without any package installed.
