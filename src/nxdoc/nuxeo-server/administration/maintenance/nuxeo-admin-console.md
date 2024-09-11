@@ -68,7 +68,19 @@ Any action triggered through the admin console uses the [bulk action framework](
 
 ![]({{file name='admin-console-action-launched.png'}} ?border=true)
 
-This command id can be copied and the action can be monitored using the REST API as described in our [bulk action framework]({{page page='bulk-action-framework'}}#testing-a-bulk-action-with-rest-api) documentation to check for its status.
+You can click on the `See Status` button to follow how the bulk action is proceeding.
+
+In addition, the command id can be copied to retrieve its status later using the `Bulk Action Monitoring` menu. Note that the bulk action id won't be remembered, so you may want to store it in a safe place if you intend to monitor it later on.
+
+![]({{file name='admin-console-bulk-action-monitoring.png'}} ?border=true)
+
+### Checking the Status of System Components
+
+The homepage provides a concise list of [probes]({{page page='health-check'}}#probes) to check the health of the various system components. For a full list with detailed information and the possibility to launch a check on them individually, you can head to the `Probes` menu.
+
+![]({{file name='admin-console-probes-homepage.png'}} ?border=true)
+
+![]({{file name='admin-console-probes.png'}} ?border=true)
 
 ## Going Further
 
