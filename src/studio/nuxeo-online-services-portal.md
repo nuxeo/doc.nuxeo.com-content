@@ -87,7 +87,7 @@ Available information includes:
 
 ## Dashboard
 
-The dashboard provides a view of your applications, the latest maintenance fixes published and information about the [Early Access Program at a glance]({{page version='' space='studio' page='early-access-program'}}).
+The dashboard provides a view of your applications, the latest maintenance fixes published and information about the featured addons from the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace).
 
 ![]({{file name='dashboard.png'}} ?w=600,border=true)
 
