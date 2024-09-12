@@ -80,7 +80,7 @@ The Nuxeo Online Services portal gives you access to information about each of y
 Available information includes:
 
 - Your dashboard
-- Your applications
+- Your studio projects
 - Your tokens
 - Distributions
 - Documentation
