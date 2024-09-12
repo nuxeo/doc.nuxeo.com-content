@@ -128,4 +128,4 @@ The documentation tab provides a guide on how to create JIRA tickets for our Sup
 
 **RELATED TOPICS**
 
-- [Nuxeo Support issue Tracker: JIRA]({{page page='support-jira'}})
+- [Nuxeo Support Issue Tracker: JIRA]({{page page='support-jira'}})
