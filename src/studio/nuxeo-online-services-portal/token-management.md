@@ -47,13 +47,13 @@ The NOS token authenticates to https://connect.nuxeo.com, where the Studio proje
 To generate a token:
 1. Login to [Nuxeo Online Services](https://connect.nuxeo.com),
 1. Visit the **My Tokens** tab,
-1. Create your token using the corresponding button and provide a clear name for it (ex: "CI Chain"). The name has no impact; it is only meant for you to remember where / how you plan to use it, that's very important in case you need to revoke it later.
+1. Create your token using the corresponding button and provide a clear name for it (ex: "CI Chain"). The name has no impact on the token. It is meant to remind you where / how do you plan to use it, which is very important in case you need to revoke it.
 ![]({{file name='token-management.png'}} ?border=true,w=650)
 
-Your token will only be shown once; be sure to save it in a secure place, for instance a password management tool.
+Your token will be shown only once, so save it in a secure place, like a password management application.
 
 {{#> callout type='info'}}
-We recommend using a different token for every tool or service you plan to use: this lessens the impact if you need to revoke it at some point.
+We recommend using a different token for every tool or service you plan to use. This reduces the impact of revoking a token if you need to do it in the future.
 {{/callout}}
 
 <a name="token-usage"></a>
