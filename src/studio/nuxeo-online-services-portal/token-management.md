@@ -32,7 +32,7 @@ Tokens need to be used as a replacement for your password in Nuxeo Online Servic
 - When using [Studio Designer Git Access]({{page page='nuxeo-studio-designer-git-access'}}) for faster development
 - When mirroring private artifacts (like a Nuxeo Studio project) using Nexus
 
-For more details on when to use the token, see the <a href="#token-usage">token usage</a> section in this page.
+For more details on when to use the token, see the <a href="#token-usage">token usage</a> section of this page.
 
 {{#> callout type='info'}}
 Tokens are only used for command line tools and APIs. You still need to use your password when you log in to Nuxeo Online Services in your browser, for example when accessing Nuxeo Studio.
@@ -42,6 +42,7 @@ Tokens are only used for command line tools and APIs. You still need to use your
 The NOS token authenticates to https://connect.nuxeo.com, where the Studio project comes from. The NOS token cannot be used to authenticate to https://packages.nuxeo.com, where hotfixes are located.
 {{/callout}}
 
+<a name="create-token">
 ## Creating a Token
 
 To generate a token:
@@ -132,9 +133,9 @@ Any other tool behaves the same as above: use your Nuxeo Online Services usernam
 
 ## Revoking a Token
 
-Tokens have no expiration date or policy. If you ever forget your token, think it may have been compromised or simply wish to change them regularly for increased security:
+Tokens have no expiration date or policy. If you ever forget any of your tokens, think it may have been compromised or simply wish to change them regularly for increased security:
 
 1. Login to [Nuxeo Online Services](https://connect.nuxeo.com),
-1. Visit the **My Tokens** tab,
-1. Revoke the appropriate token(s),
-1. Generate new token(s) and update any impacted configuration.
+1. Navigate to the **My Tokens** tab,
+1. Revoke the appropriate token(s) using Revoke button next to each of them,
+1. Generate new token(s) (see the <a href="#create-token">Creating a Token</a> section) and update any impacted configuration.
