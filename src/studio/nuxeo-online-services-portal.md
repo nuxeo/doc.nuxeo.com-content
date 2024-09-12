@@ -120,7 +120,7 @@ The distribution page provides the list of download links for all of the Nuxeo P
 
 ## Documentation
 
-The documentation tab provides a guide on how to create JIRA tickets to benefit from Support.
+The documentation tab provides a guide on how to create JIRA tickets for our Support.
 
 ![]({{file name='documentation.png'}} ?w=600,border=true)
 
