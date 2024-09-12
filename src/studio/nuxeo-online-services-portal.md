@@ -93,9 +93,12 @@ The dashboard provides a view of your applications, the latest maintenance fixes
 
 ## My Studio Projects
 
-On My Studio Projects tab, you can create a new trial Studio Project, and open your Studio projects in one click.
+In My Studio Projects tab, you can create a new trial Studio Project and open your Studio Projects in one click.
 
-To access your project settings, click Edit button next on its name. You can also access other existing instances and register a new instance.
+To access your project's settings, click Edit button next to its name. From the edit view you can:
+  - view the details of your project in Details tab
+  - access existing instances of your project and register a new one in Instances tab
+  - add hooks from Hooks tab
 
 ![]({{file name='my-studio-projects.png'}} ?w=600,border=true)
 
