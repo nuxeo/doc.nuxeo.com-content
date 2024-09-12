@@ -139,3 +139,5 @@ Tokens have no expiration date or policy. If you ever forget any of your tokens,
 1. Navigate to the **My Tokens** tab,
 1. Revoke the appropriate token(s) using Revoke button next to each of them,
 1. Generate new token(s) (see the <a href="#create-token">Creating a Token</a> section) and update any impacted configuration.
+
+![]({{file name='token-revoking.png'}} ?border=true,w=650)
