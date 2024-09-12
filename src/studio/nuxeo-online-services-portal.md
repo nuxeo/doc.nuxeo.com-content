@@ -114,7 +114,7 @@ See the [Token Management]({{page version='' space='studio' page='token-manageme
 
 ## Distributions
 
-The distribution page provides the list of all the Nuxeo Platform versions to download.
+The distribution page provides the list of download links for all of the Nuxeo Platform versions.
 
 ![]({{file name='distributions.png'}} ?w=600,border=true)
 
