@@ -106,7 +106,7 @@ To access your project's settings, click Edit button next to its name. From the 
 
 This tab lists all the tokens enabled on your account. Tokens can be created and revoked from this view.
 
-Token can be used wherever you need to provide credentials to access the NOS APIs and the Studio maven repository. Once your token is created, you can see it only once, so save it carefully. Then use it as you would your password to gain access to previously mentioned services. We recommend using one token per client application.
+Token can be used wherever you need to provide credentials to access the NOS APIs and the Studio maven repository. Once your token is created, you can see it only once, so save it carefully. Then use it as you would use your password to gain access to previously mentioned services. We recommend using one token per client application.
 
 See the [Token Management]({{page version='' space='studio' page='token-management'}}) page, for more information.
 
