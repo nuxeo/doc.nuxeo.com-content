@@ -63,7 +63,7 @@ Procedure of using your token is the same as using a password - enter it when pr
 
 ### Nuxeoctl
 
-When using a command requiring a password, nuxeoctl prompts you for your token. Example:
+When using a command that requires a password, nuxeoctl prompts you for your token. Example:
 
 ```
 ./nuxeoctl register
@@ -110,7 +110,7 @@ xkko       ckko oxxxxxxxxxxxxxo    :xxxxxxxxxxx
 
 ### Maven
 
-Your token needs to be stored in your `.m2/settings.xml` file, where you would usually put your password. Details can be found in our [Maven configuration]({{page page='maven-integration'}}#setting-up-the-maven-client) documentation.
+Your token needs to be stored in your `.m2/settings.xml` file, where you would usually put your password. For more details, go to our [Maven configuration]({{page page='maven-integration'}}#setting-up-the-maven-client) page.
 
 ### Studio Designer Git Access
 
@@ -120,7 +120,7 @@ Check our [Nuxeo Studio Designer Git access]({{page page='nuxeo-studio-designer-
 
 ### Nuxeo Online Services REST API
 
-When triggering a [Studio project release through the Nuxeo Online Services REST API]({{page space='studio' page='how-to-tag-or-release-your-nuxeo-studio-project'}}#with-the-rest-api), use your Nuxeo Online Services username replace your password with a token.
+When triggering a [Studio project release through the Nuxeo Online Services REST API]({{page space='studio' page='how-to-tag-or-release-your-nuxeo-studio-project'}}#with-the-rest-api), use your Nuxeo Online Services username and replace your Nuxeo Online Services password with your token.
 
 ### Nexus
 
