@@ -59,7 +59,7 @@ We recommend using a different token for every tool or service you plan to use. 
 <a name="token-usage"></a>
 ## Using your Tokens
 
-Using your token is exactly the same as using a password. Enter it when prompted, or store it in your configuration when using automated tools. Some examples can be found below:
+Procedure of using your token is the same as using a password - enter it when prompted, or store it in your configuration file if you are using automated tools. Some examples can be found below:
 
 ### Nuxeoctl
 
