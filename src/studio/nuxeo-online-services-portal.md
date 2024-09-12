@@ -91,13 +91,13 @@ The dashboard provides a view of your applications, the latest maintenance fixes
 
 ![]({{file name='dashboard.png'}} ?w=600,border=true)
 
-## My Applications
+## My Studio Projects
 
-On my applications tab, you can create a new trial Studio Project, and open your Studio projects in one click.
+On My Studio Projects tab, you can create a new trial Studio Project, and open your Studio projects in one click.
 
-To access your project settings, click on its name. You can also access existing instances and register a new instance.
+To access your project settings, click Edit button next on its name. You can also access other existing instances and register a new instance.
 
-![]({{file name='my-applications.png'}} ?w=600,border=true)
+![]({{file name='my-studio-projects.png'}} ?w=600,border=true)
 
 ## My Tokens
 
