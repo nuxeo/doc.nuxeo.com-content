@@ -11,25 +11,44 @@ tree_item_index: 300
 
 ## Users Tab
 
+![]({{file name='account-management.png'}} ?w=600,border=true)
+
 ### Adding Users
 
-To add a new user, click the **Add User** button. Then fill in the email address, first name, and last name in the **Add User** window that will show up. For an already existing user, you only have to fill in the email address field. You can also add tags to categorize users and find them by the tag in the future. You can use existing tags or add new tags by typing its name into the Tags field and clicking **Create item …**.
-When you finish adding user information, click **Done** to save it.
+To add a new user, click the **Add User** button 
+![]({{file name='add-user-1.png'}} ?w=600,border=true)
 
-If that person does not have a NOS account yet, she will receive an email to set it up. The setup link in the email is valid for 7 days. After this delay, our support team can trigger a new email upon request.
+and fill in the email address, first name, last name, and optionally tags. You can add existing tags or create new ones (by clicking **Create item** under tags field). Click **Done** to save the user. 
+![]({{file name='add-user-2.png'}} ?w=600,border=true)
+
+If there is no NOS account associated with provided email, email with link to set it up will be sent automatically. The setup link is valid for 7 days, after which our support team can send a new email upon request.
 
 ### Managing Tags
 
-By clicking the **Manage Tags** button you will open a pop-up window in which you can browse the list of tags used in the organization and the number of their users.
-To add a new tag, enter its name into the search box and click **Create item …**. You can edit existing tags by clicking the pencil icon next to a tag’s name, editing the entry and clicking the **accept** icon. To delete an existing tag, click the trash icon next to it and click **Confirm** in the pop-up window.
+By clicking the **Manage Tags** button
+![]({{file name='manage-tags-1.png'}} ?w=600,border=true)
+
+you will open a pop-up window in which you can see the list of tags used in the organization and the number of their users.
+![]({{file name='manage-tags-2.png'}} ?w=600,border=true)
+
+To add a new tag, enter its name into the search box and click **Create item**. 
+
+You can edit existing tags by clicking the pencil icon next to a tag’s name, editing the entry and clicking the checkmark icon. 
+![]({{file name='manage-tags-3.png'}} ?w=600,border=true)
+
+To delete an existing tag, click the trash icon next to it and click **Confirm** in the pop-up window.
 
 ### Searching Users
 
 Use the search box to find users by user ID, full name, or email.
+![]({{file name='search-users.png'}} ?w=600,border=true)
+
 
 ### Filtering Users
 
-Filter the user list by tag using the **Filter by tag** box.
+Filter the user list by tag using the **Filter by tag** bar.
+![]({{file name='filter-users.png'}} ?w=600,border=true)
+
 
 ### User View Page
 
@@ -41,23 +60,36 @@ Click a user's entry to access the user view page. Here, you can see:
 - Groups they belong to
 - Linked services
 
-You can navigate to the group view page by clicking an entry in the **Groups** table and to the service view page by clicking an entry in the **Services** table.
+![]({{file name='user-view-page.png'}} ?w=600,border=true)
+
+You can navigate to the group view page by clicking an entry in the **Groups** table on the bottom and to the service view page by clicking an entry in the **Services** table.
 
 ### Editing User Information
 
 On the user view page, click the **Edit** button to modify the user's email, first name, last name, and tags.
+![]({{file name='user-view-page-edit.png'}} ?w=600,border=true)
+
 
 ### Removing Users
 
 You can remove a user from the organization using the **Remove** button in the user view page.
-Confirming the action will remove access to all applications and services from this organization; it does not delete the user account. If that person is also a member of other organizations, access to them remains unchanged.
+Confirming the action will remove access to all applications and services from this organization; it does not delete the user account. If that user is also a member of other organizations, access to them remains unchanged.
+![]({{file name='user-view-page-remove.png'}} ?w=600,border=true)
+
 
 ### Group and Service Management
 
 By using the search box in the user view page, you can search for groups the user is part of and services the user is associated with.
-By clicking the **Manage Groups** button you can assign or unassign the user to / from groups. By clicking on a group’s name in the **Manage Groups** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Confirm** to save changes.
+By clicking the **Manage Groups** button you can assign the user to groups or take back group assignment. 
+![]({{file name='user-view-page-manage-groups.png'}} ?w=600,border=true)
+By clicking on a group’s name in the **Manage Groups** pop-up window, you switch the position of it (Unassigned or Assigned). 
+![]({{file name='user-view-page-manage-groups-popup.png'}} ?w=600,border=true)
+Click **Confirm** to save changes.
 
-You can also manage services the user is assigned to by clicking the **Manage Services** button. By clicking a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Confirm** to save changes.
+You can also manage services the user is assigned to by clicking the **Manage Services** button. 
+![]({{file name='user-view-page-manage-services.png'}} ?w=600,border=true)
+By clicking on a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Confirm** to save changes, like in Groups management pop-up.
+![]({{file name='user-view-page-remove.png'}} ?w=600,border=true)
 
 ## Groups Tab
 
