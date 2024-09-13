@@ -13,7 +13,7 @@ Nuxeo Online Services is being improved to enhance security. This page details w
 
 ## Authenticating Against Nuxeo Online Services
 
-### From your Browser - What Changes?
+### From your Browser — What Changes?
 
 - To access Nuxeo Online Services, you need to enter your _email address_ instead of your username in the login page. If you registered for a trial using Google, use the login with Google button.
 
@@ -23,7 +23,7 @@ Nuxeo Online Services is being improved to enhance security. This page details w
 
 - Multi factor authentication is enforced. The <a href="#mfa">multi-factor authentication</a> section in this page provides further details.
 
-### From the Command Line - What Changes?
+### From the Command Line — What Changes?
 
 To use our APIs, for instance in the following cases:
 - Registering an instance using nuxeoctl
