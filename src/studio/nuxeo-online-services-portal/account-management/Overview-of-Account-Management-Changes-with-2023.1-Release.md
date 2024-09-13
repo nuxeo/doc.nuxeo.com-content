@@ -40,7 +40,9 @@ There are four service types:
 4. **Combination of Studio and Support Services:** As described above.
    **Why Are There Studio Services and Base Maintenance Services Called “Unknown”?**
 
-   Nameless services are labeled as "Unknown," and currently, their names cannot be altered. Such services might be auto-generated, like those accompanying trial instances. It's important to note that the services page enumerates associated projects for each service.
+### Why Are There Studio Services and Base Maintenance Services Called “Unknown”?
+
+  Nameless services are labeled as "Unknown" and, currently, their names cannot be altered. Such services might be auto-generated, like those accompanying trial instances. It's important to note that the services page enumerates associated projects for each service.
 
    **Can Two Services Have the Same Name?**
 
@@ -52,12 +54,12 @@ There are four service types:
 
    **Can a Project Have an End Date After the Base Maintenance Service Expires?**
 
-   In the absence of a valid base maintenance service for a Connect instance, users can still access the interface but cannot publish studio packages. Technically, a studio service can possess an end date subsequent to a base maintenance service's expiration. Note that the duration of the base maintenance service aligns with the client contract's terms. Contact our Support team for potential changes.
+  In the absence of a valid base maintenance service for a Connect instance, users can still access the interface but cannot publish studio packages. Technically, a studio service can have an end date subsequent to a base maintenance service's expiration. Note that the duration of the base maintenance service aligns with the client contract's terms. Contact our Support team for potential changes.
 
    **If I Add the Email of an Existing User and Later Assign a Different Name, Does the Name Change Impact Billing?**
 
-   In this scenario, the user is added, but any alterations to the first and/or last name are disregarded.
+  In this scenario the user is added, but any changes to the first and/or last name are disregarded.
 
    **How Can I Change the Number of Available Seats?**
 
-   The number of available seats corresponds to the client contract. Contact our Support team to discuss potential adjustments to seat availability.
+  The number of available seats corresponds to the Client's contract. Contact our Support team to discuss potential adjustments to seat availability.
