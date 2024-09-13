@@ -11,7 +11,7 @@ tree_item_index: 100
 
 As a commitment to an always improved security, Nuxeo Online Services delegates authentication to Okta. This allows us to secure it in an advanced way, and provide additional security options.
 
-Therefore, whenever you are performing commands in our clients and APIs that require authentication, your password can't be used - a token should be used instead.
+Therefore, whenever you are performing commands in our clients and APIs that require authentication, your password can't be used — a token should be used instead.
 
 {{#> callout type='warning' heading='Future Change'}}
 Tokens will become the mandatory way to authenticate for all our tools and APIs. We strongly recommend doing the switch as soon as possible to prevent any breakage in the future.
@@ -60,7 +60,7 @@ We recommend using a different token for every tool or service you plan to use. 
 <a name="token-usage"></a>
 ## Using your Tokens
 
-Procedure of using your token is the same as using a password - enter it when prompted, or store it in your configuration file if you are using automated tools. Some examples can be found below:
+Procedure of using your token is the same as using a password — enter it when prompted, or store it in your configuration file if you are using automated tools. Some examples can be found below:
 
 ### Nuxeoctl
 
