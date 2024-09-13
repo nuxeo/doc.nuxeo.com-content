@@ -19,7 +19,7 @@ Nuxeo Online Services is being improved to enhance security. This page details w
 
 ![]({{file name='login-customer.png'}} ?border=true,w=650)
 
-- URL for the login page is changed to https://auth.nuxeo.com (instead of https://sso.nuxeo.com). If you cannot access it, check with your system administrator that the URL is whitelisted.
+- URL for the login page is changed to https://auth.nuxeo.com. If you cannot access it, check with your system administrator that the URL is whitelisted.
 
 - Multi factor authentication is enforced. The <a href="#mfa">multi-factor authentication</a> section in this page provides further details.
 
@@ -33,7 +33,7 @@ To use our APIs, for instance in the following cases:
 - Using the Nuxeo CLI commmands to import or export a Studio project configuration
 - Using the [Studio Designer Git Access]({{page space='studio' page='nuxeo-studio-designer-git-access'}})
 
-When authenticating, you need to provide your username (unchanged), and a _[token](#what-is-a-token)_ instead of a password (new). Refer to our [token management]({{page space='studio' page='token-management'}}) documentation for further details.
+When authenticating, you need to provide your username (unchanged), and a <a href="#what-is-a-token">token</a> instead of a password (new). Refer to our [token management]({{page space='studio' page='token-management'}}) documentation for further details.
 
 <a name="mfa">
 ## Multi-Factor Authentication
@@ -71,9 +71,8 @@ The second factor setup is required if it has not been done yet, then it is aske
 
 ## General FAQ
 
+<a name="what-is-a-token">
 ### What is a Token?
-
-{{{multiexcerpt 'what-is-a-token' page='token-management'}}}
 
 Feel free to check our [token management]({{page page='token-management'}}) documentation for further details.
 
