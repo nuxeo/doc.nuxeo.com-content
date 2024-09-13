@@ -13,7 +13,7 @@ Nuxeo Online Services is being improved to enhance security. This page details w
 
 ## Authenticating Against Nuxeo Online Services
 
-#### From your Browser - What Changes?
+### From your Browser - What Changes?
 
 - To access Nuxeo Online Services, you need to enter your _email address_ instead of your username in the login page. If you registered for a trial using Google, use the login with Google button.
 
@@ -23,7 +23,7 @@ Nuxeo Online Services is being improved to enhance security. This page details w
 
 - Multi factor authentication is enforced. The <a href="#mfa">multi-factor authentication</a> section in this page provides further details.
 
-#### From the Command Line - What Changes?
+### From the Command Line - What Changes?
 
 To use our APIs, for instance in the following cases:
 - Registering an instance using nuxeoctl
@@ -36,13 +36,13 @@ To use our APIs, for instance in the following cases:
 When authenticating, you need to provide your username (unchanged), and a _[token](#what-is-a-token)_ instead of a password (new). Refer to our [token management]({{page space='studio' page='token-management'}}) documentation for further details.
 
 <a name="mfa">
-### Multi-Factor Authentication
+## Multi-Factor Authentication
 
 Multi-factor authentication (MFA) is needed to authenticate.
 
 If you have not set up your MFA yet, you will be able to set it up while logging in. This second factor will be requested once a week to authenticate.
 
-#### Impacts
+### Impacts
 
 When you log into Nuxeo Online Services using the browser, a second authentication factor will be requested to improve your account security.
 
@@ -57,13 +57,13 @@ These factors can be one of the following:
 MFA is used only in the browser. It is not needed when using command line tools to automate tasks.
 {{/callout}}
 
-#### Multi-Factor Authentication FAQ
+## Multi-Factor Authentication FAQ
 
-##### Who is Impacted by the Change?
+### Who is Impacted by the Change?
 
 This change only applies to people using Nuxeo Studio and Nuxeo Marketplace (called developers from here on). It won't affect people working every day in your Nuxeo Server instance, even if this instance is hosted in Nuxeo Cloud.
 
-#### Can you Provide a Summary of the Change?
+### Can you Provide a Summary of the Change?
 
 When authenticating into Nuxeo Studio or Nuxeo Marketplace, developers are requested to set up a second authentication factor using their phone.
 
