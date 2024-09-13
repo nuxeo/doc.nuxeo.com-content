@@ -104,7 +104,15 @@ Utilize the search box to search the list of groups using their names.
 
 ### Creating Custom Groups
 
-Create new custom groups by clicking the **Create Group** button and filling in the name and description fields in the pop-up window. Once a group is created, you can assign users to it by clicking its name in the **Groups** table and going to a group view page.
+Create new custom groups by clicking the **Create Group** button,
+![]({{file name='groups-tab-create-group-1.png'}} ?w=600,border=true)
+filling in the name and description fields and confirming group creation in the pop-up window. 
+![]({{file name='groups-tab-create-group-2.png'}} ?w=600,border=true)
+<a name='add-users-to-groups'>
+Once a group is created, you can assign users to it by clicking on their names in the pop-up window. 
+![]({{file name='groups-tab-create-group-3.png'}} ?w=600,border=true)
+
+You can also add users to groups from the <a href="#group-view">group view</a> page.
 
 ### Editing Groups
 You can edit a group’s description by clicking the pencil icon on the list, inserting a new group description and confirming changes in the pop-up window. 
@@ -114,18 +122,38 @@ You can edit a group’s description by clicking the pencil icon on the list, in
 You can delete a group by clicking the trash icon and confirming your choice in the pop-up window.
 ![]({{file name='groups-tab-delete.png'}} ?w=600,border=true)
 
-
+<a name="group-view">
 ### Group View
 
-Clicking on a group's name in the table will take you to the group view, where you can see a list of members and services associated with that group. You can use the search box to find members of the given group by their name.
+Clicking on a group's name in the table will take you to the group view, where you can see a list of members and services associated with that group. 
+![]({{file name='groups-tab-group-view.png'}} ?w=600,border=true)
+
+#### Edit The List of Assigned Users
+You can edit the list of users assigned to this group by clicking **Manage Members** and clicking names like while <a href='#add-users-to-groups'>creating a group</a>.
+
+#### Edit The List of Services
+You can edit the list of services assigned to this group by clicking **Manage Services**, 
+clicking names of services and clicking **Update** button
+
+#### Searching Assigned Users
+You can use the search box to find members of the given group by their name.
+![]({{file name='groups-tab-group-view-search.png'}} ?w=600,border=true)
+
 
 You can go to the user view page by clicking an entry in the **Members** table, and to the service view page by clicking an entry in the **Services** table.
 
 ### Managing Group Members
 
-By clicking the **Manage Members** button you can assign and un-assign members to / from the group. By clicking a user’s name in the **Manage Members** pop-up window, you switch the position of them (Unassigned or Assigned). Click **Confirm** to save changes.
+By clicking the **Manage Members** button you can edit the list of users assigned to this group. 
+![]({{file name='groups-tab-group-view-members-1.png'}} ?w=600,border=true)
+By clicking a user’s name in the **Manage Members** pop-up window, you switch the position of them (Unassigned or Assigned). Click **Update** to save changes.
+![]({{file name='groups-tab-group-view-members-2.png'}} ?w=600,border=true)
 
-You can also manage services the group is assigned to by clicking the **Manage Services** button. By clicking a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Confirm** to save changes.
+### Managing Group Services
+You can also manage services the group is assigned to by clicking the **Manage Services** button. 
+![]({{file name='groups-tab-group-view-services-1.png'}} ?w=600,border=true)
+By clicking a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Update** to save changes.
+![]({{file name='groups-tab-group-view-services-2.png'}} ?w=600,border=true)
 
 ## Services Tab
 
