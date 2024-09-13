@@ -17,21 +17,9 @@ Nuxeo Online Services is being improved to enhance security. This page details w
 
 - To access Nuxeo Online Services, you need to enter your _email address_ instead of your username in the login page. If you registered for a trial using Google, use the login with Google button.
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/security-improvements-faq/login-as-customer
-    name: login-customer.png
-    studio_modeler#screenshot#up_to_date
---}}
-![login-as-customer](/nx_assets/0cf607da-99c1-469e-a8c4-4524a1437b38.png ?w=650,border=true)
+![]({{file name='login-customer.png'}} ?border=true,w=650)
 
 - URL for the login page is changed to https://auth.nuxeo.com (instead of https://sso.nuxeo.com). If you cannot access it, check with your system administrator that the URL is whitelisted.
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/security-improvements-faq/auth-nuxeo-com
-    name: auth-nuxeo-com.png
-    studio_modeler#screenshot#up_to_date
---}}
-![auth-nuxeo-com](/nx_assets/885d8e2c-1831-4d9d-ac50-6835a7598799.png ?border=true)
 
 - Multi factor authentication is enforced. The [multi-factor authentication](#mfa) section in this page provides further details.
 
@@ -62,12 +50,7 @@ These factors can be one of the following:
 - Voice call to a phone number
 - SMS sent to a phone number (less secure)
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/security-improvements-faq/mfa-setup
-    name: mfa-setup.png
-    studio_modeler#screenshot#up_to_date
---}}
-![mfa-setup](/nx_assets/64c95f94-e3ac-40b1-a03e-16ce33989d83.png ?w=415,border=true)
+![]({{file name='mfa-setup.png'}} ?border=true,w=650)
 
 {{#> callout type='info' heading='Info'}}
 MFA is used only in the browser. It is not needed when using command line tools to automate tasks.
