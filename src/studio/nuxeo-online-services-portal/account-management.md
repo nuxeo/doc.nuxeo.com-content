@@ -11,43 +11,43 @@ tree_item_index: 300
 
 ## Users Tab
 
-![]({{file name='account-management.png'}} ?w=600,border=true)
+![]({{file name='users-tab-account-management.png'}} ?w=600,border=true)
 
 ### Adding Users
 
 To add a new user, click the **Add User** button 
-![]({{file name='add-user-1.png'}} ?w=600,border=true)
+![]({{file name='users-tab-add-user-1.png'}} ?w=600,border=true)
 
 and fill in the email address, first name, last name, and optionally tags. You can add existing tags or create new ones (by clicking **Create item** under tags field). Click **Done** to save the user. 
-![]({{file name='add-user-2.png'}} ?w=600,border=true)
+![]({{file name='users-tab-add-user-2.png'}} ?w=600,border=true)
 
 If there is no NOS account associated with provided email, email with link to set it up will be sent automatically. The setup link is valid for 7 days, after which our support team can send a new email upon request.
 
 ### Managing Tags
 
 By clicking the **Manage Tags** button
-![]({{file name='manage-tags-1.png'}} ?w=600,border=true)
+![]({{file name='users-tab-manage-tags-1.png'}} ?w=600,border=true)
 
 you will open a pop-up window in which you can see the list of tags used in the organization and the number of their users.
-![]({{file name='manage-tags-2.png'}} ?w=600,border=true)
+![]({{file name='users-tab-manage-tags-2.png'}} ?w=600,border=true)
 
 To add a new tag, enter its name into the search box and click **Create item**. 
 
 You can edit existing tags by clicking the pencil icon next to a tag’s name, editing the entry and clicking the checkmark icon. 
-![]({{file name='manage-tags-3.png'}} ?w=600,border=true)
+![]({{file name='users-tab-manage-tags-3.png'}} ?w=600,border=true)
 
 To delete an existing tag, click the trash icon next to it and click **Confirm** in the pop-up window.
 
 ### Searching Users
 
 Use the search box to find users by user ID, full name, or email.
-![]({{file name='search-users.png'}} ?w=600,border=true)
+![]({{file name='users-tab-search-users.png'}} ?w=600,border=true)
 
 
 ### Filtering Users
 
 Filter the user list by tag using the **Filter by tag** bar.
-![]({{file name='filter-users.png'}} ?w=600,border=true)
+![]({{file name='users-tab-filter-users.png'}} ?w=600,border=true)
 
 
 ### User View Page
@@ -60,49 +60,60 @@ Click a user's entry to access the user view page. Here, you can see:
 - Groups they belong to
 - Linked services
 
-![]({{file name='user-view-page.png'}} ?w=600,border=true)
+![]({{file name='users-tab-user-view-page.png'}} ?w=600,border=true)
 
 You can navigate to the group view page by clicking an entry in the **Groups** table on the bottom and to the service view page by clicking an entry in the **Services** table.
 
 ### Editing User Information
 
 On the user view page, click the **Edit** button to modify the user's email, first name, last name, and tags.
-![]({{file name='user-view-page-edit.png'}} ?w=600,border=true)
+![]({{file name='users-tab-user-view-page-edit.png'}} ?w=600,border=true)
 
 
 ### Removing Users
 
 You can remove a user from the organization using the **Remove** button in the user view page.
 Confirming the action will remove access to all applications and services from this organization; it does not delete the user account. If that user is also a member of other organizations, access to them remains unchanged.
-![]({{file name='user-view-page-remove.png'}} ?w=600,border=true)
+![]({{file name='users-tab-user-view-page-remove.png'}} ?w=600,border=true)
 
 
 ### Group and Service Management
 
 By using the search box in the user view page, you can search for groups the user is part of and services the user is associated with.
 By clicking the **Manage Groups** button you can assign the user to groups or take back group assignment. 
-![]({{file name='user-view-page-manage-groups.png'}} ?w=600,border=true)
+![]({{file name='users-tab-user-view-page-manage-groups.png'}} ?w=600,border=true)
 By clicking on a group’s name in the **Manage Groups** pop-up window, you switch the position of it (Unassigned or Assigned). 
-![]({{file name='user-view-page-manage-groups-popup.png'}} ?w=600,border=true)
+![]({{file name='users-tab-user-view-page-manage-groups-popup.png'}} ?w=600,border=true)
 Click **Confirm** to save changes.
 
 You can also manage services the user is assigned to by clicking the **Manage Services** button. 
-![]({{file name='user-view-page-manage-services.png'}} ?w=600,border=true)
+![]({{file name='users-tab-user-view-page-manage-services.png'}} ?w=600,border=true)
 By clicking on a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Confirm** to save changes, like in Groups management pop-up.
-![]({{file name='user-view-page-remove.png'}} ?w=600,border=true)
+![]({{file name='users-tab-user-view-page-remove.png'}} ?w=600,border=true)
 
 ## Groups Tab
 
 In the **Groups** tab you can see a list of all groups in your organization, with their name, number of members and description.
-You can edit a group’s description by clicking the pencil icon on the list. You can delete a group by clicking the trash icon and confirming your choice in the pop-up window.
+![]({{file name='groups-tab.png'}} ?w=600,border=true)
+
 
 ### Searching Groups
 
 Utilize the search box to search the list of groups using their names.
+![]({{file name='groups-tab-search.png'}} ?w=600,border=true)
 
 ### Creating Custom Groups
 
 Create new custom groups by clicking the **Create Group** button and filling in the name and description fields in the pop-up window. Once a group is created, you can assign users to it by clicking its name in the **Groups** table and going to a group view page.
+
+### Editing Groups
+You can edit a group’s description by clicking the pencil icon on the list, inserting a new group description and confirming changes in the pop-up window. 
+![]({{file name='groups-tab-edit.png'}} ?w=600,border=true)
+
+### Deleting Groups
+You can delete a group by clicking the trash icon and confirming your choice in the pop-up window.
+![]({{file name='groups-tab-delete.png'}} ?w=600,border=true)
+
 
 ### Group View
 
