@@ -64,20 +64,20 @@ Click a user's entry to access the user view page. Here, you can see:
 
 You can navigate to the group view page by clicking an entry in the **Groups** table on the bottom and to the service view page by clicking an entry in the **Services** table.
 
-### Editing User Information
+#### Editing User Information
 
 On the user view page, click the **Edit** button to modify the user's email, first name, last name, and tags.
 ![]({{file name='users-tab-user-view-page-edit.png'}} ?w=600,border=true)
 
 
-### Removing Users
+#### Removing Users
 
 You can remove a user from the organization using the **Remove** button in the user view page.
 Confirming the action will remove access to all applications and services from this organization; it does not delete the user account. If that user is also a member of other organizations, access to them remains unchanged.
 ![]({{file name='users-tab-user-view-page-remove.png'}} ?w=600,border=true)
 
 
-### Group and Service Management
+#### Group and Service Management
 
 By using the search box in the user view page, you can search for groups the user is part of and services the user is associated with.
 By clicking the **Manage Groups** button you can assign the user to groups or take back group assignment. 
@@ -108,7 +108,8 @@ Create new custom groups by clicking the **Create Group** button,
 ![]({{file name='groups-tab-create-group-1.png'}} ?w=600,border=true)
 filling in the name and description fields and confirming group creation in the pop-up window. 
 ![]({{file name='groups-tab-create-group-2.png'}} ?w=600,border=true)
-<a name='add-users-to-groups'>
+
+<a name="add-users-to-groups"></a>
 Once a group is created, you can assign users to it by clicking on their names in the pop-up window. 
 ![]({{file name='groups-tab-create-group-3.png'}} ?w=600,border=true)
 
@@ -128,28 +129,20 @@ You can delete a group by clicking the trash icon and confirming your choice in 
 Clicking on a group's name in the table will take you to the group view, where you can see a list of members and services associated with that group. 
 ![]({{file name='groups-tab-group-view.png'}} ?w=600,border=true)
 
-#### Edit The List of Assigned Users
-You can edit the list of users assigned to this group by clicking **Manage Members** and clicking names like while <a href='#add-users-to-groups'>creating a group</a>.
-
-#### Edit The List of Services
-You can edit the list of services assigned to this group by clicking **Manage Services**, 
-clicking names of services and clicking **Update** button
-
 #### Searching Assigned Users
 You can use the search box to find members of the given group by their name.
 ![]({{file name='groups-tab-group-view-search.png'}} ?w=600,border=true)
 
-
 You can go to the user view page by clicking an entry in the **Members** table, and to the service view page by clicking an entry in the **Services** table.
 
-### Managing Group Members
+#### Managing Group Members
 
 By clicking the **Manage Members** button you can edit the list of users assigned to this group. 
 ![]({{file name='groups-tab-group-view-members-1.png'}} ?w=600,border=true)
 By clicking a user’s name in the **Manage Members** pop-up window, you switch the position of them (Unassigned or Assigned). Click **Update** to save changes.
 ![]({{file name='groups-tab-group-view-members-2.png'}} ?w=600,border=true)
 
-### Managing Group Services
+#### Managing Group Services
 You can also manage services the group is assigned to by clicking the **Manage Services** button. 
 ![]({{file name='groups-tab-group-view-services-1.png'}} ?w=600,border=true)
 By clicking a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Update** to save changes.
