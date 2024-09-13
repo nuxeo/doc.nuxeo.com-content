@@ -24,7 +24,7 @@ Find the release notes at: [https://doc.nuxeo.com/studio/nuxeo-studio-release-no
 
 #### Does the Request to Create a New Service Require Approval?
 
-Yes, creating services still requires approval from our Support organization. When a service is requested, a Jira ticket is generated, containing essential information about the new service and its creator. Support manages this ticket, utilizing its details or supplementary information from the user if necessary.
+Yes, creating services still requires approval from our Support organization. When a service is requested, a Jira ticket that contains essential information about the new service and its creator is generated. Support team processes this ticket using its details or asks for supplementary information if necessary.
 
 #### When I Create a New Project, Will It Create a New Service?
 
