@@ -28,7 +28,7 @@ Yes, creating services still requires approval from our Support organization. Wh
 
 #### When I Create a New Project, Will It Create a New Service?
 
-When a trial project is initiated, both a base maintenance service and a studio service are automatically created. These services are time-limited trial versions, with expiry dates displayed on the services page. For non-trial projects within an organization, no additional services are generated. Administrators can subsequently add the project to newly established services. Note that a service requires at least one associated project to be functional. New projects adhere to their expiry dates as defined by the client contract.
+When a trial project is initiated, both base maintenance service and studio service are automatically created. These services are time-limited trial versions with expiry dates displayed on the services page. For non-trial projects within an organization, no additional services are generated. Administrators can subsequently add the project to newly established services. Note that a service requires at least one associated project to be functional. New projects adhere to their expiry dates as defined by the client contract.
 
 #### What Kinds of Services Exist and How Are They Different?
 
