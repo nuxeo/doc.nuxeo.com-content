@@ -82,12 +82,15 @@ Confirming the action will remove access to all applications and services from t
 By using the search box in the user view page, you can search for groups the user is part of and services the user is associated with.
 By clicking the **Manage Groups** button you can assign the user to groups or take back group assignment. 
 ![]({{file name='users-tab-user-view-page-manage-groups.png'}} ?w=600,border=true)
+
 By clicking on a group’s name in the **Manage Groups** pop-up window, you switch the position of it (Unassigned or Assigned). 
 ![]({{file name='users-tab-user-view-page-manage-groups-popup.png'}} ?w=600,border=true)
+
 Click **Confirm** to save changes.
 
 You can also manage services the user is assigned to by clicking the **Manage Services** button. 
 ![]({{file name='users-tab-user-view-page-manage-services.png'}} ?w=600,border=true)
+
 By clicking on a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Confirm** to save changes, like in Groups management pop-up.
 ![]({{file name='users-tab-user-view-page-remove.png'}} ?w=600,border=true)
 
@@ -139,18 +142,22 @@ You can go to the user view page by clicking an entry in the **Members** table, 
 
 By clicking the **Manage Members** button you can edit the list of users assigned to this group. 
 ![]({{file name='groups-tab-group-view-members-1.png'}} ?w=600,border=true)
+
 By clicking a user’s name in the **Manage Members** pop-up window, you switch the position of them (Unassigned or Assigned). Click **Update** to save changes.
 ![]({{file name='groups-tab-group-view-members-2.png'}} ?w=600,border=true)
 
 #### Managing Group Services
 You can also manage services the group is assigned to by clicking the **Manage Services** button. 
 ![]({{file name='groups-tab-group-view-services-1.png'}} ?w=600,border=true)
+
 By clicking a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Update** to save changes.
 ![]({{file name='groups-tab-group-view-services-2.png'}} ?w=600,border=true)
 
 ## Services Tab
 
 The **Services** tab lists all organization-linked services, categorized into four types. Information displayed includes start and end dates, associated projects, available seats, and service validity.
+![]({{file name='services-tab.png'}} ?w=600,border=true)
+
 
 ### Permissions
 
@@ -158,22 +165,44 @@ Only Admin Users and Power Users can create, edit, and delete services. OrgAdmin
 
 ### Creating Services
 
-Click the **Create Service** button to add a new service. In the pop-up window, specify the type of service and its name, set the start and end dates and add a description if necessary. Click **Create Service** to save the changes.
+Click the **Request Service** button to request a new service. 
+![]({{file name='services-tab-request-service-1.png'}} ?w=600,border=true)
+In the pop-up window, specify the type of service and its name, set the start and end dates and add a description if necessary. Click **Request** button to save the changes.
+![]({{file name='services-tab-request-service-2.png'}} ?w=600,border=true)
+
 
 ### Updating and Deleting a Service
 
-By clicking the pencil icon in the table, you can update information about a given service: its name, start date and end date. Click **Update Service** to save the changes.
+By clicking the pencil icon in the table, you can update information about a given service: its name, start date and end date. 
+![]({{file name='services-tab-edit-service-1.png'}} ?w=600,border=true)
+
+Click **Update** button to save the changes.
+![]({{file name='services-tab-edit-service-2.png'}} ?w=600,border=true)
 
 By clicking the trash icon, you can delete a service from your organization.
 
 ### Service View
 
 By clicking an entry in the table of services, you will go to the service view, where you can see all members and projects associated with that service. You can use the search box to find members and projects by their name.
+![]({{file name='services-tab-service-view.png'}} ?w=600,border=true)
 
-You can go to the user view page by clicking an entry in the **Members** table.
+#### Searching Assigned Users And Projects
+You can use the search box to find users and projects that can access this service.
+![]({{file name='services-tab-search.png'}} ?w=600,border=true)
 
-### Managing Service Members and Projects
 
-By clicking the **Manage Members** button in the service view, you can assign and unassign members to / from the service. By clicking a user’s name in the **Manage Members** pop-up window, you switch the position of them (Unassigned or Assigned). Click **Confirm** to save changes.
+#### Managing Service Members and Projects
 
-You can also manage projects assigned to the service by clicking the **Manage Projects** button. By clicking a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Confirm** to save changes.
+By clicking the **Manage Members** button you can edit the list of users assigned to this service. 
+![]({{file name='services-tab-service-view-magnage-members-1.png'}} ?w=600,border=true)
+
+By clicking a user’s name in the **Manage Members** pop-up window, you switch the position of them (Unassigned or Assigned). Click **Update** button to save changes.
+![]({{file name='services-tab-service-view-magnage-members-2.png'}} ?w=600,border=true)
+
+
+You can also manage projects assigned to the service by clicking the **Manage Projects** button. 
+![]({{file name='services-tab-service-view-manage-projects-1.png'}} ?w=600,border=true)
+
+By clicking a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Update** button to save changes.
+![]({{file name='services-tab-service-view-manage-projects-2.png'}} ?w=600,border=true)
+
