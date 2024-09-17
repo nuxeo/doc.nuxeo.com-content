@@ -36,6 +36,8 @@ Nuxeo Platform LTS 2021 can be deployed with the **Nuxeo Docker image** (recomme
 - [Install Nuxeo with the Docker Image]({{page version='' space='nxdoc' page='docker-image'}})
 - [Install Nuxeo with the ZIP distribution]({{page version='' space='nxdoc' page='tomcat-server-zip'}})
 
+You can also deploy Nuxeo Platform in [Kubernetes](https://kubernetes.io/) (K8s) with the [Nuxeo Helm Chart]({{page page='kubernetes-helm-chart'}}).
+
 {{{multiexcerpt 'lts2021-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ## Why using the Nuxeo Docker Image?
