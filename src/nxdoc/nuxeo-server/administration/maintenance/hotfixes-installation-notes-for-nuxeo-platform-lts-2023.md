@@ -101,6 +101,49 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 19
+
+### Configure Tomcat Logs With Log4j
+
+
+If you enable the Tomcat logs with Log4j configuration feature in LTS 2023 you might need to migrate `conf/logging.properties` to `log4j2.xml` if you have one.
+ The default `conf/logging.properties` was migrated to this portion of the default `log4j2.xml` file:
+```java
+    <!-- Tomcat catalina loggers -->
+    <Logger name="org.apache.catalina" level="warn" additivity="false">
+      <AppenderRef ref="CATALINA" />
+    </Logger>
+    <Logger name="org.apache.catalina.core.AprLifecycleListener" level="info" />
+    <Logger name="org.apache.catalina.core.ContainerBase" level="info" />
+    <Logger name="org.apache.catalina.startup.Catalina" level="info">
+      <AppenderRef ref="CONSOLE" />
+    </Logger>
+    <Logger name="org.apache.catalina.startup.VersionLoggerListener" level="info" />
+    <!-- Tomcat coyote loggers -->
+    <Logger name="org.apache.coyote" level="warn" additivity="false">
+      <AppenderRef ref="CATALINA" />
+    </Logger>
+    <!-- Tomcat jasper loggers -->
+    <Logger name="org.apache.jasper" level="warn" additivity="false">
+      <AppenderRef ref="CATALINA" />
+    </Logger>
+```
+
+The JUL configuration present under `conf/logging.properties` will be removed in LTS 2025.
+The log files: `classloader.log`, `stderr.log`, and `tomcat.log` will also be removed in LTS 2025 as their logs are now written to `catalina.log`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32875](https://jira.nuxeo.com/browse/NXP-32875)
+
+### DocumentTaskProvider getTasks Should Rely on an Elastic to Avoid Mongo Timeouts
+
+
+The page providers below have been set to use Elasticsearch by default, make sure you add them to the `elasticsearch.override.pageproviders` nuxeo.conf property if you've overridden it.
+```
+GET_TASKS_FOR_ACTORS,GET_TASKS_FOR_ACTORS_OR_DELEGATED_ACTORS,GET_TASKS_FOR_PROCESS,GET_TASKS_FOR_PROCESS_AND_ACTORS,GET_TASKS_FOR_PROCESS_AND_NODE,GET_TASKS_FOR_TARGET_DOCUMENT,GET_TASKS_FOR_TARGET_DOCUMENTS,GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS,GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS_OR_DELEGATED_ACTORS
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32754](https://jira.nuxeo.com/browse/NXP-32754)
+
 ## Hotfix 18
 
 ### Allow to Use S3 StrictAuthenticatedEncryption With a Local Keystore
