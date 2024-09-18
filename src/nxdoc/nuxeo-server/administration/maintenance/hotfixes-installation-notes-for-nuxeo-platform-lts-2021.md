@@ -103,6 +103,27 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 60
+
+### Move Swagger Rest API and Automation Doc to an Optional Marketplace
+
+
+If you need the old swagger documentation or the automation documentation, please install the **nuxeo-rest-api-documentation** marketplace from connect.
+
+Doc source is now located at https://github.com/nuxeo/nuxeo-rest-api-swagger-doc.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32841](https://jira.nuxeo.com/browse/NXP-32841)
+
+### DocumentTaskProvider getTasks Should Rely on an Elastic to Avoid Mongo Timeouts
+
+
+The page providers below have been set to use Elasticsearch by default, make sure you add them to the `elasticsearch.override.pageproviders` nuxeo.conf property if you've overridden it.
+```
+GET_TASKS_FOR_ACTORS,GET_TASKS_FOR_ACTORS_OR_DELEGATED_ACTORS,GET_TASKS_FOR_PROCESS,GET_TASKS_FOR_PROCESS_AND_ACTORS,GET_TASKS_FOR_PROCESS_AND_NODE,GET_TASKS_FOR_TARGET_DOCUMENT,GET_TASKS_FOR_TARGET_DOCUMENTS,GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS,GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS_OR_DELEGATED_ACTORS
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32754](https://jira.nuxeo.com/browse/NXP-32754)
+
 ## Hotfix 54
 
 ### Use Keycloak Auth After Automation Basic Auth in Specific Auth Chains
