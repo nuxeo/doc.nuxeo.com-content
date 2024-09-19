@@ -23,7 +23,7 @@ Tomcat Log configuration with Log4j
 The Tomcat logs configuration can be handled by Log4j which easily allows to configure Tomcat logs in Cloud environments.
 
 The introduced configuration routes all Tomcat logs to `log/catalina.log` (without the date) with same level as with the JUL configuration under `conf/logging.properties`.
- This mechanism will be the default for LTS 2025 and need to be opt-in in LTS 2023.
+ This mechanism will be the default for LTS 2025 and must be opted-in in LTS 2023.
  You need to enable the `tomcat-logs` template for LTS 2023, for example by adding the following to your `nuxeo.conf`:
 ```java
 nuxeo.append.templates.tomcat-logs=tomcat-logs
@@ -58,7 +58,7 @@ A new `nuxeo.conf` property has been introduced to reference the log4j configura
 launcher.log4j2.file=/etc/nuxeo/log4j2-launcher.xml
 ```
 WARNING:
-variable expansion is not supported on this property because the property is used before launcher invocation which owns this mechanism.
+Variable expansion is not supported on this property because the property is used before launcher invocation, which owns this mechanism.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32668](https://jira.nuxeo.com/browse/NXP-32668)
 
