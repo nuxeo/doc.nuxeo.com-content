@@ -117,7 +117,7 @@ Doc source is now located at https://github.com/nuxeo/nuxeo-rest-api-swagger-doc
 ### DocumentTaskProvider getTasks Should Rely on an Elastic to Avoid Mongo Timeouts
 
 
-The page providers below have been set to use Elasticsearch by default, make sure you add them to the `elasticsearch.override.pageproviders` nuxeo.conf property if you've overridden it.
+The page providers below are set to use Elasticsearch by default. Ensure that you add them to the `elasticsearch.override.pageproviders` nuxeo.conf property if you've overridden it.
 ```
 GET_TASKS_FOR_ACTORS,GET_TASKS_FOR_ACTORS_OR_DELEGATED_ACTORS,GET_TASKS_FOR_PROCESS,GET_TASKS_FOR_PROCESS_AND_ACTORS,GET_TASKS_FOR_PROCESS_AND_NODE,GET_TASKS_FOR_TARGET_DOCUMENT,GET_TASKS_FOR_TARGET_DOCUMENTS,GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS,GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS_OR_DELEGATED_ACTORS
 ```
