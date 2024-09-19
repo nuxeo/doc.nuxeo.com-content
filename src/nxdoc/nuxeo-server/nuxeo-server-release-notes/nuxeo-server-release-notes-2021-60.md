@@ -25,7 +25,7 @@ AbstracSession#getOrCreateDocument now works properly to create a document under
 ## Move Swagger Rest API and Automation Doc to an Optional Marketplace
 
 
-Rest Swagger doc available under /nuxeo/api/v1/doc endpoint and Automation doc available under /nuxeo/api/v1/automation/doc endpoint are no longer part of the default distribution
+Rest Swagger doc, available under the /nuxeo/api/v1/doc endpoint, and the Automation doc, available under the /nuxeo/api/v1/automation/doc endpoint, are no longer part of the default distribution
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32841](https://jira.nuxeo.com/browse/NXP-32841)
 
