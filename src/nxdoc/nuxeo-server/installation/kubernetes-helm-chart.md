@@ -104,7 +104,7 @@ When installing the chart, an error occurs if all three conditions below are **n
 Also, if Ingress is enabled with `ingress.enabled=true`, the following warning will guide you:
 
 ```shell
-Nuxeo needs sticky session for cookie to work correctly. Unfortunately this can not be achieved by the Nuxeo Helm Chart as it depends on your Ingress controller, see below some examples:
+Nuxeo needs sticky session for cookie to work correctly. Unfortunately, this can not be achieved by the Nuxeo Helm Chart as it depends on your Ingress controller. See below some examples:
 * NGINX - add the annotation below to the ingress:
     ingress:
       annotations:
@@ -237,7 +237,7 @@ The parameters of the `nuxeo` chart, such as the Nuxeo image, can be configured 
 
 The parameters of the `minio`, `mongodb`, `opensearch` and `kafka` charts can be configured in the [values-CHART.yaml](https://github.com/nuxeo/nuxeo-helm-chart/tree/master/ci/helm/values) files.
 
-**Note:** these values are just sample values. The related charts need a fine-grained configuration to be suitable for production, see the available values for each one of them:
+**Note:** These values are just sample values. The related charts need a fine-grained configuration to be suitable for production, see the available values for each one of them:
 
 - [nuxeo](https://github.com/nuxeo/nuxeo-helm-chart/blob/master/nuxeo/values.yaml)
 - [minio](https://github.com/bitnami/charts/blob/main/bitnami/minio/values.yaml)
