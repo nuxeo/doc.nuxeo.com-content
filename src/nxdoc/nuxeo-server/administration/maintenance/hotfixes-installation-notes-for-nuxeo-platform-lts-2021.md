@@ -108,9 +108,9 @@ If you have any questions, feel free to contact our support team via a dedicated
 ### Move Swagger Rest API and Automation Doc to an Optional Marketplace
 
 
-If you need the old swagger documentation or the automation documentation, please install the **nuxeo-rest-api-documentation** marketplace from connect.
+If you need the old swagger documentation or the automation documentation, please install the **nuxeo-rest-api-documentation** marketplace package from Connect.
 
-Doc source is now located at https://github.com/nuxeo/nuxeo-rest-api-swagger-doc.
+Doc source is now located [here](https://github.com/nuxeo/nuxeo-rest-api-swagger-doc).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32841](https://jira.nuxeo.com/browse/NXP-32841)
 
