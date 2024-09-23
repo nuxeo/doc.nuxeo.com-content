@@ -35,7 +35,7 @@ nuxeo.append.templates.tomcat-logs=tomcat-logs
 ## Comments Not Showing on Version Documents
 
 
-AbstracSession#getOrCreateDocument now works properly to create a document under a version
+`AbstracSession#getOrCreateDocument` now works properly to create a document under a version.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32845](https://jira.nuxeo.com/browse/NXP-32845)
 
@@ -49,7 +49,7 @@ The task related page providers now rely on Elasticsearch by default.
 ## Make the Nuxeo Launcher Log4j Configuration File Overridable
 
 
-The Log4j configuration file for Nuxeo Launcher can now be customized
+The Log4j configuration file for Nuxeo Launcher can now be customized.
 
 Previously present in the launcher, the Nuxeo Launcher Log4j configuration file has been extracted to `/lib/log4j2-launcher.xml` so it could be edited.
 
@@ -65,7 +65,7 @@ Variable expansion is not supported on this property because the property is use
 ## Fix How Framework.getProperty Reads Accentued Characters
 
 
-The nuxeo.conf and other nuxeo properties files are now read / written with UTF-8 encoding
+The `nuxeo.conf` and other nuxeo properties files are now read / written with UTF-8 encoding.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32489](https://jira.nuxeo.com/browse/NXP-32489)
 
