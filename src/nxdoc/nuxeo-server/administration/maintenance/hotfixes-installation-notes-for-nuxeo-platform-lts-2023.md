@@ -103,7 +103,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 19
 
-### Make the Nuxeo Launcher Log4j configuration file overridable
+### Make the Nuxeo Launcher Log4j Configuration File Overridable
 
 The {{bin/nuxeoctl}} script has been updated by this feature, so if you're using the HF mechanism on a standalone zip server, you might set back the execute permission to {{bin/nuxeoctl}}, something like below:
 ```bash
