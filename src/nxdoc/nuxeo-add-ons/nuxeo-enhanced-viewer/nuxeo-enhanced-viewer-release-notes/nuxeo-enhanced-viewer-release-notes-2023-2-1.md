@@ -1,6 +1,6 @@
 ---
-title: NEV 2023.2.1
-description: Release notes for Nuxeo Enhanced Viewer 2023.2.1
+title: NEV 2021.5.1
+description: Release notes for Nuxeo Enhanced Viewer 2021.5.1
 tree_item_index:
 hidden: true
 review:
@@ -11,7 +11,7 @@ toc: true
 ---
 
 {{! multiexcerpt name='nuxeo-enhanced-viewer-updates'}}
-## New major release of NEV: 2023.2.1
+## New major release of NEV: 2021.5.1
 
 ### {{> anchor 'summary'}} Summary
 
@@ -22,7 +22,7 @@ Migration requires reconfiguring top panel widgets and annotation settings, with
 
 ## UI Overview
 
-The user interface of NEV 2023.2.1 features significant upgrades, particularly in the areas of annotations and redactions.
+The user interface of NEV 2021.5.1 features significant upgrades, particularly in the areas of annotations and redactions.
 These controls are now organized into their own grouped views for enhanced usability.
 
 The UI of NEV 2021.5.1 looks like:
