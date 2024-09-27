@@ -483,7 +483,7 @@ For Picture document type, a similar system is available to be able to get the a
 
 where, by default, `viewName` can be Original, OriginalJpeg, Medium, Thumbnail.
 
-## Default Blob Provider
+## How It Works
 
 The default Blob Provider implementation is based on a simple filesystem: considering the storage principles, this is safe to use this implementation even on a NFS like filesystem (since there is no conflicts).
 
