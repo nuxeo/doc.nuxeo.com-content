@@ -76,7 +76,7 @@ In addition, the command id can be copied to retrieve its status later using the
 
 ### Checking the Status of System Components
 
-The homepage provides a concise list of [probes]({{page page='health-check'}}#probes) to check the health of the various system components. For a full list with detailed information and the possibility to launch a check on them individually, you can head to the `Probes` menu.
+The homepage provides a concise list of [probes]({{page page='health-check'}}#probes) to check the health of the various system components. For a full list with detailed information and the possibility to launch a check on them individually, you can see the `Probes` menu.
 
 ![]({{file name='admin-console-probes-homepage.png'}} ?border=true)
 
