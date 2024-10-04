@@ -26,44 +26,71 @@ tree_item_index: 100
   
 ### CPU and RAM Requirements 
 
-It depends on the third-party application used for file editing as well as the size of the file. Nuxeo Drive is tested against microsoft office suite and we recommend using it. (latest version) Version Office 365 at that time.  
-
-You should allocate at least 500MB of free memory for Drive on top of Microsoft Office consumption for direct edit usage or at least twice the file size for larger files.
+It depends on the third-party application used for file editing as well as the size of the file. Nuxeo Drive is tested against Microsoft Office 365 and we recommend using it.
+To use Direct Edit, you should allocate at least **500MB of free memory** for Nuxeo Drive on top of Microsoft Office consumption for direct edit usage or at least **twice the file size** for larger files.
 
 ### Permissions 
 
-Administrator rights are required on the machine while installing or uninstalling the application. Upgradation is similar to installation, so similar level of access is required.  
+Administrator rights are required on the machine while installing or uninstalling the application. Upgrade is similar to installation, so similar level of access is required.  
 
 ### Dependencies 
 
-What dependencies are required by Nuxeo Drive? E.g., Python or other libraries or tools. 
+- Nuxeo-drive version 5.5.0 => Python v3.9.5 is compatible and required to be installed separately in the local machine. 
+=> Make sure that no other software overrides the supported python version. 
 
-As of now with nuxeo-drive version 5.5.0 Python v3.9.5  is required to be installed in the local machine. Make sure that no other software overrides the supported python version. 
+Nuxeo Drive embeds its own dependencies, you should ensure that you do not override these dependencies system wide to prevent issues. 
 
-Do they come embedded or have to be installed separately? 
-
-Python needs to be installed. Dependencies come embedded. 
-
-Which version of each is compatible with Drive? 
-
-Python version 3.9.5. 
-
-Does Nuxeo Drive isolate them or are they shared with the system? 
-
-Yes, they may overlap with other dependencies. Nuxeo Drive embeds its own dependencies in the (name) folder, you should ensure that you do not override these dependencies system wide to prevent issues. 
-
-Are there any other third parties tool that I need to install on my machine? 
-
-We recommend using Microsoft Office 365 or the latest version for direct edit.  
-
-Are there any security restrictions? 
-
-No 
+We recommend using Microsoft Office 365 or the latest version for Direct Edit.  
 
 ## Installation 
 
-### Localization 
+### Localization and Permission
 
 It is required to install Nuxeo Drive in the local Users folder. We do not support installing Nuxeo Drive in a different folder or folder type (e.g., redirected folder, network folder).
 
-## Direct Edit 
+You need at least Read and Write access to the local Users folder. 
+
+Info: 
+In order to show the icon overlay on the explorer on Windows platform, user needs the permission to update the registry editor. 
+
+### Account Information 
+
+Once Nuxeo Drive installed all the information related to the account, (e.g: Account configuration, database, logs, etc.) will be stored in a folder named `.nuxeo-drive` stored inside the user profile folder. No specific permission are required to store this information. 
+
+## Direct Edit
+
+When performing a Direct Edit on a document, the document is stored in a temp folder inside `.nuxeo-drive`, no specific permission are required on this folder to properly use Direct Edit. 
+
+### File Size
+
+To properly use Direct Edit please follow the recommendation of a document **up to 15GB file size with 65GB of RAM**. 
+
+### After Direct Editing 
+
+The document will not be deleted immediately after the direct edit process. The document is stored inside the `edit` folder under `.nuxeo-drive` folder. The folder will be cleaned at the time of Drive startup. So, until Nuxeo drive will be restarted, all of the documents will be kept locally.
+
+**Recommended Storage Capacity:**
+As the documents are kept locally until Drive is restarted, it will depends on the number and size of the documents edited and how often the Nuxeo Drive gets restarted.
+To keep the storage free, Nuxeo Drive should be restarted on a regular basis if multiple direct editing are performed.
+
+### Multiple Direct Editing 
+
+If the user edits multiple documents on a regular basis, it will increase the storage and memory usage.
+The documents will be stored locally until Drive is restarted, the recommended free space should be at least twice the size of the document(s) to be edited. 
+
+## Debugging 
+
+1. The first thing to do is to change the log level to **DEBUG**. To do so, on the Advanced tab, go to Advanced Settings > Log level, select DEBUG from the drop-down list and click **Apply**. 
+
+2. Then perform the whole operation you're having trouble with, and then generate the bug report. 
+
+3. Apart from this we require:
+- Nuxeo drive version
+- System info: system configuration, RAM, free storage space, free memory space, CPU usage, system logs, server logs.  
+- Scenario/ steps to reproduce which resulted into the crash and information on the documents you are trying to edit (e.g: format, size), if a doc example can be shared it will be easier for the team to test on their side.
+
+
+
+
+
+
