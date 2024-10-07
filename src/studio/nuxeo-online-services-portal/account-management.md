@@ -15,23 +15,21 @@ tree_item_index: 300
 
 ### Adding Users
 
-To add a new user, click the **Add User** button 
-![]({{file name='users-tab-add-user-1.png'}} ?w=600,border=true)
-
-and fill in the email address, first name, last name, and optionally tags. You can add existing tags or create new ones (by clicking **Create item** under tags field). Click **Done** to save the user. 
-![]({{file name='users-tab-add-user-2.png'}} ?w=600,border=true)
+To add a new user, click the **Add User** button and fill in the email address, first name, last name, and optionally tags. 
+![]({{file name='users-tab-add-user.png'}} ?w=600,border=true)
+You can add existing tags or create new ones (by clicking **Create item** under tags field). Click **Done** to save the user. 
 
 If there is no NOS account associated with provided email, email with link to set it up will be sent automatically. The setup link is valid for 7 days, after which our support team can send a new email upon request.
 
 ### Managing Tags
 
 By clicking the **Manage Tags** button
+you will open a pop-up window in which you can see the list of tags used in the organization and the number of their users.
 ![]({{file name='users-tab-manage-tags-1.png'}} ?w=600,border=true)
 
-you will open a pop-up window in which you can see the list of tags used in the organization and the number of their users.
+To add a new tag, enter its name into the search box and click **Create item**. 
 ![]({{file name='users-tab-manage-tags-2.png'}} ?w=600,border=true)
 
-To add a new tag, enter its name into the search box and click **Create item**. 
 
 You can edit existing tags by clicking the pencil icon next to a tag’s name, editing the entry and clicking the checkmark icon. 
 ![]({{file name='users-tab-manage-tags-3.png'}} ?w=600,border=true)
@@ -92,7 +90,6 @@ You can also manage services the user is assigned to by clicking the **Manage Se
 ![]({{file name='users-tab-user-view-page-manage-services.png'}} ?w=600,border=true)
 
 By clicking on a service’s name in the **Manage Services** pop-up window, you switch the position of it (Unassigned or Assigned). Click **Confirm** to save changes, like in Groups management pop-up.
-![]({{file name='users-tab-user-view-page-remove.png'}} ?w=600,border=true)
 
 ## Groups Tab
 
