@@ -51,8 +51,6 @@ These factors can be one of the following:
 - Voice call to a phone number
 - SMS sent to a phone number (less secure)
 
-![]({{file name='mfa-setup.png'}} ?border=true,h=550)
-
 {{#> callout type='info'}}
 MFA is used only in the browser. It is not needed when using command line tools to automate tasks.
 {{/callout}}
