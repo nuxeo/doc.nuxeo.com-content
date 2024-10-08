@@ -38,12 +38,12 @@ Administrator rights are required on the machine while installing or uninstallin
 
 ### Dependencies 
 
-- Nuxeo-drive version 5.5.0 => Python v3.9.5 is compatible and required to be installed separately in the local machine. 
+Starting from Nuxeo-drive version 5.5.0 => Python v3.9.5 is compatible and required to be installed separately in the local machine. 
 Make sure that no other software overrides the supported python version. 
 
 Although Nuxeo Drive embeds its own dependencies, you should ensure that you do not override these dependencies system wide to prevent issues. 
 
-We recommend using Microsoft Office 365 or the latest version for Direct Edit.  
+We recommend using **Microsoft Office 365** or the latest version for Direct Edit.  
 
 ## Installation 
 
@@ -76,12 +76,8 @@ The document will not be deleted immediately after the direct edit process. The 
 As the documents are kept locally until Drive is restarted, the required storage size will depend on the number and size of the documents edited and how often the Nuxeo Drive gets restarted.
 To optimize storage space, Nuxeo Drive should be restarted on a regular basis if multiple direct editings are performed.
 
-### Multiple Direct Editing 
-
-If the user edits multiple documents on a regular basis, it will increase the storage and memory usage.
-The documents will be stored locally until Drive is restarted, the recommended free space should be at least twice the size of the document(s) to be edited. 
-
 ## Debugging 
+
 When encountering issues with Nuxeo Drive, information is necessary to us to reproduce the issue and provide a quick and efficient resolution. We recommend following these steps:
 1. The first thing to do is to change the log level to **DEBUG**. To do so, on the Advanced tab, go to Advanced Settings > Log level, select DEBUG from the drop-down list and click **Apply**. 
 
@@ -93,9 +89,3 @@ When encountering issues with Nuxeo Drive, information is necessary to us to rep
 - Scenario/ steps to reproduce which resulted into the crash and information on the documents you are trying to edit (e.g: format, size). 
 
 Providing an example document greatly facilitates reproducing the issue. We understand that your content is sensitive and recommend that you share a version deprived of any sensitive information or personally identifying information as a precaution measure.
-
-
-
-
-
-
