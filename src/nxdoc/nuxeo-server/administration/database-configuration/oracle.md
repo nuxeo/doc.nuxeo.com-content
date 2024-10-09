@@ -396,7 +396,7 @@ you need to run this statement as your Oracle user
 CREATE SEQUENCE HIBERNATE_SEQUENCE;
 ```
 
-Grant for CREATE TABLE
+## Grant for CREATE TABLE
 
 As the Nuxeo Platform creates tables in the database at first startup, you need to grant `CREATE TABLE` to your database user.
 
