@@ -17,8 +17,6 @@ Nuxeo Online Services is being improved to enhance security. This page details w
 
 - To access Nuxeo Online Services, you need to enter your _email address_ instead of your username in the login page. If you registered for a trial using Google, use the login with Google button.
 
-![]({{file name='login-customer.png'}} ?border=true,w=650)
-
 - URL for the login page is changed to https://auth.nuxeo.com. If you cannot access it, check with your system administrator that the URL is whitelisted.
 
 - Multi factor authentication is enforced. The <a href="#mfa">multi-factor authentication</a> section in this page provides further details.
