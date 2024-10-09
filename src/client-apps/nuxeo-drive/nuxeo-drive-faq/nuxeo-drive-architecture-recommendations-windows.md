@@ -38,7 +38,7 @@ Administrator rights are required on the machine while installing or uninstallin
 
 ### Dependencies 
 
-Starting from Nuxeo-drive version 5.5.0 => Python v3.9.5 is compatible and required to be installed separately in the local machine. 
+Starting from Nuxeo-drive version 5.2.0 => Python v3.9.5 is compatible and required to be installed separately in the local machine. 
 Make sure that no other software overrides the supported python version. 
 
 Although Nuxeo Drive embeds its own dependencies, you should ensure that you do not override these dependencies system wide to prevent issues. 
