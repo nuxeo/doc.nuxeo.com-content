@@ -28,7 +28,7 @@ All Nuxeo Drive versions are compatible with Windows. We recommend to use the la
 
 Resources consumption depends mostly on the third-party application used for file editing as well as the size of the file. 
 ### Requirements for Direct Edit
-Nuxeo Drive is tested against Microsoft Office 365 and is therefore our recommendation. Direct edit can also be used with alternative Office suites, but has not been tested against them.
+Nuxeo Drive is tested against Microsoft Office 365 and is therefore our recommendation. Direct edit can also be used with alternative office suites, but has not been tested against them.
 
 To use Direct Edit, you should allocate at least **500MB of free memory** for Nuxeo Drive on top of Microsoft Office consumption for direct edit usage or at least **twice the file size** for larger files.
 
@@ -38,7 +38,7 @@ Administrator rights are required on the machine while installing or uninstallin
 
 ### Dependencies 
 
-Starting from Nuxeo-drive version 5.2.0 => Python v3.9.5 is compatible and required to be installed separately in the local machine. 
+Starting from Nuxeo-drive version 5.2.0, Python `v3.9.5` is the required version to be installed separately in the local machine. Please make sure to use this version specifically as bugs could happen even with a patch upgrade.
 Make sure that no other software overrides the supported python version. 
 
 Although Nuxeo Drive embeds its own dependencies, you should ensure that you do not override these dependencies system wide to prevent issues. 
