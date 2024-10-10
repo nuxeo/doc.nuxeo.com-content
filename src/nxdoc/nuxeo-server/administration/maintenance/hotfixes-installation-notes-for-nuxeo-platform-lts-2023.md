@@ -101,6 +101,15 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 20
+
+### Use Oracle Linux 9 Instead of Rocky Linux 9 as Base Image for LTS 2023 Docker Image
+
+
+The `docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023` Docker image is built from `oraclelinux:9-slim`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32711](https://jira.nuxeo.com/browse/NXP-32711)
+
 ## Hotfix 19
 
 ### Make the Nuxeo Launcher Log4j Configuration File Overridable
