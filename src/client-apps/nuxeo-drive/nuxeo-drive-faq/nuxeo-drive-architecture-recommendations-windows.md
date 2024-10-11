@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Drive Configuration Requirements on Windows
+title: Configuration Requirements on Windows
 review:
   comment: ''
   date: '2024-10-05'
