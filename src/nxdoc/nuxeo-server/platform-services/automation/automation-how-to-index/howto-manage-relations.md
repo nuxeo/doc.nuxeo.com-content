@@ -51,7 +51,7 @@ Let's create an element `nuxeo-se-document-relations` that uses the `javascript.
 This element refers to two auxiliary elements that are responsible for the [creation](#add-relation) and [deletion](#delete-relation) of new relationships, we will create them right after.
 
 1. On Designer, go to **Resources**.
-1. Create a new folder under **UI** and name it **Relations**.</br>
+1. Create a new folder under **UI** and name it **relations**.</br>
 1. In it, create a new element and name it `nuxeo-se-document-relations`.
 1. Choose the type **Sample layout template**.
 1. Copy the [content from our cookbook](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents/designer/nuxeo-se-document-relations.html).
