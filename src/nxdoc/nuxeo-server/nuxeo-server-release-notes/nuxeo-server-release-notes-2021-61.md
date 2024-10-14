@@ -18,7 +18,7 @@ hidden: true
 ## Improve the sequenceHexRandomized Retry Mechanism
 
 
-The MongoDB sequenceHexRandomized retry mechanism has  a maximum duration of 250 ms.
+The MongoDB sequenceHexRandomized retry mechanism has a maximum duration of 250 ms.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32880](https://jira.nuxeo.com/browse/NXP-32880)
 
