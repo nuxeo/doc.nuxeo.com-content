@@ -65,7 +65,7 @@ The web element `nuxeo-se-add-relation-dialog` shows a popup to add a new relati
 The `Document.AddRelation` operation uses negative logic in the outgoing parameter, which makes it more difficult to follow the logic.
 {{/callout}}
 
-1. In your **Relations** folder, create a new element.
+1. In your **relations** folder, create a new element.
 1. Name it `nuxeo-se-add-relation-dialog`.
 1. Choose the type **Sample layout template**.
 1. Copy the [content from our cookbook](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents/designer/nuxeo-se-add-relation-dialog.html).
@@ -75,7 +75,7 @@ The `Document.AddRelation` operation uses negative logic in the outgoing paramet
 
 Finally, we need to create a web element in charge of deleting relationships, `nuxeo-se-remove-relation-button`. For the deletion, we will use the operation `Relations.DeleteRelation`. At the end of the relationship deletion, we will launch a custom event called relation-removed to notify that the relationship has been removed.
 
-1. In your **Relations** folder, create a new element.
+1. In your **relations** folder, create a new element.
 1. Name it `nuxeo-se-remove-relation-button`.
 1. Choose the type **Sample layout template**.
 1. Copy the [content from our cookbook](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents/designer/nuxeo-se-remove-relation-button.html).
