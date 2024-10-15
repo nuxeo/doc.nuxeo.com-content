@@ -51,7 +51,7 @@ Let's create an element `nuxeo-se-document-relations` that uses the `javascript.
 This element refers to two auxiliary elements that are responsible for the [creation](#add-relation) and [deletion](#delete-relation) of new relationships, we will create them right after.
 
 1. On Designer, go to **Resources**.
-1. Create a new folder under **UI** and name it **Relations**.</br>
+1. Create a new folder under **UI** and name it **relations**.</br>
 1. In it, create a new element and name it `nuxeo-se-document-relations`.
 1. Choose the type **Sample layout template**.
 1. Copy the [content from our cookbook](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents/designer/nuxeo-se-document-relations.html).
@@ -65,7 +65,7 @@ The web element `nuxeo-se-add-relation-dialog` shows a popup to add a new relati
 The `Document.AddRelation` operation uses negative logic in the outgoing parameter, which makes it more difficult to follow the logic.
 {{/callout}}
 
-1. In your **Relations** folder, create a new element.
+1. In your **relations** folder, create a new element.
 1. Name it `nuxeo-se-add-relation-dialog`.
 1. Choose the type **Sample layout template**.
 1. Copy the [content from our cookbook](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents/designer/nuxeo-se-add-relation-dialog.html).
@@ -75,7 +75,7 @@ The `Document.AddRelation` operation uses negative logic in the outgoing paramet
 
 Finally, we need to create a web element in charge of deleting relationships, `nuxeo-se-remove-relation-button`. For the deletion, we will use the operation `Relations.DeleteRelation`. At the end of the relationship deletion, we will launch a custom event called relation-removed to notify that the relationship has been removed.
 
-1. In your **Relations** folder, create a new element.
+1. In your **relations** folder, create a new element.
 1. Name it `nuxeo-se-remove-relation-button`.
 1. Choose the type **Sample layout template**.
 1. Copy the [content from our cookbook](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents/designer/nuxeo-se-remove-relation-button.html).
