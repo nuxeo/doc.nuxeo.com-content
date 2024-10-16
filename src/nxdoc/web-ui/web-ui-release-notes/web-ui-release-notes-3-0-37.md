@@ -17,8 +17,6 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2021 (Version 3.0.37)
 
-## What’s New in Web UI for LTS 2023 (Version 3.1.13)
-
 - Integrated github action to schedule Veracode scan.<br/>[[WEBUI-1572](https://jira.nuxeo.com/browse/WEBUI-1572)]
 
 - Updated upload artifact package version from v2 to v3.<br/>[[WEBUI-1578](https://jira.nuxeo.com/browse/WEBUI-1578)]
