@@ -20,8 +20,6 @@ Welcome to the Release Notes for **Nuxeo Drive 4.4.2**
 
 The Direct Transfer feature has been disabled by default for the moment. It can be re-enabled by configuration. It is currently being reworked to be more configurable so as to better match our users' use cases.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2082](https://jira.nuxeo.com/browse/NXDRIVE-2082)
-
 ## Improvements
 
 ### Behaviors and Features Flags
@@ -75,8 +73,6 @@ Here is how to set those values for every user connected to a server, via the [s
 }
 ```
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2070](https://jira.nuxeo.com/browse/NXDRIVE-2070) and [technical specifications document](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/dep/2020-03%20Features%20flags.md)
-
 ### Direct Edit
 
 Direct Edit can now handle any custom blob metadata; there are no more limitations on the `xpath`.</br>
@@ -89,8 +85,6 @@ Those are all valid (given "s" for string and "n" for number):
 
 Notes handling is stricter, only `note:note` is taken into account, nothing changed.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2027](https://jira.nuxeo.com/browse/NXDRIVE-2027)
-
 ### Server Configuration
 
 As the server configuration endpoint can be used to enabled/disable features and tweak parameters impacting all users, it was natural to first wait for it before starting features.
@@ -101,7 +95,6 @@ Here is the flow when starting the application:
 1. Update options, merge with one from the local configuration file.
 1. Start (or deny) all features.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2091](https://jira.nuxeo.com/browse/NXDRIVE-2091)
 
 ### Delay Option
 
@@ -114,8 +107,6 @@ The last possibility was not working: if one set the 'delay' option to another v
 
 A fix has been merged to use the new value as soon as available, making the remote watcher adapting its calls in realtime.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2118](https://jira.nuxeo.com/browse/NXDRIVE-2118)
-
 ### Auto-Update
 
 Updates are now unlocked on the centralized channel when auto-update is disabled.
@@ -127,16 +118,12 @@ Auto-updates are now allowed/forced when those parameters are met:
 
 This is required for IT teams wanting to control which version of the application to deploy.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2047](https://jira.nuxeo.com/browse/NXDRIVE-2047)
-
 ### Local Configuration
 
 When an option was set from both the local configuration file and from the server configuration endpoint, and if the local value was the default value of that option, then there's no impact.
 This is unfortunate as one could not force the value of an option if it was modified from the server configuration endpoint.
 
 As of now, any option set locally, using the default value or not, has the precedence over the options set by the server.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1980](https://jira.nuxeo.com/browse/NXDRIVE-1980)
 
 ### Systray Menu
 
@@ -148,7 +135,6 @@ We have improved the systray menu with new icons and tooltips when hovering over
 --}}
 ![Icons Systray Menu](/nx_assets/b2fdfa22-0ae6-429a-b8fa-9ef54238f90d.png ?w=100)
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1255](https://jira.nuxeo.com/browse/NXDRIVE-1255)
 
 ### Disk Free Space
 
@@ -160,7 +146,6 @@ There's now a free disk space bar displayed at different places.
 --}}
 ![Free Disk Space](/nx_assets/354a68c8-43ed-4dfc-86bb-3181b3613ddb.png ?w=300,border=true)
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2042](https://jira.nuxeo.com/browse/NXDRIVE-2042)
 
 ### Notarizing macOS Software
 
@@ -169,21 +154,16 @@ Every application must be "notarized", this is now done for Nuxeo Drive.
 
 Another big step is the full support for Catalina and Mojave.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2041](https://jira.nuxeo.com/browse/NXDRIVE-2041)
-
 ### Translations
 
 Incomplete and/or obsolete translations have been cleaned up, and the hard-coded "Nuxeo Drive" has been removed to ease up future branding.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-1996](https://jira.nuxeo.com/browse/NXDRIVE-1996) and [NXDRIVE-1893](https://jira.nuxeo.com/browse/NXDRIVE-1893).
 
 ### QA/CI
 
 In the global scope of moving out from the legacy QA and having quick PR statuses, we moved quality checks and unit tests to GitHub Actions.
 
 Results are more than satisfying because we now have PR statuses in less than 2 minutes, covering all quality checks (translations, code style, spelling, dead code, lint and type annotations) and unit tests on GNU/Linux, macOS and Windows.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2064](https://jira.nuxeo.com/browse/NXDRIVE-2064)
 
 ## Fixes
 
@@ -200,37 +180,23 @@ The fix provides this expected behavior:
 - The remote file is replaced with the local one.
 - the remote file keeps its metadata.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-382](https://jira.nuxeo.com/browse/NXDRIVE-382)
-
 ### Synchronization
 
 When the local folder where data is synchronized was on a different partition than the standard `C:`, there were different errors (in the synchronization process and Direct Edit), this is fixed now.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1966](https://jira.nuxeo.com/browse/NXDRIVE-1966) and [NXDRIVE-1969](https://jira.nuxeo.com/browse/NXDRIVE-1969).
-
 The synchronization on Windows has been fixed when one creates a new folder and then renames it very quickly.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1847](https://jira.nuxeo.com/browse/NXDRIVE-1847)
 
 Some non-folderish documents can have zero digest.</br>
 This is sometimes the case with special documents using the LiveConnect addon. It may also happen in very rare cases when a server contribution may be broken.</br>
 In such scenario, Nuxeo Drive cannot synchronize the file as it has no control over the file integrity.</br> Such documents are now ignored instead of generating errors.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1973](https://jira.nuxeo.com/browse/NXDRIVE-1973)
-
 An issue has been fixed about invalid TransferStatus value, it was introduced in the version 4.2.0, it may have broke retro-compatibility between versions 4.1.4 and 4.2.0 in certain conditions. We apologize for the inconvenience.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1901](https://jira.nuxeo.com/browse/NXDRIVE-1901)
 
 ### Direct Transfer
 
 When performing Direct Transfer of a folder to a target remote folder, the content of the folder was transferred directly to the remote folder. Now a remote subfolder is created when uploading a folder.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1958](https://jira.nuxeo.com/browse/NXDRIVE-1958)
-
 Direct Transfer now handles username containing non-letter characters.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1983](https://jira.nuxeo.com/browse/NXDRIVE-1983)
 
 ### Memory
 
@@ -238,15 +204,9 @@ We take some precious time to improve the memory usage of the application. The r
 
 We also identified a memory leak in one the third-party module we are using for metrics, this had caused severe memory errors for some people and we are sorry for the inconvenience.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-1982](https://jira.nuxeo.com/browse/NXDRIVE-1982).
-
-
 ### Hi-DPI
 
 The application is now fully High-DPI aware.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1900](https://jira.nuxeo.com/browse/NXDRIVE-1900)
-
 
 ## Download Links
 
