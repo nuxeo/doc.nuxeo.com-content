@@ -21,6 +21,3 @@ In Nuxeo Drive [4.4.2]({{page version='' space='client-apps' page='442-nuxeo-dri
 Unfortunately, this version is crashing the application on some Windows machines.
 
 The upgrade has been reverted.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2169](https://jira.nuxeo.com/browse/NXDRIVE-2169)
-{{! /multiexcerpt}}
