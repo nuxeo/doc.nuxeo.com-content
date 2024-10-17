@@ -17,11 +17,11 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2021 (Version 3.0.37)
 
-- Integrated github action to schedule Veracode scan.<br/>[[WEBUI-1572](https://jira.nuxeo.com/browse/WEBUI-1572)]
+- Integrated Github action to schedule Veracode scan.<br/>[[WEBUI-1572](https://jira.nuxeo.com/browse/WEBUI-1572)]
 
 - Updated upload artifact package version from v2 to v3.<br/>[[WEBUI-1578](https://jira.nuxeo.com/browse/WEBUI-1578)]
 
-- null check added in _dataChanged function so that it will not throw error in console for nuxeo-selectivity.<br/>[[ELEMENTS-1657](https://jira.nuxeo.com/browse/ELEMENTS-1657)]
+- Null check added in _dataChanged function so that it does not throw error in console for nuxeo-selectivity.<br/>[[ELEMENTS-1657](https://jira.nuxeo.com/browse/ELEMENTS-1657)]
 
 
 ### Other Noteworthy Changes
