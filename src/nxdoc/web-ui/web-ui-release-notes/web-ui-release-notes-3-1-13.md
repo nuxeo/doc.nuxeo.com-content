@@ -17,18 +17,12 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2023 (Version 3.1.13)
 
-- Integrated Github action to schedule Veracode scan.<br/>[[WEBUI-1572](https://jira.nuxeo.com/browse/WEBUI-1572)]
-
-- Updated upload artifact package version from v2 to v3.<br/>[[WEBUI-1578](https://jira.nuxeo.com/browse/WEBUI-1578)]
-
 - Null check added in _dataChanged function so that it does not throw error in console for nuxeo-selectivity.<br/>[[ELEMENTS-1657](https://jira.nuxeo.com/browse/ELEMENTS-1657)]
 
 
 ### Other Noteworthy Changes
 
-- Fixed failing ci/cd pipeline for functional test cases in Web UI.<br/>[[WEBUI-1583](https://jira.nuxeo.com/browse/WEBUI-1583)]
-
-- Bumped pdf.js to v4.2.67.<br/>[[WEBUI-1755](https://jira.nuxeo.com/browse/WEBUI-1755)]
+- Bumped pdf.js to v4.2.67.<br/>[[ELEMENTS-1755](https://jira.nuxeo.com/browse/ELEMENTS-1755)]
 
 ## Learn More
 
