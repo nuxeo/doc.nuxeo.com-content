@@ -28,7 +28,7 @@ Starting from Web UI version `3.0.31` released in March 2024, functional tests w
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.37]({{page page='web-ui-release-notes-3-0-36'}})                  | Package upgrade, Security and bugfix release     | -->
+<!-- | [Web UI 3.0.37]({{page page='web-ui-release-notes-3-0-36'}})                  | Security and bugfix release     | -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
