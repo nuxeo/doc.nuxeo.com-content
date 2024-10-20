@@ -543,7 +543,7 @@ Resources can be inserted directly inside each template.&nbsp;But some addons ne
 
 ### Pages
 
-Each page using the `basic_page.xhtml` template needs to have a `page` contribution to the [`pages` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.theme.styling.service--pages): this is the main link between the page structure and its branding.
+Each page using the `basic_page.xhtml` template needs to have a `page` contribution to the [`pages` extension point](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.theme.styling.service--pages): this is the main link between the page structure and its branding.
 
 Here is an example of the `galaxy/default` default page definition:
 
@@ -749,7 +749,7 @@ Main resources types are `scss`,&nbsp;`css` and `js`. But other types can also b
 
 The notion of _flavor_ makes it possible to switch some elements held by the branding (colors, logo...) without changing the associated styles: negotiators make it possible to compute this flavor depending on the context, so that, for instance, branding can be customized when navigating in some parts of the document hierarchy, relying on Nuxeo local configuration features.
 
-Each flavor needs to have a `flavor` contribution to the [`flavors` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.theme.styling.service--flavors).
+Each flavor needs to have a `flavor` contribution to the [`flavors` extension point](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.theme.styling.service--flavors).
 Here is an example of the default flavor:
 
 ```

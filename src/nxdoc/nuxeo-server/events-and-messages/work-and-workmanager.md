@@ -149,7 +149,7 @@ Every Work instance is queued in a Work Queue. Each queue is associated with a t
 </extension>
 ```
 
-The details of the configuration can be seen in the [extension point documentation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.work.service--queues). Here we'll concentrate on the important points:
+The details of the configuration can be seen in the [extension point documentation](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.work.service--queues). Here we'll concentrate on the important points:
 
 *   The name is a human-readable name, for monitoring purposes.
 *   The categories define which Work instances go to this queue.

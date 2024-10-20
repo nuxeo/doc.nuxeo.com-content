@@ -335,9 +335,9 @@ This call can throw `ConverterNotRegistred` if the target converter does not exi
 
 A few operations exist to do synchronous conversions:
 
-*   [Conversion > Convert to given mime-type](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Blob.Convert)
-*   [Conversion > Convert To PDF](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Blob.ToPDF)
-*   [Conversion > Run converter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Blob.RunConverter)
+*   [Conversion > Convert to given mime-type](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Blob.Convert)
+*   [Conversion > Convert To PDF](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Blob.ToPDF)
+*   [Conversion > Run converter](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Blob.RunConverter)
 
 
 ## Configuration and Contributions
@@ -398,7 +398,7 @@ Here is an example of conversion bypass on the any2pdf converter, the input and 
 </converter>
     ```
 
-See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.convert.service.ConversionServiceImpl--converter).
+See list of [built-in contributions](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.convert.service.ConversionServiceImpl--converter).
 
 #### Chained Converters
 

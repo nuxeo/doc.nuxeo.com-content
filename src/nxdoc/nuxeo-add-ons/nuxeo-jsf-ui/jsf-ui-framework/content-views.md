@@ -822,7 +822,7 @@ When caching only one instance, setting the `cacheSize` element to more than "1"
 
 If a cache key is given, but no cache size is set, "5" will be used by default. Using "0" means no caching at all (and the cache key will be ignored).
 
-Caching is done by a Seam component named [`contentViewActions`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:contentViewActions) . Although the cache key, cache size and events configurations handle the most common use cases, it is sometimes useful to call this bean methods directly when forcing a refresh.
+Caching is done by a Seam component named [`contentViewActions`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewSeamComponent/seam:contentViewActions) . Although the cache key, cache size and events configurations handle the most common use cases, it is sometimes useful to call this bean methods directly when forcing a refresh.
 
 The `refresh` and `reset` elements configurations make it possible to refresh/reset this content view when receiving the listed Seam event names. Only `documentChanged` and `documentChildrenChanged` are handled by default, but it is possible to react to new events by adding a method with an observer on this event on a custom Seam component, and call the method `contentViewActions.refreshOnSeamEvent(String seamEventName)` or `contentViewActions.resetPageProviderOnSeamEvent(String seamEventName)`.
 
