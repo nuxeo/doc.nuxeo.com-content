@@ -574,8 +574,8 @@ If you want to roll back the changes, simply delete the `default-ldap-users-dire
 
 For a more detailed view about possible configuration, see:
 
-- [LDAPDirectory and associated extension points](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory),
-- [UserManager extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager).
+- [LDAPDirectory and associated extension points](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory),
+- [UserManager extension point](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager).
 
 The [ldaptools/](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-platform-directory/nuxeo-platform-directory-ldap/ldaptools) folder in source code of the `nuxeo-platform-directory-ldap` module further provides sample LDIF files and OpenLDAP configuration file to help you setup a sample OpenLDAP server you can use as a base setup to build your corporate directory.
 
