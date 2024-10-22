@@ -38,9 +38,6 @@ Administrator rights are required on the machine while installing or uninstallin
 
 ### Dependencies 
 
-Starting from Nuxeo-drive version 5.2.0, Python `v3.9.5` is the required version to be installed separately in the local machine. Please make sure to use this version specifically as bugs could happen even with a patch upgrade.
-Make sure that no other software overrides the supported python version. 
-
 Although Nuxeo Drive embeds its own dependencies, you should ensure that you do not override these dependencies system wide to prevent issues. 
 
 We recommend using **Microsoft Office 365** or the latest version for Direct Edit.  
