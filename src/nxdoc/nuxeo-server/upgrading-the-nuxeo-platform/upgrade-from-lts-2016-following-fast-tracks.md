@@ -198,7 +198,7 @@ See [NXP-21891](https://jira.nuxeo.com/browse/NXP-21891).
 
 {{! multiexcerpt name='upgrade-9.1-deprecated.automatic-versioning'}}
 
-We introduced a new automatic versioning system in 9.1. We deprecated [versioningRules](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningRules) extension point. You now have to use new extension points, see [documentation]({{page page='versioning'}}#automatic-versioning-system).
+We introduced a new automatic versioning system in 9.1. We deprecated [versioningRules](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningRules) extension point. You now have to use new extension points, see [documentation]({{page page='versioning'}}#automatic-versioning-system).
 
 Nuxeo provides a backward compatibility mechanism, but it could be not accurate.
 
