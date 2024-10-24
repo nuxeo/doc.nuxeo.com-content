@@ -106,7 +106,7 @@ RelationManager rm = Framework.getService(RelationManager.class)
 
 This service will be a singleton in the application. Once retrieved, you can use its own API.
 
-You can find the list of existing services on the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
+You can find the list of existing services on the [Nuxeo Platform Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listServices).
 You will also need to understand main Java classes, using the [javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/).
 
 {{#> callout type='warning' }}
