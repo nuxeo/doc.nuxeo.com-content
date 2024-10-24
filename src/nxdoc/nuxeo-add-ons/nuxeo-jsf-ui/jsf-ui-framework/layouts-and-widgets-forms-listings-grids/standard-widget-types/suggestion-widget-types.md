@@ -360,7 +360,7 @@ Previously based on RichFaces suggestion box for Nuxeo Platform 5.6 and earlier 
 
 ##### Modifying the Way of Suggesting Documents
 
-This operation uses the [`default_document_suggestion`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.webapp.pageproviders.contrib--providers) page provider. However, you can specify the NXQL query to be executed via the widget property named `query`.
+This operation uses the [`default_document_suggestion`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.webapp.pageproviders.contrib--providers) page provider. However, you can specify the NXQL query to be executed via the widget property named `query`.
 
 {{#> panel type='code' heading='Query to suggest documents with title starting with the entered term'}}
 

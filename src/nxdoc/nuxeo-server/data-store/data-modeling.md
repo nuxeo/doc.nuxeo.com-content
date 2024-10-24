@@ -350,7 +350,7 @@ Here is a simple example of a XSD schema used in Nuxeo Core (a subset of Dublin 
 
 ```
 
-A schema file has to be referenced by Nuxeo configuration to be found and used. The schema must be referenced in the **schema** extension point of the [`org.nuxeo.ecm.core.schema.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.schema.TypeService)component. A reference to a schema defines:
+A schema file has to be referenced by Nuxeo configuration to be found and used. The schema must be referenced in the **schema** extension point of the [`org.nuxeo.ecm.core.schema.TypeService`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.schema.TypeService)component. A reference to a schema defines:
 
 *   the schema name,
 *   the schema location (file),
@@ -368,7 +368,7 @@ For example, in the configuration file `OSGI-INF/types-contrib.xml` (the name is
 
 ```
 
-We name our schema "sample", and the `.xsd` file is referenced through its path, `schemas/sample.xsd`. The schema is registered through the **schema** extension point of the Nuxeo component [`org.nuxeo.ecm.core.schema.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.schema.TypeService). Our own extension component is given a name, `org.nuxeo.project.sample.types`, which is not very important as we only contribute to existing extension points and don't define new ones &mdash; but the name must be new and unique.
+We name our schema "sample", and the `.xsd` file is referenced through its path, `schemas/sample.xsd`. The schema is registered through the **schema** extension point of the Nuxeo component [`org.nuxeo.ecm.core.schema.TypeService`](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.schema.TypeService). Our own extension component is given a name, `org.nuxeo.project.sample.types`, which is not very important as we only contribute to existing extension points and don't define new ones &mdash; but the name must be new and unique.
 
 Finally, like for all components defining configuration, the component has to registered with the system by referencing it from the `META-INF/MANIFEST.MF` file of the bundle.
 

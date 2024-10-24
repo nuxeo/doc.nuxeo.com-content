@@ -344,9 +344,9 @@ For that, Nuxeo Platform provides the following patterns:
 
 - [Bundle](#bundles): A bundle is a "plugin". It is most of the time a ".jar" file with a specific structure that aims at deploying a new set of features on the Nuxeo server. Thanks to this "bundle" notion, developers can deliver their new features in a standalone JAR that the platform will know how to start. As a result, your customization is also delivered as a plug-in, like the tens of plug-ins that are part of the Nuxeo ecosystem, and that you can find on [GitHub](https://github.com/nuxeo) or the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace).
 
-- [Components and services](#components): A component is a software object declared via XML (and that may reference a Java class) that is used to expose some services in the framework. Thanks to this architecture, it is possible to expose a new service anywhere in the Java code executed in the platform. Services are auto-documented: you can see the list on [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
+- [Components and services](#components): A component is a software object declared via XML (and that may reference a Java class) that is used to expose some services in the framework. Thanks to this architecture, it is possible to expose a new service anywhere in the Java code executed in the platform. Services are auto-documented: you can see the list on [Nuxeo Platform Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listServices).
 
-- [Extensions](#extensions): An extension is a mechanism leveraged by the services to let platform users inject customization in the core of the implementation. It is a pattern used frequently on products such as Mozilla, Chrome, or Eclipse. Thanks to this architecture, it is possible to go very deep in product customization, only with XML, or using our [Nuxeo Studio]({{page space='studio' page='nuxeo-studio'}}) visual environment, without any coding. You can see the list of all extension points in [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints). Contributions to extensions are usually delivered in a custom bundle.
+- [Extensions](#extensions): An extension is a mechanism leveraged by the services to let platform users inject customization in the core of the implementation. It is a pattern used frequently on products such as Mozilla, Chrome, or Eclipse. Thanks to this architecture, it is possible to go very deep in product customization, only with XML, or using our [Nuxeo Studio]({{page space='studio' page='nuxeo-studio'}}) visual environment, without any coding. You can see the list of all extension points in [Nuxeo Platform Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listExtensionPoints). Contributions to extensions are usually delivered in a custom bundle.
 
 Implementing your own **bundle**, you will be able to contribute to existing **extensions** so as to customize your application. A lot of these configurations are supported by [Nuxeo  Studio]({{page space='studio' page ='nuxeo-studio'}}).
 
@@ -496,7 +496,7 @@ Framework.getService(ServiceInterface.class)
 
 To learn more about creating a service, see [HOWTO: Create a service]({{page page='how-to-create-a-service'}}).
 
-The list of existing services can be found on the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
+The list of existing services can be found on the [Nuxeo Platform Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listServices).
 
 ### {{> anchor 'extensions'}}Nuxeo Extension Points and Contributions
 
@@ -616,7 +616,7 @@ To learn more about contributing to existing extension points, see
 
 The Nuxeo Platform uses extension points extensively, to let you extend and configure most of the features provided by the platform.
 
-The list of existing extension points can be found on the [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints).
+The list of existing extension points can be found on the [Nuxeo Platform Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listExtensionPoints).
 
 ## {{> anchor 'packages'}}Nuxeo Packages
 
