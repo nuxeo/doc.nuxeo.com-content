@@ -128,7 +128,7 @@ Filters configuration allows to control activation of an action, to control its 
 
 An action visibility can be controlled using filters. An action filter is a set of rules that will apply - or not - given an action and a context.
 
-Filters can be registered using their own [extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--filters), or registered implicitly when defining them inside of an action definition.
+Filters can be registered using their own [extension point](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--filters), or registered implicitly when defining them inside of an action definition.
 
 Example of a filter registration:
 
@@ -213,7 +213,7 @@ ActionManager actionManager = Framework.getService(ActionManager.class);
 return actionManager.checkFilter("directoriesManagementAccess", createActionContext(ctx));
 ```
 
-This also can be looked up in XHTML templates, calling Seam component [webActions](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewSeamComponent/seam:webActions) and using its default evaluation context:
+This also can be looked up in XHTML templates, calling Seam component [webActions](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewSeamComponent/seam:webActions) and using its default evaluation context:
 
 ```xml
 <c:if test="#{webActions.checkFilter('directoriesManagementAccess')}">
