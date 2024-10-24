@@ -410,7 +410,7 @@ Be careful if you intend to copy / paste an expression taken from a different co
 
 {{{multiexcerpt 'el-language-jsf'}}}
 
-1.  First of all, you need to find the right SEAM component. To do so, go to the [Nuxeo Platform explorer](http://explorer.nuxeo.org), choose your distribution and browse the SEAM components available.
+1.  First of all, you need to find the right SEAM component. To do so, go to the [Nuxeo Platform explorer](https://explorer.nuxeo.com), choose your distribution and browse the SEAM components available.
     They are given explicit names so you can find what you are looking for more easily (eg : `clipboardActions`, `navigationContext`).
     ![]({{file name='All Seam components 2013-06-12 12-05-48.png'}} ?w=200,border=true,thumbnail=true) ![]({{file name='All Seam components 2013-06-13 14-43-48.png'}} ?w=200,border=true,thumbnail=true)
 2.  Dive into the component documentation and search for the method you wish to use.
@@ -513,13 +513,13 @@ Please note that:
 
 ### [![]({{file name='ELDependingOnComponent-6.png'}})](#schema-which-el) Filters
 
-[Filters]({{page page='actions-links-buttons-icons-tabs-and-more'}}) use the EL expression language. You have access to all Seam components and should refer to [explorer.nuxeo.org](http://explorer.nuxeo.org) to get an exhaustive list depending on your platform version. See also information in the category 7: it is actually the same context.
+[Filters]({{page page='actions-links-buttons-icons-tabs-and-more'}}) use the EL expression language. You have access to all Seam components and should refer to [explorer.nuxeo.org](https://explorer.nuxeo.com) to get an exhaustive list depending on your platform version. See also information in the category 7: it is actually the same context.
 
 {{{multiexcerpt 'el-language-jsf'}}}
 
 ### [![]({{file name='ELDependingOnComponent-7.png'}})](#schema-which-el) Widgets, XHTML and Content Views
 
-In widgets, layout, content views and in XHTML templates, you can use the EL expression language. You have access to all Seam components (see upper how to access them) and should refer to [explorer.nuxeo.org](http://explorer.nuxeo.org) to get an exhaustive list depending on your platform version. Here are a few interesting possibilities you could use to get started:
+In widgets, layout, content views and in XHTML templates, you can use the EL expression language. You have access to all Seam components (see upper how to access them) and should refer to [explorer.nuxeo.org](https://explorer.nuxeo.com) to get an exhaustive list depending on your platform version. Here are a few interesting possibilities you could use to get started:
 
 - Taken from the `NavigationContextBean`Seam component:
   - `#{changeableDocument}` - the document on screen when showing the creation form.
