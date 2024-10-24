@@ -102,7 +102,7 @@ Actions are grouped in categories to be able to display them in the same area of
 
 Actions are referencing the same category when they need to be displayed in the same area of a page.
 
-The available categories are listed below and can also be found by checking action contributions on [the explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions).
+The available categories are listed below and can also be found by checking action contributions on [the explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions).
 
 ## CAP Categories
 
