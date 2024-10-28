@@ -56,6 +56,11 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='warning' heading='Platform migration'}}
+Starting **October 25th, 2024**, all support issues must be submitted through Hyland Community. The Nuxeo Jira site will enter indefinite read-only mode at 5 p.m. EDT. Cloud deployment services will be temporarily offline, with normal operations resuming Monday, October 28. Read the [Hyland Connect blog post](https://connect.hyland.com/t5/nuxeo-blog/upcoming-nuxeo-atlassian-migration-updates-and-actions/ba-p/483504) for more details.
+{{/callout}}
+
 In order to make it easy to know which tickets the customer must address, Nuxeo provides two dashboards.
 
 - The first one is on the Nuxeo Connect homepage, accessible from the URL [https://connect.nuxeo.com/nuxeo/site/connect/dashboard](https://connect.nuxeo.com/nuxeo/site/connect/dashboard). This dashboard displays a "My Tasks" widget that lists all the tickets waiting for the customer's input. More information on what is expected from the customer is displayed on mouseover.
