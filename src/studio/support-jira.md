@@ -191,6 +191,11 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='warning' heading='Platform migration'}}
+Starting **October 25th, 2024**, all support issues must be submitted through Hyland Community. The Nuxeo Jira site will enter indefinite read-only mode at 5 p.m. EDT. Cloud deployment services will be temporarily offline, with normal operations resuming Monday, October 28. Read the [Hyland Connect blog post](https://connect.hyland.com/t5/nuxeo-blog/upcoming-nuxeo-atlassian-migration-updates-and-actions/ba-p/483504) for more details.
+{{/callout}}
+
 Your Nuxeo Support contract includes the access to our JIRA issue tracker platform [https://jira.nuxeo.com](https://jira.nuxeo.com). JIRA is the place where you can ask the support team questions, report issues with your application by creating "tickets". It enables both you and us to centralize the exchanges on your project's issues and to keep the history of your project available to all the persons working on your project. You can use JIRA to ad&shy;dress the following aspects of Nuxeo:
 
 *   use of the Nuxeo API(s)
