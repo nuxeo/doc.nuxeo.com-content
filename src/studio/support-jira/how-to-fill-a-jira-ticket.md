@@ -103,6 +103,11 @@ history:
         version: '1'
 ---
 
+{{#> callout type='warning' heading='Platform migration'}}
+Starting **October 25th, 2024**, all support issues must be submitted through Hyland Community. The Nuxeo Jira site will enter indefinite read-only mode at 5 p.m. EDT. Cloud deployment services will be temporarily offline, with normal operations resuming Monday, October 28. Read the [Hyland Connect blog post](https://connect.hyland.com/t5/nuxeo-blog/upcoming-nuxeo-atlassian-migration-updates-and-actions/ba-p/483504) for more details.
+{{/callout}}
+
+
 {{#> callout type='info' heading='Before you start'}}
 Tickets that follow the recommendations below will be processed more quickly. Tickets can be filled in English or in French.
 {{/callout}}
