@@ -19,7 +19,7 @@ This page relates to the release notes of Nuxeo Server and related addons for LT
 This page mentions what's new. Refer to the [upgrade notes]({{page page='upgrade-from-lts-2019-to-lts-2021'}}) to transition to this version.
 {{/callout}}
 
-{{{multiexcerpt 'nuxeo-server-updates-2021-61' page='nuxeo-server-release-notes-2021-61'}}}
+{{{multiexcerpt 'nuxeo-server-updates-2021-62' page='nuxeo-server-release-notes-2021-62'}}}
 
 {{#> callout type='info' heading='Upgrade Notes'}}
 Refer to the [LTS 2021 upgrade notes]({{page page='hotfixes-installation-notes-for-nuxeo-platform-lts-2021'}}) to transition to this version.
@@ -29,6 +29,7 @@ Refer to the [LTS 2021 upgrade notes]({{page page='hotfixes-installation-notes-f
 
 | Version                                                                       | Release date                 |
 | ----------------------------------------------------------------------------- | ---------------------------- |
+| [LTS 2021.62 / 2021-HF62]({{page page='nuxeo-server-release-notes-2021-62'}}) | 2024-11-04 |
 | [LTS 2021.61 / 2021-HF61]({{page page='nuxeo-server-release-notes-2021-61'}}) | 2024-10-14 |
 | [LTS 2021.60 / 2021-HF60]({{page page='nuxeo-server-release-notes-2021-60'}}) | 2024-09-23 |
 | [LTS 2021.58 / 2021-HF58]({{page page='nuxeo-server-release-notes-2021-58'}}) | 2024-08-12 |
@@ -89,6 +90,7 @@ Refer to the [LTS 2021 upgrade notes]({{page page='hotfixes-installation-notes-f
 | [LTS 2021.3 / 2021-HF03]({{page page='nuxeo-server-release-notes-2021-3'}})   | 2021-05-18                   |
 | [LTS 2021.2 / 2021-HF02]({{page page='nuxeo-server-release-notes-2021-2'}})   | 2021-05-11                   |
 | [LTS 2021.1 / 2021-HF01]({{page page='nuxeo-server-release-notes-2021-1'}})   | 2021-01-21 - Initial release |
+
 
 
 
