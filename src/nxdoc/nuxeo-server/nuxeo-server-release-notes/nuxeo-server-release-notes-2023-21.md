@@ -17,24 +17,17 @@ hidden: true
 
 ## Fix Keycloak Logout URI After Multiple Calls
 
-
 Keycloak logout URI doesn't keep previous query parameters.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32889](https://hyland.atlassian.net/browse/NXP-32889)
 
 ## Fix S3BlobScroll on Blob Provider With KeyStrategyDocId
 
-
 S3 Record blob providers are now properly scrolled
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32788](https://hyland.atlassian.net/browse/NXP-32788)
 
 ## Downgrade commons-compress
 
-
 commons-compress was downgraded to 1.21
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32926](https://hyland.atlassian.net/browse/NXP-32926)
 
 
 # Learn More
