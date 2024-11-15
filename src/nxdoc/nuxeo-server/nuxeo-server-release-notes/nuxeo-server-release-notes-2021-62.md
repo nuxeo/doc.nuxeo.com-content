@@ -25,7 +25,6 @@ S3 Record blob providers are now properly scrolled.
 commons-compress was downgraded to 1.21.
 
 
-
 # Learn More
 
 [More information about released changes and fixed bugs](https://hyland.atlassian.net/secure/ReleaseNote.jspa?projectId=14958&version=29337) is available in our bug tracking tool.
