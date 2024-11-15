@@ -17,17 +17,13 @@ hidden: true
 
 ## Fix S3BlobScroll on Blob Provider With KeyStrategyDocId
 
+S3 Record blob providers are now properly scrolled.
 
-S3 Record blob providers are now properly scrolled
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32788](https://hyland.atlassian.net/browse/NXP-32788)
 
 ## Downgrade commons-compress
 
+commons-compress was downgraded to 1.21.
 
-commons-compress was downgraded to 1.21
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32926](https://hyland.atlassian.net/browse/NXP-32926)
 
 
 # Learn More
