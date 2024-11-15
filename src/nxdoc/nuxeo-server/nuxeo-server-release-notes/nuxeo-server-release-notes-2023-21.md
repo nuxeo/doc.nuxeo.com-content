@@ -22,12 +22,12 @@ Keycloak logout URI doesn't keep previous query parameters.
 
 ## Fix S3BlobScroll on Blob Provider With KeyStrategyDocId
 
-S3 Record blob providers are now properly scrolled
+S3 Record blob providers are now properly scrolled.
 
 
 ## Downgrade commons-compress
 
-commons-compress was downgraded to 1.21
+commons-compress was downgraded to 1.21.
 
 
 # Learn More
