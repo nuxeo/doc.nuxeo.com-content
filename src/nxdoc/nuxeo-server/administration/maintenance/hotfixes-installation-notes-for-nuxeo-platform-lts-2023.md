@@ -101,6 +101,15 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 22
+
+### Fix Being Able to Create User With Empty Password
+
+
+A POST request on the `/nuxeo/api/v1/user` endpoint now returns a 400 _Bad Request_ status code if no password or a blank password is provided.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-32928](https://hyland.atlassian.net/browse/NXP-32928)
+
 ## Hotfix 20
 
 ### Use Oracle Linux 9 Instead of Rocky Linux 9 as Base Image for LTS 2023 Docker Image
