@@ -315,6 +315,11 @@ RequestHeader append nuxeo-virtual-host "https://myDomainName/"
 
 This will require you to load and activate the `mod_headers` module.
 
+
+{{#> callout type='warning' }}
+To protect your deployment against host override header injections, it is recommended to add the known values of `nuxeo-virtual-host` header ​​to the `nuxeo.allowed.hosts` nuxeo property. See [Allowed Hosts Configuration]({{page page='allowed-hosts-configuration'}})
+{{/callout}}
+
 When it is not possible to add this header at the reverse-proxy level, you can use the&nbsp;`nuxeo.virtual.host` parameter in nuxeo.conf instead. This restricts the URLs through which your Nuxeo instance can be accessed though, so use of the header if preferred when possible.
 
 And if you have a "client denied by server configuration" error, you must check the access control directives of `mod_proxy`:

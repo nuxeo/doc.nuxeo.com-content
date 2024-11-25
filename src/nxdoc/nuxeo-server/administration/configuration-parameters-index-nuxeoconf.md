@@ -1484,6 +1484,12 @@ Example: https://my.nuxeo.com/
 
 * * *
 
+#### `nuxeo.allowed.hosts`
+
+Comma separated list of hosts allowed in the `host`, the `x-forwarded-host` or the `nuxeo-virtual-host` header. See [Allowed Hosts Configuration]({{page page='allowed-hosts-configuration'}}).
+
+* * *
+
 #### `elasticsearch.enabled`
 
 Switch to enable/disable Elasticsearch usage
