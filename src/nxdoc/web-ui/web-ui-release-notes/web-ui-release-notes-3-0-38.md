@@ -3,7 +3,7 @@ title: Version 3.0.38
 description: Discover what's new in Web UI 3.0.38.
 review:
   comment: ''
-  date: '2024-10-16'
+  date: '2024-11-28'
   status: ok
 toc: true
 labels:
@@ -17,13 +17,19 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2021 (Version 3.0.38)
 
-- Null check added in _dataChanged function so that it does not throw error in console for nuxeo-selectivity.<br/>[[ELEMENTS-1657](https://jira.nuxeo.com/browse/ELEMENTS-1657)]
+- The drawer width will be dynamic and will change based on the value of --nuxeo-sidebar-width.<br/>[[WEBUI-1094](https://hyland.atlassian.net/browse/WEBUI-1094)]
 
+- Fixed placeholder width to fully display text in nuxeo-user-suggestion with multiple=true.<br/>[[ELEMENTS-1730](https://hyland.atlassian.net/browse/ELEMENTS-1730)]
+
+- Tags will be converted to lowercase to prevent duplication before submission.<br/>[[ELEMENTS-1765](https://hyland.atlassian.net/browse/ELEMENTS-1765)]
+
+- Added a tooltip to nuxeo-path-suggestion to display the full path on hover.<br/>[[ELEMENTS-1768](https://hyland.atlassian.net/browse/ELEMENTS-1768)]
 
 ### Other Noteworthy Changes
 
-- Bumped pdf.js to v4.2.67.<br/>[[ELEMENTS-1755](https://jira.nuxeo.com/browse/ELEMENTS-1755)]
+- Resolved functional and accessibility test failures in WebUI pipelines that were caused by the latest Chrome version.<br/>[[WEBUI-1602](https://hyland.atlassian.net/browse/WEBUI-1602)]
 
+- Updated search and cloud test cases to resolve random failures in functional tests pipeline.<br/>[[WEBUI-1606](https://hyland.atlassian.net/browse/WEBUI-1606)]
 
 ## Learn More
 
