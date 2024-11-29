@@ -111,12 +111,18 @@ First step:
 1.	Click Ok.  
 1.	Copy the following script into the editor: 
     ```
-    function run(input) { 
-          if (input.type === "MaterialCompound") { 
-            return "MaterialFolderCompound"; 
-          } 
-          return "CompoundDocumentFolder"; 
-        } 
+    function run(input) {
+if (input.type === "MaterialCompound") {
+return "MaterialFolderCompound";
+} else if (input.type === "Design3DCompound") { //Optional
+return "Design3DFolderCompound";
+} else if (input.type === "InDesignCompound") { //Optional
+return "InDesignFolderCompound";
+} else if (input.type === "PremiereProjectCompound") { //Optional
+return "PremiereProjectFolderCompound";
+}
+return "CompoundDocumentFolder";
+}
     ```
 1. Save your modifications.
 
@@ -128,27 +134,229 @@ Second Step:
   b.	Input type: Document 
   c.	Output type: Blob 
 1.	Click Ok.  
-1.	Copy the following script into the editor: 
-    ```
-    function run(input, params) { 
-          for (var i = 0; i < params.entries.length; i++) { 
-            if (params.entries[i].endsWith(".u3m")) { 
-              return "MaterialCompound"; 
-            } 
-          } 
-          return "CompoundDocument"; 
-        }
+1.	Go to “Parameters”, click “Add parameter” and add:
+
+a. Name: entries
+
+b. Type: String
+
+6. Copy the following script into the editor:
+
+
+function run(input, params) {
+
+for (var i = 0; i < params.entries.length; i++) {
+
+if (params.entries[i].endsWith(".u3m")) {
+
+return "MaterialCompound";
+
+} else if (params.entries[i].endsWith(".glb") || params.entries[i].endsWith(".obj")) { //Optional
+
+return "Design3DFolderCompound";
+
+} else if (params.entries[i].endsWith(".indd") || params.entries[i].endsWith(".idml")) { //Optional
+
+return "InDesignCompound";
+
+} else if (params.entries[i].endsWith(".prproj")) { //Optional
+
+return "MaterialCompound";
+
+}
+
+}
+
+return "CompoundDocument";
+
+}
      ```   
 1. Save your modifications.
 
 #### Deploy Your Customization
 
-Once you have your facet, your 2 document types and your 2 scripts, you are ready to deploy your Studio project into your instance. Once it’s done, upload a .zip containing a `.u3m` file format and see the magic!
 
-## Next Milestones
+Once you have your facet, your document types and your 2 scripts, you are ready to deploy your Studio project into your instance. Once it’s done, upload a .zip file of specified document types and see the magic!
 
-This release of Compound Documents is the first milestone on our scope. 
-Other milestones will come later during the year including: 
-•	The possibility to custom search compound documents
-•	Version compound documents and apply validation workflows
-•	Make relations of parent compound documents/children with existing documents in your system to limit duplicates
+
+OPTIONAL: Preview Selection of Compound Document
+
+1. Nuxeo Studio, go to “Automation” > “Automation Scripting”.
+
+2. Click on New.
+
+3. Fill the popup as below:
+
+a. Feature ID: “GetCompoundDocumentPreview”
+
+b. Input type: void
+
+c. Output type: void
+
+4. Click Ok.
+
+5. Copy the following script into the editor:
+
+
+function run(input, params) {
+
+
+var isINDD = false;
+
+var isPremiere = false;
+
+
+var pdfDocuments = [];
+
+var imageDocuments = [];
+
+var videoDocuments = [];
+
+var glbDocuments = [];
+
+var objDocuments = [];
+
+
+// cannot use the query operation
+
+var query = "Select * FROM Document Where ecm:isVersion = 0 AND ecm:isProxy = 0 AND ecm:isTrashed = 0 AND ecm:ancestorId = '" + input.id + "'";
+
+var children = Repository.Query(input, {
+
+'query': query
+
+});
+
+
+//var children = Document.GetChildren(input, {});
+
+
+children.forEach(function(item) {
+
+var blob = item['file:content'];
+
+if (!blob) {
+
+return;
+
+}
+
+
+switch (blob.mimeType) {
+
+case 'application/x-indesign':
+
+isINDD = true;
+
+break;
+
+case 'image/vnd.adobe.premiere':
+
+isPremiere = true;
+
+break;
+
+case 'application/pdf':
+
+pdfDocuments.push(item);
+
+break;
+
+case 'model/gltf-binary':
+
+glbDocuments.push(item);
+
+break;
+
+case 'model/obj':
+
+objDocuments.push(item);
+
+break;
+
+default:
+
+break;
+
+}
+
+
+if (item.hasFacet('Picture')) {
+
+imageDocuments.push(item);
+
+} else if (item.hasFacet('Video')) {
+
+videoDocuments.push(item);
+
+}
+
+});
+
+
+pdfDocuments.sort(sortByPath);
+
+videoDocuments.sort(sortByPath);
+
+imageDocuments.sort(sortByPath);
+
+glbDocuments.sort(sortByPath);
+
+objDocuments.sort(sortByPath);
+
+
+if (glbDocuments.length > 0) {
+
+input['cp:preview'] = glbDocuments[0].id;
+
+} else if (objDocuments.length > 0) {
+
+input['cp:preview'] = objDocuments[0].id;
+
+} else if (isINDD && pdfDocuments.length > 0) {
+
+input['cp:preview'] = pdfDocuments[0].id;
+
+} else if (isPremiere && videoDocuments.length > 0) {
+
+input['cp:preview'] = videoDocuments[0].id;
+
+} else if (imageDocuments.length > 0) {
+
+input['cp:preview'] = imageDocuments[0].id;
+
+}
+
+
+input = Document.Save(input, {});
+
+
+return input;
+
+}
+
+
+function sortByPath(a, b) {
+
+return a.path > b.path;
+
+}
+
+
+#### Compound Document Versioning Policy:
+
+1. By default, when a compound document is upload, the parent compound document will get MAJOR version bump (i.e., parent’s version will be 1.0 initially) and children will get MINOR version bump (i.e., all children’s version will be 0.1 initially).
+
+2. If you make any changes in a child, a "+" is displayed after the version number to make this apparent (e.g., 0.1+). Once a version has been created on child (e.g., child’s new version will be 0.2 or 1.1 depending on minor or major version creation respectively), the parent’s version will be shown with “+” which indicates some changes has been made.
+
+a. You can use compare version button to check the details of changed child.
+
+b. In such case, you can create a major/minor version on parent based on the changes in child.
+
+3. Creating a version in parent compound document will not affect the children’s versions.
+
+4. Upon restoring the parent version to any previous version, all children will get restored back to their versions associated with parent’s changed version. The restoration of children will happen as:
+
+a. If nuxeo.compound.document.strict.version.restore.enabled=true, then all out of scoped versions of child will get deleted and the current version will be set to the version associated with parent’s changed version.
+
+b. If nuxeo.compound.document.strict.version.restore.enabled=false, then all out of scoped versions of child will not get deleted but the current version will be set to the version associated with parent’s changed version.
