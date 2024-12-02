@@ -21,7 +21,7 @@ hidden: true
 
 - Fixed placeholder width to fully display text in `nuxeo-user-suggestion` with `multiple=true`.<br/>
 
-- Tags will be converted to lowercase to prevent duplication before submission.<br/>[ELEMENTS-1765]
+- Tags will be converted to lowercase to prevent duplication before submission.<br/>
 
 - Added a tooltip to nuxeo-path-suggestion to display the full path on hover.<br/>[ELEMENTS-1768]
 
