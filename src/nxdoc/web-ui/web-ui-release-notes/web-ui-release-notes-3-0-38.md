@@ -23,7 +23,7 @@ hidden: true
 
 - Tags will be converted to lowercase to prevent duplication before submission.<br/>
 
-- Added a tooltip to nuxeo-path-suggestion to display the full path on hover.<br/>[ELEMENTS-1768]
+- Added a tooltip to `nuxeo-path-suggestion` to display the full path on hover.<br/>
 
 ### Other Noteworthy Changes
 
