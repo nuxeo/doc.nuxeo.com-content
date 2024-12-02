@@ -29,7 +29,7 @@ hidden: true
 
 - Resolved functional and accessibility test failures in WebUI pipelines that were caused by the latest Chrome version.<br/>
 
-- Updated search and cloud test cases to resolve random failures in functional tests pipeline. (WEBUI-1606)<br/>
+- Updated search and cloud test cases to resolve random failures in functional tests pipeline.<br/>
 
 
 {{! /multiexcerpt}}
