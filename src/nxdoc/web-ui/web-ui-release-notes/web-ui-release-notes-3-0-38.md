@@ -19,7 +19,7 @@ hidden: true
 
 - The drawer width will be dynamic and will change based on the value of `--nuxeo-sidebar-width`.<br/>
 
-- Fixed placeholder width to fully display text in nuxeo-user-suggestion with multiple=true.<br/>[[ELEMENTS-1730]
+- Fixed placeholder width to fully display text in `nuxeo-user-suggestion` with `multiple=true`.<br/>
 
 - Tags will be converted to lowercase to prevent duplication before submission.<br/>[ELEMENTS-1765]
 
