@@ -17,7 +17,7 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2021 (Version 3.0.38)
 
-- The drawer width will be dynamic and will change based on the value of --nuxeo-sidebar-width.<br/>[WEBUI-1094]
+- The drawer width will be dynamic and will change based on the value of `--nuxeo-sidebar-width`.<br/>
 
 - Fixed placeholder width to fully display text in nuxeo-user-suggestion with multiple=true.<br/>[[ELEMENTS-1730]
 
