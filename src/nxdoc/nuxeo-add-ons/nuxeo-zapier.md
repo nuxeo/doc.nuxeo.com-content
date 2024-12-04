@@ -184,13 +184,6 @@ dc:description=######
 
 Jump lines to set another metadata (and don't forget you can use the dropdown to use the Zapier metadata results in this template).
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Zapier/operation.png
-    name: operation.png
-    addins#screenshot#up_to_date
---}}
-![operation.png](/nx_assets/87d8afa6-8554-4791-95b0-ab768c640884.png ?w=450,border=true)
-
 <div style="text-align: right">
 [**For more information, check the README**&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>](https://raw.githubusercontent.com/nuxeo-sandbox/nuxeo-zapier/master/README.md)
 </div>
