@@ -139,8 +139,6 @@ dc:description=######
 
 Jump lines to set another metadata (and don't forget you can use the dropdown to use the Zapier metadata results in this template).
 
-![]({{file name='operation.png'}} ?w=450,border=true)
-
 <div style="text-align: right">
 [**For more information, check the README**&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>](https://raw.githubusercontent.com/nuxeo-sandbox/nuxeo-zapier/master/README.md)
 </div>
