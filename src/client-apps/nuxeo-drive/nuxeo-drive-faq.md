@@ -255,7 +255,9 @@ Since the version `1.3.1216` of Nuxeo Drive client, the synchronization delay is
 
 Starting with macOS Mojave, the security layer has been enforced. And so when an application is trying to use another application or service, this new pop-up appears. Just click on <b>OK</b> and it will not show again.
 
-## How to Enable Icon Overlays on macOS
+## How to Enable Icon Overlays 
+
+### On macOS 
 
 They are available since Nuxeo Drive 3.1.0 and should be enabled by default. If not, you can do it manually in **System Preferences** > **Extensions**:
 
@@ -264,6 +266,17 @@ They are available since Nuxeo Drive 3.1.0 and should be enabled by default. If 
 And ensure the Nuxeo Drive > Finder Extensions is checked:
 
 ![]({{file name='drive-macos-settings-extensions.png' page='nuxeo-drive'}})
+
+### On Windows 
+
+1. Install nuxeo-drive.exe, nuxeo-drive-admin.exe and nuxeo-drive-addons.exe.
+2. Once Drive installed, add an account and set local sync folder location. Turn on **Synchronization** and restart Nuxeo Drive.
+3. a. Open the Registry Editor by pressing Windows + R, type regedit, and press Enter.
+    b. Navigate to  Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers.
+    c. Identify the icon overlays started with Nuxeo. Typically there are six of them. For each, right-click the key and choose Rename. 
+        Now insert some spaces at the beginning of the name to bump it to the top of the list.
+    d. Close Regedit.
+4. Restart the PC.
 
 ## How to Make Nuxeo Drive Work with a Nuxeo Cluster
 
