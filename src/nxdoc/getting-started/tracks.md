@@ -15,7 +15,6 @@ is_overview: true
 <br/>
 This tutorial is composed of different steps to guides you on a tour of the Nuxeo Platform and its features through its **APIs**. <br/>
 
-<br/><br/>
 [Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='discover-nuxeo-platform-apis'}})
 {{/panel}}
 </div>
@@ -25,7 +24,6 @@ This tutorial is composed of different steps to guides you on a tour of the Nuxe
 <br/>
 This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.<br/>
 
-<br/>
 [Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='configure-nuxeo-platform'}})
 {{/panel}}
 </div>
@@ -33,9 +31,8 @@ This tutorial introduces you to a few important aspects of **Nuxeo Studio** so t
 {{#> panel type='secondary' match_height='true'}}
 ### 3 - Develop
 <br/>
-This tutorial takes a contract's start date and add three months to it, but you can think of integrating any **custom logic in your Java class**.
+This tutorial takes a contract's start date and add three months to it, but you can think of integrating any **custom logic in your Java class**.<br/>
 
-<br/><br/>
 [Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='develop-with-nuxeo-platform'}})
 {{/panel}}
 </div>
@@ -43,9 +40,8 @@ This tutorial takes a contract's start date and add three months to it, but you 
 {{#> panel type='secondary' match_height='true'}}
 ### 4 - Publish
 <br/>
-This tutorial will show you how to package, hot reload, release and finally publish your project using **Nuxeo CLI**.
+This tutorial will show you how to package, hot reload, release and finally publish your project using **Nuxeo CLI**.<br/>
 
-<br/><br/><br/><br/>
 [Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='package-publish-deploy-hotreload'}})
 {{/panel}}
 </div>
