@@ -53,9 +53,9 @@ Like in a workspace, you can use drag and drop to create content in a folder.
 **Ordered Folders**
 
 {{! multiexcerpt name='ordered-folders'}}
-In an ordered folder, documents are manually sorted. So, the order in which documents are listed in the folder doesn't depend on one of its properties (version, author, etc); you decide where it should be displayed in the list. When a document is created, it is added at the end of the list. It is not possible to sort documents automatically by clicking on the columns titles in an ordered folder.
+In an ordered folder, documents are manually sorted. So, the order in which documents are listed in the folder doesn't depend on one of its properties (version, author, etc); you decide where it should be displayed in the list. When a document is created, it is added at the end of the list. 
 
-An ordered folder has the same presentation as a regular folder, but it has some additional buttons below the content table:
+An ordered folder has the same presentation as a regular folder, but it has some additional buttons that you can access when the items are selected:
 
 - Move up
 - Move down
