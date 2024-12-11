@@ -101,6 +101,21 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 23
+
+### Align Quartz-Mongodb on  quartz-2.5.0
+
+
+The upgrade of `quartz` breaks the compatibility with `quartz-mongodb` but since the project [https://github.com/michaelklishin/quartz-mongodb](https://github.com/michaelklishin/quartz-mongodb|smart-link) is in an abandoned state we have to fork it to apply the require changes. This result in a change in the `groupId` of the dependency, so if you’re using this dependency in your project, you must update it to:
+
+```xml
+<dependency>
+  <groupId>org.nuxeo.lib.novemberain</groupId>
+  <artifactId>quartz-mongodb</artifactId>
+</dependency>
+```
+
+
 ## Hotfix 22
 
 ### Fix Being Able to Create User With Empty Password
