@@ -103,6 +103,22 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 64
+
+### Fix Vulnerability in saml2-authentication-2021.x
+
+
+The following transitive dependency has been excluded from `org.opensaml:opensaml`, thus it is no more present in the saml2-authentication package fro LTS 2021:
+
+```
+<exclusion>
+  <groupId>org.apache.velocity</groupId>
+  <artifactId>velocity</artifactId>
+  <version>1.7</version>
+</exclusion>
+```
+
+
 ## Hotfix 63
 
 ### Fix Being Able to Create User With Empty Password
