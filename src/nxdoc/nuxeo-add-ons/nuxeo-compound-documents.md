@@ -135,11 +135,8 @@ Second Step:
   c.	Output type: Blob 
 1.	Click Ok.  
 1.	Go to “Parameters”, click “Add parameter” and add:
-
-a. Name: entries
-
-b. Type: String
-
+  a. Name: entries
+  b. Type: String
 6. Copy the following script into the editor:
 
 
@@ -176,25 +173,18 @@ return "CompoundDocument";
 #### Deploy Your Customization
 
 
-Once you have your facet, your document types and your 2 scripts, you are ready to deploy your Studio project into your instance. Once it’s done, upload a .zip file of specified document types and see the magic!
+Once you have your facet, your document types and your 2 scripts, you are ready to deploy your Studio project into your instance. Once it’s done, upload a .zip file of specified document types and see the results.
 
 
 OPTIONAL: Preview Selection of Compound Document
 
-1. Nuxeo Studio, go to “Automation” > “Automation Scripting”.
-
+1. In Nuxeo Studio, go to “Automation” > “Automation Scripting”.
 2. Click on New.
-
 3. Fill the popup as below:
-
-a. Feature ID: “GetCompoundDocumentPreview”
-
-b. Input type: void
-
-c. Output type: void
-
+  a. Feature ID: “GetCompoundDocumentPreview”
+  b. Input type: void
+  c. Output type: void
 4. Click Ok.
-
 5. Copy the following script into the editor:
 
 
@@ -345,18 +335,11 @@ return a.path > b.path;
 
 #### Compound Document Versioning Policy:
 
-1. By default, when a compound document is upload, the parent compound document will get MAJOR version bump (i.e., parent’s version will be 1.0 initially) and children will get MINOR version bump (i.e., all children’s version will be 0.1 initially).
-
-2. If you make any changes in a child, a "+" is displayed after the version number to make this apparent (e.g., 0.1+). Once a version has been created on child (e.g., child’s new version will be 0.2 or 1.1 depending on minor or major version creation respectively), the parent’s version will be shown with “+” which indicates some changes has been made.
-
-a. You can use compare version button to check the details of changed child.
-
-b. In such case, you can create a major/minor version on parent based on the changes in child.
-
-3. Creating a version in parent compound document will not affect the children’s versions.
-
-4. Upon restoring the parent version to any previous version, all children will get restored back to their versions associated with parent’s changed version. The restoration of children will happen as:
-
-a. If nuxeo.compound.document.strict.version.restore.enabled=true, then all out of scoped versions of child will get deleted and the current version will be set to the version associated with parent’s changed version.
-
-b. If nuxeo.compound.document.strict.version.restore.enabled=false, then all out of scoped versions of child will not get deleted but the current version will be set to the version associated with parent’s changed version.
+1. By default, when a compound document is uploaded, the parent compound document will get MAJOR version bump (i.e., parent document’s version will be 1.0 initially) and children documents will get MINOR version bump (i.e., all children’s version will be 0.1 initially).
+2. If you make any changes in a child document, a "+" is displayed after the version number to make this apparent (e.g., 0.1+). Once a version has been created on a child document (for example, child document’s new version will be 0.2 or 1.1 depending on minor or major version creation, respectively), the parent document’s version will be shown with “+” which indicates some changes were made.
+  a. You can use compare version button to check the details of the changed child document.
+  b. In such case, you can create a major/minor version on parent document based on the changes in the child document.
+3. Creating a version in parent compound document will not affect the children documents’ versions.
+4. Upon restoring the parent version to any previous version, all children documents will get restored back to their versions associated with parent document’s changed version. The restoration of children documents will happen as:
+  a. If the setting `nuxeo.compound.document.strict.version.restore.enabled=true`, then all out of scoped versions of child document will get deleted and the current version will be set to the version associated with parent’s changed version.
+  b. If the setting `nuxeo.compound.document.strict.version.restore.enabled=false`, then all out of scoped versions of child document will not get deleted, but the current version will be set to the version associated with parent’s changed version.
