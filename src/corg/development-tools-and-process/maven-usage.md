@@ -534,7 +534,7 @@ Once your Okta account is assigned the “**Sonatype Nexus**“ application, go 
 You should then connect to packages using the “single sign-on” feature and then:
 1. Click on its username,
 1. Click on User Token menu,
-1. Push the button **Access user token** to generate the tokens to be used to download the artifacts from Maven.
+1. Push the button **Access user token** to generate the tokens to be used for downloading the artifacts from Maven.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CORG/Maven Usage/user-token-maven.png
