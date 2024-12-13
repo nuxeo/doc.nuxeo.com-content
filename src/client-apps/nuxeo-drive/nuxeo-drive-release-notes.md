@@ -11,7 +11,7 @@ toc: true
 
 Welcome to the Release Notes for **Nuxeo Drive 5.5.1**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
+**Status**: <font color="##ff0000">**Beta**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.5.1.md)
 
 ## Support Back on macOS Intel 
