@@ -2376,6 +2376,16 @@ Enables users to specify a list of domains to which navigation is allowed when u
 
 * * *
 
+#### `org.nuxeo.web.ui.numberFormatting.enabled`
+
+The org.nuxeo.web.ui.numberFormatting.enabled property toggles number formatting in the Nuxeo Web UI, determining whether numbers should be formatted or left unformatted. When enabled, numbers are formatted; when disabled, they remain unformatted.
+
+**Default Value**
+
+`false`
+
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
