@@ -56,6 +56,16 @@ Our standard deployment is:
 - Pre-Prod: Available to users the first Friday of the Month
 - Prod: Available to users the second Friday of the Month
 
+Current LTS Hotfixes are displayed for each environment in the Nuxeo Customer Cloud Console. Scheduled monthly Hotfix updates can be placed “On Hold” for environments via the Customer Cloud Console. To place Scheduled monthly Hotfix updates on hold, complete the following steps.
+1. Log onto Nuxeo Cloud Console.
+2. Select Pre-Production Environment by selecting the “eye” icon.
+3. Under the “Config” dropdown, in the top left corner of the page, select “Edit HotFix Hold”.
+4. In the Nuxeo Hotfix Hold popup, select “Yes” to add or select “No” to remove a hold to the selected Pre-Production environment, and then select “Save”.
+
+If a hold is removed, the environment will be included in the next HF deployment and be updated to the HF’s outlined in that release.
+
+Customers may also request to update environments outside of the HotFix window via separate SUPNXP tickets without delaying or placing an environment “on hold”. These requests should be communicated to the Nuxeo Cloud team via SUPNXP Jira tickets.
+
 ## LTS Upgrades
 
 Customers choosing to upgrade from one LTS version to another can do so using the following guidelines.
