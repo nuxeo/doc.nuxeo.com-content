@@ -62,7 +62,7 @@ Current LTS Hotfixes are displayed for each environment in the Nuxeo Customer Cl
 3. Under the “Config” dropdown, in the top left corner of the page, select “Edit HotFix Hold”.
 4. In the Nuxeo Hotfix Hold popup, select “Yes” to add or select “No” to remove a hold to the selected Pre-Production environment, and then select “Save”.
 
-If a hold is removed, the environment will be included in the next HF deployment and be updated to the HF’s outlined in that release.
+If a hold is removed, the environment will be included in the next HF deployment and will be updated to the HF’s outlined in that release.
 
 Customers may also request to update environments outside of the HotFix window via separate SUPNXP tickets without delaying or placing an environment “on hold”. These requests should be communicated to the Nuxeo Cloud team via SUPNXP Jira tickets.
 
