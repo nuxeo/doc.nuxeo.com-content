@@ -194,11 +194,21 @@ Nuxeo Server offers multiple options to clean up orphaned content to facilitate 
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Reporting Problems
+### Reporting Problem
 
 This page lists some procedures to extract information of a running Nuxeo instance.
 
 [More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='reporting-problems'}})
+{{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Nuxeo Admin Console Release Notes
+
+Discover what's new on Nuxeo Admin Console.
+
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='admin-console-release-notes'}})
 {{/panel}}
 </div>
 
