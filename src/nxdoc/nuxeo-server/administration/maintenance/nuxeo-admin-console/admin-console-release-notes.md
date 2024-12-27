@@ -8,6 +8,9 @@ review:
 toc: true
 labels:
 tree_item_index: 500
+confluence:
+  ajs-parent-page-id: '10000'
+  ajs-parent-page-title: Nuxeo Admin Console
 ---
 
 ## Recently Released Changes

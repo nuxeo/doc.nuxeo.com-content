@@ -9,6 +9,8 @@ labels:
     - bchauvin
 is_overview: true
 tree_item_index: 1050
+confluence:
+  page_id: '10000'
 ---
 
 The Nuxeo admin console is an addon that provides a dedicated UI for system administrators to get an overview of the system and perform common tasks like reindexing documents.
