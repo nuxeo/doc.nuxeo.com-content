@@ -202,14 +202,4 @@ This page lists some procedures to extract information of a running Nuxeo instan
 {{/panel}}
 </div>
 
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Nuxeo Admin Console Release Notes
-
-Discover what's new on Nuxeo Admin Console.
-
-[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='admin-console-release-notes'}})
-{{/panel}}
-</div>
-
 </div>

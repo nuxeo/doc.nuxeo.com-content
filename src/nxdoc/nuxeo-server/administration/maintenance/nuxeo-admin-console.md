@@ -7,7 +7,7 @@ review:
     status: ok
 labels:
     - bchauvin
-toc: true
+is_overview: true
 tree_item_index: 1050
 ---
 
@@ -85,3 +85,8 @@ The homepage provides a concise list of [probes]({{page page='health-check'}}#pr
 ## Going Further
 
 Additional management options are not yet exposed into the admin console and are only available at this stage using the [management REST API endpoint]({{page space='rest-api' version='1' page='management-endpoint'}}). Please refer to the documentation for an exhaustive list.
+
+## Nuxeo Admin Console Release Notes
+
+Discover what's new on Nuxeo Admin Console in the 
+- [Release Notes]({{page page='admin-console-release-notes'}})
