@@ -3,7 +3,7 @@ title: Nuxeo Admin Console
 description: The Nuxeo admin console provides a dedicated UI for system administrators to get an overview of the system and perform common tasks like reindexing documents.
 review:
     comment: ''
-    date: '2024-08-08'
+    date: '2024-12-27'
     status: ok
 labels:
     - bchauvin
@@ -43,13 +43,19 @@ Once installed, the Nuxeo admin console can be accessed through a dedicated URL:
 
 ![]({{file name='admin-console-access-refused.png'}} ?border=true)
 
+### Warning on login
+
+A warning popup on login cautions users about tools potentially impacting application performance and can be disabled to prevent future displays.
+
+![]({{file name='admin-console-warning.png'}} ?border=true)
+
 ### Homepage
 
 The homepage provides a quick view into the essential information of your Nuxeo instance:
 * Probes and their status to see if all components are running
 * Version information and cluster enablement information
 
-![]({{file name='admin-console-homepage.png'}} ?border=true)
+![]({{file name='admin-console-home-page.png'}} ?border=true)
 
 ### Document Reindexing
 
@@ -60,7 +66,7 @@ The `Elasticsearch Reindex` menu lets you reindex documents with Elasticsearch o
 
 When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
 
-![]({{file name='admin-console-reindex.png'}} ?border=true)
+![]({{file name='admin-console-confirm-reindex.png'}} ?border=true)
 
 ### Monitoring an Action
 
@@ -72,15 +78,71 @@ You can click on the `See Status` button to follow how the bulk action is procee
 
 In addition, the command id can be copied to retrieve its status later using the `Bulk Action Monitoring` menu. Note that the bulk action id won't be remembered, so you may want to store it in a safe place if you intend to monitor it later on.
 
-![]({{file name='admin-console-bulk-action-monitoring.png'}} ?border=true)
+![]({{file name='admin-console-bulk-action-monitor.png'}} ?border=true)
 
 ### Checking the Status of System Components
 
 The homepage provides a concise list of [probes]({{page page='health-check'}}#probes) to check the health of the various system components. For a full list with detailed information and the possibility to launch a check on them individually, you can see the `Probes` menu.
 
-![]({{file name='admin-console-probes-homepage.png'}} ?border=true)
+![]({{file name='admin-console-probes-home-page.png'}} ?border=true)
 
-![]({{file name='admin-console-probes.png'}} ?border=true)
+![]({{file name='admin-console-probes-details.png'}} ?border=true)
+
+### Picture Renditions Generation
+
+The `Picture Renditions Generation` menu lets you recompute picture views for documents. You can recompute picture views:
+- Individually
+- From a folder: all documents of type picture in that folder and below are recomputed
+- From a [NXQL query]({{page page='NXQL'}})
+
+![]({{file name='admin-console-picture-renditions.png'}} ?border=true)
+
+When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
+
+![]({{file name='admin-console-picture-recompute.png'}} ?border=true)
+
+### Video Renditions Generation
+
+The `Video Renditions Generation` menu lets you recompute video conversions for documents. You can recompute video conversions:
+- Individually
+- From a folder: all documents of type video in that folder and below are recomputed
+- From a [NXQL query]({{page page='NXQL'}})
+
+You can optionally specify one or several conversion names to recompute and whether or not to recompute all video information by setting `Information to recompute`. Only missing information will be recomputed if it is set to `false`
+
+![]({{file name='admin-console-video-renditions.png'}} ?border=true)
+
+When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
+
+![]({{file name='admin-console-confirm-video-recompute.png'}} ?border=true)
+
+### Thumbnails Generation
+
+The `Thumbnails Generation` menu lets you recompute thumbnails for documents. You can recompute thumbnails:
+- Individually
+- From a folder: all documents of type video in that folder and below are recomputed
+- From a [NXQL query]({{page page='NXQL'}})
+
+![]({{file name='admin-console-thumbnails-generation.png'}} ?border=true)
+
+When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
+
+![]({{file name='admin-console-confirm-thumbnails-generation.png'}} ?border=true)
+
+### Fulltext Reindexing
+
+The `Fulltext Reindex` menu lets you run extraction of all binaries (blobs) referenced by documents. This can be done:
+- Individually
+- From a folder: all documents of type video in that folder and below are recomputed
+- From a [NXQL query]({{page page='NXQL'}})
+
+The default query skips proxies without fulltext and avoids extraction from documents without downloadable binaries. This can be configured optionally by setting `Empty fulltext index of binaries for excluded documents` (default: false) to nullify binary fulltext on excluded documents.
+
+![]({{file name='admin-console-fulltext-reindex.png'}} ?border=true)
+
+When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
+
+![]({{file name='admin-console-confirm-fulltext-reindex.png'}} ?border=true)
 
 ## Going Further
 
