@@ -57,6 +57,14 @@ The homepage provides a quick view into the essential information of your Nuxeo 
 
 ![]({{file name='admin-console-home-page.png'}} ?border=true)
 
+### Checking the Status of System Components
+
+The homepage provides a concise list of [probes]({{page page='health-check'}}#probes) to check the health of the various system components. For a full list with detailed information and the possibility to launch a check on them individually, you can see the `Probes` menu.
+
+![]({{file name='admin-console-home-page.png'}} ?border=true)
+
+![]({{file name='admin-console-probes-details.png'}} ?border=true)
+
 ### Document Reindexing
 
 The `Elasticsearch Reindex` menu lets you reindex documents with Elasticsearch or OpenSearch. You can reindex documents:
@@ -66,27 +74,7 @@ The `Elasticsearch Reindex` menu lets you reindex documents with Elasticsearch o
 
 When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
 
-![]({{file name='admin-console-confirm-reindex.png'}} ?border=true)
-
-### Monitoring an Action
-
-Any action triggered through the admin console uses the [bulk action framework]({{page page='bulk-action-framework'}}), making them highly scalable. Once an action is triggered, a confirmation is provided with a bulk action command id.
-
-![]({{file name='admin-console-action-launched.png'}} ?border=true)
-
-You can click on the `See Status` button to follow how the bulk action is proceeding.
-
-In addition, the command id can be copied to retrieve its status later using the `Bulk Action Monitoring` menu. Note that the bulk action id won't be remembered, so you may want to store it in a safe place if you intend to monitor it later on.
-
-![]({{file name='admin-console-bulk-action-monitor.png'}} ?border=true)
-
-### Checking the Status of System Components
-
-The homepage provides a concise list of [probes]({{page page='health-check'}}#probes) to check the health of the various system components. For a full list with detailed information and the possibility to launch a check on them individually, you can see the `Probes` menu.
-
-![]({{file name='admin-console-probes-home-page.png'}} ?border=true)
-
-![]({{file name='admin-console-probes-details.png'}} ?border=true)
+![]({{file name='admin-console-confirm-elasticsearch-reindex.png'}} ?border=true)
 
 ### Picture Renditions Generation
 
@@ -99,7 +87,7 @@ The `Picture Renditions Generation` menu lets you recompute picture views for do
 
 When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
 
-![]({{file name='admin-console-picture-recompute.png'}} ?border=true)
+![]({{file name='admin-console-confirm-picture-recompute.png'}} ?border=true)
 
 ### Video Renditions Generation
 
@@ -143,6 +131,20 @@ The default query skips proxies without fulltext and avoids extraction from docu
 When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
 
 ![]({{file name='admin-console-confirm-fulltext-reindex.png'}} ?border=true)
+
+
+### Monitoring an Action
+
+Any action triggered through the admin console uses the [bulk action framework]({{page page='bulk-action-framework'}}), making them highly scalable. Once an action is triggered, a confirmation is provided with a bulk action command id.
+
+![]({{file name='admin-console-action-launched.png'}} ?border=true)
+
+You can click on the `See Status` button to follow how the bulk action is proceeding.
+
+In addition, the command id can be copied to retrieve its status later using the `Bulk Action Monitoring` menu. Note that the bulk action id won't be remembered, so you may want to store it in a safe place if you intend to monitor it later on.
+
+![]({{file name='admin-console-bulk-action-monitor.png'}} ?border=true)
+
 
 ## Going Further
 
