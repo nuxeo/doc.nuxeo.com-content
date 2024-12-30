@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2024-11-28'
+  date: '2024-12-30'
   status: ok
 toc: true
 labels:
@@ -22,16 +22,17 @@ Starting from Web UI version `3.0.31` released in March 2024, functional tests w
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-38'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-0-39'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.0.38]({{page page='web-ui-release-notes-3-0-38'}})                  | Improvements and bugfix release     | -->
+<!-- | [Web UI 3.0.39]({{page page='web-ui-release-notes-3-0-39'}})                  | CSP changes and improvements release     | -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Web UI 3.0.38]({{page page='web-ui-release-notes-3-0-38'}})                  | Improvements and bugfix release     |
 | [Web UI 3.0.37]({{page page='web-ui-release-notes-3-0-37'}})                  | Security and bugfix release     |
 | [Web UI 3.0.36]({{page page='web-ui-release-notes-3-0-36'}})                  | Security and bugfix release     |
 | [Web UI 3.0.35]({{page page='web-ui-release-notes-3-0-35'}})                  | Display the document creation button on all mobile devices     |
