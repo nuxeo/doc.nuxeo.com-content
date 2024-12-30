@@ -2348,7 +2348,7 @@ Enables users to select all documents from results listings in the UI and to exe
 
 Property to override the default Content Security Policy.
 
-Note : In order to make sure that PDFs containing WebAssembly code can also be used properly, the attribute **"wasm-unsafe-eval"** needs to be added in **"script-src"** explicitly, in case the CSP headers are overridden using this property **Since WebUI 3.0.39 and 3.1.15**.
+Note :**Since WebUI 3.0.39 and 3.1.15** In order to make sure that PDFs containing WebAssembly code can also be used properly, the attribute **"wasm-unsafe-eval"** needs to be added in **"script-src"** explicitly, in case the CSP headers are overridden using this property.
 
 
 **Since LTS 2021.58**
