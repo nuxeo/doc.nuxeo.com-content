@@ -19,7 +19,7 @@ hidden: true
 
 This release for WebUI introduces several important changes to the Content Security Policy (CSP). These changes enhance security by providing more granular control over which scripts can be executed in the browser, and by reducing attack surfaces related to script execution.<br/>
 
-Changes Done for "script-src" directive -
+Changes done for "script-src" directive -
 - `Added "self" attribute` : The self keyword restricts the loading and execution of scripts to the same origin as the document. This effectively blocks scripts hosted on external domains from being executed on the page, reducing the risk of third-party script attacks.
 
 - `Added "nonce-<value>" attribute` : This allows a cryptographically random token (nonce) to be assigned to inline <script> elements. Only scripts with a matching nonce value will be executed, ensuring that only trusted scripts can run inline, and unauthorized inline scripts are blocked.
@@ -32,7 +32,8 @@ Changes Done for "script-src" directive -
 
 - `Removed dependency on "unsafe-eval" attribute` : The unsafe-eval keyword allows the use of JavaScript's eval() function and other methods like setTimeout() and setInterval() with string arguments. These methods are commonly used in XSS attacks and can be exploited by attackers to execute arbitrary code. This change removes support for unsafe-eval and prevents the use of these unsafe JavaScript functions.
 
-`Deleted the default-src or added "self" to make it more restrictive` : By adding the self attribute, we may make the default-src directive more limited; alternatively, we can eliminate it entirely.
+Changes done for "default-src" directive -
+`Removed dependency of "blob: *" ` : By removing "blob: *" and adding "self" attribute, the directive can be made more restrictive.
 
 Customers can override the default CSP of Nuxeo platform, and remove attributes like "unsafe-inline", "unsafe-eval" and "data: *" from "script-src" directive to have a stricter CSP. Note that in order to work with PDFs that have embedded WebAssembly code, it is required to either have "wasm-unsafe-eval" (Recommended) or "unsafe-eval" (Less secure) to be added in the "script-src" directive.
 <br/>[[WEBUI-1282](https://hyland.atlassian.net/browse/WEBUI-1282)]
