@@ -33,7 +33,7 @@ Changes done for "script-src" directive -
 - `Removed dependency on "unsafe-eval" attribute` : The unsafe-eval keyword allows the use of JavaScript's eval() function and other methods like setTimeout() and setInterval() with string arguments. These methods are commonly used in XSS attacks and can be exploited by attackers to execute arbitrary code. This change removes support for unsafe-eval and prevents the use of these unsafe JavaScript functions.
 
 Changes done for "default-src" directive -
-`Removed dependency of "blob: *" ` : By removing "blob: *" and adding "self" attribute, the directive can be made more restrictive.
+- `Removed dependency of "blob: *" ` : By removing "blob: *" and adding "self" attribute, the directive can be made more restrictive.
 
 Customers can override the default CSP of Nuxeo platform, and remove attributes like "unsafe-inline", "unsafe-eval" and "data: *" from "script-src" directive to have a stricter CSP. Note that in order to work with PDFs that have embedded WebAssembly code, it is required to either have "wasm-unsafe-eval" (Recommended) or "unsafe-eval" (Less secure) to be added in the "script-src" directive.
 <br/>[[WEBUI-1282](https://hyland.atlassian.net/browse/WEBUI-1282)]
