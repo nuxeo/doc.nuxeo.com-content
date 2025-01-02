@@ -2367,7 +2367,7 @@ Property to enable immediate document's blobs garbage collection. Default is `tr
 
 Property to override the default Content Security Policy.
 
-Note : **Since 3.1.15** In order to make sure that PDFs containing WebAssembly code can also be used properly, the attribute **"wasm-unsafe-eval"** needs to be added in **"script-src"** explicitly, in case the CSP headers are overridden using this property.
+Note : **(Since WebUI 3.1.15)** In order to make sure that PDFs containing WebAssembly code can also be used properly, the attribute **"wasm-unsafe-eval"** needs to be added in **"script-src"** explicitly, in case the CSP headers are overridden using this property.
 
 **Since LTS 2023.16**
 
