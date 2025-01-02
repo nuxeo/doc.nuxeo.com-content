@@ -28,7 +28,7 @@ Changes done for "script-src" directive -
 
 - `Removed dependency on "data: *" attribute` : The data: scheme allows scripts to be loaded directly from data URIs, which can be a security risk as they are often used in XSS attacks. It can be removed to prevent scripts from being loaded from data URIs.
 
-- `Removed dependency on "unsafe-inline" attribute` : This keyword previously allowed inline JavaScript to be executed, which poses a significant security risk as it can be exploited in XSS attacks. Removing this attribute forces websites to avoid using inline scripts or rely on safer alternatives, such as nonces.
+- `Removed dependency on "unsafe-inline" attribute` : This keyword previously allowed inline JavaScript to be executed, which posed a significant security risk as it can be exploited in XSS attacks. Removing this attribute forces websites to avoid using inline scripts or rely on safer alternatives, such as nonces.
 
 - `Removed dependency on "unsafe-eval" attribute` : The unsafe-eval keyword allows the use of JavaScript's eval() function and other methods like setTimeout() and setInterval() with string arguments. These methods are commonly used in XSS attacks and can be exploited by attackers to execute arbitrary code. This change removes support for unsafe-eval and prevents the use of these unsafe JavaScript functions.
 
