@@ -37,23 +37,13 @@ Changes done for "default-src" directive -
 
 Changes done for "object-src" directive -
 - `Added "none" attribute` :  Improves security by blocking all embedded <object>, <embed>, and <applet> elements on the page.
-<br/>
 
 Customers can override the default CSP of Nuxeo platform, and remove attributes like "unsafe-inline", "unsafe-eval" and "data: *" from "script-src" directive to have a stricter CSP. Note that in order to work with PDFs that have embedded WebAssembly code, it is required to either have "wasm-unsafe-eval" (Recommended) or "unsafe-eval" (Less secure) to be added in the "script-src" directive.
 
 Note that WebUI automatically enforces the addition of "self" , "nonce-", "strict-dynamic" for "script-src", and "none" for "object-src" whether the csp headers are default or overriden.
-<br/>[[WEBUI-1282](https://hyland.atlassian.net/browse/WEBUI-1282)]
-<br/>[[WEBUI-1446](https://hyland.atlassian.net/browse/WEBUI-1446)]
-<br/>[[WEBUI-1496](https://hyland.atlassian.net/browse/WEBUI-1496)]
-<br/>[[WEBUI-1497](https://hyland.atlassian.net/browse/WEBUI-1497)]
-<br/>[[WEBUI-1498](https://hyland.atlassian.net/browse/WEBUI-1498)]
-<br/>[[WEBUI-1580](https://hyland.atlassian.net/browse/WEBUI-1580)]
-<br/>[[ELEMENTS-1759](https://hyland.atlassian.net/browse/ELEMENTS-1759)]
 
 ### Other Noteworthy Changes
 
 - Offering the option to enable comma formatting this way can improve readability when dealing with very large numbers.
-<br/>[[WEBUI-1590](https://hyland.atlassian.net/browse/WEBUI-1590)]
-<br/>[[ELEMENTS-1771](https://hyland.atlassian.net/browse/ELEMENTS-1771)]
 
 {{! /multiexcerpt}}
