@@ -101,6 +101,30 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 24
+
+### Fix Vim Low CVE in Docker Image
+
+
+Vim editor was upgraded in the Docker image from `8.2.2637-20.0.1` to `8.2.2637-21.0.1`.
+
+
+### Fix Property Name in 'quartz.properties.nxftl' File
+
+
+Renamed the following Quartz scheduler property:
+
+```
+org.quartz.scheduler.mongoOptionWriteConcernTimeoutMillis
+```
+
+to
+
+```
+org.quartz.jobStore.mongoOptionWriteConcernTimeoutMillis
+```
+
+
 ## Hotfix 23
 
 ### Align Quartz-Mongodb on  quartz-2.5.0
