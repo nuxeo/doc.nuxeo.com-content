@@ -38,6 +38,9 @@ Changes done for "default-src" directive -
 Changes done for "object-src" directive -
 - `Added "none" attribute` :  Improves security by blocking all embedded <object>, <embed>, and <applet> elements on the page.
 
+Breaking Changes
+- `Removed support for org.nuxeo.web.ui.expression.eval` : This property will always be set to false and is no longer supported. Consequently, all javascript expressions will always be evaluated by "js-interpreter". As of now, the js-interpreter only supports ES5 features, and hence, ES6+ features would not work here
+
 Customers can override the default CSP of Nuxeo platform, and remove attributes like "unsafe-inline", "unsafe-eval" and "data: *" from "script-src" directive to have a stricter CSP. Note that in order to work with PDFs that have embedded WebAssembly code, it is required to either have "wasm-unsafe-eval" (Recommended) or "unsafe-eval" (Less secure) to be added in the "script-src" directive.
 
 Note that WebUI automatically enforces the addition of "self" , "nonce-", "strict-dynamic" for "script-src", and "none" for "object-src" whether the csp headers are default or overriden.
