@@ -23,6 +23,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/ppDjAQ'
     source_link: /display/NXDOC/Nuxeo+3D
 tree_item_index: 3700
+hidden: true
 history:
     -
         author: Solen Guitter
