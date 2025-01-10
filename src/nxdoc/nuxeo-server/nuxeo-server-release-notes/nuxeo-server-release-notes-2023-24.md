@@ -21,9 +21,4 @@ hidden: true
 When setting a document under indeterminate retention, retainable blobs are put under legal hold in S3. This legal hold is then removed whenever the document has a determinate retention date.
 
 
-
-# Learn More
-
-[More information about released changes and fixed bugs](https://hyland.atlassian.net/secure/ReleaseNote.jspa?projectId=14958&version=34035) is available in our bug tracking tool.
-
 {{! /multiexcerpt}}
