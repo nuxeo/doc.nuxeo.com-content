@@ -22,18 +22,18 @@ This release for WebUI introduces several important changes to the Content Secur
 Changes done for "script-src" directive -
 - `Added "self" attribute` : The self keyword restricts the loading and execution of scripts to the same origin as the document. This effectively blocks scripts hosted on external domains from being executed on the page, reducing the risk of third-party script attacks.
 
-- `Added "nonce-<value>" attribute` : This allows a cryptographically random token (nonce) to be assigned to inline "script" elements. Only scripts with a matching nonce value will be executed, ensuring that only trusted scripts can run inline, and unauthorized inline scripts are blocked.
+- `Added "nonce-<value>" attribute` : This allows a cryptographically random token (nonce) to be assigned to inline `script` elements. Only scripts with a matching nonce value will be executed, ensuring that only trusted scripts can run inline, and unauthorized inline scripts are blocked.
 
-- `Added "strict-dynamic" attribute` : When combined with a nonce ("nonce-value") for inline scripts, strict-dynamic allows dynamically added scripts to be executed only if they are loaded from trusted sources. This prevents third-party scripts from adding untrusted scripts dynamically, enhancing security by relying on trusted sources.
+- `Added "strict-dynamic" attribute` : When combined with a nonce (`nonce-value`) for inline scripts, `strict-dynamic` allows dynamically added scripts to be executed only if they are loaded from trusted sources. This prevents third-party scripts from adding untrusted scripts dynamically, enhancing security by relying on trusted sources.
 
 - `Removed dependency on "data: *" attribute` : The data: scheme allows scripts to be loaded directly from data URIs, which can be a security risk as they are often used in XSS attacks. It can be removed to prevent scripts from being loaded from data URIs.
 
 - `Removed dependency on "unsafe-inline" attribute` : This keyword previously allowed inline JavaScript to be executed, which posed a significant security risk as it can be exploited in XSS attacks. Removing this attribute forces websites to avoid using inline scripts or rely on safer alternatives, such as nonces.
 
-- `Removed dependency on "unsafe-eval" attribute` : The unsafe-eval keyword allows the use of JavaScript's eval() function and other methods like setTimeout() and setInterval() with string arguments. These methods are commonly used in XSS attacks and can be exploited by attackers to execute arbitrary code. This change removes support for unsafe-eval and prevents the use of these unsafe JavaScript functions.
+- `Removed dependency on "unsafe-eval" attribute` : The unsafe-eval keyword allows the use of JavaScript's `eval()` function and other methods like `setTimeout()` and `setInterval()` with string arguments. These methods are commonly used in XSS attacks and can be exploited by attackers to execute arbitrary code. This change removes support for `unsafe-eval` and prevents the use of these unsafe `JavaScript` functions.
 
 Changes done for "default-src" directive -
-- `Removed dependency of "blob: *" ` : By removing "blob: *" and adding "self" attribute, the directive can be made more restrictive.
+- `Removed dependency of "blob: *" ` : By removing `blob: *` and adding `self` attribute, the directive can be made more restrictive.
 
 Changes done for "object-src" directive -
 - `Added "none" attribute` :  Improves security by blocking all embedded object, embed, and applet elements on the page.
@@ -41,9 +41,9 @@ Changes done for "object-src" directive -
 Breaking Changes
 - `Removed support for org.nuxeo.web.ui.expression.eval` : This property will always be set to false and is no longer supported. Consequently, all javascript expressions will always be evaluated by "js-interpreter". As of now, the js-interpreter only supports ES5 features, and hence, ES6+ features would not work here.
 
-Customers can override the default CSP of Nuxeo platform, and remove attributes like "unsafe-inline", "unsafe-eval" and "data: *" from "script-src" directive to have a stricter CSP. Note that in order to work with PDFs that have embedded WebAssembly code, it is required to either have "wasm-unsafe-eval" (Recommended) or "unsafe-eval" (Less secure) to be added in the "script-src" directive.
+Customers can override the default CSP of Nuxeo platform, and remove attributes like `unsafe-inline`, `unsafe-eval` and `data: *` from `script-src` directive to have a stricter CSP. Note that in order to work with PDFs that have embedded WebAssembly code, it is required to either have `wasm-unsafe-eval` (Recommended) or `unsafe-eval` (Less secure) to be added in the `script-src` directive.
 
-Note that WebUI automatically enforces the addition of "self" , "nonce-", "strict-dynamic" for "script-src", and "none" for "object-src" whether the csp headers are default or overriden.
+Note that WebUI automatically enforces the addition of `self` , `nonce-`, `strict-dynamic` for `script-src`, and `none` for `object-src` whether the csp headers are default or overriden.
 
 ### Other Noteworthy Changes
 
