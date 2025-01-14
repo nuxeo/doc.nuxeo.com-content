@@ -15,7 +15,7 @@ hidden: true
 
 {{! multiexcerpt name='web-ui-updates'}}
 
-## What’s New in Web UI for LTS 2021 (Version 3.1.15)
+## What’s New in Web UI for LTS 2023 (Version 3.1.15)
 
 This release for WebUI introduces several important changes to the Content Security Policy (CSP). These changes enhance security by providing more granular control over which scripts can be executed in the browser, and by reducing attack surfaces related to script execution.<br/>
 
