@@ -125,6 +125,9 @@ The following transitive dependency has been excluded from `org.opensaml:opensam
 
 A POST request on the `/nuxeo/api/v1/user` endpoint now returns a 400 _Bad Request_ status code if no password or a blank password is provided.
 
+### Fix Tomcat Upgrade from 9.0.96 to 9.0.97
+
+If you have configured a custom contextPath like described in the [documentation]({{page space='nxdoc' page='how-to-change-context-path'}}), you need to update your `$NUXEO_HOME/templates/common-base/conf/Catalina/localhost/myapp.xml.nxftl` and add `notFoundClassResourceCacheSize="0"` to the `Context` element.
 
 ## Hotfix 60
 
