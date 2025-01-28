@@ -24,7 +24,7 @@ hidden: true
 ## Make Keycloak Logout Work With Client Not Using Credentials
 
 
-Keycloak logout now works with client authentication disabled.
+Keycloak logout now works with disabled client authentication.
 
 
 ## SAML Requests Should Be Signed
@@ -32,15 +32,15 @@ Keycloak logout now works with client authentication disabled.
 
 SAML requests are always signed when KeyManager is configured
 
-The SAML Requests send to the IDP are always signed when the KeyManager component is configured.
+The SAML Requests sent to the IDP are always signed when the KeyManager component is configured.
 
-The original cause was a startup order issue that could be workaround by putting the KeyManager contribution before the SAML authenticator one.
+The original cause was a startup order issue where putting the KeyManager contribution before the SAML authenticator could be a workaround.
 
 
 ## CSV Import Optional Trim
 
 
-Imported CSV values trimming can be disabled
+ Trimming of imported CSV values can be disabled
 
 You can disable trimming of the imported CSV values with the following contribution:
 
@@ -61,9 +61,5 @@ When importing a CSV with the `CSV.Import` automation operation, you can also se
 Fixed thumbnail rendition for JPG File with orientation in EXIF metadata.
 
 
-
-# Learn More
-
-[More information about released changes and fixed bugs](https://hyland.atlassian.net/secure/ReleaseNote.jspa?projectId=14958&version=34162) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
