@@ -18,7 +18,7 @@ hidden: true
 ## CSV Import Optional Trim
 
 
-Imported CSV values trimming can be disabled
+Trimming of imported CSV values can be disabled
 
 You can disable trimming of the imported CSV values with the following contribution:
 
@@ -39,9 +39,5 @@ When importing a CSV with the `CSV.Import` automation operation, you can also se
 Fixed thumbnail rendition for JPG File with orientation in EXIF metadata.
 
 
-
-# Learn More
-
-[More information about released changes and fixed bugs](https://hyland.atlassian.net/secure/ReleaseNote.jspa?projectId=14958&version=34151) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
