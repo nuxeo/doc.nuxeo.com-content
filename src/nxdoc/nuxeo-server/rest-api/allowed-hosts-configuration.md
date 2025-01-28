@@ -60,10 +60,10 @@ To setup the whitelist, override the `nuxeo.allowed.hosts` configuration propert
 nuxeo.url=http://localhost:8080/nuxeo
 ...
 # default, allows everything
-nuxeo.allowed.hotst=
+nuxeo.allowed.hosts=
 # allows localhost only
-nuxeo.allowed.hotst=localhost
+nuxeo.allowed.hosts=localhost
 # only allows localhost, myhost.org and also.myhost.org
-nuxeo.allowed.hotst=myhost.org,also.myhost.org
+nuxeo.allowed.hosts=myhost.org,also.myhost.org
 ```
 
