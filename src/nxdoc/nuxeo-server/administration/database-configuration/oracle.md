@@ -488,7 +488,7 @@ Starting with 11g R2, Oracle does not allocate space for a table until the first
 
 The Nuxeo Platform needs the Oracle JDBC driver to establish a connection to the database.
 
-The driver can be downloaded from the [Oracle Database JDBC driver](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) download site. As mentioned in this page:
+The driver can be downloaded from the [Oracle Database JDBC driver](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) download site, as mentioned in this page:
 > The best practice is use the latest version of the Oracle JDBC driver that supports the JDK and Database version that you use and is compatible with your support requirements.
 
 Thus, we recommend to download the latest Jar for Oracle Database 23ai (which supports Oracle Database versions 23ai, 21c, and 19c) that is certified with JDK17: [ojdbc17.jar](https://download.oracle.com/otn-pub/otn_software/jdbc/236/ojdbc17.jar).
