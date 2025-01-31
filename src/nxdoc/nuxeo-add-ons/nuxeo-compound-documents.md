@@ -139,7 +139,7 @@ Second Step:
   b. Type: String
 6. Copy the following script into the editor:
 
-
+```
 function run(input, params) {
 
 for (var i = 0; i < params.entries.length; i++) {
@@ -187,7 +187,7 @@ OPTIONAL: Preview Selection of Compound Document
 4. Click Ok.
 5. Copy the following script into the editor:
 
-
+```
 function run(input, params) {
 
 
@@ -331,7 +331,7 @@ function sortByPath(a, b) {
 return a.path > b.path;
 
 }
-
+```
 
 #### Compound Document Versioning Policy:
 
