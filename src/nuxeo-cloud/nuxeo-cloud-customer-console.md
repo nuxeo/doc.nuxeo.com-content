@@ -262,12 +262,7 @@ After you build your packages from the development sandbox, you can release them
    3. From the Post-release version bump options, select the version on which the development would continue after the release.
    4. Click Build to initiate the build.
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/package-build.png
-    name: package-build.png
-    server#screenshot#up_to_date
---}}
-![package-build.png](/nx_assets/5ad454a0-2630-4c76-8acf-c473284af967.png ?w=650,border=true)
+![]({{file name='Nuxeo-package-build-options.png'}})
 
 #### Tasks and Package Build/Deploy Pipeline Status
 
