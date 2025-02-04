@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2024-12-30'
+  date: '2025-02-04'
   status: ok
 toc: true
 labels:
@@ -22,16 +22,17 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-15'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-16'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.15]({{page page='web-ui-release-notes-3-1-15'}})                  | CSP changes and improvements release     | -->
+<!-- | [Web UI 3.1.16]({{page page='web-ui-release-notes-3-1-16'}})                  | RTL Support for WebUI, CSP changes and bugfix release     | -->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [Web UI 3.1.15]({{page page='web-ui-release-notes-3-1-15'}})                  | CSP changes and improvements release     |
 | [Web UI 3.1.13]({{page page='web-ui-release-notes-3-1-14'}})             | Improvements and bugfix release     |
 | [Web UI 3.1.13]({{page page='web-ui-release-notes-3-1-13'}})                  | Security and bugfix release     |
 | [Web UI 3.1.12]({{page page='web-ui-release-notes-3-1-12'}})                  | Security and bugfix release     |
