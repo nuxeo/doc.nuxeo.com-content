@@ -17,7 +17,7 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2021 (Version 3.0.40)
 
-- `Added support for org.nuxeo.web.ui.expression.eval` : User can now toggle this variable which affects how Nuxeo Filter expressions are evaluated. If set to true, the expression is evaluated using native javascript Function(). Otherwise, the expression is evaluated using a third-party tool that creates a safer isolated environment for evaluations - "js-interpreter". Note that this tool supports only ES5.
+- `Added support for org.nuxeo.web.ui.expression.eval` : User can now toggle this variable, which affects how Nuxeo Filter expressions are evaluated. If set to true, the expression is evaluated using native javascript Function(). Otherwise, the expression is evaluated using a third-party tool that creates a safer isolated environment for evaluations - "js-interpreter". Note that this tool supports only ES5.
 
 Note : If the value is set to the default value `true`, CSP headers (default or overridden) need to have `unsafe-eval` added as part of `script-src`.<br/>
 
