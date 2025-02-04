@@ -2373,6 +2373,21 @@ Note : **(Since WebUI 3.1.15)** In order to make sure that PDFs containing WebAs
 
 * * *
 
+#### `org.nuxeo.web.ui.expression.eval`
+
+Property to control how Nuxeo Filter expressions are evaluated. .
+
+If the property value is set to false, the Nuxeo Filter expressions are evaluated using a special JS Interpreter which is safe and secure. However, this interpreter supports only ES5 syntax. If property set to true , the expression is evaluated using native javascript Function(). 
+Note that CSP headers (default or overridden) need to have "unsafe-eval" added as part of script-src if this property is set to true.
+
+**Requires the Web UI package version 3.1.16 or above**
+
+**Default Value**
+
+`true`
+
+* * *
+
 #### `org.nuxeo.pagination.nuxeoSelectOptions.maxAllowedItems`
 
 Set the maximum number of pages in the Nuxeo select element for pagination. If the page count exceeds this number, the drop-down to select the page number is hidden. This is intended to prevent browser performance issues with large numbers of pages.
