@@ -332,7 +332,7 @@ And report the output of the following commands, assuming that Elasticsearch is 
 (ES="localhost:9200"; curl "$ES"; curl "$ES/_cat/health?v"; curl "$ES/_cat/nodes?v"; curl "$ES/_cat/indices?v") > /tmp/nuxeo-elastic-`date +%Y%m%d-%H%M%S`.txt
 ```
 
-In addition if the problem is related to unexpected search results or errors, follow this procedure: [Reporting Settings and Mapping]({{page page='elasticsearch-setup'}}#reporting-settings-and-mapping)
+In addition if the problem is related to unexpected search results or errors, follow this procedure: [Reporting Settings and Mapping]({{page page='search-setup'}}#reporting-settings-and-mapping)
 
 ## {{> anchor 'kafka'}}Kafka
 
