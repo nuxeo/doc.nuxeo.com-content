@@ -89,12 +89,8 @@ Environment details for the selected environment are shown on this page.
 
 For development sandbox environments customers are able to view environment details, recent Image Builds and Logs and Tasks, as well as initiate new Image Builds or Deployments. There are also sub-pages for sandbox and collecting data on the development sandbox environment.
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/dev-sandbox.png
-    name: dev-sandbox.png
-    addins#screenshot#up_to_date
---}}
-![dev-sandbox.png](/nx_assets/4812ab94-baa8-4cd3-9328-ede4391fe52e.png ?w=650,border=true)
+![]({{file name='Development-sandbox-screen.png'}} ?w=650,border=true)
+
 #### Prerequisites ####
 
 To start working on your Development Sandbox, ensure that you have access to the following repositories.
@@ -106,12 +102,7 @@ To start working on your Development Sandbox, ensure that you have access to the
 
 For pre-production environments customers are able to view environment details, recent Image Builds and Logs, recent and scheduled Deploys, as well as initiate new Image Builds or Deploys. There is also a sub-page for collecting data on the pre-production environment.
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/Cloud Console Env page
-    name: cloud-console-env-page.pg
-    server#screenshot#up_to_date
---}}
-![Cloud Console Env page](/nx_assets/18fff4ed-6794-4dc5-adff-fdd1a4454b17.png ?w=650,border=true)
+![]({{file name='Preproduction-environment.png'}} ?w=650,border=true)
 
 
 ### Image Builds
@@ -362,12 +353,7 @@ Edit Packages, Edit Projects, and Set/Reset SSH Key Pair can be accessed from th
 
 Once a package has been created by the NCO team, a package can be edited by selecting “Edit Packages” from the Config dropdown. In the Edit packages popup, you can edit the Package project, the repository, and the release settings.
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Cloud/edit packages
-    name: edit-packages.png
-    server#popup#up_to_date
---}}
-![edit packages](/nx_assets/1403cdf8-d585-492c-b6cc-6eb9dd78832d.png ?w=350,border=true)
+![]({{file name='Edit-package-dialog-box.png'}} ?w=650,border=true)
 
 * Package Project: Displays the package project to be edited.
   Information related to the package project is organized under four tabs, which are explained under the following four tabs:
