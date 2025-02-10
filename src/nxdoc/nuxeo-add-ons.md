@@ -343,9 +343,6 @@ Public
 [Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv)
 </td>
 </tr>
-<!--
-
--->
 <tr>
 <td colspan="1">
 Nuxeo Drive<br/>
@@ -664,6 +661,21 @@ Public
 </td>
 </tr>
 -->
+<tr>
+<td colspan="1">
+Nuxeo SCIM 2.0<br/>
+`nuxeo-scim-v2`
+</td>
+<td colspan="1">
+Public
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-scim-v2'}})
+</td>
+<td colspan="1">
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scim-v2)
+</td>
+</tr>
 <tr>
 <td colspan="1">
 Nuxeo Showcase Content<br/>
