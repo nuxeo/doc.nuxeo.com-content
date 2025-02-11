@@ -1,7 +1,7 @@
 ---
 title: Build a Custom Docker Image
 review:
-  date: '2023-04-03'
+  date: '2025-10-11'
   status: ok
 labels:
   - multiexcerpt
@@ -15,27 +15,27 @@ To build an application from Nuxeo, we strongly recommend to customize the Nuxeo
 
 ## Build a Custom Docker Image From the Nuxeo One
 
-You can simply write a [Dockerfile](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) using the Nuxeo image as [parent image](https://docs.docker.com/glossary/#parent_image).
-A good practice is to use a [build argument](https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact) before the `FROM` instruction to easily set the version of the Nuxeo parent image, as in the example below. Here, the default value is the `2021` moving tag:
+You can simply write a [Dockerfile](https://docs.docker.com/build/concepts/dockerfile/) using the Nuxeo image as [base image](https://docs.docker.com/build/building/base-images/).
+A good practice is to use a [build argument](https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact) before the `FROM` instruction to easily set the version of the Nuxeo base image, as in the example below. Here, the default value is the `2025` moving tag:
 
 ```Dockerfile
-ARG NUXEO_VERSION=2023
+ARG NUXEO_VERSION=2025
 
 FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:${NUXEO_VERSION}
 
-# Execute some commands to add layers on top of the parent image
+# Execute some commands to add layers on top of the base image
 ```
 
-Then, the custom image can be built by running the following command in the directory of the `Dockerfile`. In this case, we choose to rely on the 2023.0 version of Nuxeo.
+Then, the custom image can be built by running the following command in the directory of the `Dockerfile`. In this case, we choose to rely on the 2025.0 version of Nuxeo.
 
 ```shell
-docker build -t mycompany/myapplication:mytag --build-arg NUXEO_VERSION=2023.0 .
+docker build -t mycompany/myapplication:mytag --build-arg NUXEO_VERSION=2025.0 .
 ```
 
-To upgrade the custom image to a newer version of Nuxeo, for instance from 2023.0 to 2023.1, you can just rebuild the custom image by updating the `NUXEO_VERSION` build argument:
+To upgrade the custom image to a newer version of Nuxeo, for instance from 2025.0 to 2025.1, you can just rebuild the custom image by updating the `NUXEO_VERSION` build argument:
 
 ```shell
-docker build -t mycompany/myapplication:mytag --build-arg NUXEO_VERSION=2023.1 .
+docker build -t mycompany/myapplication:mytag --build-arg NUXEO_VERSION=2025.1 .
 ```
 
 Below, you can find some examples of customization that can be done in such a custom Docker image.
@@ -47,7 +47,7 @@ We provide a utility script to install remote Nuxeo packages from [Nuxeo Connect
 For instance, you can use this script in the following `Dockerfile`:
 
 ```Dockerfile
-FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
+FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 
 ARG CLID
 ARG CONNECT_URL
@@ -71,7 +71,7 @@ If you want to embed some additional configuration properties in your custom ima
 For instance:
 
 ```Dockerfile
-FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 
 COPY /path/to/my-configuration.properties /etc/nuxeo/conf.d/my-configuration.properties
 ```
@@ -81,16 +81,14 @@ COPY /path/to/my-configuration.properties /etc/nuxeo/conf.d/my-configuration.pro
 As it contains some non-free codecs, FFmpeg isn't part of the Nuxeo image. However, you can build a custom Docker image, based on the Nuxeo one, including the `ffmpeg` package provided by [RPM Fusion](https://rpmfusion.org/), see the `Dockerfile` sample  below. The resulting `ffmpeg` binary embeds all the codecs required for Nuxeo video conversions.
 
 ```Dockerfile
-FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
+FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 
-# we need to be root to run yum commands
+# we need to be root to run dnf commands
 USER 0
-# install EPEL, PowerTools and RPM Fusion free repositories
-RUN dnf -y install epel-release \
-  && dnf config-manager --set-enabled crb \
-  && dnf -y install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm
+# install RPM Fusion free repository
+RUN dnf -y install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm
 # install ffmpeg package
-RUN dnf -y install ffmpeg
+RUN dnf -y --enablerepo=ol9_codeready_builder install ffmpeg
 # set back original user
 USER 900
 ```
