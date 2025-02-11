@@ -422,7 +422,7 @@ Watch the related courses on Hyland University:
 - A Contract document type created on this [page]({{page page='web-ui-document-layouts'}})
 - An IDE that integrates with Maven.</br>
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
-- Java 17 with JDK
+- Java 21 with JDK
 - Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}}))
 - The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
 - npm 2.12.0+
