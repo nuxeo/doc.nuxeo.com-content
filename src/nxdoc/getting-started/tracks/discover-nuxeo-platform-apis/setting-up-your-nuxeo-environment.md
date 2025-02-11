@@ -346,7 +346,7 @@ Your server is now running. You benefit from the [features](#content-of-the-gett
 
 Contrarily to the Docker image, the universal ZIP package comes without the related software needed for this tutorial. Please [install and set up related software]({{page page='installing-and-setting-up-related-software'}}) before going to the next step.
 
-{{{multiexcerpt 'lts2023-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2025-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ### Installation
 

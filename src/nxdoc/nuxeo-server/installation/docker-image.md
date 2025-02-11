@@ -1,7 +1,7 @@
 ---
 title: Install Nuxeo with the Docker Image
 review:
-  date: '2023-04-03'
+  date: '2025-10-11'
   status: ok
 labels:
   - multiexcerpt
@@ -28,11 +28,11 @@ Watch the related course on Hyland University:</br>
 
 ## Requirements
 
-{{{multiexcerpt 'lts2023-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2025-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ## Architectures
 
-The Nuxeo 2023 Docker image, `docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023`, supports multiple platforms: it contains variants for the `amd64` (`x86`) and `arm64v8` architectures.
+The Nuxeo 2025 Docker image, `docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025`, supports multiple platforms: it contains variants for the `amd64` (`x86`) and `arm64v8` architectures.
 
 When pulling this image, Docker automatically selects the variant that matches your OS and architecture. For instance, if you're running on:
 
@@ -42,23 +42,23 @@ When pulling this image, Docker automatically selects the variant that matches y
 **The `arm64` variant doesn't include the LibreOffice converter**. Unfortunately, there is currently no LibreOffice RPM package available in a recent version for Oracle Linux (the base OS) in the `arm64` architecture. Consequently:
 
 {{#> callout type='warning' }}
-The `arm64` variant of the Nuxeo 2023 Docker image is not production-ready. It is for development purpose only. When running `docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023` or `docker run docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023`, if you're running on an ARM64 architecture (typically Apple Silicon M1), the pulled Docker image doesn't include LibreOffice. Thus, the conversion features relying on LibreOffice won't be available, typically converting Office documents to PDF.
+The `arm64` variant of the Nuxeo 2025 Docker image is not production-ready. It is for development purpose only. When running `docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025` or `docker run docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025`, if you're running on an ARM64 architecture (typically Apple Silicon M1), the pulled Docker image doesn't include LibreOffice. Thus, the conversion features relying on LibreOffice won't be available, typically converting Office documents to PDF.
 {{/callout}}
 
 {{#> callout type='info' }}
-You can force the target platform when pulling or running the Docker image with the `--platform` option, for instance to pull the `amd64` variant: `docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023 --platform=linux/amd64`
+You can force the target platform when pulling or running the Docker image with the `--platform` option, for instance to pull the `amd64` variant: `docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025 --platform=linux/amd64`
 {{/callout}}
 
 ## What's in the Nuxeo Image
 
-The Nuxeo Docker image is described by this [Dockerfile](https://github.com/nuxeo/nuxeo/blob/master/docker/Dockerfile).
+The Nuxeo Docker image is described by this [Dockerfile](https://github.com/nuxeo/nuxeo-lts/blob/2025/docker/nuxeo/Dockerfile).
 
 Based on Oracle Linux 9, it includes:
 
 - Azul's [Zulu OpenJDK 21](https://www.azul.com/downloads/?version=java-21-lts&package=jdk#zulu).
 - A bare Nuxeo server without any package installed.
 - A default embedded database, H2 (only valid for testing purposes).
-- An embedded Elasticsearch (only valid for testing purposes too).
+- An embedded repository search (only valid for testing purposes too).
 - Some basic Open Source converters, e.g.: ImageMagick, LibreOffice.
 - A `nuxeo` user with the `900` fixed UID.
 - The directories required to have the Nuxeo configuration, data and logs outside of the server directory, with appropriate permissions.
@@ -82,24 +82,24 @@ docker login docker-private.packages.nuxeo.com -u <username> -p <token_pass_code
 To pull the latest tag of the `nuxeo/nuxeo` image from the Docker registry and run a container from it, run:
 
 ```shell
-docker run --name nuxeo -p 8080:8080 docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
+docker run --name nuxeo -p 8080:8080 docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 ```
 
-The `2023` tag points to the latest release, for instance [2023.0](https://github.com/nuxeo/nuxeo-lts/releases/tag/v2023.0).
+The `2025` tag points to the latest release, for instance [2025.0](https://github.com/nuxeo/nuxeo-lts/releases/tag/v2025.0).
 
-To get the latest build, versioned `2023.x.y`, you can use the `2023.x` tag.
+To get the latest build, versioned `2025.x.y`, you can use the `2025.x` tag.
 
 The default command executed when running a container is `nuxeoctl console`. It can be overridden by specifying an argument to `docker run`. For instance, to open a bash shell in the container and automatically remove the container when it exits, just run:
 
 ```shell
-docker run -it --rm docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023 bash
+docker run -it --rm docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025 bash
 ```
 
 For a production setup and general best practices, please read about [Mounting Data, Log and Temporary Directories as Volumes]({{page page='setup-best-practices'}}#mounting-data-log-and-temporary-directories-as-volumes).
 
 ## Configuring the Image at Runtime
 
-Though we encourage to have immutable images [configured at build time]({{page page='build-a-custom-docker-image'}}), in some cases it makes sense to configure a container at runtime. This typically applies to the address and credentials of each back-end store (database, Elasticsearch, S3, etc.) that are specific to a given deployment: development, staging, production, etc.
+Though we encourage to have immutable images [configured at build time]({{page page='build-a-custom-docker-image'}}), in some cases it makes sense to configure a container at runtime. This typically applies to the address and credentials of each back-end store (database, OpenSearch, S3, etc.) that are specific to a given deployment: development, staging, production, etc.
 
 ### Configuration Properties
 
@@ -126,7 +126,7 @@ For instance, to make the Nuxeo Launcher display the JVM settings in the console
 docker run --name nuxeo \
   -p 8080:8080 \
   -e JAVA_OPTS=-XshowSettings:vm \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 ```
 
 #### NUXEO_CLID
@@ -139,7 +139,7 @@ For instance, to run a container with a registered Nuxeo instance:
 docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CLID=<NUXEO_CLID> \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 ```
 
 #### NUXEO_CONNECT_URL
@@ -152,7 +152,7 @@ For instance, to run a container with another Connect URL than the default one:
 docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CONNECT_URL=<NUXEO_CONNECT_URL> \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 ```
 
 #### NUXEO_PACKAGES
@@ -166,7 +166,7 @@ docker run --name nuxeo \
   -p 8080:8080 \
   -e NUXEO_CLID=<NUXEO_CLID> \
   -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-drive" \
-  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
+  docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 ```
 
 #### NUXEO_DEV
@@ -191,11 +191,11 @@ Setting `NUXEO_DEV=true` allows to run the Nuxeo image in development mode, mean
     docker run --name nuxeo \
       -p 8080:8080 \
       -e NUXEO_DEV=true \
-      docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
+      docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 
     docker ps
     CONTAINER ID   IMAGE
-    0eee2751d09d   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
+    0eee2751d09d   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 
     docker exec 0eee2751d09d nuxeoctl restart
     ```

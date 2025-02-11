@@ -1,16 +1,13 @@
 ---
 title: Installation
-description: Nuxeo Platform LTS 2023 can be deployed with the Nuxeo Docker image. It can be installed on all major operating system such as Windows, Linux distributions or macOS.
+description: Nuxeo Platform can be deployed with the Nuxeo Docker image. It can be installed on all major operating system such as Windows, Linux distributions or macOS.
 review:
   comment: ''
-  date: '2023-04-03'
+  date: '2025-10-11'
   status: ok
 labels:
-  - lts2016-ok
   - multiexcerpt
   - multiexcerpt-include
-  - lts2017-ok
-  - pabgrall
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
@@ -25,24 +22,20 @@ confluence:
   shortlink_source: 'https://doc.nuxeo.com/x/PQA7'
   source_link: /display/NXDOC/Installation
 tree_item_index: 100
-version_override:
-  LTS 2015: 710/admindoc/installation
-  '6.0': 60/admindoc/installation
-  '5.8': 58/admindoc/installation
 ---
 
-Nuxeo Platform LTS 2023 can be deployed with the **Nuxeo Docker image** (recommended) or using the **ZIP distribution**. It can be installed on all major operating system such as Windows (client or server), Linux distributions, macOS, etc.
+Nuxeo Platform can be deployed with the **Nuxeo Docker image** (recommended) or using the **ZIP distribution**. It can be installed on all major operating system such as Windows (client or server), Linux distributions, macOS, etc.
 
 - [Install Nuxeo with the Docker Image]({{page version='' space='nxdoc' page='docker-image'}})
 - [Install Nuxeo with the ZIP distribution]({{page version='' space='nxdoc' page='tomcat-server-zip'}})
 
 You can also deploy Nuxeo Platform in [Kubernetes](https://kubernetes.io/) (K8s) with the [Nuxeo Helm Chart]({{page page='kubernetes-helm-chart'}}).
 
-{{{multiexcerpt 'lts2023-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2025-general-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 ## Why using the Nuxeo Docker Image?
 
-{{{multiexcerpt 'lts2023-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2025-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 The [Nuxeo Platform](https://www.nuxeo.com/content-services-platform/) can be installed on many operating systems by running the Nuxeo [Docker image]({{page page='docker-image'}}).
 
@@ -98,7 +91,6 @@ If you have requirements and/or constraints are not reflected below, **do not he
           <ul>
             <li>[Web UI]({{page page='web-ui'}})</li>
             <li>[Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}})</li>
-            <li>[JSF UI]({{page page='nuxeo-jsf-ui'}})</li>
           </ul>
         </td>
         <td colspan="1"></td>

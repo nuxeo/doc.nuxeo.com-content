@@ -1,7 +1,7 @@
 ---
 title: Quickstart with Nuxeo Platform and Docker
 review:
-  date: '2023-04-03'
+  date: '2025-10-11'
   status: ok
 toc: true
 description: Useful commands in dev mode with Docker, and recommendations when going on production
@@ -16,21 +16,23 @@ This page details the fundamental commands you need to deploy your Nuxeo applica
 
 We recommend to use the [default Nuxeo Docker image]({{page page='docker-image'}}#nuxeo_dev) in **development mode** (`NUXEO_DEV=true`), allowing you to hot reload your instance, and stop the server without shutting down the container.
 
-### Get and Run the LTS 2023 Docker Image
+### Get and Run the LTS 2025 Docker Image
 
-{{{multiexcerpt 'lts2023-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'lts2025-docker-prerequisites' space='nxdoc' page='generic-multi-excerpts'}}}
 
 Execute the following command line:
-```
+
+```shell
 $ docker run --name nuxeo \
    -e NUXEO_CLID="<NUXEO_CLID>" \
    -p 8080:8080 \
    -e NUXEO_DEV=true \
    -e NUXEO_PACKAGES="nuxeo-web-ui" \
-   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
+   docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 ```
 
 Few notes:
+
 - You can add `--rm` option if your container should be deleted when shut down
 - To have different containers, change the name of your container
 
@@ -38,7 +40,7 @@ Few notes:
 
 To start/stop your Nuxeo instance, use this command:
 
-```
+```shell
 docker start/stop nuxeo
 ```
 
@@ -48,28 +50,29 @@ Remember that the `nuxeo` value corresponds to the name of the container you hav
 
 `nuxeoctl` is made available in dev mode, and the container is not shut down when stopping the server in development mode:
 
-```
+```shell
 docker exec nuxeo nuxeoctl stop
 ```
 
 ### Install Packages
 
 Either edit the `NUXEO_PACKAGES` values when running the container, or use the `nuxeoctl` script:
+
 1. `docker exec nuxeo nuxeoctl stop`
-1. `docker exec nuxeo nuxeoctl mp-install <package_name>`
-1. `docker exec nuxeo nuxeoctl start`
+2. `docker exec nuxeo nuxeoctl mp-install <package_name>`
+3. `docker exec nuxeo nuxeoctl start`
 
 ### View Logs
 
 By default, the server logs are printed to the standard output when running the Nuxeo container.
 If you've run the Nuxeo container with a different command than the default one, e.g. `docker exec nuxeo nuxeoctl start`, you can view the logs with:
 
-```
+```shell
 docker logs -f nuxeo
 ```
 or
 
-```
+```shell
 docker exec  nuxeo tail -n500 -f /var/log/nuxeo/server.log
 ```
 
@@ -77,7 +80,7 @@ docker exec  nuxeo tail -n500 -f /var/log/nuxeo/server.log
 
 If you need to explore the Nuxeo installation folder:
 
-```
+```shell
 docker exec -it nuxeo bash
 ```
 
@@ -88,7 +91,7 @@ For now, the entire Nuxeo stack, 3rd party software and data are hosted inside t
 - To test / repeat / rollback a Nuxeo upgrade because you'll be inevitably altering the database and files
 - To validate a "production-like" architecture:
   - Use an external database as MongoDB
-  - Use an Elasticsearch cluster
+  - Use an OpenSearch cluster
   - Use Kafka to run the stream-related features
 
 Let's review the key elements which should be taken into account when going into more complex architecture.
@@ -98,6 +101,7 @@ Let's review the key elements which should be taken into account when going into
 First, it is important [to customize the Nuxeo Docker Image]({{page page='build-a-custom-docker-image'}}) by building a Docker image from the Nuxeo one to have immutable images configured at build time.
 
 It is necessary then:
+
 - To build a custom Dockerfile
 - To install the Nuxeo packages and set your configuration properties on build time (Dockerfile), not runtime.
 
