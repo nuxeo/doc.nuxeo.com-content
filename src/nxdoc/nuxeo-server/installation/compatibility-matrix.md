@@ -81,15 +81,15 @@ The Nuxeo Platform supports the following databases.
   <li>
     Recommended, validated by continuous integration:
     <ul>
-      <li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 6.0.2{{! /multiexcerpt}}</li>
-      <li>{{! multiexcerpt name='PostgreSQL-supported'}}PostgreSQL 13{{! /multiexcerpt}}</li>
+      <li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 8{{! /multiexcerpt}}</li>
+      <li>{{! multiexcerpt name='PostgreSQL-supported'}}PostgreSQL 16{{! /multiexcerpt}}</li>
     </ul>
   </li>
   <li>
     Supported, not validated by continuous integration:
     <ul>
-      <li>MongoDB 4.0, 4.2 and 4.4</li>
-      <li>PostgreSQL 11 and 12</li>
+      <li>MongoDB greater than 4.0</li>
+      <li>PostgreSQL greater than 11</li>
       <li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.3{{! /multiexcerpt}}</li>
       <li>{{! multiexcerpt name='MySQL-supported'}}MySQL 8.0{{! /multiexcerpt}}</li>
       <li>{{! multiexcerpt name='Oracle-supported'}}Oracle 18c{{! /multiexcerpt}}</li>
@@ -113,7 +113,7 @@ Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). The supporte
 
 {{! multiexcerpt name='supported-app-servers-versions'}}
 <ul>
-  <li>Tomcat 9.0.x</li>
+  <li>Tomcat 10.1.x</li>
 </ul>
 {{! /multiexcerpt}}
 
@@ -123,7 +123,7 @@ Nuxeo is shipped with an embedded Tomcat server.
 
 ## OpenSearch
 
-Nuxeo Platform is tested against an OpenSearch cluster {{! multiexcerpt name='opensearch_cluster_supported_version'}}1.3.6{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch_libraries_supported_version'}}1.3.11{{! /multiexcerpt}}.
+Nuxeo Platform is tested against an OpenSearch cluster {{! multiexcerpt name='opensearch_cluster_supported_version'}}1.3.19{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch_libraries_supported_version'}}1.3.19{{! /multiexcerpt}}.
 
 More information can be found on the [OpenSearch Setup]({{page page='search-setup'}}) page.
 
@@ -137,7 +137,7 @@ More information can be found on the [Elasticsearch Setup]({{page page='search-s
 
 ## Kafka
 
-Nuxeo Platform is tested against a Kafka cluster {{! multiexcerpt name='kafka_supported_version'}}3.6.0{{! /multiexcerpt}} using Kafka Java libraries {{! multiexcerpt name='kafka_libraries_supported_version'}}3.6.0{{! /multiexcerpt}}.
+Nuxeo Platform is tested against a Kafka cluster {{! multiexcerpt name='kafka_supported_version'}}3.8.0{{! /multiexcerpt}} using Kafka Java libraries {{! multiexcerpt name='kafka_libraries_supported_version'}}3.9.0{{! /multiexcerpt}}.
 
 Kafka supports backward and forward compatibility, though we advise to use the latest available stable version.
 
@@ -146,6 +146,5 @@ Kafka supports backward and forward compatibility, though we advise to use the l
 {{! multiexcerpt name='supported-browsers'}}
 Depending on the user interface addon or applications you use, the browser requirements can differ. See the relevant pages:
 
-- [Nuxeo JSF UI]({{page page='nuxeo-jsf-ui'}})
 - [Nuxeo Web UI]({{page page='web-ui-overview'}}#requirements)
 {{! /multiexcerpt}}
