@@ -103,6 +103,14 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 67
+
+### Upgrade Protobuf-Java-Util to Fix CVE-2024-7254
+
+
+The `com.google.protobuf:protobuf-java-util` transitive dependency now has a fixed version, it has been upgraded from 3.7.1 to 3.25.5.
+
+
 ## Hotfix 64
 
 ### Fix Vulnerability in saml2-authentication-2021.x
