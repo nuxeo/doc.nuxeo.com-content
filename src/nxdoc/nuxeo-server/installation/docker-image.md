@@ -46,7 +46,7 @@ The `arm64` variant of the Nuxeo 2025 Docker image is not production-ready. It i
 {{/callout}}
 
 {{#> callout type='info' }}
-You can force the target platform when pulling or running the Docker image with the `--platform` option, for instance to pull the `amd64` variant: `docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025 --platform=linux/amd64`
+You can force the target platform when pulling or running the Docker image with the `--platform` option. For instance, to pull the `amd64` variant: `docker pull docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025 --platform=linux/amd64`
 {{/callout}}
 
 ## What's in the Nuxeo Image
