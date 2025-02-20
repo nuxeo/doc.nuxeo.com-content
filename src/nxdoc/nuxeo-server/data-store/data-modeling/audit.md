@@ -133,11 +133,13 @@ The data record structure is defined in Java by the `LogEntry` and `ExtendedInfo
 
 Nuxeo documents and events can have a lot of custom properties, so if you want to log some specific events or document properties, the [Extended Info](#extendedinfo) allows for a Key/Value type storage that will be associated to the main `LogEntry` record. These informations are extracted from the event message using and EL (Expression Language) expression and stored into a map.
 
-By default, since Nuxeo LTS 2015, the data store relies on the [Elasticsearch Back-end](#elasticsearch-back-end). To disable Elasticsearch for Audit logs and use the [Legacy SQL Back-end](#legacy-sql-back-end) please refer to the [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-es-for-audit-logs) section.
+Since LTS 2025 you have to explicitly choose a backend implementation, see below.
 
-### Elasticsearch Back-end
+### OpenSearch/Elasticsearch Back-end
 
-The audit entries are stored in the Elasticsearch index named by the `audit.elasticsearch.indexName` property in `nuxeo.conf`.
+By installing the `nuxeo-audit-opensearch1` package, you have the previous default behavior of storing audit into an OpenSearch/Elasticsearch cluster.
+
+The audit entries are stored in an OpenSearch index named by the `nuxeo.audit.backend.default.opensearch1.index.name` property (previously `audit.elasticsearch.indexName`) in `nuxeo.conf`.
 
 {{#> callout type='warning' }}
 Make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}#backingupandrestoringtheauditelasticsearchindex) section.
@@ -147,7 +149,7 @@ Fore more information about the global Elasticsearch setup, see [Elasticsearch S
 
 ### Legacy SQL Back-end
 
-If Elasticsearch is disabled for Audit logs, the data store is built over a relational database back-end.
+To use the legacy SQL back-end, you have to install the `nuxeo-audit-sql` package.
 
 The `LogEntry` and `ExtendedInfo` Java classes are mapped onto the datastore using JPA (Java Persistence API) annotations.
 
@@ -157,7 +159,9 @@ There are three tables used by the Audit Service: `NXP_LOGS`, `NXP_LOGS_EXTINFO`
 
 ### MongoDB Back-end
 
-The audit entries can also be stored in a MongoDB database. The entries will be stored in the `audit` collection by default. To enable the MongoDB data store in place of the Elasticsearch or SQL ones, activate the `mongodb-audit` template in `nuxeo.conf`.
+To use MongoDB back-end, you have to install the `nuxeo-audit-mongodb` package.
+
+The entries will be stored in the `audit` collection by default.
 
 ## Querying the Audit Data Store
 

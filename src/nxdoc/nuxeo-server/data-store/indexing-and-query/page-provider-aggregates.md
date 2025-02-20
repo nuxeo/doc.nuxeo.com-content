@@ -1,6 +1,6 @@
 ---
 title: Page Provider Aggregates
-description: When using the Elasticsearch Page Provider, you can define aggregates that will be returned along with the query result.
+description: When using the SearchService Page Provider, you can define aggregates that will be returned along with the query result.
 review:
     comment: ''
     date: '2017-12-13'
@@ -151,24 +151,24 @@ history:
 
 ---
 {{! excerpt}}
-When using the Elasticsearch Page Provider, you can define aggregates that will be returned along with the query result.
+When using the SearchService Page Provider, you can define aggregates that will be returned along with the query result.
 {{! /excerpt}}
+  
+You can define a page provider that will query documents from the SearchService. The Nuxeo Platform takes advantage of the search client implementation such as Elasticsearch/OpenSearch and you can define your own aggregates within a page provider definition. Please refer to [Elasticsearch documentation about aggregates](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations.html) for more information.
 
-You can define a page provider that will query documents from Elasticsearch. The Nuxeo Platform takes advantage of the Elasticsearch aggregate module and you can define your own aggregates within a page provider definition. Please refer to [Elasticsearch documentation about aggregates](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations.html) for more information.
-
-As for now, the Nuxeo Platform focuses on bucket aggregation. In addition to accessing the documents returned by a page provider, you will be able to get and expose each bucket of the aggregates you have defined in this page provider. Quoting Elasticsearch documentation:
+The Nuxeo Platform focuses on bucket aggregation. In addition to accessing the documents returned by a page provider, you will be able to get and expose each bucket of the aggregates you have defined in this page provider. Quoting Elasticsearch documentation:
 
 > Each bucket is associated with a criterion (depending on the aggregation type) which determines whether or not a document in the current context "falls" into it. In other words, the buckets effectively define document sets. In addition to the buckets themselves, the 'bucket' aggregations also compute and return the number of documents that "fell in" to each bucket.
 
-Nuxeo Platform [default search](https://github.com/nuxeo/nuxeo-features/blob/6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L7) leverages Elasticsearch aggregates on some default document properties.
+When the `nuxeo-search-client-opensearch1` package is installed, the Nuxeo Platform default search leverages OpenSearch aggregates on some default document properties.
 
 ![Nuxeo 6.0 default search]({{file name='aggregates.png'}} ?w=600 'Nuxeo 6.0 default search')
 
-The picture above shows the [default search](https://github.com/nuxeo/nuxeo-features/blob/6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L7) of Nuxeo Platform. On the left-hand side panel, you can see the search layout with search criteria for the current search (such as full text) and also some aggregates results (Creation date, Modification date, Author, Nature, Subjects, Coverage, Size). For example, according to the screen shot, for the current document result set, there are 58 documents whose the size is less than 100KB.
+The picture above shows the [default search](https://github.com/nuxeo/nuxeo-features/blob/6.0/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml#L7) of Nuxeo Platform. On the left-hand side panel, you can see the search layout with search criteria for the current search (such as full text) and also some aggregates results (Creation date, Modification date, Author, Nature, Subjects, Coverage, Size). For example, according to the screenshot, for the current document result set, there are 58 documents whose the size is less than 100KB.
 
-The aggregate navigation allows multiple selections and is adaptive. For instance if you select a Size aggregate "less than 100KB", this filter will be applied to the search result and to other aggregates. But the filter is not applied to the Size aggregate itself, so you are still able to see other Size repartitions and you can extend the selection by checking another values.
+The aggregate navigation allows multiple selections and is adaptive. For instance if you select a Size aggregate "less than 100KB", this filter will be applied to the search result and to other aggregates. But the filter is not applied to the Size aggregate itself, so you are still able to see other Size repartitions, and you can extend the selection by checking another values.
 
-Even with multiple aggregates, all of this is done with a single Elasticsearch query including the search results. The technical principle is similar to the one described in the [blog post "Build Zappos like faceted navigation with ElasticSearch"](http://distinctplace.com/2014/07/29/build-zappos-like-products-facets-with-elasticsearch/).
+Even with multiple aggregates, all of this is done with a single query including the search results. The technical principle is similar to the one described in the [blog post "Build Zappos like faceted navigation with ElasticSearch"](http://distinctplace.com/2014/07/29/build-zappos-like-products-facets-with-elasticsearch/).
 
 Note that aggregate results are either displayed with a checkbox-based widget or a select2-based widget. For further documentation on widgets displaying aggregate results, please refer to the page [Aggregate Widget Types]({{page page='aggregate-widget-types'}}).
 

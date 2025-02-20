@@ -469,26 +469,25 @@ history:
 This page provides several configuration use cases for [Elasticsearch](https://www.nuxeo.com/partners/technology/elasticsearch/) and [Opensearch](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/).
 {{! /excerpt}}
 
-## Setting up an Elasticsearch or OpenSearch Cluster
+## Setting up an OpenSearch 1.x, Elasticsearch 7.x or 8x Cluster
 
-Nuxeo supports Elasticsearch and OpenSearch clusters.
+To support OpenSearch 1.x, Elasticsearch 7x or 8x clusters, you need to install `nuxeo-search-client-opensearch1` package.
 
 OpenSearch 1 is a fork of Elasticsearch 7, except some advanced features (not used by Nuxeo) they are fully compatible.
 
-Nuxeo 2023 is defining index settings, mappings and uses the Rest API according to Elasticsearch 7 version (equivalent to OpenSearch 1 version). 
-Nuxeo is relying on OpenSearch client library to access the search cluster.
+The `nuxeo-search-client-opensearch1` package is defining index settings, mappings and uses the Rest API according to Elasticsearch 7 version (equivalent to OpenSearch 1 version). 
+It relies on OpenSearch 1.x client library to access the search cluster.
 
-Note that for historical reasons, Nuxeo 2023 continues to name "Elasticsearch" its search service and configuration options.
-Elasticsearch and OpenSearch could be used interchangeably in the documentation.
+Note that for historical reasons you may find some "Elasticsearch" occurrences in configuration properties.
+Because they are compatible for these versions, Elasticsearch and OpenSearch could be used interchangeably in the documentation.
 
-In addition to OpenSearch 1 and Elasticsearch 7, Nuxeo also works with Elasticsearch 8 cluster,
-as Elasticsearch 8 being backward compatible and able to honor Elasticsearch 7 API.
+In addition to OpenSearch 1 and Elasticsearch 7, Nuxeo also works with Elasticsearch 8 cluster, as Elasticsearch 8 being backward compatible and able to honor Elasticsearch 7 API.
 
 Please refer to [Compatibility Matrix]({{page page='compatibility-matrix'}}#elasticsearch) page for more information on the exact supported versions.
 
 ### Embedded Mode
 
-The default configuration uses an embedded OpenSearch instance that runs in the same JVM as the Nuxeo Platform's.
+Unlike previous versions, there is no default embedded mode in Nuxeo LTS 2025. If you want to set up an OpenSearch server that runs in the same JVM as the Nuxeo Platform's, you have to install explicitly the `nuxeo-opensearch1-embed` package.
 
 {{#> callout type='warning' }}
 This embedded mode **is only for testing purpose** and should not be used in production, neither OpenSearch nor Nuxeo can support an embedded installation.
@@ -595,34 +594,42 @@ OPENSEARCH_JAVA_OPTS=-Xms6g -Xmx6g
 
 Nuxeo uses the Rest client protocol, you have to configure the access:
 ```
-elasticsearch.addressList=http://somenode:9200,https://anothernode:443
+nuxeo.opensearch1.client.server=http://somenode:9200,https://anothernode:443
 ```
 Where:
-- `elasticsearch.addressList` is a comma separated list of URL.
+- `nuxeo.opensearch1.client.server`  is a comma separated list of URLs.
+
+This property supersedes `elasticsearch.addressList`.
 
 ### Basic Authentication
 
 If you have chosen to configure Basic Authentication then you can setup Nuxeo using `nuxeo.conf` with the follow properties:
 
 ```
-elasticsearch.restClient.username=your_username
-elasticsearch.restClient.password=your_password
+nuxeo.opensearch1.client.username=your_username
+nuxeo.opensearch1.client.password=your_password
 ```
+
+These properties supersede `elasticsearch.restClient.username` and `elasticsearch.restClient.password`.
+
 ### TLS/SSL Configuration
 
 If you have chosen to configure [Elasticsearch TLS/SSL](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-basic-setup.html#security-basic-setup) or [OpenSearch TLS/SSL](https://opensearch.org/docs/1.3/security/configuration/tls/) then you can set up Nuxeo using `nuxeo.conf` with the following properties:
 
 ```
-elasticsearch.restClient.truststore.path
-elasticsearch.restClient.truststore.password
-elasticsearch.restClient.truststore.type
-elasticsearch.restClient.keystore.path
-elasticsearch.restClient.keystore.password
-elasticsearch.restClient.keystore.type
+nuxeo.opensearch1.client.trustStore.path
+nuxeo.opensearch1.client.truststore.path
+nuxeo.opensearch1.client.truststore.password
+nuxeo.opensearch1.client.truststore.type
+nuxeo.opensearch1.client.keystore.path
+nuxeo.opensearch1.client.keystore.password
+nuxeo.opensearch1.client.keystore.type
 ```
 
+These properties supersede all `elasticsearch.restClient.*` properties.
+
 {{#> callout type='warning' }}
-If you are using TLS/SSL then the `elasticsearch.addressList` will need to be updated to include `https`.
+If you are using TLS/SSL then the `nuxeo.opensearch1.client.server` will need to be updated to include `https`.
 {{/callout}}
 
 See the [Trust Store and Key Store Configuration]({{page page='trust-store-and-key-store-configuration'}}) page for more.
@@ -635,62 +642,42 @@ Nuxeo manages 3 Elasticsearch indexes:
 - The audit logs index to store audit entries, this index is a primary storage and can not be rebuild.
 - A sequence index used to serve unique value that can be used as primary keys, this index is also a primary storage.
 
-To make the connection between the Nuxeo Platform instance and the ES cluster check the following options in the `nuxeo.conf` file and edit if you need to change the default value:
+To make the connection between the Nuxeo Platform instance and the Search cluster, check the following options in the `nuxeo.conf` file and edit if you need to change the default value:
 
 ```
-elasticsearch.indexName=nuxeo
-elasticsearch.indexNumberOfReplicas=0
-audit.elasticsearch.indexName=${elasticsearch.indexName}-audit
-seqgen.elasticsearch.indexName=${elasticsearch.indexName}-uidgen
+nuxeo.search.client.default.opensearch1.index.name=nuxeo
+nuxeo.search.client.default.opensearch1.settings.numberOfReplicas=0
+nuxeo.audit.backend.default.opensearch1.index.name=nuxeo-audit
+nuxeo.audit.backend.default.opensearch1.settings.numberOfReplicas=0
+nuxeo.uidsequencer.default.opensearch1.index.name=nuxeo-uidgen
 ```
 
 Where
 
-- `elasticsearch.indexName` is the name of the Elasticsearch index for the default document repository.
-- `elasticsearch.indexNumberOfReplicas` is the number of replicas. By default [you have 1 shard and 1 replica](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/index-modules.html). If you have a single node in your cluster you should set the `indexNumberOfReplicas`to `0`. Visit the [Elasticsearch Scalability documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/scalability.html) for more information on shards and replicas.
-- `audit.elasticsearch.indexName` is the name of the Elasticsearch index for audit logs.
-- `seqgen.elasticsearch.indexName` is the name of the Elasticsearch index for the uid sequencer, extensively used for audit logs.
+- `nuxeo.search.client.default.opensearch1.index.name` is the name of the OpenSearch index for the default document repository.
+- `nuxeo.search.client.default.opensearch1.settings.numberOfReplicas` is the number of replicas. By default [you have 1 shard and 1 replica](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/index-modules.html). If you have a single node in your cluster you should set the `indexNumberOfReplicas`to `0`. Visit the [Elasticsearch Scalability documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/scalability.html) for more information on shards and replicas.
+- `nuxeo.audit.backend.default.opensearch1.index.name` is the name of the OpenSearch index for audit logs.
+- `nuxeo.uidsequencer.default.opensearch1.index.name` is the name of the OpenSearch index for the uid sequencer, extensively used for audit logs.
 
 You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/server/nuxeo-nxr-server/src/main/resources/templates/common-base/nuxeo.defaults).
 
+These properties supersede: `elasticsearch.indexName`, `elasticsearch.indexNumberOfReplicas`, `audit.elasticsearch.indexName`, `seqgen.elasticsearch.indexName`.
+
 #### Index Aliases and Reindexing without Service Interruption
 
-Reindexing the repository can be a long operation depending on the size of the repository.
-This is an administrative procedure that is required in order to apply a new Elastic mapping or setting.
-
-By default, when Nuxeo performs a reindex of the repository, it deletes and re-creates the Elastic index then it submits all the documents for indexation.
-During this operation only the indexed documents are searchable, this would impact strongly the user experience and, it requires a service interruption.
-
-To avoid this Nuxeo can manage 2 indexes at the same time, the current one with continue to serve queries and index new document modifications,
-while the new one is going to reindex the entire repository (including the new updates). On completion Nuxeo will switch to the new index.
-
-Nuxeo leverages Elastic Aliases to do this, it manages 2 aliases: one for searching using the name of the contrib (default to `nuxeo`), one for writing with a `-write` suffix (default to `nuxeo-write`),
-both aliases will point to the same index (`nuxeo-0000` at the beginning). The index name ends with a number and is automatically incremented when reindexing.
-
-Here is how to proceed:
-
-1. Nuxeo must be configured to manage Elastic aliases, add the `elasticsearch.manageAlias.enabled=true` in your `nuxeo.conf`
-{{#> callout type='warning' }}
-   Note that if you are switching an existing instance to use managed aliases it will require a service interruption.
-   Stop Nuxeo and drop the existing `nuxeo` index, then activate the manage aliases option and, start Nuxeo, proceed to a repository reindexing while service is interrupted.
-   The next reindexing will not require service interruption.
-{{/callout}}
-2. Perform a full reindexing using the [Bulk Service](#reindexing-bulk) (the legacy reindexing will not work properly during reindexing).
-3. On completion, you have to delete the old unused index.
-
-{{#> callout type='warning' }}
-Note that using managed aliases requires more disk space on Elastic nodes because you have multiple indexes of the repository.
-Also, you have to manually delete old repository indexes when reindexing is completed.
-{{/callout}}
+This feature is planned but not available in the first release of Nuxeo LTS 2025.0.
 
 ### Translog Tuning
 
-To reduce disk IO you should consider changing the default [translog](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/index-modules-translog.html)
-durability from `request` to `async`.
+To reduce disk IO you should consider changing the default [translog](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/index-modules-translog.html) durability from `request` to `async`.
 This can be done from `nuxeo.conf`:
 ```
-elasticsearch.index.translog.durability=async
+nuxeo.search.client.default.opensearch1.settings.indexTranslogDurability=async
+nuxeo.audit.backend.default.opensearch1.settings.indexTranslogDurability=async
+nuxeo.uidsequencer.default.opensearch1.settings.indexTranslogDurability=async
 ```
+
+These properties supersede the `elasticsearch.index.translog.durability`.
 
 If your indexes are already created you need some manual operation to change the translog:
 ```bash
@@ -710,90 +697,29 @@ curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo/_set
 
 ## Disabling Elasticsearch
 
-Elasticsearch is enabled by default, if you want to disable Elasticsearch indexing and search you can simply add the following option to the `nuxeo.conf`:
-
-```
-elasticsearch.enabled=false
-```
+Simply don't install the `nuxeo-search-client-opensearch1` package.
 
 ### Disabling Elasticsearch for Audit Logs{{> anchor 'disabling-es-for-audit-logs'}}
 
-When Elasticsearch is enabled and the `audit.elasticsearch.enabled` property is set to `true` in `nuxeo.conf` which is the case by default, Elasticsearch is used as a backend for audit logs.
-
-This improves scalability, especially when using Nuxeo Drive with a large set of users.
-
-{{#> callout type='warning' }}
-When Elasticsearch is used as a backend for audit logs it becomes the reference (no more SQL backend as it was the case in Nuxeo versions lower than 7.3).
-
-For this purpose make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}) page.
-{{/callout}}
-
-If you want to disable Elasticsearch and use the SQL database as the default backend for audit logs you can simply update this property in `nuxeo.conf`:
-
-```
-audit.elasticsearch.enabled=false
-```
+Simply, don't install the `nuxeo-audit-opensearch1` package.
 
 ## Rebuilding the Repository Index{{> anchor 'reindex'}}
 
 If you need to reindex the whole repository, you have different possibilities:
 
-### Re-index the Repository Using the WorkManager (the legacy way)
-
-There are 3 ways to run it:
-
-1. From the [Nuxeo Dev Tool Browser Extension]({{page page='nuxeo-dev-tools-extension'}}#features).
-
-2. From JSF UI (DEPRECATED) > Admin center > Elasticsearch > Admin
-
-3. Using `curl`
-
-```bash
-curl -X POST "<NUXEO_URL>/nuxeo/site/automation/Elasticsearch.Index" -u Administrator:<PASSWORD> -H 'content-type: application/json' -d '{"params":{},"context":{}}'
-```
-
-Look at the `server.log` you should have 3 WARNs in the logs:
-```
-# start of re-indexing
-WARN  [http-nio-0.0.0.0-8080-exec-31] [org.nuxeo.elasticsearch.web.admin.ElasticSearchManager] Re-indexing the entire repository: default
-...
-# all the repository have been scrolled we know how much document are going to be re-indexed
-WARN  [Nuxeo-Work-elasticSearchIndexing-1:785116626625974.1486048658] [org.nuxeo.elasticsearch.work.ScrollingIndexingWorker] Re-indexing job: /elasticSearchIndexing:785116626625974.1486048658 has submited 270197 documents in 541 bucket workers
-...
-# end of the re-indexing
-WARN  [Nuxeo-Work-elasticSearchIndexing-1:785120666169686.1890981267] [org.nuxeo.elasticsearch.work.BucketIndexingWorker] Re-indexing job: /elasticSearchIndexing:785116626625974.1486048658 completed.
-```
-
-You can fine tune the WorkManager indexing process using the following options:
-
-- Sizing the indexing worker thread pool. The default size is `4`, using more threads will crawl the repository faster:
-
-    ```
-    elasticsearch.indexing.maxThreads=4
-    ```
-
-- Tuning the number of documents per worker and the number of document submitted using the Elasticsearch bulk API:
-
-    ```
-    # Reindexing option, number of documents to process per worker
-    elasticsearch.reindex.bucketReadSize=500
-    # Reindexing option, number of documents to submit to Elasticsearch per bulk command
-    elasticsearch.reindex.bucketWriteSize=50
-    ```
-
 ### Re-index Repository Using Bulk Service{{> anchor 'reindexing-bulk'}}
 
-Run a bulk command to re-index the repository, the command id is returned:
+Use the management API to re-index the repository, the command id is returned:
+
 ```bash
-curl -s -X POST "<SERVER_URL>/nuxeo/site/automation/Elasticsearch.BulkIndex" -u Administrator:<PASSWORD> -H 'content-type: application/json' -d '{"params":{},"context":{}}'
+curl -X POST -u Administrator:<PASSWORD> "<SERVER_URL>/nuxeo/api/v1/management/search/reindex"
 
 {"commandId": "21aeaea1-0ef0-4a89-a92d-fa8f679361de"}
 ```
 
 At any time, you can request the status of the re-indexing using the previous command id:
 ```bash
-curl -s -X GET "<SERVER_URL>/nuxeo/api/v1/bulk/21aeaea1-0ef0-4a89-a92d-fa8f679361de" -u Administrator:<PASSWORD> -H 'content-type: application/json'
-
+curl -X GET -u Administrator:<PASSWORD> "<SERVER_URL>/nuxeo/api/v1/management/bulk/21aeaea1-0ef0-4a89-a92d-fa8f679361de"
 {
   "entity-type": "bulkStatus",
   "commandId": "21aeaea1-0ef0-4a89-a92d-fa8f679361de",
@@ -814,7 +740,6 @@ curl -s -X GET "<SERVER_URL>/nuxeo/api/v1/bulk/21aeaea1-0ef0-4a89-a92d-fa8f67936
 }
 ```
 
-
 ## Changing Mappings and Settings of Indexes
 
 ### Updating Repository Index Configuration
@@ -825,7 +750,7 @@ Nuxeo comes with a default mapping that sets the locale for full-text and declar
 For fields that are not explicitly defined in the mapping, Elasticsearch will try to guess the type the first time it indexes the field. If the field is empty it will be treated as a String field. This is why most of the time you need to explicitly set the mapping for your custom fields that are of type date, numeric or full-text. Also fields that are used to sort and that could be empty need to be defined to prevent an unmapped field error.
 {{/callout}}
 
-The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-config.xml.nxftl`.
+The default mapping is located in the `${NUXEO_HOME}/templates/opensearch1-search-client/nxserver/config/opensearch1-search-client-config.xml.nxftl`.
 
 **To override and tune the default mapping:**
 
@@ -837,14 +762,13 @@ Instead of overriding the extension point you can simply override the default ma
     myapp.target=.
     ```
 
-1. In this custom template create a file named `nxserver/config/elasticsearch-doc-mapping.json` to override the mapping. You can create a file named `nxserver/config/elasticsearch-doc-settings.json` to override the settings.<br/>
-**Important**: You must add your custom mapping to the existing one, you cannot just set your custom mapping in the file, Nuxeo does not merge your mapping with the default one. So, you must _duplicate_ the original file at `${NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-doc-mapping.json` to `myapp/nxserver/config/elasticsearch-doc-mapping.json` , and modify the copy.
-
+1. In this custom template create a file named `{NUXEO_HOME}/templates/myapp/nxserver/config/opensearch1-doc-mapping.json` to override the mapping. You can create a file named `{NUXEO_HOME}/templates/myapp/nxserver/config/opensearch1-doc-settings.json.nxftl` to override the settings.<br/>
+**Important**: You must add your custom mapping/settings to the existing one, you cannot just set your custom mapping in the file, Nuxeo does not merge your mapping with the default one. So, you must _duplicate_ the original file and modify the copy.
 
 1. Update the `nuxeo.conf` to use your custom template.
 
     ```
-    nuxeo.templates=default,myapp
+    nuxeo.templates=default,opensearch1-search-client,myapp
     ```
 
 1. Restart and re-index the entire repository (see previous section). A re-indexing is needed to apply the new settings and mapping.
@@ -855,8 +779,8 @@ For mapping customization examples, see the page [Configuring the Elasticsearch 
 
 Here the index is a primary storage and you cannot rebuild it. So we need a tool that will extract the `_source` of documents from one index and submit it to a new index that have been setup with the new configuration.
 
-1. Update the mappings or settings configuration by overriding the `{NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-audit-index-config.xml`(follow the same procedure as the section above for the repository index)
-1. Use a new name for the `audit.elasticsearch.indexName` (like `nuxeo-audit2`)
+1. Update the mappings or settings configuration by overriding the `{NUXEO_HOME}/templates/opensearch1-audit/nxserver/config/opensearch1-audit-config.xml.nxftl`(follow the same procedure as the section above for the repository index)
+1. Use a new name for the `nuxeo.audit.backend.default.opensearch1.index.name` (like `nuxeo-audit2`)
 1. Start the Nuxeo Platform.</br>
     The new index is created with the new mapping.
 1. Stop the Nuxeo Platform
@@ -878,13 +802,27 @@ Here the index is a primary storage and you cannot rebuild it. So we need a tool
 You need to define an index for each repository. This is done by adding an `elasticSearchIndex` contribution.
 
 1. Create a custom template as described in the above section "Changing the mapping of the index".
-1. Add a second `elasticSearchIndex` contribution:
+1. Add the following contribution:
 
     ```xml
-    <elasticSearchIndex name="nuxeo-repo2" type="doc" repository="repo2"> ....
+    <extension target="org.nuxeo.ecm.core.search" point="searchIndex">
+      <searchIndex name="enhanced-repo2" searchClient="opensearch" repository="repo2" default="true" />
+    </extension>
+  
+    <extension target="org.nuxeo.ecm.core.search.client.opensearch1" point="searchClient">
+      <searchClient name="opensearch">
+        <searchIndex name="enhanced-repo2" technicalName="nuxeo-repo2" />
+      </searchClient>
+    </extension>
+  
+    <extension target="org.nuxeo.runtime.opensearch1.OpenSearchComponent" point="index">
+      <index name="nuxeo-repo2">
+        <client id="search/default" />
+      </index>
+    </extension>
     ```
 
-    Where `name` is the Elasticsearch index name and `repository` the repository name.
+    Where `repo2` is the name of the second repository and `nuxeo-repo2` the OpenSearch index name.
 
 ## Investigating and Reporting Problems
 
@@ -892,20 +830,7 @@ You need to define an index for each repository. This is done by adding an `elas
 
 To understand why a document is not present in search results or not indexed, you can activate a debug trace.
 
-Open at the `lib/log4j2.xml` file and uncomment the `ELASTIC` section:
-
-```xml
-<!-- Elasticsearch logging -->
-<File name="ELASTIC" fileName="${sys:nuxeo.log.dir}/elastic.log" append="false">
-  <PatternLayout pattern="%d{ISO8601} %-5p [%t] [%c] %m%n" />
-</File>
-
-<Logger name="org.nuxeo.elasticsearch" level="trace" additivity="false">
-  <AppenderRef ref="ELASTIC" />
-</Logger>
-```
-
-The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.
+Look at the `lib/log4j2.xml` you will find commented configuration to trace OpenSearch requests and responses.
 
 ### Reporting Settings and Mapping
 
@@ -959,21 +884,16 @@ You may need to change the `size` parameter to get more or less indexed terms.
 
 ### Explain and Profile Elasticsearch Queries
 
-When trace level logs are actived, Elasticsearch curl command will be present in the `elastic.log` log file. Getting more details on what is happening during the query execution, can either be done using [explain](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-explain.html) or [profile](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-profile.html#search-profile-api-example).
+When trace level logs are active, Elasticsearch curl command will be present in the server log file. Getting more details on what is happening during the query execution, can either be done using [explain](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-explain.html) or [profile](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-profile.html#search-profile-api-example).
 Those two approaches will help to understand the mapping and the field scoring, it can also gives inputs about unmapped fields for example.
 
-### Comparing the Elasticsearch Index with the Database Content
-
-You can use the [esync tool](https://github.com/nuxeo/esync) to compare both content and pinpoint discrepancies.
-
-This tool is a read-only standalone tool, it requires both access to the database and Elasticsearch (using transport client on port 9300).
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Elasticsearch Documentation'}}
 
 - [Configuring the Elasticsearch Mapping]({{page space='NXDOC' page='Configuring the+Elasticsearch+Mapping'}})
-- [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+- [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation '}}

@@ -1,6 +1,6 @@
 ---
 title: Indexing and Query
-description: The Nuxeo Platform stores documents and property values either in a database (VCS) or in a NoSQL database (DBS). This data is also indexed in an Elasticsearch index.
+description: The Nuxeo Platform stores documents and property values either in a database (VCS) or in a NoSQL database (DBS). This data can also be indexed in an search engine index.
 review:
     comment: ''
     date: '2019-04-16'
@@ -334,12 +334,14 @@ Watch the related course on Hyland University:</br>
 
 ## Architecture
 
+Since Nuxeo LTS 2025, we aim to support different search engines (Elasticsearch, OpenSearch, etc.). In order to be independent of the search engine's release cycle and end-of-life, this support is provided by installing a search client package on top of the Nuxeo Platform.
+
 ### Data store and index
 
-The Nuxeo Platform stores documents and their property values either in a database (VCS) or in a NoSQL database (DBS). This data is also at the same time indexed in an Elasticsearch index. To query those documents, several approaches are offered by the platform depending on whether you are from a remote application or in some Java code executed server-side. In the end, all the methods lead to two possibilities:
+The Nuxeo Platform stores documents and their property values either in a database (VCS) or in a NoSQL database (DBS). This data can at the same time be indexed by a search engine. To query those documents, several approaches are offered by the platform depending on whether you are from a remote application or in some Java code executed server-side. In the end, all the methods lead to two possibilities:
 
 - Query the data store (VCS or DBS). Queries there are "transactional", which means that the result will reflect exactly the state of the database in the transaction where the query is executed
-- Query the Elasticsearch index. This is the most scalable and efficient way to perform a query. Benchmarks show querying the repository using this Elasticsearch index scales orders of magnitude better than the database.
+- Query a search engine index. This is the most scalable and efficient way to perform a query. Benchmarks show querying the repository using a search engine such as Elasticsearch scales orders of magnitude better than the database.
 
 ### A Query Language
 
@@ -361,7 +363,7 @@ The Nuxeo Platform is also [compatible with the CMISQL]({{page page='cmis'}}) de
 
 ### Page Providers: a Pagination Service
 
-The framework also provides a paginated query system, the Page Providers.&nbsp;Page Providers are a way to expose a query defined in NXQL with additional services: pagination, parameters, maximum number of results, aggregates definition. Page providers are named and declared to the server via a contribution. More information can be found about [the page provider object]({{page page='page-providers'}}). Page providers are used in the platform in many places: Web application for browsing, for dashboards, &hellip;
+The framework also provides a paginated query system, the Page Providers. Page Providers are a way to expose a query defined in NXQL with additional services: pagination, parameters, maximum number of results, aggregates definition. Page providers are named and declared to the server via a contribution. More information can be found about [the page provider object]({{page page='page-providers'}}). Page providers are used in the platform in many places: Web application for browsing, for dashboards, etc.
 
 Resources Endpoint are also based on a page provider. By being declarative, page providers are very easy to override. That way, most of the document lists logic of the default application can be redefined just by [overriding the corresponding page provider](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.query.api.PageProviderService--providers). You can also build your own application in the same way. Note that in the web application, page providers are associated to a higher concept, the Content View, that wraps all the UI aspects of executing and presenting a search result (see paragraph below).
 
@@ -437,22 +439,28 @@ The following table and schema gives an overview of the different ways of queryi
     The CoreSession object is the main server side Java interface for accession among the repository. Among available methods is the `query()` that allows to perform directly an NXQL query and get a list of documentModels (the basic Java wrapping of a Nuxeo Document). In most of the situations it is better to rely on a page provider as it is easier to override, maintain, etc&hellip; but `session.query()` is still an option.
 6.  **CoreSession.queryAndFetch() (Server side)**
     Like `session.query()`, `CoreSession.queryAndFetch()` provides a way to perform an NXQL query and get an iterable of Java `Map` instead of `DocumentModel`.
-6.  **CoreSession.queryProjection() (Server side)**
+7.  **CoreSession.queryProjection() (Server side)**
     Methods `queryProjection()` allow to perform an NXQL query in order to get a page of projections as Java `Map`. Note: `query()` allows to get a page too, but you get a `DocumentModelList` as result.
+8.  **SearchService.search() (Server side)**
+    Since Nuxeo LTS 2025, there is a new SearchService which enables to perform an NXQL query on one or multiple repositories using available indexes. This new service provides a uniform way to search on the repository, OpenSearch 1.x, ElasticSearch 7.x or 8.x and future versions as soon as new search client packages are available. This supersedes the legacy ElasticSearchService.
 
-## {{> anchor 'elasticsearchconfiguration'}}Elasticsearch Configuration
+## {{> anchor 'searchclient'}}SearchClient Configuration
 
-The default configuration uses an embedded Elasticsearch instance that runs&nbsp;in the same JVM as the Nuxeo Platform's one. By default the Elasticsearch indexes will be located in&nbsp;`nxserver/data/elasticsearch`.
+Since Nuxeo LTS 2025, you have to explicitly choose and install a SearchClient package. By default the SearchService will be configured with a Repository SearchClient that is using the underlying repository data store (VCS or DBS) with limited capabilities regarding fulltext search, aggregation and scalability.
+
+It's therefore recommended to rely on an external search engine like OpenSearch 1.x, ElasticSearch 7.x or 8.x cluster. For this purpose, you need to install the`nuxeo-search-client-opensearch1` package.
+
+It's also possible for testing purpose to run an embedded OpenSearch 1.x server in the same JVM as Nuxeo by installing the `nuxeo-opensearch1-embed` package.
 
 {{#> callout type='warning' }}
 This embedded mode **is only for testing purpose** and should not be used in production.
 {{/callout}}
 
-See the [documentation to setup and configure an Elasticsearch]({{page page='elasticsearch-setup'}}) cluster.
+See the [documentation to setup and configure an OpenSearch or Elasticsearch]({{page page='elasticsearch-setup'}}) cluster.
 
 ## Full-Text Capabilities
 
-Both VCS/DBS &nbsp;implementations and Elasticsearch provide full-text search capabilities. Depending on the back end (Oracle, Postgres, SQL server, &hellip;) capabilities may be slightly different. The Elasticsearch implementation performs bests in terms of relevancy, &nbsp;for configuring dictionaries, running the stemming etc. Thus it is advised to leverage an Elasticsearch page provider when you want to do searches on full text index.
+Both VCS/DBS implementations and OpenSearch SearchClient provide full-text search capabilities. Depending on the back end (Oracle, Postgres, SQL server, &hellip;) capabilities may be slightly different. The OpenSearch implementation performs bests in terms of relevancy, for configuring dictionaries, running the stemming etc. Thus it is advised to leverage a SearchService page provider when you want to do searches on full text index.
 
 More documentation can be found about[ full-text search expressions]({{page page='full-text-queries'}}).
 
@@ -462,7 +470,7 @@ You should also read carefully how you can [tune the full-text index ]({{page pa
 
 Aggregates are a way to compute additional information on a search result so as to group and count result items and project them against various axis. For instance, "in the search result, 5 of the documents have the value "Specifications" for the field [`dc:nature`](http://dcnature) ".
 
-The Elasticsearch page provider implementation provides aggregates support. It is possible to define which aggregates can be requested to Elasticsearch with each queries, and a mechanism is implemented so as to filter following queries with the aggregates system offered by Elasticsearch.
+The SearchService page provider implementation provides aggregates support. It is possible to define which aggregates can be requested to OpenSearch with each queries, and a mechanism is implemented so as to filter following queries with the aggregates system offered by OpenSearch.
 
 It is possible to leverage aggregates both at the API level and in the user interface, where a set of dedicated aggregates widgets has been added. They can be used from Nuxeo Studio.
 
@@ -515,4 +523,4 @@ These elements are [fully configurable via Nuxeo Studio]({{page page='web-ui-sea
 
 ## Indexing Logic
 
-The section [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}}) provides more details on how documents are indexed in Elasticsearch.
+The section [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}}) provides more details on how documents are indexed in Elasticsearch.

@@ -175,10 +175,6 @@ In NXQL the full-text query is part of a WHERE clause that can contain other mat
 *   `ecm:fulltext.somefield = 'something'` to search a field called "somefield", using full-text if the VCS configuration contains a single index for it, or if not using fallback to a standard SQL ILIKE query: `somefield ILIKE '%something%'` (ILIKE is a case-independent LIKE). Note that this will have a serious performance impact if no full-text is used, and is provided only to help migrations from earlier versions.
 *   `ecm:fulltext LIKE 'something'` is deprecated but identical to `ecm:fulltext = 'something'`.
 
-## Elasticsearch Extension
-
-With an Elasticsearch page provider, the full-text syntax used is the Elasticsearch simple query string syntax. It is recommended to use the prefix `es:` when making such use of the syntax, as in the future it might be mandatory. Further more, any full-text request made with an `es:` prefix will be doing an "OR" between each word (vs AND otherwise). You can refer to the [Elasticsearch documentation](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-simple-query-string-query.html#_simple_query_string_syntax) page for more details on the syntax that can be used.
-
 * * *
 
 &nbsp;
@@ -188,7 +184,7 @@ With an Elasticsearch page provider, the full-text syntax used is the Elasticsea
 - [DBS]({{page page='dbs'}})
 - [VCS]({{page page='vcs'}})
 - [Monitoring Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
-- [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+- [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 
 {{/panel}}</div><div class="column medium-6">
 

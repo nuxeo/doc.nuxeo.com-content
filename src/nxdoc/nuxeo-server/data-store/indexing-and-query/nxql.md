@@ -958,11 +958,11 @@ The following limitations apply:
 *   DATE cast will fail. This means the following predicate is **not** supported in a NXQL query on a MongoDB repository:
     *   `... WHERE DATE(dc:expired) = DATE '2023-07-14'` (not supported, Date cast on the left-hand side)
 
-## {{> anchor 'elasticsearchlimitations'}} Notes about Elasticsearch
+## {{> anchor 'elasticsearchlimitations'}} Notes about OpenSearch/Elasticsearch
 
-When an NXQL query is processed by an [Elasticsearch PageProvider]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) or using the Nuxeo Elasticsearch search service, there are some limitations, specific configuration and more features available.
+When an NXQL query is processed by an [SearchService PageProvider]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) or using the Nuxeo SearchService directly, there are some limitations, specific configuration and more features available when the search client is OpenSearch.
 
-### Elasticsearch NXQL Limitations
+### OpenSearch/Elasticsearch NXQL Limitations
 
 *   Complex property correlations are not supported.
 
@@ -980,7 +980,7 @@ When an NXQL query is processed by an [Elasticsearch PageProvider]({{page page='
 *   Custom securityPolicy expressible in NXQL is taken in account since [NXP-17371](https://jira.nuxeo.com/browse/NXP-17371), if the securityPolicy is not expressible in NXQL then total count or aggregates counts can be wrong.
 *   `ecm:acl` and `ecm:tag` queries are not supported.
 
-### Required Elasticsearch Configuration
+### Required OpenSearch/Elasticsearch Configuration
 
 #### Mapping
 
@@ -1001,7 +1001,7 @@ The full-text search is not configured the same way:
 *   Custom full-text indexes are not supported. `ecm:fulltext_someindex` will match the `all_field` field. It is possible to select a list of field using hints, see below.
 *   In addition to the NXQL full-text syntax, it is also possible to use the Elasticsearch [simple query string syntax](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-simple-query-string-query.html#_simple_query_string_syntax).
 
-### Elasticsearch NXQL Hints
+### OpenSearch/Elasticsearch NXQL Hints
 
 NXQL hints enable to use more Elasticsearch operators.
 

@@ -1,6 +1,6 @@
 ---
-title: Moving Load from Database to Elasticsearch
-description: By moving query load from the database to Elasticsearch, applications can drastically increase performance and scalability.
+title: Moving Load from Database to Search Engine
+description: By moving query load from the database to a search engine such as OpenSearch, applications can drastically increase performance and scalability.
 review:
     comment: ''
     date: '2017-12-15'
@@ -89,10 +89,10 @@ history:
 
 ---
 {{! excerpt}}
-By moving query load from the database to Elasticsearch, applications can drastically increase performance and scalability.
+By moving query load from the database to a search engine (Elasticsearch, OpenSearch, ...), applications can drastically increase performance and scalability.
 {{! /excerpt}}
 
-It is easy to pinpoint slow queries that need to be migrated from the database to Elasticsearch by [monitoring slow queries]({{page page='monitoring-slow-nxql-queries'}}).
+It is easy to pinpoint slow queries that need to be migrated from the database by [monitoring slow queries]({{page page='monitoring-slow-nxql-queries'}}).
 
 ## Migrating Content View or Page Provider
 
@@ -108,19 +108,20 @@ If you can not use a page provider and want to migrate code like this:
 DocumentModelList docs = session.query(nxql);
 ```
 
-Using Elasticsearch you will use a query builder:
+Using the Search Service you will use a SearchQuery:
 
 ```java
-ElasticSearchService ess = Framework.getService(ElasticSearchService.class);
-DocumentModelList docs = ess.query(new NxQueryBuilder(session).nxql(nxql).limit(10000));
+SearchService searchService = Framework.getService(SearchService.class);
+SearchResponse response = searchService.search(SearchQuery.Builder(nxql).limit(100).build());
+DocumentModelList docs = response.loadDocuments(session);
 ```
 
-The first difference is that using `session.query`all the documents are returned while using Elasticsearch there is a default limit of `10` documents and a maximum of `10000`, see [index.max_result_window](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html) section. To get all the documents use the [scroll API]({{page page='moving-load-from-database-to-elasticsearch'}}#migrating-a-request-using-scroll-api). Note that with a limit set to `0` you can get the total results size (using `docs.totalSize()`) without loading any documents.
+The first difference is that using `session.query` all the documents are returned while using SearchService there is a default limit of `10` documents. On the OpenSearch client implementation, this limit is caped to `10000` (see [index.max_result_window](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html) section). To get all the documents use the [scroll API]({{page page='moving-load-from-database-to-elasticsearch'}}#migrating-a-request-using-scroll-api). Note that with a limit set to `0` you can get the total results size (using `docs.totalSize()`) without loading any documents. The documents are loaded from the repository in a second step during `response.loadDocument(session)`, be aware that this operation can be expensive.
 
 Another difference is that documents that are searchable at time `**t**` may be different between database and Elasticsearch:
 
 *   When using the repository API, a document is searchable after a modification once there is a `session.save()` or after the transaction commit for others sessions.
-*   When using Elasticsearch a document is searchable after a modification only when:&nbsp; the transaction is committed AND asynchronous indexing job is done AND Elasticsearch index is refreshed, which happens every second by default.
+*   When using the SearchService, a document is searchable after a modification only when the transaction is committed AND, indexing processors are done AND depending on the search client implementation, if the index is refreshed (which happens every second on OpenSearch).
 
 For instance migrating this code:
 
@@ -138,17 +139,18 @@ Can be done like this:
 doc.setPropertyValue("dc:title", "A new title");
 session.saveDocument(doc);
 session.save();
-
-ElasticSearchAdmin esa = Framework.getService(ElasticSearchAdmin.class);
+// flag the thread to wait for synchronous indexing on commit
+ThreadLocalIndexingCommandsStacker.useSyncIndexing.set(true);
+// commit
 TransactionHelper.commitOrRollbackTransaction();
 TransactionHelper.startTransaction();
-esa.prepareWaitForIndexing().get(20, TimeUnit.SECONDS); // wait for indexing
-esa.refresh(); // explicit refresh
 
-ess.query(new NxQueryBuilder(session).nxql("SELECT * FROM Document WHERE dc:title = 'A new title'")); // "doc" is returned
+SearchService searchService = Framework.getService(SearchService.class);
+SearchResponse response = searchService.search(SearchQuery.Builder("SELECT * FROM Document WHERE dc:title = 'A new title'").build());
+DocumentModelList docs = response.loadDocuments(session); // "doc" is returned
 ```
 
-Obviously there is a write overhead here because we are splitting the transaction and explicitly call a refresh. This can be useful for unit test migration but on normal code you have to decide if it make sense to search documents that are probably already loaded in your context.
+Obviously there is a write overhead here because we are splitting the transaction and explicitly call a refresh. This can be useful but on normal code you have to decide if it makes sense to search documents that are probably already loaded in your context. Note that in unit test you don't have to do this because the `CoreSearchFeature` is already configured to wait for synchronous indexing during commit.
 
 ## Migrating a queryAndFetch Request
 
@@ -162,8 +164,8 @@ IterableQueryResult rows = session.queryAndFetch("SELECT ecm:uuid, dc:title FROM
 With:
 
 ```java
-EsResult result = ess.queryAndAggregate(new NxQueryBuilder(session).nxql("SELECT ecm:uuid, dc:title FROM Document").limit(10000));
-IterableQueryResult rows = result.getRows();
+SearchResponse response = searchService.search(SearchQuery.Builder("SELECT ecm:uuid, dc:title FROM Document").build());
+IterableQueryResult docs = response.getHitsAsIterator();
 ```
 
 And you gain the limit/offset options.
@@ -176,40 +178,31 @@ For now the select clause support is limited to scalar properties. See the page 
 
 ## Migrating a Request using scroll API
 
-Since Elasticsearch 2.x, the engine rejects request where `from + size > 10000`. You can change this value by changing [index.max_result_window](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html), but it is highly unadvised. If you need to get all documents from Elasticsearch, you should use scroll API.
+To prevent overloading Nuxeo, some search client implementation such as Elasticsearch/OpenSearch will reject search request where `from + size > 10000`. If you need to get all documents from query, you should use scroll search request.
 
-To do that, we can use `ElasticSearchService#scroll(NxQueryBuilder, long)` and `ElasticSearchService#scroll(EsScrollResult)`.
+To do that, we can use the following code snippet`.
 
-For instance, with the previous query to get documents:
 ```java
-ElasticSearchService ess = Framework.getService(ElasticSearchService.class);
+SearchService searchService = Framework.getService(SearchService.class);
 
 // Perform initial search and get first batch of 20 results
 String query = "SELECT * FROM Document WHERE dc:title = 'A new title'";
-EsScrollResult scrollResult = ess.scroll(new NxQueryBuilder(session).nxql(query).limit(20), 10000);
+var response = searchService.search(SearchQuery.Builder(nxql).scrollSearch(true).scrollSize(20).build);
 
-while (!scrollResult.getDocuments().isEmpty()) {
-    DocumentModelList batchOfDocs = scrollResult.getDocuments();
-    for (DocumentModel doc : batchOfDocs) {
+while (response.getHitsCount() > 0) {
+    for (DocumentModel doc : response.loadDocuments(session)) {
         // Process document
         ...
     }
     // Get next batch of results
-    scrollResult = ess.scroll(scrollResult);
+    response = searchService.scrollSearch(response.getScrollContext());
 }
 ```
 {{#> callout type='note' }}
 
-Limit given to `NxQueryBuilder` represents the size of each batch retrieved with scroll API. The `keepAlive` parameter in milliseconds only needs to be long enough to perform the next scroll query.
+The `scrollSize` represents the size of each batch retrieved with scroll API. A `scrollKeepAlive` can also be set, it should be long enough to perform the next scroll query.
 
 {{/callout}}
-
-In a context of `IterableQueryResult`, you can use `EsIterableQueryResultImpl` class to get an `IterableQueryResult` relying on scroll API. For example:
-```java
-String query = "SELECT ecm:uuid, dc:title FROM Document";
-EsScrollResult scrollResult = ess.scroll(new NxQueryBuilder(session).nxql(query).limit(20), 10000);
-IterableQueryResult rows = new EsIterableQueryResultImpl(ess, scrollResult);
-```
 
 ## Deactivating Database Optimizations
 
@@ -233,28 +226,23 @@ When disabling Database Full-text Search on an existing instance you have to rem
 DROP TRIGGER nx_trig_ft_update ON fulltext;
 DROP INDEX fulltext_fulltext_idx;
 DROP INDEX fulltext_fulltext_title_idx;
+```
 
+On MongoDB:
+```
+// remove the fulltext index
+db.default.dropIndex('fulltext')
+// remove the field containing the metadata fulltext
+db.default.updateMany({}, {$unset: {"ecm:fulltextSimple":1}});
 ```
 
 {{/callout}}
 
-## Going Further with Elasticsearch
+## Using a Search Engine Pass Through (HTTP API)
 
-### Searching over Multiple Repositories
+The OpenSearch1 search client package comes with PassThrough endpoint, it exposes a limited set of Read Only OpenSearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
 
-If you have set up a [multi repositories configuration]({{page page='elasticsearch-setup'}}#configuration-for-multi-repositories) to query over them just use the `searchOnAllRepositories` option:
-
-```
-docs = ess.query(new NxQueryBuilder(session).nxql(nxql).searchOnAllRepositories());
-```
-
-### Using the native Elasticsearch HTTP API
-
-The [nuxeo-elasticsearch-http-read-only](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/) addon exposes&nbsp;a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
-
-See the addon [README](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/README.md) for more information.
-
-&nbsp;
+See the [OpenSearch Passthrough]({{page page='elasticsearch-passthrough'}}) page for more information.
 
 * * *
 
@@ -262,7 +250,7 @@ See the addon [README](https://github.com/nuxeo/nuxeo/blob/master/modules/platfo
 
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
-- [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+- [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 - [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 
 {{/panel}}</div><div class="column medium-6">

@@ -1,5 +1,5 @@
 ---
-title: Elasticsearch Passthrough
+title: Search Passthrough
 review:
     comment: ''
     date: '2017-12-14'
@@ -23,7 +23,7 @@ confluence:
     page_id: '26316773'
     shortlink: 5Y_RAQ
     shortlink_source: 'https://doc.nuxeo.com/x/5Y_RAQ'
-    source_link: /display/NXDOC/Elasticsearch+Passthrough
+    source_link: /display/NXDOC/Search+Passthrough
 tree_item_index: 800
 history:
     -
@@ -99,32 +99,34 @@ history:
 ---
 
 {{! excerpt}}
-The platform allows to use the HTTP REST API provided by the Elasticsearch back end.
+Some search client packages allow to use the HTTP REST API provided by the search engine back-end.
 {{! /excerpt}}
 
-## Principle
+## OpenSearch1 Search Client
 
-Elasticsearch exposes a search API to request indexes with HTTP requests (see [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)). Elasticsearch does not perform authentication or authorization. The purpose of the [Nuxeo Elasticsearch Passthrough](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only) is to expose a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
+### Principle
 
-Concretely, HTTP requests are not sent to the Elasticsearch back end but addressed to the Nuxeo Platform which will rework the query to add a filter according to a Principal and forward them to the Elasticsearch cluster.
+OpenSearch/Elasticsearch exposes a search API to request indexes with HTTP requests (see [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)). Elasticsearch does not perform authentication or authorization. The purpose of the [Search Passthrough](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only) is to expose a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
 
-The Nuxeo Elasticsearch passthrough is available at **http://my-nuxeo-server:8080/nuxeo/site/es**.
+Concretely, when installing the `nuxeo-search-client-opensearch1` package, HTTP requests are not sent to the Elasticsearch back end but addressed to the Nuxeo Platform which will rework the query to add a filter according to a Principal and forward them to the Elasticsearch cluster.
 
-## Requirement
+The Nuxeo passthrough is available at **http://my-nuxeo-server:8080/nuxeo/site/es**.
 
-When your Elasticsearch instance is embedded is the same JVM than your Nuxeo instance (not recommended for production), the passthrough works out of the box.
+### Requirement
 
-When using a standalone Elasticsearch instance, make sure the following property is correctly set in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
+When your OpenSearch instance is embedded is the same JVM than your Nuxeo instance (not recommended for production), the passthrough works out of the box.
+
+When using a remote OpenSearch/Elasticsearch cluster, make sure the following property is correctly set in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
 
 ```
 elasticsearch.httpReadOnly.baseUrl=http://your_es_instance:9200
 ```
 
-## Querying Indexes
+### Querying Indexes
 
-### Repository Index
+#### Repository Index
 
-The Elasticsearch index name for the default repository is `nuxeo`. To query the `nuxeo` repository, you can issue the following request:
+The OpenSearch index name for the default repository is `nuxeo`. To query the `nuxeo` repository, you can issue the following request:
 
 ```bash
 curl -XGET -u jdoe:jdoe  'http://localhost:8080/nuxeo/site/es/nuxeo/_search' -d '{ "query": { "match_all":{}}}'
@@ -156,12 +158,12 @@ The platform will use the [DefaultSearchRequestFilter](https://github.com/nuxeo/
 {{#> callout type='warning' }}
 
 The security filtering takes in account only the ACL security and security policy that is expressible in NXQL.
-If you use a custom security policy that is not expressible in NXQL you should not enable the Nuxeo Elasticsearch passthrough.
+If you use a custom security policy that is not expressible in NXQL you should not enable the Nuxeo Search passthrough.
 
 {{/callout}}
 
 
-### Audit Index
+#### Audit Index
 
 The platform only allows Administrator users to query the audit index.
 
@@ -183,7 +185,7 @@ The repository index and the audit index use by default respectively the [Defaul
 
 [DefaultSearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/DefaultSearchRequestFilter.java) and [AuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/AuditRequestFilter.java) are [SearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/SearchRequestFilter.java) and you can contribute your own [SearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/SearchRequestFilter.java) with the extension point [ `filters`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20DM-8.3/viewExtensionPoint/org.nuxeo.elasticsearch.http.readonly.RequestFilterService--filters).
 
-### Worfklow Audit Index Example{{> anchor 'audif_wf'}}
+#### Worfklow Audit Index Example{{> anchor 'audif_wf'}}
 
 The following contribution:
 
@@ -216,7 +218,7 @@ The [RoutingAuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modul
 
 - [Workflow Audit Log]({{page page='workflow-audit-log'}})
 - [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
-- [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+- [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 - [Security Policy Service]({{page page='security-policy-service'}})
 

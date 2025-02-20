@@ -129,9 +129,9 @@ A set of custom elements are available for bootstrapping custom graphical dashbo
 
 ## Technical Overview
 
-### Elasticsearch Passthrough
+### Search Passthrough
 
-Since Nuxeo 7.4, the platform provides an [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}}) that allows using the HTTP REST API provided by the Elasticsearch back end. This API provides a comprehensive and powerful search DSL based on JSON to define queries which we can leverage to execute advanced aggregated searches.
+Since Nuxeo 7.4, the platform provides an [Search Passthrough]({{page page='elasticsearch-passthrough'}}) that allows using the HTTP REST API provided by the Elasticsearch back end. This API provides a comprehensive and powerful search DSL based on JSON to define queries which we can leverage to execute advanced aggregated searches.
 
 These aggregations provide analytic information over a set of documents and allow us to build complex search requests which can provide computed metrics over this set of documents through filtering and "bucketing".
 
