@@ -103,7 +103,7 @@ The class must be registered through the [`policies`](http://explorer.nuxeo.org/
 A security policy has two important aspects, materialized by different methods of the interface:
 
 - how security is checked on a given document (method `checkPermission`),
-- how security is applied to NXQL, CMISQL and Elasticsearch Passthrough searches (methods `getQueryTransformer`).
+- how security is applied to NXQL, CMISQL and Search Passthrough searches (methods `getQueryTransformer`).
 
 ### Document Security Check
 
@@ -138,12 +138,12 @@ Since Nuxeo 5.6.0-HF21 and Nuxeo 5.7.2, all CMISQL queries also require implemen
 
 The `getQueryTransformer(repositoryName, "CMISQL")` method returns a `SecurityPolicy.QueryTransformer` instance, which is a class with one `transform` method taking a query in the form of `String`. It should transform this query in order to add whatever restrictions are needed (this will require parsing the CMISQL and adding whatever clauses are needed). Note that ACL checks will always be applied after this transformation.
 
-### Elasticsearch Passthrough Check
+### Search Passthrough Check
 
-Nuxeo [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}}) adds filters to take in account ACL security and security policy that are expressible in NXQL (`isExpressibleInQuery` returns `true`).
+Nuxeo [Search Passthrough]({{page page='elasticsearch-passthrough'}}) adds filters to take in account ACL security and security policy that are expressible in NXQL (`isExpressibleInQuery` returns `true`).
 
 {{#> callout type='warning' }}
-If you define a custom security policy that is not expressible in NXQL you should not enable the Nuxeo Elasticsearch passthrough.
+If you define a custom security policy that is not expressible in NXQL you should not enable the Nuxeo Search passthrough.
 {{/callout}}
 
 ## Example Security Policy Contribution

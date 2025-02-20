@@ -50,7 +50,7 @@ This diagram represents the logical architecture for a Nuxeo cluster. It contain
 
 <div class="column medium-3">
 {{#> panel type='secondary' match_height='true'}}
-<h3>[Search Engine]({{page page='elasticsearch-architecture'}})</h3>
+<h3>[Search Engines]({{page page='elasticsearch-architecture'}})</h3>
 {{/panel}}
 </div>
 

@@ -622,13 +622,15 @@ GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/docs_by_title_complex/execute?np%
 
 {{/panel}}
 
-#### With Elasticsearch
+#### With OpenSearch/Elasticsearch
+
+When you have installed the `nuxeo-search-client-opensearch1` package, the SearchService PP will query the OpenSearch index.
 
 {{#> panel type='code' heading='Default Page provider in Nuxeo Server'}}
 
 ```xml
 <genericPageProvider name="aggregates_1"
-  class="org.nuxeo.elasticsearch.provider.ElasticSearchNxqlPageProvider">
+  class="org.nuxeo.ecm.platform.query.nxql.SearchServicePageProvider">
   <property name="coreSession">#{documentManager}</property>
   <property name="maxResults">-1</property>
   <pageSize>20</pageSize>

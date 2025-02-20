@@ -1,5 +1,5 @@
 ---
-title: Elasticsearch Indexing Logic
+title: Search Indexing Logic
 description: When manipulating a session to create, update or delete documents, a synchronous listener stacks the indexing commands to process.
 review:
     comment: ''
@@ -196,31 +196,26 @@ Watch the related courses on Hyland University:</br>
 
 ## Indexing
 
-When manipulating a session to create, update or delete documents, a synchronous listener stacks the indexing commands to process. These commands are factorized and are processed either in an asynchronous job or at post commit time.
+The indexing process involves stacking indexing commands when manipulating sessions to create, update, or delete documents. These commands are then emitted as indexing domain events into a `source/indexing` stream when the transaction is committed.
 
-**Post Commit Mode**
+There are two indexing processors:
+- A **Synchronous processor**:
+  When a UI request is involved, some indexing commands are marked as synchronous. After transaction commit, the thread waits for these specific commands to be processed by the synchronous processor before returning.
+  This way the next UI request is able to search updated documents, giving a real time indexing appearance.
+  The synchronous processor reads the `source/indexing` stream and processes simple events marked as synchronous. It also refreshes the index to ensure updates are searchable.
+- An **Asynchronous processor**:
+  It reads the same `source/indexing` stream and processes all commands not handled by the synchronous processor. This includes heavy operations like indexing all children (recursive commands) when moving a folder or changing an ACL.
 
-If the commands are recorded on a UI thread (a thread used to render a JSF page for instance) the commands are treated in post commit. This means that after the transaction is committed the indexing command are sent to Elasticsearch and a refresh operation is also send to make the indexed documents available to the next query. This approach give a real time indexing appearance. A document that is created by an action is searchable on the next action.
+When indexing a document, the Nuxeo Platform sends a JSON representation to be indexed. A creation or update command submits the complete document. For OpenSearch/Elasticsearch engines, the JSON document can be viewed in the `_source` field. It is possible to override the default JSON writer (`DefaultIndexingJsonWriter`).
 
-**Asynchronous Mode**
-
-The asynchronous mode will process the commands and not send any refresh operation so they are treated in near real time (~1s after the indexing command is send).
-
-**Recursive Commands**
-
-A command can be on a single document or applied to its children (recursive). So the number of command processed reported in the Admin tab doesn't have to match the number of document processed.
-
-Recursive command that are triggered when moving a folder or changing an ACL are not treated in post commit listener. Only the first level is treated in post commit the recursive indexing is done asynchronously.
-
-**JSON Document**
-
-When indexing a document the Nuxeo Platform sends a JSON representation to be indexed. For now a creation or an update command submits the complete document. The JSON document can be viewed in the `_source` field of the Elasticsearch document. The `_source` contains all the fields.
+Note that this is a new indexing logic implemented in LTS 2025, which no longer relies on WorkManager.
 
 ## Searching and Limitations
 
-**NXQL Queries**
+NXQL Queries are translated by the SearchClient, some implementation may have some limitations or different behavior, they are documented in the [NXQL documentation.]({{page page='nxql'}}) and below.
 
-A NXQL query can be translated to Elasticsearch query with some limitations. See the page [NXQL documentation.]({{page page='nxql'}})
+### OpenSearch 1 Search Client
+This search client provides access to OpenSearch 1.x, Elasticsearch 7.x and 8.x Search engines.
 
 When the query does not specify an ordering, the results are sorted by descending order of relevance as [described in Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/relevance-intro.html).
 There are multiple ways to tune relevance:
@@ -230,7 +225,7 @@ There are multiple ways to tune relevance:
 
 **Operators and Mapping**
 
-Some operators need an explicit mapping to work properly. This is the case for FULLTEXT, LIKE and ILIKE operators (STARTSWITH for `ecm:path` has a special mapping setup by default). See the page [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}}) for more information.
+Some operators need an explicit mapping to work properly. This is the case for FULLTEXT, LIKE and ILIKE operators (STARTSWITH for `ecm:path` has a special mapping setup by default). See the page [Configuring the OpenSearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}}) for more information.
 
 **Security and ACLs**
 

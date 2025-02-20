@@ -643,16 +643,7 @@ You can ignore them by editing your `log4j2` test configuration to add:
     <Logger name="org.elasticsearch.cluster.service.ClusterApplierService" level="error" />
 ```
 
-#### Adapt Your Custom Elasticsearch Queries
-
-If you use the [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}}),
-or if you use directly the [elasticsearch query builder](https://github.com/nuxeo/nuxeo/blob/v11.4.32/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-core/src/main/java/org/nuxeo/elasticsearch/query/NxQueryBuilder.java#L164),
-make sure your query works in Elasticsearch 7.x.
-
-One of the biggest changes is that the Elasticsearch document type has been removed,
-for instance, this changes the URL pattern to access a Nuxeo document from `http://elastic:9200/nuxeo/doc/<DOC_ID>` to: `http://elastic:9200/nuxeo/<DOC_ID>`.
-
-#### Make Elasticsearch Hints an Extension Point
+#### Make OpenSearch/Elasticsearch Hints an Extension Point
 
 Elasticsearch hints are now exposed as extension point. To contribute or override an existing Elasticsearch hint, you should provide a name for your Elasticsearch hint and an implementation of `org.nuxeo.elasticsearch.api. ESHintQueryBuilder`.
 

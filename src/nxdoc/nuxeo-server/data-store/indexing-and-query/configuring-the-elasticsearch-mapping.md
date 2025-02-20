@@ -1,6 +1,6 @@
 ---
-title: Configuring the Elasticsearch Mapping
-description: This documentation page talks about the many aspects you can tune for improving the search experience for your users when it comes to search the document repository index.
+title: Configuring the Search Mapping
+description: This documentation page talks about the many aspects you can tune for improving the search experience for your users when it comes to search the document repository index using the nuxeo-search-client-opensearch1 package.
 review:
     comment: ''
     date: '2017-12-13'
@@ -187,7 +187,7 @@ history:
 
 ---
 {{! excerpt}}
-This documentation page talks about the many aspects you can tune for improving the search experience for your users when it comes to search the document repository index.
+This documentation page talks about the many aspects you can tune for improving the search experience for your users when it comes to search the document repository using an Elasticsearch or OpenSearch index.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Hyland University'}}
@@ -196,13 +196,7 @@ Watch the related courses on Hyland University
 ![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
-{{#> callout type='warning' }}
-
-This documentation page apply only to Nuxeo Platform version greater or equal to **9.3** with Elasticsearch version greater or equal to **5.6**.
-
-{{/callout}}
-
-Nuxeo comes with a default mapping that can work with custom fields of your schemas, but in a limited way. To leverage the search capabilities of Elasticsearch you need to define your own mapping, for instance in the following cases:
+The Nuxeo `nuxeo-search-client-opensearch1` package gives you access to your OpenSearch or Elasticsearch cluster. The package comes with a default mapping that can work with custom fields of your schemas, but in a limited way. To leverage the search capabilities of OpenSearch/Elasticsearch you need to define your own mapping, for instance in the following cases:
 
 *   use of a non English or a custom analyzer
 *   use a specific NXQL operators on a custom field: `LIKE`, `ILIKE`, `ecm:fulltext.custom`, `STARTSWITH`
@@ -394,7 +388,7 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_ana
 
 {{#> panel heading='Other Elasticsearch Documentation'}}
 
-- [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+- [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 - [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 

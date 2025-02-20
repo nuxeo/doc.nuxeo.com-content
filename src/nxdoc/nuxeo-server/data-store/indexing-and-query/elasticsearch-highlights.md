@@ -1,6 +1,6 @@
 ---
-title: Elasticsearch Highlights
-description: Discover how Elasticsearch can be configured to use the highlight feature.
+title: Search Highlights
+description: Discover how OpenSearch/Elasticsearch can be configured to use the highlight feature.
 review:
     date: '2017-05-22'
     status: ok
@@ -13,11 +13,11 @@ toc: true
 
 ---
 
-When using the Elasticsearch Page Provider, you can use the [Elasticsearch highlight feature](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-request-highlighting.html) to highlight some words in your query results.
+When using an OpenSearch/Elasticsearch cluster, the SearchService Page Provider can use the [highlight feature](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-request-highlighting.html) to highlight some words in your query results.
 
-### Elasticsearch Configuration
+### OpenSearch/Elasticsearch Configuration
 
-The fields that can be highlighted have to be fulltext analyzed by Elasticsearch, so the mapping has to be modified accordingly. For example, to enable highlight on words in the content of a file, contained in the `ecm:binaryText` field, the mapping has been modified as such since 9.2:
+The fields that can be highlighted have to be fulltext analyzed by Elasticsearch, so the mapping has to be modified accordingly. For example, to enable highlight on words in the content of a file, contained in the `ecm:binaryText` field:
 
 ```
     "ecm:binarytext": {

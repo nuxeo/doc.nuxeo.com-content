@@ -249,146 +249,146 @@ The parameters of the `minio`, `mongodb`, `opensearch` and `kafka` charts can be
 
 The following tables lists the configurable parameters of this chart and their default values. Also see the [values.yaml](https://github.com/nuxeo/nuxeo-helm-chart/blob/master/nuxeo/values.yaml) file.
 
-| Parameter | Description | Default |
-| --------- | ----------- | --------|
-| `image.repository`| Nuxeo image name | `docker-private.packages.nuxeo.com/nuxeo/nuxeo` |
-| `image.tag` | Nuxeo image tag | `2023` |
-| `image.pullSecrets` | Nuxeo image registry secret names | `[]` |
-| `image.pullPolicy` | Nuxeo image pull policy | `IfNotPresent` |
-| `architecture` | Nuxeo architecture (`singleNode` or `api-worker`) | `singleNode` |
-| `strategy.type` | Nuxeo deployment strategy | `RollingUpdate` |
-| `replicaCount` | Number of Nuxeo pods | 1 |
-| `workerCount` | Number of Nuxeo worker pods if `architecture=api-worker` | `nil` |
-| `clusterDomain` | Domain name within the cluster | `cluster.local` |
-| `podLabels` | Nuxeo pod labels | `{}` |
-| `podAnnotations` | Nuxeo pod annotations | `{}` |
-| `nodeSelector` | Nuxeo node labels for pod assignment | `{}` |
-| `affinity` | Nuxeo affinity for pod assignment | `{}` |
-| `tolerations` | Nuxeo tolerations for pod assignment | `[]` |
-| `resources` | Set Nuxeo container requests and limits for different resources like CPU or memory | `{"requests": {"cpu": "0.5", "memory": "2Gi"}, "limits": {"memory": "2Gi"}}` |
-| `service.labels` | Nuxeo service labels | `{}` |
-| `service.annotations` | Nuxeo service annotations | `{}` |
-| `service.type` | Nuxeo service type | `ClusterIP` |
-| `service.externalPort` | Nuxeo service port | `80` |
-| `service.internalPort` | Nuxeo service target port | `8080` |
-| `service.protocol` | Nuxeo service protocol | `TCP` |
-| `service.extraPorts` | Nuxeo service extra ports | `[]` |
-| `extraContainerPorts` | Nuxeo container extra ports | `[]` |
-| `probePath` | Liveness, readiness and startup probe path | `/nuxeo/runningstatus` |
-| `livenessProbe.periodSeconds` | Period seconds for livenessProbe | `5` |
-| `livenessProbe.successThreshold` | Success threshold for livenessProbe | `1` |
-| `livenessProbe.timeoutSeconds` | Timeout seconds for livenessProbe | `10` |
-| `livenessProbe.failureThreshold` | Failure threshold for livenessProbe | `12` |
-| `readinessProbe.periodSeconds` | Period seconds for readinessProbe | `5` |
-| `readinessProbe.successThreshold` | Success threshold for readinessProbe | `1` |
-| `readinessProbe.timeoutSeconds` | Timeout seconds for readinessProbe | `10` |
-| `readinessProbe.failureThreshold` | Failure threshold for readinessProbe | `3` |
-| `startupProbe.initialDelaySeconds` | Initial delay seconds for startupProbe | `30` |
-| `startupProbe.periodSeconds` | Period seconds for startupProbe | `5` |
-| `startupProbe.successThreshold` | Success threshold for startupProbe | `1` |
-| `startupProbe.timeoutSeconds` | Timeout seconds for startupProbe | `10` |
-| `startupProbe.failureThreshold` | Failure threshold for startupProbe | `20` |
-| `packages` | Nuxeo packages to install at startup, separated by a space | `""` |
-| `clid` | Nuxeo CLID, required for package installation | `""` |
-| `mongodb.enabled` | Enable MongoDB backend for Nuxeo | `false` |
-| `mongodb.protocol` | Protocol for MongoDB connection | `mongodb` |
-| `mongodb.host` | Host for MongoDB connection | `""` |
-| `mongodb.port` | Post for MongoDB connection | `27017` |
-| `mongodb.url` | URL for MongoDB connection, overrides `host` and `port` | `""` |
-| `mongodb.auth.enabled` | Enable MongoDB authentication | `false` |
-| `mongodb.auth.username` | MongoDB authentication username | `""` |
-| `mongodb.auth.password` | MongoDB authentication password | `""` |
-| `mongodb.auth.existingSecret` | Existing secret with MongoDB credentials (keys: `mongodb-username`, `mongodb-password`), overrides `username` and `password` | `""` |
-| `mongodb.initContainer.repository` | Image name for MongoDB connection init container | `busybox` |
-| `mongodb.initContainer.tag` | Image tag for MongoDB connection init container | `latest` |
-| `mongodb.initContainer.imagePullPolicy` | Image pull policy for MongoDB connection init container | `IfNotPresent` |
-| `postgresql.enabled` | Enable PostgreSQL backend for Nuxeo | `false` |
-| `postgresql.host` | Host for PostgreSQL connection | `""` |
-| `postgresql.port` | Post for PostgreSQL connection | `5432` |
-| `postgresql.auth.username` | PostgreSQL authentication username | `""` |
-| `postgresql.auth.password` | PostgreSQL authentication password | `""` |
-| `postgresql.auth.existingSecret` | Existing secret with PostgreSQL credentials (keys: `postgresql-username`, `postgresql-password`), overrides `username` and `password` | `""` |
-| `postgresql.initContainer.repository` | Image name for PostgreSQL connection init container | `busybox` |
-| `postgresql.initContainer.tag` | Image tag for PostgreSQL connection init container | `latest` |
-| `postgresql.initContainer.imagePullPolicy` | Image pull policy for PostgreSQL connection init container | `IfNotPresent` |
-| `elasticsearch.enabled` | Enable Elasticsearch for Nuxeo | `false` |
-| `elasticsearch.protocol` | Protocol for Elasticsearch connection | `http` |
-| `elasticsearch.host` | Host for Elasticsearch connection | `""` |
-| `elasticsearch.port` | Post for Elasticsearch connection | `9200` |
-| `elasticsearch.clusterName` | Elasticsearch cluster name | `elasticsearch` |
-| `elasticsearch.indexNumberOfReplicas` | Elasticsearch number of replicas | `0` |
-| `elasticsearch.restClient.socketTimeoutMs` | Elasticsearch REST client socket timeout in ms | `300000` |
-| `elasticsearch.restClient.connectionTimeoutMs` | Elasticsearch REST client connection timeout in ms | `300000` |
-| `elasticsearch.auth.enabled` | Enable Elasticsearch authentication | `false` |
-| `elasticsearch.auth.username` | Elasticsearch authentication username | `""` |
-| `elasticsearch.auth.password` | Elasticsearch authentication password | `""` |
+| Parameter | Description                                                                                                                                    | Default |
+| --------- |------------------------------------------------------------------------------------------------------------------------------------------------| --------|
+| `image.repository`| Nuxeo image name                                                                                                                               | `docker-private.packages.nuxeo.com/nuxeo/nuxeo` |
+| `image.tag` | Nuxeo image tag                                                                                                                                | `2023` |
+| `image.pullSecrets` | Nuxeo image registry secret names                                                                                                              | `[]` |
+| `image.pullPolicy` | Nuxeo image pull policy                                                                                                                        | `IfNotPresent` |
+| `architecture` | Nuxeo architecture (`singleNode` or `api-worker`)                                                                                              | `singleNode` |
+| `strategy.type` | Nuxeo deployment strategy                                                                                                                      | `RollingUpdate` |
+| `replicaCount` | Number of Nuxeo pods                                                                                                                           | 1 |
+| `workerCount` | Number of Nuxeo worker pods if `architecture=api-worker`                                                                                       | `nil` |
+| `clusterDomain` | Domain name within the cluster                                                                                                                 | `cluster.local` |
+| `podLabels` | Nuxeo pod labels                                                                                                                               | `{}` |
+| `podAnnotations` | Nuxeo pod annotations                                                                                                                          | `{}` |
+| `nodeSelector` | Nuxeo node labels for pod assignment                                                                                                           | `{}` |
+| `affinity` | Nuxeo affinity for pod assignment                                                                                                              | `{}` |
+| `tolerations` | Nuxeo tolerations for pod assignment                                                                                                           | `[]` |
+| `resources` | Set Nuxeo container requests and limits for different resources like CPU or memory                                                             | `{"requests": {"cpu": "0.5", "memory": "2Gi"}, "limits": {"memory": "2Gi"}}` |
+| `service.labels` | Nuxeo service labels                                                                                                                           | `{}` |
+| `service.annotations` | Nuxeo service annotations                                                                                                                      | `{}` |
+| `service.type` | Nuxeo service type                                                                                                                             | `ClusterIP` |
+| `service.externalPort` | Nuxeo service port                                                                                                                             | `80` |
+| `service.internalPort` | Nuxeo service target port                                                                                                                      | `8080` |
+| `service.protocol` | Nuxeo service protocol                                                                                                                         | `TCP` |
+| `service.extraPorts` | Nuxeo service extra ports                                                                                                                      | `[]` |
+| `extraContainerPorts` | Nuxeo container extra ports                                                                                                                    | `[]` |
+| `probePath` | Liveness, readiness and startup probe path                                                                                                     | `/nuxeo/runningstatus` |
+| `livenessProbe.periodSeconds` | Period seconds for livenessProbe                                                                                                               | `5` |
+| `livenessProbe.successThreshold` | Success threshold for livenessProbe                                                                                                            | `1` |
+| `livenessProbe.timeoutSeconds` | Timeout seconds for livenessProbe                                                                                                              | `10` |
+| `livenessProbe.failureThreshold` | Failure threshold for livenessProbe                                                                                                            | `12` |
+| `readinessProbe.periodSeconds` | Period seconds for readinessProbe                                                                                                              | `5` |
+| `readinessProbe.successThreshold` | Success threshold for readinessProbe                                                                                                           | `1` |
+| `readinessProbe.timeoutSeconds` | Timeout seconds for readinessProbe                                                                                                             | `10` |
+| `readinessProbe.failureThreshold` | Failure threshold for readinessProbe                                                                                                           | `3` |
+| `startupProbe.initialDelaySeconds` | Initial delay seconds for startupProbe                                                                                                         | `30` |
+| `startupProbe.periodSeconds` | Period seconds for startupProbe                                                                                                                | `5` |
+| `startupProbe.successThreshold` | Success threshold for startupProbe                                                                                                             | `1` |
+| `startupProbe.timeoutSeconds` | Timeout seconds for startupProbe                                                                                                               | `10` |
+| `startupProbe.failureThreshold` | Failure threshold for startupProbe                                                                                                             | `20` |
+| `packages` | Nuxeo packages to install at startup, separated by a space                                                                                     | `""` |
+| `clid` | Nuxeo CLID, required for package installation                                                                                                  | `""` |
+| `mongodb.enabled` | Enable MongoDB backend for Nuxeo                                                                                                               | `false` |
+| `mongodb.protocol` | Protocol for MongoDB connection                                                                                                                | `mongodb` |
+| `mongodb.host` | Host for MongoDB connection                                                                                                                    | `""` |
+| `mongodb.port` | Post for MongoDB connection                                                                                                                    | `27017` |
+| `mongodb.url` | URL for MongoDB connection, overrides `host` and `port`                                                                                        | `""` |
+| `mongodb.auth.enabled` | Enable MongoDB authentication                                                                                                                  | `false` |
+| `mongodb.auth.username` | MongoDB authentication username                                                                                                                | `""` |
+| `mongodb.auth.password` | MongoDB authentication password                                                                                                                | `""` |
+| `mongodb.auth.existingSecret` | Existing secret with MongoDB credentials (keys: `mongodb-username`, `mongodb-password`), overrides `username` and `password`                   | `""` |
+| `mongodb.initContainer.repository` | Image name for MongoDB connection init container                                                                                               | `busybox` |
+| `mongodb.initContainer.tag` | Image tag for MongoDB connection init container                                                                                                | `latest` |
+| `mongodb.initContainer.imagePullPolicy` | Image pull policy for MongoDB connection init container                                                                                        | `IfNotPresent` |
+| `postgresql.enabled` | Enable PostgreSQL backend for Nuxeo                                                                                                            | `false` |
+| `postgresql.host` | Host for PostgreSQL connection                                                                                                                 | `""` |
+| `postgresql.port` | Post for PostgreSQL connection                                                                                                                 | `5432` |
+| `postgresql.auth.username` | PostgreSQL authentication username                                                                                                             | `""` |
+| `postgresql.auth.password` | PostgreSQL authentication password                                                                                                             | `""` |
+| `postgresql.auth.existingSecret` | Existing secret with PostgreSQL credentials (keys: `postgresql-username`, `postgresql-password`), overrides `username` and `password`          | `""` |
+| `postgresql.initContainer.repository` | Image name for PostgreSQL connection init container                                                                                            | `busybox` |
+| `postgresql.initContainer.tag` | Image tag for PostgreSQL connection init container                                                                                             | `latest` |
+| `postgresql.initContainer.imagePullPolicy` | Image pull policy for PostgreSQL connection init container                                                                                     | `IfNotPresent` |
+| `elasticsearch.enabled` | Enable Elasticsearch for Nuxeo                                                                                                                 | `false` |
+| `elasticsearch.protocol` | Protocol for Elasticsearch connection                                                                                                          | `http` |
+| `elasticsearch.host` | Host for Elasticsearch connection                                                                                                              | `""` |
+| `elasticsearch.port` | Post for Elasticsearch connection                                                                                                              | `9200` |
+| `elasticsearch.clusterName` | Elasticsearch cluster name                                                                                                                     | `elasticsearch` |
+| `elasticsearch.indexNumberOfReplicas` | Elasticsearch number of replicas                                                                                                               | `0` |
+| `elasticsearch.restClient.socketTimeoutMs` | Elasticsearch REST client socket timeout in ms                                                                                                 | `300000` |
+| `elasticsearch.restClient.connectionTimeoutMs` | Elasticsearch REST client connection timeout in ms                                                                                             | `300000` |
+| `elasticsearch.auth.enabled` | Enable Elasticsearch authentication                                                                                                            | `false` |
+| `elasticsearch.auth.username` | Elasticsearch authentication username                                                                                                          | `""` |
+| `elasticsearch.auth.password` | Elasticsearch authentication password                                                                                                          | `""` |
 | `elasticsearch.auth.existingSecret` | Existing secret with Elasticsearch credentials (keys: `elasticsearch-username`, `elasticsearch-password`), overrides `username` and `password` | `""` |
-| `elasticsearch.httpReadOnly.enabled` | Enable Elasticsearch passthrough | `false` |
-| `elasticsearch.initContainer.repository` | Image name for Elasticsearch connection init container | `busybox` |
-| `elasticsearch.initContainer.tag` | Image tag for Elasticsearch connection init container | `latest` |
-| `elasticsearch.initContainer.imagePullPolicy` | Image pull policy for Elasticsearch connection init container | `IfNotPresent` |
-| `kafka.enabled` | Enable Kafka for Nuxeo | `false` |
-| `kafka.host` | Host for Kafka connection | `""` |
-| `kafka.port` | Post for Kafka connection | `9092` |
-| `kafka.auth.enabled` | Enable SASL Kafka authentication | `false` |
-| `kafka.auth.username` | Kafka SASL authentication username | `""` |
-| `kafka.auth.password` | Kafka SASL authentication password | `""` |
-| `kafka.auth.existingSecret` | Existing secret with Kafka credentials (keys: `kafka-username`, `kafka-password`), overrides `username` and `password` | `""` |
-| `kafka.initContainer.repository` | Image name for Kafka connection init container | `busybox` |
-| `kafka.initContainer.tag` | Image tag for Kafka connection init container | `latest` |
-| `kafka.initContainer.imagePullPolicy` | Image pull policy for Kafka connection init container | `IfNotPresent` |
-| `redis.enabled` | Enable redis for Nuxeo | `false` |
-| `initContainers` | Extra init containers for Nuxeo deployment | `[]` |
-| `googleCloudStorage.enabled` | Enable Google Cloud Storage for Nuxeo | `false` |
-| `googleCloudStorage.auth.projectId` | Google Cloud Storage project ID | `""` |
-| `googleCloudStorage.auth.credentials` | Google Cloud Storage credentials | `""` |
-| `googleCloudStorage.auth.existingSecret` | Existing secret with Google Cloud Storage credentials (keys: `gcs-project-id`, `gcs-credentials`), overrides `projectId` and `credentials` | `""` |
-| `googleCloudStorage.bucket` | Google Cloud Storage bucket name | `""` |
-| `googleCloudStorage.bucketPrefix` | Google Cloud Storage bucket prefix, needs to end with `/` | `""` |
-| `amazonS3.enabled` | Enable Amazon S3 for Nuxeo | `false` |
-| `amazonS3.auth.accessKeyId` | Amazon S3 access key ID | `""` |
-| `amazonS3.auth.secretKey` | Amazon S3  secret key | `""` |
-| `amazonS3.auth.existingSecret` | Existing secret with Amazon S3 credentials (keys: `amazon-s3-access-key-id`, `amazon-s3-secret-key`), overrides `accessKeyId` and `secretKey` | `""` |
-| `amazonS3.region` | Amazon S3 region | `""` |
-| `amazonS3.bucket` | Amazon S3 bucket name | `""` |
-| `amazonS3.bucketPrefix` | Amazon S3  bucket prefix, needs to end with `/` | `""` |
-| `serviceAccount.create` | Enable creation of a service account for Nuxeo deployment | `true` |
-| `serviceAccount.annotations` | Nuxeo service account annotations | `{}` |
-| `serviceAccount.name` | Default Nuxeo service account name | `""` |
-| `persistentVolumeStorage.enabled` | Enable persistent volume storage for Nuxeo binaries | `false` |
-| `persistentVolumeStorage.storageClass` | Nuxeo binaries persistent volume storage class | `""` |
-| `persistentVolumeStorage.accessModes` | Nuxeo binaries persistent volume access modes | `["ReadWriteOnce"]` |
-| `persistentVolumeStorage.size` | Nuxeo binaries persistent volume size | `2Gi` |
-| `persistentVolumeStorage.annotations` | Nuxeo binaries persistent volume annotations | `{}` |
-| `persistentVolumeStorage.labels` | Nuxeo binaries persistent volume labels | `{}` |
-| `ingress.enabled` | Enable Ingress for Nuxeo | `false` |
-| `ingress.className` | Nuxeo Ingress class name | `""` |
-| `ingress.annotations` | Nuxeo Ingress annotations | `{}` |
-| `ingress.labels` | Nuxeo Ingress labels | `{}` |
-| `ingress.hostname` | Nuxeo Ingress host | `""` |
-| `ingress.path` | Nuxeo Ingress path | `""` |
-| `ingress.tls` | Nuxeo Ingress TLS configuration | `[]` |
-| `logs.persistence.enabled` | Enable persistent volume storage for Nuxeo logs | `false` |
-| `logs.persistence.storageClass` | Nuxeo logs persistent volume storage class | `""` |
-| `logs.persistence.accessModes` | Nuxeo logs persistent volume access modes | `["ReadWriteOnce"]` |
-| `logs.persistence.size` | Nuxeo logs persistent volume size | `2Gi` |
-| `logs.persistence.annotations` | Nuxeo logs persistent volume annotations | `{}` |
-| `logs.persistence.labels` | Nuxeo logs persistent volume labels | `{}` |
-| `customProperties` | Custom properties to be appended to `nuxeo.conf`` | `{}` |
-| `customEnvs` | Custom environment variables for Nuxeo container(s) | `[]` |
-| `customEnvsFrom` | Custom environment variables for Nuxeo container(s), loaded from a ConfigMap or Secret | `[]` |
-| `metrics.enabled` | Enable Nuxeo global metrics | `true` |
-| `metrics.streams.enabled` | Enable stream metrics reporter for Nuxeo Stream introspection | `true` |
-| `metrics.stackDriver.enabled` | Enable Google Stackdriver metrics reporter | `false` |
-| `metrics.stackDriver.gcpProjectId` | Google Stackdriver metrics project ID | `""` |
-| `metrics.stackDriver.tracing.enabled` | Enable Google Stackdriver tracing system | `false` |
-| `metrics.stackDriver.tracing.timeout` | Google Stackdriver tracing timeout | `""` |
-| `extraContainers` | Extra containers for Nuxeo deployment | `[]` |
-| `extraVolumeMounts` | Extra volume mounts for Nuxeo pod(s) | `[]` |
-| `extraVolumes` | Extra volumes for Nuxeo deployment | `[]` |
-| `extraStringSecrets` | Extra Opaque secrets to deploy, using non base64-encoded strings (`stringData` field) | `{}` |
-| `extraSecrets` | Extra Opaque secrets to deploy, using base64-encoded strings (`data` field) | `{}` |
-| `podSecurityContext.fsGroup` | Group ID for the volumes of the Nuxeo pod(s) | `1000` |
-| `containerSecurityContext` | Security context for Nuxeo container(s) | `{}` |
-| `podDisruptionBudget.minAvailable` | Minimum number of Nuxeo pods that must be available during a disruption | `nil` |
-| `podDisruptionBudget.maxUnavailable` | Maximum number of pods that can be unavailable during a disruption | `nil` |
+| `elasticsearch.httpReadOnly.enabled` | Enable Search passthrough                                                                                                                      | `false` |
+| `elasticsearch.initContainer.repository` | Image name for Elasticsearch connection init container                                                                                         | `busybox` |
+| `elasticsearch.initContainer.tag` | Image tag for Elasticsearch connection init container                                                                                          | `latest` |
+| `elasticsearch.initContainer.imagePullPolicy` | Image pull policy for Elasticsearch connection init container                                                                                  | `IfNotPresent` |
+| `kafka.enabled` | Enable Kafka for Nuxeo                                                                                                                         | `false` |
+| `kafka.host` | Host for Kafka connection                                                                                                                      | `""` |
+| `kafka.port` | Post for Kafka connection                                                                                                                      | `9092` |
+| `kafka.auth.enabled` | Enable SASL Kafka authentication                                                                                                               | `false` |
+| `kafka.auth.username` | Kafka SASL authentication username                                                                                                             | `""` |
+| `kafka.auth.password` | Kafka SASL authentication password                                                                                                             | `""` |
+| `kafka.auth.existingSecret` | Existing secret with Kafka credentials (keys: `kafka-username`, `kafka-password`), overrides `username` and `password`                         | `""` |
+| `kafka.initContainer.repository` | Image name for Kafka connection init container                                                                                                 | `busybox` |
+| `kafka.initContainer.tag` | Image tag for Kafka connection init container                                                                                                  | `latest` |
+| `kafka.initContainer.imagePullPolicy` | Image pull policy for Kafka connection init container                                                                                          | `IfNotPresent` |
+| `redis.enabled` | Enable redis for Nuxeo                                                                                                                         | `false` |
+| `initContainers` | Extra init containers for Nuxeo deployment                                                                                                     | `[]` |
+| `googleCloudStorage.enabled` | Enable Google Cloud Storage for Nuxeo                                                                                                          | `false` |
+| `googleCloudStorage.auth.projectId` | Google Cloud Storage project ID                                                                                                                | `""` |
+| `googleCloudStorage.auth.credentials` | Google Cloud Storage credentials                                                                                                               | `""` |
+| `googleCloudStorage.auth.existingSecret` | Existing secret with Google Cloud Storage credentials (keys: `gcs-project-id`, `gcs-credentials`), overrides `projectId` and `credentials`     | `""` |
+| `googleCloudStorage.bucket` | Google Cloud Storage bucket name                                                                                                               | `""` |
+| `googleCloudStorage.bucketPrefix` | Google Cloud Storage bucket prefix, needs to end with `/`                                                                                      | `""` |
+| `amazonS3.enabled` | Enable Amazon S3 for Nuxeo                                                                                                                     | `false` |
+| `amazonS3.auth.accessKeyId` | Amazon S3 access key ID                                                                                                                        | `""` |
+| `amazonS3.auth.secretKey` | Amazon S3  secret key                                                                                                                          | `""` |
+| `amazonS3.auth.existingSecret` | Existing secret with Amazon S3 credentials (keys: `amazon-s3-access-key-id`, `amazon-s3-secret-key`), overrides `accessKeyId` and `secretKey`  | `""` |
+| `amazonS3.region` | Amazon S3 region                                                                                                                               | `""` |
+| `amazonS3.bucket` | Amazon S3 bucket name                                                                                                                          | `""` |
+| `amazonS3.bucketPrefix` | Amazon S3  bucket prefix, needs to end with `/`                                                                                                | `""` |
+| `serviceAccount.create` | Enable creation of a service account for Nuxeo deployment                                                                                      | `true` |
+| `serviceAccount.annotations` | Nuxeo service account annotations                                                                                                              | `{}` |
+| `serviceAccount.name` | Default Nuxeo service account name                                                                                                             | `""` |
+| `persistentVolumeStorage.enabled` | Enable persistent volume storage for Nuxeo binaries                                                                                            | `false` |
+| `persistentVolumeStorage.storageClass` | Nuxeo binaries persistent volume storage class                                                                                                 | `""` |
+| `persistentVolumeStorage.accessModes` | Nuxeo binaries persistent volume access modes                                                                                                  | `["ReadWriteOnce"]` |
+| `persistentVolumeStorage.size` | Nuxeo binaries persistent volume size                                                                                                          | `2Gi` |
+| `persistentVolumeStorage.annotations` | Nuxeo binaries persistent volume annotations                                                                                                   | `{}` |
+| `persistentVolumeStorage.labels` | Nuxeo binaries persistent volume labels                                                                                                        | `{}` |
+| `ingress.enabled` | Enable Ingress for Nuxeo                                                                                                                       | `false` |
+| `ingress.className` | Nuxeo Ingress class name                                                                                                                       | `""` |
+| `ingress.annotations` | Nuxeo Ingress annotations                                                                                                                      | `{}` |
+| `ingress.labels` | Nuxeo Ingress labels                                                                                                                           | `{}` |
+| `ingress.hostname` | Nuxeo Ingress host                                                                                                                             | `""` |
+| `ingress.path` | Nuxeo Ingress path                                                                                                                             | `""` |
+| `ingress.tls` | Nuxeo Ingress TLS configuration                                                                                                                | `[]` |
+| `logs.persistence.enabled` | Enable persistent volume storage for Nuxeo logs                                                                                                | `false` |
+| `logs.persistence.storageClass` | Nuxeo logs persistent volume storage class                                                                                                     | `""` |
+| `logs.persistence.accessModes` | Nuxeo logs persistent volume access modes                                                                                                      | `["ReadWriteOnce"]` |
+| `logs.persistence.size` | Nuxeo logs persistent volume size                                                                                                              | `2Gi` |
+| `logs.persistence.annotations` | Nuxeo logs persistent volume annotations                                                                                                       | `{}` |
+| `logs.persistence.labels` | Nuxeo logs persistent volume labels                                                                                                            | `{}` |
+| `customProperties` | Custom properties to be appended to `nuxeo.conf``                                                                                              | `{}` |
+| `customEnvs` | Custom environment variables for Nuxeo container(s)                                                                                            | `[]` |
+| `customEnvsFrom` | Custom environment variables for Nuxeo container(s), loaded from a ConfigMap or Secret                                                         | `[]` |
+| `metrics.enabled` | Enable Nuxeo global metrics                                                                                                                    | `true` |
+| `metrics.streams.enabled` | Enable stream metrics reporter for Nuxeo Stream introspection                                                                                  | `true` |
+| `metrics.stackDriver.enabled` | Enable Google Stackdriver metrics reporter                                                                                                     | `false` |
+| `metrics.stackDriver.gcpProjectId` | Google Stackdriver metrics project ID                                                                                                          | `""` |
+| `metrics.stackDriver.tracing.enabled` | Enable Google Stackdriver tracing system                                                                                                       | `false` |
+| `metrics.stackDriver.tracing.timeout` | Google Stackdriver tracing timeout                                                                                                             | `""` |
+| `extraContainers` | Extra containers for Nuxeo deployment                                                                                                          | `[]` |
+| `extraVolumeMounts` | Extra volume mounts for Nuxeo pod(s)                                                                                                           | `[]` |
+| `extraVolumes` | Extra volumes for Nuxeo deployment                                                                                                             | `[]` |
+| `extraStringSecrets` | Extra Opaque secrets to deploy, using non base64-encoded strings (`stringData` field)                                                          | `{}` |
+| `extraSecrets` | Extra Opaque secrets to deploy, using base64-encoded strings (`data` field)                                                                    | `{}` |
+| `podSecurityContext.fsGroup` | Group ID for the volumes of the Nuxeo pod(s)                                                                                                   | `1000` |
+| `containerSecurityContext` | Security context for Nuxeo container(s)                                                                                                        | `{}` |
+| `podDisruptionBudget.minAvailable` | Minimum number of Nuxeo pods that must be available during a disruption                                                                        | `nil` |
+| `podDisruptionBudget.maxUnavailable` | Maximum number of pods that can be unavailable during a disruption                                                                             | `nil` |

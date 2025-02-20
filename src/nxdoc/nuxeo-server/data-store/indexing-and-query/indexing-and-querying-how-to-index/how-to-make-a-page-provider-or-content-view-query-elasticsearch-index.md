@@ -1,6 +1,6 @@
 ---
-title: 'HOWTO: Make a Page Provider or Content View Query Elasticsearch Index'
-description: When configuring a content view in Nuxeo Studio, you can make it query Elasticsearch instead of the Core API. See our page for steps.
+title: 'HOWTO: Make a Page Provider or Content View Query OpenSearch Index'
+description: When configuring a content view in Nuxeo Studio, you can make it query OpenSearch/Elasticsearch instead of the Core API. See our page for steps.
 review:
     comment: ''
     date: '2017-12-14'
@@ -138,7 +138,7 @@ history:
         version: '1'
 ---
 
-When [configuring a content view]({{page space='studio' page='content-view-query-and-form-tab'}}) in Nuxeo Studio, you can make it query Elasticsearch instead of the Core API. This may be interesting for performance/scalability reasons as well as for enabling aggregates support. This page lists the required steps:
+When [configuring a content view]({{page space='studio' page='content-view-query-and-form-tab'}}) in Nuxeo Studio, you can make it query OpenSearch/Elasticsearch instead of the Core API. This may be interesting for performance/scalability reasons as well as for enabling aggregates support. This page lists the required steps:
 
 {{#> callout type='info' heading='Hyland University'}}
 Watch the related courses on Hyland University
@@ -177,7 +177,7 @@ Elasticsearch indexing is "eventually consistent". This means that depending on 
 
 - [Moving Load from Database to Elasticsearch]({{page page='moving-load-from-database-to-elasticsearch'}})
 - [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
-- [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+- [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Indexing related pages'}}

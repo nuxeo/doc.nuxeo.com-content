@@ -1,5 +1,5 @@
 ---
-title: Elasticsearch Hints Cheat Sheet
+title: NXQL Hints Cheat Sheet
 review:
     comment: ''
     date: '2019-03-28'
@@ -23,7 +23,7 @@ confluence:
     page_id: '26313934'
     shortlink: zoSRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/zoSRAQ'
-    source_link: /display/NXDOC/Elasticsearch+Hints+Cheat+Sheet
+    source_link: /display/NXDOC/NXQL+Hints+Cheat+Sheet
 tree_item_index: 900
 history:
     -
@@ -79,7 +79,7 @@ history:
 ---
 
 {{! excerpt}}
-This page lists interesting use cases of Elasticsearch Hints.
+Search client such as OpenSearch/Elasticsearch can extend NXQL to provide Hints, here are some interesting use cases.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Hyland University'}}
