@@ -75,26 +75,3 @@ FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
 
 COPY /path/to/my-configuration.properties /etc/nuxeo/conf.d/my-configuration.properties
 ```
-
-## Installing FFmpeg
-
-As it contains some non-free codecs, FFmpeg isn't part of the Nuxeo image. However, you can build a custom Docker image, based on the Nuxeo one, including the `ffmpeg` package provided by [RPM Fusion](https://rpmfusion.org/), see the `Dockerfile` sample  below. The resulting `ffmpeg` binary embeds all the codecs required for Nuxeo video conversions.
-
-```Dockerfile
-FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
-
-# we need to be root to run yum commands
-USER 0
-# install EPEL, PowerTools and RPM Fusion free repositories
-RUN dnf -y install epel-release \
-  && dnf config-manager --set-enabled crb \
-  && dnf -y install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm
-# install ffmpeg package
-RUN dnf -y install ffmpeg
-# set back original user
-USER 900
-```
-
-{{#> callout type='tip' }}
-You can use the above method to install any software in the custom image.
-{{/callout}}
