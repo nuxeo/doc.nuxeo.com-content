@@ -140,6 +140,7 @@ Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/
 - Windows Server 2012, 64 bits
 - Windows 8.1, both 32 and 64 bits
 - Windows 10, both 32 and 64 bits
+- Windows 11, 64 bits
 - Windows Server 2019, 64 bits
 
 ### macOS ARM64 Support
