@@ -37,24 +37,24 @@ The Nuxeo 3D Viewer connector adds the capabilities of preview and annotation of
 
 After installation of the package, upon trying to new document in web UI, a new option of 3D Model would appear as shown in the image below:
 
-SCREENSHOT 
+![]({{file name='3d-doc-creation.png'}} ?w=600,border=true) 
 
 Upon clicking this button, users can create a document of this type.</br>
 The 3D Model files can be selected as primary blobs of this document.
 
-SCREENSHOT 
+![]({{file name='3D-doc-listview.png'}} ?w=600,border=true)
 
 ### 3D Model File Preview and Conversion
 
 The document preview is now capable to giving a 3D experience.
 
-SCREENSHOT 
+![]({{file name='3D-doc-view.png'}} ?w=600,border=true)
 
 If a pure GLB file is uploaded, the conversions section could contain an optimized GLB version.
 
 In case when an OBJ file is uploaded, the conversions section could contain the above optimized and an equivalent GLB version of the same file.
 
-SCREENSHOT 
+![]({{file name='3D-doc-sneakerview.png'}} ?w=600,border=true)
 
 Considering the performance aspects, optimized conversions, if available, would be used for the preview.
 
@@ -70,11 +70,11 @@ The preview and conversions/rendition views are available as standalone web comp
 ### Annotating Files
 
 A new tab named 3D Annotations is available in the document preview page. 
-SCREENSHOT 
+![]({{file name='3D-doc-view-tab.png'}} ?w=600,border=true)
 
 Upon clicking it, the page that allows to annotate current 3D Model file shows up. A new annotation button shows up in the right panel clicking which, the annotate mode is activated and a point click on the specific area of 3D Model to annotate can be achieved.
 
-SCREENSHOT 
+![]({{file name='3D-doc-new-annotation.png'}} ?w=600,border=true)
 
 The annotation section is also available as standalone web component and can be included in any custom document layout using: 
 ```
