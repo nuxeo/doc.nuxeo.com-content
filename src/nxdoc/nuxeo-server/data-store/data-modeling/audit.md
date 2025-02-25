@@ -218,7 +218,7 @@ There are two PageProviders that can be used for querying the Audit data store:
 * `AuditPageProvider`: allows to generate simple queries against Audit entries.
 * `DocumentHistoryReader`: allows to compute history for a given document.
 
-    [More details on the explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.audit.PageProviderservice.contrib--providers).
+    [More details on the explorer](http://explorer.nuxeo.com/nuxeo/site/latest/viewContribution/org.nuxeo.ecm.platform.audit.PageProviderservice.contrib--providers).
 
 A schema has been defined for basic Audit search: `basicauditsearch.xsd`. This schema is helpful for building a PageProvider feeding a ContentView with data from the Audit data store. An object `BasicAuditSearch` could be used to define queries on the audit data store.
 
@@ -260,7 +260,7 @@ Those default auditable events match the Nuxeo core base events:
 * `documentRestored`
 
 {{#> callout type='info'  heading='Full List'}}
-The full list of audit events used in the platform can be found [here](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202019-10.10/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--event).
+The full list of audit events used in the platform can be found [here](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--event).
 {{/callout}}
 
 If you are sending new Nuxeo core events and want them to be audited, you have to extend the `event` extension point. Here is an example of a contribution to this extension point:
