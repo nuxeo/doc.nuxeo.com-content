@@ -332,7 +332,7 @@ For instance, the above contribution will add `modelId`, `modelName`, `worklowIn
 
 When the extension point is contributed, the data are stored into the `audit.elasticsearch.indexName` index for the Elasticsearch back-end, into the `NXP_LOGS_EXTINFO` and `NXP_LOGS_MAPEXTINFOS` tables for the legacy SQL back-end and into the `audit` collection in the `audit` database for the MongoDB back-end.
 
-[More details on the explorer.](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--event)
+[More details on the explorer.](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--extendedInfo)
 
 ### Adapter
 
