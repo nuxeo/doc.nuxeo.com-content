@@ -35,7 +35,7 @@ The Nuxeo 3D Viewer connector adds the capabilities of preview and annotation of
 
 ## Functional Overview
 
-After installation of the package, upon trying to new document in web UI, a new option of 3D Model would appear as shown in the image below:
+After installation of the package, upon trying to create a new document in web UI, a new option of 3D Model would appear as shown in the image below:
 
 ![]({{file name='3d-doc-creation.png'}} ?w=600,border=true) 
 
