@@ -9,7 +9,7 @@ labels:
     - 3d
     - connectors
 toc: true
-tree_item_index: 3700
+tree_item_index: 1000
 ---
 
 The Nuxeo 3D Viewer connector adds the capabilities of preview and annotation of the 3D model files to the Nuxeo Platform. 
