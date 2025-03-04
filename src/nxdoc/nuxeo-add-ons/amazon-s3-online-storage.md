@@ -204,12 +204,6 @@ nuxeo.s3storage.endpoint=hostname
 nuxeo.s3storage.pathstyleaccess=true
 ```
 
-If you installed the bundle JAR manually instead of using the Nuxeo Package you will also need:
-
-```
-nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider
-```
-
 The following are compatibility properties that can still be used but are deprecated (you should use global AWS configuration or IAM instance roles as described above):
 ```
 nuxeo.s3storage.awsid=your_AWS_ACCESS_KEY_ID
@@ -250,6 +244,10 @@ nuxeo.s3storage.crypt.key.alias=the_key_alias
 nuxeo.s3storage.crypt.key.password=the_key_password
 ```
 
+{{#> callout type='warning' }}
+When upgrading to `lts-2025` from a previous Nuxeo version where the data is encrypted using a local keystore, you must set the `nuxeo.s3storage.crypt.keystore.legacymode` configuration property to `true`.
+{{/callout}}
+
 ##### With a KMS Managed Key
 
 Since `2023.17` ([NXP-32760](https://jira.nuxeo.com/browse/NXP-32760)), you can enable [client-side encryption with AWS KMS](https://docs.aws.amazon.com/kms/latest/cryptographic-details/client-side-encryption.html) by defining the KMS key ID in the `nuxeo.conf`:
@@ -263,6 +261,10 @@ Optionally, specify the region of the KMS key if it is different than the one fr
 ```text
 nuxeo.s3storage.crypt.kms.clientside.region=your-kms-key-region
 ```
+
+{{#> callout type='warning' }}
+When upgrading to `lts-2025` from a previous Nuxeo version where the data is encrypted using a KMS key, you must set the `nuxeo.s3storage.crypt.kms.legacymode` configuration property to `true`.
+{{/callout}}
 
 #### Server-Side Crypto Options
 
@@ -309,10 +311,6 @@ nuxeo.s3storage.directdownload.expire=3600
 
 The expire time is expressed in seconds (the default is one hour) and determines how long the generated S3 URLs are valid. Having short-lived URLs is better for security, but too short an expiration time could be problematic if your server clock is not exactly in sync with the absolute official time use by S3.
 
-{{#> callout type='info' }}
-Before Nuxeo 7.10 the configuration was done using property `nuxeo.s3storage.downloadfroms3` instead of `nuxeo.s3storage.directdownload` (same with `expire`). This is still available for backward compatibility after Nuxeo 7.10 but will be removed in a future version, so the `nuxeo.s3storage.directdownload` version above should be preferred.
-{{/callout}}
-
 ##### CORS Configuration
 
 Web UI triggers some blob downloads from XHR (e.g. Bulk Download, CSV Export, etc.) and will require the following CORS configuration on your S3 bucket:
@@ -338,13 +336,6 @@ Web UI triggers some blob downloads from XHR (e.g. Bulk Download, CSV Export, et
 Make sure to replace `http://localhost:8080` by the address where your Nuxeo instance is deployed.
 {{/callout}}
 
-Transient stores are much easier to configure now thanks to the combination of [NXP-26594](https://jira.nuxeo.com/browse/NXP-26594) and [NXP-26581](https://jira.nuxeo.com/browse/NXP-26581).</br>
-Since [Nuxeo Platform 10.10](https://jira.nuxeo.com/browse/NXP-25974) we are no longer using SimpleTransientStore because it is not cluster-compatible.
-
-Now, unless configured otherwise, storage for the blobs of transient stores shares the S3 configuration of the default binary store to stock the transient blobs in a "subfolder" of the S3 bucket. It still has a separate TTL/GC cleanup lifecycle from the default one, everything is per-"folder".
-
-So given that now transient blobs come from S3, if direct download is enabled and JavaScript generates the download, a CORS configuration is needed on the bucket.
-
 #### Connection Pool Options
 
 You can configure the internal S3 connection pool. This pool has a size of 50 by default, so if you've configured Nuxeo to use more sessions than this and all the sessions are accessing S3, you may run out of connections.
@@ -360,26 +351,13 @@ nuxeo.s3storage.socket.timeout=50000
 
 The timeouts are expressed in milliseconds.
 
-You can read more about these parameters on the AWS [ClientConfiguration](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html) documentation page.
-
-### Checking Your Configuration
-
-To check that installation went well, you can check your startup logs and look for a line like:
-
-```
-INFO  [CachingBinaryManager] Registering binary manager 'default' using S3BinaryManager
-
-```
-
-Don't forget to enable the `INFO` level for the group `org.nuxeo` in `$NUXEO_HOME/lib/log4j2.xml` to see INFO level messages from Nuxeo classes.
-
-If your configuration is incorrect, this line will be followed by some error messages describing the problems encountered.
+You can read more about these parameters on the AWS [ApacheHttpClient](https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/http/apache/ApacheHttpClient.Builder.html) documentation page.
 
 ## AWS Configuration
 
 ### AWS S3 Permissions
 
-You must have appropriate permissions set on your bucket. In particular, note that the less commonly-used permissions `s3:AbortMultipartUpload` and `s3:ListMultipartUploadParts` are needed on the bucket objects, and `s3:ListBucketMultipartUploads` and `s3:GetBucketVersioning` are needed on the bucket itself.
+You must have appropriate permissions set on your bucket. In particular, note that the less commonly-used permission `s3:GetBucketVersioning` is needed on the bucket itself.
 
 If you plan on using [Retention]({{page page='nuxeo-retention-management'}}), you'll also need `s3:PutObjectRetention` and `s3:PutObjectLegalHold` on the bucket objects, and `s3:GetBucketObjectLockConfiguration` on the bucket itself. When testing Retention in Governance mode, you'll need a user with `s3:BypassGovernanceRetention` in order for blob garbage collection to work correctly.
 
@@ -402,7 +380,6 @@ Here is a sample AWS S3 Policy that you can use; make sure that you replace `you
                 "s3:ListBucket",
                 "s3:GetBucketLocation",
                 "s3:GetBucketVersioning",
-                "s3:ListBucketMultipartUploads",
                 "s3:GetBucketObjectLockConfiguration"
             ],
             "Resource": "arn:aws:s3:::yourbucketname"
@@ -413,8 +390,6 @@ Here is a sample AWS S3 Policy that you can use; make sure that you replace `you
                 "s3:PutObject",
                 "s3:GetObject",
                 "s3:DeleteObject",
-                "s3:AbortMultipartUpload",
-                "s3:ListMultipartUploadParts",
                 "s3:PutObjectRetention",
                 "s3:PutObjectLegalHold"
             ],
@@ -428,6 +403,10 @@ Here is a sample AWS S3 Policy that you can use; make sure that you replace `you
 
 {{#> callout type='warning' }} 
 If versioning is enabled on your s3 bucket, you should define a [Cleanup Lifecycle rule](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-configuration-examples.html#lifecycle-config-conceptual-ex7) to remove expired object delete markers. As a matter of fact, in the case of s3 versioning enabled, the [Orphaned Blobs GC]({{page page='garbage-collecting-orphaned-blobs'}}) will only add a delete marker on the garbage-collected object. This object will be permanently deleted only if such a lifecycle rule is defined.
+{{/callout}}
+
+{{#> callout type='note' }}
+Since `lts-2025`, the Nuxeo server no longer aborts old Multipart uploads. You should define a [Lifecycle configuration to abort multipart uploads](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpu-abort-incomplete-mpu-lifecycle-config.html).
 {{/callout}}
 
 ## Nuxeo Configuration Through Extension Point
@@ -491,10 +470,10 @@ The following CORS configuration allows Web UI to send files to S3, please feel 
 </CORSConfiguration>
 ```
 
-To activate S3 direct upload you have to declare the mandatory fields from [nuxeo.defaults](https://github.com/nuxeo/marketplace-amazon-s3/blob/1.9_10.10/ear/src/main/resources/s3binaries/nuxeo.defaults) in the `nuxeo.conf`.
+To activate S3 direct upload you have to declare the mandatory fields from [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/2025/packages/nuxeo-amazon-s3-package/src/main/resources/install/templates/s3binaries/nuxeo.defaults) in the `nuxeo.conf`.
 
 The optional `bucket_prefix` allows you to use a "subfolder" of the bucket. The optional `crypt.serverside` allows you to use server-side encryption (SSE-S3).
 
 The `awsid`, `awssecret`, `awstoken` and `region` are deprecated and should instead be configured through `nuxeo.aws.accessKeyId`, `nuxeo.aws.secretKey`,`nuxeo.aws.sessionToken` and `nuxeo.aws.region` or through implicit IAM instance roles (see above).
 
-S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='batch-handler'}}) and a [TransientStore]({{page space='nxdoc' page='transient-store'}}) using contributions that can be found in the s3binaries template file [s3directupload-config.xml.nxftl](https://github.com/nuxeo/nuxeo/blob/master/packages/nuxeo-amazon-s3-package/src/main/resources/install/templates/s3binaries/nxserver/config/s3directupload-config.xml.nxftl)
+S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='batch-handler'}}) and a [TransientStore]({{page space='nxdoc' page='transient-store'}}) using contributions that can be found in the s3binaries template file [s3directupload-config.xml.nxftl](https://github.com/nuxeo/nuxeo/blob/2025/packages/nuxeo-amazon-s3-package/src/main/resources/install/templates/s3binaries/nxserver/config/s3directupload-config.xml.nxftl).
