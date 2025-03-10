@@ -101,6 +101,76 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 27
+
+### Migration Tool to Extract Full Text From Mongo DB to an S3 Blob
+
+Here is the 4 steps migration process when you want to switch the storage of binary fulltext from the repository (MongoDB) to a S3 bucket on an existing instance.
+
+**1. Update the** `nuxeo.conf` **and restart all nodes**
+
+```
+nuxeo.vcs.fulltext.storedInBlob=true
+# when fulltext is stored in blob, repository fulltext search is disabled
+nuxeo.vcs.fulltext.search.disabled=true
+# bucket prefix to store fulltext blobs
+nuxeo.s3storage.fulltext.storeInBlob.bucket_prefix=fulltext
+# enable the fulltext migration
+nuxeo.bulk.action.fixBinaryFulltextStorage.enabled=true
+nuxeo.bulk.action.fixBinaryFulltextStorage.defaultConcurrency=2
+nuxeo.bulk.action.fixBinaryFulltextStorage.defaultPartitions=4
+```
+
+After this, the binary fulltext of new blob will be stored in the s3 bucket under `/fulltext/` prefix.
+
+Everything should work properly while there are two different different storage for binary fulltext.
+Re-indexing will not change this state, running `extractBinaryFulltext` will do but this is not efficient since it’s slow and expensive, follow the next steps for the migration.
+
+**2. Clean MongoDB fulltext**
+
+Since we have disabled the fulltext search from the repository, we can remove existing index and fields, check if MongoDB `fulltext` index exists
+
+```
+db.default.getIndex("fulltext")
+  {
+    v: 2,
+    key: { _fts: 'text', _ftsx: 1 },
+    name: 'fulltext',
+    weights: { 'ecm:fulltextBinary': 1, 'ecm:fulltextSimple': 1 },
+    default_language: 'english',
+    language_override: '__language',
+    textIndexVersion: 3
+  },
+```
+
+then remove it
+
+```
+db.default.dropIndex('fulltext')
+```
+
+Remove MongoDB field `ecm:fulltextSimple` this can be a long operation depending on the db size.
+
+```
+db.default.updateMany({}, {$unset: {"ecm:fulltextSimple":1}});
+```
+
+**3. Run the migration**
+
+```
+curl -s -X POST "http://localhost:8080/nuxeo/api/v1/management/fulltext/fixBinaryStorage" -u Administrator:Administrator
+```
+
+It’s possible to test it by providing a custom NXQL `query`. The default query match all docs that is not a proxy.
+
+**4. Remove the migration bulk action and restart all nodes**
+
+Change the `nuxeo.conf` and restart
+
+```
+nuxeo.bulk.action.fixBinaryFulltextStorage.enabled=false
+```
+
 ## Hotfix 24
 
 ### Fix Vim Low CVE in Docker Image
