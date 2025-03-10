@@ -704,7 +704,7 @@ This test must be made to pass in order to compile and deploy your project.
 
     import java.util.Calendar;
     import java.util.GregorianCalendar;
-    import javax.inject.Inject;
+    import jakarta.inject.Inject;
 
     import org.junit.Test;
     import org.junit.runner.RunWith;
