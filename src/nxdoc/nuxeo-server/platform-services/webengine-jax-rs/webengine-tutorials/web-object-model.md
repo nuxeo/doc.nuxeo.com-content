@@ -65,12 +65,12 @@ history:
         message: ''
         version: '1'
 ---
-## JAX-RS Resources
+## Jakarta-RS Resources
 
 {{#> panel type='code' heading='Sample3.java'}}
 ```java
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.*;
 import org.nuxeo.ecm.webengine.model.impl.*;
 import org.nuxeo.ecm.webengine.model.*;
 
@@ -89,11 +89,11 @@ import org.nuxeo.ecm.webengine.model.*;
 <ul>
  *
 <li> Module Resource - this is the Web Module entry point as we've seen in sample3.
- * This is the root resource. The other type of resources are JAX-RS sub-resources.
+ * This is the root resource. The other type of resources are Jakarta-RS sub-resources.
  * A WebModule entry point is a special kind of WebObject having as type name the module name.
  *
 <li> Web Object - this represents an object that can be requested via HTTP methods.
- *  This resource is usually wrapping some internal object to expose it as a JAX-RS resource.
+ *  This resource is usually wrapping some internal object to expose it as a Jakarta-RS resource.
  *
 <li> Web Adapter - this is a special kind of resource that can be used to adapt Web Objects
  * to application specific needs.
@@ -101,8 +101,8 @@ import org.nuxeo.ecm.webengine.model.*;
  * or adding new methods on resources.
  * This is helping in creating extensible applications, in keeping the code cleaner and in focusing better on the REST approach
  * of the application.
- * For example let say you defined a DocumentObject which will expose documents as JAX-RS resources.
- * A JAX-RS resources will be able to respond to any HTTP method like GET, POST, PUT, DELETE.
+ * For example let say you defined a DocumentObject which will expose documents as Jakarta-RS resources.
+ * A Jakarta-RS resources will be able to respond to any HTTP method like GET, POST, PUT, DELETE.
  * So let say we use:
  *
 <ul>
@@ -144,7 +144,7 @@ import org.nuxeo.ecm.webengine.model.*;
  *
  * Thus, request paths will be resolved to a resource chain usually of the form: WebModule -> WebObject -> ... -> WebObject [ -> WebAdapter ].
  * <br>
- * Each of these resource objects will be <i>served</i> using the <i>sub-resource</i> mechanism of JAX-RS until the last resource is reached.
+ * Each of these resource objects will be <i>served</i> using the <i>sub-resource</i> mechanism of Jakarta-RS until the last resource is reached.
  * The last resource will usually return a view to be rendered or a redirection response.
  * The request resource chain is exposed by the WebContext object, so that one can programatically retrieve any resource from the chain.
  * In a given resource chain there will be always 2 special resources: a <b>root</b> and a <b>target</b> resource
@@ -218,7 +218,7 @@ public class Sample3 extends ModuleRoot {
   }
 
   /**
-   * Get the WebObject (i.e. a JAX-RS sub-resource) bound to "users".
+   * Get the WebObject (i.e. a Jakarta-RS sub-resource) bound to "users".
    * Look into "users" directory for the UserManager WebObject. The location of WebObjects is not explicitly specified by the programmer.
    * The module directory will be automatically scanned for WebObject and WebAdapters.
    */
@@ -236,8 +236,8 @@ public class Sample3 extends ModuleRoot {
 ```java
 package users;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.*;
 import org.nuxeo.ecm.webengine.model.impl.*;
 import org.nuxeo.ecm.webengine.model.*;
 
@@ -275,7 +275,7 @@ public class UserManager extends DefaultObject {
   }
 
   /**
-   * Get the user JAX-RS resource given the user name
+   * Get the user Jakarta-RS resource given the user name
    */
   @Path("user/{name}")
   public Object getUser(@PathParam("name") String name) {
@@ -292,8 +292,8 @@ public class UserManager extends DefaultObject {
 ```java
 package users;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.*;
 import org.nuxeo.ecm.webengine.model.impl.*;
 import org.nuxeo.ecm.webengine.model.*;
 
@@ -361,8 +361,8 @@ public class User extends DefaultObject {
 ```java
 package users;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.*;
 import org.nuxeo.ecm.webengine.model.impl.*;
 import org.nuxeo.ecm.webengine.model.*;
 

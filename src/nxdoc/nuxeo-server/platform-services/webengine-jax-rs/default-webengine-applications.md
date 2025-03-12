@@ -12,7 +12,7 @@ labels:
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950281'
-    ajs-parent-page-title: WebEngine (JAX-RS)
+    ajs-parent-page-title: WebEngine (Jakarta-RS)
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Default+WebEngine+Applications
@@ -100,7 +100,7 @@ URLs exposed by WebEngine module are of the form `/nuxeo/site/*` (where * is a s
 <div class="column medium-6">
 {{#> panel heading='Related topics'}}
 
-- [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
+- [WebEngine (Jakarta-RS)]({{page page='webengine-jax-rs'}})
 - [Navigation URLs]({{page page='navigation-urls'}})
 
 {{/panel}}

@@ -192,3 +192,11 @@ needs to be replaced by:
 ```java
 import org.apache.el.ExpressionFactoryImpl;
 ```
+
+* * *
+
+{{#> panel heading='Related topics'}}
+
+- [How to upgrade to Jakarta RS 3 - WebEngine]({{page page='how-to-upgrade-to-jakarta-rs-3'}})
+
+{{/panel}}

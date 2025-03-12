@@ -22,7 +22,7 @@ The Nuxeo Platform marshalling service provides a rendering context. This contex
 
 This context is managed by the class `org.nuxeo.ecm.core.io.registry.context.RenderingContext`. A helper is provided to easily create a context: `org.nuxeo.ecm.core.io.registry.context.RenderingContext.CtxBuilder`.
 
-When the marshalling service is used from JAX-RS, the context is filled with:
+When the marshalling service is used from Jakarta-RS, the context is filled with:
 
 *   The Nuxeo URL
 *   The client locale

@@ -57,11 +57,11 @@ history:
         version: '1'
 ---
 
-## JAX-RS Resources
+## Jakarta-RS Resources
 {{#> panel type='code' heading='Sample2.java'}}
 ```java
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.*;
 import org.nuxeo.ecm.webengine.model.impl.*;
 import org.nuxeo.ecm.webengine.model.*;
 
@@ -69,16 +69,16 @@ import org.nuxeo.ecm.webengine.model.*;
  * Templates sample.
  *
  * This demonstrates how to use template files to build client responses.
- * JAX-RS provides a flexible mechanism to send responses based on the mime type that the client expects.
+ * Jakarta-RS provides a flexible mechanism to send responses based on the mime type that the client expects.
  * To send a response to the client you simply return the Object you want as the response.
- * JAX-RS engines will usually know how to render common Java objects like String, InputStream, File etc.
+ * Jakarta-RS engines will usually know how to render common Java objects like String, InputStream, File etc.
  * If you need to output specific objects you need to register a custom MessageBodyWriter class.
- * In JAX-RS you are not able to modify the HttpServletResponse object directly from a resource method. (add headers, cookies etc)
- * Anything you may want to output must be returned from the resource method back to JAX-RS engine, and the engine will output it for you.
+ * In Jakarta-RS you are not able to modify the HttpServletResponse object directly from a resource method. (add headers, cookies etc)
+ * Anything you may want to output must be returned from the resource method back to Jakarta-RS engine, and the engine will output it for you.
  * This is a very good thing, even if for some people this approach may seem strange.
  * You may ask yourself, ok cool, The response rendering is pretty well separated from the resource logic.
  * But how can I modify response headers?
- * In that case you must return a javax.ws.rs.Response that may be used to customize your response headers.
+ * In that case you must return a jakarta.ws.rs.Response that may be used to customize your response headers.
  *
 <p>
  * WebEngine is adding a new type of response objects: templates.

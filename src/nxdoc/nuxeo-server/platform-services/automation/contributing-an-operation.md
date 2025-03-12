@@ -430,7 +430,7 @@ The initial input of an operation (or operation chain) execution is provided by 
 
 *   A core event listener that executes operations in response to core events
 *   An action bean that executes operations in response to the user actions (through the Nuxeo Web Interface)
-*   A JAX-RS resource which executes operations in response to REST calls
+*   A Jakarta-RS resource which executes operations in response to REST calls
 *   A special listener fired by the workflow service to execute an operation chain
 
 Each of these execution contexts provide the initial input for the chain (or operation) to be executed. For example, the core event listener will use the document that is the source of the event as the initial input. The action bean executor will use the document currently opened in the User Interface.

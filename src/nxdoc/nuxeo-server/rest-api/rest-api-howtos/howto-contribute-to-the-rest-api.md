@@ -31,7 +31,7 @@ Let's first see how the REST API works, then how it can be extended.
 
  The REST API is coded in the [nuxeo-rest-api-server](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/rest-api/nuxeo-rest-api-server) Maven module. It is a [WebEngine]({{page page='webengine-jax-rs'}}) module that:
 
- - Defines the [APIRoot](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/APIRoot.java) instance, the resource class serving requests for `/nuxeo/api/v1` through the `javax.ws.rs.Path` annotation:
+ - Defines the [APIRoot](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/APIRoot.java) instance, the resource class serving requests for `/nuxeo/api/v1` through the `jakarta.ws.rs.Path` annotation:
 
  ```java
  @Path("/api/v1{repo : (/repo/[^/]+?)?}")
@@ -43,7 +43,7 @@ Let's first see how the REST API works, then how it can be extended.
 
 As an example, let’s have a look at the `directory` endpoint and see how it resolves a `GET` request on `/nuxeo/api/v1/directory/continent/africa`.
 
-First, [APIRoot](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/APIRoot.java) retrieves the proper directory `WebObject` with:
+First, [APIRoot](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/APIRoot.java) retrieves the proper directory `WebObject` with:
 
 ```java
 @Path("/directory")
@@ -52,7 +52,7 @@ public Object doGetDirectory() {
 }
 ```
 
-The directory `WebObject` is made available by [DirectoryRootObject](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/directory/DirectoryRootObject.java):
+The directory `WebObject` is made available by [DirectoryRootObject](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/directory/DirectoryRootObject.java):
 
 ```java
 @WebObject(type = "directory")
@@ -64,9 +64,9 @@ public class DirectoryRootObject extends DefaultObject {
 }
 ```
 
-This will resolve the directory name `continent` passed as a path parameter and serve the relevant [DirectoryObject](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/directory/DirectoryObject.java).
+This will resolve the directory name `continent` passed as a path parameter and serve the relevant [DirectoryObject](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/directory/DirectoryObject.java).
 
-This [DirectoryObject](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/directory/DirectoryObject.java) then resolves the `africa` directory entry to serve the relevant [DirectoryEntryObject](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/directory/DirectoryEntryObject.java):
+This [DirectoryObject](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/directory/DirectoryObject.java) then resolves the `africa` directory entry to serve the relevant [DirectoryEntryObject](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/directory/DirectoryEntryObject.java):
 
 ```java
 @Path("{entryId}")
@@ -84,7 +84,7 @@ public Object getEntry(@PathParam("entryId") final String entryId) {
 }
 ```
 
-   This [DirectoryEntryObject](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/directory/DirectoryEntryObject.java) will finally return a [DirectoryEntry](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-directory/nuxeo-platform-directory-api/src/main/java/org/nuxeo/ecm/directory/api/DirectoryEntry.java) entity:
+   This [DirectoryEntryObject](https://github.com/nuxeo/nuxeo/blob/2025/nuxeo-features/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/directory/DirectoryEntryObject.java) will finally return a [DirectoryEntry](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/nuxeo-platform-directory/nuxeo-platform-directory-api/src/main/java/org/nuxeo/ecm/directory/api/DirectoryEntry.java) entity:
 
 ```java
 @GET
@@ -95,9 +95,9 @@ public DirectoryEntry doGet() {
 
 Last but not the least, this `DirectoryEntry` entity has to be serialized and unserialized in JSON. This can be respectively done by:
 
-- [DirectoryEntryJsonWriter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-directory/nuxeo-platform-directory-core/src/main/java/org/nuxeo/ecm/directory/io/DirectoryEntryJsonWriter.java) based on `javax.ws.rs.ext.MessageBodyWriter`.
+- [DirectoryEntryJsonWriter](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/nuxeo-platform-directory/nuxeo-platform-directory-core/src/main/java/org/nuxeo/ecm/directory/io/DirectoryEntryJsonWriter.java) based on `jakarta.ws.rs.ext.MessageBodyWriter`.
 
-- [DirectoryEntryJsonReader](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-directory/nuxeo-platform-directory-core/src/main/java/org/nuxeo/ecm/directory/io/DirectoryEntryListJsonReader.java) based on `javax.ws.rs.ext.MessageBodyReader`.
+- [DirectoryEntryJsonReader](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/nuxeo-platform-directory/nuxeo-platform-directory-core/src/main/java/org/nuxeo/ecm/directory/io/DirectoryEntryListJsonReader.java) based on `jakarta.ws.rs.ext.MessageBodyReader`.
 
 ## Extending the REST API: the Workflow Case
 
@@ -140,11 +140,11 @@ Thus, any endpoint or web adapter class you add, respectively annotated with `@W
 
 A REST API endpoint is defined by a class annotated with `@WebObject`.
 
-  In the fragment bundle, all the `@WebObject` annotated classes need to be placed in a package with a name prefixed with the package name of the [APIRoot](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/APIRoot.java) class, i.e. [org.nuxeo.ecm.restapi.server.jaxrs](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs).
+  In the fragment bundle, all the `@WebObject` annotated classes need to be placed in a package with a name prefixed with the package name of the [APIRoot](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/APIRoot.java) class, i.e. [org.nuxeo.ecm.restapi.server](https://github.com/nuxeo/nuxeo/tree/2025/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server).
 
-In the case of the Workflow REST API, the `@WebObject` annotated classes are grouped within the [org.nuxeo.ecm.restapi.server.jaxrs.routing](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-rest-api/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/routing) package.
+In the case of the Workflow REST API, the `@WebObject` annotated classes are grouped within the [org.nuxeo.ecm.restapi.server.routing](https://github.com/nuxeo/nuxeo/tree/2025/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-rest-api/src/main/java/org/nuxeo/ecm/restapi/server/routing) package.
 
-As a direct result and thanks to a [routing method](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/RepositoryObject.java), the `@WebObject` annotated classes located in the fragment bundle will be discovered and made available under the `/nuxeo/api/v1` resource path as well as to their readers and writers. For instance, the [WorkflowObject](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-rest-api/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/routing/WorkflowObject.java) from the [nuxeo-routing-rest-api](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-rest-api) fragment bundle is automatically detected and available under the `/nuxeo/api/v1/workflow` path.
+As a direct result and thanks to a [routing method](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/RepositoryObject.java), the `@WebObject` annotated classes located in the fragment bundle will be discovered and made available under the `/nuxeo/api/v1` resource path as well as to their readers and writers. For instance, the [WorkflowObject](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-rest-api/src/main/java/org/nuxeo/ecm/restapi/server/routing/WorkflowObject.java) from the [nuxeo-routing-rest-api](https://github.com/nuxeo/nuxeo/tree/2025/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-rest-api) fragment bundle is automatically detected and available under the `/nuxeo/api/v1/workflow` path.
 
 ```java
 @WebObject(type = "workflow")
@@ -170,11 +170,11 @@ public class WorkflowObject extends DefaultObject {
 
 A web adapter is defined by a class annotated with `@WebAdapter`.
 
-In the exact same way as for a new endpoint, all the `@WebAdapter` annotated classes need to be placed in a package with a name prefixed with `org.nuxeo.ecm.restapi.server.jaxrs`.
+In the exact same way as for a new endpoint, all the `@WebAdapter` annotated classes need to be placed in a package with a name prefixed with `org.nuxeo.ecm.restapi.server`.
 
-In the case of the Workflow REST API, the `@WebAdapter` annotated classes are grouped within the [org.nuxeo.ecm.restapi.server.jaxrs.routing.adapter](https://github.com/nuxeo/nuxeo-platform-document-routing/tree/master/nuxeo-routing-rest-api/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/routing/adapter) package.
+In the case of the Workflow REST API, the `@WebAdapter` annotated classes are grouped within the [org.nuxeo.ecm.restapi.server.routing.adapter](https://github.com/nuxeo/nuxeo/tree/2025/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-rest-api/src/main/java/org/nuxeo/ecm/restapi/server/routing/adapter) package.
 
-As a direct result, the `@WebAdapter` annotated classes located in the fragment bundle will be discovered and made available. For instance, the [WorkflowAdapter](https://github.com/nuxeo/nuxeo-platform-document-routing/blob/master/nuxeo-routing-rest-api/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/routing/adapter/WorkflowAdapter.java) from the [nuxeo-routing-rest-api](https://github.com/nuxeo/nuxeo-platform-document-routing/tree/master/nuxeo-routing-rest-api) fragment bundle is automatically detected and available under the `/nuxeo/api/v1/path/my/doc/path/@workflowAdapter` path.
+As a direct result, the `@WebAdapter` annotated classes located in the fragment bundle will be discovered and made available. For instance, the [WorkflowAdapter](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-rest-api/src/main/java/org/nuxeo/ecm/restapi/server/routing/adapter/WorkflowAdapter.java) from the [nuxeo-routing-rest-api](https://github.com/nuxeo/nuxeo/tree/2025/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-rest-api) fragment bundle is automatically detected and available under the `/nuxeo/api/v1/path/my/doc/path/@workflowAdapter` path.
 
 ```java
 @WebAdapter(name = WorkflowAdapter.NAME, type = "workflowAdapter")
