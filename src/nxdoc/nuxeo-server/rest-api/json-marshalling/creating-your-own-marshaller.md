@@ -160,18 +160,18 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
 
 ### Using Your Marshallers
 
-*   From a JAX-RS endpoint
+*   From a Jakarta-RS endpoint
 
     1.  Make sure your WebEngine application provides the nuxeo-core-io marshalling.
 
         If it extends automation server or REST API v1, it's ok.
 
-        Otherwise, you have to register a single JAX-RS object in your application.
+        Otherwise, you have to register a single Jakarta-RS object in your application.
 
         ```java
         public class ProductApplication extends WebEngineModule {
-            public Set<Object> getSingletons() {
-                return Sets.newHashSet(new JsonCoreIODelegate());
+            public Set<Class<?>> getClasses() {
+                return Set.of(new JsonCoreIODelegate());
             }
         }
         ```
@@ -198,7 +198,7 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
         ```
 
         {{/panel}}
-*   Outside JAX-RS
+*   Outside Jakarta-RS
 
     You can use the Nuxeo Platform marshalling service outside the web context. The simplest way is to use `org.nuxeo.ecm.core.io.registry.MarshallerHelper`.
 

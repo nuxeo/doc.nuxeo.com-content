@@ -16,7 +16,7 @@ labels:
 toc: true
 confluence:
     ajs-parent-page-id: '950281'
-    ajs-parent-page-title: WebEngine (JAX-RS)
+    ajs-parent-page-title: WebEngine (Jakarta-RS)
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Session+and+Transaction+Management
@@ -106,15 +106,15 @@ history:
 
 ## Transaction Management
 
-By default WebEngine will automatically start a transaction for any request to a JAX-RS application (or WebEngine module). The default locations of static resources are omitted (so that no transaction will be started when requesting a static resource). The static resources locations is `*/skin/*`&nbsp;&mdash; this will match any path that targets a resource inside a `skin` directory in a JAX-RS application.
+By default WebEngine will automatically start a transaction for any request to a Jakarta-RS application (or WebEngine module). The default locations of static resources are omitted (so that no transaction will be started when requesting a static resource). The static resources locations is `*/skin/*`&nbsp;&mdash; this will match any path that targets a resource inside a `skin` directory in a Jakarta-RS application.
 
 You may want to adapt the transaction timeout per-request. In that case, you should specify in the HTTP headers the timeout value in seconds using the header `Nuxeo-Transaction-Timeout`.
 
 ## Session Management
 
-WebEngine provides a managed `CoreSession` to any JAX-RS resource that wants to connect to the repository. WebEngine will close the managed `CoreSession` when no more needed (at the end of the request) so you should not worry about leaks. This session can be used either in a JAX-RS resource method, or in JAX-RS a `MessageBodyReader` or `MessageBodyWriter`.
+WebEngine provides a managed `CoreSession` to any Jakarta-RS resource that wants to connect to the repository. WebEngine will close the managed `CoreSession` when no more needed (at the end of the request) so you should not worry about leaks. This session can be used either in a Jakarta-RS resource method, or in Jakarta-RS a `MessageBodyReader` or `MessageBodyWriter`.
 
-To get the managed `CoreSession` from a JAX-RS resource you can use the following code:
+To get the managed `CoreSession` from a Jakarta-RS resource you can use the following code:
 
 ```java
 UserSession.getCurrentSession(httpRequest);
@@ -142,7 +142,7 @@ By default the `getCoreSession()` method will use the default repository as conf
 
 {{#> callout type='note' }}
 
-Note that the `UserSession` object is available only in the context of a WebEngine request (_i.e._, inside JAX-RS applications or WebEngine modules).
+Note that the `UserSession` object is available only in the context of a WebEngine request (_i.e._, inside Jakarta-RS applications or WebEngine modules).
 
 {{/callout}}
 
@@ -164,7 +164,7 @@ If not specified the default repository defined by the Nuxeo server will be used
 
 ## Cleaning Up at the End of the Request
 
-Some JAX-RS resources will need to create temporary files or open other system resources that cannot be removed in the JAX-RS method because they are used by a `MessageBodyWriter`. In that case you can register a cleanup handler that will be invoked at the request end (after all JAX-RS objects finished their work and response was sent to the servlet output stream).
+Some Jakarta-RS resources will need to create temporary files or open other system resources that cannot be removed in the Jakarta-RS method because they are used by a `MessageBodyWriter`. In that case you can register a cleanup handler that will be invoked at the request end (after all Jakarta-RS objects finished their work and response was sent to the servlet output stream).
 
 To register a cleanup handler you can do the following:
 
@@ -182,7 +182,7 @@ The `cleanup` method will be invoked after the request is processed and the resp
 
 ## Configuring Transaction Management on a Path Basis
 
-You can also configure how the transaction is managed on a subset of resources in your JAX-RS application. To do this you can contribute an extension as follows:
+You can also configure how the transaction is managed on a subset of resources in your Jakarta-RS application. To do this you can contribute an extension as follows:
 
 ```xml
 <extension target="org.nuxeo.ecm.webengine.WebEngineComponent" point="request-configuration">

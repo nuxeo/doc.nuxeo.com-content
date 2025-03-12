@@ -1,5 +1,5 @@
 ---
-title: WebEngine (JAX-RS)
+title: WebEngine (Jakarta-RS)
 review:
     comment: ''
     date: '2016-12-20'
@@ -38,7 +38,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-11-24 09:22'
-        message: Fix link to JAX-RS tutorial
+        message: Fix link to Jakarta-RS tutorial
         version: '56'
     -
         author: Damien Metzler
@@ -317,15 +317,15 @@ history:
         version: '1'
 
 ---
-Nuxeo WebEngine is a web framework for [JAX-RS](http://jcp.org/en/jsr/detail?id=311) applications based on a Nuxeo document repository. It provides a template mechanism to facilitate the dynamic generation of web views for JAX-RS resources.
+Nuxeo WebEngine is a web framework for [Jakarta-RS](http://jcp.org/en/jsr/detail?id=311) applications based on a Nuxeo document repository. It provides a template mechanism to facilitate the dynamic generation of web views for Jakarta-RS resources.
 
 Templating is based on the [FreeMarker](http://freemarker.sourceforge.net/) template engine.
 
-Besides templating support, WebEngine provides an easy way to integrate native JAX-RS application on top of the Nuxeo platform - it provides all the glue and logic to deploy JAX-RS application on a Nuxeo server.
+Besides templating support, WebEngine provides an easy way to integrate native Jakarta-RS application on top of the Nuxeo platform - it provides all the glue and logic to deploy Jakarta-RS application on a Nuxeo server.
 
-We will describe here the steps required to register a JAX-RS application, and how to use WebEngine templating to provide Web views for your resources.
+We will describe here the steps required to register a Jakarta-RS application, and how to use WebEngine templating to provide Web views for your resources.
 
-This tutorial assumes you are already familiarized with JAX-RS. If not, please read first a JAX-RS tutorial or the specifications. For beginners, you can find a [JAX-RS tutorial](https://cwiki.apache.org/confluence/x/TB9xAQ) here.
+This tutorial assumes you are already familiarized with Jakarta-RS. If not, please read first a Jakarta-RS tutorial or the specifications. For beginners, you can find a [Jakarta-RS tutorial](https://cwiki.apache.org/confluence/x/TB9xAQ) here.
 
 {{#> callout type='info' }}
 
@@ -340,11 +340,11 @@ These are the key points to keep in mind to have a running simple WebEngine appl
 *   make your class extend `ModuleRoot`,
 *   annotate your class with `@WebObject`,
 
-## Declaring a JAX-RS Application in Nuxeo
+## Declaring a Jakarta-RS Application in Nuxeo
 
-To deploy your JAX-RS application in Nuxeo you should create a JAX-RS application class (see specifications) and declare it inside the `MANIFEST.MF` file of your Nuxeo bundle.
+To deploy your Jakarta-RS application in Nuxeo you should create a Jakarta-RS application class (see specifications) and declare it inside the `MANIFEST.MF` file of your Nuxeo bundle.
 
-To define a JAX-RS application, you must write a Java class that extends the `javax.ws.rs.core.Application` abstract class.
+To define a Jakarta-RS application, you must write a Java class that extends the `jakarta.ws.rs.core.Application` abstract class.
 
 Then, you need to declare your application in your bundle `MANIFEST.MF` file as following:
 
@@ -353,13 +353,13 @@ Nuxeo-WebModule: org.MyApplicationClass
 
 ```
 
-where `org.MyApplicationClass` is the full name of your JAX-RS application class.
+where `org.MyApplicationClass` is the full name of your Jakarta-RS application class.
 
 Now you simply put your JAR in Nuxeo bundles directory (e.g. `$NUXEO_HOME/nxserver/bundle`) and your Web Application will be deployed under the URL: `http://NUXEO_SERVER/nuxeo`.
 
 ### Example
 
-Let's define a JAX-RS application as follows:
+Let's define a Jakarta-RS application as follows:
 
 ```java
 public class MyWebApp extends Application {
@@ -386,7 +386,7 @@ public class MyWebAppRoot {
 
 ```
 
-Lets say the full name of `MyWebApp` is `org.nuxeo.example.MyWebApp`. Now you should tell to Nuxeo WebEngine that you have a JAX-RS application in your bundle. To do this, add a line to your `MANIFEST.MF` file as follows:
+Lets say the full name of `MyWebApp` is `org.nuxeo.example.MyWebApp`. Now you should tell to Nuxeo WebEngine that you have a Jakarta-RS application in your bundle. To do this, add a line to your `MANIFEST.MF` file as follows:
 
 ```
 Manifest-Version: 1.0
@@ -398,33 +398,33 @@ Nuxeo-WebModule: org.nuxeo.example.MyWebApp
 
 Build your application JAR and put it into your Nuxeo bundles directory. After starting the server you will have a new web page available at `http://NUXEO_SERVER/nuxeo/site/mysite`.
 
-### Automatic Discovery of JAX-RS Resources at Runtime
+### Automatic Discovery of Jakarta-RS Resources at Runtime
 
-If you don't want to explicitly declare your resources in a JAX-RS application object you can use a special application that will discover resources at runtime when it will be registered by the JAX-RS container.
-For this you should use the `org.nuxeo.ecm.webengine.jaxrs.scan.DynamicApplicationFactory` application in your manifest like this:
-
-```
-Nuxeo-WebModule: org.nuxeo.ecm.webengine.jaxrs.scan.DynamicApplicationFactory
+If you don't want to explicitly declare your resources in a Jakarta-RS (formerly Jakarta-RS) application object you can use a special application that will discover resources at runtime when it will be registered by the Jakarta-RS container.
+For this you should use the `org.nuxeo.ecm.webengine.rest.scan.DynamicApplicationFactory` application in your manifest like this:
 
 ```
+Nuxeo-WebModule: org.nuxeo.ecm.webengine.rest.scan.DynamicApplicationFactory
 
-When your JAX-RS module will be registered the bundle declaring the module will be scanned and any class annotated with `@Provider` or `@Path` will be added to the module.
+```
+
+When your Jakarta-RS module will be registered the bundle declaring the module will be scanned and any class annotated with `@Provider` or `@Path` will be added to the module.
 If you want to avoid scanning the entire bundle you can use the attribute `package` to perform scanning only inside the given package (and on its sub-packages). Example:
 
 ```
-Nuxeo-WebModule: org.nuxeo.ecm.webengine.jaxrs.scan.DynamicApplicationFactory;package=org/my/root/package
+Nuxeo-WebModule: org.nuxeo.ecm.webengine.rest.scan.DynamicApplicationFactory;package=org/my/root/package
 
 ```
 
 {{#> callout type='info' }}
 
-The JAX-RS container used by Nuxeo is [Jersey](https://jersey.java.net/).
+The Jakarta-RS container used by Nuxeo is [Jersey](https://jersey.java.net/).
 
 {{/callout}}
 
 ## {{> anchor 'declaring-webengine-module-in-nuxeo'}}Declaring a WebEngine Application in Nuxeo
 
-To declare a WebEngine Application you should create a new JAX-RS Application as in the previous section - but using the `org.nuxeo.ecm.webengine.app.WebEngineModule` base class and declare any Web Object Types used inside your application (or use runtime type discovery).
+To declare a WebEngine Application you should create a new Jakarta-RS Application as in the previous section - but using the `org.nuxeo.ecm.webengine.app.WebEngineModule` base class and declare any Web Object Types used inside your application (or use runtime type discovery).
 You will learn more about Web Object Types in the following sections.
 
 {{#> callout type='info' }}
@@ -436,15 +436,15 @@ Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;name=myWebApp;exten
 ```
 
 the **name** attribute is mandatory, **extends** and **package** are optional and are explained above.
-When declaring in that way a WebEngine module all the Web engine types and JAX-RS resources will be discovered at runtime - at each startup.
+When declaring in that way a WebEngine module all the Web engine types and Jakarta-RS resources will be discovered at runtime - at each startup.
 
 {{/callout}} {{#> callout type='info' }}
 
-A WebEngine Application is a regular JAX-RS application plus an object model to help creating Nuxeo web front ends using FreeMarker as the templating system.
+A WebEngine Application is a regular Jakarta-RS application plus an object model to help creating Nuxeo web front ends using FreeMarker as the templating system.
 
 {{/callout}}
 
-If you'd like your WEB module to be deployed in a distinct JAX-RS application than the default one (handling all WebEngine modules), you need to declare a host:
+If you'd like your WEB module to be deployed in a distinct Jakarta-RS application than the default one (handling all WebEngine modules), you need to declare a host:
 
 ```
 Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;host=MyHost
@@ -498,7 +498,7 @@ If you want automatic discovery of resources you can just use the WebEngineModul
 
 {{/callout}}
 
-Of course as for JAX-RS applications you should specify a Manifest header to declare your application like:
+Of course as for Jakarta-RS applications you should specify a Manifest header to declare your application like:
 
 ```
 Nuxeo-WebModule: org.nuxeo.ecm.webengine.admin.AdminApp;name=admin;extends=base
@@ -550,19 +550,19 @@ public class Main extends ModuleRoot {
 
 ## What Is WebEngine Good For?
 
-We've seen that using WebEngine you can deploy your JAX-RS applications without many trouble. You don't need to care about servlet declaration etc. You simply need to declare your JAX-RS application class in the MANIFEST file. The JAX-RS servlet provided by WebEngine will be used to invoke your application when its URL is hit.
+We've seen that using WebEngine you can deploy your Jakarta-RS applications without many trouble. You don't need to care about servlet declaration etc. You simply need to declare your Jakarta-RS application class in the MANIFEST file. The Jakarta-RS servlet provided by WebEngine will be used to invoke your application when its URL is hit.
 
-So for now, we've seen how to create a JAX-RS application and deploy it into a Nuxeo server. You can stop here if you just want to use JAX-RS and don't care about WebEngine templating and Web Views for your resources.
+So for now, we've seen how to create a Jakarta-RS application and deploy it into a Nuxeo server. You can stop here if you just want to use Jakarta-RS and don't care about WebEngine templating and Web Views for your resources.
 
-JAX-RS is a very good solution to build REST applications and even Web Sites. The problem is that JAX-RS focus more on REST applications and doesn't define a flexible way to build modular Web Sites on top of the JAX-RS resources.
+Jakarta-RS is a very good solution to build REST applications and even Web Sites. The problem is that Jakarta-RS focus more on REST applications and doesn't define a flexible way to build modular Web Sites on top of the Jakarta-RS resources.
 
-This is where **WebEngine** is helping by providing Web Views for your JAX-RS resources.
+This is where **WebEngine** is helping by providing Web Views for your Jakarta-RS resources.
 
-I will first explain how you can do templating (using FreeMarker) for a regular JAX-RS resource. Then I will enter deeper into the WebEngine templating model.
+I will first explain how you can do templating (using FreeMarker) for a regular Jakarta-RS resource. Then I will enter deeper into the WebEngine templating model.
 
-## JAX-RS Resource Templating
+## Jakarta-RS Resource Templating
 
-To create a FreeMarker template for your JAX-RS resource you need to put the template file (a FreeMarker template like `index.ftl`) in your bundle so the template could be located using the Java class loader at runtime.
+To create a FreeMarker template for your Jakarta-RS resource you need to put the template file (a FreeMarker template like `index.ftl`) in your bundle so the template could be located using the Java class loader at runtime.
 
 ### Example
 
@@ -598,18 +598,18 @@ In WebEngine if you doesn't sign in as a real user you will be automatically con
 Here is the list of all variables available in a template file:
 
 *   `Context` - the context object; see `org.nuxeo.ecm.webengine.model.WebContext` for the provided API.
-*   `This` - the target JAX-RS resource. (the object that returned the template)
-*   `Root` - the first JAX-RS resource in the call chain. (the first JAX-RS resources that delegate the call to the leaf resource). This variable **is not available** for pure JAX-RS resources. You should use WebEngine objects to have it defined.
-*   `Session` - the Nuxeo repository session. The session is always non null when the JAX-RS application is installed into a Nuxeo server.
-*   `Document` - this object is equivalent to **This** when the current JAX-RS resource is wrapping a Nuxeo Document. See `org.nuxeo.ecm.platform.rendering.fm.adapters.DocumentTemplate` for the provided API. This variable is not set when using pure JAX-RS resources. You should use WebEngine objects to have it defined.
-*   `Adapter` - the current WebEngine adapter - only set when using WebEngine objects and the current JAX-RS resource is an adapter.
+*   `This` - the target Jakarta-RS resource. (the object that returned the template)
+*   `Root` - the first Jakarta-RS resource in the call chain. (the first Jakarta-RS resources that delegate the call to the leaf resource). This variable **is not available** for pure Jakarta-RS resources. You should use WebEngine objects to have it defined.
+*   `Session` - the Nuxeo repository session. The session is always non null when the Jakarta-RS application is installed into a Nuxeo server.
+*   `Document` - this object is equivalent to **This** when the current Jakarta-RS resource is wrapping a Nuxeo Document. See `org.nuxeo.ecm.platform.rendering.fm.adapters.DocumentTemplate` for the provided API. This variable is not set when using pure Jakarta-RS resources. You should use WebEngine objects to have it defined.
+*   `Adapter` - the current WebEngine adapter - only set when using WebEngine objects and the current Jakarta-RS resource is an adapter.
 *   `Module` - _deprecated_ - this is the module instance (the root object) and is provided only for compatibility with previous WebEngine implementations.
 *   `Engine` - this is the singleton WebEngine service; see the `org.nuxeo.ecm.webengine.WebEngine` interface for the provided API.
-*   `basePath` - the `contextPath+"/"+servletPath` (see `javax.servlet` specifications)
+*   `basePath` - the `contextPath+"/"+servletPath` (see `jakarta.servlet` specifications)
 *   `contextPath` - _deprecated_ - special variable that identify the context path set using the runtime variable `org.nuxeo.ecm.contextPath`. Tis is useful for proxy redirections. See **WebEngine Resources** section for how to locate resources.
 *   `skinPath` - _deprecated_ - represent the path to the WebEngine module resources. Should no more be used since it is not safe when rewriting requests using a proxy HTTP server. See **WebEngine Resources** section for how to locate resources.
 
-You notice that when using pure JAX-RS objects you only have the following built-in variables defined in the template context: `This`, `Context`, `Engine`, `basePath`, `contextPath`.
+You notice that when using pure Jakarta-RS objects you only have the following built-in variables defined in the template context: `This`, `Context`, `Engine`, `basePath`, `contextPath`.
 
 ### Custom Template Variables
 
@@ -644,11 +644,11 @@ The problem with the templating described above is that template files are insid
 
 This is one of the reason the WebEngine module concept was introduced.
 
-A module is a bundle (i.e. JAR file) that contains JAX-RS resources and web resources (such as images, HTML files or templates). The module is usually defining a JAX-RS application but it can also contribute resources to other applications. So a module is defined by:
+A module is a bundle (i.e. JAR file) that contains Jakarta-RS resources and web resources (such as images, HTML files or templates). The module is usually defining a Jakarta-RS application but it can also contribute resources to other applications. So a module is defined by:
 
 *   a module name - a unique key used to identify the module in the module registry.
 *   a module path - the path of the root resource in a module.
-*   a module entry point - a JAX-RS resource class that will be served when the module path matches a client request. The module entry point is used to directly send responses or to dispatch the request to other JAX-RS resources.
+*   a module entry point - a Jakarta-RS resource class that will be served when the module path matches a client request. The module entry point is used to directly send responses or to dispatch the request to other Jakarta-RS resources.
 
 To define a module you need to create a `module.xml` file and put it in the root of your JAR. Here is the minimal content of a `module.xml` file:
 
@@ -665,9 +665,9 @@ How the entry point is located will be discussed in the next section.
 
 ### WebEngine Objects
 
-A WebEngine module is made from web resources and web objects. Resources are usually HTML, JavaScript, CSS, images or template files and are used to create web **views** for the JAX-RS objects provided by the module.
+A WebEngine module is made from web resources and web objects. Resources are usually HTML, JavaScript, CSS, images or template files and are used to create web **views** for the Jakarta-RS objects provided by the module.
 
-To be able to bind views to your JAX-RS resources you must declare them as WebEngine objects. This is done by using the annotation: `@WebObject` and extending the `org.nuxeo.ecm.webengine.model.impl.DefaultObject` class. Example:
+To be able to bind views to your Jakarta-RS resources you must declare them as WebEngine objects. This is done by using the annotation: `@WebObject` and extending the `org.nuxeo.ecm.webengine.model.impl.DefaultObject` class. Example:
 
 ```java
 @WebObject(type = "User")
@@ -683,7 +683,7 @@ public class User extends DefaultObject {
 }
 ```
 
-In the previous example we defined a WebObject of type `User`. You notice the object is a JAX-RS resource and extends the `DefaultObject` base class. The `@WebObject` annotation is used to declare the JAX-RS resource as a WebObject.
+In the previous example we defined a WebObject of type `User`. You notice the object is a Jakarta-RS resource and extends the `DefaultObject` base class. The `@WebObject` annotation is used to declare the Jakarta-RS resource as a WebObject.
 
 There is a special WebObject - the entry point of a module. To define a module entry point you need to create a WebObject that extends the `org.nuxeo.ecm.webengine.model.impl.ModuleRoot.ModuleRoot` class. Example:
 
@@ -707,7 +707,7 @@ public class Main extends ModuleRoot {
 
 ```
 
-As we've seen above when a module is loaded the entry point class is located using the `root-type` attribute in module.xml. This attribute is pointing to the WebObject having the same type as the `root_type` value. So in our case the `root-type="Admin"` attribute is telling to WebEngine to use the the class `Main` annotated with `@WebObject(type = "Admin")` as the entry point JAX-RS resource.
+As we've seen above when a module is loaded the entry point class is located using the `root-type` attribute in module.xml. This attribute is pointing to the WebObject having the same type as the `root_type` value. So in our case the `root-type="Admin"` attribute is telling to WebEngine to use the the class `Main` annotated with `@WebObject(type = "Admin")` as the entry point Jakarta-RS resource.
 
 In the example above we can see that WebObjects methods annotated with `@GET`, `@POST` etc. are used to return the response to the client. The right method is selected depending on the HTTP method that were used to make the request. `@GET` methods are used to serve GET requests, `@POST` methods are used to serve POST requests, etc. So the method:
 
@@ -733,7 +733,7 @@ The method:
 
 ```
 
-delegates the request to the WebObject having the type `UserManager`. This Web Object is a JAX-RS resource annotated with `@WebObject(type="UserManager")`.
+delegates the request to the WebObject having the type `UserManager`. This Web Object is a Jakarta-RS resource annotated with `@WebObject(type="UserManager")`.
 
 ### WebEngine Adapters
 
@@ -755,9 +755,9 @@ See more on using adapters in Adapter Tutorial.
 
 ### @Path and HTTP Method Annotations
 
-Lets discuss now how JAX-RS annotations are used to match requests.
+Lets discuss now how Jakarta-RS annotations are used to match requests.
 
-If a method is annotated using one of the HTTP method annotations (i.e. `@GET`, `@POST`, `@PUT`, `@DELETE`, etc.) then it will be invoked when the current object path matches the actual path in the user request. These methods **must** return the object that will be used as the response to be sent to the client. Regular Java objects as String, Integer etc. are automatically serialized by the JAX-RS engine and sent to the client. If you return other type of objects you must provide a writer that will handle the object serialization. See more about this in JAX-RS specifications.
+If a method is annotated using one of the HTTP method annotations (i.e. `@GET`, `@POST`, `@PUT`, `@DELETE`, etc.) then it will be invoked when the current object path matches the actual path in the user request. These methods **must** return the object that will be used as the response to be sent to the client. Regular Java objects as String, Integer etc. are automatically serialized by the Jakarta-RS engine and sent to the client. If you return other type of objects you must provide a writer that will handle the object serialization. See more about this in Jakarta-RS specifications.
 
 Methods that are annotated with both `@Path` and one of the HTTP method annotations are used in the same manner as the ones without a `@Path` annotation. The `@Path` annotation can be added if you want to match a sub-path of the current object path. `@Path` annotations may contain regular expression patterns that should be enclosed in brackets {}.
 
@@ -787,7 +787,7 @@ The `doGet` method will be invoked when a request is exactly matching the `/nuxe
 
 The `getUser` method will be invoked when a request is matching the path `/nuxeo/site/users/{name`} where {`name`} matches any path segment. So all requests on paths like `/nuxeo/site/users/foo`, `/nuxeo/site/users/bar` will match the `getUser` method. Because the path contains a pattern variable, you can use the `@PathParam` annotation to inject the actual value of that variable into the method argument.
 
-You can also use a `@Path` annotation to redirect calls to another JAX-RS resource. If you want this then you **must not** use use any HTTP method annotations in conjunction with `@Path` - otherwise the method will be treated as a terminal method that is returning the response object to be sent to the client.
+You can also use a `@Path` annotation to redirect calls to another Jakarta-RS resource. If you want this then you **must not** use use any HTTP method annotations in conjunction with `@Path` - otherwise the method will be treated as a terminal method that is returning the response object to be sent to the client.
 
 Example:
 
@@ -804,7 +804,7 @@ public class Users extends DefaultObject {
 }
 ```
 
-You can see in the example above the if the request matches a path like `/nuxeo/site/users/{name`} then the `Users` resource will dispatch the call to another JAX-RS resource (i.e. `User` object) that will be used to handle the response to the user (or to dispatch further the handling to other JAX-RS resources).
+You can see in the example above the if the request matches a path like `/nuxeo/site/users/{name`} then the `Users` resource will dispatch the call to another Jakarta-RS resource (i.e. `User` object) that will be used to handle the response to the user (or to dispatch further the handling to other Jakarta-RS resources).
 
 ### Dispatching Requests to WebObject Sub-Resources
 

@@ -66,7 +66,7 @@ When calling Automation operations through REST calls, you may want to throw cus
 
 ## Rest Custom Exception in Automation Operation and HTTP Code Error Setting
 
-In order to throw custom exception and HTTP status code, you have to create a custom Exception extending `org.nuxeo.ecm.automation.server.jaxrs.RestOperationException`. You will be able to set the HTTP status code which will be return into the rest call response.
+In order to throw custom exception and HTTP status code, you have to create a custom Exception extending `org.nuxeo.ecm.automation.server.rest.RestOperationException`. You will be able to set the HTTP status code which will be return into the rest call response.
 
 Example:
 
@@ -95,7 +95,7 @@ I have to create an ExceptionTest extending the RestOperationException:
  */
 package org.nuxeo.ecm.automation.test.helpers;
 
-import org.nuxeo.ecm.automation.server.jaxrs.RestOperationException;
+import org.nuxeo.ecm.automation.server.rest.RestOperationException;
 
 public class ExceptionTest extends RestOperationException {
 
@@ -148,7 +148,7 @@ import org.nuxeo.ecm.automation.core.annotations.Context;
 import org.nuxeo.ecm.automation.core.annotations.Operation;
 import org.nuxeo.ecm.automation.core.annotations.OperationMethod;
 import org.nuxeo.ecm.automation.core.annotations.Param;
-import org.nuxeo.ecm.automation.jaxrs.io.operations.RestOperationContext;
+import org.nuxeo.ecm.automation.io.rest.operations.RestOperationContext;
 import org.nuxeo.ecm.core.api.CoreSession;
 import org.nuxeo.ecm.core.api.DocumentModel;
 import org.nuxeo.ecm.core.api.PathRef;
@@ -174,14 +174,12 @@ public class HttpStatusOperationTest {
     @OperationMethod()
     public Object run() throws Exception {
         DocumentModel root = session.getDocument(new PathRef("/"));
-        // If context is instanceof RestOperationContext when jaxrs call is
-        // executed
         if (context != null) {
                 ExceptionTest exception = new ExceptionTest("Exception " +
                         "Message");
                 exception.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
                 throw exception;
-        }// else context is instanceof OperationContext
+        }
         return root;
     }
 
@@ -195,7 +193,7 @@ I can decide to throw a custom exception (ExceptionTest) with the appropriate HT
 
 {{#> callout type='warning' }}
 
-`org.nuxeo.ecm.automation.jaxrs.io.operations.RestOperationContext` should be inject into your custom operation to check if it's existing or not. Automation operation can be executed in local or remotely. You should check the operation "mode" when you throw this rest exception to keep your logs clear and to know from where location the operation has been called.
+`org.nuxeo.ecm.automation.io.rest.operations.RestOperationContext` should be inject into your custom operation to check if it's existing or not. Automation operation can be executed in local or remotely. You should check the operation "mode" when you throw this rest exception to keep your logs clear and to know from where location the operation has been called.
 
 {{/callout}}
 
@@ -235,7 +233,7 @@ import org.nuxeo.ecm.automation.core.annotations.Context;
 import org.nuxeo.ecm.automation.core.annotations.Operation;
 import org.nuxeo.ecm.automation.core.annotations.OperationMethod;
 import org.nuxeo.ecm.automation.core.annotations.Param;
-import org.nuxeo.ecm.automation.jaxrs.io.operations.RestOperationContext;
+import org.nuxeo.ecm.automation.io.rest.operations.RestOperationContext;
 import org.nuxeo.ecm.core.api.CoreSession;
 import org.nuxeo.ecm.core.api.DocumentModel;
 import org.nuxeo.ecm.core.api.PathRef;
@@ -261,12 +259,10 @@ public class HttpStatusOperationTest {
     @OperationMethod()
     public Object run() throws Exception {
         DocumentModel root = session.getDocument(new PathRef("/"));
-        // If context is instanceof RestOperationContext when jaxrs call is
-        // executed
         if (context != null) {
                 context.setHttpStatus(206);
             }
-        }// else context is instanceof OperationContext
+        }
         return root;
     }
 

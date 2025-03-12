@@ -123,7 +123,7 @@ history:
 ---
 ## Adapters and REST Resources
 
-WebEngine, the JAX-RS Server used to serve the REST API, offers [WebAdapters]({{page page='webengine-jax-rs'}}#webengine-adapters) for the Document Model. The REST API leverages this concept to expose adapters on top of the Document REST endpoint.
+WebEngine, the Jakarta-RS Server used to serve the REST API, offers [WebAdapters]({{page page='webengine-Jakarta-RS'}}#webengine-adapters) for the Document Model. The REST API leverages this concept to expose adapters on top of the Document REST endpoint.
 
 A WebAdapter is a URL segment starting with `@` which transforms the input resource so as to return another resource. The idea is to have a URL pointing to a Document and use the adapter to convert the Document into something else before the result is returned. The general syntax is:
 
@@ -847,7 +847,7 @@ Not completely satisfied with what's on offer? See how to [contribute a web adap
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [WebEngine (JAX-RS)]({{page page='webengine-jax-rs'}})
+- [WebEngine (Jakarta-RS)]({{page page='webengine-Jakarta-RS'}})
 - [REST API]({{page page='rest-api'}})
 - [HOWTO: Contribute to the REST API]({{page page='howto-contribute-to-the-rest-api'}})
 - [Content Enricher]({{page page='content-enrichers'}})

@@ -20,3 +20,10 @@ You will find in this section how to upgrade your Nuxeo Server project with new 
 {{{excerpt page='how-to-upgrade-to-jakarta-ee-10'}}}
 
 More information on the [Jakarta EE Page]({{page page='how-to-upgrade-to-jakarta-ee-10'}}).
+
+### How to Upgrade to Jakarta RS 3 - WebEngine
+
+{{{excerpt page='how-to-upgrade-to-jakarta-rs-3'}}}
+
+More information on the [Jakarta RS - WebEngine Page]({{page page='how-to-upgrade-to-jakarta-rs-3'}}).
+

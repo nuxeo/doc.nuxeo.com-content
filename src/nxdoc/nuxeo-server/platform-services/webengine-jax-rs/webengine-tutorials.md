@@ -15,7 +15,7 @@ labels:
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950281'
-    ajs-parent-page-title: WebEngine (JAX-RS)
+    ajs-parent-page-title: WebEngine (Jakarta-RS)
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: WebEngine+Tutorials

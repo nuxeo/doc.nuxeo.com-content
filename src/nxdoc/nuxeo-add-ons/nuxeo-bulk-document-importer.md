@@ -301,7 +301,7 @@ This module is designed to offer support for multi-threaded import on a Nuxeo re
 
 ## Usage
 
-The file importer comes as a Java library (with the Nuxeo Runtime Service) and a sample JAX-RS interface to launch, monitor and abort import jobs.
+The file importer comes as a Java library (with the Nuxeo Runtime Service) and a sample Jakarta-RS interface to launch, monitor and abort import jobs.
 
 ### Quick Start
 
@@ -678,7 +678,7 @@ To use this node type you need to redefine the importer. There are two ways to d
 *   [Add an XML extension in your Nuxeo Studio project]({{page page='how-to-contribute-to-an-extension'}}#xml-extension-studio)with the following content:
 
     ```xml
-     <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
+     <require>org.nuxeo.ecm.platform.importer.service.rest.contrib</require>
 
     <extension target="org.nuxeo.ecm.platform.importer.service.DefaultImporterComponent" point="importerConfiguration">
        <importerConfig sourceNodeClass ="org.nuxeo.ecm.platform.importer.source.FileWithIndividualMetadasSourceNode" >
@@ -692,7 +692,7 @@ To use this node type you need to redefine the importer. There are two ways to d
     ```xml
     <?xml version="1.0"?>
     <component name="customImporter">
-    <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
+    <require>org.nuxeo.ecm.platform.importer.service.rest.contrib</require>
 
     <extension target="org.nuxeo.ecm.platform.importer.service.DefaultImporterComponent" point="importerConfiguration">
        <importerConfig sourceNodeClass ="org.nuxeo.ecm.platform.importer.source.FileWithIndividualMetadasSourceNode" >
@@ -724,7 +724,7 @@ To enable this node type, redefine the importer using one of these methods:
 *   [Add an XML extension in your Nuxeo Studio project]({{page page='how-to-contribute-to-an-extension'}}#xml-extension-studio)with the following content:
 
     ```xml
-    <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
+    <require>org.nuxeo.ecm.platform.importer.service.rest.contrib</require>
 
     <extension target="org.nuxeo.ecm.platform.importer.service.DefaultImporterComponent" point="importerConfiguration">
        <importerConfig sourceNodeClass ="org.nuxeo.ecm.platform.importer.source.FileWithNonHeritedIndividalMetaDataSourceNode" >
@@ -738,7 +738,7 @@ To enable this node type, redefine the importer using one of these methods:
     ```xml
     <?xml version="1.0"?>
     <component name="customImporter">
-    <require>org.nuxeo.ecm.platform.importer.service.jaxrs.contrib</require>
+    <require>org.nuxeo.ecm.platform.importer.service.rest.contrib</require>
 
     <extension target="org.nuxeo.ecm.platform.importer.service.DefaultImporterComponent" point="importerConfiguration">
        <importerConfig sourceNodeClass ="org.nuxeo.ecm.platform.importer.source.FileWithNonHeritedIndividalMetaDataSourceNode" >

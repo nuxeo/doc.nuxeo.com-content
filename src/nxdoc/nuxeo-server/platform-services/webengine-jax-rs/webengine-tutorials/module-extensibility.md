@@ -68,12 +68,12 @@ Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;name=sample5;extend
 ```
 {{/panel}}
 
-## JAX-RS Resources
+## Jakarta-RS Resources
 
 {{#> panel type='code' heading='Samples5.java'}}
 ```java
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.*;
 import org.nuxeo.ecm.core.rest.*;
 import org.nuxeo.ecm.webengine.model.impl.*;
 import org.nuxeo.ecm.webengine.model.*;

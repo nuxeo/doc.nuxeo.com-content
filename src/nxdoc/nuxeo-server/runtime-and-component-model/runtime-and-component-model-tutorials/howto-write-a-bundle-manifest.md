@@ -289,6 +289,6 @@ Eclipse-ExtensibleAPI: true
 Nuxeo is also using two specific manifest headers:
 
 - **Nuxeo-Component**: Which specify components declared by a bundle (as XML descriptor file paths relative to JAR root);
-- **Nuxeo-WebModule**: Which specify the class name of a JAX-RS application declared by a Nuxeo bundle.
+- **Nuxeo-WebModule**: Which specify the class name of a Jakarta-RS application declared by a Nuxeo bundle.
 
 Of course these two headers are optional and should be used only when needed.
