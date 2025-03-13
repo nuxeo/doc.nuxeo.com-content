@@ -19,7 +19,7 @@ hidden: true
 
 Improve Exception Handling in WebEngine
 
-Exception happening in WebEngine is now better caught when the requested MediaType is not `application/json`.
+Exception happening in WebEngine is now better identified when the requested MediaType is not `application/json`.
 
 An exception writer has been added for `text/html` media type, so Nuxeo Server WebEngine now handles the following media type for NuxeoException handling:
 
@@ -32,9 +32,7 @@ Fixed infinite login loop when the anonymous user is enabled
 
 ## Migration Tool to Extract Full Text From Mongo DB to an S3 Blob
 
-In order to reduce the MongoDB collection size, it’s now possible to move in a efficient way the fulltext extracted from binaries (stored in MongoDB) to a s3 bucket on an existing instance.
-
-In order to reduce the MongoDB collection size, it’s now possible to move in a efficient way the fulltext extracted from binaries (stored in MongoDB) to a s3 bucket on an existing instance. See the 4 step migration process in the upgrade notes.
+In order to reduce the MongoDB collection size, it’s now possible to move the fulltext extracted from binaries (stored in MongoDB) to a s3 bucket on an existing instance  in a efficient way. See the 4 step migration process in the upgrade notes.
 
 
 {{! /multiexcerpt}}
