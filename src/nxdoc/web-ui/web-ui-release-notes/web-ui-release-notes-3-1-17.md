@@ -21,13 +21,13 @@ hidden: true
 
 ### Other Noteworthy Changes
 
-- Fixed an issue where the restore operation incorrectly used the current document's ID instead of the previous version's ID. Now, the correct previous version ID is passed, and ensures the document is restored without unnecessary checkout.<br/>
+- Fixed an issue where the restore operation incorrectly used the current document's ID instead of the previous version's ID. Now, the correct previous version ID is passed and the document is restored without unnecessary checkout.<br/>
 
-- Resolved an issue where arrow key navigation caused two documents to be highlighted simultaneously. Now, only the currently selected document is highlighted correctly.<br/>
+- Resolved an issue where the arrow key navigation caused two documents to be highlighted simultaneously. Now, only the currently selected document is highlighted correctly.<br/>
 
-- Fixed issue for date picker where dates are not getting applied on first click.<br/>
+- Fixed issue for date picker where dates were not getting applied on first click.<br/>
 
-- Fixed error in saved searches when the author is deleted.<br/>
+- Fixed error in saved searches when the author was deleted.<br/>
 
 - The contrast of data table headers has been improved to comply with AA accessibility standards, ensuring better readability and visibility.<br/>
 
