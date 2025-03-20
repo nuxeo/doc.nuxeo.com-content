@@ -263,6 +263,7 @@ public class MyModuleExceptionMapper implements ExceptionMapper<Exception> {
 {{#> panel heading='Related topics'}}
 
 - [How to upgrade to Jakarta EE 10]({{page page='how-to-upgrade-to-jakarta-ee-10'}})
+- [How to upgrade Nuxeo Rest Tests]({{page page='how-to-upgrade-rest-tests'}})
 
 {{/panel}}
 
