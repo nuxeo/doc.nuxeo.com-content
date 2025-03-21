@@ -331,7 +331,7 @@ You should contact your Nuxeo Administrator or Nuxeo sales representative to get
       -e NUXEO_DEV=true \
       -p 8080:8080 \
       -e NUXEO_PACKAGES="nuxeo-web-ui nuxeo-platform-getting-started" \
-      docker-private.packages.nuxeo.com/nuxeo/nuxeo:2021
+      docker-private.packages.nuxeo.com/nuxeo/nuxeo:2023
     ```
 
 Your server is now running. You benefit from the [features](#content-of-the-getting-started-addon) brought by the addon Getting started with the Nuxeo Platform.
@@ -397,8 +397,8 @@ To install a Nuxeo Package:
 
     ```
     Dependency resolution:
-      Installation order (2):        nuxeo-web-ui-3.0.2/nuxeo-platform-getting-started-2021.0.0
-      Packages to download (2):      nuxeo-web-ui:3.0.2, nuxeo-platform-getting-started:2021.0.0
+      Installation order (2):        nuxeo-web-ui-3.0.2/nuxeo-platform-getting-started-2023.0.0
+      Packages to download (2):      nuxeo-web-ui:3.0.2, nuxeo-platform-getting-started:2023.0.0
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -410,14 +410,14 @@ To install a Nuxeo Package:
     $ ./nuxeoctl mp-list
     [...]
     Local packages:
-       addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-2021.0.0)
+       addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-2023.0.0)
        addon     started	nuxeo-web-ui (id: nuxeo-web-ui-3.0.2)
 
     # Windows
     $ .\nuxeoctl.bat mp-list
     [...]
     Local packages:
-       addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-2021.0.0)
+       addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-2023.0.0)
        addon     started	nuxeo-web-ui (id: nuxeo-web-ui-3.0.2)
     ```
 
