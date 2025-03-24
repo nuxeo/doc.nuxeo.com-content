@@ -763,7 +763,7 @@ Instead of overriding the extension point you can simply override the default ma
     ```
 
 1. In this custom template create a file named `{NUXEO_HOME}/templates/myapp/nxserver/config/opensearch1-doc-mapping.json` to override the mapping. You can create a file named `{NUXEO_HOME}/templates/myapp/nxserver/config/opensearch1-doc-settings.json.nxftl` to override the settings.<br/>
-**Important**: You must add your custom mapping/settings to the existing one, you cannot just set your custom mapping in the file, Nuxeo does not merge your mapping with the default one. So, you must _duplicate_ the original file and modify the copy.
+**Important**: You must add your custom mapping/settings to the existing one. You cannot just set your custom mapping in the file as Nuxeo does not merge your mapping with the default one. So, you must _duplicate_ the original file and modify the copy.
 
 1. Update the `nuxeo.conf` to use your custom template.
 
