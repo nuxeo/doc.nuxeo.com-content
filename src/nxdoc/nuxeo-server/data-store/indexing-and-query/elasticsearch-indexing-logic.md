@@ -212,7 +212,7 @@ Note that this is a new indexing logic implemented in LTS 2025, which no longer 
 
 ## Searching and Limitations
 
-NXQL Queries are translated by the SearchClient, some implementation may have some limitations or different behavior, they are documented in the [NXQL documentation.]({{page page='nxql'}}) and below.
+NXQL Queries are translated by the SearchClient. Some implementations may have some limitations or different behavior. they are documented in the [NXQL documentation.]({{page page='nxql'}}) and below.
 
 ### OpenSearch 1 Search Client
 This search client provides access to OpenSearch 1.x, Elasticsearch 7.x and 8.x Search engines.
