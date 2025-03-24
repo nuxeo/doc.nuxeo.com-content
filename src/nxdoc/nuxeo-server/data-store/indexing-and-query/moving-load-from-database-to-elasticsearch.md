@@ -116,7 +116,7 @@ SearchResponse response = searchService.search(SearchQuery.Builder(nxql).limit(1
 DocumentModelList docs = response.loadDocuments(session);
 ```
 
-The first difference is that using `session.query` all the documents are returned while using SearchService there is a default limit of `10` documents. On the OpenSearch client implementation, this limit is caped to `10000` (see [index.max_result_window](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html) section). To get all the documents use the [scroll API]({{page page='moving-load-from-database-to-elasticsearch'}}#migrating-a-request-using-scroll-api). Note that with a limit set to `0` you can get the total results size (using `docs.totalSize()`) without loading any documents. The documents are loaded from the repository in a second step during `response.loadDocument(session)`, be aware that this operation can be expensive.
+The first difference is that using `session.query` all the documents are returned while using SearchService there is a default limit of `10` documents. On the OpenSearch client implementation, this limit is capped at `10000` (see [index.max_result_window](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html) section). To get all the documents, use the [scroll API]({{page page='moving-load-from-database-to-elasticsearch'}}#migrating-a-request-using-scroll-api). Note that with a limit set to `0` you can get the total results size (using `docs.totalSize()`) without loading any documents. The documents are loaded from the repository in a second step during `response.loadDocument(session)`. Be aware that this operation can be expensive.
 
 Another difference is that documents that are searchable at time `**t**` may be different between database and Elasticsearch:
 
@@ -150,7 +150,7 @@ SearchResponse response = searchService.search(SearchQuery.Builder("SELECT * FRO
 DocumentModelList docs = response.loadDocuments(session); // "doc" is returned
 ```
 
-Obviously there is a write overhead here because we are splitting the transaction and explicitly call a refresh. This can be useful but on normal code you have to decide if it makes sense to search documents that are probably already loaded in your context. Note that in unit test you don't have to do this because the `CoreSearchFeature` is already configured to wait for synchronous indexing during commit.
+Obviously, there is a write overhead here because we are splitting the transaction and explicitly calling a refresh. This can be useful but on normal code you have to decide if it makes sense to search documents that are probably already loaded in your context. Note that in unit test you don't have to do this because the `CoreSearchFeature` is already configured to wait for synchronous indexing during commit.
 
 ## Migrating a queryAndFetch Request
 
