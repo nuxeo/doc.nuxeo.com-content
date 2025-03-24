@@ -26,7 +26,7 @@ Encryption APIs for client-side encryption were bumped to v3 (previously v2). Se
 
 Nuxeo Server Packaging has been improved to support container lib.
 
-The container lib (ie: ones under TOMCAT_HOME/lib) are now included in `nuxeo-nxr-server`, allowing to create marketplace package that needs to add librairies there.
+The container lib (that is, the ones under TOMCAT_HOME/lib) is now included in `nuxeo-nxr-server`, allowing to create marketplace package that needs to add librairies there.
 
 ### Fix Infinite Login Loop When the Anonymous User Is Enabled
 
@@ -44,7 +44,7 @@ Add launcher Log4j configuration support to `nuxeoctl.bat`.
 
 ### Stop Using Joda DateTime in login.jsp and Other JSP Files
 
-Platform JSP files no longer relies on Joda-Time library.
+Platform JSP files no longer rely on Joda-Time library.
 
 ### Fix Rendition Web Adapter for Picture and Video Documents
 
@@ -81,7 +81,7 @@ nuxeo.forward.deprecated.path.enabled=false
 
 The Jena plugin for Nuxeo Relation has been removed.
 
-The `nuxeo-platform-relations-jena-plugin` has been removed from Nuxeo Platform because it was supporting only SQL and not MongoDB and has been superseded by core relations.
+The `nuxeo-platform-relations-jena-plugin` has been removed from Nuxeo Platform because it was supporting only SQL and not MongoDB. It has been superseded by core relations.
 
 ### Make Possible to Run Nuxeo With MongoDB Without H2
 
@@ -95,15 +95,15 @@ This improves security, by removing a library from the Nuxeo runtime, and perfor
 
 LogEntry extended infos are now searchable.
 
-Extended infos constraints can now be used when searching in the Audit.
+Extended info constraints can now be used when searching in the Audit.
 
-This could be expressed in a NXQL request given to the AuditPageProvider like below:
+This could be expressed in an NXQL request given to the AuditPageProvider:. For example
 
 ```
 SELECT * FROM LogEntry WHERE extended/user = 'Administrator'
 ```
 
-Or by using directly the AuditBackend#queryLogs(QueryBuilder) API like below:
+Or by using directly the AuditBackend#queryLogs(QueryBuilder) API. For example:
 
 ```
 var entries = auditBackend.queryLogs(new AuditQueryBuilder().predicate(
@@ -126,7 +126,7 @@ Keycloak logout now works with client authentication disabled.
 
 The Contributing Component can be retrieved in Descriptor with @XContext.
 
-The contributing component, or the component which holds your contribution to an extension point, can now be retrieved with the `@XContext` annotation. This can be useful if your descriptor needs to lookup a ressource present in your bundle. To use it, just add to your Descriptor:
+The contributing component, or the component which holds your contribution to an extension point, can now be retrieved with the `@XContext` annotation. This can be useful if your descriptor needs to lookup a resource present in your bundle. To use it, just add to your Descriptor:
 
 ```
     @XContext(XContextValues.CONTRIBUTING_COMPONENT)
@@ -137,9 +137,9 @@ The contributing component, or the component which holds your contribution to an
 
 SAML requests are always signed when KeyManager is configured.
 
-The SAML Requests send to the IDP are always signed when the KeyManager component is configured.
+The SAML Requests sent to the IDP are always signed when the KeyManager component is configured.
 
-The original cause was a startup order issue that could be workaround by putting the KeyManager contribution before the SAML authenticator one.
+The original cause was a startup order issue. A possible  workaround could be putting the KeyManager contribution before the SAML authenticator one.
 
 ### Create a Management REST API for UIDSequencer
 
@@ -149,9 +149,9 @@ A new Management REST API for Nuxeo Sequencer is available.
 
 UIDSequencers have been reworked for better modularity.
 
-The UIDSequencer modules have been reworked to allow more modularity, which provide better performance to Nuxeo Platform, mainly because only one sequencer is now contributed by default to Nuxeo Platform.
+The UIDSequencer modules have been reworked to allow more modularity, which provide better performance to Nuxeo Platform, mainly because only one sequencer is now contributing to Nuxeo Platform by default.
 
-A new `nuxeo.conf` property has been added to Nuxeo Platform that allows to define the default UIDSequencer used by Nuxeo:
+A new `nuxeo.conf` property has been added to Nuxeo Platform that allows defining of the default UIDSequencer used by Nuxeo:
 
 ```
 nuxeo.uidsequencer.default.class=org.nuxeo.ecm.core.uidgen.KeyValueStoreUIDSequencer
@@ -159,7 +159,7 @@ nuxeo.uidsequencer.default.class=org.nuxeo.ecm.core.uidgen.KeyValueStoreUIDSeque
 
 And so, starting from Nuxeo Platform LTS 2025, the default UIDSequencer is now `KeyValueStoreUIDSequencer`.
 
-The ElasticSearch/OpenSearch UIDSequencer has been extracted to the `nuxeo-uidgen-opensearch1` package marketplace. If you want to use it just install the package, check that the template `opensearch1-uidgen` is enabled and the OpenSearch connection configuration is present in your `nuxeo.conf`:
+The ElasticSearch/OpenSearch UIDSequencer has been extracted to the `nuxeo-uidgen-opensearch1` package marketplace. If you want to use it just install the package, check that the template `opensearch1-uidgen` is enabled, and the OpenSearch connection configuration is present in your `nuxeo.conf`:
 
 ```
 # You can replace the prefix _nuxeo.uidsequencer.default_ by _nuxeo_ if you use other OpenSearch implementations that uses the same OpenSearch cluster
@@ -189,7 +189,7 @@ nuxeo.uidsequencer.default.class=org.nuxeo.ecm.core.mongodb.seqgen.MongoDBUIDSeq
 
 ### Fix RenditionWork to Use the Correct Repository
 
-Rendition works is now compatible with multi repositories config.
+Rendition work is now compatible with multi repositories config.
 
 ### Catch ArithmeticException in Video Converter
 
@@ -201,15 +201,15 @@ There are no more Content Security Policy (CSP) errors on the login page with a 
 
 ### Fix Being Able to Create User With Empty Password
 
-The REST API doesn't allow anymore to create a user with an empty password.
+The REST API doesn't allow creating a user with an empty password.
 
 ### Make Possible to Load a RunnerFeature Dynamically
 
 Features can now dynamically loads other features.
 
-A feature can depend on other features by annotation them with `@Features` but this mechanism is static, ie: we can not condition a feature dependency for instance.
+A feature can depend on other features by using annotation with `@Features` but this mechanism is static, that is, we can not condition a feature dependency for instance.
 
-We have introduce `DynamicFeaturesLoader` to be able to depend on a feature with a simple programmatic API, for instance `MyFeature` can now depends on `MyOtherFeature` depending on some conditions, this is accomplished by created a constructor with a `DynamicFeaturesLoader` parameter in your feature, see an example below:
+We have introduced `DynamicFeaturesLoader` to be able to depend on a feature with a simple programmatic API, for instance `MyFeature` can now depends on `MyOtherFeature` depending on some conditions. This is accomplished by created a constructor with a `DynamicFeaturesLoader` parameter in your feature, see an example below:
 ```java
 public class MyFeature implements RunnerFeature {
 
@@ -231,7 +231,7 @@ Keycloak logout URI doesn't keep previous query parameters.
 
 ### Improve the sequenceHexRandomized Retry Mechanism
 
-The MongoDB sequenceHexRandomized retry mechanism has  a maximum duration of 250 ms.
+The MongoDB sequenceHexRandomized retry mechanism has a maximum duration of 250 ms.
 
 ### Configure Tomcat Logs With Log4j
 
@@ -240,7 +240,7 @@ Tomcat Log configuration with Log4j
 The Tomcat logs configuration can be handled by Log4j which easily allows to configure Tomcat logs in Cloud environments.
 
 The introduced configuration routes all Tomcat logs to `log/catalina.log` (without the date) with same level as with the JUL configuration under `conf/logging.properties`.
- This mechanism will be the default for LTS 2025 and need to be opt-in in LTS 2023.
+ This mechanism will be the default for LTS 2025 and need to be opted-in in LTS 2023.
  You need to enable the `tomcat-logs` template for LTS 2023, for example by adding the following to your `nuxeo.conf`:
 ```java
 nuxeo.append.templates.tomcat-logs=tomcat-logs
@@ -268,7 +268,7 @@ AbstracSession#getOrCreateDocument now works properly to create a document under
 
 ### Allow to Use S3 StrictAuthenticatedEncryption With a Local Keystore
 
- A nuxeo.s3storage.crypt.keystore.legacymode configuration property default to true for lts-2023, and false for lts-2025 is available to decrypt objects encrypted client-side with a local keystore in v1 AWS encryption API.
+ A nuxeo.s3storage.crypt.keystore.legacymode configuration property default is true for lts-2023, and false for lts-2025 is available to decrypt objects encrypted client-side with a local keystore in v1 AWS encryption API.
 
 ### Move Swagger Rest API and Automation Doc to an Optional Marketplace
 
@@ -276,7 +276,7 @@ Rest Swagger doc available under /nuxeo/api/v1/doc endpoint and Automation doc a
 
 ### Add a Way to Add Appenders to Loggers Configured With @LoggerLevel
 
-You can now configure additional appenders to loggers configure with `@LoggerLevel` in tests.
+You can now configure additional appenders to loggers configured with `@LoggerLevel` in tests.
 
 Loggers configured with help of `@LoggerLevel` in tests can now receive additional appenders. The resulting logger has `additivity` enabled and so the configured appenders are added to the existing one (the file appender that logs DEBUG logs and higher to `target/trace.log` and the console appender that logs WARN logs and higher to the console).
 
@@ -306,7 +306,7 @@ AWS KMS client-side encryption can be enabled by defining a KMS key ID with the 
 ```Java
 nuxeo.s3storage.crypt.kms.clientside.key=your-kms-key-id
 ```
-Optionally, specify the region of the KMS key if it is differs from the environment or bucket one:
+Optionally, specify the region of the KMS key if it is different from the environment or bucket one:
 ```Java
 nuxeo.s3storage.crypt.kms.clientside.region=your-kms-key-region
 ```
@@ -347,14 +347,14 @@ The MIME type of a document file is set to "application/octet-stream" if undefin
 
 The Log4j configuration file for Nuxeo Launcher can now be customized.
 
-Previously present in the launcher, the Nuxeo Launcher Log4j configuration file has been extracted to `/lib/log4j2-launcher.xml` so it could be edited.
+Previously present in the launcher, the Nuxeo Launcher Log4j configuration file has been extracted to `/lib/log4j2-launcher.xml` so that it could be edited.
 
 A new `nuxeo.conf` property has been introduced to reference the log4j configuration file if needed:
 ```Java
 launcher.log4j2.file=/etc/nuxeo/log4j2-launcher.xml
 ```
 WARNING:
-variable expansion is not supported on this property because the property is used before launcher invocation which owns this mechanism.
+Variable expansion is not supported on this property because the property is used before launcher invocation which owns this mechanism.
 
 
 ### Boolean Property Set to a Random String Value Using the Document REST API Should Throw an Exception
@@ -363,14 +363,14 @@ The "nuxeo.primitive.type.strict.validation" nuxeo.conf property allows to throw
 
 Boolean primitive type validation now relies on the `nuxeo.primitive.type.strict.validation` Framework property.
 
-By default, it is set to `false`, keeping the previous behavior: at a low level, when trying to decode a string input as a boolean, fall back on 0 if the string cannot be decoded as a boolean, e.g. "foo".
+By default, it is set to `false`, keeping the previous behavior: at a low level, when trying to decode a string input as a boolean, fall back on 0 if the string cannot be decoded as a boolean. For example, "foo".
 
 If set to `true`, in such case, an `IllegalArgumentException` is thrown.
 
 Consequently, when executing a REST API:
 -  search request on a PageProvider and passing "foo" as a query parameter for a predicate on a boolean field
   or
-- create a document request and  "foo" as a value for a boolean property
+- create a document request and set "foo" as a value for a boolean property
 
 the server will respond with a 400 Bad Request status code.
 
@@ -405,15 +405,13 @@ When importing a CSV with the `CSV.Import` automation operation, you can also se
 
 ### Fix Documents With Name That Begins With @ ("At" Sign)
 
-Any heading @ character in the document title is replaced by _ when computing the document path.
-
-Any heading `@` character in the document title is replaced by `_` when computing the document path.
+Any heading with `@` character in the document title is replaced by `_` when computing the document path.
 
 ### Fix How Framework.getProperty Reads Accentued Characters
 
 The nuxeo.conf and other nuxeo properties files are now read / written with UTF-8 encoding.
 
-### Fix Inline Parameter Not Working When Direct Download Enabled
+### Fix Inline Parameter Not Working When Direct Download Is Enabled
 
 Blobs are now displayed in the browser with inline parameter and S3 direct download.
 
