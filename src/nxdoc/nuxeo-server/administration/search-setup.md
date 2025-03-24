@@ -475,7 +475,7 @@ To support OpenSearch 1.x, Elasticsearch 7x or 8x clusters, you need to install 
 
 OpenSearch 1 is a fork of Elasticsearch 7, except some advanced features (not used by Nuxeo) they are fully compatible.
 
-The `nuxeo-search-client-opensearch1` package is defining index settings, mappings and uses the Rest API according to Elasticsearch 7 version (equivalent to OpenSearch 1 version). 
+The `nuxeo-search-client-opensearch1` package defines index settings, mappings and uses the Rest API according to Elasticsearch 7 version (equivalent to OpenSearch 1 version). 
 It relies on OpenSearch 1.x client library to access the search cluster.
 
 Note that for historical reasons you may find some "Elasticsearch" occurrences in configuration properties.
