@@ -960,7 +960,7 @@ The following limitations apply:
 
 ## {{> anchor 'elasticsearchlimitations'}} Notes about OpenSearch/Elasticsearch
 
-When an NXQL query is processed by an [SearchService PageProvider]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) or using the Nuxeo SearchService directly, there are some limitations, specific configuration and more features available when the search client is OpenSearch.
+When an NXQL query is processed by a [SearchService PageProvider]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) or using the Nuxeo SearchService directly, there are some limitations, specific configuration and more features available when the search client is OpenSearch.
 
 ### OpenSearch/Elasticsearch NXQL Limitations
 
