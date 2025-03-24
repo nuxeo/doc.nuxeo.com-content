@@ -99,7 +99,7 @@ history:
 ---
 
 {{! excerpt}}
-Some search client packages allow to use the HTTP REST API provided by the search engine back-end.
+Some search client packages allow the use of the HTTP REST API provided by the search engine back-end.
 {{! /excerpt}}
 
 ## OpenSearch1 Search Client
@@ -114,7 +114,7 @@ The Nuxeo passthrough is available at **http://my-nuxeo-server:8080/nuxeo/site/e
 
 ### Requirement
 
-When your OpenSearch instance is embedded is the same JVM than your Nuxeo instance (not recommended for production), the passthrough works out of the box.
+When your OpenSearch instance is embedded on the same JVM as your Nuxeo instance (not recommended for production), the passthrough works out of the box.
 
 When using a remote OpenSearch/Elasticsearch cluster, make sure the following property is correctly set in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
 
