@@ -363,7 +363,7 @@ The Nuxeo Platform is also [compatible with the CMISQL]({{page page='cmis'}}) de
 
 ### Page Providers: a Pagination Service
 
-The framework also provides a paginated query system, the Page Providers. Page Providers are a way to expose a query defined in NXQL with additional services: pagination, parameters, maximum number of results, aggregates definition. Page providers are named and declared to the server via a contribution. More information can be found about [the page provider object]({{page page='page-providers'}}). Page providers are used in the platform in many places: Web application for browsing, for dashboards, etc.
+The framework also provides a paginated query system, the Page Providers. Page Providers are a way to expose a query defined in NXQL with additional services: pagination, parameters, maximum number of results, aggregates definition. Page providers are named and declared to the server via a contribution. More information can be found about [the page provider object]({{page page='page-providers'}}). Page providers are used in the platform in many places: Web application for browsing, for dashboards, and so on.
 
 Resources Endpoint are also based on a page provider. By being declarative, page providers are very easy to override. That way, most of the document lists logic of the default application can be redefined just by [overriding the corresponding page provider](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.query.api.PageProviderService--providers). You can also build your own application in the same way. Note that in the web application, page providers are associated to a higher concept, the Content View, that wraps all the UI aspects of executing and presenting a search result (see paragraph below).
 
@@ -460,7 +460,7 @@ See the [documentation to setup and configure an OpenSearch or Elasticsearch]({{
 
 ## Full-Text Capabilities
 
-Both VCS/DBS implementations and OpenSearch SearchClient provide full-text search capabilities. Depending on the back end (Oracle, Postgres, SQL server, &hellip;) capabilities may be slightly different. The OpenSearch implementation performs bests in terms of relevancy, for configuring dictionaries, running the stemming etc. Thus it is advised to leverage a SearchService page provider when you want to do searches on full text index.
+Both VCS/DBS implementations and OpenSearch SearchClient provide full-text search capabilities. Depending on the back end (Oracle, Postgres, SQL server, &hellip;) capabilities may be slightly different. The OpenSearch implementation performs bests in terms of relevancy, for configuring dictionaries, running the stemming, and so on. Thus it is advised to leverage a SearchService page provider when you want to do searches on full text index.
 
 More documentation can be found about[ full-text search expressions]({{page page='full-text-queries'}}).
 
