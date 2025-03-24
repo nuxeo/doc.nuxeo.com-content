@@ -293,7 +293,7 @@ The following tables lists the configurable parameters of this chart and their d
 | `mongodb.enabled` | Enable MongoDB backend for Nuxeo                                                                                                               | `false` |
 | `mongodb.protocol` | Protocol for MongoDB connection                                                                                                                | `mongodb` |
 | `mongodb.host` | Host for MongoDB connection                                                                                                                    | `""` |
-| `mongodb.port` | Post for MongoDB connection                                                                                                                    | `27017` |
+| `mongodb.port` | Port for MongoDB connection                                                                                                                    | `27017` |
 | `mongodb.url` | URL for MongoDB connection, overrides `host` and `port`                                                                                        | `""` |
 | `mongodb.auth.enabled` | Enable MongoDB authentication                                                                                                                  | `false` |
 | `mongodb.auth.username` | MongoDB authentication username                                                                                                                | `""` |
@@ -304,7 +304,7 @@ The following tables lists the configurable parameters of this chart and their d
 | `mongodb.initContainer.imagePullPolicy` | Image pull policy for MongoDB connection init container                                                                                        | `IfNotPresent` |
 | `postgresql.enabled` | Enable PostgreSQL backend for Nuxeo                                                                                                            | `false` |
 | `postgresql.host` | Host for PostgreSQL connection                                                                                                                 | `""` |
-| `postgresql.port` | Post for PostgreSQL connection                                                                                                                 | `5432` |
+| `postgresql.port` | Port for PostgreSQL connection                                                                                                                 | `5432` |
 | `postgresql.auth.username` | PostgreSQL authentication username                                                                                                             | `""` |
 | `postgresql.auth.password` | PostgreSQL authentication password                                                                                                             | `""` |
 | `postgresql.auth.existingSecret` | Existing secret with PostgreSQL credentials (keys: `postgresql-username`, `postgresql-password`), overrides `username` and `password`          | `""` |
@@ -314,7 +314,7 @@ The following tables lists the configurable parameters of this chart and their d
 | `elasticsearch.enabled` | Enable Elasticsearch for Nuxeo                                                                                                                 | `false` |
 | `elasticsearch.protocol` | Protocol for Elasticsearch connection                                                                                                          | `http` |
 | `elasticsearch.host` | Host for Elasticsearch connection                                                                                                              | `""` |
-| `elasticsearch.port` | Post for Elasticsearch connection                                                                                                              | `9200` |
+| `elasticsearch.port` | Port for Elasticsearch connection                                                                                                              | `9200` |
 | `elasticsearch.clusterName` | Elasticsearch cluster name                                                                                                                     | `elasticsearch` |
 | `elasticsearch.indexNumberOfReplicas` | Elasticsearch number of replicas                                                                                                               | `0` |
 | `elasticsearch.restClient.socketTimeoutMs` | Elasticsearch REST client socket timeout in ms                                                                                                 | `300000` |
@@ -329,7 +329,7 @@ The following tables lists the configurable parameters of this chart and their d
 | `elasticsearch.initContainer.imagePullPolicy` | Image pull policy for Elasticsearch connection init container                                                                                  | `IfNotPresent` |
 | `kafka.enabled` | Enable Kafka for Nuxeo                                                                                                                         | `false` |
 | `kafka.host` | Host for Kafka connection                                                                                                                      | `""` |
-| `kafka.port` | Post for Kafka connection                                                                                                                      | `9092` |
+| `kafka.port` | Port for Kafka connection                                                                                                                      | `9092` |
 | `kafka.auth.enabled` | Enable SASL Kafka authentication                                                                                                               | `false` |
 | `kafka.auth.username` | Kafka SASL authentication username                                                                                                             | `""` |
 | `kafka.auth.password` | Kafka SASL authentication password                                                                                                             | `""` |
