@@ -204,7 +204,7 @@ In the first step of the workflow called `wf.travelExpenses.create`, a user comp
 
 ![]({{file name='expenses_graph.png'}} ?w=400,border=true,align=center)
 
-In order to have an overview of what is logged in the audit, we can use the [Search Passthrough]({{page page='elasticsearch-passthrough'}}) to query the new entries added to the audit index as we are completing the above workflow. For instance the following request
+In order to have an overview of what is logged in the audit, we can use the [Search Passthrough]({{page page='elasticsearch-passthrough'}}) to query the new entries added to the audit index as we are completing the above workflow. For instance, the following request:
 
 ```bash
 curl -XGET -u jdoe:jdoe  'http://localhost:8080/nuxeo/site/es/audit_wf/_search' -d '{ "query": { "match_all":{}}}'
