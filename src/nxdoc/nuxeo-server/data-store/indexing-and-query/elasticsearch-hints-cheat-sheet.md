@@ -79,7 +79,7 @@ history:
 ---
 
 {{! excerpt}}
-Search client such as OpenSearch/Elasticsearch can extend NXQL to provide Hints, here are some interesting use cases.
+Search client such as OpenSearch/Elasticsearch can extend NXQL to provide Hints. Here are some interesting use cases.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Hyland University'}}
