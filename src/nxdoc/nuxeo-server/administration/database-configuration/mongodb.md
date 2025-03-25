@@ -25,7 +25,7 @@ confluence:
     shortlink: yAEuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/yAEuAQ'
     source_link: /display/NXDOC/MongoDB
-tree_item_index: 600
+tree_item_index: 100
 version_override:
     LTS 2015: 710/admindoc/mongodb
 history:
