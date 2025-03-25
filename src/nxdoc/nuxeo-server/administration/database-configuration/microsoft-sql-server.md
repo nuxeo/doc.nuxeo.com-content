@@ -23,7 +23,7 @@ confluence:
     shortlink: EgI7
     shortlink_source: 'https://doc.nuxeo.com/x/EgI7'
     source_link: /display/NXDOC/Microsoft+SQL+Server
-tree_item_index: 300
+tree_item_index: 600
 version_override:
     LTS 2015: 710/admindoc/microsoft-sql-server
     '6.0': 60/admindoc/configuring-ms-sql-server

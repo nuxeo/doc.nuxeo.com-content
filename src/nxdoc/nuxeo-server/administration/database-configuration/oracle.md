@@ -23,7 +23,7 @@ confluence:
     shortlink: ywE7
     shortlink_source: 'https://doc.nuxeo.com/x/ywE7'
     source_link: /display/NXDOC/Oracle
-tree_item_index: 200
+tree_item_index: 500
 version_override:
     LTS 2015: 710/admindoc/oracle
     '6.0': 60/admindoc/configuring-oracle
