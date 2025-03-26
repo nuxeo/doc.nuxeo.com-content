@@ -1,150 +1,61 @@
 ---
-title: Nuxeo Cold Storage
-description: 'Nuxeo Cold Storage enables users to store large files and/or less frequently accessed content.'
+title: Nuxeo Connector for Content Intelligence
+description: 'Nuxeo Connector for Content Intelligence connects the Discovery module to the Nuxeo repository. This enables the Discovery module of Content Intelligence to access documents ingested from the repository and retrieve information using artificial intelligence.'
 review:
     comment: ''
-    date: '2022-02-11'
+    date: '2025-03-31'
     status: ok
 labels:
-    - lts2021-ok
-    - mlumeau
-    - coldstorage
-    - glacier
-    - storage
+    - ingest
+    - Contentintelligence
+    - connector
 toc: true
-tree_item_index: 1100
+tree_item_index: 2000
 ---
 
-The Nuxeo Cold Storage addon allows you to optimize your costs by storing your archived content into a long-term storage solution that leverages AWS's Glacier service. See [frequently asked questions - principles]({{page page='nuxeo-coldstorage-faq'}}#principles) for additional information around cost principles. Content can be sent individually or in bulk and while under cold storage, content can still be previewed and searched for.
+The Nuxeo Connector for Content Intelligence connects Knowledge Discovery to the Nuxeo repository. It enables you to perform tasks on Nuxeo documents using Artificial Intelligence (AI) from the Discovery module in the Content Intelligence Cloud. After you install and configure Nuxeo Connector for Content Intelligence, you must ingest the documents you want the Discovery module to access and perform tasks using AI.
 
-The addon is based on the usage of [Amazon S3 Glacier Flexible Retrieval (formerly Glacier)](https://aws.amazon.com/s3/storage-classes/glacier/) to store cold content.
+## Install the Nuxeo Connector for Content Intelligence
 
-## Functional Overview
+To install the Nuxeo Connector for Content Intelligence, complete the following steps.
 
-### Send to Cold Storage
+1. Install the addon package using the mp-install command. For additional information, refer to the installation steps mentioned in the [Installing a New Package on Your Instance](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) topic.
 
-Once the Nuxeo rendition of the document is available, the user can trigger the flow by clicking on **Send to cold storage** button.
+2. Update nuxeo.conf with appropriate properties. Please refer to list of configuration options in the Configure the Nuxeo Connector for Content Intelligence section.
 
-{{#> callout type='note'}}
-Sending content to cold storage requires the dedicated `WriteColdStorage` [permission]({{page page='nuxeo-coldstorage-faq'}}#permissions).
-{{/callout}}
+## Configure the Nuxeo Connector for Content Intelligence
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Send to Coldstorage button
-    name: SendToCS1.png
-    addins#screenshot#up_to_date
---}}
+Configure the plugin based on your environment using the following nuxeo.conf properties.
 
-This will immediately turn the storage class of the document's main file into the Glacier class.
+| Property name | Description |
+| ------------- | ----------- |
+| hxai.api.client.id | The Hxai client ID |
+| hxai.api.client.secret | The Hxai client secret |
+| hxai.api.auth.baseurl | The IDP base URL (ex: https://auth.iam.dev.experience.hyland.com) |
+| hxai.api.ingest.baseurl | The Hxai ingest base URL (ex: https://ingestion-api.insight.dev.ncp.hyland.com/v1) |
+| hxai.api.ingest.env.key | The ingest environment key |
 
-While the file is under cold storage, a low-resolution preview is provided to the users instead of the original file so that users can keep accessing, viewing the content (or a sample of it by default for files with multiple pages) and working with the document. The document remains searchable as well.
+## About ingestion 
 
-For additional details on the rendition used depending on the file type, refer to the [preview file configuration]({{page page='nuxeo-coldstorage-installation'}}#preview-file-configuration) section of the addon installation documentation.
+The connector leverages Nuxeo’s search capabilities to select documents and sends them for ingestion using the NXQL query language. The Nuxeo documents selected for ingestion go through the following stages:
+- Mapping: The metadata of the documents are mapped. If there are no custom maps defined, the default map can be used for mapping the document metadata. However, custom maps can be specified as default for specific document types.
+- Remap and transform: The name of the properties are standardized and values are transformed using functions.
+- Upload: Upload the binaries and IDs are assigned to them in the S3 bucket.
+- Data serialization: The metadata is serialized
 
-### Send Multiple Documents to Cold Storage
+The serialized metadata is then passed to the ingest service which is then stores it in the data lake. The Discovery module enables Nuxeo users to retrieve information using artificial intelligence by accessing ingested data from the data lake. Therefore, to ensure that Discovery module has access to the required data, ensure that the mapping and transformation is configured to ingest the required data from the Nuxeo repository.
 
-There's an option to send multiple documents to cold storage as long as all of them satisfy the requirements:
-- They are not yet in cold storage
-- The user has the correct permission
+## Planning for ingestion
 
-Select the files that you want to upload and there will be an action button to move them to cold storage.
+Before you start ingesting documents, identify what information you want to retrieve using the Discovery module. Based on your requirement, you can determine what data you want to ingest so that the Discovery module can access it and provide you the intended results. Once you have the clarity about the data you want to ingest, you can configure the mappings, ingestion parameters, ingest property mappers to simplify complex metadata, and transformation functions.
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Send Multiple To Coldstorage
-    name: SendMultipleToCS1.png
-    addins#screenshot#up_to_date
---}}
-![Send Multiple To Coldstorage](/nx_assets/d6f239bd-b830-4b3e-a041-bc23ec2d985c.png)
+After the configuration is complete, you can test a document ingestion using the Dry run mode. For the connector to ingest documents, the documents must be selected and sent for ingestion. Nuxeo search capabilities are used to locate the documents and NXQL query language sends them for ingestion. The ingest action uses the Nuxeo Bulk Action Framework (BAF) to manage the documents matched by an NXQL query. BAF provides a REST API to call and monitor it. The following example displays the execution of the ingest action:
 
-For moving content in bulk, refer to [frequently asked questions - content ingestion]({{page page='nuxeo-coldstorage-faq'}}#content-ingestion).
+```curl -ss -u foo:bar -H 'Content-Type: application/json' <myNuxeoUrl>/nuxeo/api/v1/automation/Bulk.RunAction -d \
+'{"params":{
+    "query":"SELECT * FROM Document WHERE ecm:ancestorId = '\''<my-root-doc-id>'\''",
+    "action":"ingest",
+    "parameters": "{\"inlineMapping\":\"dublincore,common\",\"inlineTransformer\":\"a=b=Function,c=d=OtherFunction\",\"replaceMapping\":false,\"aggregateDefaultMapping\":false,\"aggregateDefaultTransformer\":false,\"persistMapping\":false}
+  }
+}'```
 
-### Retrieve from Cold Storage
-
-When the user wants to have temporary access to the full file for download, he/she can trigger the retrieve flow.
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Restore from coldstorage button
-    name: RestoreFromCS1.png
-    addins#screenshot#up_to_date
---}}
-![Restore from coldstorage button](/nx_assets/bd6ceed7-004f-4d78-a0e7-2740b4871ce0.png)
-
-The user can then trigger the flow by clicking on the restore button. This is an asynchronous process that takes 3 to 5 hours to complete. Therefore, a banner is displayed on the document stating that the retrieve is in process, and the Nuxeo Platform monitors regularly the status of the retrieval.
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Retrieve from Coldstorage
-    name: RetrieveFromCS2.png
-    addins#screenshot#up_to_date
---}}
-![Retrieve from Coldstorage](/nx_assets/d606f54c-7113-4ce6-a319-be5486c40159.png)
-
-{{#> callout type='tip'}}
-The frequency at which cold storage content retrieval is checked is configurable. See the [cold storage configuration]({{page page='nuxeo-coldstorage-installation'}}#configuration) page for how to change this value.
-{{/callout}}
-
-When the Nuxeo Platform detects that the retrieval is done, an email is sent to the user and the banner displays information about the preview availability and the option to download the content.
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Retrieved from Coldstorage
-    name: RetrieveFromCS3.png
-    addins#screenshot#up_to_date
---}}
-![Retrieved from Coldstorage ](/nx_assets/514f7467-bce2-404c-9d76-0864c1869b57.png)
-
-By default, the file will be available for download for 24h. That value can be changed for all files by adding a configuration to the `nuxeo.conf` file. So, for example, if we want the file available for 48 hours, we can add:
-
-```
-nuxeo.coldstorage.numberOfDaysOfAvailability.value.default= 2
-```
-
-### Restore from Cold Storage
-
-When you no longer want the file to be stored in cold storage, you can request a restore by clicking on the restore button. The operation is also asynchronous, and the user will be notified via email once it's completed and the banner will disappear. The send to cold storage button will be available again.
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/Restore from Coldstorage button
-    name: RestoreFromCS1.png
-    addins#screenshot#up_to_date
---}}
-![Restore from Coldstorage button](/nx_assets/d81515d8-b0b4-451f-be8b-62832f35862d.png)
-
-### Delete from Cold Storage
-
-You can delete a document moved to cold storage as any other document.
-
-## Technical Overview
-
-### Flowchart
-
-**Move to Nuxeo Cold Storage**
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/moveToColdstorageFlowChart
-    name: moveToColdstorageFlowChart.jpeg
-    addins#screenshot#up_to_date
---}}
-![moveToColdstorageFlowChart](/nx_assets/4156ced3-b091-4abc-879f-256b4d13825c.svg)
-
-
-**Retrieve from Nuxeo Cold Storage**
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/retrieveFromColdstorageFlowChart
-    name: retrieveFromColdstorageFlowChart.jpeg
-    addins#screenshot#up_to_date
---}}
-![retrieveFromColdstorageFlowChart](/nx_assets/c46c67b6-8cff-4bd6-8c82-0a20a37cc136.svg)
-
-**Restore from Nuxeo Cold Storage**
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Nuxeo Coldstorage/restoreFromColdstorageFlowChart
-    name: restoreFromColdstorageFlowChart.jpeg
-    addins#screenshot#up_to_date
---}}
-![restoreFromColdstorageFlowChart](/nx_assets/654c9821-9d0a-4055-8d89-d56aacc50858.svg)
-
-
-## Learn More
-
-For a deeper look into the specifics of the addon, feel free to take a look at our [frequently asked questions about the cold storage addon]({{page page='nuxeo-coldstorage-faq'}}).
