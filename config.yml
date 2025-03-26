@@ -6,12 +6,14 @@ default:
         space_name: Developer Documentation Center
       - space_path: userdoc
         space_name: Nuxeo Platform User Documentation
-    branch: '2023'
+    branch: '2025'
     dev_browser_path: nxdoc
     repo_id: platform
     versions:
-      - label: LTS 2023
+      - label: LTS 2025
         is_current_version: true
+      - label: LTS 2023
+        url_path: '2023'
       - label: LTS 2021
         url_path: '2021'
       - label: LTS 2019
