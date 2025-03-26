@@ -157,7 +157,7 @@ Registered access
 [Documentation]({{page page='amazon-s3-online-storage'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
 </td>
 </tr>
 <tr>
@@ -172,7 +172,7 @@ Registered access
 [Documentation]({{page page='amazon-s3-direct-upload'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-direct-upload)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-direct-upload)
 </td>
 </tr>
 <tr>
@@ -187,7 +187,7 @@ Registered access
 [Documentation]({{page page='nuxeo-bulk-document-importer'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer)
 </td>
 </tr>
 <tr>
@@ -202,7 +202,7 @@ Registered access
 [Documentation]({{page version='' space='nxdoc' page='using-cas2-authentication'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication)
 </td>
 </tr>
 <tr>
@@ -218,7 +218,7 @@ Registered access
 [User documentation]({{page space='userdoc' page='digital-signature'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature)
 </td>
 </tr>
 <tr>
@@ -235,7 +235,7 @@ Public
 [User documentation]({{page space='userdoc' page='easyshare'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare)
 </td>
 </tr>
 <tr>
@@ -250,7 +250,7 @@ Registered access
 [Documentation]({{page page='google-storage'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/google-storage)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/google-storage)
 </td>
 </tr>
 <tr>
@@ -265,7 +265,7 @@ Public
 [Documentation ]({{page page='kerberos-authentication'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication)
 </td>
 </tr>
 <tr>
@@ -280,7 +280,7 @@ Registered access
 [Documentation]({{page page='microsoft-azure-online-storage'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
 </td>
 </tr>
 <tr>
@@ -310,7 +310,7 @@ Public
 [Documentation]({{page page='howto-nuxeo-api-playground'}})
 </td>
 <td colspan="1">
-[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground)
+[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground)
 </td>
 </tr>
 <tr>
@@ -340,7 +340,7 @@ Public
 [Documentation]({{page page='nuxeo-csv'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv)
 </td>
 </tr>
 <tr>
@@ -355,7 +355,7 @@ Public
 [Documentation]({{page version='' space='client-apps' page='nuxeo-drive'}})<br/>
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)
 </td>
 </tr>
 <tr>
@@ -370,7 +370,7 @@ Public
 [Documentation]({{page page='nuxeo-duoweb-two-factor-authentication'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication)
 </td>
 </tr>
 <tr>
@@ -385,7 +385,7 @@ Registered access
 [Documentation]({{page page='nuxeo-enhanced-viewer'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender)
 </td>
 </tr>
 <tr>
@@ -415,7 +415,7 @@ Public
 [Documentation]({{page page='nuxeo-file-system-exporter'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/fs-exporter)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/fs-exporter)
 </td>
 </tr>
 <tr>
@@ -431,7 +431,7 @@ Registered access
 [User documentation]({{page page='nuxeo-groups-and-rights-audit'}})
 </td>
 <td colspan="1">
-[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)
 </td>
 </tr>
 <tr>
@@ -461,7 +461,7 @@ Public
 [User documentation]({{page space='userdoc' page='nuxeo-imap-connector'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector)
 </td>
 </tr>
 <tr>
@@ -476,7 +476,7 @@ Public
 [Documentation]({{page page='nuxeo-keycloak'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-keycloak)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-keycloak)
 </td>
 </tr>
 <td colspan="1">
@@ -490,7 +490,7 @@ Public
 [Documentation]({{page page='nuxeo-live-connect'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
 </td>
 </tr>
 <tr>
@@ -505,7 +505,7 @@ Registered access
 [Documentation]({{page page='nuxeo-mail-amazon-ses'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mail-amazon-ses)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mail-amazon-ses)
 </td>
 </tr>
 <tr>
@@ -521,7 +521,7 @@ Registered access
 [User documentation]({{page space='userdoc' page='nuxeo-multi-tenant'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant)
 </td>
 </tr>
 <tr>
@@ -536,7 +536,7 @@ Registered access
 [Documentation]({{page page='nuxeo-office-online-integration'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-wopi)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-wopi)
 </td>
 </tr>
 <tr>
@@ -566,7 +566,7 @@ Registered access
 [Documentation]({{page version='' space='nxdoc' page='nuxeo-3d'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d)
 </td>
 </tr>
 <tr>
@@ -581,7 +581,7 @@ Public
 &nbsp;
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/marketplace-lang-ext-incomplete)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/marketplace-lang-ext-incomplete)
 </td>
 </tr>
 <tr>
@@ -611,7 +611,7 @@ Public
 [Documentation ]({{page page='nuxeo-platform-user-registration'}})
 </td>
 <td colspan="1">
-[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration)
 </td>
 </tr>
 <tr>
@@ -626,7 +626,7 @@ Registered access
 [Documentation]({{page page='nuxeo-retention-management'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-retention)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-retention)
 </td>
 </tr>
 <tr>
@@ -688,7 +688,7 @@ Public
 [Documentation]({{page version='' space='' page='nuxeo-showcase-content'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content)
 </td>
 </tr>
 <tr>
@@ -703,7 +703,7 @@ Public
 [Documentation]({{page page='nuxeo-spreadsheet'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
 </td>
 </tr>
 <tr>
@@ -711,7 +711,7 @@ Public
 `nuxeo-tree-snapshot`</td>
 <td>Public</td>
 <td>[Documentation]({{page page='nuxeo-tree-snapshot'}})</td>
-<td>[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)
+<td>[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)
 </td>
 </tr>
 <tr>
@@ -726,7 +726,7 @@ Public
 [Documentation]({{page version='' space='nxdoc' page='web-ui'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)
 </td>
 </tr>
 <tr>
@@ -741,7 +741,7 @@ Public
 [Documentation]({{page page='using-openid-oauth2-in-login-screen'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication)
 </td>
 </tr>
 <tr>
@@ -756,7 +756,7 @@ Public
 [Documentation]({{page page='explorer'}})
 </td>
 <td colspan="1">
-[Released for LTS 2021](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer)
+[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer)
 </td>
 </tr>
 <tr>
@@ -771,7 +771,7 @@ Public
 [Documentation]({{page page='saml-20-authentication'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication)
 </td>
 </tr>
 <tr>
@@ -786,7 +786,7 @@ Registered access
 [Documentation]({{page page='scan-documents-importer'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer)
 </td>
 </tr>
 <tr>
@@ -801,7 +801,7 @@ Public
 [Documentation]({{page page='template-rendering-addon'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering)
 </td>
 </tr>
 <!--
