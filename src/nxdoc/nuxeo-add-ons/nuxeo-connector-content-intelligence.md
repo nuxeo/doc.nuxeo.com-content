@@ -59,3 +59,25 @@ After the configuration is complete, you can test a document ingestion using the
   }
 }'```
 
+In the above curl command, the ingest action ingests document metadata for documents in the `<my-root-doc-id>`, If the documents have complex metadata, they must be simplified using the ingest property mappers before they are ingested.
+
+## Configuring ingest parameters, mappings, and transformations
+
+### Configuring ingest parameters
+
+The ingest action uses the following parameters which can be categorized under persistent and non-persistent parameters:
+
+**Persistent parameters**
+
+These parameters are saved during ingestion so that repeat ingestions to update the document use the same parameters.
+ - `inlineMapping`
+ - `inlineTransformer`
+ - `aggregateDefaultMapping`
+ - `aggregateDefaultTransformer`
+
+ **Non-persistent parameters**
+ These parameters are not saved during ingestion:
+ - `replaceMapping`
+ - `persistMapping`
+
+ 
