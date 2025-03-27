@@ -9,7 +9,7 @@ labels:
     - ingest
     - Contentintelligence
     - connector
-toc: true
+toc: false
 tree_item_index: 2000
 ---
 
