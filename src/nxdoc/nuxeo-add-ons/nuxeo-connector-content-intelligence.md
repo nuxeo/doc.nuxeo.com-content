@@ -231,6 +231,36 @@ a=b=Function1=Function2=Function3,c==Function1=Function3 # a is renamed to b and
 a=b=Function1=Function2=Function3,,,c==Function1=Function3 # same result
 ```
 
+### Adding ingestion parameters to ingest action
+
+The ingestion parameters must be included as a string when the ingest action is executed to ingest documents. For this, you can save the parameters in a JSON file and add it to the `parameters` function in the command line. For example:
+```
+$(< myParams.json | jq -c | jq -R)
+```
+
+You can also add the parameters manually. For example:
+```
+"{\"inlineMapping\":\"dublincore,common\",\"inlineTransformer\":\"a=b=Function,c=d=OtherFunction\",\"replaceMapping\":false,\"aggregateDefaultMapping\":false,\"aggregateDefaultTransformer\":false,\"persistMapping\":false}"
+```
+
+### Testing document ingestion
+
+After configuring the connector, you can perform a test ingestion to see that the ingestion task is executing correctly. To perform a test ingestion, activate the dryRun mode by setting the value of the `dryRun` parameter to `true` in the ingestion parameters. 
+**Example**
+```
+  "dryRun": true,
+  "inlineMapping": "dc:contributors,dc:description",
+  "inlineTransformer": "dc:title=meta:name=_Flag",
+  "aggregateDefaultMapping": false,
+  "aggregateDefaultTransformer": false,
+  "replaceMapping": true 
+```
+
+Once the `dryRun` mode gives the expected results, you can execute document ingestions on your repository. You can also automate your ingestion tasks using the scheduler service and event-based automation functionality available in Nuxeo.
+
+
+
+
 
 
 
