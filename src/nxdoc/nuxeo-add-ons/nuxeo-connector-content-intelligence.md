@@ -258,6 +258,86 @@ After configuring the connector, you can perform a test ingestion to see that th
 
 Once the `dryRun` mode gives the expected results, you can execute document ingestions on your repository. You can also automate your ingestion tasks using the scheduler service and event-based automation functionality available in Nuxeo.
 
+## Automating document ingestion
+
+Nuxeo supports schedule-based (default) and event-based automations, which can be used to automate ingestion tasks.
+
+### Automation using Scheduler
+
+Schedule-based automations are the preferred way to ingest your documents. They execute an even at periodic intervals as set by the user and require read-only access to documents. By setting up multiple schedules, you can run multiple ingestion jobs on subparts of the repository, each with its own config.
+
+Sample module with Schedules and corresponding EventListeners:
+
+**Schedule**
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="org.nuxeo.hxai.crons.config" version="1.0.0">
+  <extension target="org.nuxeo.ecm.core.scheduler.SchedulerService" point="schedule">
+    <schedule id="ingest1">
+      <eventId>ingest1</eventId>
+      <eventCategory>ingest</eventCategory>
+      <cronExpression>0/2 * * * * ?</cronExpression>
+    </schedule>
+    <schedule id="ingest2">
+      <eventId>ingest2</eventId>
+      <eventCategory>ingest</eventCategory>
+      <cronExpression>1/2 * * * * ?</cronExpression>
+    </schedule>
+  </extension>
+</component>
+```
+
+**EventListener**
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="org.nuxeo.hxai.cron.events.listeners.config" version="1.0.0">
+  <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+    <listener name="ingest1" async="false" postCommit="false" priority="120" class="org.nuxeo.hxai.listeners.IngestListener1">
+      <event>ingest1</event>
+    </listener>
+    <listener name="ingest2" async="false" postCommit="false" priority="120" class="org.nuxeo.hxai.listeners.IngestListener2">
+      <event>ingest2</event>
+    </listener>
+  </extension>
+</component>
+```
+
+**EventListener code**
+```
+public class IngestListener1 implements EventListener {
+
+    @Override
+    public void handleEvent(Event event) {
+        String query = "SELECT * from Document WHERE ecm:path = '/default-domain/workspaces/test/test'";
+        BulkCommand command = new BulkCommand.Builder(IngestAction.ACTION_NAME, query,
+                SYSTEM_USERNAME).param(INLINE_MAPPING, "files:files,file:content,dublincore,tags,foo:bar")
+                                .param(INLINE_TRANSFORMER, "files:files/=my:binaries")
+                                .param(REPLACE_MAPPING, true)
+                                .param(DRY_RUN_MODE, true)
+                                .build();
+        Framework.getService(BulkService.class).submit(command);
+    }
+}
+```
+
+### Automating repeat ingestions to update ingested documents using the IngestUpdateListener function
+
+The IngestUpdateListener function can be used to updated an ingested document by automating subsequent ingestions. It uses the HxAI facet to update Nuxeo that the document is ingested and is eligible for ingestion update when necessary. However, this function is disabled by default and is not the preferred approach for ingestion because of the following reasons:
+
+- It adds an extra facet to the documents
+- Ingestion is not an synchronous process and Nuxeo is not required to take action immediately.
+
+You can enable this automation feature by including the following configuration:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="org.nuxeo.hxai.events.listener.config.test" version="1.0.0">
+  <require>org.nuxeo.hxai.events.listener.config</require>
+  <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+    <listener name="ingestlistener" enabled="true"/>
+  </extension>
+</component>
+```
 
 
 
