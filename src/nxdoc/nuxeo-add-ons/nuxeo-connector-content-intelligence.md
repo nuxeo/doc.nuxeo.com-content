@@ -157,4 +157,81 @@ The `ingestPropertyMappers` configuration implements java.util.function.Consumer
 </component>
 ```
 
+### Configuring remapping and transformations
+
+After the mapping is complete, the document metadata is remapped and transformed. This action is performed by transformers where the transforming values and remapping keys are regrouped to standardize the mappings. Different functions can be used on the data to transform the content. Based on the requirement, transformers can perform the following actions:
+
+**Remap**
+```
+# Remap only
+dc:=base: # Remap all dublincore properties to prefix them with 'base'
+:title=:name # Remap all properties suffixed 'title' and apply Function to them
+files:file/=ingest:binaries # Remap all files:files/whatever into ingestion:binaries/whatever
+```
+
+**Transform**
+```
+# Transform only
+==Function # Apply Function to everything
+a==Function # Apply Function to a, don't rename it
+```
+
+**Remap and transform**
+```
+# Remap and transform
+a=b=Function # Map simple property a to b and apply Function
+:title=:name=Function # Remap all properties suffixed 'title' and apply Function to them
+a:b=c:d=Function # Exactly map a:b to c:d and apply Function to it
+files:files/=ingestion:binaries=Function # Remap all flattened items from files:files/whatever to ingestion:binaries/whatever and apply Function to them one by one
+```
+
+#### Joining multiple transformations into a transformer
+
+Transformations can be chained (joined by comma separators) into a transformer, which apply the transformations in the sequence they are joined. Here is an inline IngestTransformerDescriptor:
+
+```
+a=b=Function,a=b=OtherFunction # After being transformed int b, a is not matched by the second transformation and OtherFunction is not applied.
+# This would work but there is a better way below
+a=b=Function,b==OtherFunction # Function will be applied before OtherFunction
+```
+
+#### Configuring transformer functions
+
+You can create custom functions based on your transformation requirements. The following functions are included in the package for testion:
+
+- `_Flag`: assures that a property was contacted
+- `_Concat`: concatenates a distinguishable value to the property value
+- `_Count`: initiates or increments a numeric value to display how many times it was applied
+
+##### Default function location
+
+There is a default package for functions used by Transformers. If you include the functions in the default package, you do not need to specify the package when you execute them. For example:
+```
+// assumed package
+org.nuxeo.hxai.ingest.functions
+```
+
+##### Custom function locations
+
+You can put your functions in any custom location. The following example displays how to include functions from a custom location:
+```
+MyFunction # points to org.nuxeo.hxai.ingest.functions.MyFunction
+.MyFunction # same thing
+.my.sub.package.MyOtherFunction # points to org.nuxeo.hxai.ingest.functions.my.sub.package.MyFunction
+my.complete.package.MyFunction # use a cannonical name
+```
+
+##### Joining multiple transformation functions
+
+Multiple transformation functions can be joined to apply them on the metadata in the sequence the appear. For example:
+```
+# The most reliable solution to chain functions on a single property doesn't require you to figure things out:
+a=b=Function1=Function2=Function3,c==Function1=Function3 # a is renamed to b and Function1 to 3 are applied to it in order. c will then be transformed by Function1, then Function3
+# hard to distinguish both Transformations from each other? Add some comas. It's free!
+a=b=Function1=Function2=Function3,,,c==Function1=Function3 # same result
+```
+
+
+
+
 
