@@ -80,5 +80,6 @@ The major releases trend provides our customers more time to migrate while still
 
 Version | Release Date | Active Date | Maintenance Date | Maintenance End
 --- | --- | --- | --- | --- 
+LTS 2025 | 03/31/2025 | 03/31/2025 | 04/02/2027 | 04/28/2028
 LTS 2023 | 07/18/2023 | 07/18/2023 | 07/18/2025 | 07/18/2027 
 LTS 2021 | 01/21/2021 |	01/21/2021 | 07/18/2023 | 04/07/2025
