@@ -57,7 +57,8 @@ After the configuration is complete, you can test a document ingestion using the
     "action":"ingest",
     "parameters": "{\"inlineMapping\":\"dublincore,common\",\"inlineTransformer\":\"a=b=Function,c=d=OtherFunction\",\"replaceMapping\":false,\"aggregateDefaultMapping\":false,\"aggregateDefaultTransformer\":false,\"persistMapping\":false}
   }
-}'```
+}'
+```
 
 In the above curl command, the ingest action ingests document metadata for documents in the `<my-root-doc-id>`, If the documents have complex metadata, they must be simplified using the ingest property mappers before they are ingested.
 
@@ -80,4 +81,18 @@ These parameters are saved during ingestion so that repeat ingestions to update 
  - `replaceMapping`
  - `persistMapping`
 
- 
+The following table explains the parameters and how they can be configured:
+
+| Parameters | Description |
+| ------------- | ----------- |
+| `inlineMapping` | Assign mappings as values to this parameter. For example, `dublincore`, `dc:title`, @myMappingReference. For additional information, refer to the Configure mappings section. |
+| `inlineTransformer` | Assign transformation functions as values to this parameter. For example, `_Concat`. You can create your own transformation function and assign it to this parameter. You can also associate multiple functions that can execite in the given sequence. For additional information, refer to the Configure remap and transformation section. |
+| `replaceMapping` | Set the value of this parameter to `true` to replace the mapping and transformation previously saved for a specific document. The default value is `false`. |
+| `aggregateDefaultMapping` | Assign default mapping for a specific document type. This adds to the `inlineMapping` parameter.  |
+| `aggregateDefaultTransformer` | Assign default transformation for a specific document type. This adds to the `inlineTransformer` parameter. |
+| `persistMapping` | Set the value to `true` if you want the persistent values to be saved during ingestion. |
+
+### Configuring mappings
+
+In the Document Ingestion Life Cycle, mapping is the stage where the metadata and content of the documents selected for ingestion are mapped.  Mapping for specific type of documents can be configured which are referred to as custom maps. If a document type does not have a custom map associated with it, default mapping configuration is used to map its metadata.
+
