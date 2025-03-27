@@ -112,3 +112,49 @@ They can be used individually or together as comma separated values. The followi
 "inlineMapping": "@myMappingReference,dc:title,dublincore,files,"
 ```
 
+#### Custom mappings
+
+You can set a custom map as the default map for a specific document type. To implement this, the document type must be set as the mapping contribution’s ID. You can modify the following custom map sample based on your rquirement and set the default maps for different document types.
+
+```
+<?xml version="1.0"?>
+<component name="org.nuxeo.hxai.IngestMappingServiceComponent.test.referencing" version="1.0">
+  <extension target="org.nuxeo.hxai.IngestMappingServiceComponent" point="ingestMappings">
+    <!--default for Picture typed documents-->
+    <ingest id="Picture">
+      <properties>dc:title,icon,relatedtext:relatedtextresources</properties>
+    </ingest>
+    <!--to be referred to as @first-->
+    <ingest id="first">
+      <properties>dc:title,icon,relatedtext:relatedtextresources</properties>
+    </ingest>
+    <ingest id="second">
+      <properties>dc:description,uid:major_version,uid:minor_version</properties>
+    </ingest>
+    <ingest id="third">
+      <properties>dc:content-type</properties>
+    </ingest>
+  </extension>
+</component>
+```
+
+The IngestMappingDescriptor can be contributed via XML, validated and ready to use at runtime. It is a central way to define mappings.
+
+#### Configuring custom property mappers
+
+Ingest service can only process documents with metadata at the root level. Documents with nested or complex metadata must be simplified before they move to the Remap and Transform stage. Custom property mappers are used to simplify such complex metadata. This is useful in cases where multiple files are part of a document (files:files for example, which is spread into multiple files:files/n entries).
+
+The `ingestPropertyMappers` configuration implements java.util.function.Consumer as `PropertyMappingContext`, which allows the properties in the configuration to access any element inside the properties part of the object of the ingestible document. The following sample component includes the setting to map `my:property` using the `my.custom.Mapper` custom mapper.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="my.component" version="1.0">
+  <extension target="org.nuxeo.hxai.IngestMappingServiceComponent" point="ingestPropertyMappers">
+    <ingestPropertyMappers id="myFileMappers">
+      <class property="my:property">my.custom.Mapper</class>
+    </ingestPropertyMappers>
+  </extension>
+</component>
+```
+
+
