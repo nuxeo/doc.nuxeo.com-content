@@ -96,3 +96,19 @@ The following table explains the parameters and how they can be configured:
 
 In the Document Ingestion Life Cycle, mapping is the stage where the metadata and content of the documents selected for ingestion are mapped.  Mapping for specific type of documents can be configured which are referred to as custom maps. If a document type does not have a custom map associated with it, default mapping configuration is used to map its metadata.
 
+#### Mapping syntax
+
+The following values are recognized for mapping:
+
+| Mapping values | Description |
+| ------------- | ----------- |
+| Unprefixed properties | These properties are recognized but not recommended. Example, `files # will add files:files to the mapping` |
+| Prefixed properties |  - Add single properties, one by one. Example, `dc:title` |
+| Schemas | Maps all the properties included in the schema. For example, the `dublincore` schema includes 18 properties. Therefore it maps all the 18 properties when used. |
+| Mapping reference | Maps all the properties included in the mapping reference. For example, `@myMappingReference` |
+
+They can be used individually or together as comma separated values. The following example shows how multiple mappings can be assigned to the `inlineMapping` parameter:
+```
+"inlineMapping": "@myMappingReference,dc:title,dublincore,files,"
+```
+
