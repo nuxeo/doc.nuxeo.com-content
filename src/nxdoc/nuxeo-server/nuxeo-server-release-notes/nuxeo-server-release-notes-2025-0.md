@@ -281,7 +281,7 @@ AbstracSession#getOrCreateDocument now works properly to create a document under
 
 ### Allow to Use S3 StrictAuthenticatedEncryption With a Local Keystore
 
- A nuxeo.s3storage.crypt.keystore.legacymode configuration property default is true for lts-2023, and false for lts-2025 is available to decrypt objects encrypted client-side with a local keystore in v1 AWS encryption API.
+A `nuxeo.s3storage.crypt.keystore.legacymode` configuration property default is `true` for lts-2023, and `false` for lts-2025 is available to decrypt objects encrypted client-side with a local keystore in v1 AWS encryption API.
 
 ### Move Swagger Rest API and Automation Doc to an Optional Marketplace
 
