@@ -26,7 +26,7 @@ The Maven Plugins used by Nuxeo were updated to not depend on very old libraries
 - maven-install-plugin
 - maven-jar-plugin
 
-We had to remove the Maven Eclipse Plugin from our dependency tree as it is unmaintained, if you were leverage it you should add it back to your pom:
+We removed the Maven Eclipse Plugin from our dependency tree as it was not maintained. if you were leveraging it, you should add it back to your pom:
 
 ```xml
 <plugin>
@@ -37,8 +37,6 @@ We had to remove the Maven Eclipse Plugin from our dependency tree as it is unma
 ```
 
 ## Make Creation of User Without Password Using the REST API Configurable
-
-The nuxeo.user.password.empty.enabled nuxeo configuration property can be set to true to create users without password. Its default value is false.
 
 The `nuxeo.user.password.empty.enabled` nuxeo configuration property can be set to `true` to create users without password. Its default value is `false`**.**
 
