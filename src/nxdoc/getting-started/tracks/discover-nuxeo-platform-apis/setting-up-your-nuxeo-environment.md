@@ -294,9 +294,10 @@ history:
         version: '1'
 next_link: nxdoc/setting-up-your-javascript-environment
 ---
-
+{{! excerpt}}
 This how-to is the first step of the tutorial Getting Started with the Nuxeo Platform, allowing you to explore the Nuxeo Platform through its REST API.</br>
 It provides instructions for installing and running a Nuxeo Platform instance using Docker or the ZIP package.
+{{! /excerpt}}
 
 ## Docker
 
