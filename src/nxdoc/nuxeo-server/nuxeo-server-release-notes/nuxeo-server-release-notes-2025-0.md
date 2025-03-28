@@ -285,7 +285,11 @@ A `nuxeo.s3storage.crypt.keystore.legacymode` configuration property default is 
 
 ### Move Swagger Rest API and Automation Doc to an Optional Marketplace
 
-Rest Swagger doc available under /nuxeo/api/v1/doc endpoint and Automation doc available under `/nuxeo/api/v1/automation/doc` endpoint are no longer part of the default distribution.
+Rest Swagger doc available under `/nuxeo/api/v1/doc` endpoint and Automation doc available under `/nuxeo/api/v1/automation/doc` endpoint are no longer part of the default distribution.
+
+If you need the old swagger documentation or the automation documentation, please install the nuxeo-rest-api-documentation marketplace from connect.
+
+Doc source is now located [here](https://github.com/nuxeo/nuxeo-rest-api-swagger-doc).
 
 ### Add a Way to Add Appenders to Loggers Configured With @LoggerLevel
 
