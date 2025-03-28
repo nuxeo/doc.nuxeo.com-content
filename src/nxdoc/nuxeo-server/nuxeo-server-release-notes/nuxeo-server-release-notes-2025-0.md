@@ -440,6 +440,46 @@ Fixed thumbnail rendition for JPG File with orientation in EXIF metadata.
 
 Easyshare web and mail templates are now HTML escaped.
 
+### Improve UIDGeneratorService Modularity
+
+The UIDSequencer modules have been reworked to allow more modularity, which provide better performance to Nuxeo Platform, mainly because only one sequencer is now contributed by default to Nuxeo Platform.
+
+A new `nuxeo.conf` property has been added to Nuxeo Platform that allows to define the default UIDSequencer used by Nuxeo:
+
+```
+nuxeo.uidsequencer.default.class=org.nuxeo.ecm.core.uidgen.KeyValueStoreUIDSequencer
+```
+
+And so, starting from Nuxeo Platform LTS 2025, the default UIDSequencer is now `KeyValueStoreUIDSequencer`.
+
+The ElasticSearch/OpenSearch UIDSequencer has been extracted to the `nuxeo-uidgen-opensearch1` package marketplace. If you want to use it just install the package, check that the template `opensearch1-uidgen` is enabled and the OpenSearch connection configuration is present in your `nuxeo.conf`:
+
+```
+# You can replace the prefix _nuxeo.uidsequencer.default_ by _nuxeo_ if you use other OpenSearch implementations that uses the same OpenSearch cluster
+# Mandatory configuration
+nuxeo.uidsequencer.default.opensearch1.client.server=
+# Optional configuration
+nuxeo.uidsequencer.default.opensearch1.client.connectionTimeout=30s
+nuxeo.uidsequencer.default.opensearch1.client.socketTimeout=121s
+nuxeo.uidsequencer.default.opensearch1.client.sslCertificateVerification=true
+nuxeo.uidsequencer.default.opensearch1.client.username=
+nuxeo.uidsequencer.default.opensearch1.client.password=
+nuxeo.uidsequencer.default.opensearch1.client.trustStore.path=
+nuxeo.uidsequencer.default.opensearch1.client.trustStore.password=
+nuxeo.uidsequencer.default.opensearch1.client.trustStore.type=
+nuxeo.uidsequencer.default.opensearch1.client.keyStore.path=
+nuxeo.uidsequencer.default.opensearch1.client.keyStore.password=
+nuxeo.uidsequencer.default.opensearch1.client.keyStore.type=
+```
+
+The JPA/SQL UIDSequencer has been extracted to the `nuxeo-uidgen-sql` package marketplace. If you want to use it just install the package and check that the template `sql-uidgen` is enabled.
+
+The MongoDB UIDSequencer stays in the Nuxeo Platform, without being enabled/contributed. If you want to use it just add the line below to your `nuxeo.conf`:
+
+```
+nuxeo.uidsequencer.default.class=org.nuxeo.ecm.core.mongodb.seqgen.MongoDBUIDSequencer
+```
+
 ## Addons
 
 ### Nuxeo Retention 
