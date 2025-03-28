@@ -382,7 +382,7 @@ Boolean primitive type validation now relies on the `nuxeo.primitive.type.strict
 
 By default, it is set to `false`, keeping the previous behavior: at a low level, when trying to decode a string input as a boolean, fall back on 0 if the string cannot be decoded as a boolean. For example, "foo".
 
-If set to `true`, in such case, an `IllegalArgumentException` is thrown.
+If set to `true`, an `IllegalArgumentException` is thrown.
 
 Consequently, when executing a REST API:
 -  search request on a PageProvider and passing "foo" as a query parameter for a predicate on a boolean field
