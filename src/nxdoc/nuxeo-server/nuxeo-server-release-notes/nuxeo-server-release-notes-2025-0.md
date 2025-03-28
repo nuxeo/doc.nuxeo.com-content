@@ -22,6 +22,19 @@ All AWS JAVA SDK dependencies were bumped to v2.
 
 Encryption APIs for client-side encryption were bumped to v3 (previously v2). See upgrade notes instructions for more details.
 
+### Make Creation of User Without Password Using the REST API Configurable
+
+The `nuxeo.user.password.empty.enabled` nuxeo configuration property can be set to `true` to create users without password. Its default value is `false`**.**
+
+### Requesting an Unknown Document Id With Easyshare Returns a 500 Error
+
+Exception happening in WebEngine is now better caught when the requested MediaType is not `application/json`.
+
+An exception writer has been added for `text/html` media type, so Nuxeo Server WebEngine now handles the following media type for NuxeoException handling:
+
+- `text/html`
+- `application/json` which is the default fallback for other media types
+
 ### Improve Server Assembly to Leverage More the Maven Tree
 
 Nuxeo Server Packaging has been improved to support container lib.
@@ -110,7 +123,7 @@ var entries = auditBackend.queryLogs(new AuditQueryBuilder().predicate(
     Predicates.eq("extended/user", session.getPrincipal().getName())))
 ```
 
-### Align Quartz-Mongodb on  quartz-2.5.0
+### Align Quartz-Mongodb on quartz-2.5.0
 
 The dependency `quartz-mongodb` has been updated.
 
