@@ -258,6 +258,161 @@ curl -u USERNAME:PASSWORD -XPOST https://NUXEO_INSTANCE/nuxeo/api/v1/management/
 curl -u USERNAME:PASSWORD -XPOST https://NUXEO_INSTANCE/nuxeo/api/v1/management/sequencers/default -d 'key=customSequenceN&value=customValueN'
 ```
 
+## Nuxeo Streams 
+
+### Create a Nuxeo Stream Log4j2 Appender Package
+You need to install `nuxeo-log4j-stream` package when upgrading to LTS 2025 if you were using `NuxeoStreamAppender` in your `log4j2.xml file`.
+
+## Deprecated
+
+### Deprecated 10.10 code removal
+
+#### Configuration Properties
+
+##### Configuration Service
+
+`org.nuxeo.ecm.core.uidgen.sequencer.hibernate` was removed, the default sequencer is always used
+
+#### Contributions
+
+##### Extension point
+
+`org.nuxeo.ecm.platform.audit.service.NXAuditEventsService#bulk` has been removed as it is replaced by Nuxeo Stream
+`org.nuxeo.ecm.platform.comment.service.CommentService#config` has been removed as it is not used in newer implementations
+
+#### Constants
+
+`org.nuxeo.ecm.automation.io.rest.operations.JsonRequestReader.targetMediaTypeNXReq` was referencing `application/json+nxrequest` media type, `application/json` should be used
+`org.nuxeo.ecm.core.api.AbstractSession#TRASH_KEEP_CHECKED_IN_PROPERTY` no replacement in new implementations
+`org.nuxeo.ecm.core.api.LifeCycleConstants#DELETED_STATE` was replaced by TrashService
+`org.nuxeo.ecm.core.api.LifeCycleConstants#DELETE_TRANSITION` was replaced by TrashService
+`org.nuxeo.ecm.core.api.LifeCycleConstants#UNDELETE_TRANSITION` was replaced by TrashService
+`org.nuxeo.ecm.core.api.LifeCycleConstants#DOCUMENT_UNDELETED` was replaced by TrashService
+`org.nuxeo.ecm.core.api.NuxeoPrincipal#TRANSIENT_USER_FORMAT` was not used, no replacement
+`org.nuxeo.ecm.core.io.download.DownloadService#NXBLOBSTATUS` was replaced by the `@async` web adapter mechanism
+`org.nuxeo.ecm.platform.ec.notification.service.NotificationService#SUBSCRIPTION_NAME` was not used, no replacement
+`org.nuxeo.ecm.platform.versioning.service.VersioningManagerImpl#COMPONENT_ID` was not used, no replacement
+
+#### Methods
+
+`org.nuxeo.common.utils.FileUtils#copyFile(File, File)` was not used, use `org.apache.commons.io.FileUtils#copyFile(File, File)` or `org.apache.commons.io.FileUtils#copyFileToDirectory(File, File)` instead
+`org.nuxeo.common.utils.FileUtils#copyTree(File, File)` was not used, no replacement
+`org.nuxeo.common.utils.FileUtils#copyTree(File, File, PathFilter)` was not used, no replacement
+`org.nuxeo.common.utils.ZipUtils#getEntryContentAsStream(File, String)` was not used, no replacement
+`org.nuxeo.common.utils.ZipUtils#getEntryContentAsString(File, String)` was not used, no replacement
+`org.nuxeo.common.utils.ZipUtils#getEntryContentAsBytes(File, String)` was not used, no replacement
+`org.nuxeo.ecm.automation.server.AutomationServer#addBinding(RestBinding)` was not used, no replacement
+`org.nuxeo.ecm.automation.server.AutomationServer#removeBinding(RestBinding)` was not used, no replacement
+`org.nuxeo.ecm.collections.api.CollectionManager#getUserDefaultCollections(DocumentModel, CoreSession)` was replaced by `org.nuxeo.ecm.collections.api.CollectionManager#getUserDefaultCollections(CoreSession)`
+`org.nuxeo.ecm.collections.api.FavoritesManager#getFavorites(DocumentModel, CoreSession)` was replaced by `org.nuxeo.ecm.collections.api.FavoritesManager#getFavorites(CoreSession)`
+`org.nuxeo.ecm.core.NXCore#getLifeCycleService()` was not used, use `org.nuxeo.runtime.api.Framework#getService(Class)` instead
+`org.nuxeo.ecm.core.api.CoreSession#close()` not useful anymore, no replacement
+`org.nuxeo.ecm.core.api.DocumentModel#isPrefetched(String)` not useful anymore, no replacement
+`org.nuxeo.ecm.core.api.DocumentModel#isPrefetched(String, String)` not useful anymore, no replacement
+`org.nuxeo.ecm.core.convert.service.MimeTypeTranslationHelper#getDestinationMimeTypes(String)` was not used, no replacement
+`org.nuxeo.ecm.core.convert.service.MimeTypeTranslationHelper#getSourceMimeTypes(String)` was not used, no replacement
+`org.nuxeo.ecm.core.event.Event#isLocal()` was not used, no replacement
+`org.nuxeo.ecm.core.event.Event#setLocal(String)` was not used, no replacement
+`org.nuxeo.ecm.core.event.Event#isPublic()` was not used, no replacement
+`org.nuxeo.ecm.core.event.Event#setPublic(String)` was not used, no replacement
+`org.nuxeo.ecm.core.io.download.DownloadService#downloadBlobStatus(HttpServletRequest, HttpServletResponse, String, String)` was replaced by the `@async` web adapter mechanism
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#listToJson(Class, String, RenderingContext)` was replaced by `{{org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToList(Class, String, RenderingContext)`
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, String, RenderingContext)` was replaced by }}`org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, RenderingContext)`
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, Type, String, RenderingContext)` was replaced by ``org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, Type, RenderingContext)`
+`org.nuxeo.ecm.core.io.upload.Batch#addChunk(String, InputStream, int, int, String, String, long)` was replaced by `org.nuxeo.ecm.core.io.upload.Batch#addFile(String, Blob, int, int, String, String, long)`
+`org.nuxeo.ecm.core.io.upload.Batch#addFile(String, InputStream, String, String)` was replaced by `org.nuxeo.ecm.core.io.upload.Batch#addFile(String, Blob, String, String)`
+`org.nuxeo.ecm.core.io.upload.BatchManager#addStream(String, String, InputStream, String, String)` was replaced by `org.nuxeo.ecm.core.io.upload.BatchManager#addBlob(String, String, Blob, String, String)`
+`org.nuxeo.ecm.core.io.upload.BatchManager#addStream(String, String, InputStream, int, int, String, String, long)` was replaced by `org.nuxeo.ecm.core.io.upload.BatchManager#addBlob(String, String, Blob, int, int, String, String, long)`
+`org.nuxeo.ecm.core.io.upload.BatchManager#getTransientStore()` was moved within batch handlers
+`org.nuxeo.ecm.core.transientstore.api.TransientStoreConfig#setAbsoluteMaxSizeMB(int)` was not used, no replacement
+`org.nuxeo.ecm.core.transientstore.api.TransientStoreConfig#setFirstLevelTTL(int)` was not used, no replacement
+`org.nuxeo.ecm.core.transientstore.api.TransientStoreConfig#setSecondLevelTTL(int)` was not used, no replacement
+`org.nuxeo.ecm.core.transientstore.api.TransientStoreConfig#setTargetMaxSizeMB(int)` was not used, no replacement
+`org.nuxeo.ecm.core.work.WorkManager#find(String, State)` was not scalable, no replacement
+`org.nuxeo.ecm.core.work.WorkManager#listWork(String, State)` was not scalable, no replacement
+`org.nuxeo.ecm.core.work.WorkManager#listWorkIds(String, State)` was not scalable, no replacement
+`org.nuxeo.ecm.permissions.TransientUserPermissionHelper#acquireToken(String, DocumentModel, String)` was replaced by `org.nuxeo.ecm.permissions.TransientUserPermissionHelper#addToken(String)`
+`org.nuxeo.ecm.platform.audit.api.AuditLogger#logEvent(Event)` was replaced by contributions
+`org.nuxeo.ecm.platform.audit.api.AuditLogger#logEvents(EventBundle)` was replaced by contributions
+`org.nuxeo.ecm.platform.comment.api.CommentManager#getComments(DocumentModel, DocumentModel)` was replaced by `org.nuxeo.ecm.platform.comment.api.CommentManager#getComments(DocumentModel)`
+`org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(DocumentModel, String)` was replaced by `org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(CoreSession, Comment)`
+`org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(DocumentModel, String, String)` was replaced by `org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(CoreSession, Comment)`
+`org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(DocumentModel, DocumentModel, DocumentModel)` was replaced by `org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(CoreSession, Comment)`
+`org.nuxeo.ecm.platform.comment.api.CommentManager#deleteComment(DocumentModel, DocumentModel)` was replaced by `org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(CoreSession, String)`
+`org.nuxeo.ecm.platform.comment.api.CommentManager#getDocumentsForComment(DocumentModel)` not used anymore, no replacement
+`org.nuxeo.ecm.platform.dublincore.service.DublinCoreStorageService#setCreationDate(DocumentModel, Calendar, Event)` was replaced by `org.nuxeo.ecm.platform.dublincore.service.DublinCoreStorageService#setCreationDate(DocumentModel, Calendar)`
+`org.nuxeo.ecm.platform.dublincore.service.DublinCoreStorageService#setModificationDate(DocumentModel, Calendar, Event)` was replaced by `org.nuxeo.ecm.platform.dublincore.service.DublinCoreStorageService#setModificationDate(DocumentModel, Calendar)`
+`org.nuxeo.ecm.platform.ec.notification.email.EmailAuthenticator#value(String)` was replaced by `org.nuxeo.ecm.platform.ec.notification.email.EmailAuthenticator#protocolValue(String)`
+`org.nuxeo.ecm.platform.ec.notification.email.EmailAuthenticator#defaultValue(String)` was replaced by `org.nuxeo.ecm.platform.ec.notification.email.EmailAuthenticator#protocolValue(String)`
+`org.nuxeo.ecm.platform.ec.notification.service.NotificationRegistryImpl#getNotificationRegistry()` was not used, no replacement
+`org.nuxeo.ecm.platform.filemanager.api.FileManager#createDocumentFromBlob(CoreSession, Blob, String, boolean, String)` was replaced by `org.nuxeo.ecm.platform.filemanager.api.FileManager#createOrUpdateDocument(FileImporterContext)`
+`org.nuxeo.ecm.platform.filemanager.api.FileManager#createDocumentFromBlob(CoreSession, Blob, String, boolean, String, boolean)` was replaced by `org.nuxeo.ecm.platform.filemanager.api.FileManager#createOrUpdateDocument(FileImporterContext)`
+`org.nuxeo.ecm.platform.filemanager.api.FileManager#updateDocumentFromBlob(CoreSession, Blob, String, String)` was not used, no replacement
+`org.nuxeo.ecm.platform.filemanager.service.extension.AbstractFileImporter#getFileManagerService()` was not used, use `org.nuxeo.runtime.api.Framework#getService(Class)` instead
+`org.nuxeo.ecm.platform.filemanager.service.extension.FileImporter#setFileManagerService(FileManagerService)` was not used, no replacement
+`org.nuxeo.ecm.platform.filemanager.service.extension.FileImporter#create(CoreSession, Blob, String, boolean, String, TypeManager)` was replaced by `org.nuxeo.ecm.platform.filemanager.service.extension.FileImporter#createOrUpdate(FileImporterContext)`
+`org.nuxeo.ecm.platform.importer.factories.DefaultDocumentModelFactory#getMimeType(String)` was not used, no replacement
+`org.nuxeo.ecm.platform.rendition.service.RenditionServiceImpl#getRenditionDefinition(String)` was replaced by `org.nuxeo.ecm.platform.rendition.service.RenditionServiceImpl#getAvailableRenditionDefinition(DocumentModel, String)`
+`org.nuxeo.ecm.platform.rendition.service.RenditionServiceImpl#storeRendition(DocumentModel, Rendition)` was replaced by `org.nuxeo.ecm.platform.rendition.service.RenditionServiceImpl#storeRendition(DocumentModel, Rendition, RenditionDefinition)`
+`org.nuxeo.ecm.platform.ui.web.auth.LoginScreenHelper#registerLoginProvider(String, String, String, String, String, LoginProviderLinkComputer)` was replaced by `org.nuxeo.ecm.platform.ui.web.auth.LoginScreenHelper#registerSingleProviderLoginScreenConfig(String, String, String, String, String, LoginProviderLinkComputer)`
+`org.nuxeo.ecm.platform.ui.web.auth.service.LoginScreenConfig#registerLoginProvider(String, String, String, String, String, LoginProviderLinkComputer)` was replaced by `org.nuxeo.ecm.platform.ui.web.auth.service.LoginScreenConfig#LoginScreenConfig(LoginProviderLink)`
+`org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerManager#getCorsConfigForRequest(HttpServletRequest)` was replaced by `org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerManager#getCorsFilterForRequest(HttpServletRequest)`
+`org.nuxeo.ecm.quota.QuotaStatsService#computeInitialStatistics(String, CoreSession, QuotaStatsInitialWork)` was replaced by `org.nuxeo.ecm.quota.QuotaStatsService#computeInitialStatistics(String, CoreSession, QuotaStatsInitialWork, String)`
+`org.nuxeo.ecm.quota.QuotaStatsService#launchInitialStatisticsComputation(String, String)` was replaced by `org.nuxeo.ecm.quota.QuotaStatsService#computeInitialStatistics(String, String, String)`
+`org.nuxeo.ecm.quota.QuotaStatsUpdater#computeInitialStatistics(CoreSession, QuotaStatsInitialWork)` was replaced by `org.nuxeo.ecm.quota.QuotaStatsUpdater#computeInitialStatistics(CoreSession, QuotaStatsInitialWork, String)`
+`org.nuxeo.lib.stream.computation.ComputationPolicy#isSkipFailure()` was replaced by `org.nuxeo.lib.stream.computation.ComputationPolicy#continueOnFailure()`
+`org.nuxeo.runtime.test.runner.RuntimeHarness#deployFolder(File, ClassLoader)` was not used, no replacement
+`org.nuxeo.runtime.test.runner.RuntimeHarness#deployTestContrib(String, String)` was replaced by `org.nuxeo.runtime.test.runner.RuntimeHarness#deployContrib(String, String)`
+`org.nuxeo.runtime.test.runner.RuntimeHarness#deployTestContrib(String, URL)` was replaced by `org.nuxeo.runtime.test.runner.RuntimeHarness#deployContrib(String, String)`
+`org.nuxeo.runtime.test.runner.RuntimeHarness#getProperties()` was not used, use `org.nuxeo.runtime.api.Framework#getProperties()` instead
+`org.nuxeo.runtime.test.runner.RuntimeHarness#isRestart()` was not used, no replacement
+`org.nuxeo.runtime.test.runner.RuntimeHarness#restart()` was not used, no replacement
+`org.nuxeo.runtime.test.runner.RuntimeHarness#getClassLoaderFiles()` was not used, no replacement
+`org.nuxeo.runtime.test.runner.TransactionFeature.Waiter#await(long)` was replaced by `org.nuxeo.runtime.test.runner.TransactionFeature.Waiter#await(Duration)`
+`org.nuxeo.runtime.test.runner.TransactionFeature#nextTransaction(long, TimeUnit)` was replaced by `org.nuxeo.runtime.test.runner.TransactionFeature#nextTransaction(Duration)`
+
+#### Classes
+
+`org.nuxeo.ecm.core.api.impl.blob.AsyncBlob` was replaced by the `@async` web adapter mechanism
+`org.nuxeo.ecm.core.trash.LifeCycleTrashService` was replaced by `org.nuxeo.ecm.core.trash.PropertyTrashService`
+`org.nuxeo.ecm.core.trash.TrashService` was replaced by `org.nuxeo.ecm.core.api.trash.TrashService`
+`org.nuxeo.ecm.directory.sql.filter.SQLBetweenFilter` was replaced by `org.nuxeo.ecm.core.query.sql.model.QueryBuilder`
+`org.nuxeo.ecm.directory.sql.filter.SQLComplexFilter` was replaced by `org.nuxeo.ecm.core.query.sql.model.QueryBuilder`
+`org.nuxeo.ecm.directory.sql.filter.SQLOperatorFilter` was replaced by `org.nuxeo.ecm.core.query.sql.model.QueryBuilder`
+`org.nuxeo.ecm.liveconnect.core.JSONLiveConnectBlobDecoder` was replaced by `org.nuxeo.ecm.automation.core.util.JSONManagedBlobDecoder`
+`org.nuxeo.ecm.platform.audit.listener.AuditEventLogger` was replaced by `org.nuxeo.ecm.platform.audit.listener.StreamAuditEventListener`
+`org.nuxeo.ecm.platform.audit.service.AuditBulker` was replaced by Nuxeo Stream mechanism
+`org.nuxeo.ecm.platform.audit.service.DefaultAuditBulker` was replaced by Nuxeo Stream mechanism
+`org.nuxeo.ecm.platform.audit.service.NoopAuditBulker` was replaced by Nuxeo Stream mechanism
+`org.nuxeo.ecm.platform.audit.service.extension.AuditBulkerDescriptor` was replaced by Nuxeo Stream mechanism
+`org.nuxeo.ecm.platform.audit.service.management.AuditBulkerMBean` was replaced by Nuxeo Stream mechanism
+`org.nuxeo.ecm.platform.comment.impl.CommentManagerImpl` was replaced by `org.nuxeo.ecm.platform.comment.impl.TreeCommentManager`
+`org.nuxeo.ecm.platform.comment.service.CommentServiceHelper` was not used, use `org.nuxeo.runtime.api.Framework#getProperties()` instead
+`org.nuxeo.ecm.platform.dublincore.NXDublinCore` was not used, no replacement
+`org.nuxeo.ecm.platform.preview.adapter.PlainImagePreviewer` was not used, no replacement
+`org.nuxeo.ecm.restapi.server.BulkDocumentsObject` was replaced by the Bulk Action Framework
+`org.nuxeo.drive.operations.GetRepositoriesOperation` was not used, no replacement
+`org.nuxeo.drive.operations.NuxeoDriveAddToLocallyEditedCollection` was not used, no replacement
+`org.nuxeo.drive.operations.NuxeoDriveCanMove` was not used, no replacement
+`org.nuxeo.drive.operations.NuxeoDriveGenerateConflictedItemName` was not used, no replacement
+`org.nuxeo.drive.operations.NuxeoDriveGetClientUpdateInfo` was not used, no replacement
+`org.nuxeo.drive.operations.test.NuxeoDriveWaitForAsyncCompletion` was not used, no replacement
+`org.nuxeo.runtime.test.runner.ContainerFeature` was replaced by `org.nuxeo.runtime.test.runner.TransactionalFeature`
+`org.nuxeo.runtime.test.runner.LocalDeploy` was replaced by `org.nuxeo.runtime.test.runner.Deploy`
+`org.nuxeo.runtime.test.runner.ServletContainer` was replaced by `org.nuxeo.runtime.test.runner.ServletContainerFeature` automatic port allocation mechanism
+`org.nuxeo.runtime.test.runner.SimpleFeature` was superseeded by Java default in interface, use `org.nuxeo.runtime.test.runner.RunnerFeature` instead
+
+#### Operations
+
+The parameter `username`/`user` of operation `Document.AddPermission`/`Document.AddACL` was replaced by `users`
+
+#### Rest Endpoints
+
+The endpoints GET|PUT|DELETE `/api/v1/bulk` was removed in favor of Bulk Action Framework endpoints
+The endpoints GET|PUT|DELETE `/api/v1/oauth2/token/{providerName}/{nxLogin`} were replaced by `/api/v1/oauth2/token/provider/{providerName}/user/{nxLogin`}
+The endpoint GET `/api/v1/search/lang/{queryLanguage}/execute` was replaced by `/api/v1/search/execute`
+The endpoint POST `/api/v1/search/lang/{queryLanguage}/bulk/actionId` was replaced by `/api/v1/search/bulk/actionId`
+
 ## Dependencies Removal
 
 ### Joda Time
