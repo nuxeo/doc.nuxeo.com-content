@@ -3,7 +3,7 @@ title: Nuxeo Connector for Content Intelligence
 description: 'Nuxeo Connector for Content Intelligence connects the Discovery module to the Nuxeo repository. This enables the Discovery module of Content Intelligence to access documents ingested from the repository and retrieve information using artificial intelligence.'
 review:
     comment: ''
-    date: '2025-03-31'
+    date: '2025-03-26'
     status: ok
 labels:
     - ingest
