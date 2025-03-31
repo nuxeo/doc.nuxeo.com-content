@@ -409,7 +409,7 @@ The parameter `username`/`user` of operation `Document.AddPermission`/`Document.
 #### Rest Endpoints
 
 The endpoints GET|PUT|DELETE `/api/v1/bulk` was removed in favor of Bulk Action Framework endpoints
-The endpoints GET|PUT|DELETE `/api/v1/oauth2/token/{providerName}/{nxLogin`} were replaced by `/api/v1/oauth2/token/provider/{providerName}/user/{nxLogin`}
+The endpoints GET|PUT|DELETE `/api/v1/oauth2/token/{providerName}/{nxLogin}` were replaced by `/api/v1/oauth2/token/provider/{providerName}/user/{nxLogin}`
 The endpoint GET `/api/v1/search/lang/{queryLanguage}/execute` was replaced by `/api/v1/search/execute`
 The endpoint POST `/api/v1/search/lang/{queryLanguage}/bulk/actionId` was replaced by `/api/v1/search/bulk/actionId`
 
@@ -421,4 +421,4 @@ Joda Time library is no longer part of the default nuxeo distribution. Users are
 
 ## Complementary Information
 
-* [Release notes for Nuxeo Platform LTS 2025]({{page page='nuxeo-server-release-notes-2025-0"}})
+* [Release notes for Nuxeo Platform LTS 2025]({{page page='nuxeo-server-release-notes-2025-0'}})
