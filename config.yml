@@ -14,7 +14,9 @@ default:
     dev_browser_path: nxdoc/710
     repo_id: platform
     versions:
+      - label: LTS 2025
       - label: LTS 2023
+        url_path: '2023'
       - label: LTS 2021
         url_path: '2021'
       - label: LTS 2019
