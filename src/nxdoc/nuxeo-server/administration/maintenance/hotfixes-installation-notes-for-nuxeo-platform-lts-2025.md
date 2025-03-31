@@ -106,7 +106,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### Migration Tool to Extract Full Text From Mongo DB to an S3 Blob
 
-Here is the 4 steps migration process when you want to switch the storage of binary fulltext from the repository (MongoDB) to a S3 bucket on an existing instance.
+Here is the 4 step migration process when you want to switch the storage of binary fulltext from the repository (MongoDB) to a S3 bucket on an existing instance.
 
 **1. Update the** `nuxeo.conf` **and restart all nodes**
 
@@ -125,11 +125,11 @@ nuxeo.bulk.action.fixBinaryFulltextStorage.defaultPartitions=4
 After this, the binary fulltext of new blob will be stored in the s3 bucket under `/fulltext/` prefix.
 
 Everything should work properly while there are two different storages for the binary fulltext.
-Re-indexing will not change this state, running `extractBinaryFulltext` will do but this is not efficient since it’s slow and expensive, follow the next steps for the migration.
+Re-indexing will not change this state. Running `extractBinaryFulltext` will do but this is not efficient since it’s slow and expensive. Follow the next steps for the migration.
 
 **2. Clean MongoDB fulltext**
 
-Since we have disabled the fulltext search from the repository, we can remove existing index and fields, check if MongoDB `fulltext` index exists
+Since we have disabled the fulltext search from the repository, we can remove existing index and fields. Check if MongoDB `fulltext` index exists:
 
 ```
 db.default.getIndex("fulltext")
@@ -144,13 +144,13 @@ db.default.getIndex("fulltext")
   },
 ```
 
-then remove it
+then remove it:
 
 ```
 db.default.dropIndex('fulltext')
 ```
 
-Remove MongoDB field `ecm:fulltextSimple` this can be a long operation depending on the db size.
+Remove MongoDB field `ecm:fulltextSimple`. This can be a long operation depending on the db size.
 
 ```
 db.default.updateMany({}, {$unset: {"ecm:fulltextSimple":1}});
@@ -162,11 +162,11 @@ db.default.updateMany({}, {$unset: {"ecm:fulltextSimple":1}});
 curl -s -X POST "http://localhost:8080/nuxeo/api/v1/management/fulltext/fixBinaryStorage" -u Administrator:Administrator
 ```
 
-It’s possible to test it by providing a custom NXQL `query`. The default query match all docs that is not a proxy.
+It’s possible to test it by providing a custom NXQL `query`. The default query matches all docs that is not a proxy.
 
 **4. Remove the migration bulk action and restart all nodes**
 
-Change the `nuxeo.conf` and restart
+Change the `nuxeo.conf` and restart:
 
 ```
 nuxeo.bulk.action.fixBinaryFulltextStorage.enabled=false
@@ -310,7 +310,7 @@ For instance, if you have:
 nuxeo.templates=default,mongodb
 ```
 
-You must update it to
+You must update it to:
 
 ```
 nuxeo.templates=mongodb
@@ -318,7 +318,7 @@ nuxeo.templates=mongodb
 
 ### Align Quartz-Mongodb on  quartz-2.5.0
 
-The upgrade of `quartz` breaks the compatibility with `quartz-mongodb` but since the project [https://github.com/michaelklishin/quartz-mongodb](https://github.com/michaelklishin/quartz-mongodb|smart-link) is in an abandoned state we have to fork it to apply the require changes. This result in a change in the `groupId` of the dependency, so if you’re using this dependency in your project, you must update it to:
+The upgrade of `quartz` breaks the compatibility with `quartz-mongodb` but since the project [https://github.com/michaelklishin/quartz-mongodb](https://github.com/michaelklishin/quartz-mongodb|smart-link) is in an abandoned state, we have to fork it to apply the require changes. This result in a change in the `groupId` of the dependency, so if you’re using this dependency in your project, you must update it to:
 
 ```xml
 <dependency>
@@ -329,9 +329,9 @@ The upgrade of `quartz` breaks the compatibility with `quartz-mongodb` but since
 
 ### Improve UIDGeneratorService Modularity
 
-The default UIDSequencer in Nuxeo Platform has changed in LTS 2025, it is now `KeyValueStoreUIDSequencer`, so you might need to migrate your custom sequences, or install and use a former UIDSequencer (JPA, ElasticSearch/OpenSearch, MongoDB).
+The default UIDSequencer in Nuxeo Platform has changed in LTS 2025. It is now `KeyValueStoreUIDSequencer`, so you might need to migrate your custom sequences, or install and use a former UIDSequencer (JPA, ElasticSearch/OpenSearch, MongoDB).
 
-There’s only one sequence that is being used by Nuxeo Platform itself, it is the `audit` sequence. This sequence **doesn’t not need to be migrated** because the audit backends that needs it will init the sequence at the right value during the Nuxeo Platform start.
+There’s only one sequence that is being used by Nuxeo Platform itself. It is the `audit` sequence. This sequence **doesn’t not need to be migrated** because the audit backends that need it will init the sequence at the right value during the Nuxeo Platform start.
 
 To migrate your custom sequences, before the upgrade, we recommend to stop activity on Nuxeo Platform, then request the sequences value with the Management REST API:
 
@@ -372,7 +372,7 @@ org.quartz.jobStore.mongoOptionWriteConcernTimeoutMillis
 
 ### Configure Tomcat Logs With Log4j
 
-If you enable the Tomcat logs with Log4j configuration feature in LTS 2023 you might need to migrate `conf/logging.properties` to `log4j2.xml` if you have one.
+If you enable the Tomcat logs with Log4j configuration feature in LTS 2023, you might need to migrate `conf/logging.properties` to `log4j2.xml` if you have one.
  The default `conf/logging.properties` was migrated to this portion of the default `log4j2.xml` file:
 ```java
     <!-- Tomcat catalina loggers -->
@@ -402,17 +402,17 @@ The log files: `classloader.log`, `stderr.log`, and `tomcat.log` will also be re
 
 ##### Context
 
-The Nuxeo Platform Audit service have been heavily reworked for reliability, security and further improvements.
-In this rework we keep the backward compatibility with your existing code or your existing contributions to Audit service, but we highly encourage you to upgrade to new APIs.
+The Nuxeo Platform Audit service has been heavily reworked for reliability, security, and further improvements.
+In this rework, we kept the backward compatibility with your existing code or your existing contributions to Audit service, but we highly encourage you to upgrade to new APIs.
 
 ##### Maven
 
 The Maven module `org.nuxeo.ecm.platform:nuxeo-platform-audit-api` has been merged into `org.nuxeo.ecm.platform:nuxeo-platform-audit-core`. You may need to update your Maven dependencies.
-Optionally, if your module depends on `org.nuxeo.ecm.platform:nuxeo-platform-audit-core:test-jar` we advise to upgrade to `org.nuxeo.ecm.platform:nuxeo-platform-audit-test`which brings more features and the `org.nuxeo.audit.test.AuditFeature`that correctly configures your test execution.
+Optionally, if your module depends on `org.nuxeo.ecm.platform:nuxeo-platform-audit-core:test-jar`, we advise you to upgrade to `org.nuxeo.ecm.platform:nuxeo-platform-audit-test`, which brings more features and the `org.nuxeo.audit.test.AuditFeature`that correctly configures your test execution.
 
 ##### Java
 
-All services or POJO class that you may use from the `org.nuxeo.ecm.platform.audit` package haven migrated to `org.nuxeo.audit` or they have been replaced. 
+All services or POJO class that you may use from the `org.nuxeo.ecm.platform.audit` package have been migrated to `org.nuxeo.audit` or they have been replaced. 
 This mainly impacts the following usages:
 
 - `org.nuxeo.ecm.platform.audit.api.LogEntry` should be updated to `org.nuxeo.audit.api.LogEntry`
@@ -432,7 +432,7 @@ Events extension point declaration didn’t change, just the target of the contr
         </extension>
 ```
 
-Should be updated to:
+should be updated to:
 
 ```xml
 	<extension target="org.nuxeo.audit.service.AuditComponent" point="event">
@@ -450,7 +450,7 @@ Extended Info extension point didn’t change, just the target of the contributi
   </extension>
 ```
 
-Should be updated to:
+should be updated to:
 
 ```xml
 	<extension target="org.nuxeo.audit.service.AuditComponent" point="extendedInfo">
@@ -462,7 +462,7 @@ Should be updated to:
 
 Upgraded the MongoDB Java driver `org.mongodb:mongodb-driver-sync` from 4.11.4 to 5.1.4.
 
-### Allow to Use S3 StrictAuthenticatedEncryption With a Local Keystore
+### Allow the Use of S3 StrictAuthenticatedEncryption With a Local Keystore
 
 You must set the **nuxeo.s3storage.crypt.keystore.legacymode** configuration property to **true** when upgrading from **lts-2023** to **lts-2025** if you have objects encrypted client-side with a local keystore in v1 AWS encryption API.
 
@@ -476,7 +476,7 @@ Doc source is now located at https://github.com/nuxeo/nuxeo-rest-api-swagger-doc
 
 ### Fix Random Convert Related Tests
 
-The convert cache contribution has changed, you need to migrate your contributions to the extension point `org.nuxeo.ecm.core.convert.service.ConversionServiceImpl-configuration`.
+The convert cache contribution has changed. You need to migrate your contributions to the extension point `org.nuxeo.ecm.core.convert.service.ConversionServiceImpl-configuration`.
 For example, see below an old contribution:
 ```Java
   <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="configuration">
@@ -501,7 +501,7 @@ That will be converted to:
 
 ### DocumentTaskProvider getTasks Should Rely on an Elastic to Avoid Mongo Timeouts
 
-The page providers below have been set to use Elasticsearch by default, make sure you add them to the `elasticsearch.override.pageproviders` nuxeo.conf property if you've overridden it.
+The page providers below have been set to use Elasticsearch by default. Make sure you add them to the `elasticsearch.override.pageproviders` nuxeo.conf property if you've overridden it.
 ```
 GET_TASKS_FOR_ACTORS,GET_TASKS_FOR_ACTORS_OR_DELEGATED_ACTORS,GET_TASKS_FOR_PROCESS,GET_TASKS_FOR_PROCESS_AND_ACTORS,GET_TASKS_FOR_PROCESS_AND_NODE,GET_TASKS_FOR_TARGET_DOCUMENT,GET_TASKS_FOR_TARGET_DOCUMENTS,GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS,GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS_OR_DELEGATED_ACTORS
 ```
@@ -519,7 +519,7 @@ You need to install nuxeo-log4j-stream package when upgrading to LTS 2025 if you
 
 ### Provide OpenSearch1 NXQL Hints
 
-ElasticSearch hint extension point has been moved to new SearchService component, your contributions need to be replaced to:
+ElasticSearch hint extension point has been moved to new SearchService component. Your contributions need to be replaced to:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.search.client.opensearch1" point="hint">
@@ -534,7 +534,7 @@ ElasticSearch hint extension point has been moved to new SearchService component
 
 #### Aggregate field definition
 
-The aggregate fields expressed in parameter attribute of the PageProvider definition needs to be updated to match the Nuxeo XPath notation.
+The aggregate fields expressed in parameter attribute of the PageProvider definition need to be updated to match the Nuxeo XPath notation.
 
 For example, the following contribution:
 
