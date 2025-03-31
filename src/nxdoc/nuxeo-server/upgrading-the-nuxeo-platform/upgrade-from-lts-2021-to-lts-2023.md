@@ -117,6 +117,103 @@ The `classes/class` list has been removed from the hibernateConfiguration contri
   </hibernateConfiguration>
 </extension>
 ```
+
+##### Upgrade your MS SQL Server Database
+
+Previously Hibernates used an Identity Column for id generation, but it now uses the sequencer _hibernate_sequence_ which
+allows better performance for large insertion.
+
+This results in an incompatibility when upgrading from Nuxeo LTS 2021 to 2023 on the tables managed by Hibernate.
+
+To upgrade your Database, you will need to remove these Identity columns from all concerned tables: `NXP_LOGS`, `NXP_LOGS_EXTINFO` and `NXP_UIDSEQ`.
+
+First, stop Nuxeo. The upgrade should be done on an idle DB. 
+
+Get the primary key constraint name of the concerned table, for example NXP_LOGS, by running this SQL query on each table:
+
+```sql
+EXEC sp_helpconstraint 'NXP_LOGS';
+EXEC sp_helpconstraint 'NXP_LOGS_EXTINFO';
+EXEC sp_helpconstraint 'NXP_UIDSEQ';
+```
+
+You should have something like `PK__NXP_LOGS__4364C8827603252B` for `NXP_LOGS`. In the following SQL query, it will be named `PK__NXP_LOGS__TO_REPLACE`. You need to replace it.
+
+Create the new columns that will receive the id values at the end:
+
+```sql
+ALTER TABLE NXP_LOGS ADD LOG_ID_NEW INT NULL;
+ALTER TABLE NXP_LOGS_EXTINFO ADD LOG_EXTINFO_ID_NEW NUMERIC(19,0) NULL;
+ALTER TABLE NXP_UIDSEQ ADD SEQ_ID_NEW INT NULL;
+```
+
+Then set the values:
+
+```sql
+UPDATE NXP_LOGS SET LOG_ID_NEW = LOG_ID;
+UPDATE NXP_LOGS_EXTINFO SET LOG_EXTINFO_ID_NEW = LOG_EXTINFO_ID;
+UPDATE NXP_UIDSEQ SET SEQ_ID_NEW = SEQ_ID;
+```
+
+Drop the constraints and the columns:
+
+```sql
+ALTER TABLE NXP_LOGS_MAPEXTINFOS DROP CONSTRAINT FKF96F609C4EA9779; -- foreign constraint to NXP_LOGS_EXTINFO.LOG_EXTINFO_ID
+ALTER TABLE NXP_LOGS_MAPEXTINFOS DROP CONSTRAINT FKF96F609E7AC49AA; -- foreign constraint to NXP_LOGS.LOG_ID
+ALTER TABLE NXP_LOGS DROP CONSTRAINT PK__NXP_LOGS__TO_REPLACE;
+ALTER TABLE NXP_LOGS_EXTINFO DROP CONSTRAINT PK__NXP_LOGS_EXTINFO__TO_REPLACE;
+ALTER TABLE NXP_UIDSEQ DROP CONSTRAINT PK__NXP_UIDSEQ__TO_REPLACE;
+
+ALTER TABLE NXP_LOGS DROP COLUMN LOG_ID;
+ALTER TABLE NXP_LOGS_EXTINFO DROP COLUMN LOG_EXTINFO_ID;
+ALTER TABLE NXP_UIDSEQ DROP COLUMN SEQ_ID;
+```
+
+Then rename the new columns:
+
+```sql
+EXECUTE sp_rename 'NXP_LOGS.LOG_ID_NEW', 'LOG_ID', 'COLUMN';
+EXECUTE sp_rename 'NXP_LOGS_EXTINFO.LOG_EXTINFO_ID_NEW', 'LOG_EXTINFO_ID', 'COLUMN';
+EXECUTE sp_rename 'NXP_UIDSEQ.SEQ_ID_NEW', 'SEQ_ID', 'COLUMN';
+```
+
+Then set the columns as not null:
+
+```sql
+ALTER TABLE NXP_LOGS ALTER COLUMN LOG_ID INT NOT NULL;
+ALTER TABLE NXP_LOGS_EXTINFO ALTER COLUMN LOG_EXTINFO_ID INT NOT NULL;
+ALTER TABLE NXP_UIDSEQ ALTER COLUMN SEQ_ID INT NOT NULL;
+```
+
+Then put back the constraint:
+
+```sql
+ALTER TABLE NXP_LOGS ADD CONSTRAINT PK__NXP_LOGS__TO_REPLACE PRIMARY KEY CLUSTERED (LOG_ID ASC);
+ALTER TABLE NXP_LOGS_EXTINFO ADD CONSTRAINT PK__NXP_LOGS_EXTINFO__TO_REPLACE PRIMARY KEY CLUSTERED (LOG_EXTINFO_ID ASC);
+ALTER TABLE NXP_LOGS_MAPEXTINFOS ADD CONSTRAINT FKc8ja5tk9f0bgd3gwqlq027ju2 FOREIGN KEY (INFO_FK) REFERENCES NXP_LOGS_EXTINFO (LOG_EXTINFO_ID);
+ALTER TABLE NXP_LOGS_MAPEXTINFOS ADD CONSTRAINT FKg0i63anugieymtf7wu0uxneri FOREIGN KEY (LOG_FK) REFERENCES NXP_LOGS (LOG_ID);
+ALTER TABLE NXP_UIDSEQ ADD CONSTRAINT PK__NXP_UIDSEQ__TO_REPLACE PRIMARY KEY CLUSTERED (SEQ_ID ASC);
+```
+
+Retrieve the maximum identifier your DB data has in order to init the sequence that hibernate will use:
+
+```sql
+SELECT MAX(MaxId) FROM (
+    SELECT MAX(LOG_ID) as MaxId FROM NXP_LOGS
+    UNION ALL
+    SELECT MAX(LOG_EXTINFO_ID) as MaxId FROM NXP_LOGS_EXTINFO
+    UNION ALL SELECT MAX(SEQ_ID) as MaxId FROM NXP_UIDSEQ
+) as subQuery;
+```
+
+Add 1 to the result and create the sequence:
+
+```sql
+CREATE SEQUENCE hibernate_sequence START WITH VALUE_TO_REPLACE INCREMENT BY 1;
+```
+
+You can now start your Nuxeo LTS 2023.
+
 ##### Hibernate Release Notes
 
 **4.0.0.Final**
