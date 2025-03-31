@@ -20,7 +20,7 @@ This chapter highlights some major information about upgrade from Nuxeo Platform
 
 These upgrade notes assume that Nuxeo Server is on 2023 and up to date with the latest hotfixes.
 
-## Installation and Configuration 
+## Installation and Configuration
 
 ### AWS S3
 
@@ -206,7 +206,7 @@ curl -s -X POST "http://localhost:8080/nuxeo/api/v1/management/fulltext/fixBinar
 It’s possible to test it by providing a custom NXQL `query`. The default query match all docs that is not a proxy.
 
 4. Remove the migration bulk action and restart all nodes
-   
+
 Change the `nuxeo.conf` and restart
 ```
 nuxeo.bulk.action.fixBinaryFulltextStorage.enabled=false
@@ -246,7 +246,7 @@ To migrate your custom sequences, before the upgrade, we recommend to stop activ
 ```
 curl -u USERNAME:PASSWORD -XGET https://NUXEO_INSTANCE/nuxeo/api/v1/management/sequencers
 ```
-You will receive all the defined sequencers and all its sequences with their current values. 
+You will receive all the defined sequencers and all its sequences with their current values.
 
 Save the couple key/value somewhere in order to push them after the upgrade.
 
@@ -258,7 +258,7 @@ curl -u USERNAME:PASSWORD -XPOST https://NUXEO_INSTANCE/nuxeo/api/v1/management/
 curl -u USERNAME:PASSWORD -XPOST https://NUXEO_INSTANCE/nuxeo/api/v1/management/sequencers/default -d 'key=customSequenceN&value=customValueN'
 ```
 
-## Nuxeo Streams 
+## Nuxeo Streams
 
 ### Create a Nuxeo Stream Log4j2 Appender Package
 You need to install `nuxeo-log4j-stream` package when upgrading to LTS 2025 if you were using `NuxeoStreamAppender` in your `log4j2.xml file`.
@@ -316,8 +316,8 @@ You need to install `nuxeo-log4j-stream` package when upgrading to LTS 2025 if y
 `org.nuxeo.ecm.core.event.Event#isPublic()` was not used, no replacement
 `org.nuxeo.ecm.core.event.Event#setPublic(String)` was not used, no replacement
 `org.nuxeo.ecm.core.io.download.DownloadService#downloadBlobStatus(HttpServletRequest, HttpServletResponse, String, String)` was replaced by the `@async` web adapter mechanism
-`org.nuxeo.ecm.core.io.registry.MarshallerHelper#listToJson(Class, String, RenderingContext)` was replaced by `{{org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToList(Class, String, RenderingContext)`
-`org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, String, RenderingContext)` was replaced by }}`org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, RenderingContext)`
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#listToJson(Class, String, RenderingContext)` was replaced by `org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToList(Class, String, RenderingContext)`
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, String, RenderingContext)` was replaced by `org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, RenderingContext)`
 `org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, Type, String, RenderingContext)` was replaced by ``org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, Type, RenderingContext)`
 `org.nuxeo.ecm.core.io.upload.Batch#addChunk(String, InputStream, int, int, String, String, long)` was replaced by `org.nuxeo.ecm.core.io.upload.Batch#addFile(String, Blob, int, int, String, String, long)`
 `org.nuxeo.ecm.core.io.upload.Batch#addFile(String, InputStream, String, String)` was replaced by `org.nuxeo.ecm.core.io.upload.Batch#addFile(String, Blob, String, String)`
