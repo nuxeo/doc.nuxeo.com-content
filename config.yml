@@ -13,7 +13,9 @@ default:
       - label: none
         url_path: master
         is_current_version: true
+      - label: LTS 2025
       - label: LTS 2023
+      - url_path: '2023'
       - label: LTS 2021
         url_path: '2021'
       - label: LTS 2019
