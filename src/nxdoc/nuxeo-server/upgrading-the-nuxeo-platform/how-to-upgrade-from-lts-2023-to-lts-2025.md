@@ -33,4 +33,9 @@ More information on the [Jakarta RS - WebEngine Page]({{page page='how-to-upgrad
 
 More information on the [REST tests Page]({{page page='how-to-upgrade-rest-tests'}}).
 
+### How to Upgrade Your Audit Contributions
+
+{{{excerpt page='how-to-upgrade-audit-service'}}}
+
+More information on the [Nuxeo Audit Service Page]({{page page='how-to-upgrade-audit-service'}}).
 
