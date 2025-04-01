@@ -32,7 +32,7 @@ See below versions description:
 They are two kinds of dependencies in the Jakarta EE context, the Specifications and the Implementations.
 A cleanup was done to our dependency graph to keep only the ones needed by Nuxeo Server.
 
-### Specfications
+### Specifications
 
 You need to update the specifications you may use in your project to the Jakarta ones, generally the artifactId ends 
 with `-api`, at least it is the case in Jakarta EE.
