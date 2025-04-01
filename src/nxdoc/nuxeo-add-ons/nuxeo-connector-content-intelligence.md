@@ -19,7 +19,7 @@ The Nuxeo Connector for Content Intelligence connects Knowledge Discovery to the
 
 To install the Nuxeo Connector for Content Intelligence, complete the following steps.
 
-1. Install the addon package using the mp-install command. For additional information, refer to the installation steps mentioned in the [Installing a New Package on Your Instance](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) topic.
+1. Install the addon package using the `mp-install` command. For additional information, refer to the installation steps mentioned in the [Installing a New Package on Your Instance](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) topic.
 
 2. Update nuxeo.conf with appropriate properties. Please refer to list of configuration options in the Configure the Nuxeo Connector for Content Intelligence section.
 
@@ -40,10 +40,10 @@ Configure the plugin based on your environment using the following nuxeo.conf pr
 The connector leverages Nuxeo’s search capabilities to select documents and sends them for ingestion using the NXQL query language. The Nuxeo documents selected for ingestion go through the following stages:
 - Mapping: The metadata of the documents are mapped. If there are no custom maps defined, the default map can be used for mapping the document metadata. However, custom maps can be specified as default for specific document types.
 - Remap and transform: The name of the properties are standardized and values are transformed using functions.
-- Upload: Upload the binaries and IDs are assigned to them in the S3 bucket.
+- Upload: Upload the binaries. The IDs are assigned to them in the S3 bucket.
 - Data serialization: The metadata is serialized
 
-The serialized metadata is then passed to the ingest service which is then stores it in the data lake. The Discovery module enables Nuxeo users to retrieve information using artificial intelligence by accessing ingested data from the data lake. Therefore, to ensure that Discovery module has access to the required data, ensure that the mapping and transformation is configured to ingest the required data from the Nuxeo repository.
+The serialized metadata is then passed to the ingest service which then stores it in the data lake. The Discovery module enables Nuxeo users to retrieve information using artificial intelligence by accessing ingested data from the data lake. Therefore, to ensure that Discovery module has access to the required data, ensure that the mapping and transformation is configured to ingest the required data from the Nuxeo repository.
 
 ## Planning for ingestion
 
@@ -71,7 +71,7 @@ The ingest action uses the following parameters which can be categorized under p
 
 **Persistent parameters**
 
-These parameters are saved during ingestion so that repeat ingestions to update the document use the same parameters.
+These parameters are saved during ingestion so that repeat ingestions use the same parameters to update an ingested document.
  - `inlineMapping`
  - `inlineTransformer`
  - `aggregateDefaultMapping`
@@ -87,7 +87,7 @@ The following table explains the parameters and how they can be configured:
 | Parameters | Description |
 | ------------- | ----------- |
 | `inlineMapping` | Assign mappings as values to this parameter. For example, `dublincore`, `dc:title`, @myMappingReference. For additional information, refer to the Configure mappings section. |
-| `inlineTransformer` | Assign transformation functions as values to this parameter. For example, `_Concat`. You can create your own transformation function and assign it to this parameter. You can also associate multiple functions that can execite in the given sequence. For additional information, refer to the Configure remap and transformation section. |
+| `inlineTransformer` | Assign transformation functions as values to this parameter. For example, `_Concat`. You can create your own transformation function and assign it to this parameter. You can also associate multiple functions that can execute in the given sequence. For additional information, refer to the Configure remap and transformation section. |
 | `replaceMapping` | Set the value of this parameter to `true` to replace the mapping and transformation previously saved for a specific document. The default value is `false`. |
 | `aggregateDefaultMapping` | Assign default mapping for a specific document type. This adds to the `inlineMapping` parameter.  |
 | `aggregateDefaultTransformer` | Assign default transformation for a specific document type. This adds to the `inlineTransformer` parameter. |
