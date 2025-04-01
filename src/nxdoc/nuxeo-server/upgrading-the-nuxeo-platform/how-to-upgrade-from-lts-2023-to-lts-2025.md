@@ -8,7 +8,7 @@ review:
 labels:
     - release-notes
 toc: true
-tree_item_index: 10000000
+tree_item_index: 93
 ---
 
 Nuxeo LTS 2025 has breaking changes when you upgrade your project from a previous Nuxeo version.
