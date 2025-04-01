@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Server LTS 2023 Release Notes
+title: Nuxeo Server LTS 2025 Release Notes
 description: This page relates to the release notes of Nuxeo Server and related addons for the 2023 cycle.
 review:
    comment: ''
