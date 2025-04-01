@@ -8,7 +8,7 @@ review:
 labels:
   - multiexcerpt
 toc: true
-tree_item_index: 93
+tree_item_index: 92
 ---
 
 For the general upgrade process, see the page [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}}).
