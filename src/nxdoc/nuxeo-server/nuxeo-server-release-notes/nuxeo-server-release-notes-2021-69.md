@@ -17,7 +17,6 @@ hidden: true
 
 ## Make Creation of User Without Password Using the REST API Configurable
 
-The nuxeo.user.password.empty.enabled nuxeo configuration property can be set to true to create users without password. Its default value is false.
 
 The `nuxeo.user.password.empty.enabled` nuxeo configuration property can be set to `true` to create users without password. Its default value is `false`**.**
 
