@@ -433,9 +433,7 @@ public void testDelete() {
 * * *
 
 {{#> panel heading='Related topics'}}
-
-- [How to upgrade to Jakarta RS 3 - WebEngine]({{page page='how-to-upgrade-to-jakarta-rs-3'}})
-- [HttpClientTestRule Release Notes - 2023.13]({{page version='2023' page='nuxeo-server-release-notes-2023-13' anchor='backport-httpclienttestrule-improvements'}})
-- [HttpClientTestRule - Javadoc](https://doc.nuxeo.com/javadoc/2025-lts/org/nuxeo/http/test/HttpClientTestRule.html)
-
+* [How to upgrade to Jakarta RS 3 - WebEngine]({{page page='how-to-upgrade-to-jakarta-rs-3'}})
+* [HttpClientTestRule Release Notes - 2023.13]({{page version='2023' page='nuxeo-server-release-notes-2023-13' anchor='backport-httpclienttestrule-improvements'}})
+* [HttpClientTestRule - Javadoc](https://doc.nuxeo.com/javadoc/2025-lts/org/nuxeo/http/test/HttpClientTestRule.html)
 {{/panel}}
