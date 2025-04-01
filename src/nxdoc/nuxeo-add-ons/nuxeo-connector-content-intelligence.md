@@ -51,7 +51,8 @@ Before you start ingesting documents, identify what information you want to retr
 
 After the configuration is complete, you can test a document ingestion using the Dry run mode. For the connector to ingest documents, the documents must be selected and sent for ingestion. Nuxeo search capabilities are used to locate the documents and NXQL query language sends them for ingestion. The ingest action uses the Nuxeo Bulk Action Framework (BAF) to manage the documents matched by an NXQL query. BAF provides a REST API to call and monitor it. The following example displays the execution of the ingest action:
 
-```curl -ss -u foo:bar -H 'Content-Type: application/json' <myNuxeoUrl>/nuxeo/api/v1/automation/Bulk.RunAction -d \
+```
+curl -ss -u foo:bar -H 'Content-Type: application/json' <myNuxeoUrl>/nuxeo/api/v1/automation/Bulk.RunAction -d \
 '{"params":{
     "query":"SELECT * FROM Document WHERE ecm:ancestorId = '\''<my-root-doc-id>'\''",
     "action":"ingest",
@@ -224,6 +225,7 @@ my.complete.package.MyFunction # use a cannonical name
 ##### Joining multiple transformation functions
 
 Multiple transformation functions can be joined to apply them on the metadata in the sequence the appear. For example:
+
 ```
 # The most reliable solution to chain functions on a single property doesn't require you to figure things out:
 a=b=Function1=Function2=Function3,c==Function1=Function3 # a is renamed to b and Function1 to 3 are applied to it in order. c will then be transformed by Function1, then Function3
@@ -234,11 +236,13 @@ a=b=Function1=Function2=Function3,,,c==Function1=Function3 # same result
 ### Adding ingestion parameters to ingest action
 
 The ingestion parameters must be included as a string when the ingest action is executed to ingest documents. For this, you can save the parameters in a JSON file and add it to the `parameters` function in the command line. For example:
+
 ```
 $(< myParams.json | jq -c | jq -R)
 ```
 
 You can also add the parameters manually. For example:
+
 ```
 "{\"inlineMapping\":\"dublincore,common\",\"inlineTransformer\":\"a=b=Function,c=d=OtherFunction\",\"replaceMapping\":false,\"aggregateDefaultMapping\":false,\"aggregateDefaultTransformer\":false,\"persistMapping\":false}"
 ```
@@ -247,6 +251,7 @@ You can also add the parameters manually. For example:
 
 After configuring the connector, you can perform a test ingestion to see that the ingestion task is executing correctly. To perform a test ingestion, activate the dryRun mode by setting the value of the `dryRun` parameter to `true` in the ingestion parameters. 
 **Example**
+
 ```
   "dryRun": true,
   "inlineMapping": "dc:contributors,dc:description",
@@ -269,6 +274,7 @@ Schedule-based automations are the preferred way to ingest your documents. They 
 Sample module with Schedules and corresponding EventListeners:
 
 **Schedule**
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="org.nuxeo.hxai.crons.config" version="1.0.0">
@@ -288,6 +294,7 @@ Sample module with Schedules and corresponding EventListeners:
 ```
 
 **EventListener**
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="org.nuxeo.hxai.cron.events.listeners.config" version="1.0.0">
@@ -303,6 +310,7 @@ Sample module with Schedules and corresponding EventListeners:
 ```
 
 **EventListener code**
+
 ```
 public class IngestListener1 implements EventListener {
 
