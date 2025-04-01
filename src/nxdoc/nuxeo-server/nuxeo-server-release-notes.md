@@ -11,7 +11,7 @@ toc: true
 tree_item_index: 10000
 ---
 
-This page relates to the release notes of Nuxeo Server and related addons for LTS 2023 cycle. It will list the improvements and features that are successively shipped with the 2021.x releases.
+This page relates to the release notes of Nuxeo Server and related addons for LTS 2025 cycle. It will list the improvements and features that are successively shipped with the 2025.x releases.
 
 
 {{#> callout type='info' heading='Upgrade Notes'}}
