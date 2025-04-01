@@ -15,7 +15,7 @@ This page relates to the release notes of Nuxeo Server and related addons for LT
 
 
 {{#> callout type='info' heading='Upgrade Notes'}}
-This page mentions what's new. Refer to the [upgrade notes]({{page page='upgrade-from-lts-2021-to-lts-2023'}}) to transition to this version.
+This page mentions what's new. Refer to the [upgrade notes]({{page page='upgrade-from-lts-2023-to-lts-2025'}}) to transition to this version.
 {{/callout}}
 
 {{{multiexcerpt 'nuxeo-server-updates-2025-0' page='nuxeo-server-release-notes-2025-0'}}}
