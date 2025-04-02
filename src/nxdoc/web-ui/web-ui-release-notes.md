@@ -21,4 +21,4 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## What’s New in Web UI for LTS 2025 (Version 2025.1.0)
 
-The latest WebUI release, compatible with the LTS 2025 version of the Nuxeo platform, includes new WebUI and Elements branches for LTS 2025, with updates to GitHub workflows, package.json, and pom.xml as part of WEBUI-1593.
+The latest WebUI release, compatible with the LTS 2025 version of the Nuxeo platform, includes new WebUI and Elements branches for LTS 2025, with updates to GitHub workflows, package.json, and pom.xml files.
