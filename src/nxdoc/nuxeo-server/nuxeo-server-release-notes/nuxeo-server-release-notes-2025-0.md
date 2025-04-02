@@ -110,7 +110,7 @@ LogEntry extended infos are now searchable.
 
 Extended info constraints can now be used when searching in the Audit.
 
-This could be expressed in an NXQL request given to the AuditPageProvider:. For example
+This could be expressed in an NXQL request given to the AuditPageProvider:. For example:
 
 ```
 SELECT * FROM LogEntry WHERE extended/user = 'Administrator'
@@ -137,7 +137,7 @@ Keycloak logout now works with client authentication disabled.
 
 ### Add the Possibility to Retrieve the Contributing Component in Contributions
 
-The Contributing Component can be retrieved in Descriptor with @XContext.
+The Contributing Component can be retrieved in Descriptor with `@XContext`.
 
 The contributing component, or the component which holds your contribution to an extension point, can now be retrieved with the `@XContext` annotation. This can be useful if your descriptor needs to lookup a resource present in your bundle. To use it, just add to your Descriptor:
 
@@ -253,11 +253,6 @@ Tomcat Log configuration with Log4j
 The Tomcat logs configuration can be handled by Log4j which easily allows to configure Tomcat logs in Cloud environments.
 
 The introduced configuration routes all Tomcat logs to `log/catalina.log` (without the date) with same level as with the JUL configuration under `conf/logging.properties`.
- This mechanism will be the default for LTS 2025 and need to be opted-in in LTS 2023.
- You need to enable the `tomcat-logs` template for LTS 2023, for example by adding the following to your `nuxeo.conf`:
-```java
-nuxeo.append.templates.tomcat-logs=tomcat-logs
-```
 
 ### Fix NPE When Moving a Snapshotable Document
 
@@ -444,45 +439,34 @@ Fixed thumbnail rendition for JPG File with orientation in EXIF metadata.
 
 Easyshare web and mail templates are now HTML escaped.
 
-### Improve UIDGeneratorService Modularity
+### Upgrade Plexus-Archiver
 
-The UIDSequencer modules have been reworked to allow more modularity, which provide better performance to Nuxeo Platform, mainly because only one sequencer is now contributed by default to Nuxeo Platform.
+Maven Plugins have been updated
 
-A new `nuxeo.conf` property has been added to Nuxeo Platform that allows to define the default UIDSequencer used by Nuxeo:
+The Maven Plugins used by Nuxeo were updated to not depend on very old libraries, this is the case for:
 
-```
-nuxeo.uidsequencer.default.class=org.nuxeo.ecm.core.uidgen.KeyValueStoreUIDSequencer
-```
+- maven-clean-plugin
+- maven-enforcer-plugin
+- maven-install-plugin
+- maven-jar-plugin
 
-And so, starting from Nuxeo Platform LTS 2025, the default UIDSequencer is now `KeyValueStoreUIDSequencer`.
+We had to remove the Maven Eclipse Plugin from our dependency tree as it is unmaintained, if you were leverage it you should add it back to your pom:
 
-The ElasticSearch/OpenSearch UIDSequencer has been extracted to the `nuxeo-uidgen-opensearch1` package marketplace. If you want to use it just install the package, check that the template `opensearch1-uidgen` is enabled and the OpenSearch connection configuration is present in your `nuxeo.conf`:
-
-```
-# You can replace the prefix _nuxeo.uidsequencer.default_ by _nuxeo_ if you use other OpenSearch implementations that uses the same OpenSearch cluster
-# Mandatory configuration
-nuxeo.uidsequencer.default.opensearch1.client.server=
-# Optional configuration
-nuxeo.uidsequencer.default.opensearch1.client.connectionTimeout=30s
-nuxeo.uidsequencer.default.opensearch1.client.socketTimeout=121s
-nuxeo.uidsequencer.default.opensearch1.client.sslCertificateVerification=true
-nuxeo.uidsequencer.default.opensearch1.client.username=
-nuxeo.uidsequencer.default.opensearch1.client.password=
-nuxeo.uidsequencer.default.opensearch1.client.trustStore.path=
-nuxeo.uidsequencer.default.opensearch1.client.trustStore.password=
-nuxeo.uidsequencer.default.opensearch1.client.trustStore.type=
-nuxeo.uidsequencer.default.opensearch1.client.keyStore.path=
-nuxeo.uidsequencer.default.opensearch1.client.keyStore.password=
-nuxeo.uidsequencer.default.opensearch1.client.keyStore.type=
+```xml
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-eclipse-plugin</artifactId>
+  <version>2.10</version>
+</plugin>
 ```
 
-The JPA/SQL UIDSequencer has been extracted to the `nuxeo-uidgen-sql` package marketplace. If you want to use it just install the package and check that the template `sql-uidgen` is enabled.
+### Migration Tool to Extract Full Text From Mongo DB to an S3 Blob
 
-The MongoDB UIDSequencer stays in the Nuxeo Platform, without being enabled/contributed. If you want to use it just add the line below to your `nuxeo.conf`:
+In order to reduce the MongoDB collection size, it’s now possible to move in a efficient way the fulltext extracted from binaries (stored in MongoDB) to a s3 bucket on an existing instance. See the 4 step migration process in the upgrade notes.
 
-```
-nuxeo.uidsequencer.default.class=org.nuxeo.ecm.core.mongodb.seqgen.MongoDBUIDSequencer
-```
+### Fix Inline Parameter Not Working When Direct Download Enabled
+
+Blobs are now displayed in the browser with inline parameter and S3 direct download
 
 ## Addons
 
@@ -523,5 +507,153 @@ The mobile banner has been removed from the login page and all the JSF UI pages,
 ### Remove NTLM Login
 
 NTLM Login has been removed from Nuxeo Platform.
+
+### Remove Deprecated Code Since 10.10
+
+Code deprecated since 10.10 has been removed from Nuxeo
+
+#### Configuration Properties
+
+##### Configuration Service
+
+`org.nuxeo.ecm.core.uidgen.sequencer.hibernate` was removed, the default sequencer is always used
+
+##### Extension point
+
+`org.nuxeo.ecm.platform.audit.service.NXAuditEventsService#bulk` has been removed as it is replaced by Nuxeo Stream
+`org.nuxeo.ecm.platform.comment.service.CommentService#config` has been removed as it is not used in newer implementations
+
+#### Constants
+
+`org.nuxeo.ecm.automation.io.rest.operations.JsonRequestReader.targetMediaTypeNXReq` was referencing `application/json+nxrequest` media type, `application/json` should be used
+`org.nuxeo.ecm.core.api.AbstractSession#TRASH_KEEP_CHECKED_IN_PROPERTY` no replacement in new implementations
+`org.nuxeo.ecm.core.api.LifeCycleConstants#DELETED_STATE` was replaced by TrashService
+`org.nuxeo.ecm.core.api.LifeCycleConstants#DELETE_TRANSITION` was replaced by TrashService
+`org.nuxeo.ecm.core.api.LifeCycleConstants#UNDELETE_TRANSITION` was replaced by TrashService
+`org.nuxeo.ecm.core.api.LifeCycleConstants#DOCUMENT_UNDELETED` was replaced by TrashService
+`org.nuxeo.ecm.core.api.NuxeoPrincipal#TRANSIENT_USER_FORMAT` was not used, no replacement
+`org.nuxeo.ecm.core.io.download.DownloadService#NXBLOBSTATUS` was replaced by the `@async` web adapter mechanism
+`org.nuxeo.ecm.platform.ec.notification.service.NotificationService#SUBSCRIPTION_NAME` was not used, no replacement
+`org.nuxeo.ecm.platform.versioning.service.VersioningManagerImpl#COMPONENT_ID` was not used, no replacement
+
+#### Methods
+
+`org.nuxeo.common.utils.FileUtils#copyFile(File, File)` was not used, use `org.apache.commons.io.FileUtils#copyFile(File, File)` or `org.apache.commons.io.FileUtils#copyFileToDirectory(File, File)` instead
+`org.nuxeo.common.utils.FileUtils#copyTree(File, File)` was not used, no replacement
+`org.nuxeo.common.utils.FileUtils#copyTree(File, File, PathFilter)` was not used, no replacement
+`org.nuxeo.common.utils.ZipUtils#getEntryContentAsStream(File, String)` was not used, no replacement
+`org.nuxeo.common.utils.ZipUtils#getEntryContentAsString(File, String)` was not used, no replacement
+`org.nuxeo.common.utils.ZipUtils#getEntryContentAsBytes(File, String)` was not used, no replacement
+`org.nuxeo.ecm.automation.server.AutomationServer#addBinding(RestBinding)` was not used, no replacement
+`org.nuxeo.ecm.automation.server.AutomationServer#removeBinding(RestBinding)` was not used, no replacement
+`org.nuxeo.ecm.collections.api.CollectionManager#getUserDefaultCollections(DocumentModel, CoreSession)` was replaced by `org.nuxeo.ecm.collections.api.CollectionManager#getUserDefaultCollections(CoreSession)`
+`org.nuxeo.ecm.collections.api.FavoritesManager#getFavorites(DocumentModel, CoreSession)` was replaced by `org.nuxeo.ecm.collections.api.FavoritesManager#getFavorites(CoreSession)`
+`org.nuxeo.ecm.core.NXCore#getLifeCycleService()` was not used, use `org.nuxeo.runtime.api.Framework#getService(Class)` instead
+`org.nuxeo.ecm.core.api.CoreSession#close()` not useful anymore, no replacement
+`org.nuxeo.ecm.core.api.DocumentModel#isPrefetched(String)` not useful anymore, no replacement
+`org.nuxeo.ecm.core.api.DocumentModel#isPrefetched(String, String)` not useful anymore, no replacement
+`org.nuxeo.ecm.core.convert.service.MimeTypeTranslationHelper#getDestinationMimeTypes(String)` was not used, no replacement
+`org.nuxeo.ecm.core.convert.service.MimeTypeTranslationHelper#getSourceMimeTypes(String)` was not used, no replacement
+`org.nuxeo.ecm.core.event.Event#isLocal()` was not used, no replacement
+`org.nuxeo.ecm.core.event.Event#setLocal(String)` was not used, no replacement
+`org.nuxeo.ecm.core.event.Event#isPublic()` was not used, no replacement
+`org.nuxeo.ecm.core.event.Event#setPublic(String)` was not used, no replacement
+`org.nuxeo.ecm.core.io.download.DownloadService#downloadBlobStatus(HttpServletRequest, HttpServletResponse, String, String)` was replaced by the `@async` web adapter mechanism
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#listToJson(Class, String, RenderingContext)` was replaced by `{{org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToList(Class, String, RenderingContext)`
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, String, RenderingContext)` was replaced by }}`org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, RenderingContext)`
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, Type, String, RenderingContext)` was replaced by ``org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, Type, RenderingContext)`
+`org.nuxeo.ecm.core.io.upload.Batch#addChunk(String, InputStream, int, int, String, String, long)` was replaced by `org.nuxeo.ecm.core.io.upload.Batch#addFile(String, Blob, int, int, String, String, long)`
+`org.nuxeo.ecm.core.io.upload.Batch#addFile(String, InputStream, String, String)` was replaced by `org.nuxeo.ecm.core.io.upload.Batch#addFile(String, Blob, String, String)`
+`org.nuxeo.ecm.core.io.upload.BatchManager#addStream(String, String, InputStream, String, String)` was replaced by `org.nuxeo.ecm.core.io.upload.BatchManager#addBlob(String, String, Blob, String, String)`
+`org.nuxeo.ecm.core.io.upload.BatchManager#addStream(String, String, InputStream, int, int, String, String, long)` was replaced by `org.nuxeo.ecm.core.io.upload.BatchManager#addBlob(String, String, Blob, int, int, String, String, long)`
+`org.nuxeo.ecm.core.io.upload.BatchManager#getTransientStore()` was moved within batch handlers
+`org.nuxeo.ecm.core.transientstore.api.TransientStoreConfig#setAbsoluteMaxSizeMB(int)` was not used, no replacement
+`org.nuxeo.ecm.core.transientstore.api.TransientStoreConfig#setFirstLevelTTL(int)` was not used, no replacement
+`org.nuxeo.ecm.core.transientstore.api.TransientStoreConfig#setSecondLevelTTL(int)` was not used, no replacement
+`org.nuxeo.ecm.core.transientstore.api.TransientStoreConfig#setTargetMaxSizeMB(int)` was not used, no replacement
+`org.nuxeo.ecm.core.work.WorkManager#find(String, State)` was not scalable, no replacement
+`org.nuxeo.ecm.core.work.WorkManager#listWork(String, State)` was not scalable, no replacement
+`org.nuxeo.ecm.core.work.WorkManager#listWorkIds(String, State)` was not scalable, no replacement
+`org.nuxeo.ecm.permissions.TransientUserPermissionHelper#acquireToken(String, DocumentModel, String)` was replaced by `org.nuxeo.ecm.permissions.TransientUserPermissionHelper#addToken(String)`
+`org.nuxeo.ecm.platform.audit.api.AuditLogger#logEvent(Event)` was replaced by contributions
+`org.nuxeo.ecm.platform.audit.api.AuditLogger#logEvents(EventBundle)` was replaced by contributions
+`org.nuxeo.ecm.platform.comment.api.CommentManager#getComments(DocumentModel, DocumentModel)` was replaced by `org.nuxeo.ecm.platform.comment.api.CommentManager#getComments(DocumentModel)`
+`org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(DocumentModel, String)` was replaced by `org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(CoreSession, Comment)`
+`org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(DocumentModel, String, String)` was replaced by `org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(CoreSession, Comment)`
+`org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(DocumentModel, DocumentModel, DocumentModel)` was replaced by `org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(CoreSession, Comment)`
+`org.nuxeo.ecm.platform.comment.api.CommentManager#deleteComment(DocumentModel, DocumentModel)` was replaced by `org.nuxeo.ecm.platform.comment.api.CommentManager#createComment(CoreSession, String)`
+`org.nuxeo.ecm.platform.comment.api.CommentManager#getDocumentsForComment(DocumentModel)` not used anymore, no replacement
+`org.nuxeo.ecm.platform.dublincore.service.DublinCoreStorageService#setCreationDate(DocumentModel, Calendar, Event)` was replaced by `org.nuxeo.ecm.platform.dublincore.service.DublinCoreStorageService#setCreationDate(DocumentModel, Calendar)`
+`org.nuxeo.ecm.platform.dublincore.service.DublinCoreStorageService#setModificationDate(DocumentModel, Calendar, Event)` was replaced by `org.nuxeo.ecm.platform.dublincore.service.DublinCoreStorageService#setModificationDate(DocumentModel, Calendar)`
+`org.nuxeo.ecm.platform.ec.notification.email.EmailAuthenticator#value(String)` was replaced by `org.nuxeo.ecm.platform.ec.notification.email.EmailAuthenticator#protocolValue(String)`
+`org.nuxeo.ecm.platform.ec.notification.email.EmailAuthenticator#defaultValue(String)` was replaced by `org.nuxeo.ecm.platform.ec.notification.email.EmailAuthenticator#protocolValue(String)`
+`org.nuxeo.ecm.platform.ec.notification.service.NotificationRegistryImpl#getNotificationRegistry()` was not used, no replacement
+`org.nuxeo.ecm.platform.filemanager.api.FileManager#createDocumentFromBlob(CoreSession, Blob, String, boolean, String)` was replaced by `org.nuxeo.ecm.platform.filemanager.api.FileManager#createOrUpdateDocument(FileImporterContext)`
+`org.nuxeo.ecm.platform.filemanager.api.FileManager#createDocumentFromBlob(CoreSession, Blob, String, boolean, String, boolean)` was replaced by `org.nuxeo.ecm.platform.filemanager.api.FileManager#createOrUpdateDocument(FileImporterContext)`
+`org.nuxeo.ecm.platform.filemanager.api.FileManager#updateDocumentFromBlob(CoreSession, Blob, String, String)` was not used, no replacement
+`org.nuxeo.ecm.platform.filemanager.service.extension.AbstractFileImporter#getFileManagerService()` was not used, use `org.nuxeo.runtime.api.Framework#getService(Class)` instead
+`org.nuxeo.ecm.platform.filemanager.service.extension.FileImporter#setFileManagerService(FileManagerService)` was not used, no replacement
+`org.nuxeo.ecm.platform.filemanager.service.extension.FileImporter#create(CoreSession, Blob, String, boolean, String, TypeManager)` was replaced by `org.nuxeo.ecm.platform.filemanager.service.extension.FileImporter#createOrUpdate(FileImporterContext)`
+`org.nuxeo.ecm.platform.importer.factories.DefaultDocumentModelFactory#getMimeType(String)` was not used, no replacement
+`org.nuxeo.ecm.platform.rendition.service.RenditionServiceImpl#getRenditionDefinition(String)` was replaced by `org.nuxeo.ecm.platform.rendition.service.RenditionServiceImpl#getAvailableRenditionDefinition(DocumentModel, String)`
+`org.nuxeo.ecm.platform.rendition.service.RenditionServiceImpl#storeRendition(DocumentModel, Rendition)` was replaced by `org.nuxeo.ecm.platform.rendition.service.RenditionServiceImpl#storeRendition(DocumentModel, Rendition, RenditionDefinition)`
+`org.nuxeo.ecm.platform.ui.web.auth.LoginScreenHelper#registerLoginProvider(String, String, String, String, String, LoginProviderLinkComputer)` was replaced by `org.nuxeo.ecm.platform.ui.web.auth.LoginScreenHelper#registerSingleProviderLoginScreenConfig(String, String, String, String, String, LoginProviderLinkComputer)`
+`org.nuxeo.ecm.platform.ui.web.auth.service.LoginScreenConfig#registerLoginProvider(String, String, String, String, String, LoginProviderLinkComputer)` was replaced by `org.nuxeo.ecm.platform.ui.web.auth.service.LoginScreenConfig#LoginScreenConfig(LoginProviderLink)`
+`org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerManager#getCorsConfigForRequest(HttpServletRequest)` was replaced by `org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerManager#getCorsFilterForRequest(HttpServletRequest)`
+`org.nuxeo.ecm.quota.QuotaStatsService#computeInitialStatistics(String, CoreSession, QuotaStatsInitialWork)` was replaced by `org.nuxeo.ecm.quota.QuotaStatsService#computeInitialStatistics(String, CoreSession, QuotaStatsInitialWork, String)`
+`org.nuxeo.ecm.quota.QuotaStatsService#launchInitialStatisticsComputation(String, String)` was replaced by `org.nuxeo.ecm.quota.QuotaStatsService#computeInitialStatistics(String, String, String)`
+`org.nuxeo.ecm.quota.QuotaStatsUpdater#computeInitialStatistics(CoreSession, QuotaStatsInitialWork)` was replaced by `org.nuxeo.ecm.quota.QuotaStatsUpdater#computeInitialStatistics(CoreSession, QuotaStatsInitialWork, String)`
+`org.nuxeo.lib.stream.computation.ComputationPolicy#isSkipFailure()` was replaced by `org.nuxeo.lib.stream.computation.ComputationPolicy#continueOnFailure()`
+`org.nuxeo.runtime.test.runner.RuntimeHarness#deployFolder(File, ClassLoader)` was not used, no replacement
+`org.nuxeo.runtime.test.runner.RuntimeHarness#deployTestContrib(String, String)` was replaced by `org.nuxeo.runtime.test.runner.RuntimeHarness#deployContrib(String, String)`
+`org.nuxeo.runtime.test.runner.RuntimeHarness#deployTestContrib(String, URL)` was replaced by `org.nuxeo.runtime.test.runner.RuntimeHarness#deployContrib(String, String)`
+`org.nuxeo.runtime.test.runner.RuntimeHarness#getProperties()` was not used, use `org.nuxeo.runtime.api.Framework#getProperties()` instead
+`org.nuxeo.runtime.test.runner.RuntimeHarness#isRestart()` was not used, no replacement
+`org.nuxeo.runtime.test.runner.RuntimeHarness#restart()` was not used, no replacement
+`org.nuxeo.runtime.test.runner.RuntimeHarness#getClassLoaderFiles()` was not used, no replacement
+`org.nuxeo.runtime.test.runner.TransactionFeature.Waiter#await(long)` was replaced by `org.nuxeo.runtime.test.runner.TransactionFeature.Waiter#await(Duration)`
+`org.nuxeo.runtime.test.runner.TransactionFeature#nextTransaction(long, TimeUnit)` was replaced by `org.nuxeo.runtime.test.runner.TransactionFeature#nextTransaction(Duration)`
+
+#### Classes
+
+`org.nuxeo.ecm.core.api.impl.blob.AsyncBlob` was replaced by the `@async` web adapter mechanism
+`org.nuxeo.ecm.core.trash.LifeCycleTrashService` was replaced by `org.nuxeo.ecm.core.trash.PropertyTrashService`
+`org.nuxeo.ecm.core.trash.TrashService` was replaced by `org.nuxeo.ecm.core.api.trash.TrashService`
+`org.nuxeo.ecm.directory.sql.filter.SQLBetweenFilter` was replaced by `org.nuxeo.ecm.core.query.sql.model.QueryBuilder`
+`org.nuxeo.ecm.directory.sql.filter.SQLComplexFilter` was replaced by `org.nuxeo.ecm.core.query.sql.model.QueryBuilder`
+`org.nuxeo.ecm.directory.sql.filter.SQLOperatorFilter` was replaced by `org.nuxeo.ecm.core.query.sql.model.QueryBuilder`
+`org.nuxeo.ecm.liveconnect.core.JSONLiveConnectBlobDecoder` was replaced by `org.nuxeo.ecm.automation.core.util.JSONManagedBlobDecoder`
+`org.nuxeo.ecm.platform.audit.listener.AuditEventLogger` was replaced by `org.nuxeo.ecm.platform.audit.listener.StreamAuditEventListener`
+`org.nuxeo.ecm.platform.audit.service.AuditBulker` was replaced by Nuxeo Stream mechanism
+`org.nuxeo.ecm.platform.audit.service.DefaultAuditBulker` was replaced by Nuxeo Stream mechanism
+`org.nuxeo.ecm.platform.audit.service.NoopAuditBulker` was replaced by Nuxeo Stream mechanism
+`org.nuxeo.ecm.platform.audit.service.extension.AuditBulkerDescriptor` was replaced by Nuxeo Stream mechanism
+`org.nuxeo.ecm.platform.audit.service.management.AuditBulkerMBean` was replaced by Nuxeo Stream mechanism
+`org.nuxeo.ecm.platform.comment.impl.CommentManagerImpl` was replaced by `org.nuxeo.ecm.platform.comment.impl.TreeCommentManager`
+`org.nuxeo.ecm.platform.comment.service.CommentServiceHelper` was not used, use `org.nuxeo.runtime.api.Framework#getProperties()` instead
+`org.nuxeo.ecm.platform.dublincore.NXDublinCore` was not used, no replacement
+`org.nuxeo.ecm.platform.preview.adapter.PlainImagePreviewer` was not used, no replacement
+`org.nuxeo.ecm.restapi.server.BulkDocumentsObject` was replaced by the Bulk Action Framework
+`org.nuxeo.drive.operations.GetRepositoriesOperation` was not used, no replacement
+`org.nuxeo.drive.operations.NuxeoDriveAddToLocallyEditedCollection` was not used, no replacement
+`org.nuxeo.drive.operations.NuxeoDriveCanMove` was not used, no replacement
+`org.nuxeo.drive.operations.NuxeoDriveGenerateConflictedItemName` was not used, no replacement
+`org.nuxeo.drive.operations.NuxeoDriveGetClientUpdateInfo` was not used, no replacement
+`org.nuxeo.drive.operations.test.NuxeoDriveWaitForAsyncCompletion` was not used, no replacement
+`org.nuxeo.runtime.test.runner.ContainerFeature` was replaced by `org.nuxeo.runtime.test.runner.TransactionalFeature`
+`org.nuxeo.runtime.test.runner.LocalDeploy` was replaced by `org.nuxeo.runtime.test.runner.Deploy`
+`org.nuxeo.runtime.test.runner.ServletContainer` was replaced by `org.nuxeo.runtime.test.runner.ServletContainerFeature` automatic port allocation mechanism
+`org.nuxeo.runtime.test.runner.SimpleFeature` was superseeded by Java default in interface, use `org.nuxeo.runtime.test.runner.RunnerFeature` instead
+
+#### Operations
+
+The parameter `username`/`user` of operation `Document.AddPermission`/`Document.AddACL` was replaced by `users`
+
+#### Rest Endpoints
+
+The endpoints GET|PUT|DELETE `/api/v1/bulk` was removed in favor of Bulk Action Framework endpoints
+The endpoints GET|PUT|DELETE `/api/v1/oauth2/token/{providerName}/{nxLogin`} were replaced by `/api/v1/oauth2/token/provider/{providerName}/user/{nxLogin`}
+The endpoint GET `/api/v1/search/lang/{queryLanguage}/execute` was replaced by `/api/v1/search/execute`
+The endpoint POST `/api/v1/search/lang/{queryLanguage}/bulk/actionId` was replaced by `/api/v1/search/bulk/actionId`
 
 {{! /multiexcerpt}}
