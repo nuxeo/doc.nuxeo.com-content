@@ -1826,6 +1826,30 @@ Enables users to select all documents from results listings in the UI and to exe
 
 * * *
 
+#### `nuxeo.oauth2.garbageCollectExpiredTokens.enabled`
+
+ Property to enable the expired OAuth2 tokens garbage collection.
+
+**Since LTS 2025.1**
+
+**Default Value**
+
+`true`
+
+* * *
+
+#### `nuxeo.oauth2.garbageCollectExpiredTokens.cronExpression`
+
+ Property to define frequency of the expired OAuth2 tokens garbage collection.
+
+**Since LTS 2025.1**
+
+**Default Value**
+
+`0 0 2 ? * SUN` (every Sunday at 2 am)
+
+* * *
+
 #### `nuxeo.s3storage.s3DirectUpload.bucket_prefix`
 
 Property to specify the bucket prefix of the blob provider backing the transient store used by the S3 batch handler. Default is `s3DirectUpload`.
