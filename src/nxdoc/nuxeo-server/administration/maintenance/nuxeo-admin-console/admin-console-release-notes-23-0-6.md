@@ -8,7 +8,7 @@ review:
 toc: true
 labels:
 tree_item_index: 999
-hidden: true
+hidden: false
 ---
 
 {{{multiexcerpt 'matching-notes' page='admin-console-release-notes'}}}
