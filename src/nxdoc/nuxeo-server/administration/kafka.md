@@ -40,8 +40,7 @@ The default In-Memory implementation **should NOT be used for production** as it
 Nuxeo uses the Kafka [Producer](https://kafka.apache.org/documentation/#producerapi), [Consumer](https://kafka.apache.org/documentation/#consumerapi), and [Admin](https://kafka.apache.org/documentation/#adminapi) APIs.
 This requires only a Kafka brokers (aka bootstrap) access, it does not need to have access to Zookeeper.
 
-Here are the compatible versions:
-{{{multiexcerpt 'kafka_supported_versions' page='Compatibility Matrix'}}}
+Please refer to the [Compatibility Matrix]({{page page='compatibility-matrix'}}#kafka) page to know the supported Kafka cluster versions.
 
 Kafka brokers need to be tuned if you want more than 7 days of retention or if you have a Kafka version < 2:
 
