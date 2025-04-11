@@ -170,18 +170,22 @@ Here are the templates provided by default:
 - `docker`: Template to be used in the [Docker image]({{page page='docker-image'}}) to only append the server logs to the console, not to a `server.log` file. Also, see the page about [Logs]({{page page='logs'}}).
 - `docker-json`: Same as the `docker` template but allows to append the console logs as JSON.
 - [`https`]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) Template to make the server listen to port 443 (HTTPS)
+- [`mongodb`]({{page page='mongodb'}}): MongoDB configuration template
+- [`postgresql`]({{page page='postgresql'}}): PostgreSQL configuration template
+- `postgresql-quartz-cluster`
+
+{{! /multiexcerpt}}
+
+The templates for the other database can be downloaded through the Marketplace: 
+  
 - [`mariadb`]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used)
 - `mariadb-quartz-cluster`
-- [`mongodb`]({{page page='mongodb'}}): MongoDB configuration template
 - [`mssql`]({{page page='microsoft-sql-server'}}): MS SQL Server configuration template
 - `mssql-quartz-cluster`
 - [`mysql`]({{page page='mysql'}}): MySQL configuration template
 - `mysql-quartz-cluster`
 - [`oracle`]({{page page='oracle'}}): Oracle configuration template
 - `oracle-quartz-cluster`;
-- [`postgresql`]({{page page='postgresql'}}): PostgreSQL configuration template
-- `postgresql-quartz-cluster`
-{{! /multiexcerpt}}
 
 {{#> callout type='tip' }}
 For production environment, it is recommended to define your own custom template outside `$NUXEO_HOME`, as for `nuxeo.conf`. It must then be referenced in `nuxeo.conf` with its absolute path.
