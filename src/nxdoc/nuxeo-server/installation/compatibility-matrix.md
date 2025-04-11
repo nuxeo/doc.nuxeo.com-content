@@ -141,6 +141,10 @@ Nuxeo Platform is tested against a Kafka cluster {{! multiexcerpt name='kafka_su
 
 Kafka supports backward and forward compatibility, though we advise to use the latest available stable version.
 
+{{#> callout type='warning' }}
+Since Kafka 3.6, it’s possible to deploy Kafka without Zookeeper using KRaft mode. Currently, Kafka in KRaft mode is not supported by Nuxeo because it exhibits different behavior during topic creation, resulting in Nuxeo’s failure to initialize topics in cluster mode due to visibility issues.
+{{/callout}}
+
 ## Browsers
 
 {{! multiexcerpt name='supported-browsers'}}
