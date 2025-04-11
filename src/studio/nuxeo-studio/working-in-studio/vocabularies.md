@@ -126,7 +126,7 @@ Watch the related courses on Hyland University:</br>
 In each of these three types of vocabulary you will find identical parameters like:
 
 - **Creation Table Policy**: The Creation Table Policy defines the creation strategy for the vocabulary table when the configuration is deployed on a Nuxeo Platform instance.
-  - **If not existing** means that it will be created only if it has never been created before on the instance. If it is already here, it will only update it if additional fields need to be added in the database. This is the recommanded policy for production.
+  - **If not existing** means that it will be created only if it has never been created before on the instance. If it is already here, it will only update it if additional fields need to be added in the database. This is the recommended policy for production.
   - **Always** means the table is dropped and recreated each time the Nuxeo Server instance restarts. Modifications made directly in the instance are lost in the process. It should be used with a lot of attention, as there is no way to revert, if data has been deleted at deployment.
   - **Never** would be used so as to disable the table creation logic temporarily, but would still declare the directory.
 - **Delete** and **Delete all**: Used to delete the values.
