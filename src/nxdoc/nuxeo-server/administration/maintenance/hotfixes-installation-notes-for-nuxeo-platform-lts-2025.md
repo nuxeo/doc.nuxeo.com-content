@@ -724,7 +724,7 @@ nuxeo.bulk.action.fixBinaryFulltextStorage.enabled=false
 
 ### Restrict the Visibility of Administrators' Members
 
-The new `nuxeo.group.administrators.members.resticted` nuxeo.conf property, when set to `true`, allows to restrict the visibility of the member users, member groups and parent groups of an administrator group, typically the “administrators” group. In this case, making a call to `/nuxeo/api/v1/groups/administrators` as a non administrator user returns empty lists for the ”memberUsers”, “memberGroups” and “parentGroups“ properties.
+The new `nuxeo.group.administrators.members.resticted` nuxeo.conf property, when set to `true`, allows to restrict the visibility of the member users, member groups and parent groups of an administrator group, typically the “administrators” group. In this case, making a call to `/nuxeo/api/v1/groups/administrators` as a non-administrator user returns empty lists for the ”memberUsers”, “memberGroups” and “parentGroups“ properties.
 
 This property is not set by default.
 
