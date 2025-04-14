@@ -25,6 +25,6 @@ hidden: true
 
 - Fixed accessibility double focus issue on menu item buttons.<br/>
 
-- Fixed message translation when a user or group are created.<br/>
+- Fixed message translation when a user or group is created.<br/>
 
 {{! /multiexcerpt}}
