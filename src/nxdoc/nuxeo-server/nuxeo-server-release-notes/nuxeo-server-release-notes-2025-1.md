@@ -17,9 +17,9 @@ hidden: true
 
 ## Migration Tool to Extract Full Text From Mongo DB to an S3 Blob
 
-In order to reduce the MongoDB collection size, it’s now possible to move in a efficient way the fulltext extracted from binaries (stored in MongoDB) to a s3 bucket on an existing instance.
+In order to reduce the MongoDB collection size, it’s now possible to move in an efficient way the fulltext extracted from binaries (stored in MongoDB) to an S3 bucket on an existing instance.
 
-In order to reduce the MongoDB collection size, it’s now possible to move in a efficient way the fulltext extracted from binaries (stored in MongoDB) to a s3 bucket on an existing instance. See the 4 step migration process in the upgrade notes.
+In order to reduce the MongoDB collection size, it’s now possible to move in an efficient way the fulltext extracted from binaries (stored in MongoDB) to an S3 bucket on an existing instance. See the 4 step migration process in the upgrade notes.
 
 ## Fix Infinite Login Loop When the Anonymous User Is Enabled
 
@@ -38,11 +38,9 @@ Exception happening in WebEngine is now better caught when the requested MediaTy
 An exception writer has been added for `text/html` media type, so Nuxeo Server WebEngine now handles the following media type for NuxeoException handling:
 
 - `text/html`
-- `application/json` which is the default fallback for other media types
+- `application/json`, which is the default fallback for other media types
 
 ## Make Creation of User Without Password Using the REST API Configurable
-
-The nuxeo.user.password.empty.enabled nuxeo configuration property can be set to true to create users without password. Its default value is false.
 
 The `nuxeo.user.password.empty.enabled` nuxeo configuration property can be set to `true` to create users without password. Its default value is `false`**.**
 
@@ -50,14 +48,14 @@ The `nuxeo.user.password.empty.enabled` nuxeo configuration property can be set 
 
 Maven Plugins have been updated
 
-The Maven Plugins used by Nuxeo were updated to not depend on very old libraries, this is the case for:
+The following Maven Plugins, used by Nuxeo,  are updated so that it does not depend on very old libraries:
 
 - maven-clean-plugin
 - maven-enforcer-plugin
 - maven-install-plugin
 - maven-jar-plugin
 
-We had to remove the Maven Eclipse Plugin from our dependency tree as it is unmaintained, if you were leverage it you should add it back to your pom:
+We had to remove the Maven Eclipse Plugin from our dependency tree as it is unmaintained. If you were leverage it you should add it back to your pom:
 
 ```xml
 <plugin>
@@ -75,7 +73,7 @@ The YUM cache is now empty in the Nuxeo Docker image.
 
 Expired OAuth2 tokens are now garbage collected
 
-Expired OAuth2 tokens are garbage collected weekly (every Sunday at 2 am) by default. The frequency of this garbage collection execution is defined by a cron expression with the  Nuxeo configuration property:
+Expired OAuth2 tokens are garbage collected weekly (every Sunday at 2 AM) by default. The frequency of this garbage collection execution is defined by a cron expression with the Nuxeo configuration property:
 
 - `nuxeo.oauth2.garbageCollectExpiredTokens.cronExpression` (default `0 0 2 ? * SUN`)
 
@@ -100,9 +98,9 @@ All preview urls are now disposed inline
 
 ## Add the Ability to Scroll Directory Entries
 
-A new "directory" scroll is available to scroll directory entry ids.
+A new "directory" scroll is available to scroll directory entry IDs.
 
-The scroll query is expressed in NXQL e.g. `SELECT * FROM continent`. Where clauses are ignored and results are ordered by the directory id field ascendant.
+The scroll query is expressed in NXQL. For example, `SELECT * FROM continent`. Where clauses are ignored and results are ordered by the directory ID field ascendant.
 
 ## Restrict the Visibility of Administrators' Members
 
@@ -112,7 +110,7 @@ The "nuxeo.group.administrators.members.resticted" nuxeo.conf property allows to
 
 WebEngine Resource path are correctly retrieved
 
-The WebEngine Resource path field had an issue in its computation since the upgrade of Jersey, it is now fixed and path is correct.
+The WebEngine Resource path field had an issue in its computation since the upgrade of Jersey. It is now fixed and path is correct.
 
 This mainly affects the Freemarker templates that use this field, such as `Root.path`.
 
