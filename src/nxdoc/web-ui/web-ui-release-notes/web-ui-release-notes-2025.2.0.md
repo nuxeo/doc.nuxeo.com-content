@@ -15,13 +15,13 @@ hidden: true
 
 {{! multiexcerpt name='web-ui-updates'}}
 
-## What’s New in Web UI for LTS 2023 (Version 2025.2.0)
+## What’s New in Web UI for LTS 2025 (Version 2025.2.0)
 
--  Integrated the latest updates from the recent LTS2023 release into LTS2025
+-  Integrated the latest updates from the recent LTS 2023 release into LTS 2025
 
 ### Other Noteworthy Changes
 
-- Updated Crowdin Job for lts-2025.<br/>
+- Updated Crowdin Job for LTS 2025.<br/>
 
 - Fixed accessibility double focus issue on menu item buttons.<br/>
 
