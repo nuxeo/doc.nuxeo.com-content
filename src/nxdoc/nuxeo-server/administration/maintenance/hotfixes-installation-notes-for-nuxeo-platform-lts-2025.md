@@ -656,7 +656,7 @@ The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implem
 
 ### Migration Tool to Extract Full Text From Mongo DB to an S3 Blob
 
-Here is the 4 steps migration process when you want to switch the storage of binary fulltext from the repository (MongoDB) to a S3 bucket on an existing instance.
+Here is the 4 step migration process to switch the storage of binary fulltext from the repository (MongoDB) to a S3 bucket on an existing instance.
 
 **1. Update the** `nuxeo.conf` **and restart all nodes**
 
@@ -672,14 +672,14 @@ nuxeo.bulk.action.fixBinaryFulltextStorage.defaultConcurrency=2
 nuxeo.bulk.action.fixBinaryFulltextStorage.defaultPartitions=4
 ```
 
-After this, the binary fulltext of new blob will be stored in the s3 bucket under `/fulltext/` prefix.
+After this, the binary fulltext of new blob will be stored in the S3 bucket under `/fulltext/` prefix.
 
 Everything should work properly while there are two different storages for the binary fulltext.
-Re-indexing will not change this state, running `extractBinaryFulltext` will do but this is not efficient since it’s slow and expensive, follow the next steps for the migration.
+Re-indexing will not change this state. Running `extractBinaryFulltext` will do but this is not efficient since it’s slow and expensive. Follow the next steps for the migration.
 
 **2. Clean MongoDB fulltext**
 
-Since we have disabled the fulltext search from the repository, we can remove existing index and fields, check if MongoDB `fulltext` index exists
+Since we have disabled the fulltext search from the repository, we can remove existing index and fields. Check if MongoDB `fulltext` index exists
 
 ```
 db.default.getIndex("fulltext")
@@ -700,7 +700,7 @@ then remove it
 db.default.dropIndex('fulltext')
 ```
 
-Remove MongoDB field `ecm:fulltextSimple` this can be a long operation depending on the db size.
+Remove MongoDB field `ecm:fulltextSimple`. This can be a long operation depending on the db size.
 
 ```
 db.default.updateMany({}, {$unset: {"ecm:fulltextSimple":1}});
@@ -726,5 +726,5 @@ nuxeo.bulk.action.fixBinaryFulltextStorage.enabled=false
 
 The new `nuxeo.group.administrators.members.resticted` nuxeo.conf property, when set to `true`, allows to restrict the visibility of the member users, member groups and parent groups of an administrator group, typically the “administrators” group. In this case, making a call to `/nuxeo/api/v1/groups/administrators` as a non administrator user returns empty lists for the ”memberUsers”, “memberGroups” and “parentGroups“ properties.
 
-This property is unset by default.
+This property is not set by default.
 
