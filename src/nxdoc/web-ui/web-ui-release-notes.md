@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2025-04-02'
+  date: '2025-04-14'
   status: ok
 toc: true
 labels:
@@ -18,6 +18,8 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 
 ## Recently Released Changes
+
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-2-0'}}}
 
 ## What’s New in Web UI for LTS 2025 (Version 2025.1.0)
 
