@@ -551,7 +551,7 @@ On a naked default Nuxeo Platform, you need the following software:
 - For web preview of office documents: LibreOffice and pdftohtml
   - LibreOffice (version >= **7.1.0**): converts office file into PDF
   - pdftohtml: converts converted PDF into HTML preview
-- For thumbnail generation: ImageMagick and Ghostscript for most file formats. UFRaw for RAW files.
+- For thumbnail generation: ImageMagick and Ghostscript for most file formats.
 - For processing WordPerfect documents: libwpd
 
 If you are using Picture, Video or Audio document types, you will need these additional requirements:
@@ -568,7 +568,7 @@ Thumbnails and previews are created when documents are imported into Nuxeo, not 
 Under Debian or Ubuntu, most of these can be installed by the following command:
 
 ```bash
-sudo apt-get install imagemagick ufraw poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool
+sudo apt-get install imagemagick poppler-utils libreoffice ffmpeg libwpd-tools ghostscript exiftool
 ```
 
 {{#> callout type='warning' }}
@@ -710,20 +710,6 @@ Please, see the [FFmpeg documentation](https://trac.ffmpeg.org/wiki/CompilationG
 This will be required, for example, if you prefer to install a library like fdk-aac, instead of the internal aac encoder.
 {{/callout}}
 
-### UFRaw
-
-{{! multiexcerpt name='ufraw-intro'}}
-
-UFRaw is used in association with ImageMagick and Ghostscript to generate RAW document thumbnails.
-
-{{! /multiexcerpt}}
-
-To install UFRaw using Homebrew:
-
-```bash
-brew install ufraw
-```
-
 ### libwpd
 
 {{! multiexcerpt name='libwpd-intro'}}
@@ -850,14 +836,6 @@ Hopefully you can control the number of threads used by ImageMagick by setting a
     3. On the **Advanced** tab, click **Environment Variables...** and edit the `PATH` system variable to add the path you copied (use a `;` to separate values).
 {{! /multiexcerpt}}
         ![]({{file name='DAM-Ffmpeg-variable.png'}} ?w=250,h=291,border=true)
-
-### UFRaw
-
-{{{multiexcerpt 'ufraw-intro' page='Installing and Setting up Related Software'}}}
-
-1. Download and install UFRaw from [http://ufraw.sourceforge.net/Install.html#MS](http://ufraw.sourceforge.net/Install.html#MS).
-2. Copy the path to the bin folder inside UFRaw's installation directory (e.g. `C:\Program Files (x86)\UFRaw\bin`) and add it to the `PATH` system variable.
-{{{multiexcerpt 'windows-add-to-path' page='installing-and-setting-up-related-software'}}}
 
 ### Exiftool
 
