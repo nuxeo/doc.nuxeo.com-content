@@ -101,6 +101,14 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 29
+
+### Restrict the Visibility of Administrators' Members
+
+The new `nuxeo.group.administrators.members.resticted` nuxeo.conf property, when set to `true`, allows to restrict the visibility of the member users, member groups and parent groups of an administrator group, typically the “administrators” group. In this case, making a call to `/nuxeo/api/v1/groups/administrators` as a non administrator user returns empty lists for the ”memberUsers”, “memberGroups” and “parentGroups“ properties.
+
+This property is unset by default.
+
 ## Hotfix 27
 
 ### Migration Tool to Extract Full Text From Mongo DB to an S3 Blob
