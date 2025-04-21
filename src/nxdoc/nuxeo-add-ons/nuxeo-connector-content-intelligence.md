@@ -15,13 +15,13 @@ tree_item_index: 365
 
 The Nuxeo Connector for Content Intelligence connects Knowledge Discovery to the Nuxeo repository. It enables you to perform tasks on Nuxeo documents using Artificial Intelligence (AI) from the Discovery module in the Content Intelligence Cloud. After you install and configure Nuxeo Connector for Content Intelligence, you must ingest the documents you want the Discovery module to access and perform tasks using AI.
 
-## Install the Nuxeo Connector for Content Intelligence
+## Download and install the Nuxeo Connector for Content Intelligence
 
 To install the Nuxeo Connector for Content Intelligence, complete the following steps.
 
-1. Install the addon package using the `mp-install` command. For additional information, refer to the installation steps mentioned in the [Installing a New Package on Your Instance](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) topic.
-
-2. Update nuxeo.conf with appropriate properties. Please refer to list of configuration options in the Configure the Nuxeo Connector for Content Intelligence section.
+1. Download the Nuxeo Hyland Content Intelligence Connector from [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-hyland-content-intelligence-connector?version=2023.1.0)
+2. Install the addon package using the `mp-install` command. For additional information, refer to the installation steps mentioned in the [Installing a New Package on Your Instance](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) topic.
+3. Update nuxeo.conf with appropriate properties. Please refer to list of configuration options in the Configure the Nuxeo Connector for Content Intelligence section.
 
 ## Configure the Nuxeo Connector for Content Intelligence
 
