@@ -207,8 +207,8 @@ The workflow engine provides means to implement most of BPMN concepts: Fork, mer
 **Understanding Workflow:**
 
 - [Useful Definitions]({{page page='useful-definitions'}})
-- [Simple Workflow Example]({{page page='simple-workflow-example'}}) (tutorial)
-- [How to Assign a Workflow Task to a User Depending on a Metadata]({{page page='validation-workflow-choosing-the-assignee-based-on-a-metadata'}}) (tutorial)
+- [Workflow Engine FAQ]({{page page='workflow-engine-faq'}})
+- [Workflow How-To Index]({{page page='workflow-how-to-index'}})
 
 ## Default Available Workflows
 
@@ -259,10 +259,6 @@ To start the workflow graph:
 * [Instance Properties -]({{page page='workflow-instance-properties'}}) [Workflow Node Properties]({{page page='workflow-node-properties'}})
 * [Node General Tab in Studio Documentation]({{page space='studio' page='node-general-tab'}})
 * [Workflow Naming Conventions]({{page page='workflow-naming-conventions'}})
-
-## Discover More
-
-To go further, read the page [Simple Workflow Example]({{page page='simple-workflow-example'}}), and follow the creation of a workflow step by step with a specific use case.
 
 * * *
 
