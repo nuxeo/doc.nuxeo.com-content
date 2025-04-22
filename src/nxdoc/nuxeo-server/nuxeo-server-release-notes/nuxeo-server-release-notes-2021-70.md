@@ -15,7 +15,7 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2021-70'}}
 # What's New in LTS 2021.70 / LTS 2021-HF70
 
-## Cleanup  Yum Cache in Docker Images
+## Cleanup Yum Cache in Docker Images
 
 The YUM cache is now empty in the Nuxeo Docker image.
 
