@@ -54,11 +54,11 @@ All preview urls are now disposed inline
 
 A new "directory" scroll is available to scroll directory entry ids.
 
-The scroll query is expressed in NXQL e.g. `SELECT * FROM continent`. Where clauses are ignored and results are ordered by the directory id field ascendant.
+The scroll query is expressed in NXQL, for example, `SELECT * FROM continent`. Where clauses are ignored and results are ordered by the directory id field ascendant.
 
 ## Restrict the Visibility of Administrators' Members
 
-The "nuxeo.group.administrators.members.resticted" nuxeo.conf property allows to restrict the visibility of administrator groups' members.
+The `nuxeo.group.administrators.members.resticted` nuxeo.conf property allows to restrict the visibility of administrator groups' members.
 
 
 {{! /multiexcerpt}}
