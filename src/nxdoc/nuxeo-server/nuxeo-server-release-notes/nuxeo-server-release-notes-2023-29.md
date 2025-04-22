@@ -25,9 +25,9 @@ The YUM cache is now empty in the Nuxeo Docker image.
 
 ## OAuth2 Tokens Need to Be GC to Avoid Contention During Auth
 
-Expired OAuth2 tokens are now garbage collected
+Garbage collection task now removes expired OAuth2 tokens.
 
-Expired OAuth2 tokens are garbage collected weekly (every Sunday at 2 am) by default. The frequency of this garbage collection execution is defined by a cron expression with the  Nuxeo configuration property:
+The garbage collection task executes weekly (every Sunday at 2 am) by default, which removes expired OAuth2 tokens. The frequency of this garbage collection execution is defined by a cron expression with the  Nuxeo configuration property:
 
 - `nuxeo.oauth2.garbageCollectExpiredTokens.cronExpression` (default `0 0 2 ? * SUN`)
 
@@ -40,7 +40,7 @@ This garbage collection process uses the Bulk Action Framework, and the followin
 - `nuxeo.bulk.action.garbageCollectExpiredOAuth2Tokens.defaultConcurrency`(default `2`)
 - `nuxeo.bulk.action.garbageCollectExpiredOAuth2Tokens.defaultPartitions`(default `4`)
 
-Expired OAuth2 tokens garbage collection can also be executed on demand through the Management Rest API (see [Rest API documentation](https://doc.nuxeo.com/rest-api/1/oauth2-endpoint/)):
+Garbage collection of Expired OAuth2 tokens can also be executed on demand through the Management Rest API (see [Rest API documentation](https://doc.nuxeo.com/rest-api/1/oauth2-endpoint/)):
 
 ```
 curl -X DELETE -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/management/oauth2/expired
@@ -48,7 +48,7 @@ curl -X DELETE -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1
 
 ## Fix Content Disposition for Preview URL With Direct Download
 
-All preview urls are now disposed inline
+All preview urls are now disposed inline.
 
 ## Add the Ability to Scroll Directory Entries
 
