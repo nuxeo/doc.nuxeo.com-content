@@ -2,7 +2,7 @@
 title: NEV 2.2.1
 description: Release notes for Nuxeo Enhanced Viewer 2.2.1
 tree_item_index: 894
-hidden: false
+hidden: true
 review:
   comment: ''
   date: '2023-02-13'
