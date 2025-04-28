@@ -559,9 +559,9 @@ Code deprecated since 10.10 has been removed from Nuxeo
 `org.nuxeo.ecm.core.event.Event#isPublic()` was not used, no replacement
 `org.nuxeo.ecm.core.event.Event#setPublic(String)` was not used, no replacement
 `org.nuxeo.ecm.core.io.download.DownloadService#downloadBlobStatus(HttpServletRequest, HttpServletResponse, String, String)` was replaced by the `@async` web adapter mechanism
-`org.nuxeo.ecm.core.io.registry.MarshallerHelper#listToJson(Class, String, RenderingContext)` was replaced by `{{org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToList(Class, String, RenderingContext)`
-`org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, String, RenderingContext)` was replaced by }}`org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, RenderingContext)`
-`org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, Type, String, RenderingContext)` was replaced by ``org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, Type, RenderingContext)`
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#listToJson(Class, String, RenderingContext)` was replaced by `org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToList(Class, String, RenderingContext)`
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, String, RenderingContext)` was replaced by `org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, RenderingContext)`
+`org.nuxeo.ecm.core.io.registry.MarshallerHelper#objectToJson(Class, Type, String, RenderingContext)` was replaced by `org.nuxeo.ecm.core.io.registry.MarshallerHelper#jsonToObject(Class, String, Type, RenderingContext)`
 `org.nuxeo.ecm.core.io.upload.Batch#addChunk(String, InputStream, int, int, String, String, long)` was replaced by `org.nuxeo.ecm.core.io.upload.Batch#addFile(String, Blob, int, int, String, String, long)`
 `org.nuxeo.ecm.core.io.upload.Batch#addFile(String, InputStream, String, String)` was replaced by `org.nuxeo.ecm.core.io.upload.Batch#addFile(String, Blob, String, String)`
 `org.nuxeo.ecm.core.io.upload.BatchManager#addStream(String, String, InputStream, String, String)` was replaced by `org.nuxeo.ecm.core.io.upload.BatchManager#addBlob(String, String, Blob, String, String)`
@@ -652,7 +652,7 @@ The parameter `username`/`user` of operation `Document.AddPermission`/`Document.
 #### Rest Endpoints
 
 The endpoints GET|PUT|DELETE `/api/v1/bulk` was removed in favor of Bulk Action Framework endpoints
-The endpoints GET|PUT|DELETE `/api/v1/oauth2/token/{providerName}/{nxLogin`} were replaced by `/api/v1/oauth2/token/provider/{providerName}/user/{nxLogin`}
+The endpoints GET|PUT|DELETE `/api/v1/oauth2/token/{providerName}/{nxLogin}` were replaced by `/api/v1/oauth2/token/provider/{providerName}/user/{nxLogin}`
 The endpoint GET `/api/v1/search/lang/{queryLanguage}/execute` was replaced by `/api/v1/search/execute`
 The endpoint POST `/api/v1/search/lang/{queryLanguage}/bulk/actionId` was replaced by `/api/v1/search/bulk/actionId`
 
