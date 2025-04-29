@@ -17,19 +17,23 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2021 (Version 3.0.42)
 
-- Fixed message translation when a user or group are created and format used by nuxeo-date-picker for en-GB and other locale.
+Accessibility enhancements -
+
+- Enhanced accessibility by adding proper role values for table, rows and columns and meaningful aria-label to ensure proper table identification and navigation for screen readers.
+
+- Keyboard navigation traverses through all rows of the table enabling screen reader to read all row information properly.
+
+- Fixed accessibility double focus issue on menu item buttons.
+
+- Added appropriate caption text to tables for identification by screen readers.
+
+- Improved color contrast of webui elements as per WCGA standards by modifying opacity and color.
 
 ### Other Noteworthy Changes
 
-- Enhanced accessibility by adding proper role values for table, rows and columns and meaningful aria-label to ensure proper table identification and navigation for screen readers.<br/>
+- Fixed message translation when a user or group are created.<br/>
 
-- Keyboard navigation traverses through all rows of the table enabling screen reader to read all row information properly.<br/>
-
-- Fixed accessibility double focus issue on menu item buttons.<br/>
-
-- Added appropriate caption text to tables for identification by screen readers.<br/>
-
-- Improved color contrast of webui elements as per WCGA standards by modifying opacity and color.<br/>
+- Fixed format used by nuxeo-date-picker for en-GB and other locale.<br/>
 
 - Updated Crowdin Job changes related to lts-2025.<br/>
 
