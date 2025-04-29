@@ -17,9 +17,11 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2021 (Version 3.0.42)
 
-- Fixed Accessibility issues for Consistent Keyboard Navigation and veracode Vulenrability.
+- Fixed message translation when a user or group are created and format used by nuxeo-date-picker for en-GB and other locale.
 
 ### Other Noteworthy Changes
+
+- Enhanced accessibility by adding proper role values for table, rows and columns and meaningful aria-label to ensure proper table identification and navigation for screen readers.<br/>
 
 - Keyboard navigation traverses through all rows of the table enabling screen reader to read all row information properly.<br/>
 
