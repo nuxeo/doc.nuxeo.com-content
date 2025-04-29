@@ -23,7 +23,7 @@ Accessibility enhancements -
 
 - Keyboard navigation traverses through all rows of the table enabling screen reader to read all row information properly.
 
-- Fixed accessibility double focus issue on menu item buttons.
+- Fixed accessibility double-focus issue on menu item buttons.
 
 - Added appropriate caption text to tables for identification by screen readers.
 
@@ -31,7 +31,7 @@ Accessibility enhancements -
 
 ### Other Noteworthy Changes
 
-- Fixed message translation when a user or group are created.<br/>
+- Fixed message translation when a user or group is created.<br/>
 
 - Fixed format used by nuxeo-date-picker for en-GB and other locale.<br/>
 
