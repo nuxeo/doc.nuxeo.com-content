@@ -20,7 +20,9 @@ The Nuxeo Connector for Content Intelligence connects Knowledge Discovery to the
 To install the Nuxeo Connector for Content Intelligence, complete the following steps.
 
 1. Download the Nuxeo Hyland Content Intelligence Connector from [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-hyland-content-intelligence-connector?version=2023.1.0)
-2. Install the addon package using the `mp-install` command. For additional information, refer to the installation steps mentioned in the [Installing a New Package on Your Instance](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) topic.
+2. Install the `nuxeo-hxai-connector` addon package using the `mp-install` command. The following example displays how the command is used to install the connector:
+   ```<NUXEO_HOME>/nuxeoctl mp-install nuxeo-hxai-connector```
+   For additional information, refer to the installation steps mentioned in the [Installing a New Package on Your Instance](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) topic.
 3. Update nuxeo.conf with appropriate properties. Please refer to list of configuration options in the Configure the Nuxeo Connector for Content Intelligence section.
 
 ## Configure the Nuxeo Connector for Content Intelligence
