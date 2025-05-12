@@ -27,21 +27,20 @@ More information on the [Jakarta EE Page]({{page page='how-to-upgrade-to-jakarta
 
 More information on the [Jakarta RS - WebEngine Page]({{page page='how-to-upgrade-to-jakarta-rs-3'}}).
 
-### How to Upgrade From ElasticSearch to Search Service
+## How to Upgrade From ElasticSearch to Search Service
 
 {{{excerpt page='how-to-upgrade-search-service'}}}
 
 More information on the [Search Service Page]({{page page='how-to-upgrade-search-service'}}).
 
-### How to Upgrade Your REST tests
+## How to Upgrade Your REST tests
 
 {{{excerpt page='how-to-upgrade-rest-tests'}}}
 
 More information on the [REST tests Page]({{page page='how-to-upgrade-rest-tests'}}).
 
-### How to Upgrade Your Audit Contributions
+## How to Upgrade Your Audit Contributions
 
 {{{excerpt page='how-to-upgrade-audit-service'}}}
 
 More information on the [Nuxeo Audit Service Page]({{page page='how-to-upgrade-audit-service'}}).
-

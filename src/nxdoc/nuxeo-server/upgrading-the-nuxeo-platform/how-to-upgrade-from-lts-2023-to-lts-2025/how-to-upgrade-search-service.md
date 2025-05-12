@@ -14,7 +14,7 @@ tree_item_index: 250
 ## Introduction
 
 {{! excerpt}}
-A new `SearchService` has been introduced in Nuxeo LTS 2025, the `ElasticSearchService` has been removed, representing a breaking change. The code needs to be modified to use the new `SearchService`.
+A new `SearchService` has been introduced in Nuxeo LTS 2025. The `ElasticSearchService` has been removed, representing a breaking change. The code needs to be modified to use the new `SearchService`.
 {{! /excerpt}}
 
 ## Maven Dependency
@@ -232,7 +232,7 @@ to
 
 ## Management API
 
-`/management/elasticsearch` call should be changed to `/management/search` and stay compatible.
+`/management/elasticsearch` call should be changed to `/management/search` to remain compatible.
 
 There is no more low level `/management/elasticsearch/flush` and `/management/elasticsearch/optimize`. We recommend to use directly the search engine to perform such administrative operation.
 
@@ -303,4 +303,4 @@ nuxeo.search.client.default.opensearch1.settings.numberOfShards=5
 nuxeo.search.client.default.opensearch1.settings.numberOfReplicas=1
 ```
 
-Currently, there is no managed alias support, the `elasticsearch.manageAlias.enabled` should not be used.
+Currently, there is no managed alias support. The `elasticsearch.manageAlias.enabled` should not be used.
