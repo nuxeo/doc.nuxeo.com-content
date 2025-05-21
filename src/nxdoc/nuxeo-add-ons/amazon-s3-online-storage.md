@@ -381,7 +381,9 @@ If your configuration is incorrect, this line will be followed by some error mes
 
 You must have appropriate permissions set on your bucket. In particular, note that the less commonly-used permissions `s3:AbortMultipartUpload` and `s3:ListMultipartUploadParts` are needed on the bucket objects, and `s3:ListBucketMultipartUploads` and `s3:GetBucketVersioning` are needed on the bucket itself.
 
-If you plan on using [Retention]({{page page='nuxeo-retention-management'}}), you'll also need `s3:PutObjectRetention` and `s3:PutObjectLegalHold` on the bucket objects, and `s3:GetBucketObjectLockConfiguration` on the bucket itself. When testing Retention in Governance mode, you'll need a user with `s3:BypassGovernanceRetention` in order for blob garbage collection to work correctly.
+If you plan on using [Retention]({{page page='nuxeo-retention-management'}}), you'll also need `s3:PutObjectRetention` and `s3:PutObjectLegalHold` on the bucket objects, and `s3:GetBucketObjectLockConfiguration` on the bucket itself.
+
+The `s3:ListBucketVersions` permission is needed in order to garbage collect the retention bucket. In addition, when testing Retention in Governance mode, you'll need a user with `s3:BypassGovernanceRetention` in order for blob garbage collection to work correctly.
 
 Here is a sample AWS S3 Policy that you can use; make sure that you replace `yourbucketname` with your own bucket name.
 
@@ -416,7 +418,8 @@ Here is a sample AWS S3 Policy that you can use; make sure that you replace `you
                 "s3:AbortMultipartUpload",
                 "s3:ListMultipartUploadParts",
                 "s3:PutObjectRetention",
-                "s3:PutObjectLegalHold"
+                "s3:PutObjectLegalHold",
+                "s3:ListBucketVersions"
             ],
             "Resource": "arn:aws:s3:::yourbucketname/*"
         }

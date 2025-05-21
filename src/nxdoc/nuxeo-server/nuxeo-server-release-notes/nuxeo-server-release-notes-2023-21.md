@@ -23,6 +23,8 @@ Keycloak logout URI doesn't keep previous query parameters.
 
 S3 Record blob providers are now properly scrolled.
 
+The `s3:ListBucketVersions` permission is needed on the retention bucket.
+
 
 ## Downgrade commons-compress
 
