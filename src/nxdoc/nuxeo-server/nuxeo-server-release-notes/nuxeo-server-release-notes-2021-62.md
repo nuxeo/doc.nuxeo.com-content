@@ -18,6 +18,8 @@ tree_item_index: 1710
 
 S3 Record blob providers are now properly scrolled.
 
+The `s3:ListBucketVersions` permission is needed on the retention bucket.
+
 
 ## Downgrade commons-compress
 
