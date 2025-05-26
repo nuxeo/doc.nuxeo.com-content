@@ -399,11 +399,30 @@ On the **View** tab of your document:
 
 ### Create a Retention Event
 
-To create a new [retention event](#based-on-an-event):
+There are 2 types of event that can trigger a [retention event-based rule](#based-on-an-event):
+  * [Nuxeo Platform Event]({{page page='common-events'}}) such as `documentCreated`, `documentModified` or `documentMoved`, etc. automatically fired by the nuxeo server
+  * Retention Business Event fired manually by an app user or a 3rd party app
+
+To add a new retention event that can be referenced when defining a [retention event-based rule](#based-on-an-event):
+
+1. Go to the Administration menu
+2. Click Vocabularies
+3. Select the `RetentionEvent` vocabulary
+4. Click `Add Entry`:
+  * To add a [Nuxeo Platform Event]({{page page='common-events'}}), just enter the event name in the `ID` field.
+    or
+  * To add a Retention Business Event, enter an `ID` prefixed by `Retention.` (e.g. `Retention.EmployeeLeft`). Only events prefixed with `Retention.` can be fired manually as described in the next paragraph.
+
+## Fire a Business Retention Event
+
+As a [RecordManager](#groups-and-permissions):
+
+### From the Web UI
 
 1. Go to the Retention menu.
 2. Click on **Retention events**.
-3. Fill the fields on the **Fire event** section:
+3. Fill the fields on the **Fire event** section.
+4. Click on **Fire event**.
 
 {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-eventmenu
@@ -412,9 +431,15 @@ To create a new [retention event](#based-on-an-event):
   --}}
 ![retention-screen-eventmenu](/nx_assets/6f012bec-ec76-4b58-9efb-a4aa06b8513b.png ?w=600,border=true)
 
-4. Click on **Fire event**.
-
 At this stage, the event is created on Nuxeo Platform, and the retention rules fitting with this event will trigger the retention period for the involved documents.
+
+### From Automation
+
+There is also a dedicated `Retention.FireEvent` automation operation to allow firing a Retention Business Event:
+
+```
+curl -H 'Content-Type:application/json+nxrequest' -X POST -d '{"params":{"name":"Retention.EmployeeLeft","input":"123GHD12" , "audit":"true"},"context":{}}' -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/automation/Retention.FireEvent
+```
 
 ### {{> anchor 'retention-search'}} Retention Search
 
