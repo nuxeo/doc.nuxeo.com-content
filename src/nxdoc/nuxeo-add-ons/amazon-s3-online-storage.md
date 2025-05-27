@@ -327,7 +327,8 @@ Web UI triggers some blob downloads from XHR (e.g. Bulk Download, CSV Export, et
             "http://localhost:8080"
         ],
         "ExposeHeaders": [
-            "Content-Disposition"
+            "Content-Disposition",
+            "ETag"
         ]
     }
 ]
