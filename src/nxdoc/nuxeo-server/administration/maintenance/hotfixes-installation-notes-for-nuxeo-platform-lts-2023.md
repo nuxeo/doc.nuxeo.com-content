@@ -101,6 +101,12 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 31
+
+### Fix Vim Low CVE in Docker Image
+
+Vim editor was upgraded in the Docker image from `8.2.2637-21.0.1` to `8.2.2637-22.0.1`.
+
 ## Hotfix 29
 
 ### Restrict the Visibility of Administrators' Members
