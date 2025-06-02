@@ -23,7 +23,7 @@ WebEngine root is only displayed when "org.nuxeo.dev" mode is enabled
 
 REST Automation now returns HTTP 400 Bad Request if body is not valid
 
-Calling an Operation through REST now returns a HTTP 400 Bad Request status if the given body is not valid.
+Calling an Operation through REST now returns an HTTP 400 Bad Request status if the given body is not valid.
 
 This is also the case if the Operation requires an input and the REST request doesn’t contain a body.
 
