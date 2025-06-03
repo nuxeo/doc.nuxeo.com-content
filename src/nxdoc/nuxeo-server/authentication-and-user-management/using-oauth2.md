@@ -3,7 +3,7 @@ title: OAuth 2
 description: OAuth 2 is a protocol that allows an application to obtain access to the Nuxeo Platform on behalf of a user.
 review:
     comment: ''
-    date: '2017-12-11'
+    date: '2025-06-03'
     status: ok
 labels:
     - oauth
@@ -112,6 +112,20 @@ Here is how Nuxeo handles the OAuth 2 flow to authorize your **application** to 
 Here is how Nuxeo handles the OAuth 2 flow to authorize your **application** to access a **protected Nuxeo resource** thanks to a **JSON Web Token (JWT)** that contains identity and security information.
 
 ![]({{file name='Nuxeo-JWT-Flow.png'}} ?w=500,border=true)
+
+### OAuth 2 Client Credentials Flow
+
+This flow is best suited for Machine-to-Machine (M2M) applications, such as CLIs, daemons, or backend services, because the system must authenticate and authorize the application instead of a user.
+
+Here is how Nuxeo handles the OAuth 2 flow to authorize your **application** to access a **protected Nuxeo resource** using only its **client credentials**.
+
+![]({{file name='Nuxeo-Client-Credentials-Flow.png'}} ?w=500,border=true)
+
+While authenticating through an OAuth 2.0 Client Credentials Flow, we still need to log in with a Nuxeo principal/user. To make this flow working, we will have to define a Nuxeo user for each client id using the Client Credentials Flow.
+
+For instance, assuming we register an OAuth 2.0 client `hx-automate`, we also need a user `hx-automate` so that we can grant this user some permissions on the repository.
+
+Authentication using the `hx-automate` client id will end up being logged in as the `hx-automate` user.
 
 ## Authorization Endpoint
 
@@ -424,6 +438,60 @@ Content-Type: application/json;charset=ISO-8859-1
     "access_token": "jkCQ5cgDavJdXlIqWIWwivuhUA2heqBa",
     "expires_in": 3599.0,
     "refresh_token": "R9KzeZSnyo6ErTvYbPifehgsyIhDtdIhBp3XgJQKWcDo2ikZ8Vl2NlMV87d0KEIB",
+    "token_type": "bearer"
+}
+```
+
+### Requesting an Access Token with Client Credentials
+
+```shell
+POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=client_credentials&client_id=myApp&client_secret=clientSecret
+```
+
+**Query parameters:**
+
+<div class="table-scroll">
+    <table class="hover">
+    <tbody>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>`grant_type`</td>
+            <td>string</td>
+            <td>**Yes**</td>
+            <td>The value must be `client_credentials` for requesting an access token.</td>
+        </tr>
+        <tr>
+            <td>`client_id`</td>
+            <td>string</td>
+            <td>**Yes**</td>
+            <td>An enabled client id. A user must exist with this client id.</td>
+        </tr>
+        <tr>
+            <td>`client_secret`</td>
+            <td>string</td>
+            <td>**Yes**</td>
+            <td>The client's secret.</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+**Response:**
+
+```shell
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Length: 176
+Content-Type: application/json;charset=ISO-8859-1
+
+{
+    "access_token": "jkCQ5cgDavJdXlIqWIWwivuhUA2heqBa",
+    "expires_in": 3599.0,
     "token_type": "bearer"
 }
 ```
