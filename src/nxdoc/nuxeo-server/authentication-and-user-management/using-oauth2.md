@@ -9,7 +9,6 @@ labels:
     - oauth
     - ataillefer
     - authentication
-    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '16089115'
@@ -69,13 +68,6 @@ Nuxeo Drive supports OAuth 2 authentication. To switch to OAuth 2 you need to ad
 3. On Drive side, when adding a new account, simply uncheck the **Use legacy authentication** checkbox to use OAuth 2.
 
 Find more information on the Nuxeo Drive [related Release Notes]({{page version='' space='client-apps' page='5.2.0-nuxeo-drive-release-notes'}}#oauth2-support).
-
-### Using JSF UI
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
-
-1. Go to the Nuxeo Platform web interface, then browse to the **Admin Center** > **Cloud Services** > **Consumers** tab.
-2. Provide a name, a client ID, possibly a client secret, at least one redirect URI and save.
-  ![]({{file name='OAuth2-Consumer.png'}} ?w=500,border=true)
 
 ### Using the REST API
 
