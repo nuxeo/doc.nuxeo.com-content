@@ -6,11 +6,9 @@ review:
     date: '2017-12-11'
     status: ok
 labels:
-    - lts2016-ok
     - oauth
     - ataillefer
     - authentication
-    - lts2017-ok
     - jsf-ui
 toc: true
 confluence:
@@ -25,47 +23,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/1IcZAQ'
     source_link: /display/NXDOC/Using+OAuth2
 tree_item_index: 160
-history:
-    -
-        author: Manon Lumeau
-        date: '2016-08-16 09:59'
-        message: ''
-        version: '8'
-    -
-        author: Manon Lumeau
-        date: '2016-03-30 10:08'
-        message: ''
-        version: '7'
-    -
-        author: Damien Metzler
-        date: '2015-10-20 13:12'
-        message: ''
-        version: '6'
-    -
-        author: Solen Guitter
-        date: '2015-10-08 15:27'
-        message: Remove mentions of 5.9.2
-        version: '5'
-    -
-        author: Solen Guitter
-        date: '2014-11-27 17:10'
-        message: ''
-        version: '4'
-    -
-        author: Solen Guitter
-        date: '2014-02-11 11:50'
-        message: ''
-        version: '3'
-    -
-        author: Solen Guitter
-        date: '2014-02-11 11:44'
-        message: Formatting
-        version: '2'
-    -
-        author: Arnaud Kervern
-        date: '2014-02-10 15:54'
-        message: ''
-        version: '1'
 ---
 
 OAuth 2 is a protocol that allows an application to obtain access to the Nuxeo Platform on behalf of a user.
@@ -102,14 +59,14 @@ There are different ways to register a client:
 Nuxeo Drive supports OAuth 2 authentication. To switch to OAuth 2 you need to add a Nuxeo Drive Client:
 
 1. In the left menu of Web UI, go to **Administration** > **Cloud Services** > **Consumers** tab.
-1. Click on the **Add** button:
-    - **Name**: Choose a name.
-    - **lient ID**: `nuxeo-drive`.
-    - **Secret**: Leave it empty.
-    - **Redirects URIs**: `nxdrive://authorize`, it shouldn't be changed.</br>
+2. Click on the **Add** button:
+    * **Name**: Choose a name.
+    * **Client ID**: `nuxeo-drive`.
+    * **Secret**: Leave it empty.
+    * **Redirects URIs**: `nxdrive://authorize`, it shouldn't be changed.</br>
     If the Client ID and/or Secret are modified, make sure to use the [correct parameters]({{page version='' space='client-apps' page='parameters'}}#oauth2-client-id).
 
-1. On Drive side, when adding a new account, simply uncheck the **Use legacy authentication** checkbox to use OAuth 2.
+3. On Drive side, when adding a new account, simply uncheck the **Use legacy authentication** checkbox to use OAuth 2.
 
 Find more information on the Nuxeo Drive [related Release Notes]({{page version='' space='client-apps' page='5.2.0-nuxeo-drive-release-notes'}}#oauth2-support).
 
@@ -166,7 +123,7 @@ Here is how Nuxeo handles the OAuth 2 flow to authorize your **application** to 
 
 ## Authorization Endpoint
 
-```
+```shell
 GET https://NUXEO_SERVER/nuxeo/oauth2/authorize?response_type=code&client_id=myApp
 ```
 
@@ -239,7 +196,7 @@ The `code_challenge` and `code_challenge_method` parameters must be used with a 
 
 ### Requesting an Access Token with an Authorization Code
 
-```
+```shell
 POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=authorization_code&client_id=myApp&code=authorizationCode
 ```
 
@@ -296,7 +253,7 @@ POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=authorization_code&clien
 
 **Response:**
 
-```
+```shell
 HTTP/1.1 200 OK
 Cache-Control: no-cache
 Content-Length: 176
@@ -319,7 +276,7 @@ JWT authentication can be enabled on Nuxeo server if you set `nuxeo.jwt.secret` 
 
 The JWT assertion makes use of the `oauth2Clients` directory entry. The JWT bearer token must have several required fields to generate the OAuth 2 token.
 
-**Payload**
+#### Payload
 
 The `iss` (issuer) and `sub` (subject) fields are required for JWT generation.
 
@@ -332,7 +289,7 @@ Example payload for JWT assertion:
 }
 ```
 
-**Encode JWT**
+#### Encode JWT
 
 This example uses a `node.js` package called `jsonwebtokencli` to generate the encoded form.  Equivalent functions can be found in the Java, Python, and JavaScript libraries.
 
@@ -351,7 +308,7 @@ eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJudXhlbyIsInN1YiI6IkFkbWluaXN0cmF
 
 Use the JSON web token generated in the previous step as the assertion to generate the OAuth2 bearer token (abbreviated here).
 
-```
+```shell
 POST /nuxeo/oauth2/token HTTP/1.1
 Host: NUXEO_SERVER/nuxeo
 Accept: application/json
@@ -403,7 +360,7 @@ _The client ID and secret will be different than the JWT encoded secret._
 
 **Response:**
 
-```
+```shell
 HTTP/1.1 200 OK
 Cache-Control: no-cache
 Content-Length: 176
@@ -417,9 +374,10 @@ Content-Type: application/json;charset=ISO-8859-1
 }
 
 ```
+
 ### Refreshing an Access Token
 
-```
+```shell
 POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=refresh_token&client_id=myApp&refresh_token=refreshToken
 ```
 
@@ -464,7 +422,7 @@ POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=refresh_token&client_id=
 
 **Response:**
 
-```
+```shell
 HTTP/1.1 200 OK
 Cache-Control: no-cache
 Content-Length: 176
@@ -482,11 +440,11 @@ Content-Type: application/json;charset=ISO-8859-1
 
 Once you obtain an access token it can be used to access the protected Nuxeo resources with a request header or a query parameter. Like below using `curl`:
 
-```
+```shell
 curl -H "Authorization: Bearer ACCESS_TOKEN" https://NUXEO_SERVER/nuxeo/api/v1/path/default-domain
 ```
 
-```
+```shell
 curl https://NUXEO_SERVER/nuxeo/api/v1/path/default-domain?access_token=ACCESS_TOKEN
 ```
 
@@ -496,9 +454,9 @@ curl https://NUXEO_SERVER/nuxeo/api/v1/path/default-domain?access_token=ACCESS_T
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
-- [Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}})
-- [Using OpenID / OAuth 2 in Login Screen]({{page version='' space='nxdoc' page='using-openid-oauth2-in-login-screen'}})
-- [OAuth 2 Resource Endpoint]({{page version='' space='nxdoc' page='oauth2-endpoint'}})
+* [Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}})
+* [Using OpenID / OAuth 2 in Login Screen]({{page version='' space='nxdoc' page='using-openid-oauth2-in-login-screen'}})
+* [OAuth 2 Resource Endpoint]({{page version='' space='nxdoc' page='oauth2-endpoint'}})
 
 {{/panel}}
 </div>
