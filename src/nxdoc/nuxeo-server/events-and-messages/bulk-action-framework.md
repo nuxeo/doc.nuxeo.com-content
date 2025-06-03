@@ -114,6 +114,29 @@ If your action have some parameters, you can also validate them by adding a vali
 It is possible to add several options to the stream processor to tune the way the documents are processed.
 Please visit [nuxeo-runtime-stream README](https://github.com/nuxeo/nuxeo/blob/master/modules/runtime/nuxeo-runtime-stream/README.md) for more information.
 
+
+#### Controlling the Bulk Command Execution
+
+A Bulk command submitted to the Bulk Service contains a query that represents a list of items and an action to apply to this set. The execution of the Bulk command is divided into two parts:
+1. The scroll: The Scroll computation reads the submitted bulk command and materializes the query results into the action stream.
+2. The processing: The Action computation reads the action stream and applies the action to process the items.
+
+A Bulk action can be flagged as:
+- **Sequential Scroll**: All bulk commands are routed to the same scroll thread, eliminating parallel scrolling. The processing of items in a Bulk command can be concurrent. Multiple Bulk commands may briefly run in parallel, overlapping for a short duration. Examples: Actions like delete, update acl, move: where it is better to avoid parallel command that might conflict.
+```xml
+<action name="myAction" sequentialScroll="true" ... />
+```
+- **Sequential Processing**: All items of a Bulk command are processed sequentially by the same action thread. Multiple Bulk commands can be scrolled and processed in parallel. Example: For a Bulk action that run an automation operation to add docs to a collection, with a sequential processing avoids a concurrent update exception.
+```xml
+<action name="myAction" sequentialProcessing="true" ... />
+```
+- **Exclusive** Only one Bulk command can be submitted and run at a time. Submitting a Bulk command while another one is running results in an immediate error. The processing of items in the Bulk command can be concurrent. The entire execution is sequential. Example: heavy administrative operation like: full GC, migration, full reindex, or periodical tasks that can be skipped if already running (transient GC, workflow escalation, ...)
+```xml
+<action name="myAction" exclusive="true" ... />
+```
+
+Note that it is possible to have Sequential Bulk Command by using sequential Scroll with the bulk action on a stream with a single partition, or simply using an exclusive command.
+
 ## Bulk REST API
 
 Bulk Service APIs are accessible with REST API from two places:
