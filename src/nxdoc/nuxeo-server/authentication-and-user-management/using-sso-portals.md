@@ -2,15 +2,18 @@
 title: SSO with Portals
 review:
   comment: ''
-  date: '2016-12-14'
+  date: '2025-06-03'
   status: ok
 toc: true
 tree_item_index: 145
 labels:
-  - content-review-lts2017
   - authentication
   - dmetzler
 ---
+
+{{#> callout type='note' }}
+Deprecated since Nuxeo LTS 2025, use the [OAuth 2 Client Credentials Flow]({{page page='using-oauth2'}}#oauth-2-client-credentials-flow) instead.
+{{/callout}}
 
 This plugin provides a way to handle identity propagation between an external application and Nuxeo. It was coded to propagate user identify between a JSR168 portal and a Nuxeo server. The goal is to let the external application (ex: the portal) call the Nuxeo API _"on behalf"_ of the interactive users. This ensures that:
 
