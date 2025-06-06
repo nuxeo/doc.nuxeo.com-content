@@ -400,14 +400,14 @@ On the **View** tab of your document:
 ### Create a Retention Event
 
 There are 2 types of event that can trigger a [retention event-based rule](#based-on-an-event):
-  * [Nuxeo Platform Event]({{page page='common-events'}}) such as `documentCreated`, `documentModified` or `documentMoved`, etc. automatically fired by the nuxeo server
+  * [Nuxeo Platform Event]({{page page='common-events'}}) such as `documentCreated`, `documentModified` or `documentMoved` are automatically fired by the nuxeo server
   * Retention Business Event fired manually by an app user or a 3rd party app
 
 To add a new retention event that can be referenced when defining a [retention event-based rule](#based-on-an-event):
 
-1. Go to the Administration menu
-2. Click Vocabularies
-3. Select the `RetentionEvent` vocabulary
+1. Go to the Administration menu.
+2. Click Vocabularies.
+3. Select the `RetentionEvent` vocabulary.
 4. Click `Add Entry`:
   * To add a [Nuxeo Platform Event]({{page page='common-events'}}), just enter the event name in the `ID` field.
     or
