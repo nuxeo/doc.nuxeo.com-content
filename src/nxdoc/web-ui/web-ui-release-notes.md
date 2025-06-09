@@ -23,9 +23,10 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
+<!-- | [Web UI 2025.4.0]({{page page='web-ui-release-notes-2025-4-0'}})                  | Accessibility and Veracode Vulnerability fixes for WebUI and bugfix release     | -->
+
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-<!-- | [Web UI 2025.4.0]({{page page='web-ui-release-notes-2025-4-0'}})                  | Accessibility and Veracode Vulnerability fixes for WebUI and bugfix release     | -->
 | [Web UI 2025.3.0]({{page page='web-ui-release-notes-2025.3.0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release   | 
 | [Web UI 2025.2.0]({{page page='web-ui-release-notes-2025.2.0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release   | 
 
