@@ -16,7 +16,6 @@ hidden: true
 {{! multiexcerpt name='web-ui-updates'}}
 
 ## What’s New in Web UI for LTS 2023 (Version 3.1.19)
-
 **Accessibility enhancements** -
 
 - The main navigation drawer list and its items are now highly accessible via keyboard navigation.
@@ -57,8 +56,6 @@ hidden: true
 - Fixed Braces vulnerability flagged by Veracode by Bumping gulp to version 5.0.0
 
 - Upgraded path-to-regexp in @nuxeo/page.js, made required code adjustments, published the new version, and integrated it into WebUI to mitigate the vulnerability.
-
-
 
 ### Other Noteworthy Changes
 
