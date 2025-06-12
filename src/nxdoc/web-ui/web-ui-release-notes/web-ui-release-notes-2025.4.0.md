@@ -61,4 +61,5 @@ hidden: true
 
 - Fixed nuxeo-dropzone to support multiple file uploads without overwriting previous files.<br/>
 
+
 {{! /multiexcerpt}}
