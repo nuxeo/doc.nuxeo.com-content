@@ -1,5 +1,5 @@
 ---
-title: Version 2025.3.0
+title: Version 2025.4.0
 description: Discover what's new in Web UI 2025.4.0.
 review:
   comment: ''
@@ -8,7 +8,7 @@ review:
 toc: true
 labels:
 tree_item_index: 997
-hidden: true
+hidden: false
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
@@ -23,7 +23,7 @@ hidden: true
 - Color contrast improvements on WebUI elements as per WCAG standards have been applied to headers, instructions, and actionable components by modifying opacity and color. Minor updates are planned for the next release.
   - Regular text: Contrast ratio of 4.5:1
   - Large-Scale Text: Contrast ratio of 3:1
-  -  User Interface Components: Contrast ratio of 3:1
+  - User Interface Components: Contrast ratio of 3:1
 
 - Tables are now identified for screen readers. All tables in the Nuxeo Web UI now have single indicators to identify each table, improving intermediate and advanced screen reader proficiency. This means that screen readers will be able to identify tables every time they access them.
 
