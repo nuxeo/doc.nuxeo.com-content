@@ -105,7 +105,7 @@ You can now prepare a `values.yaml` file containing the parameter to deploy the 
 
 ```yaml
 global:
-  arenderVersion: "2.1.4"
+  arenderVersion: "2025.0.0"
   imagePullSecrets:
   - name: docker-arender-packages-nuxeo-pull-secret
 
@@ -185,7 +185,7 @@ The following table lists some of the configurable parameters for the NEV Helm C
 
 | Key                                                 | Type                         | Default                          | Description                                                                                                                                                           |
 | --------------------------------------------------- | ---------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| global.arenderVersion                               | string                       | 2.1.3                            | The NEV version to deploy                                                                                                                                             |
+| global.arenderVersion                               | string                       | 2025.0.0                         | The NEV version to deploy                                                                                                                                             |
 | global.imagePullSecrets                             | list of object with name key | []                               | The pull secrets used to pull NEV Docker images                                                                                                                       |
 | arender.rendition.sharedTmpFolder.storage.className | string                       | ""                               | The className to use for the shared PVC, it must supports RWX                                                                                                         |
 | arender.rendition.sharedTmpFolder.storage.size      | string                       | "50Gi"                           | The size of the shared PVC                                                                                                                                            |
