@@ -27,7 +27,7 @@ hidden: true
 
 - Tables are now identified for screen readers. All tables in the Nuxeo Web UI now have single indicators to identify each table, improving intermediate and advanced screen reader proficiency. This means that screen readers will be able to identify tables every time they access them.
 
-- The “Details" accordion under "View" tab, is now accessible via keyboard navigation and screen readers.
+- The “Details" accordion under "View" tab is now accessible via keyboard navigation and screen readers.
 
 - Fixed A11y test failures in GitHub Actions to ensure ongoing compliance with accessibility standards.
 
@@ -53,7 +53,7 @@ hidden: true
 
 - Fixed tar-fs vulnerability flagged by Veracode by overriding ws and tar-fs to secure versions.
 
-- Fixed Braces vulnerability flagged by Veracode by Bumping gulp to version 5.0.0
+- Fixed Braces vulnerability flagged by Veracode by Bumping gulp to version 5.0.0.
 
 - Upgraded path-to-regexp in @nuxeo/page.js, made required code adjustments, published the new version, and integrated it into WebUI to mitigate the vulnerability.
 
