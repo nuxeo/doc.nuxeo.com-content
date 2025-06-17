@@ -101,6 +101,24 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 31
+
+### Allow Having FFMpeg Installed in the LTS 2023/2025 Docker Image
+
+Upgraded ImageMagick 7 from 7.1.1.36-341 to 7.1.1.47-1.
+
+### Fix Vim Low CVE in Docker Image
+
+Vim editor was upgraded in the Docker image from `8.2.2637-21.0.1` to `8.2.2637-22.0.1`.
+
+### Fix Commons-Beanutils CVE in 2023
+
+Upgraded the `commons-beanutils:commons-beanutils` dependency from 1.10.0 to 1.11.0.
+
+### Fix Postgresql CVE in 2023/2025
+
+Upgraded the `org.postgresql:postgresql` dependency from 42.7.5 to 42.7.7.
+
 ## Hotfix 29
 
 ### Restrict the Visibility of Administrators' Members
