@@ -652,6 +652,20 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
 
+## Hotfix 3
+
+### Allow Having FFMpeg Installed in the LTS 2023/2025 Docker Image
+
+Upgraded ImageMagick 7 from 7.1.1.36-341 to 7.1.1.47-1.
+
+### Fix Vim Low CVE in Docker Image
+
+Vim editor was upgraded in the Docker image from `8.2.2637-21.0.1` to `8.2.2637-22.0.1`.
+
+### Deprecate Portal SSO Authentication
+
+The [nuxeo-platform-login-portal-sso](https://github.com/nuxeo/nuxeo-lts/tree/2025/modules/platform/login/nuxeo-platform-login-portal-sso) module was deprecated in LTS 2025. Use [OAuth 2.0 Client Credentials flow](https://doc.nuxeo.com/nxdoc/using-oauth2/#oauth-2-client-credentials-flow) instead.
+
 ## Hotfix 1
 
 ### Migration Tool to Extract Full Text From Mongo DB to an S3 Blob
