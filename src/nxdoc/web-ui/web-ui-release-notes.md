@@ -27,9 +27,5 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| [Web UI 2025.3.0]({{page page='web-ui-release-notes-2025.3.0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release   | 
-| [Web UI 2025.2.0]({{page page='web-ui-release-notes-2025.2.0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release   | 
-
-## What’s New in Web UI for LTS 2025 (Version 2025.1.0)
-
-The latest WebUI release, compatible with the LTS 2025 version of the Nuxeo platform, includes new WebUI and Elements branches for LTS 2025, with updates to GitHub workflows, package.json, and pom.xml files.
+| [Web UI 2025.3.0]({{page page='web-ui-release-notes-2025-3-0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release   | 
+| [Web UI 2025.2.0]({{page page='web-ui-release-notes-2025-2-0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release   | 
