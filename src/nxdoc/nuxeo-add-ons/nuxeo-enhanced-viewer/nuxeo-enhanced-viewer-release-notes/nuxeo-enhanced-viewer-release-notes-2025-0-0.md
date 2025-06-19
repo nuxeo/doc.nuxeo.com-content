@@ -61,5 +61,11 @@ ARender was updated to the latest version, see the various Release Notes:
 - [https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-7-0](https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-7-0|smart-link) 
 - [https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-8-0](https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-8-0|smart-link) 
 
+### Upgrading from NEV 2.x to 2025.x
+
+To upgrade to NEV `2025.x`, update the NEV Helm Chart to the latest `2.x` version.
+
+ARender software was updated from `4.8.x` to `2023.x` version. For additional information, check the [ARender Upgrade Guide](https://docs.arender.io/guides/upgrade/4.8_to_2023.0/).
+
 
 {{! /multiexcerpt}}
