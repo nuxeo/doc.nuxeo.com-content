@@ -83,7 +83,7 @@ As it contains some non-free codecs, FFmpeg isn't part of the Nuxeo image. Howev
 ```Dockerfile
 FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
 
-# We need to be the root user to run dnf commands
+# You need to be a root user to run dnf commands
 USER 0
 # install RPM Fusion free repository
 RUN dnf -y install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm
