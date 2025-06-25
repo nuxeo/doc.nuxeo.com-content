@@ -17,7 +17,7 @@ hidden: true
 
 ## Returns the readOnly Attribute for "Directory" Objects
 
-The /directory/{name} REST endpoint now returns whether the directory is read only
+The /directory/{name} REST endpoint now returns whether the directory is read only.
 
 
 {{! /multiexcerpt}}
