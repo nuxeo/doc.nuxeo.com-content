@@ -25,7 +25,7 @@ This page mentions the key elements that should be kept in mind every time a Nux
 For every component, the Nuxeo architecture must follow the compatibility matrix for your LTS distribution. The supported component versions are heavily tested, and all hotfixes and security fixes cover the specified versions during the support period.
 
 {{#> callout type='info' heading='Useful links'}}
-[Compatibility Matrix for LTS 2023]({{page page='compatibility-matrix'}})</br>
+[Compatibility Matrix for LTS 2025]({{page page='compatibility-matrix'}})</br>
 [Supported Versions](https://www.nuxeo.com/legal/supported-versions/)
 {{/callout}}
 
