@@ -17,11 +17,11 @@ hidden: true
 
 ## Harmonize Delegation and Reassignment Emails
 
-Task delegation and reassignement emails now both display who did the delegation or reassignment along with comment if any
+Task delegation and reassignment emails now both display who did the delegation or reassignment along with comment if any.
 
 ## Returns the readOnly Attribute for "Directory" Objects
 
-The /directory/{name} REST endpoint now returns whether the directory is read only.
+The `/directory/{name}` REST endpoint now returns whether the directory is read only.
 
 
 {{! /multiexcerpt}}
