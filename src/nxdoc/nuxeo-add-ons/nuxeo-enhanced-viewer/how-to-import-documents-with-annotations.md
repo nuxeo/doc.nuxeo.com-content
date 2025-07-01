@@ -186,7 +186,8 @@ Here is an example of the Nuxeo annotations for a document with 3 ARender annota
 ## Code Sample
 
 You can find below a simple method to use if you want to migrate former annotations with Java code:
-```
+
+```java
 package com.nuxeo.arender;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
@@ -209,6 +210,7 @@ import com.arondor.viewer.client.api.document.DocumentLayout;
 import com.arondor.viewer.client.api.document.DocumentPageLayout;
 import com.arondor.viewer.client.api.document.PageDimensions;
 import com.arondor.viewer.common.client.util.annotation.AnnotationIdAdapter;
+import com.arondor.viewer.common.document.ActionType;
 import com.arondor.viewer.common.documentservice.DocumentServiceDelegate;
 import com.arondor.viewer.common.documentservice.DocumentServiceDelegateNotAvailable;
 import com.arondor.viewer.rendition.api.document.DocumentAccessor;
@@ -280,7 +282,7 @@ public class NuxeoARenderMapper {
         private final DocumentLayout layout;
 
         protected NuxeoDocumentService(DocumentLayout layout) {
-            super(true);
+            super();
             this.layout = layout;
         }
 
@@ -314,7 +316,19 @@ public class NuxeoARenderMapper {
         }
 
         @Override
+        public DocumentId mayProcessAnnotationRendition(DocumentId documentId, ActionType actionType) {
+            // not needed
+            return null;
+        }
+
+        @Override
         public boolean needsToProcessRenditionsForDocument(DocumentId documentId) {
+            // not needed
+            return false;
+        }
+
+        @Override
+        public boolean needsToProcessRenditionsForDocument(DocumentId documentId, ActionType actionType) {
             // not needed
             return false;
         }
@@ -325,11 +339,11 @@ public class NuxeoARenderMapper {
 
 You will need the following Maven dependencies:
 ```
-<properties>
-    <!-- properties were taken from 10.4.x -->
-    <arender.version>4.2.0.NX1.2</arender.version>
+  <properties>
+    <!-- properties were taken from NEV 2025.0.0 -->
+    <arender.version>2023.9.0</arender.version>
     <!-- doesn't change a lot -->
-    <nuxeo.java.client.version>3.8.0</nuxeo.java.client.version>
+    <nuxeo.java.client.version>4.0.1</nuxeo.java.client.version>
   </properties>
 
   <dependencyManagement>
