@@ -186,10 +186,6 @@ Watch the related courses on Hyland University:</br>
 ![university-template-rendering.png](/nx_assets/7cb24a5f-56aa-441c-ab4c-079d984485dc.png ?w=450,border=true)
 {{/callout}}
 
-{{#> callout type='info' heading='Template Rendering with Nuxeo JSF UI and Nuxeo Web UI'}}
-**Nuxeo JSF UI** is needed to configure the document template. As an end user you don't need to configure it as the rendering button is exposed in **Nuxeo Web UI** in the Document Action Toolbar.
-{{/callout}}
-
 ## Installation
 
 {{{multiexcerpt 'mp-installation-easy' page='Generic Multi-Excerpts'}}}
@@ -302,10 +298,6 @@ Here are a few examples of the most common variables:
 {{/callout}}
 
 #### Creating the Template Document
-
-{{#> callout type='warning' heading='Nuxeo JSF UI'}}
-The template document is configured in Nuxeo JSF UI. Consequently, you need to install `nuxeo-jsf-ui` addon.
-{{/callout}}
 
 When the template file is done, you need to create a template document and attach the template file to it.
 Templates can be created in the Templates space, in workspaces and in folders.
