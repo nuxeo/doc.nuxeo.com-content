@@ -1,6 +1,6 @@
 ---
 title: Configuring the Search Mapping
-description: This documentation page talks about the many aspects you can tune for improving the search experience for your users when it comes to searching the document repository index using the nuxeo-search-client-opensearch1 package.
+description: This documentation page talks about the many aspects you can tune for improving the search experience for your users when it comes to searching the document repository index using the nuxeo-search-client-opensearch package.
 review:
     comment: ''
     date: '2017-12-13'
@@ -196,7 +196,10 @@ Watch the related courses on Hyland University
 ![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
-The Nuxeo `nuxeo-search-client-opensearch1` package gives you access to your OpenSearch or Elasticsearch cluster. The package comes with a default mapping that can work with custom fields of your schemas, but in a limited way. To leverage the search capabilities of OpenSearch/Elasticsearch, you need to define your own mapping, for instance in the following cases:
+The Nuxeo `nuxeo-search-client-opensearch1` package gives you access to your OpenSearch 1.x or Elasticsearch 7.x or 8.x cluster. 
+The Nuxeo `nuxeo-search-client-opensearch2` package gives you access to your OpenSearch 2.x cluster.
+
+Search client packages comes with a default mapping that can work with custom fields of your schemas, but in a limited way. To leverage the search capabilities of OpenSearch/Elasticsearch, you need to define your own mapping, for instance in the following cases:
 
 *   use of a non English or a custom analyzer
 *   use a specific NXQL operators on a custom field: `LIKE`, `ILIKE`, `ecm:fulltext.custom`, `STARTSWITH`
