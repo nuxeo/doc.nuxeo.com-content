@@ -624,7 +624,7 @@ GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/docs_by_title_complex/execute?np%
 
 #### With OpenSearch/Elasticsearch
 
-When you have installed the `nuxeo-search-client-opensearch1` package, the SearchService PP will query the OpenSearch index.
+When you have installed the `nuxeo-search-client-opensearch1` or `nuxeo-search-client-opensearch2` package, the SearchService PP will query the OpenSearch index.
 
 {{#> panel type='code' heading='Default Page provider in Nuxeo Server'}}
 

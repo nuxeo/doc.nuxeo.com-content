@@ -446,11 +446,13 @@ The following table and schema gives an overview of the different ways of queryi
 
 ## {{> anchor 'searchclient'}}SearchClient Configuration
 
-Since Nuxeo LTS 2025, you have to explicitly choose and install a SearchClient package. By default the SearchService will be configured with a Repository SearchClient that is using the underlying repository data store (VCS or DBS) with limited capabilities regarding fulltext search, aggregation and scalability.
+Since Nuxeo LTS 2025, you have to explicitly choose and install a SearchClient package. By default, the SearchService will be configured with a Repository SearchClient that is using the underlying repository data store (VCS or DBS) with limited capabilities regarding fulltext search, aggregation and scalability.
 
-It's therefore recommended to rely on an external search engine like OpenSearch 1.x, ElasticSearch 7.x or 8.x cluster. For this purpose, you need to install the`nuxeo-search-client-opensearch1` package.
+It's therefore recommended to rely on an external search engine.
+For OpenSearch 1.x, ElasticSearch 7.x or 8.x cluster, you need to install the`nuxeo-search-client-opensearch1` package.
+For OpenSearch 2.x, you need to install the`nuxeo-search-client-opensearch2` package.
 
-It's also possible for testing purpose to run an embedded OpenSearch 1.x server in the same JVM as Nuxeo by installing the `nuxeo-opensearch1-embed` package.
+It's also possible for testing purpose to run an embedded OpenSearch server in the same JVM as Nuxeo by installing the `nuxeo-opensearch1-embed` or `nuxeo-opensearch2-embed` package.
 
 {{#> callout type='warning' }}
 This embedded mode **is only for testing purpose** and should not be used in production.
