@@ -13,11 +13,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2024-01' space='studio' page='studio-updates-2024-01'}}}
-
-## Learn More
-
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'4.5.0','4.5.1','4.5.2','4.5.3'%29) is available in our bug tracking tool.
+{{{multiexcerpt 'studio-updates-2025-07' space='studio' page='studio-updates-2025-07'}}}
 
 ---
 
@@ -25,6 +21,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [July 2025]({{page page='studio-updates-2025-07'}})                  | Bugfixes on Studio Modeler and Designer |
 | [January 2024]({{page page='studio-updates-2024-01'}})               | Connect/Account Managment |
 | [July 2023]({{page page='studio-updates-2023-07'}})               | Structure templates |
 | [April 2023]({{page page='studio-updates-2023-04'}})               | ElasticSearch Mapping |
