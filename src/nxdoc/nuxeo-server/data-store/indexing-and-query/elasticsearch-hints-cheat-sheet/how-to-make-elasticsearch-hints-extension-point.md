@@ -27,7 +27,7 @@ The idea is to replace the hardcoded NXQL hint with a contribution system.
 ## OpenSearch Hint Contribution
 
 To contribute or override an existing OpenSearch/Elasticsearch hint, you should provide a name for your hint and an implementation of:
-`org.nuxeo.ecm.core.search.client.opensearch1.OpenSearchHintQueryBuilder`
+`org.nuxeo.ecm.core.search.client.opensearch1.OpenSearchHintQueryBuilder` (or `org.nuxeo.ecm.core.search.client.opensearch2.OpenSearchHintQueryBuilder` depending on your OpenSearch version)
 
 Each hint would have **a name and a class** that implement the same Java interface with one method that takes the three parameters (field, analyzer and value) and returns the resulting ES query object. This doesn't impact the parsing process of a query, but the connection between the ES hint (NXQL operator) and the ES query.
 
@@ -61,7 +61,7 @@ public class FuzzyOpenSearchHintQueryBuilder implements OpenSearchHintQueryBuild
 
 The way to expose the hints is by creating a contribution as below:
 
-- We use the Extension Point : `org.nuxeo.ecm.core.search.client.opensearch1`
+- We use the Extension Point : `org.nuxeo.ecm.core.search.client.opensearch1` if you are using the `nuxeo-search-client-opensearch1` package, if you are on Opensearch 2.x you need to use the `org.nuxeo.ecm.core.search.client.opensearch2` enpoint. 
 - The name of XP is `hint`
 - Our "fuzzy" switch case, will be done like below :
 

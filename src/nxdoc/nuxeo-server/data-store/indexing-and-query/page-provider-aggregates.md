@@ -160,7 +160,7 @@ The Nuxeo Platform focuses on bucket aggregation. In addition to accessing the d
 
 > Each bucket is associated with a criterion (depending on the aggregation type) which determines whether or not a document in the current context "falls" into it. In other words, the buckets effectively define document sets. In addition to the buckets themselves, the 'bucket' aggregations also compute and return the number of documents that "fell in" to each bucket.
 
-When the `nuxeo-search-client-opensearch1` package is installed, the Nuxeo Platform default search leverages OpenSearch aggregates on some default document properties.
+When the `nuxeo-search-client-opensearch1` or `nuxeo-search-client-opensearch2` package is installed, the Nuxeo Platform default search leverages OpenSearch aggregates on some default document properties.
 
 ![Nuxeo 6.0 default search]({{file name='aggregates.png'}} ?w=600 'Nuxeo 6.0 default search')
 

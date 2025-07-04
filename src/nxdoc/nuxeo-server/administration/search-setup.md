@@ -695,11 +695,11 @@ curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo/_set
 
 ```
 
-## Disabling Elasticsearch
+## Disabling OpenSearch
 
 Simply don't install the `nuxeo-search-client-opensearch1` package.
 
-### Disabling Elasticsearch for Audit Logs{{> anchor 'disabling-es-for-audit-logs'}}
+### Disabling OpenSearch for Audit Logs{{> anchor 'disabling-es-for-audit-logs'}}
 
 Simply, don't install the `nuxeo-audit-opensearch1` package.
 
@@ -823,6 +823,23 @@ You need to define an index for each repository. This is done by adding an `elas
     ```
 
     Where `repo2` is the name of the second repository and `nuxeo-repo2` the OpenSearch index name.
+
+## Setting up an OpenSearch 2.x Cluster{{> anchor 'setting-up-opensearch2'}}
+
+In order to use an OpenSearch 2.x cluster, you need to install `nuxeo-search-client-opensearch2` package.
+
+If you want to set up an OpenSearch server that runs in the same JVM as the Nuxeo Platform's, you have to install explicitly the `nuxeo-opensearch2-embed` package. For production, you need to set up a Search cluster.
+
+Currently, the configuration is identical to OpenSearch 1, with a single change: all OpenSearch 1 options must be updated to OpenSearch 2.
+
+For instance, you will have to use:
+```
+nuxeo.opensearch2.client.server=http://somenode:9200,https://anothernode:443
+nuxeo.opensearch2.client.username=your_username
+...
+nuxeo.search.client.default.opensearch2.index.name=nuxeo
+...
+```
 
 ## Investigating and Reporting Problems
 

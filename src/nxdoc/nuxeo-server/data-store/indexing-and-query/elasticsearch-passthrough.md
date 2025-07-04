@@ -102,13 +102,13 @@ history:
 Some search client packages allow the use of the HTTP REST API provided by the search engine back-end.
 {{! /excerpt}}
 
-## OpenSearch1 Search Client
+## OpenSearch Search Client
 
 ### Principle
 
 OpenSearch/Elasticsearch exposes a search API to request indexes with HTTP requests (see [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)). Elasticsearch does not perform authentication or authorization. The purpose of the [Search Passthrough](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only) is to expose a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
 
-Concretely, when installing the `nuxeo-search-client-opensearch1` package, HTTP requests are not sent to the Elasticsearch back end but addressed to the Nuxeo Platform which will rework the query to add a filter according to a Principal and forward them to the Elasticsearch cluster.
+Concretely, when installing the `nuxeo-search-client-opensearch1` or `nuxeo-search-client-opensearch2` package, HTTP requests are not sent to the Elasticsearch back end but addressed to the Nuxeo Platform which will rework the query to add a filter according to a Principal and forward them to the Elasticsearch cluster.
 
 The Nuxeo passthrough is available at **http://my-nuxeo-server:8080/nuxeo/site/es**.
 

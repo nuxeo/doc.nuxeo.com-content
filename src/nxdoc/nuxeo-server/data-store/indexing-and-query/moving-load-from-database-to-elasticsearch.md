@@ -240,7 +240,7 @@ db.default.updateMany({}, {$unset: {"ecm:fulltextSimple":1}});
 
 ## Using a Search Engine Pass Through (HTTP API)
 
-The OpenSearch1 search client package comes with PassThrough endpoint, it exposes a limited set of Read Only OpenSearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
+The OpenSearch search client package comes with PassThrough endpoint, it exposes a limited set of Read Only OpenSearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
 
 See the [OpenSearch Passthrough]({{page page='elasticsearch-passthrough'}}) page for more information.
 
