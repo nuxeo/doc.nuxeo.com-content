@@ -80,7 +80,7 @@ The two factors authentication is executing the following steps:
 
 You must [subscribe](https://signup.duo.com/) to DuoWeb services and follow [DuoWeb documentation](https://duo.com/docs/duoweb) to create all DuoWeb Keys.
 
-After installing the plugin, make sure before starting to define the following nuxeo configuration property:
+After installing the plugin, make sure to define the following Nuxeo configuration properties before you start:
 
 ```
 nuxeo.duoweb.clientId=
