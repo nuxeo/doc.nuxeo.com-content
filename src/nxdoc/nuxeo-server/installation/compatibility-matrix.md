@@ -124,9 +124,9 @@ Nuxeo is shipped with an embedded Tomcat server.
 ## OpenSearch
 
 Nuxeo Platform is fully tested against OpenSearch1 cluster:
-- an OpenSearch cluster {{! multiexcerpt name='opensearch_cluster_supported_version'}}1.3.20{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch_libraries_supported_version'::}}1.3.20{{! /multiexcerpt}}.
+- an OpenSearch cluster {{! multiexcerpt name='opensearch_cluster_supported_version'}}1.3.20{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch1_libraries_supported_version'}}1.3.20{{! /multiexcerpt}}.
 For now, Nuxeo Platform is partially tested against an embedded OpenSearch2:
-- an OpenSearch cluster {{! multiexcerpt name='opensearch2_cluster_supported_version'}}2.18.0{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch_libraries_supported_version'::}}2.23.0{{! /multiexcerpt}}.
+- an OpenSearch cluster {{! multiexcerpt name='opensearch2_cluster_supported_version'}}2.18.0{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch2_libraries_supported_version'}}2.23.0{{! /multiexcerpt}}.
 
 More information can be found on the [OpenSearch Setup]({{page page='search-setup'}}) page.
 
