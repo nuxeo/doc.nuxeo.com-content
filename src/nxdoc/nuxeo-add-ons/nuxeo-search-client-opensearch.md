@@ -20,5 +20,5 @@ Therefore we provide 2 OpenSearch packages to rely on this external search engin
 
 ## Configuration 
 
-For more information about the configuration of the OpenSearch package, please read the [Search documentation]({{page page='search-setup'}}setting-up-opensearch2).
+For more information about the configuration of the OpenSearch package, please read the [Search documentation]({{page page='search-setup'}}#setting-up-an-opensearch-2x-cluster).
 
