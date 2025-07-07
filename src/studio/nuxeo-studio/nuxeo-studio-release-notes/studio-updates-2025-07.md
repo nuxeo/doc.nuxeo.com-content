@@ -15,7 +15,7 @@ toc: true
 ### Studio Designer
 
 #### Header Compatibility for Custom Document Types
-Resolved an issue affecting custom document types that extend Folder, where default view layouts defined via <nuxeo-page-provider> included HTTP headers with dots (e.g., X-NXfetch.document). These headers were incompatible with certain infrastructure setups, such as Azure Application Gateway, which enforce stricter RFC compliance and block headers containing dots.
+Resolved an issue affecting custom document types that extend Folder, where default view layouts defined via <nuxeo-page-provider> included HTTP headers with dots (for example, X-NXfetch.document). These headers were incompatible with certain infrastructure setups, such as Azure Application Gateway, which enforce stricter RFC compliance and block headers containing dots.
 
 **What Changed:**
 Replaced dots (.) in HTTP header names with hyphens (-) to ensure compatibility.</br>
