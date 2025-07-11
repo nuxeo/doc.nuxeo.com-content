@@ -41,7 +41,7 @@ Discover here new features, improvements and bug fixes for each of our products 
 
 &#8211; &nbsp; [Drive]({{page space='client-apps' page='nuxeo-drive-release-notes'}})</br>
 &#8211; &nbsp; [Aspera]({{page space='nxdoc' page='nuxeo-aspera-release-notes'}})</br>
-&#8211; &nbsp; [Nuxeo Enhanced Viewer]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer-release-notes'}})
+&#8211; &nbsp; [Nuxeo Enhanced Viewer]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer-release-notes'}})</br>
 &#8211; &nbsp; [Nuxeo AI]({{page version='2023' space='nxdoc' page='nuxeo-ai-4.0.2.md'}})
 
 
