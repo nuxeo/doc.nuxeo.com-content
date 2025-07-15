@@ -101,6 +101,19 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 33
+
+### Upgrade DuoWeb SDK to the Latest Version
+
+See [https://doc.nuxeo.com/nxdoc/nuxeo-duoweb-two-factor-authentication/](https://doc.nuxeo.com/nxdoc/nuxeo-duoweb-two-factor-authentication/|smart-link)  for configuring Duo's two-factor authentication.
+
+### Fix JSF 2023 Functional Tests Failing on Document Update
+
+We’ve added two nuxeo.conf parameters, allowing to configure the Tomcat Connector’s `maxPartCount` and `maxPartHeaderSize` attributes. The default values match the ones set in the future version of Tomcat, 9.0.107:
+
+- `nuxeo.server.http.maxPartCount=50`
+- `nuxeo.server.http.maxPartHeaderSize=512`
+
 ## Hotfix 31
 
 ### Allow Having FFMpeg Installed in the LTS 2023/2025 Docker Image
