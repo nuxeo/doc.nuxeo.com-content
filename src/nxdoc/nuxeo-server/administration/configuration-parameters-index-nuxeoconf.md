@@ -1800,6 +1800,18 @@ There're two possible values, changing slightly the before/after reload logic:
 
 * * *
 
+#### `nuxeo.collection.max.size`
+
+Maximum number of collection's member. See also [Collection documentation]({{page page='collections'}}#core-implementation).
+
+**Since LTS 2025.6**
+
+**Default Value**
+
+`10000`
+
+* * *
+
 #### `nuxeo.selection.selectAllEnabled`
 
 Enables users to select all documents from results listings in the UI and to execute a bulk action on them. Learn more with the [bulk actions documentation]({{page page='web-ui-bulk-actions'}}).
