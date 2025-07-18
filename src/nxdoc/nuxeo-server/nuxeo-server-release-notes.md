@@ -18,7 +18,7 @@ This page relates to the release notes of Nuxeo Server and related addons for LT
 This page mentions what's new. Refer to the [upgrade notes]({{page page='upgrade-from-lts-2023-to-lts-2025'}}) to transition to this version.
 {{/callout}}
 
-{{{multiexcerpt 'nuxeo-server-updates-2025-4' page='nuxeo-server-release-notes-2025-4'}}}
+{{{multiexcerpt 'nuxeo-server-updates-2025-5' page='nuxeo-server-release-notes-2025-5'}}}
 
 {{#> callout type='info' heading='Upgrade Notes'}}
 Refer to the [LTS 2025 upgrade notes]({{page page='hotfixes-installation-notes-for-nuxeo-platform-lts-2025'}}) to transition to this version.
@@ -28,11 +28,13 @@ Refer to the [LTS 2025 upgrade notes]({{page page='hotfixes-installation-notes-f
 
 | Version                                                                       | Release date                 |
 | ----------------------------------------------------------------------------- | ---------------------------- |
+| [LTS 2025.5 / 2025-HF05]({{page page='nuxeo-server-release-notes-2025-5'}}) | 2025-07-21 |
 | [LTS 2025.4 / 2025-HF04]({{page page='nuxeo-server-release-notes-2025-4'}}) | 2025-06-30 |
 | [LTS 2025.3 / 2025-HF03]({{page page='nuxeo-server-release-notes-2025-3'}}) | 2025-06-02 |
 | [LTS 2025.2 / 2025-HF02]({{page page='nuxeo-server-release-notes-2025-2'}}) | 2025-05-12 |
 | [LTS 2025.1 / 2025-HF01]({{page page='nuxeo-server-release-notes-2025-1'}}) | 2025-04-21 |
 | [LTS 2025.0 / 2025-HF0]({{page page='nuxeo-server-release-notes-2025-0'}}) | 2025-03-31 |
+
 
 
 
