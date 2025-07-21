@@ -654,6 +654,15 @@ The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implem
 
 ## Hotfix 5
 
+### Remove Dependency on `commons-lang` libraries
+
+Removed the following dependencies from the root POM’s dependencyManagement section. If your project depends on the Nuxeo parent POM and relies on these libraries, you’ll have to upgrade your project to not depend on these libraries anymore.
+
+* `net.sf.json-lib:json-lib`
+* `commons-lang:commons-lang`
+
+Also, removed the following library from the Nuxeo Docker image and Tomcat server ZIP: `$NUXEO_HOME/lib/commons-lang-2.6.jar`.
+
 ### Upgrade DuoWeb SDK to the Latest Version
 
 See [https://doc.nuxeo.com/nxdoc/nuxeo-duoweb-two-factor-authentication/](https://doc.nuxeo.com/nxdoc/nuxeo-duoweb-two-factor-authentication/) for configuring Duo's two-factor authentication.
