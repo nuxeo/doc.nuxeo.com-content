@@ -15,6 +15,15 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2023-33'}}
 # What's New in LTS 2023.33 / LTS 2023-HF33
 
+## Remove Dependency on `commons-lang` libraries
+
+We removed the following dependencies from the root POM’s dependencyManagement section. If your project depends on the Nuxeo parent POM and relies on these libraries, you’ll have to upgrade your project to not depend on these libraries anymore.
+
+* `net.sf.json-lib:json-lib`
+* `commons-lang:commons-lang`
+
+Also, we removed the following library from the Nuxeo Docker image and Tomcat server ZIP: `$NUXEO_HOME/lib/commons-lang-2.6.jar`.
+
 ## Support Kafka in KRaft Mode
 
 Kafka in KRaft mode is now supported.
