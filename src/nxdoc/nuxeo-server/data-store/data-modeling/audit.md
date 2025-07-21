@@ -133,11 +133,23 @@ The data record structure is defined in Java by the `LogEntry` and `ExtendedInfo
 
 Nuxeo documents and events can have a lot of custom properties, so if you want to log some specific events or document properties, the [Extended Info](#extendedinfo) allows for a Key/Value type storage that will be associated to the main `LogEntry` record. These informations are extracted from the event message using and EL (Expression Language) expression and stored into a map.
 
-Since LTS 2025, you have to explicitly choose a backend implementation. See below.
+### Audit Back-ends
 
-### OpenSearch/Elasticsearch Back-end
+Since LTS 2025, you have to explicitly choose a backend implementation from the following implementations listed below:
 
-By installing the `nuxeo-audit-opensearch1` package, you have the previous default behavior of storing audit into an OpenSearch/Elasticsearch cluster.
+| Backend                                  | Marketplace Package             |
+| ---------------------------------------- | ------------------------------- |
+| In-Memory (not for production)           | Built-in Nuxeo Server (default) |
+| OpenSearch 1.x / ElasticSearch 7.x - 8.x | nuxeo-audit-opensearch1         |
+| OpenSearch 2.x                           | nuxeo-audit-opensearch2         |
+| MongoDB                                  | nuxeo-audit-mongodb             |
+| SQL DataBase (Legacy)                    | nuxeo-audit-sql                 |
+
+More information below.
+
+#### OpenSearch 1.x / Elasticsearch 7.x - 8.x Back-end
+
+By installing the `nuxeo-audit-opensearch1` package, you have the previous default behavior of storing audit into an OpenSearch 1.x / Elasticsearch 7.x - 8.x cluster.
 
 The audit entries are stored in an OpenSearch index named by the `nuxeo.audit.backend.default.opensearch1.index.name` property (previously `audit.elasticsearch.indexName`) in `nuxeo.conf`.
 
@@ -147,14 +159,21 @@ Make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index](
 
 Fore more information about the global Elasticsearch setup, see [Elasticsearch Setup]({{page page='elasticsearch-setup'}}).
 
-### MongoDB Back-end
+#### OpenSearch 2.x Back-end
+
+To use OpenSearch 2.x back-end, you have to install the `nuxeo-audit-opensearch2` package.
+
+The entries are stored in the `nuxeo-audit` index by default.
+You can configure it by setting the `nuxeo.audit.backend.default.opensearch2.index.name` property in your `nuxeo.conf`.
+
+#### MongoDB Back-end
 
 To use MongoDB back-end, you have to install the `nuxeo-audit-mongodb` package.
 
 The entries are stored in the `audit` collection by default.
 You can configure it by setting the `nuxeo.mongodb.audit.collection.name` property in your `nuxeo.conf`.
 
-### Legacy SQL Back-end
+#### Legacy SQL Back-end
 
 To use the legacy SQL back-end, you have to install the `nuxeo-audit-sql` package.
 
