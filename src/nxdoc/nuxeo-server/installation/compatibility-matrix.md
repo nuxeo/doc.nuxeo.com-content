@@ -137,12 +137,12 @@ More information can be found on the [Elasticsearch Setup]({{page page='search-s
 
 ## Kafka
 
-Nuxeo Platform is tested against a Kafka cluster {{! multiexcerpt name='kafka_supported_version'}}3.6.0{{! /multiexcerpt}} using Kafka Java libraries {{! multiexcerpt name='kafka_libraries_supported_version'}}3.6.0{{! /multiexcerpt}}.
+Nuxeo Platform is tested against a Kafka cluster {{! multiexcerpt name='kafka_supported_version'}}3.6.x{{! /multiexcerpt}} deployed in KRaft mode, Nuxeo uses Kafka Java libraries {{! multiexcerpt name='kafka_libraries_supported_version'}}3.9.x{{! /multiexcerpt}}.
 
 Kafka supports backward and forward compatibility, though we advise to use the latest available stable version.
 
 {{#> callout type='warning' }}
-Since Kafka 3.6, it’s possible to deploy Kafka without Zookeeper using KRaft mode. Currently, Kafka in KRaft mode is not supported by Nuxeo because it exhibits different behavior during topic creation, resulting in Nuxeo’s failure to initialize topics in cluster mode due to visibility issues.
+Since Kafka 3.6, it’s possible to deploy Kafka without Zookeeper using KRaft mode, this requires at least Nuxeo LTS 2023.33.
 {{/callout}}
 
 ## Browsers
