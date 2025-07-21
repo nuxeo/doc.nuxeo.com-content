@@ -147,6 +147,12 @@ Make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index](
 
 Fore more information about the global Elasticsearch setup, see [Elasticsearch Setup]({{page page='elasticsearch-setup'}}).
 
+### MongoDB Back-end
+
+To use MongoDB back-end, you have to install the `nuxeo-audit-mongodb` package.
+
+The entries will be stored in the `audit` collection by default.
+
 ### Legacy SQL Back-end
 
 To use the legacy SQL back-end, you have to install the `nuxeo-audit-sql` package.
@@ -156,12 +162,6 @@ The `LogEntry` and `ExtendedInfo` Java classes are mapped onto the datastore usi
 There are three tables used by the Audit Service: `NXP_LOGS`, `NXP_LOGS_EXTINFO` and `NXP_LOGS_MAPEXTINFOS`. `NXP_LOGS` is the main table, it is used most of the time. The two others are used only when the `extendedInfo` extension point is defined.
 
 ![]({{file name='diagram.png'}} ?w=600,border=true)
-
-### MongoDB Back-end
-
-To use MongoDB back-end, you have to install the `nuxeo-audit-mongodb` package.
-
-The entries will be stored in the `audit` collection by default.
 
 ## Querying the Audit Data Store
 
