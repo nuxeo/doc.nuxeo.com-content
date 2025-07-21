@@ -151,7 +151,8 @@ Fore more information about the global Elasticsearch setup, see [Elasticsearch S
 
 To use MongoDB back-end, you have to install the `nuxeo-audit-mongodb` package.
 
-The entries will be stored in the `audit` collection by default.
+The entries are stored in the `audit` collection by default.
+You can configure it by setting the `nuxeo.mongodb.audit.collection.name` property in your `nuxeo.conf`.
 
 ### Legacy SQL Back-end
 
