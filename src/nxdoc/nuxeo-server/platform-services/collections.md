@@ -310,7 +310,7 @@ Yet you can always unsynchronize the collection from the Nuxeo Drive tab in the 
 
 A collection holds the list of references of the documents it contains. Conversely, a document holds the list of references of the collections it belongs to.
 
-Collection operation are offered by the [CollectionManager.java](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/nuxeo-collections/src/main/java/org/nuxeo/ecm/collections/api/CollectionManager.java) service.
+Collection operations are offered by the [CollectionManager.java](https://github.com/nuxeo/nuxeo/blob/2025/modules/platform/nuxeo-collections/src/main/java/org/nuxeo/ecm/collections/api/CollectionManager.java) service.
 
 Because a collection can potentially contain a large number of documents and, to a lesser extent, a document can belong to many collections, some tasks are performed asynchronously.
 
@@ -319,7 +319,7 @@ For instance, when deleting a collection, an asynchronous work will update the d
 Finally, when copying a collection, an asynchronous work will also duplicate its content.
 
 {{#> callout type='info' heading='Collection Maximum Size'}}
-Collection maximum size is capped at 10000 members, this limit can be customized with the `nuxeo.collection.max.size` Nuxeo configuration property.
+Collection maximum size is capped at 10000 members. This limit can be customized with the `nuxeo.collection.max.size` Nuxeo configuration property.
 {{/callout}}
 
 * * *
