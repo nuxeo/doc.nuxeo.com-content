@@ -22,6 +22,27 @@ Nuxeo Drive upload capability provides a productive and network resilient way of
 
 ## Create a Transfer
 
+### Direct Transfer Integration in Web UI
+
+**Starting with Web UI version 2025.x**, the Direct Transfer functionality has been natively embedded within the Web UI. This integration allows users to initiate document uploads directly from the Web UI interface, removing the requirement to manually launch the Nuxeo Drive desktop application.
+
+**Functional Enhancements:**
+A new Direct Transfer action is now available on all folderish documents. When triggered, this action opens a pre-populated Direct Transfer dialog, automatically setting the target path based on the currently viewed folder.
+Users are only required to select the file(s) for upload and confirm the transfer operation.
+
+**Benefits:**
+* Eliminates the need for context switching between Web UI and Nuxeo Drive.
+* Reduces user interaction overhead and streamlines the document upload workflow.
+* Enhances operational efficiency and improves the overall user experience.
+  
+**System Requirements:**
+* Nuxeo Drive: Version 5.6.0 or higher
+* Web UI: Version 2025.x
+* Permissions: Edit rights on the target folderish document
+
+
+### From the Nuxeo Drive Interface
+
 1. Open Nuxeo Drive from your desktop and click on **Upload Content** button.</br>
     The Direct Transfer popup opens.
     ![]({{file name='direct-transfer-popup.png'}})
@@ -53,7 +74,7 @@ Available options are:
 #### New Remote Folder
 
 {{#> callout type='info' }}
-This option is only available on **Nuxeo Drive 4.5.1** version.
+This option is only available from **Nuxeo Drive 4.5.1** version.
 {{/callout}}
 
 This field lets you create your remote folder directly from the Direct Transfer popup. You don't have to go back to your instance to create it, you can handle everything at the same place.</br>
@@ -74,7 +95,7 @@ To do so:
 #### Document Type 
 
 {{#> callout type='info' }}
-This option is only available on **Nuxeo Drive 5.3.0 Beta** version and needs to be enabled from the **Features** tab.
+This option is only available from **Nuxeo Drive 5.3.0** version and needs to be enabled from the **Features** tab.
 {{/callout}}
 
 Once you've selected your files and/or folders, 2 drop down lists are available at the bottom of the direct transfer popup. 
