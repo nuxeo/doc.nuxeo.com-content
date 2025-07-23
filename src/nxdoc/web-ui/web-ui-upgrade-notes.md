@@ -3,7 +3,7 @@ title: Web UI Upgrade Notes
 description: Detailed upgrade notes to transition to the latest Web UI version.
 review:
     comment: ''
-    date: '2024-01-25'
+    date: '2025-07-23'
     status: ok
 toc: true
 labels:
@@ -18,7 +18,67 @@ This page mentions how to do a technical upgrade. Have a look at the [release no
 
 {{{multiexcerpt 'upgrade-notes' page='web-ui-upgrade-notes-lts-2023'}}}
 
-## Upgrading to NodeJS 18
+## Upgrading from NodeJS 18 to NodeJS 22
+
+Starting from Web UI version `3.1.20` (released on July 23, 2025), Nuxeo Web UI functional tests will officially support Node.js 22, in addition to Node.js 18.
+This means our test stack has been validated on both versions, ensuring compatibility moving forward.
+
+### Why Are You Doing This?
+
+Keeping up with the latest Node.js LTS versions ensures better performance, security, and compatibility with the evolving JavaScript ecosystem.
+Node.js 22 introduces modern JavaScript improvements that we want to leverage in our tooling and test infrastructure — such as native ES Modules (ESM), enhanced diagnostics, and better performance optimizations.
+Additionally, Node.js 18 is reaching its end of active support from the Node.js maintainers (End-of-Life: April 2025). To maintain a secure and future-proof test stack, it’s important to move forward to a supported LTS version.
+
+### What Is the Impact? Does It Impact My Projects?
+
+This upgrade is transparent for most users.
+However, if you wish to upgrade to NodeJS 22 you may need to update your code only if all of the following apply:
+
+* Your project includes custom UI functional tests.
+
+* These tests are built on top of the Nuxeo Web UI testing stack. These UI functional tests leverage the [functional test stack provided by Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/tree/maintenance-3.1.x/ftest).
+
+* Your tests are not yet using ECMAScript Modules (ESM) and rely on CommonJS (require)   syntax.
+
+If you’re using only our default tests or haven’t written custom functional tests, you can safely ignore this notice.
+
+### How Can I Test and Get Ready?
+
+If you have custom functional tests and want them to work with Node.js 22, you’ll need to address two major changes introduced by the shift to ESM:
+
+1. require() Is No Longer Supported
+In ESM-based Node.js environments (which is default from Node.js 22), you must use import instead of require().
+
+2. Explicit .js File Extensions Required
+When using import, you must include the file extension explicitly (e.g., .js) in relative paths.
+
+Failing to do this will result in module resolution errors in Node.js 22.
+
+First, you will need to get the appropriate version and source code to test this out.
+
+A dedicated version of Nuxeo Web UI is provided for you to test this change. To leverage it, you need to request the following package in your dependencies:
+`nuxeo-web-ui-3.1.20-SNAPSHOT`
+
+If your instance is not connected to internet, you can also retrieve this [Web UI NodeJS 18 upgrade test package for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=3.1.5-SNAPSHOT) directly from the marketplace.
+
+The [related source code](https://github.com/nuxeo/nuxeo-web-ui/releases/tag/v3.1.20-rc.6) is available on GitHub.
+
+With this, you should be able to update your code.
+
+### What Happens if I'm Not Ready in Time?
+
+You can still run your tests using Node.js 18 if you're not ready to adopt Node.js 22 yet. Both versions are compatible with Web UI 3.1.X.
+However, future releases may eventually drop Node.js 18 support, so early adoption is encouraged.
+To stay on Node.js 18 temporarily, you don’t need to do anything special — just continue using your current test setup until you’re ready to migrate. 
+
+Nuxeo Server can still be updated independently with newer versions to benefit from the latest updates, fixes and potential security fixes.
+
+### Can I Upgrade to LTS 2023 Without Doing This First?
+
+Yes. This change is independent of any LTS upgrades to the Nuxeo Platform.
+You can upgrade your Nuxeo Server version to LTS 2025 while still running Web UI functional tests using Node.js 18 — but again, we recommend preparing your codebase for Node.js 22 compatibility to future-proof your stack.
+
+## Upgrading from NodeJS 14 to NodeJS 18
 
 Starting from Web UI version `3.1.6` (release on March 18, 2024), Nuxeo Web UI will upgrade its requirements for its functional tests stacks and accessibility tests stack. Any UI functional tests written in your project using NodeJS 14 or lower will need to be migrated to NodeJS 18.
 
