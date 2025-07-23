@@ -16,8 +16,8 @@ Welcome to the Release Notes for **Nuxeo Drive 5.6.0**
 
 ## Upload with Direct Transfer on Web UI 
 
-**Starting from Web UI 2025.x**, the Direct Transfer feature is directly integrated to Web UI which means that you will be able to upload document(s) using Direct Transfer direclty from Web UI without having to open your Nuxeo Drive app! 
-This feature will increase your productivity as it reduces the number of clicks between Web UI and Nuxeo Drive. 
+As of Web UI version 2025.x, the Direct Transfer capability has been natively integrated into the Web UI interface.
+This enhancement enables users to initiate document uploads directly from the Web UI via Direct Transfer, eliminating the need to launch the Nuxeo Drive application. By streamlining the upload workflow, this integration minimizes context switching and reduces interaction overhead, thereby improving operational efficiency and user productivity.
 More information on the [related Documentation page]({{page page=''}}). 
 
 ## Upgrade to Python 3.13.1 
