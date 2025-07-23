@@ -9,22 +9,20 @@ review:
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 5.5.1**
+Welcome to the Release Notes for **Nuxeo Drive 5.6.0**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.5.1.md)
+**Status**: <font color="##ff0000">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.6.0.md)
 
-## Support Back on macOS Intel 
+## Upload with Direct Transfer on Web UI 
 
-The support is back on macOS Intel with version 5.5.1. 
+**Starting from Web UI 2025.x**, the Direct Transfer feature is directly integrated to Web UI which means that you will be able to upload document(s) using Direct Transfer direclty from Web UI without having to open your Nuxeo Drive app! 
+This feature will increase your productivity as it reduces the number of clicks between Web UI and Nuxeo Drive. 
+More information on the [related Documentation page]({{page page=''}}). 
 
-## **Document type** and **container type** Labels Translation 
+## Upgrade to Python 3.13.1 
 
-On the Direct Transfer popup, **Document type** and **container type** Labels can now be translated. 
-
-## Ignore zero-byte files
-
-Zero-byte files are now ignored and removed from the file listing during Direct Transfer. 
+We have upgraded from Python 3.9.5 to Python 3.13.1 
 
 ## Download Links
 
