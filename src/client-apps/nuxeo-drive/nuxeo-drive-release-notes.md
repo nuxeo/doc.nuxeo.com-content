@@ -14,11 +14,27 @@ Welcome to the Release Notes for **Nuxeo Drive 5.6.0**
 **Status**: <font color="##ff0000">**Beta**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.6.0.md)
 
-## Upload with Direct Transfer on Web UI 
+## Web UI 2025.x – Native Integration of Direct Transfer
 
-As of Web UI version 2025.x, the Direct Transfer capability has been natively integrated into the Web UI interface.
-This enhancement enables users to initiate document uploads directly from the Web UI via Direct Transfer, eliminating the need to launch the Nuxeo Drive application. By streamlining the upload workflow, this integration minimizes context switching and reduces interaction overhead, thereby improving operational efficiency and user productivity.
-More information on the [related Documentation page]({{page page=''}}). 
+**Feature Overview:**
+As of Web UI version 2025.x, the Direct Transfer capability is now natively integrated into the Web UI. This enhancement allows users to upload documents directly from the Web UI without launching the Nuxeo Drive application.
+
+**Key Improvements:**
+* Seamless Upload Experience: Users can initiate Direct Transfer operations directly from any folderish document in the Web UI.
+* New Action Button: A dedicated action button is now available on all folderish documents. When selected, it opens a pre-filled Direct Transfer popup with the current folder path.
+* Simplified Workflow: Users only need to select the document(s) to upload and start the transfer—no additional navigation required.
+
+**Benefits:**
+* Eliminates the need to switch between Web UI and Nuxeo Drive.
+* Reduces interaction overhead and improves user productivity.
+* Provides a more intuitive and efficient document upload process.
+
+**Requirements:**
+* Nuxeo Drive: Version 5.6.0 or higher
+* Web UI: Version 2025.x
+* Permissions: Edit rights on the target folderish document
+
+Please read the [related documentation]({{page page='nuxeo-drive-direct-transfer'}}# for more information.
 
 ## Upgrade to Python 3.13.1 
 
