@@ -25,7 +25,7 @@ This means our test stack has been validated on both versions, ensuring compatib
 
 ### Why Are You Doing This?
 
-Keeping up with the latest Node.js LTS versions ensures better performance, security, and compatibility with the evolving JavaScript ecosystem.
+Keeping up with the latest Node.js LTS versions ensure better performance, security, and compatibility with the evolving JavaScript ecosystem.
 Node.js 22 introduces modern JavaScript improvements that we want to leverage in our tooling and test infrastructure — such as native ES Modules (ESM), enhanced diagnostics, and better performance optimizations.
 Additionally, Node.js 18 is reaching its end of active support from the Node.js maintainers (End-of-Life: April 2025). To maintain a secure and future-proof test stack, it’s important to move forward to a supported LTS version.
 
@@ -38,7 +38,7 @@ However, if you wish to upgrade to NodeJS 22 you may need to update your code on
 
 * These tests are built on top of the Nuxeo Web UI testing stack. These UI functional tests leverage the [functional test stack provided by Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/tree/maintenance-3.1.x/ftest).
 
-* Your tests are not yet using ECMAScript Modules (ESM) and rely on CommonJS (require)   syntax.
+* Your tests are not yet using ECMAScript Modules (ESM) and rely on CommonJS (require) syntax.
 
 If you’re using only our default tests or haven’t written custom functional tests, you can safely ignore this notice.
 
@@ -50,7 +50,7 @@ If you have custom functional tests and want them to work with Node.js 22, you�
 In ESM-based Node.js environments (which is default from Node.js 22), you must use import instead of require().
 
 2. Explicit .js File Extensions Required
-When using import, you must include the file extension explicitly (e.g., .js) in relative paths.
+When using import, you must include the file extension explicitly (for example, .js) in relative paths.
 
 Failing to do this will result in module resolution errors in Node.js 22.
 
