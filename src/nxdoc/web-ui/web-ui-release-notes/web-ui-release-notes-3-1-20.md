@@ -17,7 +17,7 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2023 (Version 3.1.20)
 
-**Node.js 22 Upgrade Enhancements** - 
+**Node.js 22 Upgrade Enhancements for functional tests** - 
 
 - Migrated from CommonJS to ES Modules (ESM): Replaced all require() statements with import syntax to align with the modern JavaScript module system supported in Node.js 22.
 
@@ -27,27 +27,23 @@ hidden: true
 
 - Please refer to the [upgrade notes]({{page page='web-ui-upgrade-notes'}}) for detailed information.
 
-**Accessibility enhancements** -
-
-- Fixed Checkbox state now properly clears on deselection in list view to ensure accurate accessibility feedback.
-
-- Questions? accessibility@hyland.com
-
 **Security and vulnerability fixes** –
 
-- Replaced @polymer/marked-element with a custom wrapper to safely render markdown and resolve the marked vulnerability.
+- Replaced @polymer/marked-element with a custom Markdown rendering wrapper to enhance security and eliminate the vulnerability associated with the marked package.
 
-- Inflight vulnerability marked as a false positive – The affected package is only used in build and test-related scripts and does not impact the core webui.
+- Clarified a flagged vulnerability as a false positive — the affected dependency is only used in development and testing scripts and does not impact the core functionality of Web UI.
 
-- Upgrade to commons-lang3 or remove commons-lang.
+- Removed dependency of commons-lang due to a security vulnerability
 
-- Upgraded set-output in Github Action
+- Replaced deprecated ::set-output command with the new $GITHUB_OUTPUT method to ensure compatibility and security in Github Actions.
 
 ### Other Noteworthy Changes
 
-- loadAddons module will be loaded after router is loaded to access the navigateTo function correctly.
+- Reordered the loading of addons during WebUI initialization for better optimization.
 
-- Refresh local permissions in User Profile.
+- Fixed Checkbox state now properly clears on deselection in list view to ensure accurate accessibility feedback.
+
+- Local permissions in user profile now refresh automatically when revisiting the page—no more hard refresh needed to get the latest updates.
 <br/>
 
 {{! /multiexcerpt}}

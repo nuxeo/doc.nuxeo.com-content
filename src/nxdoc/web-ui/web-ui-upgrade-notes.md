@@ -18,7 +18,7 @@ This page mentions how to do a technical upgrade. Have a look at the [release no
 
 {{{multiexcerpt 'upgrade-notes' page='web-ui-upgrade-notes-lts-2023'}}}
 
-## Upgrading from NodeJS 18 to NodeJS 22
+## Upgrading from NodeJS 18 to NodeJS 22 for Functional tests.
 
 Starting from Web UI version `3.1.20` (released on July 23, 2025), Nuxeo Web UI functional tests will officially support Node.js 22, in addition to Node.js 18.
 This means our test stack has been validated on both versions, ensuring compatibility moving forward.
@@ -57,17 +57,17 @@ Failing to do this will result in module resolution errors in Node.js 22.
 First, you will need to get the appropriate version and source code to test this out.
 
 A dedicated version of Nuxeo Web UI is provided for you to test this change. To leverage it, you need to request the following package in your dependencies:
-`nuxeo-web-ui-3.1.20-SNAPSHOT`
+`nuxeo-web-ui-3.1.20`
 
-If your instance is not connected to internet, you can also retrieve this [Web UI NodeJS 18 upgrade test package for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=3.1.5-SNAPSHOT) directly from the marketplace.
+If your instance is not connected to internet, you can also retrieve this [Web UI NodeJS 18 upgrade test package for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=3.1.20) directly from the marketplace.
 
-The [related source code](https://github.com/nuxeo/nuxeo-web-ui/releases/tag/v3.1.20-rc.6) is available on GitHub.
+The [related source code](https://github.com/nuxeo/nuxeo-web-ui/releases/tag/v3.1.20) is available on GitHub.
 
 With this, you should be able to update your code.
 
 ### What Happens if I'm Not Ready in Time?
 
-You can still run your tests using Node.js 18 if you're not ready to adopt Node.js 22 yet. Both versions are compatible with Web UI 3.1.X.
+You can still run your tests using Node.js 18 if you're not ready to adopt Node.js 22 yet. Both versions are compatible with Web UI 3.1.20.
 However, future releases may eventually drop Node.js 18 support, so early adoption is encouraged.
 To stay on Node.js 18 temporarily, you don’t need to do anything special — just continue using your current test setup until you’re ready to migrate. 
 
@@ -76,7 +76,7 @@ Nuxeo Server can still be updated independently with newer versions to benefit f
 ### Can I Upgrade to LTS 2023 Without Doing This First?
 
 Yes. This change is independent of any LTS upgrades to the Nuxeo Platform.
-You can upgrade your Nuxeo Server version to LTS 2025 while still running Web UI functional tests using Node.js 18 — but again, we recommend preparing your codebase for Node.js 22 compatibility to future-proof your stack.
+You can upgrade your Nuxeo Server version to LTS 2023 while still running Web UI functional tests using Node.js 18 — but again, we recommend preparing your codebase for Node.js 22 compatibility to future-proof your stack.
 
 ## Upgrading from NodeJS 14 to NodeJS 18
 
