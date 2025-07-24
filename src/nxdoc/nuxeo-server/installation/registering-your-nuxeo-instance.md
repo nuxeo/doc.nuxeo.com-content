@@ -349,6 +349,14 @@ If your instance is not registered anymore but still uses hotfixes, you will rec
 If it happens, your Nuxeo instance will stop after a certain number of commits or when too many users are connected at the same time. You should make sure to register your instance as soon as you can to prevent this.
 {{/callout}}
 
+{{#> callout type='note' title='Duplicated CLID' no_icon=true}}
+
+If a CLID is used to register multiple instances, when renewed only the current instance will have its CLID updated.
+Which will lead other instances to use an outdated CLID.
+
+To resolve this issue, the newly generated CLID should be copied/pasted to other instances.
+{{/callout}}
+
 ## Re-Registering your Nuxeo Instance
 
 {{> anchor 're-registration'}}If you have removed your data from your Nuxeo application, in case of a development instance, for example, you will need to register your instance again.
