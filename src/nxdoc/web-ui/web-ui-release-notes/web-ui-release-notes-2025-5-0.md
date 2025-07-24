@@ -33,7 +33,7 @@ hidden: true
 
 - Clarified "inflight" vulnerability as a false positive — the affected dependency is only used in development and testing scripts and does not impact the core functionality of Web UI.
 
-- Removed dependency of commons-lang due to a security vulnerability
+- Removed dependency of commons-lang due to a security vulnerability.
 
 - Replaced deprecated ::set-output command with the new $GITHUB_OUTPUT method to ensure compatibility and security in Github Actions.
 
@@ -43,7 +43,7 @@ hidden: true
 
 - Fixed Checkbox state now properly clears on deselection in list view to ensure accurate accessibility feedback.
 
-- Local permissions in user profile now refresh automatically when revisiting the page—no more hard refresh needed to get the latest updates.
+- Local permissions in user profile now refresh automatically when revisiting the page—no hard refresh needed to get the latest updates.
 <br/>
 
 {{! /multiexcerpt}}
