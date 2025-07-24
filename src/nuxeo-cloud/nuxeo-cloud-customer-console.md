@@ -356,27 +356,33 @@ Once a package has been created by the NCO team, a package can be edited by sele
 ![]({{file name='Edit-package-dialog-box.png'}} ?w=650,border=true)
 
 * Package Project: Displays the package project to be edited.
-  Information related to the package project is organized under four tabs, which are explained under the following four tabs:
+
+Information related to the package project is organized under four tabs, which are explained under the following four tabs:
   * PACKAGE
   * REPOSITORY
   * MAVEN
   * RELEASE
-   Information that can be edited under each of these tabs is explained below:
-    **PACKAGE**
-    * Package project title: The package project title can be edited to any customizable name.
-    * Default project: The project to be selected from available development projects.
-    **REPOSITORY** 
-    * Git repository URL: SSH related Git URL (Example: git@github.com:myorg/myrepo.git)</br>
+
+Information that can be edited under each of these tabs is explained below:
+
+**PACKAGE**
+* Package project title: The package project title can be edited to any customizable name.
+* Default project: The project to be selected from available development projects.
+
+**REPOSITORY** 
+* Git repository URL: SSH related Git URL (Example: git@github.com:myorg/myrepo.git)</br>
       This URL is not limited to GitHub. The console is compatible with other code repositories like BitBucket, as long they support SSH keys.
-    * Git default branch name: The default branch name in Git.
-    * Git project folder: Specify the project folder for the package if multiple projects are hosted in the repository.
-    **MAVEN**
-    * Build Maven phase: Select the appropriate Maven Build lifecycle phase.
-    * Release Maven phase: Select the appropriate Maven Build lifecycle phase.
-    **RELEASE**
-    * Studio package version property: Specify the property that generates the Nuxeo Studio package version.
-    * Release commit message: Defines the format in which the commit message is populated.
-    * Post-release commit message: Defines the format in which the post-release commit message is populated.
+* Git default branch name: The default branch name in Git.
+* Git project folder: Specify the project folder for the package if multiple projects are hosted in the repository.
+
+**MAVEN**
+* Build Maven phase: Select the appropriate Maven Build lifecycle phase.
+* Release Maven phase: Select the appropriate Maven Build lifecycle phase.
+
+**RELEASE**
+* Studio package version property: Specify the property that generates the Nuxeo Studio package version.
+* Release commit message: Defines the format in which the commit message is populated.
+* Post-release commit message: Defines the format in which the post-release commit message is populated.
 
 ##### Edit Projects
 
