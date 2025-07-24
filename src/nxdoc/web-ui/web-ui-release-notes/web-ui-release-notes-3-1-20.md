@@ -31,7 +31,7 @@ hidden: true
 
 - Replaced @polymer/marked-element with a custom Markdown rendering wrapper to enhance security and eliminate the vulnerability associated with the marked package.
 
-- Clarified a flagged vulnerability as a false positive — the affected dependency is only used in development and testing scripts and does not impact the core functionality of Web UI.
+- Clarified "inflight" vulnerability as a false positive — the affected dependency is only used in development and testing scripts and does not impact the core functionality of Web UI.
 
 - Removed dependency of commons-lang due to a security vulnerability
 
