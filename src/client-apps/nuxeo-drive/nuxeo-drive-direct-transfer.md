@@ -24,7 +24,7 @@ Nuxeo Drive upload capability provides a productive and network resilient way of
 
 ### Direct Transfer Integration in Web UI
 
-**Starting with Web UI version 2025.x**, the Direct Transfer functionality has been natively embedded within the Web UI. This integration allows users to initiate document uploads directly from the Web UI interface, removing the requirement to manually launch the Nuxeo Drive desktop application.
+**Starting with Web UI 3.1.21 for LTS 2023 and 2025.6.0 for LTS 2025**, the Direct Transfer functionality has been natively embedded within the Web UI. This integration allows users to initiate document uploads directly from the Web UI interface, removing the requirement to manually launch the Nuxeo Drive desktop application.
 
 **Functional Enhancements:**
 A new Direct Transfer action is now available on all folderish documents. When triggered, this action opens a pre-populated Direct Transfer dialog, automatically setting the target path based on the currently viewed folder.
