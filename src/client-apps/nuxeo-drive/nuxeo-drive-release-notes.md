@@ -42,6 +42,6 @@ We have upgraded from Python 3.9.5 to Python 3.13.1
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.5.1-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.5.1.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-5.5.1.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.6.0-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.6.0.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-5.6.0.exe)
