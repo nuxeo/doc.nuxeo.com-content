@@ -34,7 +34,7 @@ As of Web UI 3.1.21 for LTS 2023 and 2025.6.0 for LTS 2025, the Direct Transfer 
 * Web UI: Version 3.1.21 for LTS 2023 and 2025.6.0 for LTS 2025
 * Permissions: Edit rights on the target folderish document
 
-Please read the [related documentation]({{page page='nuxeo-drive-direct-transfer'}}#direct-transfer-in-web-ui) for more information.
+Please read the [related documentation]({{page page='nuxeo-drive-direct-transfer'}}#direct-transfer-integration-in-web-ui) for more information.
 
 ## Upgrade to Python 3.13.1 
 
