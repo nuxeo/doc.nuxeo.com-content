@@ -37,7 +37,7 @@ Users are only required to select the file(s) for upload and confirm the transfe
   
 **System Requirements:**
 * Nuxeo Drive: Version 5.6.0 or higher
-* Web UI: Version 2025.x
+* Web UI: Version 3.1.21 for LTS 2023 and 2025.6.0 for LTS 2025
 * Permissions: Edit rights on the target folderish document
 
 
