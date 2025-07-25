@@ -14,10 +14,10 @@ Welcome to the Release Notes for **Nuxeo Drive 5.6.0**
 **Status**: <font color="##ff0000">**Beta**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/5.6.0.md)
 
-## Web UI 2025.x – Native Integration of Direct Transfer
+## Web UI – Native Integration of Direct Transfer
 
 **Feature Overview:**
-As of Web UI version 2025.x, the Direct Transfer capability is now natively integrated into the Web UI. This enhancement allows users to upload documents directly from the Web UI without launching the Nuxeo Drive application.
+As of Web UI 3.1.21 for LTS 2023 and 2025.6.0 for LTS 2025, the Direct Transfer capability is now natively integrated into the Web UI. This enhancement allows users to upload documents directly from the Web UI without launching the Nuxeo Drive application.
 
 **Key Improvements:**
 * Seamless Upload Experience: Users can initiate Direct Transfer operations directly from any folderish document in the Web UI.
@@ -31,10 +31,10 @@ As of Web UI version 2025.x, the Direct Transfer capability is now natively inte
 
 **Requirements:**
 * Nuxeo Drive: Version 5.6.0 or higher
-* Web UI: Version 2025.x
+* Web UI: Version 3.1.21 for LTS 2023 and 2025.6.0 for LTS 2025
 * Permissions: Edit rights on the target folderish document
 
-Please read the [related documentation]({{page page='nuxeo-drive-direct-transfer'}}# for more information.
+Please read the [related documentation]({{page page='nuxeo-drive-direct-transfer'}}#direct-transfer-in-web-ui) for more information.
 
 ## Upgrade to Python 3.13.1 
 
