@@ -357,7 +357,7 @@ Once a package has been created by the NCO team, a package can be edited by sele
 
 * Package Project: Displays the package project to be edited.
 
-Information related to the package project is organized under four tabs, which are explained under the following four tabs:
+Information related to the package project is organized under four tabs, which are explained below:
   * PACKAGE
   * REPOSITORY
   * MAVEN
