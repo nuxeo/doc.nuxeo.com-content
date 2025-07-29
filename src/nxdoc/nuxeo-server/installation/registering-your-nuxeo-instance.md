@@ -351,8 +351,7 @@ If it happens, your Nuxeo instance will stop after a certain number of commits o
 
 {{#> callout type='note' title='Duplicated CLID' no_icon=true}}
 
-If a CLID is used to register multiple instances, when renewed only the current instance will have its CLID updated.
-Which will lead other instances to use an outdated CLID.
+If a CLID is used to register multiple instances, only the current instance will have its CLID updated when renewed. This leads other instances to use an outdated CLID.
 
 To resolve this issue, the newly generated CLID should be copied/pasted to other instances.
 {{/callout}}
