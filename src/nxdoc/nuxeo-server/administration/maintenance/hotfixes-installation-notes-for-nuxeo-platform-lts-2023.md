@@ -101,6 +101,12 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 34
+
+### Remove Buildnumber-Maven-Plugin From Default Execution
+
+The `buildnumber-maven-plugin` has been removed from the default Maven execution because it didn’t work on project without Versioning Control System (such as Git).
+
 ## Hotfix 33
 
 ### Remove Dependency on `commons-lang` libraries
