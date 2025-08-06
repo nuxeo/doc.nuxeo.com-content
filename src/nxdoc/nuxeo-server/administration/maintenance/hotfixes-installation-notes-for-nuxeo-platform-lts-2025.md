@@ -652,6 +652,12 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
 
+## Hotfix 6
+
+### Remove Buildnumber-Maven-Plugin From Default Execution
+
+The `buildnumber-maven-plugin` has been removed from the default Maven execution because it didn’t work on project without Versioning Control System (such as Git).
+
 ## Hotfix 5
 
 ### Remove Dependency on `commons-lang` libraries
