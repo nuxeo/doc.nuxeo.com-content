@@ -15,7 +15,7 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2025-6'}}
 # What's New in LTS 2025.6 / LTS 2025-HF06
 
-## The Number of Documents in a Collection Should Be Caped
+## The Number of Documents in a Collection Should Be Capped
 
 Number of documents in a Collection is now capped.
 
