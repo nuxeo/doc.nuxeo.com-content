@@ -15,7 +15,7 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2023-34'}}
 # What's New in LTS 2023.34 / LTS 2023-HF34
 
-## The Number of Documents in a Collection Should Be Caped
+## The Number of Documents in a Collection Should Be Capped
 
 Number of documents in a Collection is now capped.
 
