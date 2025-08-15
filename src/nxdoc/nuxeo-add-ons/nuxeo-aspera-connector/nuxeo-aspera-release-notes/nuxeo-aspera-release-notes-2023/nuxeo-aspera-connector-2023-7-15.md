@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Aspera 2021.3.6
+title: Nuxeo Aspera 2023.7.15
 description: Release notes for Nuxeo Aspera Connector 2021.3.6
 tree_item_index: 850
 review:
