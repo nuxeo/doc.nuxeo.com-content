@@ -20,7 +20,7 @@ The Nuxeo Connector for Content Intelligence connects Knowledge Discovery to the
 To install the Nuxeo Connector for Content Intelligence, complete the following steps.
 
 1. Install the `nuxeo-hxai-connector` addon package using the `mp-install` command. The following example displays how the command is used to install the connector:
-   ```<NUXEO_HOME>/nuxeoctl mp-install nuxeo-hxai-connector```
+   ```<NUXEO_HOME>/nuxeoctl mp-install nuxeo-hxai-connector```.
    For additional information, refer to the installation steps mentioned in the [Installing a New Package on Your Instance](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) topic.
 2. Update nuxeo.conf with appropriate properties. Please refer to list of configuration options in the Configure the Nuxeo Connector for Content Intelligence section.
 
@@ -63,7 +63,7 @@ curl -ss -u foo:bar -H 'Content-Type: application/json' <myNuxeoUrl>/nuxeo/api/v
 }'
 ```
 
-In the above curl command, the ingest action ingests document metadata for documents in the `<my-root-doc-id>`, If the documents have complex metadata, they must be simplified using the ingest property mappers before they are ingested.
+In the above curl command, the ingest action ingests document metadata for documents in the `<my-root-doc-id>`. If the documents have complex metadata, they must be simplified using the ingest property mappers before they are ingested.
 
 ## Configuring ingest parameters, mappings, and transformations
 
@@ -226,7 +226,7 @@ my.complete.package.MyFunction # use a cannonical name
 
 ##### Joining multiple transformation functions
 
-Multiple transformation functions can be joined to apply them on the metadata in the sequence the appear. For example:
+Multiple transformation functions can be joined to apply them on the metadata in the sequence they appear. For example:
 
 ```
 # The most reliable solution to chain functions on a single property doesn't require you to figure things out:
@@ -271,7 +271,7 @@ Nuxeo supports schedule-based (default) and event-based automations, which can b
 
 ### Automation using Scheduler
 
-Schedule-based automations are the preferred way to ingest your documents. They execute an even at periodic intervals as set by the user and require read-only access to documents. By setting up multiple schedules, you can run multiple ingestion jobs on subparts of the repository, each with its own config.
+Schedule-based automations are the preferred way to ingest your documents. They execute at periodic intervals as set by the user and require read-only access to documents. By setting up multiple schedules, you can run multiple ingestion jobs on subparts of the repository, each with its own config.
 
 Sample module with Schedules and corresponding EventListeners:
 
@@ -335,7 +335,7 @@ public class IngestListener1 implements EventListener {
 The IngestUpdateListener function can be used to updated an ingested document by automating subsequent ingestions. It uses the HxAI facet to update Nuxeo that the document is ingested and is eligible for ingestion update when necessary. However, this function is disabled by default and is not the preferred approach for ingestion because of the following reasons:
 
 - It adds an extra facet to the documents
-- Ingestion is not an synchronous process and Nuxeo is not required to take action immediately.
+- Ingestion is not a synchronous process and Nuxeo is not required to take action immediately.
 
 You can enable this automation feature by including the following configuration:
 
