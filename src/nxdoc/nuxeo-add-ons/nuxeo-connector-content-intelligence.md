@@ -35,6 +35,7 @@ Configure the plugin based on your environment using the following nuxeo.conf pr
 | hxai.api.auth.baseurl | The IDP base URL (ex: https://auth.iam.dev.experience.hyland.com) |
 | hxai.api.ingest.baseurl | The Hxai ingest base URL (ex: https://ingestion-api.insight.dev.ncp.hyland.com/v1) |
 | hxai.api.ingest.env.key | The ingest environment key |
+| nuxeo.hxai.sourceid | The HxAI source ID |
 
 ## About ingestion 
 
