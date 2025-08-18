@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2025-07-23'
+  date: '2025-08-18'
   status: ok
 toc: true
 labels:
@@ -22,16 +22,17 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-20'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-21'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.20]({{page page='web-ui-release-notes-3-1-20'}}) | Node.js 22 upgrade for functional tests, Veracode vulnerability fixes. Includes support ticket resolutions. | -->
+<!-- | [Web UI 3.1.21]({{page page='web-ui-release-notes-3-1-21'}}) | Accessibility color contrast fixes, Nuxeo Drive Direct Transfer Upload, Veracode vulnerability fix. Includes support ticket resolutions. | -->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [Web UI 3.1.20]({{page page='web-ui-release-notes-3-1-20'}}) | Node.js 22 upgrade for functional tests, Veracode vulnerability fixes. Includes support ticket resolutions. | 
 | [Web UI 3.1.19]({{page page='web-ui-release-notes-3-1-19'}})                  | Accessibility fixes for phase one and Veracode Vulnerability fixes for WebUI and bugfix release     |
 | [Web UI 3.1.18]({{page page='web-ui-release-notes-3-1-18'}})                  | Accessibility and Veracode Vulnerability fixes for WebUI and bugfix release     |
 | [Web UI 3.1.17]({{page page='web-ui-release-notes-3-1-17'}})                  | Quill RTL Support for WebUI, WEB UI Improvement and bugfix release     |
