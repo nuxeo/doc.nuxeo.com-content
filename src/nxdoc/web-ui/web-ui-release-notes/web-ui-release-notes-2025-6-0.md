@@ -39,9 +39,9 @@ hidden: true
 
 ### Other Noteworthy Changes
 
-- Email column added to user tables <br/>
+- Added a new column to display the user’s email address in `nuxeo-group-management` and `nuxeo-user-group-latest` elements. <br/>
 
-- Resolved flicker in document actions on header
+- Fixed flicker occuring while editing documents from the document actions bar.
 
 <br/>
 
