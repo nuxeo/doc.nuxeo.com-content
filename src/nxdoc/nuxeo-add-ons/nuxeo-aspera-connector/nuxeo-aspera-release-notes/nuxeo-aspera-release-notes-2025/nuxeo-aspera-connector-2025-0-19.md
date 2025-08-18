@@ -23,7 +23,7 @@ Uploading assets via Aspera previously triggered both a "documentCreated" and a 
 
 ### Initiate Aspera Download in One API Call
 
-Previously, initiating an Aspera download required a call to GetChildrenBlobs, with results passed to another endpoint for further processing. This has been simplified: a client can now initiate a download directly with a single API call through a new endpoint.
+Previously, initiating an Aspera download required a call to GetChildrenBlobs, with results passed to another endpoint for further processing. The process has been simplified where a client can now initiate a download directly with a single API call through a new endpoint.
 <br/>[[NXCON-32](https://jira.nuxeo.com/browse/NXCON-32)]
 
 ### Fix Aspera Connector Functional Tests
