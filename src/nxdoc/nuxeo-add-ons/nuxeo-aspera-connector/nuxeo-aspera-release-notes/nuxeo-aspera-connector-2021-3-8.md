@@ -8,7 +8,6 @@ review:
   status: ok
 toc: true
 hidden: true
-hidden: true
 ---
 
 
