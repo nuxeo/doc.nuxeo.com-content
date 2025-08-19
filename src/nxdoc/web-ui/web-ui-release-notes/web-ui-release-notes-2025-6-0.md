@@ -35,13 +35,13 @@ hidden: true
 
 **Security and vulnerability fixes** 
 
-- Upgraded form-data transitive dependency to 4.0.4 to resolve security vulnerability
+- Upgraded form-data transitive dependency to 4.0.4 to resolve security vulnerability.
 
 ### Other Noteworthy Changes
 
 - Added a new column to display the user’s email address in `nuxeo-group-management` and `nuxeo-user-group-latest` elements. <br/>
 
-- Fixed flicker occuring while editing documents from the document actions bar.
+- Fixed flicker issue that occurred while editing documents from the document actions bar.
 
 <br/>
 
