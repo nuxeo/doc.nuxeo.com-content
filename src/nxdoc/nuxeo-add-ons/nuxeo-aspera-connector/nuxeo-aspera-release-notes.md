@@ -9,4 +9,4 @@ review:
 toc: true
 ---
 
-{{{multiexcerpt 'nuxeo-aspera-connector-2021-3-8' page='nuxeo-aspera-connector-2021-3-8'}}}
+{{{multiexcerpt 'nuxeo-aspera-connector-2023-7-15' page='nuxeo-aspera-connector-2023-7-15'}}}
