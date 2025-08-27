@@ -1826,6 +1826,19 @@ Enables users to select all documents from results listings in the UI and to exe
 
 * * *
 
+#### `nuxeo.subtype.restriction.enabled`
+
+Enables subtype enforcement platform-side to check if the type of any created, moved, or copied document is allowed in the destination folderish document.<br/>
+If the type is not allowed, an error occurs with a `400` HTTP Status Code (Bad request).
+
+**Since LTS 2025.7**
+
+**Default Value**
+
+`false`
+
+* * *
+
 #### `nuxeo.oauth2.token.expiration.duration`
 
  Property to set the oauth2 token expiration duration. Default is 60 minutes.
