@@ -19,9 +19,9 @@ hidden: true
 
 The --quiet option is better handled for nuxeoctl execution.
 
-## Make Possible to Contribute Several SAML Authentication Plugins
+## Allow Contributing Several SAML Authentication Plugins
 
-You can now contribute several SAML plugin with different configuration.
+You can now contribute several SAML plugins with different configuration.
 
 
 {{! /multiexcerpt}}
