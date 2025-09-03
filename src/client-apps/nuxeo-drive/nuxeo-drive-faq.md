@@ -120,15 +120,16 @@ This page non exhaustively lists frequently asked questions about Nuxeo Drive
 
 In order to be fully compatible with Nuxeo Drive, the minimum required version of the `nuxeo-drive` server addon is:
 
-- **LTS 2023**: n/a
+- **LTS 2025**: no specific version
+- **LTS 2023**: no specific version
 - **LTS 2021**: 2021.0.17
 
 And the minimum required installed Hotfix (HF) is:
 
-Client | LTS 2023 | LTS 2021 
---- | --- | --- 
-5.x | n/a | HF17
-4.x | n/a | HF17 
+Client | LTS 2025 | LTS 2023 | LTS 2021 
+--- | --- | --- | --- 
+5.x | n/a | n/a | HF17
+4.x | n/a | n/a | HF17 
 
 ## What are the supported OS?
 
