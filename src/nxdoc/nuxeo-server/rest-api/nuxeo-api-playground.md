@@ -310,46 +310,46 @@ Nuxeo API Playground can be used [online](http://nuxeo.github.io/api-playground/
 
 Note that the online version of API Playground connects to our `https://demo.nuxeo.com` instance by default, but you can use it with your own Nuxeo server.
 
-![]({{file name='playground_server_login_box.png'}} ?w=500,border=true)
+![]({{file version='2021' name='playground_server_login_box.png'}} ?w=500,border=true)
 
 ### Repository
 
 Playing with the API will modify the content of the repository. The **Repository** section of the playground will let you verify the impact of your API call attempts.
 
-![]({{file name='playground_repository_section.png'}} ?w=300,h=120,border=true)
+![]({{file version='2021' name='playground_repository_section.png'}} ?w=300,h=120,border=true)
 
 The content is represented in a tree structure which allows you to navigate the repository. Unfold the tree and click on a document.
 Its content is retrieved through REST API with JSON responses and headers displayed in the right panel.
 ![]({{file name='playground_repository_document.png'}} ?w=500,h=421,border=true)
 The left side panel allows you to explore the [REST API endpoints]({{page page='rest-api-endpoints'}}) available for the selected document. The tabs allow you to switch between HTTP methods (**GET**, **PUT**, **POST** and **DELETE**) enabling you to read, update, create and delete documents.
 
-![]({{file name='playground_repository_PUT_tab.png'}} ?w=300,h=294,border=true)
+![]({{file version='2021' name='playground_repository_PUT_tab.png'}} ?w=300,h=294,border=true)
 
 The default **GET** tab allows you to invoke [adapters]({{page page='rest-api-web-adapters'}}) on the current document as well as toggle [content enrichers]({{page page='content-enrichers'}}). By default the `thumbnail` and `breadcrumb` enrichers are selected since they are used to build the header where this information is shown. Selecting an adapter displays a form where you can enter the parameters, if any.
-![]({{file name='playground_repository_GET_tab.png'}} ?w=400,border=true)
+![]({{file version='2021' name='playground_repository_GET_tab.png'}} ?w=400,border=true)
 
 ### Data Structure
 
 We use the API to create/read/update documents. But to do so, you need to know which properties are expected for your document. The **Data Structures** section helps you understand this by listing all the document types, facets and schemas that have been configured on your Nuxeo Platform repository.
 
-![]({{file name='playground_data_structures_section..png'}} ?w=300,h=116,border=true)
+![]({{file version='2021' name='playground_data_structures_section..png'}} ?w=300,h=116,border=true)
 
 For example, to get information about the `userWorkspaceRoot` document:
 
 1.  In **Types**, click on the `userWorkspaceRoot` document type.
-    ![]({{file name='playground_document_type_properties.png'}} ?w=300,border=true,thumbnail=true)
+    ![]({{file version='2021' name='playground_document_type_properties.png'}} ?w=300,border=true,thumbnail=true)
     The schemas and facets of the document are displayed.
-2.  Click on the icon ![]({{file name='playground_sitemap_icon.png'}}).
+2.  Click on the icon ![]({{file version='2021' name='playground_sitemap_icon.png'}}).
     The complete inheritance structure of `userWorkspaceRoot` is displayed.
-    ![]({{file name='playground_inheritance_structure.png'}} ?w=500,border=true)
+    ![]({{file version='2021' name='playground_inheritance_structure.png'}} ?w=500,border=true)
 3.  Click on one of the schema names, like **dublincore** for instance, to see its structure.
-    ![]({{file name='playground_schema_structure.png'}} ?w=500,border=true)
+    ![]({{file version='2021' name='playground_schema_structure.png'}} ?w=500,border=true)
 
 ### {{> anchor 'resources-endpoints'}}Resources Endpoints
 
 In this section you can perform calls to all the [Resources Endpoints]({{page page='rest-api-endpoints'}}#resources-endpoints).
 
-![]({{file name='playground_resources_endpoints_section.png'}} ?w=300,h=111,border=true)
+![]({{file version='2021' name='playground_resources_endpoints_section.png'}} ?w=300,h=111,border=true)
 
 Depending on the endpoint, you can do **GET**, **PUT**, **POST** or **DELETE** calls to read, update, create and delete documents.
 
@@ -357,23 +357,23 @@ Depending on the endpoint, you can do **GET**, **PUT**, **POST** or **DELETE** c
 2.  Fill in the Parameters form.
 
     **Tips:**
-    *   For [Document Resources]({{page page='document-resources-endpoints'}}), you can select the document in the repository tree by clicking on the icon ![]({{file name='playground_browse_icon.png'}}), without having to type in its exact ID.
+    *   For [Document Resources]({{page page='document-resources-endpoints'}}), you can select the document in the repository tree by clicking on the icon ![]({{file version='2021' name='playground_browse_icon.png'}}), without having to type in its exact ID.
     *   For all the resources, when you perform a PUT request (usually to update the resource), you can click on the **Fetch Document** button to automatically fill in the body parameter of your request with the document JSON definition. Then you just need to modify the property you want to update.
-        ![]({{file name='playground_fetch_document_PUT.png'}} ?w=300,h=163,border=true)
+        ![]({{file version='2021' name='playground_fetch_document_PUT.png'}} ?w=300,h=163,border=true)
     *   When you perform a POST call and need an example of the expected JSON object, click on the value displayed in the **Type** column. The documentation of the corresponding JSON structure opens up.
-        ![]({{file name='playground_fetch_document_POST.png'}} ?w=500,border=true)
-3.  Optionally click on the icon ![]({{file name='playground_settings_icon.png'}}) to update the [request headers]({{page page='special-http-headers'}}) before running the call.
+        ![]({{file version='2021' name='playground_fetch_document_POST.png'}} ?w=500,border=true)
+3.  Optionally click on the icon ![]({{file version='2021' name='playground_settings_icon.png'}}) to update the [request headers]({{page page='special-http-headers'}}) before running the call.
 4.  Click on the **Run** button.
     You get three tabs:
 
     {{! multiexcerpt name='response-headers-curls-tabs'}}
     *   The **Response** content, most of the time a JSON string, but sometimes the returned error, or a byte stream if the answer was a binary.
-        ![]({{file name='playground_response_tab.png'}} ?w=500,h=256,border=true)
+        ![]({{file version='2021' name='playground_response_tab.png'}} ?w=500,h=256,border=true)
     *   The **headers** both of the request and the response:
-        ![]({{file name='playground_headers_tab.png'}} ?w=500,h=290,border=true)
+        ![]({{file version='2021' name='playground_headers_tab.png'}} ?w=500,h=290,border=true)
     *   **The CURL syntax of the request**
         This tab is key as it allows you to reproduce the same call in your own environment/shell to ensure you're not missing anything to build a successful request.
-        ![]({{file name='playground_curl_requests_tab.png'}} ?w=500,border=true){{! /multiexcerpt}}
+        ![]({{file version='2021' name='playground_curl_requests_tab.png'}} ?w=500,border=true){{! /multiexcerpt}}
 
 ### {{> anchor 'command-endpoint'}}Command Endpoint
 
@@ -398,7 +398,7 @@ The [Batch Upload Endpoint]({{page page='batch-upload-endpoint'}}) provides a wa
 *   When your client does not natively support MultiPart encoding
 *   When you want to upload files as soon as possible and then run the operation when everything has been uploaded on the server
 
-![]({{file name='playground_batch_upload.png'}} ?w=500,h=325,border=true)
+![]({{file version='2021' name='playground_batch_upload.png'}} ?w=500,h=325,border=true)
 
 #### Pre-Requisites
 
@@ -409,16 +409,16 @@ Because the Nuxeo API Playground currently uses the old API, you need to do some
 1.  Select one or more files to upload.
 2.  Click the **Upload** button. Once your files are uploaded the batch will be displayed in the list of batches. You can create any number of batches before referencing them in your requests.
 
-![]({{file name='playground_batch_upload_batch_uploaded.png'}} ?w=500,h=84,border=true)
+![]({{file version='2021' name='playground_batch_upload_batch_uploaded.png'}} ?w=500,h=84,border=true)
 
 #### Using a Batch Upload
 
 1.  Click on the **Reference a Batch** button which is displayed for any JSON document parameter.
-    ![]({{file name='playground_batch_upload_batch_selection.png'}} ?w=500,h=426,border=true)
+    ![]({{file version='2021' name='playground_batch_upload_batch_selection.png'}} ?w=500,h=426,border=true)
     A dialog containing the required `file:content` value is displayed.
-    ![]({{file name='playground_batch_upload_JSON_definition.png'}} ?w=500,h=339,border=true)
+    ![]({{file version='2021' name='playground_batch_upload_JSON_definition.png'}} ?w=500,h=339,border=true)
 2.  Copy the relevant part of the JSON definition in the form.
-    ![]({{file name='playground_batch_upload_JSON_pasted.png'}} ?w=500,h=496,border=true)
+    ![]({{file version='2021' name='playground_batch_upload_JSON_pasted.png'}} ?w=500,h=496,border=true)
 3.  Click on the **Run** button.
 
 
@@ -450,7 +450,7 @@ To enable Batch upload set the runtime configuration property `allowClientGenera
 
 ### {{> anchor 'setting-up-cors-configuration'}}Setting up a CORS Configuration
 
-If your Nuxeo server and the API Playground are not in the same domain, you need to set up a CORS configuration. We provide a [sample configuration]({{file name='cors-config.xml'}}) file that works as long as you put it in the `NUXEO_HOME/nxserver/config` folder. Read the [CORS documentation]({{page page='cross-origin-resource-sharing-cors'}}) for more details.
+If your Nuxeo server and the API Playground are not in the same domain, you need to set up a CORS configuration. We provide a [sample configuration]({{file version='2021' name='cors-config.xml'}}) file that works as long as you put it in the `NUXEO_HOME/nxserver/config` folder. Read the [CORS documentation]({{page page='cross-origin-resource-sharing-cors'}}) for more details.
 
 * * *
 
