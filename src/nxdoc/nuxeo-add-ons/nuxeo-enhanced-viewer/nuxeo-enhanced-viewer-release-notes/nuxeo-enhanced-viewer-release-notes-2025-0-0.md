@@ -51,15 +51,15 @@ ARENDER_ANNOTATION_SOUND_RECORD_TIME_LIMIT=60000
 
 ARender was updated to the latest version, see the various Release Notes:
 
-- [https://hub.arender.io/technical-blog/release-note/2023/release-note-2023-0-0](https://hub.arender.io/technical-blog/release-note/2023/release-note-2023-0-0|smart-link) 
-- [https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-1-0](https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-1-0|smart-link) 
-- [https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-2-0](https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-2-0|smart-link) 
-- [https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-3-0](https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-3-0|smart-link) 
-- [https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-4-0](https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-4-0|smart-link) 
-- [https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-5-0](https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-5-0|smart-link) 
-- [https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-6-0](https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-6-0|smart-link) 
-- [https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-7-0](https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-7-0|smart-link) 
-- [https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-8-0](https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-8-0|smart-link) 
+- [https://hub.arender.io/technical-blog/release-note/2023/release-note-2023-0-0](https://hub.arender.io/technical-blog/release-note/2023/release-note-2023-0-0) 
+- [https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-1-0](https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-1-0) 
+- [https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-2-0](https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-2-0) 
+- [https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-3-0](https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-3-0) 
+- [https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-4-0](https://hub.arender.io/technical-blog/release-note/2024/release-note-2023-4-0) 
+- [https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-5-0](https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-5-0) 
+- [https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-6-0](https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-6-0) 
+- [https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-7-0](https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-7-0) 
+- [https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-8-0](https://hub.arender.io/technical-blog/release-note/2025/release-note-2023-8-0) 
 
 ### Upgrading from NEV 2.x to 2025.x
 
