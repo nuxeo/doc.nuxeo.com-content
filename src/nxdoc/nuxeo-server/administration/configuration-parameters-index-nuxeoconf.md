@@ -1727,7 +1727,7 @@ The translog durability for Elasticsearch indexes. To reduce disk IO and increas
 
 #### `elasticsearch.fulltext.size.max`
 
-Limit the binary fulltext size at indexing time to improve elasticsearch performance. Note that the extracted binary fulltext size is limited in `default-repository-config.xml` by `fieldSizeLimit` that defaults to 128KB.
+Limit the binary fulltext size during indexing to improve elasticsearch performance. Note that the extracted binary fulltext size is limited in `default-repository-config.xml` by `fieldSizeLimit`, which defaults to 128KB.
 
 **Since LTS 2023.36**
 **Default Value**
