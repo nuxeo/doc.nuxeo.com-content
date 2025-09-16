@@ -2069,7 +2069,7 @@ The org.nuxeo.web.ui.numberFormatting.enabled property toggles number formatting
 
 #### `nuxeo.search.default.fulltext.size.max`
 
-Limit the binary fulltext size at indexing time to improve search engine performance. Note that the extracted binary fulltext size is limited in `default-repository-config.xml` by `fieldSizeLimit` that defaults to 128KB.
+Limit the binary fulltext size during indexing to improve search engine performance. Note that the extracted binary fulltext size is limited in `default-repository-config.xml` by `fieldSizeLimit`, which defaults to 128KB.
 
 **Since LTS 2025.8**
 **Default Value**
