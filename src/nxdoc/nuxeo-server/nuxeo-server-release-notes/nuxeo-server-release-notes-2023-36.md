@@ -35,7 +35,7 @@ Both the mail body and subject templates can now be defined together in mail not
 
 ## Enforce Type Restriction With the Document.Move Operation
 
-A new nuxeo.conf property "nuxeo.subtype.restriction.enabled" to enforce subtype restriction platform-side is available, default is false.
+A new nuxeo.conf property "nuxeo.subtype.restriction.enabled" to enforce subtype restriction platform-side is available. Default value of the property is `false`.
 
 A synchronous listener checks if the type of any created, moved, or copied document is allowed by the destination folderish document; otherwise, it throws an error with 400 HTTP Status Code (Bad request).
 This listener is disabled by default and can be enabled with the nuxeo configuration property `nuxeo.subtype.restriction.enabled=true`. <font color="#ffffff">40</font>
