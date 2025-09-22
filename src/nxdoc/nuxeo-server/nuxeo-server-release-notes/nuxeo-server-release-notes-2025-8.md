@@ -81,7 +81,7 @@ Correctly extract rotation metadata from Video files with FFmpeg >= 5
 
 ## Support Nuxeo Retention on GCP
 
-Google Storage Blob Provider can now be used for storing record blobs for Retention
+Google Storage Blob Provider can now be used for storing record blobs for Retention.
 
 ## Elastic/Search Reindex Management Endpoint Should Handle queryLimit for Tuning Purpose
 
