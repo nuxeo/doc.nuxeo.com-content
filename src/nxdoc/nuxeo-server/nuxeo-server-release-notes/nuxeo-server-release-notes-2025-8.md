@@ -61,7 +61,7 @@ A TransientDataStoreService has been added to Nuxeo Platform.
 
 You can now contribute and retrieve `TransientDataStore` from its service. The store allows you to store Java Map as transient data in a efficient way.
 
-A `TransientDataStore` is always contributed with a TTL value and a policy, the policy acts on how the TTL might be considered, see below possible values:
+A `TransientDataStore` is always contributed with a TTL value and a policy. The policy acts on how the TTL might be considered, see below possible values:
 
 - CREATED - define the TTL of the data at the creation time (useful for short live message)
 - ACCESSED - define the TTL of the data each time it is accessed (useful for session like data)
