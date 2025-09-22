@@ -21,7 +21,6 @@ Support of null value in extended infos has been improved.
 
 ## "firstAccessibleAncestor" Enricher in Not Returning Correct Parent Details
 
-The firstAccessibleAncestor enricher now returns the first ancestor that the current user has READ permission on
 
 The firstAccessibleAncestor enricher traverses up the document hierarchy to find the first ancestor that the current user has READ permission on. It returns `null` if there are no readable ancestors.
 
