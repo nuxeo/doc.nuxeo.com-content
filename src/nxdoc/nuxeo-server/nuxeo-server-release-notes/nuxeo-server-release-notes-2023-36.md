@@ -57,7 +57,7 @@ Binary fulltext can now be limited at indexing time.
 
 Binary fulltext can now be truncated at indexing time.
 
-On LTS 2023 use the following option 
+On LTS 2023 use the following option:
 
 `elasticsearch.fulltext.size.max=10000`
 
