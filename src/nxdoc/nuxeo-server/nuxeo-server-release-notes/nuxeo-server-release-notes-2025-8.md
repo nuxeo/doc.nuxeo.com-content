@@ -77,7 +77,7 @@ See below an example of `TransientDataStore` contribution:
 ```
 ## Fix Broken Extraction of Rotation Metadata in Video Files
 
-Correctly extract rotation metadata from Video files with FFmpeg >= 5
+Correctly extract rotation metadata from Video files with FFmpeg >= 5.
 
 ## Support Nuxeo Retention on GCP
 
