@@ -89,7 +89,7 @@ The reindex management endpoint now supports a `queryLimit` parameter to ease in
 
 ## Fix Remove Legal Hold When Document Is Under Indeterminate Retention
 
-Object in S3 storage keeps its legal hold as long as its referencing document is under indeterminate retention
+Object in S3 storage keeps its legal hold as long as its referencing document is under indeterminate retention.
 
 ## Limit Binary Fulltext Length at Indexing Time
 
