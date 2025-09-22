@@ -19,13 +19,13 @@ hidden: true
 
 Support of null value in extended infos has been improved.
 
-## "firstAccessibleAncestor" Enricher in Not Returning Correct Parent Details.
-
+## "firstAccessibleAncestor" Enricher in Not Returning Correct Parent Details
 
 The firstAccessibleAncestor enricher traverses up the document hierarchy to find the first ancestor that the current user has READ permission on. It returns `null` if there are no readable ancestors.
+
 ## Fix Random Unit Test Failure With Google Storage
 
-Clear bucket prefix content only a test tear down
+Clear bucket prefix content only a test tear down.
 
 ## Fix Email Rendering When a Notification Is Configured With Both "Template" and "subjectTemplate"
 
@@ -55,6 +55,7 @@ To do so, just prefix the username with `transient/` in your SAML mapper. You ca
 A new nuxeo.conf property "nuxeo.subtype.restriction.enabled" to enforce subtype restriction platform-side is available. Default value for this property is `false`.
 
 A synchronous listener checks if the type of any created, moved, or copied document is allowed by the destination folderish document; otherwise, an error occurs with 400 HTTP Status Code (Bad request). This listener is disabled by default and can be enabled with the Nuxeo configuration property `nuxeo.subtype.restriction.enabled=true`. 40
+
 ## Introduce a Transient Data Store
 
 A TransientDataStoreService has been added to Nuxeo Platform.
