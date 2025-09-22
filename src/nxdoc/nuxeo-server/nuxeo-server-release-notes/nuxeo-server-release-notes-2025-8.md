@@ -29,7 +29,7 @@ Clear bucket prefix content only a test tear down
 
 ## Fix Email Rendering When a Notification Is Configured With Both "Template" and "subjectTemplate"
 
-Both the mail body and subject templates can now be defined together in mail notifications
+Both the mail body and subject templates can now be defined together in mail notifications.
 
 ## Make Possible to Map an Authenticated SAML User to a Transient User
 
