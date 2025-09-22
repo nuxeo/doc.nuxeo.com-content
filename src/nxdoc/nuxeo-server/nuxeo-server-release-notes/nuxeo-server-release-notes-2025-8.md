@@ -106,7 +106,7 @@ on LTS 2025:
 `nuxeo.search.default.fulltext.size.max=10000`
 ## Add Ability to Store Blob With INTELLIGENT_TIERING Default Storage Class in S3
 
-Blobs can now be stored with INTELLIGENT_TIERING storage class in S3Blob Providers
+Blobs can now be stored with INTELLIGENT_TIERING storage class in S3Blob Providers.
 
 The new Nuxeo configuration property `nuxeo.s3storage.storageClass` allows you to specify which storage class should be used to store blobs in an S3 bucket. Supported values are `STANDARD` (default) or `INTELLIGENT_TIERING`.
 
