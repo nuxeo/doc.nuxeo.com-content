@@ -41,7 +41,7 @@ This listener is disabled by default and can be enabled with the nuxeo configura
 
 ## Fix Broken Extraction of Rotation Metadata in Video Files
 
-Correctly extract rotation metadata from Video files with FFmpeg >= 5
+Correctly extract rotation metadata from Video files with FFmpeg >= 5.
 
 ## Elastic/Search Reindex Management Endpoint Should Handle queryLimit for Tuning Purpose
 
