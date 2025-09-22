@@ -21,12 +21,11 @@ Support of null value in extended infos has been improved.
 
 ## "firstAccessibleAncestor" Enricher in Not Returning Correct Parent Details
 
-
-The firstAccessibleAncestor enricher traverses up the document hierarchy to find the first ancestor that the current user has READ permission on. It returns `null` if there are no readable ancestors.
+The firstAccessibleAncestor enricher traverses up the document hierarchy to find the first ancestor that the current user has READ permission on. It returns `null` value if there are no readable ancestors.
 
 ## Fix Random Unit Test Failure With Google Storage
 
-Clear bucket prefix content only a test tear down
+Clear bucket prefix content only a test tear down.
 
 ## Fix Email Rendering When a Notification Is Configured With Both "Template" and "subjectTemplate"
 
