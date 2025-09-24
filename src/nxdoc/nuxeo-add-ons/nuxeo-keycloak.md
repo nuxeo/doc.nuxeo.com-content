@@ -1,6 +1,14 @@
 ---
 title: Nuxeo Keycloak
 description: Nuxeo Keycloak allows you to integrate Keycloak, an Open Source Identity and Access Management solution.
+review:
+    date: '2025-09-24'
+    status: ok
+    comment: ''
+labels:
+    - keycloack
+toc: true
+tree_item_index: 2060
 ---
 
 {{! excerpt}}
