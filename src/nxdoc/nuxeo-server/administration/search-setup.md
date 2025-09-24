@@ -887,7 +887,7 @@ You need to define an index for each repository. This is done by adding an `elas
     Where `name` is the Elasticsearch index name and `repository` the repository name.
 
 {{#> callout type='warning' }}
-It is not possible to disable contribution to an `elasticSearchIndex` for a specific repository. Each repository requires a dedicated index. You can still use a custom `JsonESDocumentWriter` to remove fields or schemas depending on the repository.
+It is not possible to disable contribution to an `elasticSearchIndex` for a specific repository. Each repository requires a dedicated index. You can still use a custom `JsonESDocumentWriter` to remove fields or schemas depending on repository.
 {{/callout}}
 
 ## Investigating and Reporting Problems
