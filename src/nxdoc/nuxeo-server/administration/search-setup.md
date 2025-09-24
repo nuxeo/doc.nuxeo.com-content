@@ -825,7 +825,7 @@ You need to define an index for each repository. This is done by adding an `elas
     Where `repo2` is the name of the second repository and `nuxeo-repo2` the OpenSearch index name.
 
 {#> callout type='warning' }}
-It is not possible to disable contribution to a `searchIndex` for a specific repository. Each repository requires a dedicated index. You can still use a custom `writerClass` to remove fields or schemas depending on the repository.
+It is not possible to disable contribution to an `searchIndex` for a specific repository. Each repository requires a dedicated index. You can still use a custom `writerClass` to remove fields or schemas depending on repository.
 {{/callout}}
 
 ## Setting up an OpenSearch 2.x Cluster{{> anchor 'setting-up-opensearch2'}}
