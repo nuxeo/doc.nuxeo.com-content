@@ -38,13 +38,16 @@ Updating the Connector to version 3.0.0 is not recommended if you have _ongoing_
 `aspera.download.access.key.id`
 `aspera.download.access.key.secret`</td>
 <td colspan="1">Fixed existing typo for `acess` in these parameters</td>
+<td colspan="1">[NXP-28399](https://hyland.atlassian.net/browse/NXP-28399)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.s3storage.useDirectUpload = true`</td>
 <td colspan="1">Value no longer necessary for the Nuxeo Aspera Connector (keep if used for other Nuxeo features) </td>
+<td colspan="1">[NXP-29548](https://hyland.atlassian.net/browse/NXP-29548)</td>
 </tr>
 <td colspan="1">`nuxeo.s3storage.transient.roleArn`</td>
 <td colspan="1">Value no longer necessary for the Nuxeo Aspera Connector (keep if used for other Nuxeo features)</td>
+<td colspan="1">[NXP-29548](https://hyland.atlassian.net/browse/NXP-29548)</td>
 </tr>
 </tbody>
 </table>
@@ -62,38 +65,58 @@ Updating the Connector to version 3.0.0 is not recommended if you have _ongoing_
 
 `updateTransferStatuses` deprecated - use `syncTransfer`(CoreSession, String) instead.
 
+See [NXP-29425](https://hyland.atlassian.net/browse/NXP-29425).
+
 ### Transfer 'tab' Behavior
 
 - `nuxeo-aspera-upload-page` element: Replaced `aspera-tab-update` event by `aspera-page-update` event.
 - `nuxeo-aspera-page` element: changed `selectedtab` property into `selectedPage` property.
 
+See [NXP-29130](https://hyland.atlassian.net/browse/nxp-29130).
+
 ### Transfer Page
 
 - On `nuxeo-aspera-transfer-page`: removes property `transferGroups`.
 
+See [NXP-29497](https://hyland.atlassian.net/browse/nxp-29497)
+
 - `nuxeo-aspera-transfer-page` element: removes properties aggregates, params and quickFilters.
 
+See [NXP-29592](https://hyland.atlassian.net/browse/nxp-29592).
+
 - `nuxeo-aspera-transfer-page` element removes properties: `transfers`, `offset` and `isPreviousPageAvailable`
+
+See [NXP-29282](https://hyland.atlassian.net/browse/nxp-29282).
 
 ### Storing Message Files
 
 Deprecated `getOrCreateTransferDocument` methods (which was a deprecated Aspera method).
 
+See [NXP-29590](https://hyland.atlassian.net/browse/NXP-29590).
+
 ### Workers' Status
 
 Deprecated `bmExecute(Transfer transfer)` and introduces `bmExecute()` instead.
+
+See [NXP-29589](https://hyland.atlassian.net/browse/NXP-29589).
 
 ### Transfer Change Event
 
 `transfer-changed` event is deprecated, use `aspera-uploads-refresh` instead.
 
+See [NXP-29302](https://hyland.atlassian.net/browse/nxp-29302).
+
 ### Aspera Connect Download
 
 Removes `linkActive` and `download` properties from `nuxeo-aspera-connect`.
 
+See [NXP-28412](https://hyland.atlassian.net/browse/NXP-28412).
+
 ### Transfer Complete Event
 
 Removed the `aspera-transfer-complete` event and its listeners. From now on, there is no such event being fired.
+
+See [NXP-29467](https://hyland.atlassian.net/browse/nxp-29467).
 
 ### Transfer Edit
 
