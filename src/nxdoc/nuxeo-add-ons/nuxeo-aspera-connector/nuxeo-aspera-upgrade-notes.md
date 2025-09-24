@@ -99,6 +99,8 @@ Removed the `aspera-transfer-complete` event and its listeners. From now on, the
 
 Removed `nuxeo-aspera-upload-edit-dialog` element.
 
+See [NXP-28207](https://hyland.atlassian.net/browse/nxp-28207).
+
 ## Complementary Information
 
 - [Release notes for 3.0.0](https://doc.nuxeo.com/nxdoc/nuxeo-aspera-connector/nuxeo-aspera-release-notes/)
