@@ -3,7 +3,7 @@ title: Version 3.1.22
 description: Discover what's new in Web UI 3.1.22.
 review:
   comment: ''
-  date: '2025-09-21'
+  date: '2025-09-29'
   status: ok
 toc: true
 labels:
