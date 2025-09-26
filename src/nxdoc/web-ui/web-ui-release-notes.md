@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2025-08-18'
+  date: '2025-09-29'
   status: ok
 toc: true
 labels:
@@ -23,10 +23,11 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.6.0]({{page page='web-ui-release-notes-2025-6-0'}}) | Accessibility color contrast fixes, Nuxeo Drive Direct Transfer Upload, Veracode vulnerability fix. Includes support ticket resolutions. | -->
+<!-- | [Web UI 2025.7.0]({{page page='web-ui-release-notes-2025-7-0'}}) | Accessibility fixes. Includes support ticket resolutions. | -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Web UI 2025.6.0]({{page page='web-ui-release-notes-2025-6-0'}}) | Accessibility color contrast fixes, Nuxeo Drive Direct Transfer Upload, Veracode vulnerability fix. Includes support ticket resolutions. |
 | [Web UI 2025.5.0]({{page page='web-ui-release-notes-2025-5-0'}})                  | Node.js 22 upgrade for functional tests, Veracode vulnerability fixes. Includes support ticket resolutions. |
 | [Web UI 2025.4.0]({{page page='web-ui-release-notes-2025-4-0'}})                  | Accessibility and Veracode Vulnerability fixes for WebUI and bugfix release     |
 | [Web UI 2025.3.0]({{page page='web-ui-release-notes-2025-3-0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release   | 
