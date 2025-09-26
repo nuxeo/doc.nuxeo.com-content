@@ -121,5 +121,6 @@ Evaluation of the product involved a combination of automated, manual, and funct
 
 - Defined the display order of document types to enhance usability and selection ease by adding document types in the server nuxeo.conf file.
 
+<br/>
 
 {{! /multiexcerpt}}
