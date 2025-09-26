@@ -115,7 +115,7 @@ Evaluation of the product involved a combination of automated, manual, and funct
 
 ### Other Noteworthy Changes
 
-- A workaround to refresh the page between drag and drop actions has been introduced for the issue involving files being attached multiple times when using drag and drop in Web UI 3.1.19 and higher.
+- A workaround to refresh the page between drag and drop actions was introduced for the issue involving files being attached multiple times when using drag and drop in Web UI 3.1.19 and higher.
 
 - Implemented missing layouts for the PictureBook document type in the WebUI.
 
