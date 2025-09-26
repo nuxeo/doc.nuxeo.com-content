@@ -40,11 +40,11 @@ hidden: true
 
 **Screen Reader Optimization:**
 
-- **Viewer Comments** icons (x) / (✓) have been optimized with descriptive labels.
+- **Viewer Comments** icons (x) / (✓) were optimized with descriptive labels.
 
-- **Viewer Images** have been updated with accessible alternative text for stand-alone icons.
+- **Viewer Images** were updated with accessible alternative text for stand-alone icons.
 
-- **Landmarks** have been added to the page structure for easier navigation by screen reader users.
+- **Landmarks** were added to the page structure for easier navigation by screen reader users.
 
 - **Error messages** for mandatory fields in the 'Create' dialog are now optimized for screen readers.
 
@@ -101,7 +101,7 @@ hidden: true
 
 **Evaluation Methods Used**
 
-Evaluation of the product involved a combination of automated, manual, and functional testing against the applicable success criteria within the Web Content Accessibility Guidelines (WCAG) 2.2 A/AA. Below is a list of the assistive technologies (ATs) and primary browsers used.Below is a list of the assistive technologies (ATs) and primary browsers used.
+Evaluation of the product involved a combination of automated, manual, and functional testing against the applicable success criteria within the Web Content Accessibility Guidelines (WCAG) 2.2 A/AA. Below is a list of the assistive technologies (ATs) and primary browsers used.
 
 - macOS + VoiceOver + Chrome
 
@@ -116,9 +116,9 @@ Evaluation of the product involved a combination of automated, manual, and funct
 
 ### Other Noteworthy Changes
 
-- A workaround to refresh the page between drag and drop actions has been introduced for the issue involving files being attached multiple times when using drag and drop in Web UI 3.1.19 or above.
+- A workaround to refresh the page between drag and drop actions has been introduced for the issue involving files being attached multiple times when using drag and drop in Web UI 2025.4.0 and higher.
 
-- Implemented missing layouts for the PictureBook document type in the WebUI through Studio.
+- Implemented missing layouts for the PictureBook document type in the WebUI.
 
 - Defined the display order of document types to enhance usability and selection ease by adding document types in the server nuxeo.conf file.
 
