@@ -19,84 +19,96 @@ hidden: true
 
 **Accessibility enhancements** 
 
-- Datepicker Widget: The overall functionality of the datepicker using keyboard and screen readers is accessible.
+**Keyboard and Screen Reader Navigation:**
 
-- Tab Panel navigation is consistent for keyboard navigation.
+- Added a **"Skip to Main Content"** link to facilitate keyboard navigation.
 
-- The ‘Search’ button is keyboard accessible, focusable and able to be closed by using ESC key.
+- The main navigation menu and menu-tree are now highly keyboard accessible with a logical and meaningful tab order.
 
-- For Grid View: The radio button options using keyboard and screen reader is accessible.
+- Users can navigate between items in Grid, Table, and List Views using the Arrow keys.
 
-- Viewer Images: Alternative text for stand-alone icon images have been optimized for screen readers.
+- The **Datepicker Widget** is now fully keyboard and screen reader accessible.
 
-- Viewer Comments: ‘Reply’ button is keyboard accessible.
+- **Tab Panel navigation** is consistent for keyboard-only users.
 
-- Selection Toolbar: “Display selection”. Once the "Display Selection" modal is available and then closed, the focus goes back to the trigger, making it possible for users to continue navigating with the keyboard.
+- **'Reply' button** in Viewer Comments is now fully keyboard and screen reader accessible.
 
-- Search: 'Reset' color state contrast is sufficient. 
+- The **'Search' button** is focusable and can be closed using the ESC key.
 
-- Search: “No Containers” “Most Recent” “Validated” color contrast is sufficient. 
+- In Search Results, **Shift+Tab** moves focus backward, and **Backspace/Delete** removes multi-select values.
 
-- Skip to Main Content functionality added to improve keyboard and screen reader navigation.
 
-- Selection Toolbar: Once the toolbar is available and the options “Display Selection” and “Clear” the following shortcut information is visually available: Windows: Ctrl + .. After proceeding with the shortcuts and by pressing the tab the focus goes back to the trigger, making it possible for users to continue navigating with the keyboard.
+**Screen Reader Optimization:**
 
-- Main navigation menu and menu-tree are highly keyboard accessible, the navigation is logical and meaningful. 
+- **Viewer Comments** icons (x) / (✓) have been optimized with descriptive labels.
 
-- Grid / Table and List Views: Users must be able to navigate between items using the Left/Up Arrow (previous item) and Right/Down Arrow (next item) keys.
+- **Viewer Images** have been updated with accessible alternative text for stand-alone icons.
 
-- Search Results: For multi-select values, the user needs to press Shift+Tab to move the focus backwards. The browser will then naturally move the focus there. By pressing the Backspace or Delete key, the value will be removed.
+- **Landmarks** have been added to the page structure for easier navigation by screen reader users.
 
-- Landmarks available for screen reader navigation.
+- **Error messages** for mandatory fields in the 'Create' dialog are now optimized for screen readers.
 
-- Viewer Comments: The following icon (x) / (✓) labels have been optimized for better comprehension screen readers.
 
-- Create: Error messages optimized for mandatory fields.
+**Visual Enhancements:**
+
+- The color contrast for the **'Reset' button** and text like **"No Containers," "Most Recent," and "Validated"** in the Search functionality has been improved to meet WCAG AA requirements.
+
+
+**Interaction Enhancements:**
+
+- Keyboard focus now returns to the triggering element after closing modals like "Display Selection," allowing for continuous keyboard navigation.
+
+- Selection Toolbar shortcuts **(Windows: Ctrl + .)** are visually available to users.
+
 
 **Known Accessibility Issues:**
 
-- Tab Panel navigation functionality slightly varies between sections. There is a defect regarding the semantics of the tab panel that is specifically impacting screen reader users. 
+- **Navigation and Semantics:**
 
-- Selection Toolbar: “Display selection”. The color used for the contrast is insufficient. Action item internally addressed for upcoming release.
+- **Tab Panel navigation functionality** slightly varies between sections, and a semantic defect is specifically impacting screen reader users.
 
-- Selection Toolbar: The shortcut information is visually available: Windows: Ctrl + . but is not properly announced to screen reader users. Action item internally to be addressed for upcoming release.
+- The shortcut information for the **Selection Toolbar (Windows: Ctrl + .)** is not properly announced to screen reader users.
 
-- Grid / Table and List Views: Some functionalities are not announced for screen readers.  Action item internally to be addressed for upcoming release.
+- **Visual Contrast:**
 
-- Heading structure for screen readers.
+- The color contrast for the **"Display selection"** button in the **Selection Toolbar** is insufficient. This issue is an action item internally addressed for an upcoming release.
 
-**Coming up next** 
+- **Screen Reader Announcements:**
 
-- Optimize the autocomplete functionality of the dropdown menus on the Search Filters section.
+- Some functionalities within the **Grid, Table, and List Views** are not being announced correctly for screen readers.
 
-- Optimize the descriptions of search results for screen reader users.
+- **Heading Structure:**
 
-- Optimize the read results from different views for the Screen readers.
+- The heading structure requires optimization for screen readers to improve content comprehension and navigation.
 
-- Viewer - Image and Video Toolbar: Include proper labels on the toolbar buttons to improve comprehension for screen reader users.
 
-- Viewer: Optimize inline frames for screen readers.
 
-- Improve off-screen button texts for screen reader users.
 
-- Provide accessible alternative text for graphs information.
+**Coming up next**
 
-- Optimize pagination for keyboard users.
+- **Improve Autocomplete Functionality:** Optimize autocomplete for dropdown menus in the Search Filters section.
 
-**Evaluation Methods Used** 
+- **Enhance Search Results:** Optimize the descriptions of search results and how different views are read by screen readers.
 
-Evaluation of the product involved a combination of automated, manual, and functional testing against the applicable success criteria within the Web Content Accessibility Guidelines (WCAG) 2.2 Conformance Level A and AA, RGAA 4.1.2, and EN 301 549. The Accessibility Specialists are in charge of defining the compliance plan, conducting the accessibility audits and revalidations accordingly. 
+- **Refine Toolbar Labels:** Include proper labels on Viewer's Image and Video Toolbar buttons.
 
-Below is a list of the assistive technologies (ATs) and primary browsers used.
+- **Optimize Off-screen Content:** Improve off-screen button texts and optimize inline frames for screen readers.
+
+- **Provide Accessible Graphs:** Add alternative text for graphs and other visual data.
+
+- **Enhance Pagination:** Optimize the pagination functionality for keyboard users.
+
+
+**Evaluation Methods Used**
+
+Evaluation of the product involved a combination of automated, manual, and functional testing against the applicable success criteria within the Web Content Accessibility Guidelines (WCAG) 2.2 A/AA. Below is a list of the assistive technologies (ATs) and primary browsers used.Below is a list of the assistive technologies (ATs) and primary browsers used.
 
 - macOS + VoiceOver + Chrome
 
 - Windows + NVDA + Chrome
 
-- Questions? accessibility@hyland.com
 
-
-**Security and vulnerability fixes** 
+**Security and vulnerability fixes**
 
 - Optimised Veracode scans for the Nuxeo WebUI project
 
