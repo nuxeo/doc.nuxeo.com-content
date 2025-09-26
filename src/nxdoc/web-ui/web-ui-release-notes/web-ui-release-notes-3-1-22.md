@@ -118,7 +118,7 @@ Evaluation of the product involved a combination of automated, manual, and funct
 
 - A workaround to refresh the page between drag and drop actions has been introduced for the issue involving files being attached multiple times when using drag and drop in Web UI 3.1.19 or above.
 
-- Implemented missing layouts for the PictureBook document type in the WebUI through Studio.
+- Implemented missing layouts for the PictureBook document type in the WebUI.
 
 - Defined the display order of document types to enhance usability and selection ease by adding document types in the server nuxeo.conf file.
 
