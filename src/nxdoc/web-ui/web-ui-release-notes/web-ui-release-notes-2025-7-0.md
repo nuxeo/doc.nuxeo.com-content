@@ -46,12 +46,11 @@ hidden: true
 
 - **Landmarks** were added to the page structure for easier navigation by screen reader users.
 
-- **Error messages** for mandatory fields in the 'Create' dialog are now optimized for screen readers.
-
+- **Error messages** for mandatory fields in the 'Create' dialog box are now optimized for screen readers.
 
 **Visual Enhancements:**
 
-- The color contrast for the **'Reset' button** and text like **"No Containers," "Most Recent," and "Validated"** in the Search functionality has been improved to meet WCAG AA requirements.
+- The color contrast for the **'Reset' button** and text like **"No Containers," "Most Recent," and "Validated"** in the Search functionality were improved to meet WCAG AA requirements.
 
 
 **Interaction Enhancements:**
@@ -110,7 +109,7 @@ Evaluation of the product involved a combination of automated, manual, and funct
 
 **Security and vulnerability fixes**
 
-- Optimised Veracode scans for the Nuxeo WebUI project
+- Optimised Veracode scans for the Nuxeo WebUI project.
 
 
 
