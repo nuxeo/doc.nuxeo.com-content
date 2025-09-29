@@ -37,31 +37,30 @@ nuxeo.retention.strictmode.enabled=false
 Since LTS 2021 HF41, this property replaces and supersedes the property `nuxeo.retention.compliance.enabled`: if both are set, the value of `nuxeo.retention.strictmode.enabled` will be used.
 {{/callout}}
 
-### {{> anchor 'standard-amazon-s3'}} Amazon S3 Architecture Options
+### {{> anchor 'standard-arch'}} Architecture Options
 
 In Standard mode, there are 3 supported configurations using Amazon S3:
-- Storing records in a dedicated S3 bucket with Object Lock (recommended)
-- Storing records in a dedicated S3 bucket without Object Lock
+- Storing records in a dedicated bucket with Object Lock (recommended)
+- Storing records in a dedicated bucket without Object Lock
 - Storing records in the same bucket as other documents
 
 ### Recommended Architecture
 
 Our recommendation is to have a dedicated bucket for records. This option provides greater flexibility in the long run, and facilitates demonstrating compliance. 
 
-Depending on your compliance needs, the dedicated bucket can leverage Amazon S3 Object Lock in governance mode, or in compliance mode to provide compliance with the SEC-17A4 regulation.
+Depending on your compliance needs, the dedicated bucket can leverage Amazon S3 Object Lock or Google Storage Object Retention in governance mode, or in compliance mode to provide compliance with the SEC-17A4 regulation.
 
 {{#> callout type='info'}}
-Activating Object Lock and choosing a mode for it must be done during the creation of the bucket. Please consider your needs and the regulations you will be subject to before installing and configuring the addon.
+Activating AWS S3 Object Lock or Google Storage Object Retention and choosing a mode for it must be done during the creation of the bucket. Please consider your needs and the regulations you will be subject to before installing and configuring the addon.
 {{/callout}}
 
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;Storing records in a dedicated S3 bucket](#s3-2-buckets)<br/>
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;Storing records in a dedicated S3 bucket, with Amazon S3 Object Lock](#s3-2-buckets-object-lock)
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;Storing records in a dedicated Google Storage bucket](#gcp-2-buckets)
 
 {{> anchor 's3-2-buckets'}}
-
 #### Storing Records in a Dedicated S3 Bucket
 
-It is possible to configure an additional S3 bucket dedicated to storing records. This can be configured using an XML contribution, or via the `nuxeo.conf` configuration file.
+Storing records in a dedicated S3 bucket can be done with XML contribution, or via the `nuxeo.conf` configuration file.
 
 ##### Configure via XML Contribution
 
@@ -96,7 +95,7 @@ Configure the standard S3 bucket as described in [Amazon S3 Online Storage](http
 {{#> callout type='warning'}}
 This configuration is only applicable when using the Retention addon with a dedicated S3 bucket for the records.
 
-If you want to configure your instance with a single bucket and NO support for Object Lock now or in the future, please refer to the [single bucket architecture](#s3-one-bucket-configuration).
+If you want to configure your instance with a single bucket and NO support for Object Lock now or in the future, please refer to the [single bucket architecture](#one-bucket-configuration).
 {{/callout}}
 
 Here is the complete XML extension file example:
@@ -183,14 +182,11 @@ This will enable the [s3-retention-config.xml](https://github.com/nuxeo/nuxeo-re
   - `nuxeo.retention.s3storage.accelerateMode`</br>
     (fallback to `nuxeo.s3storage.accelerateMode`)
 
-
-{{> anchor 's3-2-buckets-object-lock'}}
-
-#### Store Records in a Dedicated S3 Bucket With S3 Object Lock
+##### Optionally activate S3 Object Lock
 
 [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) prevents the deletion of content under retention until the retention period has expired. Nuxeo Retention, when configured to use Amazon S3 Object Lock, automatically provides the retention period (or legal hold) to Amazon S3.
 
-To configure the Retention addon with a dedicated S3 bucket with Object Lock, first follow the steps described in the [dedicated bucket architecture](#s3-2-buckets). Next configure the record bucket as follows:
+Configure the record bucket as follows:
 
 - Direct writes to the Amazon S3 storage system must be disabled; this is to ensure that all documents pass through Nuxeo Platform for compliant processing.
 
@@ -204,12 +200,45 @@ To configure the Retention addon with a dedicated S3 bucket with Object Lock, fi
 
 - Amazon S3 Lifecycle Policies must not be configured for use within the Nuxeo Platform storage subsystem.
 
-{{> anchor 's3-one-bucket-configuration'}}
+{{> anchor 'gcp-2-buckets'}}
+#### Storing Records in a Dedicated Google Storage Bucket
+
+Storing records in a dedicated Google Storage bucket can simply be done via the `nuxeo.conf` configuration file after having installed the [Google Storage Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/google-storage).
+
+Add the `gcpretention` template to the `nuxeo.templates` property in the [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
+```
+nuxeo.templates=default,gcpbinaries,retention,gcpretention
+```
+
+This will activate the [gcp-retention-config.xml](https://github.com/nuxeo/nuxeo-retention/blob/lts-2025/nuxeo-retention-package/src/main/resources/install/templates/gcpretention/nxserver/config/gcp-retention-config.xml.nxftl) template, which enables the following properties for [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
+  - `nuxeo.gcp.retention.storage.bucket`</br>
+    (required)
+  - `nuxeo.gcp.retention.storage.bucket_prefix`</br>
+    (required, always define a prefix different than the default blob provider one in the case you use the same bucket)
+  - `nuxeo.gcp.retention.project`</br>
+    (fallback to `nuxeo.gcp.project`)
+  - `nuxeo.gcp.retention.credentials`</br>
+    (fallback to `nuxeo.gcp.credentials`)
+
+{{> anchor 'gcp-2-buckets-enable-retention'}}
+##### Optionally activate Google Storage Object Retention
+
+[Google Storage Object Retention](https://cloud.google.com/storage/docs/object-lock) prevents the deletion of content under retention until the retention period has expired. Nuxeo Retention, when configured to use Google Storage Object Retention automatically provides the retention period (or legal hold) to Google Storage.
+
+Configure the record bucket as follows:
+
+- The Google Storage Object Retention feature must be enabled on the record bucket.
+
+- Google Storage Object Versioning must be enabled; this is automatically done when enabling Object Lock.
+
+- Do not define any "Bucket retention policy", it is the Nuxeo server that will explicitly set the retention period for the objects stored in this bucket.
+
+{{> anchor 'one-bucket-configuration'}}
 #### Storing Records in the Same Bucket as Other Documents (Alternative Option)
 
 Records can also be stored in the same bucket as the rest of the content. This provides a simpler architecture, but restricts the possibility to adapt to more complex scenarios in the long run.
 
-This configuration does NOT allow using the [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) feature (no WORM storage option).
+This configuration does NOT allow using the [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) nor [Google Storage Object Retention](https://cloud.google.com/storage/docs/object-lock) feature (no WORM storage option).
 
 {{#> callout type='warning'}}
 Always store both regular and record blobs in different locations by using distinct prefix in your S3 bucket. Otherwise, this will result in a shared storage configuration that will prevent the [Orphaned Blobs GC]({{page page='garbage-collecting-orphaned-blobs'}}) from running efficiently.
