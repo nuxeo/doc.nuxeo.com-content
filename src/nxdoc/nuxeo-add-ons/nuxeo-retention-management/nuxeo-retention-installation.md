@@ -23,7 +23,7 @@ Picking a mode and an architecture is an impactful decision. Please consider it 
 
 {{#> callout type='info'}}
 {{! multiexcerpt name='storage-support'}}
-Using the Retention Management addon requires [storing files in Amazon S3]({{page page='amazon-s3-online-storage'}}). Other cloud platforms or storage options are not supported.
+Using the Retention Management addon requires storing files in [Amazon S3]({{page page='amazon-s3-online-storage'}}) or in [Google Storage]({{page page='google-storage'}}). Other cloud platforms or storage options are not supported.
 {{! /multiexcerpt}}
 {{/callout}}
 
@@ -32,7 +32,7 @@ Using the Retention Management addon requires [storing files in Amazon S3]({{pag
 The Nuxeo Retention Management addon offers 2 modes:
  - **Standard mode**: This mode is made for maximum flexibility, and will be our usual recommendation. It offers multiple architecture choices depending on your compliance needs and allows using all the features of Nuxeo Server. Compliance with SEC Rule 17a-4 is supported: WORM storage is an option.
 
- - **Strict mode (formerly known as compliance mode)**: this mode is designed for companies who want to use their whole Nuxeo instance as a records management solution holding SEC-17A4 compliant records first and foremost, planning limited use beyond this use case. Using it as is provides the benefit of being certified with SEC Rule 17A-4 compliance out of the box, at the cost of some functional [limitations](#limitations). This mode requires the usage of Amazon S3 Object Lock in [compliance mode]({{page page='nuxeo-retention-installation'}}#s3-configuration-requirements) for WORM storage support.
+ - **Strict mode (formerly known as compliance mode)**: this mode is designed for companies who want to use their whole Nuxeo instance as a records management solution holding SEC-17A4 compliant records first and foremost, planning limited use beyond this use case. Using it as is provides the benefit of being certified with SEC Rule 17A-4 compliance out of the box, at the cost of some functional [limitations](#limitations). This mode requires that [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) or [**Google Storage Object Retention**](https://cloud.google.com/storage/docs/object-lock) is enabled when enabling the [compliance mode]({{page page='nuxeo-retention-installation'}}#strict-formerly-known-as-compliance-mode-specificities) for WORM storage support.
 
 ## Standard Mode Specificities
 
@@ -42,7 +42,7 @@ Compliance with SEC-17A4 requires that you leverage a specific set of features.
 
 ### Storage
 
-In standard mode you can use Amazon S3, with or without the Object Lock option. Object Lock is supported:
+In standard mode you can use Amazon S3 or Google Storage, with or without the Object Lock option. Object Lock is supported:
 
 - in "governance" mode
 - in "compliance" mode, for WORM storage support
@@ -51,7 +51,7 @@ In standard mode you can use Amazon S3, with or without the Object Lock option. 
 Compliance with SEC-17A4 requires usage of Amazon S3 Object Lock in compliance mode.
 {{/callout}}
 
-Please refer to the [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) documentation for additional information about the different modes.
+Please refer to the [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) or [**Google Storage Object Retention**](https://cloud.google.com/storage/docs/object-lock) documentation for additional information about the different modes.
 
 ### Undeclaring a Record
 
@@ -87,9 +87,9 @@ Strict mode is designed to be used when your Nuxeo instance will be mostly holdi
 
 The SEC 17a-4 US regulation involves the usage of a secured storage media as part of the requirements to be compliant. Therefore, using the strict mode requires the usage of a SEC 17A-4 compatible storage solution.
 
-The Nuxeo Retention Management addon is using Amazon S3 Object Lock in "Compliance mode", to fit with this requirement.
+The Nuxeo Retention Management addon is using Amazon S3 Object Lock or Google Storage Object Retention in "Compliance mode", to fit with this requirement.
 
-Amazon S3 Object Lock in compliance mode (see [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)) guarantees that no one can delete an object which is under retention or legal hold. Amazon S3 is provided with the retention period and/or legal hold information by Nuxeo, and ensures that no changes or deletions can occur during this period.
+[**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) or [**Google Storage Object Retention**](https://cloud.google.com/storage/docs/object-lock) in compliance mode  guarantee that no one can delete an object which is under retention or legal hold. Amazon S3 or Google Storage is provided with the retention period and/or legal hold information by Nuxeo, and ensures that no changes or deletions can occur during this period.
 
 ### {{> anchor 'limitations'}}Limitations
 
