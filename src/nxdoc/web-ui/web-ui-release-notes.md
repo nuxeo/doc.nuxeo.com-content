@@ -19,7 +19,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-6-0'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-7-0'}}}
 
 ## Previous Release Notes
 
