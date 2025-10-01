@@ -123,18 +123,22 @@ Nuxeo is shipped with an embedded Tomcat server.
 
 ## OpenSearch
 
-Nuxeo Platform is fully tested against OpenSearch1 cluster:
-- an OpenSearch cluster {{! multiexcerpt name='opensearch_cluster_supported_version'}}1.3.20{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch1_libraries_supported_version'}}1.3.20{{! /multiexcerpt}}.
-For now, Nuxeo Platform is partially tested against an embedded OpenSearch2:
+Nuxeo Platform is fully tested against an OpenSearch1 cluster:
+- an OpenSearch cluster {{! multiexcerpt name='opensearch1_cluster_supported_version'}}1.3.20{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch1_libraries_supported_version'}}1.3.20{{! /multiexcerpt}}.
+
+For now, Nuxeo Platform is partially tested against an OpenSearch2 cluster:
 - an OpenSearch cluster {{! multiexcerpt name='opensearch2_cluster_supported_version'}}2.18.0{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch2_libraries_supported_version'}}2.23.0{{! /multiexcerpt}}.
 
 More information can be found on the [OpenSearch Setup]({{page page='search-setup'}}) page.
 
 ## Elasticsearch
 
-Nuxeo Platform is tested against 2 Elasticsearch clusters using OpenSearch Java libraries {{{multiexcerpt 'opensearch_libraries_supported_version'}}}:
+Nuxeo Platform is tested against 2 Elasticsearch clusters using OpenSearch Java libraries {{{multiexcerpt 'opensearch1_libraries_supported_version'}}}:
 - an {{! multiexcerpt name='elasticsearch_7_cluster_supported_version'}}7.17.9{{! /multiexcerpt}} Elasticsearch cluster
 - an {{! multiexcerpt name='elasticsearch_8_cluster_supported_version'}}8.7.0{{! /multiexcerpt}} Elasticsearch cluster
+
+For now, Nuxeo Platform is partially tested against Elasticsearch 9.x:
+- an OpenSearch cluster {{! multiexcerpt name='elasticsearch9_cluster_supported_version'}}9.0.x{{! /multiexcerpt}} using Elasticsearch Java libraries {{! multiexcerpt name='elasticsearch9_libraries_supported_version'}}9.0.x{{! /multiexcerpt}}.
 
 More information can be found on the [Elasticsearch Setup]({{page page='search-setup'}}) page.
 
