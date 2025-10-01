@@ -251,7 +251,7 @@ package.
 
 After installation, check that the `opensearch1-search-client` template is included in your `nuxeo.conf` file. The template will enable to access an OpenSearch 1.x, Elasticsearch 7.x or 8.x cluster. The previous `elasticsearch.enabled` configuration property has no more effect.
 
-Previously, the ElasticSearch / OpenSearch configuration properties looked like:
+Previously, the Elasticsearch / OpenSearch configuration properties looked like:
 
 ```properties
 # generic
@@ -277,7 +277,7 @@ elasticsearch.indexNumberOfShards=5
 elasticsearch.indexNumberOfReplicas=1
 ```
 
-Now you will configure OpenSearch 1 / ElasticSearch 7 or 8 connection with:
+Now you will configure OpenSearch 1 / Elasticsearch 7 or 8 connection with:
 
 ```properties
 # generic

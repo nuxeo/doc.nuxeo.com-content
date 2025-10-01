@@ -175,7 +175,7 @@ package.
 After installation, check that the `opensearch1-audit` template is included in your `nuxeo.conf` file. The template
 will enable the OpenSearch Audit Backend. The previous `audit.elasticsearch.enabled` configuration property has no more effect.
 
-Previously, the ElasticSearch / OpenSearch configuration property for Audit looked like:
+Previously, the Elasticsearch / OpenSearch configuration property for Audit looked like:
 
 ```properties
 # generic
@@ -202,7 +202,7 @@ audit.elasticsearch.indexName=${elasticsearch.indexName}-audit
 audit.elasticsearch.latestLogId.afterDate=now-14d/d
 ```
 
-Now you will configure OpenSearch 1 / ElasticSearch 7 or 8 connection with:
+Now you will configure OpenSearch 1 / Elasticsearch 7 or 8 connection with:
 
 ```properties
 # generic

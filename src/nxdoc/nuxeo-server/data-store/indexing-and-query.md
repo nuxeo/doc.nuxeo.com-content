@@ -442,15 +442,16 @@ The following table and schema gives an overview of the different ways of queryi
 7.  **CoreSession.queryProjection() (Server side)**
     Methods `queryProjection()` allow to perform an NXQL query in order to get a page of projections as Java `Map`. Note: `query()` allows to get a page too, but you get a `DocumentModelList` as result.
 8.  **SearchService.search() (Server side)**
-    Since Nuxeo LTS 2025, there is a new SearchService which enables to perform an NXQL query on one or multiple repositories using available indexes. This new service provides a uniform way to search on the repository, OpenSearch 1.x, ElasticSearch 7.x or 8.x and future versions as soon as new search client packages are available. This supersedes the legacy ElasticSearchService.
+    Since Nuxeo LTS 2025, there is a new SearchService which enables to perform an NXQL query on one or multiple repositories using available indexes. This new service provides a uniform way to search on the repository, OpenSearch 1.x, Elasticsearch 7.x or 8.x and future versions as soon as new search client packages are available. This supersedes the legacy ElasticSearchService.
 
 ## {{> anchor 'searchclient'}}SearchClient Configuration
 
 Since Nuxeo LTS 2025, you have to explicitly choose and install a SearchClient package. By default, the SearchService will be configured with a Repository SearchClient that is using the underlying repository data store (VCS or DBS) with limited capabilities regarding fulltext search, aggregation and scalability.
 
 It's therefore recommended to rely on an external search engine.
-For OpenSearch 1.x, ElasticSearch 7.x or 8.x cluster, you need to install the`nuxeo-search-client-opensearch1` package.
+For OpenSearch 1.x, Elasticsearch 7.x or 8.x cluster, you need to install the`nuxeo-search-client-opensearch1` package.
 For OpenSearch 2.x, you need to install the`nuxeo-search-client-opensearch2` package.
+For Elasticsearch 9.x, you need to install the`nuxeo-search-client-elasticsearch9` package.
 
 It's also possible for testing purpose to run an embedded OpenSearch server in the same JVM as Nuxeo by installing the `nuxeo-opensearch1-embed` or `nuxeo-opensearch2-embed` package.
 
