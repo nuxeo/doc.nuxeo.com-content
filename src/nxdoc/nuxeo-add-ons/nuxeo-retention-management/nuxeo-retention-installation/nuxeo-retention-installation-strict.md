@@ -184,6 +184,6 @@ This will enable the [s3-retention-config.xml](https://github.com/nuxeo/nuxeo-re
 
 ### Google Storage
 
-Just make sure to [enable the object retention]({{page page='nuxeo-retention-installation-standard'}}#gcp-2-buckets-enable-retention) on the bucket.
+Make sure to [enable the object retention]({{page page='nuxeo-retention-installation-standard'}}#gcp-2-buckets-enable-retention) on the bucket.
 
 If `nuxeo.retention.strictmode.enabled` is set to `true`, the Nuxeo server will apply the [**Locked retention mode**](https://cloud.google.com/storage/docs/object-lock#overview) while setting a retention date to an object.
