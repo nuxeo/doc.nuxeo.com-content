@@ -172,7 +172,7 @@ nuxeo.uidsequencer.default.class=org.nuxeo.ecm.core.uidgen.KeyValueStoreUIDSeque
 
 And so, starting from Nuxeo Platform LTS 2025, the default UIDSequencer is now `KeyValueStoreUIDSequencer`.
 
-The ElasticSearch/OpenSearch UIDSequencer has been extracted to the `nuxeo-uidgen-opensearch1` package marketplace. If you want to use it just install the package, check that the template `opensearch1-uidgen` is enabled, and the OpenSearch connection configuration is present in your `nuxeo.conf`:
+The Elasticsearch/OpenSearch UIDSequencer has been extracted to the `nuxeo-uidgen-opensearch1` package marketplace. If you want to use it just install the package, check that the template `opensearch1-uidgen` is enabled, and the OpenSearch connection configuration is present in your `nuxeo.conf`:
 
 ```
 # You can replace the prefix _nuxeo.uidsequencer.default_ by _nuxeo_ if you use other OpenSearch implementations that uses the same OpenSearch cluster

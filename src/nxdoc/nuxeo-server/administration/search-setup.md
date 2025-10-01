@@ -830,11 +830,11 @@ It is not possible to disable contribution to an `elasticSearchIndex` for a spec
 
 ## Setting up an OpenSearch 2.x Cluster{{> anchor 'setting-up-opensearch2'}}
 
-In order to use an OpenSearch 2.x cluster, you need to install `nuxeo-search-client-opensearch2` package.
+In order to use an OpenSearch 2.x cluster, you need to install the `nuxeo-search-client-opensearch2` package.
 
 If you want to set up an OpenSearch server that runs in the same JVM as the Nuxeo Platform's, you have to install explicitly the `nuxeo-opensearch2-embed` package. For production, you need to set up a Search cluster.
 
-Currently, the configuration is identical to OpenSearch 1, with a single change: all OpenSearch 1 options must be updated to OpenSearch 2.
+Currently, the configuration is identical to OpenSearch 1, with a single change: all `opensearch1` options must be updated to `opensearch2`.
 
 For instance, you will have to use:
 ```
@@ -844,6 +844,23 @@ nuxeo.opensearch2.client.username=your_username
 nuxeo.search.client.default.opensearch2.index.name=nuxeo
 ...
 ```
+
+## Setting up an Elasticsearch 9.x Cluster{{> anchor 'setting-up-elasticsearch9'}}
+
+In order to use an Elasticsearch 9.x cluster, you need to install the `nuxeo-search-client-elasticsearch9` package.
+
+Currently, the configuration is identical to OpenSearch 1, with a single change: all `opensearch1` options must be updated to `elasticsearch9`.
+
+For instance, you will have to use:
+```
+nuxeo.elasticsearch9.client.server=http://somenode:9200,https://anothernode:443
+nuxeo.elasticsearch9.client.username=your_username
+...
+nuxeo.search.client.default.elasticsearch9.index.name=nuxeo
+...
+```
+
+Note that it's not possible to run an Elasticsearch 9 server in the same JVM as Nuxeo Platform.
 
 ## Investigating and Reporting Problems
 

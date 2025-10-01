@@ -198,6 +198,7 @@ Watch the related courses on Hyland University
 
 The Nuxeo `nuxeo-search-client-opensearch1` package gives you access to your OpenSearch 1.x or Elasticsearch 7.x or 8.x cluster. 
 The Nuxeo `nuxeo-search-client-opensearch2` package gives you access to your OpenSearch 2.x cluster.
+The Nuxeo `nuxeo-search-client-elasticsearch9` package gives you access to your Elasticsearch 9.x cluster.
 
 Search client packages comes with a default mapping that can work with custom fields of your schemas, but in a limited way. To leverage the search capabilities of OpenSearch/Elasticsearch, you need to define your own mapping, for instance in the following cases:
 

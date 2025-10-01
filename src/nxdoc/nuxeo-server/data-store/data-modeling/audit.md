@@ -138,10 +138,11 @@ Nuxeo documents and events can have a lot of custom properties, so if you want t
 Since LTS 2025, you have to explicitly choose a backend implementation from the following implementations listed below:
 
 | Backend                                  | Marketplace Package             |
-| ---------------------------------------- | ------------------------------- |
+|------------------------------------------|---------------------------------|
 | In-Memory (not for production)           | Built-in Nuxeo Server (default) |
-| OpenSearch 1.x / ElasticSearch 7.x - 8.x | nuxeo-audit-opensearch1         |
+| OpenSearch 1.x / Elasticsearch 7.x - 8.x | nuxeo-audit-opensearch1         |
 | OpenSearch 2.x                           | nuxeo-audit-opensearch2         |
+| Elasticsearch 9.x                        | nuxeo-audit-elasticsearch9      |
 | MongoDB                                  | nuxeo-audit-mongodb             |
 | SQL DataBase (Legacy)                    | nuxeo-audit-sql                 |
 
@@ -165,6 +166,13 @@ To use OpenSearch 2.x back-end, you have to install the `nuxeo-audit-opensearch2
 
 The entries are stored in the `nuxeo-audit` index by default.
 You can configure it by setting the `nuxeo.audit.backend.default.opensearch2.index.name` property in your `nuxeo.conf`.
+
+#### Elasticsearch 9.x Back-end
+
+To use Elasticsearch 9.x back-end, you have to install the `nuxeo-audit-elasticsearch9` package.
+
+The entries are stored in the `nuxeo-audit` index by default.
+You can configure it by setting the `nuxeo.audit.backend.default.elasticsearch9.index.name` property in your `nuxeo.conf`.
 
 #### MongoDB Back-end
 

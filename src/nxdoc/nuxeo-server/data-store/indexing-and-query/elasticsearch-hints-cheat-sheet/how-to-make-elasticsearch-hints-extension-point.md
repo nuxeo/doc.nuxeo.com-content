@@ -61,7 +61,7 @@ public class FuzzyOpenSearchHintQueryBuilder implements OpenSearchHintQueryBuild
 
 The way to expose the hints is by creating a contribution as below:
 
-- We use the Extension Point : `org.nuxeo.ecm.core.search.client.opensearch1` if you are using the `nuxeo-search-client-opensearch1` package, if you are on Opensearch 2.x you need to use the `org.nuxeo.ecm.core.search.client.opensearch2` enpoint. 
+- We use the Extension Point : `org.nuxeo.ecm.core.search.client.opensearch1` if you are using the `nuxeo-search-client-opensearch1` package, if you are on Opensearch 2.x you need to use the `org.nuxeo.ecm.core.search.client.opensearch2` enpoint, and if you are on Elasticsearch 9.x you need to use `org.nuxeo.ecm.core.search.client.elasticsearch9` endpoint.
 - The name of XP is `hint`
 - Our "fuzzy" switch case, will be done like below :
 

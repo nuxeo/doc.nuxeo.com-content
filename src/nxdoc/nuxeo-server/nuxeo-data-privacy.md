@@ -119,7 +119,7 @@ As described in [Trash Service]({{page version='' space='nxdoc' page='trash-serv
 When personally identifying information needs to be removed without deleting the whole document, [content redaction using Nuxeo Enhanced Viewer]({{page space='nxdoc' page='how-to-use-content-redaction'}}) can also be considered as an option.
 
 {{#> callout type='info' }}
-Some personal information may be stored within the indexes. Cleaning the indexes requires specific ElasticSearch operations.
+Some personal information may be stored within the indexes. Cleaning the indexes requires specific Elasticsearch operations.
 {{/callout}}
 
 ### Right to Object
