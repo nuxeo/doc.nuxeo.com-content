@@ -106,6 +106,21 @@ If you have any questions, feel free to contact our support team via a dedicated
 ### Bump AWS SDK (V1) Version to Latest Release in LTS 2023
 
 The AWS Java SDK was updated from 1.12.650 to 1.12.792.
+
+### Don't include JAR files Patching Nuxeo Packages in Hotfix Package
+
+Hotfixes no more include any JAR file to patch the packages installed from the Nuxeo Marketplace. After running:
+
+```shell
+nuxeoctl mp-hotfix
+```
+
+you'll need to run the following command to also upgrade the installed Nuxeo packages:
+
+```shell
+nuxeoctl mp-upgrade
+```
+
 ## Hotfix 34
 
 ### Remove Buildnumber-Maven-Plugin From Default Execution
