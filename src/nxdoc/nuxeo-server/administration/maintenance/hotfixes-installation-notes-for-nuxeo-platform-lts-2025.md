@@ -651,6 +651,21 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 9
+
+### Don't include JAR files Patching Nuxeo Packages in Hotfix Package
+
+Hotfixes no more include any JAR file to patch the packages installed from the Nuxeo Marketplace. After running:
+
+```shell
+nuxeoctl mp-hotfix
+```
+
+you'll need to run the following command to also upgrade the installed Nuxeo packages:
+
+```shell
+nuxeoctl mp-upgrade
+```
 
 ## Hotfix 6
 
