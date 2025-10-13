@@ -1,10 +1,10 @@
 ---
-title: Nuxeo Aspera 2021.3.8
-description: Release notes for Nuxeo Aspera Connector 2021.3.8
+title: Nuxeo Aspera 2023.8.8
+description: Release notes for Nuxeo Aspera Connector 2023.8.8
 tree_item_index: 800
 review:
   comment:
-  date: '2023-02-15'
+  date: '2025-10-13'
   status: ok
 toc: true
 hidden: true
