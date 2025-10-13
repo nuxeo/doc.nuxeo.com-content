@@ -20,6 +20,7 @@ hidden: true
 The 413 - Content Too Large error is now returned when exceeding configured quota.
 
 Nuxeo now returns a 413 - Content Too Large error instead of the standard 500 - Internal Server Error when a user exceeds its quota.
+
 ## Fix Random WorkflowEscalationTest.testEscalationMultipleExecutionWithListener (PostgreSQL)
 
 A new generic test waiter for bulk command submitted by event listener is available in CoreBulkFeature
@@ -35,6 +36,7 @@ A new Fetcher has been added for Comment response. Use `fetch.comment=author` to
 ### Audit / History Principal Fetcher
 
 A new Fetcher has been added for Audit responses. Use `fetch.logEntry=principal` to receive a full user / principal object at `principal` location.
+
 ## Bump AWS SDK (V1) Version to Latest Release in LTS 2023
 
 The AWS Java SDK was updated from 1.12.650 to 1.12.792.
