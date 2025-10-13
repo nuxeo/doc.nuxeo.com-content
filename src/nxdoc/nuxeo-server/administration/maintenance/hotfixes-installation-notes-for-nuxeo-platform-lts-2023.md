@@ -102,6 +102,11 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 37
+
+### Bump AWS SDK (V1) Version to Latest Release in LTS 2023
+
+The AWS Java SDK was updated from 1.12.650 to 1.12.792.
 ## Hotfix 34
 
 ### Remove Buildnumber-Maven-Plugin From Default Execution
