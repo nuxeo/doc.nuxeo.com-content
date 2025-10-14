@@ -2,7 +2,7 @@
 title: Hotfixes Installation Notes
 review:
     comment: ''
-    date: '2023-03-14'
+    date: '2025-10-09'
     status: ok
 labels:
     - multiexcerpt-include
@@ -28,13 +28,14 @@ Use of the <copy /> command on JAR files is not recommended, prefer using <updat
 ```
 {{/callout}}
 
-Since LTS 2021, the addon "Nuxeo JSF UI" is handled outside the main Nuxeo repository on GitHub. As a consequence, the related fixes for JSF UI will not be embedded in a hotfix.</br>
-Therefore if the addon "Nuxeo JSF UI" is installed on your instance, you must upgrade this package after installing a hotfix by running the following command:
+{{#> callout type='note' }}
+Since Hotfix 9, hotfixes don't include any patch for the packages installed from the Nuxeo Marketplace. To also upgrade the installed Nuxeo packages, you need to run:
 
-```
+```shell
 > nuxeoctl mp-upgrade
 ```
-Note that this command will upgrade the versions of any package.
+
+{{/callout}}
 
 ## Instance Registration
 
