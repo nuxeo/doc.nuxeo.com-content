@@ -310,7 +310,7 @@ Public
 [Documentation]({{page page='howto-nuxeo-api-playground'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground)
 </td>
 </tr>
 <tr>
@@ -325,7 +325,7 @@ Registered access
 [Documentation]({{page page='nuxeo-aspera-connector'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera)
 </td>
 </tr>
 <tr>
@@ -431,7 +431,7 @@ Registered access
 [User documentation]({{page page='nuxeo-groups-and-rights-audit'}})
 </td>
 <td colspan="1">
-[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)
+[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)
 </td>
 </tr>
 <tr>
@@ -446,7 +446,7 @@ Registered access
 [Documentation]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package)
 </td>
 </tr>
 <tr>
