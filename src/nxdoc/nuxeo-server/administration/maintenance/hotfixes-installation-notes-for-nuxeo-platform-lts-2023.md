@@ -29,7 +29,7 @@ Use of the <copy /> command on JAR files is not recommended, prefer using <updat
 {{/callout}}
 
 {{#> callout type='note' }}
-Since Hotfix 9, hotfixes don't include any patch for the packages installed from the Nuxeo Marketplace. To also upgrade the installed Nuxeo packages, you need to run:
+Since Hotfix 9, hotfixes don't include any patch for the packages installed from the Nuxeo Marketplace. To also upgrade the installed Nuxeo packages, run the following command:
 
 ```shell
 > nuxeoctl mp-upgrade
