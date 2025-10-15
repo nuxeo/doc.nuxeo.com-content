@@ -26,7 +26,7 @@ A new generic test waiter for bulk command submitted by event listener is availa
 
 ## Integrate an External Uid for User and Group to Use in REST API
 
-Several additions to user for REST APIs
+Several additions to user for REST APIs.
 
 ### Comment Author Fetcher
 
