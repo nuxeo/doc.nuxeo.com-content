@@ -35,7 +35,8 @@ A new Fetcher has been added for Comment response. Use `fetch.comment=author` to
 ### Audit / History Principal Fetcher
 
 A new Fetcher has been added for Audit responses. Use `fetch.logEntry=principal` to receive a full user / principal object at `principal` location.
-## Bump AWS SDK (V1) Version to Latest Release in LTS 2023
+
+## Update AWS SDK (V1) Version to Latest Release in LTS 2023
 
 The AWS Java SDK was updated from 1.12.650 to 1.12.792.
 
