@@ -20,6 +20,7 @@ hidden: true
 The 413 - Content Too Large error is now returned when exceeding configured quota.
 
 Nuxeo now returns a 413 - Content Too Large error instead of the standard 500 - Internal Server Error when a user exceeds its quota.
+
 ## Fix Random WorkflowEscalationTest.testEscalationMultipleExecutionWithListener (PostgreSQL)
 
 A new generic test waiter for bulk command submitted by event listener is available in CoreBulkFeature
