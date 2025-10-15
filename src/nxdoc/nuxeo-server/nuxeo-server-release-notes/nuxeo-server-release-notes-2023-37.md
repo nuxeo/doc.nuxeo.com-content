@@ -22,7 +22,7 @@ Nuxeo now returns a "413 - Content Too Large" error instead of the standard "500
 
 ## Fix Random WorkflowEscalationTest.testEscalationMultipleExecutionWithListener (PostgreSQL)
 
-A new generic test waiter for bulk command submitted by event listener is available in CoreBulkFeature
+A new generic test waiter for bulk command submitted by event listener is available in CoreBulkFeature.
 
 ## Integrate an External Uid for User and Group to Use in REST API
 
