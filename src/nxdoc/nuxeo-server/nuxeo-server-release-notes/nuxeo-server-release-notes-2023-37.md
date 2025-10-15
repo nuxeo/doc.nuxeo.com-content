@@ -17,7 +17,6 @@ hidden: true
 
 ## Fix HTTP Status Code When a Quota Is Exceeded
 
-
 Nuxeo now returns a "413 - Content Too Large" error instead of the standard "500 - Internal Server Error" when a user exceeds its quota.
 
 ## Fix Random WorkflowEscalationTest.testEscalationMultipleExecutionWithListener (PostgreSQL)
