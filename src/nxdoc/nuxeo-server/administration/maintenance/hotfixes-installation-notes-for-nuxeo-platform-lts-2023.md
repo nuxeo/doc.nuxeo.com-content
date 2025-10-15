@@ -103,7 +103,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 37
 
-### Bump AWS SDK (V1) Version to Latest Release in LTS 2023
+### Update the AWS SDK (V1) Version to the Latest Release in LTS 2023
 
 The AWS Java SDK was updated from 1.12.650 to 1.12.792.
 
