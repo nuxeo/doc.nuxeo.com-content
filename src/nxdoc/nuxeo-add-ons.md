@@ -611,7 +611,7 @@ Public
 [Documentation ]({{page page='nuxeo-platform-user-registration'}})
 </td>
 <td colspan="1">
-[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration)
+[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration)
 </td>
 </tr>
 <tr>
@@ -641,7 +641,7 @@ Registered access
 [Documentation]({{page page='nuxeo-for-salesforce'}})
 </td>
 <td colspan="1">
-[Released for LTS 2023](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce)
 </td>
 </tr>
 <!--
