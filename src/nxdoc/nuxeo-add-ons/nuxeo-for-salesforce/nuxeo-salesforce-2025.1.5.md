@@ -19,13 +19,13 @@ This release contain technical enhancements and some vulnerability fixes.
 ## Released Changes
 
 ### Technical enhancements
-* Optimized Docker Image build with bind mount
+* Optimized Docker Image build with bind mount.
 
-* Used nuxeo-lts base helm file as descriptors were updated to be used from external repositories.
+* Used nuxeo-lts base helm file as descriptors were updated so that they can be used from external repositories.
 
-* Supports nuxeo-lts v2025.7
+* Supports nuxeo-lts v2025.7.
 
-* Added the maven enforcer steps to check that the commit keeps the project releasable at any time.
+* Added the maven enforcer steps to ensure that the project can be released any time.
 
 ### Vulnerability fixes
 * Updated repository URLs to use HTTPS instead of HTTP to improve security. This was reported as a vulnerability in codeQL scans.
