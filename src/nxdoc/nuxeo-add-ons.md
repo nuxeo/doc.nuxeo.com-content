@@ -556,7 +556,7 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
-Nuxeo Platform 3D<br/>
+Nuxeo Platform 3D Viewer<br/>
 `nuxeo-platform-3d`
 </td>
 <td colspan="1">
@@ -566,7 +566,7 @@ Registered access
 [Documentation]({{page version='' space='nxdoc' page='nuxeo-3d'}})
 </td>
 <td colspan="1">
-[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d)
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-3d-viewer)
 </td>
 </tr>
 <tr>
