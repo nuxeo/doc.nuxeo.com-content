@@ -22,17 +22,17 @@ This release contains bug fix, technical enhancement and some vulnerability fixe
 * Fixed application clocking issue while sorting in ascending/descending order and scrolling page down to bottom.
 
 ### Technical enhancements
-* Updated labels on Kubernetes resources for monitoring pods deployed by the Platform CI.
+* Updated labels on Kubernetes resources for monitoring the pods that are deployed by the Platform CI.
 
-* Optimized Jenkins CI process by removing calls from `jx-upgrade-platform` and automatically retrieve the team in `nxK8s.setPodLabels`.
+* Optimized Jenkins CI process by removing calls from `jx-upgrade-platform` so that the team in `nxK8s.setPodLabels` can be automatically retrieved.
 
 * Upgraded nuxeo Helm chart to 3.1.0. 
 
-* Fixed FFmpeg installation since Oracle Linux 9 switch.
+* Fixed FFmpeg installation in Oracle Linux 9.
 
 * Optimized Docker Image build with bind mount.
 
-* Used nuxeo-lts base helm file as descriptors were updated so that they can be used from external repositories.
+* Descriptors in the nuxeo-lts base helm file were updated so that they can be used from external repositories.
 
 * Supports nuxeo-lts v2023.36.
 
