@@ -28,7 +28,7 @@ An issue was encountered when max_items param was included in '/ops/transfers' r
 ### Technical enhancements
 * Added the maven enforcer steps introduced in nuxeo-opensearch2 addon that checks the commit to keep the project ready for release any time.
 
-* Fixed FFmpeg installation since Oracle Linux 9 switch.
+* Fixed the FFmpeg installation in Oracle Linux 9.
 
 * Optimized Docker Image build with bind mount.
 
