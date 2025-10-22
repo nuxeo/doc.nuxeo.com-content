@@ -26,7 +26,7 @@ An issue was encountered when max_items param was included in '/ops/transfers' r
 * Included permissions in workflow file. This was reported as a vulnerability in codeQL scan.
 
 ### Technical enhancements
-* Fixed FFmpeg installation since Oracle Linux 9 switch.
+* Fixed the FFmpeg installation in Oracle Linux 9.
 
 * Optimized Docker Image build with bind mount.
 
