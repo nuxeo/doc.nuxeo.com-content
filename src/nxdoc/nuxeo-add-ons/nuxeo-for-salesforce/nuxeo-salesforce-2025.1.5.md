@@ -21,7 +21,7 @@ This release contain technical enhancements and some vulnerability fixes.
 ### Technical enhancements
 * Optimized Docker Image build with bind mount.
 
-* Used nuxeo-lts base helm file as descriptors were updated so that they can be used from external repositories.
+* Descriptors in the nuxeo-lts base helm file were updated so that they can be used from external repositories.
 
 * Supports nuxeo-lts v2025.7.
 
