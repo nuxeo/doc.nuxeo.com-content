@@ -1,6 +1,6 @@
 ---
-title: Nuxeo Aspera 2023.8.8
-description: Release notes for Nuxeo Aspera Connector 2023.8.8
+title: Nuxeo Aspera 2023.8.9
+description: Release notes for Nuxeo Aspera Connector 2023.8.9
 tree_item_index: 800
 review:
   comment:
@@ -11,9 +11,9 @@ hidden: true
 ---
 
 
-{{! multiexcerpt name='nuxeo-aspera-connector-2023-8-8'}}
+{{! multiexcerpt name='nuxeo-aspera-connector-2023-8-9'}}
 
-## What's New in Aspera for LTS 2023 (version 2023.8.8)
+## What's New in Aspera for LTS 2023 (version 2023.8.9)
 This release includes a bug fix, vulnerability fixes and some technical enhancements.
 ## Released Changes
 
