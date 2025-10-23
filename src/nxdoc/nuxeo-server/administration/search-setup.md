@@ -618,12 +618,11 @@ If you have chosen to configure [Elasticsearch TLS/SSL](https://www.elastic.co/g
 
 ```
 nuxeo.opensearch1.client.trustStore.path
-nuxeo.opensearch1.client.truststore.path
-nuxeo.opensearch1.client.truststore.password
-nuxeo.opensearch1.client.truststore.type
-nuxeo.opensearch1.client.keystore.path
-nuxeo.opensearch1.client.keystore.password
-nuxeo.opensearch1.client.keystore.type
+nuxeo.opensearch1.client.trustStore.password
+nuxeo.opensearch1.client.trustStore.type
+nuxeo.opensearch1.client.keyStore.path
+nuxeo.opensearch1.client.keyStore.password
+nuxeo.opensearch1.client.keyStore.type
 ```
 
 These properties supersede all `elasticsearch.restClient.*` properties.
