@@ -96,7 +96,7 @@ On user interface provided by Nuxeo, deleting a document involves several steps 
 
 ## Trash Management
 
-Trash feature is managed by [TrashService](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/trash/TrashService.html).
+Trash feature is managed by [TrashService](https://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/trash/TrashService.html).
 
 ### Trash / Untrash / Purge Document
 
