@@ -20,7 +20,7 @@ hidden: true
 **Enhancements** 
 
 - **Customizable Document Type Display Order**
-Users can now configure the display order of document types in the document creation popup, improving selection efficiency. In order to do so, it would be required to add the following property in the configuration (nuxeo.conf) with comma separated list of document type IDs. The ones that are left out would follow the default order.
+Users can now configure the display order of document types in the document creation popup, improving selection efficiency. To do so, add the following property in the configuration (nuxeo.conf file) with comma separated list of document type IDs. The document types that are left out would follow the default order.
 `org.nuxeo.web.ui.document_type.order=file,note,workspace`
 
  Grouping support is deferred to a future release.
