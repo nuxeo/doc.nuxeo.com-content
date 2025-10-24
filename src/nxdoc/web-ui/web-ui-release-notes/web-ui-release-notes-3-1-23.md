@@ -47,7 +47,7 @@ Fixed an issue where a blue focus outline appeared after mouse clicks. Now, outl
 Resolved a bug that allowed multiple comment submissions via rapid clicks. The submit button is now disabled after the first click.
 
 - **PDF Filename Escaping**
-Fixed a double escaping/unescaping issue in PDF filename handling identified during GitHub code scans.
+Fixed a double escaping/unescaping issue in PDF filename handling, identified during GitHub code scans.
 
 <br/>
 
