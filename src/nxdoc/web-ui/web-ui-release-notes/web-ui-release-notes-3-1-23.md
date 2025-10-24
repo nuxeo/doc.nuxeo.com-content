@@ -8,7 +8,7 @@ review:
 toc: true
 labels:
 tree_item_index: 978
-hidden: false
+hidden: true
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
@@ -18,7 +18,6 @@ hidden: false
 ## What’s New in Web UI for LTS 2023 (Version 3.1.23)
 
 **Enhancements** 
-
 
 - **Customizable Document Type Display Order**
 Users can now configure the display order of document types in the document creation popup, improving selection efficiency. In order to do so, it would be required to add the following property in the configuration (nuxeo.conf) with comma separated list of document type IDs. The ones that are left out would follow the default order.
