@@ -26,7 +26,7 @@ Users can now configure the display order of document types in the document crea
  Grouping support is deferred to a future release.
 
 - **Configurable Rendition Selection**
-The rendition selection in the publication popup is now optional, allowing projects to streamline publishing workflows by hiding this option when unnecessary. Additionally, For the Rendition dropdown, “**Default Rendition**” will be pre-selected by default.
+The rendition selection in the publication popup is now optional, allowing projects to streamline publishing workflows by hiding this option when unnecessary. Additionally, in the Rendition dropdown, “**Default Rendition**” is pre-selected by default.
 
 - **Hide "Permissions to external users" block in Permissions tab**
 The permission to external users block is now not visible to the customers who have the following property and value set in the configuration
