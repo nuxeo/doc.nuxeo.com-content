@@ -102,6 +102,11 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 38
+
+### Fix Vim Medium CVE in Docker Image
+
+Vim editor was upgraded in the Docker image from `8.2.2637-22.0.1.el9_6` to `8.2.2637-22.0.1.el9_6.1`.
 ## Hotfix 37
 
 ### Update the AWS SDK (V1) Version to the Latest Release in LTS 2023
