@@ -652,6 +652,11 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 10
+
+### Fix Vim Medium CVE in Docker Image
+
+Vim editor was upgraded in the Docker image from `8.2.2637-22.0.1.el9_6` to `8.2.2637-22.0.1.el9_6.1`.
 ## Hotfix 9
 
 ### Don't include JAR files Patching Nuxeo Packages in Hotfix Package
