@@ -33,7 +33,7 @@ Publication with default rendition of a folderish document with a custom lifecyc
 
 ## Use uploadFromUrl Instead of copyFromUrl API for Azure Optimized Copy 
 
-Azure Blob Provider now leverages efficient APIs to write and copy blobs
+Azure Blob Provider now leverages efficient APIs to write and copy blobs.
 
 The Azure Blob Provider now uses the [uploadFromFileWithResponse](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-upload-java#upload-a-block-blob-with-configuration-options) API to write a file to an Azure container. As such, new Nuxeo configuration properties are available to tweak the underlying [ParallelTransferOptions](https://learn.microsoft.com/en-us/java/api/com.azure.storage.blob.models.paralleltransferoptions?view=azure-java-stable):
 
