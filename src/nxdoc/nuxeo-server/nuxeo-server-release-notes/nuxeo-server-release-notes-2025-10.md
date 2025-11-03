@@ -23,7 +23,7 @@ Logout is fixed when Shibboleth authentication is configured.
 
 Properties with same name, but from different schemas, can now be properly retained as long as a prefix is defined for each schema.
 
-## Fix File Properties When Using Creating the Document From REST API by Using an Existing Blob Digest
+## Fix File Properties When Creating the Document using REST API and an Existing Blob Digest
 
 When creating a document with Automation and an existing blob, we can now pass all the file properties, such as MIME type and filename.
 
