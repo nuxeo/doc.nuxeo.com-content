@@ -17,7 +17,7 @@ hidden: true
 
 ## Fix Shibboleth Logout With Anonymous User Enabled
 
-Logout is fixed when Shibboleth authentication is enabled for anonymous user.
+Logout is fixed when Shibboleth authentication is configured.
 
 ## Schemas With Matching Attributes Incorrectly Affected by Retention
 
