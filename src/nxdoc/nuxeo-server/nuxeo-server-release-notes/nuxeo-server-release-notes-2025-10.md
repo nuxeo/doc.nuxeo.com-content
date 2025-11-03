@@ -38,7 +38,7 @@ Azure Blob Provider now leverages efficient APIs to write and copy blobs.
 The Azure Blob Provider now uses the [uploadFromFileWithResponse](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-upload-java#upload-a-block-blob-with-configuration-options) API to write a file to an Azure container. As such, new Nuxeo configuration properties are available to tweak the underlying [ParallelTransferOptions](https://learn.microsoft.com/en-us/java/api/com.azure.storage.blob.models.paralleltransferoptions?view=azure-java-stable) API:
 
 - `nuxeo.storage.azure.upload.blockSize` to set the block size (chunk size) to transfer at a time, default is `4 MiB`
-- `nuxeo.storage.azure.upload.maxConcurrency` to sets the maximum number of parallel requests that will be issued at any given time as a part of a single parallel transfer, defaults to `2`
+- `nuxeo.storage.azure.upload.maxConcurrency` to set the maximum number of parallel requests that will be issued at any given time as a part of a single parallel transfer, defaults to `2`
 - `nuxeo.storage.azure.upload.maxSingleUploadSize` if the size of the data is less than or equal to this value, it will be uploaded in a single put rather than broken up into chunks, defaults to `8 MiB`
 - `nuxeo.storage.azure.upload.timeout` to set the upload timeout, defaults to `2h`
 
