@@ -47,7 +47,7 @@ It also now uses the [uploadFromUrl](https://learn.microsoft.com/en-us/azure/sto
 
 Reduce long tail processing due to unbalance load.
 
-## NuxeoDrive.GetChangeSummary Should Ignore Trashed Documents Unauthorized to the Current User
+## NuxeoDrive.GetChangeSummary Should Ignore Trashed Documents that the Current User is not Authorized to Access
 
 The Nuxeo Drive change summary doesn't include any more trashed or untrashed documents to which the connected user doesn't have access.
 
