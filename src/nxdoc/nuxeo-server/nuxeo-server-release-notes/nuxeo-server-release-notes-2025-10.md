@@ -55,7 +55,7 @@ The Nuxeo Drive change summary doesn't include any more trashed or untrashed doc
 
 nuxeoctl correctly installs packages containing JAR files with the "dash-number" pattern in their name.
 
-## Fix Typo on Enabled in ConvertCacheDescriptor
+## Fix Typo in Enabled associated with ConvertCacheDescriptor
 
 Enabled flag on convert cache is taken into account.
 
