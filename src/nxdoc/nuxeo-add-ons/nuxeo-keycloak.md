@@ -18,7 +18,7 @@ The [Nuxeo Keycloak package](https://connect.nuxeo.com/nuxeo/site/marketplace/pa
 It is certified that Nuxeo works with Keycloak up to version 26.2.5.
 
 {{#> callout type='info'}}
-See the [Nuxeo Keycloak Package README.md](https://github.com/nuxeo/nuxeo-lts/blob/2023/packages/nuxeo-keycloak-package/README.md) for a complete list of required and optional configuration parameters directly contributable via `nuxeo.conf`.
+See the [Nuxeo Keycloak Package README.md](https://github.com/nuxeo/nuxeo/blob/2023/packages/nuxeo-keycloak-package/README.md) for a complete list of required and optional configuration parameters directly contributable via `nuxeo.conf`.
 {{/callout}}
 
 ## Nuxeo/Keycloak Automation and REST API Status Code Specifications
