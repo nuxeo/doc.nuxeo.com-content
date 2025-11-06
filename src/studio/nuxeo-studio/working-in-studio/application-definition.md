@@ -61,7 +61,7 @@ The Application Definition page enables you to manage the requirements of your N
     name: application-definition.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Application Definition Screen](/nx_assets/8a378d74-f04d-4196-8779-5562fd79e9b3.png ?w=350,border=true)
+![Application Definition Screen](/nx_assets/studio/application-definition-full-screen.png ?border=true)
 
 {{#> callout type='info' heading='Watch the related courses on Hyland University'}}
 [Video on a simple Nuxeo Project Creation](https://university.hyland.com/courses/e4114)
@@ -71,39 +71,43 @@ The Application Definition page enables you to manage the requirements of your N
 ## Main Options
 
 -   **Nuxeo Server Version:** Studio will generate valid configuration for this Nuxeo Server version.
--   **Packages to Install:** The list of additional dependencies needed to make your application work. Selected dependencies will be automatically installed when you deploy your Nuxeo Studio configuration on your server.
+-   **Packages:** The list of additional dependencies needed to make your application work. Selected dependencies will be automatically installed when you deploy your Nuxeo Studio configuration on your server.
 
 Any Nuxeo public or [private]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}) addon uploaded in the [Nuxeo Marketplace](https://marketplace.nuxeo.com) can be selected. Type a character to start filtering them. The title and description are provided for each addon to help you select the package you need.
+
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Application Definition/Addons List
     name: addons-list.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Addons List](/nx_assets/0c684cef-bae9-4a60-8f5f-3752bfe3f079.png ?w=350,border=true)
+![Addons List](/nx_assets/studio/application-definition-search-packages.png ?border=true)
 
 Some addons bring additional options into Studio such as new screens or options, making their configuration easier. Once you select addons impacting Studio, their specific features are instantly available.
 
-Addons that display a `Private` tag mean they have been uploaded on the marketplace through the [private channel]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}). You cannot yet select a specific version of a private package as a dependency. Application definition will add the latest available version on the marketplace every time you save your changes.
+Addons that display a `Private` tag mean they have been uploaded on the marketplace through the [private channel]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}).
 
+You can select the version of added packages, remove existing packages, or change the version of already installed ones.
 No change is kept until you manually press the save button. Pending changes are displayed so that you can assess what will be added or removed and undo it if necessary.
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Application Definition/Pending Modifications
-    name: pending-modifications.png
-    studio_modeler#screenshot#up_to_date
---}}
-![Pending Modifications](/nx_assets/32b3fdd2-8395-4550-96b3-141d199a0ed0.png ?w=350,border=true)
+Each dependency line is color-coded according to its status:
+<span style="padding: 2px 10px; background: rgba(22,136,70,0.5)">ADDED</span>
+<span style="padding: 2px 10px; background: rgba(231,29,19,0.5)">REMOVED</span>
+<span style="padding: 2px 10px; background: rgba(0,108,250,0.5)">CHANGED</span>
+<span style="padding: 2px 10px; background: rgba(25,59,103,0.05)">INSTALLED</span>
+
+![Package Changes](/nx_assets/studio/application-definition-package-changes.png ?border=true)
 
 ## Upgrading to a Newer Nuxeo Server version
 
 When upgrading to a newer Nuxeo Version, Nuxeo Studio will automatically adapt the configuration. Some exceptions requiring a manual change may still happen and are listed in the [specific upgrade instructions]({{page page='specific-upgrade-instructions'}}) page.
 
-When a previously selected package is not available for your newer Nuxeo Server version, Nuxeo Studio will list it in the pending changes to warn you.
+When a previously selected package is not available for your new Nuxeo Server version, Nuxeo Studio lists it under removed packages to alert you.
+For available packages, each one is automatically upgraded to the latest version compatible with the new server version. 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Application Definition/Removal Notice
     name: removal-notice.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Removal Notice](/nx_assets/e7f5c288-33db-4cca-af83-fd15876acb93.png ?w=350,border=true)
+![Service Version Update](/nx_assets/studio/application-definition-server-version-update.png ?border=true)
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
