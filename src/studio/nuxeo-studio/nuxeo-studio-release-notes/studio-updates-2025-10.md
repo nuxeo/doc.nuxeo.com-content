@@ -38,6 +38,12 @@ Displayed the latest commit ID on relevant pages for improved tracking and versi
 Developers and users can now easily verify deployed code versions, improving accountability and debugging efficiency.
 
 ###   Fixed an issue on the My Studio Projects page
+Fixed an issue where the My Studio Projects page on the Connect Dashboard did not display the correct studio projects accessible to the user.
 
+**What Changed:** 
+Updated the project access logic to accurately fetch and display only the studio projects the logged-in user has permissions for.
+
+**Impact:**
+Ensures users now see the correct list of studio projects, improving data accuracy and overall user experience on the dashboard.
 
 {{! /multiexcerpt}}
