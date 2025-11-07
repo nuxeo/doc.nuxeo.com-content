@@ -73,7 +73,7 @@ So, let's go over to your custom bundle file, and let's add the following code:
   });
 
   const myHeader = document.createElement('my-header');
-  document.body.appendChild(myHeader);
+  document.body.prepend(myHeader);
 </script>
 ```
 
@@ -176,7 +176,7 @@ Let's start by the header. Going back to your custom bundle code and focusing on
   });
 
   const myHeader = document.createElement('my-header');
-  document.body.appendChild(myHeader);
+  document.body.prepend(myHeader);
 </script>
 ```
 
@@ -210,7 +210,7 @@ After it, we will also need to replace the static text inside our spans with a d
   });
 
   const myHeader = document.createElement('my-header');
-  document.body.appendChild(myHeader);
+  document.body.prepend(myHeader);
 </script>
 ```
 
@@ -226,7 +226,7 @@ Next, we need to check if `nuxeo-app` is defined and ready in our document. To d
   });
 
   const myHeader = document.createElement('my-header');
-  document.body.appendChild(myHeader);
+  document.body.prepend(myHeader);
 
   customElements.whenDefined('nuxeo-app').then(() => {
     const app = document.querySelector('nuxeo-app');
