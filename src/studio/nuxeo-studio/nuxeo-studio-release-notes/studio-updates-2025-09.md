@@ -1,7 +1,7 @@
 ---
 title: 'September 2025'
 description: Release notes for Nuxeo Studio released in September 2025.
-tree_item_index: 930
+tree_item_index: 928
 review:
   comment: ''
   date: '2025-09-17'
