@@ -14,7 +14,6 @@ toc: true
 
 ### Studio Designer
 
-
 ### Enhancements & Bugfixes
 
 ### UI Modernization
@@ -27,7 +26,6 @@ Replaced outdated JSF components with new JSLint-based pages to enhance performa
 **Impact:**
 Improves overall customer engagement and provides a smoother, more consistent interface across the platform.
 
-
 ###  Developer Experience : Show Commit ID
 Introduced commit ID visibility within the interface to enhance transparency and traceability of code changes.
 
@@ -37,7 +35,7 @@ Displayed the latest commit ID on relevant pages for improved tracking and versi
 **Impact:**
 Developers and users can now easily verify deployed code versions, improving accountability and debugging efficiency.
 
-###   Fixed an issue on the My Studio Projects page
+###  Fixed an issue on the My Studio Projects page
 Fixed an issue where the My Studio Projects page on the Connect Dashboard did not display the correct studio projects accessible to the user.
 
 **What Changed:** 
