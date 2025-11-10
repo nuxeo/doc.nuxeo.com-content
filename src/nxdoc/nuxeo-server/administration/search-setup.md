@@ -663,7 +663,7 @@ You can find all the available options in the [nuxeo.defaults](https://github.co
 These properties supersede: `elasticsearch.indexName`, `elasticsearch.indexNumberOfReplicas`, `audit.elasticsearch.indexName`, `seqgen.elasticsearch.indexName`.
 
 {{#> callout type='warning'}}
-Nuxeo LTS 2025 is no longer managing OpenSearch/Elasticsearch aliases like in LTS 2023, it still can accept an alias instead of an index for the repository, in this case it must be managed externally, Nuxeo will fail to reindex a repository on an alias, but it’s possible to do blue/green reindex, blue being an alias, green must be a true index. The alias swap to the new index have to be managed externally.
+Nuxeo LTS 2025 is no longer managing OpenSearch/Elasticsearch aliases like in LTS 2023. It still can accept an alias instead of an index for the repository. In this case, it must be managed externally. Nuxeo will fail to reindex a repository on an alias, but it’s possible to do blue/green reindex, blue being an alias, green must be a true index. The alias swap to the new index have to be managed externally.
 {{/callout}}
 
 ### Translog Tuning
