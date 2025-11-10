@@ -9,8 +9,8 @@ toc: true
 labels:
 tree_item_index: 700
 ---
-**Product**: Nuxeo Web UI
-**Latest Release Date**: September 29, 2025 - LTS 2025 (Version 2025.7.0)
+**Product**: Nuxeo Web UI <br>
+**Latest Release Date**: September 29, 2025 - LTS 2023 (Version 3.1.22)
 
 ## Conformance Status
 
@@ -77,6 +77,7 @@ We have made significant improvements in the latest release to address known iss
 - **Selection Toolbar shortcuts (Windows: Ctrl + .)** are visually available to users.
 
 
+
 ## Future Accessibility Plans
 
 Our commitment to accessibility is ongoing. We plan to implement the following improvements in upcoming releases including Q1 and Q2 of 2026 to continue our progress toward conformance.
@@ -88,6 +89,7 @@ Our commitment to accessibility is ongoing. We plan to implement the following i
 - **Refine Visual & Interactive Elements:** Improve the color contrast for the **"Display selection"** button in the **Selection Toolbar**. We will also include proper labels on the Viewer's Image and Video Toolbar buttons and optimize off-screen button texts and inline frames for screen readers.
 
 - **Provide Accessible Data:** Include accessible alternative text for graphs and other visual data.
+
 
 
 ## Feedback & Questions
