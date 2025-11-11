@@ -3,7 +3,7 @@ title: Search Setup
 description: This page provides several configuration use cases for Elasticsearch and Opensearch.
 review:
     comment: ''
-    date: '2020-11-03'
+    date: '2025-11-12'
     status: ok
 labels:
     - lts2016-ok
@@ -743,90 +743,179 @@ curl -X GET -u Administrator:<PASSWORD> "<SERVER_URL>/nuxeo/api/v1/management/bu
 }
 ```
 
-### Re-index Repository without interruption of service{{> anchor 'reindexing'}}
+### Re-index Repository Without Service Interruption{{> anchor 'reindexing'}}
 
-Since LTS 2025.11, it is possible to reindex the repository without service interruption.
+{{#> callout type='note' heading='Available Since'}}
+This feature is available since LTS 2025.11.
+{{/callout}}
 
-The approach involves creating a new index, populating it with repository content, testing the new index, and then swapping to it if desired. Since the current index is not dropped and remains fully operational, no service interruption is required.
+Since LTS 2025.11, it is possible to reindex the repository without downtime. This enables you to:
+- Appy a new settings/mappings
+- Migrate to a different search cluster
+- Migrate to a different search implementations (e.g., OpenSearch to Elasticsearch)
 
-This follows the blue/green deployment logic, where the blue index is the current operational index and the green index is the new target index.
+#### Blue/Green Deployment Strategy
 
-Here is the procedure to reindex without interruption on an OpenSearch1 cluster:
+The approach follows the blue/green deployment pattern:
+- **Blue index:** The current operational index serving all search requests
+- **Green index:** The new target index being populated
 
-1. Rolling restart → With a `nuxeo.conf` that activates a `enhanced-green` index
+The process involves creating a new index, populating it with repository content, testing the new index, and then swapping to it when ready.
+
+During the repository indexing, both indexes —the blue and the green— are populated with ongoing indexing activity. Since the current blue index remains fully operational, no service interruption is required.
+
+#### Procedure for OpenSearch1
+
+Here is the complete procedure to reindex without interruption on an OpenSearch1 cluster:
+
+**Step 1: Rolling restart with green index configuration**
+
+Update `nuxeo.conf` to activate the `enhanced-green` index:
+
 ```shell
 # Activate a green configuration for OpenSearch1
 nuxeo.append.templates.green=opensearch1-green-search-client
-# Name of the new green index
+# OpenSearch index to create, associated with the `enhanced-green` index
 nuxeo.search.client.green.opensearch1.index.name=nuxeo-2025-11
-# for reference, the name of the current blue index
+# For reference, the OpenSearch index associated with the current blue `enhanced` index
 nuxeo.search.client.default.opensearch1.index.name=nuxeo
 ```
-2. Reindex → Launch a full reindex on the green index using the management API
+
+Perform a rolling restart of your Nuxeo cluster.
+
+**Step 2: Launch the reindexing**
+
+Trigger a full reindex on the `enhanced-green` index using the management API:
+
 ```shell
 curl -XPOST -u Administrator:Administrator \
     "http://localhost:8080/nuxeo/api/v1/management/search/reindex?index=enhanced-green"
 ```
-3. Test the new index → Using the management search endpoint
+
+**Step 3: Test the new index**
+
+Verify the new index using the management search endpoint:
+
 ```shell
 curl -XGET -u Administrator:Administrator \
   --data-urlencode "nxql=SELECT * FROM Document" \
   --data-urlencode "pageSize=10" \
   "http://localhost:8080/nuxeo/api/v1/management/search/checkSearch"
 ```
-4. Rolling restart → With a `nuxeo.conf` that swap to the new index
+ 
+You can also test a specific Page Provider by adding `index=enhanced-green` parameter, for instance:
+```shell
+curl -XGET -u Administrator:Administrator \
+  "http://localhost:8080/nuxeo/api/v1/search/pp/nxql_search/execute?index=enhanced-green&currentPageIndex=0&offset=0"
+```
+
+**Step 4: Switch to the new index**
+
+Update `nuxeo.conf` to swap to the new index:
+
 ```shell
 # Deactivate the green configuration
 # nuxeo.append.templates.green=opensearch1-green-search-client
-# Use the new index
+# Use the new OpenSearch index for the default `enhanced` index
 nuxeo.search.client.default.opensearch1.index.name=nuxeo-2025-11
 ```
-#### Re-index Repository without interruption of service in a different Search cluster
 
-Since the green configuration can be fully customized, it is possible to point to a different search cluster by replacing the `default` property with `green`. For example:
+Perform a rolling restart of your Nuxeo cluster to activate the changes.
+
+{{#> callout type='info' heading='Important Notes'}}
+- **Old index cleanup:** The old blue index is not automatically deleted. You can safely remove it after verifying the new green index is working correctly.
+- **Monitoring reindexing progress:** Use the bulk status API to monitor the reindexing progress: `GET /nuxeo/api/v1/management/bulk/<commandId>`
+- **Disk space:** Ensure you have sufficient disk space on your search cluster, as both indexes will exist simultaneously during the migration.
+- **Rollback:** If issues occur after switching to the new index, you can quickly rollback by reverting the configuration changes and performing another rolling restart.
+{{/callout}}
+
+#### Reindexing to a Different Search Cluster
+
+Since the green configuration can be fully customized, it is possible to point to a different search cluster by overriding the `default` properties with `green` properties. 
+
+For example, to reindex to a new OpenSearch cluster:
+
 ```shell
 nuxeo.search.client.green.opensearch1.index.name=nuxeo-2025-11
 nuxeo.search.client.green.opensearch1.client.server=https://new-search-cluster:9200/
-nuxeo.search.client.green.opensearch1.client.username=...
-nuxeo.search.client.green.opensearch1.client.password=...
+nuxeo.search.client.green.opensearch1.client.username=<username>
+nuxeo.search.client.green.opensearch1.client.password=<password>
 ```
+
+Then follow the same 4-step procedure described above.
+
 #### Cross-Implementation Reindexing
 
-You can perform reindexing across different search implementations:
+You can perform reindexing without interruption across different search implementations:
 
 ##### OpenSearch1 to OpenSearch2 Migration
 
-Reindexing from blue index in OpenSearch1 to green index in OpenSearch2
-1. Install `nuxeo-search-client-opensearch2` package and remove `nuxeo-search-client-opensearch1` package. The OpenSearch2 search client is compatible with OpenSearch 1.x clusters. You need to configure the OpenSearch2 blue and green index:
+This migration reindexes from a blue index in OpenSearch1 to a green index in OpenSearch2.
+
+**Step 1: Install OpenSearch2 package**
+
+1. Install the `nuxeo-search-client-opensearch2` package
+2. Remove the `nuxeo-search-client-opensearch1` package
+
+**Note:** The OpenSearch2 search client is compatible with OpenSearch 1.x clusters.
+
+**Step 2: Configure default blue and green indexes**
+
+Update `nuxeo.conf` to configure both OpenSearch2 indexes:
+
 ```shell
-# Copy your default opensearch1 configuration as opensearch2
+# Copy your default OpenSearch1 configuration as OpenSearch2
 nuxeo.search.client.default.opensearch2.index.name=nuxeo
-nuxeo.search.client.default.opensearch2.client.server=https://new-search-cluster:9200/
-nuxeo.search.client.default.opensearch2.client.username=...
+nuxeo.search.client.default.opensearch2.client.server=https://search-cluster:9200/
+nuxeo.search.client.default.opensearch2.client.username=<username>
+nuxeo.search.client.default.opensearch2.client.password=<password>
 # Activate the green index
 nuxeo.append.templates.green=opensearch2-green-search-client
 nuxeo.search.client.green.opensearch2.index.name=nuxeo-2025-11
 ```
-2. Do a rolling restart and proceed with the reindexing procedure as previously described
+
+**Step 3: Complete the migration**
+
+Perform a rolling restart and proceed with Steps 2-4 of the reindexing procedure described above.
 
 ##### OpenSearch1 to Elasticsearch9 Migration
 
-Reindexing from blue index in OpenSearch1 to green index in Elasticsearch9
-1. Install `nuxeo-search-client-elasticsearch9` package in addition to the `nuxeo-search-client-opensearch1` package. Then configure `nuxeo.conf` to add an Elasticsearch9 green index only:
+This migration reindexes from a blue index in OpenSearch1 to a green index in Elasticsearch9.
+
+**Step 1: Install Elasticsearch9 package**
+
+Install the `nuxeo-search-client-elasticsearch9` package in addition to the `nuxeo-search-client-opensearch1` package.
+
+**Step 2: Configure the Elasticsearch9 green index**
+
+Update `nuxeo.conf` to add an Elasticsearch9 green index:
+
 ```shell
 nuxeo.append.templates.green=elasticsearch9-green-search-client
 nuxeo.search.client.green.elasticsearch9.index.name=nuxeo-2025-11
-# Disable elasticsearch9 "enhanced" index during migration
+nuxeo.search.client.green.elasticsearch9.client.server=https://elasticsearch-cluster:9200/
+nuxeo.search.client.green.elasticsearch9.client.username=<username>
+nuxeo.search.client.green.elasticsearch9.client.password=<password>
+# Disable the default Elasticsearch9 "enhanced" index during migration
 nuxeo.search.client.default.elasticsearch9.index.name=
-``` 
-2. Do a rolling restart and proceed with reindexing and testing as previously described
-3. Complete the migration by removing the `nuxeo-search-client-opensearch1` package and updating the configuration:
+```
+
+**Step 3: Reindex and test**
+
+Perform a rolling restart and proceed with Steps 2-3 of the reindexing procedure (launch reindexing and test).
+
+**Step 4: Complete the migration**
+
+After successful testing, remove the `nuxeo-search-client-opensearch1` package and update the configuration:
+
 ```shell
-# Remove green template:
+# Remove the green template
 # nuxeo.append.templates.green=elasticsearch9-green-search-client
 # Use the new index as default
 nuxeo.search.client.default.elasticsearch9.index.name=nuxeo-2025-11
 ```
+
+Perform a final rolling restart to complete the migration.
 
 ## Changing Mappings and Settings of Indexes
 
