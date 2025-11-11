@@ -86,7 +86,7 @@ Some addons bring additional options into Studio such as new screens or options,
 
 Addons that display a `Private` tag mean they have been uploaded on the marketplace through the [private channel]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}).
 
-You can select the version of added packages, remove existing packages, or change the version of already installed ones.
+You can select the version of added packages, remove existing packages, or change the version of already installed packages.
 No change is kept until you manually press the save button. Pending changes are displayed so that you can assess what will be added or removed and undo it if necessary.
 Each dependency line is color-coded according to its status:
 <span style="padding: 2px 10px; background: rgba(22,136,70,0.5)">ADDED</span>
