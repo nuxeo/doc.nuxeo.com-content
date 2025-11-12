@@ -36,6 +36,7 @@ Nuxeo nodes need to be adapted **depending on the workloads**:
 Applications requiring heavy processing like picture or video conversions can take benefit from having some Nuxeo Server nodes dedicated to these asynchronous tasks. Having such a demarcation between nodes is a good way to be sure that async processing won't slow down interactive processing.
 
 **Nuxeo worker nodes** allow you to manage batch processing nodes and to execute asynchronous work, such as conversions, Nuxeo Drive synchronization processes, full-text extraction etc. The number of necessary nodes will vary based on your needs, such as the use of the processing of large volumes of rich media files, the use of Nuxeo addons like Nuxeo Drive etc.
+ [Learn how to configure autoscaling for Nuxeo worker nodes using AWS EC2 Auto Scaling Groups based on Nuxeo cluster metrics](({{page page='how-to-autoscale'}})).
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Scalability Options/worker-nodes-intro.png
