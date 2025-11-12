@@ -351,7 +351,12 @@ This optional property lets Nuxeo Drive monitor additional processes for file lo
 Currently, this feature works only on Windows.
 - Default value (str):
 - version added: 5.7.0
-
+- Example:
+  ```
+  include_process =
+	    notepad
+	    code
+  ```
 * * *
 
 #### `locale`
