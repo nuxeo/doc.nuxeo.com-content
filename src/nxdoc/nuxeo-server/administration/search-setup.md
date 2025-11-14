@@ -750,9 +750,9 @@ This feature is available since LTS 2025.11.
 {{/callout}}
 
 Since LTS 2025.11, it is possible to reindex the repository without downtime. This enables you to:
-- Appy a new settings/mappings
+- Appy new settings/mappings
 - Migrate to a different search cluster
-- Migrate to a different search implementations (e.g., OpenSearch to Elasticsearch)
+- Migrate to different search implementations (e.g., OpenSearch to Elasticsearch)
 
 #### Blue/Green Deployment Strategy
 
