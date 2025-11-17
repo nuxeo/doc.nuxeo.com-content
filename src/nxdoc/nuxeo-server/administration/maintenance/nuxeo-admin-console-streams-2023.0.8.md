@@ -1,9 +1,9 @@
 ---
-title: Nuxeo Admin Console
-description: The Nuxeo admin console provides a dedicated UI for system administrators to get an overview of the system and perform common tasks like reindexing documents.
+title: Streams feature
+description: The Stream feature delivers a powerful interface for observing, analyzing, and controlling real-time data flows within your application. Through a set of dedicated tabs, Streams enables users to uncover detailed insights into stream processing, performance metrics, and consumer activity.
 review:
     comment: ''
-    date: '2024-12-27'
+    date: '2025-11-17'
     status: ok
 labels:
     - bchauvin
@@ -13,149 +13,222 @@ confluence:
   page_id: '10000'
 ---
 
-The Nuxeo admin console is an addon that provides a dedicated UI for system administrators to get an overview of the system and perform common tasks like reindexing documents.
+## Table of Contents
 
-## Installation
+1. Getting Started
 
-{{{multiexcerpt 'mp-installation-easy' page='Generic Multi-Excerpts'}}}
+2. Key Enhancements
 
-{{#> callout type='tip' }}
-The package id for this addon is `nuxeo-admin-console`.
-{{/callout}}
+3. Stream Records 
 
-### What It Is
+4. Consumer Thread Pool
 
-As a Nuxeo system administrator, the admin console is your go-to application to support your users on a daily basis and maintain your Nuxeo instance in production. Through an easy to use UI, it provides a full set of capabilities to leverage our [management REST API endpoint]({{page space='rest-api' version='1' page='management-endpoint'}}) tasks easily on individual documents and at scale. 
+5. Consumer Position 
 
-### What It Is NOT
+6. Scaling Analysis 
 
-- A monitoring and observability application. Nuxeo provides a wide set of [metrics for observability]({{page page='observability'}}) that leverage market standards, allowing you to leverage your monitoring tool of choice for this use case.
+7. Stream Processor Info 
 
-- A functional administration tool. Options like managing users or vocabularies for instance can be achieved from [Nuxeo Web UI]({{page space='userdoc' page='administration'}}). 
-
-- A developer focused application. Applications like our [browser extension for developers]({{page page='nuxeo-dev-tools-extension'}}) and [Nuxeo CLI]({{page page='nuxeo-cli'}}) help with that.
-
-- A way to get the logs of your instance. Reasons for that:
-  - Since we run Nuxeo apps as a cluster, we need to aggregate all the logs from all the systems in a single place, including logs from services like [Nuxeo Enhanced Viewer]({{page page='nuxeo-enhanced-viewer'}}). A single Nuxeo instance cannot get this information, so the admin console cannot handle that. Their display is managed in the [cloud console]({{page space='nuxeo-cloud' page='nuxeo-cloud-customer-console'}}) for our cloud customers. Self-managed customers can leverage their observability tool of choice.
-  - Logs configuration usually varies depending on the type of environment. The [cloud console]({{page space='nuxeo-cloud' page='nuxeo-cloud-customer-console'}}) offers this option.
-
-## Functional Overview
-
-Once installed, the Nuxeo admin console can be accessed through a dedicated URL: `[YOUR-NUXEO-SERVER-URL/nuxeo]/nuxeoadmin`. Only `administrators` can access this interface. Using an account without adminstrator level displays an error message.
-
-![]({{file name='admin-console-access-refused.png'}} ?border=true)
-
-### Warning on login
-
-A warning popup on login cautions users about tools potentially impacting application performance and can be disabled to prevent future displays.
-
-![]({{file name='admin-console-warning.png'}} ?border=true)
-
-### Homepage
-
-The homepage provides a quick view into the essential information of your Nuxeo instance:
-* Probes and their status to see if all components are running
-* Version information and cluster enablement information
-
-![]({{file name='admin-console-home-page.png'}} ?border=true)
-
-### Checking the Status of System Components
-
-The homepage provides a concise list of [probes]({{page page='health-check'}}#probes) to check the health of the various system components. For a full list with detailed information and the possibility to launch a check on them individually, you can see the `Probes` menu.
-
-![]({{file name='admin-console-home-page.png'}} ?border=true)
-
-![]({{file name='admin-console-probes-details.png'}} ?border=true)
-
-### Document Reindexing
-
-The `Elasticsearch Reindex` menu lets you reindex documents with Elasticsearch or OpenSearch. You can reindex documents:
-- Individually
-- From a folder: all documents in that folder and below are reindexed
-- From a [NXQL query]({{page page='NXQL'}})
-
-When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
-
-![]({{file name='admin-console-confirm-elasticsearch-reindex.png'}} ?border=true)
-
-### Picture Renditions Generation
-
-The `Picture Renditions Generation` menu lets you recompute picture views for documents. You can recompute picture views:
-- Individually
-- From a folder: all documents of type picture in that folder and below are recomputed
-- From a [NXQL query]({{page page='NXQL'}})
-
-![]({{file name='admin-console-picture-renditions.png'}} ?border=true)
-
-When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
-
-![]({{file name='admin-console-confirm-picture-recompute.png'}} ?border=true)
-
-### Video Renditions Generation
-
-The `Video Renditions Generation` menu lets you recompute video conversions for documents. You can recompute video conversions:
-- Individually
-- From a folder: all documents of type video in that folder and below are recomputed
-- From a [NXQL query]({{page page='NXQL'}})
-
-You can optionally specify one or several conversion names to recompute and whether or not to recompute all video information by setting `Information to recompute`. Only missing information will be recomputed if it is set to `false`
-
-![]({{file name='admin-console-video-renditions.png'}} ?border=true)
-
-When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
-
-![]({{file name='admin-console-confirm-video-recompute.png'}} ?border=true)
-
-### Thumbnails Generation
-
-The `Thumbnails Generation` menu lets you recompute thumbnails for documents. You can recompute thumbnails:
-- Individually
-- From a folder: all documents of type video in that folder and below are recomputed
-- From a [NXQL query]({{page page='NXQL'}})
-
-![]({{file name='admin-console-thumbnails-generation.png'}} ?border=true)
-
-When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
-
-![]({{file name='admin-console-confirm-thumbnails-generation.png'}} ?border=true)
-
-### Fulltext Reindexing
-
-The `Fulltext Reindex` menu lets you run extraction of all binaries (blobs) referenced by documents. This can be done:
-- Individually
-- From a folder: all documents of type video in that folder and below are recomputed
-- From a [NXQL query]({{page page='NXQL'}})
-
-The default query skips proxies without fulltext and avoids extraction from documents without downloadable binaries. This can be configured optionally by setting `Empty fulltext index of binaries for excluded documents` (default: false) to nullify binary fulltext on excluded documents.
-
-![]({{file name='admin-console-fulltext-reindex.png'}} ?border=true)
-
-When using the `Folder` and `NXQL Query` options, the admin console warns you about the consequences and the expected duration of this action.
-
-![]({{file name='admin-console-confirm-fulltext-reindex.png'}} ?border=true)
+8. FAQs & Troubleshooting
 
 
-### Monitoring an Action
 
-Any action triggered through the admin console uses the [bulk action framework]({{page page='bulk-action-framework'}}), making them highly scalable. Once an action is triggered, a confirmation is provided with a bulk action command id.
+### Getting Started
 
-![]({{file name='admin-console-action-launched.png'}} ?border=true)
+To access the Streams feature:
 
-You can click on the `See Status` button to follow how the bulk action is proceeding.
+1. Log in to your account.
 
-In addition, the command id can be copied to retrieve its status later using the `Bulk Action Monitoring` menu. Note that the bulk action id won't be remembered, so you may want to store it in a safe place if you intend to monitor it later on.
+2. Navigate to the Streams section from the main menu.
 
-![]({{file name='admin-console-bulk-action-monitor.png'}} ?border=true)
+3. Select a stream to view its details and analytics.
 
 
-## Going Further
+Stream Management provides a unified interface with tabs for Stream Records, Stream Processor Info, Scaling Analysis, Consumer Position, and Consumer Thread Pool—enabling Users to View and Manage Stream Records via UI.
 
-Additional management options are not yet exposed into the admin console and are only available at this stage using the [management REST API endpoint]({{page space='rest-api' version='1' page='management-endpoint'}}). Please refer to the documentation for an exhaustive list.
 
-## Nuxeo Admin Console Release Notes
 
-Discover what's new on Nuxeo Admin Console in the 
-- [Release Notes]({{page page='admin-console-release-notes'}})
+### Stream Records 
 
-Add for the streams 
+The Stream Records provides a real-time view of the records flowing through your selected stream.
 
+![]({{file name='Stream-Records.png'}} ?border=true)
+
+Key Features:
+
+- Live Data Feed: View incoming records as they are processed.
+
+- Filtering: Filter records by key, value, timestamp, or custom attributes.
+
+- Search: Quickly locate specific records using the search bar.
+
+- Record Details: Click on any record to view its metadata and payload.
+
+Use Cases:
+
+- Monitoring data quality and throughput.
+
+- Auditing specific events or transactions.
+
+
+### Consumer Thread Pool 
+
+The Consumer Thread Pool provides insights into the thread pools used by stream consumers
+
+
+![]({{file name='Consumer-Thread-Pool.jpeg'}} ?border=true)
+
+
+Key Features:
+
+- Configuration: Start and Stop the Thread pool nodes of the Consumer.
+
+Use Cases:
+
+- Manage the Consumer Thread pools of the Stream.
+
+
+### Consumer Position 
+
+
+The Consumer Position under Stream Management provides two main functionalities:
+1️ Change Consumer Position
+2️ Get Consumer Position
+
+These are used to view and manage the position of a consumer group in a selected stream.
+
+
+### Change Consumer Position
+
+
+![]({{file name='Change-Consumer-Position.png'}} ?border=true)
+
+Key Features
+
+- Manually set the position of a consumer group within a selected stream.
+
+- Enables precise control over where a consumer resumes processing.
+
+- Requires the consumer to be stopped before changing position (ensures safe operation).
+
+- Supports targeted event reprocessing or skipping over specific records.
+
+Use Case
+
+- Use Change Consumer Position to reprocess past events after fixing an error, or to skip over problematic records that are blocking processing—helping maintain smooth and reliable stream operations.
+
+
+### Get Consumer Position
+
+
+![]({{file name='Get-Consumer-Position.png'}} ?border=true)
+
+Key Features
+
+- View the current position of a consumer group within a selected stream.
+
+- Provides real-time visibility into which records have been processed.
+
+- Helps track consumer progress and identify processing lags or bottlenecks.
+
+- Enables monitoring of multiple consumer groups across different streams.
+
+Use Case
+
+- Use Get Consumer Position to monitor the progress of consumer groups, ensure timely processing of stream data, and quickly identify any delays or issues in event consumption.
+
+
+### Scaling Analysis 
+
+The Scaling Analysis helps you understand and optimize the scalability of your stream processing.
+
+
+![]({{file name='Scaling-Analysis.png'}} ?border=true)
+
+Key Features:
+
+- Throughput Metrics: Visualize data ingestion and processing rates over time.
+
+- Resource Utilization: Monitor CPU, memory, and network usage.
+
+- Scaling Recommendations: The system automatically fetches and displays scaling recommendations in JSON format.
+
+- Historical Trends: Analyze past scaling events and their impact.
+
+Use Cases:
+
+- Planning for peak loads.
+
+- Identifying underutilized resources.
+
+- Making informed decisions about scaling infrastructure.
+
+
+
+### Stream Processor Info 
+
+The Stream Processor Info offers detailed information about the stream processors handling your data.
+
+
+![]({{file name='Stream-Processor-Info.png'}} ?border=true)
+
+Key Features:
+
+- Processor Status: View the health and status of each processor (active, idle, error).
+
+- Configuration Details: Inspect processor configurations, such as parallelism, checkpointing, and error handling.
+
+- Metrics: Monitor processing rates, latency, and error counts.
+
+Use Cases:
+
+- Ensuring processors are running optimally.
+
+- Diagnosing processing bottlenecks.
+
+- Reviewing processor configurations for compliance.
+
+
+
+
+
+## Frequently Asked Questions (FAQ)
+
+Q1: What happens if I click "Clear" on Stream Records?
+A: It only clears the records from your screen. No data is deleted from the server.
+
+
+Q2: Why can't I start or stop the Consumer Thread Pool?
+A: Both the stream and consumer position must be selected. Also, you cannot start or stop while another operation is in progress.
+
+
+Q3: Can I change the consumer position while it is running?
+A: No. You must stop the consumer first using the Consumer Thread Pool tab.
+
+
+Q4: What should I do if I see an error message?
+A: Check that all required fields are filled. If the problem persists, review the error message for details or try again using the Retry button.
+
+
+Q5: Does Scaling Analysis or Nuxeo Stream Processor Info make any changes to the system?
+A: No. Both features are read-only and only display information.
+
+
+Q6: Streams is not visible in the Admin Console. What should I check first?
+Start by verifying whether the following configuration is set in nuxeo.conf file:
+metrics.streams.enabled=true
+If this property is missing or set to false, the Streams section will not appear in the Admin Console.
+
+
+Q7. What should I do if metrics.streams.enabled is not defined in nuxeo.conf?
+If the property is not present, add the following line to your nuxeo.conf:
+metrics.streams.enabled=true
+After updating the file, restart the server and check the Admin Console again.
+
+
+Q8. I added the configuration, but Streams is still not visible. What should I do next?
+If Streams still do not show up after enabling the property:
+- Double-check for typos in the configuration.
+- Ensure the server was restarted correctly.
+- Verify that the configuration is being applied by reviewing the startup logs.
+- Inspect for errors or failures in the logs that might indicate issues.
