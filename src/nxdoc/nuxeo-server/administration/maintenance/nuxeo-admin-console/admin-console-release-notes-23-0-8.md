@@ -33,75 +33,75 @@ We’re excited to introduce powerful new capabilities to help users monitor, ma
 
 
 
-⚙️ Consumer Thread Pool
+### Consumer Thread Pool
 
-Auto-loads available streams and positions.
+- Auto-loads available streams and positions.
 
-Start/Stop operations gated by required inputs.
+- Start/Stop operations gated by required inputs.
 
-Confirmation dialogs for safe execution.
+- Confirmation dialogs for safe execution.
 
-Error handling for API failures and invalid states.
+- Error handling for API failures and invalid states.
 
-Fully keyboard accessible with shortcut support.
-
-
-
-🎯 Consumer Position 
-
-Change Consumer Position
-
-Supports position changes to Beginning, End, Specific Offset, or Specific Date.
-
-Requires Stream, Consumer, and Position inputs.
-
-Confirmation dialog ensures safe execution.
-
-Displays before/after positions in JSON format.
-
-Pre-condition: Consumer must be stopped before changes.
-
-Get Consumer Position
-
-Fetches current consumer group position.
-
-Requires Stream and Consumer inputs.
-
-JSON-based result display.
+- Fully keyboard accessible with shortcut support.
 
 
 
-📈 Scaling Analysis
+### Consumer Position 
 
-Automatically retrieves backend scaling metrics.
+- Change Consumer Position
 
-Presents results in a clean, readable JSON format.
+- Supports position changes to Beginning, End, Specific Offset, or Specific Date.
 
-Clearly indicates if scaling is recommended.
+- Requires Stream, Consumer, and Position inputs.
 
-Robust error handling with retry option.
+- Confirmation dialog ensures safe execution.
 
-Read-only interface for safe monitoring.
+- Displays before/after positions in JSON format.
 
-
-
-📊 Stream Processor Info
-
-Monitor active stream processors in real time.
-
-View processor details like status, lag, and configuration in a clear JSON format.
-
-Read-only tab for safe, non-intrusive monitoring.
-
-Retry option available if data fails to load.
+- Pre-condition: Consumer must be stopped before changes.
 
 
+### Get Consumer Position
 
-Other Noteworthy Changes
+- Fetches current consumer group position.
 
-Introduced a new UI button enabling users to check all probes simultaneously.
+- Requires Stream and Consumer inputs.
 
-Enhanced the home page to show instance registration and expiration details.
+- JSON-based result display.
+
+
+### Scaling Analysis
+
+- Automatically retrieves backend scaling metrics.
+
+- Presents results in a clean, readable JSON format.
+
+- Clearly indicates if scaling is recommended.
+
+- Robust error handling with retry option.
+
+- Read-only interface for safe monitoring.
+
+
+
+### Stream Processor Info
+
+- Monitor active stream processors in real time.
+
+- View processor details like status, lag, and configuration in a clear JSON format.
+
+- Read-only tab for safe, non-intrusive monitoring.
+
+- Retry option available if data fails to load.
+
+
+
+### Other Noteworthy Changes
+
+- Introduced a new UI button enabling users to check all probes simultaneously.
+
+- Enhanced the home page to show instance registration and expiration details.
 
 
 
