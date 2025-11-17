@@ -15,7 +15,7 @@ confluence:
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'admin-console-updates' page='admin-console-release-notes-23-0-7'}}}
+{{{multiexcerpt 'admin-console-updates' page='admin-console-release-notes-23-0-8'}}}
 
 ---
 
