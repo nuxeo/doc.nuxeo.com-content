@@ -326,10 +326,12 @@ Default languages in Nuxeo Platform 10.1 are:
 - Swedish
 
 **On Web UI:**
+- Arabic
 - Dutch
 - English
 - French
 - German
+- Hebrew
 - Italian
 - Japanese
 - Spanish
