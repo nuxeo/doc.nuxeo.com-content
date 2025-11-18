@@ -148,6 +148,14 @@ In addition, the command id can be copied to retrieve its status later using the
 ![]({{file name='admin-console-bulk-action-monitor.png'}} ?border=true)
 
 
+### Stream Management
+The Streams feature provides a robust interface for monitoring, analyzing, and managing real-time data streams within your application. With a suite of specialized tabs, Streams empowers users to gain deep insights into stream processing, performance, and consumer activity.
+
+- [Stream Management]({{page page='nuxeo-admin-console-streams-2023.0.8}})
+
+
+
+
 ## Going Further
 
 Additional management options are not yet exposed into the admin console and are only available at this stage using the [management REST API endpoint]({{page space='rest-api' version='1' page='management-endpoint'}}). Please refer to the documentation for an exhaustive list.
@@ -157,4 +165,4 @@ Additional management options are not yet exposed into the admin console and are
 Discover what's new on Nuxeo Admin Console in the 
 - [Release Notes]({{page page='admin-console-release-notes'}})
 
-Add for the streams 
+
