@@ -350,7 +350,7 @@ Lowercase file suffixes to ignore while syncing.
 This optional property lets Nuxeo Drive monitor additional processes for file locking during Direct Edit. By default, it tracks Microsoft Office, Adobe, and Open Office applications.</br>
 Currently, this feature works only on Windows.
 - Default value: None
-- version added: 5.7.0
+- version added: 6.0.0
 - Example:
   ```
   include_process =
