@@ -1,9 +1,9 @@
 ---
-title: Version 23.0.8
-description: Discover what's new in Admin Console 23.0.8.
+title: Version 23.1.0
+description: Discover what's new in Admin Console 23.1.0.
 review:
   comment: ''
-  date: '2025-11-17'
+  date: '2025-11-18'
   status: ok
 toc: true
 labels:
@@ -15,7 +15,7 @@ hidden: true
 
 {{! multiexcerpt name='admin-console-updates'}}
 
-## What’s New in Admin Console for LTS 2023 (Version 23.0.8)
+## What’s New in Admin Console for LTS 2023 (Version 23.1.0)
 
 We’re excited to introduce powerful new capabilities to help users monitor, manage, and optimize stream processing with greater control and transparency within our Nuxeo environment:
 
