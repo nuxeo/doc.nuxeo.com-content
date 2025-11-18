@@ -3,7 +3,7 @@ title: Nuxeo Admin Console
 description: The Nuxeo admin console provides a dedicated UI for system administrators to get an overview of the system and perform common tasks like reindexing documents.
 review:
     comment: ''
-    date: '2024-12-27'
+    date: '2025-11-18'
     status: ok
 labels:
     - bchauvin
