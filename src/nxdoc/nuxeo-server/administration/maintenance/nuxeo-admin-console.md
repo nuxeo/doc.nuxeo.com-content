@@ -5,8 +5,6 @@ review:
     comment: ''
     date: '2025-11-18'
     status: ok
-labels:
-    - bchauvin
 is_overview: true
 tree_item_index: 1050
 confluence:
