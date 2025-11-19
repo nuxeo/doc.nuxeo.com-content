@@ -3,7 +3,7 @@ title: Streams feature
 description: The Stream feature delivers a powerful interface for observing, analyzing, and controlling real-time data flows within your application. Through a set of dedicated tabs, Streams enables users to uncover detailed insights into stream processing, performance metrics, and consumer activity.
 review:
     comment: ''
-    date: '2025-11-17'
+    date: '2025-11-18'
     status: ok
 labels:
     - bchauvin
