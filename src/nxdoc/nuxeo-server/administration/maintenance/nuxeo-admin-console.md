@@ -151,7 +151,7 @@ In addition, the command id can be copied to retrieve its status later using the
 ### Stream Management
 The Streams feature provides a robust interface for monitoring, analyzing, and managing real-time data streams within your application. With a suite of specialized tabs, Streams empowers users to gain deep insights into stream processing, performance, and consumer activity.
 
-- [Stream Management]({{page page='nuxeo-admin-console-streams-2025.1.0'}})
+- [Stream Management]({{page page='nuxeo-admin-console-streams-25.1.0'}})
 
 
 
