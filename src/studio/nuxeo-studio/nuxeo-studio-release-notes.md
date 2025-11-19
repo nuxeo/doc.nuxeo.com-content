@@ -21,6 +21,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [November 2025]({{page page='studio-updates-2025-11'}})                  | Resolved Client Connect Document Creation page |
 | [October 2025]({{page page='studio-updates-2025-10'}})                  | Modernizes the UI and Improves system stability |
 | [September 2025]({{page page='studio-updates-2025-09'}})                  | Fixed trial registration process |
 | [July 2025]({{page page='studio-updates-2025-07'}})                  | Bugfixes on Studio Modeler |
