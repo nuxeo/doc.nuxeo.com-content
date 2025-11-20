@@ -73,7 +73,7 @@ Use Cases:
 
 ### Consumer Thread Pool 
 
-The Consumer Thread Pool provides insights into the thread pools used by stream consumers
+The Consumer Thread Pool provides insights into the thread pools used by stream consumers.
 
 
 ![]({{file name='Consumer-Thread-Pool.jpeg'}} ?border=true)
@@ -115,7 +115,7 @@ Key Features
 
 Use Case
 
-- Use Change Consumer Position to reprocess past events after fixing an error, or to skip over problematic records that are blocking processing—helping maintain smooth and reliable stream operations.
+- Use Change Consumer Position to reprocess past events after fixing an error, or skip over problematic records that are blocking processing—helping maintain smooth and reliable stream operations.
 
 
 ### Get Consumer Position
