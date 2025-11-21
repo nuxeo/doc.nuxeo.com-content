@@ -21,9 +21,7 @@ confluence:
 
 ## Previous Release Notes
 
-<!-- | [Admin Console 23.0.8]({{page page='admin-console-release-notes-23-0-8'}}) -->
-
-| [Admin Console 23.0.7]({{page page='admin-console-release-notes-23-0-7'}})                  | Compatibility with stricter CSP   |
+<!-- | [Admin Console 23.0.7]({{page page='admin-console-release-notes-23-0-7'}})                  | Compatibility with stricter CSP   | -->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
