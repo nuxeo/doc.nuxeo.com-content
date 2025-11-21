@@ -3,7 +3,7 @@ title: Admin Console Release Notes
 description: Discover changes brought in our recent Nuxeo Admin Console updates.
 review:
   comment: ''
-  date: '2025-04-04'
+  date: '2025-04-07'
   status: ok
 toc: true
 labels:
@@ -15,14 +15,10 @@ confluence:
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'admin-console-updates' page='admin-console-release-notes-25-1-0'}}} 
+## What’s New in Admin Console for LTS 2025 (Version 25.0.7)
 
----
+The latest Admin Console release, compatible with the LTS 2025 version of the Nuxeo platform, includes new branches for LTS 2025, with updates to GitHub workflows, package.json, and pom.xml files.
 
-## Previous Release Notes
+## Additional Changes
 
-<!-- | [Admin Console 25.1.0]({{page page='admin-console-release-notes-25-1-0'}}) | Admin Console Streams feature & other enhancements |-->
-
-| Version                                                    | Summary                                                                             |
-| ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| | [Admin Console 25.0.7]({{page page='admin-console-release-notes-25-0-7'}})                  | Compatibility with LTS 2025 platform & Elastic Search management endpoint change    | 
+- The Elastic Search management endpoint was changed from `/management/elasticsearch/reindex` to `/management/search/reindex`. 
