@@ -220,13 +220,13 @@ metrics.streams.enabled=true
 If this property is missing or set to false, the Streams section will not appear in the Admin Console.
 
 
-Q7: What should I do if metrics.streams.enabled is not defined in nuxeo.conf?
+Q7. What should I do if metrics.streams.enabled is not defined in nuxeo.conf?
 If the property is not present, add the following line to your nuxeo.conf:
 metrics.streams.enabled=true
 After updating the file, restart the server and check the Admin Console again.
 
 
-Q8: I added the configuration, but Streams is still not visible. What should I do next?
+Q8. I added the configuration, but Streams is still not visible. What should I do next?
 If Streams still do not show up after enabling the property:
 - Double-check for typos in the configuration.
 - Ensure the server was restarted correctly.
