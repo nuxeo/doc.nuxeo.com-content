@@ -1,5 +1,5 @@
 ---
-title: Version 23.0.8
+title: Version 23.0.7
 description: Discover what's new in Admin Console 23.0.8.
 review:
   comment: ''
