@@ -156,5 +156,3 @@ Additional management options are not yet exposed into the admin console and are
 
 Discover what's new on Nuxeo Admin Console in the 
 - [Release Notes]({{page page='admin-console-release-notes'}})
-
-Add for the streams 
