@@ -21,9 +21,10 @@ confluence:
 
 ## Previous Release Notes
 
-<!-- | [Admin Console 23.1.0]({{page page='admin-console-release-notes-23-1-0'}}) | Admin Console Streams feature & other enhancements|-->
+<!-- | [Admin Console 23.1.0]({{page page='admin-console-release-notes-23-1-0'}}) | Admin Console Streams feature |-->
+
+| [Admin Console 23.0.7]({{page page='admin-console-release-notes-23-0-7'}})                  | Compatibility with stricter CSP   |
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Admin Console 23.0.7]({{page page='admin-console-release-notes-23-0-7'}})                  | Compatibility with stricter CSP   |
 | [Admin Console 23.0.6]({{page page='admin-console-release-notes-23-0-6'}})                  | Fulltext Reindex feature, Replacement of Hyland UI with Angular Material design & bugfix    | 
