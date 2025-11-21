@@ -35,7 +35,7 @@ We’re excited to introduce powerful new capabilities to help users monitor, ma
 
 ### Consumer Thread Pool
 
-- Auto-loads available in streams and positions.
+- Auto-loads available streams and positions.
 
 - Start/Stop operations gated by required inputs.
 
@@ -49,7 +49,7 @@ We’re excited to introduce powerful new capabilities to help users monitor, ma
 
 ### Consumer Position 
 
-- Change Consumer Position.
+- Change Consumer Position
 
 - Supports position changes to Beginning, End, Specific Offset, or Specific Date.
 
