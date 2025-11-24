@@ -17,16 +17,15 @@ hidden: true
 
 ## Provide Uninterrupted Service During Full Reindex
 
-It's now possible to reindex repository without downtime
+It's now possible to reindex repository without downtime. For ways to re-index repository without downtime across different search clusters and implementations, see [https://doc.nuxeo.com/nxdoc/search-setup/#reindexing](https://doc.nuxeo.com/nxdoc/search-setup/#reindexing-bulk).
 
-Provide ways to re-index repository without downtime across different search clusters and implementations, see [https://doc.nuxeo.com/nxdoc/search-setup/#reindexing](https://doc.nuxeo.com/nxdoc/search-setup/#reindexing-bulk)
 ## Fix SAML Logout When No Login Page Is Configured
 
 Don't save SAML logout request when logging out.
 
 ## Support Nuxeo Retention on Azure Storage
 
-Azure Blob Provider can now be used for storing record blobs for Retention
+Azure Blob Provider can now be used for storing record blobs for Retention.
 
 ## NoSuchFileException in LocalBlobStore.writeBlobGeneric()
 
@@ -34,12 +33,11 @@ Files being written to LocalBlobStore are now ignored by the garbage collector.
 
 ## Create a D2 (Declarative Diagramming) Introspection Stream Export
 
-It's now possible to view the cluster state as D2 diagram
-
 It's now possible to view the [cluster state as D2 diagram](https://doc.nuxeo.com/rest-api/1/stream-endpoint/#get-detailed-nuxeo-stream-and-processor-information).
+
 ## Deprecate PropertyBasedConfiguration's getProperties Methods With a Default-Value Parameter
 
-Use Optional-based methods instead.
+Use Optional-based methods instead of getProperties methods with a default-value parameter.
 
 ## Address Regression in Hotfix 2023.38 of Library Quartz 2.5.1 in a Nuxeo Cluster Using PostgreSQL
 
