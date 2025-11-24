@@ -17,7 +17,7 @@ hidden: true
 
 ## Add Ability to Store Blob With INTELLIGENT_TIERING Default Storage Class in S3
 
-Blobs can now be stored with INTELLIGENT_TIERING storage class in S3Blob Providers
+Blobs can now be stored with INTELLIGENT_TIERING storage class in S3 Blob Providers.
 
 The new Nuxeo configuration property `nuxeo.s3storage.storageClass` allows you to specify which storage class should be used to store blobs in an S3 bucket. Supported values are `STANDARD` (default) or `INTELLIGENT_TIERING`.
 
@@ -39,7 +39,7 @@ Note that the `INTELLIGENT_TIERING` class could only be used when the underlying
 - *Infrequent Access tier*
 - *Archive Instant Access tier*
 
-The 2 last tiers are prohibited as they must be accessed asynchronously (requires an explicit restore action) and the Nuxeo platform does not handle this use case.
+The two last tiers are prohibited as they must be accessed asynchronously (requires an explicit restore action) and the Nuxeo platform does not handle this use case.
 
 - *Archive Access tier*
 - *Deep Archive Access tier*
@@ -47,11 +47,10 @@ The 2 last tiers are prohibited as they must be accessed asynchronously (require
 NB: There is also the possibility to define a lifecycle rule on the bucket to transition objects from `STANDARD` to `INTELLIGENT_TIERING` storage class. However, AWS states:
 
 > Transitions are charged per request
-> For a lifecycle transition action, each request corresponds to an object transition. For details on lifecycle transition pricing, see requests pricing info on the Storage & requests tab of the [Amazon S3 pricing page ](https://aws.amazon.com/s3/pricing).
-
-i.e. transitioning data from S3 `STANDARD` to S3 `INTELLIGENT_TIERING` will be charged /home/jenkins/workspace/uxeo_lts_check-release-date_2023@tmp/durable-8e440e61/script.sh.copy.01 per 1,000 requests.
+> For a lifecycle transition action, each request corresponds to an object transition. For details on lifecycle transition pricing, see requests pricing info on the Storage & requests tab of the [Amazon S3 pricing page ](https://aws.amazon.com/s3/pricing), that is, transitioning data from S3 `STANDARD` to S3 `INTELLIGENT_TIERING` will be charged $0.01 per 1,000 requests.
 
 Although the lifecycle could be needed to transition existing objects, consider leveraging this new `nuxeo.s3storage.storageClass` property to avoid this extra cost for objects created in the future.
+
 ## Fix SAML Logout When No Login Page Is Configured
 
 Don't save SAML logout request when logging out.
@@ -62,9 +61,8 @@ Files being written to LocalBlobStore are now ignored by the garbage collector.
 
 ## Create a D2 (Declarative Diagramming) Introspection Stream Export
 
-It's now possible to view the cluster state as D2 diagram
-
 It's now possible to view the [cluster state as D2 diagram](https://doc.nuxeo.com/rest-api/1/stream-endpoint/#get-detailed-nuxeo-stream-and-processor-information).
+
 ## Address Regression in Hotfix 2023.38 of Library Quartz 2.5.1 in a Nuxeo Cluster Using PostgreSQL
 
 Address a regression in Quartz for PostgreSQL.
