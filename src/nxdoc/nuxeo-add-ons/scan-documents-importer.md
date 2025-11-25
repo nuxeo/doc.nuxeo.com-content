@@ -124,8 +124,8 @@ Please note that the XML can only be mapped to non-multivalued and non-complex f
 
 Advanced XML parsing can be achieved by adding the following bundles into your platform (copy the jar files into the `nxserver/bundles` directory):
 
-1.  [nuxeo-importer-xml-parser](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav~org.nuxeo.ecm.platform~nuxeo-importer-xml-parser~~~~kw,versionexpand)
-2.  [nuxeo-importer-scan-xml-parser](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav~org.nuxeo.ecm.platform~nuxeo-importer-scan-xml-parser~~~~kw,versionexpand)
+1.  [nuxeo-importer-xml-parser](https://packages.nuxeo.com/#browse/search/maven=attributes.maven2.groupId%3Dorg.nuxeo.ecm.platform%20AND%20attributes.maven2.artifactId%3Dnuxeo-importer-xml-parser)
+2.  [nuxeo-importer-scan-xml-parser](https://packages.nuxeo.com/#browse/search/maven=attributes.maven2.groupId%3Dorg.nuxeo.ecm.platform%20AND%20attributes.maven2.artifactId%3Dnuxeo-importer-scan-xml-parser)
 
 These bundles provide you with a new service (`org.nuxeo.ecm.platform.importer.xml.parser.XMLImporterComponent`) and extension points that need to be used instead of the regular ones:
 
