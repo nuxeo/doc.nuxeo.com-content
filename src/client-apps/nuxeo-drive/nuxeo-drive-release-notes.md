@@ -44,6 +44,6 @@ Resolved intermittent copy/paste issues by blocking unnecessary clipboard signal
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-6.0.0-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-6.0.0.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-6.0.0.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.0-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.0.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.0.exe)
