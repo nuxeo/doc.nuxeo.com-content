@@ -3,7 +3,7 @@ title: Admin Console Release Notes
 description: Discover changes brought in our recent Nuxeo Admin Console updates.
 review:
   comment: ''
-  date: '2025-04-04'
+  date: '2025-11-18'
   status: ok
 toc: true
 labels:
@@ -15,14 +15,15 @@ confluence:
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'admin-console-updates' page='admin-console-release-notes-23-0-7'}}}
+{{{multiexcerpt 'admin-console-updates' page='admin-console-release-notes-23-1-0'}}} 
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Admin Console 23.0.7]({{page page='admin-console-release-notes-23-0-7'}})                  | Compatibility with stricter CSP   | -->
+<!-- | [Admin Console 23.1.0]({{page page='admin-console-release-notes-23-1-0'}}) | Admin Console Streams feature & other enhancements|-->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [Admin Console 23.0.7]({{page page='admin-console-release-notes-23-0-7'}})                  | Compatibility with stricter CSP   |
 | [Admin Console 23.0.6]({{page page='admin-console-release-notes-23-0-6'}})                  | Fulltext Reindex feature, Replacement of Hyland UI with Angular Material design & bugfix    | 
