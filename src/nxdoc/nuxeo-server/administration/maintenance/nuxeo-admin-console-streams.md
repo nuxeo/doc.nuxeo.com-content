@@ -188,7 +188,7 @@ Use Cases:
 
 
 
-## Frequently Asked Questions (FAQ)
+### Frequently Asked Questions (FAQ)
 
 Q1: What happens if I click "Clear" on Stream Records?
 A: It only clears the records from your screen. No data is deleted from the server.
