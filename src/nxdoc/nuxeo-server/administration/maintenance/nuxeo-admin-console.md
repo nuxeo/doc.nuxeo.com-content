@@ -3,10 +3,8 @@ title: Nuxeo Admin Console
 description: The Nuxeo admin console provides a dedicated UI for system administrators to get an overview of the system and perform common tasks like reindexing documents.
 review:
     comment: ''
-    date: '2024-12-27'
+    date: '2025-11-18'
     status: ok
-labels:
-    - bchauvin
 is_overview: true
 tree_item_index: 1050
 confluence:
@@ -146,6 +144,12 @@ You can click on the `See Status` button to follow how the bulk action is procee
 In addition, the command id can be copied to retrieve its status later using the `Bulk Action Monitoring` menu. Note that the bulk action id won't be remembered, so you may want to store it in a safe place if you intend to monitor it later on.
 
 ![]({{file name='admin-console-bulk-action-monitor.png'}} ?border=true)
+
+
+### Stream Management
+The Streams feature provides a robust interface for monitoring, analyzing, and managing real-time data streams within your application. With a suite of specialized tabs, Streams empowers users to gain deep insights into stream processing, performance, and consumer activity.
+
+- [Stream Management]({{page page='nuxeo-admin-console-streams'}})
 
 
 ## Going Further
