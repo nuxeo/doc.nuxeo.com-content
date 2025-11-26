@@ -15,19 +15,17 @@ confluence:
 
 1. Getting Started
 
-2. Key Enhancements
+2. Stream Records 
 
-3. Stream Records 
+3. Consumer Thread Pool
 
-4. Consumer Thread Pool
+4. Consumer Position 
 
-5. Consumer Position 
+5. Scaling Analysis 
 
-6. Scaling Analysis 
+6. Stream Processor Info 
 
-7. Stream Processor Info 
-
-8. FAQs & Troubleshooting
+7. FAQs & Troubleshooting
 
 
 
@@ -42,7 +40,7 @@ To access the Streams feature:
 3. Select a stream to view its details and analytics.
 
 
-Stream Management provides a unified interface with tabs for Stream Records, Stream Processor Info, Scaling Analysis, Consumer Position, and Consumer Thread Pool—enabling Users to View and Manage Stream Records via UI.
+Stream Management provides a unified interface with tabs for Stream Records, Stream Processor Info, Scaling Analysis, Consumer Position, and Consumer Thread Pool, enabling Users to View and Manage Stream Records via UI.
 
 
 
@@ -98,7 +96,7 @@ The Consumer Position under Stream Management provides two main functionalities:
 These are used to view and manage the position of a consumer group in a selected stream.
 
 
-### Change Consumer Position
+#### Change Consumer Position
 
 
 ![](/assets/nxdoc/nuxeo-admin-console/admin-console-change-consumer-position.png)
@@ -116,10 +114,10 @@ Key Features
 
 Use Case
 
-- Use Change Consumer Position to reprocess past events after fixing an error, or skip over problematic records that are blocking processing—helping maintain smooth and reliable stream operations.
+- Use Change Consumer Position to reprocess past events after fixing an error, or skip over problematic records that are blocking processing, which helps maintain smooth and reliable stream operations.
 
 
-### Get Consumer Position
+#### Get Consumer Position
 
 
 ![](/assets/nxdoc/nuxeo-admin-console/admin-console-get-consumer-position.png)
