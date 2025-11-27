@@ -23,10 +23,7 @@ hidden: true
 Users can type in the search box to quickly narrow down the list and find the desired entry more efficiently.
 
 
-**Security Enhancements** 
-
-- ***Temporarily Disabled SauceLabs***
-SauceLabs integration has been disabled to prevent unit test pipeline failures and ensure build stability.
+**Security Improvements** 
 
 - ***Resolved GitHub Code Scan Alert***
 Fixed incomplete string escaping and improved input validation to enhance security and prevent injection risks.
@@ -35,10 +32,7 @@ Fixed incomplete string escaping and improved input validation to enhance securi
 All Maven repository URLs now use HTTPS instead of HTTP, securing artifact downloads/uploads and mitigating potential MITM (Man-in-the-Middle) attacks.
 
 
-**Bug Fixes & Improvements** 
-
-- ***Comments & CSV Import Stability***
-Addressed defects in comments and CSV import functional tests, improving reliability and accuracy.
+**Bug Fixes & Upgrades** 
 
 - ***Crowdin Version Upgrade***
 Updated Crowdin to v2.12.0 to resolve translation synchronization issues.
