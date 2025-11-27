@@ -20,7 +20,7 @@ hidden: true
 
 **Enhancements** 
 
-- ***Filterable Saved searches drop-down list***
+- ***Saved Searches dropdown list is filterable***
 Users can type in the search box to quickly narrow down the list and find the desired entry more efficiently.
 
 
