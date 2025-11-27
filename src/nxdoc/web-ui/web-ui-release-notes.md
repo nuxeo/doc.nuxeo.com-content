@@ -28,7 +28,7 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.24]({{page page='web-ui-release-notes-3-1-24'}}) |Security Improvements. Bug Fixes. Includes support ticket resolutions. | -->
+<!-- | [Web UI 3.1.24]({{page page='web-ui-release-notes-3-1-24'}}) | Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions. | -->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
