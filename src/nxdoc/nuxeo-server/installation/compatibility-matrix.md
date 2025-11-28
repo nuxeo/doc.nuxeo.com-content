@@ -123,22 +123,39 @@ Nuxeo is shipped with an embedded Tomcat server.
 
 ## OpenSearch
 
-Nuxeo Platform is fully tested against an OpenSearch1 cluster:
-- an OpenSearch cluster {{! multiexcerpt name='opensearch1_cluster_supported_version'}}1.3.20{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch1_libraries_supported_version'}}1.3.20{{! /multiexcerpt}}.
+Nuxeo Platform supports OpenSearch1, Opensearch2 and OpenSearch3 clusters.
 
-For now, Nuxeo Platform is partially tested against an OpenSearch2 cluster:
-- an OpenSearch cluster {{! multiexcerpt name='opensearch2_cluster_supported_version'}}2.18.0{{! /multiexcerpt}} using OpenSearch Java libraries {{! multiexcerpt name='opensearch2_libraries_supported_version'}}2.23.0{{! /multiexcerpt}}.
+Nuxeo Platform is fully tested against an OpenSearch1 cluster, using OpenSearch Java libraries 1.3.
+
+Nuxeo Platform is partially tested against OpenSearch1, OpenSearch2 and OpenSearch3 clusters using OpenSearch Java libraries 2.x.
+
+Here are the packages compatibility matrix: 
+
+```
+nuxeo-search-client-opensearch1: OS1 ✅, OS2 🚫, OS3 🚫, ES7 ✅, ES8 ✅, ES9 🚫, embed ✅
+nuxeo-audit-opensearch1:         OS1 ✅, OS2 🚫, OS3 🚫, ES7 ✅, ES8 ✅, ES9 🚫, embed ✅
+nuxeo-search-client-opensearch2: OS1 ✅, OS2 ✅, OS3 ✅, ES7 ✅, ES8 🚫, ES9 🚫, embed ✅
+nuxeo-audit-opensearch2:         OS1 ✅, OS2 ✅, OS3 ✅, ES7 ✅, ES8 🚫, ES9 🚫, embed ✅
+```
 
 More information can be found on the [OpenSearch Setup]({{page page='search-setup'}}) page.
 
 ## Elasticsearch
 
-Nuxeo Platform is tested against 2 Elasticsearch clusters using OpenSearch Java libraries {{{multiexcerpt 'opensearch1_libraries_supported_version'}}}:
-- an {{! multiexcerpt name='elasticsearch_7_cluster_supported_version'}}7.17.9{{! /multiexcerpt}} Elasticsearch cluster
-- an {{! multiexcerpt name='elasticsearch_8_cluster_supported_version'}}8.7.0{{! /multiexcerpt}} Elasticsearch cluster
+Nuxeo Platform supports Elastisearch7, Elasticsearch8 and Elasticsearch9 clusters.
 
-For now, Nuxeo Platform is partially tested against Elasticsearch 9.x:
-- an OpenSearch cluster {{! multiexcerpt name='elasticsearch9_cluster_supported_version'}}9.0.x{{! /multiexcerpt}} using Elasticsearch Java libraries {{! multiexcerpt name='elasticsearch9_libraries_supported_version'}}9.0.x{{! /multiexcerpt}}.
+Nuxeo Platform is fully tested against Elasticsearch7 and Elasticsearch8 clusters using OpenSearch Java libraries 1.3.
+
+Nuxeo Platform is partially tested against Elasticsearch9 cluster using Elasticsearch Java libraries 9.x.
+
+Here are the packages compatibility matrix:
+
+```
+nuxeo-search-client-opensearch1:    OS1 ✅, OS2 🚫, OS3 🚫, ES7 ✅, ES8 ✅, ES9 🚫, embed ✅
+nuxeo-audit-opensearch1:            OS1 ✅, OS2 🚫, OS3 🚫, ES7 ✅, ES8 ✅, ES9 🚫, embed ✅
+nuxeo-search-client-elasticsearch9: OS1 🚫, OS2 🚫, OS3 🚫, ES7 🚫, ES8 🚫, ES9 ✅, embed 🚫
+nuxeo-audit-elasticsearch9:         OS1 🚫, OS2 🚫, OS3 🚫, ES7 🚫, ES8 🚫, ES9 ✅, embed 🚫
+```
 
 More information can be found on the [Elasticsearch Setup]({{page page='search-setup'}}) page.
 
