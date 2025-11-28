@@ -3,7 +3,7 @@ title: Nuxeo Enhanced Viewer
 description: 'Nuxeo Enhanced Viewer addon allows users to preview and annotate content stored in the Nuxeo repository: documents, PDF, images, and videos with the ARender previewer.'
 review:
     comment: ''
-    date: '2021-12-23'
+    date: '2025-07-03'
     status: ok
 labels:
     - arender-connector
@@ -47,43 +47,40 @@ You can access the different types of annotations available by default directly 
 <table class="hover">
 <tbody>
 <tr>
-<td colspan="1">![annotations-draw-arrows.png](/nx_assets/7749f97c-548e-446c-8542-97fd35bfb6ff.png ?w=40)</td>
-<td colspan="1"> Add an arrow.</br> Repeat mode enabled by default. </td>
+<td colspan="1"></td>
+<td colspan="1"> Strike through text. </td>
 </tr>
 <tr>
-<td colspan="1">![annotations-add-freehand.png](/nx_assets/275b858a-e1e6-4d6d-9d70-cc505bb120e9.png ?w=40)</td>
-<td colspan="1"> Draw different shapes with the Freehand.</br>
-Repeat mode enabled by default. </td>
+<td colspan="1"></td>
+<td colspan="1"> Add free text box. </td>
 </tr>
 <tr>
-<td colspan="1">
-![annotations-sticky-note.png](/nx_assets/63ec2953-c04a-4eb3-87fe-b2bbfac763ef.png ?w=40)</td>
-<td colspan="1"> Add a sticky note. </td>
+<td colspan="1"></td>
+<td colspan="1"> Add a circle. </td>
 </tr>
 <tr>
-<td colspan="1">
-![annotations-free-text-box.png](/nx_assets/2a874c02-8282-459f-a511-80d524f05ad5.png ?w=40)</td>
-<td colspan="1"> Add a text box. </td>
+<td colspan="1"></td>
+<td colspan="1"> Add polyline. </td>
 </tr>
 <tr>
-<td colspan="1">
-![annotations-highlight-rectangle.png](/nx_assets/eef983e3-10bd-4d9f-be66-982990bf7aa8.png ?w=40)</td>
-<td colspan="1"> Add a highlighted rectangle.</br> Once your rectangle is created you can modify the color and opacity of the highlight.</br> Repeat mode enabled by default.</td>
+<td colspan="1"></td>
+<td colspan="1"> Add freehand. </td>
 </tr>
 <tr>
-<td colspan="1">
-![annotations-draw-circle.png](/nx_assets/a12f0162-1971-4a00-8f60-cf71df4c7199.png ?w=40)</td>
-<td colspan="1"> Add a circle.</br> Repeat mode enabled by default.</td>
+<td colspan="1"></td>
+<td colspan="1"> Add arrow. </td>
 </tr>
 <tr>
-<td colspan="1">
-![annotations-highlight-text.png](/nx_assets/bad65cf1-4779-459c-9bd6-74283ef88cbd.png ?w=40)</td>
-<td colspan="1"> Highlight text.</br> Once your text is selected you can modify the color and opacity of the highlight.</td>
+<td colspan="1"></td>
+<td colspan="1"> Add measure arrow. </td>
 </tr>
 <tr>
-<td colspan="1">
-![annotations-strikethrough-text.png](/nx_assets/463ebd3a-e506-4f3b-b52a-7f122aa48456.png ?w=40)</td>
-<td colspan="1"> Add strikethrough text. </td>
+<td colspan="1"></td>
+<td colspan="1"> Add stamp. </td>
+</tr>
+<tr>
+<td colspan="1"></td>
+<td colspan="1"> Add an audio. </td>
 </tr>
 <tr>
   <td colspan="1">
