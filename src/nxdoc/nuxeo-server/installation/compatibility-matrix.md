@@ -88,7 +88,7 @@ The Nuxeo Platform supports the following databases.
   <li>
     Supported, not validated by continuous integration:
     <ul>
-      <li>MongoDB 4.0, 4.2 and 4.4</li>
+      <li>MongoDB 4.0, 4.2, 4.4, 5.0, 7.0, 8.0 and 8.1</li>
       <li>PostgreSQL 11 and 12</li>
       <li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.3{{! /multiexcerpt}}</li>
       <li>{{! multiexcerpt name='MySQL-supported'}}MySQL 8.0{{! /multiexcerpt}}</li>
