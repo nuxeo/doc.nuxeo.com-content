@@ -129,7 +129,7 @@ Nuxeo Platform is fully tested against an OpenSearch1 cluster, using OpenSearch 
 
 Nuxeo Platform is partially tested against OpenSearch1, OpenSearch2 and OpenSearch3 clusters using OpenSearch Java libraries 2.x.
 
-Here are the packages compatibility matrix: 
+The compatibility matrix for the packages is provided below: 
 
 ```
 nuxeo-search-client-opensearch1: OS1 ✅, OS2 🚫, OS3 🚫, ES7 ✅, ES8 ✅, ES9 🚫, embed ✅
@@ -148,7 +148,7 @@ Nuxeo Platform is fully tested against Elasticsearch7 and Elasticsearch8 cluster
 
 Nuxeo Platform is partially tested against Elasticsearch9 cluster using Elasticsearch Java libraries 9.x.
 
-Here are the packages compatibility matrix:
+The compatibility matrix for the packages is provided below: 
 
 ```
 nuxeo-search-client-opensearch1:    OS1 ✅, OS2 🚫, OS3 🚫, ES7 ✅, ES8 ✅, ES9 🚫, embed ✅
