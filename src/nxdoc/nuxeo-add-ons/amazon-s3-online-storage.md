@@ -211,6 +211,31 @@ nuxeo.s3storage.awssecret=your_AWS_SECRET_ACCESS_KEY
 nuxeo.s3storage.region=your_AWS_REGION
 ```
 
+#### Storage Class
+
+Since `2025.8`, the Nuxeo configuration property `nuxeo.s3storage.storageClass` allows you to specify which storage class should be used to store blobs in an S3 bucket. Supported values are `STANDARD` (default) or `INTELLIGENT_TIERING`.
+
+You can also fine-tune which storage class should be applied to the full-text blobs extracted from binaries (when `nuxeo.vcs.fulltext.storedInBlob=true`) with the `nuxeo.s3storage.fulltext.storeInBlob.storageClass` property.
+
+Alternatively, when defining your own S3 blob provider XML contribution, you can also specify the `storageClass` property:
+
+```
+  <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+    <blobprovider name="myBlobProvider">
+      <class>org.nuxeo.ecm.blob.s3.S3BlobProvider</class>
+      ...
+      <property name="storageClass">INTELLIGENT_TIERING</property>
+```
+
+Note that the `INTELLIGENT_TIERING` class could only be used when the underlying bucket used to store data is configured to use only immediate (synchronous) access tiers:
+- *Infrequent Access tier*
+- *Archive Instant Access tier*
+- *Archive Instant Access tier*
+
+The 2 last tiers are prohibited as they must be accessed asynchronously (requires an explicit restore action) and the Nuxeo platform does not handle this use case.
+- *Archive Access tier*
+- *Deep Archive Access tier*
+
 #### Client-Side Crypto Options
 
 With S3 you have the option of storing your data encrypted using [S3 Client-Side Encryption](http://docs.amazonwebservices.com/AmazonS3/latest/dev/UsingClientSideEncryption.html). Note that the local cache will _not_ be encrypted.
