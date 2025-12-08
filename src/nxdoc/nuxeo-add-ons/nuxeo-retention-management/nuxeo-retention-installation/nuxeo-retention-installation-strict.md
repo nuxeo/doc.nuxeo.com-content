@@ -187,3 +187,9 @@ This will enable the [s3-retention-config.xml](https://github.com/nuxeo/nuxeo-re
 Make sure to [enable the object retention]({{page page='nuxeo-retention-installation-standard'}}#gcp-2-buckets-enable-retention) on the bucket.
 
 If `nuxeo.retention.strictmode.enabled` is set to `true`, the Nuxeo server will apply the [**Locked retention mode**](https://cloud.google.com/storage/docs/object-lock#overview) while setting a retention date to an object.
+
+### Azure Storage
+
+Make sure to [enable the storage immutability]({{page page='nuxeo-retention-installation-standard'}}#azure-2-containers-enable-retention) on the container.
+
+If `nuxeo.retention.strictmode.enabled` is set to `true`, the Nuxeo server will apply the [**Locked retention mode**](https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-policy-configure-version-scope?tabs=azure-portal#lock-a-time-based-retention-policy) while setting a retention date to an object.

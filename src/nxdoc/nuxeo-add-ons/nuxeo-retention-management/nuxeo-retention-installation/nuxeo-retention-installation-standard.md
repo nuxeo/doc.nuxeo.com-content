@@ -48,14 +48,19 @@ In Standard mode, there are 3 supported configurations using Amazon S3:
 
 Our recommendation is to have a dedicated bucket for records. This option provides greater flexibility in the long run, and facilitates demonstrating compliance. 
 
-Depending on your compliance needs, the dedicated bucket can leverage Amazon S3 Object Lock or Google Storage Object Retention in governance mode, or in compliance mode to provide compliance with the SEC-17A4 regulation.
+Depending on your compliance needs, the dedicated bucket can leverage either :
+ - Amazon S3 Object Lock
+ - Google Storage Object Retention
+ - Azure Immutable Storage
+in governance mode, or in compliance mode to provide compliance with the SEC-17A4 regulation.
 
 {{#> callout type='info'}}
-Activating AWS S3 Object Lock or Google Storage Object Retention and choosing a mode for it must be done during the creation of the bucket. Please consider your needs and the regulations you will be subject to before installing and configuring the addon.
+Activating AWS S3 Object Lock, Google Storage Object Retention or Azure Immutable Storage and choosing a mode for it must be done during the creation of the bucket. Please consider your needs and the regulations you will be subject to before installing and configuring the addon.
 {{/callout}}
 
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;Storing records in a dedicated S3 bucket](#s3-2-buckets)<br/>
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;Storing records in a dedicated Google Storage bucket](#gcp-2-buckets)
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i> Storing records in a dedicated S3 bucket](#s3-2-buckets)<br/>
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i> Storing records in a dedicated Google Storage bucket](#gcp-2-buckets)
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i> Storing records in a dedicated Azure Blob Storage container](#azure-2-containers)
 
 {{> anchor 's3-2-buckets'}}
 #### Storing Records in a Dedicated S3 Bucket
@@ -233,12 +238,48 @@ Configure the record bucket as follows:
 
 - Do not define any "Bucket retention policy", it is the Nuxeo server that will explicitly set the retention period for the objects stored in this bucket.
 
+{{> anchor 'azure-2-containers'}}
+#### Storing Records in a Dedicated Azure Blob Storage container
+
+Storing records in a dedicated Azure Storage container can simply be done via the `nuxeo.conf` configuration file after having installed the [Google Storage Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/google-storage).
+
+Add the `azureretention` template to the `nuxeo.templates` property in the [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
+```
+nuxeo.templates=default,azurebinaries,retention,azureretention
+```
+
+This will activate the [azure-retention-config.xml](https://github.com/nuxeo/nuxeo-retention/blob/v2025.3.1/nuxeo-retention-package/src/main/resources/install/templates/azureretention/nxserver/config/azure-retention-config.xml.nxftl) template, which enables the following properties for [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
+  - `nuxeo.storage.azure.retention.container`</br>
+    (required)
+  - `nuxeo.storage.azure.retention.prefix`</br>
+    (required, always define a prefix different than the default blob provider one in the case you use the same bucket)
+  - `nuxeo.storage.azure.retention.account.name`</br>
+    (fallback to `nuxeo.storage.azure.account.name`)
+  - `nuxeo.storage.azure.retention.account.key`</br>
+    (fallback to `nuxeo.storage.azure.account.key`)
+
+{{> anchor 'azure-2-containers-enable-retention'}}
+##### Optionally activate Azure Immutable Storage
+
+[Azure Immutable Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-policy-configure-version-scope?tabs=azure-portal#lock-a-time-based-retention-policy) prevents the deletion of content under retention until the retention period has expired. Nuxeo Retention, when configured to use Azure Immutable Storage automatically provides the retention period (or legal hold) to Azure Storage.
+
+Configure the record container as follows:
+
+- The [Azure Blob Versioning](https://learn.microsoft.com/en-us/azure/storage/blobs/versioning-enable) must be enabled on the record container.
+
+- The [Azure version-level immutability](https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-policy-configure-version-scope?tabs=azure-portal#enable-support-for-version-level-immutability) must be enabled on the record container.
+
+- Do not enable version-level immutability at container level. Do not define any "Default retention policy", it is the Nuxeo server that will explicitly set the retention period for the objects stored in this bucket.
+
 {{> anchor 'one-bucket-configuration'}}
 #### Storing Records in the Same Bucket as Other Documents (Alternative Option)
 
 Records can also be stored in the same bucket as the rest of the content. This provides a simpler architecture, but restricts the possibility to adapt to more complex scenarios in the long run.
 
-This configuration does NOT allow using the [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) nor [Google Storage Object Retention](https://cloud.google.com/storage/docs/object-lock) feature (no WORM storage option).
+This configuration does NOT allow using any WORM storage feature of the supported storage provider:
+ - [Amazon S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)
+ - [Google Storage Object Retention](https://cloud.google.com/storage/docs/object-lock)
+ - [Azure Immutable Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-policy-configure-version-scope?tabs=azure-portal#enable-version-level-immutability-for-a-new-container)
 
 {{#> callout type='warning'}}
 Always store both regular and record blobs in different locations by using distinct prefix in your S3 bucket. Otherwise, this will result in a shared storage configuration that will prevent the [Orphaned Blobs GC]({{page page='garbage-collecting-orphaned-blobs'}}) from running efficiently.
