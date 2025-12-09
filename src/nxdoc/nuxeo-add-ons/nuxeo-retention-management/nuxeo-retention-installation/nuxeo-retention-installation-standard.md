@@ -48,7 +48,7 @@ In Standard mode, there are 3 supported configurations using Amazon S3:
 
 Our recommendation is to have a dedicated bucket for records. This option provides greater flexibility in the long run, and facilitates demonstrating compliance. 
 
-Depending on your compliance needs, the dedicated bucket can leverage either :
+Depending on your compliance needs, the dedicated bucket can leverage either:
  - Amazon S3 Object Lock
  - Google Storage Object Retention
  - Azure Immutable Storage
