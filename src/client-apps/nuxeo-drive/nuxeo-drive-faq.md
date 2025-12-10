@@ -122,21 +122,21 @@ In order to be fully compatible with Nuxeo Drive, the minimum required version o
 
 - **LTS 2025**: no specific version
 - **LTS 2023**: no specific version
-- **LTS 2021**: 2021.0.17
 
 And the minimum required installed Hotfix (HF) is:
 
-Client | LTS 2025 | LTS 2023 | LTS 2021 
---- | --- | --- | --- 
-5.x | n/a | n/a | HF17
-4.x | n/a | n/a | HF17 
+Client | LTS 2025 | LTS 2023 
+--- | --- | --- 
+6.x | n/a | n/a
+5.x | n/a | n/a 
+4.x | n/a | n/a  
 
 ## What are the supported OS?
 
 Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/support.md#client)):
 
 - GNU/Linux, 64 bits
-- macOS >= 10.13, 64 bits and [ARM64](#macos-arm64-support)
+- macOS >= 13, 64 bits and [ARM64](#macos-arm64-support)
 - Windows 11, 64 bits
 - Windows Server 2022, 64 bits
 
@@ -144,6 +144,7 @@ Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/
 
 Nuxeo Drive 5.0 and newer will run on macOS ARM64 as soon as the 11.2.2 or newer OS update will be installed.
 
+<!--
 ### Obsolete Windows version
 
 For out-of-date Windows versions, Nuxeo Drive may not start on it.
@@ -170,6 +171,8 @@ choco install kb3063858
 - Download link: [Windows8-RT-KB3063858-x64.msu](https://download.microsoft.com/download/9/E/E/9EEB707E-2896-4890-8082-2D9FB930C615/Windows8-RT-KB3063858-x64.msu)
 - Checksum (SHA256): `64ACF31484023625E19DD45613AA8926AA3837218AA5B2A955745EED9FBFF7DF`
 
+-->
+
 ### Supported GNU/Linux Distributions
 
 {{#> callout type='note' }}
@@ -180,7 +183,7 @@ Minimum supported versions:
 
 | Nuxeo Drive | Debian | Fedora | Manjaro | Ubuntu
 |---|---|---|---|---
-| >= 4.2.0 | 9.0.0 | 25 | 18.1.0 | 16.04.1
+| >= 5.x | 9.0.0 | 25 | 18.1.0 | 22.04
 
 ## What Actions Trigger a Synchronization?
 
