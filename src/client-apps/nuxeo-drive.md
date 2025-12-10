@@ -22,7 +22,7 @@ Nuxeo Drive proposes 3 main features:
 
 | Channel | Version                                                                    |
 | ------- | -------------------------------------------------------------------------- |
-| Release | [6.0.O](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
+| Release | [6.0.0](https://community.nuxeo.com/static/drive-updates/release/?C=M;O=D) |
 | Beta    | [n/a](https://community.nuxeo.com/static/drive-updates/beta/?C=M;O=D) |
 | Alpha   | [6.0.x](https://community.nuxeo.com/static/drive-updates/alpha/?C=M;O=D) |
 
