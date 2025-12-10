@@ -652,6 +652,16 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 12
+
+### Restrict to Test Scope the Use of org.awaitility.awaitility Library
+
+We wrongly added a test only dependency to Nuxeo Server 2025 library: `awaitility`.
+
+This library is used by various Maven modules to test async mechanism, and should not have landed to Nuxeo Server 2025. Due to the nature of the library we have removed it from Nuxeo Server, if your source code was using this library you should check that `awaitility` is shipped within your package.
+### Fix Vim Medium CVE in Docker Image
+
+Vim editor was upgraded in the Docker image from `8.2.2637-22.0.1.el9_6.1` to `8.2.2637-23.0.1.el9_7`.
 ## Hotfix 10
 
 ### Fix Vim Medium CVE in Docker Image
