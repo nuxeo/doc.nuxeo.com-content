@@ -34,10 +34,14 @@ Added functionality to detect concurrent edits using lock files, with remote loc
 
 ### 64-bit Upgrade for macOS, Linux and Windows
 
+{{#> callout type='warning' heading='32bit no longer supported' }}
+32bit will no longer be supported starting from Nuxeo Drive 6.0.0 for all os.
+{{/callout}}
+
 Nuxeo Drive now runs on 64-bit architecture for macOS, Linux and Windows, offering:
 - Improved performance and stability for large files.
 - Full compatibility with modern operating systems.
-- **32bit will no longer be supported starting from Nuxeo Drive 6.0.0 for all os**
+
 
 ### Clipboard Reliability Fix 
 
