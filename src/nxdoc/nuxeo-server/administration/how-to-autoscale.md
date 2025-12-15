@@ -84,9 +84,15 @@ Add the following option to `nuxeo.conf` on all nodes:
 
 ```shell
 metrics.cloudwatch.scale.enabled=true
+metrics.cloudwatch.scale.tag=my-instance-tag
 ```
 
 This will publish two CloudWatch metrics that can be used with different [dynamic auto-scaling types](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html):
+
+Note that the tag is mandatory for identifying your Nuxeo cluster instance. If you omit this option, you will see the following error:
+```text
+ERROR: Missing required cloudwatch scale tag: awsTag option, CloudWatch scale metric will not be reported.
+```
 
 #### Option 1: StepScale Metric (Recommended)
 
