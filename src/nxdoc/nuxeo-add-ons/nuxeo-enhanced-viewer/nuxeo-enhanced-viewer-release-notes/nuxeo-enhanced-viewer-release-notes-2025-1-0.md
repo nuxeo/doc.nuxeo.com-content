@@ -3,7 +3,7 @@ title: NEV 2025.1.0
 description: Release notes for Nuxeo Enhanced Viewer 2025.1.0
 
 tree_item_index: 2490
-hidden: true
+hidden: false
 review:
   comment: ''
   date: '2025-06-20'
