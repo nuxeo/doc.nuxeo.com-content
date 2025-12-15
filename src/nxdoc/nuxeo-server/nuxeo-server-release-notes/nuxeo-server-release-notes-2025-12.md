@@ -17,8 +17,6 @@ hidden: true
 
 ## Take Into Account Bundle-Revision Header From MANIFEST.MF File
 
-Support Bundle-Revision from MANIFEST.MF file
-
 The Bundle MANIFEST.MF entry `Bundle-Revision` is now supported by Nuxeo.
 
 The revision can then be accessed within Nuxeo Runtime APIs when added to the `META-INF/MANIFEST.MF` file within a Nuxeo Bundle jar.
@@ -55,7 +53,7 @@ curl -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/managemen
 ```
 ## Restrict to Test Scope the Use of org.awaitility.awaitility Library
 
-The awaitility dependency is now declared as test
+The awaitility dependency is now declared as test.
 
 
 {{! /multiexcerpt}}
