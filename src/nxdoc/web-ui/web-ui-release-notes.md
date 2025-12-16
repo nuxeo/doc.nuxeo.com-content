@@ -23,7 +23,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.10.0]({{page page='web-ui-release-notes-2025-10-0'}}) | Bug Fixes & Upgrades. Security Improvements. Infrastructure & Performance | -->
+<!-- | [Web UI 2025.10.0]({{page page='web-ui-release-notes-2025-10-0'}}) | Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions. | -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
