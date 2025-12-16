@@ -47,16 +47,6 @@ Updated to v5.4, enabling better handling of complex PDFs and introducing new fe
 - ***Metadata Enhancement:***
 The “Publisher” and “Publish date” fields now accurately reflect the actual publishing of the document, ensuring better clarity and consistency in document lifecycle tracking.
 
-
-
-**Infrastructure & Performance** 
-
-- ***GitHub Runner Migration:***
-Moved from self-hosted runners to GitHub-hosted runners for improved resources, resolving intermittent functional test hangs and enhancing execution performance.
-
-- ***Removed Deprecated Maven Reference:***
-Eliminated references to decommissioned mavenin from nuxeo-WEBUI-repo.
-
 <br/>
 
 {{! /multiexcerpt}}
