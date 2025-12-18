@@ -23,7 +23,7 @@ hidden: true
 Addressed risks in deep-merge logic by blocking unsafe keys (__proto__, constructor) and ensuring only own properties are merged, preventing potential XSS or logic-tampering attacks.
 
 - ***GitHub Actions Permissions:***
-Default permissions tightened to read-only, replacing previous read-write defaults. Write access is now restricted to necessary scopes only.
+Default permissions restricted to read-only, replacing previous read-write defaults. Write access is now restricted to necessary scopes only.
 
 - ***jsondiffpatch Vulnerability:***
 Resolved XSS vulnerability in jsondiffpatch (via HtmlFormatter) by upgrading from v0.3.11 → v0.7.3 and hardening HTML formatting to prevent script injection.
