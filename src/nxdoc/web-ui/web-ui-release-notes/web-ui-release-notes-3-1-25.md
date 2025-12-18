@@ -26,7 +26,7 @@ Addressed risks in deep-merge logic by blocking unsafe keys (__proto__, construc
 Default permissions restricted to read-only, replacing previous read-write defaults. Write access is now restricted to necessary scopes only.
 
 - ***jsondiffpatch Vulnerability:***
-Resolved XSS vulnerability in jsondiffpatch (via HtmlFormatter) by upgrading from v0.3.11 → v0.7.3 and hardening HTML formatting to prevent script injection.
+Resolved XSS vulnerability in jsondiffpatch (via HtmlFormatter) by upgrading from v0.3.11 to v0.7.3 and implemented  HTML formatting rules to prevent script injection.
 
 - ***Select2 XSS Fix:***
 Patched vulnerability in Select2 version 4.0.5 and below where HTML templates with Ajax-loaded data could allow script injection. Updated Web UI logic now prevents unsafe HTML rendering.
