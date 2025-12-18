@@ -41,7 +41,7 @@ Implemented uniform layout recalculations across dashboard and panels, eliminati
 Fixed breaking changes after upgrading Select2 from 3.x to 4.x by updating wrapper classes and replacing deprecated APIs for full compatibility.
 
 - ***PDF.js Upgrade:***
-Updated to v5.4, enabling better handling of complex PDFs and introducing new features.
+Updated to version 5.4, enabling better handling of complex PDFs and introducing new features.
 
 - ***Metadata Enhancement:***
 The “Publisher” and “Publish date” fields now accurately reflect the actual publishing of the document, ensuring better clarity and consistency in document lifecycle tracking.
