@@ -16,8 +16,8 @@ tree_item_index: 0
 
 ## Create a Cloudwatch Reporter to Expose Scale Metric
 
-The scale metric can be exposed in CloudWatch to ease AutoScale group configuration,
-[learn how to configure autoscaling for Nuxeo worker nodes using AWS EC2 Auto Scaling Groups based on Nuxeo cluster metrics]({{page page='how-to-autoscale'}}).
+The scale metric can be exposed in CloudWatch to ease AutoScale group configuration.
+[Learn how to configure autoscaling for Nuxeo worker nodes using AWS EC2 Auto Scaling Groups based on Nuxeo cluster metrics]({{page page='how-to-autoscale'}}).
 
 ## Add Bulk Management Endpoint to Abort a Command
 
