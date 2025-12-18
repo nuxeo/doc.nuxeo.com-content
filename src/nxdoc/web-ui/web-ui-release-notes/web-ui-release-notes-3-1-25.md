@@ -29,7 +29,7 @@ Default permissions tightened to read-only, replacing previous read-write defaul
 Resolved XSS vulnerability in jsondiffpatch (via HtmlFormatter) by upgrading from v0.3.11 → v0.7.3 and hardening HTML formatting to prevent script injection.
 
 - ***Select2 XSS Fix:***
-Patched vulnerability in Select2 ≤4.0.5 where HTML templates with Ajax-loaded data could allow script injection. Updated Web UI logic now prevents unsafe HTML rendering.
+Patched vulnerability in Select2 version 4.0.5 and below where HTML templates with Ajax-loaded data could allow script injection. Updated Web UI logic now prevents unsafe HTML rendering.
 
 
 **Bug Fixes & Upgrades** 
