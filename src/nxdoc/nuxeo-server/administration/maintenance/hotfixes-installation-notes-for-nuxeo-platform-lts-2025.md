@@ -652,6 +652,31 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 13
+
+### Upgrade Keycloak to 26.0.6 to Fix CVE-2024-10039
+
+Upgraded the following dependencies from 25.0.3 to 26.4.7:
+
+```
+org.keycloak:keycloak-core
+org.keycloak:keycloak-common
+org.keycloak:keycloak-adapter-spi
+org.keycloak:keycloak-crypto-default
+org.keycloak:keycloak-server-spi
+org.keycloak:keycloak-server-spi-private
+```
+
+Upgraded the following dependencies from 25.0.3 to 26.0.7:
+
+```
+org.keycloak:keycloak-policy-enforcer
+org.keycloak:keycloak-authz-client
+org.keycloak:keycloak-client-common-synced
+```
+### Move S3 Request Controller Contrib to S3 Package Template Resources
+
+The `org.nuxeo.ecm.core.storage.cloud.requestcontroller.service.contrib` component is deprecated.The contributions carried by the `org.nuxeo.ecm.core.storage.cloud.requestcontroller.service.contrib` component has been moved within the new `org.nuxeo.ecm.core.storage.s3.directDownload` component, which is deployed by the [amazon-s3-online-storage marketplace package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) as an NXTFL template.
 ## Hotfix 12
 
 ### Restrict to Test Scope the Use of org.awaitility.awaitility Library
