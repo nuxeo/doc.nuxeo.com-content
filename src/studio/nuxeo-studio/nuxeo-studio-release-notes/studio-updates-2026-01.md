@@ -12,7 +12,7 @@ toc: true
 
 ##  New Features
 
-## Add Manual File Editing During Branch Merge Conflicts
+### Add Manual File Editing During Branch Merge Conflicts
 
 Added the capability to manually edit files when conflicts occur during a branch merge in Studio. This matches native Git behavior and enables seamless merge resolution workflows.
 **What Changed:**
