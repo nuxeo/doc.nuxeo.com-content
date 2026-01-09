@@ -334,7 +334,7 @@ This will associate all the upload mechanism to this specific provider. We recom
 
 ### Uploading a File {{> anchor 'uploading-a-file'}}
 
-You can do a simple POST with the payload containing your file, but a multipart encoded upload is also supported.
+You can do a simple POST with the payload containing your file.
 
 ```
 POST http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}
