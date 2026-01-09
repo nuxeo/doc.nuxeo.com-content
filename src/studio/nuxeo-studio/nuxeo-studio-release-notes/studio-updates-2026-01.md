@@ -21,7 +21,7 @@ Developers can now directly edit conflicting files within the Studio interface d
 Development teams can resolve merge conflicts more efficiently without leaving their workflow, reducing debugging time and enabling smoother collaboration across branches.
 
 
-## Expose Deployed Studio Project Git SHA via REST API
+### Expose Deployed Studio Project Git SHA via REST API
 
 Introduced a new REST endpoint that exposes the Git SHA of the currently deployed Studio project at runtime.
 **What Changed:**
