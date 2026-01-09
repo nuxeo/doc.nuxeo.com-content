@@ -47,7 +47,7 @@ Fixed the release mechanism to properly handle version numbering across multiple
 **Impact:**
 Teams can now release from any branch reliably without encountering version conflicts, enabling more flexible development workflows and reducing deployment delays.
 
-## Restored Manual Validation Button in Connect Dashboard
+### Restored Manual Validation Button in Connect Dashboard
 
 Fixed the missing validation button for registration requests in the Connect Dashboard interface.
 **What Changed:**
