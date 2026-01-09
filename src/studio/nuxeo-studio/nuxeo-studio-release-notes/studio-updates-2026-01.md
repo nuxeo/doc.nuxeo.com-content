@@ -29,7 +29,7 @@ Added API endpoint that returns the exact Git commit hash of the deployed Studio
 **Impact:**
 CI/CD pipelines can now track deployments accurately and verify which version is running in each environment, improving traceability and deployment confidence.
 
-## Enable Version Selection for Application Definitions
+### Enable Version Selection for Application Definitions
 
 Added the capability for customers to select specific versions of Application Definitions, with Marketplace packages now displayed in descending version order (latest first).
 **What Changed:**
