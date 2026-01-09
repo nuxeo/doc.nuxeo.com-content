@@ -39,7 +39,7 @@ Customers gain flexibility to work with specific Application Definition versions
 
 ## Bugfixes
 
-## Fixed Release Process Across Different Branches
+### Fixed Release Process Across Different Branches
 
 Resolved versioning issues that occurred when creating releases while working in different branches.
 **What Changed:**
