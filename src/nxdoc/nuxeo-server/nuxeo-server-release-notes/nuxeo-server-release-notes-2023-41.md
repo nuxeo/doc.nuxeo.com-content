@@ -17,7 +17,7 @@ hidden: true
 
 ## Keep Custom Metadata When Publishing a Rendition of a Folderish Document
 
-Rendition service offers a new "targetDocTypes" extension point to register the target document type for holding a rendition of a source document type       that is either Folderish or is not adaptable as a BlobHolder.
+Rendition service offers a new "targetDocTypes" extension point to register the target document type for holding a rendition of a source document type that is either Folderish or is not adaptable as a BlobHolder.
 
 The new targetDocTypes extension point allows registering the target document type for holding a rendition of a source document type that is either Folderish or is not adaptable as a BlobHolder, which is required to hold the rendition result. Contributed target types must be adaptable as a BlobHolder.
 
@@ -30,9 +30,10 @@ Example:
 ```
 
 If no target doc type is found for a given type, it falls back on File.
+
 ## Run Work in Failure Management Endpoint Should Accept dryRun and Filter Parameters
 
-The "dryRun" and "categoryFilter" form parameters are now available on the "run-works-in-failure" 's work manager endpoint.
+The "dryRun" and "categoryFilter" form parameters are now available on the work manager endpoint of "run-works-in-failure".
 
 ## Enable Override of PageProvider Class in PaginableAdapter
 
