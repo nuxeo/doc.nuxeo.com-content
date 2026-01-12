@@ -17,7 +17,7 @@ hidden: true
 
 ## Keep Custom Metadata When Publishing a Rendition of a Folderish Document
 
-Rendition service offers a new "targetDocTypes" extension point to register the target document type for holding a rendition of a source document type       that is either Folderish or is not adaptable as a BlobHolder.
+Rendition service offers a new "targetDocTypes" extension point to register the target document type for holding a rendition of a source document type that is either Folderish or is not adaptable as a BlobHolder.
 
 The new targetDocTypes extension point allows registering the target document type for holding a rendition of a source document type that is either Folderish or is not adaptable as a BlobHolder, which is required to hold the rendition result. Contributed target types must be adaptable as a BlobHolder.
 
@@ -30,17 +30,18 @@ Example:
 ```
 
 If no target doc type is found for a given type, it falls back on File.
+
 ## Upgrade Keycloak to 26.0.6 to Fix CVE-2024-10039
 
 Upgraded the Keycloak core libraries from 25.0.3 to 26.4.7.
 
 ## Provide a Package Marketplace to Use the AWS JDBC Driver
 
-Datasource configuration improvements and AWS Advanced JDBC Driver addition
+Included improvements in Datasource configuration and addition of AWS Advanced JDBC Driver.
 
 #### Datasource configuration improvements
 
-We improve how you can configure the Datasource used by Nuxeo. You can now give any specific configuration to the properties used by the underlying java Driver. By default we define the following properties:
+We improved how you can configure the Datasource used by Nuxeo. You can now give any specific configuration to the properties used by the underlying java Driver. By default we define the following properties:
 
 ```
 nuxeo.datasource.properties.minTotal=${nuxeo.db.min-pool-size:=}
@@ -53,7 +54,7 @@ nuxeo.datasource.properties.accessToUnderlyingConnectionAllowed=true
 
 The pattern to use to define new properties is: `nuxeo.datasource.properties.SPECIFIC_KEY=SPECIFIC_VALUE`.
 
-In addition to these properties, there’s also the possibility to customize the DB connection checker properties on the same pattern, by default the connection instantiated during DB connection tests receives these properties:
+In addition to these properties, there’s also the possibility to customize the DB connection checker properties on the same pattern. By default the connection instantiated during DB connection tests receives these properties:
 
 ```
 nuxeo.datasource.checker.properties.user=${nuxeo.db.user}
@@ -66,11 +67,11 @@ The `nuxeo-amazon-jdbc` Nuxeo Package is now available to leverage the AWS Advan
 
 The AWS Advanced JDBC Driver must be used with another JDBC Driver (such as PostgreSQL or MySQL/MariaDB) as it is a wrapper around another driver.
 
-Let have a look to an example with PostgreSQL. 
+Let's have a look to an example with PostgreSQL. 
 
 ##### Template aws-jdbc (default)
 
-After installing the `nuxeo-amazon-jdbc` package, the `aws-jdbc` template will be added automatically, your nuxeo.conf should look like this:
+After installing the `nuxeo-amazon-jdbc` package, the `aws-jdbc` template will be added automatically. Your nuxeo.conf should look like this:
 
 ```
 nuxeo.templates=postgresql,aws-jdbc
@@ -80,13 +81,13 @@ nuxeo.db.user=nuxeo
 nuxeo.db.password=nuxeo
 ```
 
-The default configured plugins are based on the AWS Driver defaults, which are: `auroraConnectionTracker,failover2,efm2`, the full list of available plugins can be accessed [here](https://github.com/aws/aws-advanced-jdbc-wrapper/blob/main/docs/using-the-jdbc-driver/UsingTheJdbcDriver.md#list-of-available-plugins).
+The default configured plugins are based on the AWS Driver defaults, which are: `auroraConnectionTracker,failover2,efm2`. The full list of available plugins can be accessed [here](https://github.com/aws/aws-advanced-jdbc-wrapper/blob/main/docs/using-the-jdbc-driver/UsingTheJdbcDriver.md#list-of-available-plugins).
 
 Based on the datasource configuration properties, you can edit these plugins with `nuxeo.datasource.properties.wrapperPlugins` property (note that the checker might also need to receive introduced properties).
 
 ##### Template aws-jdbc-iam
 
-You can enable the optional `aws-jdbc-iam` template which ease the activation of [IAM plugin](https://github.com/aws/aws-advanced-jdbc-wrapper/blob/main/docs/using-the-jdbc-driver/using-plugins/UsingTheIamAuthenticationPlugin.md). By adding the template you will benefit from IAM plugin properties definition:
+You can enable the optional `aws-jdbc-iam` template which eases the activation of [IAM plugin](https://github.com/aws/aws-advanced-jdbc-wrapper/blob/main/docs/using-the-jdbc-driver/using-plugins/UsingTheIamAuthenticationPlugin.md). By adding the template you will benefit from IAM plugin properties definition:
 
 ```
 nuxeo.datasource.properties.wrapperPlugins=auroraConnectionTracker,failover2,efm2,iam
@@ -119,18 +120,17 @@ nuxeo.datasource.checker.properties.wrapperPlugins=awsSecretsManager
 nuxeo.datasource.checker.properties.secretsManagerSecretId=${nuxeo.datasource.properties.secretsManagerSecretId}
 ```
 
-In basic setup you will just need to define `nuxeo.datasource.properties.secretsManagerSecretId` property in addition to activate the `aws-jdbc-secret-manager` template.
+In basic setup, you just need to define `nuxeo.datasource.properties.secretsManagerSecretId` property in addition to activating the `aws-jdbc-secret-manager` template.
+
 ## Run Work in Failure Management Endpoint Should Accept dryRun and Filter Parameters
 
-The "dryRun" and "categoryFilter" form parameters are now available on the "run-works-in-failure" 's work manager endpoint.
+The "dryRun" and "categoryFilter" form parameters are now available on the work manager endpoint of "run-works-in-failure".
 
 ## Enable Override of PageProvider Class in PaginableAdapter
 
-Page providers used in PagineableAdapter are now using a name and they can be overriden like other page providers.
+Page providers used in PagineableAdapter are now using a name and they can be overridden like other page providers.
 
 ## Declare the Availability of the Es Passthrough in Capabilities Endpoint
-
-Capabilities endpoint states if ES passthrough is available
 
 The capability endpoint now returns whether the ES passthrough endpoint is available or not:
 
@@ -158,11 +158,11 @@ nuxeo.passthrough.elasticsearch.audit.enabled=true
 ```
 ## Fix S3 KMS and AES Server-Side Encryption With AWS SDK V2
 
-S3 KMS and AES server-side encryption with AWS SDK v2 now works
+S3 KMS and AES server-side encryption with AWS SDK v2 now works.
 
 ## Cleanup S3 Unit Tests Features
 
-The S3BlobProviderFeature test feature now installs CoreBulkFeature and DocumentBlobManagerFeature
+The S3BlobProviderFeature test feature now installs CoreBulkFeature and DocumentBlobManagerFeature.
 
 ## Support All S3 Storage Class Providing Synchronous Access
 
@@ -174,7 +174,8 @@ The following [S3 Storage Classes](https://docs.aws.amazon.com/AmazonS3/latest/u
 - S3 One Zone-IA (`ONEZONE_IA`)
 - S3 Glacier Instant Retrieval (`GLACIER_IR`)
 
-and can be set through the `nuxeo.s3storage.storageClass` Nuxeo configuration property. See also   release notes.
+These classes can be set through the `nuxeo.s3storage.storageClass` Nuxeo configuration property. See also release notes.
+
 ## Move S3 Request Controller Contrib to S3 Package Template Resources
 
 The "org.nuxeo.ecm.core.storage.cloud.requestcontroller.service.contrib" component is deprecated in favor of "org.nuxeo.ecm.core.storage.s3.directDownload".
