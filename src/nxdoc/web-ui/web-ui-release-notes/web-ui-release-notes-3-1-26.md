@@ -27,17 +27,17 @@ Resolved an issue where long document titles caused the window to stretch or ove
 Fixed a UI issue where column filter value lists appeared too narrow when multiple columns were present, improving usability and readability.
 
 - ***Catalog Generation Reliability:***
-- Corrected missing element bindings in generated catalog JAR due to absent path fields in catalog.json, ensuring proper button functionality for LTS 2023 and 2025.
-- Enabled stable and snapshot catalog generation from any branch, release, or tag, allowing manual generation of stable catalogs without the -SNAPSHOT suffix when required.
+  - Corrected missing element bindings in generated catalog JAR due to absent path fields in catalog.json, ensuring proper button functionality for LTS 2023 and 2025.
+  - Enabled stable and snapshot catalog generation from any branch, release, or tag, allowing manual generation of stable catalogs without the -SNAPSHOT suffix when required.
 
 - ***Pipeline Stability Improvements:***
 Optimized video.feature and csv_import.feature by improving waits and synchronization, reducing intermittent failures and ensuring more stable cross-repo pipeline executions.
 
 - ***CI Process Upgrades:***
-- Upgraded PR check packages (Accessibility, Functional Test, lint, test).
-- Streamlined accessibility pipeline logs for better traceability.
-- Enhanced headless/headful execution configuration with optional video recording.
-- Updated accessibility browser version to the latest for improved reliability in CI runs.
+  - Upgraded PR check packages (Accessibility, Functional Test, lint, test).
+  - Streamlined accessibility pipeline logs for better traceability.
+  - Enhanced headless/headful execution configuration with optional video recording.
+  - Updated accessibility browser version to the latest for improved reliability in CI runs.
 
 
 **Security Improvements** 
@@ -51,8 +51,7 @@ Introduced a permissions key at the workflow level to enforce least-privilege ac
 **Accessibility Updates** 
 
 - ***Improved Screen Reader Experience:***
-
-- Removed alt text from decorative icons and thumbnail images to ensure screen readers ignore non-informative visuals, improving accessibility compliance.
+Removed alt text from decorative icons and thumbnail images to ensure screen readers ignore non-informative visuals, improving accessibility compliance.
 
 
 <br/>
