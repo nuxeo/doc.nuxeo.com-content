@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2025-12-15'
+  date: '2026-01-15'
   status: ok
 toc: true
 labels:
@@ -22,16 +22,17 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-25'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-26'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.25]({{page page='web-ui-release-notes-3-1-25'}}) | Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions.| -->
+<!-- | [Web UI 3.1.26]({{page page='web-ui-release-notes-3-1-26'}}) | Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions.| -->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [Web UI 3.1.25]({{page page='web-ui-release-notes-3-1-25'}}) | Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions.|
 | [Web UI 3.1.24]({{page page='web-ui-release-notes-3-1-24'}}) | Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions. | 
 | [Web UI 3.1.23]({{page page='web-ui-release-notes-3-1-23'}}) | Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions. |
 | [Web UI 3.1.22]({{page page='web-ui-release-notes-3-1-22'}}) | Accessibility fixes. Includes support ticket resolutions. |
