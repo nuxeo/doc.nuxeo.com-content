@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2025-12-15'
+  date: '2026-01-15'
   status: ok
 toc: true
 labels:
@@ -19,14 +19,15 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-10-0'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-11-0'}}}
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.10.0]({{page page='web-ui-release-notes-2025-10-0'}}) | Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions. | -->
+<!-- | [Web UI 2025.11.0]({{page page='web-ui-release-notes-2025-11-0'}}) |  Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions.| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Web UI 2025.10.0]({{page page='web-ui-release-notes-2025-10-0'}}) | Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions. | 
 | [Web UI 2025.9.0]({{page page='web-ui-release-notes-2025-9-0'}}) | Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions.  | 
 | [Web UI 2025.8.0]({{page page='web-ui-release-notes-2025-8-0'}}) | Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions.  |
 | [Web UI 2025.7.0]({{page page='web-ui-release-notes-2025-7-0'}}) | Accessibility fixes. Includes support ticket resolutions. |
