@@ -40,6 +40,7 @@ Optimized video.feature and csv_import.feature by improving waits and synchroniz
   - Updated accessibility browser version to the latest for improved reliability in CI runs.
 
 
+
 **Security Improvements** 
 
 - ***Download Restrictions:***
@@ -47,6 +48,8 @@ Mitigated client-side URL redirect and phishing risks by restricting downloads t
 
 - ***Workflow Permissions:***
 Introduced a permissions key at the workflow level to enforce least-privilege access across all jobs by default.
+
+
 
 **Accessibility Updates** 
 
