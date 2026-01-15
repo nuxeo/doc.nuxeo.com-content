@@ -23,6 +23,12 @@ hidden: true
 - ***Improved Document Title Handling:***
 Resolved an issue where long document titles caused the window to stretch or overflow. Titles now display correctly without impacting layout.
 
+- ***Document Import Notifications***
+The system now displays the actual backend error message in notifications instead of showing a generic ERROR: undefined. This provides clearer feedback for troubleshooting.
+
+- ***PDF.js Integration:***
+Updated the integrated PDF.js library to the latest version. The accompanying README has been revised to include version details and related updates.
+
 - ***Column Filter Display:***
 Fixed a UI issue where column filter value lists appeared too narrow when multiple columns were present, improving usability and readability.
 
