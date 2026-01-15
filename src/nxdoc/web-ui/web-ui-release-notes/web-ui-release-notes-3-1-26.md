@@ -33,7 +33,7 @@ Updated the integrated PDF.js library to the latest version. The accompanying RE
 Fixed a UI issue where column filter value lists appeared too narrow when multiple columns were present, improving usability and readability.
 
 - ***Catalog Generation Reliability:***
-  - Corrected missing element bindings in generated catalog JAR due to absent path fields in catalog.json, ensuring proper button functionality for LTS 2023 and 2025.
+  - Corrected missing element bindings in generated catalog JAR due to absent path fields in catalog.json, which ensured proper button functionality for LTS 2023 and 2025.
   - Enabled stable and snapshot catalog generation from any branch, release, or tag, allowing manual generation of stable catalogs without the -SNAPSHOT suffix when required.
 
 - ***Pipeline Stability Improvements:***
