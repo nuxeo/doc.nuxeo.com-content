@@ -40,7 +40,7 @@ Fixed a UI issue where column filter value lists appeared too narrow when multip
   - Enabled stable and snapshot catalog generation from any branch, release, or tag, allowing manual generation of stable catalogs without the -SNAPSHOT suffix when required.
 
 - ***Pipeline Stability Improvements:***
-Optimized video.feature and csv_import.feature by improving waits and synchronization, reducing intermittent failures and ensuring more stable cross-repo pipeline executions.
+Optimized `video.feature` and `csv_import.feature` by improving waits and synchronization, reducing intermittent failures and ensuring more stable cross-repo pipeline executions.
 
 - ***CI Process Upgrades:***
   - Upgraded PR check packages (Accessibility, Functional Test, lint, test).
@@ -57,7 +57,6 @@ Mitigated client-side URL redirect and phishing risks by restricting downloads t
 
 - ***Workflow Permissions:***
 Introduced a permissions key at the workflow level to enforce least-privilege access across all jobs by default.
-
 
 
 **Accessibility Updates** 
