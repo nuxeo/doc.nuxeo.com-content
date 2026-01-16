@@ -23,7 +23,7 @@ hidden: true
 - ***Improved Document Title Handling:***
 Resolved an issue where long document titles caused the window to stretch or overflow. Titles now display correctly without impacting layout.
 
-***Quick Filters Now Retained with Pagination in nuxeo-data-table:***
+- ***Quick Filters Now Retained with Pagination in nuxeo-data-table:***
 Quick filters are now preserved when pagination is enabled on nuxeo-data-table. When the paginable attribute is set, quick filters remain visible above the results, and filtering continues to work as expected without disrupting pagination behavior. This update ensures a consistent and intuitive filtering experience across paginated result sets.
 
 - ***Document Import Notifications***
