@@ -1,5 +1,5 @@
 ---
-title: Version 25.1.0
+title: Version 25.2.0
 description: Discover what's new in Admin Console 25.2.0.
 review:
   comment: ''
@@ -18,12 +18,45 @@ hidden: true
 
 ## What’s New in Admin Console for LTS 2025 (Version 25.2.0)
 
+## Technical Upgrades & Framework Modernization
+
+###  Angular Upgrade: Angular 16 ➝ Angular 21
+
+The Admin Console UI framework has been fully migrated from Angular 16 to Angular 21.
+This upgrade includes dependency updates and fixes for all related breaking changes.
+
+Key Improvements:
+
+  - Stronger security posture, addressing 4 High‑Severity vulnerabilities
+
+  - Better performance and build optimization
+
+  - Access to modern Angular tooling and long‑term support
+
+  - Increased maintainability and improved development workflow
+
+
+### Migration from Karma/Jasmine to Vitest
+
+Unit testing has been migrated from the legacy or old Karma + Jasmine framework to a much modern and natively supported test framework Vitest in Angular. All tests were updated to be compatible, and CI pipelines have been modernized accordingly.
+
+Benefits:
+
+  - Faster test execution
+
+  - More stable and modern testing infrastructure
+
+  - Cleaner developer experience with reduced legacy tooling
+
+  - Removal of outdated Karma/Jasmine configurations
+
+
 
 ## New Features & Enhancements
 
-### New Configuration Details Tab
+### New Configuration Details Section
 
-A dedicated Configuration Details tab has been added to the Nuxeo Admin Console.
+A dedicated Configuration Details section has been added to the Nuxeo Admin Console.
 This enhancement provides administrators with a centralized view of all configuration properties available for the current Nuxeo instance and environment.
 
 Benefits:
@@ -75,39 +108,6 @@ Dependabot now:
   - Improves security posture and reduces maintenance overhead
 
 
-
-## Technical Upgrades & Framework Modernization
-
-###  Angular Upgrade: Angular 16 ➝ Angular 21
-
-The Admin Console UI framework has been fully migrated from Angular 16 to Angular 21.
-This upgrade includes dependency updates and fixes for all related breaking changes.
-
-Key Improvements:
-
-  - Stronger security posture, addressing 4 High‑Severity vulnerabilities
-
-  - Better performance and build optimization
-
-  - Access to modern Angular tooling and long‑term support
-
-  - Increased maintainability and improved development workflow
-
-
-### Migration from Karma/Jasmine to Vitest
-
-Unit testing has been migrated from Karma + Jasmine to Vitest.
-All tests were updated to be compatible, and CI pipelines have been modernized accordingly.
-
-Benefits:
-
-  - Faster test execution
-
-  - More stable and modern testing infrastructure
-
-  - Cleaner developer experience with reduced legacy tooling
-
-  - Removal of outdated Karma/Jasmine configurations
 
 
 {{! /multiexcerpt}}
