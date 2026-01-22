@@ -100,4 +100,6 @@ history:
         version: '1'
 ---
 
-{{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo-js-client/blob/master/README.md')}}}
+{{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo-js-client/refs/heads/master/README.md')}}}
+
+
