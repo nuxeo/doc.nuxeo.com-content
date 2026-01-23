@@ -37,7 +37,7 @@ Key Improvements:
 
 ### Migration from Karma/Jasmine to Vitest
 
-Unit testing has been migrated from the legacy or old Karma + Jasmine framework to Vitest, a modern and natively supported testing framework for Angular. All existing tests have been updated for compatibility, and CI pipelines have been refreshed to align with the new tooling.
+Unit testing has been migrated from the legacy or old Karma + Jasmine framework to a much modern and natively supported test framework Vitest in Angular. All tests were updated to be compatible, and CI pipelines have been modernized accordingly.
 
 Benefits:
 
@@ -75,7 +75,7 @@ The sequence now places Get Consumer Positions first, followed by Change Consume
 
 ### Automatic Clearing of Search Input for Consumer Position Updates
 
-The search field used to filter consumer position records now, it automatically resets after each `Get Consumer Position` or `Change Consumer Position` action. This enhancement ensures:
+The search input used to filter consumer position records now clears automatically after each "Get Consumer Position" or "Change consumer position" operation. This enhancement ensures:
 
   - Search filters don't persist across operations
 
@@ -89,7 +89,7 @@ The search field used to filter consumer position records now, it automatically 
 
 ###  Correct Version Numbering for 2025 LTS Builds
 
-Resolved an issue where major releases were incorrectly generating a minor version build for the LTS 2025 version.
+Resolved an issue where major releases were incorrectly generating a minor version build for the 2025 LTS version.
 Version generation now correctly aligns with the expected release pattern.
 
 
