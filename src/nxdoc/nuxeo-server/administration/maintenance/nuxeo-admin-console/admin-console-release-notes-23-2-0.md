@@ -34,7 +34,6 @@ Key Improvements:
 
   - Increased maintainability and improved development workflow
 
-
 ### Migration from Karma/Jasmine to Vitest
 
 Unit testing has been migrated from the legacy or old Karma + Jasmine framework to Vitest, a modern and natively supported testing framework for Angular. All existing tests have been updated for compatibility, and CI pipelines have been refreshed to align with the new tooling.
@@ -48,8 +47,6 @@ Benefits:
   - Cleaner developer experience with reduced legacy tooling
 
   - Removal of outdated Karma/Jasmine configurations
-
-
 
 ## New Features & Enhancements
 
@@ -66,16 +63,14 @@ Benefits:
 
   - Eliminates the need for manual lookups or server-side access
 
-
 ### Improved Tab Navigation for Consumer Positions
 
 The tabs under Streams Management have been reordered to ensure a more intuitive workflow.
 The sequence now places Get Consumer Positions first, followed by Change Consumer Positions, aligning with typical user navigation patterns.
 
-
 ### Automatic Clearing of Search Input for Consumer Position Updates
 
-The search field used to filter consumer position records now, it automatically resets after each `Get Consumer Position` or `Change Consumer Position` action. This enhancement ensures:
+The search field used to filter consumer position records now automatically resets after each `Get Consumer Position` or `Change Consumer Position` action. This enhancement ensures:
 
   - Search filters don't persist across operations
 
@@ -83,15 +78,12 @@ The search field used to filter consumer position records now, it automatically 
 
   - Improved user experience when performing multiple consumer position queries
 
-
-
 ## Bug Fixes
 
 ###  Correct Version Numbering for 2025 LTS Builds
 
 Resolved an issue where major releases were incorrectly generating a minor version build for the LTS 2025 version.
 Version generation now correctly aligns with the expected release pattern.
-
 
 ## Security & Dependency Management
 
@@ -105,8 +97,5 @@ Dependabot now:
   - Automatically opens pull requests for updates
 
   - Improves security posture and reduces maintenance overhead
-
-
-
 
 {{! /multiexcerpt}}
