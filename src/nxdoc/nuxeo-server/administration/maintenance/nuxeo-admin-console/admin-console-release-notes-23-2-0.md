@@ -3,7 +3,7 @@ title: Version 23.2.0
 description: Discover what's new in Admin Console 23.2.0.
 review:
   comment: ''
-  date: '2026-02-21'
+  date: '2026-01-21'
   status: ok
 toc: true
 labels:
