@@ -90,16 +90,36 @@ Use Cases:
 
 
 The Consumer Position under Stream Management provides two main functionalities:
-1️ Change Consumer Position
-2️ Get Consumer Position
+1️ Get Consumer Position
+2️ Change Consumer Position
 
 These are used to view and manage the position of a consumer group in a selected stream.
 
 
+
+#### Get Consumer Position
+
+
+![](/assets/nxdoc/nuxeo-admin-console/GetConsumerPositionNew.png)
+
+Key Features
+
+- View the current position of a consumer group within a selected stream.
+
+- Provides real-time visibility into which records have been processed.
+
+- Helps track consumer progress and identify processing lags or bottlenecks.
+
+- Enables monitoring of multiple consumer groups across different streams.
+
+Use Case
+
+- Use Get Consumer Position to monitor the progress of consumer groups, ensure timely processing of stream data, and quickly identify any delays or issues in event consumption.
+
 #### Change Consumer Position
 
 
-![](/assets/nxdoc/nuxeo-admin-console/admin-console-change-consumer-position.png)
+![](/assets/nxdoc/nuxeo-admin-console/ChangeConsumerPositionNew.jpeg)
 
 
 Key Features
@@ -115,26 +135,6 @@ Key Features
 Use Case
 
 - Use Change Consumer Position to reprocess past events after fixing an error, or skip over problematic records that are blocking processing, which helps maintain smooth and reliable stream operations.
-
-
-#### Get Consumer Position
-
-
-![](/assets/nxdoc/nuxeo-admin-console/admin-console-get-consumer-position.png)
-
-Key Features
-
-- View the current position of a consumer group within a selected stream.
-
-- Provides real-time visibility into which records have been processed.
-
-- Helps track consumer progress and identify processing lags or bottlenecks.
-
-- Enables monitoring of multiple consumer groups across different streams.
-
-Use Case
-
-- Use Get Consumer Position to monitor the progress of consumer groups, ensure timely processing of stream data, and quickly identify any delays or issues in event consumption.
 
 
 ### Scaling Analysis 
