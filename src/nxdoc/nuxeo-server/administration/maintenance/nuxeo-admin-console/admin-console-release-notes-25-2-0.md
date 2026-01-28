@@ -20,7 +20,7 @@ hidden: true
 
 ## Technical Upgrades & Framework Modernization
 
-###  Angular Upgrade: Angular 16 ➝ Angular 21
+###  Angular Upgrade: Angular 16 to Angular 21
 
 The Admin Console UI framework has been fully migrated from Angular 16 to Angular 21.
 This upgrade includes dependency updates and fixes for all related breaking changes.
@@ -35,7 +35,6 @@ Key Improvements:
 
   - Increased maintainability and improved development workflow
 
-
 ### Migration from Karma/Jasmine to Vitest
 
 Unit testing has been migrated from the legacy or old Karma + Jasmine framework to a much modern and natively supported test framework Vitest in Angular. All tests were updated to be compatible, and CI pipelines have been modernized accordingly.
@@ -49,8 +48,6 @@ Benefits:
   - Cleaner developer experience with reduced legacy tooling
 
   - Removal of outdated Karma/Jasmine configurations
-
-
 
 ## New Features & Enhancements
 
@@ -67,12 +64,10 @@ Benefits:
 
   - Eliminates the need for manual lookups or server-side access
 
-
 ### Improved Tab Navigation for Consumer Positions
 
 The tabs under Streams Management have been reordered to ensure a more intuitive workflow.
 The sequence now places Get Consumer Positions first, followed by Change Consumer Positions, aligning with typical user navigation patterns.
-
 
 ### Automatic Clearing of Search Input for Consumer Position Updates
 
@@ -84,15 +79,12 @@ The search input used to filter consumer position records now clears automatical
 
   - Improved user experience when performing multiple consumer position queries
 
-
-
 ## Bug Fixes
 
 ###  Correct Version Numbering for 2025 LTS Builds
 
 Resolved an issue where major releases were incorrectly generating a minor version build for the 2025 LTS version.
 Version generation now correctly aligns with the expected release pattern.
-
 
 ## Security & Dependency Management
 
