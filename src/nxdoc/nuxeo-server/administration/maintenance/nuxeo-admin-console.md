@@ -162,6 +162,11 @@ The Streams feature provides a robust interface for monitoring, analyzing, and m
 
 - [Stream Management]({{page page='nuxeo-admin-console-streams'}})
 
+### Configuration Properties
+A new Configuration Properties section has been added to the Nuxeo Admin Console. This enhancement provides administrators with a centralized view of all configuration properties available for the current Nuxeo instance and its environment. By consolidating these settings in one location, the Admin Console now offers improved clarity, easier troubleshooting, and greater transparency into the platform’s operational configuration.
+This update ensures that all platform‑level configuration properties are easily accessible directly within the Admin Console UI.
+
+![](/assets/nxdoc/nuxeo-admin-console/ConfigurationProperties.png?border=true)
 
 ## Going Further
 
