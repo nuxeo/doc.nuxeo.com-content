@@ -19,7 +19,7 @@ hidden: true
 
 ## Technical Upgrades & Framework Modernization
 
-###  Angular Upgrade: Angular 16 ➝ Angular 21
+###  Angular Upgrade: Angular 16 to Angular 21
 
 The Admin Console UI framework has been fully migrated from Angular 16 to Angular 21.
 This upgrade includes dependency updates and fixes for all related breaking changes.
