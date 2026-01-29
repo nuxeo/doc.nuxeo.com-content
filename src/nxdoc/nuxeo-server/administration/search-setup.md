@@ -1043,9 +1043,39 @@ Note that it's not possible to run an Elasticsearch 9 server in the same JVM as 
 
 ### Activate Traces
 
-To understand why a document is not present in search results or not indexed, you can activate a debug trace.
+To understand why a document is not present in search results or not indexed, you can activate a debug trace to print OpenSearch/Elasticsearch requests and responses.
 
-Look at the `lib/log4j2.xml` you will find commented configuration to trace OpenSearch requests and responses.
+The first step, not mandatory, is to create a dedicated appender where all the traces will be printed. In `lib/log4j2.xml`, add this code
+
+```
+    <!-- Search logging -->
+    <File name="SEARCH" fileName="${sys:nuxeo.log.dir}/search.log" append="false">
+      <PatternLayout pattern="${fileLayout}" />
+    </File>
+```
+
+Then add the logger which corresponds to the Search engine you configured in Nuxeo:
+* Opensearch 1.x (with `nuxeo-search-client-opensearch1` package):
+```
+<Logger name="org.nuxeo.runtime.opensearch1.client" level="trace">
+  <AppenderRef ref="SEARCH" />
+</Logger>
+```
+* Opensearch 2.x (with `nuxeo-search-client-opensearch2` package):
+```
+<Logger name="org.nuxeo.runtime.opensearch2.client" level="trace">
+  <AppenderRef ref="SEARCH" />
+</Logger>
+```  
+* Elasticsearch 9.x (with `nuxeo-search-client-elasticsearch9` package):
+```
+<Logger name="org.nuxeo.runtime.elasticsearch9.client" level="trace">
+  <AppenderRef ref="SEARCH" />
+</Logger>
+```
+{{#> callout type='warning' }}
+Do not include the `<AppenderRef ref="SEARCH" />` code if you've not defined the appender at the first step.
+{{/callout}}
 
 ### Reporting Settings and Mapping
 
