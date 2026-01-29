@@ -652,6 +652,11 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 14
+
+### Fix Version Reindexing When the Working Copy Is Moved
+
+Set `nuxeo.search.reindexVersionsListener.enabled=true` for lts-2025 or `elasticsearch.reindexVersionsListener.enabled=true` for lts-2023 to reindex versions after a document is moved.
 ## Hotfix 13
 
 ### Upgrade Keycloak to 26.0.6 to Fix CVE-2024-10039
