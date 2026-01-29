@@ -124,7 +124,7 @@ Use Case
 
 Key Features
 
-- Manually set the position of a consumer group within a selected stream.
+- Enables you to manually set the position of a consumer group within a selected stream.
 
 - Enables precise control over where a consumer resumes processing.
 
