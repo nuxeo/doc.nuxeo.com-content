@@ -103,6 +103,11 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 42
+
+### Fix Version Reindexing When the Working Copy Is Moved
+
+Set `nuxeo.search.reindexVersionsListener.enabled=true` for lts-2025 or `elasticsearch.reindexVersionsListener.enabled=true` for lts-2023 to reindex versions after a document is moved.
 ## Hotfix 40
 
 ### Restrict to Test Scope the Use of org.awaitility.awaitility Library
