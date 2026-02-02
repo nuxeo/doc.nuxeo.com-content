@@ -17,9 +17,8 @@ hidden: true
 
 ## Cannot Empty a Multi-Value Property on a User in a Multi-Directory Configuration
 
-Multi Directory entries can now be nullified.
+Multi-directory entries can now be nullified. Note that nullifying a String field that has a default value will result in persisting an empty string. The default value would be used otherwise. 
 
-Multi-directory entries can now be nullified. Note that nullifying a String field that has a default value will result in persisting an empty string; the default value would be used otherwise. 
 ## Fix Version Reindexing When the Working Copy Is Moved
 
 A new nuxeo configuration property is available to reindex versions when a document is moved.
@@ -27,11 +26,10 @@ A new nuxeo configuration property is available to reindex versions when a docum
 The nuxeo.search.reindexVersionsListener.enabled Nuxeo configuration property is available for lts-2025. It enables a listener on the documentMoved event to reindex the affected versions, updating their path in the search backend.
 
 This property is named elasticsearch.reindexVersionsListener.enabled for lts-2023.
-## Provide a List Installed Package API Within Management API
 
-List Installed Packages in Management REST API
+## List Installed Package Within Management API
 
-You can now retrieve the list of installed packages to your Nuxeo Server with the endpoint `/nuxeo/api/v1/management/distribution/packages`, for example:
+You can now retrieve the list of installed packages to your Nuxeo Server with the endpoint `/nuxeo/api/v1/management/distribution/packages`. For example:
 
 ```
 curl -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/management/distribution/packages
@@ -60,22 +58,21 @@ curl -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/managemen
 }
 
 ```
+
 ## Possible NPE in NuxeoOAuth2Token
 
 OAuth2 tokens without expiration date are not garbage collected.
 
 ## Add Back HEAD Request on Presigned URLs Support on S3BlobProvider
 
-S3 presigned URL (generated for direct download) can now be used with the HEAD method to get file info only
+S3 presigned URL (generated for direct download) can now be used with the HEAD method to get file info only.
 
-## Make Possible to Retrieve WebEngine Resource by Java Type
-
-Instantiate WebObject with their Java Type
+## Retrieve WebEngine Resource by Java Type
 
 You can now instantiate your WebEngine WebObject by giving their Java Type to the new `newObject` API.
+
 ## Fix IllegalArgumentException With Message "Child Name [/Context] Is Not Unique" When Running CMIS Test Suites
 
 Deploy web app before servlet in tests.
-
 
 {{! /multiexcerpt}}
