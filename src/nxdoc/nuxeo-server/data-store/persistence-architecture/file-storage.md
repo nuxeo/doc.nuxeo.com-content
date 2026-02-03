@@ -483,6 +483,10 @@ For Picture document type, a similar system is available to be able to get the a
 
 where, by default, `viewName` can be Original, OriginalJpeg, Medium, Thumbnail.
 
+The use of `nxpicsfile` endpoint requires the installation of addon [nuxeo-jsf-ui](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui).
+If addon `nuxeo-jsf-ui` is not installed, use the `nxfile` endpoint or the URL mentioned in property `file:content` or `picture:views` shown in the JSON export of a document.
+Addon `nuxeo-jsf-ui` will stop being released starting **LTS 2025**.
+
 ## How It Works
 
 The default Blob Provider implementation is based on a simple filesystem: considering the storage principles, this is safe to use this implementation even on a NFS like filesystem (since there is no conflicts).
