@@ -17,21 +17,19 @@ hidden: true
 
 ## Cannot Empty a Multi-Value Property on a User in a Multi-Directory Configuration
 
-Multi Directory entries can now be nullified.
+Multi-directory entries can now be nullified. Note that nullifying a String field that has a default value will result in persisting an empty string. The default value would be used otherwise. 
 
-Multi-directory entries can now be nullified. Note that nullifying a String field that has a default value will result in persisting an empty string; the default value would be used otherwise. 
 ## Fix Version Reindexing When the Working Copy Is Moved
 
 A new nuxeo configuration property is available to reindex versions when a document is moved.
 
-The nuxeo.search.reindexVersionsListener.enabled Nuxeo configuration property is available for lts-2025. It enables a listener on the documentMoved event to reindex the affected versions, updating their path in the search backend.
+The elasticsearch.reindexVersionsListener.enabled Nuxeo configuration property is available for lts-2023. It enables a listener on the documentMoved event to reindex the affected versions, updating their path in the search backend.
 
-This property is named elasticsearch.reindexVersionsListener.enabled for lts-2023.
-## Provide a List Installed Package API Within Management API
+This property is named nuxeo.search.reindexVersionsListener.enabled for lts-2025.
 
-List Installed Packages in Management REST API
+## List Installed Packages Within Management API
 
-You can now retrieve the list of installed packages to your Nuxeo Server with the endpoint `/nuxeo/api/v1/management/distribution/packages`, for example:
+You can now retrieve the list of installed packages to your Nuxeo Server with the endpoint `/nuxeo/api/v1/management/distribution/packages`. For example:
 
 ```
 curl -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/management/distribution/packages
@@ -64,11 +62,10 @@ curl -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/managemen
 
 OAuth2 tokens without expiration date are not garbage collected.
 
-## Make Possible to Retrieve WebEngine Resource by Java Type
-
-Instantiate WebObject with their Java Type
+## Retrieve WebEngine Resource by Java Type
 
 You can now instantiate your WebEngine WebObject by giving their Java Type to the new `newObject` API.
+
 ## Fix IllegalArgumentException With Message "Child Name [/Context] Is Not Unique" When Running CMIS Test Suites
 
 Deploy web app before servlet in tests.
