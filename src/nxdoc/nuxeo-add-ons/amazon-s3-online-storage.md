@@ -234,8 +234,8 @@ Alternatively, when defining your own S3 blob provider XML contribution, you can
 ```
 
 Note that the `INTELLIGENT_TIERING` class could only be used when the underlying bucket used to store data is configured to use only immediate (synchronous) access tiers:
+- *Frequent Access tier*
 - *Infrequent Access tier*
-- *Archive Instant Access tier*
 - *Archive Instant Access tier*
 
 The 2 last tiers are prohibited as they must be accessed asynchronously (requires an explicit restore action) and the Nuxeo platform does not handle this use case.
