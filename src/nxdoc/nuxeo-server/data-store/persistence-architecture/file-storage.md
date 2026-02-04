@@ -485,7 +485,7 @@ where, by default, `viewName` can be Original, OriginalJpeg, Medium, Thumbnail.
 
 The use of `nxpicsfile` endpoint requires the installation of addon [nuxeo-jsf-ui](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui).
 If addon `nuxeo-jsf-ui` is not installed, use the `nxfile` endpoint or the URL mentioned in property `file:content` or `picture:views` shown in the JSON export of a document.
-Addon `nuxeo-jsf-ui` will stop being released starting **LTS 2025**.
+Release of the `nuxeo-jsf-ui` addon will stop starting **LTS 2025**.
 
 ## How It Works
 
