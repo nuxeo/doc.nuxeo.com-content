@@ -1,21 +1,21 @@
 ---
 title: Version 2025.11.0
-description: Discover what's new in Web UI 2025.11.0.
+description: Discover what's new in Web UI 2025.12.0.
 review:
   comment: ''
-  date: '2026-01-15'
+  date: '2026-02-10'
   status: ok
 toc: true
 labels:
-tree_item_index: 990
-hidden: false
+tree_item_index: 989
+hidden: true
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
 
 {{! multiexcerpt name='web-ui-updates'}}
 
-## What’s New in Web UI for LTS 2025 (Version 2025.11.0)
+## What’s New in Web UI for LTS 2025 (Version 2025.12.0)
 
 
 **Bug Fixes & Enhancements** 
