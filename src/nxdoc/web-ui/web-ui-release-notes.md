@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2026-02-10'
+  date: '2026-02-11'
   status: ok
 toc: true
 labels:
