@@ -3,7 +3,7 @@ title: Version 3.1.27
 description: Discover what's new in Web UI 3.1.27.
 review:
   comment: ''
-  date: '2026-02-10'
+  date: '2026-02-11'
   status: ok
 toc: true
 labels:
@@ -20,50 +20,46 @@ hidden: true
 
 **Bug Fixes & Enhancements** 
 
-- ***Improved Document Title Handling:***
-Resolved an issue where long document titles caused the window to stretch or overflow. Titles now display correctly without impacting layout.
+- ***Automatic Refresh for i18n Translation Labels:***
+  - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed.
+  - Users no longer need to perform a hard browser reload to see updated labels.
 
-- ***Quick Filters Now Retained with Pagination in nuxeo-data-table:***
-Quick filters are now preserved when pagination is enabled on nuxeo-data-table. When the paginable attribute is set, quick filters remain visible above the results, and filtering continues to work as expected without disrupting pagination behavior. This update ensures a consistent and intuitive filtering experience across paginated result sets.
+- ***Configurable Confirmation Dialogs for Standard Actions:***
+  - All standard Nuxeo WebUI buttons now support configurable confirmation dialogs.
+  - Admins can enable/disable dialogs and define custom confirmation messages.
+  - Behavior previously limited to “Delete” now extends to lifecycle actions and document actions, improving consistency and user safety.
 
-- ***Document Import Notifications***
-The system now displays the actual backend error message in notifications instead of showing a generic ERROR: undefined. This provides clearer feedback for troubleshooting.
+- ***Automatic Production Catalog Generation:***
+  - Releasing new WebUI versions now triggers automated production catalog generation, streamlining release workflows and reducing manual steps.
 
-- ***PDF.js Integration:***
-Updated the integrated PDF.js library to the latest version. The accompanying README has been revised to include version details and related updates.
+- ***Correct Handling of JSON Payload for Saved Searches:***
+  - Fixed an issue where the JSON payload used during save/rename operations was incorrectly modified as an array of strings.
+  - Saved search operations now use the correct payload format and no longer fail silently.
 
-- ***Column Filter Display:***
-Fixed a UI issue where column filter value lists appeared too narrow when multiple columns were present, improving usability and readability.
+- ***Saved Search Title Truncation:***
+  - Long saved search names were previously truncated in the Filters dropdown.
+  - The full saved search title is now displayed, improving readability and usability.
 
-- ***Catalog Generation Reliability:***
-  - Corrected missing element bindings in generated catalog JAR due to absent path fields in catalog.json, which ensured proper button functionality for LTS 2023 and 2025.
-  - Enabled stable and snapshot catalog generation from any branch, release, or tag, allowing manual generation of stable catalogs without the -SNAPSHOT suffix when required.
-
-- ***Pipeline Stability Improvements:***
-Optimized video.feature and csv_import.feature by improving waits and synchronization, reducing intermittent failures and ensuring more stable cross-repo pipeline executions.
-
-- ***CI Process Upgrades:***
-  - Upgraded PR check packages (Accessibility, Functional Test, lint, test).
-  - Streamlined accessibility pipeline logs for better traceability.
-  - Enhanced headless/headful execution configuration with optional video recording.
-  - Updated accessibility browser version to the latest for improved reliability in CI runs.
+- ***Editing Multi‑Valued Numeric Properties:***
+  - Editing multi‑valued Number fields through the WebUI Edit layout previously caused save failures due to incorrect type handling.
+  - Values are now correctly treated as numeric types, preventing ArrayStoreException errors and ensuring documents save successfully.
 
 
 
 **Security Improvements** 
 
-- ***Download Restrictions:***
-Mitigated client-side URL redirect and phishing risks by restricting downloads to trusted blob: and absolute http(s) URLs, blocking redirects constructed from untrusted DOM input.
+- ***Client‑Side Redirect/Phishing Mitigation:***
+  - Strengthened URL validation for file downloads.
+  - Only trusted blob: and absolute http(s) URLs are allowed.
+  - Redirects built from untrusted DOM input are now blocked to prevent phishing‑style attacks.
 
-- ***Workflow Permissions:***
-Introduced a permissions key at the workflow level to enforce least-privilege access across all jobs by default.
+- ***Service Worker Caching Reliability:***
+  - Updated Service Worker behavior to prevent caching of Polymer HTML imports.
+  - Ensures newly added USER_MENU pages and custom slots load correctly after browser reloads.
 
+- ***Accessibility Pipeline Fixes:***
+  - Resolved accessibility test pipeline failures by pinning the browser environment to a stable version.
 
-
-**Accessibility Updates** 
-
-- ***Improved Screen Reader Experience:***
-Removed alt text from decorative icons and thumbnail images to ensure screen readers ignore non-informative visuals, improving accessibility compliance.
 
 
 <br/>
