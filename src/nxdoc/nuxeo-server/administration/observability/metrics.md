@@ -41,6 +41,7 @@ By default, since Nuxeo 11, we have the following metric reporters:
 - Datadog
 - Prometheus
 - GCP Metrics (previously known as Stackdriver)
+- Dynatrace
 
 It is possible to activate multiple reporters at the same time.
 
@@ -49,7 +50,7 @@ For instance, metrics are pushed to Graphite and Datadog while Prometheus is pol
 
 Monitoring systems are either hierarchical or dimensional:
 - __Hierarchical__ Monitoring system uses a flat metric name, like a file system tree. Example of such system are: JMX, Graphite, StatsD, Ganglia, ...
-- __Dimensional__ Monitoring system uses metric names enriched with tag key/value pairs. Example of such system are: Prometheus, Datadog, influxDB, ...
+- __Dimensional__ Monitoring system uses metric names enriched with tag key/value pairs. Example of such system are: Prometheus, Datadog, influxDB, Dynatrace...
 
 Since Nuxeo 11 the instrumentation of the code uses metric names with tags (dimensional metric).
 Hierarchical monitoring reporters flatten the tags into the metric name.
@@ -89,6 +90,11 @@ that express the work `queue` dimension, the metric name is translated into:
   <th>GCP Metrics (Stackdriver)</th>
   <td>dimensional</td>
   <td>custom.googleapis.com/nuxeo/dropwizard5_nuxeo.works.global.queue.scheduled queue:videoConversion</td>  
+</tr>
+<tr>
+  <th>Dynatrace</th>
+  <td>dimensional</td>
+  <td>nuxeo.works.global.queue.scheduled queue:videoConversion host:nuxeo</td>
 </tr>
 </tbody>
 </table>
@@ -217,6 +223,27 @@ metrics.stackdriver.gcpProjectId=MY-GCP-PROJECT-ID
 The metrics will be prefixed by `custom.googleapis.com/nuxeo/dropwizard5_`
 
 ![stackdriver]({{file name='stackdriver-metric.png'}} ?w=650,border=true)
+
+### Dynatrace Reporter
+
+Nuxeo can report its metrics to Dynatrace OneAgent or ActiveGate when [configured to accept UDP StatsD](https://docs.dynatrace.com/docs/ingest-from/extend-dynatrace/extend-metrics/ingestion-methods/statsd) protocol.
+
+Configuration:
+```
+# activation
+metrics.enabled=true
+metrics.dynatrace.enabled=true
+# default
+metrics.dynatrace.host=localhost
+metrics.dynatrace.port=18125
+metrics.dynatrace.pollInterval=60
+metrics.dynatrace.tags=nuxeo
+```
+
+The `metrics.dynatrace.host` and `metrics.dynatrace.port` must refer to a DogStatsD agent in charge of forwarding metrics into the cloud.
+
+Additional tags can be added to all metrics using `metrics.dynatrace.tags`.
+Metrics are pushed to Dynatrace using the defined `pollInterval` in second.
 
 ## Metrics Filtering
 
