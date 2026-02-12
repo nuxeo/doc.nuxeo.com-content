@@ -37,7 +37,7 @@ hidden: true
   - The full saved search title is now displayed, improving readability and usability.
 
 - ***Editing Multi‑Valued Numeric Properties:***
-  - Editing multi‑valued Number fields through the WebUI Edit layout previously caused save failures due to incorrect type handling.
+  - Resolved an issue where editing multi‑valued Number fields through the WebUI Edit layout caused save failures due to incorrect type handling.
   - Values are now correctly treated as numeric types, preventing ArrayStoreException errors and ensuring documents are saved successfully.
 
 
