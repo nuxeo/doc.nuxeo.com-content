@@ -14,7 +14,7 @@ hidden: true
 {{! multiexcerpt name='nuxeo-salesforce-connector-2023-1-16'}}
 
 ## What's New in Salesforce for LTS 2023 (version 2023.1.16)
-This release contains bug fix, technical enhancement and some vulnerability fixes.
+This release contains bug fix, technical enhancement, and some vulnerability fixes.
 
 ## Released Changes
 
@@ -26,7 +26,7 @@ This release contains bug fix, technical enhancement and some vulnerability fixe
 
 * Optimized Jenkins CI process by removing calls from `jx-upgrade-platform` so that the team in `nxK8s.setPodLabels` can be automatically retrieved.
 
-* Upgraded nuxeo Helm chart to 3.1.0. 
+* Upgraded Nuxeo Helm chart to 3.1.0. 
 
 * Fixed FFmpeg installation in Oracle Linux 9.
 
