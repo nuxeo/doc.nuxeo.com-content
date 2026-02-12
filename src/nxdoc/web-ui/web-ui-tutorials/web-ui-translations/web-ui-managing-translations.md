@@ -42,7 +42,7 @@ Adding translations can easily be done using [Nuxeo Studio Designer]({{page spac
 Translations keys usually follow a [convention]({{page space='nxdoc' page='web-ui-automated-translation-labels'}}).
 
 {{#> callout type='note' }}
-Web UI uses the same language as the web browser. After adding a translation and having hot-reloaded your project, you may need to force refresh the page to force the translation files to be reloaded.
+Web UI uses the same language as the web browser. After adding a translation and hot-reloading your project, simply reload the page to apply the updated translation files.
 {{/callout}}
 
 Whenever possible, Nuxeo Studio helps managing translations by generating translation keys and their label on your behalf. Some labels are generated explicitly when you save your configuration (e.g. schema properties), some are generated only if you do not add a translation key by yourself (e.g. document type names), and others have to be handled manually. Below is a breakdown of how they work together.

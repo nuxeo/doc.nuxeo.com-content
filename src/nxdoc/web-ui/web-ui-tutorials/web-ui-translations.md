@@ -60,7 +60,7 @@ Adding translation can easily be done using [Nuxeo Studio Designer]({{page space
 {{/callout}}
 
 {{#> callout type='note' }}
-After adding a translation and having hot-reloaded your project, you may need to force refresh the page to force the translation files to be reloaded.
+After adding a translation and hot-reloading your project, simply reload the page to apply the updated translation files.
 {{/callout}}
 
 To make your bundle append additional label translations, you need to create the proper `messages` files as follow:
