@@ -53,6 +53,9 @@ hidden: true
   - Only trusted blob: and absolute http(s) URLs are allowed.
   - Redirects built from untrusted DOM input are now blocked to prevent phishing‑style attacks.
 
+
+**Other features/Improvements**
+
 - ***Service Worker Caching Reliability:***
   - Updated Service Worker behavior to prevent caching of Polymer HTML imports.
   - Ensures newly added USER_MENU pages and custom slots load correctly after browser reloads.
