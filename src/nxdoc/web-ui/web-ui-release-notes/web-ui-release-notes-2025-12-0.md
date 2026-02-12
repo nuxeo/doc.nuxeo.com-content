@@ -25,7 +25,7 @@ hidden: true
   - Updated Service Worker behavior to prevent caching of Polymer HTML imports which ensures newly added pages and custom slots to load correctly after browser reloads.
 
 - ***Configurable Confirmation Dialogs for Standard Actions:***
-  - Delete blob functionality now supports configurable confirmation messages which can be enabled/disabled by admins.
+  - Delete blob functionality now supports configurable confirmation messages, which can be enabled/disabled by admins.
 
 - ***Automatic Production Catalog Generation:***
   - Releasing new WebUI versions now triggers automated production catalog generation, streamlining release workflows and reducing manual steps.
