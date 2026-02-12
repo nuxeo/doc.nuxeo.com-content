@@ -20,23 +20,20 @@ hidden: true
 
 **Bug Fixes & Enhancements** 
 
-- ***Normal reload for i18n Translation Labels:***
+- ***Normal reload for custom messages and templates:***
   - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed on normal reload and doesnt require hard reload.
-  - Users no longer need to perform a hard browser reload to see updated labels.
+  - Updated Service Worker behavior to prevent caching of Polymer HTML imports which ensures newly added pages and custom slots to load correctly after browser reloads.
+
 
 - ***Configurable Confirmation Dialogs for Standard Actions:***
-  - All standard Nuxeo WebUI buttons now support configurable confirmation dialogs.
-  - Admins can enable/disable dialogs and define custom confirmation messages.
-  - Behavior previously limited to “Delete” now extends to lifecycle actions and document actions, improving consistency and user safety.
+  - Delete blob functionality now supports configurable confirmation messages which can be enabled/disabled by admins.
 
 - ***Automatic Production Catalog Generation:***
   - Releasing new WebUI versions now triggers automated production catalog generation, streamlining release workflows and reducing manual steps.
 
-- ***Correct Handling of JSON Payload for Saved Searches:***
+- ***Saved Search Optimization:***
   - Fixed an issue where the JSON payload used during save/rename operations was incorrectly modified as an array of strings.
   - Saved search operations now use the correct payload format and no longer fail silently.
-
-- ***Saved Search Title Truncation:***
   - Long saved search names were previously truncated in the Filters dropdown.
   - The full saved search title is now displayed, improving readability and usability.
 
@@ -49,16 +46,10 @@ hidden: true
 **Security Improvements** 
 
 - ***Client‑Side Redirect/Phishing Mitigation:***
-  - Strengthened URL validation for file downloads.
-  - Only trusted blob: and absolute http(s) URLs are allowed.
-  - Redirects built from untrusted DOM input are now blocked to prevent phishing‑style attacks.
+  - An issue causing unintended client‑side redirects in the embedded PDF.js component has been identified and fixed within the application.
 
 
-  **Other features/Improvements**
-
-- ***Service Worker Caching Reliability:***
-  - Updated Service Worker behavior to prevent caching of Polymer HTML imports.
-  - Ensures newly added USER_MENU pages and custom slots load correctly after browser reloads.
+**Other features/Improvements**
 
 - ***Accessibility Pipeline Fixes:***
   - Resolved accessibility test pipeline failures by pinning the browser environment to a stable version.
