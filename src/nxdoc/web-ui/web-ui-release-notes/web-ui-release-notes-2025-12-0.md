@@ -33,7 +33,7 @@ hidden: true
 - ***Saved Search Optimization:***
   - Fixed an issue where the JSON payload used during save/rename operations was incorrectly modified as an array of strings.
   - Saved search operations now use the correct payload format and no longer fail silently.
-  - Long saved search names were previously truncated in the Filters dropdown.
+  - Fixed an issue where the long saved search names were truncated in the Filters dropdown.
   - The full saved search title is now displayed, improving readability and usability.
 
 - ***Editing Multi‑Valued Numeric Properties:***
