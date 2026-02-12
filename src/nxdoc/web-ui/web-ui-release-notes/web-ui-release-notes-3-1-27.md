@@ -20,8 +20,8 @@ hidden: true
 
 **Bug Fixes & Enhancements** 
 
-- ***Automatic Refresh for i18n Translation Labels:***
-  - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed.
+- ***Normal reload for i18n Translation Labels:***
+  - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed on normal reload and doesnt require hard reload.
   - Users no longer need to perform a hard browser reload to see updated labels.
 
 - ***Configurable Confirmation Dialogs for Standard Actions:***
