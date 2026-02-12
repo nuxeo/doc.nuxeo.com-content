@@ -38,7 +38,7 @@ hidden: true
 
 - ***Editing Multi‑Valued Numeric Properties:***
   - Editing multi‑valued Number fields through the WebUI Edit layout previously caused save failures due to incorrect type handling.
-  - Values are now correctly treated as numeric types, preventing ArrayStoreException errors and ensuring documents save successfully.
+  - Values are now correctly treated as numeric types, preventing ArrayStoreException errors and ensuring documents are saved successfully.
 
 
 
