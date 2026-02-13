@@ -121,9 +121,17 @@ Here is how Nuxeo handles the OAuth 2 flow to authorize your **application** to 
 
 ![]({{file name='Nuxeo-JWT-Flow.png'}} ?w=500,border=true)
 
+{{#> callout type='warning' heading='Security Warning: Not Recommended for Machine-to-Machine Authentication'}}
+The JWT flow requires sharing the JWT secret (`nuxeo.jwt.secret`) between the Nuxeo Server and the client application, which creates a significant security risk, especially with multiple client applications. **This flow must not be used for machine-to-machine (M2M) authentication.** If the secret is compromised, all clients using it are affected. For secure M2M authentication, use the [OAuth 2 Client Credentials Flow](#oauth-2-client-credentials-flow) instead, which provides unique credentials per client.
+{{/callout}}
+
 ### OAuth 2 Client Credentials Flow
 
-This flow is best suited for Machine-to-Machine (M2M) applications, such as CLIs, daemons, or backend services, because the system must authenticate and authorize the application instead of a user.
+{{#> callout type='info' heading='Recommended for Machine-to-Machine Authentication'}}
+**The OAuth 2 Client Credentials Flow is the recommended and most secure method for Machine-to-Machine (M2M) authentication.** Unlike other flows, it provides unique credentials for each client, ensuring proper isolation and security if credentials are compromised.
+{{/callout}}
+
+This flow is best suited for M2M applications, such as CLIs, daemons, or backend services, because the system authenticates and authorizes the application itself rather than acting on behalf of a user.
 
 Here is how Nuxeo handles the OAuth 2 flow to authorize your **application** to access a **protected Nuxeo resource** using only its **client credentials**.
 
