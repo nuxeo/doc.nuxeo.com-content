@@ -26,7 +26,7 @@ hidden: true
 
 
 - ***Configurable Confirmation Dialogs for Standard Actions:***
-  - Delete blob functionality now supports configurable confirmation messages which can be enabled/disabled by admins.
+  - Delete blob functionality now supports configurable confirmation messages, which can be enabled/disabled by administrators.
 
 - ***Automatic Production Catalog Generation:***
   - Releasing new WebUI versions now triggers automated production catalog generation, streamlining release workflows and reducing manual steps.
