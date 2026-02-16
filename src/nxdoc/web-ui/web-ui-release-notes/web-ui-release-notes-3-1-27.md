@@ -22,7 +22,7 @@ hidden: true
 
 - ***Normal reload for custom messages and templates:***
   - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed on normal reload and do not require hard reload.
-  - Updated Service Worker behavior to prevent caching of Polymer HTML imports which ensures newly added pages and custom slots to load correctly after browser reloads.
+  - Updated Service Worker behavior to prevent caching of Polymer HTML imports, which ensures newly added pages and custom slots to load correctly after browser reloads.
 
 
 - ***Configurable Confirmation Dialogs for Standard Actions:***
