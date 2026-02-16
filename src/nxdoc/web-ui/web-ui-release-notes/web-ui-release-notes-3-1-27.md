@@ -29,7 +29,7 @@ hidden: true
   - Delete blob functionality now supports configurable confirmation messages, which can be enabled/disabled by administrators.
 
 - ***Automatic Production Catalog Generation:***
-  - Releasing new WebUI versions now triggers automated production catalog generation, streamlining release workflows and reducing manual steps.
+  - Releasing new WebUI versions now trigger automated production catalog generation, streamlining release workflows and reducing manual steps.
 
 - ***Saved Search Optimization:***
   - Fixed an issue where the JSON payload used during save/rename operations was incorrectly modified as an array of strings.
