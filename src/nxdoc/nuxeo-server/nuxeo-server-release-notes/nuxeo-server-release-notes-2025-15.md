@@ -17,19 +17,18 @@ hidden: true
 
 ## JDBCRowMapper With Closed Connection on PostgreSQL
 
-There is a new option to ensure borrowed connection is not stale
+There is a new option to ensure borrowed connection is not stale.
 
-Under heavy load, the VCS connection pool can hand out stale (closed) connections. A new option `org.nuxeo.session.pool.reconnect.enabled` has been added: when enabled, each borrowed connection is reopened to ensure it is not stale.
+Under heavy load, the VCS connection pool can hand out stale (closed) connections. A new option `org.nuxeo.session.pool.reconnect.enabled` has been added. When enabled, each borrowed connection is reopened to ensure it is not stale.
 
 - LTS 2023: Default behavior is unchanged; the option is disabled.
 - LTS 2025: The option is enabled by default.
+- 
 ## Implement a Dynatrace Metric Reporter
 
-There is a new Dynatrace metrics reporter.
+A new Dynatrace Metric reporter is available.
 
-There is a new Dynatrace Metric reporter available.
-
-It only works with Dynatrace OneAgent or ActiveGate configured to accept UDP StatsD protocol.
+It only works with Dynatrace OneAgent or ActiveGate, which is configured to accept UDP StatsD protocol.
 
 Use the option below to enable it:
 
@@ -44,7 +43,7 @@ Updated LibreOffice in Docker image from 7.5.8 to 7.5.9.2.
 
 ## Add No Limit Support to ByteSize
 
-Fix no limit support on configuration expressed in bytes
+Fixed no limit support on configuration expressed in bytes.
 
 
 {{! /multiexcerpt}}
