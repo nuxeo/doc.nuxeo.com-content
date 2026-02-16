@@ -30,7 +30,7 @@ A new Dynatrace Metric reporter is available.
 
 It only works with Dynatrace OneAgent or ActiveGate, which is configured to accept UDP StatsD protocol.
 
-Use the option below to enable it:
+Use the setting below to enable it:
 
 ```
 metrics.dynatrace.enabled=true
