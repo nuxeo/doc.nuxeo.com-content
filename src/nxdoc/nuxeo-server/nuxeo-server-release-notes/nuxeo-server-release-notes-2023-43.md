@@ -21,7 +21,7 @@ Updated LibreOffice in Docker image from 7.5.8 to 7.5.9.2.
 
 ## Add No Limit Support to ByteSize
 
-Fix no limit support on configuration expressed in bytes
+Fixed no limit support on configuration expressed in bytes.
 
 
 {{! /multiexcerpt}}
