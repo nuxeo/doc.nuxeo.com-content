@@ -4,51 +4,23 @@ description: Release notes for Nuxeo Drive.
 tree_item_index: 700
 review:
   comment: 'release'
-  date: '2024-04-25'
+  date: '2026-02-23'
   status: ok
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 6.0.0**
+Welcome to the Release Notes for **Nuxeo Drive 6.0.1**
 
-**Status**: <font color="#0066ff">**Release**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/6.0.0.md)
+**Status**: <font color="##ff0000">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/6.0.1.md)
 
-## Direct Transfer 
+## Upgrade Behavior 
 
-### Enhanced Folder Navigation 
-
-Improved folder navigation and selection for Direct Transfer, including shared folder support and performance tweaks.
-
-### Configurable Size Limits
-
-Introduced options to set maximum file and folder size limits for Direct Transfer, with built-in validation and clear error messages.
-
-## Synchronization 
-
-### Concurrent Editing Detection
-
-Added functionality to detect concurrent edits using lock files, with remote lock/unlock support and privacy-friendly notifications.
-
-## Core 
-
-### 64-bit Upgrade for macOS, Linux and Windows
-
-{{#> callout type='warning' heading='32bit no longer supported' }}
-32bit will no longer be supported starting from Nuxeo Drive 6.0.0 for all os.
-{{/callout}}
-
-Nuxeo Drive now runs on 64-bit architecture for macOS, Linux and Windows, offering:
-- Improved performance and stability for large files.
-- Full compatibility with modern operating systems.
-
-
-### Clipboard Reliability Fix 
-
-Resolved intermittent copy/paste issues by blocking unnecessary clipboard signals, ensuring smoother user experience.
+We discovered an issue on upgrading from old Nueo version to latest one. The problem has to do with upgrade from 5.4.0 to the new version. Upgrade from 5.5.x+ to the new version is unaffected. The issue has been fixed in Nuxeo Drive 6.0.1. 
+ 
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-6.0.0-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-6.0.0.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/release/nuxeo-drive-6.0.0.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.0-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.0.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.0.exe)
