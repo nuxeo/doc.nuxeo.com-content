@@ -27,6 +27,6 @@ We discovered an issue when upgrading from old Nuxeo Drive version to latest one
 
 ## Download Links
 
-- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.0-x86_64.AppImage)
-- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.0.dmg)
-- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.0.exe)
+- [GNU/Linux binary](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.1-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.1.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-6.0.1.exe)
