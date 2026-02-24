@@ -136,7 +136,7 @@ Client | LTS 2025 | LTS 2023
 Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/support.md#client)):
 
 - GNU/Linux, 64 bits
-- macOS >= 13, 64 bits and [ARM64](#macos-arm64-support)
+- macOS >= 15, 64 bits and [ARM64](#macos-arm64-support)
 - Windows 11, 64 bits
 - Windows Server 2022, 64 bits
 
