@@ -22,7 +22,7 @@ Starting from Nuxeo Drive 6.0.1, macOS versions supported are >= 15, 64 bits.
 
 ## Upgrade Behavior 
 
-We discovered an issue on upgrading from old Nueo version to latest one. The problem has to do with upgrade from 5.4.0 to the new version. Upgrade from 5.5.x+ to the new version is unaffected. The issue has been fixed in Nuxeo Drive 6.0.1. 
+We discovered an issue on upgrading from old Nuxeo version to latest one, on Windows 11. The problem has to do with upgrade from 5.4.0 to 6.0.0. Upgrade from 5.5.x+ to 6.0.0 is unaffected. The issue has been fixed in Nuxeo Drive 6.0.1.
  
 
 ## Download Links
