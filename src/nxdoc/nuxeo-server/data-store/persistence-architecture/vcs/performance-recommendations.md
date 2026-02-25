@@ -114,7 +114,7 @@ Here is a non-exhaustive list of recommendations to get better performance:
   - if possible disable the ACL optimization, look at the [perf template](https://github.com/nuxeo/nuxeo/tree/master/server/nuxeo-nxr-server/src/main/resources/templates/perf) for more information.
 
 
-- If you are doing an NXQL query that involves custom schemas, you may need to add custom indexes to make the request efficient. You can trace the slow NXQL queries using [NXP-14845](https://jira.nuxeo.com/browse/NXP-14845).
+- If you are doing an NXQL query that involves custom schemas, you may need to add custom indexes to make the request efficient.
 
 
 - Try to switch all page providers to Elasticsearch.
@@ -129,7 +129,7 @@ Here is a non-exhaustive list of recommendations to get better performance:
 - Use BIGINT document identifier instead of default UID. This is done by adding a `<idType>sequence</idType>` in the repository contribution.
 
 
-- Turn the Elasticsearch translog to async for all index ([NXP-25587](https://jira.nuxeo.com/browse/NXP-25587)).
+- Turn the Elasticsearch translog to async for all index.
 
 - Tune the Elasticsearch settings and mappings:
   - Remove the `html_strip` char filters if not needed (on repository and audit index), its indexing cost is high on CPU.
