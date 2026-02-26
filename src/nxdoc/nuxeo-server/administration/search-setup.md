@@ -1007,7 +1007,7 @@ It is not possible to disable contribution to an `elasticSearchIndex` for a spec
 
 ## Setting up an OpenSearch 2.x Cluster{{> anchor 'setting-up-opensearch2'}}
 
-In order to use an OpenSearch 2.x cluster, you need to install the `nuxeo-search-client-opensearch2` package.
+In order to use an OpenSearch 2.x cluster, you need to install the `nuxeo-search-client-opensearch2` and `nuxeo-audit-opensearch2` packages.
 
 If you want to set up an OpenSearch server that runs in the same JVM as the Nuxeo Platform's, you have to install explicitly the `nuxeo-opensearch2-embed` package. For production, you need to set up a Search cluster.
 
@@ -1024,7 +1024,7 @@ nuxeo.search.client.default.opensearch2.index.name=nuxeo
 
 ## Setting up an Elasticsearch 9.x Cluster{{> anchor 'setting-up-elasticsearch9'}}
 
-In order to use an Elasticsearch 9.x cluster, you need to install the `nuxeo-search-client-elasticsearch9` package.
+In order to use an Elasticsearch 9.x cluster, you need to install the `nuxeo-search-client-elasticsearch9` and `nuxeo-audit-elasticsearch9` packages.
 
 Currently, the configuration is identical to OpenSearch 1, with a single change: all `opensearch1` options must be updated to `elasticsearch9`.
 
@@ -1057,19 +1057,19 @@ The first step, not mandatory, is to create a dedicated appender where all the t
 Then add the logger which corresponds to the Search engine you configured in Nuxeo:
 * Opensearch 1.x (with `nuxeo-search-client-opensearch1` package):
 ```
-<Logger name="org.nuxeo.runtime.opensearch1.client" level="trace">
+<Logger name="org.nuxeo.runtime.opensearch1" level="trace">
   <AppenderRef ref="SEARCH" />
 </Logger>
 ```
 * Opensearch 2.x (with `nuxeo-search-client-opensearch2` package):
 ```
-<Logger name="org.nuxeo.runtime.opensearch2.client" level="trace">
+<Logger name="org.nuxeo.runtime.opensearch2" level="trace">
   <AppenderRef ref="SEARCH" />
 </Logger>
 ```  
 * Elasticsearch 9.x (with `nuxeo-search-client-elasticsearch9` package):
 ```
-<Logger name="org.nuxeo.runtime.elasticsearch9.client" level="trace">
+<Logger name="org.nuxeo.runtime.elasticsearch9" level="trace">
   <AppenderRef ref="SEARCH" />
 </Logger>
 ```
