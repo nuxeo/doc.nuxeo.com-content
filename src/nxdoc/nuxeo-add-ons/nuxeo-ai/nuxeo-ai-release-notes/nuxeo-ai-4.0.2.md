@@ -1,7 +1,7 @@
 ---
 title: Nuxeo AI 4.0.2
 description: Release notes for Nuxeo AI 4.0.2
-tree_item_index: 1000
+tree_item_index: 300
 review:
   comment: ''
   date: '2025-07-10'
