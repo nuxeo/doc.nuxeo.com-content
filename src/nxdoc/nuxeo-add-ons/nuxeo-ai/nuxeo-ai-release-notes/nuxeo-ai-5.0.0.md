@@ -9,7 +9,7 @@ review:
 toc: true
 ---
 
-{{! multiexcerpt name='nuxeo-ai-5.0.0'}}
+{{! multiexcerpt name='nuxeo-ai-5-0-0'}}
 
 ## What's New in Nuxeo AI for LTS 2025 (version 5.0.0)
 
