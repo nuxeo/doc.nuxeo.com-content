@@ -9,7 +9,7 @@ review:
 toc: true
 ---
 
-{{! multiexcerpt name='nuxeo-ai-4.0.3'}}
+{{! multiexcerpt name='nuxeo-ai-4-0-3'}}
 
 ## What's New in Nuxeo AI (version 4.0.3)
 
