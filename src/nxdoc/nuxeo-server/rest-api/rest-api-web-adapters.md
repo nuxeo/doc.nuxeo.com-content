@@ -305,6 +305,23 @@ Default adapters provided by default.
 
 <table class="hover">
   <tr>
+    <td class="small-2">**@preferences**</td>
+    <td>
+      Returns the current user's [preferences for the target Document]({{page page='user-preferences-endpoint'}}#document-user-preferences).
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /api/v1/id/{docId}/@preferences
+      ```
+    </td>
+  </tr>
+</table>
+
+<table class="hover">
+  <tr>
     <td class="small-2">**@rendition**</td>
     <td>Returns the renditions of a blob</td>
   </tr>
