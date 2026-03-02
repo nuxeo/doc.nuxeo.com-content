@@ -91,6 +91,15 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
           CRUD on OAuth2 providers, clients and tokens. See [OAuth2 Resource Endpoint]({{page page='oauth2-endpoint'}}) for more information.</td>
       </tr>
       <tr>
+        <td class="small-3">**User Preferences**</td>
+        <td class="small-3">
+          `/nuxeo/api/v1/me/preferences/{preferenceKey}`
+        </td>
+        <td class="small-6">
+          CRUD on [Global User's Preferences]({{page page='user-preferences-endpoint'}}#global-user-preferences).
+        </td>
+      </tr>
+      <tr>
         <td class="small-3">**Workflows and Tasks**</td>
         <td class="small-3">
           `/nuxeo/api/v1/workflow/{workflowId}`<br/>

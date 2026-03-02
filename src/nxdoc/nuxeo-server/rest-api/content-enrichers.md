@@ -406,6 +406,10 @@ For example, sometimes you need to get the children, parents or workflow tasks o
         <td>Current user's subscribed notifications for the current document</td>
       </tr>
       <tr>
+        <td>`userPreferences`</td>
+        <td>Current user's [preferences for the current document]({{page page='user-preferences-endpoint'}}#document-user-preferences)</td>
+      </tr>
+      <tr>
         <td>`userprofile`</td>
         <td>DOB, phone number and avatar of current user</td>
       </tr>
