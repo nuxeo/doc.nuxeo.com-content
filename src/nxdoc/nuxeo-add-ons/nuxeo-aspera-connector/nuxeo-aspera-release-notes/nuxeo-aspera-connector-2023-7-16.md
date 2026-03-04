@@ -31,7 +31,7 @@ Enhanced user feedback when the IBM Aspera Client selection window is already op
 
 ### Security Improvements
 
-#### Code Scanning & Dependency Security
+#### Code Scanning and Dependency Security
 
 * Addressed multiple security vulnerabilities reported by GitHub Code Scanning in the `nuxeo-aspera-connector`, including a fix for an implicit narrowing conversion vulnerability.
 
@@ -45,7 +45,7 @@ The Aspera connector now fully supports **pause, resume, and remove** actions in
 * Dashboard statuses in Nuxeo remain in sync.
 * Delete is automatically disabled for in‑progress transfers to prevent inconsistent states.
 
-### Quality & Maintainability Improvements
+### Quality and Maintainability Improvements
 
 #### Automated Code Coverage & SonarCloud
 
