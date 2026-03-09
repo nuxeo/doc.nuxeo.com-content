@@ -542,4 +542,4 @@ nuxeo.aws.trustStorePassword=myPassword
 nuxeo.aws.trustStoreType=jks
 ```
 
-Additionally, since `lts-2025`, Nuxeo server uses the [S3 CRT Client](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/crt-based-s3-client.html) for downloading and uploading binaries. The S3 CRT Client does not use a Java Trust Store but instead the OS trust store where the self-signed certificate must also be added.
+Additionally, since `lts-2025`, Nuxeo server uses the [S3 CRT Client](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/crt-based-s3-client.html) for downloading and uploading binaries. The S3 CRT Client does not use a Java Trust Store but instead uses the OS trust store where the self-signed certificate must also be added.
