@@ -17,11 +17,11 @@ hidden: true
 
 ## Add JSF Config to the AJP Connector in server.xml.nxftl
 
-Tomcat AJP Connector's maxPartCount and maxPartHeaderSize attributes can now be configured.
+Tomcat AJP Connector's `maxPartCount` and `maxPartHeaderSize` attributes can now be configured.
 
-## Backport NXP-33273: Make Possible to Contribute Several SAML Authentication Plugins
+## Backport NXP-33273: Contribute Several SAML Authentication Plugins
 
-You can now contribute several SAML plugin with different configuration.
+You can now contribute several SAML plugins with different configuration.
 
 
 {{! /multiexcerpt}}
