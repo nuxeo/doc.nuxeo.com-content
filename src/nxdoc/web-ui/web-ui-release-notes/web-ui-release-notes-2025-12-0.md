@@ -1,5 +1,5 @@
 ---
-title: Version 2025.11.0
+title: Version 2025.12.0
 description: Discover what's new in Web UI 2025.12.0.
 review:
   comment: ''
@@ -8,7 +8,7 @@ review:
 toc: true
 labels:
 tree_item_index: 989
-hidden: true
+hidden: false
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
@@ -21,11 +21,11 @@ hidden: true
 **Bug Fixes & Enhancements** 
 
 - ***Normal reload for custom messages and templates:***
-  - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed on normal reload and do not require hard reload.
-  - Updated Service Worker behavior to prevent caching of Polymer HTML imports, which ensures newly added pages and custom slots to load correctly after browser reloads.
+  - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed on normal reload and doesnt require hard reload.
+  - Updated Service Worker behavior to prevent caching of Polymer HTML imports which ensures newly added pages and custom slots to load correctly after browser reloads.
 
 - ***Configurable Confirmation Dialogs for Standard Actions:***
-  - Delete blob functionality now supports configurable confirmation messages, which can be enabled/disabled by admins.
+  - Delete blob functionality now supports configurable confirmation messages which can be enabled/disabled by admins.
 
 - ***Automatic Production Catalog Generation:***
   - Releasing new WebUI versions now triggers automated production catalog generation, streamlining release workflows and reducing manual steps.
@@ -33,12 +33,12 @@ hidden: true
 - ***Saved Search Optimization:***
   - Fixed an issue where the JSON payload used during save/rename operations was incorrectly modified as an array of strings.
   - Saved search operations now use the correct payload format and no longer fail silently.
-  - Fixed an issue where the long saved search names were truncated in the Filters dropdown.
+  - Long saved search names were previously truncated in the Filters dropdown.
   - The full saved search title is now displayed, improving readability and usability.
 
 - ***Editing Multi‑Valued Numeric Properties:***
-  - Resolved an issue where editing multi‑valued Number fields through the WebUI Edit layout caused save failures due to incorrect type handling.
-  - Values are now correctly treated as numeric types, preventing ArrayStoreException errors and ensuring documents are saved successfully.
+  - Editing multi‑valued Number fields through the WebUI Edit layout previously caused save failures due to incorrect type handling.
+  - Values are now correctly treated as numeric types, preventing ArrayStoreException errors and ensuring documents save successfully.
 
 
 
