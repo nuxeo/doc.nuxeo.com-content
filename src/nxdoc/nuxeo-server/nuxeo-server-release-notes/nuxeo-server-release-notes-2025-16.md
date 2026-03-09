@@ -17,8 +17,6 @@ hidden: true
 
 ## Management API Could Report Usage to Audit
 
-An event is fired for every access to the Management API
-
 The `managementApiAccess` event is fired for all authenticated request to the Management API. The event context holds the `HttpServletRequest` as argument, which enables users to easily contribute the event and its extendedInfo mappers to the Audit service. For instance:
 
 ```
@@ -38,8 +36,6 @@ The `managementApiAccess` event is fired for all authenticated request to the Ma
 ```
 
 ## Query a Non Default Audit Backend API
-
-Query another Audit Backend than the default one.
 
 The property `backend` was added to the `AuditPageProvider` page provider allowing callers to query a different audit backend than the default one.See the following example:
 
@@ -138,13 +134,11 @@ Nuxeo configuration properties:
 - `nuxeo.user.preferences.listeners.userDeleted.enabled` defines whether preferences should be deleted after the owner is deleted; the default is `true`
 - `nuxeo.bulk.action.userPreferencesGC.enabled` defines whether document-related preferences should be deleted after the related document is deleted; the default is `true`
 
-## Introduce a Contribuable Audit Router
+## Introduce a Contributable Audit Router
 
 Configure Audit Router to ingest Log Entries to different Backends.
 
-The Audit ingestion mechanism has been improved to leverage the introduced Audit Router service.
-
-You can now contribute Audit routes to write log entries to different audit backend. For instance, if you want to write the log entries of a specific event to a secondary audit backend named `other`, you can contribute the following:
+The Audit ingestion mechanism has been improved to leverage the introduced Audit Router service. You can now contribute Audit routes to write log entries to different audit backend. For instance, if you want to write the log entries of a specific event to a secondary audit backend named `other`, you can contribute the following:
 
 ```
 <extension target="org.nuxeo.audit.service.AuditComponent" point="routes">
@@ -173,27 +167,17 @@ Nuxeo Server declares only the `default` route that ingests the default events i
 </extension>
 ```
 
-That means, for every event fired through the `EventService`, the ones registered within an audit route will be converted to audit log entries, like previously.
-
-Then, audit routes are all evaluated against each log entries, and each log entry matching a route is written to the corresponding backend.
-
-This is a two steps process: convert events to log entries and then route them to audit backends.
+That means, for every event fired through the `EventService`, the ones registered within an audit route will be converted to audit log entries, like previously. Then, audit routes are all evaluated against each log entries, and each log entry matching a route is written to the corresponding backend. This is a two steps process: convert events to log entries and then route them to audit backends.
 
 #### Events to Log Entries
 
-At startup, the Audit Router extracts all contributed `event` from enabled `route` to convert latter the events to log entries.
-
-For example, with the previous `other` route, the Audit Router will convert all default events contributed to the `default` route and the `specificEvent` events from the `other` route. The log entries are then passed to the routing engine.
+At startup, the Audit Router extracts all contributed `event` from enabled `route` to convert latter the events to log entries. For example, with the previous `other` route, the Audit Router will convert all default events contributed to the `default` route and the `specificEvent` events from the `other` route. The log entries are then passed to the routing engine.
 
 #### Routing Engine
 
-The Audit Router tests each log entries against each route to compute which audit backend will receive the log entry.
+The Audit Router tests each log entries against each route to compute which audit backend will receive the log entry. For example, with the previous `other` route, the Audit Router will compute that all default events contributed to the `default` route will be written to the `default` audit backend and the `specificEvent` events from the `other` route will be written to the `other` backend.
 
-For example, with the previous `other` route, the Audit Router will compute that all default events contributed to the `default` route will be written to the `default` audit backend and the `specificEvent` events from the `other` route will be written to the `other` backend.
-
-Another addition to the Audit Router service is the audit route predicates that can be contributed.
-
-For example, with the previous `other` route, the `specificEvent` event can be of two categories, `catA` and `catB`, and we would like to route them to different audit backends. This is doable with:
+Another addition to the Audit Router service is the audit route predicates that can be contributed. For example, with the previous `other` route, the `specificEvent` event can be of two categories, `catA` and `catB`, and we would like to route them to different audit backends. This is doable with:
 
 ```
 <extension target="org.nuxeo.audit.service.AuditComponent" point="routes">
