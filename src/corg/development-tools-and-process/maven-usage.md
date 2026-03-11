@@ -333,19 +333,19 @@ Maven relies on JAVA_HOME rather than PATH for Java.
 
 ### Configure Repositories
 
-Nuxeo uses [Sonatype Nexus OSS](http://nexus.sonatype.org/) for storing its artifacts at [https://maven.nuxeo.org/](https://maven.nuxeo.org/).
+Nuxeo uses [Sonatype Nexus OSS](http://nexus.sonatype.org/) for storing its artifacts at [https://packages.nuxeo./](https://packages.nuxeo.com).
 
 You will find there a lot of "group", "hosted" and "proxy" repositories:
 
-*   **[.../groups/public/](https://maven.nuxeo.org/nexus/content/groups/public/)** and **[.../groups/public-snapshot/](https://maven.nuxeo.org/nexus/content/groups/public-snapshot/)** .
+*   **[.../group/public-lts/](https://maven.nuxeo.org/nexus/content/group/public-lts/)** and **[.../group/maven-public/](https://maven.nuxeo.org/nexus/content/group/maven-public/)** .
     Those are the preferred entry points. They are groups aggregating all other repositories.
-*   [.../repositories/public-releases/](https://maven.nuxeo.org/nexus/content/repositories/public-releases/) and [.../repositories/public-snapshots/](https://maven.nuxeo.org/nexus/content/repositories/public-snapshots/)
+*   [.../repositories/maven-public-releases/](https://maven.nuxeo.org/nexus/content/repositories/maven-public-releases/) and [.../repositories/maven-public-snapshots/](https://maven.nuxeo.org/nexus/content/repositories/maven-public-snapshots/)
     Here are stored all Nuxeo published artifacts. Those are internally hosted Nuxeo repositories.
 *   [.../groups/thirdparty-releases/](https://maven.nuxeo.org/nexus/content/groups/thirdparty-releases/) and [.../groups/thirdparty-snapshots/](https://maven.nuxeo.org/nexus/content/groups/thirdparty-snapshots/)
-    Those groups deliver everything except Nuxeo artifacts (i.e. thirdparty-releases = public - public-releases).
-*   [.../repositories/vendor-releases/](https://maven.nuxeo.org/nexus/content/repositories/vendor-releases/) and [.../repositories/vendor-snapshots/](https://maven.nuxeo.org/nexus/content/repositories/vendor-snapshots/)
+    Those groups deliver everything except Nuxeo artifacts (i.e. thirdparty-releases = public - maven-public-releases).
+*   [.../repositories/maven-vendor/](https://maven.nuxeo.org/nexus/content/repositories/maven-vendor/) and [.../repositories/maven-vendor/](https://maven.nuxeo.org/nexus/content/repositories/maven-vendor/)
     Here are stored all third-party artifacts which were not available on Internet as Maven artifacts (because their editor does not manage their own public Maven repository, neither publish in available ones; or because Nuxeo has applied some patches on them).
-*   [.../repositories/hotfix-releases-group/](https://maven.nuxeo.org/nexus/content/groups/hotfix-releases-group) and [.../repositories/hotfix-snapshots/](https://maven.nuxeo.org/nexus/content/repositories/hotfix-snapshots/)
+*   [.../groups/maven-hotfix/](https://maven.nuxeo.org/nexus/content/groups/hotfix-releases-group) and [.../groups/maven-hotfix/](https://maven.nuxeo.org/nexus/content/groups/maven-hotfix/)
     Here are stored all Nuxeo published Hotfix artifacts. Those are internally hosted Nuxeo repositories. The access is restricted to Nuxeo customers.
 *   Various proxy repositories from which Nuxeo retrieve some artifacts.
     These are public repositories from Apache, Atlassian, Codehaus, Google, ibiblio, JBoss, Maven Central (of course), Sonatype...
@@ -358,7 +358,7 @@ There are three solutions for enabling your Maven build to use Nuxeo repositorie
 <repositories>
   <repository>
     <id>public</id>
-    <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
+    <url>http://maven.nuxeo.org/nexus/content/group/public-lts</url>
     <releases>
       <enabled>true</enabled>
     </releases>
@@ -368,7 +368,7 @@ There are three solutions for enabling your Maven build to use Nuxeo repositorie
   </repository>
   <repository>
     <id>public-snapshot</id>
-    <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
+    <url>http://maven.nuxeo.org/nexus/content/group/maven-public</url>
     <releases>
       <enabled>false</enabled>
     </releases>
@@ -393,7 +393,7 @@ There are three solutions for enabling your Maven build to use Nuxeo repositorie
       <repositories>
         <repository>
           <id>public</id>
-          <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
+          <url>http://maven.nuxeo.org/nexus/content/group/public-lts</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -403,7 +403,7 @@ There are three solutions for enabling your Maven build to use Nuxeo repositorie
         </repository>
         <repository>
           <id>public-snapshot</id>
-          <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
+          <url>http://maven.nuxeo.org/nexus/content/group/maven-public</url>
           <releases>
             <enabled>false</enabled>
           </releases>
@@ -470,7 +470,7 @@ Add the repositories in your POM:
   </repository>
   <repository>
     <id>hotfix-snapshots</id>
-    <url>https://maven.nuxeo.org/nexus/content/repositories/hotfix-snapshots</url>
+    <url>https://maven.nuxeo.org/nexus/content/groups/maven-hotfix</url>
     <releases>
       <enabled>false</enabled>
     </releases>
@@ -497,7 +497,7 @@ Set your credentials in your `$M2_REPO/settings.xml`:
     <mirror>
       <id>hotfix-snapshots-eu</id>
       <name>hotfix snapshots EU</name>
-      <url>https://maven-eu.nuxeo.org/nexus/content/repositories/hotfix-snapshots</url>
+      <url>https://maven-eu.nuxeo.org/nexus/content/groups/maven-hotfix</url>
       <mirrorOf>hotfix-snapshots</mirrorOf>
     </mirror>
   </mirrors>
@@ -834,9 +834,9 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
   <!--
   <mirrors>
     <mirror>
-      <id>public-releases-mirror</id>
+      <id>maven-public-releases-mirror</id>
       <name>public releases mirror</name>
-      <url>http://mavenin.nuxeo.com/nexus/content/groups/public</url>
+      <url>http://mavenin.nuxeo.com/nexus/content/group/public-lts</url>
       <mirrorOf>public</mirrorOf>
     </mirror>
     <mirror>
@@ -855,7 +855,7 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
       <password>****</password>
     </server>
     <server>
-      <id>public-releases</id>
+      <id>maven-public-releases</id>
       <username>****</username>
       <password>****</password>
     </server>
@@ -866,12 +866,12 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
       <password>****</password>
     </server>
     <server>
-      <id>vendor-releases</id>
+      <id>maven-vendor</id>
       <username>****</username>
       <password>****</password>
     </server>
     <server>
-      <id>public-snapshots</id>
+      <id>maven-public-snapshots</id>
       <username>****</username>
       <password>****</password>
     </server>
@@ -888,7 +888,7 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
       <password>****</password>
     </server>
     <server>
-      <id>vendor-snapshots</id>
+      <id>maven-vendor</id>
       <username>****</username>
       <password>****</password>
     </server>
@@ -908,7 +908,7 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
       <repositories>
         <repository>
           <id>public</id>
-          <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
+          <url>http://maven.nuxeo.org/nexus/content/group/public-lts</url>
           <releases>
             <enabled>true</enabled>
           </releases>
