@@ -28,7 +28,7 @@ hidden: true
 
 - ***More reliable Studio catalog generation:***
   - Catalog generation has been improved to consistently detect all required elements, reducing configuration errors in Studio Designer.
-
+  
 
 **Accessibility Improvements** 
 
@@ -60,7 +60,6 @@ hidden: true
 
 - ***Up-to-date dependencies and tooling:***
   - CI and security scanning workflows have been updated to the latest supported versions, ensuring continued reliability and compliance with long-term support requirements.
-
 
 <br/>
 
