@@ -21,11 +21,11 @@ hidden: false
 **Bug Fixes & Enhancements** 
 
 - ***Normal reload for custom messages and templates:***
-  - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed on normal reload and doesnt require hard reload.
-  - Updated Service Worker behavior to prevent caching of Polymer HTML imports which ensures newly added pages and custom slots to load correctly after browser reloads.
+  - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed on normal reload and doesn't require hard reload.
+  - Updated Service Worker behavior to prevent caching of Polymer HTML imports, ensuring that newly added pages and custom slots load correctly after browser reloads.
 
 - ***Configurable Confirmation Dialogs for Standard Actions:***
-  - Delete blob functionality now supports configurable confirmation messages which can be enabled/disabled by admins.
+  - Delete blob functionality now supports configurable confirmation messages that can be enabled or disabled by admins.
 
 - ***Automatic Production Catalog Generation:***
   - Releasing new WebUI versions now triggers automated production catalog generation, streamlining release workflows and reducing manual steps.
@@ -38,7 +38,7 @@ hidden: false
 
 - ***Editing Multi‑Valued Numeric Properties:***
   - Editing multi‑valued Number fields through the WebUI Edit layout previously caused save failures due to incorrect type handling.
-  - Values are now correctly treated as numeric types, preventing ArrayStoreException errors and ensuring documents save successfully.
+  - Values are now correctly treated as numeric types, preventing ArrayStoreException errors and ensuring documents are saved successfully.
 
 
 
