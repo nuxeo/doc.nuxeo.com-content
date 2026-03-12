@@ -21,7 +21,7 @@ hidden: false
 **Bug Fixes & Enhancements** 
 
 - ***Normal reload for custom messages and templates:***
-  - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed on normal reload and doesnt require hard reload.
+  - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed on normal reload and doesn't require hard reload.
   - Updated Service Worker behavior to prevent caching of Polymer HTML imports, ensuring that newly added pages and custom slots load correctly after browser reloads.
 
 - ***Configurable Confirmation Dialogs for Standard Actions:***
