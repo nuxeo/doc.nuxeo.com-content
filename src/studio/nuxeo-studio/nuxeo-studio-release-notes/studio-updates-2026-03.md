@@ -1,6 +1,6 @@
 ---
 title: 'March 2026'
-description: Release notes for Nuxeo Studio released in March 2026.
+description: Release notes for Nuxeo Studio release version 2026.0.1 in March 2026.
 tree_item_index: 921
 review:
   comment: ''
