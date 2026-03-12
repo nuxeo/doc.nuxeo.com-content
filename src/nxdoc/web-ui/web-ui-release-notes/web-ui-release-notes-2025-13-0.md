@@ -24,11 +24,11 @@ hidden: true
   - Multiple files uploaded via the dropzone are now correctly appended and displayed together before document creation.
 
 - ***Resizable and reorderable data table columns:***
-  - Users can now resize and rearrange table columns by dragging the column headers, making tables easier to personalize and work with.
+  - Users can now resize and rearrange table columns by dragging the column headers, making tables easier to personalize and work with.Support for saving table preferences is planned for a future release.
 
 - ***More reliable Studio catalog generation:***
   - Catalog generation has been improved to consistently detect all required elements, reducing configuration errors in Studio Designer.
-  
+
 
 **Accessibility Improvements** 
 
