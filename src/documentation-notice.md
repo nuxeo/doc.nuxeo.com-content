@@ -32,5 +32,5 @@ Nuxeo Documentation
 **Department/Group**
 Documentation
  
-Revision Numbers
+**Revision Numbers**
 LTS 2025/LTS 2023
