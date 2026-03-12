@@ -20,21 +20,16 @@ hidden: true
 
 **Enhancements** 
 
-- ***Improved file uploads in create, edit, and import screens:***
-  - Multiple files uploaded via the dropzone are now correctly appended and displayed together before document creation.
-
 - ***Resizable and reorderable data table columns:***
   - Users can now resize and rearrange table columns by dragging the column headers, making tables easier to personalize and work with.Support for saving table preferences is planned for a future release.
 
-- ***More reliable Studio catalog generation:***
-  - Catalog generation has been improved to consistently detect all required elements, reducing configuration errors in Studio Designer.
 
 
 **Accessibility Improvements** 
 
-- ***Better keyboard navigation and screen reader support:***
-  - Tabbing and arrow key navigation is now consistent, the close (cross) button is keyboard accessible, and screen readers announce only relevant information such as result titles and indexes.
-    -***Improved focus handling***
+- ***Better keyboard navigation and screen reader support on Global Search:***
+  - Tabbing and arrow key navigation is now consistent on global search results, the close (cross) button is keyboard accessible, and screen readers announce only relevant information such as result titles and indexes.
+    -***Improved focus handling:***
         Unnecessary keyboard focus on headings has been removed to better align with accessibility standards.
 
 
@@ -49,6 +44,9 @@ hidden: true
 - ***Directory fields reset correctly:***
   - Clearing directory-based fields now properly removes the displayed selection when reset.
 
+- ***Improved file uploads in create, edit, and import screens:***
+  - Multiple files uploaded via the dropzone are now correctly appended and displayed together before document creation.
+
 
 **Performance, Security, and Reliability**
 
@@ -60,6 +58,9 @@ hidden: true
 
 - ***Up-to-date dependencies and tooling:***
   - CI and security scanning workflows have been updated to the latest supported versions, ensuring continued reliability and compliance with long-term support requirements.
+
+- ***More reliable Studio catalog generation:***
+  - Catalog generation has been improved to consistently detect all required elements, reducing configuration errors in Studio Designer.
 
 
 
