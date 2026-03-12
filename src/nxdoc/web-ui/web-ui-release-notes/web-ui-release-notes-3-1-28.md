@@ -3,7 +3,7 @@ title: Version 3.1.28
 description: Discover what's new in Web UI 3.1.28.
 review:
   comment: ''
-  date: '2026-03-11'
+  date: '2026-03-12'
   status: ok
 toc: true
 labels:
@@ -18,42 +18,48 @@ hidden: true
 ## What’s New in Web UI for LTS 2023 (Version 3.1.28)
 
 
-**Bug Fixes & Enhancements** 
+**Enhancements** 
 
-- ***Normal reload for custom messages and templates:***
-  - Internationalization (i18n) resources under /ui/i18n/ now bypass caching, ensuring the latest translations are always displayed on normal reload and do not require hard reload.
-  - Updated Service Worker behavior to prevent caching of Polymer HTML imports, which ensures newly added pages and custom slots to load correctly after browser reloads.
+- ***Improved file uploads in create, edit, and import screens:***
+  - Multiple files uploaded via the dropzone are now correctly appended and displayed together before document creation.
 
+- ***Resizable and reorderable data table columns:***
+  - Users can now resize and rearrange table columns by dragging the column headers, making tables easier to personalize and work with.
 
-- ***Configurable Confirmation Dialogs for Standard Actions:***
-  - Delete blob functionality now supports configurable confirmation messages, which can be enabled/disabled by administrators.
-
-- ***Automatic Production Catalog Generation:***
-  - Releasing new WebUI versions now trigger automated production catalog generation, streamlining release workflows and reducing manual steps.
-
-- ***Saved Search Optimization:***
-  - Fixed an issue where the JSON payload used during save/rename operations was incorrectly modified as an array of strings.
-  - Saved search operations now use the correct payload format and no longer fail silently.
-  - Fixed an issue where long saved search names were truncated in the Filters dropdown.
-  - The full saved search title is now displayed, improving readability and usability.
-
-- ***Editing Multi‑Valued Numeric Properties:***
-  - Editing multi‑valued Number fields through the WebUI Edit layout previously caused save failures due to incorrect type handling.
-  - Values are now correctly treated as numeric types, preventing ArrayStoreException errors and ensuring documents save successfully.
+- ***More reliable Studio catalog generation:***
+  - Catalog generation has been improved to consistently detect all required elements, reducing configuration errors in Studio Designer.
 
 
+**Accessibility Improvements** 
 
-**Security Improvements** 
+- ***Better keyboard navigation and screen reader support:***
+  - Tabbing and arrow key navigation is now consistent, the close (cross) button is keyboard accessible, and screen readers announce only relevant information such as result titles and indexes.
+    -***Improved focus handling***
+        Unnecessary keyboard focus on headings has been removed to better align with accessibility standards.
 
-- ***Client‑Side Redirect/Phishing Mitigation:***
-  - An issue causing unintended client‑side redirects in the embedded PDF.js component has been identified and fixed within the application.
+
+**Bug Fixes**
+
+- ***Clearer feedback for unsupported file uploads:***
+  - The dropzone now shows a proper error message when users try to upload files that are not accepted.
+
+- ***PDF preview works with special characters in filenames:***
+  - PDF files containing special characters (such as square brackets) now preview correctly in the Web UI.
+
+- ***Directory fields reset correctly:***
+  - Clearing directory-based fields now properly removes the displayed selection when reset.
 
 
-**Other features/Improvements**
+**Performance, Security, and Reliability**
 
-- ***Accessibility Pipeline Fixes:***
-  - Resolved accessibility test pipeline failures by pinning the browser environment to a stable version.
+- ***Faster and more efficient CI builds:***
+  - Build pipelines now use dependency caching and shared configurations to reduce build times and duplication.
 
+- ***Improved CI security:***
+  - GitHub workflows have been updated to use more secure dependency handling and safer pull request execution.
+
+- ***Up-to-date dependencies and tooling:***
+  - CI and security scanning workflows have been updated to the latest supported versions, ensuring continued reliability and compliance with long-term support requirements.
 
 
 <br/>
