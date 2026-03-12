@@ -333,7 +333,7 @@ Maven relies on JAVA_HOME rather than PATH for Java.
 
 ### Configure Repositories
 
-Nuxeo uses [Sonatype Nexus OSS](http://nexus.sonatype.org/) for storing its artifacts at [https://packages.nuxeo./](https://packages.nuxeo.com).
+Nuxeo uses [Sonatype Nexus](http://nexus.sonatype.org/) for storing its artifacts at [https://packages.nuxeo./](https://packages.nuxeo.com).
 
 You will find there a lot of "group", "hosted" and "proxy" repositories:
 
