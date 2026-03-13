@@ -173,7 +173,7 @@ You don't need to use the [nuxeo-distribution](https://github.com/nuxeo/nuxeo-di
 
 - you want a standard Nuxeo distribution:
     - download it from [http://www.nuxeo.com/downloads/](http://www.nuxeo.com/downloads/) (manual download only)
-    - download it from [http://maven.nuxeo.org](http://maven.nuxeo.org) (manually via online interface or automatically using Maven)
+    - download it from [http://packages.nuxeo.com](https://packages.nuxeo.com/) (manually via online interface or automatically using Maven)
 - you want to customize configuration files:
     - use [the template configuration system]({{page space='nxdoc' page='configuration-templates'}})
 - you want to [build your own distribution]({{page page='creating-your-own-distribution'}}):

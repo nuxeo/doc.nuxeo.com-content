@@ -509,7 +509,7 @@ Every project super POM should define the following if not defined (or different
 <repositories>
   <repository>
     <id>public</id>
-    <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
+    <url>https://packages.nuxeo.com/repository/maven-public-lts</url>
     <releases>
       <enabled>true</enabled>
     </releases>
@@ -519,7 +519,7 @@ Every project super POM should define the following if not defined (or different
   </repository>
   <repository>
     <id>public-snapshot</id>
-    <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
+    <url>https://packages.nuxeo.com/repository/maven-public-snapshots</url>
     <releases>
       <enabled>false</enabled>
     </releases>
@@ -533,7 +533,7 @@ Every project super POM should define the following if not defined (or different
 <pluginRepositories>
   <pluginRepository>
     <id>public</id>
-    <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
+    <url>https://packages.nuxeo.com/repository/maven-public-lts</url>
     <name>Nuxeo virtual release repository</name>
     <releases>
       <enabled>true</enabled>
@@ -544,7 +544,7 @@ Every project super POM should define the following if not defined (or different
   </pluginRepository>
   <pluginRepository>
     <id>public-snapshot</id>
-    <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
+    <url>https://packages.nuxeo.com/repository/maven-public-snapshots</url>
     <name>Nuxeo virtual snapshot repository</name>
     <releases>
       <enabled>false</enabled>
@@ -563,11 +563,11 @@ Every project super POM should define the following if not defined (or different
   </site>
   <repository>
     <id>public-releases</id>
-    <url>https://mavenin.nuxeo.com/nexus/content/repositories/public-releases</url>
+    <url>https://packages.nuxeo.com/repository/maven-public-releases</url>
   </repository>
   <snapshotRepository>
     <id>public-snapshots</id>
-    <url>https://mavenin.nuxeo.com/nexus/content/repositories/public-snapshots</url>
+    <url>https://packages.nuxeo.com/repository/maven-public-snapshots</url>
     <uniqueVersion>true</uniqueVersion>
   </snapshotRepository>
 </distributionManagement>

@@ -74,4 +74,4 @@ Maven manages the build ordering as a graph of dependencies between artifacts.
 
 Artifacts are store locally in `M2_REPO` (usually `~/.m2/repository`) when running `mvn install`.
 Artifacts are also stored remotely in online [repositories](http://maven.apache.org/guides/introduction/introduction-to-repositories.html) when running `mvn deploy`. Remote artifacts can then be downloaded by Maven to avoid having to locally build or install them.
-Nuxeo uses [Sonatype Nexus OSS](http://nexus.sonatype.org/) for storing its artifacts: [https://maven.nuxeo.org/](https://maven.nuxeo.org/).
+Nuxeo uses [Sonatype Nexus](https://www.sonatype.com/products/sonatype-nexus-repository) for storing its artifacts: [https://packages.nuxeo.com/](https://packages.nuxeo.com/).
