@@ -29,8 +29,8 @@ hidden: true
 
 - ***Better keyboard navigation and screen reader support on Global Search:***
   - Tabbing and arrow key navigation is now consistent on global search results, the close (cross) button is keyboard accessible, and screen readers announce only relevant information such as result titles and indexes.
-    -***Improved focus handling:***
-        Unnecessary keyboard focus on headings has been removed to better align with accessibility standards.
+- ***Improved focus handling:***
+  - Unnecessary keyboard focus on headings has been removed to better align with accessibility standards.
 
 
 **Bug Fixes**
