@@ -21,7 +21,7 @@ hidden: true
 **Enhancements** 
 
 - ***Resizable and reorderable data table columns:***
-  - Users can now resize and rearrange table columns by dragging the column headers, making tables easier to personalize and work with.Support for saving table preferences is planned for a future release.
+  - Users can now resize and rearrange table columns by dragging the column headers, making tables easier to personalize and work with. Support for saving table preferences is planned for a future release.
 
 
 
