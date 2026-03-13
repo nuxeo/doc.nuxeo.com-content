@@ -4,7 +4,7 @@ description: Release notes for Nuxeo Aspera Connector.
 tree_item_index: 100
 review:
   comment: ''
-  date: '2020-09-10'
+  date: '2026-03-16'
   status: ok
 toc: true
 ---
