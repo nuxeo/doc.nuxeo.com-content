@@ -33,6 +33,7 @@ This upgrade notes assume that Nuxeo Server is up to date in 10.10 before the up
 The maximum duration to produce a thumbnail is now limited by default to 5min. This limit is applied to the listener in charge of creating a new thumbnail and also to the recomputeThumbnail bulk action.
 
 The limit can be tuned with:
+
 ```
 nuxeo.thumbnail.transaction.timeout.seconds=300
 ```
@@ -115,7 +116,7 @@ Note that `repository.clustering.delay` still exists but is only meaningful for 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25499](https://jira.nuxeo.com/browse/NXP-25499)
 
-### Behavior Changes 
+### Behavior Changes
 
 #### Upgrade from CentOS 7 to Oracle Linux 7 {{> tag 'Since 2021.54'}}
 
@@ -131,6 +132,7 @@ This OS change is not breaking for a standard Nuxeo LTS 2021 server Docker image
 Our Cloud team will handle all necessary configuration changes. Your service will continue seamlessly until the end of life (EOL) of LTS 2021. We are dedicated to ensuring a smooth transition and continuous service without interruption.
 
 **Self-Managed Customers:**
+
 - LTS 2023: The Nuxeo Server LTS 2023 version is not concerned by these changes, and a upgrade to LTS 2023 is the seen as the best course of action. The upgrade process from LTS 2021 to LTS 2023 has been largely streamlined versus previous versions.
 
 - Review and upgrade: For those Customers wishing to continue on LTS 2021 Docker image distribution, particularly if you have significantly customised the standard Docker image, we recommend you review the upcoming changes. A test image is now available for you to ensure compatibility and to facilitate a smooth transition. The image can be accessed using the command:
@@ -142,7 +144,7 @@ Our Cloud team will handle all necessary configuration changes. Your service wil
 
 Oracle will continue to provide maintenance for Oracle Linux 7 until December 1, 2024. Self-managed customers not transitioning to LTS 2023 and rebuilding their own Docker image from the Nuxeo base image are advised to secure extended maintenance from Oracle. This will allow them to benefit from the (security) fixes in the oraclelinux base image and full support between the official end of maintenance for Oracle Linux 7 and the end of LTS 2021's maintenance period.
 
-##### CentOS End of Life 
+##### CentOS End of Life
 
 Please note that CentOS will be officially out of maintenance on the 30th of June 2024. It is strongly recommended that clients move away from CentOS to ensure the continued security of their instance.
 
@@ -180,7 +182,7 @@ There're breaking changes on ConfigurationGenerator, a lot of methods has been r
 
 The new class ConfigurationHolder is the new first citizen to get the Nuxeo Configuration in this layer. You can retrieve it with ConfigurationGenerator#getConfigurationHolder method.
 
-You now can use ```nuxeo.append.templates.SOMETHING=A_TEMPLATE``` parameter in `nuxeo.conf` to append templates to load by the configuration generator.
+You now can use `nuxeo.append.templates.SOMETHING=A_TEMPLATE` parameter in `nuxeo.conf` to append templates to load by the configuration generator.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25667](https://jira.nuxeo.com/browse/NXP-25667)
 
@@ -290,11 +292,13 @@ The `nuxeo.s3.multipart.copy.part.size` ConfigurationService property, formerly 
 The new `nuxeo.s3storage.multipart.copy.part.size` `nuxeo.conf` property should be used instead, default value hasn't changed: 5242880 (5 MB).
 
 If you have contributed a custom `nuxeo.s3.multipart.copy.part.size` ConfigurationService property with an XML component such as:
+
 ```
   <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
     <property name="nuxeo.s3.multipart.copy.part.size">xxxx</property>
   </extension>
-```  
+```
+
 you need to remove it and replace it by `nuxeo.s3storage.multipart.copy.part.size=xxxx` in `nuxeo.conf`. Though, backward compatibility is kept.
 
 The following `nuxeo.conf` properties have been added:
@@ -517,6 +521,7 @@ If you contribute to an operation and want to call it by an alias, you need to c
 (Please note you can't cross contribute to an OperationType implementation, a chain operation can't disable a scripted operation for example)
 
 `ChainOperationType`:
+
 ```
 <component name="org.nuxeo.ecm.automation.test-chain-operation" version="1.0">
   <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
@@ -526,6 +531,7 @@ If you contribute to an operation and want to call it by an alias, you need to c
 ```
 
 `ScriptingOperationType`:
+
 ```
 <component name="org.nuxeo.ecm.automation.test-scripted-operation-disable" version="1.0">
   <require>org.nuxeo.ecm.automation.test-scripted-operation</require>
@@ -715,10 +721,10 @@ More details in the [Nuxeo How to documentation]({{page space='nxdoc' page='how-
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21874](https://jira.nuxeo.com/browse/NXP-21874)
 
-
 #### Add property to set max_expansion on match_phrase_prefix operator {{> tag 'Since 2021.17'}}
 
 Max expansions can be configured through the Configuration service with a contribution like
+
 ```xml
     <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
         <property name=elasticsearch.max_expansions>200</property>
@@ -1146,6 +1152,7 @@ try (MockServerClient client = new MockServerClient("localhost", PORT)) {
 #### Remove the assignment to the ZIP extra field to produce correct ZIP
 
 You can now disable the extra field setting when doing Nuxeo IO export by contributing the following:
+
 ```Java
   <extension target=org.nuxeo.runtime.ConfigurationService point=configuration>
     <property name=nuxeo.core.io.archive.extra.files.count>false</property>
@@ -1158,7 +1165,6 @@ This property has `true` as default as disabling this behavior may impact perfor
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30713](https://jira.nuxeo.com/browse/NXP-30713)
 
-
 #### Bulk SetPropertiesAction - VersioningOption parameter does not take effect when Versioning Service is extended via XML Extension
 
 As documented in the [automatic versioning system](https://doc.nuxeo.com/nxdoc/versioning/#source-based-versioning), the versioning policy order should be higher than `10`, order lower than 10 is reserved for internal purposes.
@@ -1166,6 +1172,7 @@ This restriction is now enforced on LTS 2021, a server having a versioning polic
 On LTS 2019, an ERROR message will be logged during Nuxeo startup.
 
 In addition to disable the automatic versioning system for `setProperties` action, we also have disabled the system for the following system related updates:
+
 - add/remove a document to/from a collection
 - recompute pictureViews
 - add/remove notifications subscriptions
@@ -1187,42 +1194,46 @@ This can impact positively performance by avoiding version creation on the above
 JAAS has been removed (the use of LoginContext, security domains, LoginModules, etc.) and replaced per a direct call to `NuxeoAuthenticationPlugins`.
 
 New methods:
- - `Framework.loginSystem()`
- - `Framework.loginSystem(originatingUser)`
- - `Framework.loginUser(username)`
- - `NuxeoPrincipal.getCurrent()`
- - `NuxeoPrincipal.isCurrentAdministrator()`
+
+- `Framework.loginSystem()`
+- `Framework.loginSystem(originatingUser)`
+- `Framework.loginUser(username)`
+- `NuxeoPrincipal.getCurrent()`
+- `NuxeoPrincipal.isCurrentAdministrator()`
 
 The above `loginSystem` and `loginUser` methods now return a `NuxeoLoginContext` that is `AutoCloseable` and can therefore be used in a try-with-resources.
 
 Deprecated methods:
+
 - `Framework.login()`</br>
-    -> `Framework.loginSystem()`
+  -> `Framework.loginSystem()`
 - `Framework.loginAs(originatingUser)`</br>
-    -> `Framework.loginSystem(originatingUser)`
+  -> `Framework.loginSystem(originatingUser)`
 - `Framework.loginAsUser(username)`</br>
-    -> `Framework.loginUser(username)`
+  -> `Framework.loginUser(username)`
 - `Framework.login(username, password)`</br>
-    -> `Framework.loginUser(username)`
+  -> `Framework.loginUser(username)`
 - `ClientLoginModule.clearThreadLocalLogin()`</br>
-    -> `LoginComponent.clearPrincipalStack()` (INTERNAL)
+  -> `LoginComponent.clearPrincipalStack()` (INTERNAL)
 - `ClientLoginModule.getThreadLocalLogin()`</br>
-    -> `LoginComponent` (INTERNAL)
+  -> `LoginComponent` (INTERNAL)
 - `ClientLoginModule.getCurrentLogin()`</br>
-    -> `LoginComponent.getCurrentPrincipal()`
+  -> `LoginComponent.getCurrentPrincipal()`
 - `ClientLoginModule.getCurrentPrincipal()`</br>
-    -> `NuxeoPrincipal.getCurrent()`
+  -> `NuxeoPrincipal.getCurrent()`
 - `ClientLoginModule.isCurrentAdministrator()`</br>
-    -> `NuxeoPrincipal.isCurrentAdministrator()`
+  -> `NuxeoPrincipal.isCurrentAdministrator()`
 - `LoginStack`
 
 These extension points or part of their contributions are removed:
- - `<loginModulePlugin>` in the element `<authenticationPlugin>` of extension point `authenticators` of `org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService`
- - the extension point domains of `org.nuxeo.runtime.LoginComponent` (which included registration of `LoginModule` classes)
- - the extension point plugin of `org.nuxeo.ecm.platform.login.LoginPluginRegistry` (which included registration of `LoginPlugin` classes)
+
+- `<loginModulePlugin>` in the element `<authenticationPlugin>` of extension point `authenticators` of `org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService`
+- the extension point domains of `org.nuxeo.runtime.LoginComponent` (which included registration of `LoginModule` classes)
+- the extension point plugin of `org.nuxeo.ecm.platform.login.LoginPluginRegistry` (which included registration of `LoginPlugin` classes)
 
 Behavior change:
- - `NuxeoAuthenticationPlugin.handleRetrieveIdentity` should now contain all the authentication code, and return a `UserIdentificationInfo with credentialsChecked = true` (using the 1-arg constructor) if the credentials have already been checked by the auth plugin itself. Otherwise the method may return a `UserIdentificationInfo` that includes a username and password, to let the generic filter check the password against the UserManager.
+
+- `NuxeoAuthenticationPlugin.handleRetrieveIdentity` should now contain all the authentication code, and return a `UserIdentificationInfo with credentialsChecked = true` (using the 1-arg constructor) if the credentials have already been checked by the auth plugin itself. Otherwise the method may return a `UserIdentificationInfo` that includes a username and password, to let the generic filter check the password against the UserManager.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-27942](https://jira.nuxeo.com/browse/NXP-27942)
 
