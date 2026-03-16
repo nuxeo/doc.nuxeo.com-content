@@ -518,3 +518,28 @@ The optional `bucket_prefix` allows you to use a "subfolder" of the bucket. The 
 The `awsid`, `awssecret`, `awstoken` and `region` are deprecated and should instead be configured through `nuxeo.aws.accessKeyId`, `nuxeo.aws.secretKey`,`nuxeo.aws.sessionToken` and `nuxeo.aws.region` or through implicit IAM instance roles (see above).
 
 S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='batch-handler'}}) and a [TransientStore]({{page space='nxdoc' page='transient-store'}}) using contributions that can be found in the s3binaries template file [s3directupload-config.xml.nxftl](https://github.com/nuxeo/nuxeo/blob/2025/packages/nuxeo-amazon-s3-package/src/main/resources/install/templates/s3binaries/nxserver/config/s3directupload-config.xml.nxftl).
+
+## Configuration for MinIO
+
+The [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) can be used with [MinIO](https://www.min.io/).
+
+In that case, the `nuxeo.s3storage.endpoint` property must point to the url where the MinIO cluster is deployed. Here is a minimal configuration:
+```
+nuxeo.aws.accessKeyId=myAccessKeyId
+nuxeo.aws.secretKey=mySecretKey
+nuxeo.aws.region=myRegion
+
+nuxeo.s3storage.endpoint=https://myminio:9100
+nuxeo.s3storage.bucket=myBucket
+```
+
+### Self-signed certificate for HTTPS
+
+In development or testing stage, you may want to use a self-signed certificate to secure the communication between Nuxeo and MinIO. This self-signed certificate must be added to a Java Trust Store and registered with:
+```
+nuxeo.aws.trustStorePath=/path/to/truststore.jks
+nuxeo.aws.trustStorePassword=myPassword
+nuxeo.aws.trustStoreType=jks
+```
+
+Additionally, since `lts-2025`, Nuxeo server uses the [S3 CRT Client](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/crt-based-s3-client.html) for downloading and uploading binaries. The S3 CRT Client does not use a Java Trust Store but instead uses the OS trust store where the self-signed certificate must also be added.

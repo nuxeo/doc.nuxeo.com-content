@@ -1,19 +1,19 @@
 ---
-title: Nuxeo Aspera 2025.1.7
-description: Release notes for Nuxeo Aspera Connector 2025.1.7
+title: Nuxeo Aspera 2025.2.0
+description: Release notes for Nuxeo Aspera Connector 2025.2.0
 tree_item_index: 790
 review:
   comment: ''
-  date: '2026-03-02'
+  date: '2026-03-16'
   status: ok
 toc: true
 hidden: true
 ---
 
 
-{{! multiexcerpt name='nuxeo-aspera-connector-2025-1-7'}}
+{{! multiexcerpt name='nuxeo-aspera-connector-2025-2-0'}}
 
-## What's New in Aspera for LTS 2025 (Version 2025.1.7)
+## What's New in Aspera for LTS 2025 (Version 2025.2.0)
 
 This release includes a bug fix, vulnerability fixes and some technical enhancements.
 
