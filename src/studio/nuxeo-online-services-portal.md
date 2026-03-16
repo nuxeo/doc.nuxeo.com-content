@@ -100,7 +100,7 @@ To access your project's settings, click Edit button next to its name. From the 
   - access existing instances of your project and register a new one in Instances tab
   - add hooks from Hooks tab
 
-![]({{file name='my-studio-projects.png'}} ?w=600,border=true)
+![]({{file name='my-studio-projects-v2.png'}} ?w=600,border=true)
 
 ## My Tokens
 
