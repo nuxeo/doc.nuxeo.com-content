@@ -17,13 +17,10 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2025 (Version 2025.13.0)
 
-
 **Enhancements** 
 
 - ***Resizable and reorderable data table columns:***
   - Users can now resize and rearrange table columns by dragging the column headers, making tables easier to personalize and work with. Support for saving table preferences is planned for a future release.
-
-
 
 **Accessibility Improvements** 
 
@@ -31,7 +28,6 @@ hidden: true
   - Tabbing and arrow key navigation is now consistent on global search results, the close (cross) button is keyboard accessible, and screen readers announce only relevant information such as result titles and indexes.
 - ***Improved focus handling:***
   - Unnecessary keyboard focus on headings has been removed to better align with accessibility standards.
-
 
 **Bug Fixes**
 
@@ -46,7 +42,6 @@ hidden: true
 
 - ***Improved file uploads in create, edit, and import screens:***
   - Multiple files uploaded via the dropzone are now correctly appended and displayed together before document creation.
-
 
 **Performance, Security, and Reliability**
 
