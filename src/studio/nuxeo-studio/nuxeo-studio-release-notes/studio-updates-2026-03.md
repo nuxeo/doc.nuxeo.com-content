@@ -16,7 +16,7 @@ toc: true
 Self service trial creation has been enabled in NOS Connect, supporting faster onboarding for partners and prospects.
 
 **What Changed:**
-Authorized users can now directly create time bound trial environments from the Connect portal for partners, prospects, and other external stakeholders, with Studio and Base services provisioned by default, supporting faster demos, onboarding, and enablement. Trials are governed by role based access and automatic expiry, balancing faster adoption with cost and usage governance
+Authorized users can now directly create time bound trial environments from the Connect portal for partners, prospects, and other external stakeholders, with Studio and Base services provisioned by default, supporting faster demos, onboarding, and enablement. Trials are governed by role based access and automatic expiry, balancing faster adoption with cost and usage governance.
 
 **Impact:**
 Partners and other external parties can generate trials instantly for demos, evaluations, and training, reducing delays, operational overhead, and dependency on support teams.
@@ -28,7 +28,7 @@ Improved responsiveness and clarity in account and service management workflows.
 The UI now updates immediately after clicking Confirm when assigning or modifying services, removing the need for manual page refreshes.
 
 **Impact:**
-Admins get instant confirmation that changes are applied, reducing confusion, duplicate actions, and support requests.
+Administrators get instant confirmation that changes are applied, reducing confusion, duplicate actions, and support requests.
 
 ### Improved Visibility of Assigned Users for OrgAdmins
 Resolved inconsistencies between assigned users and what OrgAdmins see in the UI.
@@ -38,7 +38,6 @@ OrgAdmins can now view all users assigned to their services, including Hyland an
 
 **Impact:**
 More accurate service management, fewer access mismatches, and increased confidence in account administration.
-
 
 ##  Security & Stability Improvements
 
