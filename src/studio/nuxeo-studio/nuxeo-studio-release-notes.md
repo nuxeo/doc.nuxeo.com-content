@@ -21,7 +21,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [March 2026]({{page page='studio-updates-2026-03'}})                  | Relaese Version 2026.0.1 Self-Service Trial Creation, Security & Stability Improvements |
+| [March 2026]({{page page='studio-updates-2026-03'}})                  | Release Version 2026.0.1 Self-Service Trial Creation, Security & Stability Improvements |
 | [February 2026]({{page page='studio-updates-2026-02'}})                  | Comprehensive Document Browser for JSF Deprecation, Secure User Password Encryption Implementation. |
 | [January 2026]({{page page='studio-updates-2026-01'}})                  | Enhanced Git workflow with conflict resolution, deployment traceability, multi-branch release fixes, and version selection capabilities. |
 | [November 2025]({{page page='studio-updates-2025-11'}})                  | Resolved Client Connect Document Creation page |
