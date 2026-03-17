@@ -463,7 +463,7 @@ After you completed the project creation, you get this folder structure:
     ```xml
     <repository>
       <id>public</id>
-      <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
+      <url>https://packages.nuxeo.com/repository/maven-public-lts</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -478,7 +478,7 @@ After you completed the project creation, you get this folder structure:
     ```xml
     <repository>
       <id>public-snapshot</id>
-      <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
+      <url>https://packages.nuxeo.com/repository/maven-public-snapshots</url>
       <releases>
         <enabled>false</enabled>
       </releases>
