@@ -724,9 +724,17 @@ Nuxeo uses 3 indexes:
 1. The repository index, named `nuxeo` by default, doesn't need this migration because the repository
    will be re-indexed in the next step, so, once this index has been backed up, you can delete it.
 
-2. The sequence index named `nuxeo-uidgen` will be re-created at startup, so, once this index has been backed up, you can delete it.
+2. The audit index named `nuxeo-audit` needs to be migrated. Follow the [re-index upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/reindex-upgrade.html).
 
-3. The audit index named `nuxeo-audit` needs to be migrated. Follow the [re-index upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/reindex-upgrade.html).
+3. The sequence index named `nuxeo-uidgen` will be re-created at startup, so, once this index has been backed up, you can delete it.
+
+{{#> callout type='warning'}}
+The `nuxeo-uidgen` index must be deleted **after** the audit index migration is complete and **before** restarting Nuxeo. This ensures that the sequence is re-initialized with the value of the highest audit record, preventing duplicate IDs.
+{{/callout}}
+
+{{#> callout type='note'}}
+Only the default `uidgen` sequence is automatically re-created at startup. If you have other sequences, they must be recreated and correctly initialized to the right ID to also avoid duplicate IDs.
+{{/callout}}
 
 Once the Elasticsearch cluster is upgraded, start Nuxeo LTS 2021 and proceed to a [repository re-index]({{page page='elasticsearch-setup'}}#reindex).
 
