@@ -1,19 +1,19 @@
 ---
-title: Nuxeo Aspera 2023.9.0
-description: Release notes for Nuxeo Aspera Connector 2023.9.0
+title: Nuxeo Aspera 2023.9.34
+description: Release notes for Nuxeo Aspera Connector 2023.9.34
 tree_item_index: 790
 review:
   comment: ''
-  date: '2026-03-16'
+  date: '2026-03-19'
   status: ok
 toc: true
 hidden: true
 ---
 
 
-{{! multiexcerpt name='nuxeo-aspera-connector-2023-9-0'}}
+{{! multiexcerpt name='nuxeo-aspera-connector-2023-9-34'}}
 
-## What's New in Aspera for LTS 2023 (Version 2023.9.0)
+## What's New in Aspera for LTS 2023 (Version 2023.9.34)
 
 This release includes a bug fix, vulnerability fixes and some technical enhancements.
 
@@ -49,7 +49,7 @@ The Aspera connector now fully supports **pause, resume, and remove** actions in
 
 #### Automated Code Coverage and SonarCloud
 
-* Added automated code coverage reporting and SonarCloud integration for both backend and frontend of the Aspera connector on the `lts‑2025` branch, improving test visibility and code quality.
+* Added automated code coverage reporting and SonarCloud integration for of the Aspera connector on the `lts‑2025` branch, improving test visibility and code quality.
 
 * Extended code coverage support to the `lts‑2023` branch for consistent quality metrics across supported versions.
 
