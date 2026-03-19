@@ -11,5 +11,4 @@ toc: true
 
 {{{multiexcerpt 'nuxeo-aspera-connector-2023-9-34' page='nuxeo-aspera-connector-2023-9-34'}}}
 
-{{{multiexcerpt 'nuxeo-aspera-connector-2023-8-9' page='nuxeo-aspera-connector-2023-8-9'}}}
 
