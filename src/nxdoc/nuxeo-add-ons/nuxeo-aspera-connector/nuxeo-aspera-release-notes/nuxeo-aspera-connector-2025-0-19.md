@@ -7,6 +7,7 @@ review:
   date: '2025-08-18'
   status: ok
 toc: true
+hidden: false
 ---
 
 {{! multiexcerpt name='nuxeo-aspera-connector-2025-0-19'}}

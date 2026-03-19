@@ -1,13 +1,13 @@
 ---
 title: Nuxeo Aspera 2025.1.6
 description: Release notes for Nuxeo Aspera Connector 2025.1.6
-tree_item_index: 800
+tree_item_index: 854
 review:
   comment:
   date: '2025-10-13'
   status: ok
 toc: true
-hidden: true
+hidden: false
 ---
 
 
