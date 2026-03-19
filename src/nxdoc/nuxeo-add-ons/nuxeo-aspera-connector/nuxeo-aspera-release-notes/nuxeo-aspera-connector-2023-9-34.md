@@ -49,7 +49,7 @@ The Aspera connector now fully supports **pause, resume, and remove** actions in
 
 #### Automated Code Coverage and SonarCloud
 
-* Added automated code coverage reporting and SonarCloud integration for of the Aspera connector on the `lts‑2025` branch, improving test visibility and code quality.
+* Added automated code coverage reporting and SonarCloud integration for the Aspera connector on the `lts‑2025` branch, improving test visibility and code quality.
 
 * Extended code coverage support to the `lts‑2023` branch for consistent quality metrics across supported versions.
 
