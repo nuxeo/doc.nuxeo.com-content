@@ -10,7 +10,7 @@ toc: true
 ---
 {{! multiexcerpt name='studio-updates-2026-03'}}
 
-# March Major Release – v2026.0.1
+# March Release v2026.0.1
 
 ##  New Features
 
@@ -52,7 +52,7 @@ Enhanced validation and handling of workspace deserialization to prevent unautho
 **Impact:**
 Improves overall platform security posture and reduces exposure to potential exploitation risks.
 
-# March Minor Release – v2026.1.0
+# March Release v2026.1.0
 
 ### More Reliable NOS Studio Builds
 Improved consistency and predictability of Studio builds when multiple artifacts share the same version.
