@@ -79,6 +79,8 @@ Although this feature is always usable, even out of Nuxeo Studio context, it is 
 
 You can go to the automation documentation on your server: `http://NUXEO_SERVER/nuxeo/site/automation/doc`
 
+The installation of addon [Nuxeo Rest Api Swagger Documentation](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-rest-api-documentation) is required since **LTS 2021.60** and **LTS 2023.18**.
+
 You see the list of all operations, and all chains that are declared on your server. Any chain that you have designed using Studio should be declared there. For each chain, you see a  "trace" section. From there, you can enable the trace (actually it enables it globally), and you can download traces, either light (if not enable) or full.
 
 ![]({{file name='Screen Shot 2013-11-26 at 00.27.20.png'}} ?w=250,border=true,thumbnail=true)
