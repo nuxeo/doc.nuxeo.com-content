@@ -10,8 +10,6 @@ toc: true
 ---
 {{! multiexcerpt name='studio-updates-2026-03'}}
 
-# March Release v2026.0.1
-
 ##  New Features
 
 ### Self Service Trial Environment Creation (NOS Connect)
@@ -41,7 +39,16 @@ OrgAdmins can now view all users assigned to their services, including Hyland an
 **Impact:**
 More accurate service management, fewer access mismatches, and increased confidence in account administration.
 
-##  Security & Stability Improvements
+### Better Lifecycle Control for Clients, Users, Groups, and Services
+Easier management and cleanup of obsolete directory and service data.
+
+**What Changed:**
+Administrators can now delete clients, groups, users, services, and registration requests directly within NOS. This removes the need for manual interventions or custom scripts to clean up old or unused entries.
+
+**Impact:**
+Day‑to‑day account and service hygiene becomes simpler. Test accounts, unused groups, decommissioned clients, and stale registration requests can be removed cleanly, reducing clutter, confusion, and operational overhead.
+
+##  Security, Stability Improvements and Bugfixes
 
 ### Path Injection Vulnerability Fix
 Strengthened platform security by addressing a path injection vulnerability in deserialization logic.
@@ -52,8 +59,6 @@ Enhanced validation and handling of workspace deserialization to prevent unautho
 **Impact:**
 Improves overall platform security posture and reduces exposure to potential exploitation risks.
 
-# March Release v2026.1.0
-
 ### More Reliable NOS Studio Builds
 Improved consistency and predictability of Studio builds when multiple artifacts share the same version.
 
@@ -62,15 +67,6 @@ NOS Studio now reliably selects the correct build artifact even when multiple fi
 
 **Impact:**
 Developers and release engineers see fewer build discrepancies and “works on my machine” issues, with more stable, repeatable builds across environments.
-
-### Better Lifecycle Control for Clients, Users, Groups, and Services
-Easier management and cleanup of obsolete directory and service data.
-
-**What Changed:**
-Administrators can now delete clients, groups, users, services, and registration requests directly within NOS. This removes the need for manual interventions or custom scripts to clean up old or unused entries.
-
-**Impact:**
-Day‑to‑day account and service hygiene becomes simpler. Test accounts, unused groups, decommissioned clients, and stale registration requests can be removed cleanly, reducing clutter, confusion, and operational overhead.
 
 ### Stronger Alignment with Okta Password Policies
 Reduced risk of inconsistent user states caused by password policy rejections.
