@@ -21,21 +21,21 @@ Added the `nuxeo.freemarker.processor.mimetype.max.size` configuration parameter
 
 ## Fix Blob Dispatch to Provider With Caching Configuration, Key Digest Strategy, and Optimized Copy
 
-Blobs can now be dispatched between heterogeneous blob providers.
+Blobs can now be dispatched between heterogeneous blob providers, from LocalBlobProvider to S3BlobProvider.
 
-Blobs can now be dispatched from LocalBlobProvider to S3BlobProvider.
 ## Plug hasFolderishChild Json Content Enricher on Search Service
 
-The "hasFolderishChild" JSON enricher now relies on the search service
+The "hasFolderishChild" JSON enricher now relies on the search service.
 
 The `org.nuxeo.ecm.core.io.marshallers.json.enrichers.HasFolderishChildJsonEnricher` has been deprecated in favor of `org.nuxeo.ecm.restapi.server.enrichers.HasFolderishChildJsonEnricher`.The new enricher relies on the `SearchService`, which uses indexed backends (such as OpenSearch) to resolve queries more efficiently, resulting in better performance for operations like the `hasFolderishChild` enrichment.
+
 ## Unable to Create User Preferences as a Non-Admin User
 
-Non-admin users can create preferences
+Non-admin users can now create preferences.
 
 ## Fix ByteRange Download With an AES Blob Provider
 
-Download with byte range now works with AESBlobProvider
+Download with byte range now works with AESBlobProvider.
 
 
 {{! /multiexcerpt}}
