@@ -246,7 +246,7 @@ The Nuxeo Shell is available at the Admin Center, in the "Monitoring" tab and al
 
 Nuxeo Shell can be installed in Eclipse adding the following repository: Nuxeo ECR - [http://osgi.nuxeo.org/p2/ecr/ide/](http://osgi.nuxeo.org/p2/ecr/ide/), then install "ECR Shell Feature".
 
-[Download the last released version of Nuxeo Shell](http://www.nuxeo.org/static/latest-release/nuxeo-shell) for a manual install. You can browse available versions at [https://maven.nuxeo.org](https://maven.nuxeo.org/nexus/index.html#nexus-search;gav~org.nuxeo.shell~nuxeo-shell~~~) (or pick [latest](https://maven.nuxeo.org/nexus/service/local/artifact/maven/redirect?r=public-releases&g=org.nuxeo.shell&a=nuxeo-shell&v=LATEST&e=jar)).
+[Download the last released version of Nuxeo Shell](http://www.nuxeo.org/static/latest-release/nuxeo-shell) for a manual install. You can browse available versions at [https://packages.nuxeo.com](https://packages.nuxeo.com/nexus/index.html#nexus-search;gav~org.nuxeo.shell~nuxeo-shell~~~) (or pick [latest](https://packages.nuxeo.com/nexus/service/local/artifact/maven/redirect?r=public-releases&g=org.nuxeo.shell&a=nuxeo-shell&v=LATEST&e=jar)).
 {{/callout}}
 
 ## Overview
