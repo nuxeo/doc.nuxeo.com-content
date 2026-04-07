@@ -1,5 +1,5 @@
 ---
-title: Search Setup for OpenSearch 1.x and Elasticsearch 7.x–8.x
+title: OpenSearch 1.x and Elasticsearch 7.x–8.x
 description: Install the OpenSearch 1.x / Elasticsearch 7–8 search client packages, optional embedded mode, and external Elasticsearch or OpenSearch clusters for Nuxeo LTS 2025.
 review:
     comment: ''
@@ -147,4 +147,5 @@ OPENSEARCH_JAVA_OPTS=-Xms6g -Xmx6g
 - [Search setup]({{page page='search-setup'}}) — [Configuring Nuxeo to Access the Search Cluster]({{page page='search-setup'}}#configuring-nuxeo-to-access-the-search-cluster), reindex, mappings, multi-repository, and troubleshooting (all illustrated with the `opensearch1` property namespace).
 - [Search setup for OpenSearch 2.x]({{page page='search-setup-opensearch2'}}) — OpenSearch 2.x client (`opensearch2` namespace).
 - [Search setup for Elasticsearch 9.x]({{page page='search-setup-elasticsearch9'}}) — Elasticsearch 9.x client (`elasticsearch9` namespace).
+- [Search setup for MongoDB Atlas Search]({{page page='search-setup-mongoatlas'}}) — MongoDB Atlas Search client (`mongoatlas` namespace).
 - [Nuxeo Search Client OpenSearch]({{page page='nuxeo-search-client-opensearch'}}) / [Nuxeo Search Client Elasticsearch]({{page page='nuxeo-search-client-elasticsearch'}}) — Marketplace packages.

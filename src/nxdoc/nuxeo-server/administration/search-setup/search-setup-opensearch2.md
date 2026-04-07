@@ -1,5 +1,5 @@
 ---
-title: Search Setup for OpenSearch 2.x
+title: OpenSearch 2.x
 description: Configure Nuxeo LTS 2025 with an OpenSearch 2.x cluster using the opensearch2 search client packages.
 review:
     comment: ''

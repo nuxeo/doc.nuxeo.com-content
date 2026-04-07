@@ -1,5 +1,5 @@
 ---
-title: Search Setup for Elasticsearch 9.x
+title: Elasticsearch 9.x
 description: Configure Nuxeo LTS 2025 with an Elasticsearch 9.x cluster using the elasticsearch9 search client packages.
 review:
     comment: ''
@@ -14,7 +14,7 @@ confluence:
     ajs-parent-page-title: Search Setup
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-tree_item_index: 1010
+tree_item_index: 1007
 ---
 
 {{! excerpt}}
