@@ -4,7 +4,7 @@ description: Documentation page about the Nuxeo OpenSearch packages.
 tree_item_index: 2590
 review:
   comment: ''
-  date: '2025-07-04'
+  date: '2026-04-07'
   status: ok
 toc: true
 ---
@@ -20,5 +20,5 @@ Therefore, we provide 2 OpenSearch packages to rely on this external search engi
 
 ## Configuration 
 
-For more information about the configuration of the OpenSearch package, please read the [Search documentation]({{page page='search-setup'}}#setting-up-an-opensearch-2x-cluster).
+For configuration of the OpenSearch 1.x / Elasticsearch 7–8 client, see **[Search setup for OpenSearch 1.x and Elasticsearch 7.x–8.x]({{page page='search-setup-opensearch1'}})** and the shared procedures on [Search setup]({{page page='search-setup'}}) (`opensearch1` examples). For OpenSearch 2.x, see **[Search setup for OpenSearch 2.x]({{page page='search-setup-opensearch2'}})** and reuse those shared steps with the `opensearch2` namespace.
 

@@ -138,7 +138,7 @@ nuxeo-search-client-opensearch2: OS1 ✅, OS2 ✅, OS3 ✅, ES7 ✅, ES8 🚫, E
 nuxeo-audit-opensearch2:         OS1 ✅, OS2 ✅, OS3 ✅, ES7 ✅, ES8 🚫, ES9 🚫, embed ✅
 ```
 
-More information can be found on the [OpenSearch Setup]({{page page='search-setup'}}) page.
+More information can be found on the [Search setup for OpenSearch 1.x and Elasticsearch 7.x–8.x]({{page page='search-setup-opensearch1'}}) and [Search setup]({{page page='search-setup'}}) pages.
 
 ## Elasticsearch
 
@@ -157,7 +157,7 @@ nuxeo-search-client-elasticsearch9: OS1 🚫, OS2 🚫, OS3 🚫, ES7 🚫, ES8 
 nuxeo-audit-elasticsearch9:         OS1 🚫, OS2 🚫, OS3 🚫, ES7 🚫, ES8 🚫, ES9 ✅, embed 🚫
 ```
 
-More information can be found on the [Elasticsearch Setup]({{page page='search-setup'}}) page.
+More information can be found on the [Search setup for OpenSearch 1.x and Elasticsearch 7.x–8.x]({{page page='search-setup-opensearch1'}}) (Elasticsearch 7–8 via `nuxeo-search-client-opensearch1`), [Search setup for Elasticsearch 9.x]({{page page='search-setup-elasticsearch9'}}), and [Search setup]({{page page='search-setup'}}) pages.
 
 ## Kafka
 
