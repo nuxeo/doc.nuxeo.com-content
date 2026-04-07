@@ -469,15 +469,16 @@ history:
 This page provides several configuration use cases for [Elasticsearch](https://www.nuxeo.com/partners/technology/elasticsearch/) and [Opensearch](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/).
 {{! /excerpt}}
 
-Pick the guide that matches your search stack (packages, optional embedded server, cluster install). Then use this page for shared Nuxeo configuration from [Configuring Nuxeo to Access the Search Cluster](#configuring-nuxeo-to-access-the-search-cluster) onward (reindex, mappings, multi-repository, troubleshooting). Examples below use the `opensearch1` property namespace in `nuxeo.conf`; replace that segment with `opensearch2` or `elasticsearch9` when you use another client.
+Pick the guide that matches your search stack (packages, optional embedded server, cluster install). Then use this page for shared Nuxeo configuration from [Configuring Nuxeo to Access the Search Cluster](#configuring-nuxeo-to-access-the-search-cluster) onward (reindex, mappings, multi-repository, troubleshooting). Examples below use the `opensearch1` property namespace in `nuxeo.conf`; replace that segment with `opensearch2`, `elasticsearch9`, or `mongoatlas` when you use another client.
 
 | Search stack | `nuxeo.conf` namespace | Main package | Dedicated setup |
 | --- | --- | --- | --- |
 | OpenSearch 1.x, Elasticsearch 7.x or 8.x | `opensearch1` | `nuxeo-search-client-opensearch1` | [Search setup for OpenSearch 1.x and Elasticsearch 7.x–8.x]({{page page='search-setup-opensearch1'}}) |
 | OpenSearch 2.x | `opensearch2` | `nuxeo-search-client-opensearch2` | [Search setup for OpenSearch 2.x]({{page page='search-setup-opensearch2'}}) |
 | Elasticsearch 9.x | `elasticsearch9` | `nuxeo-search-client-elasticsearch9` | [Search setup for Elasticsearch 9.x]({{page page='search-setup-elasticsearch9'}}) |
+| MongoDB Atlas Search (repository on MongoDB Atlas) | `mongoatlas` | `nuxeo-search-client-mongoatlas` | [MongoDB Atlas Search]({{page page='search-setup-mongoatlas'}}) |
 
-Audit and optional embedded packages are listed on each guide. For a Marketplace-oriented overview, see [Nuxeo Search Client OpenSearch]({{page page='nuxeo-search-client-opensearch'}}) and [Nuxeo Search Client Elasticsearch]({{page page='nuxeo-search-client-elasticsearch'}}).
+Audit and optional embedded packages are listed on each guide where they apply. For a Marketplace-oriented overview, see [Nuxeo Search Client OpenSearch]({{page page='nuxeo-search-client-opensearch'}}) and [Nuxeo Search Client Elasticsearch]({{page page='nuxeo-search-client-elasticsearch'}}).
 
 ## Configuring Nuxeo to Access the Search Cluster
 
