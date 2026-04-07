@@ -3,7 +3,7 @@ title: Search Setup
 description: This page provides several configuration use cases for Elasticsearch and Opensearch.
 review:
     comment: ''
-    date: '2025-11-12'
+    date: '2026-04-07'
     status: ok
 labels:
     - lts2016-ok
@@ -469,126 +469,15 @@ history:
 This page provides several configuration use cases for [Elasticsearch](https://www.nuxeo.com/partners/technology/elasticsearch/) and [Opensearch](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/).
 {{! /excerpt}}
 
-## Setting up an OpenSearch 1.x, Elasticsearch 7.x or 8x Cluster
+Pick the guide that matches your search stack (packages, optional embedded server, cluster install). Then use this page for shared Nuxeo configuration from [Configuring Nuxeo to Access the Search Cluster](#configuring-nuxeo-to-access-the-search-cluster) onward (reindex, mappings, multi-repository, troubleshooting). Examples below use the `opensearch1` property namespace in `nuxeo.conf`; replace that segment with `opensearch2` or `elasticsearch9` when you use another client.
 
-To support OpenSearch 1.x, Elasticsearch 7x or 8x clusters, you need to install `nuxeo-search-client-opensearch1` package.
+| Search stack | `nuxeo.conf` namespace | Main package | Dedicated setup |
+| --- | --- | --- | --- |
+| OpenSearch 1.x, Elasticsearch 7.x or 8.x | `opensearch1` | `nuxeo-search-client-opensearch1` | [Search setup for OpenSearch 1.x and Elasticsearch 7.x–8.x]({{page page='search-setup-opensearch1'}}) |
+| OpenSearch 2.x | `opensearch2` | `nuxeo-search-client-opensearch2` | [Search setup for OpenSearch 2.x]({{page page='search-setup-opensearch2'}}) |
+| Elasticsearch 9.x | `elasticsearch9` | `nuxeo-search-client-elasticsearch9` | [Search setup for Elasticsearch 9.x]({{page page='search-setup-elasticsearch9'}}) |
 
-OpenSearch 1 is a fork of Elasticsearch 7, except some advanced features (not used by Nuxeo) they are fully compatible.
-
-The `nuxeo-search-client-opensearch1` package defines index settings, mappings and uses the Rest API according to Elasticsearch 7 version (equivalent to OpenSearch 1 version). 
-It relies on OpenSearch 1.x client library to access the search cluster.
-
-Note that for historical reasons you may find some "Elasticsearch" occurrences in configuration properties.
-Because they are compatible for these versions, Elasticsearch and OpenSearch could be used interchangeably in the documentation.
-
-In addition to OpenSearch 1 and Elasticsearch 7, Nuxeo also works with Elasticsearch 8 cluster, as Elasticsearch 8 being backward compatible and able to honor Elasticsearch 7 API.
-
-Please refer to [Compatibility Matrix]({{page page='compatibility-matrix'}}#elasticsearch) page for more information on the exact supported versions.
-
-### Embedded Mode
-
-Unlike previous versions, there is no default embedded mode in Nuxeo LTS 2025. If you want to set up an OpenSearch server that runs in the same JVM as the Nuxeo Platform's, you have to install explicitly the `nuxeo-opensearch1-embed` package.
-
-{{#> callout type='warning' }}
-This embedded mode **is only for testing purpose** and should not be used in production, neither OpenSearch nor Nuxeo can support an embedded installation.
-{{/callout}}
-
-For production you need to setup a Search cluster.
-
-### Installing an Elasticsearch Cluster
-
-Refer to the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) to install and secure your cluster. Basically:
-
-- Don't run Elasticsearch open to the public.
-- Don't run Elasticsearch as root.
-- Secure the connection between Nuxeo and Elasticsearch:
-  - Elasticsearch 7 requires [the X-Pack extension](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/setup-xpack.html) to enable secured communication between Nuxeo and Elasticsearch.
-    Please follow this guide to [Securing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-settings.html).
-  - Elasticsearch 8 security is enabled by default. Follow this guide for [further security configuration](https://www.elastic.co/guide/en/elasticsearch/reference/8.7/security-settings.html).
-- Follow the [Elasticsearch REST Security APIs documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-api.html) for configuring a [user](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-api-put-user.html) and [role](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-api-put-role.html).
-
-{{#> callout type='tip' }}
-An example on how to create a role:
-```bash
-curl -XPOST -u elastic 'localhost:9200/_security/role/nuxeo_role' -H "Content-Type: application/json" -d '{
-  "cluster" : [
-    "all"
-  ],
- "indices" : [
-   {
-     "names" : [ "nuxeo*" ],
-     "privileges" : [ "all" ]
-   }
- ]
-}'
-```
-An example on how to create a user for that role:
-```bash
-curl -XPOST -u elastic 'localhost:9200/_security/user/nuxeo_user' -H "Content-Type: application/json" -d '{
-  "password" : "nuxeo_secret_password",
-  "full_name" : "Nuxeo User",
-  "roles" : [ "nuxeo_role" ]
-}'
-```
-{{/callout}}
-
-
-#### Recommended Tuning
-
-If you have a large number of documents or if you use Nuxeo in cluster you may reach the default configuration limitation, here are some recommended tuning:
-
-Consider disabling the OS swapping or using other [Elasticsearch option](https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#_swapping_is_the_death_of_performance) to prevent the heap to be swapped.
-
-In `/etc/default/elasticsearch` file you can increase the JVM heap to half of the available OS memory:
-
-```
-# For a dedicated node with 12g of RAM
-ES_JAVA_OPTS="-Xms6g -Xmx6g"
-```
-
-### Installing an OpenSearch Cluster
-
-Refer to the [OpenSearch documentation](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/) to install OpenSearch. Basically:
-
-- Don't run OpenSearch open to the public.
-- Don't run OpenSearch as root.
-- Secure the connection between Nuxeo and OpenSearch, the security plugin is enabled by default with demo values which need to be replaced. See [OpenSearch Security Configuration](https://opensearch.org/docs/latest/security/configuration/index/) for guidance.
-- Follow the OpenSearch [Access Control API documentation](https://opensearch.org/docs/1.3/security/access-control/api) for configuring a [user](https://opensearch.org/docs/1.3/security/access-control/api/#create-user) and [role](https://opensearch.org/docs/1.3/security/access-control/api/#create-role).
-
-{{#> callout type='tip' }}
-An example on how to create a role:
-```bash
-curl -XPUT -u admin http://localhost:9200/_plugins/_security/api/roles/nuxeo_role -H "Content-Type: application/json" -d '{
-  "cluster_permissions" : [
-    "all"
-  ],
- "index_permissions" : [
-   {
-     "index_patterns" : [ "nuxeo*" ],
-     "allowed_actions" : [ "all" ]
-   }
- ]
-}'
-```
-An example on how to create a user for that role:
-```bash
-curl -XPUT -u admin http://localhost:9200/_plugins/_security/api/internalusers/nuxeo_user -H "Content-Type: application/json" -d '{
-  "password" : "nuxeo_secret_password",
-  "description" : "Nuxeo User",
-  "backend_roles" : [ "nuxeo_role" ]
-}'
-```
-{{/callout}}
-
-#### Recommended Tuning
-
-If you have a large number of documents or if you use Nuxeo in cluster you may reach the default configuration limitation, here are some [recommended tuning OpenSearch options](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/#important-settings)
-
-You can increase the JVM heap to half of the available OS memory:
-```
-# For a dedicated node with 12g of RAM
-OPENSEARCH_JAVA_OPTS=-Xms6g -Xmx6g
-```
+Audit and optional embedded packages are listed on each guide. For a Marketplace-oriented overview, see [Nuxeo Search Client OpenSearch]({{page page='nuxeo-search-client-opensearch'}}) and [Nuxeo Search Client Elasticsearch]({{page page='nuxeo-search-client-elasticsearch'}}).
 
 ## Configuring Nuxeo to Access the Search Cluster
 
@@ -694,13 +583,9 @@ curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo/_set
 
 ```
 
-## Disabling OpenSearch
+## Disabling OpenSearch/Elasticsearch
 
-Simply don't install the `nuxeo-search-client-opensearch1` package.
-
-### Disabling OpenSearch for Audit Logs{{> anchor 'disabling-es-for-audit-logs'}}
-
-Simply, don't install the `nuxeo-audit-opensearch1` package.
+Simply don't install any `nuxeo-search-client-*` or `nuxeo-audit-*` package.
 
 ## Rebuilding the Repository Index{{> anchor 'reindex'}}
 
@@ -1005,40 +890,6 @@ You need to define an index for each repository. This is done by adding an `elas
 It is not possible to disable contribution to an `elasticSearchIndex` for a specific repository. Each repository requires a dedicated index. You can still use a custom `JsonESDocumentWriter` to remove fields or schemas depending on the repository.
 {{/callout}}
 
-## Setting up an OpenSearch 2.x Cluster{{> anchor 'setting-up-opensearch2'}}
-
-In order to use an OpenSearch 2.x cluster, you need to install the `nuxeo-search-client-opensearch2` and `nuxeo-audit-opensearch2` packages.
-
-If you want to set up an OpenSearch server that runs in the same JVM as the Nuxeo Platform's, you have to install explicitly the `nuxeo-opensearch2-embed` package. For production, you need to set up a Search cluster.
-
-Currently, the configuration is identical to OpenSearch 1, with a single change: all `opensearch1` options must be updated to `opensearch2`.
-
-For instance, you will have to use:
-```
-nuxeo.opensearch2.client.server=http://somenode:9200,https://anothernode:443
-nuxeo.opensearch2.client.username=your_username
-...
-nuxeo.search.client.default.opensearch2.index.name=nuxeo
-...
-```
-
-## Setting up an Elasticsearch 9.x Cluster{{> anchor 'setting-up-elasticsearch9'}}
-
-In order to use an Elasticsearch 9.x cluster, you need to install the `nuxeo-search-client-elasticsearch9` and `nuxeo-audit-elasticsearch9` packages.
-
-Currently, the configuration is identical to OpenSearch 1, with a single change: all `opensearch1` options must be updated to `elasticsearch9`.
-
-For instance, you will have to use:
-```
-nuxeo.elasticsearch9.client.server=http://somenode:9200,https://anothernode:443
-nuxeo.elasticsearch9.client.username=your_username
-...
-nuxeo.search.client.default.elasticsearch9.index.name=nuxeo
-...
-```
-
-Note that it's not possible to run an Elasticsearch 9 server in the same JVM as Nuxeo Platform.
-
 ## Investigating and Reporting Problems
 
 ### Activate Traces
@@ -1127,7 +978,7 @@ curl -XGET 'localhost:9200/nuxeo/doc/_search?pretty' -H 'Content-Type: applicati
 
 You may need to change the `size` parameter to get more or less indexed terms.
 
-### Explain and Profile Elasticsearch Queries
+### Explain and Profile OpenSearch/Elasticsearch Queries
 
 When trace level logs are active, Elasticsearch curl command will be present in the server log file. Getting more details on what is happening during the query execution, can either be done using [explain](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-explain.html) or [profile](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-profile.html#search-profile-api-example).
 Those two approaches will help to understand the mapping and the field scoring, it can also gives inputs about unmapped fields for example.

@@ -2,9 +2,9 @@
 title: Administration
 description: Browse the administration section to discover how to setup your instance correctly.
 review:
-  comment: ''
-  date: '2018-01-02'
-  status: ok
+    comment: ''
+    date: '2026-04-07'
+    status: ok
 labels:
   - lts2016-ok
   - lts2017-ok

@@ -459,7 +459,7 @@ It's also possible for testing purpose to run an embedded OpenSearch server in t
 This embedded mode **is only for testing purpose** and should not be used in production.
 {{/callout}}
 
-See the [documentation to setup and configure an OpenSearch or Elasticsearch]({{page page='elasticsearch-setup'}}) cluster.
+See [Search setup]({{page page='search-setup'}}) and the dedicated guides for [OpenSearch 1.x / Elasticsearch 7–8]({{page page='search-setup-opensearch1'}}), [OpenSearch 2.x]({{page page='search-setup-opensearch2'}}), and [Elasticsearch 9.x]({{page page='search-setup-elasticsearch9'}}).
 
 ## Full-Text Capabilities
 

@@ -34,4 +34,4 @@ At least three nodes for the Elasticsearch cluster: Remember **you always need t
 ## Configuration
 
 The Elasticsearch configuration is detailed in the following documentation:
--  [Elasticsearch Cluster Recommended Tuning]({{page version='' space='nxdoc' page='search-setup'}}#installing-the-elasticsearch-cluster)
+-  [Elasticsearch Cluster Recommended Tuning]({{page version='' space='nxdoc' page='search-setup-opensearch1'}}#installing-the-elasticsearch-cluster)
