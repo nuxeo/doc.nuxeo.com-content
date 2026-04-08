@@ -1,21 +1,21 @@
 ---
-title: Version 3.1.28
-description: Discover what's new in Web UI 3.1.28.
+title: Version 3.1.29
+description: Discover what's new in Web UI 3.1.29.
 review:
   comment: ''
-  date: '2026-03-12'
+  date: '2026-04-09'
   status: ok
 toc: true
 labels:
-tree_item_index: 973
-hidden: false
+tree_item_index: 972
+hidden: true
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
 
 {{! multiexcerpt name='web-ui-updates'}}
 
-## What’s New in Web UI for LTS 2023 (Version 3.1.28)
+## What’s New in Web UI for LTS 2023 (Version 3.1.29)
 
 **Enhancements** 
 
