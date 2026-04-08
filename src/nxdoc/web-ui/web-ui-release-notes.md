@@ -19,14 +19,15 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-13-0'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-14-0'}}}
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.13.0]({{page page='web-ui-release-notes-2025-13-0'}}) |  Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions.| -->
+<!-- | [Web UI 2025.14.0]({{page page='web-ui-release-notes-2025-14-0'}}) |  Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions.| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Web UI 2025.13.0]({{page page='web-ui-release-notes-2025-13-0'}}) |  Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions.| 
 | [Web UI 2025.12.0]({{page page='web-ui-release-notes-2025-12-0'}}) |  Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions.|
 | [Web UI 2025.11.0]({{page page='web-ui-release-notes-2025-11-0'}}) |  Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions.| 
 | [Web UI 2025.10.0]({{page page='web-ui-release-notes-2025-10-0'}}) | Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions. | 

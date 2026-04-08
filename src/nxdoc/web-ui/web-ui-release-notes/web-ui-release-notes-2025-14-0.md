@@ -1,13 +1,13 @@
 ---
-title: Version 2025.13.0
-description: Discover what's new in Web UI 2025.13.0.
+title: Version 2025.14.0
+description: Discover what's new in Web UI 2025.14.0.
 review:
   comment: ''
-  date: '2026-03-12'
+  date: '2026-04-09'
   status: ok
 toc: true
 labels:
-tree_item_index: 988
+tree_item_index: 987
 hidden: true
 ---
 
@@ -15,7 +15,7 @@ hidden: true
 
 {{! multiexcerpt name='web-ui-updates'}}
 
-## What’s New in Web UI for LTS 2025 (Version 2025.13.0)
+## What’s New in Web UI for LTS 2025 (Version 2025.14.0)
 
 **Enhancements** 
 
