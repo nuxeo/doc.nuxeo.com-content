@@ -449,9 +449,9 @@ The following table and schema gives an overview of the different ways of queryi
 Since Nuxeo LTS 2025, you have to explicitly choose and install a SearchClient package. By default, the SearchService will be configured with a Repository SearchClient that is using the underlying repository data store (VCS or DBS) with limited capabilities regarding fulltext search, aggregation and scalability.
 
 It's therefore recommended to rely on an external search engine (or MongoDB Atlas Search when using a MongoDB repository).
-For OpenSearch 1.x, Elasticsearch 7.x or 8.x cluster, you need to install the`nuxeo-search-client-opensearch1` package.
-For OpenSearch 2.x, you need to install the`nuxeo-search-client-opensearch2` package.
-For Elasticsearch 9.x, you need to install the`nuxeo-search-client-elasticsearch9` package.
+For OpenSearch 1.x, Elasticsearch 7.x or 8.x cluster, you need to install the `nuxeo-search-client-opensearch1` package.
+For OpenSearch 2.x, you need to install the `nuxeo-search-client-opensearch2` package.
+For Elasticsearch 9.x, you need to install the `nuxeo-search-client-elasticsearch9` package.
 For MongoDB Atlas Search with a MongoDB repository, you need to install the `nuxeo-search-client-mongoatlas` package.
 
 It's also possible for testing purpose to run an embedded OpenSearch server in the same JVM as Nuxeo by installing the `nuxeo-opensearch1-embed` or `nuxeo-opensearch2-embed` package.

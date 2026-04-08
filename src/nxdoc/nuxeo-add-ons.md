@@ -678,6 +678,66 @@ Public
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo Search Client Elasticsearch 9.x<br/>
+`nuxeo-search-client-elasticsearch9`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-search-client-elasticsearch'}})
+</td>
+<td colspan="1">
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-search-client-elasticsearch9)
+</td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Search Client MongoDB Atlas<br/>
+`nuxeo-search-client-mongoatlas`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-search-client-mongoatlas'}})
+</td>
+<td colspan="1">
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-search-client-mongoatlas)
+</td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Search Client OpenSearch 1.x<br/>
+`nuxeo-search-client-opensearch1`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-search-client-opensearch'}})
+</td>
+<td colspan="1">
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-search-client-opensearch1). Also for Elasticsearch 7.x–8.x.
+</td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Search Client OpenSearch 2.x<br/>
+`nuxeo-search-client-opensearch2`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-search-client-opensearch'}})
+</td>
+<td colspan="1">
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-search-client-opensearch2)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo Showcase Content<br/>
 `nuxeo-showcase-content`
 </td>
