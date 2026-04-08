@@ -21,13 +21,13 @@ tree_item_index: 1002
 Use the `nuxeo-search-client-opensearch1` stack for OpenSearch 1.x, Elasticsearch 7.x or 8.x: packages, optional embedded server, and cluster installation guidance.
 {{! /excerpt}}
 
-## Setting up an OpenSearch 1.x, Elasticsearch 7.x or 8x Cluster{{> anchor 'setting-up-opensearch1'}}
+## Setting up an OpenSearch 1.x, Elasticsearch 7.x or 8.x Cluster{{> anchor 'setting-up-opensearch1'}}
 
-To support OpenSearch 1.x, Elasticsearch 7x or 8x clusters, you need to install `nuxeo-search-client-opensearch1` package.
+To support OpenSearch 1.x, Elasticsearch 7.x or 8.x clusters, you need to install the `nuxeo-search-client-opensearch1` package.
 
 OpenSearch 1 is a fork of Elasticsearch 7, except some advanced features (not used by Nuxeo) they are fully compatible.
 
-The `nuxeo-search-client-opensearch1` package defines index settings, mappings and uses the Rest API according to Elasticsearch 7 version (equivalent to OpenSearch 1 version). 
+The `nuxeo-search-client-opensearch1` package defines index settings, mappings and uses the REST API according to Elasticsearch 7 version (equivalent to OpenSearch 1 version).
 It relies on OpenSearch 1.x client library to access the search cluster.
 
 Note that for historical reasons you may find some "Elasticsearch" occurrences in configuration properties.
@@ -148,4 +148,4 @@ OPENSEARCH_JAVA_OPTS=-Xms6g -Xmx6g
 - [Search setup for OpenSearch 2.x]({{page page='search-setup-opensearch2'}}) — OpenSearch 2.x client (`opensearch2` namespace).
 - [Search setup for Elasticsearch 9.x]({{page page='search-setup-elasticsearch9'}}) — Elasticsearch 9.x client (`elasticsearch9` namespace).
 - [Search setup for MongoDB Atlas Search]({{page page='search-setup-mongoatlas'}}) — MongoDB Atlas Search client (`mongoatlas` namespace).
-- [Nuxeo Search Client OpenSearch]({{page page='nuxeo-search-client-opensearch'}}) / [Nuxeo Search Client Elasticsearch]({{page page='nuxeo-search-client-elasticsearch'}}) — Marketplace packages.
+- [Nuxeo Search Client OpenSearch]({{page page='nuxeo-search-client-opensearch'}}) / [Nuxeo Search Client Elasticsearch]({{page page='nuxeo-search-client-elasticsearch'}}) / [Nuxeo Search Client MongoDB Atlas]({{page page='nuxeo-search-client-mongoatlas'}}) — Marketplace packages.

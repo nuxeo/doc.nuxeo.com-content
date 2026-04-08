@@ -478,7 +478,7 @@ Pick the guide that matches your search stack (packages, optional embedded serve
 | Elasticsearch 9.x | `elasticsearch9` | `nuxeo-search-client-elasticsearch9` | [Search setup for Elasticsearch 9.x]({{page page='search-setup-elasticsearch9'}}) |
 | MongoDB Atlas Search (repository on MongoDB Atlas) | `mongoatlas` | `nuxeo-search-client-mongoatlas` | [MongoDB Atlas Search]({{page page='search-setup-mongoatlas'}}) |
 
-Audit and optional embedded packages are listed on each guide where they apply. For a Marketplace-oriented overview, see [Nuxeo Search Client OpenSearch]({{page page='nuxeo-search-client-opensearch'}}) and [Nuxeo Search Client Elasticsearch]({{page page='nuxeo-search-client-elasticsearch'}}).
+Audit and optional embedded packages are listed on each guide where they apply. For a Marketplace-oriented overview, see [Nuxeo Search Client OpenSearch]({{page page='nuxeo-search-client-opensearch'}}), [Nuxeo Search Client Elasticsearch]({{page page='nuxeo-search-client-elasticsearch'}}), and [Nuxeo Search Client MongoDB Atlas]({{page page='nuxeo-search-client-mongoatlas'}}).
 
 ## Configuring Nuxeo to Access the Search Cluster
 
@@ -584,7 +584,7 @@ curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo/_set
 
 ```
 
-## Disabling OpenSearch/Elasticsearch
+## Disabling OpenSearch/Elasticsearch{{> anchor 'disabling-elasticsearch'}}{{> anchor 'disabling-elasticsearch-for-audit-logs'}}
 
 Simply don't install any `nuxeo-search-client-*` or `nuxeo-audit-*` package.
 

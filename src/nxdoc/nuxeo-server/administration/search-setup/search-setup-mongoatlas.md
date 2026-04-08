@@ -215,6 +215,7 @@ db.default.aggregate([
 
 ### Nuxeo Documentation
 
+- [Nuxeo Search Client MongoDB Atlas]({{page page='nuxeo-search-client-mongoatlas'}}) — Marketplace package overview.
 - [MongoDB]({{page page='mongodb'}}) — database and repository configuration.
 - [Search setup]({{page page='search-setup'}}) — shared documentation (oriented toward OpenSearch/Elasticsearch); use the sections that apply to your stack.
 - [NXQL]({{page page='nxql'}}) — query language reference.
