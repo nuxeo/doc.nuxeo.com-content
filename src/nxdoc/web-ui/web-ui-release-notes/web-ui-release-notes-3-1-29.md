@@ -17,46 +17,30 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2023 (Version 3.1.29)
 
-**Enhancements** 
 
-- ***Resizable and reorderable data table columns:***
-  - Users can now resize and rearrange table columns by dragging the column headers, making tables easier to personalize and work with. Support for saving table preferences is planned for a future release.
+**Bug fixes and Enhancements** 
+
+- ***Persistent table column preferences:***
+  - Users can now customize table columns (order, width, visibility, and sort) in Search and Document Browse views. These preferences are securely stored in the backend and automatically restored across sessions and browsers, ensuring a consistent and personalized experience.
+- ***Customizable date format in Date Picker:***
+  - The Nuxeo Date Picker now respects a configurable format property, allowing users to view and enter dates in their preferred format.
+- ***Improved aggregation filter readability:***
+  - Aggregation filter dropdowns now fully display long values, ensuring selected options are always visible and easy to read.
+- ***Cleaner table header layout:***
+  - Removed unwanted vertical scrollbars from aggregate column headers in nuxeo-data-table for a smoother browsing experience.
+- ***Fixed metadata duplication during multi‑file import:***
+  - Resolved an issue where properties from the first document were incorrectly applied to all files during multi‑file imports. Each file now correctly maintains its own independent properties.
+- ***Resolved 404 errors on profile links:***
+  - Non‑admin and non‑power users no longer encounter 404 errors when clicking user profile links, as these links are now conditionally disabled.
+
 
 **Accessibility Improvements** 
 
-- ***Better keyboard navigation and screen reader support on Global Search:***
-  - Tabbing and arrow key navigation is now consistent on global search results, the close (cross) button is keyboard accessible, and screen readers announce only relevant information such as result titles and indexes.
-    
-- ***Improved focus handling:***
-  - Unnecessary keyboard focus on headings has been removed to better align with accessibility standards.
+- ***Improved keyboard navigation:***
+  - Fixed accessibility issues in dropdown elements so tabbing behavior is now consistent and predictable.
+- ***Role‑appropriate profile access:***
+  - User profile links are now disabled for non‑admin and non‑power users, preventing confusing 404 errors and improving overall usability.
 
-**Bug Fixes**
-
-- ***Clearer feedback for unsupported file uploads:***
-  - The dropzone now shows a proper error message when users try to upload files that are not accepted.
-
-- ***PDF preview works with special characters in filenames:***
-  - PDF files containing special characters (such as square brackets) now preview correctly in the Web UI.
-
-- ***Directory fields reset correctly:***
-  - Clearing directory-based fields now properly removes the displayed selection when reset.
-
-- ***Improved file uploads in create, edit, and import screens:***
-  - Multiple files uploaded via the dropzone are now correctly appended and displayed together before document creation.
-
-**Performance, Security, and Reliability**
-
-- ***Faster and more efficient CI builds:***
-  - Build pipelines now use dependency caching and shared configurations to reduce build times and duplication.
-
-- ***Improved CI security:***
-  - GitHub workflows have been updated to use more secure dependency handling and safer pull request execution.
-
-- ***Up-to-date dependencies and tooling:***
-  - CI and security scanning workflows have been updated to the latest supported versions, ensuring continued reliability and compliance with long-term support requirements.
-
-- ***More reliable Studio catalog generation:***
-  - Catalog generation has been improved to consistently detect all required elements, reducing configuration errors in Studio Designer.
 
 
 <br/>
