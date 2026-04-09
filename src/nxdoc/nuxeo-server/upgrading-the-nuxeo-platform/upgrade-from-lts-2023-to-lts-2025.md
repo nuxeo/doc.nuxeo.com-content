@@ -261,7 +261,7 @@ The upgrade of `quartz` breaks the compatibility with `quartz-mongodb` but since
 
 The default UIDSequencer in Nuxeo Platform has changed in LTS 2025, it is now `KeyValueStoreUIDSequencer`, so you might need to migrate your custom sequences, or install and use a former UIDSequencer (JPA, ElasticSearch/OpenSearch, MongoDB).
 
-There’s only one sequence that is being used by Nuxeo Platform itself, it is the `audit` sequence. This sequence **doesn’t not need to be migrated** because the audit backends that needs it will init the sequence at the right value during the Nuxeo Platform start.
+There’s only one sequence that is used by Nuxeo Platform itself. It is the `audit` sequence. This sequence **does not need to be migrated** because the audit backends that need it will initialize the sequence to the right value at Nuxeo Platform startup.
 
 To migrate your custom sequences, before the upgrade, we recommend to stop activity on Nuxeo Platform, then request the sequences value with the Management REST API:
 
@@ -281,6 +281,12 @@ curl -u USERNAME:PASSWORD -XPOST https://NUXEO_INSTANCE/nuxeo/api/v1/management/
 ...
 curl -u USERNAME:PASSWORD -XPOST https://NUXEO_INSTANCE/nuxeo/api/v1/management/sequencers/default -d 'key=customSequenceN&value=customValueN'
 ```
+
+## Search Engine
+
+A full repository re-index is required to apply the new index mapping, even if your target search engine remains OpenSearch 1.x / Elasticsearch 7.x–8.x. See the [repository re-indexing procedure]({{page page='search-setup'}}#reindex).
+
+If you remain on OpenSearch 1.x / Elasticsearch 7.x–8.x, the audit index can be kept unchanged. If you switch to a different search engine, migrate the audit index to the new cluster. Refer to the OpenSearch or Elasticsearch documentation.
 
 ## Nuxeo Streams
 
