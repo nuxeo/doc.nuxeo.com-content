@@ -93,7 +93,7 @@ The Nuxeo Platform supports the following databases.
       <li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.3{{! /multiexcerpt}}</li>
       <li>{{! multiexcerpt name='MySQL-supported'}}MySQL 8.0{{! /multiexcerpt}}</li>
       <li>{{! multiexcerpt name='Oracle-supported'}}Oracle 18c{{! /multiexcerpt}}</li>
-      <li>{{! multiexcerpt name='SQLserver-supported'}}SQL Server 2017{{! /multiexcerpt}}</li>
+      <li>{{! multiexcerpt name='SQLserver-supported'}}SQL Server 2022{{! /multiexcerpt}}</li>
     </ul>
   </li>
 </ul>
