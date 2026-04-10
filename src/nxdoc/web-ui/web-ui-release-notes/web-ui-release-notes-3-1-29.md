@@ -18,7 +18,7 @@ hidden: true
 ## What’s New in Web UI for LTS 2023 (Version 3.1.29)
 
 
-**Bug fixes and Enhancements** 
+**Bug Fixes and Enhancements** 
 
 - ***Persistent table column preferences:***
   - Users can now customize table columns (order, width, visibility, and sort) in Search and Document Browse views. These preferences are securely stored in the backend and automatically restored across sessions and browsers, ensuring a consistent and personalized experience.
