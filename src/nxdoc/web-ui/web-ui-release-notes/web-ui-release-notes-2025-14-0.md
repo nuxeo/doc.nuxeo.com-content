@@ -20,7 +20,7 @@ hidden: true
 **Bug Fixes and Enhancements** 
 
 - ***Persistent table column preferences:***
-  - Users can now customize table columns (order, width, visibility, and sort) in Search and Document Browse views. These preferences are securely stored in the backend and automatically restored across sessions and browsers, ensuring a consistent and personalized experience.
+  - Users can now customize table columns (order, width, visibility, and sort) in Search and Document Browse views. These preferences are securely stored in the backend and automatically restored across sessions and browsers, ensuring a consistent and personalized experience. User preferences are now preserved across sessions and browsers.
 - ***Customizable date format in Date Picker:***
   - The Nuxeo Date Picker now respects a configurable format property, allowing users to view and enter dates in their preferred format.
 - ***Improved aggregation filter readability:***
