@@ -9,7 +9,7 @@ review:
 toc: true
 ---
 
-Since Nuxeo LTS 2025, you have to explicitly choose and install a SearchClient package. By default, the SearchService will be configured with a Repository SearchClient that is using the underlying repository data store with limited capabilities regarding fulltext search and aggregation.
+Since Nuxeo LTS 2025, you have to explicitly choose and install a SearchClient package. By default, the SearchService is configured with a Repository SearchClient that uses the underlying repository data store with limited capabilities regarding fulltext search and aggregation.
 For **MongoDB Atlas Search** with a **MongoDB Atlas** document repository, install the `nuxeo-search-client-mongoatlas` package.
 
 ## Installation
