@@ -367,11 +367,23 @@ This menu displays all the layers of the document and allow to select / unselect
 
 The annotations module supports a large number of file formats.
 
-- **PDF** - all versions, XFA not supported
-- **Images**: JPEG, PNG, TIFF, GIF, BMP, JNG, PBM, PSD, EPS, PS, DCM (Format DICOM) and all formats supported by ImageMagick
-- **Microsoft Office (97-2013)**: Word (.doc, .docx) , PowerPoint (.ppt, .pptx), Excel (.xls, .xlsx), WordML (.xml), Visio (.vsd)
-- **Composite files**: ZIP, EML, MSG
-- **Others**: TXT, OpenDocument (LibreOffice or OpenOffice)
+- **PDF** - PDF (Portable Document Format, Portable Document Format Archive, Portable Document Format Portfolio), FDF, XFDF
+- **Image** - JPEG, PNG, TIFF, GIF, BMP, PSD, EPS, DCM (Format DICOM), PCX, JP2, HEIF, WEBP
+- **Email** - MSG, EML
+- **Web** - HTML
+- **Office Word** - DOC, DOT, DOCX, DOTX, DOCM, DOTM, RTF, ODT, ODM, OTT
+- **Office Presentation** - PPT, POT, PPS, PPA, PPTX, POTX, PPTM, POTM, ODP
+- **Office Excel** - XLS, XLT, XLA, XLSX, XSLM, XLTX, XLTM, ODS
+- **Office Visio** - VSD, VSDX, ODG
+- **Microsoft Project** - MPP
+- **Microsoft Publisher** - PUB
+- **Text** - TXT
+- **Video** - MP4, MOV, QT, 3GPP, FLV, MPEG, AVI, MKV, WMV, MP2P
+- **Audio** - MP3, WAV, MPEG, AIFF
+- **AFP** - AFP, MDA
+- **AutoCAD** - DWG, DXF, DWF, DGN, IFC
+- **Archives** - ZIP, 7Z, JAR
+- **Visit Card** - VCF
 
 <!--
 ## Roadmap
