@@ -53,7 +53,7 @@ hidden: true
   - Upgraded uuid from 3.3.2 ->13.0.0
   - Upgraded mocha from 7.2.0 → 11.7.5
   - Upgraded @open-wc/karma-esm from 2.13.21 -> 4.0.0
-  - Migrated test setup to ESM by upgrading chai to v5, sinon-chai to 4.0.1, and replacing karma-sinon-chai with an explicit ESM configuration
+  - Migrated test setup to ESM by upgrading chai to v5, sinon-chai to 4.0.1, and replacing karma-sinon-chai with an explicit ESM configuration.
   - Replaced deprecated @open-wc/prettier-config with a direct dependency on Prettier 3, standardizing formatting rules across the Web UI codebase.
   - Migrated AWS SDK for JavaScript from v2 to v3 to address Dependabot alerts and ensure correct region parameter validation.
 
