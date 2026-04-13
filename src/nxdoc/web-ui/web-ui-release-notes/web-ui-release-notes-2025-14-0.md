@@ -36,7 +36,7 @@ hidden: true
 **Accessibility Improvements** 
 
 - ***Improved keyboard navigation:***
-  - Fixed accessibility issues in dropdown elements so tabbing behavior is now consistent and predictable.
+  - Fixed accessibility issues in dropdown elements so the tabbing behavior is now consistent and predictable.
 - ***Role‑appropriate profile access:***
   - User profile links are now disabled for non‑admin and non‑power users, preventing confusing 404 errors and improving overall usability.
 
