@@ -32,14 +32,12 @@ hidden: true
 - ***Resolved 404 errors on profile links:***
   - Non‑admin and non‑power users no longer encounter 404 errors when clicking user profile links, as these links are now conditionally disabled.
 
-
 **Accessibility Improvements** 
 
 - ***Improved keyboard navigation:***
   - Fixed accessibility issues in dropdown elements so the tabbing behavior is now consistent and predictable.
 - ***Role‑appropriate profile access:***
   - User profile links are now disabled for non‑admin and non‑power users, preventing confusing 404 errors and improving overall usability.
-
 
 **Developer Experience & Platform Maintenance** 
   - Upgraded ESLint from v5 to v9 and removed dependency on @open-wc/eslint-config
