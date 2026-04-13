@@ -372,7 +372,7 @@ ALTER DATABASE nuxeo SET RECOVERY SIMPLE;
 
 ## Full-Text
 
-Nuxeo Platform indexes full-text using the SQL database. You will need to make sure that your SQL Server instance has full-text search configured, which is an optional component during installation. See [Full-Text Search on Microsoft Documentation](https://docs.microsoft.com/en-us/sql/relational-databases/search/full-text-search) for details.
+Nuxeo Platform indexes full-text using the SQL database. Ensure that your SQL Server instance has full-text search configured, which is an optional component during installation. See [Full-Text Search on Microsoft Documentation](https://docs.microsoft.com/en-us/sql/relational-databases/search/full-text-search) for details.
 
 Otherwise, such an error will occur at server startup:
 
