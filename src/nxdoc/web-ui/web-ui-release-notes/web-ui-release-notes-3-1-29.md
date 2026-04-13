@@ -41,7 +41,21 @@ hidden: true
 - ***Role‑appropriate profile access:***
   - User profile links are now disabled for non‑admin and non‑power users, preventing confusing 404 errors and improving overall usability.
 
-
+**Developer Experience & Platform Maintenance** 
+  - Upgraded ESLint from v5 to v9 and removed dependency on @open-wc/eslint-config
+  - Bumped eslint-plugin-html from 5.0.5 → 8.1.4 for improved HTML linting reliability
+  - Upgraded webpack-cli from 5.1.4 → 6.0.1
+  - Updated clean-webpack-plugin to 4.0.0
+  - Upgraded webpack-bundle-analyzer to 5.2.0
+  - Updated css-loader from 5.2.7 → 7.1.3
+  - Bumped dotenv from 8.6.0 → 17.2.4
+  - Upgraded lit-html from 2.8.0 → 3.3.2
+  - Upgraded uuid from 3.3.2 ->13.0.0
+  - Upgraded mocha from 7.2.0 → 11.7.5
+  - Upgraded @open-wc/karma-esm from 2.13.21 -> 4.0.0
+  - Migrated test setup to ESM by upgrading chai to v5, sinon-chai to 4.0.1, and replacing karma-sinon-chai with an explicit ESM configuration.
+  - Replaced deprecated @open-wc/prettier-config with a direct dependency on Prettier 3, standardizing formatting rules across the Web UI codebase.
+  - Migrated AWS SDK for JavaScript from v2 to v3 to address Dependabot alerts and ensure correct region parameter validation.
 
 <br/>
 
