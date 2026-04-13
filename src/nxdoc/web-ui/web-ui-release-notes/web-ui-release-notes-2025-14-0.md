@@ -48,7 +48,7 @@ hidden: true
   - Updated clean-webpack-plugin to 4.0.0.
   - Upgraded webpack-bundle-analyzer to 5.2.0.
   - Updated css-loader from 5.2.7 to 7.1.3.
-  - Bumped dotenv from 8.6.0 → 17.2.4
+  - Bumped dotenv from 8.6.0 to 17.2.4.
   - Upgraded lit-html from 2.8.0 to 3.3.2.
   - Upgraded uuid from 3.3.2 to 13.0.0.
   - Upgraded mocha from 7.2.0 to 11.7.5.
