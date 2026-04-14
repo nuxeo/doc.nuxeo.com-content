@@ -13,7 +13,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2026-03' space='studio' page='studio-updates-2026-03'}}}
+{{{multiexcerpt 'studio-updates-2026-04' space='studio' page='studio-updates-2026-04'}}}
 
 ---
 
@@ -21,6 +21,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [March 2026]({{page page='studio-updates-2026-03'}})                  | Enhance self-service trials, admin controls, Studio reliability, and Okta-aligned security |
 | [February 2026]({{page page='studio-updates-2026-02'}})                  | Comprehensive Document Browser for JSF Deprecation, Secure User Password Encryption Implementation. |
 | [January 2026]({{page page='studio-updates-2026-01'}})                  | Enhanced Git workflow with conflict resolution, deployment traceability, multi-branch release fixes, and version selection capabilities. |
 | [November 2025]({{page page='studio-updates-2025-11'}})                  | Resolved Client Connect Document Creation page |
