@@ -652,6 +652,11 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 18
+
+### ELSA-2026-5602 in LTS 2025/2023 - Vim 8.2.2637-23.0.1.el9_7 - Medium
+
+Vim editor was upgraded in the Docker image from `8.2.2637-23.0.1.el9_7` to `8.2.2637-23.0.1.el9_7.1`.
 ## Hotfix 14
 
 ### Fix Version Reindexing When the Working Copy Is Moved
