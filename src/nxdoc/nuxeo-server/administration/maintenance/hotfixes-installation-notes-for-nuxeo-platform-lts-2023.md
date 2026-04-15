@@ -103,6 +103,11 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 46
+
+### ELSA-2026-5602 in LTS 2025/2023 - Vim 8.2.2637-23.0.1.el9_7 - Medium
+
+Vim editor was upgraded in the Docker image from `8.2.2637-23.0.1.el9_7` to `8.2.2637-23.0.1.el9_7.1`.
 ## Hotfix 42
 
 ### Fix Version Reindexing When the Working Copy Is Moved
