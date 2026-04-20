@@ -23,7 +23,7 @@ Install the MongoDB Atlas Search client when the repository runs on MongoDB Atla
 
 ## Overview
 
-The `nuxeo-search-client-mongoatlas` module integrates [MongoDB Atlas Search](https://www.mongodb.com/docs/atlas/atlas-search/). Unlike the other **Elasticsearch-based** search clients, documents are **indexed automatically from the MongoDB repository** via change streams, without indexing writer. That is **simpler to operate** but comes with **stricter limitations**.
+The `nuxeo-search-client-mongoatlas` module integrates [MongoDB Atlas Search](https://www.mongodb.com/docs/atlas/atlas-search/). Unlike the other **Elasticsearch-based** search clients, documents are **indexed automatically from the MongoDB repository** via change streams, without indexing writer. That is **simpler to operate** but comes with **stricter limitations**. For instance, indexing is **eventually consistent**: there is no way to wait for indexing to complete. A document that was just created or updated **may not appear in search results immediately**.
 
 Atlas Search is **Lucene-based** and **more static** than Elasticsearch: **operators and facets need explicit field mappings**, and there are **fewer aggregate types** than on OpenSearch/Elasticsearch. The sections below cover configuration, mappings, supported operators and aggregates, and known limits.
 
@@ -35,7 +35,7 @@ This search client applies only when the **document repository is stored on [Mon
 
 ### Local testing with Docker
 
-You can exercise the stack with the official local image, for example `mongodb/mongodb-atlas-local` (see `docker-compose-mongoatlas.yml` in the [nuxeo-mongoatlas](https://github.com/nuxeo/nuxeo-mongoatlas) repository). That image is useful for development and tests but **does not replicate full Atlas infrastructure**: some behaviors differ from cloud Atlas (for example **no dynamic mapping** and other gaps). Treat it as a convenience, not a substitute for validating behavior against a real Atlas deployment.
+For local development and testing you can use the official `mongodb/mongodb-atlas-local` Docker image. That image is useful for development and tests but **does not replicate full Atlas infrastructure**: some behaviors differ from cloud Atlas (for example **no dynamic mapping** and other gaps). Treat it as a convenience, not a substitute for validating behavior against a real Atlas deployment.
 
 ### Connection and access
 
@@ -49,7 +49,9 @@ nuxeo.search.client.default.mongoatlas.index.name=nuxeo
 
 ## Search operators
 
-The index uses `lucene.keyword` as the default analyzer; `keywordLowercase` and `fulltext` are also provided. Without proper mapping applied to a field, search may return an empty result with `INDEX_MAPPING` in `getLimitations()`.
+Atlas Search requires **explicit field mappings** for each operator you want to use on a given field. Nuxeo provides a default mapping that covers the most common system and Dublin Core fields. If you query a field that is not mapped, the search returns an empty result with `INDEX_MAPPING` in `getLimitations()`.
+
+The index uses `lucene.keyword` as the default analyzer; `keywordLowercase` and `fulltext` are also provided.
 
 | Operator | Required mapping | Example |
 | --- | --- | --- |
@@ -59,6 +61,8 @@ The index uses `lucene.keyword` as the default analyzer; `keywordLowercase` and 
 | `ecm:fulltext.field` | `multi.fulltext` with `fulltext` analyzer | `ecm:fulltext.dc:title = 'search term'` — tokenized, analyzed search |
 
 ### Custom field mapping example
+
+If you need to search or filter on a field that is not covered by the default mapping (for example a field from a custom schema), you must add a mapping for it. The mapping defines which operators are available for that field.
 
 To enable all operators on `dc:description`:
 
@@ -89,7 +93,7 @@ To enable all operators on `dc:description`:
 
 ### Fulltext analyzer
 
-The `fulltext` analyzer uses standard tokenizer, englishPossessive, lowercase, stopword (English), and [kStemming](https://www.mongodb.com/docs/atlas/atlas-search/analyzers/token-filters/#kstemming). Fulltext search on the entire document uses multi-path search (for example `ecm:fulltext` queries both `ecm:fulltextBinary` and `ecm:fulltextSimple`). Atlas Search does not support `copy_to`; unlike OpenSearch/Elasticsearch, there is no single technical field for document-wide fulltext.
+The `fulltext` analyzer uses standard tokenizer, englishPossessive, lowercase, stopword (English), and [kStemming](https://www.mongodb.com/docs/atlas/atlas-search/analyzers/token-filters/#kstemming). Fulltext search on the entire document uses multi-path search (for example `ecm:fulltext` queries both `ecm:fulltextBinary` and `ecm:fulltextSimple`); there is no single combined field for document-wide fulltext.
 
 ### Search limitations
 
@@ -148,60 +152,11 @@ Aggregates use MongoDB Atlas Search facet collectors. Counts are computed over t
 
 Documents are indexed asynchronously via change streams. The search client has no reliable way to wait for indexing to complete. A document that was just created or updated may not appear in the next search immediately.
 
-When Nuxeo performs a full reindex, the Atlas index is dropped and recreated with the Nuxeo mapping. This can be used to apply a new mapping.
+When Nuxeo performs a full reindex, the Atlas index is dropped and recreated with the Nuxeo mapping. This can be used to apply a new mapping (see [Custom field mapping example](#custom-field-mapping-example)).
 
 ### MongoAtlasCoreSearchFeature (testing)
 
 Because there is no way to know when indexing is done, the test feature waits a fixed delay and hopes it is enough.
-
-## Module development and tests
-
-The following applies to developers working on the [nuxeo-mongoatlas](https://github.com/nuxeo/nuxeo-mongoatlas) repository.
-
-### Running unit tests
-
-There is no embedded mode for MongoDB Atlas Search. Run a local instance using Docker Compose:
-
-```shell
-docker-compose -f ./docker-compose-mongoatlas.yml up -d
-```
-
-This starts MongoDB with Atlas Search support on `localhost:27017`.
-
-```shell
-mvn -nsu test
-```
-
-```shell
-docker-compose -f ./docker-compose-mongoatlas.yml down
-```
-
-### Debugging
-
-`nuxeo-search-client-mongoatlas` runs tests from `org.nuxeo.ecm.core:nuxeo-core-test` by setting `MongoAtlasCoreSearchFeature`. These external tests are run by the Maven Surefire plugin when invoking `mvn -nsu test` and may not be detected by your IDE.
-
-Run a single test:
-
-```shell
-mvn -nsu test -Dnuxeo.test.search=mongoatlas -Dtest=TestSearchClientNxql#testNxqlFromDocumentation
-```
-
-To debug an external test:
-
-```shell
-mvnDebug -DforkCount=0 -nsu test
-```
-
-This waits for your IDE to start a "Remote JVM Debug" session configured with `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000`.
-
-### Search queries from mongosh
-
-```javascript
-db.default.aggregate([
-  { $search: { index: "nuxeo", count: { type: "total" }, compound: { must: [{ exists: { path: "ecm:id" } }] } } },
-  { $limit: 5 }
-])
-```
 
 ## See also
 

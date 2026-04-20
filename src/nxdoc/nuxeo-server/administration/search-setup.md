@@ -469,7 +469,7 @@ history:
 This page provides several configuration use cases for [Elasticsearch](https://www.nuxeo.com/partners/technology/elasticsearch/) and [Opensearch](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/).
 {{! /excerpt}}
 
-Pick the guide that matches your search stack (packages, optional embedded server, cluster install). Then use this page for shared Nuxeo configuration from [Configuring Nuxeo to Access the Search Cluster](#configuring-nuxeo-to-access-the-search-cluster) onward (reindex, mappings, multi-repository, troubleshooting). Examples below use the `opensearch1` property namespace in `nuxeo.conf`; replace that segment with `opensearch2`, `elasticsearch9`, or `mongoatlas` when you use another client.
+Pick the guide that matches your search stack (packages, optional embedded server, cluster install). Then use this page for shared Nuxeo configuration from [Configuring Nuxeo to Access the Search Cluster](#configuring-nuxeo-to-access-the-search-cluster) onward (reindex, mappings, multi-repository, troubleshooting). Examples below use the `opensearch1` property namespace in `nuxeo.conf`; replace that segment with `opensearch2` or `elasticsearch9` when you use another client. For `mongoatlas`, the search client reuses the MongoDB repository connection, so the search-cluster access section does not apply; refer to the [MongoDB Atlas Search]({{page page='search-setup-mongoatlas'}}) dedicated page instead.
 
 | Search stack | `nuxeo.conf` namespace | Main package | Dedicated setup |
 | --- | --- | --- | --- |
