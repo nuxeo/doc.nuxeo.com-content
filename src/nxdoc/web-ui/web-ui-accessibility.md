@@ -21,3 +21,5 @@ The latest version can be found below:
 - **Cadence**: Every 12 to 16 months. 
 
 Contact us at [accessibility@hyland.com](mailto:accessibility@hyland.com) for more information about Nuxeo accessibility updates.
+
+For more information, please refer to the [Accessibility Statement](https://doc.nuxeo.com/nxdoc/2023/web-ui-accessibility-statement/) corresponding to release version LTS 2023 (version 3.1.22) and the [Web UI release notes](https://doc.nuxeo.com/nxdoc/2023/web-ui-release-notes/).
