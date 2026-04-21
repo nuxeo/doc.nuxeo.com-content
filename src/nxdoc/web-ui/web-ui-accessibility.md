@@ -1,23 +1,23 @@
 ---
-title: Web UI Accessibility - Accessibility Conformance Report (ACR)
+title: Web UI Accessibility - Section 508, WCAG Conformance VPAT
 description: Voluntary Product Accessibility Template for Web UI
 review:
     comment: ''
-    date: '2024-09-13'
+    date: '2026-04-21'
     status: ok
 toc: true
 labels:
 tree_item_index: 600
 ---
 
-Nuxeo is committed to making Web UI accessible and keeping a high level of quality on that front. Our target is the WCAG 2.1 standard level AA. Our current level of support for accessibility is controlled regularly, and we publish the results using the standard section 508 Compliance (VPAT) document. Its latest iteration can be found below.
+Nuxeo is committed to making Web UI accessible and keeping a high level of quality on that front. Our current level of support for accessibility is controlled regularly, and we publish the results using the following the [VPAT 2.5 INT](https://www.itic.org/policy/accessibility/vpat) which includes 508: [Revised Section 508 standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines) corresponding to the U.S. Federal accessibility standard, [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) corresponding to the European Union’s “Accessibility requirements suitable for public procurement of ICT products and services in Europe” and Web Content Accessibility Guidelines (WCAG) 2.2 Level of Conformance A & AA.
 
-- **Date**: September, 2024
+The latest version can be found below:
+
 - **Product**: Nuxeo Web UI
-- **Link**: [Voluntary Product Accessibility Template for Web UI]({{file name='2024-09-nuxeo-web-ui-3-1-12-vpat.pdf'}}).
+- **Publication Date**: April, 2026
+- **Release Version**: Version 3.1.29
+- **Accessibility Conformance Report**: [Download the VPAT [here]({{file name='Nuxeo_Web_UI_VPAT_Version 3.1.29.pdf'}})]
+- **Cadence**: Every 12 to 16 months. 
 
-
-The release of the new version of the ACR is scheduled for Q1-2026. Please refer to the Accessibility Statement for more information. [Accessibility Statement]({{page space='nxdoc' page='web-ui-accessibility-statement'}}).
-
-
-Updates regarding accessibility improvements in a particular release can be found in the [Web UI release notes]({{page space='nxdoc' page='web-ui-release-notes'}})
+Contact us at [accessibility@hyland.com](mailto:accessibility@hyland.com) for more information about Nuxeo accessibility updates.
