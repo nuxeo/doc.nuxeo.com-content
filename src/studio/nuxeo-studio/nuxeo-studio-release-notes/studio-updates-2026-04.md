@@ -19,13 +19,13 @@ Generated projects are better aligned with LTS 2025 OpenSearch requirements.
 Updated generated “append mapping” contributions to support LTS 2025 OpenSearch changes, avoiding broken/legacy Elasticsearch extension points in generated projects.
 
 **Impact:**
-Upgrades and new project generation are smoother and less error‑prone for customers moving to or running on LTS 2025.
+Upgrades and new project generation are smoother and less error‑prone for customers moving to or operating on LTS 2025.
 
 ### Updated Generated Dashboards (nuxeo-home) for Supported Web UI Versions
 Keeps generated Studio output aligned with supported Web UI versions.
 
 **What Changed:**
-Updated nuxeo-home generation so customers no longer receive outdated dashboard code (e.g., 10.10-era), reducing drift across 2023/2025 releases.
+Updated nuxeo-home generation so customers no longer receive outdated dashboard code (for example, 10.10-era), reducing drift across 2023/2025 releases.
 
 **Impact:**
 Customers get up-to-date generated dashboards that match the intended Web UI version for their release, reducing regressions, UI drift, and rework.
@@ -45,7 +45,7 @@ Users can create Studio projects directly in Account Management with correct ser
 Improves correctness and stability for automation built in Studio.
 
 **What Changed:**
-Fixed the Document.SetProperty registry contract so the operation correctly accepts and produces document(s), preventing runtime errors caused by mismatched operation metadata.
+Fixed the Document.SetProperty registry contract that enables the operation to correctly accepts and produces document(s), preventing runtime errors caused by mismatched operation metadata.
 
 **Impact:**
 Users can use Document.SetProperty safely with single or multiple documents, avoiding confusing runtime failures.
@@ -63,7 +63,7 @@ Users see only relevant services and can reliably search using combined filters,
 Restores stable release workflows in Studio.
 
 **What Changed:**
-Resolved release dialog failures triggered by non-standard version tags (e.g., 7.10).
+Resolved release dialog failures triggered by non-standard version tags (for example, 7.10).
 
 **Impact:**
 Users can create releases reliably without errors or workarounds, ensuring smoother end-to-end release workflows.
