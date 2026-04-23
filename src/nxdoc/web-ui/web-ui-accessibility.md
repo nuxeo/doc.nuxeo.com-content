@@ -10,7 +10,7 @@ labels:
 tree_item_index: 600
 ---
 
-Nuxeo is committed to making Web UI accessible and keeping a high level of quality on that front. Our current level of support for accessibility is controlled regularly, and we publish the results using [VPAT 2.5 INT](https://www.itic.org/policy/accessibility/vpat), which includes 508: [Revised Section 508 standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines) corresponding to the U.S. Federal accessibility standard, [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) corresponding to the European Union’s “Accessibility requirements suitable for public procurement of ICT products and services in Europe” and Web Content Accessibility Guidelines (WCAG) 2.2 Level of Conformance A & AA.
+Nuxeo is committed to making Web UI accessible and keeping a high level of quality on that front. Our current level of support for accessibility is controlled regularly, and we publish the results using [VPAT 2.5 INT](https://www.itic.org/policy/accessibility/vpat), which include 508: [Revised Section 508 standards](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines) corresponding to the U.S. Federal accessibility standard, [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) corresponding to the European Union’s “Accessibility requirements suitable for public procurement of ICT products and services in Europe” and Web Content Accessibility Guidelines (WCAG) 2.2 Level of Conformance A & AA.
 
 The latest version can be found below:
 
