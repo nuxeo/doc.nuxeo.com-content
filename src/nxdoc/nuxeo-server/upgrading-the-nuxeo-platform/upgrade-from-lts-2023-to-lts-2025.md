@@ -288,6 +288,26 @@ A full repository re-index is required to apply the new index mapping, even if y
 
 If you remain on OpenSearch 1.x / Elasticsearch 7.x–8.x, the audit index can be kept unchanged. If you switch to a different search engine, migrate the audit index to the new cluster. Refer to the OpenSearch or Elasticsearch documentation.
 
+### Relation Document Indexing
+
+In LTS 2025, Relation documents are no longer indexed by default. If your application searches for Relation documents, you need to explicitly enable their indexing by adding the following property to your `nuxeo.conf`:
+
+```
+nuxeo.search.indexing.relation.enabled=true
+```
+
+This option only affects documents indexed after it is enabled. To make existing Relation documents searchable, set `nuxeo.search.indexing.relation.enabled=true` before running the repository re-index required for the upgrade. If you enable it afterward, you must run another repository re-index so that existing Relation documents are indexed.
+
+When this option is enabled, the NXQL `FROM` clause behaves as follows:
+
+- `FROM Document` returns indexed documents whose type is a `Document` subtype, excluding `Relation` documents.
+- `FROM Document, Relation` returns both `Document` subtype documents and `Relation` documents.
+- `FROM Relation` returns only `Relation` documents.
+
+Without this option, Relation documents are not indexed and are not searchable.
+
+See [NXP-33538](https://jira.nuxeo.com/browse/NXP-33538).
+
 ## Nuxeo Streams
 
 ### Create a Nuxeo Stream Log4j2 Appender Package
