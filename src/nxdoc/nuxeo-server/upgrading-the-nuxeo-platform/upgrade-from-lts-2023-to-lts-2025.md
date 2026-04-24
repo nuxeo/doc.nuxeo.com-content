@@ -306,8 +306,6 @@ When this option is enabled, the NXQL `FROM` clause behaves as follows:
 
 Without this option, Relation documents are not indexed and are not searchable.
 
-See [NXP-33538](https://jira.nuxeo.com/browse/NXP-33538).
-
 ## Nuxeo Streams
 
 ### Create a Nuxeo Stream Log4j2 Appender Package
