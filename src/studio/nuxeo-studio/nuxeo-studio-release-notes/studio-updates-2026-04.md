@@ -75,7 +75,7 @@ Prevents button labels from appearing when Studio designers explicitly choose to
 Fixed how the show-label boolean attribute is generated when a button uses a custom bound element. When “show label” is turned off, Studio now omits the attribute instead of assigning show-label="false" or an empty value, aligning with Polymer/Web Components boolean semantics.
 
 **Impact:**
-Designers get predictable, standards-compliant behavior for custom buttons: toggling “show label” in Studio reliably hides or shows labels at runtime, reducing UI confusion and eliminating the need for HTML workarounds in deployed applications.
+Designers get predictable, standards-compliant behavior for custom buttons. Toggling “show label” in Studio reliably hides or shows labels at runtime, reducing UI confusion and eliminating the need for HTML workarounds in deployed applications.
 
 ### Multi‑User Okta Email Mappings No Longer Block Connect User Assignment
 Keeps Connect user onboarding and client assignment flowing even in complex Okta setups.
