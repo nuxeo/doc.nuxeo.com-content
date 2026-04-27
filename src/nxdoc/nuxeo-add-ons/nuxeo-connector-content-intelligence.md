@@ -43,7 +43,7 @@ Nuxeo associates metadata and content such as text and binaries. Nuxeo indexes d
 
 The Ingest service provides a REST API to send your documents to Content Intelligence. The Ingest payload is an array of "ingest events" with two distinguishable parts:
 
-**The hard-coded part:** A part of the schema is mandatory and handled by the connector. You do not need to configure it.
+**The hard-coded part:** This part of the schema is mandatory and handled by the connector. You do not need to configure it.
 
 **The properties part:** Data is expected in the following structure:
 - **Files:** Must be flat at the root of properties. Nested files will be ignored.
