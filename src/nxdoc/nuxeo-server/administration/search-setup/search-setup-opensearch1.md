@@ -42,7 +42,7 @@ Please refer to [Compatibility Matrix]({{page page='compatibility-matrix'}}#elas
 Unlike previous versions, there is no default embedded mode in Nuxeo LTS 2025. If you want to set up an OpenSearch server that runs in the same JVM as the Nuxeo Platform's, you have to install explicitly the `nuxeo-opensearch1-embed` package.
 
 {{#> callout type='warning' }}
-This embedded mode **is only for testing purpose** and should not be used in production, neither OpenSearch nor Nuxeo can support an embedded installation.
+This embedded mode **is only for testing purpose** and should not be used in production. Neither OpenSearch nor Nuxeo can support an embedded installation.
 {{/callout}}
 
 For production you need to setup a Search cluster.
@@ -87,11 +87,11 @@ curl -XPOST -u elastic 'localhost:9200/_security/user/nuxeo_user' -H "Content-Ty
 
 #### Recommended Tuning
 
-If you have a large number of documents or if you use Nuxeo in cluster you may reach the default configuration limitation, here are some recommended tuning:
+If you have a large number of documents or if you use Nuxeo in cluster, you may reach the default configuration limitation. Here are some recommended tuning:
 
 Consider disabling the OS swapping or using other [Elasticsearch option](https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#_swapping_is_the_death_of_performance) to prevent the heap to be swapped.
 
-In `/etc/default/elasticsearch` file you can increase the JVM heap to half of the available OS memory:
+In `/etc/default/elasticsearch` file, you can increase the JVM heap to half of the available OS memory:
 
 ```
 # For a dedicated node with 12g of RAM
@@ -104,7 +104,7 @@ Refer to the [OpenSearch documentation](https://opensearch.org/docs/1.3/install-
 
 - Don't run OpenSearch open to the public.
 - Don't run OpenSearch as root.
-- Secure the connection between Nuxeo and OpenSearch, the security plugin is enabled by default with demo values which need to be replaced. See [OpenSearch Security Configuration](https://opensearch.org/docs/latest/security/configuration/index/) for guidance.
+- Secure the connection between Nuxeo and OpenSearch. The security plugin is enabled by default with demo values which need to be replaced. See [OpenSearch Security Configuration](https://opensearch.org/docs/latest/security/configuration/index/) for guidance.
 - Follow the OpenSearch [Access Control API documentation](https://opensearch.org/docs/1.3/security/access-control/api) for configuring a [user](https://opensearch.org/docs/1.3/security/access-control/api/#create-user) and [role](https://opensearch.org/docs/1.3/security/access-control/api/#create-role).
 
 {{#> callout type='tip' }}
@@ -134,7 +134,7 @@ curl -XPUT -u admin http://localhost:9200/_plugins/_security/api/internalusers/n
 
 #### Recommended Tuning
 
-If you have a large number of documents or if you use Nuxeo in cluster you may reach the default configuration limitation, here are some [recommended tuning OpenSearch options](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/#important-settings)
+If you have a large number of documents or if you use Nuxeo in cluster, you may reach the default configuration limitation. Here are some [recommended tuning OpenSearch options](https://opensearch.org/docs/1.3/install-and-configure/install-opensearch/index/#important-settings)
 
 You can increase the JVM heap to half of the available OS memory:
 ```
