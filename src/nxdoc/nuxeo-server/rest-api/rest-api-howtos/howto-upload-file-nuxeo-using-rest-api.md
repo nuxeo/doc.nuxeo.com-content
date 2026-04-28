@@ -146,13 +146,13 @@ Before uploading any file or chunk you need to [initialize an upload batch](#bat
 ## {{> anchor 'batchinitialization'}}Batch Initialization
 
 ```
-POST http://NUXEO_SERVER/nuxeo/api/v1/upload/
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/new/default
 ```
 
 Or with cURL:
 
 ```
-curl -u Administrator:Administrator -X POST http://NUXEO_SERVER/nuxeo/api/v1/upload
+curl -u Administrator:Administrator -X POST http://NUXEO_SERVER/nuxeo/api/v1/upload/new/default
 ```
 
 Response:
