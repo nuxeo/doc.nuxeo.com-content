@@ -16,10 +16,10 @@ toc: true
 Eliminates false automation-chain validation errors and reduces upgrade breakages for LTS 2025 migrations.
 
 **What Changed:**
-Corrected Studio registry operation metadata so declared operation signatures match actual runtime definitions. This includes fixing diverging Signature properties across 75 operations identified between operations-2025.0.json and operations-2021.0.json, ensuring Studio’s displayed Accepts/Produces information is accurate (e.g., operations like Document.Save).
+Corrected Studio registry operation metadata so declared operation signatures match actual runtime definitions. This includes fixing diverging signature properties across 75 operations, ensuring Studio’s displayed Accepts/Produces information is accurate (e.g., operations like Document.Save).
 
 **Impact:**
-Automation chains that previously appeared invalid (or failed unexpectedly) due to signature mismatches now validate and execute correctly without manual workarounds. This reduces silent chain breakages during LTS 2021 → LTS 2025 upgrades, improves developer/integrator trust in Studio as the source of truth, and lowers escalation/support load tied to post-upgrade automation failures.
+Automation chains that previously appeared invalid (or failed unexpectedly) due to signature mismatches now validate and execute correctly without manual workarounds. This reduces silent chain breakages during LTS 2021 to LTS 2025 upgrades, improves developer/integrator trust in Studio as the source of truth, and lowers escalation/support load tied to post-upgrade automation failures.
 
 
 {{! /multiexcerpt}}
