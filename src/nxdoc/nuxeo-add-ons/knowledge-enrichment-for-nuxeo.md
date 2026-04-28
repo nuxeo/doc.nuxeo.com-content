@@ -62,7 +62,7 @@ All Knowledge Enrichment capabilities are available as action buttons in the doc
 * Located in the top‑right action area of the document view
 * Each button triggers an AI enrichment process and saves results as metadata
 
-![Screenshot showing Knowledge Enrichment action buttons in the top-right area of the Nuxeo document view](nx_assets/953cc015-1c38-434b-94ea-161fbf4cf4ea.png)
+![Screenshot showing Knowledge Enrichment action buttons in the top-right area of the Nuxeo document view](/nx_assets/953cc015-1c38-434b-94ea-161fbf4cf4ea.png ?w=350,border=true)
 
 ## Configuration (`nuxeo.conf`)
 
@@ -85,21 +85,21 @@ nuxeo.hyland.cic.datacuration.clientSecret=<secret>
 * **What it does:** Sends the document to the Knowledge Enrichment service and automatically categorizes the document into one of the predefined types (Contract, Invoice, Legal, Technical, Financial, Report, Policy, Resume).
 * **Where results appear:** Metadata → **Document Category** field
 
-![Screenshot showing the resulting Document Category metadata](nx_assets/6124bffb-b6d7-448b-9cc2-179af860bb86.png)
+![Screenshot showing the resulting Document Category metadata](/nx_assets/6124bffb-b6d7-448b-9cc2-179af860bb86.png ?w=650,border=true)
 
 ### 2. Named Entity Recognition – Text
 * **Action Button:** `Extract Named Entities`
 * **What it does:** Extracts key entities from the document text (Examples of entities: People, Organizations, Locations, Dates, Products).
 * **Where results appear:** Metadata → **Tags** field
 
-![Screenshot showing the 'Extract Named Entities' button and the populated Tags field](.nx_assets/0aa682da-1018-4ca8-a043-edf2e2eec3d9.png)
+![Screenshot showing the 'Extract Named Entities' button and the populated Tags field](/nx_assets/0aa682da-1018-4ca8-a043-edf2e2eec3d9.png ?w=650,border=true)
 
 ### 3. Text Summarization
 * **Action Button:** `Summarize Document`
 * **What it does:** Automatically generates a concise summary of the document.
 * **Where results appear:** Metadata → **Description** field
 
-![Screenshot showing the 'Summarize Document' button and the populated Description field](.nx_assets/10b3fce8-6894-4a65-850b-b1b57efb2b49.png)
+![Screenshot showing the 'Summarize Document' button and the populated Description field](/nx_assets/10b3fce8-6894-4a65-850b-b1b57efb2b49.png ?w=650,border=true)
 
 ## Image Use Cases
 
@@ -113,7 +113,7 @@ nuxeo.hyland.cic.datacuration.clientSecret=<secret>
 * **What it does:** Identifies recognizable entities within images, such as visible objects, brands, places and landmarks, and text elements appearing in the image.
 * **Where results appear:** Metadata → **Tags** field
 
-![Screenshot showing the 'Describe Image' button and the resulting image metadata and tags](.nx_assets/57096c57-ab82-4cfd-9001-57c5815a52aa.png)
+![Screenshot showing the 'Describe Image' button and the resulting image metadata and tags](/nx_assets/57096c57-ab82-4cfd-9001-57c5815a52aa.png ?w=650,border=true)
 
 ## Generate and review document metadata using Knowledge Enrichment
 
