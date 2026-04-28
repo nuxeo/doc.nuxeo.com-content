@@ -1,7 +1,7 @@
 ---
 title: 'January 2026'
 description: Release notes for Nuxeo Studio released in January 2026.
-tree_item_index: 924
+tree_item_index: 923
 review:
   comment: ''
   date: '2026-01-08'
