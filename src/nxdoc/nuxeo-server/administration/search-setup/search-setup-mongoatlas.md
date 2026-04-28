@@ -93,7 +93,7 @@ To enable all operators on `dc:description`:
 
 ### Fulltext analyzer
 
-The `fulltext` analyzer uses standard tokenizer, englishPossessive, lowercase, stopword (English), and [kStemming](https://www.mongodb.com/docs/atlas/atlas-search/analyzers/token-filters/#kstemming). Fulltext search on the entire document uses multi-path search (for example `ecm:fulltext` queries both `ecm:fulltextBinary` and `ecm:fulltextSimple`); there is no single combined field for document-wide fulltext.
+The `fulltext` analyzer uses standard tokenizer, englishPossessive, lowercase, stopword (English), and [kStemming](https://www.mongodb.com/docs/atlas/atlas-search/analyzers/token-filters/#kstemming). Fulltext search on the entire document uses multi-path search (for example `ecm:fulltext` queries both `ecm:fulltextBinary` and `ecm:fulltextSimple`). There is no single combined field for document-wide fulltext.
 
 ### Search limitations
 
@@ -144,7 +144,7 @@ Aggregates use MongoDB Atlas Search facet collectors. Counts are computed over t
 - **No cross-aggregate filtering**: Selecting a bucket (for example `dc:source = foo`) filters results correctly, but aggregate counts do not narrow; all counts reflect the full base result set.
 - **Unsupported**: `sum`, `avg`, `min`, `max`, `count`, `cardinality`, `missing`, `significant_terms`. When requested, search succeeds but unsupported aggregates keep empty buckets; `UNSUPPORTED` is reported in `getLimitations()`.
 - **Terms order/exclude**: Atlas string facets support `numBuckets` only; `order` and `exclude` are applied client-side.
-- **"other" bucket**: Atlas returns an "other" bucket for documents outside range boundaries; it is filtered out in the response.
+- **"other" bucket**: Atlas returns an "other" bucket for documents outside range boundaries. It is filtered out in the response.
 
 ## Other limitations
 
