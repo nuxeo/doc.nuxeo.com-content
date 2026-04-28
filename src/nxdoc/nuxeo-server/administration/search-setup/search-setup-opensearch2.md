@@ -25,7 +25,7 @@ In order to use an OpenSearch 2.x cluster, you need to install the `nuxeo-search
 
 If you want to set up an OpenSearch server that runs in the same JVM as the Nuxeo Platform's, you have to install explicitly the `nuxeo-opensearch2-embed` package. For production, you need to set up a Search cluster.
 
-Install and tune your cluster following [Search setup for OpenSearch 1.x and Elasticsearch 7.x–8.x]({{page page='search-setup-opensearch1'}}) where the workflow matches (OpenSearch 2.x instead of OpenSearch 1.x). Then use the same configuration workflow as on [Search setup]({{page page='search-setup'}}), starting with [Configuring Nuxeo to Access the Search Cluster]({{page page='search-setup'}}#configuring-nuxeo-to-access-the-search-cluster) and the following sections there (reindex, mappings, multi-repository, troubleshooting). In every `nuxeo.conf` property name, replace the `opensearch1` segment with the client key for your search stack (see the example below).
+Install and tune your cluster following [Search setup for OpenSearch 1.x and Elasticsearch 7.x–8.x]({{page page='search-setup-opensearch1'}}) where the workflow matches (OpenSearch 2.x instead of OpenSearch 1.x). Then use the same configuration workflow as on [Search setup]({{page page='search-setup'}}), starting with [Configuring Nuxeo to Access the Search Cluster]({{page page='search-setup'}}#configuring-nuxeo-to-access-the-search-cluster) and the following sections (reindex, mappings, multi-repository, troubleshooting). In every `nuxeo.conf` property name, replace the `opensearch1` segment with the client key for your search stack (see the example below).
 
 For instance, you will have to use:
 ```
