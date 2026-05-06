@@ -3,11 +3,11 @@ title: Python Client
 description: The Nuxeo Python Client is a Python client library for Nuxeo Automation and REST API.
 review:
     comment: ''
-    date: '2017-12-18'
+    date: '2026-05-06'
     status: ok
 labels:
-    - lts2016-ok
-    - lts2017-ok
+    - lts2025-ok
+    - lts2023-ok
     - python-client
     - mschoentgen
     - client
@@ -29,6 +29,12 @@ version_override:
     '6.0': 60/nxdoc/using-a-python-client
     '5.8': 58/nxdoc/using-a-python-client
 history:
+
+    -
+        author: Gurudas Banerjee
+        date: '2026-05-06 08:48'
+        message: 'python upgrade 3.9.5 to 3.13.1'
+        version: '17'
     -
         author: Anne Jubert
         date: '2016-05-31 08:48'
