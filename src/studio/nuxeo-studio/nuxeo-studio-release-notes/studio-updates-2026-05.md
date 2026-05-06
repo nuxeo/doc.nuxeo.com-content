@@ -10,7 +10,7 @@ toc: true
 ---
 {{! multiexcerpt name='studio-updates-2026-05'}}
 
-##  Bug fixes
+## Bug fixes
 
 ### LTS 2025 Operation Signatures Now Match Runtime in Studio Registry
 Eliminates false automation-chain validation errors and reduces upgrade breakages for LTS 2025 migrations.
