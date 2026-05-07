@@ -652,6 +652,107 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 19
+
+### Create Management APIs to Copy Audit Backends and Check the Result
+
+The SQL Audit backend has been improved to delegate ID generation to the Nuxeo sequencer (KeyValueStore-based) instead of relying exclusively on the Hibernate/SQL sequence generator. This paves the way for consistent ID assignment across multiple audit backends and is a prerequisite for the copy and purge audit mechanisms introduced in this version.
+
+> Note: This is currently opt-in. In a future release it will become the only supported mode; plan the migration accordingly and perform it before leveraging any copy or purge audit operation.
+
+## Steps
+
+Steps 1 and 2 must be performed while Nuxeo is running. Steps 3 and 4 require Nuxeo to be stopped.
+
+### 1. Retrieve the latest audit log ID
+
+Use `GET /management/audit/checkSearch` — the response returns IDs ordered descending, so the first value in `results` is the highest ID currently in the database:
+
+```
+curl -u Administrator:Administrator \
+  "http://localhost:8080/nuxeo/api/v1/management/audit/checkSearch?backend=default&pageSize=1"
+```
+
+```
+{
+  "pageProvider": "audit_check_nxql",
+  "orders": ["id DESC"],
+  "executions": {
+    "default": {
+      "resultsCount": 1500,
+      "results": [1500]
+    }
+  }
+}
+```
+
+Note the value (here `1500`).
+
+### 2. Initialise the Nuxeo sequencer
+
+Use `POST /management/sequencers/default` to set the `audit` key to a value safely above the highest ID retrieved above. Adding a margin of 50–100 is recommended to avoid any conflict with entries that may be written between the check and the server stop:
+
+```
+# Highest ID was 1500, use 1550 for safety
+curl -X POST -u Administrator:Administrator \
+  http://localhost:8080/nuxeo/api/v1/management/sequencers/default \
+  -d 'key=audit&value=1550'
+```
+
+You can verify it was applied:
+
+```
+curl -u Administrator:Administrator \
+  http://localhost:8080/nuxeo/api/v1/management/sequencers
+```
+
+```
+{
+  "entity-type": "sequencers",
+  "entries": [
+    {
+      "entity-type": "sequencer",
+      "name": "default",
+      "implementation": "org.nuxeo.ecm.core.uidgen.KeyValueStoreUIDSequencer",
+      "keyValues": [
+        { "key": "audit", "value": 1550 }
+      ]
+    }
+  ]
+}
+```
+
+Then stop Nuxeo before proceeding to step 3.
+
+### 3. Enable the Nuxeo sequencer for the SQL Audit backend
+
+In `nuxeo.conf`, add or update:
+
+```
+nuxeo.audit.backend.default.sql.use_nuxeo_sequencer=true
+```
+
+### 4. Start Nuxeo
+
+New audit log entries will now be assigned IDs by the Nuxeo sequencer, starting above the initialised value.
+### Add Property to Configure Search Behavior on LDAP Groups
+
+A new property `nuxeo.ldap.group.searchBehavior` is added to the LDAP template to configure the search behavior for LDAP groups
+### Add @Cleanup Annotation to Control Test Fixture Cleanup Granularity
+
+The usage of `@RepositoryConfig(cleanup = Granularity.METHOD)` on test classes that define no `init` method is deprecated and will be removed in a future version.
+
+Replace it with the new `@Cleanup` annotation (or simply remove the annotation entirely, since `METHOD` is the default granularity):
+
+```
+// Before (deprecated)
+@RepositoryConfig(cleanup = Granularity.METHOD)
+public class MyTest { ... }
+
+// After (remove the annotation entirely, or be explicit)
+@Cleanup // equivalent to @Cleanup(granularity = Cleanup.Granularity.METHOD) or nothing
+public class MyTest { ... }
+```
 ## Hotfix 18
 
 ### ELSA-2026-5602 in LTS 2025/2023 - Vim 8.2.2637-23.0.1.el9_7 - Medium
