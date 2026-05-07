@@ -152,76 +152,18 @@ a map.
 Since LTS 2025, you have to explicitly choose a backend implementation from the
 following implementations listed below:
 
-| Backend                                  | Marketplace Package             |
-|------------------------------------------|---------------------------------|
-| In-Memory (not for production)           | Built-in Nuxeo Server (default) |
-| OpenSearch 1.x / Elasticsearch 7.x - 8.x | nuxeo-audit-opensearch1         |
-| OpenSearch 2.x                           | nuxeo-audit-opensearch2         |
-| Elasticsearch 9.x                        | nuxeo-audit-elasticsearch9      |
-| MongoDB                                  | nuxeo-audit-mongodb             |
-| SQL DataBase (Legacy)                    | nuxeo-audit-sql                 |
+| Backend                                  | Marketplace Package             | Reference                                                                          |
+|------------------------------------------|---------------------------------|------------------------------------------------------------------------------------|
+| In-Memory (not for production)           | Built-in Nuxeo Server (default) | —                                                                                  |
+| OpenSearch 1.x / Elasticsearch 7.x - 8.x | nuxeo-audit-opensearch1         | [OpenSearch 1.x Audit Backend]({{page page='audit-backend-opensearch1'}})          |
+| OpenSearch 2.x                           | nuxeo-audit-opensearch2         | [OpenSearch 2.x Audit Backend]({{page page='audit-backend-opensearch2'}})          |
+| Elasticsearch 9.x                        | nuxeo-audit-elasticsearch9      | [Elasticsearch 9.x Audit Backend]({{page page='audit-backend-elasticsearch9'}})    |
+| MongoDB                                  | nuxeo-audit-mongodb             | [MongoDB Audit Backend]({{page page='audit-backend-mongodb'}})                     |
+| SQL Database (Legacy)                    | nuxeo-audit-sql                 | [SQL Audit Backend (Legacy)]({{page page='audit-backend-sql'}})                      |
 
-More information below.
-
-#### OpenSearch 1.x / Elasticsearch 7.x - 8.x Back-end
-
-By installing the `nuxeo-audit-opensearch1` package, you have the previous
-default behavior of storing audit into an OpenSearch 1.x / Elasticsearch 7.x -
-8.x cluster.
-
-The audit entries are stored in an OpenSearch index named by the
-`nuxeo.audit.backend.default.opensearch1.index.name` property (previously
-`audit.elasticsearch.indexName`) in `nuxeo.conf`.
-
-{{#> callout type='warning' }}
-Make sure you read the
-[Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}#backingupandrestoringtheauditelasticsearchindex)
-section.
-{{/callout}}
-
-Fore more information about the global Elasticsearch setup, see
-[Elasticsearch Setup]({{page page='elasticsearch-setup'}}).
-
-#### OpenSearch 2.x Back-end
-
-To use OpenSearch 2.x back-end, you have to install the
-`nuxeo-audit-opensearch2` package.
-
-The entries are stored in the `nuxeo-audit` index by default. You can configure
-it by setting the `nuxeo.audit.backend.default.opensearch2.index.name` property
-in your `nuxeo.conf`.
-
-#### Elasticsearch 9.x Back-end
-
-To use Elasticsearch 9.x back-end, you have to install the
-`nuxeo-audit-elasticsearch9` package.
-
-The entries are stored in the `nuxeo-audit` index by default. You can configure
-it by setting the `nuxeo.audit.backend.default.elasticsearch9.index.name`
-property in your `nuxeo.conf`.
-
-#### MongoDB Back-end
-
-To use MongoDB back-end, you have to install the `nuxeo-audit-mongodb` package.
-
-The entries are stored in the `audit` collection by default. You can configure
-it by setting the `nuxeo.mongodb.audit.collection.name` property in your
+Each child page lists the configuration properties exposed by the package as
+`nuxeo.audit.backend.default.<implementation>.*` so you can override them in
 `nuxeo.conf`.
-
-#### Legacy SQL Back-end
-
-To use the legacy SQL back-end, you have to install the `nuxeo-audit-sql`
-package.
-
-The `LogEntry` and `ExtendedInfo` Java classes are mapped onto the datastore
-using JPA (Java Persistence API) annotations.
-
-There are three tables used by the Audit Service: `NXP_LOGS`, `NXP_LOGS_EXTINFO`
-and `NXP_LOGS_MAPEXTINFOS`. `NXP_LOGS` is the main table, it is used most of the
-time. The two others are used only when the `extendedInfo` extension point is
-defined.
-
-![]({{file name='diagram.png'}} ?w=600,border=true)
 
 ## Querying the Audit Data Store
 
@@ -244,41 +186,6 @@ List<LogEntry> logEntries = reader.getLogEntriesFor(doc.getId(), 'myRepository')
 AuditQueryBuilder builder = new AuditQueryBuilder();
 builder.predicates(Predicates.eq("docUUID", doc.getId()), Predicates.eq("repositoryId", 'myRepository'));
 List<LogEntry> logEntriesFiltered = reader.queryLogs(builder);
-```
-
-You can perform some simple queries using the Elasticsearch API, here is an
-example of getting all the logs of the category 'MyExport' ordered by the date
-of the event:
-
-```java
-List<LogEntry> entries = new ArrayList<>();
-ElasticSearchAdmin esa = Framework.getService(ElasticSearchAdmin.class);
-SearchRequestBuilder builder = esa.getClient()
-                                  .prepareSearch(esa.getIndexNameForType(ElasticSearchConstants.ENTRY_TYPE))
-                                  .setTypes(ElasticSearchConstants.ENTRY_TYPE)
-                                  .setSearchType(SearchType.DFS_QUERY_THEN_FETCH);
-builder.setQuery(QueryBuilders.termQuery("category", "MyExport"));
-builder.addSort("eventDate", SortOrder.DESC);
-SearchResponse searchResponse = builder.execute().actionGet();
-for (SearchHit hit : searchResponse.getHits()) {
-    try {
-        entries.add(AuditEntryJSONReader.read(hit.getSourceAsString()));
-    } catch (IOException e) {
-        log.error("Error while reading Audit Entry from ES", e);
-    }
-}
-```
-
-When using the legacy SQL back-end, you can use `AuditReader` to do simple
-queries using the JPA Query language:
-
-```java
-StringBuffer query = new StringBuffer("from LogEntry log where ");
-query.append(" log.category='");
-query.append("MyExport");
-query.append("'  ORDER BY log.eventDate DESC");
-AuditReader reader = Framework.getService(AuditReader.class);
-List<LogEntry> result = (List<LogEntry>)reader.nativeQuery(query.toString(), 1, 1);
 ```
 
 There are two PageProviders that can be used for querying the Audit data store:
@@ -473,23 +380,3 @@ to define the queues' parameters is `queue` for the
 ```
 
 [More details on the explorer.](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.work.service--queues)
-
-### Hibernate - Legacy SQL Back-end Only
-
-In the legacy SQL back-end, the Audit Service  uses Hibernate as a JPA provider.
-The configuration is done in the `hibernate` extension point for the
-`org.nuxeo.ecm.core.persistence.PersistenceComponent` target. This extension
-point lets you override the default Hibernate configuration.
-
-```xml
-<extension target="org.nuxeo.ecm.core.persistence.PersistenceComponent" point="hibernate">
-  <hibernateConfiguration name="nxaudit-logs">
-    <datasource>nxaudit-logs</datasource>
-    <properties>
-      <property name="hibernate.hbm2ddl.auto">update</property>
-    </properties>
-  </hibernateConfiguration>
-</extension>
-```
-
-[More details on the explorer.](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.persistence.PersistenceComponent--hibernate)
