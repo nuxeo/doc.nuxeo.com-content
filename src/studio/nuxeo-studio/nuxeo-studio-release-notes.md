@@ -13,7 +13,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2026-04' space='studio' page='studio-updates-2026-05'}}}
+{{{multiexcerpt 'studio-updates-2026-05' space='studio' page='studio-updates-2026-05'}}}
 
 ---
 
