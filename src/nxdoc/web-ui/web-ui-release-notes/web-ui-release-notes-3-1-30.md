@@ -8,7 +8,7 @@ review:
 toc: true
 labels:
 tree_item_index: 971
-hidden: trueExpand comment
+hidden: true
 
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
@@ -18,11 +18,11 @@ hidden: trueExpand comment
 ## What’s New in Web UI for LTS 2023 (Version 3.1.30)
 
 
- Accessibility Enhancements
+ **Accessibility Enhancements**
 
 We continue to improve accessibility across Nuxeo Web UI to ensure an inclusive experience for all users.
 
-    Improved screen reader support across the application
+    ***Improved screen reader support across the application***
 
         The Add to Collections dropdown is now fully accessible with screen readers.
 
@@ -34,7 +34,7 @@ We continue to improve accessibility across Nuxeo Web UI to ensure an inclusive 
 
         Search and form dropdowns now announce labels and context correctly for better navigation.
 
-    Improved date picker experience
+    ***Improved date picker experience***
 
         Fixed issues where date pickers displayed incorrect translations or date formats.
 
@@ -42,9 +42,9 @@ We continue to improve accessibility across Nuxeo Web UI to ensure an inclusive 
 
  
 
-🚀 New Capabilities
+🚀 **New Capabilities**
 
-    Direct download to Nuxeo Drive
+    ***Direct download to Nuxeo Drive***
 
         Added a new Web UI action that lets users download selected documents or folders directly into Nuxeo Drive.
 
@@ -54,7 +54,7 @@ We continue to improve accessibility across Nuxeo Web UI to ensure an inclusive 
 
  
 
-✅ Bug Fixes & Usability Improvements
+✅ **Bug Fixes & Usability Improvements**
 
     Fixed an issue where the selection actions toolbar did not appear after refreshing search results.
 
@@ -70,7 +70,7 @@ We continue to improve accessibility across Nuxeo Web UI to ensure an inclusive 
 
  
 
-🧠 AI Readiness Improvements
+🧠 **AI Readiness Improvements**
 
     Added AI context markdown files to:
 
@@ -82,7 +82,7 @@ These updates help establish a stronger foundation for more contextual and intel
 
  
 
-⚙️ Platform & Reliability Improvements
+⚙️ **Platform & Reliability Improvements**
 
 To keep Nuxeo Web UI stable, secure, and future‑ready, we’ve updated several internal dependencies and build tools. These changes do not impact end‑user workflows directly but improve performance, maintainability, and CI/CD reliability.
 
