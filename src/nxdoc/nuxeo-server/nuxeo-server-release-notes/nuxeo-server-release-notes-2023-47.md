@@ -31,36 +31,37 @@ nuxeo.vcs.fullltext.storeInBlob=true
 nuxeo.dbs.fulltext.storeInBlobThreshold=4KiB 
 ```
 
-The threshold can be activated on existing instance, it will apply only for new documents.
+The threshold can be activated on existing instance. It will apply only for new documents.
 
-It’s possible to force the threshold to apply to the entire repository using the `management/fulltext/fixBinaryStorage` management endpoint as described in [ NXP-33048](https://hyland.atlassian.net/browse/NXP-33048)
+It’s possible to force the threshold to apply to the entire repository using the `management/fulltext/fixBinaryStorage` management endpoint.
+
 ## Fix Relation Documents Missing From Repository Re-Index LTS 2023
 
 Relations are now included in reindexing. "SELECT * FROM Document" no longer returns Relations on Elasticsearch/OpenSearch backends.
 
-Full repository reindexing operations now use `FROM Document, Relation` so Relations are now included in reindexing.
-
-`SELECT * FROM Document` incorrectly returned Relation documents when using Elasticsearch or OpenSearch backends.
+Full repository reindexing operations now use `FROM Document, Relation`, so Relations are now included in reindexing. Previously, `SELECT * FROM Document` incorrectly returned Relation documents when using Elasticsearch or OpenSearch backends.
 
 Before: `SELECT * FROM Document` returned Documents + Relations (incorrect)
 
 After: `SELECT * FROM Document` returns only Documents (correct)
+
 ## Fix UnsupportedOperationException When Uploading a File to an Encrypted Blob Store
 
 Implemented `copyOrMoveBlob` method for `AESBlobStore`, enabling encrypted blob dispatch between blob stores.
 
 ## Fix WOPI Favicon Not Matching Opened Application
 
-Use matching Microsoft favicons when opening a document through Microsoft 365 for the web
+Use matching Microsoft favicons when opening a document through Microsoft 365 for the web.
 
 ## Add Property to Configure Search Behavior on LDAP Groups
 
-A new property nuxeo.ldap.group.searchBehavior is added to the LDAP template to configure the search behavior for LDAP groups
+A new property, nuxeo.ldap.group.searchBehavior is added to the LDAP template to configure the search behavior for LDAP groups.
 
-A new property `nuxeo.ldap.group.searchBehavior` is added to the LDAP template to configure the search behavior for LDAP groups
+A new property, `nuxeo.ldap.group.searchBehavior` is added to the LDAP template to configure the search behavior for LDAP groups.
+
 ## Better Handling of Duration.ZERO Formatting With DurationUtils
 
-DurationUtils now proper format zero
+DurationUtils now proper handle zero formatting.
 
 
 {{! /multiexcerpt}}
