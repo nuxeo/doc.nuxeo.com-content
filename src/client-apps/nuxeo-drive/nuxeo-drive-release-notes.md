@@ -30,7 +30,7 @@ We updated the app to use PyQt6 and Node.js 24 so it matches modern platforms an
 
 ### Safer dependencies and libraries
 
-We fixed security issues in several core libraries, including Authlib, pip, Pygments, cryptography, Requests, and how pytest handles temporary folders. These changes make the app more secure overall.
+We fixed security issues in several core libraries, including Authlib, pip, Pygments, cryptography, Requests, and the way pytest handles temporary folders. These changes make the app more secure overall.
 
 ## Fixes
 
