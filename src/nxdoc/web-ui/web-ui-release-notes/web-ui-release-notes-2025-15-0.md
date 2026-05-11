@@ -23,8 +23,8 @@ We continue to improve accessibility across Nuxeo Web UI to ensure an inclusive 
 
 - ***Improved screen reader support across the application:***
     - The Add to Collections dropdown is now fully accessible with screen readers.
-    - Dropdown items and date picker fields are now read correctly by assistive technologies.
-    - The Image & Video toolbar is now fully screen‑reader accessible.
+    - Dropdown Items and Date Picker fields are now read correctly by assistive technologies.
+    - The Image and Video toolbar is now fully screen‑reader accessible.
     - The default search form now uses both labels and placeholders to clearly communicate information to screen reader users.
     - Search and form dropdowns now announce labels and context correctly for better navigation.
 - ***Improved date picker experience:***
@@ -42,7 +42,7 @@ We continue to improve accessibility across Nuxeo Web UI to ensure an inclusive 
 
 - Fixed an issue where the selection actions toolbar did not appear after refreshing search results.
 - Fixed saved searches for hierarchical vocabularies, ensuring full hierarchy paths are preserved and searches return expected results.
-- Fixed Workflow Analytics not refreshing when the date range was changed.
+- Fixed an issue where Workflow Analytics was not refreshing when the date range was changed.
 - Removed a hardcoded sort order on the Collections page, allowing server‑side sort configuration to be respected.
 - Improved handling of search suggestions containing double quotes, ensuring special characters are escaped correctly.
 - Reduced functional test flakiness, minimizing random test failures and improving overall stability.
