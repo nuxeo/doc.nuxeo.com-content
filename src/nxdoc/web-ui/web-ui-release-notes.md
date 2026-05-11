@@ -23,7 +23,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.15.0]({{page page='web-ui-release-notes-2025-15-0'}}) |Accessibility fixes, usability, AI-readiness, and platform reliability improvements| -->
+<!-- | [Web UI 2025.15.0]({{page page='web-ui-release-notes-2025-15-0'}}) |Accessibility fixes, usability, and platform reliability improvements| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
