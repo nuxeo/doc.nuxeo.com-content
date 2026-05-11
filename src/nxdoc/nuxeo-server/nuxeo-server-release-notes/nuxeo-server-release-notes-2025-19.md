@@ -17,7 +17,7 @@ hidden: true
 
 ## Store Binary Fulltext in Blob Only Above a Threshold
 
-It's now possible to store the binary fulltext into a blob only if the size exceed a threshold
+It's now possible to store the binary fulltext into a blob only if the size exceed a threshold.
 
 When using binary fulltext stored in blob, a size threshold can now be configured. Fulltext smaller than the threshold is stored inline in the repository, while fulltext equal to or larger than the threshold is externalized to a blob provider.
 
@@ -31,14 +31,15 @@ nuxeo.vcs.fullltext.storeInBlob=true
 nuxeo.dbs.fulltext.storeInBlobThreshold=4KiB 
 ```
 
-The threshold can be activated on existing instance, it will apply only for new documents.
+The threshold can be activated on existing instance. It will apply only for new documents.
 
-It’s possible to force the threshold to apply to the entire repository using the `management/fulltext/fixBinaryStorage` management endpoint as described in [ NXP-33048](https://hyland.atlassian.net/browse/NXP-33048)
+It’s possible to force the threshold to apply to the entire repository using the `management/fulltext/fixBinaryStorage` management endpoint.
+
 ## Create Management APIs to Copy Audit Backends and Check the Result
 
-Management REST API to copy audit from one backend to another have been added
+Management REST API to copy audit from one backend to another have been added.
 
-Assuming you have configured two audit backends (e.g. `default` and `archive`), the Management REST API now provides dedicated endpoints to copy audit log entries from one backend to another and to verify the result.
+Assuming you have configured two audit backends (for example, `default` and `archive`), the Management REST API now provides dedicated endpoints to copy audit log entries from one backend to another and to verify the result.
 
 ### Copy audit entries between backends
 
@@ -110,16 +111,15 @@ Implemented `copyOrMoveBlob` method for `AESBlobStore`, enabling encrypted blob 
 
 ## Fix WOPI Favicon Not Matching Opened Application
 
-Use matching Microsoft favicons when opening a document through Microsoft 365 for the web
+Use matching Microsoft favicons when opening a document through Microsoft 365 for the web.
 
 ## Add Property to Configure Search Behavior on LDAP Groups
 
-A new property nuxeo.ldap.group.searchBehavior is added to the LDAP template to configure the search behavior for LDAP groups
+A new property `nuxeo.ldap.group.searchBehavior` is added to the LDAP template to configure the search behavior for LDAP groups.
 
-A new property `nuxeo.ldap.group.searchBehavior` is added to the LDAP template to configure the search behavior for LDAP groups
 ## Add @Cleanup Annotation to Control Test Fixture Cleanup Granularity
 
-New @Cleanup annotation for declarative test fixture cleanup granularity
+New @Cleanup annotation is now available for declarative test fixture cleanup granularity.
 
 The new `@Cleanup` annotation (package `org.nuxeo.runtime.test.runner`) can be placed on a test class to control how often test fixtures — such as K/V stores, the document repository, and directory caches — are cleaned between tests.
 
@@ -140,13 +140,14 @@ public class MyTest {
 - `Cleanup.Granularity.CLASS`: fixtures are cleaned only once per test class. Useful for read-only or expensive-to-initialize datasets.
 
 The `RuntimeKeyValueStoreFeature`, `CoreFeature`, `AuditFeature` and `DirectoryFeature` read the `@Cleanup` annotation at startup via `runner.getConfig(Cleanup.class)` and respect the configured granularity during test execution.
+
 ## Better Handling of Duration.ZERO Formatting With DurationUtils
 
-DurationUtils now proper format zero
+DurationUtils now properly handle zero formatting.
 
-## NuxeoDrive.GetChangeSummary Might Fail Under Pressure With OpenSearch
+## Improved fail-tolerance of NuxeoDrive.GetChangeSummary when Under Pressure With OpenSearch
 
-NuxeoDrive.GetChangeSummary performance has been improved
+NuxeoDrive.GetChangeSummary performance has been improved.
 
 
 {{! /multiexcerpt}}
