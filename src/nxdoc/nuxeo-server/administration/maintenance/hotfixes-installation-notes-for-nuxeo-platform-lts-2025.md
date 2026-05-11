@@ -658,7 +658,7 @@ The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implem
 
 The SQL Audit backend has been improved to delegate ID generation to the Nuxeo sequencer (KeyValueStore-based) instead of relying exclusively on the Hibernate/SQL sequence generator. This paves the way for consistent ID assignment across multiple audit backends and is a prerequisite for the copy and purge audit mechanisms introduced in this version.
 
-> Note: This is currently opt-in. In a future release it will become the only supported mode; plan the migration accordingly and perform it before leveraging any copy or purge audit operation.
+> Note: This is currently opt-in. In a future release it will become the only supported mode. Plan the migration accordingly and perform it before leveraging any copy or purge audit operation.
 
 ## Steps
 
@@ -666,7 +666,7 @@ Steps 1 and 2 must be performed while Nuxeo is running. Steps 3 and 4 require Nu
 
 ### 1. Retrieve the latest audit log ID
 
-Use `GET /management/audit/checkSearch` — the response returns IDs ordered descending, so the first value in `results` is the highest ID currently in the database:
+Use `GET /management/audit/checkSearch` — the response returns IDs in descending order, so the first value in `results` is the highest ID currently in the database:
 
 ```
 curl -u Administrator:Administrator \
@@ -735,9 +735,11 @@ nuxeo.audit.backend.default.sql.use_nuxeo_sequencer=true
 ### 4. Start Nuxeo
 
 New audit log entries will now be assigned IDs by the Nuxeo sequencer, starting above the initialised value.
+
 ### Add Property to Configure Search Behavior on LDAP Groups
 
-A new property `nuxeo.ldap.group.searchBehavior` is added to the LDAP template to configure the search behavior for LDAP groups
+A new property, `nuxeo.ldap.group.searchBehavior` is added to the LDAP template to configure the search behavior for LDAP groups.
+
 ### Add @Cleanup Annotation to Control Test Fixture Cleanup Granularity
 
 The usage of `@RepositoryConfig(cleanup = Granularity.METHOD)` on test classes that define no `init` method is deprecated and will be removed in a future version.
