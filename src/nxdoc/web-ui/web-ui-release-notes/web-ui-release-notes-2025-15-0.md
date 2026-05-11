@@ -47,13 +47,6 @@ We continue to improve accessibility across Nuxeo Web UI to ensure an inclusive 
 - Improved handling of search suggestions containing double quotes, ensuring special characters are escaped correctly.
 - Reduced functional test flakiness, minimizing random test failures and improving overall stability.
 
-**AI Readiness Improvements**
-
-- Added AI context markdown files to:
-    - nuxeo-elements
-    - nuxeo-web-ui
-- These updates help establish a stronger foundation for more contextual and intelligent AI‑powered features in the future.
-
 **Platform and Reliability Improvements**
 
 - To keep Nuxeo Web UI stable, secure, and future‑ready, we’ve updated several internal dependencies and build tools. These changes do not impact end-user workflows directly but improve performance, maintainability, and CI/CD reliability.
