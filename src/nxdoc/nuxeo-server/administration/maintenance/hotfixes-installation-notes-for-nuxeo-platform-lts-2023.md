@@ -113,9 +113,11 @@ Applications that query Relation documents must update queries to include them e
 - Use `SELECT * FROM Relation` to query only Relations
 
 Queries using `FROM Document` will return fewer results if they previously relied on the bug to find Relations. This affects only Elasticsearch/OpenSearch backends; VCS and DBS backends remain unchanged.
+
 ### Add Property to Configure Search Behavior on LDAP Groups
 
-A new property `nuxeo.ldap.group.searchBehavior` is added to the LDAP template to configure the search behavior for LDAP groups
+A new property `nuxeo.ldap.group.searchBehavior` is added to the LDAP template to configure the search behavior for LDAP groups.
+
 ## Hotfix 46
 
 ### ELSA-2026-5602 in LTS 2025/2023 - Vim 8.2.2637-23.0.1.el9_7 - Medium
