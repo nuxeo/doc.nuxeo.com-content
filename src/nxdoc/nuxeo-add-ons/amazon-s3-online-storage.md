@@ -197,7 +197,28 @@ nuxeo.s3storage.region=your_AWS_REGION
 
 #### Storage Class
 
-Since `2025.8`, the Nuxeo configuration property `nuxeo.s3storage.storageClass` allows you to specify which storage class should be used to store blobs in an S3 bucket. Supported values are `STANDARD` (default) or `INTELLIGENT_TIERING`.
+Since `2025.8`, the Nuxeo configuration property `nuxeo.s3storage.storageClass` allows you to specify which storage class should be used to store blobs in an S3 bucket.
+
+The following S3 storage classes are supported:
+
+- `STANDARD` (default)
+- `INTELLIGENT_TIERING`
+- `STANDARD_IA` (Standard - Infrequent Access)
+- `ONEZONE_IA` (One Zone - Infrequent Access)
+- `GLACIER_IR` (Glacier Instant Retrieval)
+
+{{#> callout type='warning' heading='INTELLIGENT_TIERING Restrictions'}}
+The `INTELLIGENT_TIERING` class can only be used when the underlying bucket is configured to use only immediate (synchronous) access tiers:
+
+- _Frequent Access tier_
+- _Infrequent Access tier_
+- _Archive Instant Access tier_
+
+The following asynchronous access tiers are prohibited as they must be accessed asynchronously (requires an explicit restore action) and the Nuxeo platform does not handle this use case:
+
+- _Archive Access tier_
+- _Deep Archive Access tier_
+  {{/callout}}
 
 You can also fine-tune which storage class should be applied to the full-text blobs extracted from binaries (when `nuxeo.vcs.fulltext.storedInBlob=true`) with the `nuxeo.s3storage.fulltext.storeInBlob.storageClass` property.
 
@@ -210,17 +231,6 @@ Alternatively, when defining your own S3 blob provider XML contribution, you can
       ...
       <property name="storageClass">INTELLIGENT_TIERING</property>
 ```
-
-Note that the `INTELLIGENT_TIERING` class could only be used when the underlying bucket used to store data is configured to use only immediate (synchronous) access tiers:
-
-- _Infrequent Access tier_
-- _Archive Instant Access tier_
-- _Archive Instant Access tier_
-
-The 2 last tiers are prohibited as they must be accessed asynchronously (requires an explicit restore action) and the Nuxeo platform does not handle this use case.
-
-- _Archive Access tier_
-- _Deep Archive Access tier_
 
 #### Client-Side Crypto Options
 
