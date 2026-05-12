@@ -2,125 +2,106 @@
 title: Amazon S3 Online Storage
 description: The Amazon S3 Online Storage is a Nuxeo Binary Manager for S3. It stores Nuxeo's binaries (the attached documents) in an Amazon S3 bucket.
 review:
-    comment: ''
-    date: '2019-09-18'
-    status: ok
+  comment: ''
+  date: '2019-09-18'
+  status: ok
 labels:
-    - lts2016-ok
-    - amazon-s3
-    - fguillaume
-    - binary-manager
-    - multiexcerpt-include
-    - lts2017-ok
+  - lts2016-ok
+  - amazon-s3
+  - fguillaume
+  - binary-manager
+  - multiexcerpt-include
+  - lts2017-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Amazon+S3+Online+Storage
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Amazon+S3+Online+Storage'
-    page_id: '12912817'
-    shortlink: sQjF
-    shortlink_source: 'https://doc.nuxeo.com/x/sQjF'
-    source_link: /display/NXDOC/Amazon+S3+Online+Storage
+  ajs-parent-page-id: '16089349'
+  ajs-parent-page-title: Nuxeo Add-Ons
+  ajs-space-key: NXDOC
+  ajs-space-name: Nuxeo Platform Developer Documentation
+  canonical: Amazon+S3+Online+Storage
+  canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Amazon+S3+Online+Storage'
+  page_id: '12912817'
+  shortlink: sQjF
+  shortlink_source: 'https://doc.nuxeo.com/x/sQjF'
+  source_link: /display/NXDOC/Amazon+S3+Online+Storage
 tree_item_index: 300
 history:
-    -
-        author: Florent Guillaume
-        date: '2016-08-17 09:53'
-        message: ermission clarificatio
-        version: '19'
-    -
-        author: Florent Guillaume
-        date: '2016-08-11 15:30'
-        message: added s3 policy
-        version: '18'
-    -
-        author: Alain Escaffre
-        date: '2016-08-02 12:07'
-        message: ''
-        version: '17'
-    -
-        author: Solen Guitter
-        date: '2016-06-01 14:30'
-        message: 'Use generic installation excerpt '
-        version: '16'
-    -
-        author: Solen Guitter
-        date: '2016-02-04 16:55'
-        message: ''
-        version: '15'
-    -
-        author: Florent Guillaume
-        date: '2016-01-28 15:07'
-        message: add server-side encryption option
-        version: '14'
-    -
-        author: Florent Guillaume
-        date: '2016-01-05 15:00'
-        message: cachecount+ cacheminage
-        version: '13'
-    -
-        author: Florent Guillaume
-        date: '2015-12-16 13:19'
-        message: bucket_prefix
-        version: '12'
-    -
-        author: Solen Guitter
-        date: '2015-11-27 13:55'
-        message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
-        version: '11'
-    -
-        author: Mathieu Guillaume
-        date: '2015-10-07 08:57'
-        message: ''
-        version: '10'
-    -
-        author: Florent Guillaume
-        date: '2015-09-22 12:21'
-        message: Download From S3
-        version: '9'
-    -
-        author: Manon Lumeau
-        date: '2015-06-29 10:02'
-        message: ''
-        version: '8'
-    -
-        author: Michaël Vachette
-        date: '2015-03-20 11:00'
-        message: ''
-        version: '7'
-    -
-        author: Vladimir Pasquier
-        date: '2014-05-05 18:12'
-        message: ''
-        version: '6'
-    -
-        author: Solen Guitter
-        date: '2014-01-21 17:44'
-        message: ''
-        version: '5'
-    -
-        author: Florent Guillaume
-        date: '2014-01-20 18:20'
-        message: NXP-13550 connection pool doc
-        version: '4'
-    -
-        author: Solen Guitter
-        date: '2013-10-16 17:03'
-        message: ''
-        version: '3'
-    -
-        author: Solen Guitter
-        date: '2013-08-05 16:33'
-        message: ''
-        version: '2'
-    -
-        author: Solen Guitter
-        date: '2013-01-04 10:51'
-        message: ''
-        version: '1'
+  - author: Florent Guillaume
+    date: '2016-08-17 09:53'
+    message: ermission clarificatio
+    version: '19'
+  - author: Florent Guillaume
+    date: '2016-08-11 15:30'
+    message: added s3 policy
+    version: '18'
+  - author: Alain Escaffre
+    date: '2016-08-02 12:07'
+    message: ''
+    version: '17'
+  - author: Solen Guitter
+    date: '2016-06-01 14:30'
+    message: 'Use generic installation excerpt '
+    version: '16'
+  - author: Solen Guitter
+    date: '2016-02-04 16:55'
+    message: ''
+    version: '15'
+  - author: Florent Guillaume
+    date: '2016-01-28 15:07'
+    message: add server-side encryption option
+    version: '14'
+  - author: Florent Guillaume
+    date: '2016-01-05 15:00'
+    message: cachecount+ cacheminage
+    version: '13'
+  - author: Florent Guillaume
+    date: '2015-12-16 13:19'
+    message: bucket_prefix
+    version: '12'
+  - author: Solen Guitter
+    date: '2015-11-27 13:55'
+    message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
+    version: '11'
+  - author: Mathieu Guillaume
+    date: '2015-10-07 08:57'
+    message: ''
+    version: '10'
+  - author: Florent Guillaume
+    date: '2015-09-22 12:21'
+    message: Download From S3
+    version: '9'
+  - author: Manon Lumeau
+    date: '2015-06-29 10:02'
+    message: ''
+    version: '8'
+  - author: Michaël Vachette
+    date: '2015-03-20 11:00'
+    message: ''
+    version: '7'
+  - author: Vladimir Pasquier
+    date: '2014-05-05 18:12'
+    message: ''
+    version: '6'
+  - author: Solen Guitter
+    date: '2014-01-21 17:44'
+    message: ''
+    version: '5'
+  - author: Florent Guillaume
+    date: '2014-01-20 18:20'
+    message: NXP-13550 connection pool doc
+    version: '4'
+  - author: Solen Guitter
+    date: '2013-10-16 17:03'
+    message: ''
+    version: '3'
+  - author: Solen Guitter
+    date: '2013-08-05 16:33'
+    message: ''
+    version: '2'
+  - author: Solen Guitter
+    date: '2013-01-04 10:51'
+    message: ''
+    version: '1'
 ---
 
 The [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) is a Nuxeo Binary Manager for S3. It stores Nuxeo's binaries (the attached documents) in an [Amazon S3](http://aws.amazon.com/s3/) bucket.
@@ -144,11 +125,13 @@ For the case of a single repository, you can do the configuration using the `nux
 In `nuxeo.conf`, add the following lines:
 
 {{! multiexcerpt name='aws-config-credentials'}}
+
 ```
 nuxeo.aws.accessKeyId=your_AWS_ACCESS_KEY_ID
 nuxeo.aws.secretKey=your_AWS_SECRET_ACCESS_KEY
 nuxeo.aws.region=your_AWS_REGION
 ```
+
 {{! /multiexcerpt}}
 
 {{#> callout type='info' }}
@@ -161,24 +144,24 @@ If you used explicit configuration, the file `nuxeo.conf` now contains S3 secret
 
 The region code can be found in the [S3 Region Documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). The default is `us-east-1`. At the time this documentation was written, the list is:
 
-* us-east-1: US East (N. Virginia) (default)
-* us-east-2: US East (Ohio)
-* us-west-1: US West (N. California)
-* us-west-2: US West (Oregon)
-* eu-west-1: EU (Ireland)
-* eu-west-2: EU (London)
-* eu-west-3: EU (Paris)
-* eu-central-1: EU (Frankfurt)
-* ap-south-1: Asia Pacific (Mumbai)
-* ap-southeast-1: Asia Pacific (Singapore)
-* ap-southeast-2: Asia Pacific (Sydney)
-* ap-northeast-1: Asia Pacific (Tokyo)
-* ap-northeast-2: Asia Pacific (Seoul)
-* ap-northeast-3: Asia Pacific (Osaka-Local)
-* sa-east-1: South America (São Paulo)
-* ca-central-1: Canada (Central)
-* cn-north-1: China (Beijing)
-* cn-northwest-1: China (Ningxia)
+- us-east-1: US East (N. Virginia) (default)
+- us-east-2: US East (Ohio)
+- us-west-1: US West (N. California)
+- us-west-2: US West (Oregon)
+- eu-west-1: EU (Ireland)
+- eu-west-2: EU (London)
+- eu-west-3: EU (Paris)
+- eu-central-1: EU (Frankfurt)
+- ap-south-1: Asia Pacific (Mumbai)
+- ap-southeast-1: Asia Pacific (Singapore)
+- ap-southeast-2: Asia Pacific (Sydney)
+- ap-northeast-1: Asia Pacific (Tokyo)
+- ap-northeast-2: Asia Pacific (Seoul)
+- ap-northeast-3: Asia Pacific (Osaka-Local)
+- sa-east-1: South America (São Paulo)
+- ca-central-1: Canada (Central)
+- cn-north-1: China (Beijing)
+- cn-northwest-1: China (Ningxia)
 
 ### Specifying Your Amazon S3 Parameters
 
@@ -205,6 +188,7 @@ nuxeo.s3storage.pathstyleaccess=true
 ```
 
 The following are compatibility properties that can still be used but are deprecated (you should use global AWS configuration or IAM instance roles as described above):
+
 ```
 nuxeo.s3storage.awsid=your_AWS_ACCESS_KEY_ID
 nuxeo.s3storage.awssecret=your_AWS_SECRET_ACCESS_KEY
@@ -228,13 +212,15 @@ Alternatively, when defining your own S3 blob provider XML contribution, you can
 ```
 
 Note that the `INTELLIGENT_TIERING` class could only be used when the underlying bucket used to store data is configured to use only immediate (synchronous) access tiers:
-- *Infrequent Access tier*
-- *Archive Instant Access tier*
-- *Archive Instant Access tier*
+
+- _Infrequent Access tier_
+- _Archive Instant Access tier_
+- _Archive Instant Access tier_
 
 The 2 last tiers are prohibited as they must be accessed asynchronously (requires an explicit restore action) and the Nuxeo platform does not handle this use case.
-- *Archive Access tier*
-- *Deep Archive Access tier*
+
+- _Archive Access tier_
+- _Deep Archive Access tier_
 
 #### Client-Side Crypto Options
 
@@ -339,25 +325,18 @@ The expire time is expressed in seconds (the default is one hour) and determines
 ##### CORS Configuration
 
 Web UI triggers some blob downloads from XHR (e.g. Bulk Download, CSV Export, etc.) and will require the following CORS configuration on your S3 bucket:
+
 ```json
 [
-    {
-        "AllowedHeaders": [
-            "*"
-        ],
-        "AllowedMethods": [
-            "GET"
-        ],
-        "AllowedOrigins": [
-            "http://localhost:8080"
-        ],
-        "ExposeHeaders": [
-            "Content-Disposition",
-            "ETag"
-        ]
-    }
+  {
+    "AllowedHeaders": ["*"],
+    "AllowedMethods": ["GET"],
+    "AllowedOrigins": ["http://localhost:8080"],
+    "ExposeHeaders": ["Content-Disposition", "ETag"]
+  }
 ]
 ```
+
 {{#> callout type='note' }}
 Make sure to replace `http://localhost:8080` by the address where your Nuxeo instance is deployed.
 {{/callout}}
@@ -430,7 +409,7 @@ Here is a sample AWS S3 Policy that you can use; make sure that you replace `you
 
 ### AWS S3 Cleanup Lifecycle Rule
 
-{{#> callout type='warning' }} 
+{{#> callout type='warning' }}
 If versioning is enabled on your s3 bucket, you should define a [Cleanup Lifecycle rule](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-configuration-examples.html#lifecycle-config-conceptual-ex7) to remove expired object delete markers. As a matter of fact, in the case of s3 versioning enabled, the [Orphaned Blobs GC]({{page page='garbage-collecting-orphaned-blobs'}}) will only add a delete marker on the garbage-collected object. This object will be permanently deleted only if such a lifecycle rule is defined.
 {{/callout}}
 
@@ -468,7 +447,6 @@ The above configuration uses `nuxeo.conf` properties prefixed with `nuxeo.s3stor
 ```
 
 Note that this needs to override the default configuration present in the default Nuxeo template `default-repository-config.xml.nxftl`, which already defines the standard configuration for the `default` blob provider. You may need to `<require>default-repository-config</require>` in order for the override to be correctly taken into account.
-
 
 ## S3 Direct Upload
 
@@ -524,6 +502,7 @@ S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='b
 The [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) can be used with [MinIO](https://www.min.io/).
 
 In that case, the `nuxeo.s3storage.endpoint` property must point to the url where the MinIO cluster is deployed. Here is a minimal configuration:
+
 ```
 nuxeo.aws.accessKeyId=myAccessKeyId
 nuxeo.aws.secretKey=mySecretKey
@@ -536,6 +515,7 @@ nuxeo.s3storage.bucket=myBucket
 ### Self-signed certificate for HTTPS
 
 In development or testing stage, you may want to use a self-signed certificate to secure the communication between Nuxeo and MinIO. This self-signed certificate must be added to a Java Trust Store and registered with:
+
 ```
 nuxeo.aws.trustStorePath=/path/to/truststore.jks
 nuxeo.aws.trustStorePassword=myPassword
