@@ -34,7 +34,7 @@ Customers who were previously blocked from making any Studio Designer updates (a
 Fixes an indefinite loading state so OrgAdmins can view user information and manage permissions as expected.
 
 **What Changed:**
-Corrected Connect Account Management behavior where OrgAdmins could open a user page but user details never rendered (only loading icons indefinitely), even though the same pages loaded correctly for other roles (e.g., Power User).
+Corrected Connect Account Management behavior where OrgAdmins could open a user page but user details never rendered (only loading icons indefinitely), even though the same pages loaded correctly for other roles (for example, Power User).
 
 **Impact:**
 OrgAdmins regain reliable access to user account details, enabling expected self-service administration tasks (including permission assignment) across affected customer organizations.
