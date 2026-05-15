@@ -36,7 +36,7 @@ We fixed security issues in several core libraries, including Authlib, pip, Pygm
 
 ### Stability and user experience
 
-Fixed Windows app startup issues and improved the Microsoft Windows installer so that the existing Drive instance is stopped before installing. Also, resolved a Direct Transfer Web UI icon problem that occurred when target names contain spaces.
+Fixed Windows app startup issues and improved the Microsoft Windows installer so that the existing Drive instance is stopped before installing. Also, resolved a Direct Transfer Web UI icon problem that occurred when target names contained spaces.
 
 ## Download Links
 
