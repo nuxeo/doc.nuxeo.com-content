@@ -24,7 +24,7 @@ You can now download large files directly, supported by new backend services and
 
 ### Updated platforms and runtimes
 
-We updated the app to use PyQt6 and Node.js 24 so it matches modern platforms and tools. The app now works better with current systems and is easier to maintain and improve over time.
+We updated the app to use PyQt6 and Node.js 24 so that it matches modern platforms and tools. The app now works better with current systems and is easier to maintain and improve over time.
 
 ## Security Vulnerability Fixes
 
