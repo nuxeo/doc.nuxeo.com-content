@@ -34,7 +34,7 @@ Knowledge Enrichment enhances your content with machine‑generated metadata usi
 No AI expertise is required—everything is available through intuitive action buttons.
 {{/callout}}
 
-## Supported Content Types
+## Supported File Types
 
 ### Documents
 **Currently supported:** * PDF and docx documents
