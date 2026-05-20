@@ -25,7 +25,7 @@ in order to be able to display them. For example, in a document layout, when it 
 
 By default, Web UI requests any available field when navigating to a particular document. However, depending on your custom document types, resolving every single field may result in degraded performance.
 
-Since 10.10 ([NXP-26520](https://jira.nuxeo.com/browse/NXP-26520) and [NXP-25512](https://jira.nuxeo.com/browse/NXP-25512)), you can limit the list of fields that should be resolved with a contribution such as the following:
+Since 10.10 ([NXP-26520](https://hyland-sync.atlassian.net/browse/NXP-16707) and [NXP-25512](https://hyland-sync.atlassian.net/browse/NXP-10466)), you can limit the list of fields that should be resolved with a contribution such as the following:
 
 ```xml
 <require>org.nuxeo.web.ui.properties.contrib</require>
@@ -100,7 +100,7 @@ will likely not behave well because each time you change a parameter, all aggreg
 For such use case, it is better not to use `auto` mode or have more specialized searches by adding different ones with a query pattern focusing on, for example, a given document type.
 
 {{#> callout type='tip' }}
-Since 10.3 ([NXP-24880](https://jira.nuxeo.com/browse/NXP-24880)), page-provider aggregate computations can be skipped on demand to speed up the query.
+Since 10.3 ([NXP-24880](https://hyland-sync.atlassian.net/browse/NXP-10599)), page-provider aggregate computations can be skipped on demand to speed up the query.
 {{/callout}}
 
 Depending on your search form design, you may only wish to compute aggregates if some other parameters are set in order to restrict the result set. For example, if we'd like the [Web UI default search](https://github.com/nuxeo/nuxeo-web-ui/blob/release-10.3/elements/search/default/nuxeo-default-search-form.html) to only compute aggregates if the fulltext parameter is not empty, we can add `skipAggregates`:
@@ -123,7 +123,7 @@ Since 10.3 , we have improved caching strategy to better leverage browser HTTP c
 
 ### Static Resources
 
-Since 10.3 ([NXP-25700](https://jira.nuxeo.com/browse/NXP-25700)), we added a Service Worker (SW) to allow for more aggressive cache on `\*.html` and `\*.js` resources by appending the server latest hot-reload or restart timestamp (TS) to their URL:
+Since 10.3 ([NXP-25700](https://hyland-sync.atlassian.net/browse/NXP-10426)), we added a Service Worker (SW) to allow for more aggressive cache on `\*.html` and `\*.js` resources by appending the server latest hot-reload or restart timestamp (TS) to their URL:
  - On clean hit, we will read resources without TS (default cache will be ineffective). SW will be installed.
  - On next hit, SW will intercept matching requests, append the TS and forward them to the network (aggressive cache will be effective)
  - On subsequent hits, SW will keep intercepting requests and network will read them from cache.
@@ -140,7 +140,7 @@ According to the [specs](https://developers.google.com/web/fundamentals/primers/
 
 ### Dynamic Resources
 
-Since 10.3 ([NXP-25385](https://jira.nuxeo.com/browse/NXP-25385)), resource URLs for document previews, thumbnails, blobs, etc. have the document's `changeToken` appended as a query parameter.
+Since 10.3 ([NXP-25385](https://hyland-sync.atlassian.net/browse/NXP-10499)), resource URLs for document previews, thumbnails, blobs, etc. have the document's `changeToken` appended as a query parameter.
 
 Such URLs have a very aggressive cache (approximately 1 year) defined in [web-request-controller-contrib.xml#L47](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-web-common/src/main/resources/OSGI-INF/web-request-controller-contrib.xml#L47). As a matter of fact, each time the document changes, its `changeToken` also changes and the resource is invalidated by the browser cache.
 
