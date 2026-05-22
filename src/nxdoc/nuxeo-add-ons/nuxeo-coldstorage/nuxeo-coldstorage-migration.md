@@ -19,8 +19,8 @@ This page explains how to exit the Nuxeo Cold Storage addon by restoring all doc
 {{#> callout type='warning' heading='Prerequisites: S3 Objects Must Be Restored in AWS'}}
 **Important:** Before running the Nuxeo migration, all S3 objects in Glacier Flexible Retrieval storage class **must be restored to a downloadable state directly in AWS**. This is a two-phase process:
 
-1. **AWS-side restoration**: Use AWS S3 Batch Operations to restore all Glacier Flexible Retrieval objects
-2. **Nuxeo-side migration**: Once objects are restored and downloadable, run the Nuxeo migration
+1. **AWS-side restoration**: Use AWS S3 Batch Operations to restore all Glacier Flexible Retrieval objects.
+2. **Nuxeo-side migration**: Once objects are restored and downloadable, run the Nuxeo migration.
 
 The Nuxeo migration **will not complete** if S3 objects are not in a restored state. Object restoration must be handled directly in AWS and cannot be performed by Nuxeo. See below for detailed procedure.
 {{/callout}}
@@ -62,9 +62,9 @@ Add this property to `nuxeo.conf` on **all Nuxeo nodes** (both front-end and wor
 {{#> callout type='warning' heading='Impact on Operations'}}
 Once this property is enabled:
 
-- The **move to cold storage** action is no longer available (at both UI and API level)
+- The **move to cold storage** action is no longer available (at both UI and API level).
 - Any pending or new bulk actions to move content to cold storage will fail with errors (documents will be skipped). This is expected and safe.
-- **Restore operations** continue to work normally
+- **Restore operations** continue to work normally.
   {{/callout}}
 
 ### Step 2: Restore S3 Objects from Glacier Flexible Retrieval
@@ -73,21 +73,21 @@ Use AWS S3 Batch Operations to restore all Glacier Flexible Retrieval objects ba
 
 #### Creating the Batch Operation
 
-1. Navigate to **AWS Console > S3 > Batch Operations**
-2. Click **Create job**
-3. **Choose Region**: Select the region where your S3 bucket is located
-4. **Manifest**: Select **Generate an object list by specifying filters**
-   - **Source bucket**: Enter your Nuxeo S3 bucket name (matches `nuxeo.s3storage.bucket` in your `nuxeo.conf`)
-   - **Prefix**: Enter the bucket prefix (matches `nuxeo.s3storage.bucket_prefix` in your `nuxeo.conf`)
+1. Navigate to **AWS Console > S3 > Batch Operations**.
+2. Click **Create job**.
+3. **Choose Region**: Select the region where your S3 bucket is located.
+4. **Manifest**: Select **Generate an object list by specifying filters**.
+   - **Source bucket**: Enter your Nuxeo S3 bucket name (matches `nuxeo.s3storage.bucket` in your `nuxeo.conf`).
+   - **Prefix**: Enter the bucket prefix (matches `nuxeo.s3storage.bucket_prefix` in your `nuxeo.conf`).
    - **Object filters**:
-     - Storage class: Select **Glacier Flexible Retrieval**
-     - This ensures only objects currently in cold storage are targeted
-5. **Operation**: Choose **Restore**
+     - Storage class: Select **Glacier Flexible Retrieval**.
+     - This ensures only objects currently in cold storage are targeted.
+5. **Operation**: Choose **Restore**.
 6. **Configure restoration settings**:
-   - **Retrieval tier**: Select **Bulk** (most cost-effective for large-scale migrations)
-   - **Days to keep restored**: Enter **30** (or longer for maximum flexibility)
-7. **Additional options**: Configure as needed (IAM role, completion report, etc.)
-8. **Submit the job** and monitor its progress in the Batch Operations dashboard
+   - **Retrieval tier**: Select **Bulk** (most cost-effective for large-scale migrations).
+   - **Days to keep restored**: Enter **30** (or longer for maximum flexibility).
+7. **Additional options**: Configure as needed (IAM role, completion report, etc).
+8. **Submit the job** and monitor its progress in the Batch Operations dashboard.
 
 {{#> callout type='tip'}}
 Using the filter-based approach eliminates the need to create and maintain an S3 inventory, making the process faster and simpler. The job will automatically target only objects in Glacier Flexible Retrieval storage class.
@@ -155,8 +155,8 @@ curl -u Administrator:Administrator \
 ```
 
 The migration will run a bulk action, configured with the following parameters:
- - `nuxeo.bulk.action.migration.defaultConcurrency` defaults to 2
- - `nuxeo.bulk.action.migration.defaultPartitions` defaults to 4
+ - `nuxeo.bulk.action.migration.defaultConcurrency` defaults to 2.
+ - `nuxeo.bulk.action.migration.defaultPartitions` defaults to 4.
 Changing partitions takes effect only when creating the bulk-migration stream. Partitions can be resized directly on Kafka.
 
 #### Poll Migration Progress
@@ -217,7 +217,7 @@ curl -u Administrator:Administrator \
 **Expected outcomes:**
 
 - **State `done`**: All documents have been successfully restored. You can proceed with uninstalling the `nuxeo-coldstorage` addon.
-- **State `enabled`**: Some documents remain in cold storage (S3 blobs are not yet downloadable)
+- **State `enabled`**: Some documents remain in cold storage (S3 blobs are not yet downloadable).
 
 {{#> callout type='warning' heading='If State Remains enabled'}}
 If the migration state remains `enabled`, some S3 objects may not yet be fully restored or downloadable.
@@ -225,9 +225,9 @@ If the migration state remains `enabled`, some S3 objects may not yet be fully r
 **Resolution:**
 
 1. Check for `WARN` and `ERROR` logs for `RestoreFromColdStorageMigrator` class. 
-2. Make sure you have waited for the S3 restore windows
+2. Make sure you have waited for the S3 restore windows.
 3. Retry the migration step (Step 4: Run the Migration Step). The migration is idempotent and can be run multiple times.
-4. Probe again to refresh the state
+4. Probe again to refresh the state.
 {{/callout}}
 
 **Additional verification:**
@@ -245,9 +245,9 @@ If the migration is complete, this query should return no results (`resultsCount
 
 Once the migration status shows `done`:
 
-- All documents are successfully restored in Nuxeo
-- All content is stored at the default S3 storage class
-- The `ColdStorage` facet has been removed from all documents
+- All documents are successfully restored in Nuxeo.
+- All content is stored at the default S3 storage class.
+- The `ColdStorage` facet has been removed from all documents.
 
 You can now safely **uninstall the Nuxeo Cold Storage addon** from your instance.
 
@@ -261,9 +261,9 @@ You can now safely **uninstall the Nuxeo Cold Storage addon** from your instance
 
 **Solution:**
 
-1. Review the S3 Batch Operations failure report in the AWS Console
-2. Address individual object failures (re-run restore for specific objects if needed)
-3. Ensure all objects are restored before proceeding with the Nuxeo migration
+1. Review the S3 Batch Operations failure report in the AWS Console.
+2. Address individual object failures (re-run restore for specific objects if needed).
+3. Ensure all objects are restored before proceeding with the Nuxeo migration.
 
 ### Migration Stuck in enabled State
 
@@ -273,10 +273,10 @@ You can now safely **uninstall the Nuxeo Cold Storage addon** from your instance
 
 **Solution:**
 
-1. Verify all S3 objects are restored in the AWS Console
-2. Ensure the restore window has not expired (extend if needed)
-3. Re-run the migration step from Step 4
-4. Probe and verify the state again
+1. Verify all S3 objects are restored in the AWS Console.
+2. Ensure the restore window has not expired (extend if needed).
+3. Re-run the migration step from Step 4.
+4. Probe and verify the state again.
 
 ### Move to Cold Storage Operations Still Working
 
@@ -286,9 +286,9 @@ You can now safely **uninstall the Nuxeo Cold Storage addon** from your instance
 
 **Solution:**
 
-1. Verify `nuxeo.coldstorage.migration.restore.enabled=true` is set in `nuxeo.conf` on **all nodes**
-2. Perform a full cluster restart
-3. Verify the property is active by checking logs or testing a move operation (should fail)
+1. Verify `nuxeo.coldstorage.migration.restore.enabled=true` is set in `nuxeo.conf` on **all nodes**.
+2. Perform a full cluster restart.
+3. Verify the property is active by checking logs or testing a move operation (should fail).
 
 ## Technical Details
 
@@ -296,14 +296,14 @@ You can now safely **uninstall the Nuxeo Cold Storage addon** from your instance
 
 When you run the migration step (`enabled-to-done`):
 
-1. The migration queries all documents with the `ColdStorage` facet
+1. The migration queries all documents with the `ColdStorage` facet.
 2. For each document:
-   - Verifies the main file blob is downloadable from S3
-   - Changes the S3 object storage class to the default configured storage class
-   - Moves the blob from `coldstorage:coldContent` back to `file:content`
-   - Removes the `ColdStorage` facet from the document
-3. Documents are processed in batches for optimal performance
-4. If any blob is not downloadable, that document is skipped (migration state remains `enabled`)
+   - Verifies the main file blob is downloadable from S3.
+   - Changes the S3 object storage class to the default configured storage class.
+   - Moves the blob from `coldstorage:coldContent` back to `file:content`.
+   - Removes the `ColdStorage` facet from the document.
+3. Documents are processed in batches for optimal performance.
+4. If any blob is not downloadable, that document is skipped (migration state remains `enabled`).
 
 ### Migration State Transitions
 
