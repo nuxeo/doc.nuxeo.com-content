@@ -86,7 +86,7 @@ Use AWS S3 Batch Operations to restore all Glacier Flexible Retrieval objects ba
 6. **Configure restoration settings**:
    - **Retrieval tier**: Select **Bulk** (most cost-effective for large-scale migrations).
    - **Days to keep restored**: Enter **30** (or longer for maximum flexibility).
-7. **Additional options**: Configure as needed (IAM role, completion report, etc).
+7. **Additional options**: Configure as needed (IAM role, completion report, and so on).
 8. **Submit the job** and monitor its progress in the Batch Operations dashboard.
 
 {{#> callout type='tip'}}
@@ -157,7 +157,7 @@ curl -u Administrator:Administrator \
 The migration will run a bulk action, configured with the following parameters:
  - `nuxeo.bulk.action.migration.defaultConcurrency` defaults to 2.
  - `nuxeo.bulk.action.migration.defaultPartitions` defaults to 4.
-Changing partitions takes effect only when creating the bulk-migration stream. Partitions can be resized directly on Kafka.
+Changing partitions take effect only when creating the bulk-migration stream. Partitions can be resized directly on Kafka.
 
 #### Poll Migration Progress
 
@@ -257,7 +257,7 @@ You can now safely **uninstall the Nuxeo Cold Storage addon** from your instance
 
 **Symptoms:** Some objects fail to restore in the S3 Batch Operations job.
 
-**Cause:** Various S3-specific issues (permissions, object lifecycle policies, etc.).
+**Cause:** Various S3-specific issues (permissions, object lifecycle policies, and so on).
 
 **Solution:**
 
@@ -311,7 +311,7 @@ When you run the migration step (`enabled-to-done`):
 | ---------- | ------------------------------------------------------------------ |
 | `disabled` | Migration property is `false` (default)                            |
 | `enabled`  | Migration property is `true`, but documents remain in cold storage |
-| `done`     | All documents successfully restored, addon can be uninstalled      |
+| `done`     | All documents successfully restored; addon can be uninstalled      |
 
 The migration can only transition from `enabled` to `done` when all documents with the `ColdStorage` facet have been successfully restored.
 
