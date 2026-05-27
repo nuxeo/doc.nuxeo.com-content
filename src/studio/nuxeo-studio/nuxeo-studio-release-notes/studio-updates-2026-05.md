@@ -4,11 +4,22 @@ description: Release notes for Nuxeo Studio release in May 2026.
 tree_item_index: 916
 review:
   comment: ''
-  date: '2026-05-14'
+  date: '2026-05-23'
   status: ok
 toc: true
 ---
 {{! multiexcerpt name='studio-updates-2026-05'}}
+
+## What's New
+
+### Transfer Studio Projects Between Organizations, Right from Connect
+Administrators can now reassign Studio projects to a different organization directly from the Connect interface, no more relying on manual API calls or waiting on a specific team member to do it for you.
+
+**What Changed:**
+A new "Change Organization" option is now available on the Studio Project Details page in Connect. If you're an Org Admin or Hyland Admin, you can pick a target organization and move the project through a simple, guided workflow. Every transfer is validated before it goes through, and a full audit trail captures who made the change, when, and what the old and new organizations were.
+
+**Impact:**
+Previously, transferring a project between organizations required a single person with knowledge of internal REST endpoints. If that person was unavailable, the transfer was stuck. Now any authorized admin can handle it independently, which means faster turnaround for org splits, subscription changes, and customer migrations. You also get a clear, auditable record of every transfer for compliance and troubleshooting.
 
 ## Bug fixes
 
@@ -21,15 +32,6 @@ Corrected Studio registry operation metadata so that declared operation signatur
 **Impact:**
 Automation chains that previously appeared invalid (or failed unexpectedly) due to signature mismatches now validate and execute correctly without manual workarounds. This reduces silent chain breakages during LTS 2021 to LTS 2025 upgrades, improves developer/integrator trust in Studio as the source of truth, and lowers escalation/support load related to post-upgrade automation failures.
 
-### Fix content validation error preventing changes to Studio projects
-Restores the ability to save Studio changes for projects with HTML layouts that include JavaScript, removing a blocking validation regression.
-
-**What Changed:**
-Updated Studio Designer’s content validation behavior to prevent valid projects from failing save operations with a generic Content Validation Error when HTML layouts contain JavaScript (issue introduced in March 2026 release).
-
-**Impact:**
-Customers who were previously blocked from making any Studio Designer updates (and forced to switch to direct Git workflows) can now edit and save their projects normally again, reducing upgrade disruption and support escalations tied to unclear/overly-blocking validation failures.
-
 ### User details now load for OrgAdmins in Account Management
 Fixes an indefinite loading state so OrgAdmins can view user information and manage permissions as expected.
 
@@ -38,5 +40,30 @@ Corrected Connect Account Management behavior where OrgAdmins could open a user 
 
 **Impact:**
 OrgAdmins regain reliable access to user account details, enabling expected self-service administration tasks (including permission assignment) across affected customer organizations.
+
+### Studio Access is Now Properly Enforced After an Organization Change
+When a Studio project moves to a new organization and loses its service link, access is now correctly revoked until a valid service is reassigned.
+
+**What Changed:**
+After a project's organization or client is changed in Connect and the service association is removed, Studio now blocks access as expected. The "Open in Studio" button in Connect is greyed out when there's no valid service linked, and Studio itself shows a clear "Project expired" message explaining why. Once a valid, non-expired service is linked under the new organization, access is automatically restored and the subscription end date is displayed.
+
+**Impact:**
+Before this fix, users could still open and work inside a Studio project even after its service link had been removed. This created a gap where projects could operate outside their intended organizational controls. That gap is now closed. Access always reflects the current ownership and service status, so administrators can be confident that organization changes take full effect immediately.
+
+## Security Fixes
+
+### Marketplace Security: Package Namespace Protection and Private Package Privacy
+Two security issues on the Nuxeo Marketplace have been addressed to protect package integrity and customer confidentiality.
+
+**What Changed:**
+First, the Marketplace now enforces namespace ownership during package uploads. Non-Nuxeo accounts can no longer publish packages using Nuxeo-owned identifiers like nuxeo-drive or nuxeo-web-ui. Partners are required to upload under their own namespaced identifiers. Second, packages marked as private are no longer visible in public or unauthenticated search results.
+
+**Impact:**
+Before these fixes, it was possible for a partner account to upload a package that overrode an official Nuxeo distribution, which posed a real supply-chain risk for critical platform packages. At the same time, searching the Marketplace could reveal the names of private packages and the identities of the partners or clients they belonged to. Both issues are now resolved. Official packages are protected from unauthorized overrides, and private package information stays private.
+
+## Known Issues and Rollbacks
+
+### Content Validation Fix for Studio Designer Temporarily Rolled Back
+The content validation fix for Studio Designer (originally released as part of the previous release) has been pulled back due to an issue discovered during rollout. Some administrators experienced unexpected behavior after the change was applied. We are actively working on a resolution, and the fix will be re-released in a future update once the underlying problem is fully addressed. No action is required from your side in the meantime.
 
 {{! /multiexcerpt}}
