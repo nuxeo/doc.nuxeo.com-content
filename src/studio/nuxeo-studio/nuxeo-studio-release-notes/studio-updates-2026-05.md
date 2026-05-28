@@ -13,13 +13,13 @@ toc: true
 ## What's New
 
 ### Transfer Studio Projects Between Organizations, Right from Connect
-Administrators can now reassign Studio projects to a different organization directly from the Connect interface, no more relying on manual API calls or waiting on a specific team member to do it for you.
+Administrators can now reassign Studio projects to a different organization directly from the Connect interface, without manual API calls or assistance from a specific team member.
 
 **What Changed:**
-A new "Change Organization" option is now available on the Studio Project Details page in Connect. If you're an Org Admin or Hyland Admin, you can pick a target organization and move the project through a simple, guided workflow. Every transfer is validated before it goes through, and a full audit trail captures who made the change, when, and what the old and new organizations were.
+A new "Change Organization" option is now available on the Studio Project Details page in Connect. If you're an Organization Admin or Hyland Admin, you can choose the required organization and move the project through a simple, guided workflow. Each transfer is validated before completion, with a full audit trail capturing who made the change, when it occurred, and the previous and new organizations.
 
 **Impact:**
-Previously, transferring a project between organizations required a single person with knowledge of internal REST endpoints. If that person was unavailable, the transfer was stuck. Now any authorized admin can handle it independently, which means faster turnaround for org splits, subscription changes, and customer migrations. You also get a clear, auditable record of every transfer for compliance and troubleshooting.
+Previously, transferring a project between organizations required someone familiar with internal REST endpoints, creating delays when that person was unavailable. Now, any authorized administrator can complete transfers independently, enabling faster turnaround for organization splits, subscription changes, and customer migrations. Each transfer is also recorded in a clear audit trail for compliance and troubleshooting.
 
 ## Bug fixes
 
@@ -42,13 +42,13 @@ Corrected Connect Account Management behavior where OrgAdmins could open a user 
 OrgAdmins regain reliable access to user account details, enabling expected self-service administration tasks (including permission assignment) across affected customer organizations.
 
 ### Studio Access is Now Properly Enforced After an Organization Change
-When a Studio project moves to a new organization and loses its service link, access is now correctly revoked until a valid service is reassigned.
+Access is now revoked when a project that moved to a new organization loses its service link, and remains revoked until a valid service is reassigned.
 
 **What Changed:**
-After a project's organization or client is changed in Connect and the service association is removed, Studio now blocks access as expected. The "Open in Studio" button in Connect is greyed out when there's no valid service linked, and Studio itself shows a clear "Project expired" message explaining why. Once a valid, non-expired service is linked under the new organization, access is automatically restored and the subscription end date is displayed.
+After a project’s organization or client is changed in Connect and its service association is removed, Studio access is blocked as expected. The "Open in Studio" button is disabled when no valid service is linked, and Studio displays "Project expired" message. Access is automatically restored after a valid, non-expired service is linked to the new organization, with the end date of the subscription is displayed.
 
 **Impact:**
-Before this fix, users could still open and work inside a Studio project even after its service link had been removed. This created a gap where projects could operate outside their intended organizational controls. That gap is now closed. Access always reflects the current ownership and service status, so administrators can be confident that organization changes take full effect immediately.
+Before this fix, users could access Studio projects even after the associated service link was removed, allowing projects to operate outside the intended organizational controls. This issue is now resolved. Access now reflects the project’s current ownership and service status, ensuring organization changes take effect immediately.
 
 ## Security Fixes
 
