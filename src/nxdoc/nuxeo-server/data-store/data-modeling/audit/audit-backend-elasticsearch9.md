@@ -49,7 +49,7 @@ contributes a default `audit/default` Elasticsearch client and index named
 | `nuxeo.audit.backend.default.elasticsearch9.client.password`                         |             | Basic auth password.                                   |
 | `nuxeo.audit.backend.default.elasticsearch9.client.trustStore.path`                  |             | Path to a truststore.                                  |
 | `nuxeo.audit.backend.default.elasticsearch9.client.trustStore.password`              |             | Truststore password.                                   |
-| `nuxeo.audit.backend.default.elasticsearch9.client.trustStore.type`                  |             | Truststore type (e.g. `JKS`).                          |
+| `nuxeo.audit.backend.default.elasticsearch9.client.trustStore.type`                  |             | Truststore type (for example, `JKS`).                          |
 | `nuxeo.audit.backend.default.elasticsearch9.client.keyStore.path`                    |             | Path to a keystore.                                    |
 | `nuxeo.audit.backend.default.elasticsearch9.client.keyStore.password`                |             | Keystore password.                                     |
 | `nuxeo.audit.backend.default.elasticsearch9.client.keyStore.type`                    |             | Keystore type.                                         |
