@@ -58,7 +58,7 @@ property falls back to its `nuxeo.opensearch2.*` equivalent.
 | `nuxeo.audit.backend.default.opensearch2.client.password`                         |             | Basic auth password.                                   |
 | `nuxeo.audit.backend.default.opensearch2.client.trustStore.path`                  |             | Path to a truststore.                                  |
 | `nuxeo.audit.backend.default.opensearch2.client.trustStore.password`              |             | Truststore password.                                   |
-| `nuxeo.audit.backend.default.opensearch2.client.trustStore.type`                  |             | Truststore type (e.g. `JKS`).                          |
+| `nuxeo.audit.backend.default.opensearch2.client.trustStore.type`                  |             | Truststore type (for example, `JKS`).                          |
 | `nuxeo.audit.backend.default.opensearch2.client.keyStore.path`                    |             | Path to a keystore.                                    |
 | `nuxeo.audit.backend.default.opensearch2.client.keyStore.password`                |             | Keystore password.                                     |
 | `nuxeo.audit.backend.default.opensearch2.client.keyStore.type`                    |             | Keystore type.                                         |
