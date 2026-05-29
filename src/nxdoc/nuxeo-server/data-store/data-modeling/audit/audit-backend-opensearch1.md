@@ -68,7 +68,7 @@ legacy `elasticsearch.restClient.*` property.
 | `nuxeo.audit.backend.default.opensearch1.client.password`                         |             | Basic auth password.                                   |
 | `nuxeo.audit.backend.default.opensearch1.client.trustStore.path`                  |             | Path to a truststore.                                  |
 | `nuxeo.audit.backend.default.opensearch1.client.trustStore.password`              |             | Truststore password.                                   |
-| `nuxeo.audit.backend.default.opensearch1.client.trustStore.type`                  |             | Truststore type (e.g. `JKS`).                          |
+| `nuxeo.audit.backend.default.opensearch1.client.trustStore.type`                  |             | Truststore type (for example, `JKS`).                          |
 | `nuxeo.audit.backend.default.opensearch1.client.keyStore.path`                    |             | Path to a keystore.                                    |
 | `nuxeo.audit.backend.default.opensearch1.client.keyStore.password`                |             | Keystore password.                                     |
 | `nuxeo.audit.backend.default.opensearch1.client.keyStore.type`                    |             | Keystore type.                                         |
