@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2026-02-10'
+  date: '2026-06-04'
   status: ok
 toc: true
 labels:
@@ -19,14 +19,15 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-15-0'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-16-0'}}}
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.15.0]({{page page='web-ui-release-notes-2025-15-0'}}) |Accessibility fixes, usability, and platform reliability improvements| -->
+<!-- | [Web UI 2025.16.0]({{page page='web-ui-release-notes-2025-16-0'}}) |Accessibility fixes, usability, and platform reliability improvements| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Web UI 2025.15.0]({{page page='web-ui-release-notes-2025-15-0'}}) |Accessibility fixes, usability, and platform reliability improvements| 
 | [Web UI 2025.14.0]({{page page='web-ui-release-notes-2025-14-0'}}) | Preservation of user preferences. Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions|
 | [Web UI 2025.13.0]({{page page='web-ui-release-notes-2025-13-0'}}) |  Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions.| 
 | [Web UI 2025.12.0]({{page page='web-ui-release-notes-2025-12-0'}}) |  Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions.|

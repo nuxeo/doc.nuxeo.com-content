@@ -7,8 +7,8 @@ review:
   status: ok
 toc: true
 labels:
-tree_item_index: 986
-hidden: false
+tree_item_index: 985
+hidden: true
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
