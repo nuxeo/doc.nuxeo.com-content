@@ -3,7 +3,7 @@ title: Web UI Release Notes
 description: Discover changes brought in our recent Nuxeo Web UI updates.
 review:
   comment: ''
-  date: '2026-06-04'
+  date: '2026-06-05'
   status: ok
 toc: true
 labels:
@@ -23,7 +23,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.16.0]({{page page='web-ui-release-notes-2025-16-0'}}) |Accessibility fixes, usability, and platform reliability improvements| -->
+<!-- | [Web UI 2025.16.0]({{page page='web-ui-release-notes-2025-16-0'}}) |Enhancements,Bug Fixes,Security & Quality Improvements and Engineering & Reliability Improvements| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |

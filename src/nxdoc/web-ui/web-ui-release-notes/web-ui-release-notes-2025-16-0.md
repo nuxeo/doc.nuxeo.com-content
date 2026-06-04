@@ -1,9 +1,9 @@
 ---
 title: Version 2025.15.0
-description: Discover what's new in Web UI 2025.15.0.
+description: Discover what's new in Web UI 2025.16.0.
 review:
   comment: ''
-  date: '2026-05-08'
+  date: '2026-06-05'
   status: ok
 toc: true
 labels:
@@ -15,47 +15,48 @@ hidden: true
 
 {{! multiexcerpt name='web-ui-updates'}}
 
-## What’s New in Web UI for LTS 2025 (Version 2025.15.0)
+## What’s New in Web UI for LTS 2025 (Version 2025.16.0)
 
-**Accessibility Enhancements**
+**Enhancements**
 
-We continue to improve accessibility across Nuxeo Web UI to ensure an inclusive experience for all users.
+- ***Improved vocabulary visibility:***
+    - Vocabulary labels are now fully visible and no longer truncated, making it easier to read and manage entries.
+- ***Smoother filtering experience:***
+    - Quick filters now respond correctly to a single click, improving usability and reducing friction when refining results.
+- ***Better accessibility contrast:***
+    - Arrow icons have been updated to meet accessibility contrast standards, improving visibility and usability.
+- ***Improved Drive integration experience:***
+    - When Nuxeo Drive is not installed, attempting actions such as Open, Edit, Upload, or Download now displays a helpful installation prompt with direct download links.
+- ***Improved localisation for French users:***
+    - Date placeholders now correctly display in the jj/mm/aaaa format, ensuring a more consistent and localised experience.
 
-- ***Improved screen reader support across the application:***
-    - The Add to Collections dropdown is now fully accessible with screen readers.
-    - Dropdown Items and Date Picker fields are now read correctly by assistive technologies.
-    - The Image and Video toolbar is now fully screen‑reader accessible.
-    - The default search form now uses both labels and placeholders to clearly communicate information to screen reader users.
-    - Search and form dropdowns now announce labels and context correctly for better navigation.
-- ***Improved date picker experience:***
-    - Fixed issues where date pickers displayed incorrect translations or date formats.
-    - Improved calendar behavior when using the Date Picker inside data tables, ensuring consistent and reliable date selection.
 
-**New Capabilities**
+**Bug Fixes**
+- ***Vocabulary Management reliability fix:***
+    - Fixed an issue where vocabulary entries with keys starting with @ could not be handled correctly. These entries can now be created and managed without errors.
+- ***Task visibility issue resolved:***
+    - Fixed an issue where tasks from other users could appear under slow network conditions. Tasks are now correctly filtered and displayed per user.
+- ***Direct Transfer reliability fix:***
+    - Resolved an issue where the Direct Transfer Web UI icon did not work for targets containing spaces. The feature now works as expected.
+- ***Date picker stability improvement:***
+    - Fixed an issue where the calendar could close unexpectedly when selecting dates with a minimum date set.
 
-- ***Direct download to Nuxeo Drive:***
-    - Added a new Web UI action that lets users download selected documents or folders directly into Nuxeo Drive.
-    - Supports multi‑selection (up to 25 items).
-    - Downloads are initiated seamlessly using Drive‑specific links for a smoother workflow.
+**Security & Quality Improvements**
+- Strengthened protection against potential cross-site scripting (XSS) vulnerabilities by improving DOM handling.
+- Improved protection against potential request forgery vulnerabilities in client-side requests.
+-  Resolved known dependency vulnerabilities to enhance overall application security.
+- Improved CI/CD security by addressing potential script injection risks and enforcing least-privilege permissions.
+- Strengthened package installation security to reduce supply chain risks.
 
-**Bug Fixes and Usability Improvements**
 
-- Fixed an issue where the selection actions toolbar did not appear after refreshing search results.
-- Fixed saved searches for hierarchical vocabularies, ensuring full hierarchy paths are preserved and searches return expected results.
-- Fixed an issue where Workflow Analytics was not refreshing when the date range was changed.
-- Removed a hardcoded sort order on the Collections page, allowing server‑side sort configuration to be respected.
-- Improved handling of search suggestions containing double quotes, ensuring special characters are escaped correctly.
-- Reduced functional test flakiness, minimizing random test failures and improving overall stability.
+**Engineering & Reliability Improvements**
+- Increased unit test coverage across core components, improving reliability and stability.
+- Enhanced testing using AI-assisted approaches for broader validation.
+- Integrated SonarQube Cloud for automated code quality and test coverage monitoring.
+- Improved dependency management to ensure consistent and secure builds.
+-  Updated development dependencies (including ESLint) for better maintainability.
+- Standardised test file naming conventions for consistency.
 
-**Platform and Reliability Improvements**
-
-- To keep Nuxeo Web UI stable, secure, and future‑ready, we’ve updated several internal dependencies and build tools. These changes do not impact end-user workflows directly but improve performance, maintainability, and CI/CD reliability.
-- Highlights include:
-    - Dependency updates across build, test, and UI frameworks.
-    - Improved test coverage reporting.
-    - Updated CI/CD tooling and GitHub Actions.
-    - Updated 3D rendering, workflow diagramming, and visualization libraries.
-    - Improved browser compatibility and build stability.
 
 <br/>
 
