@@ -54,8 +54,6 @@ hidden: true
 - Integrated SonarQube Cloud for automated code quality and test coverage monitoring.
 - Improved dependency management to ensure consistent and secure builds.
 -  Updated development dependencies (including ESLint) for better maintainability.
-- Standardised test file naming conventions for consistency.
-
 
 <br/>
 
