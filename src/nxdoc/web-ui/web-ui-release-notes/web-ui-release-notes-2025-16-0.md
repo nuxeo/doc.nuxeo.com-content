@@ -45,6 +45,7 @@ hidden: true
 - Resolved known dependency vulnerabilities to enhance overall application security
 - Improved CI/CD security by addressing potential script injection risks and enforcing least-privilege permissions.
 - Strengthened package installation security to reduce supply chain risks.
+- Updated APIs to use server-generated UUIDs instead of exposing names in endpoints, improving data protection.
 
 
 **Engineering & Reliability Improvements**
