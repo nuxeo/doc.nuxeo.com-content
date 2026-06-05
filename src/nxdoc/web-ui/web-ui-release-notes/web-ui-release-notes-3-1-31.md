@@ -25,11 +25,9 @@ hidden: true
     - Vocabulary labels are now fully visible and no longer truncated, making it easier to read and manage entries.
 - ***Smoother filtering experience:***
     - Quick filters now respond correctly to a single click, improving usability and reducing friction when refining results.
-- ***Better accessibility contrast:***
-    - Arrow icons have been updated to meet accessibility contrast standards, improving visibility and usability.
 - ***Improved Drive integration experience:***
     - When Nuxeo Drive is not installed, attempting actions such as Open, Edit, Upload, or Download now displays a helpful installation prompt with direct download links.
-- ***Improved localisation for French users:***
+- ***Improved localisation for French users on Date picker:***
     - Date placeholders now correctly display in the jj/mm/aaaa format, ensuring a more consistent and localised experience.
 
 
@@ -46,7 +44,7 @@ hidden: true
 **Security & Quality Improvements**
 - Strengthened protection against potential cross-site scripting (XSS) vulnerabilities by improving DOM handling.
 - Improved protection against potential request forgery vulnerabilities in client-side requests.
--  Resolved known dependency vulnerabilities to enhance overall application security.
+- Resolved known dependency vulnerabilities to enhance overall application security.
 - Improved CI/CD security by addressing potential script injection risks and enforcing least-privilege permissions.
 - Strengthened package installation security to reduce supply chain risks.
 
@@ -56,7 +54,7 @@ hidden: true
 - Enhanced testing using AI-assisted approaches for broader validation.
 - Integrated SonarQube Cloud for automated code quality and test coverage monitoring.
 - Improved dependency management to ensure consistent and secure builds.
--  Updated development dependencies (including ESLint) for better maintainability.
+- Updated development dependencies (including ESLint) for better maintainability.
 - Standardised test file naming conventions for consistency.
 
 
