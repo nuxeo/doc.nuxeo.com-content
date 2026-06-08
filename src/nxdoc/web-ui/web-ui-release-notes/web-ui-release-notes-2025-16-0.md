@@ -28,7 +28,6 @@ hidden: true
 - ***Improved localisation for French users on Date picker:***
     - Date placeholders now correctly display in the jj/mm/aaaa format, ensuring a more consistent and localised experience.
 
-
 **Bug Fixes**
 - ***Vocabulary Management reliability fix:***
     - Fixed an issue where vocabulary entries with keys starting with @ could not be handled correctly. These entries can now be created and managed without errors.
@@ -42,20 +41,18 @@ hidden: true
 **Security & Quality Improvements**
 - Strengthened protection against potential cross-site scripting (XSS) vulnerabilities by improving DOM handling.
 - Improved protection against potential request forgery vulnerabilities in client-side requests.
-- Resolved known dependency vulnerabilities to enhance overall application security
+- Resolved known dependency vulnerabilities to enhance overall application security.
 - Improved CI/CD security by addressing potential script injection risks and enforcing least-privilege permissions.
 - Strengthened package installation security to reduce supply chain risks.
 - Updated APIs to use server-generated UUIDs instead of exposing names in endpoints, improving data protection.
 
-
 **Engineering & Reliability Improvements**
-- Increased unit test coverage across core components, improving reliability and stability.
+- Increased unit test coverage across core components, improving reliability, and stability.
 - Enhanced testing using AI-assisted approaches for broader validation.
 - Integrated SonarQube Cloud for automated code quality and test coverage monitoring.
 - Improved dependency management to ensure consistent and secure builds.
--  Updated development dependencies (including ESLint) for better maintainability.
+- Updated development dependencies (including ESLint) for better maintainability.
 
 <br/>
-
 
 {{! /multiexcerpt}}
