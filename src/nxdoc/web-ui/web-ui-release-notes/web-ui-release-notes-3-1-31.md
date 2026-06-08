@@ -37,7 +37,7 @@ hidden: true
 - ***Task visibility issue resolved:***
     - Fixed an issue where tasks from other users could appear under slow network conditions. Tasks are now correctly filtered and displayed per user.
 - ***Direct Transfer reliability fix:***
-    - Resolved an issue where the Direct Transfer Web UI icon did not work for targets containing spaces. The feature now works as expected.
+    - * Resolved an issue where the Direct Transfer Web UI icon did not work for targets containing spaces by using an encoded and compressed URL. This fix only works with Nuxeo Drive 7.0.0 and above and is not supported on older versions.
 - ***Date picker stability improvement:***
     - Fixed an issue where the calendar could close unexpectedly when selecting dates with a minimum date set.
 
