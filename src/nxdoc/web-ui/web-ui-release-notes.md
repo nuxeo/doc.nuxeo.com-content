@@ -23,7 +23,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.16.0]({{page page='web-ui-release-notes-2025-16-0'}}) |Enhancements,Bug Fixes,Security & Quality Improvements and Engineering & Reliability Improvements| -->
+<!-- | [Web UI 2025.16.0]({{page page='web-ui-release-notes-2025-16-0'}}) |Enhancements, Bug Fixes, Security & Quality Improvements, and Engineering & Reliability Improvements| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
