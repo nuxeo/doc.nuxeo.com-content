@@ -23,11 +23,11 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.16.0]({{page page='web-ui-release-notes-2025-16-0'}}) |Enhancements, Bug Fixes, Security & Quality Improvements, and Engineering & Reliability Improvements| -->
+<!-- | [Web UI 2025.16.0]({{page page='web-ui-release-notes-2025-16-0'}}) |Enhancements, Bug Fixes, Security & Quality Improvements, and Engineering & Reliability Improvements.| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-|| [Web UI 2025.15.0]({{page page='web-ui-release-notes-2025-15-0'}}) | Accessibility fixes, usability, and platform reliability improvements |
+|| [Web UI 2025.15.0]({{page page='web-ui-release-notes-2025-15-0'}}) | Accessibility fixes, usability, and platform reliability improvements. |
 | [Web UI 2025.14.0]({{page page='web-ui-release-notes-2025-14-0'}}) | Preservation of user preferences. Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions|
 | [Web UI 2025.13.0]({{page page='web-ui-release-notes-2025-13-0'}}) |  Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions.| 
 | [Web UI 2025.12.0]({{page page='web-ui-release-notes-2025-12-0'}}) |  Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions.|
@@ -38,6 +38,6 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 | [Web UI 2025.7.0]({{page page='web-ui-release-notes-2025-7-0'}}) | Accessibility fixes. Includes support ticket resolutions. |
 | [Web UI 2025.6.0]({{page page='web-ui-release-notes-2025-6-0'}}) | Accessibility color contrast fixes, Nuxeo Drive Direct Transfer Upload, Veracode vulnerability fix. Includes support ticket resolutions. |
 | [Web UI 2025.5.0]({{page page='web-ui-release-notes-2025-5-0'}})                  | Node.js 22 upgrade for functional tests, Veracode vulnerability fixes. Includes support ticket resolutions. |
-| [Web UI 2025.4.0]({{page page='web-ui-release-notes-2025-4-0'}})                  | Accessibility and Veracode Vulnerability fixes for WebUI and bugfix release     |
-| [Web UI 2025.3.0]({{page page='web-ui-release-notes-2025-3-0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release   | 
-| [Web UI 2025.2.0]({{page page='web-ui-release-notes-2025-2-0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release   | 
+| [Web UI 2025.4.0]({{page page='web-ui-release-notes-2025-4-0'}})                  | Accessibility and Veracode Vulnerability fixes for WebUI and bugfix release.     |
+| [Web UI 2025.3.0]({{page page='web-ui-release-notes-2025-3-0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release.   | 
+| [Web UI 2025.2.0]({{page page='web-ui-release-notes-2025-2-0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release.   | 
