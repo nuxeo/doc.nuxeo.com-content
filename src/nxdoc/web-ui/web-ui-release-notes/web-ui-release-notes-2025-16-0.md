@@ -47,7 +47,7 @@ hidden: true
 - Updated APIs to use server-generated UUIDs instead of exposing names in endpoints, improving data protection.
 
 **Engineering & Reliability Improvements**
-- Increased unit test coverage across core components, improving reliability, and stability.
+- Increased unit test coverage across core components, improving reliability and stability.
 - Enhanced testing using AI-assisted approaches for broader validation.
 - Integrated SonarQube Cloud for automated code quality and test coverage monitoring.
 - Improved dependency management to ensure consistent and secure builds.
