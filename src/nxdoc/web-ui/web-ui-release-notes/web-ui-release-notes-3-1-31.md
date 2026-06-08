@@ -18,7 +18,6 @@ hidden: true
 
 ## What’s New in Web UI for LTS 2023 (Version 3.1.31)
 
-
 **Enhancements**
 
 - ***Improved vocabulary visibility:***
@@ -29,7 +28,6 @@ hidden: true
     - When Nuxeo Drive is not installed, attempting actions such as Open, Edit, Upload, or Download now displays a helpful installation prompt with direct download links.
 - ***Improved localisation for French users on Date picker:***
     - Date placeholders now correctly display in the jj/mm/aaaa format, ensuring a more consistent and localised experience.
-
 
 **Bug Fixes**
 - ***Vocabulary Management reliability fix:***
@@ -48,7 +46,6 @@ hidden: true
 - Improved CI/CD security by addressing potential script injection risks and enforcing least-privilege permissions.
 - Strengthened package installation security to reduce supply chain risks.
 - Updated APIs to use server-generated UUIDs instead of exposing names in endpoints, improving data protection.
-
 
 **Engineering & Reliability Improvements**
 - Increased unit test coverage across core components, improving reliability and stability.
