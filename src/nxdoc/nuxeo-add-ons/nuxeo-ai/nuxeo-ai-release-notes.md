@@ -9,4 +9,6 @@ review:
 toc: true
 ---
 
+{{{multiexcerpt 'nuxeo-ai-4-0-4' page='nuxeo-ai-4-0-4'}}}
+
 {{{multiexcerpt 'nuxeo-ai-4-0-3' page='nuxeo-ai-4-0-3'}}}
