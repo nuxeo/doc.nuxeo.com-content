@@ -3,7 +3,7 @@ title: WebDAV
 description: Nuxeo supports the WebDAV protocol enabling you to create and edit Office documents stored in the Nuxeo Platform directly from you OS desktop.
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2026-06-12'
     status: ok
 labels:
     - lts2016-ok
@@ -93,42 +93,6 @@ history:
         version: '1'
 ---
 
-## Functional Overview
-
-{{{multiexcerpt 'functional-overview' space='nxdoc' page='working-with-webdav'}}}
-
-## Technical Overview
-
-Nuxeo supports the WebDAV (Web-based Distributed Authoring and Versioning) protocol and thus enables you to create and edit Office documents stored in the Nuxeo Platform directly from you OS desktop, without having to go through your Nuxeo application in a browser.
-
-The documentation about installation and usage of WebDAV can be found [in the Nuxeo Platform User Guide]({{page space='nxdoc' page='working-with-webdav'}}).
-
-### Adding a New WebDAV Client
-
-The plugin comes with a default configuration which supports only a few clients among Windows 7's one, litmus, davfs, cadaver. If your usual client is not listed, you can override this configuration by adding a new file `webdav-authentication-config.xml` under `$NUXEO/nxserver/config/` and update the list associated to the header.
-
-Below is an example where BitKinex is added:
-
-```
-<?xml version="1.0"?>
-<component name="org.nuxeo.ecm.platform.wi.auth.config.custom">
-
-  <require>org.nuxeo.ecm.platform.wi.auth.config</require>
-
-  <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="specificChains">
-
-    <specificAuthenticationChain name="WebDAV">
-      <headers>
-        <header name="User-Agent">(Microsoft-WebDAV-MiniRedir|DavClnt|litmus|gvfs|davfs|WebDAV|cadaver|BitKinex).*</header>
-      </headers>
-
-      <replacementChain>
-        <plugin>DIGEST_AUTH</plugin>
-        <plugin>WEBDAV_BASIC_AUTH</plugin>
-      </replacementChain>
-    </specificAuthenticationChain>
-  </extension>
-
-</component>
-
-```
+{{#> callout type='info' heading='Since Nuxeo LTS 2025'}}
+WebDAV is no longer shipped by default with the Nuxeo server. It is now provided as a separate Nuxeo Package. See **[Nuxeo WebDAV]({{page page='nuxeo-webdav'}})** for installation, configuration, and documentation.
+{{/callout}}

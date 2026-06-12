@@ -776,6 +776,21 @@ Public
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo WebDAV<br/>
+`nuxeo-webdav`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-webdav'}})
+</td>
+<td colspan="1">
+[Released for LTS 2025](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-webdav)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo Web UI<br/>
 `nuxeo-web-ui`
 </td>
