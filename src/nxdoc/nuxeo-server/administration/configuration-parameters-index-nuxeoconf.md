@@ -2078,6 +2078,126 @@ Limit the binary fulltext size during indexing to improve search engine performa
 
 * * *
 
+#### `nuxeo.search.indexing.enabled`
+
+Master switch enabling the search indexing subsystem: the `ongoingIndexing` stream processor and the `bulk/indexing` and `bulk/indexingBackground` bulk actions. Set to `false` to disable all search indexing.
+
+**Since LTS 2025**
+
+**Default Value**
+
+`true`
+
+* * *
+
+#### `nuxeo.search.indexing.defaultPartitions`
+
+Number of partitions of the `source/indexing` domain event stream, into which indexing commands are produced when documents are created, updated or deleted. Caps the maximum parallelism of the ongoing indexing across the cluster.
+
+**Since LTS 2025**
+
+**Default Value**
+
+`4`
+
+* * *
+
+#### `nuxeo.search.stream.indexing.defaultConcurrency`
+
+Concurrency of the `ongoingIndexing` stream processor on each Nuxeo node. This processor performs the near real time (synchronous) ongoing indexing of document changes by consuming the `source/indexing` stream.
+
+**Since LTS 2025**
+
+**Default Value**
+
+`4`
+
+* * *
+
+#### `nuxeo.search.stream.indexing.defaultPartitions`
+
+Number of partitions of the `ongoingIndexing` stream processor. Caps the maximum parallelism of the near real time (synchronous) ongoing indexing across the cluster.
+
+**Since LTS 2025**
+
+**Default Value**
+
+`12`
+
+* * *
+
+#### `nuxeo.search.stream.indexing.batch.size`
+
+Maximum number of indexing records per batch flushed to the search engine by the `ongoingIndexing` processor (near real time synchronous ongoing indexing).
+
+**Since LTS 2025**
+
+**Default Value**
+
+`20`
+
+* * *
+
+#### `nuxeo.search.stream.indexing.batch.threshold`
+
+Maximum time to wait before flushing a non-full batch from the `ongoingIndexing` processor (near real time synchronous ongoing indexing).
+
+**Since LTS 2025**
+
+**Default Value**
+
+`250ms`
+
+* * *
+
+#### `nuxeo.search.stream.indexingAsync.defaultConcurrency`
+
+Concurrency of the `indexing` stream processor (bulk action `bulk/indexing`). This bulk action performs the asynchronous ongoing indexing: fan-out of recursive indexing commands (subtree updates, ACL changes, move/copy of containers) and asynchronous bulk indexing commands.
+
+**Since LTS 2025**
+
+**Default Value**
+
+`4`
+
+* * *
+
+#### `nuxeo.search.stream.indexingAsync.defaultPartitions`
+
+Number of partitions of the `indexing` stream processor (bulk action `bulk/indexing`). Caps the maximum parallelism of the asynchronous ongoing indexing across the cluster.
+
+**Since LTS 2025**
+
+**Default Value**
+
+`8`
+
+* * *
+
+#### `nuxeo.search.stream.reindexing.defaultConcurrency`
+
+Concurrency of the `indexingBackground` stream processor (bulk action `bulk/indexingBackground`) used by full repository re-indexing.
+
+**Since LTS 2025**
+
+**Default Value**
+
+`4`
+
+* * *
+
+#### `nuxeo.search.stream.reindexing.defaultPartitions`
+
+Number of partitions of the `indexingBackground` stream processor. Caps the maximum parallelism of a full re-index across the cluster.
+
+**Since LTS 2025**
+
+**Default Value**
+
+`8`
+
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
