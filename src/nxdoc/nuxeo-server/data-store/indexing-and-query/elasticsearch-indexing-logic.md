@@ -194,11 +194,11 @@ Watch the related courses on Hyland University:</br>
 ![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
-## Indexing
+## Ongoing Indexing
 
-The indexing process involves stacking indexing commands when manipulating sessions to create, update, or delete documents. These commands are then emitted as indexing domain events into a `source/indexing` stream when the transaction is committed.
+The ongoing indexing process involves stacking indexing commands when manipulating sessions to create, update, or delete documents. These commands are then emitted as indexing domain events into a `source/indexing` stream when the transaction is committed.
 
-There are two indexing processors:
+There are two ongoing indexing processors:
 - A **Synchronous processor**:
   When a UI request is involved, some indexing commands are marked as synchronous. After transaction commit, the thread waits for these specific commands to be processed by the synchronous processor before returning.
   This way the next UI request is able to search updated documents, giving a real time indexing appearance.
@@ -208,7 +208,17 @@ There are two indexing processors:
 
 When indexing a document, the Nuxeo Platform sends a JSON representation to be indexed. A creation or update command submits the complete document. For OpenSearch/Elasticsearch engines, the JSON document can be viewed in the `_source` field. It is possible to override the default JSON writer (`DefaultIndexingJsonWriter`).
 
-Note that this is a new indexing logic implemented in LTS 2025, which no longer relies on WorkManager.
+Note that this is a new ongoing indexing logic implemented in LTS 2025, which no longer relies on WorkManager.
+
+## Re-indexing Logic
+
+A full repository re-index is run as a dedicated [Bulk Action]({{page page='bulk-action-framework'}}) named `indexingBackground` that consumes its own stream `bulk/indexingBackground`. This stream and its computation are fully isolated from the ongoing indexing pipeline described above:
+
+- Ongoing indexing keeps running on the `source/indexing` stream (synchronous and asynchronous processors): documents created, updated or deleted while a full re-index is in progress are still indexed in near real time and remain searchable.
+- The re-index action scrolls the repository, rebuilds the JSON representation of each document and submits it to the search engine without going through `source/indexing`. It therefore does not compete with the ongoing indexing throughput and does not delay the visibility of fresh changes.
+- The re-index stream processor can be sized independently from the ongoing indexing pipeline. See [Search Setup]({{page page='search-setup'}}#reindex) for the tuning procedure.
+
+The same `indexingBackground` action is used both for the blocking "re-index with interruption of service" procedure and for the blue/green "re-index without interruption of service" procedure available since LTS 2025.11.
 
 ## Searching and Limitations
 
