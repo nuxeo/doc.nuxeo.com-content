@@ -590,6 +590,15 @@ Simply don't install any `nuxeo-search-client-*` or `nuxeo-audit-*` package.
 
 ## Rebuilding the Repository Index{{> anchor 'reindex'}}
 
+The repository re-indexing runs on a dedicated [Bulk Action]({{page page='bulk-action-framework'}}) named `indexingBackground` with its own stream processor. As described in [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}}#re-indexing-logic), this isolates the full re-index from the ongoing indexing pipeline, so ongoing document changes keep being indexed in near real time during a re-index.
+
+The throughput of a full re-index can be tuned independently from the ongoing indexing by adjusting two properties in `nuxeo.conf`:
+
+- `nuxeo.search.stream.reindexing.defaultConcurrency` (default: `4`) — the number of threads used by the re-indexing stream processor on each Nuxeo node.
+- `nuxeo.search.stream.reindexing.defaultPartitions` (default: `8`) — the number of stream partitions for the re-indexing action. Caps the maximum parallelism of a full re-index across the cluster.
+
+Increase these values to speed up a full re-index on large repositories, at the cost of additional load on the search cluster and on the Nuxeo workers. See [Configuration Parameters Index]({{page page='configuration-parameters-index-nuxeoconf'}}) for the complete list of related properties.
+
 If you need to reindex the whole repository, you have different possibilities:
 
 ### Re-index Repository with interruption of service{{> anchor 'reindexing-bulk'}}
