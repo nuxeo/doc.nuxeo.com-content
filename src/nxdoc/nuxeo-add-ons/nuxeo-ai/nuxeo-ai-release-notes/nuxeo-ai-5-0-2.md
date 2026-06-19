@@ -13,7 +13,7 @@ toc: true
 
 ## What's New in Nuxeo AI (version 5.0.2)
 
-Nuxeo AI 4.0.4 introduces the `nuxeo-ai-content-intelligence` addon — bringing automatic AI-powered descriptions, summaries, and entity tagging to your images and documents using Hyland's Content Intelligence cloud service.
+Nuxeo AI 5.0.2 introduces the `nuxeo-ai-content-intelligence` addon — bringing automatic AI-powered descriptions, summaries, and entity tagging to your images and documents using Hyland's Content Intelligence cloud service.
 
 ## New Features
 
