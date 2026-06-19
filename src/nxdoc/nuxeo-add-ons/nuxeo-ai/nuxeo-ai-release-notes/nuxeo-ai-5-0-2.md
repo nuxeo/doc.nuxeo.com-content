@@ -13,7 +13,7 @@ toc: true
 
 ## What's New in Nuxeo AI (version 5.0.2)
 
-Nuxeo AI 4.0.4 introduces the `nuxeo-ai-content-intelligence` addon — bringing automatic AI-powered descriptions, summaries, and entity tagging to your images and documents using Hyland's Content Intelligence cloud service.
+Nuxeo AI 5.0.2 introduces the `nuxeo-ai-content-intelligence` addon — bringing automatic AI-powered descriptions, summaries, and entity tagging to your images and documents using Hyland's Content Intelligence cloud service.
 
 ## New Features
 
@@ -56,6 +56,8 @@ Add the following to your `nuxeo.conf`:
 nuxeo.ai.images.enabled=true
 nuxeo.ai.contentintelligence.enabled=true
 nuxeo.ai.contentintelligence.documents.enabled=true
+nuxeo.enrichment.raiseEvent=true
+nuxeo.enrichment.save.facets=true
 nuxeo.hyland.cic.auth.baseUrl=<your CIC auth URL>
 nuxeo.hyland.cic.contextEnrichment.baseUrl=<your CIC enrichment URL>
 nuxeo.hyland.cic.enrichment.clientId=<your client ID>
