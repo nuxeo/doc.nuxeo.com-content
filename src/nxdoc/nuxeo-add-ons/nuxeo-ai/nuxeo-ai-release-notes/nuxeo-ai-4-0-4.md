@@ -21,8 +21,8 @@ Nuxeo AI 4.0.4 introduces the `nuxeo-ai-content-intelligence` addon — bringing
 
 Install the new `nuxeo-ai-content-intelligence` package to enable out-of-the-box AI enrichment:
 
-- **Images** — Automatically generates a natural-language description (saved to `dc:description`) and tags detected entities such as people, places, and organizations.
-- **Documents** (PDF, Word, Excel, PowerPoint, plain text) — Automatically summarizes the content (saved to `dc:description`) and tags named entities found in the text.
+- **Images** — Automatically generates a natural-language description and tags detected entities such as people, places, and organizations.
+- **Documents** (PDF, Word, Excel, PowerPoint, plain text) — Automatically summarizes the content and tags named entities found in the text.
 
 Enrichment typically completes in seconds for standard files. Larger files (around 100 MB or more) may take a few minutes. <br/>
 
@@ -56,6 +56,8 @@ Add the following to your `nuxeo.conf`:
 nuxeo.ai.images.enabled=true
 nuxeo.ai.contentintelligence.enabled=true
 nuxeo.ai.contentintelligence.documents.enabled=true
+nuxeo.enrichment.raiseEvent=true
+nuxeo.enrichment.save.facets=true
 nuxeo.hyland.cic.auth.baseUrl=<your CIC auth URL>
 nuxeo.hyland.cic.contextEnrichment.baseUrl=<your CIC enrichment URL>
 nuxeo.hyland.cic.enrichment.clientId=<your client ID>
