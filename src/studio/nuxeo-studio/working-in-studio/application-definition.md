@@ -96,18 +96,37 @@ Each dependency line is color-coded according to its status:
 
 ![Package Changes](/nx_assets/studio/application-definition-package-changes.png ?border=true)
 
-## Upgrading to a Newer Nuxeo Server version
+## Managing Package Versions During LTS Upgrade in Nuxeo Studio
 
-When upgrading to a newer Nuxeo Version, Nuxeo Studio will automatically adapt the configuration. Some exceptions requiring a manual change may still happen and are listed in the [specific upgrade instructions]({{page page='specific-upgrade-instructions'}}) page.
+When you change the Nuxeo Server version on the Application Definition page, Nuxeo Studio adapts the package list to the target LTS. The Packages list uses background colors to show what will happen to each package when you click Save.
+![Service Version Update](/nx_assets/studio/update_application_definition_page_v2.1.png ?border=true)
 
-When a previously selected package is not available for your new Nuxeo Server version, Nuxeo Studio lists it under removed packages to alert you.
-For available packages, each one is automatically upgraded to the latest version compatible with the new server version. 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Application Definition/Removal Notice
-    name: removal-notice.png
-    studio_modeler#screenshot#up_to_date
---}}
-![Service Version Update](/nx_assets/studio/application-definition-server-version-update.png ?border=true)
+*Screenshot of the Application Definition interface after selecting a new Nuxeo Server version. The background colors of the packages are explained below.*
+
+If a previously selected package is unavailable for your new Nuxeo Server version, Nuxeo Studio lists it under removed packages to alert you. Available packages automatically upgrade to the latest version compatible with the new server.
+
+### What Each Color Means
+
+- **Blue**: Package will be upgraded to the latest version compatible with the target LTS. Old and new versions are shown side by side (e.g. `Nuxeo Drive 2023.47.14 → 2025.19.14`).
+- **Red**: Package will be removed when you save (e.g. `Aspera Connector`).
+- **Green**: Package will be added when you save (e.g. `Nuxeo JSF To Web UI`).
+- **White (unhighlighted)**: Package version is locked and will be left as-is. Studio will not auto-upgrade it when you switch LTS versions (e.g. `Nuxeo Web UI`).
+
+Locking a version across an LTS migration is rarely appropriate, as most packages are not compatible across LTS versions. If the locked version is not available for the target LTS, the Version dropdown appears empty and a compatible version must be selected manually.
+
+Some exceptions requiring a manual change may still happen and are listed in the [specific upgrade instructions]({{page page='specific-upgrade-instructions'}}) page.
+
+### Using the ❌ Button
+
+The red **X** button on the right of each package row behaves as follows:
+
+1. **First click**: The package turns white. Its version is locked and will not be auto-updated on future LTS switches.
+2. **Second click**: The package turns red. It is marked for removal and will be deleted when you click **Save**.
+
+### Adding a Package
+
+Adding a new package from the search field shows it in green. It will be installed when you click **Save**.
+![Service Version Update](/nx_assets/studio/update_application_definition_page_v2.2.png ?border=true)
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
