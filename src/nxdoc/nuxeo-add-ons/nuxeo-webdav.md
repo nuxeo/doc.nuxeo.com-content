@@ -27,9 +27,7 @@ WebDAV is no longer shipped by default with the Nuxeo server. To keep using the 
 
 {{! multiexcerpt name='webdav-functional-overview'}}
 
-The Nuxeo Platform enables you to create and edit Office documents stored in the Nuxeo Platform directly from your OS desktop, without having to go on your Nuxeo application in a browser. This is possible thanks to the support of the WebDAV (Web-based Distributed Authoring and Versioning) protocol.
-
-After installing the `nuxeo-webdav` package, you just need to add the Nuxeo Platform as a network drive. You will then be able to do the following actions on Nuxeo MS Office documents, from your OS desktop directly:
+After installing the `nuxeo-webdav` package, you just need to add the Nuxeo Platform as a network drive. You will then be able to perform the following actions on Nuxeo MS Office documents from your OS desktop directly:
 
 *   Create documents and folders
 *   Edit documents
