@@ -1,7 +1,7 @@
 ---
 title: Build a Custom Docker Image
 review:
-  date: '2025-10-11'
+  date: '2026-06-18'
   status: ok
 labels:
   - multiexcerpt
@@ -95,4 +95,124 @@ USER 900
 
 {{#> callout type='tip' }}
 You can use the above method to install any software in the custom image.
+{{/callout}}
+
+## Installing CCExtractor
+
+[CCExtractor](https://ccextractor.org) is used to extract subtitles from videos. As there is no prebuilt RPM available for Oracle Linux 9, it must be compiled from source. Since CCExtractor also depends on [GPAC](https://gpac.io/), which isn't packaged for Oracle Linux 9 either, GPAC must also be built from source.
+
+The recommended approach is a [multi-stage build](https://docs.docker.com/build/building/multi-stage/) using an Oracle Linux 9 image as the builder stage. This avoids any [glibc](https://www.gnu.org/software/libc/) or shared-library compatibility issue, since the build stage uses the same Linux distribution as the final Nuxeo image. The final image only embeds the runtime dependencies and the compiled binaries, keeping its size minimal.
+
+The `Dockerfile` sample below builds CCExtractor with OCR support enabled (via [Tesseract](https://github.com/tesseract-ocr/tesseract) and [Leptonica](http://www.leptonica.org/)), which is the default and recommended configuration:
+
+```Dockerfile
+# ------------------------------------------------------------------------
+# Build stage: compile GPAC and CCExtractor on Oracle Linux 9
+ARG GPAC_VERSION=v2.4.0
+ARG CCEXTRACTOR_VERSION=v0.96.6
+
+FROM oraclelinux:9 AS builder
+
+ARG GPAC_VERSION
+ARG CCEXTRACTOR_VERSION
+
+# Install build dependencies (EPEL and CodeReady Builder are required for tesseract-devel and leptonica-devel)
+RUN dnf -y install oracle-epel-release-el9 \
+  && dnf -y --enablerepo=ol9_codeready_builder install \
+    autoconf271 \
+    autoconf-archive \
+    automake \
+    clang \
+    clang-devel \
+    cmake \
+    curl \
+    freetype-devel \
+    gcc \
+    gcc-c++ \
+    git \
+    leptonica-devel \
+    libcurl-devel \
+    libjpeg-turbo-devel \
+    libpng-devel \
+    libxml2-devel \
+    make \
+    openssl-devel \
+    pkgconf-pkg-config \
+    tesseract-devel \
+    zlib-devel \
+  && dnf clean all
+
+# Make autoconf 2.71 (required by CCExtractor) the default autoconf in PATH
+ENV PATH="/opt/rh/autoconf271/bin:${PATH}"
+
+# Install Rust toolchain (required by CCExtractor)
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o /tmp/rustup-init.sh \
+  && sh /tmp/rustup-init.sh -y --default-toolchain stable \
+  && rm -f /tmp/rustup-init.sh
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+# Build and install GPAC library
+WORKDIR /tmp
+RUN git clone -b ${GPAC_VERSION} --depth 1 https://github.com/gpac/gpac \
+  && cd gpac \
+  && ./configure --prefix=/usr --libdir=lib64 \
+  && make -j$(nproc) lib \
+  && make install-lib \
+  && ldconfig
+
+# Build CCExtractor using the autotools workflow
+RUN git clone -b ${CCEXTRACTOR_VERSION} --depth 1 https://github.com/CCExtractor/ccextractor \
+  && cd ccextractor/linux \
+  && ./autogen.sh \
+  && ./configure \
+  && make -j$(nproc)
+
+# ------------------------------------------------------------------------
+# Final stage: copy the CCExtractor binary and its runtime dependencies into the Nuxeo image
+FROM docker-private.packages.nuxeo.com/nuxeo/nuxeo:2025
+
+# You must be the root user to run dnf commands and to write under /usr/lib64
+USER 0
+
+# Install runtime dependencies (libcurl, libpng, libjpeg, openssl, freetype, libxml2 are already provided by the Nuxeo base image)
+RUN dnf -y install oracle-epel-release-el9 \
+  && dnf -y install tesseract leptonica \
+  && dnf clean all
+
+# Copy only the real versioned GPAC shared library from the builder stage (Docker
+# COPY follows symlinks, which would otherwise duplicate the library file), then
+# recreate the SONAME symlinks (`libgpac.so.<MAJOR>` and `libgpac.so`) and refresh
+# the linker cache. The major version is derived at build time so this snippet
+# keeps working when GPAC_VERSION (and therefore the .so filename) is overridden.
+COPY --from=builder /usr/lib64/libgpac.so.*.*.* /usr/lib64/
+RUN set -eux; \
+  gpac_real="$(basename "$(ls -1 /usr/lib64/libgpac.so.*.*.* | head -n1)")"; \
+  gpac_major="$(echo "${gpac_real}" | sed -E 's/^libgpac\.so\.([0-9]+)\..*/\1/')"; \
+  ln -sf "${gpac_real}" "/usr/lib64/libgpac.so.${gpac_major}"; \
+  ln -sf "${gpac_real}" /usr/lib64/libgpac.so; \
+  ldconfig
+
+# Copy the CCExtractor binary
+COPY --from=builder /tmp/ccextractor/linux/ccextractor /usr/local/bin/ccextractor
+
+# Set back the original Nuxeo user
+USER 900
+```
+
+### Building for Multiple Platforms
+
+The Nuxeo Docker image is published for both `linux/amd64` and `linux/arm64`. Since the `Dockerfile` sample above compiles CCExtractor from source, the resulting binary is automatically built for whichever platform [`docker buildx`](https://docs.docker.com/build/building/multi-platform/) targets. No platform-specific branching is needed in the `Dockerfile`.
+
+For instance, to build a multi-platform image for both `linux/amd64` and `linux/arm64`:
+
+```shell
+docker buildx build --platform linux/amd64,linux/arm64 -t mycompany/myapplication:mytag --push .
+```
+
+{{#> callout type='note' }}
+The CCExtractor version (`v0.96.6`) and the GPAC version (`v2.4.0`) used in the `Dockerfile` sample above are pinned for reproducibility. You can override them at build time using the `CCEXTRACTOR_VERSION` and `GPAC_VERSION` build arguments, for instance:
+
+```shell
+docker build --build-arg CCEXTRACTOR_VERSION=v0.96.6 --build-arg GPAC_VERSION=v2.4.0 -t mycompany/myapplication:mytag .
+```
 {{/callout}}
