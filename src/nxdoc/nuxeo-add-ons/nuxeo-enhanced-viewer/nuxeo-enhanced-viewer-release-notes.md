@@ -9,13 +9,11 @@ review:
 toc: true
 ---
 
-{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2025-2-0'}}}
+{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2026-0-0'}}}
 
 ---
 
 ## NEV Release Notes Summary
 
 
-- [NEV 2025.1.0]({{page page='nuxeo-enhanced-viewer-release-notes-2025-1-0'}})
-- [NEV 2025.0.0]({{page page='nuxeo-enhanced-viewer-release-notes-2025-0-0'}})
 - [NEV 2.3.0]({{page page='nuxeo-enhanced-viewer-release-notes-2-3-0'}})
