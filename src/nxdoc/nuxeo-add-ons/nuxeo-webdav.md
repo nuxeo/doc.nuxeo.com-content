@@ -34,14 +34,14 @@ After installing the `nuxeo-webdav` package, you just need to add the Nuxeo Plat
 *   Move documents and folders
 
 {{#> callout type='info' heading='Nuxeo Drive'}}
-There are several known limitations with using the WebDAV protocol on Windows machines to connect to the Nuxeo Platform: temporary files that are stored in the Nuxeo Platform, technical name displayed instead of title of the document. We do not recommend mounting WebDAV drives on Windows machines except for specific use cases. The behavior can vary depending on the version of Windows and service pack.
+There are several known limitations with using the WebDAV protocol on Windows machines to connect to the Nuxeo Platform, such as temporary files that are stored in the Nuxeo Platform, technical name displayed instead of title of the document, and so on. We do not recommend mounting WebDAV drives on Windows machines except for specific use cases. The behavior can vary depending on the version of Windows and service pack.
 
 We recommend you to pay attention to [Nuxeo Drive]({{page version='' space='client-apps' page='nuxeo-drive'}}) that can offer you a file system access style without the above mentioned drawbacks.
 {{/callout}}
 
 ### Adding the Nuxeo Platform as an External Drive
 
-Depending on your OS, the steps to follow so the Nuxeo Platform is seen by the OS as an external drive are different depending on your OS.
+Depending on your OS, the steps to follow so that the Nuxeo Platform is seen by the OS as an external drive are different.
 
 {{#> callout type='note' heading='Requirement'}}
 The first time you do the mapping, make sure that you have already logged in to the web interface once. This is required to setup the Windows authentication protocol.
@@ -95,7 +95,7 @@ You can create folders and documents in the Nuxeo Platform from your desktop.
 To create documents in a Nuxeo folder or workspace, you can:
 
 *   Drag and drop files from a local folder into the target Nuxeo folder,
-*   Create the document in the native office application and save it in the Nuxeo folder.
+*   Create the document in the native office application and save it in the Nuxeo folder
 
 You can then create, copy and move documents and folders in the Nuxeo Platform via the Windows Explorer or Mac Finder the same way you would do in a local folder.
 
@@ -105,7 +105,7 @@ You can then create, copy and move documents and folders in the Nuxeo Platform v
 
 {{! multiexcerpt name='webdav-client-configuration'}}
 
-The package comes with a default configuration which supports only a few clients among Windows's built-in one, litmus, davfs, cadaver. If your usual client is not listed, you can override this configuration by adding a new file `webdav-authentication-config.xml` under `$NUXEO/nxserver/config/` and update the list associated to the header.
+The package comes with a default configuration which supports only a few clients among Windows' built-in one, litmus, davfs, cadaver. If your usual client is not listed, you can override this configuration by adding a new file `webdav-authentication-config.xml` under `$NUXEO/nxserver/config/` and update the list associated to the header.
 
 Below is an example where BitKinex is added:
 
