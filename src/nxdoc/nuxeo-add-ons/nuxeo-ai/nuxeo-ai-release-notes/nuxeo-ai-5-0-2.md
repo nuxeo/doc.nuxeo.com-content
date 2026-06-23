@@ -56,6 +56,8 @@ Add the following to your `nuxeo.conf`:
 nuxeo.ai.images.enabled=true
 nuxeo.ai.contentintelligence.enabled=true
 nuxeo.ai.contentintelligence.documents.enabled=true
+nuxeo.enrichment.raiseEvent=true
+nuxeo.enrichment.save.facets=true
 nuxeo.hyland.cic.auth.baseUrl=<your CIC auth URL>
 nuxeo.hyland.cic.contextEnrichment.baseUrl=<your CIC enrichment URL>
 nuxeo.hyland.cic.enrichment.clientId=<your client ID>
