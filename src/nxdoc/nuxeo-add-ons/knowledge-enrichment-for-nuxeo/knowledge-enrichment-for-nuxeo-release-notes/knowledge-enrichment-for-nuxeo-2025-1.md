@@ -1,6 +1,6 @@
 ---
-title: knowledge enrichment for nuxeo 2025.1
-description: Release notes for knowledge enrichment for nuxeo 2025.1
+title: Knowledge Enrichment for Nuxeo 2025.1
+description: Release notes for Knowledge Enrichment for Nuxeo 2025.1
 tree_item_index: 200
 review:
   comment: ''
@@ -11,7 +11,7 @@ toc: true
 
 {{! multiexcerpt name='knowledge-enrichment-for-nuxeo-2025-1'}}
 
-## What's New in Nuxeo Content Intelligence Connector(Version 2025.1)
+## What's New in Nuxeo Content Intelligence Connector (Version 2025.1)
 
 ## Your Documents Now Get Smarter — Automatically
 
@@ -27,8 +27,8 @@ Every time you bring a document into the system — whether it's one file or hun
   - If something fails, you'll know why. Clear error messages appear in the UI.
 
 
-### Enrich Manually in case of Auto Enrichment failure
-Users can trigger enrichment from a dedicated enrichment action/button for docs and images in which auto enrichment fails(Classify/Summarize/Extract Identities/Describe)
+### Enrich Manually if Automatic Enrichment Fails
+ Users can trigger enrichment from a dedicated action/button for documents and images when automatic enrichment fails (Classify/Summarize/Extract Identities/Describe).
 
   - The button only shows up for file types that support enrichment — no guesswork.
   - The system picks the right enrichment actions based on your document type.
@@ -39,7 +39,7 @@ Each document now shows a clear status so you always know where things stand:
 
   - Processing — Enrichment is running
   - Success — Enrichment completed
-  - Failure — Something went wrong (with fallback behaviour where applicable)
+  - Failure — Something went wrong (with fallback behavior where applicable)
 
 No need to dig into logs or ask an admin.
 
@@ -47,7 +47,7 @@ No need to dig into logs or ask an admin.
 ### Helpful Notifications
 Whether you're importing one document or a batch, you'll get timely notifications in the UI so you're never left wondering what's happening.
 
-###  No Studio Setup Required
+### No Studio Setup Required
 The connector now includes a built-in web module for Nuxeo Web UI. This means your team doesn't need to configure enrichment actions in Studio anymore — less setup, fewer moving parts, faster rollouts.
 
 {{! /multiexcerpt}}
