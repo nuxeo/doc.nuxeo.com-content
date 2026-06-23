@@ -94,7 +94,7 @@ The document is automatically locked in the Nuxeo Platform. When you save your m
 You can create folders and documents in the Nuxeo Platform from your desktop.
 To create documents in a Nuxeo folder or workspace, you can:
 
-*   Drag and drop files from a local folder into the target Nuxeo folder,
+*   Drag and drop files from a local folder into the target Nuxeo folder
 *   Create the document in the native office application and save it in the Nuxeo folder
 
 You can then create, copy and move documents and folders in the Nuxeo Platform via the Windows Explorer or Mac Finder the same way you would do in a local folder.
