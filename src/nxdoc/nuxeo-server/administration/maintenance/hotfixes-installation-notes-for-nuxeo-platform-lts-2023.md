@@ -103,6 +103,11 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 49
+
+### Stop Pinning Vim-Enhanced Version in Nuxeo Docker Image
+
+The `vim-enhanced` system package is no longer pinned in the Nuxeo Docker image. The latest available version from the Oracle Linux repos is installed at image build time.
 ## Hotfix 47
 
 ### Fix Relation Documents Missing From Repository Re-Index LTS 2023
