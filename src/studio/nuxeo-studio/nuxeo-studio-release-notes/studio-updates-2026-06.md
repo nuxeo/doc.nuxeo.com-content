@@ -16,7 +16,7 @@ toc: true
 Administrators can now toggle the Trial flag and view the Support Level for projects directly in Connect, without switching to the legacy JSF interface.
 
 **What Changed:**
-A new toggle for the Trial flag has been added to the Connect Administration interface. Additionally, a "Support Level" column now appears in the Services view, letting you see at a glance which projects are currently marked as trials. These capabilities were previously only accessible through the legacy JSF admin pages.
+A new toggle button for the Trial flag has been added to the Connect Administration interface. Additionally, a "Support Level" column now appears in the Services view, letting you see at a glance which projects are currently marked as trials. These capabilities were previously only accessible through the legacy JSF admin pages.
 
 **Impact:**
 This eliminates another reason to switch back to JSF for routine administration. You can now manage trial designations and verify support levels from a single, modern interface - saving time and reducing context-switching during account setup and reviews.
@@ -30,11 +30,11 @@ A new descriptive details view has been added to the Studio Administration UI fo
 **Impact:**
 Previously, reviewing artifact details required navigating through multiple screens or using API calls. Now, all the information you need is available in one place, making it faster to verify artifact versions, check integrity via checksums, or clean up outdated artifacts.
 
-### Settings & Permissions for Studio Project Artifacts
+### Managing Settings and Permissions for Studio Project Artifacts
 A new centralized page gives administrators clear visibility into who can view, download, delete, or configure artifacts.
 
 **What Changed:**
-A dedicated Settings & Permissions page has been added under Studio Project Artifacts. It displays all permission mappings by role in a single view, so you can quickly understand and verify access controls without digging through multiple configuration screens.
+A dedicated Settings and Permissions page has been added under Studio Project Artifacts. It displays all permission mappings by role in a single view, so you can quickly understand and verify access controls without digging through multiple configuration screens.
 
 **Impact:**
 Administrators can now audit and understand artifact permissions at a glance, making it easier to ensure the right people have the right level of access — especially important when onboarding new team members or tightening security policies.
