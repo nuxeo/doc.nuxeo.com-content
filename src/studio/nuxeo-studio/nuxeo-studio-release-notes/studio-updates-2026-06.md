@@ -37,7 +37,7 @@ A new centralized page gives administrators clear visibility into who can view, 
 A dedicated Settings and Permissions page has been added under Studio Project Artifacts. It displays all permission mappings by role in a single view, so you can quickly understand and verify access controls without digging through multiple configuration screens.
 
 **Impact:**
-Administrators can now audit and understand artifact permissions at a glance, making it easier to ensure the right people have the right level of access — especially important when onboarding new team members or tightening security policies.
+Administrators can now audit and understand artifact permissions at a glance, making it easier to ensure that the right people have the right level of access — especially important when onboarding new team members or tightening security policies.
 
 ## Bug fixes
 
