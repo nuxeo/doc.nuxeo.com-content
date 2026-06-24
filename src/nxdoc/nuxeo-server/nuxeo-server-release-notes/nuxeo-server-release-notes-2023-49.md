@@ -17,7 +17,7 @@ hidden: true
 
 ## Gracefully Handle Errors During Big CSV Import
 
-New `nuxeo.csv.importer.max.lines` configuration property for Nuxeo CSV importer defines the configuration for rejecting CSV files exceeding the desired limit. Default is `-1` (unlimited).
+Introduced the new `nuxeo.csv.importer.max.lines` configuration property for Nuxeo CSV importer that defines the configuration for rejecting CSV files exceeding the desired limit. Default is `-1` (unlimited).
 
 ## Fix Duplicate ACEs in 'Acls' Enricher's Response
 
