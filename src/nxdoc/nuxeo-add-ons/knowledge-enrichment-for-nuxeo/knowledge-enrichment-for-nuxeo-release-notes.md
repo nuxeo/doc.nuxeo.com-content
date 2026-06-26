@@ -1,6 +1,6 @@
 ---
 title: Knowledge Enrichment for Nuxeo Release Notes
-description: Release notes for knowledge enrichment for nuxeo.
+description: Release notes for knowledge enrichment for Nuxeo.
 tree_item_index: 100
 review:
   comment: ''
