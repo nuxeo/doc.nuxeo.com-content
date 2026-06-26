@@ -41,7 +41,7 @@ Watch the related courses on Hyland University:</br>
 If you are **upgrading from a previous version** of the Nuxeo Aspera connector, please see the [upgrade notes]({{page page='nuxeo-aspera-upgrade-notes'}}) for **critical** information related to potential **breaking code**.
 {{/callout}}
 
-**Version 3.0.0** of the Nuxeo Aspera Connector is aligned with **IBM Aspera Connect 3.9.9 SDK** and, by default, points to the IBM Aspera Connect SDK 3.9.9 CDN URL. If you would like to host the SDK on your own servers or point to another version, please see our entry on [configuring the SDK url](#sdk-url). If you are using a version newer than this, functionality might be affected.
+**Version 3.0.0** of the Nuxeo Aspera Connector is aligned with **IBM Aspera Connect 5.0.3 SDK** and, by default, points to the IBM Aspera Connect SDK 5.0.3 CDN URL. If you would like to host the SDK on your own servers or point to another version, please see our entry on [configuring the SDK url](#sdk-url). If you are using a version newer than this, functionality might be affected.
 
 ### Installation
 
@@ -201,7 +201,7 @@ aspera.download.access.key.secret=
 
 #### SDK URL
 
-The Aspera Connect SDK version used with this version of the Nuxeo Aspera Connector defaults to Aspera Connect SDK 3.9.9. If you would like to use a different SDK, you can modify this in one of two ways:
+The Aspera Connect SDK version used with this version of the Nuxeo Aspera Connector defaults to Aspera Connect SDK 5.0.3. If you would like to use a different SDK, you can modify this in one of two ways:
 - In the `nuxeo.conf` file
 - As a contribution
 
