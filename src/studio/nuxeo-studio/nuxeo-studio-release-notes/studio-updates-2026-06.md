@@ -4,7 +4,7 @@ description: Release notes for Nuxeo Studio release in June 2026.
 tree_item_index: 916
 review:
   comment: ''
-  date: '2026-06-23'
+  date: '2026-06-29'
   status: ok
 toc: true
 ---
@@ -38,6 +38,33 @@ A dedicated Settings and Permissions page has been added under Studio Project Ar
 
 **Impact:**
 Administrators can now audit and understand artifact permissions at a glance, making it easier to ensure that the right people have the right level of access — especially important when onboarding new team members or tightening security policies.
+
+### Faster Loading for the Connect Account Page
+The Connect account page now loads consistently in under one second, making everyday administration noticeably faster.
+
+**What Changed:**
+We optimized the underlying queries and data loading for the Connect account page. Previously, the page took over 12 seconds to load the first time you visited it, even though subsequent loads were faster. Now, every page load completes in under one second, regardless of whether it is your first visit or a return visit.
+
+**Impact:**
+If you manage accounts through Connect, you will notice a dramatically faster experience. The 12x improvement removes a significant daily friction point, especially for administrators who access the account page frequently throughout the day.
+
+### Project Information Now Visible on the Connect Services Screen
+You can now see which project a service belongs to directly in the services list, without opening each entry individually.
+
+**What Changed:**
+Project information has been added to the Connect services screen. Previously, when multiple services shared the same name, it was difficult to tell them apart because the project association was only visible in the legacy JSF interface. Now, the project name is displayed alongside each service entry.
+
+**Impact:**
+Administrators managing accounts with many services, such as presales or enterprise accounts with hundreds of entries, can now quickly identify and select the correct service without clicking through each one. This saves significant time during routine service and project management.
+
+### Updated Hyland/Nuxeo Logo Across Connect, Marketplace, and Documentation
+The logo displayed on Connect, Marketplace, and the Documentation site has been updated to reflect the current Hyland/Nuxeo branding.
+
+**What Changed:**
+The existing logo assets on the Connect Dashboard, Marketplace Add-ons page, and the Documentation site header have been replaced with the new approved Hyland/Nuxeo logo. Studio is not affected by this change.
+
+**Impact:**
+You will see consistent, up-to-date branding across these properties. No action is needed on your part. All links and navigation continue to work as before.
 
 ## Bug fixes
 
