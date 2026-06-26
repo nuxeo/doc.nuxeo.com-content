@@ -18,7 +18,7 @@ toc: true
 We've made it easier to enrich your documents. When you upload or import files, the system now automatically classifies, summarizes, extracts key identities, and describes them — no extra steps needed from you.
 
 ### Automatic Enrichment When You Upload
-Every time you bring a document into the system — whether it's one file or multiple — enrichment kicks in automatically in the background.
+Every time you bring a document into the system — whether it's one file or multiple — enrichment starts automatically in the background.
 
   - You won't be interrupted. Upload continues as normal while enrichment runs behind the scenes. 
   - You'll be notified. A message lets you know enrichment has started and when it's done.
