@@ -26,7 +26,6 @@ Every time you bring a document into the system — whether it's one file or mul
   - Unsupported files are skipped gracefully. No confusing errors for file types that don't apply.
   - If something fails, you'll know why. Clear error messages appear in the UI.
 
-
 ### Enrich Manually if Automatic Enrichment Fails
  Users can trigger enrichment from a dedicated action/button for documents and images when automatic enrichment fails (Classify/Summarize/Extract Identities/Describe).
 
