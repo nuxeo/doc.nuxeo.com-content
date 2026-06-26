@@ -15,7 +15,7 @@ toc: true
 
 ## Your Documents Now Get Smarter — Automatically
 
-We've made it easier than ever to enrich your documents. When you upload or import files, the system now automatically classifies, summarizes, extracts key identities, and describes them — no extra steps needed from you.
+We've made it easier to enrich your documents. When you upload or import files, the system now automatically classifies, summarizes, extracts key identities, and describes them — no extra steps needed from you.
 
 
 ### Automatic Enrichment When You Upload
