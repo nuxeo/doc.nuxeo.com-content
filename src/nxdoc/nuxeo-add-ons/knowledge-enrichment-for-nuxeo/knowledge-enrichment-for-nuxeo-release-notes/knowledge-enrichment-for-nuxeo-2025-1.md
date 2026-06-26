@@ -42,7 +42,6 @@ Each document now shows a clear status so you always know where things stand:
 
 No need to dig into logs or ask an admin.
 
-
 ### Helpful Notifications
 Whether you're importing one document or a batch, you'll get timely notifications in the UI so you're never left wondering what's happening.
 
