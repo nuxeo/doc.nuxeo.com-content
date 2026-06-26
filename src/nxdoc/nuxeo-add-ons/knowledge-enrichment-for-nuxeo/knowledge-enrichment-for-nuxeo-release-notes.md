@@ -1,14 +1,12 @@
 ---
-title: Nuxeo AI Release Notes
-description: Release notes for Nuxeo AI.
+title: Knowledge Enrichment for Nuxeo Release Notes
+description: Release notes for knowledge enrichment for Nuxeo.
 tree_item_index: 100
 review:
   comment: ''
-  date: '2026-02-27'
+  date: '2026-06-25'
   status: ok
 toc: true
 ---
 
-{{{multiexcerpt 'nuxeo-ai-4-0-4' page='nuxeo-ai-4-0-4'}}}
-
-{{{multiexcerpt 'nuxeo-ai-4-0-3' page='nuxeo-ai-4-0-3'}}}
+{{{multiexcerpt 'knowledge-enrichment-for-nuxeo-2023-1' page='knowledge-enrichment-for-nuxeo-2023-1'}}}
