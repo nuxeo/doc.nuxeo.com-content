@@ -1,32 +1,49 @@
 ---
-title: Nuxeo AI 4.0.3
-description: Release notes for Nuxeo AI 4.0.3
-tree_item_index: 400
+title: Knowledge Enrichment for Nuxeo 2023.1
+description: Release notes for Knowledge Enrichment for Nuxeo 2023.1
+tree_item_index: 200
 review:
   comment: ''
-  date: '2026-02-27'
+  date: '2026-06-25'
   status: ok
 toc: true
 ---
 
-{{! multiexcerpt name='nuxeo-ai-4-0-3'}}
+{{! multiexcerpt name='knowledge-enrichment-for-nuxeo-2023-1'}}
 
-## What's New in Nuxeo AI (version 4.0.3)
+## What's New in Nuxeo Content Intelligence Connector (Version 2023.1)
 
-This is a bugfix and improvement release focused on enhancements and fixes related to the Sightengine integration.
+## Your Documents Now Get Smarter — Automatically
 
-## Released Changes
+We've made it easier to enrich your documents. When you upload or import files, the system now automatically classifies, summarizes, extracts key identities, and describes them — no extra steps needed from you.
 
-### Image Quality Analysis Now Works Reliably With Sightengine
+### Automatic Enrichment When You Upload
+Every time you bring a document into the system — whether it's one file or multiple — enrichment kicks in automatically in the background.
 
-Previously, image quality and safety checks via Sightengine could fail with errors, preventing analysis results from being returned. This has been resolved — image analysis now completes successfully, so you can rely on automated quality and safety assessments for your content. <br/>
+  - You won't be interrupted. Upload continues as normal while enrichment runs behind the scenes. 
+  - You'll be notified. A message lets you know enrichment has started and when it's done.
+  - Unsupported files are skipped gracefully. No confusing errors for file types that don't apply.
+  - If something fails, you'll know why. Clear error messages appear in the UI.
 
-### Broader Offensive Content Detection
+### Enrich Manually if Automatic Enrichment Fails
+ Users can trigger enrichment from a dedicated action/button for documents and images when automatic enrichment fails (Classify/Summarize/Extract Identities/Describe).
 
-Content safety analysis now detects a wider range of offensive imagery, including hate symbols and offensive gestures. This helps you enforce content policies more comprehensively. <br/>
+  - The button only shows up for file types that support enrichment — no guesswork.
+  - The system picks the right enrichment actions based on your document type.
+  - No Studio configuration needed — it works out of the box.
 
-### Richer Color Metadata for Images
+### See Enrichment Status at a Glance
+Each document now shows a clear status so you always know where things stand:
 
-Image quality analysis now returns HSV (Hue, Saturation, Value) color data, giving you more detailed color information for use in visual search, asset categorization, and design workflows. <br/>
+  - Processing — Enrichment is running
+  - Success — Enrichment completed
+  - Failure — Something went wrong (with fallback behavior where applicable)
+
+
+### Helpful Notifications
+Whether you're importing one document or a batch, you'll get timely notifications in the UI so you're never left wondering what's happening.
+
+### No Studio Setup Required
+The connector now includes a built-in web module for Nuxeo Web UI. This means your team doesn't need to configure enrichment actions in Studio anymore — less setup, fewer moving parts, faster rollouts.
 
 {{! /multiexcerpt}}
