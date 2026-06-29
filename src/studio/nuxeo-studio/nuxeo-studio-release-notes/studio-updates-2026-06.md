@@ -4,7 +4,7 @@ description: Release notes for Nuxeo Studio release in June 2026.
 tree_item_index: 916
 review:
   comment: ''
-  date: '2026-06-29'
+  date: '2026-06-30'
   status: ok
 toc: true
 ---
