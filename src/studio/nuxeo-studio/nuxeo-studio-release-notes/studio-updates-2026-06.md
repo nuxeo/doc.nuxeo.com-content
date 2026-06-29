@@ -49,10 +49,10 @@ We optimized the underlying queries and data loading for the Connect account pag
 If you manage accounts through Connect, you will notice a dramatically faster experience. The 12x improvement removes a significant daily friction point, especially for administrators who access the account page frequently throughout the day.
 
 ### Project Information Now Visible on the Connect Services Screen
-You can now see which project a service belongs to directly in the services list, without opening each entry individually.
+You can now see to which project a service belongs directly in the services list, without opening each entry individually.
 
 **What Changed:**
-Project information has been added to the Connect services screen. Previously, when multiple services shared the same name, it was difficult to tell them apart because the project association was only visible in the legacy JSF interface. Now, the project name is displayed alongside each service entry.
+Project information has been added to the Connect services screen. Previously, when multiple services shared the same name, it was difficult to differentiate between them because the project association was only visible in the legacy JSF interface. Now, the project name is displayed alongside each service entry.
 
 **Impact:**
 Administrators managing accounts with many services, such as presales or enterprise accounts with hundreds of entries, can now quickly identify and select the correct service without clicking through each one. This saves significant time during routine service and project management.
