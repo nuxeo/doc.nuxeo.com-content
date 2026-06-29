@@ -12,7 +12,7 @@ toc: true
 Welcome to the Release Notes for **Nuxeo Drive 7.0.1**
 
 **Status**: <font color="##ff0000">**Beta**</font> </br>
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/wip-direct-download-fix-from-master/docs/changes/7.0.1.md)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/7.0.1.md)
 
 ## What's New:
 
