@@ -3,7 +3,7 @@ title: Thumbnail
 description: A thumbnail is a reduced-size version of a picture used to help in recognizing and organizing documents. See more of Nuxeo explanation.
 review:
     comment: ''
-    date: '2018-01-16'
+    date: '2026-06-30'
     status: ok
 labels:
     - lts2016-ok
@@ -218,7 +218,9 @@ Here are the different components of the thumbnail feature:
  * Interface: [`ThumbnailService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailService.html)
  * Implementation: [`ThumbnailServiceImpl`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailServiceImpl.html)
  * Component: [`org.nuxeo.ecm.core.api.thumbnail.ThumbnailService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService)
- * Extension point: [`thumbnailFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService--thumbnailFactory)
+ * Extension points:
+   * [`thumbnailFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService--thumbnailFactory): register thumbnail factories per document type or facet.
+   * `thumbnailConfiguration`: enable or disable thumbnail auto-generation globally or per repository (see [Disabling Thumbnail Auto-Generation](#disabling-thumbnail-auto-generation)). Available since `2025.22`.
 
 * **Default Thumbnail factories**
 
@@ -415,3 +417,41 @@ Blob getDefaultThumbnail(DocumentModel doc) {
 Here, we can see the `ThumbnailAdapter` to use and factories like the default one `ThumbnailDocumentFactory` and `ThumbnailPictureFactory`:
 
 ![]({{file name='thumbnail.png'}} ?w=650,border=true)
+
+## Disabling Thumbnail Auto-Generation
+
+Available since `2025.22`.
+
+By default, Nuxeo computes a thumbnail for each document on creation and refreshes it whenever its main blob changes. On instances that do not need server-side thumbnails -- for example when thumbnails are produced by a downstream service, or to reduce binary storage and CPU footprint -- this auto-generation can be disabled globally or per repository.
+
+### Global Configuration
+
+Set the following property in `nuxeo.conf`:
+
+```
+nuxeo.thumbnail.enabled=false
+```
+
+When set to `false`, [`CheckBlobUpdateListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/CheckBlobUpdateListener.html) does not schedule a thumbnail update for newly created documents. Documents that already carry the `Thumbnail` facet still get their thumbnail refreshed on subsequent blob updates, so existing content keeps working unchanged.
+
+### Per-Repository Configuration
+
+A per-repository override can be contributed to the `thumbnailConfiguration` extension point of the `ThumbnailService`:
+
+```xml
+<extension target="org.nuxeo.ecm.core.api.thumbnail.ThumbnailService"
+  point="thumbnailConfiguration">
+  <thumbnailConfig repository="myRepository" enabled="false" />
+</extension>
+```
+
+The descriptor accepts values of the following attributes:
+
+* `repository`: name of the repository this configuration applies to. Omit to set the default that applies to all repositories.
+* `enabled`: `true` (default) to keep thumbnail auto-generation, `false` to disable it.
+
+A contribution without a `repository` attribute defines the default for all repositories; per-repository contributions override that default.
+
+### Purging Existing Thumbnails
+
+Disabling auto-generation only prevents new thumbnails from being produced; it does not touch the thumbnails already stored on documents. Existing thumbnails can be removed to reclaim storage using the [Thumbnails Management REST endpoint]({{page space='rest-api' version='1' page='thumbnails-endpoint'}}#remove-thumbnails) (`DELETE /management/thumbnails/remove`).

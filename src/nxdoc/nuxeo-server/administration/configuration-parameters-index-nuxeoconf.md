@@ -3,7 +3,7 @@ title: Configuration Parameters Index (nuxeo.conf)
 description: Manage your configuration properties around the Nuxeo Platform.
 review:
   comment: ''
-  date: '2021-01-12'
+  date: '2026-06-30'
   status: ok
 labels:
   - content-review-lts2016
@@ -1908,6 +1908,18 @@ Property to use a MongoDB optimized implementation of the transient store, repla
 **Default Value**
 
 `mongodb`
+
+* * *
+
+#### `nuxeo.thumbnail.enabled`
+
+When set to `false`, it disables automatic thumbnail generation on document creation and blob updates. See [Disabling Thumbnail Auto-Generation]({{page page='thumbnail'}}#disabling-thumbnail-auto-generation) for details, including how to override this setting per repository through the `thumbnailConfiguration` extension point.
+
+**Since LTS 2025.22**
+
+**Default Value**
+
+`true`
 
 * * *
 
