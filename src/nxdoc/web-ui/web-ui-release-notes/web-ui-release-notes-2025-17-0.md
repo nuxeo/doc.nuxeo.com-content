@@ -53,6 +53,8 @@ hidden: true
 - Improved keyboard accessibility in modal dialogs by keeping focus within the active window.
 - Fixed an issue that could allow navigation to background content while a modal was open.
 - Enhanced overall accessibility and usability for keyboard users.
+- Date picker dropdowns can now be dismissed using the Esc key.
+- Modal dialogs can now be closed using the Esc key, including Edit Layout dialogs.
 
 **Performance, Reliability & Quality Improvements**
 - Improved application quality and maintainability by moving to a modern unit testing framework that provides faster and more reliable test execution.
