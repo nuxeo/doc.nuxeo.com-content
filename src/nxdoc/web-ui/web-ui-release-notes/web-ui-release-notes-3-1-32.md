@@ -49,7 +49,6 @@ hidden: true
 - ***Direct Application Stability:***
     - Resolved compatibility issues with newer Node.js versions, ensuring more stable application behaviour and preventing runtime errors.
 
-
 **Accessibility Improvements**
 - Improved keyboard accessibility in modal dialogs by keeping focus within the active window.
 - Fixed an issue that could allow navigation to background content while a modal was open.
