@@ -28,7 +28,6 @@ hidden: true
     - Create and Edit dialogs can now be closed using the Esc key, providing a quicker and more intuitive user experience.
 - ***Better Collections Experience:***
     - Collection names and content lists now make full use of the available space when the navigation panel is expanded. Longer names are displayed more effectively and will show an ellipsis when necessary.
-    
 
 **Bug Fixes**
 - ***Read-Only Vocabulary Protection:***
