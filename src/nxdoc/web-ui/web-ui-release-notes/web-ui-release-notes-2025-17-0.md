@@ -39,7 +39,7 @@ hidden: true
 - ***Activity Feed Display Fix:***
     - Resolved a layout issue in Folder Details where long usernames could cause text alignment problems. Activity entries now display consistently and are easier to read.
 - ***Workflow Diagram Display:***
-    - Fixed an issue where workflow transition lines could appear in the wrong position when viewing workflow graphs. Workflow diagrams now render correctly.
+    - Fixed an issue where workflow transition lines could appear in the incorrect position when viewing workflow graphs. Workflow diagrams now render correctly.
 - ***Data Accuracy Improvement:***
     - Resolved an issue where text values containing only numbers could be automatically converted to numeric values, removing leading zeros. Values are now preserved exactly as entered.
 - ***Date and Modal Accessibility Fixes:***
