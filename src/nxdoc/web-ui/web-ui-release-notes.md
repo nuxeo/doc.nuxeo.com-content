@@ -22,16 +22,17 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-31'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-32'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.31]({{page page='web-ui-release-notes-3-1-31'}}) | Enhancements, Bug Fixes, Security & Quality Improvements and Engineering & Reliability Improvements|-->
+<!-- | [Web UI 3.1.32]({{page page='web-ui-release-notes-3-1-32'}}) | Enhancements, Bug Fixes, Accessibility Improvements and Performance, Reliability & Quality Improvements|-->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [Web UI 3.1.31]({{page page='web-ui-release-notes-3-1-31'}}) | Enhancements, Bug Fixes, Security & Quality Improvements and Engineering & Reliability Improvements|
 | [Web UI 3.1.30]({{page page='web-ui-release-notes-3-1-30'}}) | Accessibility fixes, usability, and platform reliability improvements | 
 | [Web UI 3.1.29]({{page page='web-ui-release-notes-3-1-29'}}) | Preservation of user preferences. Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions.|
 | [Web UI 3.1.28]({{page page='web-ui-release-notes-3-1-28'}}) | Bug Fixes & Upgrades. Important Enhancements. Security Improvements. Includes support ticket resolutions.| 
