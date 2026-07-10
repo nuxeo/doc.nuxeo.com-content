@@ -2,7 +2,7 @@
 title: Nuxeo Drive
 review:
     comment: ''
-    date: '2026-06-29'
+    date: '2026-07-10'
     status: ok
 labels:
     - lts2023-ok
