@@ -93,7 +93,7 @@ PDF/A is a version of PDF intended for long-term preservation. It is designed to
 
 ## What This Feature Does Not Include
 
-PDF/A Conversion is focused on creating archival PDF/A output. It does not include broader PDF editing or document manipulation capabilities.
+PDF/A Conversion is focused on creating archival PDF/A output. It does not include the following broader PDF editing or document manipulation capabilities.
 
 * Watermarking, merging, or splitting PDFs
 * Redaction or annotation tools
