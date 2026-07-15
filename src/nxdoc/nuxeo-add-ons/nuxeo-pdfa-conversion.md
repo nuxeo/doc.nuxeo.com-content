@@ -128,7 +128,6 @@ PDF/A Conversion is especially useful for organizations that need dependable lon
 - Teams benefit from a built-in, repeatable experience rather than isolated custom implementations
 - Archived files are easier to access through predictable preview or download behavior
 
-
 ## Frequently Asked Questions
 
 **Does PDF/A Conversion replace the original file?**
