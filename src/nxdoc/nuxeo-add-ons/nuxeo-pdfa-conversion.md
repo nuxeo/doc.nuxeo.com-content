@@ -19,6 +19,12 @@ PDF/A Conversion for Nuxeo helps organizations create archive-ready documents di
 
 Many organizations need to preserve documents for years to meet legal, regulatory, operational, or historical requirements. PDF/A Conversion simplifies that process by providing a built-in way to produce standardized archival files without relying on separate tools or custom integrations.
 
+## Prerequisites
+
+{{#> callout type='warning'}}
+**LibreOffice** (headless mode) and **Ghostscript** must be installed on the Nuxeo Server, as they are used internally for PDF/A conversions. These are typically available in standard Nuxeo deployment environments, including the official Docker image.
+{{/callout}}
+
 ## What PDF/A Conversion Delivers
 
 PDF/A Conversion turns supported files into PDF/A, a self-contained format made for long-term access.
@@ -93,7 +99,7 @@ PDF/A is a version of PDF intended for long-term preservation. It is designed to
 
 ## What This Feature Does Not Include
 
-PDF/A Conversion is focused on creating archival PDF/A output. It does not include broader PDF editing or document manipulation capabilities.
+PDF/A Conversion is focused on creating archival PDF/A output. It does not include the following broader PDF editing or document manipulation capabilities.
 
 * Watermarking, merging, or splitting PDFs
 * Redaction or annotation tools
