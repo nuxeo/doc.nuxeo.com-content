@@ -54,7 +54,6 @@ Users can preview the PDF/A output when supported or download it when preview is
 
 PDF/A Conversion supports common business files, including documents, text files, images, and PDFs.
 
-
 | File Group       | Examples                                |
 | ---------------- | --------------------------------------- |
 | Office documents | Word, Excel, PowerPoint                 |
