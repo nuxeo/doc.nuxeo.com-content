@@ -86,7 +86,6 @@ PDF/A is a version of PDF intended for long-term preservation. It is designed to
 - **Migration and normalization:** Convert mixed source content into a more consistent archive format
 - **Operational archiving:** Retain source files while also producing a preservation-oriented copy for long-term storage
 
-
 | Before                                                  | With PDF/A Conversion                                 |
 | ------------------------------------------------------- | ----------------------------------------------------- |
 | Customers often depended on custom or third-party tools | Conversion is available as a built-in capability      |
