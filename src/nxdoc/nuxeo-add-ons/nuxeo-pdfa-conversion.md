@@ -62,6 +62,7 @@ PDF/A Conversion supports common business files, including documents, text files
 | Images           | TIFF, JPEG, PNG                         |
 | PDF files        | PDF files that need conversion to PDF/A |
 
+
 {{#> callout type='warning'}}
 Support applies to the file groups described for this feature. Preview availability may vary depending on file behavior and environment capabilities.
 {{/callout}}
