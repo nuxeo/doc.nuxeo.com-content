@@ -93,6 +93,7 @@ PDF/A is a version of PDF intended for long-term preservation. It is designed to
 | Access to archived files was not always clear           | Users can preview or download the converted output    |
 | Converted output could replace source context           | Original files are preserved alongside PDF/A versions |
 
+
 ## What This Feature Does Not Include
 
 PDF/A Conversion is focused on creating archival PDF/A output. It does not include the following broader PDF editing or document manipulation capabilities:
