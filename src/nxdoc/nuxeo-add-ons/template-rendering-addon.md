@@ -274,6 +274,9 @@ The template file is the file that will be used to generate the rendering of the
   --}}
   ![template-rendering-template-file.png](/nx_assets/0df401bd-a061-42e7-95c6-28577d65803d.png ?w=650,border=true)
 
+{{#> callout type='tip' heading='With LibreOffice'}}
+For a Libreoffice template, it is not possible to just insert the freemarker expression (Libreoffice may chunk some peaces in the XML), you must use **Insert** > **Fields** > **More Fields** > The **Functions** tab > **Input field**, then click the **Insert** button to enter your expression (i.e. ${doc['dc:description']})
+
 **To render a picture**:
 
 1. In MS Office, insert a picture as a placeholder.
