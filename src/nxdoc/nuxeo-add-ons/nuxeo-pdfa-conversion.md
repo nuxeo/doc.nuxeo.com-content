@@ -20,12 +20,6 @@ PDF/A Conversion for Nuxeo helps organizations create archive-ready documents di
 
 Many organizations need to preserve documents for years to meet legal, regulatory, operational, or historical requirements. PDF/A Conversion simplifies that process by providing a built-in way to produce standardized archival files without relying on separate tools or custom integrations.
 
-## Prerequisites
-
-{{#> callout type='warning'}}
-**LibreOffice** (headless mode) and **Ghostscript** must be installed on the Nuxeo Server, as they are used internally for PDF/A conversions. These are typically available in standard Nuxeo deployment environments, including the official Docker image.
-{{/callout}}
-
 ## What PDF/A Conversion Delivers
 
 PDF/A Conversion turns supported files into PDF/A, a self-contained format made for long-term access.
@@ -60,12 +54,14 @@ Users can preview the PDF/A output when supported or download it when preview is
 
 PDF/A Conversion supports common business files, including documents, text files, images, and PDFs.
 
+
 | File Group       | Examples                                |
 | ---------------- | --------------------------------------- |
 | Office documents | Word, Excel, PowerPoint                 |
 | Text files       | TXT, RTF                                |
 | Images           | TIFF, JPEG, PNG                         |
 | PDF files        | PDF files that need conversion to PDF/A |
+
 
 {{#> callout type='warning'}}
 Support applies to the file groups described for this feature. Preview availability may vary depending on file behavior and environment capabilities.
@@ -91,6 +87,7 @@ PDF/A is a version of PDF intended for long-term preservation. It is designed to
 - **Migration and normalization:** Convert mixed source content into a more consistent archive format
 - **Operational archiving:** Retain source files while also producing a preservation-oriented copy for long-term storage
 
+
 | Before                                                  | With PDF/A Conversion                                 |
 | ------------------------------------------------------- | ----------------------------------------------------- |
 | Customers often depended on custom or third-party tools | Conversion is available as a built-in capability      |
@@ -99,9 +96,12 @@ PDF/A is a version of PDF intended for long-term preservation. It is designed to
 | Access to archived files was not always clear           | Users can preview or download the converted output    |
 | Converted output could replace source context           | Original files are preserved alongside PDF/A versions |
 
+
+
+
 ## What This Feature Does Not Include
 
-PDF/A Conversion is focused on creating archival PDF/A output. It does not include the following broader PDF editing or document manipulation capabilities:
+PDF/A Conversion is focused on creating archival PDF/A output. It does not include broader PDF editing or document manipulation capabilities.
 
 - Watermarking, merging, or splitting PDFs
 - Redaction or annotation tools
@@ -123,12 +123,15 @@ PDF/A Conversion is especially useful for organizations that need dependable lon
 - Any business with retention, archive, or compliance requirements
 
 
+
 ## Customer Expectations
 
 - Users get a simpler path to archive-ready documents
 - Organizations can preserve both source files and converted files together
 - Teams benefit from a built-in, repeatable experience rather than isolated custom implementations
 - Archived files are easier to access through predictable preview or download behavior
+
+
 
 ## Frequently Asked Questions
 
