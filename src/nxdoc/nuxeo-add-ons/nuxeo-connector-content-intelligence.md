@@ -13,7 +13,7 @@ toc: true
 tree_item_index: 365
 ---
 
-The Nuxeo Connector for Content Intelligence connects Knowledge Discovery to the Nuxeo repository. It enables you to perform tasks on Nuxeo documents using artificial intelligence (AI) from the Discovery module in the Content Innovation Cloud. After you install and configure Nuxeo Connector for Content Intelligence, ingest the documents that you want the Discovery module to access.
+The Nuxeo Connector for Content Intelligence ingests data from the Nuxeo repository to the Cloud Content Repository so that it is available to Content Innovation Cloud services, such as Knowledge Discovery. It enables you to perform tasks on Nuxeo documents using artificial intelligence (AI) from the Discovery module in the Content Innovation Cloud. After you install and configure Nuxeo Connector for Content Intelligence, ingest the documents that you want the Discovery module to access.
 
 ## Understanding the Connector
 
