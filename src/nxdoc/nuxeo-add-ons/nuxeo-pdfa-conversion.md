@@ -31,7 +31,7 @@ PDF/A Conversion turns supported files into PDF/A, a self-contained format made 
 
 **Key Benefits**
 * Convert common business documents and image files into PDF/A
-* Use the capability for newly added content
+* Use the capability only for newly added content
 * Keep the original file together with the converted archival version
 * Give users a clear way to preview or download the converted file
 * Reduce the need for third-party conversion products or one-off custom solutions
