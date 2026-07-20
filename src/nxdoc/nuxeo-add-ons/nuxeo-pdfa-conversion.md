@@ -1,7 +1,6 @@
 ---
-
 title: PDF/A Conversion for Nuxeo
-description: 'PDF/A Conversion for Nuxeo helps organizations create archive-ready documents directly within the platform by converting supported files into PDF/A, a format designed for long-term preservation, while keeping the original source file available.'
+description: '...'
 review:
     comment: ''
     date: '2026-07-16'
@@ -11,8 +10,8 @@ labels:
     - conversion
     - nuxeo
 toc: true
-
-## tree_item_index: 2050
+tree_item_index: 2050
+---
 
 ## Overview
 
@@ -31,12 +30,11 @@ Many organizations need to preserve documents for years to meet legal, regulator
 PDF/A Conversion turns supported files into PDF/A, a self-contained format made for long-term access.
 
 **Key Benefits**
-
-- Convert common business documents and image files into PDF/A
-- Use the capability for newly added content
-- Keep the original file together with the converted archival version
-- Give users a clear way to preview or download the converted file
-- Reduce the need for third-party conversion products or one-off custom solutions
+* Convert common business documents and image files into PDF/A
+* Use the capability for newly added content
+* Keep the original file together with the converted archival version
+* Give users a clear way to preview or download the converted file
+* Reduce the need for third-party conversion products or one-off custom solutions
 
 {{#> callout type='info'}}
 Archive programs work best when the preservation format is consistent, accessible, and easy to produce. Built-in PDF/A Conversion helps standardize that experience across environments.
@@ -60,12 +58,12 @@ Users can preview the PDF/A output when supported or download it when preview is
 
 PDF/A Conversion supports common business files, including documents, text files, images, and PDFs.
 
-| File Group       | Examples                                |
-| ---------------- | --------------------------------------- |
-| Office documents | Word, Excel, PowerPoint                 |
-| Text files       | TXT, RTF                                |
-| Images           | TIFF, JPEG, PNG                         |
-| PDF files        | PDF files that need conversion to PDF/A |
+| File Group | Examples |
+| --- | --- |
+| Office documents | Word, Excel, PowerPoint |
+| Text files | TXT, RTF |
+| Images | TIFF, JPEG, PNG |
+| PDF files | PDF files that need conversion to PDF/A |
 
 {{#> callout type='warning'}}
 Support applies to the file groups described for this feature. Preview availability may vary depending on file behavior and environment capabilities.
@@ -86,27 +84,27 @@ PDF/A is a version of PDF intended for long-term preservation. It is designed to
 
 ## Typical Use Cases
 
-- **Regulatory retention:** Preserve records in a standardized archival format for long-term compliance
-- **Corporate records management:** Store critical business documents in a format intended for durable access
-- **Migration and normalization:** Convert mixed source content into a more consistent archive format
-- **Operational archiving:** Retain source files while also producing a preservation-oriented copy for long-term storage
+* **Regulatory retention:** Preserve records in a standardized archival format for long-term compliance
+* **Corporate records management:** Store critical business documents in a format intended for durable access
+* **Migration and normalization:** Convert mixed source content into a more consistent archive format
+* **Operational archiving:** Retain source files while also producing a preservation-oriented copy for long-term storage
 
-| Before                                                  | With PDF/A Conversion                                 |
-| ------------------------------------------------------- | ----------------------------------------------------- |
-| Customers often depended on custom or third-party tools | Conversion is available as a built-in capability      |
-| Setup and maintenance added complexity                  | Fewer moving parts and lower operational burden       |
-| Archiving practices varied by implementation            | A more consistent approach across environments        |
-| Access to archived files was not always clear           | Users can preview or download the converted output    |
-| Converted output could replace source context           | Original files are preserved alongside PDF/A versions |
+| Before | With PDF/A Conversion |
+| --- | --- |
+| Customers often depended on custom or third-party tools | Conversion is available as a built-in capability |
+| Setup and maintenance added complexity | Fewer moving parts and lower operational burden |
+| Archiving practices varied by implementation | A more consistent approach across environments |
+| Access to archived files was not always clear | Users can preview or download the converted output |
+| Converted output could replace source context | Original files are preserved alongside PDF/A versions |
 
 ## What This Feature Does Not Include
 
-PDF/A Conversion is focused on creating archival PDF/A output. It does not include the following broader PDF editing or document manipulation capabilities:
+PDF/A Conversion is focused on creating archival PDF/A output. It does not include the following broader PDF editing or document manipulation capabilities.
 
-- Watermarking, merging, or splitting PDFs
-- Redaction or annotation tools
-- Email conversion or support for specialized formats outside the supported list
-- Editing or enriching PDF/A metadata as part of the conversion flow
+* Watermarking, merging, or splitting PDFs
+* Redaction or annotation tools
+* Email conversion or support for specialized formats outside the supported list
+* Editing or enriching PDF/A metadata as part of the conversion flow
 
 {{#> callout type='warning'}}
 This feature is intended for PDF/A conversion. It should not be treated as a full PDF editing or records governance suite by itself.
@@ -116,25 +114,25 @@ This feature is intended for PDF/A conversion. It should not be treated as a ful
 
 PDF/A Conversion is especially useful for organizations that need dependable long-term document preservation.
 
-- Government agencies
-- Financial services organizations
-- Healthcare providers and payers
-- Energy and utilities companies
-- Any business with retention, archive, or compliance requirements
+* Government agencies
+* Financial services organizations
+* Healthcare providers and payers
+* Energy and utilities companies
+* Any business with retention, archive, or compliance requirements
 
 ## Customer Expectations
 
-- Users get a simpler path to archive-ready documents
-- Organizations can preserve both source files and converted files together
-- Teams benefit from a built-in, repeatable experience rather than isolated custom implementations
-- Archived files are easier to access through predictable preview or download behavior
+* Users get a simpler path to archive-ready documents
+* Organizations can preserve both source files and converted files together
+* Teams benefit from a built-in, repeatable experience rather than isolated custom implementations
+* Archived files are easier to access through predictable preview or download behavior
 
 ## Frequently Asked Questions
 
 **Does PDF/A Conversion replace the original file?**
 No. The original document remains available alongside the PDF/A version.
 
-**Can this be used for existing content?**   
+**Can this be used for existing content?**
 No. It can be used for newly added files. Support for existing documents is planned in the upcoming release.
 
 **Is this a complete PDF editing solution?**
