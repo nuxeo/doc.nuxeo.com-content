@@ -3,7 +3,7 @@ title: PDF/A Conversion for Nuxeo
 description: 'PDF/A Conversion for Nuxeo helps organizations create archive-ready documents directly within the platform by converting supported files into PDF/A, a format designed for long-term preservation, while keeping the original source file available.'
 review:
     comment: ''
-    date: '2026-07-20'
+    date: '2026-07-21'
     status: ok
 labels:
     - pdfa
@@ -71,12 +71,10 @@ Support applies to the file groups described for this feature. Preview availabil
 
 ## How It Works
 
-The conversion process is simple for users and administrators.
-
-1. A supported document is uploaded or an existing document is selected.
-2. Nuxeo converts the file into PDF/A format.
-3. The original file remains stored in the platform.
-4. Users can access the PDF/A output through preview or download, depending on support.
+1. A supported document is uploaded to the Nuxeo platform.
+2. Nuxeo automatically converts the document to PDF/A format.
+3. The original document remains securely stored and available within the platform.
+4. Users can access the converted PDF/A document using the View PDF/A button in the blob actions or download it through the Export Document Actions.
 
 {{#> callout type='info'}}
 PDF/A is a version of PDF intended for long-term preservation. It is designed to keep documents self-contained so they can be opened and viewed more consistently over time.
@@ -133,7 +131,8 @@ PDF/A Conversion is especially useful for organizations that need dependable lon
 No. The original document remains available alongside the PDF/A version.
 
 **Can this be used for existing content?**
-No. It can be used for newly added files. Support for existing documents is planned in the upcoming release.
+Yes, with some limitations. This feature can be used for newly added files. However, bulk conversion of existing documents is not currently supported.
+For existing documents, users can convert individual files to PDF/A format using the Export Document action.
 
 **Is this a complete PDF editing solution?**
 No. The feature is limited to PDF/A conversion and does not include editing, redaction, merging, splitting, or annotation features.
