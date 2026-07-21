@@ -103,6 +103,23 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 50
+
+### Refactor PublicationJsonEnricher to Use a Page Provider
+
+For the `2023` branch, if you maintain custom `nuxeo.defaults` files that override `elasticsearch.override.pageproviders`, you must append `ALL_PUBLICATION_QUERY` to the comma-separated list. Otherwise, publication count queries will execute against VCS/DBS instead of Elasticsearch, negating the performance optimization.
+Example
+`elasticsearch.override.pageprovider`=default_search,...,ALL_PUBLICATION_QUERY
+### Take Into Account the Search Pattern on LDAP Directories
+
+### New API on UserManager (@since 2025.22)
+
+- `MultiExpression getUserSearchPredicate(String pattern)`
+- `MultiExpression getGroupSearchPredicate(String pattern)`
+
+They build the NXQL `MultiExpression` previously hardcoded by callers (in particular `SuggestUserEntries`), honoring the user/group directory's `substringMatchType` (`subinitial`, `subany`, `subfinal`). Both methods return null for a blank pattern.
+
+Custom `UserManager` implementations that do not extend `UserManagerImpl` should override these methods to benefit from `substringMatchType` support. If they don't, the `UserGroup.Suggestion` operation falls back to the legacy `subinitial`-only behavior at runtime (instead of failing), preserving backward compatibility. Callers building their own predicates for user/group suggestion are encouraged to migrate to this API to honor the directory configuration consistently.
 ## Hotfix 49
 
 ### Stop Pinning Vim-Enhanced Version in Nuxeo Docker Image
