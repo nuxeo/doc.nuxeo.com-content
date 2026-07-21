@@ -652,6 +652,30 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 22
+
+### Refactor PublicationJsonEnricher to Use a Page Provider
+
+For the `2023` branch, if you maintain custom `nuxeo.defaults` files that override `elasticsearch.override.pageproviders`, you must append `ALL_PUBLICATION_QUERY` to the comma-separated list. Otherwise, publication count queries will execute against VCS/DBS instead of Elasticsearch, negating the performance optimization.
+Example
+`elasticsearch.override.pageprovider`=default_search,...,ALL_PUBLICATION_QUERY
+### Take Into Account the Search Pattern on LDAP Directories
+
+### New API on UserManager (@since 2025.22)
+
+- `MultiExpression getUserSearchPredicate(String pattern)`
+- `MultiExpression getGroupSearchPredicate(String pattern)`
+
+They build the NXQL `MultiExpression` previously hardcoded by callers (in particular `SuggestUserEntries`), honoring the user/group directory's `substringMatchType` (`subinitial`, `subany`, `subfinal`). Both methods return null for a blank pattern.
+
+Custom `UserManager` implementations that do not extend `UserManagerImpl` should override these methods to benefit from `substringMatchType` support. If they don't, the `UserGroup.Suggestion` operation falls back to the legacy `subinitial`-only behavior at runtime (instead of failing), preserving backward compatibility. Callers building their own predicates for user/group suggestion are encouraged to migrate to this API to honor the directory configuration consistently.
+### OpenSAML 5.2.2 Upgrade Breaks SAML Init on jdk.xml.maxElementDepth
+
+- Library version bump: `<opensaml.version>` in the root pom.xml moves from 5.2.1 to 5.2.2, propagating to all 14 `org.opensaml:*` artifacts in `<dependencyManagement>`.
+- In-tree changes:
+  - JAXP override around `initOpenSAML()`: temporarily forces the JDK built-in `DocumentBuilderFactory` (string literal, no JDK-internal bytecode reference, no enforcer impact), restored in `finally`; the method is now `synchronized`.
+- New `SAMLConfigurationInitializer().init()` call so binding-layer size-limit checks find their registered `SAMLConfiguration`.
+- Upstream breaking change (OpenSAML 5.2.2, `opensaml-core-api`): `GlobalParserPoolInitializer` (and `DecryptionParserPoolInitializer`) now harden the default `BasicParserPool` with two JDK-JAXP-specific builder attributes — `jdk.xml.elementAttributeLimit = 30` and `jdk.xml.maxElementDepth = 25` — overridable via the new OpenSAML system properties `opensaml.config.xml.elementAttributeLimit` and `opensaml.config.xml.maxElementDepth`.
 ## Hotfix 21
 
 ### Stop Pinning Vim-Enhanced Version in Nuxeo Docker Image
