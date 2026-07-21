@@ -80,7 +80,7 @@ docker login docker-private.packages.nuxeo.com -u <token_name_code> -p <token_pa
 ```
 
 {{#> callout type='info' }}
-You can find your `<token_name_code>` and `<token_pass_code>` on `https://packages.nuxeo.com/` by clicking on profile (top right) then `User Token`. 
+You can find your `<token_name_code>` and `<token_pass_code>` on `https://packages.nuxeo.com/` by clicking on profile (top right), then `User Token`. 
 {{/callout}}
 
 To pull the latest tag of the `nuxeo/nuxeo` image from the Docker registry and run a container from it, run:
