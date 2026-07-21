@@ -76,8 +76,12 @@ To use the video related features in Nuxeo, such as conversions, storyboarding a
 First, you need to be authenticated in order to pull the Docker image:
 
 ```shell
-docker login docker-private.packages.nuxeo.com -u <username> -p <token_pass_code>
+docker login docker-private.packages.nuxeo.com -u <token_name_code> -p <token_pass_code>
 ```
+
+{{#> callout type='info' }}
+You can find your `<token_name_code>` and `<token_pass_code>` on `https://packages.nuxeo.com/` by clicking on profile (top right) then `User Token`. 
+{{/callout}}
 
 To pull the latest tag of the `nuxeo/nuxeo` image from the Docker registry and run a container from it, run:
 
