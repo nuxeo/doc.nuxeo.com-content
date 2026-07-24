@@ -663,6 +663,8 @@ Example:
 
 ### Take Into Account the Search Pattern on LDAP Directories
 
+The `UserGroup.Suggestion` operation now honors the directory's `substringMatchType (subinitial, subany, subfinal)`, so LDAP user/group suggestions return infix and suffix matches when configured to do so.
+
 ### New API on UserManager (@since 2025.22)
 
 - `MultiExpression getUserSearchPredicate(String pattern)`
