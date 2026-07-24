@@ -17,12 +17,11 @@ hidden: true
 
 ## Refactor PublicationJsonEnricher to Use a Page Provider
 
-PublicationJsonEnricher now uses the SearchService
+PublicationJsonEnricher now uses the SearchService. The 2025 branch use `SearchService.search()` directly. A new page provider plugged into the Elasticsearch backend has been introduced for the 2023 branch. For additional information, see Upgrade notes.
 
-The 2025 and 2027 branches use `SearchService.search()` directly. A new page provider plugged into the Elasticsearch backend has been introduced for the 2023 branch. See Upgrade notes.
 ## Take Into Account the Search Pattern on LDAP Directories
 
-The UserGroup.Suggestion operation now honors the directory's substringMatchType (subinitial, subany, subfinal), so LDAP user/group suggestions return infix and suffix matches when configured to do so.
+The `UserGroup.Suggestion` operation now honors the directory's `substringMatchType (subinitial, subany, subfinal)`, so LDAP user/group suggestions return infix and suffix matches when configured to do so.
 
 ## Security Fixes
 
