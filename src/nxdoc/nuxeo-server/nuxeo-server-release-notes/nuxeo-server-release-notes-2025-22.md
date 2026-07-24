@@ -17,15 +17,13 @@ hidden: true
 
 ## Support AWS DocumentDB Elastic
 
-Improve support of AWS DocumentDB Elastic
+Improve support of AWS DocumentDB Elastic.
 
 ## Allow Disabling Thumbnail Auto-Generation Per Repository
 
 Thumbnail auto-generation can now be disabled globally or per repository.
 
 ### Optional thumbnail auto-generation
-
-Thumbnail auto-generation can now be disabled globally or per repository.
 
 - Set `nuxeo.thumbnail.enabled=false` in `nuxeo.conf` to disable it globally.
 - Contribute to the new `thumbnailConfiguration` extension point of `org.nuxeo.ecm.core.api.thumbnail.ThumbnailService` for per-repository overrides:
@@ -36,7 +34,7 @@ Thumbnail auto-generation can now be disabled globally or per repository.
 </extension>
 ```
 
-When disabled, no thumbnail is computed at document creation; thumbnails on documents that already carry the `Thumbnail` facet continue to be refreshed when their main blob changes.
+When disabled, no thumbnail is computed at document creation. Thumbnails on documents that already carry the `Thumbnail` facet continue to be refreshed when their main blob changes.
 
 The `perf` server template now ships with thumbnail auto-generation disabled.
 
@@ -46,18 +44,18 @@ A new bulk action and management endpoint allow removing stored thumbnails (blob
 
 - `DELETE /api/v1/management/thumbnails/remove?query=<NXQL>&queryLimit=<N>`
 - Both parameters are optional. Default query targets all non-proxy documents currently carrying a thumbnail blob.
+  
 ## Refactor PublicationJsonEnricher to Use a Page Provider
 
-PublicationJsonEnricher now uses the SearchService
+PublicationJsonEnricher now uses the SearchService. The 2025 branch use `SearchService.search()` directly. A new page provider plugged into the Elasticsearch backend has been introduced for the 2023 branch. For additional information, see Upgrade notes.
 
-The 2025 and 2027 branches use `SearchService.search()` directly. A new page provider plugged into the Elasticsearch backend has been introduced for the 2023 branch. See Upgrade notes.
 ## Take Into Account the Search Pattern on LDAP Directories
 
-The UserGroup.Suggestion operation now honors the directory's substringMatchType (subinitial, subany, subfinal), so LDAP user/group suggestions return infix and suffix matches when configured to do so.
+The `UserGroup.Suggestion` operation now honors the directory's `substringMatchType (subinitial, subany, subfinal)`, so LDAP user/group suggestions return infix and suffix matches when configured to do so.
 
 ## Support DocumentDB Local
 
-Improve support of DocumentDB local docker image
+Improve support of DocumentDB local docker image.
 
 ## S3 Blob Storage Properties With Full nuxeo.s3storage.* Prefix Cannot Be Set via Framework Properties (nuxeo.conf)
 
