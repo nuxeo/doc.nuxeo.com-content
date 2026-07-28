@@ -20,11 +20,11 @@ Watch the related course on Hyland University:</br>
 
 Nuxeo Web UI is a responsive application with three main layout regions:
 
-![Functional Overview](/nx_assets/be681297-17de-47f5-88f2-6520e3ee3021.png ?w=650,border=true)
-
 1. [The side menu](#side-menu-functional-overview)
-2. [The header toolbar](#header-toolbar-functional-overview) 
-3. [The main view](#main-view-functional-overview)
+2. [The main view](#main-view-functional-overview)
+3. [The header toolbar](#header-toolbar-functional-overview) 
+
+![Functional Overview](/nx_assets/be681297-17de-47f5-88f2-6520e3ee3021.png ?w=650,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Functional Overview
@@ -43,8 +43,8 @@ Nuxeo Web UI is a responsive application with three main layout regions:
 
 1.  **Domain**: The title of the selected page / document.
 2.  **Sub-Views**: The sub-views available.
-3.  **Quick search**: Search by keywords or users.
-4.  **Document Actions**: Actions to be performed on the current document.
+3.  **Document Actions**: Actions to be performed on the current document.
+4.  **Quick search**: Search by keywords or users.
 
 ## {{> anchor 'side-menu-functional-overview'}} Side Menu
 
