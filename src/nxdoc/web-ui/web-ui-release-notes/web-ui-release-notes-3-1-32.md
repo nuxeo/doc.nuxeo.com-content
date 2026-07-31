@@ -3,12 +3,12 @@ title: Version 3.1.32
 description: Discover what's new in Web UI 3.1.32.
 review:
   comment: ''
-  date: '2026-07-03'
+  date: '2026-07-31'
   status: ok
 toc: true
 labels:
 tree_item_index: 969
-hidden: true
+hidden: false
 ---
 
 
