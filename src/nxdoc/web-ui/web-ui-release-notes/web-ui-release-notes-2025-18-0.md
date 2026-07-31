@@ -55,7 +55,7 @@ hidden: true
     - Resolved a spurious AbortError that could appear in browser consoles when document listings were cancelled due to rapid navigation, filtering, sorting, or refresh operations.
 
 **Platform & Build Improvements**
-- **Migrated unit testing framework:***
+- ***Migrated unit testing framework:***
     - Migrated the Elements Repository unit test framework from Karma to Web Test Runner, providing a more modern and maintainable testing platform.
 - ***Improved build reproducibility and security:***
     - Locked JavaScript dependencies to verified versions and adopted deterministic dependency installation processes to improve supply-chain security and ensure consistent builds across environments.
