@@ -18,46 +18,46 @@ hidden: true
 ## What’s New in Web UI for LTS 2025 (Version 2025.18.0)
 
 **User Experience Improvements**
-- ***Improved document display after workflow completion:***
-    - After completing a workflow task and refreshing the page, Web UI now correctly displays the associated document instead of the completed workflow task.
+- ***Improved navigation after workflow task completion:***
+    - After completing a workflow task and refreshing the page, Web UI now displays the associated document instead of the completed task.
 - ***Improved comment author display:***
-    - Comments now display the author's full name instead of their username, providing a more user-friendly experience and aligning with the behaviour found in the legacy JSF UI.
-- ***Improved avatar rendering:***
-    - User avatars now display only the first and last name initials, preventing initials from overflowing the avatar circle for users with multi-part names.
-- ***Improved Recent Documents reliability:***
-    - Fixed an issue where corrupted local storage data could prevent navigation from the Recent Documents list. The application now automatically recovers from invalid stored values.
-- ***Improved document list readability:***
-    - Restored the expected width of the Document Title column in List View, improving readability when multiple metadata columns are displayed.
-- ***Improved placeholder configuration for the Date picker:***
-    - Administrators can now control the visibility of placeholders through a configurable nuxeo.conf property. The application also provides the correct validation message when an invalid format is used.
+    - Comment authors now show their full name instead of their username, restoring parity with the legacy JSF UI.
+- ***Improved avatar initials for multi-part names:***
+    - User avatars now show only the first and last name initials, so initials no longer overflow the avatar circle for users with multi-part names.
+- ***Improved Recent Documents resilience:***
+    - Recent Documents now recovers automatically from a corrupted or empty local-storage value that previously caused an error and blocked navigation.
+- ***Restored the Title column width in List View:***
+    - Fixed a regression affecting the document Title column width in List View, improving readability when several metadata columns are shown.
+- ***Improved Date picker placeholder and validation:***
+    - Placeholder visibility for the Date picker can now be controlled through a nuxeo.conf property, and an invalid date format now shows the correct error message.
 
 **Accessibility Improvements**
-- ***Enhanced Grid View accessibility:***
-    - Improved Grid View accessibility by eliminating redundant adjacent links that could cause duplicate announcements by screen readers during keyboard navigation.
-- ***Improved screen reader support in the Permissions screen:***
-    - Repeated buttons now expose unique accessible names, making them easier to identify and use with screen readers.
-- ***Improved iframe accessibility in the Document Viewer:***
-    - Added missing title attributes to inline frames (iframes) to improve screen reader compatibility and support WCAG compliance requirements.
+- ***Removed duplicate screen reader announcements in Grid View:***
+    - Adjacent links in Grid View no longer cause screen readers to announce the same item twice during keyboard navigation.
+- ***Unique accessible names for repeated buttons:***
+    - Repeated buttons now expose unique names to screen readers, making them easier to tell apart.
+- ***Added titles to inline frames:***
+    - Inline frames (iframes) now include title attributes, improving screen reader support and WCAG compliance.
 - ***Improved pagination accessibility:***
-    - Pagination controls now provide clearer context and navigation semantics for screen reader users, improving accessibility when navigating large result sets.
+    - Pagination controls now provide clearer navigation semantics and context for screen reader users when results span multiple pages.
 
 **Administration & Directory Management**
-- ***Improved group membership management:***
-    - Group member listings now identify users that no longer exist in the directory. These entries are clearly marked as not found and can be removed directly from the group.
-- ***Improved user detail synchronization:***
-    - When a user's attributes are updated, the Group view now immediately reflects the latest user information without requiring additional actions.
+- ***Improved handling of removed users in group listings:***
+    - Group member listings now surface users that no longer exist in the directory, flag them as not found, and allow them to be removed from the group.
+- ***Refreshed user details in the Group view:***
+    - Editing a user's attributes now immediately refreshes the user details shown in the Group view.
 
 **Workflow & Document Management**
-- ***Improved WOPI action availability:***
-    - Fixed an issue that could cause the WOPI action button to disappear after a page refresh. The required metadata is now loaded correctly during the initial request, ensuring the action remains available when applicable.
-- ***Improved collection and document navigation reliability:***
-    - Resolved a spurious AbortError that could appear in browser consoles when document listings were cancelled due to rapid navigation, filtering, sorting, or refresh operations.
+- ***Kept the WOPI action available after refresh:***
+    - The WOPI action button no longer disappears after a page refresh; the data it depends on is now loaded during the initial request.
+- ***Silenced a spurious AbortError on cancelled listings:***
+    - A harmless AbortError no longer appears in the browser console when a document listing is cancelled by rapid navigation, filtering, sorting, or refreshing.
 
 **Platform & Build Improvements**
-- ***Migrated unit testing framework:***
-    - Migrated the Elements Repository unit test framework from Karma to Web Test Runner, providing a more modern and maintainable testing platform.
+- ***Migrated the unit test framework:***
+    - The Elements unit test framework has moved from Karma to Web Test Runner, providing a more modern and maintainable testing platform.
 - ***Improved build reproducibility and security:***
-    - Locked JavaScript dependencies to verified versions and adopted deterministic dependency installation processes to improve supply-chain security and ensure consistent builds across environments.
+    - JavaScript dependencies are now locked to verified versions with deterministic CI installs, improving supply-chain security and keeping builds consistent across environments.
 
 <br/>
 
