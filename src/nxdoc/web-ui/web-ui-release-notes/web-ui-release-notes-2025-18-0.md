@@ -28,18 +28,19 @@ hidden: true
     - Fixed an issue where corrupted local storage data could prevent navigation from the Recent Documents list. The application now automatically recovers from invalid stored values.
 - ***Improved document list readability:***
     - Restored the expected width of the Document Title column in List View, improving readability when multiple metadata columns are displayed.
-- ***Improved placeholder configuration:***
+- ***Improved placeholder configuration for the Date picker:***
     - Administrators can now control the visibility of placeholders through a configurable nuxeo.conf property. The application also provides the correct validation message when an invalid format is used.
-- ***Improved pagination accessibility:***
-    - Pagination controls now provide clearer context and navigation semantics for screen reader users, improving accessibility when navigating large result sets.
+
 
 **Accessibility Improvements**
 - ***Enhanced Grid View accessibility:***
     - Improved Grid View accessibility by eliminating redundant adjacent links that could cause duplicate announcements by screen readers during keyboard navigation.
-- ***Improved screen reader support for repeated actions:***
+- ***Improved screen reader support in the Permissions screen:***
     - Repeated buttons now expose unique accessible names, making them easier to identify and use with screen readers.
-- ***Improved iframe accessibility:***
+- ***Improved iframe accessibility in the Document Viewer:***
     - Added missing title attributes to inline frames (iframes) to improve screen reader compatibility and support WCAG compliance requirements.
+- ***Improved pagination accessibility:***
+    - Pagination controls now provide clearer context and navigation semantics for screen reader users, improving accessibility when navigating large result sets.
 
 **Administration & Directory Management**
 - ***Improved group membership management:***
@@ -54,12 +55,8 @@ hidden: true
     - Resolved a spurious AbortError that could appear in browser consoles when document listings were cancelled due to rapid navigation, filtering, sorting, or refresh operations.
 
 **Platform & Build Improvements**
-- ***New Alpha Build workflow:***
-    - Added a dedicated Alpha Build workflow that automatically generates alpha builds for feature branches, simplifying validation and testing during development.
-- ***Improved preview environment generation:***
-    - Resolved issues that could cause timeout failures when generating preview environments, improving the reliability of dynamic preview deployments.
 - **Migrated unit testing framework:***
-    - Migrated the Web UI unit testing framework from Karma to Web Test Runner, providing a more modern and maintainable testing platform.
+    - Migrated the Elements Repository unit test framework from Karma to Web Test Runner, providing a more modern and maintainable testing platform.
 - ***Improved build reproducibility and security:***
     - Locked JavaScript dependencies to verified versions and adopted deterministic dependency installation processes to improve supply-chain security and ensure consistent builds across environments.
 
