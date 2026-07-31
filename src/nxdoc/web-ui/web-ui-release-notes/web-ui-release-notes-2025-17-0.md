@@ -3,12 +3,12 @@ title: Version 2025.17.0
 description: Discover what's new in Web UI 2025.17.0.
 review:
   comment: ''
-  date: '2026-07-03'
+  date: '2026-07-31'
   status: ok
 toc: true
 labels:
 tree_item_index: 984
-hidden: true
+hidden: false
 ---
 
 {{{multiexcerpt 'matching-notes' page='web-ui-release-notes'}}}
