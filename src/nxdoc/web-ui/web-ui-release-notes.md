@@ -29,7 +29,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | [Web UI 2025.17.0]({{page page='web-ui-release-notes-2025-17-0'}}) |Enhancements, Bug Fixes, Accessibility Improvements, and Performance, Reliability & Quality Improvements.|
 | [Web UI 2025.16.0]({{page page='web-ui-release-notes-2025-16-0'}}) |Enhancements, Bug Fixes, Security & Quality Improvements, and Engineering & Reliability Improvements.|
-|| [Web UI 2025.15.0]({{page page='web-ui-release-notes-2025-15-0'}}) | Accessibility fixes, usability, and platform reliability improvements. |
+| [Web UI 2025.15.0]({{page page='web-ui-release-notes-2025-15-0'}}) | Accessibility fixes, usability, and platform reliability improvements. |
 | [Web UI 2025.14.0]({{page page='web-ui-release-notes-2025-14-0'}}) | Preservation of user preferences. Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions|
 | [Web UI 2025.13.0]({{page page='web-ui-release-notes-2025-13-0'}}) |  Enhancements. Security Improvements. Bug Fixes. Includes support ticket resolutions.| 
 | [Web UI 2025.12.0]({{page page='web-ui-release-notes-2025-12-0'}}) |  Bug Fixes & Upgrades. Security Improvements. Includes support ticket resolutions.|
