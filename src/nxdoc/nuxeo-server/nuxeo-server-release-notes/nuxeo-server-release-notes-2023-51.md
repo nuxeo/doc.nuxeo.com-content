@@ -17,6 +17,6 @@ hidden: true
 
 ## Security Fixes
 
-This release also contains security fixes.
+This release contains security fixes.
 
 {{! /multiexcerpt}}
