@@ -19,7 +19,7 @@ Package search in Application Definition now returns only the packages that matc
 Search in Application Definition was returning too many packages that did not match the search term. Searching for something like csv or nuxeo-csv brought back a long list of unrelated packages. Search now narrows the results to packages that actually match your query.
 
 **Impact:**
-You can find the package you need, such as nuxeo-csv, much faster and with far less noise. This resolves a regression that had made package discovery slower than it should have been.
+You can find the package you need, such as nuxeo-csv, much faster and with less noise. This resolves a regression that had made package discovery slower than it should have been.
 
 ## Bug fixes
 
