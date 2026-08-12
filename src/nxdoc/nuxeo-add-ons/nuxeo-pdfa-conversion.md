@@ -81,7 +81,7 @@ PDF/A is a version of PDF intended for long-term preservation. It is designed to
 {{/callout}}
 
 
- ## Bulk Migration for Pre-existing Documents
+## Bulk Migration for Pre-existing Documents
 
 Documents uploaded before the PDF/A package was installed do not have a PDF/A rendition. You can convert them in bulk using the management REST API.
 
