@@ -304,6 +304,55 @@ nuxeo.mongodb.keystore.type
 
 See the [Trust Store and Key Store Configuration]({{page page='trust-store-and-key-store-configuration'}}) page for more.
 
+## DocumentDB
+
+[DocumentDB](https://github.com/documentdb/documentdb) is compatible with MongoDB. Therefore, it can be used by Nuxeo as a backend, like MongoDB, but with a few limitations. A DocumentDB deployment is configured exactly like a MongoDB one: it uses the same `mongodb` template and the same `nuxeo.mongodb.*` properties described above. Only the differences are detailed below.
+
+The following DocumentDB flavors have been validated with Nuxeo:
+
+- [Amazon DocumentDB](https://aws.amazon.com/documentdb/), both instance-based clusters and [elastic clusters](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-using-elastic-clusters.html)
+- [Azure DocumentDB](https://learn.microsoft.com/azure/documentdb/)
+- The open source [DocumentDB](https://github.com/documentdb/documentdb) `documentdb-local` Docker image, which is convenient for local development
+
+### Limitations
+
+Because DocumentDB does not implement all MongoDB features, the following limitations apply:
+
+- **No repository-level fulltext search.** Fulltext content is still extracted and remains searchable through `Elasticsearch` or `OpenSearch`, but the fulltext search performed directly by the repository (MongoDB) is not available and must be disabled (see the configuration below).
+- **No retryable writes.** Retryable writes must be disabled in the connection string (see the configuration below).
+- **Limited number of concurrent cursors.** The maximum number of cursors open at any given time depends on the chosen DocumentDB service and instance type. Refer to your provider's documentation for the applicable quota.
+
+Nuxeo also transparently handles two other differences, so no configuration is required for them:
+
+- **Unsupported index options.** DocumentDB rejects some index options (such as `partialFilterExpression`, `hidden`, `collation`, `storageEngine` and `wildcardProjection`, which also covers hashed indexes). When Nuxeo creates its indexes at startup and the database rejects an unsupported option, it logs a warning and automatically retries the index creation without the unsupported options. This is expected and does not prevent startup.
+- **Explicit collection creation.** DocumentDB Elastic clusters do not support implicit collection creation. Nuxeo creates the required collections explicitly before creating their indexes.
+
+Other differences documented by the providers should not affect Nuxeo. For reference, see the Amazon DocumentDB [Functional Differences](https://docs.aws.amazon.com/documentdb/latest/developerguide/functional-differences.html) and [supported MongoDB APIs](https://docs.aws.amazon.com/documentdb/latest/developerguide/mongo-apis.html).
+
+### DocumentDB Configuration
+
+Use the same `mongodb` template as for MongoDB and add the DocumentDB-specific settings in `nuxeo.conf`:
+
+```properties
+nuxeo.templates=mongodb
+# Point to your DocumentDB cluster and disable retryable writes
+nuxeo.mongodb.server=mongodb://<USER>:<PASSWORD>@<DOCUMENTDB_HOST>:27017/?retryWrites=false
+# Disable repository (MongoDB) fulltext search, use Elasticsearch/OpenSearch instead
+nuxeo.fulltext.search.disabled=true
+```
+
+{{#> callout type='warning' }}
+
+On Amazon DocumentDB **elastic** clusters, the Quartz scheduler must use the server-default write concern, otherwise commands are rejected with error `303 Field 'writeConcern' is currently not supported`. Add the following property (not needed for instance-based clusters):
+
+```properties
+org.quartz.jobStore.mongoOptionUseServerDefaultWriteConcern=true
+```
+
+{{/callout}}
+
+DocumentDB is usually accessed over TLS. See the [TLS/SSL Configuration](#tls-ssl-configuration) section above for the related `nuxeo.mongodb.ssl` and trust store / key store properties. All other MongoDB configuration options (connection pool, database name, directories, audit, etc.) apply unchanged.
+
 ## Hotfixes and indexes
 
 Since LTS 2021 ([NXP-29261](https://jira.nuxeo.com/browse/NXP-29261)) indexes are defined in document schemas and created during Nuxeo start. This is fine when starting from scratch, but it is not recommended on existing instance with large amount of documents, because creating an index is an heavy operation that can timeout or impact the MongoDB performance.
