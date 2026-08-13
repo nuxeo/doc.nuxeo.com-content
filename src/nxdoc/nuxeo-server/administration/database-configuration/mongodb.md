@@ -318,14 +318,14 @@ The following DocumentDB flavors have been validated with Nuxeo:
 
 Because DocumentDB does not implement all MongoDB features, the following limitations apply:
 
-- **No repository-level fulltext search.** Fulltext content is still extracted and remains searchable through `Elasticsearch` or `OpenSearch`, but the fulltext search performed directly by the repository (MongoDB) is not available and must be disabled (see the configuration below).
-- **No retryable writes.** Retryable writes must be disabled in the connection string (see the configuration below).
-- **Limited number of concurrent cursors.** The maximum number of cursors open at any given time depends on the chosen DocumentDB service and instance type. Refer to your provider's documentation for the applicable quota.
+- **No repository-level fulltext search -** Fulltext content is still extracted and remains searchable through `Elasticsearch` or `OpenSearch`, but the fulltext search performed directly by the repository (MongoDB) is not available and must be disabled (see the configuration below).
+- **No retryable writes -** Retryable writes must be disabled in the connection string (see the configuration below).
+- **Limited number of concurrent cursors -** The maximum number of cursors open at any given time depends on the chosen DocumentDB service and instance type. Refer to your provider's documentation for the applicable quota.
 
 Nuxeo also transparently handles two other differences, so no configuration is required for them:
 
-- **Unsupported index options.** DocumentDB rejects some index options (such as `partialFilterExpression`, `hidden`, `collation`, `storageEngine` and `wildcardProjection`, which also covers hashed indexes). When Nuxeo creates its indexes at startup and the database rejects an unsupported option, it logs a warning and automatically retries the index creation without the unsupported options. This is expected and does not prevent startup.
-- **Explicit collection creation.** DocumentDB Elastic clusters do not support implicit collection creation. Nuxeo creates the required collections explicitly before creating their indexes.
+- **Unsupported index options -** DocumentDB rejects some index options (such as `partialFilterExpression`, `hidden`, `collation`, `storageEngine` and `wildcardProjection`, which also covers hashed indexes). When Nuxeo creates its indexes at startup and the database rejects an unsupported option, it logs a warning and automatically retries the index creation without the unsupported options. This is expected and does not prevent startup.
+- **Explicit collection creation -** DocumentDB Elastic clusters do not support implicit collection creation. Nuxeo creates the required collections explicitly before creating their indexes.
 
 Other differences documented by the providers should not affect Nuxeo. For reference, see the Amazon DocumentDB [Functional Differences](https://docs.aws.amazon.com/documentdb/latest/developerguide/functional-differences.html) and [supported MongoDB APIs](https://docs.aws.amazon.com/documentdb/latest/developerguide/mongo-apis.html).
 
@@ -351,7 +351,7 @@ org.quartz.jobStore.mongoOptionUseServerDefaultWriteConcern=true
 
 {{/callout}}
 
-DocumentDB is usually accessed over TLS. See the [TLS/SSL Configuration](#tls-ssl-configuration) section above for the related `nuxeo.mongodb.ssl` and trust store / key store properties. All other MongoDB configuration options (connection pool, database name, directories, audit, etc.) apply unchanged.
+DocumentDB is usually accessed over TLS. See the [TLS/SSL Configuration](#tls-ssl-configuration) section above for the related `nuxeo.mongodb.ssl` and trust store / key store properties. All other MongoDB configuration options (connection pool, database name, directories, audit, and so on) apply unchanged.
 
 ## Hotfixes and indexes
 
