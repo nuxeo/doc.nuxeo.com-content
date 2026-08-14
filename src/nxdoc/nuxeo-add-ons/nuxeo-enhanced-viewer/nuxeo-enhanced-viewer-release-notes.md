@@ -9,7 +9,7 @@ review:
 toc: true
 ---
 
-{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2026-1-0'}}}
+{{{multiexcerpt 'nuxeo-enhanced-viewer-updates' page='nuxeo-enhanced-viewer-release-notes-2026-2-0'}}}
 
 ---
 
