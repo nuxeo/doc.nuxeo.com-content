@@ -12,6 +12,22 @@ toc: true
 
 ## Improvements
 
+### Both Studio and Support Services Now Visible in Account Management
+Account Management now displays both Studio and Support services for each Studio project, giving administrators a complete view of available services.
+
+**What Changed**
+Account Management was showing only one service per Studio project when both a Studio service and a Support service existed. Both services now appear in the list.
+
+**Impact:**
+Administrators can clearly see all services associated with a Studio project without confusion, making service management and administration more straightforward.
+
+### Change Password Option Now Available in Connect
+Users can now update their account password directly in Connect without needing to return to the legacy JSF interface.
+
+**What Changed:**
+The change password option has been migrated from JSF to Connect, completing another step in the transition away from the legacy interface.
+Impact: Users experience a more seamless, unified account management workflow in Connect, and teams can reduce reliance on JSF for routine password updates.
+
 ### More precise package search in Application Definition
 Package search in Application Definition now returns only the packages that match what you type, so you spend less time scrolling through results that are not relevant.
 
@@ -49,5 +65,16 @@ Search results in Connect were less complete than the equivalent search in JSF. 
 
 **Impact:**
 If you are moving from JSF workflows to Connect, search now works the way you expect. This removes a point of confusion and makes the transition smoother.
+
+## Security fixes
+
+### Critical Security Fix in Register Module
+A critical security vulnerability in the register module has been addressed.
+
+**What Changed:**
+A security issue in the register module has been identified and resolved.
+
+**Impact:**
+Register module users benefit from improved protection and reduced security risk.
 
 {{! /multiexcerpt}}
