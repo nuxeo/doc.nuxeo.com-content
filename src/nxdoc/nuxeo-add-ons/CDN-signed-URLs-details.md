@@ -18,7 +18,7 @@ This page covers prerequisites and `nuxeo.conf` configuration. For the end-user 
 
 ## Prerequisites
 
-Before enabling CDN signed URL sharing:
+Before enabling CDN signed URL sharing, ensure that the following criteria are met:
 
 - **Nuxeo Platform** — LTS 2025 (or the platform version supported by your Media Manipulation package)
 - **[Amazon S3 Online Storage]({{page page='amazon-s3-online-storage'}})** — binaries stored in S3 via `S3BlobProvider`
@@ -36,7 +36,7 @@ When S3 and CloudFront are configured, users generate CDN signed URLs from the *
 2. Click **Create CDN URL**.
 3. Copy the generated URL.
 
-Nuxeo signs the URL; subsequent downloads are served by CloudFront, not by Nuxeo. Optional date fields in the Share card control **document permissions** in Nuxeo; **URL validity** is governed solely by the CloudFront signature expiration.
+Nuxeo signs the URL. Subsequent downloads are served by CloudFront, not by Nuxeo. Optional date fields in the Share card control **document permissions** in Nuxeo; **URL validity** is governed solely by the CloudFront signature expiration.
 
 **Important:** CDN signed URLs apply to **stored blobs only**. On-the-fly crop, resize, or format changes from the manipulation dialog are not included. Use **Download as** or **Save** to persist a transformation first, then share the resulting blob if needed.
 

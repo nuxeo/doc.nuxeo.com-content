@@ -26,7 +26,7 @@ Customers can install this just like any other add-on onto the nuxeo server inst
 ## Prerequisites
 Nuxeo Platform – LTS-2025 
 
-Nuxeo Web UI – dependent package which will be installed if not present. 
+Nuxeo Web UI – dependent package must be installed if not present. 
 
 Picture View generations for OriginalJpeg and FullHD are enabled. 
 
@@ -93,7 +93,7 @@ CDN signed URLs can be generated for stored blobs (main file and existing pictur
 
 In the Share card, select the blob to share from **Select a Value**, then click **Create CDN URL**. Copy the generated URL using the copy action.
 
-The URL remains valid until its CloudFront signature expires. Expiration is controlled by `nuxeo.s3storage.cloudfront.expiration.seconds` (default: 3600 seconds). Revocation is not available from the UI; a signed URL stays valid until it expires.
+The URL remains valid until its CloudFront signature expires. Expiration is controlled by `nuxeo.s3storage.cloudfront.expiration.seconds` (default: 3600 seconds). Revocation is not available from the UI. A signed URL stays valid until it expires.
 
 **Note:** CDN signed URLs serve stored blobs only. On-the-fly crop, resize, or format changes from the manipulation dialog are not included in the CDN URL. Use **Download as** or **Save** to persist a transformation first, then share the resulting blob if needed.
 
@@ -154,7 +154,7 @@ Possible timeouts during the transformation of large sized images.
 The transaction timeout needs to be increased explicitly in such cases using the config key: 
 `nuxeo.media.transform.transaction.timeout.seconds`
 
-CDN signed URLs are limited to stored blobs (main file and picture views); on-the-fly transformations cannot be shared via CDN URL.
+CDN signed URLs are limited to stored blobs (main file and picture views). On-the-fly transformations cannot be shared via CDN URL.
 
 CDN signed URLs cannot be revoked before their CloudFront signature expires.
 
