@@ -103,6 +103,11 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 52
+
+### Use Versity S3 Gateway in Benchmark to Eliminate Cross-Cloud I/O Bottleneck During Data Import
+
+There is a new `benchmark-aws-s3` PR label in GitHub that runs the benchmark against an AWS S3 bucket (as before).
 ## Hotfix 50
 
 ### Refactor PublicationJsonEnricher to Use a Page Provider
