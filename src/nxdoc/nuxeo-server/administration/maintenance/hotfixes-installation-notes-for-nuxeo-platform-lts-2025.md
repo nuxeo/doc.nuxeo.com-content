@@ -652,6 +652,11 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 24
+
+### Use Versity S3 Gateway in Benchmark to Eliminate Cross-Cloud I/O Bottleneck During Data Import
+
+There is a new `benchmark-aws-s3` PR label in GitHub that runs the benchmark against an AWS S3 bucket (as before).
 ## Hotfix 22
 
 ### Refactor PublicationJsonEnricher to Use a Page Provider
