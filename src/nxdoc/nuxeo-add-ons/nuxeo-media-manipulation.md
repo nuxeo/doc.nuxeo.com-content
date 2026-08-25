@@ -3,7 +3,7 @@ title: Nuxeo Media Manipulation
 description: 'Nuxeo Media Manipulation documentation'
 review:
     comment: ''
-    date: '2025-06-11'
+    date: '2026-08-24'
     status: ok
 labels:
     - lts2023-ok
@@ -27,15 +27,17 @@ Customers can install this just like any other add-on onto the nuxeo server inst
 
 Nuxeo Platform – LTS-2023 
 
-Nuxeo Web UI – dependent package which will be installed if not present. 
+Nuxeo Web UI – dependent package must be installed if not present. 
 
 Picture View generations for OriginalJpeg and FullHD are enabled. 
+
+Nuxeo S3 Binary Storage with CloudFront configured. CDN signed URL sharing must be enabled (`nuxeo.media.downloadlinks.cloudfront.enabled=true`). See [CDN signed URLs details]({{page page='CDN-signed-URLs-details'}}).
 
 ## Current Scope
 
 Supported Media Facets: Picture 
 
-Supported Functionalities: Cropping and Resizing, Addition of custom aspect ratio options, Output format selection, Download, Share – Public link, Save Manipulation as rendition, Save Manipulation as Derivative document. 
+Supported Functionalities: Cropping and Resizing, Addition of custom aspect ratio options, Output format selection, Download, Share – CDN signed URL, Save Manipulation as rendition, Save Manipulation as Derivative document. 
 
 ## Functional Overview
 
@@ -63,6 +65,10 @@ All the transformations done on the FullHD view will be scaled accordingly and a
 
 The threshold at which this should happen is configurable and this would happen when the size of the originalJPEG rendition in MB > nuxeo.media.image.maxsize. 
 
+When S3 binary storage and CloudFront are configured, users can generate CDN signed URLs from the Share card to deliver stored blobs without authentication. URLs point to content served through CloudFront rather than through the Nuxeo server. Optional date fields in the Share card control document permissions; URL validity is governed by the CloudFront signature expiration.
+
+For configuration details, see [CDN signed URLs details]({{page page='CDN-signed-URLs-details'}}).
+
 ### Cropping, Resizing and Aspect Ratios
 
 The crop panel displays the picture and the crop box. Crop box can be operated freely when the Aspect ratio is selected as free, which is default. 
@@ -86,11 +92,13 @@ As these options sourced to the vocabulary: aspectRatio, admin can configure the
 
 ### Sharing
 
-Public URLs can be generated for the desired/existing transformation(s). These URLs won't need any authentication and can be simply used to get the transformed image. 
- 
-To generate URL for desired/current transformation, the option of Custom must be selected in the drop down – Select a Value and clicking on create public url button. 
- 
-The generated URL can be timeboxed by selecting from and to dates. 
+CDN signed URLs can be generated for stored blobs (main file and existing picture views such as OriginalJPEG and FullHD). These URLs do not require authentication and deliver content directly through CloudFront.
+
+In the Share card, select the blob to share from **Select a Value**, then click **Create CDN URL**. Copy the generated URL using the copy action.
+
+The URL remains valid until its CloudFront signature expires. Expiration is controlled by `nuxeo.s3storage.cloudfront.expiration.seconds` (default: 3600 seconds). Revocation is not available from the UI. A signed URL stays valid until it expires.
+
+**Note:** CDN signed URLs serve stored blobs only. On-the-fly crop, resize, or format changes from the manipulation dialog are not included in the CDN URL. Use **Download as** or **Save** to persist a transformation first, then share the resulting blob if needed.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Media Manipulation/Share
@@ -108,11 +116,6 @@ Allows to download the image applying the desired transformations in the selecte
     addins#screenshot#up_to_date
 --}}
 ![Download as](/nx_assets/fb6fe2ff-b05b-4d93-8e6b-e9281df34ef1.png ?w=650,border=true)
-
-For both the download and public link use cases, please make sure to add the  
-`nuxeo.url` config key with appropriate nuxeo host value: 
-
-`Eg: nuxeo.url=https://<your domain name here>/nuxeo`
 
 ### Saving
 
@@ -143,7 +146,7 @@ Upon save as derivative, a new document will be created, copying from the curren
 --}}
 ![new rendition](/nx_assets/48265045-06ee-4e1d-87b1-00225811e3a3.png ?w=650,border=true)
 
-A new document can been seen with name: Derivative – City
+A new document can be seen with name: Derivative – City
 
 ## Known Limitations 
 
@@ -154,11 +157,15 @@ Possible timeouts during the transformation of large sized images.
 The transaction timeout needs to be increased explicitly in such cases using the config key: 
 `nuxeo.media.transform.transaction.timeout.seconds`
 
+CDN signed URLs are limited to stored blobs (main file and picture views). On-the-fly transformations cannot be shared via CDN URL.
+
+CDN signed URLs cannot be revoked before their CloudFront signature expires.
+
 ## Future Scope
 
 Support of additional media and functionalities. 
 
 Asynchronous handling of invoked transformation requests with a dashboard to check the status.
 
-Delivery through CDN.
+CDN-based image editing, resizing, or on-the-fly transformation capabilities — beyond the current CDN signed URL delivery for stored blobs.
  
