@@ -30,7 +30,7 @@ Nuxeo Web UI – dependent package must be installed if not present.
 
 Picture View generations for OriginalJpeg and FullHD are enabled. 
 
-Nuxeo S3 Binary Storage with CloudFront configured. CDN signed URL sharing must be enabled (`nuxeo.media.downloadlinks.cloudfront.enabled=true`). See [CDN signed URLs details]({{page page='CDN-signed-URLs-details'}}).
+Nuxeo S3 Binary Storage with CloudFront configured. CDN signed URL sharing must be enabled (`nuxeo.media.downloadlinks.cloudfront.enabled=true`). See [CDN signed URLs details]({{page page='cdn-signed-urls-details'}}).
 
 ## Current Scope
 Supported Media Facets: Picture 
@@ -64,7 +64,7 @@ The threshold at which this should happen is configurable and this would happen 
 
 When S3 binary storage and CloudFront are configured, users can generate CDN signed URLs from the Share card to deliver stored blobs without authentication. URLs point to content served through CloudFront rather than through the Nuxeo server. Optional date fields in the Share card control document permissions; URL validity is governed by the CloudFront signature expiration.
 
-For configuration details, see [CDN signed URLs details]({{page page='CDN-signed-URLs-details'}}).
+For configuration details, see [CDN signed URLs details]({{page page='cdn-signed-urls-details'}}).
 
 ### Cropping, Resizing and Aspect Ratios
 
