@@ -1,6 +1,5 @@
 ---
-
-## title: CDN Signed URLs Details
+title: CDN Signed URLs Details
 description: Configuration and behavior of CDN signed URL sharing for Nuxeo Media Manipulation.
 review:
   comment: ''
@@ -11,6 +10,7 @@ labels:
   - media-manipulation
   - dam
 toc: true
+---
 
 CDN signed URLs let users share **stored blobs** (main file and existing picture views such as OriginalJPEG and FullHD) through Amazon CloudFront without routing downloads through the Nuxeo server. URLs are signed and time-limited; end users access content directly from CloudFront edge locations.
 
