@@ -24,7 +24,7 @@ Before enabling CDN signed URL sharing, ensure that the following criteria are m
 - **[Amazon S3 Online Storage]({{page page='amazon-s3-online-storage'}})** — binaries stored in S3 via `S3BlobProvider`
 - **[Amazon CloudFront]({{page page='amazon-cloudfront-distribution'}})** — distribution in front of the S3 bucket, with **Restrict Viewer Access** enabled so objects require signed URLs
 - **CloudFront signing key** — Key Pair ID and private key file mounted on every Nuxeo node
-- **Nuxeo Media Manipulation** add-on is installed
+- **Nuxeo Media Manipulation** add-on installed
 
 Picture view generations for **OriginalJpeg** and **FullHD** must be enabled if you intend to share those renditions.
 
