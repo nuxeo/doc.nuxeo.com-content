@@ -33,10 +33,19 @@ Highlights:
 - Improved visual consistency across Web UI.
 - Existing Nuxeo themes remain the default experience unless explicitly enabled.
 
+**When the flag is off**
+
+The default experience remains classic Nuxeo. Customers see the classic Default and Dark themes and do not receive Hyland logos, Hyland palettes, Hyland page chrome, or the Hyland theme set. They will still see a limited set of refinements that were intentionally classified to apply across all themes.
+
+**When the flag is on**
+
+Customers receive the full Hyland-branded experience through the Hyland Light and Hyland Dark themes. This includes branding-specific colors, logos, font treatment, and page styling.
+
 To enable the Hyland-branded experience, add the following property to `nuxeo.conf`:
 
 ```
 org.nuxeo.web.ui.branding.rebrand=true
+
 ```
 
 #### Improved Navigation Experience
