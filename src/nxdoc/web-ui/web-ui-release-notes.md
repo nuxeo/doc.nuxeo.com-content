@@ -19,14 +19,15 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-18-0'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-19-0'}}}
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.18.0]({{page page='web-ui-release-notes-2025-18-0'}}) |User Experience Improvements, Accessibility Improvements, Workflow & Document Management and Platform & Build Improvements.| -->
+<!-- | [Web UI 2025.19.0]({{page page='web-ui-release-notes-2025-19-0'}}) |Optional Hyland-branded experience for Web UI along with a wide range of navigation, browsing, search, workflow, accessibility, and reliability improvements| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Web UI 2025.18.0]({{page page='web-ui-release-notes-2025-18-0'}}) |User Experience Improvements, Accessibility Improvements, Workflow & Document Management and Platform & Build Improvements.|
 | [Web UI 2025.17.0]({{page page='web-ui-release-notes-2025-17-0'}}) |Enhancements, Bug Fixes, Accessibility Improvements, and Performance, Reliability & Quality Improvements.|
 | [Web UI 2025.16.0]({{page page='web-ui-release-notes-2025-16-0'}}) |Enhancements, Bug Fixes, Security & Quality Improvements, and Engineering & Reliability Improvements.|
 | [Web UI 2025.15.0]({{page page='web-ui-release-notes-2025-15-0'}}) | Accessibility fixes, usability, and platform reliability improvements. |
