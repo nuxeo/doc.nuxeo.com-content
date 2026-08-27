@@ -35,7 +35,7 @@ Highlights:
 
 **When the flag is off**
 
-The default experience remains classic Nuxeo. Customers see the classic Default and Dark themes and do not receive Hyland logos, Hyland palettes, Hyland page chrome, or the Hyland theme set. They will still see a limited set of refinements that were intentionally classified to apply across all themes.
+The default experience remains classic Nuxeo. Customers see the classic Light(Default) and Dark themes and do not receive Hyland logos, Hyland palettes, Hyland page chrome, or the Hyland theme set. They will still see a limited set of refinements that were intentionally classified to apply across all themes.
 
 **When the flag is on**
 
