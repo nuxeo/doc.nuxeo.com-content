@@ -99,7 +99,7 @@ org.nuxeo.web.ui.branding.rebrand=true
 - Proxy documents can now be copied and pasted, simplifying management of published content.
 - Required multi-valued properties now provide clearer validation feedback.
 - Rendering issues affecting multi-valued complex properties after editing have been resolved.
-- Closing notifications no longer unintentionally closes the spreadsheet editor.
+- Closing notifications no longer unintentionally close the spreadsheet editor.
 
 ### Accessibility Improvements
 
