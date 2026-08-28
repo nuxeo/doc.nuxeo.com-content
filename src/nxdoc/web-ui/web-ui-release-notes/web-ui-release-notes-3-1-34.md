@@ -83,7 +83,7 @@ org.nuxeo.web.ui.branding.rebrand=true
 
 #### Enhanced CSV Exports
 
-- CSV exports now include metadata from custom document schemas, providing more complete export data.
+- CSV exports include metadata from custom document schemas, providing more complete data.
 
 ### Workflow Improvements
 
