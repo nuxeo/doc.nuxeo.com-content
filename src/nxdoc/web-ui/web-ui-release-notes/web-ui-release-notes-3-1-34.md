@@ -57,7 +57,7 @@ org.nuxeo.web.ui.branding.rebrand=true
 #### Improved Session Management
 
 - Users are automatically redirected to the login page when their session expires.
-- After re-authentication, users are returned to the page they were previously viewing.
+- After re-authentication, users are returned to the page they were viewing previously.
 - Session expiration is handled more gracefully, reducing navigation errors.
 - Administrators can configure automatic logout for inactive users to strengthen security policies.
 
