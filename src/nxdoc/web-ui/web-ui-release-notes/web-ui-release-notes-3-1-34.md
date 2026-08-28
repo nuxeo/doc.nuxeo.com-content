@@ -71,7 +71,7 @@ org.nuxeo.web.ui.branding.rebrand=true
 
 #### Improved Document Downloads and Publications
 
-- Downloaded files now preserve filenames that contain spaces.
+- Downloaded files now retain filenames that contain spaces.
 - Publication dialogs now provide more intuitive default rendition selections based on document content.
 
 ### Search and Export Improvements
