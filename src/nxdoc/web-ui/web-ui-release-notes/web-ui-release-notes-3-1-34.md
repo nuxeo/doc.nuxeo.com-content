@@ -128,7 +128,7 @@ This release includes several enhancements designed to improve usability for key
 #### Improved Preview Experience
 
 - Documents with unsupported file types now display a clear "No Preview Available" message instead of displaying preview errors.
-- Issues affecting preview environments, document previews, and user management functionality have been resolved.
+- Issues associated with preview environments, document previews, and user management functionality have been resolved.
 
 #### Improved Nuxeo Drive Experience
 
