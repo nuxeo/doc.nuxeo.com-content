@@ -3,7 +3,7 @@ title: Search Setup
 description: This page provides several configuration use cases for Elasticsearch and Opensearch.
 review:
     comment: ''
-    date: '2020-11-03'
+    date: '2026-09-02'
     status: ok
 labels:
     - lts2016-ok
@@ -855,6 +855,10 @@ For mapping customization examples, see the page [Configuring the Elasticsearch 
 
 Here the index is a primary storage and you cannot rebuild it. So we need a tool that will extract the `_source` of documents from one index and submit it to a new index that have been setup with the new configuration.
 
+{{#> callout type='warning' heading='Finish the migration before restarting'}}
+The audit index is a primary storage: unlike the repository index, it cannot be rebuilt from the repository. Once you stop the Nuxeo Platform to copy the entries, do not start it again — and do not delete the source index — until the `_reindex` request has completed and both indexes report the same document count. Audit entries that were not copied are lost permanently.
+{{/callout}}
+
 1. Update the mappings or settings configuration by overriding the `{NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-audit-index-config.xml`(follow the same procedure as the section above for the repository index)
 1. Use a new name for the `audit.elasticsearch.indexName` (like `nuxeo-audit2`)
 1. Start the Nuxeo Platform.</br>
@@ -872,6 +876,36 @@ Here the index is a primary storage and you cannot rebuild it. So we need a tool
     }
     }'
     ```
+
+    On a large audit index, send the request asynchronously and poll the returned task instead of waiting on the call:
+
+    ```bash
+    curl -X POST "http://localhost:9200/_reindex?wait_for_completion=false" \
+      -H 'Content-Type: application/json' -d '{
+    "source": {
+    "index": "nuxeo-audit"
+    },
+    "dest": {
+    "index": "nuxeo-audit2"
+    }
+    }'
+
+    # poll the task id returned by the request above
+    curl "http://localhost:9200/_tasks/<taskId>?pretty"
+    ```
+
+1. Wait for the `_reindex` request to complete, then refresh the new index and check that both indexes hold the same number of entries.
+
+    ```bash
+    curl -X POST "http://localhost:9200/nuxeo-audit2/_refresh"
+
+    curl "http://localhost:9200/nuxeo-audit/_count?pretty"
+    curl "http://localhost:9200/nuxeo-audit2/_count?pretty"
+    ```
+
+    The destination index is not refreshed automatically when `_reindex` finishes, so counts taken straight after the copy can be stale and look mismatched even though every entry was copied.
+
+1. Start the Nuxeo Platform.
 
 ## Configuration for Multi Repositories
 
