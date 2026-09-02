@@ -23,7 +23,7 @@ A search engine such as Elasticsearch (or OpenSearch)  is used to relieve the da
 - It stores the document's audit log. Since every operation on a document in Nuxeo is stored for possible audit purposes, the corresponding table would grow very rapidly and possibly reach millions of tuples when stored in the database. Using Elasticsearch, this is not a problem anymore.
 - It scales horizontally and provides constant performance even with growing content size.
 
-A search engine is a mandatory component of the Nuxeo architecture: in a development environment, it makes sense to use the embedded OpenSearch package, but a Nuxeo production environment expects an externalized Elasticsearch or OpenSearch cluster. Refer to the [Search setup]({{page page='search-setup'}}) documentation for more information.
+A search engine is not required: Nuxeo can rely on the repository (database) search alone. However, a dedicated search engine is recommended for scalable and performant solutions. When a search engine is used, Nuxeo supports an externalized OpenSearch, Elasticsearch, or MongoDB Atlas Search backend. In a development environment, it makes sense to use the embedded OpenSearch package. Refer to the [Search setup]({{page page='search-setup'}}) documentation for more information.
 
 ## Recommendation
 
