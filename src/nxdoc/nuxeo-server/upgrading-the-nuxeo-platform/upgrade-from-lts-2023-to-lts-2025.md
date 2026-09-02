@@ -3,7 +3,7 @@ title: Upgrade from LTS 2023 to LTS 2025
 description: Instructions to upgrade your Nuxeo Platform instance from LTS 2023 version to LTS 2025.
 review:
   comment: ''
-  date: '2025-02-28'
+  date: '2026-09-02'
   status: ok
 labels:
   - multiexcerpt
@@ -286,7 +286,7 @@ curl -u USERNAME:PASSWORD -XPOST https://NUXEO_INSTANCE/nuxeo/api/v1/management/
 
 A full repository re-index is required to apply the new index mapping, even if your target search engine remains OpenSearch 1.x / Elasticsearch 7.x–8.x. See the [repository re-indexing procedure]({{page page='search-setup'}}#reindex).
 
-If you remain on OpenSearch 1.x / Elasticsearch 7.x–8.x, the audit index can be kept unchanged. If you switch to a different search engine, migrate the audit index to the new cluster. Refer to the OpenSearch or Elasticsearch documentation.
+If you remain on OpenSearch 1.x / Elasticsearch 7.x–8.x, the audit index can be kept unchanged. If you switch to a different search engine, the audit index has to be migrated separately from the repository index: it is a primary storage and cannot be rebuilt. See [Migrating Search Technology]({{page page='search-setup-migration'}}).
 
 ### Relation Document Indexing
 

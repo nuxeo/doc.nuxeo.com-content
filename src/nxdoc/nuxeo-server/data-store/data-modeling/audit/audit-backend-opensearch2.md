@@ -3,7 +3,7 @@ title: OpenSearch 2.x Audit Backend
 description: OpenSearch 2.x Audit Backend for Nuxeo — installation, available configuration properties.
 review:
     comment: ''
-    date: '2026-05-07'
+    date: '2026-09-02'
     status: ok
 labels:
     - audit
@@ -24,6 +24,10 @@ It deploys the `opensearch2-audit` template, which sets
 `nuxeo.audit.backend.default.factory` to
 `org.nuxeo.audit.opensearch2.OpenSearchAuditBackendFactory` and contributes a
 default `audit/default` OpenSearch client and index named `nuxeo-audit`.
+
+{{#> callout type='warning' }}
+Make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}#backingupandrestoringtheauditelasticsearchindex) section.
+{{/callout}}
 
 ## Configuration
 
@@ -71,6 +75,10 @@ property falls back to its `nuxeo.opensearch2.*` equivalent.
 | `nuxeo.audit.backend.default.opensearch2.settings.numberOfShards`                 | `5`       | Number of primary shards.                  |
 | `nuxeo.audit.backend.default.opensearch2.settings.numberOfReplicas`               | `1`       | Number of replicas.                        |
 | `nuxeo.audit.backend.default.opensearch2.settings.ignoreMalformed`                | `true`    | Ignore malformed values during indexing.   |
+
+## Migrating From Another Backend
+
+To move existing audit entries from another backend to this one — for instance when upgrading from OpenSearch 1.x — copy the audit backend rather than copying the index at cluster level. See [Copy an Audit Backend]({{page page='copy-audit-backend'}}) and [Migrating Search Technology]({{page page='search-setup-migration'}}).
 
 ## Learn More
 
