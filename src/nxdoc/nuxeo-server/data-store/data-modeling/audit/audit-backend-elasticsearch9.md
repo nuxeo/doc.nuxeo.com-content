@@ -3,7 +3,7 @@ title: Elasticsearch 9.x Audit Backend
 description: Elasticsearch 9.x Audit Backend for Nuxeo — installation, available configuration properties.
 review:
     comment: ''
-    date: '2026-05-07'
+    date: '2026-09-02'
     status: ok
 labels:
     - audit
@@ -25,6 +25,10 @@ It deploys the `elasticsearch9-audit` template, which sets
 `org.nuxeo.audit.elasticsearch9.ElasticsearchAuditBackendFactory` and
 contributes a default `audit/default` Elasticsearch client and index named
 `nuxeo-audit`.
+
+{{#> callout type='warning' }}
+Make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}#backingupandrestoringtheauditelasticsearchindex) section.
+{{/callout}}
 
 ## Configuration
 
@@ -62,6 +66,10 @@ contributes a default `audit/default` Elasticsearch client and index named
 | `nuxeo.audit.backend.default.elasticsearch9.settings.numberOfShards`                 | `5`       | Number of primary shards.                  |
 | `nuxeo.audit.backend.default.elasticsearch9.settings.numberOfReplicas`               | `1`       | Number of replicas.                        |
 | `nuxeo.audit.backend.default.elasticsearch9.settings.ignoreMalformed`                | `true`    | Ignore malformed values during indexing.   |
+
+## Migrating From Another Backend
+
+To move existing audit entries from another backend to this one — for instance when upgrading from OpenSearch 1.x — copy the audit backend rather than copying the index at cluster level. See [Copy an Audit Backend]({{page page='copy-audit-backend'}}) and [Migrating Search Technology]({{page page='search-setup-migration'}}).
 
 ## Learn More
 
