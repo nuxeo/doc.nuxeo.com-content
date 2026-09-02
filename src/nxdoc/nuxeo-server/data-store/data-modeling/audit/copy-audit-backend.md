@@ -3,7 +3,7 @@ title: Copy an Audit Backend
 description: Copy log entries from one Audit Backend to another using the audit scroll, the copyAudit bulk action and the Management REST API.
 review:
     comment: ''
-    date: '2026-05-07'
+    date: '2026-09-02'
     status: ok
 labels:
     - audit
@@ -75,8 +75,8 @@ Three Management endpoints expose the copy / verification flow:
 
 ## Typical Blue/Green Migration
 
-1. Deploy a secondary Audit Backend (referred to as the green backend, the live one being the default)
-   the `default` backend) — see the [Audit Router]({{page page='audit-router'}})
+1. Deploy a secondary Audit Backend — referred to as the green backend, the
+   live one being the `default` backend — see the [Audit Router]({{page page='audit-router'}})
    page.
 2. Contribute a [route]({{page page='audit-router'}}#routes-extension-point) to start mirroring live ingestion to the `green`
    backend.
@@ -101,3 +101,4 @@ reused to provide an uninterrupted **Audit Purge** capability.
 - [Audit Router]({{page page='audit-router'}})
 - [Audit Endpoint]({{page space='rest-api' version='1' page='audit-endpoint'}})
 - [Bulk Action Framework]({{page page='bulk-action-framework'}})
+- [Migrating Search Technology]({{page page='search-setup-migration'}})

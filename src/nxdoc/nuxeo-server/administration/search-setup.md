@@ -478,6 +478,8 @@ Pick the guide that matches your search stack (packages, optional embedded serve
 | Elasticsearch 9.x | `elasticsearch9` | `nuxeo-search-client-elasticsearch9` | [Search setup for Elasticsearch 9.x]({{page page='search-setup-elasticsearch9'}}) |
 | MongoDB Atlas Search (repository on MongoDB Atlas) | `mongoatlas` | `nuxeo-search-client-mongoatlas` | [MongoDB Atlas Search]({{page page='search-setup-mongoatlas'}}) |
 
+If you are changing the search technology of an existing instance, see [Migrating Search Technology]({{page page='search-setup-migration'}}) for what has to be migrated and which procedure applies to each part.
+
 Audit and optional embedded packages are listed on each guide where they apply. For a Marketplace-oriented overview, see [Nuxeo Search Client OpenSearch]({{page page='nuxeo-search-client-opensearch'}}), [Nuxeo Search Client Elasticsearch]({{page page='nuxeo-search-client-elasticsearch'}}), and [Nuxeo Search Client MongoDB Atlas]({{page page='nuxeo-search-client-mongoatlas'}}).
 
 ## Configuring Nuxeo to Access the Search Cluster
@@ -756,6 +758,10 @@ Then follow the same 4-step procedure described above.
 
 You can perform reindexing without interruption across different search implementations:
 
+{{#> callout type='warning' heading='This covers the repository index only'}}
+The procedures below migrate the repository index. The audit logs index is a primary storage that cannot be rebuilt from the repository, so it has to be migrated separately by [copying the audit backend]({{page page='copy-audit-backend'}}). See [Migrating Search Technology]({{page page='search-setup-migration'}}) for the full picture.
+{{/callout}}
+
 ##### OpenSearch1 to OpenSearch2 Migration
 
 This migration reindexes from a blue index in OpenSearch1 to a green index in OpenSearch2.
@@ -863,6 +869,8 @@ For mapping customization examples, see the page [Configuring the Elasticsearch 
 ### Updating the Audit Logs Index Configuration
 
 Here the index is a primary storage and you cannot rebuild it. So we need a tool that will extract the `_source` of documents from one index and submit it to a new index that have been setup with the new configuration.
+
+This procedure applies when you keep the same search implementation and only need to apply a new mapping or new settings. To move the audit to a different implementation or a different cluster, copy the audit backend instead — see [Migrating Search Technology]({{page page='search-setup-migration'}}).
 
 {{#> callout type='warning' heading='Finish the migration before restarting'}}
 The audit index is a primary storage: unlike the repository index, it cannot be rebuilt from the repository. Once you stop the Nuxeo Platform to copy the entries, do not start it again — and do not delete the source index — until the `_reindex` request has completed and both indexes report the same document count. Audit entries that were not copied are lost permanently.
