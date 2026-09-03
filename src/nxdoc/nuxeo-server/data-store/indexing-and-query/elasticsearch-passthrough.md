@@ -114,12 +114,12 @@ The Nuxeo passthrough is available at **http://my-nuxeo-server:8080/nuxeo/site/e
 
 ### Requirement
 
-When your OpenSearch instance is embedded on the same JVM as your Nuxeo instance (not recommended for production), the passthrough works out of the box.
+The passthrough works out of the box, it reuses the OpenSearch/Elasticsearch client configured for the Nuxeo instance, no additional base URL configuration is required.
 
-When using a remote OpenSearch/Elasticsearch cluster, make sure the following property is correctly set in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
+The passthrough is enabled by default. It can be disabled by setting the following property in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
 
 ```
-elasticsearch.httpReadOnly.baseUrl=http://your_es_instance:9200
+nuxeo.passthrough.elasticsearch.enabled=false
 ```
 
 ### Querying Indexes

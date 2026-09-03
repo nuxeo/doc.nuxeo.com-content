@@ -2090,6 +2090,30 @@ Limit the binary fulltext size during indexing to improve search engine performa
 
 * * *
 
+#### `nuxeo.passthrough.elasticsearch.enabled`
+
+Enable the [Search Passthrough]({{page page='elasticsearch-passthrough'}}) for the repository index. Set to `false` to disable it.
+
+**Since `nuxeo-search-client-opensearch2` 2025.5**
+
+**Default Value**
+
+`true`
+
+* * *
+
+#### `nuxeo.passthrough.elasticsearch.audit.enabled`
+
+Enable the [Search Passthrough]({{page page='elasticsearch-passthrough'}}) for the audit index. Set to `false` to disable it.
+
+**Since `nuxeo-audit-opensearch2` 2025.5**
+
+**Default Value**
+
+`true`
+
+* * *
+
 #### `nuxeo.search.indexing.enabled`
 
 Master switch enabling the search indexing subsystem: the `ongoingIndexing` stream processor and the `bulk/indexing` and `bulk/indexingBackground` bulk actions. Set to `false` to disable all search indexing.
