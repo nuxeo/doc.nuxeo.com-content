@@ -351,7 +351,7 @@ org.quartz.jobStore.mongoOptionUseServerDefaultWriteConcern=true
 
 {{/callout}}
 
-DocumentDB is usually accessed over TLS. See the [TLS/SSL Configuration](#tls-ssl-configuration) section above for the related `nuxeo.mongodb.ssl` and trust store / key store properties. All other MongoDB configuration options (connection pool, database name, directories, audit, and so on) apply unchanged.
+DocumentDB is usually accessed over TLS. See the [TLS/SSL Configuration](#tlsssl-configuration) section above for the related `nuxeo.mongodb.ssl` and trust store / key store properties. All other MongoDB configuration options (connection pool, database name, directories, audit, and so on) apply unchanged.
 
 ## Hotfixes and indexes
 
