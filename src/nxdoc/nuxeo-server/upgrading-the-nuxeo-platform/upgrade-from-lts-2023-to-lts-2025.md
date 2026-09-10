@@ -17,6 +17,8 @@ For the general upgrade process, see the page [Upgrading the Nuxeo Platform]({{p
 This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2023 (2023.x) to Nuxeo Platform LTS 2025 (2025.x). We strongly encourage you to also have a quick read of the upgrade notes.
 {{! /excerpt}}
 
+This page covers infrastructure, configuration and deprecations. For the API changes your project code has to follow — Jakarta EE 10, Jakarta RS 3, the new Search Service, the Audit Service and REST tests — see [How to upgrade to LTS 2025.0]({{page page='how-to-upgrade-from-lts-2023-to-lts-2025'}}).
+
 ## Prerequisites
 
 These upgrade notes assume that Nuxeo Server is on 2023 and up to date with the latest hotfixes.
