@@ -103,6 +103,11 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 53
+
+### Enhance Exclusiveness Handling in BulkService to Return a 409 HTTP Status
+
+When submitting an exclusive bulk command while another command of the same type is already running, Nuxeo now throws a `ConcurrentUpdateException` instead of an `IllegalStateException`. This exception maps to an HTTP 409 Conflict response. Applications that previously caught `IllegalStateException` to handle this case should be updated to catch `ConcurrentUpdateException` (or its parent class `NuxeoException`) instead.
 ## Hotfix 52
 
 ### Use Versity S3 Gateway in Benchmark to Eliminate Cross-Cloud I/O Bottleneck During Data Import
