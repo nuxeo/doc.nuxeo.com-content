@@ -39,7 +39,7 @@ Pressing the "Enter" key will navigate to the first item in the suggestions. It'
 
 The Search tab enables you to search a document using documents metadata. You can for instance select metadata of the searched document or the date of specific events such as publication, creation.
 
-The Search tab leverages [Elasticsearch]({{page version='' space='nxdoc' page='elasticsearch-setup'}}) to provide a quicker and more efficient search. The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
+The Search tab leverages [Elasticsearch]({{page version='' space='nxdoc' page='search-setup'}}) to provide a quicker and more efficient search. The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
 
 ![]({{file name='search-tab-web-ui.png'}} ?w=600,border=true)
 

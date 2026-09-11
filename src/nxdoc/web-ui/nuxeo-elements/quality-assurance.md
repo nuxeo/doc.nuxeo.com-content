@@ -152,7 +152,7 @@ With Nuxeo platform, you have two ways of fetching data from the server for buil
 - Via 'direct' queries
 - Via [`pageproviders`]({{page version='' space='nxdoc' page='page-providers'}})
 
-Depending on your environment, you perform searches with Nuxeo Server on top of your **database** (PostgreSQL, MongoDB) or on top of your [**ElasticSearch**]({{page version='' space='nxdoc' page='elasticsearch-setup'}}) **(recommended)**.
+Depending on your environment, you perform searches with Nuxeo Server on top of your **database** (PostgreSQL, MongoDB) or on top of your [**ElasticSearch**]({{page version='' space='nxdoc' page='search-setup'}}) **(recommended)**.
 
 For Elasticsearch (ES), use `pageproviders` which [can be activated for ES]({{page version='' space='nxdoc' page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) via the `nuxeo.conf` file and the following Nuxeo elements with related properties:
 

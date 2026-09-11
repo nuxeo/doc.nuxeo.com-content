@@ -128,7 +128,7 @@ Use the following `nuxeo.conf` properties:
 - `elasticsearch.restClient.keystore.password`
 - `elasticsearch.restClient.keystore.type`
 
-See the [Elasticsearch Configuration]({{page page='elasticsearch-setup'}}) page for more.
+See the [Elasticsearch Configuration]({{page page='search-setup'}}) page for more.
 
 ### MongoDB
 

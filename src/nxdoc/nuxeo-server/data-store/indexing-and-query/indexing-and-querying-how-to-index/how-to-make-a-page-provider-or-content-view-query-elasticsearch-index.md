@@ -176,7 +176,7 @@ Elasticsearch indexing is "eventually consistent". This means that depending on 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other pages about Elasticsearch'}}
 
 - [Moving Load from Database to Elasticsearch]({{page page='moving-load-from-database-to-elasticsearch'}})
-- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Search Setup]({{page page='search-setup'}})
 - [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 

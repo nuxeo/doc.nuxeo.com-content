@@ -393,7 +393,7 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_ana
 {{#> panel heading='Other Elasticsearch Documentation'}}
 
 - [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
-- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Search Setup]({{page page='search-setup'}})
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
 {{/panel}}</div><div class="column medium-4">

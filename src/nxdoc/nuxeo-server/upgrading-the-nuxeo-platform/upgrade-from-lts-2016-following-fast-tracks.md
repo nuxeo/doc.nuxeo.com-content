@@ -18,7 +18,7 @@ tree_item_index: 99
 
 {{! multiexcerpt name='upgrade-9.1-reindex-warning'}}
 
-Reindex the full repository following [Rebuilding the repository index page]({{page anchor='rebuildingtheindex-rebuilding-the-repository-index' page='elasticsearch-setup'}}), or using [Nuxeo Dev Tools Extension]({{page page='nuxeo-dev-tools-extension'}}). See [NXP-21279](https://jira.nuxeo.com/browse/NXP-21279).
+Reindex the full repository following [Rebuilding the repository index page]({{page page='search-setup'}}#rebuilding-the-repository-index), or using [Nuxeo Dev Tools Extension]({{page page='nuxeo-dev-tools-extension'}}). See [NXP-21279](https://jira.nuxeo.com/browse/NXP-21279).
 
 {{! /multiexcerpt}}
 
