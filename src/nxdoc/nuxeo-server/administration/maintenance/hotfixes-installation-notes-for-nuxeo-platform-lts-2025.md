@@ -681,14 +681,17 @@ This flags an unsafe configuration that can cause silent blob content loss. Beha
 For both LTS 2025 and LTS 2027
 
 A misleading `WARN` logged when a cloud store does not implement versioning (e.g. minio, versity, etc) and versioning is not required has been demoted to `DEBUG`.
+
 ### Enhance Exclusiveness Handling in BulkService to Return a 409 HTTP Status
 
 When submitting an exclusive bulk command while another command of the same type is already running, Nuxeo now throws a `ConcurrentUpdateException` instead of an `IllegalStateException`. This exception maps to an HTTP 409 Conflict response. Applications that previously caught `IllegalStateException` to handle this case should be updated to catch `ConcurrentUpdateException` (or its parent class `NuxeoException`) instead.
+
 ### Change CacheDescriptor#ttl to java.time.Duration for Explicit Unit
 
 Existing `<ttl>` XML contributions using a plain number (interpreted as minutes) and Java callers of the deprecated `CacheDescriptor#getTTL()`/`setTTL(Long)` keep working unchanged for now, but this backward compatibility is temporary and will be removed in a future release.
 
 Customers should update their contributions to use an explicit Duration string (e.g. `5m`, `1h`, `30s`) and migrate any Java usage to `getTTLAsDuration()`/`setTTL(Duration)` as soon as possible, to avoid breakage once the legacy plain-number/`Long`-based support is removed for good.
+
 ## Hotfix 24
 
 ### Use Versity S3 Gateway in Benchmark to Eliminate Cross-Cloud I/O Bottleneck During Data Import
