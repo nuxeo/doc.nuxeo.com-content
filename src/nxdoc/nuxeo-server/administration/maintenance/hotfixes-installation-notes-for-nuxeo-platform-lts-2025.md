@@ -657,11 +657,13 @@ The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implem
 ### LTS 2025 - Stale OpenSearch Indexing Under High Concurrency in Clustered Environment.
 
 This release changes the main message envelop encoding (`Record` Avro schema). During a rolling upgrade where nodes with new release are mixed with existing nodes, old nodes will not be able to read messages from new nodes, they will fail to process asynchronous tasks or invalidation from new nodes. Asynchronous processing in failure will be rescheduled on new nodes without consequences but old nodes might continue to perform some existing processing without receiving new invalidation so potentially with a stale cache.
+
 This could be mitigated by:
 
-- Performing the rolling upgrade on low activity and ensuring a short rolling upgrade window
+- Performing the rolling upgrade on low activity and ensuring a short rolling upgrade window.
 - Full restart of the cluster: stop the entire cluster, start the cluster with the new release.
-- Doing a first rolling restart to disable the DBS cache (`nuxeo.dbs.cache.enabled=false`), then a second rolling restart to perform the HF upgrade while re-enable the DBS cache (`nuxeo.dbs.cache.enabled=true`)
+- Doing a first rolling restart to disable the DBS cache (`nuxeo.dbs.cache.enabled=false`), then a second rolling restart to perform the HF upgrade while re-enable the DBS cache (`nuxeo.dbs.cache.enabled=true`).
+  
 ### S3BlobStoreConfiguration: Fix Spurious Versioning Warn When KeyStrategyDocId Is Not Used
 
 LTS 2027
