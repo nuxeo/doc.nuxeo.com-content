@@ -217,7 +217,7 @@ The [RoutingAuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modul
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Workflow Audit Log]({{page page='workflow-audit-log'}})
-- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Search Setup]({{page page='search-setup'}})
 - [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 - [Security Policy Service]({{page page='security-policy-service'}})

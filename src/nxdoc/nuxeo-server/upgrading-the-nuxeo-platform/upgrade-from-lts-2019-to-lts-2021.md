@@ -591,7 +591,7 @@ you need to upgrade your existing Elasticsearch cluster to version 7.9 (7.7 or 7
 If you encounter indexing errors because of negative startOffset, your mapping needs to be updated.
 
 If you have overridden the Elastic mapping then follow the recommended changes in the ticket.
-Then you need to reindex the repository, visit the [related documentation]({{page page='elasticsearch-setup'}}#rebuilding-the-repository-index) for more information.
+Then you need to reindex the repository, visit the [related documentation]({{page page='search-setup'}}#rebuilding-the-repository-index) for more information.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-30785](https://jira.nuxeo.com/browse/NXP-30785)
 
@@ -703,7 +703,7 @@ This means that there is no migration to do if your Nuxeo instance has been crea
 Follow the [Elasticsearch upgrade documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/setup-upgrade.html) to upgrade your Elasticsearch Cluster.
 
 If you had to adapt your Elasticsearch settings or mappings for 7.x,
-you have to proceed to a [repository re-index]({{page page='elasticsearch-setup'}}#reindex) in order to apply the new configuration.
+you have to proceed to a [repository re-index]({{page page='search-setup'}}#reindex) in order to apply the new configuration.
 
 #### Migration of Elastic Indexes Created in Elasticsearch 5.x (Nuxeo 9.10/LTS 2017)
 
@@ -727,7 +727,7 @@ The `nuxeo-uidgen` index must be deleted **after** the audit index migration is 
 Only the default `uidgen` sequence is automatically re-created at startup. If you have other sequences, they must be recreated and correctly initialized to the right ID to also avoid duplicate IDs.
 {{/callout}}
 
-Once the Elasticsearch cluster is upgraded, start Nuxeo LTS 2021 and proceed to a [repository re-index]({{page page='elasticsearch-setup'}}#reindex).
+Once the Elasticsearch cluster is upgraded, start Nuxeo LTS 2021 and proceed to a [repository re-index]({{page page='search-setup'}}#reindex).
 
 ## Bulk Service (Aka "Bulk Action Framework")
 
