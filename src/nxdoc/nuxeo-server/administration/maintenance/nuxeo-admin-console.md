@@ -162,7 +162,7 @@ The Streams feature provides a robust interface for monitoring, analyzing, and m
 
 - [Stream Management]({{page page='nuxeo-admin-console-streams'}})
 
-#### Bundles Management Page
+### Bundles Management Page
 
 A new Bundles page is now available in the Admin Console. This page lets administrators view the runtime distribution and all deployed bundles in one place, including bundle names, versions, and revisions. It also provides search and pagination capabilities to make navigation easier.
 
