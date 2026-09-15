@@ -23,7 +23,7 @@ confluence:
 
 | [Admin Console 23.2.0]({{page page='admin-console-release-notes-23-2-0'}}) | Admin Console new feature & other enhancements|
 
-<!-- | [Admin Console 23.2.1]({{page page='admin-console-release-notes-23-2-0'}}) | Admin Console new feature & other enhancements|-->
+<!-- | [Admin Console 23.2.1]({{page page='admin-console-release-notes-23-2-1'}}) | Admin Console new feature & other enhancements|-->
 <!-- | [Admin Console 23.2.0]({{page page='admin-console-release-notes-23-2-0'}}) | New Features & Enhancements, Bug Fixes, Security & Dependency Management, Angular version upgrade and unit test framework switch|-->
 
 | Version                                                    | Summary                                                                             |
