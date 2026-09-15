@@ -162,6 +162,13 @@ The Streams feature provides a robust interface for monitoring, analyzing, and m
 
 - [Stream Management]({{page page='nuxeo-admin-console-streams'}})
 
+
+### Configuration Properties
+A new Configuration Properties section has been added to the Nuxeo Admin Console.�This enhancement provides administrators with a centralized view of all configuration properties available for the current Nuxeo instance and its environment. By consolidating these settings in one location, the Admin Console now offers improved clarity, easier troubleshooting, and greater transparency into the platform’s operational configuration.
+This update ensures that all platform‑level configuration properties are easily accessible directly within the Admin Console UI.
+
+![](/assets/nxdoc/nuxeo-admin-console/ConfigurationProperties.png?border=true)
+
 ### Bundles Management Page
 
 A new Bundles page is now available in the Admin Console. This page lets administrators view the runtime distribution and all deployed bundles in one place, including bundle names, versions, and revisions. It also provides search and pagination capabilities to make navigation easier.
@@ -171,12 +178,6 @@ Startup warnings and errors are displayed directly within the page, helping admi
 This feature restores bundle visibility that was previously available in the legacy JSF-based administration interface.
 
 ![](/assets/nxdoc/nuxeo-admin-console/BundlesManagementPage.png?border=true)
-
-### Configuration Properties
-A new Configuration Properties section has been added to the Nuxeo Admin Console.�This enhancement provides administrators with a centralized view of all configuration properties available for the current Nuxeo instance and its environment. By consolidating these settings in one location, the Admin Console now offers improved clarity, easier troubleshooting, and greater transparency into the platform’s operational configuration.
-This update ensures that all platform‑level configuration properties are easily accessible directly within the Admin Console UI.
-
-![](/assets/nxdoc/nuxeo-admin-console/ConfigurationProperties.png?border=true)
 
 ## Going Further
 
