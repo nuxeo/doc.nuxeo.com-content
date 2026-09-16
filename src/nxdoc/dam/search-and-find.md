@@ -18,7 +18,7 @@ The Nuxeo Platform provides different way to search your documents. Searches can
 
 The search enables you to search a document using documents metadata. You can for instance select metadata of the searched document or the date of specific events such as publication, creation.
 
-The Search tab leverages [Elasticsearch]({{page version='' space='nxdoc' page='elasticsearch-setup'}}) to provide a quicker and more efficient search. The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
+The Search tab leverages [Elasticsearch]({{page version='' space='nxdoc' page='search-setup'}}) to provide a quicker and more efficient search. The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
 
 ### Assets Search
 

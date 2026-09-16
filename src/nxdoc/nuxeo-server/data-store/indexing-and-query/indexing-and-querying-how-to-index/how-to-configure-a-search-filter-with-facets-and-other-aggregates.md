@@ -414,7 +414,7 @@ This aggregate allows you to define a set of ranges and works as the date range 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Search Setup]({{page page='search-setup'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 - [Aggregate Widget Types]({{page page='aggregate-widget-types'}})
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})

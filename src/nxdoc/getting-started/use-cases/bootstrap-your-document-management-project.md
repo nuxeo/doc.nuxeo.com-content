@@ -300,6 +300,6 @@ At some point in your project you need to decide about the architecture. Do you 
 
 - [Persistence Architecture]({{page page='persistence-architecture'}})
 - [Nuxeo Architecture Components - Configuration]({{page page='nuxeo-architecture-components'}})
-- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Search Setup]({{page page='search-setup'}})
 
 {{/callout}}

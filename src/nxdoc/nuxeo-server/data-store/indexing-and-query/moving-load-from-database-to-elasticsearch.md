@@ -242,7 +242,7 @@ DROP INDEX fulltext_fulltext_title_idx;
 
 ### Searching over Multiple Repositories
 
-If you have set up a [multi repositories configuration]({{page page='elasticsearch-setup'}}#configuration-for-multi-repositories) to query over them just use the `searchOnAllRepositories` option:
+If you have set up a [multi repositories configuration]({{page page='search-setup'}}#configuration-for-multi-repositories) to query over them just use the `searchOnAllRepositories` option:
 
 ```
 docs = ess.query(new NxQueryBuilder(session).nxql(nxql).searchOnAllRepositories());
@@ -263,7 +263,7 @@ See the addon [README](https://github.com/nuxeo/nuxeo/blob/master/modules/platfo
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 - [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
-- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Search Setup]({{page page='search-setup'}})
 
 {{/panel}}</div><div class="column medium-6">
 
