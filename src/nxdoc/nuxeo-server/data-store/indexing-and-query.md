@@ -448,7 +448,7 @@ The default configuration uses an embedded Elasticsearch instance that runs&nbsp
 This embedded mode **is only for testing purpose** and should not be used in production.
 {{/callout}}
 
-See the [documentation to setup and configure an Elasticsearch]({{page page='elasticsearch-setup'}}) cluster.
+See the [documentation to setup and configure an Elasticsearch]({{page page='search-setup'}}) cluster.
 
 ## Full-Text Capabilities
 

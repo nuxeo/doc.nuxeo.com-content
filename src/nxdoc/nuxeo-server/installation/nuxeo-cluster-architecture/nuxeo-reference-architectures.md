@@ -322,7 +322,7 @@ The same idea is true for all the Cloud specific services like provisioning and 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Nuxeo Architecture Components - Configuration]({{page page='nuxeo-architecture-components'}})
-- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Search Setup]({{page page='search-setup'}})
 - [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
 
 {{/panel}}</div></div>

@@ -1371,7 +1371,7 @@ When true, enables adding negative ACL (deny permissions) in the UI, otherwise o
 
 #### `audit.elasticsearch.enabled`
 
-See [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-elasticsearch-for-audit-logs).<br/>
+See [Disabling Elasticsearch for Audit Logs]({{page page='search-setup'}}#disabling-elasticsearch-for-audit-logs).<br/>
 Defaults to false on server upgrade, true on new install.
 
 **Default Value**
