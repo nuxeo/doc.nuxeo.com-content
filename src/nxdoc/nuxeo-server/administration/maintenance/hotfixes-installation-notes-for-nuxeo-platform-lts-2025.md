@@ -652,6 +652,41 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 25
+
+### LTS 2025 - Stale OpenSearch Indexing Under High Concurrency in Clustered Environment.
+
+This release changes the main message envelop encoding (`Record` Avro schema). During a rolling upgrade where nodes with new release are mixed with existing nodes, old nodes will not be able to read messages from new nodes, they will fail to process asynchronous tasks or invalidation from new nodes. Asynchronous processing in failure will be rescheduled on new nodes without consequences but old nodes might continue to perform some existing processing without receiving new invalidation so potentially with a stale cache.
+This could be mitigated by:
+
+- Performing the rolling upgrade on low activity and ensuring a short rolling upgrade window
+- Full restart of the cluster: stop the entire cluster, start the cluster with the new release.
+- Doing a first rolling restart to disable the DBS cache (`nuxeo.dbs.cache.enabled=false`), then a second rolling restart to perform the HF upgrade while re-enable the DBS cache (`nuxeo.dbs.cache.enabled=true`)
+### S3BlobStoreConfiguration: Fix Spurious Versioning Warn When KeyStrategyDocId Is Not Used
+
+LTS 2027
+Cloud blob providers now fail fast on unsafe versioning configuration. Blob providers backed by cloud storage (S3, GoogleStorage and Azure) now validate their versioning configuration at startup. If a provider is configured with KeyStrategyDocId while cloud-storage object versioning is not enabled, initialization fails with a NuxeoException:
+
+`Cloud storage versioning must be enabled for blob provider '<id>' using KeyStrategyDocId`
+This unsafe combination previously went undetected and could cause silent, unrecoverable blob content loss (a blob update overwriting the previous document version's content). Misconfigured providers must now enable cloud-storage versioning to start.
+
+LTS 2025
+Warning added when cloud blob provider versioning configuration is unsafe. Blob providers using `KeyStrategyDocId` without cloud-storage object versioning enabled now log a `WARN` at startup:
+
+`Cloud storage versioning must be enabled for blob provider '<id>' using KeyStrategyDocId`
+This flags an unsafe configuration that can cause silent blob content loss. Behavior is unchanged otherwise (initialization still succeeds), to avoid disrupting running deployments.
+
+For both LTS 2025 and LTS 2027
+
+A misleading `WARN` logged when a cloud store does not implement versioning (e.g. minio, versity, etc) and versioning is not required has been demoted to `DEBUG`.
+### Enhance Exclusiveness Handling in BulkService to Return a 409 HTTP Status
+
+When submitting an exclusive bulk command while another command of the same type is already running, Nuxeo now throws a `ConcurrentUpdateException` instead of an `IllegalStateException`. This exception maps to an HTTP 409 Conflict response. Applications that previously caught `IllegalStateException` to handle this case should be updated to catch `ConcurrentUpdateException` (or its parent class `NuxeoException`) instead.
+### Change CacheDescriptor#ttl to java.time.Duration for Explicit Unit
+
+Existing `<ttl>` XML contributions using a plain number (interpreted as minutes) and Java callers of the deprecated `CacheDescriptor#getTTL()`/`setTTL(Long)` keep working unchanged for now, but this backward compatibility is temporary and will be removed in a future release.
+
+Customers should update their contributions to use an explicit Duration string (e.g. `5m`, `1h`, `30s`) and migrate any Java usage to `getTTLAsDuration()`/`setTTL(Duration)` as soon as possible, to avoid breakage once the legacy plain-number/`Long`-based support is removed for good.
 ## Hotfix 24
 
 ### Use Versity S3 Gateway in Benchmark to Eliminate Cross-Cloud I/O Bottleneck During Data Import
