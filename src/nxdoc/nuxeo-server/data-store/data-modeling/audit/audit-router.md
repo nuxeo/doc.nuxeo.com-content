@@ -88,7 +88,7 @@ evaluated for incoming events. It defaults to `true`.
 
 A `live="false"` route is excluded from the live routing path described above,
 but it remains addressable by name, for instance to be used by the
-[Audit Purge]({{page page='purging-audit-logs-nxp_logs'}}) mechanism. This lets
+[Audit Purge]({{page page='purge-audit-backend'}}) mechanism. This lets
 you declare purge-only or archive routes that never fire on new events but can
 still be triggered explicitly through `POST /management/audit/purge`.
 
@@ -140,14 +140,14 @@ construct fails fast at deployment rather than at routing time:
 <route name="archive-old-login-success" live="false">
   <backend name="archive" />
   <predicate class="org.nuxeo.audit.service.route.NXQLPredicate">
-    <property name="query">SELECT * FROM LogEntry WHERE eventId = 'loginSuccess' AND logDate &lt; DATE '2025-01-01'</property>
+    <property name="query">SELECT * FROM LogEntry WHERE eventId = 'loginSuccess' AND eventDate &lt; DATE '2025-01-01'</property>
   </predicate>
 </route>
 ```
 
 It supports a subset of NXQL: `=`, `!=`, `<`, `<=`, `>`, `>=`, `IN`,
-`BETWEEN`, `LIKE`, `IS NULL`, and boolean `AND` / `OR` / `NOT`, as well as
-`NOW()` with an optional ISO-8601 period/duration argument (e.g. `NOW('-P1D')`
+`BETWEEN`, `LIKE`, `STARTSWITH`, `IS NULL`, and boolean `AND` / `OR` / `NOT`, as well as
+`NOW()` with an optional ISO-8601 period/duration argument (for example, `NOW('-P1D')`
 for "one day ago"). Within a single bulk action run (for instance one
 `POST /management/audit/purge` call), every `NOW()` evaluation is pinned to
 the same instant so results stay consistent across all scrolled entries.
@@ -166,7 +166,7 @@ as "everything the future default route does _not_ keep":
 <route name="future-default-route" live="true">
   <backend name="future-default" />
   <predicate class="org.nuxeo.audit.service.route.NXQLPredicate">
-    <property name="query">SELECT * FROM LogEntry WHERE NOT (eventId = 'loginSuccess' AND logDate &lt; NOW('-P30D'))</property>
+    <property name="query">SELECT * FROM LogEntry WHERE NOT (eventId = 'loginSuccess' AND eventDate &lt; NOW('-P30D'))</property>
   </predicate>
 </route>
 
@@ -267,6 +267,6 @@ nuxeo.audit.backend.default.opensearch1.enabled=false
 
 - [Audit]({{page page='audit'}})
 - [Copy an Audit Backend]({{page page='copy-audit-backend'}})
-- [Purging Audit Logs]({{page page='purging-audit-logs-nxp_logs'}})
+- [Purge an Audit Backend]({{page page='purge-audit-backend'}})
 - [Audit Endpoint]({{page space='rest-api' version='1' page='audit-endpoint'}})
 - [How to Upgrade Nuxeo Audit Service]({{page page='how-to-upgrade-audit-service'}})

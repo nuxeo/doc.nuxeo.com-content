@@ -93,14 +93,14 @@ Three Management endpoints expose the copy / verification flow:
 {{#> callout type='info' heading='Going further — Purging Audit'}}
 The same building blocks (audit scroll, routes, bulk actions) are reused by the
 **Audit Purge** mechanism to archive or drop a subset of the log entries — see
-[Purging Audit Logs]({{page page='purging-audit-logs-nxp_logs'}}).
+[Purge an Audit Backend]({{page page='purge-audit-backend'}}).
 {{/callout}}
 
 ## Learn More
 
 - [Audit]({{page page='audit'}})
 - [Audit Router]({{page page='audit-router'}})
-- [Purging Audit Logs]({{page page='purging-audit-logs-nxp_logs'}})
+- [Purge an Audit Backend]({{page page='purge-audit-backend'}})
 - [Audit Endpoint]({{page space='rest-api' version='1' page='audit-endpoint'}})
 - [Bulk Action Framework]({{page page='bulk-action-framework'}})
 - [Migrating Search Technology]({{page page='search-setup-migration'}})
