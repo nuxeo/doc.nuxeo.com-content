@@ -2,12 +2,12 @@
 title: Copy an Audit Backend
 description: Copy log entries from one Audit Backend to another using the audit scroll, the copyAudit bulk action and the Management REST API.
 review:
-    comment: ''
-    date: '2026-09-02'
-    status: ok
+  comment: ''
+  date: '2026-09-02'
+  status: ok
 labels:
-    - audit
-    - blue-green-migration
+  - audit
+  - blue-green-migration
 toc: true
 tree_item_index: 780
 ---
@@ -55,10 +55,10 @@ as long as a previous one is still running.
 
 Default action configuration:
 
-| Property                                           | Default |
-|----------------------------------------------------|---------|
-| `nuxeo.bulk.action.copyAudit.defaultConcurrency`   | `2`     |
-| `nuxeo.bulk.action.copyAudit.defaultPartitions`    | `4`     |
+| Property                                         | Default |
+| ------------------------------------------------ | ------- |
+| `nuxeo.bulk.action.copyAudit.defaultConcurrency` | `2`     |
+| `nuxeo.bulk.action.copyAudit.defaultPartitions`  | `4`     |
 
 The action also tolerates failures: it retries up to 3 times with an
 exponential back-off (`500ms` → `10s`) before giving up.
@@ -67,11 +67,11 @@ exponential back-off (`500ms` → `10s`) before giving up.
 
 Three Management endpoints expose the copy / verification flow:
 
-| Endpoint                                | Purpose                                                     |
-|-----------------------------------------|-------------------------------------------------------------|
-| `POST /management/audit/copy`           | Trigger a `copyAudit` bulk action between two backends.     |
-| `GET  /management/audit/checkSearch`    | Run the same NXQL on several backends and compare results.  |
-| `GET  /management/audit/introspection`  | Get a PlantUML view of the live audit routing.              |
+| Endpoint                               | Purpose                                                    |
+| -------------------------------------- | ---------------------------------------------------------- |
+| `POST /management/audit/copy`          | Trigger a `copyAudit` bulk action between two backends.    |
+| `GET  /management/audit/checkSearch`   | Run the same NXQL on several backends and compare results. |
+| `GET  /management/audit/introspection` | Get a PlantUML view of the live audit routing.             |
 
 ## Typical Blue/Green Migration
 
@@ -90,15 +90,17 @@ Three Management endpoints expose the copy / verification flow:
 7. (Optional) Delete the contents of the previous backend once you no longer
    need to keep its historical data.
 
-{{#> callout type='info' heading='Coming next — Purge Audit Migration'}}
-The same building blocks (audit scroll + `copyAudit` style bulk action) will be
-reused to provide an uninterrupted **Audit Purge** capability.
+{{#> callout type='info' heading='Going further — Purging Audit'}}
+The same building blocks (audit scroll, routes, bulk actions) are reused by the
+**Audit Purge** mechanism to archive or drop a subset of the log entries — see
+[Purging Audit Logs]({{page page='purging-audit-logs-nxp_logs'}}).
 {{/callout}}
 
 ## Learn More
 
 - [Audit]({{page page='audit'}})
 - [Audit Router]({{page page='audit-router'}})
+- [Purging Audit Logs]({{page page='purging-audit-logs-nxp_logs'}})
 - [Audit Endpoint]({{page space='rest-api' version='1' page='audit-endpoint'}})
 - [Bulk Action Framework]({{page page='bulk-action-framework'}})
 - [Migrating Search Technology]({{page page='search-setup-migration'}})
