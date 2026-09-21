@@ -251,7 +251,7 @@ See the [OpenSearch Passthrough]({{page page='elasticsearch-passthrough'}}) page
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 - [Search Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
-- [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
+- [Search Setup]({{page page='search-setup'}})
 
 {{/panel}}</div><div class="column medium-6">
 

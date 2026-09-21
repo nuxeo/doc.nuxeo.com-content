@@ -80,6 +80,51 @@ Support applies to the file groups described for this feature. Preview availabil
 PDF/A is a version of PDF intended for long-term preservation. It is designed to keep documents self-contained so they can be opened and viewed more consistently over time.
 {{/callout}}
 
+## Bulk Migration for Pre-existing Documents
+
+Documents uploaded before the PDF/A package was installed do not have a PDF/A rendition. You can convert them in bulk using the management REST API.
+
+### Triggering a Bulk Migration
+
+Send a POST request to the migration endpoint. Only administrators can perform this operation.
+
+```bash
+curl -u Administrator:Administrator -X POST \
+  "http://localhost:8080/nuxeo/api/v1/management/pdfa/migrate?query=SELECT * FROM Document WHERE file:content/name IS NOT NULL AND pdfa:content/name IS NULL AND ecm:isVersion = 0 AND ecm:isProxy = 0 AND ecm:isTrashed = 0"
+```
+
+The response returns a `commandId` that you can use to track progress.
+
+### Checking Migration Status
+
+Poll the bulk command status until the state is `COMPLETED`:
+
+```bash
+curl -u Administrator:Administrator \
+  "http://localhost:8080/nuxeo/api/v1/management/bulk/<commandId>"
+```
+
+Once complete, the affected documents display the **View PDF/A** button and the **Export > PDF/A** option in the Web UI.
+
+### Scoping Migration to a Specific Folder
+
+To limit migration of documents to a particular folder, adjust the query parameter:
+
+```bash
+curl -u Administrator:Administrator -X POST \
+  "http://localhost:8080/nuxeo/api/v1/management/pdfa/migrate?query=SELECT * FROM Document WHERE ecm:path STARTSWITH '/default-domain/workspaces/MyFolder' AND file:content/name IS NOT NULL AND ecm:isVersion = 0"
+```
+
+### Behavior Notes
+
+* **Idempotent:** Re-running the migration skips documents that already have a PDF/A rendition. No duplicates are created.
+* **Unsupported files are skipped:** Files with unsupported MIME types (for example, ZIP archives) are skipped without raising errors.
+* **Admin-only:** Non-administrator users receive a `401` or `403` response when attempting to trigger migration.
+
+{{#> callout type='info'}}
+After migration completes, refresh the Web UI to see the PDF/A actions on previously uploaded documents.
+{{/callout}}
+
 ## Typical Use Cases
 
 * **Regulatory retention:** Preserve records in a standardized archival format for long-term compliance
@@ -131,8 +176,7 @@ PDF/A Conversion is especially useful for organizations that need dependable lon
 No. The original document remains available alongside the PDF/A version.
 
 **Can this be used for existing content?**
-Yes, with some limitations. This feature can be used for newly added files. However, bulk conversion of existing documents is not currently supported.
-For existing documents, users can convert individual files to PDF/A format using the Export Document action.
+Yes. Newly uploaded documents are converted automatically. For pre-existing documents, administrators can trigger a bulk migration using the management REST API. See the [Bulk Migration](#bulk-migration-for-pre-existing-documents) section above for details.
 
 **Is this a complete PDF editing solution?**
 No. The feature is limited to PDF/A conversion and does not include editing, redaction, merging, splitting, or annotation features.

@@ -3,7 +3,7 @@ title: Upgrade from LTS 2023 to LTS 2025
 description: Instructions to upgrade your Nuxeo Platform instance from LTS 2023 version to LTS 2025.
 review:
   comment: ''
-  date: '2025-02-28'
+  date: '2026-09-02'
   status: ok
 labels:
   - multiexcerpt
@@ -16,6 +16,8 @@ For the general upgrade process, see the page [Upgrading the Nuxeo Platform]({{p
 {{! excerpt}}
 This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2023 (2023.x) to Nuxeo Platform LTS 2025 (2025.x). We strongly encourage you to also have a quick read of the upgrade notes.
 {{! /excerpt}}
+
+This page covers infrastructure, configuration and deprecations. For the API changes your project code has to follow — Jakarta EE 10, Jakarta RS 3, the new Search Service, the Audit Service and REST tests — see [How to upgrade to LTS 2025.0]({{page page='how-to-upgrade-from-lts-2023-to-lts-2025'}}).
 
 ## Prerequisites
 
@@ -286,7 +288,9 @@ curl -u USERNAME:PASSWORD -XPOST https://NUXEO_INSTANCE/nuxeo/api/v1/management/
 
 A full repository re-index is required to apply the new index mapping, even if your target search engine remains OpenSearch 1.x / Elasticsearch 7.x–8.x. See the [repository re-indexing procedure]({{page page='search-setup'}}#reindex).
 
-If you remain on OpenSearch 1.x / Elasticsearch 7.x–8.x, the audit index can be kept unchanged. If you switch to a different search engine, migrate the audit index to the new cluster. Refer to the OpenSearch or Elasticsearch documentation.
+It does not have to be done before going live. Using the OpenSearch 2.x search client with its legacy compatibility option, an LTS 2025 instance can query an index built by LTS 2023, so the re-index can be deferred to a blue/green migration that runs without service interruption. See [Migrating Search Technology]({{page page='search-setup-migration'}}).
+
+If you remain on OpenSearch 1.x / Elasticsearch 7.x–8.x, the audit index can be kept unchanged. If you switch to a different search engine, the audit index has to be migrated separately from the repository index: it is a primary storage and cannot be rebuilt. See [Migrating Search Technology]({{page page='search-setup-migration'}}).
 
 ### Relation Document Indexing
 

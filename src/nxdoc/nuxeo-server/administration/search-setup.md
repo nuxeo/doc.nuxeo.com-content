@@ -3,7 +3,7 @@ title: Search Setup
 description: This page provides several configuration use cases for Elasticsearch and Opensearch.
 review:
     comment: ''
-    date: '2026-04-07'
+    date: '2026-09-02'
     status: ok
 labels:
     - lts2016-ok
@@ -478,6 +478,8 @@ Pick the guide that matches your search stack (packages, optional embedded serve
 | Elasticsearch 9.x | `elasticsearch9` | `nuxeo-search-client-elasticsearch9` | [Search setup for Elasticsearch 9.x]({{page page='search-setup-elasticsearch9'}}) |
 | MongoDB Atlas Search (repository on MongoDB Atlas) | `mongoatlas` | `nuxeo-search-client-mongoatlas` | [MongoDB Atlas Search]({{page page='search-setup-mongoatlas'}}) |
 
+If you are changing the search technology of an existing instance, see [Migrating Search Technology]({{page page='search-setup-migration'}}) for what has to be migrated and which procedure applies to each part.
+
 Audit and optional embedded packages are listed on each guide where they apply. For a Marketplace-oriented overview, see [Nuxeo Search Client OpenSearch]({{page page='nuxeo-search-client-opensearch'}}), [Nuxeo Search Client Elasticsearch]({{page page='nuxeo-search-client-elasticsearch'}}), and [Nuxeo Search Client MongoDB Atlas]({{page page='nuxeo-search-client-mongoatlas'}}).
 
 ## Configuring Nuxeo to Access the Search Cluster
@@ -687,6 +689,8 @@ curl -XPOST -u Administrator:Administrator \
     "http://localhost:8080/nuxeo/api/v1/management/search/reindex?index=enhanced-green"
 ```
 
+The response returns a `commandId` that you can use to track progress.
+
 **Step 3: Test the new index**
 
 Verify the new index using the management search endpoint:
@@ -705,6 +709,17 @@ curl -XGET -u Administrator:Administrator \
 ```
 
 **Step 4: Switch to the new index**
+
+{{#> callout type='warning' heading='Finish the migration before restarting'}}
+Do not switch to the green index until the re-indexing launched in Step 2 has completed. Check the bulk command status and wait for its state to be `COMPLETED`:
+
+```shell
+curl -XGET -u Administrator:Administrator \
+  "http://localhost:8080/nuxeo/api/v1/management/bulk/<commandId>"
+```
+
+If you swap the index and perform the rolling restart while the re-indexing is still running, a partially populated green index becomes the index serving all search requests, and documents that have not been indexed yet are missing from search results.
+{{/callout}}
 
 Update `nuxeo.conf` to swap to the new index:
 
@@ -742,6 +757,10 @@ Then follow the same 4-step procedure described above.
 #### Cross-Implementation Reindexing
 
 You can perform reindexing without interruption across different search implementations:
+
+{{#> callout type='warning' heading='This covers the repository index only'}}
+The procedures below migrate the repository index. The audit logs index is a primary storage that cannot be rebuilt from the repository, so it has to be migrated separately by [copying the audit backend]({{page page='copy-audit-backend'}}). See [Migrating Search Technology]({{page page='search-setup-migration'}}) for the full picture.
+{{/callout}}
 
 ##### OpenSearch1 to OpenSearch2 Migration
 
@@ -851,6 +870,12 @@ For mapping customization examples, see the page [Configuring the Elasticsearch 
 
 Here the index is a primary storage and you cannot rebuild it. So we need a tool that will extract the `_source` of documents from one index and submit it to a new index that have been setup with the new configuration.
 
+This procedure applies when you keep the same search implementation and only need to apply a new mapping or new settings. To move the audit to a different implementation or a different cluster, copy the audit backend instead — see [Migrating Search Technology]({{page page='search-setup-migration'}}).
+
+{{#> callout type='warning' heading='Finish the migration before restarting'}}
+The audit index is a primary storage: unlike the repository index, it cannot be rebuilt from the repository. Once you stop the Nuxeo Platform to copy the entries, do not start it again — and do not delete the source index — until the `_reindex` request has completed and both indexes report the same document count. Audit entries that were not copied are lost permanently.
+{{/callout}}
+
 1. Update the mappings or settings configuration by overriding the `{NUXEO_HOME}/templates/opensearch1-audit/nxserver/config/opensearch1-audit-config.xml.nxftl`(follow the same procedure as the section above for the repository index)
 1. Use a new name for the `nuxeo.audit.backend.default.opensearch1.index.name` (like `nuxeo-audit2`)
 1. Start the Nuxeo Platform.</br>
@@ -868,6 +893,36 @@ Here the index is a primary storage and you cannot rebuild it. So we need a tool
     }
     }'
     ```
+
+    On a large audit index, send the request asynchronously and poll the returned task instead of waiting on the call:
+
+    ```bash
+    curl -X POST "http://localhost:9200/_reindex?wait_for_completion=false" \
+      -H 'Content-Type: application/json' -d '{
+    "source": {
+    "index": "nuxeo-audit"
+    },
+    "dest": {
+    "index": "nuxeo-audit2"
+    }
+    }'
+
+    # poll the task id returned by the request above
+    curl "http://localhost:9200/_tasks/<taskId>?pretty"
+    ```
+
+1. Wait for the `_reindex` request to complete, then refresh the new index and check that both indexes hold the same number of entries.
+
+    ```bash
+    curl -X POST "http://localhost:9200/nuxeo-audit2/_refresh"
+
+    curl "http://localhost:9200/nuxeo-audit/_count?pretty"
+    curl "http://localhost:9200/nuxeo-audit2/_count?pretty"
+    ```
+
+    The destination index is not refreshed automatically when `_reindex` finishes, so counts taken straight after the copy can be stale and look mismatched even though every entry was copied.
+
+1. Start the Nuxeo Platform.
 
 ## Configuration for Multi Repositories
 

@@ -3,7 +3,7 @@ title: Upgrade
 description: This page describes a general upgrade procedure. You will find below the list of required manual steps per version.
 review:
     comment: ''
-    date: '2020-07-29'
+    date: '2026-09-10'
     status: ok
 labels:
     - content-review-lts2016
@@ -466,8 +466,10 @@ You should have [configured Nuxeo with a specific configuration]({{page page='se
         {{#> callout type='warning' }}
         Be very careful about the two properties allowing to configure the backend for audit logs, make sure you read the related documentation:
 
-        *   `audit.elasticsearch.enabled`: [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-elasticsearch-for-audit-logs)
+        *   `audit.elasticsearch.enabled`: [Disabling Elasticsearch for Audit Logs]({{page page='search-setup'}}#disabling-elasticsearch-for-audit-logs)
         *   `audit.elasticsearch.migration`: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='810' page='elasticsearch-setup'}}#triggering-sql-to-elasticsearch-audit-logs-migration)
+
+        Starting with LTS 2025, these two properties have no effect. The audit backend is selected by installing the corresponding Marketplace Package, and Nuxeo Server ships with an in-memory implementation that is for testing only — so an upgrade that installs no audit package stores no audit durably. See [How to upgrade Nuxeo Audit Service]({{page page='how-to-upgrade-audit-service'}}).
         {{/callout}}
         *   Replace the old nuxeo.conf file with this new one.
 6.  [Upgrade your Nuxeo Packages](#marketplace-packages-upgrade).
@@ -509,6 +511,12 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 
 ## Detailed Upgrade by Version
 
+### To Nuxeo LTS 2025 from LTS 2023
+See [Upgrade from LTS 2023 to LTS 2025]({{page space='nxdoc' page='upgrade-from-lts-2023-to-lts-2025'}}) for the upgrade notes, and [How to upgrade to LTS 2025.0]({{page space='nxdoc' page='how-to-upgrade-from-lts-2023-to-lts-2025'}}) for the API migration guides: Jakarta EE 10, Jakarta RS 3, Search Service, Audit Service and REST tests.
+
+Release Notes:
+- [Nuxeo Platform LTS 2025 Release notes]({{page page='nuxeo-server-release-notes-2025-0'}})
+
 ### To Nuxeo LTS 2023 from LTS 2021
 See [Upgrade from LTS 2021 to LTS 2023]({{page space='nxdoc' page='upgrade-from-lts-2021-to-lts-2023'}}) to upgrade to the LTS 2023 version of Nuxeo Platform.
 
@@ -529,7 +537,7 @@ Release Notes:
 
 ### To LTS 2017 from LTS 2016
 
-See [Upgrade from LTS 2016 to LTS 2017]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-LTS-2017'}}) to upgrade to the LTS 2017 version or [Upgrade from LTS 2016 following Fast Tracks]({{page version='' space='' page='upgrade-from-lts-2016-following-fast-tracks'}}) to upgrade from a Fast Track version to LTS 2017.
+See [Upgrade from LTS 2016 to LTS 2017]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-lts-2017'}}) to upgrade to the LTS 2017 version or [Upgrade from LTS 2016 following Fast Tracks]({{page version='' space='' page='upgrade-from-lts-2016-following-fast-tracks'}}) to upgrade from a Fast Track version to LTS 2017.
 
 Release notes:
 - [9.x Release notes]({{page version='910' space='nxdoc' page='nuxeo-server-release-notes'}})

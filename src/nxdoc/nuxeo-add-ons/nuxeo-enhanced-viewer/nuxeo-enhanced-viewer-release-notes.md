@@ -16,6 +16,7 @@ toc: true
 ## NEV Release Notes Summary
 
 
+- [NEV 2026.3.0]({{page page='nuxeo-enhanced-viewer-release-notes-2026-3-0'}})
 - [NEV 2026.2.0]({{page page='nuxeo-enhanced-viewer-release-notes-2026-2-0'}})
 - [NEV 2026.1.0]({{page page='nuxeo-enhanced-viewer-release-notes-2026-1-0'}})
 - [NEV 2026.0.0]({{page page='nuxeo-enhanced-viewer-release-notes-2026-0-0'}})

@@ -997,7 +997,7 @@ Visit the [mapping documentation]({{page page='configuring-the-elasticsearch-map
 
 The full-text search is not configured the same way:
 
-*   The `ecm:fulltext` matches the `all_field` field which is the concatenation of all fields. This is different from the NXQL `ecm:fulltext` which matches only some explicit fields. You can [adapt the mapping to exclude some fields]({{page page='elasticsearch-setup'}}).
+*   The `ecm:fulltext` matches the `all_field` field which is the concatenation of all fields. This is different from the NXQL `ecm:fulltext` which matches only some explicit fields. You can [adapt the mapping to exclude some fields]({{page page='search-setup'}}).
 *   Custom full-text indexes are not supported. `ecm:fulltext_someindex` will match the `all_field` field. It is possible to select a list of field using hints, see below.
 *   In addition to the NXQL full-text syntax, it is also possible to use the Elasticsearch [simple query string syntax](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-simple-query-string-query.html#_simple_query_string_syntax).
 

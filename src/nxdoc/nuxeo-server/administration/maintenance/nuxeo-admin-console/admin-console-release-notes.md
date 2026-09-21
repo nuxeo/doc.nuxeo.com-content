@@ -15,14 +15,15 @@ confluence:
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'admin-console-updates' page='admin-console-release-notes-25-2-0'}}} 
+{{{multiexcerpt 'admin-console-updates' page='admin-console-release-notes-25-2-1'}}} 
 
 ---
 
 ## Previous Release Notes
 
-| [Admin Console 25.1.0]({{page page='admin-console-release-notes-25-1-0'}}) | Admin Console Streams feature & other enhancements |-
+| [Admin Console 25.2.0]({{page page='admin-console-release-notes-25-2-0'}}) | Admin Console new feature & other enhancements |-
 
+<!-- [Admin Console 25.1.0]({{page page='admin-console-release-notes-25-1-0'}}) | Admin Console Streams feature & other enhancements |-->
 <!-- | [Admin Console 25.2.0]({{page page='admin-console-release-notes-25-2-0'}}) | New Features & Enhancements, Bug Fixes, Security & Dependency Management, Angular version upgrade and unit test framework switch|-->
 
 | Version                                                    | Summary                                                                             |

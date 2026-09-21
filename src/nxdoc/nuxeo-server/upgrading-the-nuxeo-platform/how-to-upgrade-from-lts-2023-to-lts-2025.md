@@ -3,7 +3,7 @@ title: How to upgrade to LTS 2025.0
 description: Discover what changed in LTS 2025.0
 review:
    comment: ''
-   date: '2025-03-10'
+   date: '2026-09-10'
    status: ok
 labels:
     - release-notes
@@ -14,6 +14,8 @@ tree_item_index: 93
 Nuxeo LTS 2025 has breaking changes when you upgrade your project from a previous Nuxeo version.
 
 You will find in this section how to upgrade your Nuxeo Server project with new Jakarta Standards and Nuxeo APIs.
+
+For the infrastructure, configuration and deprecation notes that go with this upgrade, see [Upgrade from LTS 2023 to LTS 2025]({{page page='upgrade-from-lts-2023-to-lts-2025'}}). For the general upgrade procedure, see [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}}).
 
 ## How to Upgrade to Jakarta EE 10
 

@@ -19,6 +19,11 @@ The Office Online integration is done thanks to the Web Application Open Platfor
 
 You can find more information on the WOPI protocol for the Office Online integration [here](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/).
 
+Two deployment options are officially supported by Hyland:
+
+- The Microsoft-hosted **Office Online** cloud service.
+- An **Office Online Server (OOS)** deployed **on-premises** within your own infrastructure. See [Office Online Server On-Premises](#office-online-server-on-premises) for the specific configuration.
+
 ## Functional Overview
 
 ### Office Online Check-In
@@ -110,6 +115,10 @@ Office Online only makes requests to trusted partner domains, so the domain of y
 
 Nuxeo has currently registered `*.nuxeocloud.com` as an allowed domain.
 
+{{#> callout type='note' }}
+This applies to the Microsoft-hosted **Office Online** cloud service only. An [on-premises Office Online Server](#office-online-server-on-premises) manages this trust itself.
+{{/callout}}
+
 ### HTTPS
 
 As stated [here](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/environments#production-environment), the WOPI host, here the Nuxeo server, must use HTTPS.
@@ -124,7 +133,7 @@ The Office Online integration relies on the JWT authentication. You need to enab
 
 To allow the integration between Nuxeo and Office Online, Nuxeo needs to discover the Office Online client. To do that, you need to set the `nuxeo.wopi.discoveryURL` parameter in your `nuxeo.conf` to the Office Online Production discovery URL `https://onenote.officeapps.live.com/hosting/discovery`. See [WOPI discovery URLs](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/environments#wopi-discovery-urls) for more information.
 
-If you target a WOPI client other than Office Online, just set its discovery URL instead of the Office Online one.
+If you target a WOPI client other than the Office Online cloud service, just set its discovery URL instead of the Office Online one. This is notably the case for an [on-premises Office Online Server](#office-online-server-on-premises).
 
 ### Base URL for Office Online Calls
 
@@ -135,6 +144,24 @@ For instance, if your Nuxeo server public domain is `bar.com` which is not in th
 ```
 nuxeo.wopi.baseURL=https://tech.com/nuxeo
 ```
+
+### Office Online Server On-Premises
+
+Hyland officially supports and maintains the integration of an **Office Online Server (OOS)** deployed **on-premises** within your own infrastructure. An on-premises server exposes the same WOPI protocol as the cloud service, so the only difference is the discovery URL Nuxeo points to:
+
+1. Meet the general [Requirements](#requirements) — notably [HTTPS](#https). The [WOPI domain allow list](#wopi-domain-allow-list) does not apply; trust is managed on the Office Online Server side.
+1. Enable [JWT Authentication](#jwt-authentication).
+1. Set the `nuxeo.wopi.discoveryURL` parameter in your `nuxeo.conf` to your server's discovery endpoint, that is, its host followed by `/hosting/discovery`:
+
+    ```
+    nuxeo.wopi.discoveryURL=https://your-office-online-server.example.com/hosting/discovery
+    ```
+
+1. If needed, set the [Base URL for Office Online Calls](#base-url-for-office-online-calls).
+
+{{#> callout type='note' }}
+Your Office Online Server must in turn be configured to trust the Nuxeo host. Refer to the [Microsoft Office Online Server documentation](https://learn.microsoft.com/en-us/officeonlineserver/office-online-server) for its installation and administration.
+{{/callout}}
 
 ### Office Online Related Limitations
 
