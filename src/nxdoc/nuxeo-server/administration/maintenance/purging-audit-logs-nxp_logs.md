@@ -95,154 +95,20 @@ history:
 
 {{#> callout type='warning' heading='Recommended approach since 2025.26'}}
 Since Nuxeo 2025.26, purging Audit is a first-class, supported operation built
-on top of the [Audit Router]({{page page='audit-router'}}) and the
-[Blue/Green Audit migration]({{page page='copy-audit-backend'}}) infrastructure.
-The manual backend-level scripts described at the bottom of this page are kept
-for reference on older versions only.
+on the [Audit Router]({{page page='audit-router'}}) and Management REST API —
+see [Purge an Audit Backend]({{page page='purge-audit-backend'}}). The manual
+backend-level scripts below are kept for reference on older versions only.
 {{/callout}}
 
-Depending on usage (lots of updates, lots of workflows, lots of logins, ...), the audit storage can grow very quickly. Since Nuxeo 2025.26, a purge mechanism is available through the Management REST API to route a subset of the log entries to a dedicated Audit Backend (for archival) or to simply drop them, without any direct backend-level operation.
-
-## How It Works
-
-The purge mechanism reuses the [Audit Router]({{page page='audit-router'}})
-`routes` extension point and the [Blue/Green Audit migration]({{page page='copy-audit-backend'}})
-tooling:
-
-- A route can now be declared **non-live** (`live="false"`): it is not
-  evaluated for new incoming events, but it remains addressable by name so it
-  can be triggered explicitly for a purge or migration operation.
-- The `POST /management/audit/purge` Management endpoint scrolls `LogEntry`s
-  matching an NXQL query and dispatches them through one or more named routes
-  — live or not — writing matching entries to each route's target backend.
-- The platform ships an `NXQLPredicate` so a route can filter which entries it
-  accepts using plain NXQL, without writing any Java code.
-
-Nothing is ever deleted in place: entries are routed to whichever backend you
-configure (an archive backend, a new default backend, …), and the old backend
-is only decommissioned once you no longer need it — see the
-[Audit Endpoint]({{page space='rest-api' version='1' page='audit-endpoint'}})
-for the full REST API reference.
-
-## Canonical Purge Scenario
-
-The following scenario keeps only recent `loginSuccess` events in the audit
-storage going forward, while old ones are archived: a `future-default`
-backend receives everything except `loginSuccess` entries older than 30 days,
-and an `archive` backend receives exactly the complement — those old
-`loginSuccess` entries — without duplicating any filtering logic.
-
-### 1. Contribute Secondary Audit Backends
-
-See [Audit Router — Worked Example]({{page page='audit-router'}}#worked-example-routing-a-business-event-to-a-secondary-backend)
-for the full backend registration (factory, client, index). Here, two simple
-backends:
-
-```xml
-<extension target="org.nuxeo.audit.service.AuditComponent" point="backendFactory">
-  <backend name="future-default" factory="org.nuxeo.audit.opensearch1.OpenSearchAuditBackendFactory" />
-  <backend name="archive" factory="org.nuxeo.audit.opensearch1.OpenSearchAuditBackendFactory" />
-</extension>
-```
-
-### 2. Contribute the Routes
-
-- `future-default-route` is **live**: from now on it dual-writes every new
-  event to `future-default`, except `loginSuccess` entries already older than
-  30 days at ingestion time (there shouldn't be any, but the same predicate
-  will be reused for the purge below).
-- `archive-route` is **non-live**: it never fires on new events, and is
-  defined with `NotRoutesPredicate` as the exact complement of
-  `future-default-route`, so it only ever needs to be triggered explicitly by
-  a purge.
-
-```xml
-<extension target="org.nuxeo.audit.service.AuditComponent" point="routes">
-  <route name="future-default-route" live="true">
-    <backend name="future-default" />
-    <predicate class="org.nuxeo.audit.service.route.NXQLPredicate">
-      <property name="query">SELECT * FROM LogEntry WHERE NOT (eventId = 'loginSuccess' AND logDate &lt; NOW('-P30D'))</property>
-    </predicate>
-  </route>
-
-  <route name="archive-route" live="false">
-    <backend name="archive" />
-    <predicate class="org.nuxeo.audit.service.route.NotRoutesPredicate">
-      <property name="routes">future-default-route</property>
-    </predicate>
-  </route>
-</extension>
-```
-
-See the [Audit Router]({{page page='audit-router'}}) page for more about the
-`live` attribute, `NXQLPredicate` and `NotRoutesPredicate`.
-
-### 3. Trigger the Purge
-
-```curl
-curl -X POST -u Administrator:Administrator \
---data-urlencode "query=SELECT * FROM default" \
---data-urlencode "routes=future-default-route" \
---data-urlencode "routes=archive-route" \
-http://localhost:8080/nuxeo/api/v1/management/audit/purge
-```
-
-The `query` scopes the source entries to scroll — here, every entry currently
-in `default`. Each entry is then evaluated against both routes: recent
-entries and non-`loginSuccess` entries land in `future-default`, while old
-`loginSuccess` entries land in `archive`. Because `future-default-route` is
-live, any entry already dual-written to it since it was contributed is
-recognized as a duplicate and skipped rather than copied twice; the resulting
-[bulk status]({{page space='rest-api' version='1' page='bulk-status-entity-type'}})'s `result` object
-reports `matched.<route-name>` and `skip.<backend-name>` counters for this.
-
-{{#> callout type='note'}}
-If you don't need per-entry filtering through a route, `POST /management/audit/copy`
-with an NXQL `query` form parameter (instead of `from`) is enough to copy an
-arbitrary subset of entries from one backend to another — see
-[Copy an Audit Backend]({{page page='copy-audit-backend'}}).
-{{/callout}}
-
-### 4. Validate
-
-```curl
-curl -X GET -u Administrator:Administrator \
---data-urlencode "nxql=SELECT * FROM LogEntry WHERE NOT (eventId = 'loginSuccess' AND logDate &lt; NOW('-P30D'))" \
---data-urlencode "backend=default" \
---data-urlencode "backend=future-default" \
--G http://localhost:8080/nuxeo/api/v1/management/audit/checkSearch
-```
-
-### 5. Swap the Default Backend
-
-Once `future-default` has caught up with `default` (validated above),
-promote it as the new `default` — this is a repackaging step, see the
-[Typical Blue/Green Migration]({{page page='copy-audit-backend'}}#typical-blue-green-migration)
-steps.
-
-### 6. Decommission the Old Backend
-
-Once entries have been routed and validated, the old backend content can be
-dropped at the infrastructure level (drop the SQL rows, delete the
-Elasticsearch/OpenSearch index, …). This last step remains a manual,
-operational action outside of Nuxeo.
-
-## Learn More
-
-- [Audit Router]({{page page='audit-router'}})
-- [Copy an Audit Backend]({{page page='copy-audit-backend'}})
-- [Audit Endpoint]({{page space='rest-api' version='1' page='audit-endpoint'}})
-- [Audit]({{page page='audit'}})
-
----
+Depending on usage (lots of updates, lots of workflows, lots of logins, ...), the audit storage can grow very quickly.
 
 ## Legacy Manual Purge (Before 2025.26)
 
 {{#> callout type='warning' }}
 The scripts below operate directly on the storage backend and bypass Nuxeo.
-They are kept for versions prior to 2025.26 only; use the
-[Management REST API purge mechanism](#canonical-purge-scenario) described
-above on more recent versions.
+They are kept for versions prior to 2025.26 only; use
+[Purge an Audit Backend]({{page page='purge-audit-backend'}}) on more recent
+versions.
 {{/callout}}
 
 You can configure the audit to filter what must be recorded, but on versions
@@ -650,3 +516,10 @@ audit.elasticsearch.indexName=nuxeo-audit-201809
 This purge procedure can also be used to upgrade Elasticsearch from 5.x or to update the mapping.
 You just need to remove the query part of the re-index command if you don't want to purge at the same time.
 {{/callout}}
+
+## Learn More
+
+- [Purge an Audit Backend]({{page page='purge-audit-backend'}})
+- [Audit Router]({{page page='audit-router'}})
+- [Copy an Audit Backend]({{page page='copy-audit-backend'}})
+- [Audit]({{page page='audit'}})
