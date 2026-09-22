@@ -4,11 +4,11 @@ description: Release notes for Nuxeo Aspera Connector.
 tree_item_index: 100
 review:
   comment: ''
-  date: '2026-03-23'
+  date: '2026-09-24'
   status: ok
 toc: true
 ---
 
-{{{multiexcerpt 'nuxeo-aspera-connector-2023-9-34' page='nuxeo-aspera-connector-2023-9-34'}}}
+{{{multiexcerpt 'nuxeo-aspera-connector-2023-10-0' page='nuxeo-aspera-connector-2023-10-0'}}}
 
 
