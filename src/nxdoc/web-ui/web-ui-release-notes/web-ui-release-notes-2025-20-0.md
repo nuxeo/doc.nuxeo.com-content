@@ -28,7 +28,7 @@ This release improves document sharing and sign-in, makes document import and co
 
 #### Improved Listings and Selection
 
-- Multi-value directory suggestion dropdowns now indent hierarchical entries so child values line up under their parent.
+- Multi-value directory suggestion dropdowns now indent hierarchical entries so that the child values line up under their parent.
 - Data table listings can now be configured for single selection — setting multiple selection to off now takes effect as expected.
 - Restored the alignment of the **Sort by** control in the **Search Results** header with the sort-order toggle.
 
@@ -66,7 +66,7 @@ This release continues the accessibility programme with improvements for keyboar
 - The left navigation menu now announces whether its sections are expanded or collapsed, covering the navigation drawer, the collapsed navigation bar, and the browse tree.
 - Toast messages, such as the notification that a CSV export is ready, are now announced to screen readers.
 - Alternative text for functional images has been refined so that the screen readers describe the action each image performs.
-- Charts and other data visualisations are now labelled for assistive technologies, so screen reader users are no longer given only a heading and an unlabelled graphic.
+- Charts and other data visualisations are now labelled for assistive technologies, so that the screen reader users are no longer given only a heading and an unlabelled graphic.
 
 ### Platform Reliability and Security
 
