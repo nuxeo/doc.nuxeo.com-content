@@ -24,7 +24,7 @@ This release improves document sharing and sign-in, makes document import and co
 #### Improved Document Sharing and Sign-In
 
 - Document permalinks now use a standards-compliant query-parameter URL without the hashbang prefix, so a shared link survives single sign-on redirects and opens the document directly.
-- Where anonymous authentication is configured, a user who opens a permalink to a document they are not allowed to read is now taken to the sign-in page with the original link preserved, instead of seeing a permission error and having to sign out and navigate again.
+- Where anonymous authentication is configured, a user, who opens a permalink to a document with restricted read permission, is now taken to the sign-in page with the original link preserved instead of seeing a permission error and having to sign out and navigate again.
 
 #### Improved Listings and Selection
 
