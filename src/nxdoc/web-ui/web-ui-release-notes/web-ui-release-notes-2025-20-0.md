@@ -48,7 +48,6 @@ This release continues the accessibility programme with improvements for keyboar
 
 - Tags and comments input fields now have visible labels that are programmatically associated with their controls, meeting WCAG 2.0 criterion 3.3.2 (Labels or Instructions).
 - Required fields that are left empty are now reported with inline text messages and a form-level error summary rather than colour alone, and the controls report their required and invalid state to assistive technologies, meeting WCAG 2.0 criteria 1.4.1 (Use of Color) and 3.3.3 (Error Suggestion).
-- Alternative text for functional images has been refined so screen readers describe the action each image performs.
 
 #### Improved Text Spacing
 
@@ -66,6 +65,7 @@ This release continues the accessibility programme with improvements for keyboar
 
 - The left navigation menu now announces whether its sections are expanded or collapsed, covering the navigation drawer, the collapsed navigation bar, and the browse tree.
 - Toast messages, such as the notification that a CSV export is ready, are now announced to screen readers.
+- Alternative text for functional images has been refined so screen readers describe the action each image performs.
 - Charts and other data visualisations are now labelled for assistive technologies, so screen reader users are no longer given only a heading and an unlabelled graphic.
 
 ### Platform Reliability and Security
