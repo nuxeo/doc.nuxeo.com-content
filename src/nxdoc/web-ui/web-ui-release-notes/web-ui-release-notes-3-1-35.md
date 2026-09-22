@@ -28,7 +28,7 @@ This release improves document sharing and sign-in, makes document import and co
 
 #### Improved Listings and Selection
 
-- Multi-value directory suggestion dropdowns now indent hierarchical entries so child values line up under their parent.
+- Multi-value directory suggestion dropdowns now indent hierarchical entries so that the child values line up under their parent.
 - Data table listings can now be configured for single selection — setting multiple selection to off now takes effect as expected.
 - Restored the alignment of the **Sort by** control in the **Search Results** header with the sort-order toggle.
 
