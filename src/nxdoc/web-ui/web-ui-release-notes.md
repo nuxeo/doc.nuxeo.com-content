@@ -23,7 +23,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.20.0]({{page page='web-ui-release-notes-2025-20-0'}}) |User Experience Improvements, Document Management Improvements, Accessibility Improvements and Platform Reliability and Security| -->
+<!-- | [Web UI 2025.20.0]({{page page='web-ui-release-notes-2025-20-0'}}) |User Experience Improvements, Document Management Improvements, Accessibility Improvements, and Platform Reliability and Security| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
