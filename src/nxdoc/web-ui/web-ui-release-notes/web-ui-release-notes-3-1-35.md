@@ -34,7 +34,7 @@ This release improves document sharing and sign-in, makes document import and co
 
 ### Document Management Improvements
 
-- Note documents now correctly render complex HTML content, including tables, in the Rich Text Editor.
+- Documents now correctly render complex HTML content, including tables, in the Rich Text Editor.
 - Importing documents with metadata now includes every entry in the result.
 - When an import of ten or more files partially fails, only the files that actually failed remain in the import list.
 - Comparing two documents now produces the correct result for properties holding ten or more values.
