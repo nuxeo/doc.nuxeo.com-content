@@ -21,6 +21,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [August 2026]({{page page='studio-updates-2026-08'}})                  | Account management improvements, Connect password migration, register security fix |
 | [June 2026]({{page page='studio-updates-2026-06'}})                  | Marketplace security hardening, self-service org transfers, LTS 2025 fixes |
 | [May 2026]({{page page='studio-updates-2026-05'}})                  | Fixes for automation signatures, project saves, and OrgAdmin access |
 | [April 2026]({{page page='studio-updates-2026-04'}})                  | Compatibility improvements and multiple reliability fixes |
