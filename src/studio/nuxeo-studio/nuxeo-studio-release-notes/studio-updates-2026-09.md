@@ -59,7 +59,7 @@ The offline registration flow was throwing a content-loading error during the re
 **Impact:**
 Organizations using offline registration can now complete instance registration without workarounds or manual intervention.
 
-### Studio Designer Code Generation for Collection Selection Actions Fixed
+###  Fixed the Studio Designer Code Generation for Collection Selection Actions
 Studio Designer now generates code against selection instead of document for addToCollectionSelectionAction, enabling correct use of selection-based expressions.
 
 **What Changed:**
