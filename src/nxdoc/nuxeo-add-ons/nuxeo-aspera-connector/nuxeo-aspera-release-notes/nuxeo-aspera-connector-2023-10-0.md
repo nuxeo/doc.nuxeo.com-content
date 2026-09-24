@@ -29,7 +29,6 @@ A new option allows administrators to disable thumbnail previews in transfer lis
 
 File import operations are now more resilient when importers return empty or null results. The connector handles these scenarios automatically, eliminating the need for custom workarounds and helping ensure uninterrupted import processing.
 
-
 ### Bug Fixes
 
 #### Consistent Folder Names in Downloads
