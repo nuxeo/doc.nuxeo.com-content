@@ -15,7 +15,7 @@ toc: true
 ### Marketplace Search Results Now Ranked by Relevance
 Marketplace search now prioritizes exact package matches, putting official and public packages ahead of private ones, so you find what you need faster.
 
-**What Changed**
+**What Changed:**
 Search results were returning metadata matches alongside exact package name matches without clear prioritization. The search algorithm now ranks exact matches first, surfaces public packages more prominently than private ones, and filters out low-value metadata hits that cluttered results.
 
 **Impact:**
@@ -38,6 +38,24 @@ New API endpoints are now documented in interactive Swagger/OpenAPI format, repl
 
 **Impact:**
 Developers and administrators can understand and test new APIs more quickly without digging through separate documentation or making exploratory calls. Error codes are better explained, reducing debugging time.
+
+### Connect User Management Pages Now Load Quickly
+The Connect user page and other user management pages now load in under one second, dramatically improving the administrative experience.
+
+**What Changed:**
+User management pages in Connect were slow to load, taking two or more seconds on first load. Performance optimizations have brought load times down to under one second consistently.
+
+**Impact:**
+Administrators spend less time waiting for pages to open when managing user accounts, permissions, and profiles. The improvement removes a daily friction point for teams managing large user bases.
+
+### Search Mapping Contributions Now Generated for OpenSearch 2.x and Elasticsearch 9.x
+Search Mapping contributions are now generated correctly when your Nuxeo LTS 2025 environment uses OpenSearch 2.x or Elasticsearch 9.x search clients.
+
+**What Changed:**
+Previously, Search Mapping contributions were generated using the legacy Elasticsearch extension point regardless of which search client your project selected. The generator now checks your Application Definition and creates contributions targeting OpenSearch 2.x or Elasticsearch 9.x as appropriate.
+
+**Impact:**
+Studio-generated Search Mapping configurations work correctly without manual editing or post-generation fixes. Developers using LTS 2025 can rely on generated code that aligns with their search infrastructure without workarounds.
 
 ## Bug fixes
 
@@ -67,6 +85,24 @@ The code generation for collection selection actions was incorrectly targeting t
 
 **Impact:**
 Collection selection actions work as expected without manual code edits. Studio Designer output is reliable and requires no post-generation fixes.
+
+### Filters with JavaScript Expressions Now Work in Studio Designer
+Filters using JavaScript expressions to check document properties are now supported in Studio Designer without endless loading or validation errors.
+
+**What Changed:**
+Previously, filters with JavaScript expressions like checking for file MIME types would cause endless loading loops or fail validation. The content validation logic now properly handles complex JavaScript expressions in filter conditions.
+
+**Impact:**
+Designers can create sophisticated, conditional button and layout visibility rules based on document properties without workarounds. Previously blocked workflows now work as expected.
+
+### User Updates Now Complete Successfully in Connect
+Updating user profiles and permissions in Connect no longer fails with errors, restoring reliable user management workflows.
+
+**What Changed:**
+The user update functionality in Connect was failing during submission, preventing admins from modifying user profiles or permissions. The issue has been resolved so updates complete successfully.
+
+**Impact:**
+Administrators can manage user accounts, assign roles, and update permissions without encountering blocking errors. User administration is now fully reliable in Connect.
 
 ## Security improvements
 
