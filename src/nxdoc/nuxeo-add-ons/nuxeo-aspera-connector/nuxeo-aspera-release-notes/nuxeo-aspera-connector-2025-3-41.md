@@ -4,7 +4,7 @@ description: Release notes for Nuxeo Aspera Connector 2025.3.41
 tree_item_index: 852
 review:
   comment: ''
-  date: '2026-09-25'
+  date: '2026-09-26'
   status: ok
 toc: true
 hidden: true
