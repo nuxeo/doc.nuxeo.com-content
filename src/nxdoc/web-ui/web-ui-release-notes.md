@@ -19,14 +19,15 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-20-0'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-21-0'}}}
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.20.0]({{page page='web-ui-release-notes-2025-20-0'}}) |User Experience Improvements, Document Management Improvements, Accessibility Improvements, and Platform Reliability and Security| -->
+<!-- | [Web UI 2025.21.0]({{page page='web-ui-release-notes-2025-21-0'}}) |Hotfix release: restored Home navigation on the application logo, restored Kawaii and Light themes, and corrected default theme name| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Web UI 2025.20.0]({{page page='web-ui-release-notes-2025-20-0'}}) |User Experience Improvements, Document Management Improvements, Accessibility Improvements, and Platform Reliability and Security|
 | [Web UI 2025.19.0]({{page page='web-ui-release-notes-2025-19-0'}}) |Optional Hyland-branded experience for Web UI along with a wide range of navigation, browsing, search, workflow, accessibility, and reliability improvements|
 | [Web UI 2025.18.0]({{page page='web-ui-release-notes-2025-18-0'}}) |User Experience Improvements, Accessibility Improvements, Workflow & Document Management and Platform & Build Improvements.|
 | [Web UI 2025.17.0]({{page page='web-ui-release-notes-2025-17-0'}}) |Enhancements, Bug Fixes, Accessibility Improvements, and Performance, Reliability & Quality Improvements.|
