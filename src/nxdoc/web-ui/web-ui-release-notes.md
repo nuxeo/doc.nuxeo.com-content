@@ -23,7 +23,7 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.21.0]({{page page='web-ui-release-notes-2025-21-0'}}) |Hotfix release: restored Home navigation on the application logo, restored Kawaii and Light themes, and corrected default theme name| -->
+<!-- | [Web UI 2025.21.0]({{page page='web-ui-release-notes-2025-21-0'}}) |Hotfix release: Restored Home navigation on the application logo, Kawaii and Light themes, and corrected default theme name| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
