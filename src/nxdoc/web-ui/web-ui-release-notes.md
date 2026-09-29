@@ -28,7 +28,7 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.36]({{page page='web-ui-release-notes-3-1-36'}}) | Hotfix release: restored Home navigation on the application logo, restored Kawaii and Light themes, and corrected default theme name|-->
+<!-- | [Web UI 3.1.36]({{page page='web-ui-release-notes-3-1-36'}}) | Hotfix release: Restored Home navigation on the application logo, Kawaii and Light themes, and corrected default theme name|-->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
