@@ -21,7 +21,7 @@ This is a hotfix release addressing the side navigation and the classic Nuxeo th
 
 **User Experience Improvements**
 - ***Restored Home navigation on the application logo:***
-    - The standalone Home icon has been removed from the side navigation, and clicking the application logo returns users to the Home dashboard again, in both the classic Nuxeo and the Hyland-branded experience. The wide gap between the logo and the first navigation icon has also been removed.
+    - The standalone Home icon has been removed from the side navigation, and clicking the application logo now returns users to the Home dashboard, in both the classic Nuxeo and the Hyland-branded experience. The wide gap between the logo and the first navigation icon has also been removed.
 - ***Restored Kawaii and Light themes:***
     - The **Kawaii** and **Light** themes are available again in the classic Nuxeo experience. Hover and selection highlighting now display correctly in the **Kawaii** theme.
 - ***Corrected the default theme name:***
