@@ -181,7 +181,7 @@ Genuine flow errors still fail closed with a clean `401` (no partial session): a
 
 The page reveals nothing about whether the account exists, the external id, or any token detail.
 
-By default the add-on serves its own localizable page (shipped in its `nuxeo.war` at `/<context>/oidc/unprovisioned.jsp`). To point at your own page instead:
+By default, the add-on serves its own localizable page (shipped in its `nuxeo.war` at `/<context>/oidc/unprovisioned.jsp`). To point at your own page instead:
 
 ```properties
 # Optional. A same-origin, context-relative absolute path (must start with a single "/").
@@ -226,7 +226,7 @@ The transient per-login secrets (PKCE `code_verifier`, `state`, `nonce`) are hel
 At first login a dedicated `oidcFlowState` store namespace is created (a `kv.oidcFlowState` collection on MongoDB, a `kv_oidcFlowState` table on SQL). On a single node the platform default in-memory store is used and no configuration is needed. The flow state is single-use and expires automatically after `nuxeo.oidc.flowState.ttl` (default 10 minutes).
 
 {{#> callout type='info'}}
-The login correlation key is the container's `JSESSIONID`. If another unauthenticated request from the same browser reaches a *different* node while the user is at the provider, that node mints a new session id and resets the cookie, so the in-flight login fails closed (`401`) and must be retried.
+The login correlation key is the container's `JSESSIONID`. If another unauthenticated request from the same browser reaches a *different* node while the user is at the provider, that node mints a new session id and resets the cookie, so the in-flight login fails (`401`) and must be retried.
 {{/callout}}
 
 ## Scope & Product Boundary
