@@ -103,6 +103,11 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 54
+
+### Refuse Creating a User When a Group With the Same Id Exists, and Vice Versa
+
+This check is controlled by a new `ConfigurationService` boolean property, `nuxeo.usermanager.check.user.group.id.conflict`, contributed in `usermanager-properties.xml`. It defaults to `false`, so existing behavior is unchanged unless it is explicitly enabled. Starting with 2027, this property will default to `true`.
 ## Hotfix 53
 
 ### Enhance Exclusiveness Handling in BulkService to Return a 409 HTTP Status
