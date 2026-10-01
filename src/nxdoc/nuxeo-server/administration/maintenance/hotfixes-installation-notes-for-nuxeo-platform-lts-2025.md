@@ -652,6 +652,11 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 26
+
+### Refuse Creating a User When a Group With the Same Id Exists, and Vice Versa
+
+This check is controlled by a new `ConfigurationService` boolean property, `nuxeo.usermanager.check.user.group.id.conflict`, contributed in `usermanager-properties.xml`. It defaults to `false`, so existing behavior is unchanged unless it is explicitly enabled. Starting with 2027, this property will default to `true`.
 ## Hotfix 25
 
 ### LTS 2025 - Stale OpenSearch Indexing Under High Concurrency in Clustered Environment
