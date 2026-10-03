@@ -420,10 +420,10 @@ At pure storage level, the facets are simple declarative markers. These marker a
 
 Default facets include:
 
-*   Versionnable,
-*   HiddenInNavigation,
-*   Commentable,
-*   Folderish,
+*   Versionable
+*   HiddenInNavigation
+*   Commentable
+*   Folderish
 *   ...
 
 Here are some Document Types definition examples:
