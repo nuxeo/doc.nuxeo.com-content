@@ -1,6 +1,6 @@
 ---
-title: Knowledge Enrichment (KE) for Nuxeo
-description: 'Knowledge Enrichment (KE) for Nuxeo brings AI‑powered understanding to your content by automatically classifying documents, extracting key entities, and generating summaries and image descriptions.'
+title: Nuxeo Content Intelligence Connector
+description: 'The Nuxeo Content Intelligence Connector connects your Nuxeo repository directly to Hyland Content Intelligence (CIC), bringing automated AI enrichment to your everyday content workflows without custom coding.'
 review:
     comment: ''
     date: '2026-04-22'
@@ -14,6 +14,8 @@ tree_item_index: 366
 ---
 
 ## Overview
+
+The [Nuxeo Content Intelligence Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-content-intelligence-connector) connects your Nuxeo repository directly to Hyland Content Intelligence (CIC), bringing automated AI enrichment to your everyday content workflows without custom coding.
 
 Knowledge Enrichment (KE) for Nuxeo brings AI‑powered understanding to your content by automatically classifying documents, extracting key entities, and generating summaries and image descriptions. With simple, one‑click actions in the Nuxeo UI, users can enrich documents and images and immediately benefit from better search, discovery, and downstream automation.
 
@@ -154,7 +156,3 @@ By using Knowledge Enrichment in Nuxeo, customers can:
 * Increase content understanding at scale
 
 Knowledge Enrichment helps teams spend less time organizing content and more time using it.
-
-{{#> callout type='info'}}
-**Configuration Note:** Please refer to the [Nuxeo Studio configuration]({{page space='studio' page='how-to-configure-studio-for-using-knowledge-enrichement'}}) section to set up the required schemas, document types, and metadata needed for the Knowledge Enrichment (KE) Connector.
-{{/callout}}
