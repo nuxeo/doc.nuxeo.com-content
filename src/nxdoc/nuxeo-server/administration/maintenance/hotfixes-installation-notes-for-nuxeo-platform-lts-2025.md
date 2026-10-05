@@ -656,7 +656,8 @@ The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implem
 
 ### Refuse Creating a User When a Group With the Same Id Exists, and Vice Versa
 
-This check is controlled by a new `ConfigurationService` boolean property, `nuxeo.usermanager.check.user.group.id.conflict`, contributed in `usermanager-properties.xml`. It defaults to `false`, so existing behavior is unchanged unless it is explicitly enabled. Starting with 2027, this property will default to `true`.
+This check is controlled by a new `ConfigurationService` boolean property, `nuxeo.usermanager.check.user.group.id.conflict`, contributed in `usermanager-properties.xml`. The default value of this property is `false`, so existing behavior remains unchanged unless it is explicitly enabled. Starting with the LTS 2027 release, this default value will change to `true`.
+
 ## Hotfix 25
 
 ### LTS 2025 - Stale OpenSearch Indexing Under High Concurrency in Clustered Environment
