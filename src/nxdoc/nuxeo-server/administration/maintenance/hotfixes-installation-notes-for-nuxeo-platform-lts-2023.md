@@ -107,7 +107,8 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### Refuse Creating a User When a Group With the Same Id Exists, and Vice Versa
 
-This check is controlled by a new `ConfigurationService` boolean property, `nuxeo.usermanager.check.user.group.id.conflict`, contributed in `usermanager-properties.xml`. It defaults to `false`, so existing behavior is unchanged unless it is explicitly enabled. Starting with 2027, this property will default to `true`.
+This check is controlled by a new `ConfigurationService` boolean property, `nuxeo.usermanager.check.user.group.id.conflict`, contributed in `usermanager-properties.xml`. The default value of this property is `false`, so existing behavior remains unchanged unless you enable it. Starting with the 2027 release, the default value will be `true`.
+
 ## Hotfix 53
 
 ### Enhance Exclusiveness Handling in BulkService to Return a 409 HTTP Status
