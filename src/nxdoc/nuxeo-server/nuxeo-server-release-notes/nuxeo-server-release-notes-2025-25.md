@@ -14,6 +14,12 @@ tree_item_index: 0
 {{! multiexcerpt name='nuxeo-server-updates-2025-25'}}
 # What's New in LTS 2025.25 / LTS 2025-HF25
 
+{{#> callout type='warning'}}
+**Upgrading from 2025.24 or earlier requires a full cluster restart.**
+
+Stop all the nodes before starting them on the new version. A rolling restart leaves the restarted nodes unable to consume cluster invalidations: they serve stale documents and the index desynchronizes, until the whole cluster is restarted. The same applies when downgrading.
+{{/callout}}
+
 ## CMIS: Cannot Use JOIN and CONTAINS Clause in Same Query
 
 CMISQL queries combining a JOIN and a CONTAINS() clause no longer fail.

@@ -15,6 +15,14 @@ hidden: true
 {{! multiexcerpt name='nuxeo-server-updates-2025-26'}}
 # What's New in LTS 2025.26 / LTS 2025-HF26
 
+{{#> callout type='warning'}}
+**Upgrading from 2025.24 or earlier requires a full cluster restart.**
+
+Stop all the nodes before starting them on the new version. A rolling restart from 2025.24 or earlier leaves the restarted nodes unable to consume cluster invalidations: they serve stale documents and the index desynchronizes, until the whole cluster is restarted. The same applies when downgrading.
+
+Upgrading from 2025.25 supports a rolling restart.
+{{/callout}}
+
 ## Management API - Audit Purge Endpoint
 
  New "purge" management rest API audit endpoint to submit the "routeAudit" BAF that scrolls log entries matching a query and dispatching through named routes.
