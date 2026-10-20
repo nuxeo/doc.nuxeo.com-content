@@ -14,7 +14,9 @@ toc: true
 
 The Nuxeo Cloud team deploys all changes to Production and Pre-Production Environments via Marketplace Packages.
 
-JIRA deployment requests should be submitted up to 2 days before the change is required. The request should also include when the deployment should take place.
+Deployment requests should be submitted through Hyland Community up to 2 days before the change is required.
+When submitting the case, select Cloud Services Request – Deployment from the Functionality drop-down list.
+The request should include the target environment, the build or Marketplace Package version to deploy, and the requested deployment date, time, and time zone.
 
 Some important notes regarding deployments:
 - Snapshot or Date-Based Releases are NOT allowed in PreProd and Prod environments. The Nuxeo Cloud Team only deploys production-ready code.
@@ -32,8 +34,14 @@ The standard 7 days a week US, EU and Japan maintenance windows are identified b
 
 ## Deployment Requests
 
-All Nuxeo Cloud Deployments require a JIRA Support Ticket (SUPNXP) to be created with a ticket type of “Nuxeo Cloud Deployment” that provides the following information:
+To request a Nuxeo Cloud Deployment, submit a case through Hyland Community and select Cloud Services Request – Deployment from the Functionality drop-down list.
+This automatically opens a corresponding request with the Nuxeo Cloud team while also creating a Support case.
 
+For configuration requests, select Cloud Services Request – Configuration instead.
+
+Deployment requests should provide the following information:
+
+- Target Environment
 - Name and Link to the correct version of the Marketplace Package, including any configuration templates
 - Required 3rd Party Services or SSO services (e.g. FFMPEG, ImageMagick, Okta, etc.).
 - Nuxeo Conf Updates corresponding to packages or 3rd party services.
