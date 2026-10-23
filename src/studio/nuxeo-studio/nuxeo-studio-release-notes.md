@@ -13,7 +13,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2026-08' space='studio' page='studio-updates-2026-08'}}}
+{{{multiexcerpt 'studio-updates-2026-09' space='studio' page='studio-updates-2026-09'}}}
 
 ---
 
@@ -21,6 +21,7 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                    |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [September 2026]({{page page='studio-updates-2026-09'}})                  | Marketplace search ranking, history/audit tabs in Connect, API documentation, user page performance, LTS 2025 search mapping support, Studio Designer fixes, and Pendo analytics encryption |
 | [August 2026]({{page page='studio-updates-2026-08'}})                  | Account management improvements, Connect password migration, register security fix |
 | [June 2026]({{page page='studio-updates-2026-06'}})                  | Marketplace security hardening, self-service org transfers, LTS 2025 fixes |
 | [May 2026]({{page page='studio-updates-2026-05'}})                  | Fixes for automation signatures, project saves, and OrgAdmin access |
