@@ -18,7 +18,7 @@ This page relates to the release notes of Nuxeo Server and related addons for LT
 This page mentions what's new. Refer to the [upgrade notes]({{page page='upgrade-from-lts-2021-to-lts-2023'}}) to transition to this version.
 {{/callout}}
 
-{{{multiexcerpt 'nuxeo-server-updates-2023-54' page='nuxeo-server-release-notes-2023-54'}}}
+{{{multiexcerpt 'nuxeo-server-updates-2023-55' page='nuxeo-server-release-notes-2023-55'}}}
 
 {{#> callout type='info' heading='Upgrade Notes'}}
 Refer to the [LTS 2023 upgrade notes]({{page page='hotfixes-installation-notes-for-nuxeo-platform-lts-2023'}}) to transition to this version.
@@ -28,6 +28,7 @@ Refer to the [LTS 2023 upgrade notes]({{page page='hotfixes-installation-notes-f
 
 | Version                                                                       | Release date                 |
 | ----------------------------------------------------------------------------- | ---------------------------- |
+| [LTS 2023.55 / 2023-HF55]({{page page='nuxeo-server-release-notes-2023-55'}}) | 2026-10-26 |
 | [LTS 2023.54 / 2023-HF54]({{page page='nuxeo-server-release-notes-2023-54'}}) | 2026-10-05 |
 | [LTS 2023.53 / 2023-HF53]({{page page='nuxeo-server-release-notes-2023-53'}}) | 2026-09-14 |
 | [LTS 2023.52 / 2023-HF52]({{page page='nuxeo-server-release-notes-2023-52'}}) | 2026-08-24 |
@@ -82,6 +83,7 @@ Refer to the [LTS 2023 upgrade notes]({{page page='hotfixes-installation-notes-f
 | [LTS 2023.3 / 2023-HF03]({{page page='nuxeo-server-release-notes-2023-3'}}) | 2023-09-25 |
 | [LTS 2023.2 / 2023-HF02]({{page page='nuxeo-server-release-notes-2023-2'}}) | 2023-09-04 |
 | [LTS 2023.1 / 2023-HF01]({{page page='nuxeo-server-release-notes-2023-1'}}) | 2023-08-14 |
+
 
 
 
