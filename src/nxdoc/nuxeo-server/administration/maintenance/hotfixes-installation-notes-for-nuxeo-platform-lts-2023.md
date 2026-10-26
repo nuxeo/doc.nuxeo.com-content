@@ -103,6 +103,29 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 55
+
+### Fix Database Initialization With nuxeo.subtype.restriction.enabled=true
+
+To fix repository startup with `nuxeo.subtype.restriction.enabled=true`, several system document types now declare their allowed subtypes, and a few factories/services explicitly bypass the subtype restriction check (via `CoreSession.DISABLE_SUBTYPE_RESTRICTION`) when creating their containers.
+
+Behavior changes to be aware of:
+
+- `TaskRoot` now declares the `SystemDocument` facet, consistent with other system container types. As a consequence, the `DublinCoreListener` no longer updates dublincore metadata (`dc:modified`, `dc:lastContributor`, etc.) on `TaskRoot` documents. To keep tracking changes on this container, the `ForceAudit` facet was added to `TaskRoot` so audit entries are still recorded for document lifecycle events.
+- `Domain` no longer declares `CommentRoot` as an allowed subtype. That declaration was tied to the Relation-based comment implementation, deprecated since LTS 2019, and is removed along with it; `CommentRoot` creation for the active comment managers now relies on the subtype restriction bypass in `TreeCommentManager` instead.
+- Custom code or contributions that create `TaskRoot`, `UserWorkspaceRoot`, `CommentRoot`, `SavedSearchesRoot` or `UserProfile` documents outside of the platform's own factories/services and that enable `nuxeo.subtype.restriction.enabled=true` may need to set `CoreSession.DISABLE_SUBTYPE_RESTRICTION` context data on the document model before calling `createDocument`, or declare the type as an allowed subtype.
+### SAML Logout Throws an Exception Instead of Being Gracefully Skipped When IdP Only Exposes HTTP-POST for Single Logout
+
+Prior to this fix, SAML logout threw an exception (`The IDP doesn't support the outbound binding: HTTP_REDIRECT`) when the IdP metadata only exposed an `HTTP-POST` `SingleLogoutService` binding. This is now handled gracefully:
+
+- Single Logout is skipped (the user is still logged out locally) and an `INFO` message is logged instead of throwing.
+- A `WARNING` Runtime Message is raised at SAML plugin initialization when the IdP metadata doesn't expose a `SingleLogoutService` supporting `HTTP-Redirect`, informing administrators that SLO will not work properly for the configured IdP.
+### Stream Cat Management Endpoint Is Reachable by Any Authenticated User
+
+The `org.nuxeo.ecm.restapi.server.management.StreamServlet` servlet has been removed and replaced by `StreamCatObject`, a WebEngine sub-resource of `StreamObject`. The public HTTP contract (path, query parameters, `text/event-stream` response) is unchanged, but:
+
+- The endpoint now enforces the same authorization guard as the rest of `/api/v1/management/*` (configured management port, administrator / configured `nuxeo.management.api.user` / configured `nuxeo.management.api.groups`). Any integration relying on the previous unauthorized access must authenticate as an allowed management user going forward.
+- Any custom `deployment-fragment.xml` contribution referencing the old `Nuxeo Stream Servlet` servlet registration or its `NuxeoAuthenticationFilter` mapping no longer applies and can be removed.
 ## Hotfix 54
 
 ### Refuse Creating a User When a Group With the Same Id Exists, and Vice Versa
