@@ -19,14 +19,15 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-21-0'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-2025-22-0'}}}
 
 ## Previous Release Notes
 
-<!-- | [Web UI 2025.21.0]({{page page='web-ui-release-notes-2025-21-0'}}) |Hotfix release: Restored Home navigation on the application logo, Kawaii and Light themes, and corrected default theme name| -->
+<!-- | [Web UI 2025.22.0]({{page page='web-ui-release-notes-2025-22-0'}}) |User Experience Improvements, Administration & Directory Management, Search and Export Improvements, Document Management Improvements, Accessibility Improvements, Storage and Integration Improvements, and Platform Reliability and Security| -->
 
 | Version                                                                      | Summary                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Web UI 2025.21.0]({{page page='web-ui-release-notes-2025-21-0'}}) |Hotfix release: Restored Home navigation on the application logo, Kawaii and Light themes, and corrected default theme name|
 | [Web UI 2025.20.0]({{page page='web-ui-release-notes-2025-20-0'}}) |User Experience Improvements, Document Management Improvements, Accessibility Improvements, and Platform Reliability and Security|
 | [Web UI 2025.19.0]({{page page='web-ui-release-notes-2025-19-0'}}) |Optional Hyland-branded experience for Web UI along with a wide range of navigation, browsing, search, workflow, accessibility, and reliability improvements|
 | [Web UI 2025.18.0]({{page page='web-ui-release-notes-2025-18-0'}}) |User Experience Improvements, Accessibility Improvements, Workflow & Document Management and Platform & Build Improvements.|
@@ -46,3 +47,4 @@ This page mentions what's new. Refer to the [upgrade notes]({{page page='web-ui-
 | [Web UI 2025.4.0]({{page page='web-ui-release-notes-2025-4-0'}})                  | Accessibility and Veracode Vulnerability fixes for WebUI and bugfix release.     |
 | [Web UI 2025.3.0]({{page page='web-ui-release-notes-2025-3-0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release.   | 
 | [Web UI 2025.2.0]({{page page='web-ui-release-notes-2025-2-0'}})                  | Integrated the latest updates from the recent LTS 2023 release into LTS 2025 release.   | 
+
