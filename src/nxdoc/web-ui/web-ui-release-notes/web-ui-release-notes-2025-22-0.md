@@ -26,11 +26,11 @@ This release introduces instance-wide announcements, improves browsing, search, 
 - Document and search result lists no longer briefly display stale thumbnails or row content while scrolling.
 - When no product name is configured, the browser tab title no longer ends with an extra hyphen.
 - Labels and placeholders are now translated before they are first displayed, eliminating transient translation keys across the interface.
-- Right-clicking a document title in **List View** now offers **Open Link in New Tab** and **Open Link in New Window**.
+- Right-clicking a document title in **List View** now offers **Open Link in New Tab** and **Open Link in New Window** options.
 - External links in PDF documents now open in a new tab instead of navigating away from the document view.
 - Excess blank space and unnecessary scroll bars at the bottom of standard and custom tabs have been removed.
 
-### Administration & Directory Management
+### Administration and Directory Management
 
 #### Instance-Wide Announcements
 
@@ -61,7 +61,7 @@ This release improves keyboard operation and the information announced to screen
 - The left navigation tree now announces whether its items are expanded or collapsed.
 - On user details and profile pages, screen readers now announce the **Email** and **Company** values together with their field names.
 - The Rich Text Editor link dialog is now fully operable with the keyboard, including its link editing controls and focus handling.
-- The **Copy Link** button in the **Share Document** dialog is now keyboard accessible, has a clear screen reader label, and announces when the link has been copied.
+- The **Copy Link** button in the **Share Document** dialog box is now keyboard accessible, has a clear screen reader label, and announces when the link has been copied.
 - Empty tables now announce one header row to screen readers instead of incorrectly reporting a second row.
 - Text and background colour controls in the Rich Text Editor are now labelled and announced correctly to screen readers.
 - Built-in layouts no longer expose an invalid widget role to assistive technologies. Existing custom layouts remain compatible and should adopt the supported widget markup.
