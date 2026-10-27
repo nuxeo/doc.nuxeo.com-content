@@ -34,25 +34,28 @@ Member exports are not recursive; `sort` and `zip` are supported. Each row is a 
 With `nuxeo.group.administrators.members.resticted=true`, restricted groups come back with empty `memberUsers`, `memberGroups` and `parentGroups`, as `GET /group/{name}` already does.
 
 Query limits default to 100000 (`nuxeo.core.bulk.userCSVExport.queryLimit`, `nuxeo.core.bulk.groupCSVExport.queryLimit`). Blob assembly is now shared, tuned by `nuxeo.bulk.action.csvExportBlob.defaultConcurrency`, `nuxeo.bulk.action.csvExportBlob.defaultPartitions` and `nuxeo.bulk.action.csvExportBlob.produceImmediate`, which default to the `csvExport` values.
+
 ## Fix Database Initialization With nuxeo.subtype.restriction.enabled=true
 
 Fixed repository startup failures and subtype restriction errors for several system document types when nuxeo.subtype.restriction.enabled=true.
 
 When `nuxeo.subtype.restriction.enabled=true` was set, repository startup could fail because several system container document types (`TaskRoot`, `UserWorkspaceRoot`, `CommentRoot`, `SavedSearchesRoot` and `UserProfile`) were not declared as allowed subtypes of their parent containers. These document types are now either declared as allowed subtypes, or explicitly bypass the subtype restriction check at creation time, so the platform starts correctly and features relying on these containers (personal workspace, favorites, collections, tasks, workflows, comments, saved searches, user profile) work as expected.
-## SAML Logout Throws an Exception Instead of Being Gracefully Skipped When IdP Only Exposes HTTP-POST for Single Logout
+
+## SAML Logout Triggers an Exception Instead of Being Gracefully Skipped When IdP Only Exposes HTTP-POST for Single Logout
 
 Fixed SAML logout failing when the IDP only exposes an HTTP-POST SingleLogoutService binding.
 
-SAML logout no longer fails when the Identity Provider's metadata only exposes an `HTTP-POST` binding for its `SingleLogoutService` (no `HTTP-Redirect`, the only outbound binding Nuxeo implements for Single Logout). In this case, Nuxeo now skips Single Logout and logs the information instead of throwing an exception, and a `WARNING` Runtime Message is raised at startup to warn administrators that Single Logout will not work properly with their current IdP binding configuration.
+SAML logout no longer fails when the Identity Provider's metadata only exposes an `HTTP-POST` binding for its `SingleLogoutService` (no `HTTP-Redirect`, the only outbound binding Nuxeo implements for Single Logout). In this case, Nuxeo now skips Single Logout and logs the information instead of triggering an exception, and a `WARNING` Runtime Message is raised at startup to warn administrators that Single Logout will not work properly with their current IdP binding configuration.
+
 ## Reset HTTP Session Timeout After Authentication
 
 HTTP sessions now get the configured session.timeout applied after login. Previously a session kept whatever inactivity interval it had before authenticating.
 
 ## AbstractUserMapper Cannot Persist System-Schema Attributes Returned by resolveAttributes - JIT Create Throws NPE, Update Throws PropertyNotFoundException
 
-null
+Fixed an issue where AbstractUserMapper could not persist System-Schema attributes returned by resolveAttributes.
 
-## RenditionObject#initialize Throws ArrayIndexOutOfBoundsException (500) Instead of 400 for Malformed Requests
+## RenditionObject#initialize Triggers ArrayIndexOutOfBoundsException (500) Instead of 400 for Malformed Requests
 
 `GET /api/v1/ext/Rendition` called with an invalid number of arguments now returns 400 Bad Request instead of 500 Internal Server Error.
 
@@ -61,6 +64,7 @@ null
 Fixed an authorization bypass on the management stream cat endpoint.
 
 The management `/stream/cat` endpoint used by the `StreamServlet` was reachable by any authenticated user, bypassing the management API's authorization guard (configured port, administrator/configured user/group check). The endpoint is now implemented as a `StreamCatObject` WebEngine sub-resource of `StreamObject`, so it automatically inherits the same authorization guard as the rest of `/api/v1/management/*`.
+
 ## Security Fixes
 
 This release also contains security fixes.
