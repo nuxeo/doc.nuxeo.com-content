@@ -13,7 +13,7 @@ toc: true
 ## Bug fixes
 
 ### Studio Designer Layout Parsing Now Handles Modern JavaScript Syntax
-Studio Designer now parses and processes layout contributions that use modern ECMAScript features like optional chaining syntax without throwing parser errors.
+Studio Designer now parses and processes layout contributions that use modern ECMAScript features like optional chaining syntax without displaying parser errors.
 
 **What Changed:**
 Layout contributions using modern JavaScript syntax like optional chaining (?.) were causing the Studio Designer parser to fail, generating errors and preventing code from being saved. The parser has been updated to recognize and handle these modern language features correctly.
@@ -21,7 +21,7 @@ Layout contributions using modern JavaScript syntax like optional chaining (?.) 
 **Impact:**
 You can confidently use modern JavaScript syntax in custom layouts and automation code. Design-time validation works reliably, and there are no longer false error messages blocking legitimate code patterns that work perfectly at runtime.
 
-### Connect Group Details Now Displays Sub-Groups
+### Connect Group Details Page Now Displays Sub-Groups
 The Connect Group Details page now shows nested sub-groups when present, matching the same behavior available in the legacy JSF interface.
 
 **What Changed:**
