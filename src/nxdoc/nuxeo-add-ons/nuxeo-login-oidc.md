@@ -3,7 +3,7 @@ title: Nuxeo OIDC Login
 description: The Nuxeo OIDC Login add-on adds standards-based OpenID Connect authentication to Nuxeo, with Microsoft Entra ID as the default provider.
 review:
     comment: ''
-    date: '2026-09-29'
+    date: '2026-10-29'
     status: ok
 labels:
     - authentication
@@ -100,15 +100,7 @@ All keys below configure the default `entra` provider. Every value is overridabl
 
 The ID-token signature algorithms accepted by the default provider are `RS256` and `ES256`. These are not exposed as a `nuxeo.conf` key; adjust them by contributing to the `providers` extension point (see [Advanced: Contributing a Provider](#advanced-contributing-a-provider)).
 
-#### Reserved Keys
-
-| Property | Default | Description |
-| --- | --- | --- |
-| `nuxeo.oidc.entra.groupLookupEnabled` | `false` | **Reserved — no effect in this release.** A provider flag wired for a future group-lookup capability. |
-
-{{#> callout type='warning'}}
-`nuxeo.oidc.entra.groupLookupEnabled` is present in the provider descriptor but the shipped add-on performs **no group resolution**, so setting it currently has no effect. Group mapping is tracked as separate, not-yet-shipped work. Do not rely on this flag; to resolve groups today, use a custom `UserMapper` (see [Customising the Mapping](#customising-the-mapping)).
-{{/callout}}
+The group propagation keys (`nuxeo.oidc.entra.groupLookupEnabled`, `groupsClaim` and `persistGroupMemberships`) and the sign-out key (`nuxeo.oidc.postLogoutRedirectUrl`) are described in the [Nuxeo OIDC Login 2025.1 release notes]({{page page='nuxeo-login-oidc-2025-1'}}).
 
 ### Other Configuration Keys
 
@@ -196,7 +188,7 @@ Establishing the Nuxeo principal from the validated OIDC identity goes through t
 
 The shipped default:
 
-- Reuses the platform `AbstractUserMapper` as-is — implementing only `resolveAttributes` (plus a small `createPrincipal` creation hook), never overriding the lookup / JIT-create / update loop.
+- Reuses the platform `AbstractUserMapper` as-is — implementing only `resolveAttributes`, never overriding the lookup / JIT-create / update loop.
 - Writes the external id into the **search** attributes under `sys:id`, so the platform matches a pre-provisioned user by external id regardless of their login id, and writes a human-friendly login id plus mapped profile claims (`firstName`, `lastName`, `email`) into the **user** attributes for a JIT create.
 - Adds **no groups** beyond what the user directory itself yields.
 
@@ -231,12 +223,11 @@ The login correlation key is the container's `JSESSIONID`. If another unauthenti
 
 ## Scope & Product Boundary
 
-This add-on provides authentication, user resolution against the platform-native external id, and optional JIT provisioning of a single user on first sign-in. It is intentionally provider-agnostic and adds no groups.
+This add-on provides authentication, user resolution against the platform-native external id, and optional JIT provisioning of a single user on first sign-in. It is intentionally provider-agnostic.
 
 The following are **out of scope** for the add-on and are delivered as project work, not by this package:
 
 - Scheduled or bulk **synchronization / provisioning** of users and groups from the identity provider.
-- **Group mapping / virtual groups** at login. The shipped default mapper performs no group resolution; enrich groups through a custom `UserMapper`.
 
 ## Advanced: Contributing a Provider
 
