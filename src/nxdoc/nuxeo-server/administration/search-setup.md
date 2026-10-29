@@ -699,13 +699,14 @@ Verify the new index using the management search endpoint:
 curl -XGET -u Administrator:Administrator \
   --data-urlencode "nxql=SELECT * FROM Document" \
   --data-urlencode "pageSize=10" \
+  --data-urlencode "queryParams=SELECT * FROM Document" \
   "http://localhost:8080/nuxeo/api/v1/management/search/checkSearch"
 ```
  
 You can also test a specific Page Provider by adding `index=enhanced-green` parameter, for instance:
 ```shell
 curl -XGET -u Administrator:Administrator \
-  "http://localhost:8080/nuxeo/api/v1/search/pp/nxql_search/execute?index=enhanced-green&currentPageIndex=0&offset=0"
+  "http://localhost:8080/nuxeo/api/v1/search/pp/nxql_search/execute?index=enhanced-green&queryParams=SELECT%20%2A%20FROM%20Document&currentPageIndex=0&offset=0"
 ```
 
 **Step 4: Switch to the new index**
