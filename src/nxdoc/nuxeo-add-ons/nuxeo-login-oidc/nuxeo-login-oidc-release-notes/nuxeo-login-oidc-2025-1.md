@@ -27,7 +27,7 @@ Nuxeo OIDC Login 2025.1 requires **Nuxeo LTS 2025.27.34 or later**. Upgrade the 
 
 Users can now get Nuxeo groups from their identity provider. At each sign-in, the values of the ID token's group claim (for Microsoft Entra ID, the group object ids) are mapped onto Nuxeo groups through a mapping table you contribute.
 
-The feature is off by default. To turn it on, set in `nuxeo.conf`:
+The feature is off by default. To turn it on, add the following to `nuxeo.conf`:
 
 ```properties
 nuxeo.oidc.entra.groupLookupEnabled=true
@@ -35,7 +35,7 @@ nuxeo.oidc.entra.groupLookupEnabled=true
 nuxeo.oidc.entra.groupsClaim=groups
 ```
 
-Then contribute the mapping table, for example in `nxserver/config/oidc-groups-config.xml`:
+Then define the mapping table in an XML contribution, for example in `nxserver/config/oidc-groups-config.xml`:
 
 ```xml
 <component name="my.oidc.group-mappings">
@@ -56,7 +56,7 @@ A later contribution can re-target a value, or drop it with `remove="true"`. Val
 How the mapped groups behave:
 
 - **Virtual by default.** The groups are added to the user every time Nuxeo loads them, on every path (sign-in, REST API, background work). Nothing is written to the user, the user directory or any group.
-- **Always current.** Each sign-in replaces the previous values, so a group the provider stops sending stops being granted. A change to the mapping table applies without a new sign-in.
+- **Kept up to date.** Each sign-in replaces the stored group values with the ones in the new ID token. If a user is removed from a group at the provider, they lose the mapped Nuxeo group at their next sign-in. A change to the mapping table applies right away, without a new sign-in.
 - **Groups are never created.** Mapping onto an existing group grants it without changing its members, label or hierarchy. A mapped name that doesn't exist as a group appears as a computed group in group searches, such as ACL pickers. Create stored target groups before mapping them: while a name is mapped, Nuxeo refuses to create a group with that name.
 - **Unknown values are ignored.** Claim values are never logged.
 - **No claim, no mapped groups.** Users without a group claim keep their directory groups only. This includes Entra users who belong to too many groups (the Entra "groups overage"), as resolving them would need Microsoft Graph, which the add-on doesn't call.
@@ -72,7 +72,7 @@ If the principal cache is enabled (for example with an LDAP user directory), gro
 Set `nuxeo.oidc.entra.persistGroupMemberships=true` to also write the mapped memberships into existing groups of the group directory, and remove the ones a later sign-in no longer maps. The group directory must be writable: a read-only one (such as LDAP) makes the server fail at startup when this flag is set.
 
 {{#> callout type='warning'}}
-The recommended configuration keeps `persistGroupMemberships` off and relies on virtual groups only. Persisted memberships are ordinary memberships: turning the flag (or `groupLookupEnabled`) off later does **not** remove them. Changing a mapping can also leave users in the previous group. Clean such memberships up by hand.
+The recommended configuration keeps `persistGroupMemberships` off and relies on virtual groups only. Persisted memberships are ordinary memberships: turning the flag (or `groupLookupEnabled`) off later does **not** remove them. Changing a mapping can also leave users in the previous group. Clean such memberships manually.
 {{/callout}}
 
 #### Signing Out Also Signs Out of the Provider
@@ -98,9 +98,9 @@ Sessions opened with other authentication methods (basic, token, form) sign out 
 
 ### Technical Enhancements
 
-#### User Creation Relies on the Platform
+#### External Identifier Stored by the Platform
 
-When users are created at first sign-in (`nuxeo.oidc.entra.jitEnabled=true`), the add-on now relies on the platform to store their external identifier (`sys:id`). The add-on-specific code that did this has been removed. This is why the release requires Nuxeo LTS 2025.27.34 or later. User matching and creation behave as before.
+When a user is created at first sign-in (`nuxeo.oidc.entra.jitEnabled=true`), their external identifier (`sys:id`) is now stored by the Nuxeo Platform instead of by the add-on. This change requires Nuxeo LTS 2025.27.34 or later. Matching and creating users work as before, and no configuration change is needed.
 
 #### Tests Run on the Nuxeo Runtime
 
