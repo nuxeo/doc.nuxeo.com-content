@@ -73,7 +73,7 @@ This release improves keyboard operation and the information announced to screen
 ### Platform Reliability and Security
 
 - Security updates have been implemented to address identified vulnerabilities and strengthen platform protection.
-- The Web UI and Nuxeo Elements build and CI tooling has been updated to support Node.js 24, with Node.js 22.13.0 now set as the minimum supported version.
+- The Web UI, Nuxeo Elements build, and CI tooling have been updated to support Node.js 24, with Node.js 22.13.0 now set as the minimum supported version.
 
 <br/>
 
