@@ -22,16 +22,17 @@ Starting from Web UI version `3.1.6` released in March 2024, functional tests wr
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-37'}}}
+{{{multiexcerpt 'web-ui-updates' page='web-ui-release-notes-3-1-38'}}}
 
 ---
 
 ## Previous Release Notes
 
-<!-- | [Web UI 3.1.37]({{page page='web-ui-release-notes-3-1-37'}}) | User Experience Improvements, Administration & Directory Management, Search and Export Improvements, Document Management Improvements, Accessibility Improvements, Storage and Integration Improvements, and Platform Reliability and Security|-->
+<!-- | [Web UI 3.1.38]({{page page='web-ui-release-notes-3-1-38'}}) | Platform Reliability and Security|-->
 
 | Version                                                    | Summary                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [Web UI 3.1.37]({{page page='web-ui-release-notes-3-1-37'}}) | User Experience Improvements, Administration & Directory Management, Search and Export Improvements, Document Management Improvements, Accessibility Improvements, Storage and Integration Improvements, and Platform Reliability and Security|
 | [Web UI 3.1.36]({{page page='web-ui-release-notes-3-1-36'}}) | Hotfix release: Restored Home navigation on the application logo, Kawaii and Light themes, and corrected default theme name|
 | [Web UI 3.1.35]({{page page='web-ui-release-notes-3-1-35'}}) | User Experience Improvements, Document Management Improvements, Accessibility Improvements, and Platform Reliability and Security|
 | [Web UI 3.1.34]({{page page='web-ui-release-notes-3-1-34'}}) | User Experience Improvements, Accessibility Improvements, Search and Export Improvements, Workflow Improvements , Platform Reliability and Security and Storage and Integration Improvements|
