@@ -77,7 +77,7 @@ history:
 
 ### Why a migration script is needed
 
-A database structure change was introduced with Nuxeo 5.3.2 to fix query with operator IN (for more details, see [https://jira.nuxeo.com/browse/NXP-5183](https://jira.nuxeo.com/browse/NXP-5183) ).
+A database structure change was introduced with Nuxeo 5.3.2 to fix query with operator IN (for more details, see [NXP-23502](https://hyland-sync.atlassian.net/browse/NXP-23502)).
 
 Below is an example of structure change:
 
