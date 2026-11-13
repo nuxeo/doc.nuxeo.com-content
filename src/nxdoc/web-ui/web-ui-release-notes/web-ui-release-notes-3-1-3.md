@@ -40,14 +40,14 @@ If you currently leverage the `nuxeo-file` element in your Nuxeo Studio configur
 
 ### Other Noteworthy Changes
 
-- When using the WOPI addon, the related button is now displayed on first load for a document.<br/>[[WEBUI-1202](https://jira.nuxeo.com/browse/WEBUI-1202)]
-- The nuxeo-document-attachments element works correctly with multivalued properties configured in Nuxeo Studio.<br/>[[WEBUI-1224](https://jira.nuxeo.com/browse/WEBUI-1224)]
-- The `nuxeo-operation-button` element uses the native browser functionality to download blobs instead of using async calls<br/>[[ELEMENTS-1658](https://jira.nuxeo.com/browse/ELEMENTS-1658)] 
+- When using the WOPI addon, the related button is now displayed on first load for a document.<br/>[[WEBUI-270](https://hyland-sync.atlassian.net/browse/WEBUI-270)]
+- The nuxeo-document-attachments element works correctly with multivalued properties configured in Nuxeo Studio.<br/>[[WEBUI-256](https://hyland-sync.atlassian.net/browse/WEBUI-256)]
+- The `nuxeo-operation-button` element uses the native browser functionality to download blobs instead of using async calls<br/>[[ELEMENTS-86](https://hyland-sync.atlassian.net/browse/ELEMENTS-86)]
 
 
 ## Learn More
 
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project IN %28%27WEBUI%27%2C %27ELEMENTS%27%29 AND fixVersion IN %28%273.1.3%27%29 ORDER BY 'Epic Link' ASC%2C type DESC%2C  'Backlog priority' DESC%2C component DESC%2C priority DESC) is available in our bug tracking tool.
+[More information about released changes and fixed bugs(https://hyland-sync.atlassian.net/issues?jql=)] is available in our bug tracking tool.
 
 
 {{! /multiexcerpt}}
