@@ -103,6 +103,38 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 56
+
+### Propose a Way to Migrate User and Group for External Uid Support
+
+Once the external id is enabled with `nuxeo.user.group.externalid.enabled`:
+
+- The `id` field of the `user` and `group` JSON entities holds the generated external id instead of the username or group name: clients needing them must read the `name` field. REST paths keep accepting both the external id and the username or group name.
+- `NuxeoPrincipal#getId()` and `NuxeoGroup#getId()` return the external id. Custom code must keep identifying users and groups by `getName()` (ACLs, events, `UserManager` lookups, keys of stored data), the external id being only meant for REST API consumers.
+### Move HttpClientTestRule to Nuxeo-Common-Test
+
+`HttpClientTestRule` and its companions (handlers, `HttpResponse`, `CloseableHttpResponse`) moved from `org.nuxeo.http.test` in `nuxeo-features-test` to `org.nuxeo.common.test.http` in `nuxeo-common-test`. The former classes are kept as deprecated facades (for removal) delegating to the moved ones, so existing test code keeps compiling (see below for `src/main` code), but should be migrated to the new package:
+
+- Errors raised by the client are now `RuntimeException` instead of `NuxeoException`.
+- `ManagementBaseTest#httpClient` and `RestTestRule#httpClient` are deprecated, subclasses should use the new `ManagementBaseTest#client` and `RestTestRule#client` fields, typed with the moved `HttpClientTestRule`.
+- `RestTestRule#MapHandler` is deprecated, subclasses should use the new `RestTestRule#JsonMapHandler`.
+- Apart from the `HttpResponse`/`CloseableHttpResponse` constructors taking an Apache `CloseableHttpResponse`, the protected internals of the former classes are not kept by the facades.
+- `nuxeo-common-test` is managed with `test` scope, which overrides the `compile` scope it transitively gets from `nuxeo-features-test`. Any `src/main` code using the HTTP test client, including through the deprecated `org.nuxeo.http.test` classes, stops compiling (e.g. `class file for org.nuxeo.common.test.http.handler.AbstractStatusCodeHandler not found`) until it declares `nuxeo-common-test` with `compile` scope (same as other `nuxeo-*-test` modules).
+### Document Updates Are Sometimes Not Applied to Elasticsearch in a Multi-Node Cluster
+
+Revision-based Elasticsearch index versions (opt-in)
+
+In a multi-node cluster, especially on Windows, an update can be silently ignored by Elasticsearch when the node that indexes it has a lagging clock. The search index then keeps the previous values until the document is modified or reindexed. The new property `elasticsearch.index.revisionVersion.enabled` orders index writes by the document revision stored in the repository instead of a timestamp, so an older revision never overwrites a newer one. It is disabled by default; enabling it is recommended for clusters running on Windows.
+
+Repository change tokens must be enabled (`nuxeo.changetoken.enabled=true`, the default). Otherwise the property has no effect and a warning is logged at startup.
+
+- To enable: stop all Nuxeo nodes, set elasticsearch.index.revisionVersion.enabled=true on every node, then restart the cluster. Rolling activation is not supported.
+- To disable: stop all nodes, remove the property or set it to false everywhere, then recreate the search indexes and fully reindex. Reindexing into the existing indexes is not enough.
+- After restoring the repository from a backup while keeping the search index, recreate the index and fully reindex.
+
+When enabled, reindexing a document and its children (`Elasticsearch.Index` on a document) no longer removes index entries for documents that no longer exist under it.
+
+This setting only fixes write ordering. It does not prevent indexing from reading stale document data (the separate  cache fix is not part of this hotfix).
 ## Hotfix 55
 
 ### Fix Database Initialization With nuxeo.subtype.restriction.enabled=true
