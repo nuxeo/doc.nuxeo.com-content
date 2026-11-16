@@ -124,7 +124,7 @@ ${app.path}: define your distribution path (ie ./stage/nuxeo-custom-server)
 
 ```
 
-Optional: choose the wizard distribution type by setting wizard addon preset ([NXP-8031](https://jira.nuxeo.com/browse/NXP-8031)):
+Optional: choose the wizard distribution type by setting wizard addon preset ([NXP-13776](https://hyland-sync.atlassian.net/browse/NXP-13776)):
 
 ```
 <!-- Set the wizard.preset by default -->
@@ -149,7 +149,7 @@ ${app.path}: define your distribution path (ie ./stage/nuxeo-custom-tomcat)
 
 Only fews column additions were done between 5.4.2 and 5.5 (no alter). So you can migrate and retrieve all your 5.4.2 data after 5.5 installation.
 
-For relations, these attributes are added to the "relation" schema ([NXP-7962](http://jira.nuxeo.com/browse/NXP-7962)):
+For relations, these attributes are added to the "relation" schema ([NXP-5715](https://hyland-sync.atlassian.net/browse/NXP-5715)):
 
 ```
 <xs:element name="predicate" type="xs:string" />
@@ -159,13 +159,13 @@ For relations, these attributes are added to the "relation" schema ([NXP-7962](h
 
 ```
 
-A new metadata has been added to follow the legacy definition of `dublincore` schema ([NXP-7884](http://jira.nuxeo.com/browse/NXP-7884)) :
+A new metadata has been added to follow the legacy definition of `dublincore` schema ([NXP-13811](https://hyland-sync.atlassian.net/browse/NXP-13811)) :
 
 ```
 <xs:element name="publisher" type="xs:string"/>
 ```
 
-A new schema has been added: `task.xsd` (related to the nuxeo-platform-task feature - [NXP-7852](http://jira.nuxeo.com/browse/NXP-7852)):
+A new schema has been added: `task.xsd` (related to the nuxeo-platform-task feature - [NXP-8038](https://hyland-sync.atlassian.net/browse/NXP-8038)):
 
 ```
 <xs:element name="actors" type="nxt:stringList" /> (Task actors list)
@@ -191,9 +191,9 @@ UPDATE fulltext SET simpletext_title = NX_TO_TSVECTOR("dublincore"."title") FROM
 
 #### PostgreSQL fulltext phrase search
 
-In Nuxeo 5.5 for PostgreSQL we've added a better way to store fulltext information that enables the use of phrase search. If you want to use phrase search, you should follow the upgrade notes of [NXP-5689](https://jira.nuxeo.com/browse/NXP-5689). If you do this fulltext upgrade, you may want to check the (unsupported for now) [nuxeo-reindex-fulltext plugin](https://github.com/nuxeo/nuxeo-reindex-fulltext) to get more accurate phrase search results.
+In Nuxeo 5.5 for PostgreSQL we've added a better way to store fulltext information that enables the use of phrase search. If you want to use phrase search, you should follow the upgrade notes of [NXP-28346](https://hyland-sync.atlassian.net/browse/NXP-28346). If you do this fulltext upgrade, you may want to check the (unsupported for now) [nuxeo-reindex-fulltext plugin](https://github.com/nuxeo/nuxeo-reindex-fulltext) to get more accurate phrase search results.
 
-If you don't do the upgrade described in [NXP-5689](https://jira.nuxeo.com/browse/NXP-5689), you'll get the following error message:
+If you don't do the upgrade described in [NXP-28346](https://hyland-sync.atlassian.net/browse/NXP-28346), you'll get the following error message:
 
 ```sql
 Cannot use phrase search in fulltext compatibilty mode. Please upgrade the fulltext table: ...
@@ -201,7 +201,7 @@ Cannot use phrase search in fulltext compatibilty mode. Please upgrade the fullt
 
 ### Directories
 
-Directories with auto-incremented columns must be upgraded, as the mechanism for auto-increment has been changed to be more robust. Please follow the [NXP-7124 upgrade notes](https://jira.nuxeo.com/browse/NXP-7124) if you have auto-incremented columns (there aren't any in a default Nuxeo installation).
+Directories with auto-incremented columns must be upgraded, as the mechanism for auto-increment has been changed to be more robust. Please follow the [NXP-18680 upgrade notes](https://hyland-sync.atlassian.net/browse/NXP-18680) if you have auto-incremented columns (there aren't any in a default Nuxeo installation).
 
 ## Code Migration
 
