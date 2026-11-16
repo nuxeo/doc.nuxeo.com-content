@@ -112,7 +112,7 @@ Moreover, the 'database' template does not depend on 'default' template any more
 
 ### HTTPS
 
-If you're getting the following error at startup: "Expression nuxeo.server.https.keystoreFile is undefined on line 101, column 32 in server.xml.nxftl" (complete stack trace available at [NXP-9874](https://jira.nuxeo.com/browse/NXP-9874)), you should change the nuxeo.conf file properties as more properties are now require for HTTPS configuration. If you do not need HTTPS, do not fill any of the https properties. Otherwise, make sure you fill all the properties the startup complains about.
+If you're getting the following error at startup: "Expression nuxeo.server.https.keystoreFile is undefined on line 101, column 32 in server.xml.nxftl" (complete stack trace available at [NXP-22106](https://hyland-sync.atlassian.net/browse/NXP-22106)), you should change the nuxeo.conf file properties as more properties are now require for HTTPS configuration. If you do not need HTTPS, do not fill any of the https properties. Otherwise, make sure you fill all the properties the startup complains about.
 
 The HTTPS properties to define are:
 
@@ -135,7 +135,7 @@ The workflow system previously used (based on jBPM) has been moved to an addon (
 
 ### Oracle and Clustering
 
-When using Oracle and Nuxeo clustering, you will have to upgrade your cluster tables. See the [NXP-9541](https://jira.nuxeo.com/browse/NXP-9541) Upgrade notes for details.
+When using Oracle and Nuxeo clustering, you will have to upgrade your cluster tables. See the [NXP-22223](https://hyland-sync.atlassian.net/browse/NXP-22223) Upgrade notes for details.
 
 ### Custom repository definition
 
