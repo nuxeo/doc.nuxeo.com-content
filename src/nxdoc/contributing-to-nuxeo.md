@@ -296,7 +296,7 @@ Founded on the principles of open-source, Nuxeo is passionate about community: t
 Nuxeo development is fully transparent:
 
 - Any commit in the code can be followed on [Nuxeo GitHub repositories](http://nuxeo.github.io/) and on [ecm-checkins@lists.nuxeo.com](mailto:ecm-checkins@lists.nuxeo.com).
-- Any evolution and bug fixing is tracked on [JIRA](https://jira.nuxeo.com/).
+- Any evolution and bug fixing is tracked on [JIRA](https://hyland-sync.atlassian.net/issues).
 
 ## Contribution Principles
 
@@ -305,7 +305,7 @@ Nuxeo is always happy when someone offers to help in the improvement of the prod
 Before describing this process, here are a few points that are the basis of the Nuxeo development process and that should always be kept in mind.
 
 - Don’t start coding without warning the [Product Manager](mailto:product-team@nuxeo.com). This is really important because maybe the code was going to be completely refactored, or the fix was planned and assigned for the next team sprint, or your idea is simply not aligned with our product roadmap and you don’t want to lose your time!
-- Any change in the Nuxeo sources should match with a JIRA issue ([Nuxeo Platform](https://jira.nuxeo.com/browse/NXP) or any other corresponding product: [Nuxeo Elements](https://jira.nuxeo.com/browse/ELEMENTS), [Browser Developer Extensions](https://jira.nuxeo.com/browse/BDE), etc.).
+- Any change in the Nuxeo sources should match with a JIRA issue ([Nuxeo Platform](https://hyland-sync.atlassian.net/jira/software/c/projects/NXP/list) or any other corresponding product: [Nuxeo Elements](https://hyland-sync.atlassian.net/jira/software/c/projects/ELEMENTS/list), [Browser Developer Extensions](https://hyland-sync.atlassian.net/jira/software/c/projects/BDE/list), etc.).
 - Any code change must be documented in English.
 - Any code change must be unit-tested, this is required to ensure non-regression.
 - Any code change must be implemented respecting the [Coding and Design Guidelines]({{page space='corg' page='coding-and-design-guidelines'}}). Typically, the Nuxeo Dev team pays a lot of attention to the code formatting so don’t add useless spaces or newlines if not necessary.
@@ -353,7 +353,7 @@ As an external contributor, not member of the [Nuxeo](https://github.com/nuxeo/)
 1. Create a new branch, respecting the [Nuxeo branch naming policy]({{page space='corg' page='git-usage'}}#main-rules-and-good-practices) `<TYPE>-<JIRA_ISSUE>-<SHORT_DESCRIPTION>`.
 
     - As a TYPE, choose between `fix`, `feature`, `improvement` or `task`.
-    - JIRA_ISSUE is the reference of the related [Jira](https://jira.nuxeo.com/) issue.
+    - JIRA_ISSUE is the reference of the related [Jira](https://hyland-sync.atlassian.net/issues) issue.
     - SHORT_DESCRIPTION should state *what* the changes in this branch do, using lowercase with hyphens.
 
   For instance:
@@ -372,7 +372,7 @@ As an external contributor, not member of the [Nuxeo](https://github.com/nuxeo/)
 
 2. Add a commit message, respecting the [Nuxeo commit conventions]({{page space='corg' page='git-usage'}}#main-rules-and-good-practices) `<JIRA_ISSUE>: <MESSAGE>`.
 
-    - JIRA_ISSUE is the reference of the related [Jira](https://jira.nuxeo.com/) issue. Most of the time, it is the same than the one in the branch name. Yet, it is OK to have additional commits referencing other JIRA issues within the same branch/PR.
+    - JIRA_ISSUE is the reference of the related [Jira](https://hyland-sync.atlassian.net/issues) issue. Most of the time, it is the same than the one in the branch name. Yet, it is OK to have additional commits referencing other JIRA issues within the same branch/PR.
     - MESSAGE should state *what* the change in this commit does.
 
   For instance:
