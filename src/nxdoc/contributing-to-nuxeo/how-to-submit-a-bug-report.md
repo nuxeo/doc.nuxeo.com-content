@@ -42,7 +42,7 @@ history:
         version: '1'
 
 ---
-<span style="color: rgb(34,34,34);text-decoration: none;">Due to a change in Atlassian's JIRA licensing, we are no longer able to allow everyone to open an account on [jira.nuxeo.com](http://jira.nuxeo.com). This means that only active JIRA users will keep an open account. All other accounts will be deactivated and migrated to a &ldquo;community bot&rdquo; user.</span>
+<span style="color: rgb(34,34,34);text-decoration: none;">Due to a change in Atlassian's JIRA licensing, we are no longer able to allow everyone to open an account on [Jira](https://hyland-sync.atlassian.net/issues). This means that only active JIRA users will keep an open account. All other accounts will be deactivated and migrated to a &ldquo;community bot&rdquo; user.</span>
 
 <span style="color: rgb(34,34,34);text-decoration: none;">We consider active JIRA users to be those who have opened more than 2 tickets in the past year.</span>
 <span style="color: rgb(34,34,34);text-decoration: none;">Don't worry, you will still be able to send us your feedback and open tickets. To do that, you will just have to go to [connect.hyland.com](https://connect.hyland.com). Start by creating a question and you&rsquo;ll get an answer from Nuxeo. We'll help you qualify the bug. Once it's qualified, you will be able to click on the &ldquo;Report a bug&rdquo; button.</span>
