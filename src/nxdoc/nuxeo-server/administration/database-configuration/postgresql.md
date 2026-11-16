@@ -880,11 +880,11 @@ ERROR: data type uuid[] has no default operator class for access method "gin"
 
 PostgreSQL is very good, very fast, and is our reference database. To be completely honest it still has some limitations that other databases don't have:
 
-*   Its full-text engine doesn't know how to do full-text phrase search, which means we have to use a slower and not completely equivalent workaround when phrase search is required ([NXP-6720](https://jira.nuxeo.com/browse/NXP-6720)).
+*   Its full-text engine doesn't know how to do full-text phrase search, which means we have to use a slower and not completely equivalent workaround when phrase search is required ([NXP-5149](https://hyland-sync.atlassian.net/browse/NXP-5149)).
 
 ## Reporting Problems
 
-If you have a database configuration problem and you want to fill a JIRA ticket, there are some information to report:
+If you have a database configuration problem and you want to fill a support case, there are some information to report:
 
 *   The PostgreSQL server state: is it dedicated or shared, which OS, how many CPU, RAM, is it a virtual machine...
 
@@ -915,8 +915,8 @@ If you have a database configuration problem and you want to fill a JIRA ticket,
 
         {{/callout}}
 
-*   Attach the output file located in `/tmp/pgconf.txt` into the JIRA ticket. An example of such a result file is [here]({{file name='pgconf.txt'}}), so that you can check that yours has the correct format.
-*   If you are monitoring the slowest queries (See monitoring section) you can zip and attach the `postgresql` log file to the JIRA ticket.
+*   Attach the output file located in `/tmp/pgconf.txt` into the support case. An example of such a result file is [here]({{file name='pgconf.txt'}}), so that you can check that yours has the correct format.
+*   If you are monitoring the slowest queries (See monitoring section) you can zip and attach the `postgresql` log file to the support case.
 
 * * *
 
