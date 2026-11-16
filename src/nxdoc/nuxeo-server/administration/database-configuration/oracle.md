@@ -506,7 +506,7 @@ Oracle is used by a lot of our customers. Nevertheless it's not perfect.
 Oracle limitations:
 
 *   The well-known Oracle-specific equivalence of `NULL` and an empty string causes headaches and performance degradations in a number of places.
-*   Oracle has problems on some `LEFT OUTER JOINS` using the standard ANSI syntax when combined with full-text queries, and has to be reverted to its non-standard implicit join syntax using `(+)` which cannot be used in all cases ([NXP-5410](https://jira.nuxeo.com/browse/NXP-5410)).
+*   Oracle has problems on some `LEFT OUTER JOINS` using the standard ANSI syntax when combined with full-text queries, and has to be reverted to its non-standard implicit join syntax using `(+)` which cannot be used in all cases ([NXP-18834](https://hyland-sync.atlassian.net/browse/NXP-18834)).
 *   PL/SQL pipelined functions or functions called from a `SELECT` cannot do DML (`INSERT`, `UPDATE`, `DELETE`) (ORA-14551) without starting an autonomous transaction. For consistency reasons starting an autonomous transaction is out of the question. This makes some code (used in clustering) inherently slower.
 *   Table name limitation to 30 characters makes for very unreadable table names when using user-defined schemas.
 
