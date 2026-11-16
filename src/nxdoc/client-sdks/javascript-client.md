@@ -1075,7 +1075,7 @@ To run both Node.js and browser tests:
 
 ### Reporting Issues
 
-You can follow the developments in the Nuxeo JS Client project of our JIRA bug tracker: [https://jira.nuxeo.com/browse/NXJS](https://jira.nuxeo.com/browse/NXJS).
+You can follow the developments in the Nuxeo JS Client project of our JIRA bug tracker: [https://hyland-sync.atlassian.net/jira/software/c/projects/NXJS/list](https://hyland-sync.atlassian.net/jira/software/c/projects/NXJS/list).
 
 You can report issues on [answers.nuxeo.com](http://answers.nuxeo.com).
 
