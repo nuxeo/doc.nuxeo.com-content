@@ -172,7 +172,7 @@ Because stream and computation names are used to define thread names, Kafka topi
 the URN notation `namespace/specific-name` is encoded as an identifier with the form `namespace-specific-name`.
 For this reason, a namespace should not contain the `-` (dash) character.
 
-For backward compatibility it is still possible to not use namespace as long as names match `[A-Za-z0-9][A-Za-z0-9_]*` see [NXP-28877](https://jira.nuxeo.com/browse/NXP-28877) for more information.
+For backward compatibility it is still possible to not use namespace as long as names match `[A-Za-z0-9][A-Za-z0-9_]*` see [NXP-9845](https://hyland-sync.atlassian.net/browse/NXP-9845) for more information.
 
 #### LogConfig
 
@@ -308,7 +308,7 @@ will be re-assigned to another available computation thread and the record will 
 is permanent, all the computation threads on all nodes are going to terminate, blocking the downstream computations completely.
 
 Also, nothing prevents a computation from creating a Dead Letter Queue mechanism. In case of failure, the record is
-persisted in a dedicated stream and the processing continues. This is the approach taken by the [WorkManager DLQ](https://jira.nuxeo.com/browse/NXP-27148).
+persisted in a dedicated stream and the processing continues. This is the approach taken by the [WorkManager DLQ](https://hyland-sync.atlassian.net/browse/NXP-10200).
 
 ### {{> anchor 'recovery'}}Recovery After Failure
 
