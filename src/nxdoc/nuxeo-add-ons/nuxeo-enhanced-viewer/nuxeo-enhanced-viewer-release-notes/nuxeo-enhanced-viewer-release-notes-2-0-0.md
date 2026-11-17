@@ -64,7 +64,7 @@ You can now select dynamically the layers to be displayed on the viewer. You can
 
 It replaces the previous mechanism which consisted on displaying each layer on a dedicated page.
 
-See [NEV-207](https://jira.nuxeo.com/browse/NEV-207).
+See [NEV-469](https://hyland-sync.atlassian.net/browse/NEV-469).
 
 ### UI/UX
 
@@ -113,7 +113,7 @@ See below the renaming of ARender artifacts:
 </table>
 </div>
 
-See [NEV-454](https://jira.nuxeo.com/browse/NEV-454).
+See [NEV-235](https://hyland-sync.atlassian.net/browse/NEV-235).
 
 #### Display Content of Containers Files (Archives, Emails) Even When There Is Unsupported File(s) Inside
 
@@ -121,13 +121,13 @@ Previously, archive files (ex: .zip) or emails with attachments (.eml, .msg) cou
 
 This new version allows to display all the supported files inside a container document and add an error message to inform the user of the unsupported file(s).
 
-See [NEV-377](https://jira.nuxeo.com/browse/NEV-377).
+See [NEV-303](https://hyland-sync.atlassian.net/browse/NEV-303).
 
 #### Display XML Files as Plain Text
 
 The XML files are now supported into the Nuxeo Enhanced Viewer. Those type of files are displayed in plain text.
 
-See [NEV-497](https://jira.nuxeo.com/browse/NEV-497).
+See [NEV-193](https://hyland-sync.atlassian.net/browse/NEV-193).
 
 ### Major Fixes
 
@@ -135,7 +135,7 @@ See [NEV-497](https://jira.nuxeo.com/browse/NEV-497).
 
 Following the [Log4j vulnerabilities (CVE-2021-45046)](https://logging.apache.org/log4j/2.x/security.html), we have removed unsafe log4j dependencies on the rendition services.
 
-See [NEV-514](https://jira.nuxeo.com/browse/NEV-514).
+See [NEV-176](https://hyland-sync.atlassian.net/browse/NEV-176).
 
 #### Improve Low Quality TIFF Files Display
 
@@ -143,25 +143,25 @@ Certain TIFF (mostly black and white with low resolution) documents were poorly 
 
 We have improved the conversion and display quality, including in case of zoom.
 
-See [NEV-456](https://jira.nuxeo.com/browse/NEV-456).
+See [NEV-233](https://hyland-sync.atlassian.net/browse/NEV-233).
 
 #### Dedicated Message for Unsupported Files
 
 We have added a specific error message in case of a file fails to be displayed because it is not a supported format.
 
-See [NEV-507](https://jira.nuxeo.com/browse/NEV-507).
+See [NEV-183](https://hyland-sync.atlassian.net/browse/NEV-183).
 
 #### Fix Download With Annotations for Document With Several Layers
 
 We have fixed the download with annotations feature which was failing in case of a document with layers.
 
-See [NEV-378](https://jira.nuxeo.com/browse/NEV-378).
+See [NEV-302](https://hyland-sync.atlassian.net/browse/NEV-302).
 
 #### Reduce Time to Display for .msg Files With Embedded Images
 
 We have fixed the slowness occurring when displaying an email (.msg) with embedded images.
 
-See [NEV-350](https://jira.nuxeo.com/browse/NEV-350).
+See [NEV-330](https://hyland-sync.atlassian.net/browse/NEV-330).
 
 #### Improve Concurrent Access to a Document
 
