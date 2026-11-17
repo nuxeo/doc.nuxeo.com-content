@@ -31,10 +31,11 @@ This version fixes the issue, and upgrading to this version can be applied in li
 
 ## Noteworthy Changes
 
-- Fixed a security issue.<br/>[[NEV-629](https://jira.nuxeo.com/browse/NEV-629)]
+- Fixed a security issue.<br/>
+{{!-- [NEV-629](https://hyland.atlassian.net/browse/NEV-629) link removed: the ticket is no longer publicly visible. --}}
 
 ## Learn More
 
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project IN %28'NEV'%29 AND fixVersion IN %28'arender-2.1.4'%29 ORDER BY type DESC, priority DESC) is available in our bug tracking tool.
+[More information about released changes and fixed bugs]https://hyland-sync.atlassian.net/issues?jql=project%20%3D%20NEV) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
