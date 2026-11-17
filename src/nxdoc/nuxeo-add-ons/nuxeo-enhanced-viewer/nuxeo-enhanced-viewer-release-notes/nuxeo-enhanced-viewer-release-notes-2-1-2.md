@@ -19,12 +19,12 @@ This is a bugfix release.
 
 ## Noteworthy Changes
 
-- Text files containing special characters are correctly rendered.<br/>[[NEV-590](https://jira.nuxeo.com/browse/NEV-590)]
-- Edit box disappears upon clicking the "stop annotation edition" when working with circle annotations.<br/>[[NEV-464](https://jira.nuxeo.com/browse/NEV-464)]
-- Fixed a cache issue that prevented some files from loading correctly.<br/>[[NEV-596](https://jira.nuxeo.com/browse/NEV-596)]
+- Text files containing special characters are correctly rendered.<br/>[[NEV-108](https://hyland-sync.atlassian.net/browse/NEV-108)]
+- Edit box disappears upon clicking the "stop annotation edition" when working with circle annotations.<br/>[[NEV-225](https://hyland-sync.atlassian.net/browse/NEV-225)]
+<!-- - Fixed a cache issue that prevented some files from loading correctly.<br/>[[NEV-596](https://jira.nuxeo.com/browse/NEV-596)] -> https://hyland.atlassian.net/browse/NEV-611 reports that the issue was not resolved until https://hyland.atlassian.net/browse/NEV-610 --> 
 
 ## Learn More
 
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project IN %28'NEV'%29 AND fixVersion IN %28'arender-2.1.1','arender-2.1.2'%29 ORDER BY type DESC, priority DESC) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://hyland-sync.atlassian.net/jira/software/c/projects/NEV/list?jql=project%20%3D%20NEV%20AND%20%22text%20fix%20version%5Bshort%20text%5D%22%20~%20%22arender-2.1.2") is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
