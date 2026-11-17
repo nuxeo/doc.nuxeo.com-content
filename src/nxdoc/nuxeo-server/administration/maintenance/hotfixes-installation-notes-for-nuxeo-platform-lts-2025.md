@@ -652,6 +652,59 @@ HEAD requests on Presigned URLs are no longer supported. See NXP-32293 and [aws-
 
 The old and deprecated **org.nuxeo.ecm.core.storage.sql.S3BinaryManager** implementation has been deleted and is no longer part of the distribution. The remaining classes from the **org.nuxeo.ecm.core.storage.sql** package have been merged into the **org.nuxeo.ecm.blob.s3** one. Please update any dependant project accordingly.
 
+## Hotfix 28
+
+### Propose a Way to Migrate User and Group for External Uid Support
+
+Once the external id is enabled with `nuxeo.user.group.externalid.enabled`:
+
+- The `id` field of the `user` and `group` JSON entities holds the generated external id instead of the username or group name: clients needing them must read the `name` field. REST paths keep accepting both the external id and the username or group name.
+- `NuxeoPrincipal#getId()` and `NuxeoGroup#getId()` return the external id. Custom code must keep identifying users and groups by `getName()` (ACLs, events, `UserManager` lookups, keys of stored data), the external id being only meant for REST API consumers.
+### MimetypeRegistryService#getMimetypeFromBlob Fails for MP3 Files With and Without ID3v2 Headers
+
+MIME type detection: new `detector` extension point
+
+Content-based MIME type detection in `MimetypeRegistryService` now goes through pluggable detectors, contributed to the new `detector` extension point of `org.nuxeo.ecm.platform.mimetype.service.MimetypeRegistryService`. Detectors run by ascending `order`; the first one returning a MIME type wins, and its result is normalized against the registry. When no detector returns a result, the MIME type is deduced from the filename extension, as before.
+
+Default contributions:
+
+```
+<extension target="org.nuxeo.ecm.platform.mimetype.service.MimetypeRegistryService" point="detector">
+  <detector name="id3v2" class="org.nuxeo.ecm.platform.mimetype.detectors.ID3v2Detector" order="10" />
+  <detector name="jmimemagic" class="org.nuxeo.ecm.platform.mimetype.detectors.JMimeMagicDetector" order="1000" />
+</extension>
+```
+
+- `order` is optional and defaults to 100, so a custom detector runs between `id3v2` and `jmimemagic` unless it sets its own order.
+- A detector can be disabled by contributing it again with `enabled="false"`.
+- A detector that throws a `RuntimeException` is logged and skipped. A `MimetypeDetectionException` still fails the detection.
+
+New public API (all `@since 2025.28`):
+
+- `org.nuxeo.ecm.platform.mimetype.interfaces.MimetypeDetector`: `Optional<String> detect(File file, byte[] header) throws IOException`. `header` holds the first 16 bytes of the file, or fewer for smaller files; a detector needing more reads it from `file`.
+- `org.nuxeo.ecm.platform.mimetype.service.MimetypeDetectorDescriptor`, with attributes `name`, `class`, `enabled` and `order`.
+- `org.nuxeo.ecm.platform.mimetype.detectors.ID3v2Detector`: detects MP3 files starting with an ID3v2 tag, only when an MPEG audio frame follows the tag. ID3-tagged AAC is not detected as MP3.
+- `org.nuxeo.ecm.platform.mimetype.detectors.JMimeMagicDetector`: the former jMimeMagic scan, with its existing corrections for zero bytes and XML declarations.
+- `MimetypeRegistryService.XP_DETECTOR`.
+
+Behaviour changes
+
+- MP3 files are detected as `audio/mpeg` from their content. `audio/mp3` is now registered as an alias of `audio/mpeg`.
+- The MIME type that jMimeMagic or a detector returns is now normalized against the registry, so `audio/mp3` becomes `audio/mpeg` and `text/x-java` becomes `text/java-source`.
+- `getNormalizedMimeType` returns the given MIME type when it is already a normalized one, instead of possibly resolving it as an alias of another entry. For example, `application/vnd.ms-excel` is no longer turned into `text/csv` (it is also listed as a `text/csv` alias).
+- `getMimetypeFromBlob` / `getMimetypeFromBlobWithDefault`: when the content isn't recognized, detection falls back on the blob's filename extension instead of failing with "no registered mimetype has extension: bin". Generated temporary filenames (e.g. `nxblob-*.tmp`) are ignored, so `getMimetypeFromBlobWithDefault` still returns the given default.
+- `getMimetypeFromFilenameAndBlobWithDefault`, `getMimetypeFromFilenameWithBlobMimetypeFallback` and `updateMimetype`: after the given filename fails, they detect from the content only and never use the blob's stored filename. This also applies to blobs over 10 MB, which previously fell back on the stored blob filename.
+- An unchecked exception thrown by jMimeMagic (e.g. an index error on a malformed file) used to fail detection. It is now logged at error level, and detection falls back on the filename extension. Checked jMimeMagic errors (`MagicException`, `MagicParseException`) still fail the detection with `MimetypeDetectionException`.
+- A `MimetypeRegistryService` created with `new` outside the Nuxeo runtime (never activated) has no detector contributions, so it only uses the filename. Obtain the service with `Framework.getService(MimetypeRegistry.class)`.
+### Move HttpClientTestRule to Nuxeo-Common-Test
+
+`HttpClientTestRule` and its companions (handlers, `HttpResponse`, `CloseableHttpResponse`) moved from `org.nuxeo.http.test` in `nuxeo-features-test` to `org.nuxeo.common.test.http` in `nuxeo-common-test`. The former classes are kept as deprecated facades (for removal) delegating to the moved ones, so existing test code keeps compiling (see below for `src/main` code), but should be migrated to the new package:
+
+- Errors raised by the client are now `RuntimeException` instead of `NuxeoException`.
+- `ManagementBaseTest#httpClient` and `RestTestRule#httpClient` are deprecated, subclasses should use the new `ManagementBaseTest#client` and `RestTestRule#client` fields, typed with the moved `HttpClientTestRule`.
+- `RestTestRule#MapHandler` is deprecated, subclasses should use the new `RestTestRule#JsonMapHandler`.
+- Apart from the `HttpResponse`/`CloseableHttpResponse` constructors taking an Apache `CloseableHttpResponse`, the protected internals of the former classes are not kept by the facades.
+- `nuxeo-common-test` is managed with `test` scope, which overrides the `compile` scope it transitively gets from `nuxeo-features-test`. Any `src/main` code using the HTTP test client, including through the deprecated `org.nuxeo.http.test` classes, stops compiling (e.g. `class file for org.nuxeo.common.test.http.handler.AbstractStatusCodeHandler not found`) until it declares `nuxeo-common-test` with `compile` scope (same as other `nuxeo-*-test` modules).
 ## Hotfix 27
 
 ### OpenSearch 2.5+ Breaking Change Causes Nuxeo ILIKE Searches Containing Unicode Diacritics to Return No Results
