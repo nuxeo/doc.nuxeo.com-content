@@ -52,14 +52,14 @@ This release brings major observability improvements and bugfixes.
 
 Being able to preview your content is a mission critical capability. In order to better support our stack, we brought major improvements to the way we can monitor its performance.
 
-See [NEV-492](https://jira.nuxeo.com/browse/NEV-492).
+See [NEV-198](https://hyland-sync.atlassian.net/browse/NEV-198).
 
 ## Other Noteworthy Changes
 
-- WPG files are correctly rendered.<br/>[[NEV-311](https://jira.nuxeo.com/browse/NEV-311)]
+- WPG files are correctly rendered.<br/>[[NEV-368](https://hyland-sync.atlassian.net/browse/NEV-368)]
 
 ## Learn More
 
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project IN %28'NEV'%29 AND fixVersion IN %28'arender-2.1.0'%29 ORDER BY type DESC, priority DESC) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://hyland-sync.atlassian.net/jira/software/c/projects/NEV/list?jql=project%20%3D%20NEV%20AND%20%22text%20fix%20version%5Bshort%20text%5D%22%20~%20%22arender-2.1.0%22) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
