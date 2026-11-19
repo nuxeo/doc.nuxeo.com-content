@@ -161,6 +161,10 @@ history:
         version: '1'
 ---
 
+{{#> callout type='note' }}
+The release of this addon will stop starting **Nuxeo LTS 2025**.
+{{/callout}}
+
 {{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
 
 ## Requirements
