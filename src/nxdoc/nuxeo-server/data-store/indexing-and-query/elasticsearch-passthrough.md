@@ -157,8 +157,7 @@ The platform will use the [DefaultSearchRequestFilter](https://github.com/nuxeo/
 
 {{#> callout type='warning' }}
 
-The security filtering takes in account only the ACL security and security policy that is expressible in NXQL.
-If you use a custom security policy that is not expressible in NXQL you should not enable the Nuxeo Search passthrough.
+The default Search Passthrough filter enforces indexed ACLs only. It does not apply custom security policies, even when they are expressible in NXQL. If a custom security policy restricts document visibility, do not enable Search Passthrough unless a custom passthrough filter enforces equivalent restrictions. This limitation applies to both returned documents and aggregation results.
 
 {{/callout}}
 
